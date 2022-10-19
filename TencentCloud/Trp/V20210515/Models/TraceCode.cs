@@ -25,7 +25,7 @@ namespace TencentCloud.Trp.V20210515.Models
     {
         
         /// <summary>
-        /// 码
+        /// 二维码
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public ulong? CorpId{ get; set; }
 
         /// <summary>
-        /// 包ID
+        /// 码包ID
         /// </summary>
         [JsonProperty("PackId")]
         public string PackId{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 码状态 0: 冻结 1: 激活
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

@@ -154,6 +154,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("ValueMin")]
         public float? ValueMin{ get; set; }
 
+        /// <summary>
+        /// 告警分级阈值配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HierarchicalValue")]
+        public AlarmHierarchicalValue HierarchicalValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -176,6 +183,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "ValueMax", this.ValueMax);
             this.SetParamSimple(map, prefix + "ValueMin", this.ValueMin);
+            this.SetParamObj(map, prefix + "HierarchicalValue.", this.HierarchicalValue);
         }
     }
 }

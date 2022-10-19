@@ -110,6 +110,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string[] Assistants{ get; set; }
 
         /// <summary>
+        /// 录制地址。仅在房间结束后存在。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordUrl")]
+        public string RecordUrl{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -133,6 +140,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "SubType", this.SubType);
             this.SetParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
             this.SetParamArraySimple(map, prefix + "Assistants.", this.Assistants);
+            this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

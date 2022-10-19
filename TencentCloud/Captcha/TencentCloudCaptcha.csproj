@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{39D5883D-7A4D-3B59-9517-0DFDD1B08F9C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.621</VersionPrefix>
+    <VersionPrefix>3.0.622</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,7 @@
     <Compile Include="V20190722\Models\CaptchaOperDataTryTimesDistributeUnit.cs" />
     <Compile Include="V20190722\Models\CaptchaOperDataTryTimesUnit.cs" />
     <Compile Include="V20190722\Models\CaptchaQueryData.cs" />
+    <Compile Include="V20190722\Models\CaptchaStatisticObj.cs" />
     <Compile Include="V20190722\Models\CaptchaTicketDataRes.cs" />
     <Compile Include="V20190722\Models\CaptchaUserAllAppId.cs" />
     <Compile Include="V20190722\Models\DescribeCaptchaAppIdInfoRequest.cs" />
@@ -79,8 +80,11 @@
     <Compile Include="V20190722\Models\DescribeCaptchaUserAllAppIdResponse.cs" />
     <Compile Include="V20190722\Models\GetTotalTicketStatisticsRequest.cs" />
     <Compile Include="V20190722\Models\GetTotalTicketStatisticsResponse.cs" />
+    <Compile Include="V20190722\Models\InterceptPerTrendObj.cs" />
     <Compile Include="V20190722\Models\OutputManageMarketingRiskValue.cs" />
+    <Compile Include="V20190722\Models\RequestTrendObj.cs" />
     <Compile Include="V20190722\Models\TicketAmountUnit.cs" />
+    <Compile Include="V20190722\Models\TicketCheckTrendObj.cs" />
     <Compile Include="V20190722\Models\TicketInterceptUnit.cs" />
     <Compile Include="V20190722\Models\TicketThroughUnit.cs" />
     <Compile Include="V20190722\Models\UpdateCaptchaAppIdInfoRequest.cs" />

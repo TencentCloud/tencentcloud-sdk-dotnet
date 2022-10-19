@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 模板唯一标识
+        /// 模板唯一标识，查询单个模版时使用
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
@@ -55,12 +55,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
         /// 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
         /// </summary>
         [JsonProperty("QueryAllComponents")]
@@ -71,6 +65,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
+
+        /// <summary>
+        /// 操作者的信息
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -83,9 +83,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "QueryAllComponents", this.QueryAllComponents);
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

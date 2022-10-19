@@ -1829,6 +1829,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云企付-跨境支付下单
+        /// </summary>
+        /// <param name="req"><see cref="CreateOpenBankGlobalPaymentOrderRequest"/></param>
+        /// <returns><see cref="CreateOpenBankGlobalPaymentOrderResponse"/></returns>
+        public async Task<CreateOpenBankGlobalPaymentOrderResponse> CreateOpenBankGlobalPaymentOrder(CreateOpenBankGlobalPaymentOrderRequest req)
+        {
+             JsonResponseModel<CreateOpenBankGlobalPaymentOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOpenBankGlobalPaymentOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenBankGlobalPaymentOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-跨境支付下单
+        /// </summary>
+        /// <param name="req"><see cref="CreateOpenBankGlobalPaymentOrderRequest"/></param>
+        /// <returns><see cref="CreateOpenBankGlobalPaymentOrderResponse"/></returns>
+        public CreateOpenBankGlobalPaymentOrderResponse CreateOpenBankGlobalPaymentOrderSync(CreateOpenBankGlobalPaymentOrderRequest req)
+        {
+             JsonResponseModel<CreateOpenBankGlobalPaymentOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOpenBankGlobalPaymentOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenBankGlobalPaymentOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 云企付-创建商户
         /// </summary>
         /// <param name="req"><see cref="CreateOpenBankMerchantRequest"/></param>

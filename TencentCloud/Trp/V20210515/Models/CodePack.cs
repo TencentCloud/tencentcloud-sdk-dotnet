@@ -60,14 +60,14 @@ namespace TencentCloud.Trp.V20210515.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 制码状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 记录
+        /// 执行日志
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Log")]
@@ -109,14 +109,14 @@ namespace TencentCloud.Trp.V20210515.Models
         public long? Cipher{ get; set; }
 
         /// <summary>
-        /// 文字码地址
+        /// [弃用] 文字码地址，通过另一个接口查
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TextUrl")]
         public string TextUrl{ get; set; }
 
         /// <summary>
-        /// 二维码地址
+        /// [弃用] 二维码地址，通过另一个接口查
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackUrl")]

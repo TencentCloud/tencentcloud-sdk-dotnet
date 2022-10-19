@@ -73,6 +73,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? ComponentRequired{ get; set; }
 
         /// <summary>
+        /// 控件关联的签署方id
+        /// </summary>
+        [JsonProperty("ComponentRecipientId")]
+        public string ComponentRecipientId{ get; set; }
+
+        /// <summary>
         /// 控件所属文件的序号 (文档中文件的排列序号，从0开始)
         /// </summary>
         [JsonProperty("FileIndex")]
@@ -182,6 +188,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ComponentType", this.ComponentType);
             this.SetParamSimple(map, prefix + "ComponentName", this.ComponentName);
             this.SetParamSimple(map, prefix + "ComponentRequired", this.ComponentRequired);
+            this.SetParamSimple(map, prefix + "ComponentRecipientId", this.ComponentRecipientId);
             this.SetParamSimple(map, prefix + "FileIndex", this.FileIndex);
             this.SetParamSimple(map, prefix + "GenerateMode", this.GenerateMode);
             this.SetParamSimple(map, prefix + "ComponentWidth", this.ComponentWidth);

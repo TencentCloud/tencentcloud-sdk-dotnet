@@ -37,12 +37,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
         /// 查询过滤实名用户，key为Status，Values为["IsVerified"]
         /// </summary>
         [JsonProperty("Filters")]
@@ -54,6 +48,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// 操作者的信息
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,9 +62,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

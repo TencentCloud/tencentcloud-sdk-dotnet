@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.621</VersionPrefix>
+    <VersionPrefix>3.0.622</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -203,6 +203,8 @@
     <Compile Include="V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationRequest.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationResponse.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationResult.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankGlobalPaymentOrderRequest.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankGlobalPaymentOrderResponse.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankMerchantRequest.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankMerchantResponse.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankMerchantResult.cs" />
@@ -215,6 +217,7 @@
     <Compile Include="V20190820\Models\CreateOpenBankSubMerchantRateConfigureRequest.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankSubMerchantRateConfigureResponse.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankSubMerchantRateConfigureResult.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankUnifiedOrderPaymentResult.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankUnifiedOrderRequest.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankUnifiedOrderResponse.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankVerificationOrderRequest.cs" />
@@ -331,8 +334,10 @@
     <Compile Include="V20190820\Models\MultiApplyOrder.cs" />
     <Compile Include="V20190820\Models\NaturalPersonInfo.cs" />
     <Compile Include="V20190820\Models\OpenBankApprovalGuideInfo.cs" />
+    <Compile Include="V20190820\Models\OpenBankBillingInfo.cs" />
     <Compile Include="V20190820\Models\OpenBankFormInfo.cs" />
     <Compile Include="V20190820\Models\OpenBankGoodsInfo.cs" />
+    <Compile Include="V20190820\Models\OpenBankOrderRedirectInfo.cs" />
     <Compile Include="V20190820\Models\OpenBankPayLimitInfo.cs" />
     <Compile Include="V20190820\Models\OpenBankPayeeInfo.cs" />
     <Compile Include="V20190820\Models\OpenBankPayerInfo.cs" />
@@ -345,6 +350,7 @@
     <Compile Include="V20190820\Models\OpenBankRefundOrderApplyResult.cs" />
     <Compile Include="V20190820\Models\OpenBankSceneInfo.cs" />
     <Compile Include="V20190820\Models\OpenBankSettlementRulesInfo.cs" />
+    <Compile Include="V20190820\Models\OpenBankShippingInfo.cs" />
     <Compile Include="V20190820\Models\OpenBankStoreInfo.cs" />
     <Compile Include="V20190820\Models\Order.cs" />
     <Compile Include="V20190820\Models\OrderItem.cs" />

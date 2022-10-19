@@ -253,7 +253,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 新建拦截
+        /// 新建协查处置
         /// </summary>
         /// <param name="req"><see cref="CreateCRBlockRequest"/></param>
         /// <returns><see cref="CreateCRBlockResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 新建拦截
+        /// 新建协查处置
         /// </summary>
         /// <param name="req"><see cref="CreateCRBlockRequest"/></param>
         /// <returns><see cref="CreateCRBlockResponse"/></returns>
@@ -813,6 +813,46 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
+        /// 查询取证详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCRObtainDetailRequest"/></param>
+        /// <returns><see cref="DescribeCRObtainDetailResponse"/></returns>
+        public async Task<DescribeCRObtainDetailResponse> DescribeCRObtainDetail(DescribeCRObtainDetailRequest req)
+        {
+             JsonResponseModel<DescribeCRObtainDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCRObtainDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCRObtainDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询取证详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCRObtainDetailRequest"/></param>
+        /// <returns><see cref="DescribeCRObtainDetailResponse"/></returns>
+        public DescribeCRObtainDetailResponse DescribeCRObtainDetailSync(DescribeCRObtainDetailRequest req)
+        {
+             JsonResponseModel<DescribeCRObtainDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCRObtainDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCRObtainDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询作品基本信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCRWorkInfoRequest"/></param>
@@ -893,7 +933,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 拦截申请
+        /// 协查处置申请
         /// </summary>
         /// <param name="req"><see cref="ModifyCRBlockStatusRequest"/></param>
         /// <returns><see cref="ModifyCRBlockStatusResponse"/></returns>
@@ -913,7 +953,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 拦截申请
+        /// 协查处置申请
         /// </summary>
         /// <param name="req"><see cref="ModifyCRBlockStatusRequest"/></param>
         /// <returns><see cref="ModifyCRBlockStatusResponse"/></returns>

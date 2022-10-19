@@ -2819,6 +2819,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 修改日志主题
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClsTopicRequest"/></param>
+        /// <returns><see cref="ModifyClsTopicResponse"/></returns>
+        public async Task<ModifyClsTopicResponse> ModifyClsTopic(ModifyClsTopicRequest req)
+        {
+             JsonResponseModel<ModifyClsTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClsTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClsTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改日志主题
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClsTopicRequest"/></param>
+        /// <returns><see cref="ModifyClsTopicResponse"/></returns>
+        public ModifyClsTopicResponse ModifyClsTopicSync(ModifyClsTopicRequest req)
+        {
+             JsonResponseModel<ModifyClsTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClsTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClsTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改数据库权限
         /// </summary>
         /// <param name="req"><see cref="ModifyDatabaseACLRequest"/></param>

@@ -48,6 +48,36 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("GoodsBizType")]
         public string GoodsBizType{ get; set; }
 
+        /// <summary>
+        /// 商品编号。
+        /// </summary>
+        [JsonProperty("Sku")]
+        public string Sku{ get; set; }
+
+        /// <summary>
+        /// 商品单价。
+        /// </summary>
+        [JsonProperty("Price")]
+        public string Price{ get; set; }
+
+        /// <summary>
+        /// 商品数量
+        /// </summary>
+        [JsonProperty("Quantity")]
+        public string Quantity{ get; set; }
+
+        /// <summary>
+        /// 商品图片url
+        /// </summary>
+        [JsonProperty("ProductImage")]
+        public string ProductImage{ get; set; }
+
+        /// <summary>
+        /// 商品链接url
+        /// </summary>
+        [JsonProperty("ProductUrl")]
+        public string ProductUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +88,11 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "GoodsDetail", this.GoodsDetail);
             this.SetParamSimple(map, prefix + "GoodsDescription", this.GoodsDescription);
             this.SetParamSimple(map, prefix + "GoodsBizType", this.GoodsBizType);
+            this.SetParamSimple(map, prefix + "Sku", this.Sku);
+            this.SetParamSimple(map, prefix + "Price", this.Price);
+            this.SetParamSimple(map, prefix + "Quantity", this.Quantity);
+            this.SetParamSimple(map, prefix + "ProductImage", this.ProductImage);
+            this.SetParamSimple(map, prefix + "ProductUrl", this.ProductUrl);
         }
     }
 }

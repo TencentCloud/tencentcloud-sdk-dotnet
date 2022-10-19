@@ -67,7 +67,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? TemplateType{ get; set; }
 
         /// <summary>
-        /// 是否是发起人
+        /// 是否是发起人 ,已弃用
         /// </summary>
         [JsonProperty("IsPromoter")]
         public bool? IsPromoter{ get; set; }

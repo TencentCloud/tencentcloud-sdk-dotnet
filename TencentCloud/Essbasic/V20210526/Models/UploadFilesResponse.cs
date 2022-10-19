@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 文件id数组，有效期一个小时
+        /// 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }

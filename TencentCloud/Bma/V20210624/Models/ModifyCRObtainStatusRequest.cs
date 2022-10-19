@@ -31,7 +31,7 @@ namespace TencentCloud.Bma.V20210624.Models
         public long? TortId{ get; set; }
 
         /// <summary>
-        /// 取证类型：1-网页取证 2-过程取证
+        /// 取证类型：1-网页取证 2-过程取证(暂不提供)
         /// </summary>
         [JsonProperty("ObtainType")]
         public long? ObtainType{ get; set; }

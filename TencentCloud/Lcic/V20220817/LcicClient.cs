@@ -53,6 +53,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 绑定文档到房间
+        /// </summary>
+        /// <param name="req"><see cref="BindDocumentToRoomRequest"/></param>
+        /// <returns><see cref="BindDocumentToRoomResponse"/></returns>
+        public async Task<BindDocumentToRoomResponse> BindDocumentToRoom(BindDocumentToRoomRequest req)
+        {
+             JsonResponseModel<BindDocumentToRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindDocumentToRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindDocumentToRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定文档到房间
+        /// </summary>
+        /// <param name="req"><see cref="BindDocumentToRoomRequest"/></param>
+        /// <returns><see cref="BindDocumentToRoomResponse"/></returns>
+        public BindDocumentToRoomResponse BindDocumentToRoomSync(BindDocumentToRoomRequest req)
+        {
+             JsonResponseModel<BindDocumentToRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindDocumentToRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindDocumentToRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建房间内可以使用的文档。
         /// </summary>
         /// <param name="req"><see cref="CreateDocumentRequest"/></param>
@@ -253,6 +293,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 获取房间统计信息，仅可在房间结束后调用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoomStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeRoomStatisticsResponse"/></returns>
+        public async Task<DescribeRoomStatisticsResponse> DescribeRoomStatistics(DescribeRoomStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeRoomStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoomStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取房间统计信息，仅可在房间结束后调用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoomStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeRoomStatisticsResponse"/></returns>
+        public DescribeRoomStatisticsResponse DescribeRoomStatisticsSync(DescribeRoomStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeRoomStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoomStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取用户信息
         /// </summary>
         /// <param name="req"><see cref="DescribeUserRequest"/></param>
@@ -373,6 +453,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 修改应用
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAppRequest"/></param>
+        /// <returns><see cref="ModifyAppResponse"/></returns>
+        public async Task<ModifyAppResponse> ModifyApp(ModifyAppRequest req)
+        {
+             JsonResponseModel<ModifyAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改应用
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAppRequest"/></param>
+        /// <returns><see cref="ModifyAppResponse"/></returns>
+        public ModifyAppResponse ModifyAppSync(ModifyAppRequest req)
+        {
+             JsonResponseModel<ModifyAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 注册用户
         /// </summary>
         /// <param name="req"><see cref="RegisterUserRequest"/></param>
@@ -444,6 +564,46 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "SetAppCustomContent");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAppCustomContentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 文档从房间解绑
+        /// </summary>
+        /// <param name="req"><see cref="UnbindDocumentFromRoomRequest"/></param>
+        /// <returns><see cref="UnbindDocumentFromRoomResponse"/></returns>
+        public async Task<UnbindDocumentFromRoomResponse> UnbindDocumentFromRoom(UnbindDocumentFromRoomRequest req)
+        {
+             JsonResponseModel<UnbindDocumentFromRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindDocumentFromRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindDocumentFromRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 文档从房间解绑
+        /// </summary>
+        /// <param name="req"><see cref="UnbindDocumentFromRoomRequest"/></param>
+        /// <returns><see cref="UnbindDocumentFromRoomResponse"/></returns>
+        public UnbindDocumentFromRoomResponse UnbindDocumentFromRoomSync(UnbindDocumentFromRoomRequest req)
+        {
+             JsonResponseModel<UnbindDocumentFromRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindDocumentFromRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindDocumentFromRoomResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
