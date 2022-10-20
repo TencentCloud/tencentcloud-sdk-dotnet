@@ -73,7 +73,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public ulong? Rank{ get; set; }
 
         /// <summary>
-        /// [无效] 溯源阶段 0:商品 1:通用 2:物流
+        /// [无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
         /// </summary>
         [JsonProperty("Phase")]
         public ulong? Phase{ get; set; }

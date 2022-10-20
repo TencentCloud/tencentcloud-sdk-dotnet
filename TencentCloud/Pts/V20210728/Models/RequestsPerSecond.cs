@@ -66,6 +66,13 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("TargetRequestsPerSecond")]
         public long? TargetRequestsPerSecond{ get; set; }
 
+        /// <summary>
+        /// 优雅关停的等待时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GracefulStopSeconds")]
+        public long? GracefulStopSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "Resources", this.Resources);
             this.SetParamSimple(map, prefix + "StartRequestsPerSecond", this.StartRequestsPerSecond);
             this.SetParamSimple(map, prefix + "TargetRequestsPerSecond", this.TargetRequestsPerSecond);
+            this.SetParamSimple(map, prefix + "GracefulStopSeconds", this.GracefulStopSeconds);
         }
     }
 }

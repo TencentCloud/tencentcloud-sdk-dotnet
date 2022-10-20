@@ -303,6 +303,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 资源管理需要先将资源上传到cos中，然后调用该接口，将cos资源绑定到wedata
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrUpdateResourceRequest"/></param>
+        /// <returns><see cref="CreateOrUpdateResourceResponse"/></returns>
+        public async Task<CreateOrUpdateResourceResponse> CreateOrUpdateResource(CreateOrUpdateResourceRequest req)
+        {
+             JsonResponseModel<CreateOrUpdateResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOrUpdateResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrUpdateResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 资源管理需要先将资源上传到cos中，然后调用该接口，将cos资源绑定到wedata
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrUpdateResourceRequest"/></param>
+        /// <returns><see cref="CreateOrUpdateResourceResponse"/></returns>
+        public CreateOrUpdateResourceResponse CreateOrUpdateResourceSync(CreateOrUpdateResourceRequest req)
+        {
+             JsonResponseModel<CreateOrUpdateResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOrUpdateResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrUpdateResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 创建任务
         /// </summary>
@@ -502,6 +542,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DeleteFolder");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFolderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 资源管理删除资源
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceRequest"/></param>
+        /// <returns><see cref="DeleteResourceResponse"/></returns>
+        public async Task<DeleteResourceResponse> DeleteResource(DeleteResourceRequest req)
+        {
+             JsonResponseModel<DeleteResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 资源管理删除资源
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceRequest"/></param>
+        /// <returns><see cref="DeleteResourceResponse"/></returns>
+        public DeleteResourceResponse DeleteResourceSync(DeleteResourceRequest req)
+        {
+             JsonResponseModel<DeleteResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteResourceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1038,6 +1118,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRelatedInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRelatedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取资源管理目录树
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceManagePathTreesRequest"/></param>
+        /// <returns><see cref="DescribeResourceManagePathTreesResponse"/></returns>
+        public async Task<DescribeResourceManagePathTreesResponse> DescribeResourceManagePathTrees(DescribeResourceManagePathTreesRequest req)
+        {
+             JsonResponseModel<DescribeResourceManagePathTreesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceManagePathTrees");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceManagePathTreesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取资源管理目录树
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceManagePathTreesRequest"/></param>
+        /// <returns><see cref="DescribeResourceManagePathTreesResponse"/></returns>
+        public DescribeResourceManagePathTreesResponse DescribeResourceManagePathTreesSync(DescribeResourceManagePathTreesRequest req)
+        {
+             JsonResponseModel<DescribeResourceManagePathTreesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceManagePathTrees");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceManagePathTreesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -333,6 +333,46 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
+        /// 新建过程取证码
+        /// </summary>
+        /// <param name="req"><see cref="CreateCRDesktopCodeRequest"/></param>
+        /// <returns><see cref="CreateCRDesktopCodeResponse"/></returns>
+        public async Task<CreateCRDesktopCodeResponse> CreateCRDesktopCode(CreateCRDesktopCodeRequest req)
+        {
+             JsonResponseModel<CreateCRDesktopCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCRDesktopCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCRDesktopCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建过程取证码
+        /// </summary>
+        /// <param name="req"><see cref="CreateCRDesktopCodeRequest"/></param>
+        /// <returns><see cref="CreateCRDesktopCodeResponse"/></returns>
+        public CreateCRDesktopCodeResponse CreateCRDesktopCodeSync(CreateCRDesktopCodeRequest req)
+        {
+             JsonResponseModel<CreateCRDesktopCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCRDesktopCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCRDesktopCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 版权保护-新建取证接口
         /// </summary>
         /// <param name="req"><see cref="CreateCRObtainRequest"/></param>

@@ -43,7 +43,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源
+        /// 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
         /// </summary>
         [JsonProperty("Phase")]
         public ulong? Phase{ get; set; }

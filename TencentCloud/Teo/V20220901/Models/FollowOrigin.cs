@@ -32,6 +32,20 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
+        /// <summary>
+        /// 源站未返回 Cache-Control 头时, 设置默认的缓存时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultCacheTime")]
+        public long? DefaultCacheTime{ get; set; }
+
+        /// <summary>
+        /// 源站未返回 Cache-Control 头时, 设置缓存/不缓存
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultCache")]
+        public string DefaultCache{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -39,6 +53,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "DefaultCacheTime", this.DefaultCacheTime);
+            this.SetParamSimple(map, prefix + "DefaultCache", this.DefaultCache);
         }
     }
 }

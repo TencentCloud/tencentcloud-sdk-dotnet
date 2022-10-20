@@ -37,7 +37,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public FlowInfo[] FlowInfos{ get; set; }
 
         /// <summary>
-        /// 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+        /// 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls（此Url返回的是PDF文件流 ）；
         /// 预览链接有效期300秒；
         /// </summary>
         [JsonProperty("NeedPreview")]

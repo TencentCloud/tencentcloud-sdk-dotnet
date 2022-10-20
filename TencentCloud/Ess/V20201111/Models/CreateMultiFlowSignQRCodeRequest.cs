@@ -25,6 +25,12 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
+        /// 用户信息
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
+
+        /// <summary>
         /// 模板ID
         /// </summary>
         [JsonProperty("TemplateId")]
@@ -35,26 +41,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
-
-        /// <summary>
-        /// 用户信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 应用信息
-        /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
-
-        /// <summary>
-        /// 回调地址,最大长度1000字符串
-        /// 回调时机：
-        /// 用户通过签署二维码发起签署流程时，企业额度不足导致失败
-        /// </summary>
-        [JsonProperty("CallbackUrl")]
-        public string CallbackUrl{ get; set; }
 
         /// <summary>
         /// 最大可发起签署流程份数，默认5份 
@@ -78,6 +64,26 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 限制二维码用户条件
         /// </summary>
+        [JsonProperty("Restrictions")]
+        public ApproverRestriction[] Restrictions{ get; set; }
+
+        /// <summary>
+        /// 回调地址,最大长度1000字符串
+        /// 回调时机：
+        /// 用户通过签署二维码发起签署流程时，企业额度不足导致失败
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
+        /// <summary>
+        /// 应用信息
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
+        /// <summary>
+        /// 限制二维码用户条件（已弃用）
+        /// </summary>
         [JsonProperty("ApproverRestrictions")]
         public ApproverRestriction ApproverRestrictions{ get; set; }
 
@@ -87,14 +93,15 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
             this.SetParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
             this.SetParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
+            this.SetParamArrayObj(map, prefix + "Restrictions.", this.Restrictions);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
         }
     }

@@ -45,6 +45,13 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("MaxRequestsPerSecond")]
         public long? MaxRequestsPerSecond{ get; set; }
 
+        /// <summary>
+        /// 优雅终止任务的等待时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GracefulStopSeconds")]
+        public long? GracefulStopSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamArrayObj(map, prefix + "Stages.", this.Stages);
             this.SetParamSimple(map, prefix + "IterationCount", this.IterationCount);
             this.SetParamSimple(map, prefix + "MaxRequestsPerSecond", this.MaxRequestsPerSecond);
+            this.SetParamSimple(map, prefix + "GracefulStopSeconds", this.GracefulStopSeconds);
         }
     }
 }

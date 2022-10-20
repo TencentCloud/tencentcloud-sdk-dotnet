@@ -62,6 +62,13 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
+        /// <summary>
+        /// 指标序列名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +81,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

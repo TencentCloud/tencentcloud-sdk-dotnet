@@ -32,7 +32,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 查询资源所对应的签署流程Id，最多支持50个。
+        /// 查询资源所对应的签署流程Id，最多支持50个
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }

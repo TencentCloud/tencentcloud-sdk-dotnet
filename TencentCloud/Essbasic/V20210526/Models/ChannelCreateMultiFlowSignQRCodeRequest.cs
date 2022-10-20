@@ -62,6 +62,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? QrEffectiveDay{ get; set; }
 
         /// <summary>
+        /// 限制二维码用户条件
+        /// </summary>
+        [JsonProperty("Restrictions")]
+        public ApproverRestriction[] Restrictions{ get; set; }
+
+        /// <summary>
         /// 回调地址，最大长度1000个字符
         /// 不传默认使用渠道应用号配置的回调地址
         /// 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
@@ -70,16 +76,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 限制二维码用户条件
-        /// </summary>
-        [JsonProperty("ApproverRestrictions")]
-        public ApproverRestriction ApproverRestrictions{ get; set; }
-
-        /// <summary>
         /// 用户信息
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
+
+        /// <summary>
+        /// 限制二维码用户条件（已弃用）
+        /// </summary>
+        [JsonProperty("ApproverRestrictions")]
+        public ApproverRestriction ApproverRestrictions{ get; set; }
 
 
         /// <summary>
@@ -93,9 +99,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
             this.SetParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
             this.SetParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
+            this.SetParamArrayObj(map, prefix + "Restrictions.", this.Restrictions);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
-            this.SetParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
         }
     }
 }

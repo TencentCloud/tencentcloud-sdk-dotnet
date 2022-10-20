@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27664084-899E-3873-B6E4-FE25D3A68B6F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.622</VersionPrefix>
+    <VersionPrefix>3.0.623</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -75,6 +75,8 @@
     <Compile Include="V20210413\Models\InjectConfig.cs" />
     <Compile Include="V20210413\Models\IstioConfig.cs" />
     <Compile Include="V20210413\Models\IstiodConfig.cs" />
+    <Compile Include="V20210413\Models\LinkClusterListRequest.cs" />
+    <Compile Include="V20210413\Models\LinkClusterListResponse.cs" />
     <Compile Include="V20210413\Models\LoadBalancer.cs" />
     <Compile Include="V20210413\Models\LoadBalancerStatus.cs" />
     <Compile Include="V20210413\Models\Mesh.cs" />
@@ -96,6 +98,8 @@
     <Compile Include="V20210413\Models\Tag.cs" />
     <Compile Include="V20210413\Models\TracingConfig.cs" />
     <Compile Include="V20210413\Models\TracingZipkin.cs" />
+    <Compile Include="V20210413\Models\UnlinkClusterRequest.cs" />
+    <Compile Include="V20210413\Models\UnlinkClusterResponse.cs" />
     <Compile Include="V20210413\Models\WorkloadConfig.cs" />
   </ItemGroup>
 </Project>

@@ -127,6 +127,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
         /// SELECTOR - 选项值
         /// DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+        /// SIGN_SEAL - 印章Id，于控制台查询获取
         /// </summary>
         [JsonProperty("ComponentValue")]
         public string ComponentValue{ get; set; }

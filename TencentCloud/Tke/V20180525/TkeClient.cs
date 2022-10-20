@@ -6333,7 +6333,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 初始化与云监控融合的2.0版本实例，开启集成中心时调用
+        /// 初始化TMP实例，开启集成中心时调用
         /// </summary>
         /// <param name="req"><see cref="RunPrometheusInstanceRequest"/></param>
         /// <returns><see cref="RunPrometheusInstanceResponse"/></returns>
@@ -6353,7 +6353,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 初始化与云监控融合的2.0版本实例，开启集成中心时调用
+        /// 初始化TMP实例，开启集成中心时调用
         /// </summary>
         /// <param name="req"><see cref="RunPrometheusInstanceRequest"/></param>
         /// <returns><see cref="RunPrometheusInstanceResponse"/></returns>

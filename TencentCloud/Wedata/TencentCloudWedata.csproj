@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.622</VersionPrefix>
+    <VersionPrefix>3.0.623</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,6 +64,8 @@
     <Compile Include="V20210820\Models\CreateDataSourceResponse.cs" />
     <Compile Include="V20210820\Models\CreateFolderRequest.cs" />
     <Compile Include="V20210820\Models\CreateFolderResponse.cs" />
+    <Compile Include="V20210820\Models\CreateOrUpdateResourceRequest.cs" />
+    <Compile Include="V20210820\Models\CreateOrUpdateResourceResponse.cs" />
     <Compile Include="V20210820\Models\CreateTaskRequest.cs" />
     <Compile Include="V20210820\Models\CreateTaskResponse.cs" />
     <Compile Include="V20210820\Models\CreateWorkflowRequest.cs" />
@@ -76,6 +78,8 @@
     <Compile Include="V20210820\Models\DeleteDataSourcesResponse.cs" />
     <Compile Include="V20210820\Models\DeleteFolderRequest.cs" />
     <Compile Include="V20210820\Models\DeleteFolderResponse.cs" />
+    <Compile Include="V20210820\Models\DeleteResourceRequest.cs" />
+    <Compile Include="V20210820\Models\DeleteResourceResponse.cs" />
     <Compile Include="V20210820\Models\DeleteWorkflowNewRequest.cs" />
     <Compile Include="V20210820\Models\DeleteWorkflowNewResponse.cs" />
     <Compile Include="V20210820\Models\DependencyConfig.cs" />
@@ -105,6 +109,8 @@
     <Compile Include="V20210820\Models\DescribeProjectResponse.cs" />
     <Compile Include="V20210820\Models\DescribeRelatedInstancesRequest.cs" />
     <Compile Include="V20210820\Models\DescribeRelatedInstancesResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeResourceManagePathTreesRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeResourceManagePathTreesResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskDetailRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskInstancesData.cs" />
@@ -163,6 +169,7 @@
     <Compile Include="V20210820\Models\RegisterEventResponse.cs" />
     <Compile Include="V20210820\Models\RerunInstancesRequest.cs" />
     <Compile Include="V20210820\Models\RerunInstancesResponse.cs" />
+    <Compile Include="V20210820\Models\ResourcePathTree.cs" />
     <Compile Include="V20210820\Models\RunTaskRequest.cs" />
     <Compile Include="V20210820\Models\RunTaskResponse.cs" />
     <Compile Include="V20210820\Models\SaveCustomFunctionRequest.cs" />
@@ -187,6 +194,7 @@
     <Compile Include="V20210820\Models\TaskScriptContent.cs" />
     <Compile Include="V20210820\Models\TriggerEventRequest.cs" />
     <Compile Include="V20210820\Models\TriggerEventResponse.cs" />
+    <Compile Include="V20210820\Models\UserFileDTO.cs" />
     <Compile Include="V20210820\Models\Workflow.cs" />
   </ItemGroup>
 </Project>

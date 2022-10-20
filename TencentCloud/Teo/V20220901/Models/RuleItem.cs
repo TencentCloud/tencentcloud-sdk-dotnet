@@ -56,6 +56,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("RulePriority")]
         public long? RulePriority{ get; set; }
 
+        /// <summary>
+        /// 规则标签。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public string[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "RulePriority", this.RulePriority);
+            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
         }
     }
 }

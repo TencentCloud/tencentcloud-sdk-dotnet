@@ -213,6 +213,46 @@ namespace TencentCloud.Tcm.V20210413
         }
 
         /// <summary>
+        /// 关联集群
+        /// </summary>
+        /// <param name="req"><see cref="LinkClusterListRequest"/></param>
+        /// <returns><see cref="LinkClusterListResponse"/></returns>
+        public async Task<LinkClusterListResponse> LinkClusterList(LinkClusterListRequest req)
+        {
+             JsonResponseModel<LinkClusterListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "LinkClusterList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LinkClusterListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关联集群
+        /// </summary>
+        /// <param name="req"><see cref="LinkClusterListRequest"/></param>
+        /// <returns><see cref="LinkClusterListResponse"/></returns>
+        public LinkClusterListResponse LinkClusterListSync(LinkClusterListRequest req)
+        {
+             JsonResponseModel<LinkClusterListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "LinkClusterList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LinkClusterListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改网格
         /// </summary>
         /// <param name="req"><see cref="ModifyMeshRequest"/></param>
@@ -244,6 +284,46 @@ namespace TencentCloud.Tcm.V20210413
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMesh");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMeshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解关联集群
+        /// </summary>
+        /// <param name="req"><see cref="UnlinkClusterRequest"/></param>
+        /// <returns><see cref="UnlinkClusterResponse"/></returns>
+        public async Task<UnlinkClusterResponse> UnlinkCluster(UnlinkClusterRequest req)
+        {
+             JsonResponseModel<UnlinkClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnlinkCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlinkClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解关联集群
+        /// </summary>
+        /// <param name="req"><see cref="UnlinkClusterRequest"/></param>
+        /// <returns><see cref="UnlinkClusterResponse"/></returns>
+        public UnlinkClusterResponse UnlinkClusterSync(UnlinkClusterRequest req)
+        {
+             JsonResponseModel<UnlinkClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnlinkCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlinkClusterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

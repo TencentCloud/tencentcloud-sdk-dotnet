@@ -24,12 +24,26 @@ namespace TencentCloud.Tke.V20180525.Models
     public class RunPrometheusInstanceRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 子网ID，默认使用实例所用子网初始化，也可通过该参数传递新的子网ID初始化
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

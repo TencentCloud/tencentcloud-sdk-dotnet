@@ -47,8 +47,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li> Hsts；</li>
         /// <li> ClientIpHeader；</li>
         /// <li> TlsVersion；</li>
-        /// <li> OcspStapling。</li>
-        /// <li> HTTP/2 访问（Http2）。</li>
+        /// <li> OcspStapling；</li>
+        /// <li> HTTP/2 访问（Http2）；</li>
+        /// <li> 回源跟随重定向(UpstreamFollowRedirect)。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NormalAction")]

@@ -162,6 +162,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("RecordWithSchema")]
         public bool? RecordWithSchema{ get; set; }
 
+        /// <summary>
+        /// 存放信令表的数据库名称
+        /// </summary>
+        [JsonProperty("SignalDatabase")]
+        public string SignalDatabase{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "IncludeContentChanges", this.IncludeContentChanges);
             this.SetParamSimple(map, prefix + "IncludeQuery", this.IncludeQuery);
             this.SetParamSimple(map, prefix + "RecordWithSchema", this.RecordWithSchema);
+            this.SetParamSimple(map, prefix + "SignalDatabase", this.SignalDatabase);
         }
     }
 }

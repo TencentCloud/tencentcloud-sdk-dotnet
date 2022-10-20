@@ -128,7 +128,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 参数控件样式，json格式表述
         /// 不同类型的控件会有部分非通用参数
-        /// TEXT控件可以指定字体
+        /// TEXT/MULTI_LINE_TEXT控件可以指定
+        /// 1 Font：目前只支持黑体、宋体
+        /// 2 FontSize： 范围12-72
+        /// 3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
         /// 例如：{"FontSize":12}
         /// </summary>
         [JsonProperty("ComponentExtra")]

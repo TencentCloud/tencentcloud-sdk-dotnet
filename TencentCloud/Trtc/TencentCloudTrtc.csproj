@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.622</VersionPrefix>
+    <VersionPrefix>3.0.623</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,8 +47,6 @@
     <Compile Include="V20190722\TrtcClient.cs" />
     <Compile Include="V20190722\Models\AbnormalEvent.cs" />
     <Compile Include="V20190722\Models\AbnormalExperience.cs" />
-    <Compile Include="V20190722\Models\AgentParams.cs" />
-    <Compile Include="V20190722\Models\AudioEncode.cs" />
     <Compile Include="V20190722\Models\AudioParams.cs" />
     <Compile Include="V20190722\Models\CloudStorage.cs" />
     <Compile Include="V20190722\Models\CloudVod.cs" />
@@ -98,23 +96,9 @@
     <Compile Include="V20190722\Models\EventList.cs" />
     <Compile Include="V20190722\Models\EventMessage.cs" />
     <Compile Include="V20190722\Models\LayoutParams.cs" />
-    <Compile Include="V20190722\Models\MaxVideoUser.cs" />
-    <Compile Include="V20190722\Models\McuAudioParams.cs" />
-    <Compile Include="V20190722\Models\McuCustomCrop.cs" />
-    <Compile Include="V20190722\Models\McuLayout.cs" />
-    <Compile Include="V20190722\Models\McuLayoutParams.cs" />
-    <Compile Include="V20190722\Models\McuLayoutVolume.cs" />
-    <Compile Include="V20190722\Models\McuPassThrough.cs" />
-    <Compile Include="V20190722\Models\McuPublishCdnParam.cs" />
-    <Compile Include="V20190722\Models\McuSeiParams.cs" />
-    <Compile Include="V20190722\Models\McuUserInfoParams.cs" />
-    <Compile Include="V20190722\Models\McuVideoParams.cs" />
-    <Compile Include="V20190722\Models\McuWaterMarkImage.cs" />
-    <Compile Include="V20190722\Models\McuWaterMarkParams.cs" />
     <Compile Include="V20190722\Models\MixLayout.cs" />
     <Compile Include="V20190722\Models\MixLayoutParams.cs" />
     <Compile Include="V20190722\Models\MixTranscodeParams.cs" />
-    <Compile Include="V20190722\Models\MixUserInfo.cs" />
     <Compile Include="V20190722\Models\ModifyCloudRecordingRequest.cs" />
     <Compile Include="V20190722\Models\ModifyCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\ModifyPictureRequest.cs" />
@@ -136,20 +120,15 @@
     <Compile Include="V20190722\Models\SdkAppIdNewTrtcTimeUsage.cs" />
     <Compile Include="V20190722\Models\SdkAppIdRecordUsage.cs" />
     <Compile Include="V20190722\Models\SdkAppIdTrtcMcuTranscodeTimeUsage.cs" />
-    <Compile Include="V20190722\Models\SingleSubscribeParams.cs" />
     <Compile Include="V20190722\Models\SmallVideoLayoutParams.cs" />
     <Compile Include="V20190722\Models\StartMCUMixTranscodeByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\StartMCUMixTranscodeByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\StartMCUMixTranscodeRequest.cs" />
     <Compile Include="V20190722\Models\StartMCUMixTranscodeResponse.cs" />
-    <Compile Include="V20190722\Models\StartPublishCdnStreamRequest.cs" />
-    <Compile Include="V20190722\Models\StartPublishCdnStreamResponse.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeRequest.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeResponse.cs" />
-    <Compile Include="V20190722\Models\StopPublishCdnStreamRequest.cs" />
-    <Compile Include="V20190722\Models\StopPublishCdnStreamResponse.cs" />
     <Compile Include="V20190722\Models\StorageFile.cs" />
     <Compile Include="V20190722\Models\StorageParams.cs" />
     <Compile Include="V20190722\Models\SubscribeStreamUserIds.cs" />
@@ -157,11 +136,7 @@
     <Compile Include="V20190722\Models\TimeValue.cs" />
     <Compile Include="V20190722\Models\TrtcTimeNewUsage.cs" />
     <Compile Include="V20190722\Models\TrtcUsage.cs" />
-    <Compile Include="V20190722\Models\UpdatePublishCdnStreamRequest.cs" />
-    <Compile Include="V20190722\Models\UpdatePublishCdnStreamResponse.cs" />
     <Compile Include="V20190722\Models\UserInformation.cs" />
-    <Compile Include="V20190722\Models\UserMediaStream.cs" />
-    <Compile Include="V20190722\Models\VideoEncode.cs" />
     <Compile Include="V20190722\Models\VideoParams.cs" />
     <Compile Include="V20190722\Models\WaterMark.cs" />
     <Compile Include="V20190722\Models\WaterMarkImage.cs" />

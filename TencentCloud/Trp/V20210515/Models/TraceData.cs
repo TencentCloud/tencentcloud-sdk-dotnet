@@ -60,21 +60,21 @@ namespace TencentCloud.Trp.V20210515.Models
         public ulong? Rank{ get; set; }
 
         /// <summary>
-        /// 溯源阶段 0:商品 1:通用 2:物流
+        /// 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Phase")]
         public ulong? Phase{ get; set; }
 
         /// <summary>
-        /// 环节名称
+        /// 溯源环节名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhaseName")]
         public string PhaseName{ get; set; }
 
         /// <summary>
-        /// 时间
+        /// 溯源时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TraceTime")]
