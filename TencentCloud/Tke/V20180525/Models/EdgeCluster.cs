@@ -98,6 +98,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterAdvancedSettings")]
         public EdgeClusterAdvancedSettings ClusterAdvancedSettings{ get; set; }
 
+        /// <summary>
+        /// 边缘容器集群级别
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Level")]
+        public string Level{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +123,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "EdgeClusterVersion", this.EdgeClusterVersion);
             this.SetParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
             this.SetParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
         }
     }
 }

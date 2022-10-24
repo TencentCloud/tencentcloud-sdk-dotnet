@@ -292,5 +292,45 @@ namespace TencentCloud.Thpc.V20220401
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="SetAutoScalingConfigurationRequest"/></param>
+        /// <returns><see cref="SetAutoScalingConfigurationResponse"/></returns>
+        public async Task<SetAutoScalingConfigurationResponse> SetAutoScalingConfiguration(SetAutoScalingConfigurationRequest req)
+        {
+             JsonResponseModel<SetAutoScalingConfigurationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetAutoScalingConfiguration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAutoScalingConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="SetAutoScalingConfigurationRequest"/></param>
+        /// <returns><see cref="SetAutoScalingConfigurationResponse"/></returns>
+        public SetAutoScalingConfigurationResponse SetAutoScalingConfigurationSync(SetAutoScalingConfigurationRequest req)
+        {
+             JsonResponseModel<SetAutoScalingConfigurationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetAutoScalingConfiguration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAutoScalingConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

@@ -4013,7 +4013,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 获取2.0实例关联集群列表
+        /// 获取TMP实例关联集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusClusterAgentsRequest"/></param>
         /// <returns><see cref="DescribePrometheusClusterAgentsResponse"/></returns>
@@ -4033,7 +4033,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 获取2.0实例关联集群列表
+        /// 获取TMP实例关联集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusClusterAgentsRequest"/></param>
         /// <returns><see cref="DescribePrometheusClusterAgentsResponse"/></returns>

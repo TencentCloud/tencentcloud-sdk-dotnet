@@ -91,7 +91,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? IsFullText{ get; set; }
 
         /// <summary>
-        /// 签署前置条件：阅读时长限制，默认为不需要
+        /// 签署前置条件：阅读时长限制，单位秒，默认为不需要
         /// </summary>
         [JsonProperty("PreReadTime")]
         public ulong? PreReadTime{ get; set; }

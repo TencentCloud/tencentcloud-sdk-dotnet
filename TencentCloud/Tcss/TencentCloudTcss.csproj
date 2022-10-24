@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.623</VersionPrefix>
+    <VersionPrefix>3.0.624</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,10 @@
     <Compile Include="V20201101\Models\AddAndPublishNetworkFirewallPolicyYamlDetailResponse.cs" />
     <Compile Include="V20201101\Models\AddAssetImageRegistryRegistryDetailRequest.cs" />
     <Compile Include="V20201101\Models\AddAssetImageRegistryRegistryDetailResponse.cs" />
+    <Compile Include="V20201101\Models\AddComplianceAssetPolicySetToWhitelistRequest.cs" />
+    <Compile Include="V20201101\Models\AddComplianceAssetPolicySetToWhitelistResponse.cs" />
+    <Compile Include="V20201101\Models\AddCompliancePolicyAssetSetToWhitelistRequest.cs" />
+    <Compile Include="V20201101\Models\AddCompliancePolicyAssetSetToWhitelistResponse.cs" />
     <Compile Include="V20201101\Models\AddCompliancePolicyItemToWhitelistRequest.cs" />
     <Compile Include="V20201101\Models\AddCompliancePolicyItemToWhitelistResponse.cs" />
     <Compile Include="V20201101\Models\AddEditAbnormalProcessRuleRequest.cs" />
@@ -109,6 +113,7 @@
     <Compile Include="V20201101\Models\ComplianceAssetDetailInfo.cs" />
     <Compile Include="V20201101\Models\ComplianceAssetInfo.cs" />
     <Compile Include="V20201101\Models\ComplianceAssetPolicyItem.cs" />
+    <Compile Include="V20201101\Models\ComplianceAssetPolicySetItem.cs" />
     <Compile Include="V20201101\Models\ComplianceAssetSummary.cs" />
     <Compile Include="V20201101\Models\ComplianceBenchmarkStandard.cs" />
     <Compile Include="V20201101\Models\ComplianceBenchmarkStandardEnable.cs" />
@@ -119,6 +124,7 @@
     <Compile Include="V20201101\Models\ComplianceK8SDetailInfo.cs" />
     <Compile Include="V20201101\Models\CompliancePeriodTask.cs" />
     <Compile Include="V20201101\Models\CompliancePeriodTaskRule.cs" />
+    <Compile Include="V20201101\Models\CompliancePolicyAssetSetItem.cs" />
     <Compile Include="V20201101\Models\CompliancePolicyItemSummary.cs" />
     <Compile Include="V20201101\Models\ComplianceScanFailedAsset.cs" />
     <Compile Include="V20201101\Models\ComplianceWhitelistItem.cs" />
@@ -201,6 +207,10 @@
     <Compile Include="V20201101\Models\DeleteAbnormalProcessRulesResponse.cs" />
     <Compile Include="V20201101\Models\DeleteAccessControlRulesRequest.cs" />
     <Compile Include="V20201101\Models\DeleteAccessControlRulesResponse.cs" />
+    <Compile Include="V20201101\Models\DeleteComplianceAssetPolicySetFromWhitelistRequest.cs" />
+    <Compile Include="V20201101\Models\DeleteComplianceAssetPolicySetFromWhitelistResponse.cs" />
+    <Compile Include="V20201101\Models\DeleteCompliancePolicyAssetSetFromWhitelistRequest.cs" />
+    <Compile Include="V20201101\Models\DeleteCompliancePolicyAssetSetFromWhitelistResponse.cs" />
     <Compile Include="V20201101\Models\DeleteCompliancePolicyItemFromWhitelistRequest.cs" />
     <Compile Include="V20201101\Models\DeleteCompliancePolicyItemFromWhitelistResponse.cs" />
     <Compile Include="V20201101\Models\DeleteEscapeWhiteListRequest.cs" />
@@ -409,6 +419,8 @@
     <Compile Include="V20201101\Models\DescribeImageAutoAuthorizedTaskListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeImageComponentListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeImageComponentListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageRegistryNamespaceListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageRegistryNamespaceListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeImageRegistryTimingScanTaskRequest.cs" />
     <Compile Include="V20201101\Models\DescribeImageRegistryTimingScanTaskResponse.cs" />
     <Compile Include="V20201101\Models\DescribeImageRiskSummaryRequest.cs" />

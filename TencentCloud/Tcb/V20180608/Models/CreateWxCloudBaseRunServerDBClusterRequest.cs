@@ -48,6 +48,14 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
+        /// <summary>
+        /// 0: 非大小写敏感
+        /// 1: 大小写敏感
+        /// 默认 0
+        /// </summary>
+        [JsonProperty("LowerCaseTableName")]
+        public string LowerCaseTableName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +66,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "WxAppId", this.WxAppId);
             this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
+            this.SetParamSimple(map, prefix + "LowerCaseTableName", this.LowerCaseTableName);
         }
     }
 }

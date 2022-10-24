@@ -58,6 +58,27 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExternalLabels")]
         public Label[] ExternalLabels{ get; set; }
 
+        /// <summary>
+        /// 集群所在地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 集群所在VPC ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// 记录关联等操作的失败信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailedReason")]
+        public string FailedReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +90,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamArrayObj(map, prefix + "ExternalLabels.", this.ExternalLabels);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "FailedReason", this.FailedReason);
         }
     }
 }

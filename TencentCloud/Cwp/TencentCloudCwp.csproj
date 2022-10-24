@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.623</VersionPrefix>
+    <VersionPrefix>3.0.624</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -82,10 +82,12 @@
     <Compile Include="V20180228\Models\BaselineDetectParam.cs" />
     <Compile Include="V20180228\Models\BaselineEffectHost.cs" />
     <Compile Include="V20180228\Models\BaselineEventLevelInfo.cs" />
+    <Compile Include="V20180228\Models\BaselineHostDetect.cs" />
     <Compile Include="V20180228\Models\BaselineHostTopList.cs" />
     <Compile Include="V20180228\Models\BaselineInfo.cs" />
     <Compile Include="V20180228\Models\BaselineItem.cs" />
     <Compile Include="V20180228\Models\BaselineItemDetect.cs" />
+    <Compile Include="V20180228\Models\BaselinePolicy.cs" />
     <Compile Include="V20180228\Models\BaselineRuleInfo.cs" />
     <Compile Include="V20180228\Models\BaselineRuleTopInfo.cs" />
     <Compile Include="V20180228\Models\BashEvent.cs" />
@@ -117,6 +119,8 @@
     <Compile Include="V20180228\Models\DefendAttackLog.cs" />
     <Compile Include="V20180228\Models\DeleteAttackLogsRequest.cs" />
     <Compile Include="V20180228\Models\DeleteAttackLogsResponse.cs" />
+    <Compile Include="V20180228\Models\DeleteBaselinePolicyRequest.cs" />
+    <Compile Include="V20180228\Models\DeleteBaselinePolicyResponse.cs" />
     <Compile Include="V20180228\Models\DeleteBaselineStrategyRequest.cs" />
     <Compile Include="V20180228\Models\DeleteBaselineStrategyResponse.cs" />
     <Compile Include="V20180228\Models\DeleteBashEventsRequest.cs" />
@@ -151,6 +155,8 @@
     <Compile Include="V20180228\Models\DeleteReverseShellEventsResponse.cs" />
     <Compile Include="V20180228\Models\DeleteReverseShellRulesRequest.cs" />
     <Compile Include="V20180228\Models\DeleteReverseShellRulesResponse.cs" />
+    <Compile Include="V20180228\Models\DeleteScanTaskRequest.cs" />
+    <Compile Include="V20180228\Models\DeleteScanTaskResponse.cs" />
     <Compile Include="V20180228\Models\DeleteSearchTemplateRequest.cs" />
     <Compile Include="V20180228\Models\DeleteSearchTemplateResponse.cs" />
     <Compile Include="V20180228\Models\DeleteTagsRequest.cs" />
@@ -239,6 +245,8 @@
     <Compile Include="V20180228\Models\DescribeBaselineDetailResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineEffectHostListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineEffectHostListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineHostDetectListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineHostDetectListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineHostTopRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineHostTopResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineItemDetectListRequest.cs" />
@@ -247,6 +255,8 @@
     <Compile Include="V20180228\Models\DescribeBaselineItemListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselinePolicyListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselinePolicyListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineRuleRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineRuleResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineScanScheduleRequest.cs" />
@@ -295,6 +305,8 @@
     <Compile Include="V20180228\Models\DescribeImportMachineInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeIndexListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeIndexListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeJavaMemShellListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeJavaMemShellListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeLicenseBindListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeLicenseBindListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeLicenseBindScheduleRequest.cs" />
@@ -496,6 +508,7 @@
     <Compile Include="V20180228\Models\IgnoreImpactedHostsRequest.cs" />
     <Compile Include="V20180228\Models\IgnoreImpactedHostsResponse.cs" />
     <Compile Include="V20180228\Models\IgnoreRuleEffectHostInfo.cs" />
+    <Compile Include="V20180228\Models\JavaMemShellInfo.cs" />
     <Compile Include="V20180228\Models\LicenseBindDetail.cs" />
     <Compile Include="V20180228\Models\LicenseBindTaskDetail.cs" />
     <Compile Include="V20180228\Models\LicenseDetail.cs" />
@@ -515,6 +528,8 @@
     <Compile Include="V20180228\Models\ModifyBanModeResponse.cs" />
     <Compile Include="V20180228\Models\ModifyBanStatusRequest.cs" />
     <Compile Include="V20180228\Models\ModifyBanStatusResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyBaselinePolicyRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyBaselinePolicyResponse.cs" />
     <Compile Include="V20180228\Models\ModifyBruteAttackRulesRequest.cs" />
     <Compile Include="V20180228\Models\ModifyBruteAttackRulesResponse.cs" />
     <Compile Include="V20180228\Models\ModifyLicenseBindsRequest.cs" />
@@ -576,6 +591,8 @@
     <Compile Include="V20180228\Models\StandardModeConfig.cs" />
     <Compile Include="V20180228\Models\StartBaselineDetectRequest.cs" />
     <Compile Include="V20180228\Models\StartBaselineDetectResponse.cs" />
+    <Compile Include="V20180228\Models\StopBaselineDetectRequest.cs" />
+    <Compile Include="V20180228\Models\StopBaselineDetectResponse.cs" />
     <Compile Include="V20180228\Models\StopNoticeBanTipsRequest.cs" />
     <Compile Include="V20180228\Models\StopNoticeBanTipsResponse.cs" />
     <Compile Include="V20180228\Models\Strategy.cs" />

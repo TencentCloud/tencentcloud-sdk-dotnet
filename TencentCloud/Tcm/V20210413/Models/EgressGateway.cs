@@ -42,6 +42,12 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("Workload")]
         public WorkloadConfig Workload{ get; set; }
 
+        /// <summary>
+        /// 工作负载的状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public EgressGatewayStatus Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamObj(map, prefix + "Workload.", this.Workload);
+            this.SetParamObj(map, prefix + "Status.", this.Status);
         }
     }
 }

@@ -173,6 +173,90 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 新增安全合规忽略(资产+检测项列表)列表，不显示指定的检查项包含的资产内容
+        /// 参考的AddCompliancePolicyItemToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
+        /// </summary>
+        /// <param name="req"><see cref="AddComplianceAssetPolicySetToWhitelistRequest"/></param>
+        /// <returns><see cref="AddComplianceAssetPolicySetToWhitelistResponse"/></returns>
+        public async Task<AddComplianceAssetPolicySetToWhitelistResponse> AddComplianceAssetPolicySetToWhitelist(AddComplianceAssetPolicySetToWhitelistRequest req)
+        {
+             JsonResponseModel<AddComplianceAssetPolicySetToWhitelistResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddComplianceAssetPolicySetToWhitelist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddComplianceAssetPolicySetToWhitelistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增安全合规忽略(资产+检测项列表)列表，不显示指定的检查项包含的资产内容
+        /// 参考的AddCompliancePolicyItemToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
+        /// </summary>
+        /// <param name="req"><see cref="AddComplianceAssetPolicySetToWhitelistRequest"/></param>
+        /// <returns><see cref="AddComplianceAssetPolicySetToWhitelistResponse"/></returns>
+        public AddComplianceAssetPolicySetToWhitelistResponse AddComplianceAssetPolicySetToWhitelistSync(AddComplianceAssetPolicySetToWhitelistRequest req)
+        {
+             JsonResponseModel<AddComplianceAssetPolicySetToWhitelistResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddComplianceAssetPolicySetToWhitelist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddComplianceAssetPolicySetToWhitelistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增安全合规忽略(检测项+资产)列表，不显示指定的检查项包含的资产内容
+        /// 参考的AddCompliancePolicyItemToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
+        /// </summary>
+        /// <param name="req"><see cref="AddCompliancePolicyAssetSetToWhitelistRequest"/></param>
+        /// <returns><see cref="AddCompliancePolicyAssetSetToWhitelistResponse"/></returns>
+        public async Task<AddCompliancePolicyAssetSetToWhitelistResponse> AddCompliancePolicyAssetSetToWhitelist(AddCompliancePolicyAssetSetToWhitelistRequest req)
+        {
+             JsonResponseModel<AddCompliancePolicyAssetSetToWhitelistResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddCompliancePolicyAssetSetToWhitelist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddCompliancePolicyAssetSetToWhitelistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增安全合规忽略(检测项+资产)列表，不显示指定的检查项包含的资产内容
+        /// 参考的AddCompliancePolicyItemToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
+        /// </summary>
+        /// <param name="req"><see cref="AddCompliancePolicyAssetSetToWhitelistRequest"/></param>
+        /// <returns><see cref="AddCompliancePolicyAssetSetToWhitelistResponse"/></returns>
+        public AddCompliancePolicyAssetSetToWhitelistResponse AddCompliancePolicyAssetSetToWhitelistSync(AddCompliancePolicyAssetSetToWhitelistRequest req)
+        {
+             JsonResponseModel<AddCompliancePolicyAssetSetToWhitelistResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddCompliancePolicyAssetSetToWhitelist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddCompliancePolicyAssetSetToWhitelistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 将指定的检测项添加到白名单中，不显示未通过结果。
         /// </summary>
         /// <param name="req"><see cref="AddCompliancePolicyItemToWhitelistRequest"/></param>
@@ -2164,6 +2248,88 @@ namespace TencentCloud.Tcss.V20201101
              {
                  var strResp = this.InternalRequestSync(req, "DeleteAccessControlRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccessControlRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 移除安全合规忽略(资产+检测项)列表，不显示指定的检查项包含的资产内容
+        /// 参考的AddCompliancePolicyAssetSetToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
+        /// </summary>
+        /// <param name="req"><see cref="DeleteComplianceAssetPolicySetFromWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteComplianceAssetPolicySetFromWhitelistResponse"/></returns>
+        public async Task<DeleteComplianceAssetPolicySetFromWhitelistResponse> DeleteComplianceAssetPolicySetFromWhitelist(DeleteComplianceAssetPolicySetFromWhitelistRequest req)
+        {
+             JsonResponseModel<DeleteComplianceAssetPolicySetFromWhitelistResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteComplianceAssetPolicySetFromWhitelist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteComplianceAssetPolicySetFromWhitelistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 移除安全合规忽略(资产+检测项)列表，不显示指定的检查项包含的资产内容
+        /// 参考的AddCompliancePolicyAssetSetToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
+        /// </summary>
+        /// <param name="req"><see cref="DeleteComplianceAssetPolicySetFromWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteComplianceAssetPolicySetFromWhitelistResponse"/></returns>
+        public DeleteComplianceAssetPolicySetFromWhitelistResponse DeleteComplianceAssetPolicySetFromWhitelistSync(DeleteComplianceAssetPolicySetFromWhitelistRequest req)
+        {
+             JsonResponseModel<DeleteComplianceAssetPolicySetFromWhitelistResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteComplianceAssetPolicySetFromWhitelist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteComplianceAssetPolicySetFromWhitelistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增安全合规忽略(检测项+资产)列表，不显示指定的检查项包含的资产内容
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCompliancePolicyAssetSetFromWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteCompliancePolicyAssetSetFromWhitelistResponse"/></returns>
+        public async Task<DeleteCompliancePolicyAssetSetFromWhitelistResponse> DeleteCompliancePolicyAssetSetFromWhitelist(DeleteCompliancePolicyAssetSetFromWhitelistRequest req)
+        {
+             JsonResponseModel<DeleteCompliancePolicyAssetSetFromWhitelistResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCompliancePolicyAssetSetFromWhitelist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCompliancePolicyAssetSetFromWhitelistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增安全合规忽略(检测项+资产)列表，不显示指定的检查项包含的资产内容
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCompliancePolicyAssetSetFromWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteCompliancePolicyAssetSetFromWhitelistResponse"/></returns>
+        public DeleteCompliancePolicyAssetSetFromWhitelistResponse DeleteCompliancePolicyAssetSetFromWhitelistSync(DeleteCompliancePolicyAssetSetFromWhitelistRequest req)
+        {
+             JsonResponseModel<DeleteCompliancePolicyAssetSetFromWhitelistResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCompliancePolicyAssetSetFromWhitelist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCompliancePolicyAssetSetFromWhitelistResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -6324,6 +6490,46 @@ namespace TencentCloud.Tcss.V20201101
              {
                  var strResp = this.InternalRequestSync(req, "DescribeImageComponentList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageComponentListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户镜像仓库下的项目名称列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryNamespaceListRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryNamespaceListResponse"/></returns>
+        public async Task<DescribeImageRegistryNamespaceListResponse> DescribeImageRegistryNamespaceList(DescribeImageRegistryNamespaceListRequest req)
+        {
+             JsonResponseModel<DescribeImageRegistryNamespaceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageRegistryNamespaceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageRegistryNamespaceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户镜像仓库下的项目名称列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRegistryNamespaceListRequest"/></param>
+        /// <returns><see cref="DescribeImageRegistryNamespaceListResponse"/></returns>
+        public DescribeImageRegistryNamespaceListResponse DescribeImageRegistryNamespaceListSync(DescribeImageRegistryNamespaceListRequest req)
+        {
+             JsonResponseModel<DescribeImageRegistryNamespaceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageRegistryNamespaceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageRegistryNamespaceListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

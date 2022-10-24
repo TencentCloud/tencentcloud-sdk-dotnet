@@ -30,6 +30,24 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("LoadBalancer")]
         public LoadBalancerStatus LoadBalancer{ get; set; }
 
+        /// <summary>
+        /// ingress gateway 当前的版本
+        /// </summary>
+        [JsonProperty("CurrentVersion")]
+        public string CurrentVersion{ get; set; }
+
+        /// <summary>
+        /// ingress gateway 目标的版本
+        /// </summary>
+        [JsonProperty("DesiredVersion")]
+        public string DesiredVersion{ get; set; }
+
+        /// <summary>
+        /// ingress gateway的状态，取值running, upgrading, rollbacking
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +55,9 @@ namespace TencentCloud.Tcm.V20210413.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "LoadBalancer.", this.LoadBalancer);
+            this.SetParamSimple(map, prefix + "CurrentVersion", this.CurrentVersion);
+            this.SetParamSimple(map, prefix + "DesiredVersion", this.DesiredVersion);
+            this.SetParamSimple(map, prefix + "State", this.State);
         }
     }
 }

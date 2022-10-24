@@ -105,6 +105,12 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("Status")]
         public MeshStatus Status{ get; set; }
 
+        /// <summary>
+        /// 标签列表
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +128,7 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamArrayObj(map, prefix + "ClusterList.", this.ClusterList);
             this.SetParamObj(map, prefix + "Config.", this.Config);
             this.SetParamObj(map, prefix + "Status.", this.Status);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }
