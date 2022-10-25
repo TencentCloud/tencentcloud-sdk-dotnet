@@ -25,12 +25,6 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 导出字段
-        /// </summary>
-        [JsonProperty("ExportField")]
-        public string[] ExportField{ get; set; }
-
-        /// <summary>
         /// 过滤条件。
         /// <li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li>
         /// <li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li>
@@ -64,18 +58,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
+        /// <summary>
+        /// 导出字段
+        /// </summary>
+        [JsonProperty("ExportField")]
+        public string[] ExportField{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "ExportField.", this.ExportField);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "By", this.By);
             this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamArraySimple(map, prefix + "ExportField.", this.ExportField);
         }
     }
 }

@@ -224,6 +224,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EnableHybridStorage")]
         public bool? EnableHybridStorage{ get; set; }
 
+        /// <summary>
+        /// 是否开启essd 增强型云盘
+        /// </summary>
+        [JsonProperty("DiskEnhance")]
+        public ulong? DiskEnhance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +268,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
             this.SetParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
+            this.SetParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
         }
     }
 }

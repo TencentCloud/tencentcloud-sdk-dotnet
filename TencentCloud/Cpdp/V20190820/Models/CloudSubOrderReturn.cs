@@ -110,6 +110,20 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("WxSubMchId")]
         public string WxSubMchId{ get; set; }
 
+        /// <summary>
+        /// 米大师侧渠道子订单号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelSubPayOrderId")]
+        public string ChannelSubPayOrderId{ get; set; }
+
+        /// <summary>
+        /// 物品ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +144,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamObj(map, prefix + "AttachmentInfoList.", this.AttachmentInfoList);
             this.SetParamSimple(map, prefix + "ChannelExternalSubOrderId", this.ChannelExternalSubOrderId);
             this.SetParamSimple(map, prefix + "WxSubMchId", this.WxSubMchId);
+            this.SetParamSimple(map, prefix + "ChannelSubPayOrderId", this.ChannelSubPayOrderId);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

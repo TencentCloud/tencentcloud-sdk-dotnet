@@ -38,6 +38,55 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
+        /// <summary>
+        /// 版本名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VersionName")]
+        public string VersionName{ get; set; }
+
+        /// <summary>
+        /// Ready实例数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReadyReplicas")]
+        public long? ReadyReplicas{ get; set; }
+
+        /// <summary>
+        /// 实例数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Replicas")]
+        public long? Replicas{ get; set; }
+
+        /// <summary>
+        /// Updated实例数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdatedReplicas")]
+        public long? UpdatedReplicas{ get; set; }
+
+        /// <summary>
+        /// UpdatedReady实例数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdatedReadyReplicas")]
+        public long? UpdatedReadyReplicas{ get; set; }
+
+        /// <summary>
+        /// 更新版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateRevision")]
+        public string UpdateRevision{ get; set; }
+
+        /// <summary>
+        /// 当前版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CurrentRevision")]
+        public string CurrentRevision{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +95,13 @@ namespace TencentCloud.Tem.V20210701.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
+            this.SetParamSimple(map, prefix + "VersionName", this.VersionName);
+            this.SetParamSimple(map, prefix + "ReadyReplicas", this.ReadyReplicas);
+            this.SetParamSimple(map, prefix + "Replicas", this.Replicas);
+            this.SetParamSimple(map, prefix + "UpdatedReplicas", this.UpdatedReplicas);
+            this.SetParamSimple(map, prefix + "UpdatedReadyReplicas", this.UpdatedReadyReplicas);
+            this.SetParamSimple(map, prefix + "UpdateRevision", this.UpdateRevision);
+            this.SetParamSimple(map, prefix + "CurrentRevision", this.CurrentRevision);
         }
     }
 }

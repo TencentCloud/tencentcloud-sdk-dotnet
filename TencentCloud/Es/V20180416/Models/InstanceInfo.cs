@@ -73,7 +73,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string SubnetUid{ get; set; }
 
         /// <summary>
-        /// 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+        /// 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -546,6 +546,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EnableHybridStorage")]
         public bool? EnableHybridStorage{ get; set; }
 
+        /// <summary>
+        /// 流程进度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProcessPercent")]
+        public float? ProcessPercent{ get; set; }
+
+        /// <summary>
+        /// Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KibanaAlteringPublicAccess")]
+        public string KibanaAlteringPublicAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -631,6 +645,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "OptionalWebServiceInfos.", this.OptionalWebServiceInfos);
             this.SetParamSimple(map, prefix + "AutoIndexEnabled", this.AutoIndexEnabled);
             this.SetParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
+            this.SetParamSimple(map, prefix + "ProcessPercent", this.ProcessPercent);
+            this.SetParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
         }
     }
 }

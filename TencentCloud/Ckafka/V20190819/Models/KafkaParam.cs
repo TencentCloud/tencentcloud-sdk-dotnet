@@ -112,6 +112,20 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("UseTableMapping")]
         public bool? UseTableMapping{ get; set; }
 
+        /// <summary>
+        /// 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UseAutoCreateTopic")]
+        public bool? UseAutoCreateTopic{ get; set; }
+
+        /// <summary>
+        /// 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CompressionType")]
+        public string CompressionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +145,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "QpsLimit", this.QpsLimit);
             this.SetParamArrayObj(map, prefix + "TableMappings.", this.TableMappings);
             this.SetParamSimple(map, prefix + "UseTableMapping", this.UseTableMapping);
+            this.SetParamSimple(map, prefix + "UseAutoCreateTopic", this.UseAutoCreateTopic);
+            this.SetParamSimple(map, prefix + "CompressionType", this.CompressionType);
         }
     }
 }

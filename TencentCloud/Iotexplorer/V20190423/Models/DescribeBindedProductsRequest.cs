@@ -42,6 +42,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 是否跨账号绑定产品
+        /// </summary>
+        [JsonProperty("ProductSource")]
+        public long? ProductSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "GatewayProductId", this.GatewayProductId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ProductSource", this.ProductSource);
         }
     }
 }

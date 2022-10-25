@@ -60,6 +60,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("LatestTamperedFileMTime")]
         public string LatestTamperedFileMTime{ get; set; }
 
+        /// <summary>
+        /// 新文件内容
+        /// </summary>
+        [JsonProperty("NewFile")]
+        public string NewFile{ get; set; }
+
+        /// <summary>
+        /// 新旧文件的差异
+        /// </summary>
+        [JsonProperty("FileDiff")]
+        public string FileDiff{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "FilePath", this.FilePath);
             this.SetParamSimple(map, prefix + "FileCreateTime", this.FileCreateTime);
             this.SetParamSimple(map, prefix + "LatestTamperedFileMTime", this.LatestTamperedFileMTime);
+            this.SetParamSimple(map, prefix + "NewFile", this.NewFile);
+            this.SetParamSimple(map, prefix + "FileDiff", this.FileDiff);
         }
     }
 }

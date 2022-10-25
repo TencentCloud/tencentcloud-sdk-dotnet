@@ -67,6 +67,15 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("CertInfo")]
         public ServerCertInfo[] CertInfo{ get; set; }
 
+        /// <summary>
+        /// 申请类型，取值有：
+        /// <li>apply：托管EdgeOne；</li>
+        /// <li>none：不托管EdgeOne。</li>不填，默认取值为none。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplyType")]
+        public string ApplyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +87,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "TlsVersion.", this.TlsVersion);
             this.SetParamObj(map, prefix + "Hsts.", this.Hsts);
             this.SetParamArrayObj(map, prefix + "CertInfo.", this.CertInfo);
+            this.SetParamSimple(map, prefix + "ApplyType", this.ApplyType);
         }
     }
 }

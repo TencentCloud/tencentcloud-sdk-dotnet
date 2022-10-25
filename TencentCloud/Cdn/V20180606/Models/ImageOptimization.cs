@@ -45,6 +45,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("GuetzliAdapter")]
         public GuetzliAdapter GuetzliAdapter{ get; set; }
 
+        /// <summary>
+        /// AvifAdapter配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AvifAdapter")]
+        public AvifAdapter AvifAdapter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "WebpAdapter.", this.WebpAdapter);
             this.SetParamObj(map, prefix + "TpgAdapter.", this.TpgAdapter);
             this.SetParamObj(map, prefix + "GuetzliAdapter.", this.GuetzliAdapter);
+            this.SetParamObj(map, prefix + "AvifAdapter.", this.AvifAdapter);
         }
     }
 }

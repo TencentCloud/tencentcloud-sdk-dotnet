@@ -48,6 +48,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("ChannelSettleId")]
         public string ChannelSettleId{ get; set; }
 
+        /// <summary>
+        /// 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+        /// </summary>
+        [JsonProperty("Environment")]
+        public string Environment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "ChannelSubMerchantId", this.ChannelSubMerchantId);
             this.SetParamSimple(map, prefix + "OutSettleId", this.OutSettleId);
             this.SetParamSimple(map, prefix + "ChannelSettleId", this.ChannelSettleId);
+            this.SetParamSimple(map, prefix + "Environment", this.Environment);
         }
     }
 }

@@ -107,6 +107,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("UseDefaultImageServiceParameters")]
         public UseDefaultRepoParameters UseDefaultImageServiceParameters{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +132,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "DeployMode", this.DeployMode);
             this.SetParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
             this.SetParamObj(map, prefix + "UseDefaultImageServiceParameters.", this.UseDefaultImageServiceParameters);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

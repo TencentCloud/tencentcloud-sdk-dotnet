@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.624</VersionPrefix>
+    <VersionPrefix>3.0.625</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,8 @@
     <Compile Include="V20210526\Models\CcInfo.cs" />
     <Compile Include="V20210526\Models\ChannelBatchCancelFlowsRequest.cs" />
     <Compile Include="V20210526\Models\ChannelBatchCancelFlowsResponse.cs" />
+    <Compile Include="V20210526\Models\ChannelCancelFlowRequest.cs" />
+    <Compile Include="V20210526\Models\ChannelCancelFlowResponse.cs" />
     <Compile Include="V20210526\Models\ChannelCancelMultiFlowSignQRCodeRequest.cs" />
     <Compile Include="V20210526\Models\ChannelCancelMultiFlowSignQRCodeResponse.cs" />
     <Compile Include="V20210526\Models\ChannelCreateBatchCancelFlowUrlRequest.cs" />

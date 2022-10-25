@@ -157,6 +157,15 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
+        /// <summary>
+        /// 高危信息说明：
+        /// ABROAD - 海外IP；
+        /// XTI - 威胁情报
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Desc")]
+        public string Desc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +191,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
             this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
+            this.SetParamSimple(map, prefix + "Desc", this.Desc);
         }
     }
 }

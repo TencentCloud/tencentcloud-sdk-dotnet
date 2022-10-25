@@ -78,6 +78,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("DevStatus")]
         public string DevStatus{ get; set; }
 
+        /// <summary>
+        /// 产品拥有者名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductOwnerName")]
+        public string ProductOwnerName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +99,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProductType", this.ProductType);
             this.SetParamSimple(map, prefix + "NetType", this.NetType);
             this.SetParamSimple(map, prefix + "DevStatus", this.DevStatus);
+            this.SetParamSimple(map, prefix + "ProductOwnerName", this.ProductOwnerName);
         }
     }
 }

@@ -66,6 +66,24 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("NotifyUrl")]
         public string NotifyUrl{ get; set; }
 
+        /// <summary>
+        /// 附言
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 结算第三方渠道扩展信息。通联国际必选
+        /// </summary>
+        [JsonProperty("ExternalSettleData")]
+        public string ExternalSettleData{ get; set; }
+
+        /// <summary>
+        /// 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+        /// </summary>
+        [JsonProperty("Environment")]
+        public string Environment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "ChannelSubMerchantId", this.ChannelSubMerchantId);
             this.SetParamSimple(map, prefix + "SettleDetail", this.SettleDetail);
             this.SetParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "ExternalSettleData", this.ExternalSettleData);
+            this.SetParamSimple(map, prefix + "Environment", this.Environment);
         }
     }
 }

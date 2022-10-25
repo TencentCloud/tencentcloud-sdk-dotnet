@@ -72,6 +72,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
 
+        /// <summary>
+        /// 地域ID
+        /// </summary>
+        [JsonProperty("RegionID")]
+        public string RegionID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArrayObj(map, prefix + "LogTypeList.", this.LogTypeList);
             this.SetParamSimple(map, prefix + "AccessType", this.AccessType);
             this.SetParamSimple(map, prefix + "KafkaVersion", this.KafkaVersion);
+            this.SetParamSimple(map, prefix + "RegionID", this.RegionID);
         }
     }
 }

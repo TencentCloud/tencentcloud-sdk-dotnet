@@ -37,6 +37,22 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] FlowIds{ get; set; }
 
         /// <summary>
+        /// 撤销理由
+        /// </summary>
+        [JsonProperty("CancelMessage")]
+        public string CancelMessage{ get; set; }
+
+        /// <summary>
+        /// 撤销理由自定义格式；选项：
+        /// 0 默认格式
+        /// 1 只保留身份信息：展示为【发起方】
+        /// 2 保留身份信息+企业名称：展示为【发起方xxx公司】
+        /// 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+        /// </summary>
+        [JsonProperty("CancelMessageFormat")]
+        public long? CancelMessageFormat{ get; set; }
+
+        /// <summary>
         /// 操作人信息
         /// </summary>
         [JsonProperty("Operator")]
@@ -50,6 +66,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+            this.SetParamSimple(map, prefix + "CancelMessage", this.CancelMessage);
+            this.SetParamSimple(map, prefix + "CancelMessageFormat", this.CancelMessageFormat);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }

@@ -117,6 +117,48 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("UnderDeploying")]
         public bool? UnderDeploying{ get; set; }
 
+        /// <summary>
+        /// 分批次部署状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BatchDeployStatus")]
+        public string BatchDeployStatus{ get; set; }
+
+        /// <summary>
+        /// 可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// 节点信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeInfos")]
+        public NodeInfo[] NodeInfos{ get; set; }
+
+        /// <summary>
+        /// 实例信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PodList")]
+        public DescribeRunPodPage PodList{ get; set; }
+
+        /// <summary>
+        /// 工作负载信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkloadInfo")]
+        public WorkloadInfo WorkloadInfo{ get; set; }
+
+        /// <summary>
+        /// 创建日期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateDate")]
+        public string CreateDate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +179,12 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
             this.SetParamSimple(map, prefix + "UnderDeploying", this.UnderDeploying);
+            this.SetParamSimple(map, prefix + "BatchDeployStatus", this.BatchDeployStatus);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamArrayObj(map, prefix + "NodeInfos.", this.NodeInfos);
+            this.SetParamObj(map, prefix + "PodList.", this.PodList);
+            this.SetParamObj(map, prefix + "WorkloadInfo.", this.WorkloadInfo);
+            this.SetParamSimple(map, prefix + "CreateDate", this.CreateDate);
         }
     }
 }

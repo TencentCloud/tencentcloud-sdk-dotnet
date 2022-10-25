@@ -66,6 +66,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("PgwVpcInfos")]
         public VpcInfo[] PgwVpcInfos{ get; set; }
 
+        /// <summary>
+        /// 服务治理限流server引擎绑定的网络信息
+        /// </summary>
+        [JsonProperty("LimiterVpcInfos")]
+        public VpcInfo[] LimiterVpcInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArraySimple(map, prefix + "Features.", this.Features);
             this.SetParamSimple(map, prefix + "MainPassword", this.MainPassword);
             this.SetParamArrayObj(map, prefix + "PgwVpcInfos.", this.PgwVpcInfos);
+            this.SetParamArrayObj(map, prefix + "LimiterVpcInfos.", this.LimiterVpcInfos);
         }
     }
 }

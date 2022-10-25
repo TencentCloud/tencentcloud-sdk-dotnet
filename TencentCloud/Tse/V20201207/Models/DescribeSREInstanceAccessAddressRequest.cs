@@ -43,7 +43,7 @@ namespace TencentCloud.Tse.V20201207.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 引擎其他组件名称（pushgateway）
+        /// 引擎其他组件名称（pushgateway、polaris-limiter）
         /// </summary>
         [JsonProperty("Workload")]
         public string Workload{ get; set; }

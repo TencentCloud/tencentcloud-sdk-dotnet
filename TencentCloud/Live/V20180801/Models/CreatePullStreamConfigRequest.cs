@@ -29,7 +29,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// 注意：
         /// 1. 多个点播url之间使用空格拼接。
         /// 2. 目前上限支持10个url。
-        /// 3. 支持拉流文件格式：flv，rtmp，hls，mp4。
+        /// 3. 目前不支持https协议。
+        /// 4. 支持拉流文件格式：flv，rtmp，hls，mp4。
         /// </summary>
         [JsonProperty("FromUrl")]
         public string FromUrl{ get; set; }

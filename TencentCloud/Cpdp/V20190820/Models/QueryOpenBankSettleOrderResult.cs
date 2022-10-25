@@ -90,6 +90,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("SettleFee")]
         public string SettleFee{ get; set; }
 
+        /// <summary>
+        /// 账户货币。参考附录“币种类型”。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Currency")]
+        public string Currency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +112,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "FailReason", this.FailReason);
             this.SetParamSimple(map, prefix + "TimeFinish", this.TimeFinish);
             this.SetParamSimple(map, prefix + "SettleFee", this.SettleFee);
+            this.SetParamSimple(map, prefix + "Currency", this.Currency);
         }
     }
 }

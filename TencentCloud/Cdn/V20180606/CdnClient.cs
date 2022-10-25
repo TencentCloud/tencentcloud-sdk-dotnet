@@ -1081,7 +1081,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG 和 Guetzli。 
+        /// DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG、 Guetzli 和 Avif。 
         /// </summary>
         /// <param name="req"><see cref="DescribeImageConfigRequest"/></param>
         /// <returns><see cref="DescribeImageConfigResponse"/></returns>
@@ -1101,7 +1101,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG 和 Guetzli。 
+        /// DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG、 Guetzli 和 Avif。 
         /// </summary>
         /// <param name="req"><see cref="DescribeImageConfigRequest"/></param>
         /// <returns><see cref="DescribeImageConfigResponse"/></returns>
@@ -3121,7 +3121,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// UpdateImageConfig 用于更新控制台图片优化的相关配置，支持Webp、TPG 和 Guetzli。 
+        /// UpdateImageConfig 用于更新控制台图片优化的相关配置，支持Webp、TPG、 Guetzli 和 Avif。 
         /// </summary>
         /// <param name="req"><see cref="UpdateImageConfigRequest"/></param>
         /// <returns><see cref="UpdateImageConfigResponse"/></returns>
@@ -3141,7 +3141,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// UpdateImageConfig 用于更新控制台图片优化的相关配置，支持Webp、TPG 和 Guetzli。 
+        /// UpdateImageConfig 用于更新控制台图片优化的相关配置，支持Webp、TPG、 Guetzli 和 Avif。 
         /// </summary>
         /// <param name="req"><see cref="UpdateImageConfigRequest"/></param>
         /// <returns><see cref="UpdateImageConfigResponse"/></returns>

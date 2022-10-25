@@ -129,6 +129,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("BenchmarkStandardId")]
         public ulong? BenchmarkStandardId{ get; set; }
 
+        /// <summary>
+        /// 检测项适用的版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicableVersion")]
+        public string ApplicableVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +157,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "WhitelistId", this.WhitelistId);
             this.SetParamSimple(map, prefix + "FixSuggestion", this.FixSuggestion);
             this.SetParamSimple(map, prefix + "BenchmarkStandardId", this.BenchmarkStandardId);
+            this.SetParamSimple(map, prefix + "ApplicableVersion", this.ApplicableVersion);
         }
     }
 }

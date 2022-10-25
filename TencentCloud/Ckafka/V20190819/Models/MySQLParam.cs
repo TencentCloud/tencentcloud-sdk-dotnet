@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Database{ get; set; }
 
         /// <summary>
-        /// MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
+        /// MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
@@ -168,6 +168,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("SignalDatabase")]
         public string SignalDatabase{ get; set; }
 
+        /// <summary>
+        /// 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+        /// </summary>
+        [JsonProperty("IsTableRegular")]
+        public bool? IsTableRegular{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "IncludeQuery", this.IncludeQuery);
             this.SetParamSimple(map, prefix + "RecordWithSchema", this.RecordWithSchema);
             this.SetParamSimple(map, prefix + "SignalDatabase", this.SignalDatabase);
+            this.SetParamSimple(map, prefix + "IsTableRegular", this.IsTableRegular);
         }
     }
 }

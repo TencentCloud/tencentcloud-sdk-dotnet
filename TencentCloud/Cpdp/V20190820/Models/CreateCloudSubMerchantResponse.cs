@@ -25,25 +25,32 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 子应用Id。
+        /// 子应用ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubAppId")]
         public string SubAppId{ get; set; }
 
         /// <summary>
-        /// 渠道子商户Id。
+        /// 渠道子商户ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelSubMerchantId")]
         public string ChannelSubMerchantId{ get; set; }
 
         /// <summary>
-        /// 层级，从0开始。
+        /// 层级，从0开始
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }
+
+        /// <summary>
+        /// 渠道应用ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelAppId")]
+        public string ChannelAppId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -60,6 +67,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "ChannelSubMerchantId", this.ChannelSubMerchantId);
             this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "ChannelAppId", this.ChannelAppId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

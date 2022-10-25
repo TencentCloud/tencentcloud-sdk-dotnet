@@ -99,6 +99,50 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 渠道版撤销签署流程接口
+        /// 注意:
+        /// 能撤回合同的只能是合同的发起人或者发起企业的超管、法人
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCancelFlowRequest"/></param>
+        /// <returns><see cref="ChannelCancelFlowResponse"/></returns>
+        public async Task<ChannelCancelFlowResponse> ChannelCancelFlow(ChannelCancelFlowRequest req)
+        {
+             JsonResponseModel<ChannelCancelFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCancelFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCancelFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道版撤销签署流程接口
+        /// 注意:
+        /// 能撤回合同的只能是合同的发起人或者发起企业的超管、法人
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCancelFlowRequest"/></param>
+        /// <returns><see cref="ChannelCancelFlowResponse"/></returns>
+        public ChannelCancelFlowResponse ChannelCancelFlowSync(ChannelCancelFlowRequest req)
+        {
+             JsonResponseModel<ChannelCancelFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCancelFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCancelFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口（ChannelCancelMultiFlowSignQRCode）用于取消一码多扫二维码。该接口对传入的二维码ID，若还在有效期内，可以提前失效。
         /// </summary>
         /// <param name="req"><see cref="ChannelCancelMultiFlowSignQRCodeRequest"/></param>
@@ -799,7 +843,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 通过此接口（DescribeTemplates）查询该子客企业在电子签拥有的的有效模板，不包括渠道模版
+        /// 通过此接口（DescribeTemplates）查询该子客企业在电子签拥有的有效模板，不包括渠道模板
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplatesRequest"/></param>
         /// <returns><see cref="DescribeTemplatesResponse"/></returns>
@@ -819,7 +863,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 通过此接口（DescribeTemplates）查询该子客企业在电子签拥有的的有效模板，不包括渠道模版
+        /// 通过此接口（DescribeTemplates）查询该子客企业在电子签拥有的有效模板，不包括渠道模板
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplatesRequest"/></param>
         /// <returns><see cref="DescribeTemplatesResponse"/></returns>

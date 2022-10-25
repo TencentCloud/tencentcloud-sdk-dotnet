@@ -60,6 +60,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string User{ get; set; }
 
         /// <summary>
+        /// 地域ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionID")]
+        public string RegionID{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -76,6 +83,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamArrayObj(map, prefix + "LogTypeList.", this.LogTypeList);
             this.SetParamSimple(map, prefix + "User", this.User);
+            this.SetParamSimple(map, prefix + "RegionID", this.RegionID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

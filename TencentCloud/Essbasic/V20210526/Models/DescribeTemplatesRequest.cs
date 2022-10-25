@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 模板唯一标识，查询单个模版时使用
+        /// 模板唯一标识，查询单个模板时使用
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

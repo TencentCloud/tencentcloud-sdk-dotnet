@@ -65,8 +65,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Area{ get; set; }
 
         /// <summary>
-        /// 指定下载日志的类型。
-        /// access：获取访问日志
+        /// 指定下载日志的类型，目前仅支持访问日志（access）。
+        /// access：访问日志
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }

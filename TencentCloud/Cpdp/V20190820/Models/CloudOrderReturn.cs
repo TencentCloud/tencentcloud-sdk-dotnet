@@ -188,6 +188,27 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("SceneInfo")]
         public string SceneInfo{ get; set; }
 
+        /// <summary>
+        /// 子应用ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public string SubAppId{ get; set; }
+
+        /// <summary>
+        /// 支付场景
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayScene")]
+        public string PayScene{ get; set; }
+
+        /// <summary>
+        /// 支付方式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PaymentMethod")]
+        public string PaymentMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +240,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamArrayObj(map, prefix + "ChannelExternalUserInfoList.", this.ChannelExternalUserInfoList);
             this.SetParamArrayObj(map, prefix + "ExternalReturnPromptGroupList.", this.ExternalReturnPromptGroupList);
             this.SetParamSimple(map, prefix + "SceneInfo", this.SceneInfo);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "PayScene", this.PayScene);
+            this.SetParamSimple(map, prefix + "PaymentMethod", this.PaymentMethod);
         }
     }
 }

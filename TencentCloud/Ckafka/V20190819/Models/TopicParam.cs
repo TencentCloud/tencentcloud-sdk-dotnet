@@ -51,6 +51,20 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
+        /// <summary>
+        /// 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CompressionType")]
+        public string CompressionType{ get; set; }
+
+        /// <summary>
+        /// 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UseAutoCreateTopic")]
+        public bool? UseAutoCreateTopic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +75,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "OffsetType", this.OffsetType);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "CompressionType", this.CompressionType);
+            this.SetParamSimple(map, prefix + "UseAutoCreateTopic", this.UseAutoCreateTopic);
         }
     }
 }

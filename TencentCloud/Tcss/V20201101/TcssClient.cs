@@ -6259,6 +6259,86 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 查询导出任务下载URL
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportJobDownloadURLRequest"/></param>
+        /// <returns><see cref="DescribeExportJobDownloadURLResponse"/></returns>
+        public async Task<DescribeExportJobDownloadURLResponse> DescribeExportJobDownloadURL(DescribeExportJobDownloadURLRequest req)
+        {
+             JsonResponseModel<DescribeExportJobDownloadURLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExportJobDownloadURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExportJobDownloadURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询导出任务下载URL
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportJobDownloadURLRequest"/></param>
+        /// <returns><see cref="DescribeExportJobDownloadURLResponse"/></returns>
+        public DescribeExportJobDownloadURLResponse DescribeExportJobDownloadURLSync(DescribeExportJobDownloadURLRequest req)
+        {
+             JsonResponseModel<DescribeExportJobDownloadURLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExportJobDownloadURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExportJobDownloadURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询导出任务管理列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportJobManageListRequest"/></param>
+        /// <returns><see cref="DescribeExportJobManageListResponse"/></returns>
+        public async Task<DescribeExportJobManageListResponse> DescribeExportJobManageList(DescribeExportJobManageListRequest req)
+        {
+             JsonResponseModel<DescribeExportJobManageListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExportJobManageList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExportJobManageListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询导出任务管理列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportJobManageListRequest"/></param>
+        /// <returns><see cref="DescribeExportJobManageListResponse"/></returns>
+        public DescribeExportJobManageListResponse DescribeExportJobManageListSync(DescribeExportJobManageListRequest req)
+        {
+             JsonResponseModel<DescribeExportJobManageListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExportJobManageList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExportJobManageListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询导出任务的结果
         /// </summary>
         /// <param name="req"><see cref="DescribeExportJobResultRequest"/></param>

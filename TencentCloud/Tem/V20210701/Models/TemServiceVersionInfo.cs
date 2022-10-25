@@ -517,6 +517,97 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("EnableMetrics")]
         public long? EnableMetrics{ get; set; }
 
+        /// <summary>
+        /// 用户AppId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppId")]
+        public string AppId{ get; set; }
+
+        /// <summary>
+        /// 用户SubAccountUin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubAccountUin")]
+        public string SubAccountUin{ get; set; }
+
+        /// <summary>
+        /// 用户Uin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// 地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 应用分组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// 是否启用注册中心
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableRegistry")]
+        public long? EnableRegistry{ get; set; }
+
+        /// <summary>
+        /// 弹性伸缩数组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoscalerList")]
+        public Autoscaler[] AutoscalerList{ get; set; }
+
+        /// <summary>
+        /// 修改人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Modifier")]
+        public string Modifier{ get; set; }
+
+        /// <summary>
+        /// 创建人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Creator")]
+        public string Creator{ get; set; }
+
+        /// <summary>
+        /// 部署策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeployStrategyConf")]
+        public DeployStrategyConf DeployStrategyConf{ get; set; }
+
+        /// <summary>
+        /// 实例列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PodList")]
+        public DescribeRunPodPage PodList{ get; set; }
+
+        /// <summary>
+        /// 发布时配置是否有修改
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfEdited")]
+        public bool? ConfEdited{ get; set; }
+
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -596,6 +687,19 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "StoppedManually", this.StoppedManually);
             this.SetParamSimple(map, prefix + "TcrInstanceId", this.TcrInstanceId);
             this.SetParamSimple(map, prefix + "EnableMetrics", this.EnableMetrics);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "EnableRegistry", this.EnableRegistry);
+            this.SetParamArrayObj(map, prefix + "AutoscalerList.", this.AutoscalerList);
+            this.SetParamSimple(map, prefix + "Modifier", this.Modifier);
+            this.SetParamSimple(map, prefix + "Creator", this.Creator);
+            this.SetParamObj(map, prefix + "DeployStrategyConf.", this.DeployStrategyConf);
+            this.SetParamObj(map, prefix + "PodList.", this.PodList);
+            this.SetParamSimple(map, prefix + "ConfEdited", this.ConfEdited);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -31,6 +31,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public CKafkaInstanceInfo[] InstanceList{ get; set; }
 
         /// <summary>
+        /// 地域列表
+        /// </summary>
+        [JsonProperty("RegionList")]
+        public RegionInfo[] RegionList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+            this.SetParamArrayObj(map, prefix + "RegionList.", this.RegionList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

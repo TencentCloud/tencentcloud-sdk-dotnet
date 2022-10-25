@@ -89,6 +89,48 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("ContainerState")]
         public string ContainerState{ get; set; }
 
+        /// <summary>
+        /// 实例所在节点信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeInfo")]
+        public NodeInfo NodeInfo{ get; set; }
+
+        /// <summary>
+        /// 启动时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 是否健康
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Unhealthy")]
+        public bool? Unhealthy{ get; set; }
+
+        /// <summary>
+        /// 不健康时的提示信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UnhealthyWarningMsg")]
+        public string UnhealthyWarningMsg{ get; set; }
+
+        /// <summary>
+        /// 版本ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
+
+        /// <summary>
+        /// 应用名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationName")]
+        public string ApplicationName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +147,12 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "RestartCount", this.RestartCount);
             this.SetParamSimple(map, prefix + "Ready", this.Ready);
             this.SetParamSimple(map, prefix + "ContainerState", this.ContainerState);
+            this.SetParamObj(map, prefix + "NodeInfo.", this.NodeInfo);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "Unhealthy", this.Unhealthy);
+            this.SetParamSimple(map, prefix + "UnhealthyWarningMsg", this.UnhealthyWarningMsg);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         }
     }
 }

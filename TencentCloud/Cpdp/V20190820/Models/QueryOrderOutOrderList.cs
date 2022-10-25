@@ -165,6 +165,27 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("ChannelExternalOrderId")]
         public string ChannelExternalOrderId{ get; set; }
 
+        /// <summary>
+        /// 主单核销状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SettleCheck")]
+        public long? SettleCheck{ get; set; }
+
+        /// <summary>
+        /// 渠道方用户信息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelExternalUserInfoList")]
+        public OldChannelExternalUserInfo[] ChannelExternalUserInfoList{ get; set; }
+
+        /// <summary>
+        /// 附加项信息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttachmentInfoList")]
+        public OldAttachmentInfo[] AttachmentInfoList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -193,6 +214,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "ChannelOrderId", this.ChannelOrderId);
             this.SetParamArrayObj(map, prefix + "SubOrderList.", this.SubOrderList);
             this.SetParamSimple(map, prefix + "ChannelExternalOrderId", this.ChannelExternalOrderId);
+            this.SetParamSimple(map, prefix + "SettleCheck", this.SettleCheck);
+            this.SetParamArrayObj(map, prefix + "ChannelExternalUserInfoList.", this.ChannelExternalUserInfoList);
+            this.SetParamArrayObj(map, prefix + "AttachmentInfoList.", this.AttachmentInfoList);
         }
     }
 }

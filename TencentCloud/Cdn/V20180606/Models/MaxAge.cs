@@ -40,6 +40,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("MaxAgeRules")]
         public MaxAgeRule[] MaxAgeRules{ get; set; }
 
+        /// <summary>
+        /// MaxAge 状态码相关规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxAgeCodeRule")]
+        public MaxAgeCodeRule MaxAgeCodeRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -48,6 +55,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamArrayObj(map, prefix + "MaxAgeRules.", this.MaxAgeRules);
+            this.SetParamObj(map, prefix + "MaxAgeCodeRule.", this.MaxAgeCodeRule);
         }
     }
 }

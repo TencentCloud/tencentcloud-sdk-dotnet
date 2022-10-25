@@ -25,7 +25,8 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 日志包下载链接
+        /// 日志包下载链接。
+        /// 下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。
         /// </summary>
         [JsonProperty("DomainLogs")]
         public DomainLog[] DomainLogs{ get; set; }

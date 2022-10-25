@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.624</VersionPrefix>
+    <VersionPrefix>3.0.625</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -407,6 +407,10 @@
     <Compile Include="V20201101\Models\DescribeEscapeSafeStateResponse.cs" />
     <Compile Include="V20201101\Models\DescribeEscapeWhiteListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeEscapeWhiteListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeExportJobDownloadURLRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeExportJobDownloadURLResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeExportJobManageListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeExportJobManageListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeExportJobResultRequest.cs" />
     <Compile Include="V20201101\Models\DescribeExportJobResultResponse.cs" />
     <Compile Include="V20201101\Models\DescribeImageAuthorizedInfoRequest.cs" />
@@ -622,6 +626,7 @@
     <Compile Include="V20201101\Models\EscapeRule.cs" />
     <Compile Include="V20201101\Models\EscapeRuleEnabled.cs" />
     <Compile Include="V20201101\Models\EscapeWhiteListInfo.cs" />
+    <Compile Include="V20201101\Models\ExportJobInfo.cs" />
     <Compile Include="V20201101\Models\ExportVirusListRequest.cs" />
     <Compile Include="V20201101\Models\ExportVirusListResponse.cs" />
     <Compile Include="V20201101\Models\FileAttributeInfo.cs" />

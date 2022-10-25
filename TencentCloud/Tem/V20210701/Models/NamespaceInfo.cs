@@ -87,6 +87,13 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("Locked")]
         public long? Locked{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +110,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "EnvironmentName", this.EnvironmentName);
             this.SetParamSimple(map, prefix + "ApmInstanceId", this.ApmInstanceId);
             this.SetParamSimple(map, prefix + "Locked", this.Locked);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

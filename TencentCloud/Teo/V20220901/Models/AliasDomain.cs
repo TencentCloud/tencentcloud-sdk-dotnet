@@ -51,14 +51,28 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 别称域名状态，取值有：
         /// <li> active：已生效； </li>
-        /// <li> pending：未生效；</li>
-        /// <li> not_filed：未备案；</li>
+        /// <li> pending：部署中；</li>
         /// <li> conflict：被找回。 </li>
         /// <li> stop：已停用；</li>
         /// <li> deleted：已删除。 </li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// 封禁模式，取值有：
+        /// <li> 0：未封禁； </li>
+        /// <li> 11：合规封禁；</li>
+        /// <li> 14：未备案封禁。</li>
+        /// </summary>
+        [JsonProperty("ForbidMode")]
+        public long? ForbidMode{ get; set; }
+
+        /// <summary>
+        /// 目标域名是否被封禁。
+        /// </summary>
+        [JsonProperty("TargetForbid")]
+        public bool? TargetForbid{ get; set; }
 
         /// <summary>
         /// 别称域名创建时间。
@@ -83,6 +97,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "TargetName", this.TargetName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ForbidMode", this.ForbidMode);
+            this.SetParamSimple(map, prefix + "TargetForbid", this.TargetForbid);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
         }

@@ -853,6 +853,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云企付-绑定分账收款方
+        /// </summary>
+        /// <param name="req"><see cref="BindOpenBankProfitSharePayeeRequest"/></param>
+        /// <returns><see cref="BindOpenBankProfitSharePayeeResponse"/></returns>
+        public async Task<BindOpenBankProfitSharePayeeResponse> BindOpenBankProfitSharePayee(BindOpenBankProfitSharePayeeRequest req)
+        {
+             JsonResponseModel<BindOpenBankProfitSharePayeeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindOpenBankProfitSharePayee");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindOpenBankProfitSharePayeeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-绑定分账收款方
+        /// </summary>
+        /// <param name="req"><see cref="BindOpenBankProfitSharePayeeRequest"/></param>
+        /// <returns><see cref="BindOpenBankProfitSharePayeeResponse"/></returns>
+        public BindOpenBankProfitSharePayeeResponse BindOpenBankProfitSharePayeeSync(BindOpenBankProfitSharePayeeRequest req)
+        {
+             JsonResponseModel<BindOpenBankProfitSharePayeeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindOpenBankProfitSharePayee");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindOpenBankProfitSharePayeeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 会员绑定提现账户-回填银联鉴权短信码。用于会员填写动态验证码后，发往银行进行验证，验证成功则完成绑定。
         /// </summary>
         /// <param name="req"><see cref="BindRelateAccReUnionPayRequest"/></param>
@@ -6226,6 +6266,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryOpenBankPaymentOrder");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankPaymentOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-绑定分账收款方查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankProfitSharePayeeRequest"/></param>
+        /// <returns><see cref="QueryOpenBankProfitSharePayeeResponse"/></returns>
+        public async Task<QueryOpenBankProfitSharePayeeResponse> QueryOpenBankProfitSharePayee(QueryOpenBankProfitSharePayeeRequest req)
+        {
+             JsonResponseModel<QueryOpenBankProfitSharePayeeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryOpenBankProfitSharePayee");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankProfitSharePayeeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-绑定分账收款方查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankProfitSharePayeeRequest"/></param>
+        /// <returns><see cref="QueryOpenBankProfitSharePayeeResponse"/></returns>
+        public QueryOpenBankProfitSharePayeeResponse QueryOpenBankProfitSharePayeeSync(QueryOpenBankProfitSharePayeeRequest req)
+        {
+             JsonResponseModel<QueryOpenBankProfitSharePayeeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryOpenBankProfitSharePayee");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankProfitSharePayeeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

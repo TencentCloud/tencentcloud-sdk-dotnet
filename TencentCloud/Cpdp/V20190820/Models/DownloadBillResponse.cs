@@ -43,6 +43,15 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string DownloadUrl{ get; set; }
 
         /// <summary>
+        /// 账单类型
+        /// TRADE，对账单
+        /// FUND，资金账单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StateType")]
+        public string StateType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +66,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "FileMD5", this.FileMD5);
             this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+            this.SetParamSimple(map, prefix + "StateType", this.StateType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

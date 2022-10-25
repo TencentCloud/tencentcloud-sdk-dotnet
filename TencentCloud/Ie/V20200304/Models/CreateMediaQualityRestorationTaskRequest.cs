@@ -48,6 +48,12 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("CallbackInfo")]
         public CallbackInfo CallbackInfo{ get; set; }
 
+        /// <summary>
+        /// 极速高清体验馆渠道标志。
+        /// </summary>
+        [JsonProperty("TopSpeedCodecChannel")]
+        public ulong? TopSpeedCodecChannel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamArrayObj(map, prefix + "TransInfo.", this.TransInfo);
             this.SetParamObj(map, prefix + "SaveInfo.", this.SaveInfo);
             this.SetParamObj(map, prefix + "CallbackInfo.", this.CallbackInfo);
+            this.SetParamSimple(map, prefix + "TopSpeedCodecChannel", this.TopSpeedCodecChannel);
         }
     }
 }

@@ -133,7 +133,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 创建规则
+        /// 创建访问控制规则
         /// </summary>
         /// <param name="req"><see cref="CreateAcRulesRequest"/></param>
         /// <returns><see cref="CreateAcRulesResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 创建规则
+        /// 创建访问控制规则
         /// </summary>
         /// <param name="req"><see cref="CreateAcRulesRequest"/></param>
         /// <returns><see cref="CreateAcRulesResponse"/></returns>

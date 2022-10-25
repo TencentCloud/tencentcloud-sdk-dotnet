@@ -24,12 +24,19 @@ namespace TencentCloud.Tcss.V20201101.Models
     public class DescribeSecLogDeliveryKafkaOptionsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 地域，若为空则返回所有可选地域
+        /// </summary>
+        [JsonProperty("RegionID")]
+        public string RegionID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RegionID", this.RegionID);
         }
     }
 }
