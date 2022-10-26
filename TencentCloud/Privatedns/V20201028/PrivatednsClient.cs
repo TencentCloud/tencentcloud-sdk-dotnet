@@ -813,6 +813,46 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// 修改解析记录状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordsStatusRequest"/></param>
+        /// <returns><see cref="ModifyRecordsStatusResponse"/></returns>
+        public async Task<ModifyRecordsStatusResponse> ModifyRecordsStatus(ModifyRecordsStatusRequest req)
+        {
+             JsonResponseModel<ModifyRecordsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRecordsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改解析记录状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordsStatusRequest"/></param>
+        /// <returns><see cref="ModifyRecordsStatusResponse"/></returns>
+        public ModifyRecordsStatusResponse ModifyRecordsStatusSync(ModifyRecordsStatusRequest req)
+        {
+             JsonResponseModel<ModifyRecordsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRecordsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 开通私有域解析
         /// </summary>
         /// <param name="req"><see cref="SubscribePrivateZoneServiceRequest"/></param>

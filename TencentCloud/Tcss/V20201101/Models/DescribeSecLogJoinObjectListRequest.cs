@@ -47,10 +47,10 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 过滤条件。
-        /// <li>Status- String - 是否必填：否 - 主机状态 /li>
-        /// <li>HostIP- String - 是否必填：否 - 主机内网IP /li>
-        /// <li>PublicIP- String - 是否必填：否 - 主机外网IP /li>
-        /// <li>HostName- String - 是否必填：否 - 主机名称 /li>
+        /// <li>Status- String - 是否必填：否 - 主机状态 </li>
+        /// <li>HostIP- String - 是否必填：否 - 主机内网IP </li>
+        /// <li>PublicIP- String - 是否必填：否 - 主机外网IP </li>
+        /// <li>HostName- String - 是否必填：否 - 主机名称 </li>
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }

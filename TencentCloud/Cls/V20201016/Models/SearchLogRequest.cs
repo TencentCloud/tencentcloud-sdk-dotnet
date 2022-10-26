@@ -85,6 +85,16 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("UseNewAnalysis")]
         public bool? UseNewAnalysis{ get; set; }
 
+        /// <summary>
+        /// 执行统计分析（Query中包含SQL）时，是否对原始日志先进行采样，再进行统计分析。
+        /// 0：自动采样;
+        /// 0～1：按指定采样率采样，例如0.02;
+        /// 1：不采样，即精确分析
+        /// 默认值为1
+        /// </summary>
+        [JsonProperty("SamplingRate")]
+        public float? SamplingRate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -99,6 +109,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
+            this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         }
     }
 }

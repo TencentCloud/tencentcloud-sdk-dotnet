@@ -1495,7 +1495,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除直播拉流配置。
+        /// 删除直播拉流配置。该接口已下线,请使用新接口 DeleteLivePullStreamTask。
         /// </summary>
         /// <param name="req"><see cref="DeletePullStreamConfigRequest"/></param>
         /// <returns><see cref="DeletePullStreamConfigResponse"/></returns>
@@ -1515,7 +1515,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除直播拉流配置。
+        /// 删除直播拉流配置。该接口已下线,请使用新接口 DeleteLivePullStreamTask。
         /// </summary>
         /// <param name="req"><see cref="DeletePullStreamConfigRequest"/></param>
         /// <returns><see cref="DeletePullStreamConfigResponse"/></returns>
@@ -3669,7 +3669,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 查询直播拉流配置。
+        /// 查询直播拉流配置。该接口已下线,请使用新接口 DescribeLivePullStreamTasks。
         /// </summary>
         /// <param name="req"><see cref="DescribePullStreamConfigsRequest"/></param>
         /// <returns><see cref="DescribePullStreamConfigsResponse"/></returns>
@@ -3689,7 +3689,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 查询直播拉流配置。
+        /// 查询直播拉流配置。该接口已下线,请使用新接口 DescribeLivePullStreamTasks。
         /// </summary>
         /// <param name="req"><see cref="DescribePullStreamConfigsRequest"/></param>
         /// <returns><see cref="DescribePullStreamConfigsResponse"/></returns>
@@ -4735,7 +4735,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 更新拉流配置。
+        /// 更新拉流配置。该接口为已下线接口，请使用新接口 ModifyLivePullStreamTask。 
         /// </summary>
         /// <param name="req"><see cref="ModifyPullStreamConfigRequest"/></param>
         /// <returns><see cref="ModifyPullStreamConfigResponse"/></returns>
@@ -4755,7 +4755,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 更新拉流配置。
+        /// 更新拉流配置。该接口为已下线接口，请使用新接口 ModifyLivePullStreamTask。 
         /// </summary>
         /// <param name="req"><see cref="ModifyPullStreamConfigRequest"/></param>
         /// <returns><see cref="ModifyPullStreamConfigResponse"/></returns>
@@ -4775,7 +4775,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 修改直播拉流配置的状态。
+        /// 修改直播拉流配置的状态。该接口已下线,请使用新接口 ModifyLivePullStreamTask。
         /// </summary>
         /// <param name="req"><see cref="ModifyPullStreamStatusRequest"/></param>
         /// <returns><see cref="ModifyPullStreamStatusResponse"/></returns>
@@ -4795,7 +4795,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 修改直播拉流配置的状态。
+        /// 修改直播拉流配置的状态。该接口已下线,请使用新接口 ModifyLivePullStreamTask。
         /// </summary>
         /// <param name="req"><see cref="ModifyPullStreamStatusRequest"/></param>
         /// <returns><see cref="ModifyPullStreamStatusResponse"/></returns>

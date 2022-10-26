@@ -91,6 +91,18 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? FilterEnterpriseFlag{ get; set; }
 
         /// <summary>
+        /// 轻量版搜索
+        /// </summary>
+        [JsonProperty("FilterLightFlag")]
+        public ulong? FilterLightFlag{ get; set; }
+
+        /// <summary>
+        /// 定制版搜索
+        /// </summary>
+        [JsonProperty("FilterChannelFlag")]
+        public ulong? FilterChannelFlag{ get; set; }
+
+        /// <summary>
         /// 标签搜索
         /// </summary>
         [JsonProperty("FilterTag")]
@@ -113,6 +125,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterBoundStatus", this.FilterBoundStatus);
             this.SetParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
             this.SetParamSimple(map, prefix + "FilterEnterpriseFlag", this.FilterEnterpriseFlag);
+            this.SetParamSimple(map, prefix + "FilterLightFlag", this.FilterLightFlag);
+            this.SetParamSimple(map, prefix + "FilterChannelFlag", this.FilterChannelFlag);
             this.SetParamObj(map, prefix + "FilterTag.", this.FilterTag);
         }
     }

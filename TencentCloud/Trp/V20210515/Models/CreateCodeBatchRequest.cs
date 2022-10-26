@@ -61,13 +61,13 @@ namespace TencentCloud.Trp.V20210515.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 活动ID
+        /// 模版ID，或者活动ID
         /// </summary>
         [JsonProperty("MpTpl")]
         public string MpTpl{ get; set; }
 
         /// <summary>
-        /// 克隆批次ID
+        /// 克隆批次ID，同时会复制溯源信息
         /// </summary>
         [JsonProperty("CloneId")]
         public string CloneId{ get; set; }

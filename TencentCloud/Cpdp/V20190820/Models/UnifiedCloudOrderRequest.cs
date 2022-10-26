@@ -323,6 +323,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("ExternalUserInfoList")]
         public CloudExternalUserInfo[] ExternalUserInfoList{ get; set; }
 
+        /// <summary>
+        /// 渠道透传数据列表
+        /// </summary>
+        [JsonProperty("ExternalAttachmentDataList")]
+        public CloudExternalAttachmentData[] ExternalAttachmentDataList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -368,6 +374,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamArrayObj(map, prefix + "ExternalPromptGroupList.", this.ExternalPromptGroupList);
             this.SetParamSimple(map, prefix + "OrderReceiveMode", this.OrderReceiveMode);
             this.SetParamArrayObj(map, prefix + "ExternalUserInfoList.", this.ExternalUserInfoList);
+            this.SetParamArrayObj(map, prefix + "ExternalAttachmentDataList.", this.ExternalAttachmentDataList);
         }
     }
 }

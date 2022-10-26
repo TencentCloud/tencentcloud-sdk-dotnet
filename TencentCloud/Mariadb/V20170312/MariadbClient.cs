@@ -2113,6 +2113,126 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyInstanceNetwork）用于修改实例所属网络
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNetworkRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNetworkResponse"/></returns>
+        public async Task<ModifyInstanceNetworkResponse> ModifyInstanceNetwork(ModifyInstanceNetworkRequest req)
+        {
+             JsonResponseModel<ModifyInstanceNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceNetwork）用于修改实例所属网络
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNetworkRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNetworkResponse"/></returns>
+        public ModifyInstanceNetworkResponse ModifyInstanceNetworkSync(ModifyInstanceNetworkRequest req)
+        {
+             JsonResponseModel<ModifyInstanceNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceVip）用于修改实例VIP
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceVipRequest"/></param>
+        /// <returns><see cref="ModifyInstanceVipResponse"/></returns>
+        public async Task<ModifyInstanceVipResponse> ModifyInstanceVip(ModifyInstanceVipRequest req)
+        {
+             JsonResponseModel<ModifyInstanceVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceVip）用于修改实例VIP
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceVipRequest"/></param>
+        /// <returns><see cref="ModifyInstanceVipResponse"/></returns>
+        public ModifyInstanceVipResponse ModifyInstanceVipSync(ModifyInstanceVipRequest req)
+        {
+             JsonResponseModel<ModifyInstanceVipResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceVport）用于修改实例VPORT
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceVportRequest"/></param>
+        /// <returns><see cref="ModifyInstanceVportResponse"/></returns>
+        public async Task<ModifyInstanceVportResponse> ModifyInstanceVport(ModifyInstanceVportRequest req)
+        {
+             JsonResponseModel<ModifyInstanceVportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceVport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceVportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceVport）用于修改实例VPORT
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceVportRequest"/></param>
+        /// <returns><see cref="ModifyInstanceVportResponse"/></returns>
+        public ModifyInstanceVportResponse ModifyInstanceVportSync(ModifyInstanceVportRequest req)
+        {
+             JsonResponseModel<ModifyInstanceVportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceVport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceVportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyLogFileRetentionPeriod)用于修改数据库备份日志保存天数。
         /// </summary>
         /// <param name="req"><see cref="ModifyLogFileRetentionPeriodRequest"/></param>

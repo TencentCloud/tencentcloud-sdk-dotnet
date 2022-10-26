@@ -81,7 +81,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// PERSON_AUTO_SIGN-个人自动签；
         /// ORGANIZATION-企业；
         /// ENTERPRISESERVER-企业静默签;
-        /// 注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
+        /// 注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；
         /// </summary>
         [JsonProperty("ApproverType")]
         public string ApproverType{ get; set; }
@@ -128,6 +128,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }
 
+        /// <summary>
+        /// 签署人个性化能力值
+        /// </summary>
+        [JsonProperty("ApproverOption")]
+        public ApproverOption ApproverOption{ get; set; }
+
+        /// <summary>
+        /// 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+        /// </summary>
+        [JsonProperty("ApproverNeedSignReview")]
+        public bool? ApproverNeedSignReview{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +162,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArraySimple(map, prefix + "ComponentLimitType.", this.ComponentLimitType);
             this.SetParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+            this.SetParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
+            this.SetParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
         }
     }
 }

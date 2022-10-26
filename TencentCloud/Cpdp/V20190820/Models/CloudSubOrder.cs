@@ -108,6 +108,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("AttachmentInfoList")]
         public CloudAttachmentInfo[] AttachmentInfoList{ get; set; }
 
+        /// <summary>
+        /// 渠道透传数据列表。
+        /// </summary>
+        [JsonProperty("ExternalAttachmentDataList")]
+        public CloudExternalAttachmentData[] ExternalAttachmentDataList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +132,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "WxSubMchId", this.WxSubMchId);
             this.SetParamObj(map, prefix + "SettleInfo.", this.SettleInfo);
             this.SetParamArrayObj(map, prefix + "AttachmentInfoList.", this.AttachmentInfoList);
+            this.SetParamArrayObj(map, prefix + "ExternalAttachmentDataList.", this.ExternalAttachmentDataList);
         }
     }
 }

@@ -62,13 +62,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] LoadBalancerVips{ get; set; }
 
         /// <summary>
-        /// 负载均衡绑定的后端服务的外网 IP。
+        /// 负载均衡绑定的后端服务的外网 IP，只支持查询云服务器的公网 IP。
         /// </summary>
         [JsonProperty("BackendPublicIps")]
         public string[] BackendPublicIps{ get; set; }
 
         /// <summary>
-        /// 负载均衡绑定的后端服务的内网 IP。
+        /// 负载均衡绑定的后端服务的内网 IP，只支持查询云服务器的内网 IP。
         /// </summary>
         [JsonProperty("BackendPrivateIps")]
         public string[] BackendPrivateIps{ get; set; }

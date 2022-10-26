@@ -78,6 +78,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Tries")]
         public ulong? Tries{ get; set; }
 
+        /// <summary>
+        /// 自定义变量（仅高级版支持）
+        /// </summary>
+        [JsonProperty("Variables")]
+        public Variable[] Variables{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "NotAfter", this.NotAfter);
             this.SetParamSimple(map, prefix + "Tries", this.Tries);
+            this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
         }
     }
 }

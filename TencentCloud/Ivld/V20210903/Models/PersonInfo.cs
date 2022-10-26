@@ -48,6 +48,13 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("AppearInfo")]
         public AppearInfo AppearInfo{ get; set; }
 
+        /// <summary>
+        /// 人脸在图片中的位置，仅在图片标签任务有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppearRect")]
+        public Rectf AppearRect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamSimple(map, prefix + "Job", this.Job);
             this.SetParamSimple(map, prefix + "FirstAppear", this.FirstAppear);
             this.SetParamObj(map, prefix + "AppearInfo.", this.AppearInfo);
+            this.SetParamObj(map, prefix + "AppearRect.", this.AppearRect);
         }
     }
 }

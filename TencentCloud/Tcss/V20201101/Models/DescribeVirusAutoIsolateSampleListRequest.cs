@@ -38,9 +38,9 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 过滤条件。
-        /// <li>MD5- String - 是否必填：否 - md5 /li>
-        /// <li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 /li>
-        /// <li>VirusName- String - 是否必填：否 - 病毒名 /li>
+        /// <li>MD5- String - 是否必填：否 - md5 </li>
+        /// <li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 </li>
+        /// <li>VirusName- String - 是否必填：否 - 病毒名 </li>
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }

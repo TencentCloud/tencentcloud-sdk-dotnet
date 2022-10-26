@@ -53,6 +53,46 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// 创建项目
+        /// </summary>
+        /// <param name="req"><see cref="AddProjectRequest"/></param>
+        /// <returns><see cref="AddProjectResponse"/></returns>
+        public async Task<AddProjectResponse> AddProject(AddProjectRequest req)
+        {
+             JsonResponseModel<AddProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建项目
+        /// </summary>
+        /// <param name="req"><see cref="AddProjectRequest"/></param>
+        /// <returns><see cref="AddProjectResponse"/></returns>
+        public AddProjectResponse AddProjectSync(AddProjectRequest req)
+        {
+             JsonResponseModel<AddProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于给标签关联资源
         /// </summary>
         /// <param name="req"><see cref="AddResourceTagRequest"/></param>
@@ -1164,6 +1204,46 @@ namespace TencentCloud.Tag.V20180813
              {
                  var strResp = this.InternalRequestSync(req, "UnTagResources");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnTagResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改项目
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProjectRequest"/></param>
+        /// <returns><see cref="UpdateProjectResponse"/></returns>
+        public async Task<UpdateProjectResponse> UpdateProject(UpdateProjectRequest req)
+        {
+             JsonResponseModel<UpdateProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改项目
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProjectRequest"/></param>
+        /// <returns><see cref="UpdateProjectResponse"/></returns>
+        public UpdateProjectResponse UpdateProjectSync(UpdateProjectRequest req)
+        {
+             JsonResponseModel<UpdateProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateProjectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

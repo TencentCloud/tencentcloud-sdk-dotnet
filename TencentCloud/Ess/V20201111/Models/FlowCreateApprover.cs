@@ -126,6 +126,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("RegisterInfo")]
         public RegisterInfo RegisterInfo{ get; set; }
 
+        /// <summary>
+        /// 签署人个性化能力值
+        /// </summary>
+        [JsonProperty("ApproverOption")]
+        public ApproverOption ApproverOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +154,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ApproverSource", this.ApproverSource);
             this.SetParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
             this.SetParamObj(map, prefix + "RegisterInfo.", this.RegisterInfo);
+            this.SetParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
         }
     }
 }

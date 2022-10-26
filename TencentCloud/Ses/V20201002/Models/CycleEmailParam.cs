@@ -36,6 +36,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("IntervalTime")]
         public ulong? IntervalTime{ get; set; }
 
+        /// <summary>
+        /// 是否终止周期，用于任务更新 0否1是
+        /// </summary>
+        [JsonProperty("TermCycle")]
+        public ulong? TermCycle{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ses.V20201002.Models
         {
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "IntervalTime", this.IntervalTime);
+            this.SetParamSimple(map, prefix + "TermCycle", this.TermCycle);
         }
     }
 }
