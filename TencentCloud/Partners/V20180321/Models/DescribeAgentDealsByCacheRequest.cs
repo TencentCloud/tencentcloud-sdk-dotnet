@@ -31,19 +31,19 @@ namespace TencentCloud.Partners.V20180321.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数目
+        /// 限制数目 最大200
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 下单时间范围起始点
+        /// 下单时间范围起始点【请保持时间范围最大90天】
         /// </summary>
         [JsonProperty("CreatTimeRangeStart")]
         public string CreatTimeRangeStart{ get; set; }
 
         /// <summary>
-        /// 下单时间范围终止点
+        /// 下单时间范围终止点【请保持时间范围最大90天】
         /// </summary>
         [JsonProperty("CreatTimeRangeEnd")]
         public string CreatTimeRangeEnd{ get; set; }

@@ -97,7 +97,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong? PreReadTime{ get; set; }
 
         /// <summary>
-        /// 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。非企微场景不使用此字段
+        /// 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Partners.V20180321.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数目
+        /// 限制数目 最大100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

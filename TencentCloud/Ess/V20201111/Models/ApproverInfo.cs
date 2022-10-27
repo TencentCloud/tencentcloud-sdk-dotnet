@@ -98,7 +98,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? PreReadTime{ get; set; }
 
         /// <summary>
-        /// 签署人userId，非企微场景不使用此字段
+        /// 签署人userId，传此字段则不用传姓名、手机号
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

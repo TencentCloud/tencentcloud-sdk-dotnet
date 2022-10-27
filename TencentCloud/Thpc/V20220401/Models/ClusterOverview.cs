@@ -96,6 +96,12 @@ namespace TencentCloud.Thpc.V20220401.Models
         [JsonProperty("LoginNodeCount")]
         public long? LoginNodeCount{ get; set; }
 
+        /// <summary>
+        /// 集群所属私有网络ID。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Thpc.V20220401.Models
             this.SetParamArrayObj(map, prefix + "ManagerNodeSet.", this.ManagerNodeSet);
             this.SetParamArrayObj(map, prefix + "LoginNodeSet.", this.LoginNodeSet);
             this.SetParamSimple(map, prefix + "LoginNodeCount", this.LoginNodeCount);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
         }
     }
 }

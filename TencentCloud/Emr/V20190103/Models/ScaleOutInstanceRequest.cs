@@ -185,6 +185,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ScaleOutServiceConfAssign")]
         public string ScaleOutServiceConfAssign{ get; set; }
 
+        /// <summary>
+        /// 0表示关闭自动续费，1表示开启自动续费
+        /// </summary>
+        [JsonProperty("AutoRenew")]
+        public long? AutoRenew{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -216,6 +222,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "ScaleOutServiceConfAssign", this.ScaleOutServiceConfAssign);
+            this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         }
     }
 }
