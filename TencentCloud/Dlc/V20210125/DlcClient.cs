@@ -653,6 +653,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 创建查询结果下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateResultDownloadRequest"/></param>
+        /// <returns><see cref="CreateResultDownloadResponse"/></returns>
+        public async Task<CreateResultDownloadResponse> CreateResultDownload(CreateResultDownloadRequest req)
+        {
+             JsonResponseModel<CreateResultDownloadResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateResultDownload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateResultDownloadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建查询结果下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateResultDownloadRequest"/></param>
+        /// <returns><see cref="CreateResultDownloadResponse"/></returns>
+        public CreateResultDownloadResponse CreateResultDownloadSync(CreateResultDownloadRequest req)
+        {
+             JsonResponseModel<CreateResultDownloadResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateResultDownload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateResultDownloadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（CreateScript）用于创建sql脚本。
         /// </summary>
         /// <param name="req"><see cref="CreateScriptRequest"/></param>
@@ -1444,6 +1484,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDatabases");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询结果下载任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResultDownloadRequest"/></param>
+        /// <returns><see cref="DescribeResultDownloadResponse"/></returns>
+        public async Task<DescribeResultDownloadResponse> DescribeResultDownload(DescribeResultDownloadRequest req)
+        {
+             JsonResponseModel<DescribeResultDownloadResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResultDownload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResultDownloadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询结果下载任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResultDownloadRequest"/></param>
+        /// <returns><see cref="DescribeResultDownloadResponse"/></returns>
+        public DescribeResultDownloadResponse DescribeResultDownloadSync(DescribeResultDownloadRequest req)
+        {
+             JsonResponseModel<DescribeResultDownloadResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResultDownload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResultDownloadResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
