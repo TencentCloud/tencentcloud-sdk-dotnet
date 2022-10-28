@@ -31,6 +31,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ConfigId{ get; set; }
 
         /// <summary>
+        /// 采集规则配置名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
         /// 日志格式化方式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -98,6 +105,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "LogFormat", this.LogFormat);
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);

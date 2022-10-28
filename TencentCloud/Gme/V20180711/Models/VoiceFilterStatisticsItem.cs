@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 语音过滤总时长
+        /// 语音过滤总时长，单位为min
         /// </summary>
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }

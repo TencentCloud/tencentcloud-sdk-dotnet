@@ -31,6 +31,12 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         public KTVPlaylistBaseInfo[] PlaylistBaseInfoSet{ get; set; }
 
         /// <summary>
+        /// 歌单总数。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "PlaylistBaseInfoSet.", this.PlaylistBaseInfoSet);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

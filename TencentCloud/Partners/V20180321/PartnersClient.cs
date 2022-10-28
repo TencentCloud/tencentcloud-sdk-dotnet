@@ -733,6 +733,46 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
+        /// 代理商可查询自己名下全部返佣信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRebateInfosNewRequest"/></param>
+        /// <returns><see cref="DescribeRebateInfosNewResponse"/></returns>
+        public async Task<DescribeRebateInfosNewResponse> DescribeRebateInfosNew(DescribeRebateInfosNewRequest req)
+        {
+             JsonResponseModel<DescribeRebateInfosNewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRebateInfosNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRebateInfosNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 代理商可查询自己名下全部返佣信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRebateInfosNewRequest"/></param>
+        /// <returns><see cref="DescribeRebateInfosNewResponse"/></returns>
+        public DescribeRebateInfosNewResponse DescribeRebateInfosNewSync(DescribeRebateInfosNewRequest req)
+        {
+             JsonResponseModel<DescribeRebateInfosNewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRebateInfosNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRebateInfosNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 代理商查询名下业务员列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeSalesmansRequest"/></param>

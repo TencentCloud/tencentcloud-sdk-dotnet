@@ -40,9 +40,22 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         /// 类型列表，取值有：
         /// <li>OfficialRec：官方推荐；</li>
         /// <li>Customize：自定义。</li>
+        /// 默认值为 OfficialRec。
         /// </summary>
         [JsonProperty("Types")]
         public string[] Types{ get; set; }
+
+        /// <summary>
+        /// 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 分页返回的记录条数，默认值：20，最大值：50。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -53,6 +66,8 @@ namespace TencentCloud.Yinsuda.V20220527.Models
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamArraySimple(map, prefix + "Types.", this.Types);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

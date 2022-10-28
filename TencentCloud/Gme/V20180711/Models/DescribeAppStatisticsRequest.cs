@@ -43,7 +43,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
+        /// 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
         /// </summary>
         [JsonProperty("Services")]
         public string[] Services{ get; set; }

@@ -110,6 +110,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 切片类型，仅当 Format 为 HLS 时有效。
+        /// </summary>
+        [JsonProperty("SegmentType")]
+        public string SegmentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
         }
     }
 }

@@ -533,6 +533,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 本接口用于查询节点的属性，包括节点所在可用区、节点名称、地址、角色、状态、主从延迟、优先级、投票权、标签等属性。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceNodePropertyRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceNodePropertyResponse"/></returns>
+        public async Task<DescribeDBInstanceNodePropertyResponse> DescribeDBInstanceNodeProperty(DescribeDBInstanceNodePropertyRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceNodePropertyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceNodeProperty");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceNodePropertyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于查询节点的属性，包括节点所在可用区、节点名称、地址、角色、状态、主从延迟、优先级、投票权、标签等属性。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceNodePropertyRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceNodePropertyResponse"/></returns>
+        public DescribeDBInstanceNodePropertyResponse DescribeDBInstanceNodePropertySync(DescribeDBInstanceNodePropertyRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceNodePropertyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceNodeProperty");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceNodePropertyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>

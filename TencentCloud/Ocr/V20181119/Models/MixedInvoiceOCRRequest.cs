@@ -58,6 +58,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 13：过路过桥费发票
         /// 15：非税发票
         /// 16：全电发票
+        /// ----------------------
+        /// -1：其他发票,（仅返回，本参数不支持传入-1，请在ReturnOther中控制是否返回）
         /// </summary>
         [JsonProperty("Types")]
         public long?[] Types{ get; set; }
@@ -70,6 +72,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ReturnOther")]
         public string ReturnOther{ get; set; }
 
+        /// <summary>
+        /// 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+        /// </summary>
+        [JsonProperty("IsPdf")]
+        public bool? IsPdf{ get; set; }
+
+        /// <summary>
+        /// 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+        /// </summary>
+        [JsonProperty("PdfPageNumber")]
+        public long? PdfPageNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +94,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamArraySimple(map, prefix + "Types.", this.Types);
             this.SetParamSimple(map, prefix + "ReturnOther", this.ReturnOther);
+            this.SetParamSimple(map, prefix + "IsPdf", this.IsPdf);
+            this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         }
     }
 }

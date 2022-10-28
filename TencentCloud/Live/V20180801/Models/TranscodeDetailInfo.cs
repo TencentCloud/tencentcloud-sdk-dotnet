@@ -67,7 +67,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? Bitrate{ get; set; }
 
         /// <summary>
-        /// 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
+        /// 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark），快直播（Webrtc）。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -84,6 +84,14 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
 
+        /// <summary>
+        /// 地域：
+        /// Mainland：国内。
+        /// Overseas：海外。
+        /// </summary>
+        [JsonProperty("MainlandOrOversea")]
+        public string MainlandOrOversea{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -99,6 +107,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "PushDomain", this.PushDomain);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
         }
     }
 }

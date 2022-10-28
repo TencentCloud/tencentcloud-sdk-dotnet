@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5B725517-C450-383B-A194-A17CAF39F71A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.628</VersionPrefix>
+    <VersionPrefix>3.0.629</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,7 @@
     <Compile Include="V20180711\Models\AgeDetectTaskResult.cs" />
     <Compile Include="V20180711\Models\AppStatisticsItem.cs" />
     <Compile Include="V20180711\Models\ApplicationDataStatistics.cs" />
+    <Compile Include="V20180711\Models\AudioTextStatisticsItem.cs" />
     <Compile Include="V20180711\Models\CreateAgeDetectTaskRequest.cs" />
     <Compile Include="V20180711\Models\CreateAgeDetectTaskResponse.cs" />
     <Compile Include="V20180711\Models\CreateAppRequest.cs" />
@@ -96,8 +97,10 @@
     <Compile Include="V20180711\Models\ModifyRoomInfoResponse.cs" />
     <Compile Include="V20180711\Models\ModifyUserMicStatusRequest.cs" />
     <Compile Include="V20180711\Models\ModifyUserMicStatusResponse.cs" />
+    <Compile Include="V20180711\Models\OverseaTextStatisticsItem.cs" />
     <Compile Include="V20180711\Models\RealTimeSpeechStatisticsItem.cs" />
     <Compile Include="V20180711\Models\RealtimeSpeechConf.cs" />
+    <Compile Include="V20180711\Models\RealtimeTextStatisticsItem.cs" />
     <Compile Include="V20180711\Models\RoomUser.cs" />
     <Compile Include="V20180711\Models\ScanDetail.cs" />
     <Compile Include="V20180711\Models\ScanPiece.cs" />
@@ -105,6 +108,7 @@
     <Compile Include="V20180711\Models\ScanVoiceResponse.cs" />
     <Compile Include="V20180711\Models\ScanVoiceResult.cs" />
     <Compile Include="V20180711\Models\StatisticsItem.cs" />
+    <Compile Include="V20180711\Models\StreamTextStatisticsItem.cs" />
     <Compile Include="V20180711\Models\Tag.cs" />
     <Compile Include="V20180711\Models\Task.cs" />
     <Compile Include="V20180711\Models\UpdateScanRoomsRequest.cs" />

@@ -36,6 +36,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("FunctionId")]
         public string FunctionId{ get; set; }
 
+        /// <summary>
+        /// 项目ID，必须填
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "ClusterIdentifier", this.ClusterIdentifier);
             this.SetParamSimple(map, prefix + "FunctionId", this.FunctionId);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

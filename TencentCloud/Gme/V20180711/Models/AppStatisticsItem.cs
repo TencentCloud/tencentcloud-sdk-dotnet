@@ -51,6 +51,34 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
+        /// <summary>
+        /// 录音转文本用量统计数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AudioTextStatisticsItem")]
+        public AudioTextStatisticsItem AudioTextStatisticsItem{ get; set; }
+
+        /// <summary>
+        /// 流式转文本用量数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StreamTextStatisticsItem")]
+        public StreamTextStatisticsItem StreamTextStatisticsItem{ get; set; }
+
+        /// <summary>
+        /// 海外转文本用量数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OverseaTextStatisticsItem")]
+        public OverseaTextStatisticsItem OverseaTextStatisticsItem{ get; set; }
+
+        /// <summary>
+        /// 实时语音转文本用量数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RealtimeTextStatisticsItem")]
+        public RealtimeTextStatisticsItem RealtimeTextStatisticsItem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +89,10 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamObj(map, prefix + "VoiceMessageStatisticsItem.", this.VoiceMessageStatisticsItem);
             this.SetParamObj(map, prefix + "VoiceFilterStatisticsItem.", this.VoiceFilterStatisticsItem);
             this.SetParamSimple(map, prefix + "Date", this.Date);
+            this.SetParamObj(map, prefix + "AudioTextStatisticsItem.", this.AudioTextStatisticsItem);
+            this.SetParamObj(map, prefix + "StreamTextStatisticsItem.", this.StreamTextStatisticsItem);
+            this.SetParamObj(map, prefix + "OverseaTextStatisticsItem.", this.OverseaTextStatisticsItem);
+            this.SetParamObj(map, prefix + "RealtimeTextStatisticsItem.", this.RealtimeTextStatisticsItem);
         }
     }
 }
