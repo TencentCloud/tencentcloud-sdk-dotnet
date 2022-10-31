@@ -34,8 +34,8 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 端口，支持格式：
-        /// 单个端口，如：80。
-        /// 端口段，如：81-82。表示81，82两个端口。
+        /// <li>单个端口，如：80。</li>
+        /// <li>端口段，如：81-82。表示81，82两个端口。</li>
         /// 注意：一条规则最多可填写20个端口。
         /// </summary>
         [JsonProperty("Port")]
@@ -51,11 +51,8 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 源站信息：
-        /// 当OriginType=custom时，表示一个或多个源站，如：
-        /// OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-        /// OriginValue=["test.com:80"]；
-        /// 当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
-        /// OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+        /// <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+        /// <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
         /// </summary>
         [JsonProperty("OriginValue")]
         public string[] OriginValue{ get; set; }
@@ -95,6 +92,14 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("SessionPersist")]
         public bool? SessionPersist{ get; set; }
 
+        /// <summary>
+        /// 源站端口，支持格式：
+        /// <li>单端口，如：80。</li>
+        /// <li>端口段：81-82，表示81，82两个端口。</li>
+        /// </summary>
+        [JsonProperty("OriginPort")]
+        public string OriginPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +114,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
             this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+            this.SetParamSimple(map, prefix + "OriginPort", this.OriginPort);
         }
     }
 }

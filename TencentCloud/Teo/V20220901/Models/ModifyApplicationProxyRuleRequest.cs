@@ -52,8 +52,8 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 端口，支持格式：
-        /// 80：80端口
-        /// 81-90：81至90端口。不填保持原有值。
+        /// <li>80：80端口；</li>
+        /// <li>81-90：81至90端口。</li>
         /// </summary>
         [JsonProperty("Port")]
         public string[] Port{ get; set; }
@@ -68,11 +68,9 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 源站信息：
-        /// 当OriginType=custom时，表示一个或多个源站，如：
-        /// OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-        /// OriginValue=["test.com:80"]；
-        /// 当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
-        /// OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+        /// <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+        /// <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
+        /// 
         /// 不填保持原有值。
         /// </summary>
         [JsonProperty("OriginValue")]
@@ -91,10 +89,18 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 是否开启会话保持，取值有：
         /// <li>true：开启；</li>
-        /// <li>false：关闭。</li>不填保持原有值。
+        /// <li>false：关闭。</li>不填为false。
         /// </summary>
         [JsonProperty("SessionPersist")]
         public bool? SessionPersist{ get; set; }
+
+        /// <summary>
+        /// 源站端口，支持格式：
+        /// <li>单端口：80；</li>
+        /// <li>端口段：81-90，81至90端口。</li>
+        /// </summary>
+        [JsonProperty("OriginPort")]
+        public string OriginPort{ get; set; }
 
 
         /// <summary>
@@ -111,6 +117,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "OriginValue.", this.OriginValue);
             this.SetParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
             this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+            this.SetParamSimple(map, prefix + "OriginPort", this.OriginPort);
         }
     }
 }

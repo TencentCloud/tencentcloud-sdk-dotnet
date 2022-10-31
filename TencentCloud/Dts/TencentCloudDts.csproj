@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.629</VersionPrefix>
+    <VersionPrefix>3.0.630</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -44,6 +44,127 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20211206\DtsClient.cs" />
+    <Compile Include="V20211206\Models\CheckStep.cs" />
+    <Compile Include="V20211206\Models\CheckStepInfo.cs" />
+    <Compile Include="V20211206\Models\CompareAbstractInfo.cs" />
+    <Compile Include="V20211206\Models\CompareDetailInfo.cs" />
+    <Compile Include="V20211206\Models\CompareObject.cs" />
+    <Compile Include="V20211206\Models\CompareObjectItem.cs" />
+    <Compile Include="V20211206\Models\CompareTableItem.cs" />
+    <Compile Include="V20211206\Models\CompareTaskInfo.cs" />
+    <Compile Include="V20211206\Models\CompareTaskItem.cs" />
+    <Compile Include="V20211206\Models\CompareViewItem.cs" />
+    <Compile Include="V20211206\Models\CompleteMigrateJobRequest.cs" />
+    <Compile Include="V20211206\Models\CompleteMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\ConfigureSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\ConfigureSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\ConflictHandleOption.cs" />
+    <Compile Include="V20211206\Models\ConsistencyOption.cs" />
+    <Compile Include="V20211206\Models\CreateCheckSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\CreateCheckSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\CreateCompareTaskRequest.cs" />
+    <Compile Include="V20211206\Models\CreateCompareTaskResponse.cs" />
+    <Compile Include="V20211206\Models\CreateMigrateCheckJobRequest.cs" />
+    <Compile Include="V20211206\Models\CreateMigrateCheckJobResponse.cs" />
+    <Compile Include="V20211206\Models\CreateMigrationServiceRequest.cs" />
+    <Compile Include="V20211206\Models\CreateMigrationServiceResponse.cs" />
+    <Compile Include="V20211206\Models\CreateSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\CreateSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\DBEndpointInfo.cs" />
+    <Compile Include="V20211206\Models\DBInfo.cs" />
+    <Compile Include="V20211206\Models\DBItem.cs" />
+    <Compile Include="V20211206\Models\Database.cs" />
+    <Compile Include="V20211206\Models\DatabaseTableObject.cs" />
+    <Compile Include="V20211206\Models\DdlOption.cs" />
+    <Compile Include="V20211206\Models\DeleteCompareTaskRequest.cs" />
+    <Compile Include="V20211206\Models\DeleteCompareTaskResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeCheckSyncJobResultRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeCheckSyncJobResultResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeCompareReportRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeCompareReportResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeCompareTasksRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeCompareTasksResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeMigrateDBInstancesRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeMigrateDBInstancesResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeMigrationCheckJobRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeMigrationCheckJobResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeMigrationDetailRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeMigrationDetailResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeMigrationJobsRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeMigrationJobsResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeSyncJobsRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeSyncJobsResponse.cs" />
+    <Compile Include="V20211206\Models\DestroyMigrateJobRequest.cs" />
+    <Compile Include="V20211206\Models\DestroyMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\DestroySyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\DestroySyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\DetailCheckItem.cs" />
+    <Compile Include="V20211206\Models\DifferenceDetail.cs" />
+    <Compile Include="V20211206\Models\DifferenceItem.cs" />
+    <Compile Include="V20211206\Models\Endpoint.cs" />
+    <Compile Include="V20211206\Models\ErrorInfoItem.cs" />
+    <Compile Include="V20211206\Models\IsolateMigrateJobRequest.cs" />
+    <Compile Include="V20211206\Models\IsolateMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\IsolateSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\IsolateSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\JobItem.cs" />
+    <Compile Include="V20211206\Models\KeyValuePairOption.cs" />
+    <Compile Include="V20211206\Models\MigrateAction.cs" />
+    <Compile Include="V20211206\Models\MigrateDBItem.cs" />
+    <Compile Include="V20211206\Models\MigrateDetailInfo.cs" />
+    <Compile Include="V20211206\Models\MigrateOption.cs" />
+    <Compile Include="V20211206\Models\ModifyCompareTaskNameRequest.cs" />
+    <Compile Include="V20211206\Models\ModifyCompareTaskNameResponse.cs" />
+    <Compile Include="V20211206\Models\ModifyCompareTaskRequest.cs" />
+    <Compile Include="V20211206\Models\ModifyCompareTaskResponse.cs" />
+    <Compile Include="V20211206\Models\ModifyMigrateJobSpecRequest.cs" />
+    <Compile Include="V20211206\Models\ModifyMigrateJobSpecResponse.cs" />
+    <Compile Include="V20211206\Models\ModifyMigrateNameRequest.cs" />
+    <Compile Include="V20211206\Models\ModifyMigrateNameResponse.cs" />
+    <Compile Include="V20211206\Models\ModifyMigrationJobRequest.cs" />
+    <Compile Include="V20211206\Models\ModifyMigrationJobResponse.cs" />
+    <Compile Include="V20211206\Models\Objects.cs" />
+    <Compile Include="V20211206\Models\Options.cs" />
+    <Compile Include="V20211206\Models\ProcessProgress.cs" />
+    <Compile Include="V20211206\Models\ProcessStepTip.cs" />
+    <Compile Include="V20211206\Models\RecoverMigrateJobRequest.cs" />
+    <Compile Include="V20211206\Models\RecoverMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\RecoverSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\RecoverSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\ResizeSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\ResizeSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\ResumeMigrateJobRequest.cs" />
+    <Compile Include="V20211206\Models\ResumeMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\ResumeSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\ResumeSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\RoleItem.cs" />
+    <Compile Include="V20211206\Models\SkippedDetail.cs" />
+    <Compile Include="V20211206\Models\SkippedItem.cs" />
+    <Compile Include="V20211206\Models\StartCompareRequest.cs" />
+    <Compile Include="V20211206\Models\StartCompareResponse.cs" />
+    <Compile Include="V20211206\Models\StartMigrateJobRequest.cs" />
+    <Compile Include="V20211206\Models\StartMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\StartSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\StartSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\StepDetailInfo.cs" />
+    <Compile Include="V20211206\Models\StepInfo.cs" />
+    <Compile Include="V20211206\Models\StepTip.cs" />
+    <Compile Include="V20211206\Models\StopCompareRequest.cs" />
+    <Compile Include="V20211206\Models\StopCompareResponse.cs" />
+    <Compile Include="V20211206\Models\StopMigrateJobRequest.cs" />
+    <Compile Include="V20211206\Models\StopMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\StopSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\StopSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\SyncDetailInfo.cs" />
+    <Compile Include="V20211206\Models\SyncJobInfo.cs" />
+    <Compile Include="V20211206\Models\Table.cs" />
+    <Compile Include="V20211206\Models\TableItem.cs" />
+    <Compile Include="V20211206\Models\TagFilter.cs" />
+    <Compile Include="V20211206\Models\TagItem.cs" />
+    <Compile Include="V20211206\Models\TradeInfo.cs" />
+    <Compile Include="V20211206\Models\View.cs" />
+    <Compile Include="V20211206\Models\ViewItem.cs" />
     <Compile Include="V20180330\DtsClient.cs" />
     <Compile Include="V20180330\Models\ActivateSubscribeRequest.cs" />
     <Compile Include="V20180330\Models\ActivateSubscribeResponse.cs" />

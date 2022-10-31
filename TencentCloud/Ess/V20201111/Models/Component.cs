@@ -33,12 +33,15 @@ namespace TencentCloud.Ess.V20201111.Models
         /// DYNAMIC_TABLE - 动态表格控件；
         /// ATTACHMENT - 附件控件；
         /// SELECTOR - 选择器控件；
+        /// DATE - 日期控件；默认是格式化为xxxx年xx月xx日
         /// 
         /// 如果是SignComponent控件类型，则可选的字段为
         /// SIGN_SEAL - 签署印章控件；
         /// SIGN_DATE - 签署日期控件；
+        /// DATE， 日期控件，默认是格式化为xxxx年xx月xx日
         /// SIGN_SIGNATURE - 用户签名控件；
         /// SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
+        /// SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY、ComponentWidth、ComponentHeight
         /// 
         /// 表单域的控件不能作为印章和签名控件
         /// </summary>
@@ -127,7 +130,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
         /// SELECTOR - 选项值
         /// DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
-        /// SIGN_SEAL - 印章Id，于控制台查询获取
+        /// DATE - 默认是格式化为xxxx年xx月xx日
+        /// SIGN_SEAL - 印章ID，于控制台查询获取
+        /// SIGN_PAGING_SEAL - 可以指定印章ID，于控制台查询获取
         /// </summary>
         [JsonProperty("ComponentValue")]
         public string ComponentValue{ get; set; }

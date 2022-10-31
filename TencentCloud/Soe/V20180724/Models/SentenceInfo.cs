@@ -60,6 +60,27 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("SuggestedScore")]
         public float? SuggestedScore{ get; set; }
 
+        /// <summary>
+        /// 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RefTextId")]
+        public long? RefTextId{ get; set; }
+
+        /// <summary>
+        /// 主题词命中标志，0表示没命中，1表示命中
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KeyWordHits")]
+        public float?[] KeyWordHits{ get; set; }
+
+        /// <summary>
+        /// 负向主题词命中标志，0表示没命中，1表示命中
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UnKeyWordHits")]
+        public float?[] UnKeyWordHits{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +93,9 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "PronFluency", this.PronFluency);
             this.SetParamSimple(map, prefix + "PronCompletion", this.PronCompletion);
             this.SetParamSimple(map, prefix + "SuggestedScore", this.SuggestedScore);
+            this.SetParamSimple(map, prefix + "RefTextId", this.RefTextId);
+            this.SetParamArraySimple(map, prefix + "KeyWordHits.", this.KeyWordHits);
+            this.SetParamArraySimple(map, prefix + "UnKeyWordHits.", this.UnKeyWordHits);
         }
     }
 }

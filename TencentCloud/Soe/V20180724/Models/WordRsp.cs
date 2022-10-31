@@ -72,6 +72,13 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("ReferenceWord")]
         public string ReferenceWord{ get; set; }
 
+        /// <summary>
+        /// 主题词命中标志，0表示没命中，1表示命中
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KeywordTag")]
+        public long? KeywordTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "MatchTag", this.MatchTag);
             this.SetParamArrayObj(map, prefix + "PhoneInfos.", this.PhoneInfos);
             this.SetParamSimple(map, prefix + "ReferenceWord", this.ReferenceWord);
+            this.SetParamSimple(map, prefix + "KeywordTag", this.KeywordTag);
         }
     }
 }

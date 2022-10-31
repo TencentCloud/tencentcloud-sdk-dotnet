@@ -213,6 +213,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 创建话机账号
+        /// </summary>
+        /// <param name="req"><see cref="CreateExtensionRequest"/></param>
+        /// <returns><see cref="CreateExtensionResponse"/></returns>
+        public async Task<CreateExtensionResponse> CreateExtension(CreateExtensionRequest req)
+        {
+             JsonResponseModel<CreateExtensionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateExtension");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateExtensionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建话机账号
+        /// </summary>
+        /// <param name="req"><see cref="CreateExtensionRequest"/></param>
+        /// <returns><see cref="CreateExtensionResponse"/></returns>
+        public CreateExtensionResponse CreateExtensionSync(CreateExtensionRequest req)
+        {
+             JsonResponseModel<CreateExtensionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateExtension");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateExtensionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建 SDK 登录 Token。
         /// </summary>
         /// <param name="req"><see cref="CreateSDKLoginTokenRequest"/></param>
@@ -324,6 +364,46 @@ namespace TencentCloud.Ccc.V20200210
              {
                  var strResp = this.InternalRequestSync(req, "CreateUserSig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserSigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除话机账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExtensionRequest"/></param>
+        /// <returns><see cref="DeleteExtensionResponse"/></returns>
+        public async Task<DeleteExtensionResponse> DeleteExtension(DeleteExtensionRequest req)
+        {
+             JsonResponseModel<DeleteExtensionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteExtension");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteExtensionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除话机账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExtensionRequest"/></param>
+        /// <returns><see cref="DeleteExtensionResponse"/></returns>
+        public DeleteExtensionResponse DeleteExtensionSync(DeleteExtensionRequest req)
+        {
+             JsonResponseModel<DeleteExtensionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteExtension");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteExtensionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -564,6 +644,86 @@ namespace TencentCloud.Ccc.V20200210
              {
                  var strResp = this.InternalRequestSync(req, "DescribeChatMessages");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChatMessagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取话机信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtensionRequest"/></param>
+        /// <returns><see cref="DescribeExtensionResponse"/></returns>
+        public async Task<DescribeExtensionResponse> DescribeExtension(DescribeExtensionRequest req)
+        {
+             JsonResponseModel<DescribeExtensionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExtension");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExtensionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取话机信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtensionRequest"/></param>
+        /// <returns><see cref="DescribeExtensionResponse"/></returns>
+        public DescribeExtensionResponse DescribeExtensionSync(DescribeExtensionRequest req)
+        {
+             JsonResponseModel<DescribeExtensionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExtension");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExtensionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询话机列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtensionsRequest"/></param>
+        /// <returns><see cref="DescribeExtensionsResponse"/></returns>
+        public async Task<DescribeExtensionsResponse> DescribeExtensions(DescribeExtensionsRequest req)
+        {
+             JsonResponseModel<DescribeExtensionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExtensions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExtensionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询话机列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtensionsRequest"/></param>
+        /// <returns><see cref="DescribeExtensionsResponse"/></returns>
+        public DescribeExtensionsResponse DescribeExtensionsSync(DescribeExtensionsRequest req)
+        {
+             JsonResponseModel<DescribeExtensionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExtensions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExtensionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -973,6 +1133,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 修改话机账号(绑定技能组、绑定坐席账号)
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExtensionRequest"/></param>
+        /// <returns><see cref="ModifyExtensionResponse"/></returns>
+        public async Task<ModifyExtensionResponse> ModifyExtension(ModifyExtensionRequest req)
+        {
+             JsonResponseModel<ModifyExtensionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyExtension");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyExtensionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改话机账号(绑定技能组、绑定坐席账号)
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExtensionRequest"/></param>
+        /// <returns><see cref="ModifyExtensionResponse"/></returns>
+        public ModifyExtensionResponse ModifyExtensionSync(ModifyExtensionRequest req)
+        {
+             JsonResponseModel<ModifyExtensionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyExtension");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyExtensionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改客服账号
         /// </summary>
         /// <param name="req"><see cref="ModifyStaffRequest"/></param>
@@ -1004,6 +1204,46 @@ namespace TencentCloud.Ccc.V20200210
              {
                  var strResp = this.InternalRequestSync(req, "ModifyStaff");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStaffResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置话机注册密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetExtensionPasswordRequest"/></param>
+        /// <returns><see cref="ResetExtensionPasswordResponse"/></returns>
+        public async Task<ResetExtensionPasswordResponse> ResetExtensionPassword(ResetExtensionPasswordRequest req)
+        {
+             JsonResponseModel<ResetExtensionPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetExtensionPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetExtensionPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置话机注册密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetExtensionPasswordRequest"/></param>
+        /// <returns><see cref="ResetExtensionPasswordResponse"/></returns>
+        public ResetExtensionPasswordResponse ResetExtensionPasswordSync(ResetExtensionPasswordRequest req)
+        {
+             JsonResponseModel<ResetExtensionPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetExtensionPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetExtensionPasswordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

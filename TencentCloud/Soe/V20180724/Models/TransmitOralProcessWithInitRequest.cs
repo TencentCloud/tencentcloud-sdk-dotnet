@@ -164,6 +164,12 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("TextMode")]
         public long? TextMode{ get; set; }
 
+        /// <summary>
+        /// 主题词和关键词
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -187,6 +193,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "IsAsync", this.IsAsync);
             this.SetParamSimple(map, prefix + "IsQuery", this.IsQuery);
             this.SetParamSimple(map, prefix + "TextMode", this.TextMode);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
         }
     }
 }
