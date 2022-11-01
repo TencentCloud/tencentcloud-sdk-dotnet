@@ -101,13 +101,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] StreamIds{ get; set; }
 
         /// <summary>
-        /// 直播录制文件的唯一标识。匹配集合中的任意元素。
-        /// <li>数组长度限制：10。</li>
-        /// </summary>
-        [JsonProperty("Vids")]
-        public string[] Vids{ get; set; }
-
-        /// <summary>
         /// 匹配创建时间在此时间段内的文件。
         /// <li>包含所指定的头尾时间点。</li>
         /// </summary>
@@ -214,13 +207,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// （不推荐：应使用 Vids 替代）
-        /// 直播录制文件的唯一标识。
-        /// </summary>
-        [JsonProperty("Vid")]
-        public string Vid{ get; set; }
-
-        /// <summary>
         /// （不推荐：应使用 CreateTime 替代）
         /// 创建时间的开始时间。
         /// <li>大于等于开始时间。</li>
@@ -240,6 +226,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
+        /// <summary>
+        /// 该字段已无效。
+        /// </summary>
+        [JsonProperty("Vids")]
+        public string[] Vids{ get; set; }
+
+        /// <summary>
+        /// 该字段已无效。
+        /// </summary>
+        [JsonProperty("Vid")]
+        public string Vid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -256,7 +254,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "Categories.", this.Categories);
             this.SetParamArraySimple(map, prefix + "SourceTypes.", this.SourceTypes);
             this.SetParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
-            this.SetParamArraySimple(map, prefix + "Vids.", this.Vids);
             this.SetParamObj(map, prefix + "CreateTime.", this.CreateTime);
             this.SetParamObj(map, prefix + "ExpireTime.", this.ExpireTime);
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
@@ -270,9 +267,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);
-            this.SetParamSimple(map, prefix + "Vid", this.Vid);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArraySimple(map, prefix + "Vids.", this.Vids);
+            this.SetParamSimple(map, prefix + "Vid", this.Vid);
         }
     }
 }

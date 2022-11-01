@@ -49,7 +49,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public ulong? Gpu{ get; set; }
 
         /// <summary>
-        /// Gpu卡型号 T4或者V100
+        /// Gpu卡型号 T4或者V100。仅展示当前 GPU 卡型号，若存在多类型同时使用，则参考 RealGpuDetailSet 的值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GpuType")]
@@ -64,6 +64,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("RealGpu")]
         public ulong? RealGpu{ get; set; }
 
+        /// <summary>
+        /// 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RealGpuDetailSet")]
+        public GpuDetail[] RealGpuDetailSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +82,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Gpu", this.Gpu);
             this.SetParamSimple(map, prefix + "GpuType", this.GpuType);
             this.SetParamSimple(map, prefix + "RealGpu", this.RealGpu);
+            this.SetParamArrayObj(map, prefix + "RealGpuDetailSet.", this.RealGpuDetailSet);
         }
     }
 }

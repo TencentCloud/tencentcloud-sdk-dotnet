@@ -114,6 +114,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? NeedSignReview{ get; set; }
 
         /// <summary>
+        /// 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
+        /// <summary>
         /// 应用号信息
         /// </summary>
         [JsonProperty("Agent")]
@@ -138,6 +144,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }

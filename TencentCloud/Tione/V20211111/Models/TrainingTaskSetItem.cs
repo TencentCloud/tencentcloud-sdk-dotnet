@@ -51,11 +51,11 @@ namespace TencentCloud.Tione.V20211111.Models
         public string FrameworkVersion{ get; set; }
 
         /// <summary>
-        /// 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+        /// 框架运行环境
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TrainingMode")]
-        public string TrainingMode{ get; set; }
+        [JsonProperty("FrameworkEnvironment")]
+        public string FrameworkEnvironment{ get; set; }
 
         /// <summary>
         /// 计费模式
@@ -83,11 +83,11 @@ namespace TencentCloud.Tione.V20211111.Models
         public ResourceConfigInfo[] ResourceConfigInfos{ get; set; }
 
         /// <summary>
-        /// 标签配置
+        /// 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("TrainingMode")]
+        public string TrainingMode{ get; set; }
 
         /// <summary>
         /// 任务状态
@@ -167,6 +167,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
+        /// <summary>
+        /// 标签配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,12 +184,12 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "FrameworkName", this.FrameworkName);
             this.SetParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
-            this.SetParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
+            this.SetParamSimple(map, prefix + "FrameworkEnvironment", this.FrameworkEnvironment);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "ChargeStatus", this.ChargeStatus);
             this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamArrayObj(map, prefix + "ResourceConfigInfos.", this.ResourceConfigInfos);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "RuntimeInSeconds", this.RuntimeInSeconds);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
@@ -195,6 +202,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
             this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

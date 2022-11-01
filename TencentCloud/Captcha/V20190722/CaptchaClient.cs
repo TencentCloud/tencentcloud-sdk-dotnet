@@ -533,6 +533,46 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
+        /// 查询单个验证的统计数据，包括：票据校验量、票据校验通过量、票据校验拦截量。
+        /// </summary>
+        /// <param name="req"><see cref="GetTicketStatisticsRequest"/></param>
+        /// <returns><see cref="GetTicketStatisticsResponse"/></returns>
+        public async Task<GetTicketStatisticsResponse> GetTicketStatistics(GetTicketStatisticsRequest req)
+        {
+             JsonResponseModel<GetTicketStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetTicketStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTicketStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单个验证的统计数据，包括：票据校验量、票据校验通过量、票据校验拦截量。
+        /// </summary>
+        /// <param name="req"><see cref="GetTicketStatisticsRequest"/></param>
+        /// <returns><see cref="GetTicketStatisticsResponse"/></returns>
+        public GetTicketStatisticsResponse GetTicketStatisticsSync(GetTicketStatisticsRequest req)
+        {
+             JsonResponseModel<GetTicketStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetTicketStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTicketStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询所有验证的统计数据，包括：总票据校验量、总票据校验通过量、总票据校验拦截量。
         /// </summary>
         /// <param name="req"><see cref="GetTotalTicketStatisticsRequest"/></param>

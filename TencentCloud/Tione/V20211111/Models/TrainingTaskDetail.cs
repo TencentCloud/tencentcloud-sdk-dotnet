@@ -69,11 +69,11 @@ namespace TencentCloud.Tione.V20211111.Models
         public string FrameworkVersion{ get; set; }
 
         /// <summary>
-        /// 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+        /// 框架运行环境
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TrainingMode")]
-        public string TrainingMode{ get; set; }
+        [JsonProperty("FrameworkEnvironment")]
+        public string FrameworkEnvironment{ get; set; }
 
         /// <summary>
         /// 计费模式
@@ -102,11 +102,11 @@ namespace TencentCloud.Tione.V20211111.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 自定义镜像信息
+        /// 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ImageInfo")]
-        public ImageInfo ImageInfo{ get; set; }
+        [JsonProperty("TrainingMode")]
+        public string TrainingMode{ get; set; }
 
         /// <summary>
         /// 代码包
@@ -175,10 +175,11 @@ namespace TencentCloud.Tione.V20211111.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// 自定义镜像信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("ImageInfo")]
+        public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
         /// 运行时长
@@ -268,6 +269,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
+        /// <summary>
+        /// 任务状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -281,12 +288,12 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "FrameworkName", this.FrameworkName);
             this.SetParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
-            this.SetParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
+            this.SetParamSimple(map, prefix + "FrameworkEnvironment", this.FrameworkEnvironment);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamArrayObj(map, prefix + "ResourceConfigInfos.", this.ResourceConfigInfos);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
-            this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
+            this.SetParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
             this.SetParamObj(map, prefix + "CodePackagePath.", this.CodePackagePath);
             this.SetParamObj(map, prefix + "StartCmdInfo.", this.StartCmdInfo);
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
@@ -297,7 +304,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "LogConfig.", this.LogConfig);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
             this.SetParamSimple(map, prefix + "RuntimeInSeconds", this.RuntimeInSeconds);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
@@ -311,6 +318,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
             this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

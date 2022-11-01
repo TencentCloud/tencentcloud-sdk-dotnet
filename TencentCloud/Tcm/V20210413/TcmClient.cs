@@ -333,6 +333,46 @@ namespace TencentCloud.Tcm.V20210413
         }
 
         /// <summary>
+        /// 修改 Tracing 配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTracingConfigRequest"/></param>
+        /// <returns><see cref="ModifyTracingConfigResponse"/></returns>
+        public async Task<ModifyTracingConfigResponse> ModifyTracingConfig(ModifyTracingConfigRequest req)
+        {
+             JsonResponseModel<ModifyTracingConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTracingConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTracingConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改 Tracing 配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTracingConfigRequest"/></param>
+        /// <returns><see cref="ModifyTracingConfigResponse"/></returns>
+        public ModifyTracingConfigResponse ModifyTracingConfigSync(ModifyTracingConfigRequest req)
+        {
+             JsonResponseModel<ModifyTracingConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTracingConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTracingConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 解关联集群
         /// </summary>
         /// <param name="req"><see cref="UnlinkClusterRequest"/></param>

@@ -61,6 +61,25 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Amount")]
         public string Amount{ get; set; }
 
+        /// <summary>
+        /// 地区编码，通用机打电子发票时必填。
+        /// 广东:4400，浙江:3300
+        /// </summary>
+        [JsonProperty("RegionCode")]
+        public string RegionCode{ get; set; }
+
+        /// <summary>
+        /// 销方税号，通用机打电子发票必填
+        /// </summary>
+        [JsonProperty("SellerTaxCode")]
+        public string SellerTaxCode{ get; set; }
+
+        /// <summary>
+        /// 是否开启通用机打电子发票，默认为关闭。
+        /// </summary>
+        [JsonProperty("EnableCommonElectronic")]
+        public bool? EnableCommonElectronic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +92,9 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "InvoiceKind", this.InvoiceKind);
             this.SetParamSimple(map, prefix + "CheckCode", this.CheckCode);
             this.SetParamSimple(map, prefix + "Amount", this.Amount);
+            this.SetParamSimple(map, prefix + "RegionCode", this.RegionCode);
+            this.SetParamSimple(map, prefix + "SellerTaxCode", this.SellerTaxCode);
+            this.SetParamSimple(map, prefix + "EnableCommonElectronic", this.EnableCommonElectronic);
         }
     }
 }

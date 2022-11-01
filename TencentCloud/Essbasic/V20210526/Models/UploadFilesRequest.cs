@@ -31,9 +31,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 文件对应业务类型，用于区分文件存储路径：
-        /// 1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
-        /// 2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
+        /// 文件对应业务类型
+        /// 1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
+        /// 2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }

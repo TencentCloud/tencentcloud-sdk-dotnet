@@ -84,6 +84,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("FilePattern")]
         public string FilePattern{ get; set; }
 
+        /// <summary>
+        /// 导出规则
+        /// </summary>
+        [JsonProperty("ExtractRule")]
+        public LogConfigExtractRule ExtractRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "BeginningRegex", this.BeginningRegex);
             this.SetParamSimple(map, prefix + "LogPath", this.LogPath);
             this.SetParamSimple(map, prefix + "FilePattern", this.FilePattern);
+            this.SetParamObj(map, prefix + "ExtractRule.", this.ExtractRule);
         }
     }
 }

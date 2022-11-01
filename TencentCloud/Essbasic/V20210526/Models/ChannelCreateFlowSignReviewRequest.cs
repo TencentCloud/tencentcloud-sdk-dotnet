@@ -40,6 +40,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 企业内部审核结果
         /// PASS: 通过
         /// REJECT: 拒绝
+        /// SIGN_REJECT:拒签(流程结束)
         /// </summary>
         [JsonProperty("ReviewType")]
         public string ReviewType{ get; set; }

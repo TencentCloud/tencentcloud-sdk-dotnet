@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.631</VersionPrefix>
+    <VersionPrefix>3.0.632</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -94,6 +94,8 @@
     <Compile Include="V20191205\Models\ModifyCertificateAliasResponse.cs" />
     <Compile Include="V20191205\Models\ModifyCertificateProjectRequest.cs" />
     <Compile Include="V20191205\Models\ModifyCertificateProjectResponse.cs" />
+    <Compile Include="V20191205\Models\ModifyCertificatesExpiringNotificationSwitchRequest.cs" />
+    <Compile Include="V20191205\Models\ModifyCertificatesExpiringNotificationSwitchResponse.cs" />
     <Compile Include="V20191205\Models\OperationLog.cs" />
     <Compile Include="V20191205\Models\PackageInfo.cs" />
     <Compile Include="V20191205\Models\PackageTransferOutInfo.cs" />

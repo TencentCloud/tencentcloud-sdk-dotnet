@@ -78,6 +78,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("IdentityRoleID")]
         public ulong?[] IdentityRoleID{ get; set; }
 
+        /// <summary>
+        /// 主体关系ID
+        /// </summary>
+        [JsonProperty("AuthRelationId")]
+        public long? AuthRelationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamSimple(map, prefix + "PayUin", this.PayUin);
             this.SetParamArraySimple(map, prefix + "IdentityRoleID.", this.IdentityRoleID);
+            this.SetParamSimple(map, prefix + "AuthRelationId", this.AuthRelationId);
         }
     }
 }

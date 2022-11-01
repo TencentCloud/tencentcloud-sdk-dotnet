@@ -51,13 +51,13 @@ namespace TencentCloud.Tem.V20210701.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
+        /// 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json；
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// 首行正则表达式，当LogType=multiline_log 时生效
+        /// 首行正则表达式，当 LogType 为多行全文、多行正则时生效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginningRegex")]
@@ -105,6 +105,13 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
+        /// <summary>
+        /// 导出规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtractRule")]
+        public LogConfigExtractRule ExtractRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +130,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "ModifyDate", this.ModifyDate);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
+            this.SetParamObj(map, prefix + "ExtractRule.", this.ExtractRule);
         }
     }
 }

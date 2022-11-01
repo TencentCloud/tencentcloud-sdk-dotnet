@@ -2573,7 +2573,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// 查询所有有实例命名空间列表
+        /// 查询所有实例命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAllNamespacesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAllNamespacesResponse"/></returns>
@@ -2593,7 +2593,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// 查询所有有实例命名空间列表
+        /// 查询所有实例命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAllNamespacesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAllNamespacesResponse"/></returns>

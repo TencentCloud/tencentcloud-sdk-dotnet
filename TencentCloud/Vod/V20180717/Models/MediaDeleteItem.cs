@@ -26,8 +26,9 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
-        /// <li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）。</li>
-        /// <li>TranscodeFiles（删除转码文件）。</li>
+        /// <li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li>
+        /// <li>TranscodeFiles（删除转码文件）；</li>
+        /// <li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li>
         /// <li>WechatPublishFiles（删除微信发布文件）。</li>
         /// </summary>
         [JsonProperty("Type")]

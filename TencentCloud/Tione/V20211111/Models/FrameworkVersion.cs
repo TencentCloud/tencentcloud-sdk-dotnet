@@ -36,6 +36,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("TrainingModes")]
         public string[] TrainingModes{ get; set; }
 
+        /// <summary>
+        /// 框架运行环境
+        /// </summary>
+        [JsonProperty("Environment")]
+        public string Environment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamArraySimple(map, prefix + "TrainingModes.", this.TrainingModes);
+            this.SetParamSimple(map, prefix + "Environment", this.Environment);
         }
     }
 }

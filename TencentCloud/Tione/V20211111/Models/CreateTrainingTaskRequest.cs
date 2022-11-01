@@ -31,12 +31,6 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-        /// </summary>
-        [JsonProperty("TrainingMode")]
-        public string TrainingMode{ get; set; }
-
-        /// <summary>
         /// 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
         /// </summary>
         [JsonProperty("ChargeType")]
@@ -53,6 +47,12 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         [JsonProperty("CodePackagePath")]
         public CosPathInfo CodePackagePath{ get; set; }
+
+        /// <summary>
+        /// 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+        /// </summary>
+        [JsonProperty("TrainingMode")]
+        public string TrainingMode{ get; set; }
 
         /// <summary>
         /// COS训练输出路径
@@ -73,10 +73,16 @@ namespace TencentCloud.Tione.V20211111.Models
         public string FrameworkName{ get; set; }
 
         /// <summary>
-        /// 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+        /// 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
         /// </summary>
         [JsonProperty("FrameworkVersion")]
         public string FrameworkVersion{ get; set; }
+
+        /// <summary>
+        /// 训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+        /// </summary>
+        [JsonProperty("FrameworkEnvironment")]
+        public string FrameworkEnvironment{ get; set; }
 
         /// <summary>
         /// 预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
@@ -101,12 +107,6 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         [JsonProperty("StartCmdInfo")]
         public StartCmdInfo StartCmdInfo{ get; set; }
-
-        /// <summary>
-        /// 数据来源，eg：DATASET、COS、CFS、HDFS
-        /// </summary>
-        [JsonProperty("DataSource")]
-        public string DataSource{ get; set; }
 
         /// <summary>
         /// 数据配置
@@ -144,6 +144,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 数据来源，eg：DATASET、COS、CFS、HDFS
+        /// </summary>
+        [JsonProperty("DataSource")]
+        public string DataSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,25 +157,26 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamArrayObj(map, prefix + "ResourceConfigInfos.", this.ResourceConfigInfos);
             this.SetParamObj(map, prefix + "CodePackagePath.", this.CodePackagePath);
+            this.SetParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
             this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamSimple(map, prefix + "LogEnable", this.LogEnable);
             this.SetParamSimple(map, prefix + "FrameworkName", this.FrameworkName);
             this.SetParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
+            this.SetParamSimple(map, prefix + "FrameworkEnvironment", this.FrameworkEnvironment);
             this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
             this.SetParamObj(map, prefix + "StartCmdInfo.", this.StartCmdInfo);
-            this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
             this.SetParamArrayObj(map, prefix + "DataConfigs.", this.DataConfigs);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamObj(map, prefix + "LogConfig.", this.LogConfig);
             this.SetParamSimple(map, prefix + "TuningParameters", this.TuningParameters);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
         }
     }
 }

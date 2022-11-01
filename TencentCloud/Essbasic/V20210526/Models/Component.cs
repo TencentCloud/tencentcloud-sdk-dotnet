@@ -27,6 +27,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 控件编号
         /// 
+        /// CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
+        /// 
         /// 注：
         /// 当GenerateMode=3时，通过"^"来决定是否使用关键字整词匹配能力。
         /// 例：

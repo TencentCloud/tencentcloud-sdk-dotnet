@@ -853,6 +853,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 修改忽略证书到期通知。打开或关闭证书到期通知。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCertificatesExpiringNotificationSwitchRequest"/></param>
+        /// <returns><see cref="ModifyCertificatesExpiringNotificationSwitchResponse"/></returns>
+        public async Task<ModifyCertificatesExpiringNotificationSwitchResponse> ModifyCertificatesExpiringNotificationSwitch(ModifyCertificatesExpiringNotificationSwitchRequest req)
+        {
+             JsonResponseModel<ModifyCertificatesExpiringNotificationSwitchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCertificatesExpiringNotificationSwitch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCertificatesExpiringNotificationSwitchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改忽略证书到期通知。打开或关闭证书到期通知。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCertificatesExpiringNotificationSwitchRequest"/></param>
+        /// <returns><see cref="ModifyCertificatesExpiringNotificationSwitchResponse"/></returns>
+        public ModifyCertificatesExpiringNotificationSwitchResponse ModifyCertificatesExpiringNotificationSwitchSync(ModifyCertificatesExpiringNotificationSwitchRequest req)
+        {
+             JsonResponseModel<ModifyCertificatesExpiringNotificationSwitchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCertificatesExpiringNotificationSwitch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCertificatesExpiringNotificationSwitchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ReplaceCertificate）用于重颁发证书。已申请的免费证书仅支持 RSA 算法、密钥对参数为2048的证书重颁发，并且目前仅支持1次重颁发。
         /// </summary>
         /// <param name="req"><see cref="ReplaceCertificateRequest"/></param>

@@ -113,7 +113,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 11：增值税普通发票（卷式），
         /// 14：增值税电子（通行费）发票，
         /// 15：二手车销售统一发票，
-        /// 32：深圳区块链发票
+        /// 32：深圳区块链发票，
+        /// 102：通用机打电子发票
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

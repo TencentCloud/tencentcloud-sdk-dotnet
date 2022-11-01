@@ -1737,6 +1737,46 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 创建恶意请求事件导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateRiskDnsEventExportJobRequest"/></param>
+        /// <returns><see cref="CreateRiskDnsEventExportJobResponse"/></returns>
+        public async Task<CreateRiskDnsEventExportJobResponse> CreateRiskDnsEventExportJob(CreateRiskDnsEventExportJobRequest req)
+        {
+             JsonResponseModel<CreateRiskDnsEventExportJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRiskDnsEventExportJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRiskDnsEventExportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建恶意请求事件导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateRiskDnsEventExportJobRequest"/></param>
+        /// <returns><see cref="CreateRiskDnsEventExportJobResponse"/></returns>
+        public CreateRiskDnsEventExportJobResponse CreateRiskDnsEventExportJobSync(CreateRiskDnsEventExportJobRequest req)
+        {
+             JsonResponseModel<CreateRiskDnsEventExportJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRiskDnsEventExportJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRiskDnsEventExportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加检索模板
         /// </summary>
         /// <param name="req"><see cref="CreateSearchTemplateRequest"/></param>

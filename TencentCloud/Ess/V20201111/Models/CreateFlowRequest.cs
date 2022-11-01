@@ -68,7 +68,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? DeadLine{ get; set; }
 
         /// <summary>
-        /// 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+        /// 用户自定义字段，回调的时候会进行透传，长度需要小于20480
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
