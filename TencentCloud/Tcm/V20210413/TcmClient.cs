@@ -253,6 +253,46 @@ namespace TencentCloud.Tcm.V20210413
         }
 
         /// <summary>
+        /// 关联Prometheus
+        /// </summary>
+        /// <param name="req"><see cref="LinkPrometheusRequest"/></param>
+        /// <returns><see cref="LinkPrometheusResponse"/></returns>
+        public async Task<LinkPrometheusResponse> LinkPrometheus(LinkPrometheusRequest req)
+        {
+             JsonResponseModel<LinkPrometheusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "LinkPrometheus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LinkPrometheusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关联Prometheus
+        /// </summary>
+        /// <param name="req"><see cref="LinkPrometheusRequest"/></param>
+        /// <returns><see cref="LinkPrometheusResponse"/></returns>
+        public LinkPrometheusResponse LinkPrometheusSync(LinkPrometheusRequest req)
+        {
+             JsonResponseModel<LinkPrometheusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "LinkPrometheus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LinkPrometheusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改网格
         /// </summary>
         /// <param name="req"><see cref="ModifyMeshRequest"/></param>
@@ -324,6 +364,46 @@ namespace TencentCloud.Tcm.V20210413
              {
                  var strResp = this.InternalRequestSync(req, "UnlinkCluster");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlinkClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解除关联Prometheus
+        /// </summary>
+        /// <param name="req"><see cref="UnlinkPrometheusRequest"/></param>
+        /// <returns><see cref="UnlinkPrometheusResponse"/></returns>
+        public async Task<UnlinkPrometheusResponse> UnlinkPrometheus(UnlinkPrometheusRequest req)
+        {
+             JsonResponseModel<UnlinkPrometheusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnlinkPrometheus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlinkPrometheusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解除关联Prometheus
+        /// </summary>
+        /// <param name="req"><see cref="UnlinkPrometheusRequest"/></param>
+        /// <returns><see cref="UnlinkPrometheusResponse"/></returns>
+        public UnlinkPrometheusResponse UnlinkPrometheusSync(UnlinkPrometheusRequest req)
+        {
+             JsonResponseModel<UnlinkPrometheusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnlinkPrometheus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlinkPrometheusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

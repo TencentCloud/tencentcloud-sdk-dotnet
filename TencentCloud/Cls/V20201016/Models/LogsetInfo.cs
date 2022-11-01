@@ -43,6 +43,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
+        /// 云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssumerName")]
+        public string AssumerName{ get; set; }
+
+        /// <summary>
         /// 日志集绑定的标签
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -56,7 +63,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? TopicCount{ get; set; }
 
         /// <summary>
-        /// 若AssumerUin非空，则表示创建该日志集的服务方角色
+        /// 若AssumerName非空，则表示创建该日志集的服务方角色
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
@@ -70,6 +77,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "AssumerName", this.AssumerName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "TopicCount", this.TopicCount);
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);

@@ -46,6 +46,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Duration{ get; set; }
 
         /// <summary>
+        /// 视频片段目标时长，单位为秒。
+        /// <li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+        /// <li>当 TargetDuration 取大于0的值时，将对视频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+        /// </summary>
+        [JsonProperty("TargetDuration")]
+        public float? TargetDuration{ get; set; }
+
+        /// <summary>
         /// 视频原点位置，取值有：
         /// <li>Center：坐标原点为中心位置，如画布中心。</li>
         /// 默认值 ：Center。
@@ -94,16 +102,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Height{ get; set; }
 
         /// <summary>
-        /// 对图像进行的操作，如图像旋转等。
-        /// </summary>
-        [JsonProperty("ImageOperations")]
-        public ImageTransform[] ImageOperations{ get; set; }
-
-        /// <summary>
         /// 对音频进行操作，如静音等。
         /// </summary>
         [JsonProperty("AudioOperations")]
         public AudioTransform[] AudioOperations{ get; set; }
+
+        /// <summary>
+        /// 对图像进行的操作，如图像旋转等。
+        /// </summary>
+        [JsonProperty("ImageOperations")]
+        public ImageTransform[] ImageOperations{ get; set; }
 
 
         /// <summary>
@@ -114,13 +122,14 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SourceMedia", this.SourceMedia);
             this.SetParamSimple(map, prefix + "SourceMediaStartTime", this.SourceMediaStartTime);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "TargetDuration", this.TargetDuration);
             this.SetParamSimple(map, prefix + "CoordinateOrigin", this.CoordinateOrigin);
             this.SetParamSimple(map, prefix + "XPos", this.XPos);
             this.SetParamSimple(map, prefix + "YPos", this.YPos);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
-            this.SetParamArrayObj(map, prefix + "ImageOperations.", this.ImageOperations);
             this.SetParamArrayObj(map, prefix + "AudioOperations.", this.AudioOperations);
+            this.SetParamArrayObj(map, prefix + "ImageOperations.", this.ImageOperations);
         }
     }
 }

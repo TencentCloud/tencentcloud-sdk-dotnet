@@ -37,6 +37,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// ET_RISK_SYSCALL:高危系统调用
         /// ET_ABNORMAL_PROCESS: 异常进程
         /// ET_ACCESS_CONTROL 文件篡改
+        /// ET_VIRUS 木马事件
+        /// ET_MALICIOUS_CONNECTION 恶意外连事件
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }

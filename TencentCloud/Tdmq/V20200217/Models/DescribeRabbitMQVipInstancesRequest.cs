@@ -15,35 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAliasDomainStatusRequest : AbstractModel
+    public class DescribeRabbitMQVipInstancesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 站点 ID。
-        /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
-
-        /// <summary>
-        /// 别称域名状态，取值有：
-        /// <li> false：开启别称域名；</li>
-        /// <li> true：关闭别称域名。</li>
-        /// </summary>
-        [JsonProperty("Paused")]
-        public bool? Paused{ get; set; }
-
-        /// <summary>
-        /// 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-        /// <li>target-name<br>   按照【<strong>目标域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否<li>alias-id<br>   按照【<strong>别称域名ID</strong>】进行过滤。<br>   类型：String<br>   必选：否<li>alias-name<br>   按照【<strong>别称域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+        /// 查询条件过滤器
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 查询数目上限，默认20
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 查询起始位置
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
 
         /// <summary>
@@ -51,9 +48,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "Paused", this.Paused);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

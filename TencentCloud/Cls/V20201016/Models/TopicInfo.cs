@@ -55,6 +55,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? Index{ get; set; }
 
         /// <summary>
+        /// 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssumerName")]
+        public string AssumerName{ get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -101,6 +108,20 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
+        /// <summary>
+        /// 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubAssumerName")]
+        public string SubAssumerName{ get; set; }
+
+        /// <summary>
+        /// 日志主题描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Describes")]
+        public string Describes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +133,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
             this.SetParamSimple(map, prefix + "Index", this.Index);
+            this.SetParamSimple(map, prefix + "AssumerName", this.AssumerName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
@@ -119,6 +141,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
+            this.SetParamSimple(map, prefix + "Describes", this.Describes);
         }
     }
 }

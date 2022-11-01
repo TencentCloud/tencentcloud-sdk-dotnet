@@ -85,7 +85,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// 资源过期时间，以时间戳形式展示。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }

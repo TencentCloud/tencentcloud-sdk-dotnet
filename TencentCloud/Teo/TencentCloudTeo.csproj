@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.630</VersionPrefix>
+    <VersionPrefix>3.0.631</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,7 +53,6 @@
     <Compile Include="V20220901\Models\AdvancedFilter.cs" />
     <Compile Include="V20220901\Models\AdvancedOriginGroup.cs" />
     <Compile Include="V20220901\Models\AiRule.cs" />
-    <Compile Include="V20220901\Models\AliasDomain.cs" />
     <Compile Include="V20220901\Models\ApplicationProxy.cs" />
     <Compile Include="V20220901\Models\ApplicationProxyRule.cs" />
     <Compile Include="V20220901\Models\AscriptionInfo.cs" />
@@ -77,8 +76,6 @@
     <Compile Include="V20220901\Models\ClsLogTopicInfo.cs" />
     <Compile Include="V20220901\Models\CodeAction.cs" />
     <Compile Include="V20220901\Models\Compression.cs" />
-    <Compile Include="V20220901\Models\CreateAliasDomainRequest.cs" />
-    <Compile Include="V20220901\Models\CreateAliasDomainResponse.cs" />
     <Compile Include="V20220901\Models\CreateApplicationProxyRequest.cs" />
     <Compile Include="V20220901\Models\CreateApplicationProxyResponse.cs" />
     <Compile Include="V20220901\Models\CreateApplicationProxyRuleRequest.cs" />
@@ -134,8 +131,6 @@
     <Compile Include="V20220901\Models\DDoSSpeedLimit.cs" />
     <Compile Include="V20220901\Models\DDoSStatusInfo.cs" />
     <Compile Include="V20220901\Models\DefaultServerCertInfo.cs" />
-    <Compile Include="V20220901\Models\DeleteAliasDomainRequest.cs" />
-    <Compile Include="V20220901\Models\DeleteAliasDomainResponse.cs" />
     <Compile Include="V20220901\Models\DeleteApplicationProxyRequest.cs" />
     <Compile Include="V20220901\Models\DeleteApplicationProxyResponse.cs" />
     <Compile Include="V20220901\Models\DeleteApplicationProxyRuleRequest.cs" />
@@ -154,8 +149,6 @@
     <Compile Include="V20220901\Models\DeleteZoneResponse.cs" />
     <Compile Include="V20220901\Models\DescribeAddableEntityListRequest.cs" />
     <Compile Include="V20220901\Models\DescribeAddableEntityListResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeAliasDomainsRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeAliasDomainsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeApplicationProxiesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeApplicationProxiesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeAvailablePlansRequest.cs" />
@@ -322,10 +315,6 @@
     <Compile Include="V20220901\Models\ModifyAlarmConfigResponse.cs" />
     <Compile Include="V20220901\Models\ModifyAlarmDefaultThresholdRequest.cs" />
     <Compile Include="V20220901\Models\ModifyAlarmDefaultThresholdResponse.cs" />
-    <Compile Include="V20220901\Models\ModifyAliasDomainRequest.cs" />
-    <Compile Include="V20220901\Models\ModifyAliasDomainResponse.cs" />
-    <Compile Include="V20220901\Models\ModifyAliasDomainStatusRequest.cs" />
-    <Compile Include="V20220901\Models\ModifyAliasDomainStatusResponse.cs" />
     <Compile Include="V20220901\Models\ModifyApplicationProxyRequest.cs" />
     <Compile Include="V20220901\Models\ModifyApplicationProxyResponse.cs" />
     <Compile Include="V20220901\Models\ModifyApplicationProxyRuleRequest.cs" />

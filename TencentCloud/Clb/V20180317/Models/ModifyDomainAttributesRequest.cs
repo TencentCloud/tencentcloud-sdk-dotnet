@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string NewDomain{ get; set; }
 
         /// <summary>
-        /// 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
+        /// 域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateInput Certificate{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("NewDomains")]
         public string[] NewDomains{ get; set; }
 
+        /// <summary>
+        /// 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
+        /// </summary>
+        [JsonProperty("MultiCertInfo")]
+        public MultiCertInfo MultiCertInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
             this.SetParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
             this.SetParamArraySimple(map, prefix + "NewDomains.", this.NewDomains);
+            this.SetParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
         }
     }
 }

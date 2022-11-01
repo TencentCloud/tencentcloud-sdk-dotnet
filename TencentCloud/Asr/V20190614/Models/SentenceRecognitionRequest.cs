@@ -70,7 +70,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public string UsrAudioKey{ get; set; }
 
         /// <summary>
-        /// 语音 URL，公网可下载。当 SourceType 值为 0（语音 URL上传） 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时长不能超过60s，音频文件大小不能超过3MB。
+        /// 语音的URL地址，需要公网环境浏览器可下载。当 SourceType 值为 0时须填写该字段，为 1 时不填。音频时长不能超过60s，音频文件大小不能超过3MB。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

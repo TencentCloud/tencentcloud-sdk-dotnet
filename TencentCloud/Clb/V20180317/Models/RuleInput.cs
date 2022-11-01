@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// 证书信息
+        /// 证书信息；此参数和MultiCertInfo不能同时传入。
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateInput Certificate{ get; set; }
@@ -109,6 +109,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
+        /// <summary>
+        /// 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
+        /// </summary>
+        [JsonProperty("MultiCertInfo")]
+        public MultiCertInfo MultiCertInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +135,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
             this.SetParamSimple(map, prefix + "Quic", this.Quic);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
+            this.SetParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
         }
     }
 }

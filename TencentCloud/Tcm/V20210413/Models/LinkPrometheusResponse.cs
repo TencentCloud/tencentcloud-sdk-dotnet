@@ -15,13 +15,13 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Tcm.V20210413.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAliasDomainStatusResponse : AbstractModel
+    public class LinkPrometheusResponse : AbstractModel
     {
         
         /// <summary>

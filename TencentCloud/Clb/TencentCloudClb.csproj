@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{85382FF1-BBAE-38BC-A5A9-F38E940A3D38}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.630</VersionPrefix>
+    <VersionPrefix>3.0.631</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,7 @@
     <Compile Include="V20180317\Models\BindDetailItem.cs" />
     <Compile Include="V20180317\Models\BlockedIP.cs" />
     <Compile Include="V20180317\Models\CertIdRelatedWithLoadBalancers.cs" />
+    <Compile Include="V20180317\Models\CertInfo.cs" />
     <Compile Include="V20180317\Models\CertificateInput.cs" />
     <Compile Include="V20180317\Models\CertificateOutput.cs" />
     <Compile Include="V20180317\Models\ClassicalHealth.cs" />
@@ -219,6 +220,7 @@
     <Compile Include="V20180317\Models\ModifyTargetPortResponse.cs" />
     <Compile Include="V20180317\Models\ModifyTargetWeightRequest.cs" />
     <Compile Include="V20180317\Models\ModifyTargetWeightResponse.cs" />
+    <Compile Include="V20180317\Models\MultiCertInfo.cs" />
     <Compile Include="V20180317\Models\Quota.cs" />
     <Compile Include="V20180317\Models\RegisterTargetGroupInstancesRequest.cs" />
     <Compile Include="V20180317\Models\RegisterTargetGroupInstancesResponse.cs" />

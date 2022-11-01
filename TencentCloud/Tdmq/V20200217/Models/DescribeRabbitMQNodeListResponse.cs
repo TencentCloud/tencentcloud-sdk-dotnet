@@ -15,20 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAliasDomainResponse : AbstractModel
+    public class DescribeRabbitMQNodeListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 别称域名 ID。
+        /// 集群列表数量
         /// </summary>
-        [JsonProperty("AliasId")]
-        public string AliasId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 集群列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeList")]
+        public RabbitMQPrivateNode[] NodeList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +49,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AliasId", this.AliasId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "NodeList.", this.NodeList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

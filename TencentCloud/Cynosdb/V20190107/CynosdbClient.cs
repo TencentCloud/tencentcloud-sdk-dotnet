@@ -413,6 +413,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 为集群删除手动备份，无法删除自动备份
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupRequest"/></param>
+        /// <returns><see cref="DeleteBackupResponse"/></returns>
+        public async Task<DeleteBackupResponse> DeleteBackup(DeleteBackupRequest req)
+        {
+             JsonResponseModel<DeleteBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为集群删除手动备份，无法删除自动备份
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupRequest"/></param>
+        /// <returns><see cref="DeleteBackupResponse"/></returns>
+        public DeleteBackupResponse DeleteBackupSync(DeleteBackupRequest req)
+        {
+             JsonResponseModel<DeleteBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 账号所有权限
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountAllGrantPrivilegesRequest"/></param>

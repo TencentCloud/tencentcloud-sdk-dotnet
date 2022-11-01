@@ -44,7 +44,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? UserLevel{ get; set; }
 
         /// <summary>
-        /// 旗舰版到期时间
+        /// 旗舰版到期时间（Epoch Unix Timestamp）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProExpireTime")]

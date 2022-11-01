@@ -46,6 +46,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Duration{ get; set; }
 
         /// <summary>
+        /// 音频片段目标时长，单位为秒。
+        /// <li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+        /// <li>当 TargetDuration 取大于0的值时，将对音频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+        /// </summary>
+        [JsonProperty("TargetDuration")]
+        public float? TargetDuration{ get; set; }
+
+        /// <summary>
         /// 对音频片段进行的操作，如音量调节等。
         /// </summary>
         [JsonProperty("AudioOperations")]
@@ -60,6 +68,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SourceMedia", this.SourceMedia);
             this.SetParamSimple(map, prefix + "SourceMediaStartTime", this.SourceMediaStartTime);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "TargetDuration", this.TargetDuration);
             this.SetParamArrayObj(map, prefix + "AudioOperations.", this.AudioOperations);
         }
     }

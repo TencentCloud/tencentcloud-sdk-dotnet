@@ -25,13 +25,13 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
     {
         
         /// <summary>
-        /// 返回偏移量。
+        /// 返回偏移量。Offset最小为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量。
+        /// 返回数量。Limit需要在[1, 100]之间。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

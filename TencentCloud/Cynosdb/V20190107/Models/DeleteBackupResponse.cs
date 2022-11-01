@@ -15,13 +15,13 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAliasDomainResponse : AbstractModel
+    public class DeleteBackupResponse : AbstractModel
     {
         
         /// <summary>

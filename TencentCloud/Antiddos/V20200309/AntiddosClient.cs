@@ -3053,6 +3053,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 查询账号维度待处理风险信息，包括是否为付费用户，查询攻击中、封堵中、过期资源数量等
+        /// </summary>
+        /// <param name="req"><see cref="DescribePendingRiskInfoRequest"/></param>
+        /// <returns><see cref="DescribePendingRiskInfoResponse"/></returns>
+        public async Task<DescribePendingRiskInfoResponse> DescribePendingRiskInfo(DescribePendingRiskInfoRequest req)
+        {
+             JsonResponseModel<DescribePendingRiskInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePendingRiskInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePendingRiskInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询账号维度待处理风险信息，包括是否为付费用户，查询攻击中、封堵中、过期资源数量等
+        /// </summary>
+        /// <param name="req"><see cref="DescribePendingRiskInfoRequest"/></param>
+        /// <returns><see cref="DescribePendingRiskInfoResponse"/></returns>
+        public DescribePendingRiskInfoResponse DescribePendingRiskInfoSync(DescribePendingRiskInfoRequest req)
+        {
+             JsonResponseModel<DescribePendingRiskInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePendingRiskInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePendingRiskInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DisassociateDDoSEipAddress) 用于解绑高防弹性公网IP。
         /// </summary>
         /// <param name="req"><see cref="DisassociateDDoSEipAddressRequest"/></param>

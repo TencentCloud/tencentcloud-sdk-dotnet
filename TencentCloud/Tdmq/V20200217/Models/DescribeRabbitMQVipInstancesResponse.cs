@@ -15,15 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAliasDomainResponse : AbstractModel
+    public class DescribeRabbitMQVipInstancesResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 未分页的总数目
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 实例信息列表
+        /// </summary>
+        [JsonProperty("Instances")]
+        public RabbitMQVipInstance[] Instances{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +48,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Instances.", this.Instances);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

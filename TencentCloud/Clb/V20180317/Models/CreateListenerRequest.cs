@@ -55,7 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
+        /// 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。此参数和MultiCertInfo不能同时传入。
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateInput Certificate{ get; set; }
@@ -109,6 +109,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("DeregisterTargetRst")]
         public bool? DeregisterTargetRst{ get; set; }
 
+        /// <summary>
+        /// 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数仅适用于未开启SNI特性的HTTPS监听器。此参数和Certificate不能同时传入。
+        /// </summary>
+        [JsonProperty("MultiCertInfo")]
+        public MultiCertInfo MultiCertInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +135,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
             this.SetParamSimple(map, prefix + "EndPort", this.EndPort);
             this.SetParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
+            this.SetParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
         }
     }
 }

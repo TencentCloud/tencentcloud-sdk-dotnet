@@ -82,7 +82,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
+        /// 语音的URL地址，需要公网环境浏览器可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

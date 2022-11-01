@@ -15,27 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Tcm.V20210413.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAliasDomainRequest : AbstractModel
+    public class LinkPrometheusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 站点 ID。
+        /// 网格ID
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("MeshID")]
+        public string MeshID{ get; set; }
 
         /// <summary>
-        /// 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-        /// <li>target-name<br>   按照【<strong>目标域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否<li>alias-id<br>   按照【<strong>别称域名ID</strong>】进行过滤。<br>   类型：String<br>   必选：否<li>alias-name<br>   按照【<strong>别称域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+        /// 配置
         /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("Prometheus")]
+        public PrometheusConfig Prometheus{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "MeshID", this.MeshID);
+            this.SetParamObj(map, prefix + "Prometheus.", this.Prometheus);
         }
     }
 }

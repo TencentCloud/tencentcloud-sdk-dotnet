@@ -261,6 +261,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("JNDIUrl")]
         public string JNDIUrl{ get; set; }
 
+        /// <summary>
+        /// rasp detail
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RaspDetail")]
+        public RaspInfo[] RaspDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -301,6 +308,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
             this.SetParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
             this.SetParamSimple(map, prefix + "JNDIUrl", this.JNDIUrl);
+            this.SetParamArrayObj(map, prefix + "RaspDetail.", this.RaspDetail);
         }
     }
 }

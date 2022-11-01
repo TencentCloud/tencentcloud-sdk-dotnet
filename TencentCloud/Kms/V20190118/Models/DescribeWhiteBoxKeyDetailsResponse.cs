@@ -25,13 +25,13 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 白盒密钥信息列表
+        /// 白盒密钥信息列表。
         /// </summary>
         [JsonProperty("KeyInfos")]
         public WhiteboxKeyInfo[] KeyInfos{ get; set; }
 
         /// <summary>
-        /// key总数量
+        /// 白盒密钥总数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
