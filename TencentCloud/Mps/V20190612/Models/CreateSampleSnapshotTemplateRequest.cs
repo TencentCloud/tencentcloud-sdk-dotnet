@@ -78,7 +78,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// 图片格式，取值为 jpg 和 png。默认为 jpg。
+        /// 图片格式，取值为 jpg、png、webp。默认为 jpg。
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

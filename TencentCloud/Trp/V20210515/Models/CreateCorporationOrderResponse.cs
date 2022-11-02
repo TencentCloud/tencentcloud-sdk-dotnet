@@ -15,34 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.Trp.V20210515.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyRoomInfoRequest : AbstractModel
+    public class CreateCorporationOrderResponse : AbstractModel
     {
         
         /// <summary>
-        /// 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+        /// 企业ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("CorpId")]
+        public ulong? CorpId{ get; set; }
 
         /// <summary>
-        /// 房间id
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("RoomId")]
-        public ulong? RoomId{ get; set; }
-
-        /// <summary>
-        /// 301 启动推流
-        /// 302 停止推流
-        /// 303 重置RTMP连接
-        /// </summary>
-        [JsonProperty("OperationType")]
-        public long? OperationType{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -50,9 +43,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
-            this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
+            this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -68,6 +68,12 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         [JsonProperty("Override")]
         public ulong? Override{ get; set; }
 
+        /// <summary>
+        /// 套餐列表顺序：PackageQueue=front会立即使用新购买的套餐，新购套餐结束后，列表中下一个未过期的套餐继续生效；PackageQueue=end会等设备当前所有已购买套餐过期后才会生效新购套餐。与Override参数不能同时使用。
+        /// </summary>
+        [JsonProperty("PackageQueue")]
+        public string PackageQueue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +84,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
             this.SetParamSimple(map, prefix + "Override", this.Override);
+            this.SetParamSimple(map, prefix + "PackageQueue", this.PackageQueue);
         }
     }
 }

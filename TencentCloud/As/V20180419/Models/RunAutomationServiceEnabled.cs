@@ -15,34 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.As.V20180419.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyRoomInfoResponse : AbstractModel
+    public class RunAutomationServiceEnabled : AbstractModel
     {
         
         /// <summary>
-        /// 操作结果, 0成功, 非0失败
+        /// 是否开启[自动化助手](https://cloud.tencent.com/document/product/1340)服务。取值范围：<br><li>TRUE：表示开启自动化助手服务<br><li>FALSE：表示不开启自动化助手服务
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Result")]
-        public ulong? Result{ get; set; }
-
-        /// <summary>
-        /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ErrMsg")]
-        public string ErrMsg{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Enabled")]
+        public bool? Enabled{ get; set; }
 
 
         /// <summary>
@@ -50,9 +37,7 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
-            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
         }
     }
 }

@@ -31,6 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>OcrWordsRecognition：文本关键词识别，</li>
         /// <li>AsrFullTextRecognition：语音全文识别，</li>
         /// <li>OcrFullTextRecognition：文本全文识别。</li>
+        /// <li>TransTextRecognition：语音翻译。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -70,6 +71,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("OcrFullTextRecognitionResultSet")]
         public LiveStreamOcrFullTextRecognitionResult[] OcrFullTextRecognitionResultSet{ get; set; }
 
+        /// <summary>
+        /// 翻译结果，当Type 为 TransTextRecognition 时有效。
+        /// </summary>
+        [JsonProperty("TransTextRecognitionResultSet")]
+        public LiveStreamTransTextRecognitionResult[] TransTextRecognitionResultSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +89,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "OcrWordsRecognitionResultSet.", this.OcrWordsRecognitionResultSet);
             this.SetParamArrayObj(map, prefix + "AsrFullTextRecognitionResultSet.", this.AsrFullTextRecognitionResultSet);
             this.SetParamArrayObj(map, prefix + "OcrFullTextRecognitionResultSet.", this.OcrFullTextRecognitionResultSet);
+            this.SetParamArrayObj(map, prefix + "TransTextRecognitionResultSet.", this.TransTextRecognitionResultSet);
         }
     }
 }

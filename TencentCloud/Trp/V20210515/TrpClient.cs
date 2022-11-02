@@ -133,6 +133,46 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 以订单方式新建企业信息/配额信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateCorporationOrderRequest"/></param>
+        /// <returns><see cref="CreateCorporationOrderResponse"/></returns>
+        public async Task<CreateCorporationOrderResponse> CreateCorporationOrder(CreateCorporationOrderRequest req)
+        {
+             JsonResponseModel<CreateCorporationOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCorporationOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCorporationOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 以订单方式新建企业信息/配额信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateCorporationOrderRequest"/></param>
+        /// <returns><see cref="CreateCorporationOrderResponse"/></returns>
+        public CreateCorporationOrderResponse CreateCorporationOrderSync(CreateCorporationOrderRequest req)
+        {
+             JsonResponseModel<CreateCorporationOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCorporationOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCorporationOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 生成自定义码包
         /// </summary>
         /// <param name="req"><see cref="CreateCustomPackRequest"/></param>

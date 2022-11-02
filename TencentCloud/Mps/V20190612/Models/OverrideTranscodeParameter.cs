@@ -64,6 +64,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TEHDConfig")]
         public TEHDConfigForUpdate TEHDConfig{ get; set; }
 
+        /// <summary>
+        /// 字幕流配置参数。
+        /// </summary>
+        [JsonProperty("SubtitleTemplate")]
+        public SubtitleTemplate SubtitleTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +82,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
             this.SetParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+            this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
         }
     }
 }

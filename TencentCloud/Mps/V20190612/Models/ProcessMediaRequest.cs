@@ -92,8 +92,11 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 编排ID。
-        /// 注意1：对于OutputStorage、OutputDir，如果编排任务里没有配置，将采用请求里对应参数。
-        /// 注意2：对于TaskNotifyConfig，如果编排任务里没有配置，将采用请求里对应的参数。
+        /// 注意1：对于OutputStorage、OutputDir参数：
+        /// <li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
+        /// <li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若创建任务接口（ProcessMedia）有输出，将覆盖原有编排的默认输出。</li>
+        /// 注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessMedia）有设置，将覆盖原有编排的默认回调。
+        /// 
         /// 注意3：编排的 Trigger 只是用来自动化触发场景，在手动发起的请求中已经配置的 Trigger 无意义。
         /// </summary>
         [JsonProperty("ScheduleId")]

@@ -31,6 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>OcrWordsRecognition：文本关键词识别，</li>
         /// <li>AsrFullTextRecognition：语音全文识别，</li>
         /// <li>OcrFullTextRecognition：文本全文识别。</li>
+        /// <li>TransTextRecognition：语音翻译。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -75,6 +76,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("OcrFullTextTask")]
         public AiRecognitionTaskOcrFullTextResult OcrFullTextTask{ get; set; }
 
+        /// <summary>
+        /// 翻译结果，当 Type 为
+        ///  TransTextRecognition 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TransTextTask")]
+        public AiRecognitionTaskTransTextResult TransTextTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +96,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
             this.SetParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
             this.SetParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
+            this.SetParamObj(map, prefix + "TransTextTask.", this.TransTextTask);
         }
     }
 }

@@ -61,7 +61,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
+        /// 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；json_log 为 json格式；fullregex_log 为单行正则；multiline_fullregex_log 为多行正则
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }

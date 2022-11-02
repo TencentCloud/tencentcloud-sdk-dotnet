@@ -66,6 +66,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("DepartmentId")]
         public string DepartmentId{ get; set; }
 
+        /// <summary>
+        /// 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
+        /// </summary>
+        [JsonProperty("TagFilters")]
+        public TagFilter[] TagFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Kind", this.Kind);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+            this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         }
     }
 }

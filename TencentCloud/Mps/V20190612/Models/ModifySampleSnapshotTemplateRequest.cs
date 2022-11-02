@@ -84,7 +84,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? SampleInterval{ get; set; }
 
         /// <summary>
-        /// 图片格式，取值为 jpg 和 png。
+        /// 图片格式，取值为 jpg、png、webp。
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

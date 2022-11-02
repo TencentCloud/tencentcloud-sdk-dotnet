@@ -55,7 +55,7 @@ namespace TencentCloud.Thpc.V20220401.Models
         public long? ComputeNodeCount{ get; set; }
 
         /// <summary>
-        /// 调度器类型。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
+        /// 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
         /// </summary>
         [JsonProperty("SchedulerType")]
         public string SchedulerType{ get; set; }
@@ -101,7 +101,7 @@ namespace TencentCloud.Thpc.V20220401.Models
         public bool? DryRun{ get; set; }
 
         /// <summary>
-        /// 域名字服务类型。默认值：NIS
+        /// 域名字服务类型。默认取值：NIS。
         /// <li>NIS：NIS域名字服务。
         /// </summary>
         [JsonProperty("AccountType")]

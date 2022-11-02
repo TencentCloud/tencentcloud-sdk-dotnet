@@ -795,46 +795,6 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
-        /// 修改房间信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyRoomInfoRequest"/></param>
-        /// <returns><see cref="ModifyRoomInfoResponse"/></returns>
-        public async Task<ModifyRoomInfoResponse> ModifyRoomInfo(ModifyRoomInfoRequest req)
-        {
-             JsonResponseModel<ModifyRoomInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyRoomInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoomInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改房间信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyRoomInfoRequest"/></param>
-        /// <returns><see cref="ModifyRoomInfoResponse"/></returns>
-        public ModifyRoomInfoResponse ModifyRoomInfoSync(ModifyRoomInfoRequest req)
-        {
-             JsonResponseModel<ModifyRoomInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyRoomInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoomInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 修改用户麦克风状态。
         /// </summary>
         /// <param name="req"><see cref="ModifyUserMicStatusRequest"/></param>
