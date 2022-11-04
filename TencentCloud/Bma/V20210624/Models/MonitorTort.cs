@@ -174,6 +174,12 @@ namespace TencentCloud.Bma.V20210624.Models
         [JsonProperty("IsOverseas")]
         public long? IsOverseas{ get; set; }
 
+        /// <summary>
+        /// ip地理位置
+        /// </summary>
+        [JsonProperty("IPLoc")]
+        public string IPLoc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Bma.V20210624.Models
             this.SetParamSimple(map, prefix + "EvidenceStatus", this.EvidenceStatus);
             this.SetParamSimple(map, prefix + "IsProducer", this.IsProducer);
             this.SetParamSimple(map, prefix + "IsOverseas", this.IsOverseas);
+            this.SetParamSimple(map, prefix + "IPLoc", this.IPLoc);
         }
     }
 }

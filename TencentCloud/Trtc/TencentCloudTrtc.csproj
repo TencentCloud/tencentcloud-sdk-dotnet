@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.633</VersionPrefix>
+    <VersionPrefix>3.0.634</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -78,6 +78,14 @@
     <Compile Include="V20190722\Models\DescribeRoomInfoResponse.cs" />
     <Compile Include="V20190722\Models\DescribeScaleInfoRequest.cs" />
     <Compile Include="V20190722\Models\DescribeScaleInfoResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeTRTCMarketQualityMetricDataRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeTRTCMarketQualityMetricDataResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeTRTCMarketScaleMetricDataRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeTRTCMarketScaleMetricDataResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeTRTCRealTimeQualityMetricDataRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeTRTCRealTimeQualityMetricDataResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeTRTCRealTimeScaleMetricDataRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeTRTCRealTimeScaleMetricDataResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcMcuTranscodeTimeRequest.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcMcuTranscodeTimeResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcUsageRequest.cs" />
@@ -120,6 +128,7 @@
     <Compile Include="V20190722\Models\SdkAppIdNewTrtcTimeUsage.cs" />
     <Compile Include="V20190722\Models\SdkAppIdRecordUsage.cs" />
     <Compile Include="V20190722\Models\SdkAppIdTrtcMcuTranscodeTimeUsage.cs" />
+    <Compile Include="V20190722\Models\SeriesInfo.cs" />
     <Compile Include="V20190722\Models\SmallVideoLayoutParams.cs" />
     <Compile Include="V20190722\Models\StartMCUMixTranscodeByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\StartMCUMixTranscodeByStrRoomIdResponse.cs" />
@@ -132,6 +141,7 @@
     <Compile Include="V20190722\Models\StorageFile.cs" />
     <Compile Include="V20190722\Models\StorageParams.cs" />
     <Compile Include="V20190722\Models\SubscribeStreamUserIds.cs" />
+    <Compile Include="V20190722\Models\TRTCDataResp.cs" />
     <Compile Include="V20190722\Models\TencentVod.cs" />
     <Compile Include="V20190722\Models\TimeValue.cs" />
     <Compile Include="V20190722\Models\TrtcTimeNewUsage.cs" />

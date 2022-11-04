@@ -25,36 +25,30 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
+        /// 调用方用户信息，UserId 必填
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
+
+        /// <summary>
         /// 文件对应的业务类型，目前支持：
+        /// - 流程 "FLOW"，如需下载合同文件请选择此项
         /// - 模板 "TEMPLATE"
         /// - 文档 "DOCUMENT"
         /// - 印章  “SEAL”
-        /// - 流程 "FLOW"
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// 业务编号的数组，如模板编号、文档编号、印章编号
+        /// 业务编号的数组，如流程编号、模板编号、文档编号、印章编号。如需下载合同文件请传入FlowId
         /// 最大支持20个资源
         /// </summary>
         [JsonProperty("BusinessIds")]
         public string[] BusinessIds{ get; set; }
 
         /// <summary>
-        /// 操作者信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 应用相关信息
-        /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
-
-        /// <summary>
-        /// 下载后的文件命名，只有fileType为zip的时候生效
+        /// 下载后的文件命名，只有FileType为zip的时候生效
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
@@ -86,14 +80,20 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 暂不开放
         /// </summary>
-        [JsonProperty("Scene")]
-        public string Scene{ get; set; }
+        [JsonProperty("CcToken")]
+        public string CcToken{ get; set; }
 
         /// <summary>
         /// 暂不开放
         /// </summary>
-        [JsonProperty("CcToken")]
-        public string CcToken{ get; set; }
+        [JsonProperty("Scene")]
+        public string Scene{ get; set; }
+
+        /// <summary>
+        /// 应用相关信息
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
 
 
         /// <summary>
@@ -101,17 +101,17 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
             this.SetParamArraySimple(map, prefix + "BusinessIds.", this.BusinessIds);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "UrlTtl", this.UrlTtl);
-            this.SetParamSimple(map, prefix + "Scene", this.Scene);
             this.SetParamSimple(map, prefix + "CcToken", this.CcToken);
+            this.SetParamSimple(map, prefix + "Scene", this.Scene);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

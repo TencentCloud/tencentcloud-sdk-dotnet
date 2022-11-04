@@ -137,6 +137,12 @@ namespace TencentCloud.Thpc.V20220401.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。
+        /// </summary>
+        [JsonProperty("AutoScalingType")]
+        public string AutoScalingType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +167,7 @@ namespace TencentCloud.Thpc.V20220401.Models
             this.SetParamObj(map, prefix + "LoginNode.", this.LoginNode);
             this.SetParamSimple(map, prefix + "LoginNodeCount", this.LoginNodeCount);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "AutoScalingType", this.AutoScalingType);
         }
     }
 }

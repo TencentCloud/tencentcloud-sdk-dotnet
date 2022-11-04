@@ -333,7 +333,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 本接口用于删除一对标签键和标签值
+        /// 本接口用于批量删除标签键和标签值。
         /// </summary>
         /// <param name="req"><see cref="DeleteTagsRequest"/></param>
         /// <returns><see cref="DeleteTagsResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// 本接口用于删除一对标签键和标签值
+        /// 本接口用于批量删除标签键和标签值。
         /// </summary>
         /// <param name="req"><see cref="DeleteTagsRequest"/></param>
         /// <returns><see cref="DeleteTagsResponse"/></returns>

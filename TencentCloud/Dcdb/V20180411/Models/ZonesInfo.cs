@@ -42,6 +42,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
+        /// <summary>
+        /// 是否在售
+        /// </summary>
+        [JsonProperty("OnSale")]
+        public bool? OnSale{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "OnSale", this.OnSale);
         }
     }
 }

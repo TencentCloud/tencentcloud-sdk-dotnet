@@ -32,8 +32,8 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 全文索引的分词符，其中的每个字符代表一个分词符；
-        /// 仅支持英文符号及\n\t\r；
-        /// 推荐使用 @&?|#()='",;:<>[]{}/ \n\t\r\ 作为分词符；
+        /// 仅支持英文符号、\n\t\r及转义符\；
+        /// 注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义
         /// </summary>
         [JsonProperty("Tokenizer")]
         public string Tokenizer{ get; set; }

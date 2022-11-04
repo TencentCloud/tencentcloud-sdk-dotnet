@@ -293,6 +293,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 为CAM用户创建访问密钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessKeyRequest"/></param>
+        /// <returns><see cref="CreateAccessKeyResponse"/></returns>
+        public async Task<CreateAccessKeyResponse> CreateAccessKey(CreateAccessKeyRequest req)
+        {
+             JsonResponseModel<CreateAccessKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAccessKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccessKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为CAM用户创建访问密钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessKeyRequest"/></param>
+        /// <returns><see cref="CreateAccessKeyResponse"/></returns>
+        public CreateAccessKeyResponse CreateAccessKeySync(CreateAccessKeyRequest req)
+        {
+             JsonResponseModel<CreateAccessKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAccessKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccessKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户组
         /// </summary>
         /// <param name="req"><see cref="CreateGroupRequest"/></param>
@@ -644,6 +684,48 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "CreateUserSAMLConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserSAMLConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为CAM用户删除访问密钥。
+        /// 此接口属于高风险操作，删除密钥后不可恢复，腾讯云将永久拒绝此密钥的所有请求，请谨慎使用。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccessKeyRequest"/></param>
+        /// <returns><see cref="DeleteAccessKeyResponse"/></returns>
+        public async Task<DeleteAccessKeyResponse> DeleteAccessKey(DeleteAccessKeyRequest req)
+        {
+             JsonResponseModel<DeleteAccessKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAccessKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccessKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为CAM用户删除访问密钥。
+        /// 此接口属于高风险操作，删除密钥后不可恢复，腾讯云将永久拒绝此密钥的所有请求，请谨慎使用。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccessKeyRequest"/></param>
+        /// <returns><see cref="DeleteAccessKeyResponse"/></returns>
+        public DeleteAccessKeyResponse DeleteAccessKeySync(DeleteAccessKeyRequest req)
+        {
+             JsonResponseModel<DeleteAccessKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAccessKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccessKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2964,6 +3046,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "UntagRole");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UntagRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为CAM用户更新访问密钥
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAccessKeyRequest"/></param>
+        /// <returns><see cref="UpdateAccessKeyResponse"/></returns>
+        public async Task<UpdateAccessKeyResponse> UpdateAccessKey(UpdateAccessKeyRequest req)
+        {
+             JsonResponseModel<UpdateAccessKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateAccessKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAccessKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为CAM用户更新访问密钥
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAccessKeyRequest"/></param>
+        /// <returns><see cref="UpdateAccessKeyResponse"/></returns>
+        public UpdateAccessKeyResponse UpdateAccessKeySync(UpdateAccessKeyRequest req)
+        {
+             JsonResponseModel<UpdateAccessKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateAccessKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAccessKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

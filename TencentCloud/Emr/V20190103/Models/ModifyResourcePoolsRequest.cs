@@ -31,7 +31,9 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 标识是fair还是capacity
+        /// 取值范围：
+        /// <li>fair:代表公平调度标识</li>
+        /// <li>capacity:代表容量调度标识</li>
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

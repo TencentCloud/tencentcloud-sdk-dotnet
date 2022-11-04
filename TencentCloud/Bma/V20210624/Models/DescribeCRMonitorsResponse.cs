@@ -37,6 +37,12 @@ namespace TencentCloud.Bma.V20210624.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
+        /// 导出地址
+        /// </summary>
+        [JsonProperty("ExportURL")]
+        public string ExportURL{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Bma.V20210624.Models
         {
             this.SetParamArrayObj(map, prefix + "Monitors.", this.Monitors);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "ExportURL", this.ExportURL);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{35B03DD2-7919-36B9-9AF9-8C160C55C632}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.633</VersionPrefix>
+    <VersionPrefix>3.0.634</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="V20190116\CamClient.cs" />
     <Compile Include="V20190116\Models\AccessKey.cs" />
+    <Compile Include="V20190116\Models\AccessKeyDetail.cs" />
     <Compile Include="V20190116\Models\AddUserRequest.cs" />
     <Compile Include="V20190116\Models\AddUserResponse.cs" />
     <Compile Include="V20190116\Models\AddUserToGroupRequest.cs" />
@@ -63,6 +64,8 @@
     <Compile Include="V20190116\Models\AttachedUserPolicyGroupInfo.cs" />
     <Compile Include="V20190116\Models\ConsumeCustomMFATokenRequest.cs" />
     <Compile Include="V20190116\Models\ConsumeCustomMFATokenResponse.cs" />
+    <Compile Include="V20190116\Models\CreateAccessKeyRequest.cs" />
+    <Compile Include="V20190116\Models\CreateAccessKeyResponse.cs" />
     <Compile Include="V20190116\Models\CreateGroupRequest.cs" />
     <Compile Include="V20190116\Models\CreateGroupResponse.cs" />
     <Compile Include="V20190116\Models\CreateOIDCConfigRequest.cs" />
@@ -81,6 +84,8 @@
     <Compile Include="V20190116\Models\CreateUserOIDCConfigResponse.cs" />
     <Compile Include="V20190116\Models\CreateUserSAMLConfigRequest.cs" />
     <Compile Include="V20190116\Models\CreateUserSAMLConfigResponse.cs" />
+    <Compile Include="V20190116\Models\DeleteAccessKeyRequest.cs" />
+    <Compile Include="V20190116\Models\DeleteAccessKeyResponse.cs" />
     <Compile Include="V20190116\Models\DeleteGroupRequest.cs" />
     <Compile Include="V20190116\Models\DeleteGroupResponse.cs" />
     <Compile Include="V20190116\Models\DeleteOIDCConfigRequest.cs" />
@@ -217,6 +222,8 @@
     <Compile Include="V20190116\Models\TagRoleResponse.cs" />
     <Compile Include="V20190116\Models\UntagRoleRequest.cs" />
     <Compile Include="V20190116\Models\UntagRoleResponse.cs" />
+    <Compile Include="V20190116\Models\UpdateAccessKeyRequest.cs" />
+    <Compile Include="V20190116\Models\UpdateAccessKeyResponse.cs" />
     <Compile Include="V20190116\Models\UpdateAssumeRolePolicyRequest.cs" />
     <Compile Include="V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
     <Compile Include="V20190116\Models\UpdateGroupRequest.cs" />

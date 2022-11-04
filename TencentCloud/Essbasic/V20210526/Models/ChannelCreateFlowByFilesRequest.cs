@@ -108,6 +108,15 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 签署人校验方式
+        /// VerifyCheck: 人脸识别（默认）
+        /// MobileCheck：手机号验证
+        /// 参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
+        /// </summary>
+        [JsonProperty("ApproverVerifyType")]
+        public string ApproverVerifyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +137,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CustomerData", this.CustomerData);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
         }
     }
 }

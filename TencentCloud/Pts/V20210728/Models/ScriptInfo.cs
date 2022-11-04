@@ -73,6 +73,13 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("LoadWeight")]
         public long? LoadWeight{ get; set; }
 
+        /// <summary>
+        /// 文件 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "EncodedContent", this.EncodedContent);
             this.SetParamSimple(map, prefix + "EncodedHttpArchive", this.EncodedHttpArchive);
             this.SetParamSimple(map, prefix + "LoadWeight", this.LoadWeight);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }
 }

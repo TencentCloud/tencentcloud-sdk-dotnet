@@ -55,7 +55,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         public ulong? Kind{ get; set; }
 
         /// <summary>
-        /// 分页，偏移位置
+        /// 分页偏移位置，默认值为0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

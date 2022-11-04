@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public RunMonitorServiceEnabled MonitorService{ get; set; }
 
         /// <summary>
-        /// 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
+        /// 该参数已废弃，查询时会返回空值，请勿使用。
         /// </summary>
         [JsonProperty("AutomationService")]
         public RunAutomationServiceEnabled[] AutomationService{ get; set; }

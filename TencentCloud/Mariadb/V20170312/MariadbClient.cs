@@ -1701,6 +1701,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（IsolateDedicatedDBInstance）用于隔离独享云数据库实例。
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateDedicatedDBInstanceResponse"/></returns>
+        public async Task<IsolateDedicatedDBInstanceResponse> IsolateDedicatedDBInstance(IsolateDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（IsolateDedicatedDBInstance）用于隔离独享云数据库实例。
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateDedicatedDBInstanceResponse"/></returns>
+        public IsolateDedicatedDBInstanceResponse IsolateDedicatedDBInstanceSync(IsolateDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 隔离后付费实例
         /// </summary>
         /// <param name="req"><see cref="IsolateHourDBInstanceRequest"/></param>

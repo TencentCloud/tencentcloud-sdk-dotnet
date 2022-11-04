@@ -84,6 +84,30 @@ namespace TencentCloud.Bma.V20210624.Models
         [JsonProperty("MonitorNote")]
         public string MonitorNote{ get; set; }
 
+        /// <summary>
+        /// 作品类型全部展示
+        /// </summary>
+        [JsonProperty("WorkCategoryAll")]
+        public string WorkCategoryAll{ get; set; }
+
+        /// <summary>
+        /// 存证状态
+        /// </summary>
+        [JsonProperty("EvidenceStatus")]
+        public long? EvidenceStatus{ get; set; }
+
+        /// <summary>
+        /// 存证状态说明
+        /// </summary>
+        [JsonProperty("EvidenceNote")]
+        public string EvidenceNote{ get; set; }
+
+        /// <summary>
+        /// 侵权站点数量
+        /// </summary>
+        [JsonProperty("TortSiteNum")]
+        public long? TortSiteNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +124,10 @@ namespace TencentCloud.Bma.V20210624.Models
             this.SetParamSimple(map, prefix + "WorkCategory", this.WorkCategory);
             this.SetParamSimple(map, prefix + "InsertTime", this.InsertTime);
             this.SetParamSimple(map, prefix + "MonitorNote", this.MonitorNote);
+            this.SetParamSimple(map, prefix + "WorkCategoryAll", this.WorkCategoryAll);
+            this.SetParamSimple(map, prefix + "EvidenceStatus", this.EvidenceStatus);
+            this.SetParamSimple(map, prefix + "EvidenceNote", this.EvidenceNote);
+            this.SetParamSimple(map, prefix + "TortSiteNum", this.TortSiteNum);
         }
     }
 }

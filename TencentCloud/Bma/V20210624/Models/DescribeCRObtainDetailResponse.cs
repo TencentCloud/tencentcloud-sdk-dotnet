@@ -115,6 +115,12 @@ namespace TencentCloud.Bma.V20210624.Models
         public string ObtainName{ get; set; }
 
         /// <summary>
+        /// 取证公证信息
+        /// </summary>
+        [JsonProperty("DepositPdfCert")]
+        public string DepositPdfCert{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -141,6 +147,7 @@ namespace TencentCloud.Bma.V20210624.Models
             this.SetParamSimple(map, prefix + "ObtainNote", this.ObtainNote);
             this.SetParamSimple(map, prefix + "ObtainDuration", this.ObtainDuration);
             this.SetParamSimple(map, prefix + "ObtainName", this.ObtainName);
+            this.SetParamSimple(map, prefix + "DepositPdfCert", this.DepositPdfCert);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
