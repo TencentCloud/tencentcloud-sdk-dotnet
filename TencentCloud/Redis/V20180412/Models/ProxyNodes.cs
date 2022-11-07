@@ -25,11 +25,18 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 节点ID
+        /// 节点 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
+
+        /// <summary>
+        /// 可用区 ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
 
 
         /// <summary>
@@ -38,6 +45,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

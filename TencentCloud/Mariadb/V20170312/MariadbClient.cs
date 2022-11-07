@@ -1701,6 +1701,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口(IsolateDBInstance)用于隔离云数据库实例（包年包月），隔离后不能通过IP和端口访问数据库。隔离的实例可在回收站中进行开机。若为欠费隔离，请尽快进行充值。
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateDBInstanceResponse"/></returns>
+        public async Task<IsolateDBInstanceResponse> IsolateDBInstance(IsolateDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(IsolateDBInstance)用于隔离云数据库实例（包年包月），隔离后不能通过IP和端口访问数据库。隔离的实例可在回收站中进行开机。若为欠费隔离，请尽快进行充值。
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateDBInstanceResponse"/></returns>
+        public IsolateDBInstanceResponse IsolateDBInstanceSync(IsolateDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（IsolateDedicatedDBInstance）用于隔离独享云数据库实例。
         /// </summary>
         /// <param name="req"><see cref="IsolateDedicatedDBInstanceRequest"/></param>

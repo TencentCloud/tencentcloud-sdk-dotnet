@@ -39,11 +39,12 @@ namespace TencentCloud.Soe.V20180724.Models
 
         /// <summary>
         /// 语音文件类型
-        /// 1: raw
+        /// 1: raw/pcm
         /// 2: wav
         /// 3: mp3
         /// 4: speex
         /// 语音文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败。
+        /// [音频上传格式](https://cloud.tencent.com/document/product/884/56132)
         /// </summary>
         [JsonProperty("VoiceFileType")]
         public long? VoiceFileType{ get; set; }
@@ -56,7 +57,9 @@ namespace TencentCloud.Soe.V20180724.Models
         public long? VoiceEncodeType{ get; set; }
 
         /// <summary>
-        /// 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为1k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
+        /// 当前语音数据, 编码格式要求为BASE64且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数）。格式要求参考[音频上传格式](https://cloud.tencent.com/document/product/884/56132)
+        /// 流式模式下需要将语音数据进行分片处理，参考：[分片大小设置](https://cloud.tencent.com/document/product/884/78985#.E5.88.86.E7.89.87.E5.A4.A7.E5.B0.8F.E8.AE.BE.E7.BD.AE.E4.B8.BA.E5.A4.9A.E5.A4.A7.E6.AF.94.E8.BE.83.E5.90.88.E9.80.82.3F)
+        /// 如何进行流式分片参考：[流式测试](https://cloud.tencent.com/document/product/884/78824#.E6.B5.81.E5.BC.8F.E8.AF.84.E6.B5.8B)
         /// </summary>
         [JsonProperty("UserVoiceData")]
         public string UserVoiceData{ get; set; }
@@ -105,12 +108,13 @@ namespace TencentCloud.Soe.V20180724.Models
         /// 评价苛刻指数。取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数。
         /// 1.0：适用于最小年龄段用户，一般对应儿童应用场景；
         /// 4.0：适用于最高年龄段用户，一般对应成人严格打分场景。
+        /// 苛刻度影响范围参考：[苛刻度影响范围](https://cloud.tencent.com/document/product/884/78824#.E8.8B.9B.E5.88.BB.E5.BA.A6)
         /// </summary>
         [JsonProperty("ScoreCoeff")]
         public float? ScoreCoeff{ get; set; }
 
         /// <summary>
-        /// 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。如果没有新建SoeAppId，请勿填入该参数，否则会报欠费错误。
+        /// 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。如果没有新建SoeAppId，请勿填入该参数，否则会报欠费错误。使用指南：[业务应用](https://cloud.tencent.com/document/product/884/78824#.E4.B8.9A.E5.8A.A1.E5.BA.94.E7.94.A8)
         /// </summary>
         [JsonProperty("SoeAppId")]
         public string SoeAppId{ get; set; }
@@ -124,26 +128,25 @@ namespace TencentCloud.Soe.V20180724.Models
 
         /// <summary>
         /// 输出断句中间结果标识
-        /// 0：不输出
+        /// 0：不输出（默认）
         /// 1：输出，通过设置该参数
-        /// 可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+        /// 可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcessWithInit请求返回结果 SentenceInfoSet 字段。
         /// </summary>
         [JsonProperty("SentenceInfoEnabled")]
         public long? SentenceInfoEnabled{ get; set; }
 
         /// <summary>
         /// 评估语言
-        /// 0：英文
+        /// 0：英文（默认）
         /// 1：中文
-        /// ServerType不填默认为0
         /// </summary>
         [JsonProperty("ServerType")]
         public long? ServerType{ get; set; }
 
         /// <summary>
         /// 异步模式标识
-        /// 0：同步模式
-        /// 1：异步模式（一般情况不建议使用异步模式）
+        /// 0：同步模式（默认）
+        /// 1：异步模式（一般情况不建议使用异步模式，如需使用参考：[异步轮询](https://cloud.tencent.com/document/product/884/78824#.E7.BB.93.E6.9E.9C.E6.9F.A5.E8.AF.A2)）
         /// 可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
         /// </summary>
         [JsonProperty("IsAsync")]
@@ -157,9 +160,8 @@ namespace TencentCloud.Soe.V20180724.Models
 
         /// <summary>
         /// 输入文本模式
-        /// 0: 普通文本
+        /// 0: 普通文本（默认）
         /// 1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
-        /// 2：音素注册模式（提工单注册需要使用音素的单词）。
         /// </summary>
         [JsonProperty("TextMode")]
         public long? TextMode{ get; set; }

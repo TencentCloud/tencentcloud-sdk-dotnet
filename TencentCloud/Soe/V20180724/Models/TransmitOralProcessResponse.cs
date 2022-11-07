@@ -31,13 +31,13 @@ namespace TencentCloud.Soe.V20180724.Models
         public float? PronAccuracy{ get; set; }
 
         /// <summary>
-        /// 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+        /// 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义。取值无意义时，值为-1
         /// </summary>
         [JsonProperty("PronFluency")]
         public float? PronFluency{ get; set; }
 
         /// <summary>
-        /// 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+        /// 发音完整度，取值范围[0, 1]，当为词模式或自由说模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义。取值无意义时，值为-1
         /// </summary>
         [JsonProperty("PronCompletion")]
         public float? PronCompletion{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 保存语音音频文件下载地址
+        /// 已废弃，不再保存语音音频文件下载地址
         /// </summary>
         [JsonProperty("AudioUrl")]
         public string AudioUrl{ get; set; }

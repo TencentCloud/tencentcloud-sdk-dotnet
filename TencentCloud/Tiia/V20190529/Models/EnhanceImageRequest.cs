@@ -30,16 +30,16 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// • 图片格式：PNG、JPG、JPEG。 
         /// • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
         /// 建议：
-        /// • 图片像素：大于50*50像素，最大不超过250万像素，否则影响识别效果； 
-        /// • 长宽比：长边：短边<5； 
+        /// • 图片像素：大于50*50像素，最大不超过250万像素，否则影响识别效果。 
+        /// • 长宽比：长边：短边<5。 
         /// 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
-        /// **注意：图片需要base64编码，并且要去掉编码头部。**
+        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。图片经过Base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+        /// 注意：图片需要Base64编码，并且要去掉编码头部。
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }

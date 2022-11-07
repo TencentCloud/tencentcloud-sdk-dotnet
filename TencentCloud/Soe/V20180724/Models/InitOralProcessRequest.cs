@@ -67,13 +67,13 @@ namespace TencentCloud.Soe.V20180724.Models
         /// <summary>
         /// 评价苛刻指数。取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数。
         /// 1.0：适用于最小年龄段用户，一般对应儿童应用场景；
-        /// 4.0：适用于最高年龄段用户，一般对应成人严格打分场景。
+        /// 4.0：适用于最高年龄段用户，一般对应成人严格打分场景。苛刻度影响范围参考：[苛刻度影响范围](https://cloud.tencent.com/document/product/884/78824#.E8.8B.9B.E5.88.BB.E5.BA.A6)
         /// </summary>
         [JsonProperty("ScoreCoeff")]
         public float? ScoreCoeff{ get; set; }
 
         /// <summary>
-        /// 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。如果没有新建SoeAppId，请勿填入该参数，否则会报欠费错误。
+        /// 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。如果没有新建SoeAppId，请勿填入该参数，否则会报欠费错误。使用指南：[业务应用](https://cloud.tencent.com/document/product/884/78824#.E4.B8.9A.E5.8A.A1.E5.BA.94.E7.94.A8)
         /// </summary>
         [JsonProperty("SoeAppId")]
         public string SoeAppId{ get; set; }
@@ -102,9 +102,8 @@ namespace TencentCloud.Soe.V20180724.Models
 
         /// <summary>
         /// 评估语言
-        /// 0：英文
+        /// 0：英文（默认）
         /// 1：中文
-        /// ServerType不填默认为0
         /// </summary>
         [JsonProperty("ServerType")]
         public long? ServerType{ get; set; }
@@ -122,7 +121,6 @@ namespace TencentCloud.Soe.V20180724.Models
         /// 输入文本模式
         /// 0: 普通文本
         /// 1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
-        /// 2：音素注册模式（提工单注册需要使用音素的单词）。
         /// </summary>
         [JsonProperty("TextMode")]
         public long? TextMode{ get; set; }

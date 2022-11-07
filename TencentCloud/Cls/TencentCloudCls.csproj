@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.634</VersionPrefix>
+    <VersionPrefix>3.0.635</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,8 @@
 
   <ItemGroup>
     <Compile Include="V20201016\ClsClient.cs" />
+    <Compile Include="V20201016\Models\AddMachineGroupInfoRequest.cs" />
+    <Compile Include="V20201016\Models\AddMachineGroupInfoResponse.cs" />
     <Compile Include="V20201016\Models\AlarmAnalysisConfig.cs" />
     <Compile Include="V20201016\Models\AlarmInfo.cs" />
     <Compile Include="V20201016\Models\AlarmNotice.cs" />
@@ -107,6 +109,8 @@
     <Compile Include="V20201016\Models\DeleteIndexResponse.cs" />
     <Compile Include="V20201016\Models\DeleteLogsetRequest.cs" />
     <Compile Include="V20201016\Models\DeleteLogsetResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteMachineGroupInfoRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteMachineGroupInfoResponse.cs" />
     <Compile Include="V20201016\Models\DeleteMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\DeleteMachineGroupResponse.cs" />
     <Compile Include="V20201016\Models\DeleteShipperRequest.cs" />

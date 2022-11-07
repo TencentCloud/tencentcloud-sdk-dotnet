@@ -53,6 +53,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 用于添加机器组信息
+        /// </summary>
+        /// <param name="req"><see cref="AddMachineGroupInfoRequest"/></param>
+        /// <returns><see cref="AddMachineGroupInfoResponse"/></returns>
+        public async Task<AddMachineGroupInfoResponse> AddMachineGroupInfo(AddMachineGroupInfoRequest req)
+        {
+             JsonResponseModel<AddMachineGroupInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddMachineGroupInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddMachineGroupInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于添加机器组信息
+        /// </summary>
+        /// <param name="req"><see cref="AddMachineGroupInfoRequest"/></param>
+        /// <returns><see cref="AddMachineGroupInfoResponse"/></returns>
+        public AddMachineGroupInfoResponse AddMachineGroupInfoSync(AddMachineGroupInfoRequest req)
+        {
+             JsonResponseModel<AddMachineGroupInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddMachineGroupInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddMachineGroupInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 应用采集配置到指定机器组
         /// </summary>
         /// <param name="req"><see cref="ApplyConfigToMachineGroupRequest"/></param>
@@ -964,6 +1004,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "DeleteMachineGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMachineGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除机器组信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMachineGroupInfoRequest"/></param>
+        /// <returns><see cref="DeleteMachineGroupInfoResponse"/></returns>
+        public async Task<DeleteMachineGroupInfoResponse> DeleteMachineGroupInfo(DeleteMachineGroupInfoRequest req)
+        {
+             JsonResponseModel<DeleteMachineGroupInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteMachineGroupInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMachineGroupInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除机器组信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMachineGroupInfoRequest"/></param>
+        /// <returns><see cref="DeleteMachineGroupInfoResponse"/></returns>
+        public DeleteMachineGroupInfoResponse DeleteMachineGroupInfoSync(DeleteMachineGroupInfoRequest req)
+        {
+             JsonResponseModel<DeleteMachineGroupInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteMachineGroupInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMachineGroupInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

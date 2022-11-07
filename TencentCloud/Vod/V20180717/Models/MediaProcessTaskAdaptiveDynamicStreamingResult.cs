@@ -49,6 +49,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
+        /// 转自适应码流任务进度，取值范围 [0-100] 。
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
+
+        /// <summary>
         /// 对视频转自适应码流任务的输入。
         /// </summary>
         [JsonProperty("Input")]
@@ -70,6 +76,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
             this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
         }

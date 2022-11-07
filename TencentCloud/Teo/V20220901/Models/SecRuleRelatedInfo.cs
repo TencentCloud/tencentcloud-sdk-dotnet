@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 规则ID列表（99999为无效id）。
+        /// 规则ID。
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }
@@ -72,6 +72,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("RuleTypeName")]
         public string RuleTypeName{ get; set; }
 
+        /// <summary>
+        /// 攻击内容。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttackContent")]
+        public string AttackContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +91,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "RuleLevel", this.RuleLevel);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "RuleTypeName", this.RuleTypeName);
+            this.SetParamSimple(map, prefix + "AttackContent", this.AttackContent);
         }
     }
 }
