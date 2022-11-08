@@ -66,6 +66,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("Digest")]
         public string Digest{ get; set; }
 
+        /// <summary>
+        /// 指定是否为精准匹配，true为精准匹配，不填为模糊匹配
+        /// </summary>
+        [JsonProperty("ExactMatch")]
+        public bool? ExactMatch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Digest", this.Digest);
+            this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
         }
     }
 }

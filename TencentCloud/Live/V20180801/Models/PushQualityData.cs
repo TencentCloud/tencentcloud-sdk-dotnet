@@ -156,6 +156,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Flux")]
         public float? Flux{ get; set; }
 
+        /// <summary>
+        /// 推流服务端 IP。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServerIp")]
+        public string ServerIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +191,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "StreamParam", this.StreamParam);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "Flux", this.Flux);
+            this.SetParamSimple(map, prefix + "ServerIp", this.ServerIp);
         }
     }
 }

@@ -2645,6 +2645,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（IsolateDedicatedDBInstance）用于销毁已隔离的独享云数据库实例。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="TerminateDedicatedDBInstanceResponse"/></returns>
+        public async Task<TerminateDedicatedDBInstanceResponse> TerminateDedicatedDBInstance(TerminateDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<TerminateDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（IsolateDedicatedDBInstance）用于销毁已隔离的独享云数据库实例。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="TerminateDedicatedDBInstanceResponse"/></returns>
+        public TerminateDedicatedDBInstanceResponse TerminateDedicatedDBInstanceSync(TerminateDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<TerminateDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(UpgradeDBInstance)用于扩容云数据库实例。本接口完成下单和支付两个动作，如果发生支付失败的错误，调用用户账户相关接口中的支付订单接口（PayDeals）重新支付即可。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>

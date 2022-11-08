@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.635</VersionPrefix>
+    <VersionPrefix>3.0.636</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,7 @@
     <Compile Include="V20201111\Models\ApproverInfo.cs" />
     <Compile Include="V20201111\Models\ApproverOption.cs" />
     <Compile Include="V20201111\Models\ApproverRestriction.cs" />
+    <Compile Include="V20201111\Models\AuthorizedUser.cs" />
     <Compile Include="V20201111\Models\Caller.cs" />
     <Compile Include="V20201111\Models\CancelFlowRequest.cs" />
     <Compile Include="V20201111\Models\CancelFlowResponse.cs" />
@@ -93,6 +94,8 @@
     <Compile Include="V20201111\Models\DescribeFlowTemplatesResponse.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationEmployeesRequest.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationEmployeesResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeOrganizationSealsRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeOrganizationSealsResponse.cs" />
     <Compile Include="V20201111\Models\DescribeThirdPartyAuthCodeRequest.cs" />
     <Compile Include="V20201111\Models\DescribeThirdPartyAuthCodeResponse.cs" />
     <Compile Include="V20201111\Models\FailedCreateStaffData.cs" />
@@ -108,6 +111,7 @@
     <Compile Include="V20201111\Models\FormField.cs" />
     <Compile Include="V20201111\Models\GetTaskResultApiRequest.cs" />
     <Compile Include="V20201111\Models\GetTaskResultApiResponse.cs" />
+    <Compile Include="V20201111\Models\OccupiedSeal.cs" />
     <Compile Include="V20201111\Models\OrganizationInfo.cs" />
     <Compile Include="V20201111\Models\PdfVerifyResult.cs" />
     <Compile Include="V20201111\Models\Recipient.cs" />

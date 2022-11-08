@@ -33,7 +33,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 拉流源的类型：
         /// PullLivePushLive -直播，
-        /// PullVodPushLive -点播。
+        /// PullVodPushLive -点播，
+        /// PullPicPushLive -图片。
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
@@ -231,6 +232,15 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("WatermarkList")]
         public PullPushWatermarkInfo[] WatermarkList{ get; set; }
 
+        /// <summary>
+        /// 点播源是否启用本地推流模式，默认0，不启用。
+        /// 0 - 不启用。
+        /// 1 - 启用。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VodLocalMode")]
+        public long? VodLocalMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -263,6 +273,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
             this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
             this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
+            this.SetParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
         }
     }
 }

@@ -53,6 +53,86 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 批量创建任务告警规则
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateIntegrationTaskAlarmsRequest"/></param>
+        /// <returns><see cref="BatchCreateIntegrationTaskAlarmsResponse"/></returns>
+        public async Task<BatchCreateIntegrationTaskAlarmsResponse> BatchCreateIntegrationTaskAlarms(BatchCreateIntegrationTaskAlarmsRequest req)
+        {
+             JsonResponseModel<BatchCreateIntegrationTaskAlarmsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchCreateIntegrationTaskAlarms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchCreateIntegrationTaskAlarmsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量创建任务告警规则
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateIntegrationTaskAlarmsRequest"/></param>
+        /// <returns><see cref="BatchCreateIntegrationTaskAlarmsResponse"/></returns>
+        public BatchCreateIntegrationTaskAlarmsResponse BatchCreateIntegrationTaskAlarmsSync(BatchCreateIntegrationTaskAlarmsRequest req)
+        {
+             JsonResponseModel<BatchCreateIntegrationTaskAlarmsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchCreateIntegrationTaskAlarms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchCreateIntegrationTaskAlarmsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除集成任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchDeleteIntegrationTasksResponse"/></returns>
+        public async Task<BatchDeleteIntegrationTasksResponse> BatchDeleteIntegrationTasks(BatchDeleteIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchDeleteIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchDeleteIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除集成任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchDeleteIntegrationTasksResponse"/></returns>
+        public BatchDeleteIntegrationTasksResponse BatchDeleteIntegrationTasksSync(BatchDeleteIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchDeleteIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDeleteIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 批量删除任务，仅对任务状态为”已停止“有效；
         /// </summary>
@@ -86,6 +166,126 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "BatchDeleteTasksNew");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteTasksNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量置成功集成任务实例
+        /// </summary>
+        /// <param name="req"><see cref="BatchForceSuccessIntegrationTaskInstancesRequest"/></param>
+        /// <returns><see cref="BatchForceSuccessIntegrationTaskInstancesResponse"/></returns>
+        public async Task<BatchForceSuccessIntegrationTaskInstancesResponse> BatchForceSuccessIntegrationTaskInstances(BatchForceSuccessIntegrationTaskInstancesRequest req)
+        {
+             JsonResponseModel<BatchForceSuccessIntegrationTaskInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchForceSuccessIntegrationTaskInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchForceSuccessIntegrationTaskInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量置成功集成任务实例
+        /// </summary>
+        /// <param name="req"><see cref="BatchForceSuccessIntegrationTaskInstancesRequest"/></param>
+        /// <returns><see cref="BatchForceSuccessIntegrationTaskInstancesResponse"/></returns>
+        public BatchForceSuccessIntegrationTaskInstancesResponse BatchForceSuccessIntegrationTaskInstancesSync(BatchForceSuccessIntegrationTaskInstancesRequest req)
+        {
+             JsonResponseModel<BatchForceSuccessIntegrationTaskInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchForceSuccessIntegrationTaskInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchForceSuccessIntegrationTaskInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量终止集成任务实例
+        /// </summary>
+        /// <param name="req"><see cref="BatchKillIntegrationTaskInstancesRequest"/></param>
+        /// <returns><see cref="BatchKillIntegrationTaskInstancesResponse"/></returns>
+        public async Task<BatchKillIntegrationTaskInstancesResponse> BatchKillIntegrationTaskInstances(BatchKillIntegrationTaskInstancesRequest req)
+        {
+             JsonResponseModel<BatchKillIntegrationTaskInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchKillIntegrationTaskInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchKillIntegrationTaskInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量终止集成任务实例
+        /// </summary>
+        /// <param name="req"><see cref="BatchKillIntegrationTaskInstancesRequest"/></param>
+        /// <returns><see cref="BatchKillIntegrationTaskInstancesResponse"/></returns>
+        public BatchKillIntegrationTaskInstancesResponse BatchKillIntegrationTaskInstancesSync(BatchKillIntegrationTaskInstancesRequest req)
+        {
+             JsonResponseModel<BatchKillIntegrationTaskInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchKillIntegrationTaskInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchKillIntegrationTaskInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对集成离线任务执行批量补数据操作
+        /// </summary>
+        /// <param name="req"><see cref="BatchMakeUpIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchMakeUpIntegrationTasksResponse"/></returns>
+        public async Task<BatchMakeUpIntegrationTasksResponse> BatchMakeUpIntegrationTasks(BatchMakeUpIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchMakeUpIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchMakeUpIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchMakeUpIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对集成离线任务执行批量补数据操作
+        /// </summary>
+        /// <param name="req"><see cref="BatchMakeUpIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchMakeUpIntegrationTasksResponse"/></returns>
+        public BatchMakeUpIntegrationTasksResponse BatchMakeUpIntegrationTasksSync(BatchMakeUpIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchMakeUpIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchMakeUpIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchMakeUpIntegrationTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -137,6 +337,166 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 批量重跑集成任务实例
+        /// </summary>
+        /// <param name="req"><see cref="BatchRerunIntegrationTaskInstancesRequest"/></param>
+        /// <returns><see cref="BatchRerunIntegrationTaskInstancesResponse"/></returns>
+        public async Task<BatchRerunIntegrationTaskInstancesResponse> BatchRerunIntegrationTaskInstances(BatchRerunIntegrationTaskInstancesRequest req)
+        {
+             JsonResponseModel<BatchRerunIntegrationTaskInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchRerunIntegrationTaskInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchRerunIntegrationTaskInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量重跑集成任务实例
+        /// </summary>
+        /// <param name="req"><see cref="BatchRerunIntegrationTaskInstancesRequest"/></param>
+        /// <returns><see cref="BatchRerunIntegrationTaskInstancesResponse"/></returns>
+        public BatchRerunIntegrationTaskInstancesResponse BatchRerunIntegrationTaskInstancesSync(BatchRerunIntegrationTaskInstancesRequest req)
+        {
+             JsonResponseModel<BatchRerunIntegrationTaskInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchRerunIntegrationTaskInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchRerunIntegrationTaskInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量继续执行集成实时任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchResumeIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchResumeIntegrationTasksResponse"/></returns>
+        public async Task<BatchResumeIntegrationTasksResponse> BatchResumeIntegrationTasks(BatchResumeIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchResumeIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchResumeIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchResumeIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量继续执行集成实时任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchResumeIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchResumeIntegrationTasksResponse"/></returns>
+        public BatchResumeIntegrationTasksResponse BatchResumeIntegrationTasksSync(BatchResumeIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchResumeIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchResumeIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchResumeIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量运行集成任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchStartIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchStartIntegrationTasksResponse"/></returns>
+        public async Task<BatchStartIntegrationTasksResponse> BatchStartIntegrationTasks(BatchStartIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchStartIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchStartIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchStartIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量运行集成任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchStartIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchStartIntegrationTasksResponse"/></returns>
+        public BatchStartIntegrationTasksResponse BatchStartIntegrationTasksSync(BatchStartIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchStartIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchStartIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchStartIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量停止集成任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchStopIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchStopIntegrationTasksResponse"/></returns>
+        public async Task<BatchStopIntegrationTasksResponse> BatchStopIntegrationTasks(BatchStopIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchStopIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchStopIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchStopIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量停止集成任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchStopIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchStopIntegrationTasksResponse"/></returns>
+        public BatchStopIntegrationTasksResponse BatchStopIntegrationTasksSync(BatchStopIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchStopIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchStopIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchStopIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 仅对任务状态为”调度中“和”已暂停“有效，对所选任务的任务实例进行终止，并停止调度
         /// </summary>
@@ -170,6 +530,286 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "BatchStopTasksNew");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchStopTasksNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量暂停集成任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchSuspendIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchSuspendIntegrationTasksResponse"/></returns>
+        public async Task<BatchSuspendIntegrationTasksResponse> BatchSuspendIntegrationTasks(BatchSuspendIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchSuspendIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchSuspendIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchSuspendIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量暂停集成任务
+        /// </summary>
+        /// <param name="req"><see cref="BatchSuspendIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchSuspendIntegrationTasksResponse"/></returns>
+        public BatchSuspendIntegrationTasksResponse BatchSuspendIntegrationTasksSync(BatchSuspendIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchSuspendIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchSuspendIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchSuspendIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量更新集成任务（暂时仅支持批量更新责任人）
+        /// </summary>
+        /// <param name="req"><see cref="BatchUpdateIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchUpdateIntegrationTasksResponse"/></returns>
+        public async Task<BatchUpdateIntegrationTasksResponse> BatchUpdateIntegrationTasks(BatchUpdateIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchUpdateIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchUpdateIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchUpdateIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量更新集成任务（暂时仅支持批量更新责任人）
+        /// </summary>
+        /// <param name="req"><see cref="BatchUpdateIntegrationTasksRequest"/></param>
+        /// <returns><see cref="BatchUpdateIntegrationTasksResponse"/></returns>
+        public BatchUpdateIntegrationTasksResponse BatchUpdateIntegrationTasksSync(BatchUpdateIntegrationTasksRequest req)
+        {
+             JsonResponseModel<BatchUpdateIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchUpdateIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchUpdateIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 判断告警规则重名
+        /// </summary>
+        /// <param name="req"><see cref="CheckAlarmRegularNameExistRequest"/></param>
+        /// <returns><see cref="CheckAlarmRegularNameExistResponse"/></returns>
+        public async Task<CheckAlarmRegularNameExistResponse> CheckAlarmRegularNameExist(CheckAlarmRegularNameExistRequest req)
+        {
+             JsonResponseModel<CheckAlarmRegularNameExistResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckAlarmRegularNameExist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckAlarmRegularNameExistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 判断告警规则重名
+        /// </summary>
+        /// <param name="req"><see cref="CheckAlarmRegularNameExistRequest"/></param>
+        /// <returns><see cref="CheckAlarmRegularNameExistResponse"/></returns>
+        public CheckAlarmRegularNameExistResponse CheckAlarmRegularNameExistSync(CheckAlarmRegularNameExistRequest req)
+        {
+             JsonResponseModel<CheckAlarmRegularNameExistResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckAlarmRegularNameExist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckAlarmRegularNameExistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 判断集成节点名称是否存在
+        /// </summary>
+        /// <param name="req"><see cref="CheckIntegrationNodeNameExistsRequest"/></param>
+        /// <returns><see cref="CheckIntegrationNodeNameExistsResponse"/></returns>
+        public async Task<CheckIntegrationNodeNameExistsResponse> CheckIntegrationNodeNameExists(CheckIntegrationNodeNameExistsRequest req)
+        {
+             JsonResponseModel<CheckIntegrationNodeNameExistsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckIntegrationNodeNameExists");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckIntegrationNodeNameExistsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 判断集成节点名称是否存在
+        /// </summary>
+        /// <param name="req"><see cref="CheckIntegrationNodeNameExistsRequest"/></param>
+        /// <returns><see cref="CheckIntegrationNodeNameExistsResponse"/></returns>
+        public CheckIntegrationNodeNameExistsResponse CheckIntegrationNodeNameExistsSync(CheckIntegrationNodeNameExistsRequest req)
+        {
+             JsonResponseModel<CheckIntegrationNodeNameExistsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckIntegrationNodeNameExists");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckIntegrationNodeNameExistsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 判断集成任务名称是否存在
+        /// </summary>
+        /// <param name="req"><see cref="CheckIntegrationTaskNameExistsRequest"/></param>
+        /// <returns><see cref="CheckIntegrationTaskNameExistsResponse"/></returns>
+        public async Task<CheckIntegrationTaskNameExistsResponse> CheckIntegrationTaskNameExists(CheckIntegrationTaskNameExistsRequest req)
+        {
+             JsonResponseModel<CheckIntegrationTaskNameExistsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckIntegrationTaskNameExists");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckIntegrationTaskNameExistsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 判断集成任务名称是否存在
+        /// </summary>
+        /// <param name="req"><see cref="CheckIntegrationTaskNameExistsRequest"/></param>
+        /// <returns><see cref="CheckIntegrationTaskNameExistsResponse"/></returns>
+        public CheckIntegrationTaskNameExistsResponse CheckIntegrationTaskNameExistsSync(CheckIntegrationTaskNameExistsRequest req)
+        {
+             JsonResponseModel<CheckIntegrationTaskNameExistsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckIntegrationTaskNameExists");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckIntegrationTaskNameExistsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 离线任务重名校验
+        /// </summary>
+        /// <param name="req"><see cref="CheckTaskNameExistRequest"/></param>
+        /// <returns><see cref="CheckTaskNameExistResponse"/></returns>
+        public async Task<CheckTaskNameExistResponse> CheckTaskNameExist(CheckTaskNameExistRequest req)
+        {
+             JsonResponseModel<CheckTaskNameExistResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckTaskNameExist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckTaskNameExistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 离线任务重名校验
+        /// </summary>
+        /// <param name="req"><see cref="CheckTaskNameExistRequest"/></param>
+        /// <returns><see cref="CheckTaskNameExistResponse"/></returns>
+        public CheckTaskNameExistResponse CheckTaskNameExistSync(CheckTaskNameExistRequest req)
+        {
+             JsonResponseModel<CheckTaskNameExistResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckTaskNameExist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckTaskNameExistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提交集成任务
+        /// </summary>
+        /// <param name="req"><see cref="CommitIntegrationTaskRequest"/></param>
+        /// <returns><see cref="CommitIntegrationTaskResponse"/></returns>
+        public async Task<CommitIntegrationTaskResponse> CommitIntegrationTask(CommitIntegrationTaskRequest req)
+        {
+             JsonResponseModel<CommitIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CommitIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CommitIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提交集成任务
+        /// </summary>
+        /// <param name="req"><see cref="CommitIntegrationTaskRequest"/></param>
+        /// <returns><see cref="CommitIntegrationTaskResponse"/></returns>
+        public CommitIntegrationTaskResponse CommitIntegrationTaskSync(CommitIntegrationTaskRequest req)
+        {
+             JsonResponseModel<CommitIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CommitIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CommitIntegrationTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -303,6 +943,246 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 建hive表
+        /// </summary>
+        /// <param name="req"><see cref="CreateHiveTableRequest"/></param>
+        /// <returns><see cref="CreateHiveTableResponse"/></returns>
+        public async Task<CreateHiveTableResponse> CreateHiveTable(CreateHiveTableRequest req)
+        {
+             JsonResponseModel<CreateHiveTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateHiveTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHiveTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 建hive表
+        /// </summary>
+        /// <param name="req"><see cref="CreateHiveTableRequest"/></param>
+        /// <returns><see cref="CreateHiveTableResponse"/></returns>
+        public CreateHiveTableResponse CreateHiveTableSync(CreateHiveTableRequest req)
+        {
+             JsonResponseModel<CreateHiveTableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateHiveTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHiveTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建hive表，返回表名称
+        /// </summary>
+        /// <param name="req"><see cref="CreateHiveTableByDDLRequest"/></param>
+        /// <returns><see cref="CreateHiveTableByDDLResponse"/></returns>
+        public async Task<CreateHiveTableByDDLResponse> CreateHiveTableByDDL(CreateHiveTableByDDLRequest req)
+        {
+             JsonResponseModel<CreateHiveTableByDDLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateHiveTableByDDL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHiveTableByDDLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建hive表，返回表名称
+        /// </summary>
+        /// <param name="req"><see cref="CreateHiveTableByDDLRequest"/></param>
+        /// <returns><see cref="CreateHiveTableByDDLResponse"/></returns>
+        public CreateHiveTableByDDLResponse CreateHiveTableByDDLSync(CreateHiveTableByDDLRequest req)
+        {
+             JsonResponseModel<CreateHiveTableByDDLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateHiveTableByDDL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHiveTableByDDLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 注册采集器
+        /// </summary>
+        /// <param name="req"><see cref="CreateInLongAgentRequest"/></param>
+        /// <returns><see cref="CreateInLongAgentResponse"/></returns>
+        public async Task<CreateInLongAgentResponse> CreateInLongAgent(CreateInLongAgentRequest req)
+        {
+             JsonResponseModel<CreateInLongAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInLongAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInLongAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 注册采集器
+        /// </summary>
+        /// <param name="req"><see cref="CreateInLongAgentRequest"/></param>
+        /// <returns><see cref="CreateInLongAgentResponse"/></returns>
+        public CreateInLongAgentResponse CreateInLongAgentSync(CreateInLongAgentRequest req)
+        {
+             JsonResponseModel<CreateInLongAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInLongAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInLongAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建集成节点
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrationNodeRequest"/></param>
+        /// <returns><see cref="CreateIntegrationNodeResponse"/></returns>
+        public async Task<CreateIntegrationNodeResponse> CreateIntegrationNode(CreateIntegrationNodeRequest req)
+        {
+             JsonResponseModel<CreateIntegrationNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateIntegrationNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIntegrationNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建集成节点
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrationNodeRequest"/></param>
+        /// <returns><see cref="CreateIntegrationNodeResponse"/></returns>
+        public CreateIntegrationNodeResponse CreateIntegrationNodeSync(CreateIntegrationNodeRequest req)
+        {
+             JsonResponseModel<CreateIntegrationNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateIntegrationNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIntegrationNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建集成任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrationTaskRequest"/></param>
+        /// <returns><see cref="CreateIntegrationTaskResponse"/></returns>
+        public async Task<CreateIntegrationTaskResponse> CreateIntegrationTask(CreateIntegrationTaskRequest req)
+        {
+             JsonResponseModel<CreateIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建集成任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrationTaskRequest"/></param>
+        /// <returns><see cref="CreateIntegrationTaskResponse"/></returns>
+        public CreateIntegrationTaskResponse CreateIntegrationTaskSync(CreateIntegrationTaskRequest req)
+        {
+             JsonResponseModel<CreateIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建离线任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateOfflineTaskRequest"/></param>
+        /// <returns><see cref="CreateOfflineTaskResponse"/></returns>
+        public async Task<CreateOfflineTaskResponse> CreateOfflineTask(CreateOfflineTaskRequest req)
+        {
+             JsonResponseModel<CreateOfflineTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOfflineTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOfflineTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建离线任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateOfflineTaskRequest"/></param>
+        /// <returns><see cref="CreateOfflineTaskResponse"/></returns>
+        public CreateOfflineTaskResponse CreateOfflineTaskSync(CreateOfflineTaskRequest req)
+        {
+             JsonResponseModel<CreateOfflineTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOfflineTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOfflineTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 资源管理需要先将资源上传到cos中，然后调用该接口，将cos资源绑定到wedata
         /// </summary>
         /// <param name="req"><see cref="CreateOrUpdateResourceRequest"/></param>
@@ -376,6 +1256,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "CreateTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建任务告警规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskAlarmRegularRequest"/></param>
+        /// <returns><see cref="CreateTaskAlarmRegularResponse"/></returns>
+        public async Task<CreateTaskAlarmRegularResponse> CreateTaskAlarmRegular(CreateTaskAlarmRegularRequest req)
+        {
+             JsonResponseModel<CreateTaskAlarmRegularResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTaskAlarmRegular");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskAlarmRegularResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建任务告警规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskAlarmRegularRequest"/></param>
+        /// <returns><see cref="CreateTaskAlarmRegularResponse"/></returns>
+        public CreateTaskAlarmRegularResponse CreateTaskAlarmRegularSync(CreateTaskAlarmRegularRequest req)
+        {
+             JsonResponseModel<CreateTaskAlarmRegularResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTaskAlarmRegular");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskAlarmRegularResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -551,6 +1471,166 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 删除采集器
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInLongAgentRequest"/></param>
+        /// <returns><see cref="DeleteInLongAgentResponse"/></returns>
+        public async Task<DeleteInLongAgentResponse> DeleteInLongAgent(DeleteInLongAgentRequest req)
+        {
+             JsonResponseModel<DeleteInLongAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteInLongAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInLongAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除采集器
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInLongAgentRequest"/></param>
+        /// <returns><see cref="DeleteInLongAgentResponse"/></returns>
+        public DeleteInLongAgentResponse DeleteInLongAgentSync(DeleteInLongAgentRequest req)
+        {
+             JsonResponseModel<DeleteInLongAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteInLongAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInLongAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除集成节点
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIntegrationNodeRequest"/></param>
+        /// <returns><see cref="DeleteIntegrationNodeResponse"/></returns>
+        public async Task<DeleteIntegrationNodeResponse> DeleteIntegrationNode(DeleteIntegrationNodeRequest req)
+        {
+             JsonResponseModel<DeleteIntegrationNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteIntegrationNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIntegrationNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除集成节点
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIntegrationNodeRequest"/></param>
+        /// <returns><see cref="DeleteIntegrationNodeResponse"/></returns>
+        public DeleteIntegrationNodeResponse DeleteIntegrationNodeSync(DeleteIntegrationNodeRequest req)
+        {
+             JsonResponseModel<DeleteIntegrationNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteIntegrationNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIntegrationNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除集成任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIntegrationTaskRequest"/></param>
+        /// <returns><see cref="DeleteIntegrationTaskResponse"/></returns>
+        public async Task<DeleteIntegrationTaskResponse> DeleteIntegrationTask(DeleteIntegrationTaskRequest req)
+        {
+             JsonResponseModel<DeleteIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除集成任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIntegrationTaskRequest"/></param>
+        /// <returns><see cref="DeleteIntegrationTaskResponse"/></returns>
+        public DeleteIntegrationTaskResponse DeleteIntegrationTaskSync(DeleteIntegrationTaskRequest req)
+        {
+             JsonResponseModel<DeleteIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOfflineTaskRequest"/></param>
+        /// <returns><see cref="DeleteOfflineTaskResponse"/></returns>
+        public async Task<DeleteOfflineTaskResponse> DeleteOfflineTask(DeleteOfflineTaskRequest req)
+        {
+             JsonResponseModel<DeleteOfflineTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteOfflineTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOfflineTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOfflineTaskRequest"/></param>
+        /// <returns><see cref="DeleteOfflineTaskResponse"/></returns>
+        public DeleteOfflineTaskResponse DeleteOfflineTaskSync(DeleteOfflineTaskRequest req)
+        {
+             JsonResponseModel<DeleteOfflineTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteOfflineTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOfflineTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 资源管理删除资源
         /// </summary>
         /// <param name="req"><see cref="DeleteResourceRequest"/></param>
@@ -582,6 +1662,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DeleteResource");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除任务告警规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskAlarmRegularRequest"/></param>
+        /// <returns><see cref="DeleteTaskAlarmRegularResponse"/></returns>
+        public async Task<DeleteTaskAlarmRegularResponse> DeleteTaskAlarmRegular(DeleteTaskAlarmRegularRequest req)
+        {
+             JsonResponseModel<DeleteTaskAlarmRegularResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTaskAlarmRegular");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTaskAlarmRegularResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除任务告警规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskAlarmRegularRequest"/></param>
+        /// <returns><see cref="DeleteTaskAlarmRegularResponse"/></returns>
+        public DeleteTaskAlarmRegularResponse DeleteTaskAlarmRegularSync(DeleteTaskAlarmRegularRequest req)
+        {
+             JsonResponseModel<DeleteTaskAlarmRegularResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTaskAlarmRegular");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTaskAlarmRegularResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -624,6 +1744,166 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DeleteWorkflowNew");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWorkflowNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 告警事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmEventsRequest"/></param>
+        /// <returns><see cref="DescribeAlarmEventsResponse"/></returns>
+        public async Task<DescribeAlarmEventsResponse> DescribeAlarmEvents(DescribeAlarmEventsRequest req)
+        {
+             JsonResponseModel<DescribeAlarmEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 告警事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmEventsRequest"/></param>
+        /// <returns><see cref="DescribeAlarmEventsResponse"/></returns>
+        public DescribeAlarmEventsResponse DescribeAlarmEventsSync(DescribeAlarmEventsRequest req)
+        {
+             JsonResponseModel<DescribeAlarmEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 告警接收人详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmReceiverRequest"/></param>
+        /// <returns><see cref="DescribeAlarmReceiverResponse"/></returns>
+        public async Task<DescribeAlarmReceiverResponse> DescribeAlarmReceiver(DescribeAlarmReceiverRequest req)
+        {
+             JsonResponseModel<DescribeAlarmReceiverResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmReceiver");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmReceiverResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 告警接收人详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmReceiverRequest"/></param>
+        /// <returns><see cref="DescribeAlarmReceiverResponse"/></returns>
+        public DescribeAlarmReceiverResponse DescribeAlarmReceiverSync(DescribeAlarmReceiverRequest req)
+        {
+             JsonResponseModel<DescribeAlarmReceiverResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmReceiver");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmReceiverResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取集群命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNamespaceListRequest"/></param>
+        /// <returns><see cref="DescribeClusterNamespaceListResponse"/></returns>
+        public async Task<DescribeClusterNamespaceListResponse> DescribeClusterNamespaceList(DescribeClusterNamespaceListRequest req)
+        {
+             JsonResponseModel<DescribeClusterNamespaceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterNamespaceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterNamespaceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取集群命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNamespaceListRequest"/></param>
+        /// <returns><see cref="DescribeClusterNamespaceListResponse"/></returns>
+        public DescribeClusterNamespaceListResponse DescribeClusterNamespaceListSync(DescribeClusterNamespaceListRequest req)
+        {
+             JsonResponseModel<DescribeClusterNamespaceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterNamespaceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterNamespaceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取数据源信息-数据源分页列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourceInfoListRequest"/></param>
+        /// <returns><see cref="DescribeDataSourceInfoListResponse"/></returns>
+        public async Task<DescribeDataSourceInfoListResponse> DescribeDataSourceInfoList(DescribeDataSourceInfoListRequest req)
+        {
+             JsonResponseModel<DescribeDataSourceInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataSourceInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataSourceInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取数据源信息-数据源分页列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourceInfoListRequest"/></param>
+        /// <returns><see cref="DescribeDataSourceInfoListResponse"/></returns>
+        public DescribeDataSourceInfoListResponse DescribeDataSourceInfoListSync(DescribeDataSourceInfoListRequest req)
+        {
+             JsonResponseModel<DescribeDataSourceInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataSourceInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataSourceInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -708,6 +1988,86 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDataSourceWithoutInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataSourceWithoutInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取字段类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataTypesRequest"/></param>
+        /// <returns><see cref="DescribeDataTypesResponse"/></returns>
+        public async Task<DescribeDataTypesResponse> DescribeDataTypes(DescribeDataTypesRequest req)
+        {
+             JsonResponseModel<DescribeDataTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取字段类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataTypesRequest"/></param>
+        /// <returns><see cref="DescribeDataTypesResponse"/></returns>
+        public DescribeDataTypesResponse DescribeDataTypesSync(DescribeDataTypesRequest req)
+        {
+             JsonResponseModel<DescribeDataTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取数据库信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseInfoListRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseInfoListResponse"/></returns>
+        public async Task<DescribeDatabaseInfoListResponse> DescribeDatabaseInfoList(DescribeDatabaseInfoListRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatabaseInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取数据库信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseInfoListRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseInfoListResponse"/></returns>
+        public DescribeDatabaseInfoListResponse DescribeDatabaseInfoListSync(DescribeDatabaseInfoListRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatabaseInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -965,6 +2325,326 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取采集器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInLongAgentListRequest"/></param>
+        /// <returns><see cref="DescribeInLongAgentListResponse"/></returns>
+        public async Task<DescribeInLongAgentListResponse> DescribeInLongAgentList(DescribeInLongAgentListRequest req)
+        {
+             JsonResponseModel<DescribeInLongAgentListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInLongAgentList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInLongAgentListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取采集器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInLongAgentListRequest"/></param>
+        /// <returns><see cref="DescribeInLongAgentListResponse"/></returns>
+        public DescribeInLongAgentListResponse DescribeInLongAgentListSync(DescribeInLongAgentListRequest req)
+        {
+             JsonResponseModel<DescribeInLongAgentListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInLongAgentList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInLongAgentListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询采集器关联的任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInLongAgentTaskListRequest"/></param>
+        /// <returns><see cref="DescribeInLongAgentTaskListResponse"/></returns>
+        public async Task<DescribeInLongAgentTaskListResponse> DescribeInLongAgentTaskList(DescribeInLongAgentTaskListRequest req)
+        {
+             JsonResponseModel<DescribeInLongAgentTaskListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInLongAgentTaskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInLongAgentTaskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询采集器关联的任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInLongAgentTaskListRequest"/></param>
+        /// <returns><see cref="DescribeInLongAgentTaskListResponse"/></returns>
+        public DescribeInLongAgentTaskListResponse DescribeInLongAgentTaskListSync(DescribeInLongAgentTaskListRequest req)
+        {
+             JsonResponseModel<DescribeInLongAgentTaskListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInLongAgentTaskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInLongAgentTaskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取采集器所在集群的VPC列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInLongAgentVpcListRequest"/></param>
+        /// <returns><see cref="DescribeInLongAgentVpcListResponse"/></returns>
+        public async Task<DescribeInLongAgentVpcListResponse> DescribeInLongAgentVpcList(DescribeInLongAgentVpcListRequest req)
+        {
+             JsonResponseModel<DescribeInLongAgentVpcListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInLongAgentVpcList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInLongAgentVpcListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取采集器所在集群的VPC列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInLongAgentVpcListRequest"/></param>
+        /// <returns><see cref="DescribeInLongAgentVpcListResponse"/></returns>
+        public DescribeInLongAgentVpcListResponse DescribeInLongAgentVpcListSync(DescribeInLongAgentVpcListRequest req)
+        {
+             JsonResponseModel<DescribeInLongAgentVpcListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInLongAgentVpcList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInLongAgentVpcListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取TKE集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInLongTkeClusterListRequest"/></param>
+        /// <returns><see cref="DescribeInLongTkeClusterListResponse"/></returns>
+        public async Task<DescribeInLongTkeClusterListResponse> DescribeInLongTkeClusterList(DescribeInLongTkeClusterListRequest req)
+        {
+             JsonResponseModel<DescribeInLongTkeClusterListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInLongTkeClusterList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInLongTkeClusterListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取TKE集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInLongTkeClusterListRequest"/></param>
+        /// <returns><see cref="DescribeInLongTkeClusterListResponse"/></returns>
+        public DescribeInLongTkeClusterListResponse DescribeInLongTkeClusterListSync(DescribeInLongTkeClusterListRequest req)
+        {
+             JsonResponseModel<DescribeInLongTkeClusterListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInLongTkeClusterList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInLongTkeClusterListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 日志获取详情页面
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLastLogRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLastLogResponse"/></returns>
+        public async Task<DescribeInstanceLastLogResponse> DescribeInstanceLastLog(DescribeInstanceLastLogRequest req)
+        {
+             JsonResponseModel<DescribeInstanceLastLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceLastLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLastLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 日志获取详情页面
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLastLogRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLastLogResponse"/></returns>
+        public DescribeInstanceLastLogResponse DescribeInstanceLastLogSync(DescribeInstanceLastLogRequest req)
+        {
+             JsonResponseModel<DescribeInstanceLastLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceLastLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLastLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeInstanceListResponse"/></returns>
+        public async Task<DescribeInstanceListResponse> DescribeInstanceList(DescribeInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeInstanceListResponse"/></returns>
+        public DescribeInstanceListResponse DescribeInstanceListSync(DescribeInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例运行日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLogRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLogResponse"/></returns>
+        public async Task<DescribeInstanceLogResponse> DescribeInstanceLog(DescribeInstanceLogRequest req)
+        {
+             JsonResponseModel<DescribeInstanceLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例运行日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLogRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLogResponse"/></returns>
+        public DescribeInstanceLogResponse DescribeInstanceLogSync(DescribeInstanceLogRequest req)
+        {
+             JsonResponseModel<DescribeInstanceLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 离线任务实例运行日志列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLogListRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLogListResponse"/></returns>
+        public async Task<DescribeInstanceLogListResponse> DescribeInstanceLogList(DescribeInstanceLogListRequest req)
+        {
+             JsonResponseModel<DescribeInstanceLogListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceLogList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLogListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 离线任务实例运行日志列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLogListRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLogListResponse"/></returns>
+        public DescribeInstanceLogListResponse DescribeInstanceLogListSync(DescribeInstanceLogListRequest req)
+        {
+             JsonResponseModel<DescribeInstanceLogListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceLogList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLogListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 获取实例日志列表
         /// </summary>
@@ -998,6 +2678,486 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstanceLogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集成节点
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationNodeRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationNodeResponse"/></returns>
+        public async Task<DescribeIntegrationNodeResponse> DescribeIntegrationNode(DescribeIntegrationNodeRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集成节点
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationNodeRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationNodeResponse"/></returns>
+        public DescribeIntegrationNodeResponse DescribeIntegrationNodeSync(DescribeIntegrationNodeRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据集成大屏概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationStatisticsResponse"/></returns>
+        public async Task<DescribeIntegrationStatisticsResponse> DescribeIntegrationStatistics(DescribeIntegrationStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据集成大屏概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationStatisticsResponse"/></returns>
+        public DescribeIntegrationStatisticsResponse DescribeIntegrationStatisticsSync(DescribeIntegrationStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据集成大屏采集器状态分布统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationStatisticsAgentStatusRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationStatisticsAgentStatusResponse"/></returns>
+        public async Task<DescribeIntegrationStatisticsAgentStatusResponse> DescribeIntegrationStatisticsAgentStatus(DescribeIntegrationStatisticsAgentStatusRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationStatisticsAgentStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationStatisticsAgentStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationStatisticsAgentStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据集成大屏采集器状态分布统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationStatisticsAgentStatusRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationStatisticsAgentStatusResponse"/></returns>
+        public DescribeIntegrationStatisticsAgentStatusResponse DescribeIntegrationStatisticsAgentStatusSync(DescribeIntegrationStatisticsAgentStatusRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationStatisticsAgentStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationStatisticsAgentStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationStatisticsAgentStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据集成大屏实例状态统计趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationStatisticsInstanceTrendRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationStatisticsInstanceTrendResponse"/></returns>
+        public async Task<DescribeIntegrationStatisticsInstanceTrendResponse> DescribeIntegrationStatisticsInstanceTrend(DescribeIntegrationStatisticsInstanceTrendRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationStatisticsInstanceTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationStatisticsInstanceTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationStatisticsInstanceTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据集成大屏实例状态统计趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationStatisticsInstanceTrendRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationStatisticsInstanceTrendResponse"/></returns>
+        public DescribeIntegrationStatisticsInstanceTrendResponse DescribeIntegrationStatisticsInstanceTrendSync(DescribeIntegrationStatisticsInstanceTrendRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationStatisticsInstanceTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationStatisticsInstanceTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationStatisticsInstanceTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据集成大屏同步条数统计趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationStatisticsRecordsTrendRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationStatisticsRecordsTrendResponse"/></returns>
+        public async Task<DescribeIntegrationStatisticsRecordsTrendResponse> DescribeIntegrationStatisticsRecordsTrend(DescribeIntegrationStatisticsRecordsTrendRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationStatisticsRecordsTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationStatisticsRecordsTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationStatisticsRecordsTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据集成大屏同步条数统计趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationStatisticsRecordsTrendRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationStatisticsRecordsTrendResponse"/></returns>
+        public DescribeIntegrationStatisticsRecordsTrendResponse DescribeIntegrationStatisticsRecordsTrendSync(DescribeIntegrationStatisticsRecordsTrendRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationStatisticsRecordsTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationStatisticsRecordsTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationStatisticsRecordsTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据集成大屏任务状态分布统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationStatisticsTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationStatisticsTaskStatusResponse"/></returns>
+        public async Task<DescribeIntegrationStatisticsTaskStatusResponse> DescribeIntegrationStatisticsTaskStatus(DescribeIntegrationStatisticsTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationStatisticsTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationStatisticsTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationStatisticsTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据集成大屏任务状态分布统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationStatisticsTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationStatisticsTaskStatusResponse"/></returns>
+        public DescribeIntegrationStatisticsTaskStatusResponse DescribeIntegrationStatisticsTaskStatusSync(DescribeIntegrationStatisticsTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationStatisticsTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationStatisticsTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationStatisticsTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据集成大屏任务状态统计趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationStatisticsTaskStatusTrendRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationStatisticsTaskStatusTrendResponse"/></returns>
+        public async Task<DescribeIntegrationStatisticsTaskStatusTrendResponse> DescribeIntegrationStatisticsTaskStatusTrend(DescribeIntegrationStatisticsTaskStatusTrendRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationStatisticsTaskStatusTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationStatisticsTaskStatusTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationStatisticsTaskStatusTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据集成大屏任务状态统计趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationStatisticsTaskStatusTrendRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationStatisticsTaskStatusTrendResponse"/></returns>
+        public DescribeIntegrationStatisticsTaskStatusTrendResponse DescribeIntegrationStatisticsTaskStatusTrendSync(DescribeIntegrationStatisticsTaskStatusTrendRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationStatisticsTaskStatusTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationStatisticsTaskStatusTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationStatisticsTaskStatusTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集成任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationTaskRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationTaskResponse"/></returns>
+        public async Task<DescribeIntegrationTaskResponse> DescribeIntegrationTask(DescribeIntegrationTaskRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集成任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationTaskRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationTaskResponse"/></returns>
+        public DescribeIntegrationTaskResponse DescribeIntegrationTaskSync(DescribeIntegrationTaskRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集成任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationTasksRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationTasksResponse"/></returns>
+        public async Task<DescribeIntegrationTasksResponse> DescribeIntegrationTasks(DescribeIntegrationTasksRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集成任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationTasksRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationTasksResponse"/></returns>
+        public DescribeIntegrationTasksResponse DescribeIntegrationTasksSync(DescribeIntegrationTasksRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集成任务版本节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationVersionNodesInfoRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationVersionNodesInfoResponse"/></returns>
+        public async Task<DescribeIntegrationVersionNodesInfoResponse> DescribeIntegrationVersionNodesInfo(DescribeIntegrationVersionNodesInfoRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationVersionNodesInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationVersionNodesInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationVersionNodesInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集成任务版本节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationVersionNodesInfoRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationVersionNodesInfoResponse"/></returns>
+        public DescribeIntegrationVersionNodesInfoResponse DescribeIntegrationVersionNodesInfoSync(DescribeIntegrationVersionNodesInfoRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationVersionNodesInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationVersionNodesInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationVersionNodesInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取kafka的topic信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaTopicInfoRequest"/></param>
+        /// <returns><see cref="DescribeKafkaTopicInfoResponse"/></returns>
+        public async Task<DescribeKafkaTopicInfoResponse> DescribeKafkaTopicInfo(DescribeKafkaTopicInfoRequest req)
+        {
+             JsonResponseModel<DescribeKafkaTopicInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKafkaTopicInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKafkaTopicInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取kafka的topic信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaTopicInfoRequest"/></param>
+        /// <returns><see cref="DescribeKafkaTopicInfoResponse"/></returns>
+        public DescribeKafkaTopicInfoResponse DescribeKafkaTopicInfoSync(DescribeKafkaTopicInfoRequest req)
+        {
+             JsonResponseModel<DescribeKafkaTopicInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKafkaTopicInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKafkaTopicInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取离线任务长连接Token
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOfflineTaskTokenRequest"/></param>
+        /// <returns><see cref="DescribeOfflineTaskTokenResponse"/></returns>
+        public async Task<DescribeOfflineTaskTokenResponse> DescribeOfflineTaskToken(DescribeOfflineTaskTokenRequest req)
+        {
+             JsonResponseModel<DescribeOfflineTaskTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOfflineTaskToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOfflineTaskTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取离线任务长连接Token
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOfflineTaskTokenRequest"/></param>
+        /// <returns><see cref="DescribeOfflineTaskTokenResponse"/></returns>
+        public DescribeOfflineTaskTokenResponse DescribeOfflineTaskTokenSync(DescribeOfflineTaskTokenRequest req)
+        {
+             JsonResponseModel<DescribeOfflineTaskTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOfflineTaskToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOfflineTaskTokenResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1087,6 +3247,126 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查询实时任务实例节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealTimeTaskInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeRealTimeTaskInstanceNodeInfoResponse"/></returns>
+        public async Task<DescribeRealTimeTaskInstanceNodeInfoResponse> DescribeRealTimeTaskInstanceNodeInfo(DescribeRealTimeTaskInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeRealTimeTaskInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRealTimeTaskInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealTimeTaskInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实时任务实例节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealTimeTaskInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeRealTimeTaskInstanceNodeInfoResponse"/></returns>
+        public DescribeRealTimeTaskInstanceNodeInfoResponse DescribeRealTimeTaskInstanceNodeInfoSync(DescribeRealTimeTaskInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeRealTimeTaskInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRealTimeTaskInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealTimeTaskInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实时任务运行指标概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealTimeTaskMetricOverviewRequest"/></param>
+        /// <returns><see cref="DescribeRealTimeTaskMetricOverviewResponse"/></returns>
+        public async Task<DescribeRealTimeTaskMetricOverviewResponse> DescribeRealTimeTaskMetricOverview(DescribeRealTimeTaskMetricOverviewRequest req)
+        {
+             JsonResponseModel<DescribeRealTimeTaskMetricOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRealTimeTaskMetricOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealTimeTaskMetricOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实时任务运行指标概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealTimeTaskMetricOverviewRequest"/></param>
+        /// <returns><see cref="DescribeRealTimeTaskMetricOverviewResponse"/></returns>
+        public DescribeRealTimeTaskMetricOverviewResponse DescribeRealTimeTaskMetricOverviewSync(DescribeRealTimeTaskMetricOverviewRequest req)
+        {
+             JsonResponseModel<DescribeRealTimeTaskMetricOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRealTimeTaskMetricOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealTimeTaskMetricOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实时任务同步速度趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealTimeTaskSpeedRequest"/></param>
+        /// <returns><see cref="DescribeRealTimeTaskSpeedResponse"/></returns>
+        public async Task<DescribeRealTimeTaskSpeedResponse> DescribeRealTimeTaskSpeed(DescribeRealTimeTaskSpeedRequest req)
+        {
+             JsonResponseModel<DescribeRealTimeTaskSpeedResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRealTimeTaskSpeed");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealTimeTaskSpeedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实时任务同步速度趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealTimeTaskSpeedRequest"/></param>
+        /// <returns><see cref="DescribeRealTimeTaskSpeedResponse"/></returns>
+        public DescribeRealTimeTaskSpeedResponse DescribeRealTimeTaskSpeedSync(DescribeRealTimeTaskSpeedRequest req)
+        {
+             JsonResponseModel<DescribeRealTimeTaskSpeedResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRealTimeTaskSpeed");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealTimeTaskSpeedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询任务实例的关联实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRelatedInstancesRequest"/></param>
@@ -1167,6 +3447,206 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取数据标准规则详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandardRuleDetailInfoListRequest"/></param>
+        /// <returns><see cref="DescribeStandardRuleDetailInfoListResponse"/></returns>
+        public async Task<DescribeStandardRuleDetailInfoListResponse> DescribeStandardRuleDetailInfoList(DescribeStandardRuleDetailInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStandardRuleDetailInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStandardRuleDetailInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStandardRuleDetailInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取数据标准规则详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandardRuleDetailInfoListRequest"/></param>
+        /// <returns><see cref="DescribeStandardRuleDetailInfoListResponse"/></returns>
+        public DescribeStandardRuleDetailInfoListResponse DescribeStandardRuleDetailInfoListSync(DescribeStandardRuleDetailInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStandardRuleDetailInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStandardRuleDetailInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStandardRuleDetailInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实时任务日志列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamTaskLogListRequest"/></param>
+        /// <returns><see cref="DescribeStreamTaskLogListResponse"/></returns>
+        public async Task<DescribeStreamTaskLogListResponse> DescribeStreamTaskLogList(DescribeStreamTaskLogListRequest req)
+        {
+             JsonResponseModel<DescribeStreamTaskLogListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamTaskLogList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamTaskLogListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实时任务日志列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamTaskLogListRequest"/></param>
+        /// <returns><see cref="DescribeStreamTaskLogListResponse"/></returns>
+        public DescribeStreamTaskLogListResponse DescribeStreamTaskLogListSync(DescribeStreamTaskLogListRequest req)
+        {
+             JsonResponseModel<DescribeStreamTaskLogListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamTaskLogList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamTaskLogListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取数据表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableInfoListRequest"/></param>
+        /// <returns><see cref="DescribeTableInfoListResponse"/></returns>
+        public async Task<DescribeTableInfoListResponse> DescribeTableInfoList(DescribeTableInfoListRequest req)
+        {
+             JsonResponseModel<DescribeTableInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTableInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取数据表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableInfoListRequest"/></param>
+        /// <returns><see cref="DescribeTableInfoListResponse"/></returns>
+        public DescribeTableInfoListResponse DescribeTableInfoListSync(DescribeTableInfoListRequest req)
+        {
+             JsonResponseModel<DescribeTableInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTableInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取表schema信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableSchemaInfoRequest"/></param>
+        /// <returns><see cref="DescribeTableSchemaInfoResponse"/></returns>
+        public async Task<DescribeTableSchemaInfoResponse> DescribeTableSchemaInfo(DescribeTableSchemaInfoRequest req)
+        {
+             JsonResponseModel<DescribeTableSchemaInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTableSchemaInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableSchemaInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取表schema信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableSchemaInfoRequest"/></param>
+        /// <returns><see cref="DescribeTableSchemaInfoResponse"/></returns>
+        public DescribeTableSchemaInfoResponse DescribeTableSchemaInfoSync(DescribeTableSchemaInfoRequest req)
+        {
+             JsonResponseModel<DescribeTableSchemaInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTableSchemaInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableSchemaInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询任务告警规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskAlarmRegulationsRequest"/></param>
+        /// <returns><see cref="DescribeTaskAlarmRegulationsResponse"/></returns>
+        public async Task<DescribeTaskAlarmRegulationsResponse> DescribeTaskAlarmRegulations(DescribeTaskAlarmRegulationsRequest req)
+        {
+             JsonResponseModel<DescribeTaskAlarmRegulationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskAlarmRegulations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskAlarmRegulationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询任务告警规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskAlarmRegulationsRequest"/></param>
+        /// <returns><see cref="DescribeTaskAlarmRegulationsResponse"/></returns>
+        public DescribeTaskAlarmRegulationsResponse DescribeTaskAlarmRegulationsSync(DescribeTaskAlarmRegulationsRequest req)
+        {
+             JsonResponseModel<DescribeTaskAlarmRegulationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskAlarmRegulations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskAlarmRegulationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 查询任务具体详情
         /// </summary>
@@ -1209,6 +3689,86 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 离线任务实例详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskInstanceRequest"/></param>
+        /// <returns><see cref="DescribeTaskInstanceResponse"/></returns>
+        public async Task<DescribeTaskInstanceResponse> DescribeTaskInstance(DescribeTaskInstanceRequest req)
+        {
+             JsonResponseModel<DescribeTaskInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 离线任务实例详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskInstanceRequest"/></param>
+        /// <returns><see cref="DescribeTaskInstanceResponse"/></returns>
+        public DescribeTaskInstanceResponse DescribeTaskInstanceSync(DescribeTaskInstanceRequest req)
+        {
+             JsonResponseModel<DescribeTaskInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 离线任务实例统计明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskInstanceReportDetailRequest"/></param>
+        /// <returns><see cref="DescribeTaskInstanceReportDetailResponse"/></returns>
+        public async Task<DescribeTaskInstanceReportDetailResponse> DescribeTaskInstanceReportDetail(DescribeTaskInstanceReportDetailRequest req)
+        {
+             JsonResponseModel<DescribeTaskInstanceReportDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskInstanceReportDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInstanceReportDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 离线任务实例统计明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskInstanceReportDetailRequest"/></param>
+        /// <returns><see cref="DescribeTaskInstanceReportDetailResponse"/></returns>
+        public DescribeTaskInstanceReportDetailResponse DescribeTaskInstanceReportDetailSync(DescribeTaskInstanceReportDetailRequest req)
+        {
+             JsonResponseModel<DescribeTaskInstanceReportDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskInstanceReportDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInstanceReportDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询任务实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskInstancesRequest"/></param>
@@ -1240,6 +3800,126 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTaskInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看任务锁状态信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLockStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskLockStatusResponse"/></returns>
+        public async Task<DescribeTaskLockStatusResponse> DescribeTaskLockStatus(DescribeTaskLockStatusRequest req)
+        {
+             JsonResponseModel<DescribeTaskLockStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskLockStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskLockStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看任务锁状态信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLockStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskLockStatusResponse"/></returns>
+        public DescribeTaskLockStatusResponse DescribeTaskLockStatusSync(DescribeTaskLockStatusRequest req)
+        {
+             JsonResponseModel<DescribeTaskLockStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskLockStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskLockStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 按起止日期统计离线任务的所有实例的运行指标总和
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskReportRequest"/></param>
+        /// <returns><see cref="DescribeTaskReportResponse"/></returns>
+        public async Task<DescribeTaskReportResponse> DescribeTaskReport(DescribeTaskReportRequest req)
+        {
+             JsonResponseModel<DescribeTaskReportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 按起止日期统计离线任务的所有实例的运行指标总和
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskReportRequest"/></param>
+        /// <returns><see cref="DescribeTaskReportResponse"/></returns>
+        public DescribeTaskReportResponse DescribeTaskReportSync(DescribeTaskReportRequest req)
+        {
+             JsonResponseModel<DescribeTaskReportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 离线任务周期统计明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskReportDetailListRequest"/></param>
+        /// <returns><see cref="DescribeTaskReportDetailListResponse"/></returns>
+        public async Task<DescribeTaskReportDetailListResponse> DescribeTaskReportDetailList(DescribeTaskReportDetailListRequest req)
+        {
+             JsonResponseModel<DescribeTaskReportDetailListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskReportDetailList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskReportDetailListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 离线任务周期统计明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskReportDetailListRequest"/></param>
+        /// <returns><see cref="DescribeTaskReportDetailListResponse"/></returns>
+        public DescribeTaskReportDetailListResponse DescribeTaskReportDetailListSync(DescribeTaskReportDetailListRequest req)
+        {
+             JsonResponseModel<DescribeTaskReportDetailListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskReportDetailList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskReportDetailListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1324,6 +4004,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTasksByPage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTasksByPageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调试运行集成任务
+        /// </summary>
+        /// <param name="req"><see cref="DryRunDIOfflineTaskRequest"/></param>
+        /// <returns><see cref="DryRunDIOfflineTaskResponse"/></returns>
+        public async Task<DryRunDIOfflineTaskResponse> DryRunDIOfflineTask(DryRunDIOfflineTaskRequest req)
+        {
+             JsonResponseModel<DryRunDIOfflineTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DryRunDIOfflineTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DryRunDIOfflineTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调试运行集成任务
+        /// </summary>
+        /// <param name="req"><see cref="DryRunDIOfflineTaskRequest"/></param>
+        /// <returns><see cref="DryRunDIOfflineTaskResponse"/></returns>
+        public DryRunDIOfflineTaskResponse DryRunDIOfflineTaskSync(DryRunDIOfflineTaskRequest req)
+        {
+             JsonResponseModel<DryRunDIOfflineTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DryRunDIOfflineTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DryRunDIOfflineTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1459,6 +4179,166 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 生成建hive表的sql
+        /// </summary>
+        /// <param name="req"><see cref="GenHiveTableDDLSqlRequest"/></param>
+        /// <returns><see cref="GenHiveTableDDLSqlResponse"/></returns>
+        public async Task<GenHiveTableDDLSqlResponse> GenHiveTableDDLSql(GenHiveTableDDLSqlRequest req)
+        {
+             JsonResponseModel<GenHiveTableDDLSqlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenHiveTableDDLSql");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenHiveTableDDLSqlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成建hive表的sql
+        /// </summary>
+        /// <param name="req"><see cref="GenHiveTableDDLSqlRequest"/></param>
+        /// <returns><see cref="GenHiveTableDDLSqlResponse"/></returns>
+        public GenHiveTableDDLSqlResponse GenHiveTableDDLSqlSync(GenHiveTableDDLSqlRequest req)
+        {
+             JsonResponseModel<GenHiveTableDDLSqlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenHiveTableDDLSql");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenHiveTableDDLSqlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提取数据集成节点字段Schema
+        /// </summary>
+        /// <param name="req"><see cref="GetIntegrationNodeColumnSchemaRequest"/></param>
+        /// <returns><see cref="GetIntegrationNodeColumnSchemaResponse"/></returns>
+        public async Task<GetIntegrationNodeColumnSchemaResponse> GetIntegrationNodeColumnSchema(GetIntegrationNodeColumnSchemaRequest req)
+        {
+             JsonResponseModel<GetIntegrationNodeColumnSchemaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetIntegrationNodeColumnSchema");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetIntegrationNodeColumnSchemaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提取数据集成节点字段Schema
+        /// </summary>
+        /// <param name="req"><see cref="GetIntegrationNodeColumnSchemaRequest"/></param>
+        /// <returns><see cref="GetIntegrationNodeColumnSchemaResponse"/></returns>
+        public GetIntegrationNodeColumnSchemaResponse GetIntegrationNodeColumnSchemaSync(GetIntegrationNodeColumnSchemaRequest req)
+        {
+             JsonResponseModel<GetIntegrationNodeColumnSchemaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetIntegrationNodeColumnSchema");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetIntegrationNodeColumnSchemaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取离线任务实例列表(新)
+        /// </summary>
+        /// <param name="req"><see cref="GetOfflineDIInstanceListRequest"/></param>
+        /// <returns><see cref="GetOfflineDIInstanceListResponse"/></returns>
+        public async Task<GetOfflineDIInstanceListResponse> GetOfflineDIInstanceList(GetOfflineDIInstanceListRequest req)
+        {
+             JsonResponseModel<GetOfflineDIInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetOfflineDIInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetOfflineDIInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取离线任务实例列表(新)
+        /// </summary>
+        /// <param name="req"><see cref="GetOfflineDIInstanceListRequest"/></param>
+        /// <returns><see cref="GetOfflineDIInstanceListResponse"/></returns>
+        public GetOfflineDIInstanceListResponse GetOfflineDIInstanceListSync(GetOfflineDIInstanceListRequest req)
+        {
+             JsonResponseModel<GetOfflineDIInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetOfflineDIInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetOfflineDIInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取离线任务实例
+        /// </summary>
+        /// <param name="req"><see cref="GetOfflineInstanceListRequest"/></param>
+        /// <returns><see cref="GetOfflineInstanceListResponse"/></returns>
+        public async Task<GetOfflineInstanceListResponse> GetOfflineInstanceList(GetOfflineInstanceListRequest req)
+        {
+             JsonResponseModel<GetOfflineInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetOfflineInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetOfflineInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取离线任务实例
+        /// </summary>
+        /// <param name="req"><see cref="GetOfflineInstanceListRequest"/></param>
+        /// <returns><see cref="GetOfflineInstanceListResponse"/></returns>
+        public GetOfflineInstanceListResponse GetOfflineInstanceListSync(GetOfflineInstanceListRequest req)
+        {
+             JsonResponseModel<GetOfflineInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetOfflineInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetOfflineInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 实例批量终止操作
         /// </summary>
@@ -1492,6 +4372,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "KillInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 锁定集成任务
+        /// </summary>
+        /// <param name="req"><see cref="LockIntegrationTaskRequest"/></param>
+        /// <returns><see cref="LockIntegrationTaskResponse"/></returns>
+        public async Task<LockIntegrationTaskResponse> LockIntegrationTask(LockIntegrationTaskRequest req)
+        {
+             JsonResponseModel<LockIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "LockIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LockIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 锁定集成任务
+        /// </summary>
+        /// <param name="req"><see cref="LockIntegrationTaskRequest"/></param>
+        /// <returns><see cref="LockIntegrationTaskResponse"/></returns>
+        public LockIntegrationTaskResponse LockIntegrationTaskSync(LockIntegrationTaskRequest req)
+        {
+             JsonResponseModel<LockIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "LockIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LockIntegrationTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1673,6 +4593,126 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 更新集成节点
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIntegrationNodeRequest"/></param>
+        /// <returns><see cref="ModifyIntegrationNodeResponse"/></returns>
+        public async Task<ModifyIntegrationNodeResponse> ModifyIntegrationNode(ModifyIntegrationNodeRequest req)
+        {
+             JsonResponseModel<ModifyIntegrationNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyIntegrationNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIntegrationNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新集成节点
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIntegrationNodeRequest"/></param>
+        /// <returns><see cref="ModifyIntegrationNodeResponse"/></returns>
+        public ModifyIntegrationNodeResponse ModifyIntegrationNodeSync(ModifyIntegrationNodeRequest req)
+        {
+             JsonResponseModel<ModifyIntegrationNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyIntegrationNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIntegrationNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新集成任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIntegrationTaskRequest"/></param>
+        /// <returns><see cref="ModifyIntegrationTaskResponse"/></returns>
+        public async Task<ModifyIntegrationTaskResponse> ModifyIntegrationTask(ModifyIntegrationTaskRequest req)
+        {
+             JsonResponseModel<ModifyIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新集成任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIntegrationTaskRequest"/></param>
+        /// <returns><see cref="ModifyIntegrationTaskResponse"/></returns>
+        public ModifyIntegrationTaskResponse ModifyIntegrationTaskSync(ModifyIntegrationTaskRequest req)
+        {
+             JsonResponseModel<ModifyIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改任务告警规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskAlarmRegularRequest"/></param>
+        /// <returns><see cref="ModifyTaskAlarmRegularResponse"/></returns>
+        public async Task<ModifyTaskAlarmRegularResponse> ModifyTaskAlarmRegular(ModifyTaskAlarmRegularRequest req)
+        {
+             JsonResponseModel<ModifyTaskAlarmRegularResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTaskAlarmRegular");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTaskAlarmRegularResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改任务告警规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskAlarmRegularRequest"/></param>
+        /// <returns><see cref="ModifyTaskAlarmRegularResponse"/></returns>
+        public ModifyTaskAlarmRegularResponse ModifyTaskAlarmRegularSync(ModifyTaskAlarmRegularRequest req)
+        {
+             JsonResponseModel<ModifyTaskAlarmRegularResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTaskAlarmRegular");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTaskAlarmRegularResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 更新任务
         /// </summary>
@@ -1748,6 +4788,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "ModifyTaskLinks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTaskLinksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重命名任务（任务编辑）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskNameRequest"/></param>
+        /// <returns><see cref="ModifyTaskNameResponse"/></returns>
+        public async Task<ModifyTaskNameResponse> ModifyTaskName(ModifyTaskNameRequest req)
+        {
+             JsonResponseModel<ModifyTaskNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTaskName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTaskNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重命名任务（任务编辑）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskNameRequest"/></param>
+        /// <returns><see cref="ModifyTaskNameResponse"/></returns>
+        public ModifyTaskNameResponse ModifyTaskNameSync(ModifyTaskNameRequest req)
+        {
+             JsonResponseModel<ModifyTaskNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTaskName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTaskNameResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2009,6 +5089,126 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 重启采集器
+        /// </summary>
+        /// <param name="req"><see cref="RestartInLongAgentRequest"/></param>
+        /// <returns><see cref="RestartInLongAgentResponse"/></returns>
+        public async Task<RestartInLongAgentResponse> RestartInLongAgent(RestartInLongAgentRequest req)
+        {
+             JsonResponseModel<RestartInLongAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestartInLongAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartInLongAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重启采集器
+        /// </summary>
+        /// <param name="req"><see cref="RestartInLongAgentRequest"/></param>
+        /// <returns><see cref="RestartInLongAgentResponse"/></returns>
+        public RestartInLongAgentResponse RestartInLongAgentSync(RestartInLongAgentRequest req)
+        {
+             JsonResponseModel<RestartInLongAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestartInLongAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartInLongAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 继续集成任务
+        /// </summary>
+        /// <param name="req"><see cref="ResumeIntegrationTaskRequest"/></param>
+        /// <returns><see cref="ResumeIntegrationTaskResponse"/></returns>
+        public async Task<ResumeIntegrationTaskResponse> ResumeIntegrationTask(ResumeIntegrationTaskRequest req)
+        {
+             JsonResponseModel<ResumeIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResumeIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 继续集成任务
+        /// </summary>
+        /// <param name="req"><see cref="ResumeIntegrationTaskRequest"/></param>
+        /// <returns><see cref="ResumeIntegrationTaskResponse"/></returns>
+        public ResumeIntegrationTaskResponse ResumeIntegrationTaskSync(ResumeIntegrationTaskRequest req)
+        {
+             JsonResponseModel<ResumeIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResumeIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 抢占锁定集成任务
+        /// </summary>
+        /// <param name="req"><see cref="RobAndLockIntegrationTaskRequest"/></param>
+        /// <returns><see cref="RobAndLockIntegrationTaskResponse"/></returns>
+        public async Task<RobAndLockIntegrationTaskResponse> RobAndLockIntegrationTask(RobAndLockIntegrationTaskRequest req)
+        {
+             JsonResponseModel<RobAndLockIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RobAndLockIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RobAndLockIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 抢占锁定集成任务
+        /// </summary>
+        /// <param name="req"><see cref="RobAndLockIntegrationTaskRequest"/></param>
+        /// <returns><see cref="RobAndLockIntegrationTaskResponse"/></returns>
+        public RobAndLockIntegrationTaskResponse RobAndLockIntegrationTaskSync(RobAndLockIntegrationTaskRequest req)
+        {
+             JsonResponseModel<RobAndLockIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RobAndLockIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RobAndLockIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 运行任务
         /// </summary>
@@ -2124,6 +5324,86 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "SetTaskAlarmNew");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTaskAlarmNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启动集成任务
+        /// </summary>
+        /// <param name="req"><see cref="StartIntegrationTaskRequest"/></param>
+        /// <returns><see cref="StartIntegrationTaskResponse"/></returns>
+        public async Task<StartIntegrationTaskResponse> StartIntegrationTask(StartIntegrationTaskRequest req)
+        {
+             JsonResponseModel<StartIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启动集成任务
+        /// </summary>
+        /// <param name="req"><see cref="StartIntegrationTaskRequest"/></param>
+        /// <returns><see cref="StartIntegrationTaskResponse"/></returns>
+        public StartIntegrationTaskResponse StartIntegrationTaskSync(StartIntegrationTaskRequest req)
+        {
+             JsonResponseModel<StartIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止集成任务
+        /// </summary>
+        /// <param name="req"><see cref="StopIntegrationTaskRequest"/></param>
+        /// <returns><see cref="StopIntegrationTaskResponse"/></returns>
+        public async Task<StopIntegrationTaskResponse> StopIntegrationTask(StopIntegrationTaskRequest req)
+        {
+             JsonResponseModel<StopIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止集成任务
+        /// </summary>
+        /// <param name="req"><see cref="StopIntegrationTaskRequest"/></param>
+        /// <returns><see cref="StopIntegrationTaskResponse"/></returns>
+        public StopIntegrationTaskResponse StopIntegrationTaskSync(StopIntegrationTaskRequest req)
+        {
+             JsonResponseModel<StopIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopIntegrationTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2257,6 +5537,86 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 暂停集成任务
+        /// </summary>
+        /// <param name="req"><see cref="SuspendIntegrationTaskRequest"/></param>
+        /// <returns><see cref="SuspendIntegrationTaskResponse"/></returns>
+        public async Task<SuspendIntegrationTaskResponse> SuspendIntegrationTask(SuspendIntegrationTaskRequest req)
+        {
+             JsonResponseModel<SuspendIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SuspendIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SuspendIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 暂停集成任务
+        /// </summary>
+        /// <param name="req"><see cref="SuspendIntegrationTaskRequest"/></param>
+        /// <returns><see cref="SuspendIntegrationTaskResponse"/></returns>
+        public SuspendIntegrationTaskResponse SuspendIntegrationTaskSync(SuspendIntegrationTaskRequest req)
+        {
+             JsonResponseModel<SuspendIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SuspendIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SuspendIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询Inlong manager日志
+        /// </summary>
+        /// <param name="req"><see cref="TaskLogRequest"/></param>
+        /// <returns><see cref="TaskLogResponse"/></returns>
+        public async Task<TaskLogResponse> TaskLog(TaskLogRequest req)
+        {
+             JsonResponseModel<TaskLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TaskLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TaskLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询Inlong manager日志
+        /// </summary>
+        /// <param name="req"><see cref="TaskLogRequest"/></param>
+        /// <returns><see cref="TaskLogResponse"/></returns>
+        public TaskLogResponse TaskLogSync(TaskLogRequest req)
+        {
+             JsonResponseModel<TaskLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TaskLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TaskLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 触发事件
         /// </summary>
@@ -2290,6 +5650,86 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "TriggerEvent");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TriggerEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解锁集成任务
+        /// </summary>
+        /// <param name="req"><see cref="UnlockIntegrationTaskRequest"/></param>
+        /// <returns><see cref="UnlockIntegrationTaskResponse"/></returns>
+        public async Task<UnlockIntegrationTaskResponse> UnlockIntegrationTask(UnlockIntegrationTaskRequest req)
+        {
+             JsonResponseModel<UnlockIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnlockIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlockIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解锁集成任务
+        /// </summary>
+        /// <param name="req"><see cref="UnlockIntegrationTaskRequest"/></param>
+        /// <returns><see cref="UnlockIntegrationTaskResponse"/></returns>
+        public UnlockIntegrationTaskResponse UnlockIntegrationTaskSync(UnlockIntegrationTaskRequest req)
+        {
+             JsonResponseModel<UnlockIntegrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnlockIntegrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlockIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新采集器
+        /// </summary>
+        /// <param name="req"><see cref="UpdateInLongAgentRequest"/></param>
+        /// <returns><see cref="UpdateInLongAgentResponse"/></returns>
+        public async Task<UpdateInLongAgentResponse> UpdateInLongAgent(UpdateInLongAgentRequest req)
+        {
+             JsonResponseModel<UpdateInLongAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateInLongAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateInLongAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新采集器
+        /// </summary>
+        /// <param name="req"><see cref="UpdateInLongAgentRequest"/></param>
+        /// <returns><see cref="UpdateInLongAgentResponse"/></returns>
+        public UpdateInLongAgentResponse UpdateInLongAgentSync(UpdateInLongAgentRequest req)
+        {
+             JsonResponseModel<UpdateInLongAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateInLongAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateInLongAgentResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 存储地域
+        /// 存储地域。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 存储地域描述信息
+        /// 存储地域描述信息。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -45,10 +45,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 是否默认的存储地域，true：是；false：否
+        /// 是否默认的存储地域，true：是；false：否。
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
+
+        /// <summary>
+        /// 存储区域，取值有：
+        /// <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+        /// <li>Outside Chinese Mainland：中国境外。</li>
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
 
         /// <summary>
@@ -60,6 +68,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

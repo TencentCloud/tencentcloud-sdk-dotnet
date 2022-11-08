@@ -95,6 +95,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("SkillGroupName")]
         public string SkillGroupName{ get; set; }
 
+        /// <summary>
+        /// 满意度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Satisfaction")]
+        public IMSatisfaction Satisfaction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +118,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
             this.SetParamSimple(map, prefix + "SkillGroupName", this.SkillGroupName);
+            this.SetParamObj(map, prefix + "Satisfaction.", this.Satisfaction);
         }
     }
 }

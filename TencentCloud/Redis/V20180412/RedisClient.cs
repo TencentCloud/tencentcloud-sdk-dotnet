@@ -3053,7 +3053,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 续费实例
+        /// 本接口（RenewInstance）可用于为实例续费。
         /// </summary>
         /// <param name="req"><see cref="RenewInstanceRequest"/></param>
         /// <returns><see cref="RenewInstanceResponse"/></returns>
@@ -3073,7 +3073,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 续费实例
+        /// 本接口（RenewInstance）可用于为实例续费。
         /// </summary>
         /// <param name="req"><see cref="RenewInstanceRequest"/></param>
         /// <returns><see cref="RenewInstanceResponse"/></returns>

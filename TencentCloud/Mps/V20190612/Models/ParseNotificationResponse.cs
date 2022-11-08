@@ -34,14 +34,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string EventType{ get; set; }
 
         /// <summary>
-        /// 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+        /// 视频处理任务信息，仅当 EventType 为 WorkflowTask，该字段有值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkflowTaskEvent")]
         public WorkflowTask WorkflowTaskEvent{ get; set; }
 
         /// <summary>
-        /// 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+        /// 视频编辑任务信息，仅当 EventType 为 EditMediaTask，该字段有值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EditMediaTaskEvent")]
@@ -60,7 +60,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+        /// 编排任务信息，仅当 EventType 为 ScheduleTask，该字段有值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleTaskEvent")]

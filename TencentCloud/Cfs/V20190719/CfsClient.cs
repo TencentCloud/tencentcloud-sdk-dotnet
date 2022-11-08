@@ -533,7 +533,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 查询文件系统快照d定期策略列表信息
+        /// 查询文件系统快照定期策略列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoSnapshotPoliciesRequest"/></param>
         /// <returns><see cref="DescribeAutoSnapshotPoliciesResponse"/></returns>
@@ -553,7 +553,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 查询文件系统快照d定期策略列表信息
+        /// 查询文件系统快照定期策略列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoSnapshotPoliciesRequest"/></param>
         /// <returns><see cref="DescribeAutoSnapshotPoliciesResponse"/></returns>
