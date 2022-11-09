@@ -35,13 +35,14 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>purge_url：URL；</li>
         /// <li>purge_prefix：前缀；</li>
         /// <li>purge_host：Hostname；</li>
-        /// <li>purge_all：全部缓存。</li>
+        /// <li>purge_all：全部缓存；</li>
+        /// <li>purge_cache_tag：cache-tag刷新。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 要刷新的资源列表，每个元素格式依据Type而定：
+        /// 要清除缓存的资源列表，每个元素格式依据Type而定：
         /// 1) Type = purge_host 时：
         /// 形如：www.example.com 或 foo.bar.example.com。
         /// 2) Type = purge_prefix 时：
@@ -50,6 +51,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 形如：https://www.example.com/example.jpg。
         /// 4）Type = purge_all 时：
         /// Targets可为空，不需要填写。
+        /// 5）Type = purge_cache_tag 时：
+        /// 形如：tag1。
         /// </summary>
         [JsonProperty("Targets")]
         public string[] Targets{ get; set; }

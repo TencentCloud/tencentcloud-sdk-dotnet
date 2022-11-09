@@ -25,18 +25,6 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点Id。
-        /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
-
-        /// <summary>
-        /// 子域名。
-        /// </summary>
-        [JsonProperty("Entity")]
-        public string Entity{ get; set; }
-
-        /// <summary>
         /// 分页查询偏移量。默认值：0。
         /// </summary>
         [JsonProperty("Offset")]
@@ -49,6 +37,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Limit{ get; set; }
 
         /// <summary>
+        /// 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// 子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+        /// </summary>
+        [JsonProperty("Entity")]
+        public string Entity{ get; set; }
+
+        /// <summary>
         /// 规则类型，取值有：
         /// <li> idcid；</li>
         /// <li>sipbot；</li>
@@ -57,17 +57,24 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
+        /// <summary>
+        /// 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "Entity", this.Entity);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "Entity", this.Entity);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

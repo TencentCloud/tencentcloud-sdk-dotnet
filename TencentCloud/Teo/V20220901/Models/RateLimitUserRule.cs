@@ -69,8 +69,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 规则状态，取值有：
         /// <li>on：生效；</li>
-        /// <li>off：不生效。</li>
-        /// <li>hour：小时。</li>默认on生效。
+        /// <li>off：不生效。</li>默认on生效。
         /// </summary>
         [JsonProperty("RuleStatus")]
         public string RuleStatus{ get; set; }
@@ -96,7 +95,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 过滤词，取值有：
-        /// <li>host：域名；</li>
         /// <li>sip：客户端ip。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -109,6 +107,15 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// 统计范围，字段为null时，代表source_to_eo。取值有：
+        /// <li>source_to_eo：（响应）源站到EdgeOne。</li>
+        /// <li>client_to_eo：（请求）客户端到EdgeOne；</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FreqScope")]
+        public string[] FreqScope{ get; set; }
 
 
         /// <summary>
@@ -128,6 +135,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
             this.SetParamArraySimple(map, prefix + "FreqFields.", this.FreqFields);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamArraySimple(map, prefix + "FreqScope.", this.FreqScope);
         }
     }
 }

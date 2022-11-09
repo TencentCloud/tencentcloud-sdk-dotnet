@@ -43,11 +43,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? DailyAvailable{ get; set; }
 
         /// <summary>
-        /// 配额类型，取值有：
-        /// <li> purge_prefix：前缀；</li>
-        /// <li> purge_url：URL；</li>
-        /// <li> purge_host：Hostname；</li>
-        /// <li> purge_all：全部缓存内容。</li>
+        /// 刷新预热缓存类型，取值有：
+        /// <li> purge_prefix：按前缀刷新；</li>
+        /// <li> purge_url：按URL刷新；</li>
+        /// <li> purge_host：按Hostname刷新；</li>
+        /// <li> purge_all：刷新全部缓存内容；</li>
+        /// <li> purge_cache_tag：按CacheTag刷新；</li><li> prefetch_url：按URL预热。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

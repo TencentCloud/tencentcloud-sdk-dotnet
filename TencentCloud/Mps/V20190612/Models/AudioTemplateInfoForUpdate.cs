@@ -71,6 +71,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }
 
+        /// <summary>
+        /// 指定输出要保留的音频轨道。默认是全部保留源的。
+        /// </summary>
+        [JsonProperty("StreamSelects")]
+        public long?[] StreamSelects{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+            this.SetParamArraySimple(map, prefix + "StreamSelects.", this.StreamSelects);
         }
     }
 }

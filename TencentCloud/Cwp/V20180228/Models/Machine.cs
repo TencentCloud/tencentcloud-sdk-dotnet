@@ -193,6 +193,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("IsAddedOnTheFifteen")]
         public ulong? IsAddedOnTheFifteen{ get; set; }
 
+        /// <summary>
+        /// 主机ip列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IpList")]
+        public string IpList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -225,6 +232,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "ProtectType", this.ProtectType);
             this.SetParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
             this.SetParamSimple(map, prefix + "IsAddedOnTheFifteen", this.IsAddedOnTheFifteen);
+            this.SetParamSimple(map, prefix + "IpList", this.IpList);
         }
     }
 }

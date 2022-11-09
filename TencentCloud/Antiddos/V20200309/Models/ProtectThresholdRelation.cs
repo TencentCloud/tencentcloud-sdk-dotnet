@@ -76,6 +76,34 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("ListenerCcThresholdList")]
         public ListenerCcThreholdConfig[] ListenerCcThresholdList{ get; set; }
 
+        /// <summary>
+        /// SYN FLOOD流量阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SynFloodThreshold")]
+        public ulong? SynFloodThreshold{ get; set; }
+
+        /// <summary>
+        /// SYN FLOOD包量阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SynFloodPktThreshold")]
+        public ulong? SynFloodPktThreshold{ get; set; }
+
+        /// <summary>
+        /// UDP FLOOD流量阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UdpFloodThreshold")]
+        public ulong? UdpFloodThreshold{ get; set; }
+
+        /// <summary>
+        /// UDP FLOOD包量阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UdpFloodPktThreshold")]
+        public ulong? UdpFloodPktThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +117,10 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "CCThreshold", this.CCThreshold);
             this.SetParamArrayObj(map, prefix + "InstanceDetailList.", this.InstanceDetailList);
             this.SetParamArrayObj(map, prefix + "ListenerCcThresholdList.", this.ListenerCcThresholdList);
+            this.SetParamSimple(map, prefix + "SynFloodThreshold", this.SynFloodThreshold);
+            this.SetParamSimple(map, prefix + "SynFloodPktThreshold", this.SynFloodPktThreshold);
+            this.SetParamSimple(map, prefix + "UdpFloodThreshold", this.UdpFloodThreshold);
+            this.SetParamSimple(map, prefix + "UdpFloodPktThreshold", this.UdpFloodPktThreshold);
         }
     }
 }

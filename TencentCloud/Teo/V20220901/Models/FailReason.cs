@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Reason{ get; set; }
 
         /// <summary>
-        /// 处理失败的资源列表，该列表元素来源于输入参数中的Targets，因此格式和入参中的Targets保持一致。
+        /// 处理失败的资源列表。
         /// </summary>
         [JsonProperty("Targets")]
         public string[] Targets{ get; set; }

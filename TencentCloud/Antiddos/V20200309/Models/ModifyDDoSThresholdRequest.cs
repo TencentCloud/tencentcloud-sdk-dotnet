@@ -43,6 +43,36 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
+        /// <summary>
+        /// 配置其他阈值标志位，1表示配置其他阈值
+        /// </summary>
+        [JsonProperty("OtherThresholdFlag")]
+        public long? OtherThresholdFlag{ get; set; }
+
+        /// <summary>
+        /// SYN FLOOD流量阈值
+        /// </summary>
+        [JsonProperty("SynFloodThreshold")]
+        public ulong? SynFloodThreshold{ get; set; }
+
+        /// <summary>
+        /// SYN FLOOD包量阈值
+        /// </summary>
+        [JsonProperty("SynFloodPktThreshold")]
+        public ulong? SynFloodPktThreshold{ get; set; }
+
+        /// <summary>
+        /// UDP FLOOD流量阈值
+        /// </summary>
+        [JsonProperty("UdpFloodThreshold")]
+        public ulong? UdpFloodThreshold{ get; set; }
+
+        /// <summary>
+        /// UDP FLOOD包量阈值
+        /// </summary>
+        [JsonProperty("UdpFloodPktThreshold")]
+        public ulong? UdpFloodPktThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +82,11 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Threshold", this.Threshold);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Business", this.Business);
+            this.SetParamSimple(map, prefix + "OtherThresholdFlag", this.OtherThresholdFlag);
+            this.SetParamSimple(map, prefix + "SynFloodThreshold", this.SynFloodThreshold);
+            this.SetParamSimple(map, prefix + "SynFloodPktThreshold", this.SynFloodPktThreshold);
+            this.SetParamSimple(map, prefix + "UdpFloodThreshold", this.UdpFloodThreshold);
+            this.SetParamSimple(map, prefix + "UdpFloodPktThreshold", this.UdpFloodPktThreshold);
         }
     }
 }

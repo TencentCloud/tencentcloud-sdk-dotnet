@@ -2773,7 +2773,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 查询安全防护配置详情
+        /// 查询安全防护配置详情。请求参数中ZoneId+Entity或TemplateId至少填一项。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityPolicyRequest"/></param>
         /// <returns><see cref="DescribeSecurityPolicyResponse"/></returns>
@@ -2793,7 +2793,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 查询安全防护配置详情
+        /// 查询安全防护配置详情。请求参数中ZoneId+Entity或TemplateId至少填一项。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityPolicyRequest"/></param>
         /// <returns><see cref="DescribeSecurityPolicyResponse"/></returns>
@@ -4693,7 +4693,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改Web&Bot安全配置
+        /// 修改Web&Bot安全配置。
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityPolicyRequest"/></param>
         /// <returns><see cref="ModifySecurityPolicyResponse"/></returns>
@@ -4713,7 +4713,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改Web&Bot安全配置
+        /// 修改Web&Bot安全配置。
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityPolicyRequest"/></param>
         /// <returns><see cref="ModifySecurityPolicyResponse"/></returns>

@@ -2117,6 +2117,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 展示API上已绑定的插件列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginsByApiRequest"/></param>
+        /// <returns><see cref="DescribePluginsByApiResponse"/></returns>
+        public async Task<DescribePluginsByApiResponse> DescribePluginsByApi(DescribePluginsByApiRequest req)
+        {
+             JsonResponseModel<DescribePluginsByApiResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePluginsByApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginsByApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 展示API上已绑定的插件列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginsByApiRequest"/></param>
+        /// <returns><see cref="DescribePluginsByApiResponse"/></returns>
+        public DescribePluginsByApiResponse DescribePluginsByApiSync(DescribePluginsByApiRequest req)
+        {
+             JsonResponseModel<DescribePluginsByApiResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePluginsByApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginsByApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeService）用于查询一个服务的详细信息、包括服务的描述、域名、协议、创建时间、发布情况等信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceRequest"/></param>

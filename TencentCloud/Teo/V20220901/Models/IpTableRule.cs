@@ -59,6 +59,15 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 规则启用状态，当返回为null时，为启用。取值有：
+        /// <li> on：启用；</li>
+        /// <li> off：未启用。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +79,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "MatchContent", this.MatchContent);
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

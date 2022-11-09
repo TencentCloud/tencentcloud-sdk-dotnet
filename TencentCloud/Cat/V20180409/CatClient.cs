@@ -413,6 +413,46 @@ namespace TencentCloud.Cat.V20180409
         }
 
         /// <summary>
+        /// 更新探测任务属性
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProbeTaskAttributesRequest"/></param>
+        /// <returns><see cref="UpdateProbeTaskAttributesResponse"/></returns>
+        public async Task<UpdateProbeTaskAttributesResponse> UpdateProbeTaskAttributes(UpdateProbeTaskAttributesRequest req)
+        {
+             JsonResponseModel<UpdateProbeTaskAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateProbeTaskAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateProbeTaskAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新探测任务属性
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProbeTaskAttributesRequest"/></param>
+        /// <returns><see cref="UpdateProbeTaskAttributesResponse"/></returns>
+        public UpdateProbeTaskAttributesResponse UpdateProbeTaskAttributesSync(UpdateProbeTaskAttributesRequest req)
+        {
+             JsonResponseModel<UpdateProbeTaskAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateProbeTaskAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateProbeTaskAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量更新拨测任务配置
         /// </summary>
         /// <param name="req"><see cref="UpdateProbeTaskConfigurationListRequest"/></param>

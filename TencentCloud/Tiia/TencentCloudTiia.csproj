@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E63812DF-A192-30BF-985E-E5282DD5F582}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.636</VersionPrefix>
+    <VersionPrefix>3.0.637</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -78,6 +78,8 @@
     <Compile Include="V20190529\Models\DetectLabelResponse.cs" />
     <Compile Include="V20190529\Models\DetectMisbehaviorRequest.cs" />
     <Compile Include="V20190529\Models\DetectMisbehaviorResponse.cs" />
+    <Compile Include="V20190529\Models\DetectPetRequest.cs" />
+    <Compile Include="V20190529\Models\DetectPetResponse.cs" />
     <Compile Include="V20190529\Models\DetectProductBetaRequest.cs" />
     <Compile Include="V20190529\Models\DetectProductBetaResponse.cs" />
     <Compile Include="V20190529\Models\DetectProductRequest.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="V20190529\Models\LemmaInfo.cs" />
     <Compile Include="V20190529\Models\Location.cs" />
     <Compile Include="V20190529\Models\ObjectInfo.cs" />
+    <Compile Include="V20190529\Models\Pet.cs" />
     <Compile Include="V20190529\Models\Product.cs" />
     <Compile Include="V20190529\Models\ProductInfo.cs" />
     <Compile Include="V20190529\Models\RecognizeCarProRequest.cs" />

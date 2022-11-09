@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点Id。
+        /// 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 子域名。
+        /// 子域名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
         /// </summary>
         [JsonProperty("Entity")]
         public string Entity{ get; set; }
@@ -81,6 +81,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("WafGroups")]
         public WafGroup[] WafGroups{ get; set; }
 
+        /// <summary>
+        /// 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +101,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "WafRules.", this.WafRules);
             this.SetParamObj(map, prefix + "AiRule.", this.AiRule);
             this.SetParamArrayObj(map, prefix + "WafGroups.", this.WafGroups);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

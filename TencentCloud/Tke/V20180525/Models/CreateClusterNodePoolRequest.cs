@@ -31,13 +31,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// AutoScalingGroupPara AS组参数
+        /// AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
         /// </summary>
         [JsonProperty("AutoScalingGroupPara")]
         public string AutoScalingGroupPara{ get; set; }
 
         /// <summary>
-        /// LaunchConfigurePara 运行参数
+        /// LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
         /// </summary>
         [JsonProperty("LaunchConfigurePara")]
         public string LaunchConfigurePara{ get; set; }

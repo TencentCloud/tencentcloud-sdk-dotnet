@@ -677,6 +677,50 @@ namespace TencentCloud.Tiia.V20190529
         }
 
         /// <summary>
+        /// 传入一张图片，识别出图片中是否存在宠物
+        /// >     
+        /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// </summary>
+        /// <param name="req"><see cref="DetectPetRequest"/></param>
+        /// <returns><see cref="DetectPetResponse"/></returns>
+        public async Task<DetectPetResponse> DetectPet(DetectPetRequest req)
+        {
+             JsonResponseModel<DetectPetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectPet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectPetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 传入一张图片，识别出图片中是否存在宠物
+        /// >     
+        /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// </summary>
+        /// <param name="req"><see cref="DetectPetRequest"/></param>
+        /// <returns><see cref="DetectPetResponse"/></returns>
+        public DetectPetResponse DetectPetSync(DetectPetRequest req)
+        {
+             JsonResponseModel<DetectPetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetectPet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectPetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持识别图片中包含的商品，能够输出商品的品类名称、类别，还可以输出商品在图片中的位置。支持一张图片多个商品的识别。
         /// >?    
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。

@@ -192,6 +192,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
+        /// <summary>
+        /// 大于报文长度，取值1+
+        /// </summary>
+        [JsonProperty("PktLenGT")]
+        public long? PktLenGT{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -220,6 +226,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Offset2", this.Offset2);
             this.SetParamSimple(map, prefix + "IsNot2", this.IsNot2);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "PktLenGT", this.PktLenGT);
         }
     }
 }
