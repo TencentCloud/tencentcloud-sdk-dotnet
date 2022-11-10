@@ -44,7 +44,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string MediaName{ get; set; }
 
         /// <summary>
-        /// 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
+        /// 要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }

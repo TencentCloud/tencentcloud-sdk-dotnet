@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.637</VersionPrefix>
+    <VersionPrefix>3.0.638</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,17 +46,22 @@
   <ItemGroup>
     <Compile Include="V20211111\TioneClient.cs" />
     <Compile Include="V20211111\Models\APIConfigDetail.cs" />
+    <Compile Include="V20211111\Models\BatchModelAccTask.cs" />
     <Compile Include="V20211111\Models\BatchTaskDetail.cs" />
     <Compile Include="V20211111\Models\BatchTaskInstance.cs" />
     <Compile Include="V20211111\Models\BatchTaskSetItem.cs" />
     <Compile Include="V20211111\Models\CFSConfig.cs" />
     <Compile Include="V20211111\Models\CosPathInfo.cs" />
+    <Compile Include="V20211111\Models\CreateBatchModelAccTasksRequest.cs" />
+    <Compile Include="V20211111\Models\CreateBatchModelAccTasksResponse.cs" />
     <Compile Include="V20211111\Models\CreateBatchTaskRequest.cs" />
     <Compile Include="V20211111\Models\CreateBatchTaskResponse.cs" />
     <Compile Include="V20211111\Models\CreateDatasetRequest.cs" />
     <Compile Include="V20211111\Models\CreateDatasetResponse.cs" />
     <Compile Include="V20211111\Models\CreateModelServiceRequest.cs" />
     <Compile Include="V20211111\Models\CreateModelServiceResponse.cs" />
+    <Compile Include="V20211111\Models\CreateOptimizedModelRequest.cs" />
+    <Compile Include="V20211111\Models\CreateOptimizedModelResponse.cs" />
     <Compile Include="V20211111\Models\CreateTrainingModelRequest.cs" />
     <Compile Include="V20211111\Models\CreateTrainingModelResponse.cs" />
     <Compile Include="V20211111\Models\CreateTrainingTaskRequest.cs" />
@@ -75,6 +80,8 @@
     <Compile Include="V20211111\Models\DeleteBatchTaskResponse.cs" />
     <Compile Include="V20211111\Models\DeleteDatasetRequest.cs" />
     <Compile Include="V20211111\Models\DeleteDatasetResponse.cs" />
+    <Compile Include="V20211111\Models\DeleteModelAccelerateTaskRequest.cs" />
+    <Compile Include="V20211111\Models\DeleteModelAccelerateTaskResponse.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceGroupRequest.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceGroupResponse.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceRequest.cs" />
@@ -111,6 +118,12 @@
     <Compile Include="V20211111\Models\DescribeLatestTrainingMetricsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeLogsRequest.cs" />
     <Compile Include="V20211111\Models\DescribeLogsResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeModelAccEngineVersionsRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeModelAccEngineVersionsResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeModelAccelerateTaskRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeModelAccelerateTaskResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeModelAccelerateTasksRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeModelAccelerateTasksResponse.cs" />
     <Compile Include="V20211111\Models\DescribeModelServiceCallInfoRequest.cs" />
     <Compile Include="V20211111\Models\DescribeModelServiceCallInfoResponse.cs" />
     <Compile Include="V20211111\Models\DescribeModelServiceGroupRequest.cs" />
@@ -142,6 +155,7 @@
     <Compile Include="V20211111\Models\DescribeTrainingTasksRequest.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingTasksResponse.cs" />
     <Compile Include="V20211111\Models\DetectionLabelInfo.cs" />
+    <Compile Include="V20211111\Models\EngineVersion.cs" />
     <Compile Include="V20211111\Models\EnvVar.cs" />
     <Compile Include="V20211111\Models\Filter.cs" />
     <Compile Include="V20211111\Models\FilterLabelInfo.cs" />
@@ -151,6 +165,7 @@
     <Compile Include="V20211111\Models\GroupResource.cs" />
     <Compile Include="V20211111\Models\HDFSConfig.cs" />
     <Compile Include="V20211111\Models\HorizontalPodAutoscaler.cs" />
+    <Compile Include="V20211111\Models\HyperParameter.cs" />
     <Compile Include="V20211111\Models\ImageInfo.cs" />
     <Compile Include="V20211111\Models\InferGatewayCallInfo.cs" />
     <Compile Include="V20211111\Models\InferTemplate.cs" />
@@ -159,7 +174,10 @@
     <Compile Include="V20211111\Models\LogConfig.cs" />
     <Compile Include="V20211111\Models\LogIdentity.cs" />
     <Compile Include="V20211111\Models\MetricData.cs" />
+    <Compile Include="V20211111\Models\ModelAccEngineVersion.cs" />
+    <Compile Include="V20211111\Models\ModelAccelerateTask.cs" />
     <Compile Include="V20211111\Models\ModelInfo.cs" />
+    <Compile Include="V20211111\Models\ModelInputInfo.cs" />
     <Compile Include="V20211111\Models\ModifyServiceGroupWeightsRequest.cs" />
     <Compile Include="V20211111\Models\ModifyServiceGroupWeightsResponse.cs" />
     <Compile Include="V20211111\Models\OcrLabelInfo.cs" />
@@ -170,6 +188,8 @@
     <Compile Include="V20211111\Models\ResourceConfigInfo.cs" />
     <Compile Include="V20211111\Models\ResourceGroup.cs" />
     <Compile Include="V20211111\Models\ResourceInfo.cs" />
+    <Compile Include="V20211111\Models\RestartModelAccelerateTaskRequest.cs" />
+    <Compile Include="V20211111\Models\RestartModelAccelerateTaskResponse.cs" />
     <Compile Include="V20211111\Models\RowItem.cs" />
     <Compile Include="V20211111\Models\RowValue.cs" />
     <Compile Include="V20211111\Models\ScheduledAction.cs" />
@@ -190,6 +210,8 @@
     <Compile Include="V20211111\Models\StatefulSetCondition.cs" />
     <Compile Include="V20211111\Models\StopBatchTaskRequest.cs" />
     <Compile Include="V20211111\Models\StopBatchTaskResponse.cs" />
+    <Compile Include="V20211111\Models\StopModelAccelerateTaskRequest.cs" />
+    <Compile Include="V20211111\Models\StopModelAccelerateTaskResponse.cs" />
     <Compile Include="V20211111\Models\StopTrainingTaskRequest.cs" />
     <Compile Include="V20211111\Models\StopTrainingTaskResponse.cs" />
     <Compile Include="V20211111\Models\Tag.cs" />
