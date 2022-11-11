@@ -15,35 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Cfs.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GenerateReflectSequenceRequest : AbstractModel
+    public class DeleteUserQuotaResponse : AbstractModel
     {
         
         /// <summary>
-        /// SDK生成的打包数据的资源链接。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("DeviceDataUrl")]
-        public string DeviceDataUrl{ get; set; }
-
-        /// <summary>
-        /// SDK生成的打包数据的MD5值。
-        /// </summary>
-        [JsonProperty("DeviceDataMd5")]
-        public string DeviceDataMd5{ get; set; }
-
-        /// <summary>
-        /// 1-静默
-        /// 2-眨眼
-        /// 3-光线
-        /// 4-眨眼+光线 （默认）
-        /// </summary>
-        [JsonProperty("SecurityLevel")]
-        public string SecurityLevel{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +36,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DeviceDataUrl", this.DeviceDataUrl);
-            this.SetParamSimple(map, prefix + "DeviceDataMd5", this.DeviceDataMd5);
-            this.SetParamSimple(map, prefix + "SecurityLevel", this.SecurityLevel);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

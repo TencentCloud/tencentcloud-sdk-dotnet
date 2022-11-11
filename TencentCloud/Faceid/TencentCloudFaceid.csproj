@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{285E4D65-D854-3FAC-912D-5A63E6D8406B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.638</VersionPrefix>
+    <VersionPrefix>3.0.639</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,19 +45,12 @@
 
   <ItemGroup>
     <Compile Include="V20180301\FaceidClient.cs" />
-    <Compile Include="V20180301\Models\ApplyLivenessTokenRequest.cs" />
-    <Compile Include="V20180301\Models\ApplyLivenessTokenResponse.cs" />
-    <Compile Include="V20180301\Models\ApplySdkVerificationTokenRequest.cs" />
-    <Compile Include="V20180301\Models\ApplySdkVerificationTokenResponse.cs" />
-    <Compile Include="V20180301\Models\ApplyWebVerificationTokenRequest.cs" />
-    <Compile Include="V20180301\Models\ApplyWebVerificationTokenResponse.cs" />
     <Compile Include="V20180301\Models\BankCard2EVerificationRequest.cs" />
     <Compile Include="V20180301\Models\BankCard2EVerificationResponse.cs" />
     <Compile Include="V20180301\Models\BankCard4EVerificationRequest.cs" />
     <Compile Include="V20180301\Models\BankCard4EVerificationResponse.cs" />
     <Compile Include="V20180301\Models\BankCardVerificationRequest.cs" />
     <Compile Include="V20180301\Models\BankCardVerificationResponse.cs" />
-    <Compile Include="V20180301\Models\CardVerifyResult.cs" />
     <Compile Include="V20180301\Models\ChargeDetail.cs" />
     <Compile Include="V20180301\Models\CheckBankCardInformationRequest.cs" />
     <Compile Include="V20180301\Models\CheckBankCardInformationResponse.cs" />
@@ -69,9 +62,6 @@
     <Compile Include="V20180301\Models\CheckIdNameDateResponse.cs" />
     <Compile Include="V20180301\Models\CheckPhoneAndNameRequest.cs" />
     <Compile Include="V20180301\Models\CheckPhoneAndNameResponse.cs" />
-    <Compile Include="V20180301\Models\CompareResult.cs" />
-    <Compile Include="V20180301\Models\CreateUploadUrlRequest.cs" />
-    <Compile Include="V20180301\Models\CreateUploadUrlResponse.cs" />
     <Compile Include="V20180301\Models\DetectAuthRequest.cs" />
     <Compile Include="V20180301\Models\DetectAuthResponse.cs" />
     <Compile Include="V20180301\Models\DetectDetail.cs" />
@@ -79,15 +69,10 @@
     <Compile Include="V20180301\Models\DetectInfoIdCardData.cs" />
     <Compile Include="V20180301\Models\DetectInfoText.cs" />
     <Compile Include="V20180301\Models\DetectInfoVideoData.cs" />
-    <Compile Include="V20180301\Models\DetectReflectLivenessAndCompareRequest.cs" />
-    <Compile Include="V20180301\Models\DetectReflectLivenessAndCompareResponse.cs" />
     <Compile Include="V20180301\Models\EidInfo.cs" />
     <Compile Include="V20180301\Models\EncryptedPhoneVerificationRequest.cs" />
     <Compile Include="V20180301\Models\EncryptedPhoneVerificationResponse.cs" />
     <Compile Include="V20180301\Models\Encryption.cs" />
-    <Compile Include="V20180301\Models\FileInfo.cs" />
-    <Compile Include="V20180301\Models\GenerateReflectSequenceRequest.cs" />
-    <Compile Include="V20180301\Models\GenerateReflectSequenceResponse.cs" />
     <Compile Include="V20180301\Models\GetActionSequenceRequest.cs" />
     <Compile Include="V20180301\Models\GetActionSequenceResponse.cs" />
     <Compile Include="V20180301\Models\GetDetectInfoEnhancedRequest.cs" />
@@ -105,18 +90,12 @@
     <Compile Include="V20180301\Models\GetFaceIdTokenResponse.cs" />
     <Compile Include="V20180301\Models\GetLiveCodeRequest.cs" />
     <Compile Include="V20180301\Models\GetLiveCodeResponse.cs" />
-    <Compile Include="V20180301\Models\GetLivenessResultRequest.cs" />
-    <Compile Include="V20180301\Models\GetLivenessResultResponse.cs" />
     <Compile Include="V20180301\Models\GetRealNameAuthResultRequest.cs" />
     <Compile Include="V20180301\Models\GetRealNameAuthResultResponse.cs" />
     <Compile Include="V20180301\Models\GetRealNameAuthTokenRequest.cs" />
     <Compile Include="V20180301\Models\GetRealNameAuthTokenResponse.cs" />
-    <Compile Include="V20180301\Models\GetSdkVerificationResultRequest.cs" />
-    <Compile Include="V20180301\Models\GetSdkVerificationResultResponse.cs" />
     <Compile Include="V20180301\Models\GetWeChatBillDetailsRequest.cs" />
     <Compile Include="V20180301\Models\GetWeChatBillDetailsResponse.cs" />
-    <Compile Include="V20180301\Models\GetWebVerificationResultRequest.cs" />
-    <Compile Include="V20180301\Models\GetWebVerificationResultResponse.cs" />
     <Compile Include="V20180301\Models\IdCardOCRVerificationRequest.cs" />
     <Compile Include="V20180301\Models\IdCardOCRVerificationResponse.cs" />
     <Compile Include="V20180301\Models\IdCardVerificationRequest.cs" />
@@ -148,9 +127,6 @@
     <Compile Include="V20180301\Models\PhoneVerificationCUCCResponse.cs" />
     <Compile Include="V20180301\Models\PhoneVerificationRequest.cs" />
     <Compile Include="V20180301\Models\PhoneVerificationResponse.cs" />
-    <Compile Include="V20180301\Models\VerificationDetail.cs" />
-    <Compile Include="V20180301\Models\VideoLivenessCompareRequest.cs" />
-    <Compile Include="V20180301\Models\VideoLivenessCompareResponse.cs" />
     <Compile Include="V20180301\Models\WeChatBillDetail.cs" />
   </ItemGroup>
 </Project>

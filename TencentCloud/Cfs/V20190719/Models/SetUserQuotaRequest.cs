@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Cfs.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetLivenessResultResponse : AbstractModel
+    public class SetUserQuotaRequest : AbstractModel
     {
         
         /// <summary>
-        /// 流程的最终结果
+        /// 文件系统 ID
         /// </summary>
-        [JsonProperty("Result")]
-        public string Result{ get; set; }
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 流程的最终结果描述
+        /// 指定配额类型，包括Uid、Gid
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("UserType")]
+        public string UserType{ get; set; }
 
         /// <summary>
-        /// 人像截图
+        /// UID/GID信息
         /// </summary>
-        [JsonProperty("BestFrame")]
-        public FileInfo BestFrame{ get; set; }
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
         /// <summary>
-        /// 检测过程视频
+        /// 容量硬限制，单位GiB
         /// </summary>
-        [JsonProperty("Video")]
-        public FileInfo Video{ get; set; }
+        [JsonProperty("CapacityHardLimit")]
+        public ulong? CapacityHardLimit{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 文件硬限制，单位个
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("FileHardLimit")]
+        public ulong? FileHardLimit{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamObj(map, prefix + "BestFrame.", this.BestFrame);
-            this.SetParamObj(map, prefix + "Video.", this.Video);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "CapacityHardLimit", this.CapacityHardLimit);
+            this.SetParamSimple(map, prefix + "FileHardLimit", this.FileHardLimit);
         }
     }
 }

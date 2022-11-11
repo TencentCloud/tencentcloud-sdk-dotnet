@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Cfs.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSdkVerificationResultRequest : AbstractModel
+    public class DeleteUserQuotaRequest : AbstractModel
     {
         
         /// <summary>
-        /// 标识一次Sdk核验流程的令牌。
+        /// 文件系统 ID
         /// </summary>
-        [JsonProperty("SdkToken")]
-        public string SdkToken{ get; set; }
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
+
+        /// <summary>
+        /// 指定配额类型，包括Uid、Gid
+        /// </summary>
+        [JsonProperty("UserType")]
+        public string UserType{ get; set; }
+
+        /// <summary>
+        /// UID/GID信息
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkToken", this.SdkToken);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

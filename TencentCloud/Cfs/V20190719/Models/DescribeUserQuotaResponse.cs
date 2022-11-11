@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Cfs.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ApplyLivenessTokenResponse : AbstractModel
+    public class DescribeUserQuotaResponse : AbstractModel
     {
         
         /// <summary>
-        /// 标识一次SDK核验流程的令牌，有效时间为10分钟。流程结束后可用该令牌获取核验结果信息。
+        /// UserQuota条目总数
         /// </summary>
-        [JsonProperty("SdkToken")]
-        public string SdkToken{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// UserQuota条目
+        /// </summary>
+        [JsonProperty("UserQuotaInfo")]
+        public UserQuota[] UserQuotaInfo{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +48,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkToken", this.SdkToken);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "UserQuotaInfo.", this.UserQuotaInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

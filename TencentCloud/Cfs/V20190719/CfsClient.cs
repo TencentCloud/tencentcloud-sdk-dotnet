@@ -533,6 +533,46 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 指定条件删除文件系统配额
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserQuotaRequest"/></param>
+        /// <returns><see cref="DeleteUserQuotaResponse"/></returns>
+        public async Task<DeleteUserQuotaResponse> DeleteUserQuota(DeleteUserQuotaRequest req)
+        {
+             JsonResponseModel<DeleteUserQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteUserQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 指定条件删除文件系统配额
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserQuotaRequest"/></param>
+        /// <returns><see cref="DeleteUserQuotaResponse"/></returns>
+        public DeleteUserQuotaResponse DeleteUserQuotaSync(DeleteUserQuotaRequest req)
+        {
+             JsonResponseModel<DeleteUserQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteUserQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询文件系统快照定期策略列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoSnapshotPoliciesRequest"/></param>
@@ -964,6 +1004,86 @@ namespace TencentCloud.Cfs.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSnapshotOperationLogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotOperationLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询文件系统配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserQuotaRequest"/></param>
+        /// <returns><see cref="DescribeUserQuotaResponse"/></returns>
+        public async Task<DescribeUserQuotaResponse> DescribeUserQuota(DescribeUserQuotaRequest req)
+        {
+             JsonResponseModel<DescribeUserQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询文件系统配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserQuotaRequest"/></param>
+        /// <returns><see cref="DescribeUserQuotaResponse"/></returns>
+        public DescribeUserQuotaResponse DescribeUserQuotaSync(DescribeUserQuotaRequest req)
+        {
+             JsonResponseModel<DescribeUserQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置文件系统配额，提供UID/GID的配额设置的接口
+        /// </summary>
+        /// <param name="req"><see cref="SetUserQuotaRequest"/></param>
+        /// <returns><see cref="SetUserQuotaResponse"/></returns>
+        public async Task<SetUserQuotaResponse> SetUserQuota(SetUserQuotaRequest req)
+        {
+             JsonResponseModel<SetUserQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetUserQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetUserQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置文件系统配额，提供UID/GID的配额设置的接口
+        /// </summary>
+        /// <param name="req"><see cref="SetUserQuotaRequest"/></param>
+        /// <returns><see cref="SetUserQuotaResponse"/></returns>
+        public SetUserQuotaResponse SetUserQuotaSync(SetUserQuotaRequest req)
+        {
+             JsonResponseModel<SetUserQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetUserQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetUserQuotaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

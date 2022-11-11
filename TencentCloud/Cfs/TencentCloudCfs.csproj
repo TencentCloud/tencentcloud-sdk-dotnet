@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BC6405B5-6B40-3410-9D43-1965C0DAEE4C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.638</VersionPrefix>
+    <VersionPrefix>3.0.639</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -74,6 +74,8 @@
     <Compile Include="V20190719\Models\DeleteCfsSnapshotResponse.cs" />
     <Compile Include="V20190719\Models\DeleteMountTargetRequest.cs" />
     <Compile Include="V20190719\Models\DeleteMountTargetResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteUserQuotaRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteUserQuotaResponse.cs" />
     <Compile Include="V20190719\Models\DescribeAutoSnapshotPoliciesRequest.cs" />
     <Compile Include="V20190719\Models\DescribeAutoSnapshotPoliciesResponse.cs" />
     <Compile Include="V20190719\Models\DescribeAvailableZoneInfoRequest.cs" />
@@ -96,6 +98,8 @@
     <Compile Include="V20190719\Models\DescribeMountTargetsResponse.cs" />
     <Compile Include="V20190719\Models\DescribeSnapshotOperationLogsRequest.cs" />
     <Compile Include="V20190719\Models\DescribeSnapshotOperationLogsResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeUserQuotaRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeUserQuotaResponse.cs" />
     <Compile Include="V20190719\Models\FileSystemByPolicy.cs" />
     <Compile Include="V20190719\Models\FileSystemClient.cs" />
     <Compile Include="V20190719\Models\FileSystemInfo.cs" />
@@ -104,6 +108,8 @@
     <Compile Include="V20190719\Models\PGroup.cs" />
     <Compile Include="V20190719\Models\PGroupInfo.cs" />
     <Compile Include="V20190719\Models\PGroupRuleInfo.cs" />
+    <Compile Include="V20190719\Models\SetUserQuotaRequest.cs" />
+    <Compile Include="V20190719\Models\SetUserQuotaResponse.cs" />
     <Compile Include="V20190719\Models\SignUpCfsServiceRequest.cs" />
     <Compile Include="V20190719\Models\SignUpCfsServiceResponse.cs" />
     <Compile Include="V20190719\Models\SnapshotInfo.cs" />
@@ -126,5 +132,6 @@
     <Compile Include="V20190719\Models\UpdateCfsRuleResponse.cs" />
     <Compile Include="V20190719\Models\UpdateCfsSnapshotAttributeRequest.cs" />
     <Compile Include="V20190719\Models\UpdateCfsSnapshotAttributeResponse.cs" />
+    <Compile Include="V20190719\Models\UserQuota.cs" />
   </ItemGroup>
 </Project>

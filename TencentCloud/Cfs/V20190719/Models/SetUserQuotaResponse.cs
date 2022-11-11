@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Cfs.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetLivenessResultRequest : AbstractModel
+    public class SetUserQuotaResponse : AbstractModel
     {
         
         /// <summary>
-        /// 标识一次Sdk核验流程的令牌。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("SdkToken")]
-        public string SdkToken{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkToken", this.SdkToken);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

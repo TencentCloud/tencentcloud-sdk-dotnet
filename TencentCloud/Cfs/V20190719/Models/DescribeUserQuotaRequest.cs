@@ -15,38 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Cfs.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateUploadUrlResponse : AbstractModel
+    public class DescribeUserQuotaRequest : AbstractModel
     {
         
         /// <summary>
-        /// 用于上传内容的链接，使用HTTP PUT方法上传。
+        /// 文件系统 ID
         /// </summary>
-        [JsonProperty("UploadUrl")]
-        public string UploadUrl{ get; set; }
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 完成上传后将该链接用于后续需要传入资源URL的地方。
+        /// 过滤条件。
+        /// <br><li>UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid| Gid )
+        /// <br><li>UserId - Array of String - 是否必填：否 -（过滤条件）按UID/GID过滤。
         /// </summary>
-        [JsonProperty("ResourceUrl")]
-        public string ResourceUrl{ get; set; }
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 上传和下载链接过期时间点，10位unix时间戳。
+        /// Offset 分页码
         /// </summary>
-        [JsonProperty("ExpiredTimestamp")]
-        public long? ExpiredTimestamp{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// Limit 页面大小
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -54,10 +56,10 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UploadUrl", this.UploadUrl);
-            this.SetParamSimple(map, prefix + "ResourceUrl", this.ResourceUrl);
-            this.SetParamSimple(map, prefix + "ExpiredTimestamp", this.ExpiredTimestamp);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

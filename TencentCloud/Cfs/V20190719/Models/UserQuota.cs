@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Cfs.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetectReflectLivenessAndCompareRequest : AbstractModel
+    public class UserQuota : AbstractModel
     {
         
         /// <summary>
-        /// SDK生成的活体检测数据包的资源地址。
+        /// 指定配额类型，包括Uid、Gid
         /// </summary>
-        [JsonProperty("LiveDataUrl")]
-        public string LiveDataUrl{ get; set; }
+        [JsonProperty("UserType")]
+        public string UserType{ get; set; }
 
         /// <summary>
-        /// SDK生成的活体检测数据包的资源内容MD5（32位，用于校验LiveData的一致性）。
+        /// UID/GID信息
         /// </summary>
-        [JsonProperty("LiveDataMd5")]
-        public string LiveDataMd5{ get; set; }
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
         /// <summary>
-        /// 用于比对的目标图片的资源地址。
+        /// 容量硬限制，单位GiB
         /// </summary>
-        [JsonProperty("ImageUrl")]
-        public string ImageUrl{ get; set; }
+        [JsonProperty("CapacityHardLimit")]
+        public ulong? CapacityHardLimit{ get; set; }
 
         /// <summary>
-        /// 用于比对的目标图片的资源MD5（32位，用于校验Image的一致性）。
+        /// 文件硬限制，单位个
         /// </summary>
-        [JsonProperty("ImageMd5")]
-        public string ImageMd5{ get; set; }
+        [JsonProperty("FileHardLimit")]
+        public ulong? FileHardLimit{ get; set; }
+
+        /// <summary>
+        /// 文件系统ID
+        /// </summary>
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LiveDataUrl", this.LiveDataUrl);
-            this.SetParamSimple(map, prefix + "LiveDataMd5", this.LiveDataMd5);
-            this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
-            this.SetParamSimple(map, prefix + "ImageMd5", this.ImageMd5);
+            this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "CapacityHardLimit", this.CapacityHardLimit);
+            this.SetParamSimple(map, prefix + "FileHardLimit", this.FileHardLimit);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         }
     }
 }
