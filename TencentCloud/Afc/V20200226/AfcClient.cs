@@ -136,5 +136,45 @@ namespace TencentCloud.Afc.V20200226
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 天御信鸽取数平台接口
+        /// </summary>
+        /// <param name="req"><see cref="TransportGeneralInterfaceRequest"/></param>
+        /// <returns><see cref="TransportGeneralInterfaceResponse"/></returns>
+        public async Task<TransportGeneralInterfaceResponse> TransportGeneralInterface(TransportGeneralInterfaceRequest req)
+        {
+             JsonResponseModel<TransportGeneralInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TransportGeneralInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransportGeneralInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 天御信鸽取数平台接口
+        /// </summary>
+        /// <param name="req"><see cref="TransportGeneralInterfaceRequest"/></param>
+        /// <returns><see cref="TransportGeneralInterfaceResponse"/></returns>
+        public TransportGeneralInterfaceResponse TransportGeneralInterfaceSync(TransportGeneralInterfaceRequest req)
+        {
+             JsonResponseModel<TransportGeneralInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TransportGeneralInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransportGeneralInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }
