@@ -39,6 +39,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 查询过滤实名用户，Key为Status，Values为["IsVerified"]
         /// 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
+        /// 查询离职员工时，Key为Status，Values为["QuiteJob"]
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

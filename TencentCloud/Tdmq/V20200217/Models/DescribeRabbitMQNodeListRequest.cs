@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 不适用，默认参数
+        /// rabbitmq集群ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

@@ -72,6 +72,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 是否获取模板预览链接
+        /// </summary>
+        [JsonProperty("WithPreviewUrl")]
+        public bool? WithPreviewUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "QueryAllComponents", this.QueryAllComponents);
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
         }
     }
 }

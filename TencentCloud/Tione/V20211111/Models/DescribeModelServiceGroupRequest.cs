@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 无
+        /// 服务组ID
         /// </summary>
         [JsonProperty("ServiceGroupId")]
         public string ServiceGroupId{ get; set; }

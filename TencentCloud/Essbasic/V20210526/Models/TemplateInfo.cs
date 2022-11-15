@@ -84,6 +84,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
 
+        /// <summary>
+        /// 模板的预览链接
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PreviewUrl")]
+        public string PreviewUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+            this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         }
     }
 }

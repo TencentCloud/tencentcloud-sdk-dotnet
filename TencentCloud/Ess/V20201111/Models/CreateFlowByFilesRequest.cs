@@ -77,10 +77,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? NeedPreview{ get; set; }
 
         /// <summary>
-        /// 签署流程描述,最大长度1000个字符
+        /// 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
         /// </summary>
-        [JsonProperty("FlowDescription")]
-        public string FlowDescription{ get; set; }
+        [JsonProperty("PreviewType")]
+        public long? PreviewType{ get; set; }
 
         /// <summary>
         /// 签署流程的签署截止时间。
@@ -134,6 +134,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverVerifyType")]
         public string ApproverVerifyType{ get; set; }
 
+        /// <summary>
+        /// 签署流程描述,最大长度1000个字符
+        /// </summary>
+        [JsonProperty("FlowDescription")]
+        public string FlowDescription{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,7 +154,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
             this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
-            this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
+            this.SetParamSimple(map, prefix + "PreviewType", this.PreviewType);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
@@ -156,6 +162,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
+            this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         }
     }
 }

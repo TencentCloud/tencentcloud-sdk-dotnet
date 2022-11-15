@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 经办人身份证件类型
+        /// 签署人身份证件类型
         /// 1.ID_CARD 居民身份证
         /// 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
         /// 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
@@ -40,7 +40,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string IdCardType{ get; set; }
 
         /// <summary>
-        /// 经办人证件号
+        /// 签署人证件号
         /// </summary>
         [JsonProperty("IdCardNumber")]
         public string IdCardNumber{ get; set; }

@@ -25,12 +25,6 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 扩展数据
-        /// </summary>
-        [JsonProperty("Externals")]
-        public Externals Externals{ get; set; }
-
-        /// <summary>
         /// 定时器名称，目前仅支持销毁一个值：TerminateInstances。
         /// </summary>
         [JsonProperty("TimerAction")]
@@ -42,15 +36,21 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ActionTime")]
         public string ActionTime{ get; set; }
 
+        /// <summary>
+        /// 扩展数据
+        /// </summary>
+        [JsonProperty("Externals")]
+        public Externals Externals{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Externals.", this.Externals);
             this.SetParamSimple(map, prefix + "TimerAction", this.TimerAction);
             this.SetParamSimple(map, prefix + "ActionTime", this.ActionTime);
+            this.SetParamObj(map, prefix + "Externals.", this.Externals);
         }
     }
 }

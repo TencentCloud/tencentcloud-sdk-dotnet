@@ -2645,7 +2645,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// 本接口（IsolateDedicatedDBInstance）用于销毁已隔离的独享云数据库实例。
+        /// 本接口（TerminateDedicatedDBInstance）用于销毁已隔离的独享云数据库实例。
         /// </summary>
         /// <param name="req"><see cref="TerminateDedicatedDBInstanceRequest"/></param>
         /// <returns><see cref="TerminateDedicatedDBInstanceResponse"/></returns>
@@ -2665,7 +2665,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// 本接口（IsolateDedicatedDBInstance）用于销毁已隔离的独享云数据库实例。
+        /// 本接口（TerminateDedicatedDBInstance）用于销毁已隔离的独享云数据库实例。
         /// </summary>
         /// <param name="req"><see cref="TerminateDedicatedDBInstanceRequest"/></param>
         /// <returns><see cref="TerminateDedicatedDBInstanceResponse"/></returns>

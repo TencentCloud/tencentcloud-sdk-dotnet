@@ -126,6 +126,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
+        /// <summary>
+        /// 图片格式。
+        /// </summary>
+        [JsonProperty("Format")]
+        public string Format{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -146,6 +152,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "Format", this.Format);
         }
     }
 }

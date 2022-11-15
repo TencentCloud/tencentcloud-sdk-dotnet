@@ -154,6 +154,17 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
+        /// <summary>
+        /// 服务质量级别：
+        /// <li>`DEFAULT`：默认</li>
+        /// <li>`PT`：云金</li>
+        /// <li>`AU`：云银</li>
+        /// <li>`AG`：云铜</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QosLevel")]
+        public string QosLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -180,6 +191,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "AttachType", this.AttachType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
         }
     }
 }

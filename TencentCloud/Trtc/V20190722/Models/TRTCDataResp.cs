@@ -25,21 +25,21 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// StatementID值
+        /// StatementID值，监控仪表盘下固定为0。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatementID")]
         public long? StatementID{ get; set; }
 
         /// <summary>
-        /// Series数据
+        /// 查询结果数据，以Columns-Values形式返回。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Series")]
         public SeriesInfo[] Series{ get; set; }
 
         /// <summary>
-        /// Total值
+        /// Total值，监控仪表盘功能下固定为1。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]

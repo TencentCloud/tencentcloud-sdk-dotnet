@@ -49,6 +49,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ItemCoord")]
         public ItemCoord ItemCoord{ get; set; }
 
+        /// <summary>
+        /// 字段所在行号，下标从0开始，非行字段或未能识别行号的该值返回-1。
+        /// </summary>
+        [JsonProperty("Row")]
+        public long? Row{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
+            this.SetParamSimple(map, prefix + "Row", this.Row);
         }
     }
 }

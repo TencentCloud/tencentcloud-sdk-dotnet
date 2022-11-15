@@ -57,7 +57,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public string Callback{ get; set; }
 
         /// <summary>
-        /// 语言，目前jp代表日语
+        /// 语种，不传默认中文
         /// </summary>
         [JsonProperty("Lang")]
         public string Lang{ get; set; }

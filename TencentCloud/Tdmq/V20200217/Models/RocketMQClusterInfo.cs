@@ -74,6 +74,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("SupportNamespaceEndpoint")]
         public bool? SupportNamespaceEndpoint{ get; set; }
 
+        /// <summary>
+        /// VPC信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Vpcs")]
+        public VpcConfig[] Vpcs{ get; set; }
+
+        /// <summary>
+        /// 是否为专享实例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsVip")]
+        public bool? IsVip{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +102,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
             this.SetParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
             this.SetParamSimple(map, prefix + "SupportNamespaceEndpoint", this.SupportNamespaceEndpoint);
+            this.SetParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
+            this.SetParamSimple(map, prefix + "IsVip", this.IsVip);
         }
     }
 }

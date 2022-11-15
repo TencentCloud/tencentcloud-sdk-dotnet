@@ -62,16 +62,22 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? NeedPreview{ get; set; }
 
         /// <summary>
-        /// 客户端Token，保持接口幂等性,最大长度64个字符
+        /// 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
         /// </summary>
-        [JsonProperty("ClientToken")]
-        public string ClientToken{ get; set; }
+        [JsonProperty("PreviewType")]
+        public long? PreviewType{ get; set; }
 
         /// <summary>
         /// 应用相关信息
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
+
+        /// <summary>
+        /// 客户端Token，保持接口幂等性,最大长度64个字符
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
 
 
         /// <summary>
@@ -85,8 +91,9 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArraySimple(map, prefix + "FileNames.", this.FileNames);
             this.SetParamArrayObj(map, prefix + "FormFields.", this.FormFields);
             this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
-            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "PreviewType", this.PreviewType);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
         }
     }
 }

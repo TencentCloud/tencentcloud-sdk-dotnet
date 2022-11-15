@@ -50,6 +50,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string UniformSocialCreditCode{ get; set; }
 
         /// <summary>
+        /// 渠道侧合作企业法人/负责人姓名
+        /// </summary>
+        [JsonProperty("ProxyLegalName")]
+        public string ProxyLegalName{ get; set; }
+
+        /// <summary>
         /// 操作者的信息
         /// </summary>
         [JsonProperty("Operator")]
@@ -65,6 +71,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
             this.SetParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
             this.SetParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
+            this.SetParamSimple(map, prefix + "ProxyLegalName", this.ProxyLegalName);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }

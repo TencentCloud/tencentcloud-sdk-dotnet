@@ -68,6 +68,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string MenuStatus{ get; set; }
 
         /// <summary>
+        /// 链接跳转类型："PC"-PC控制台，“CHANNEL”-H5跳转到电子签小程序；“APP”-第三方APP或小程序跳转电子签小程序，默认为PC控制台
+        /// </summary>
+        [JsonProperty("Endpoint")]
+        public string Endpoint{ get; set; }
+
+        /// <summary>
+        /// 触发自动跳转事件，仅对App类型有效，"VERIFIED":企业认证完成/员工认证完成后跳回原App/小程序
+        /// </summary>
+        [JsonProperty("AutoJumpBackEvent")]
+        public string AutoJumpBackEvent{ get; set; }
+
+        /// <summary>
         /// 操作者的信息
         /// </summary>
         [JsonProperty("Operator")]
@@ -86,6 +98,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
             this.SetParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
             this.SetParamSimple(map, prefix + "MenuStatus", this.MenuStatus);
+            this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
+            this.SetParamSimple(map, prefix + "AutoJumpBackEvent", this.AutoJumpBackEvent);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
