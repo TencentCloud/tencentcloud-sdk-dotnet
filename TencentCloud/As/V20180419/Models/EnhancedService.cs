@@ -42,6 +42,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("AutomationService")]
         public RunAutomationServiceEnabled[] AutomationService{ get; set; }
 
+        /// <summary>
+        /// 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutomationToolsService")]
+        public RunAutomationServiceEnabled AutomationToolsService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "SecurityService.", this.SecurityService);
             this.SetParamObj(map, prefix + "MonitorService.", this.MonitorService);
             this.SetParamArrayObj(map, prefix + "AutomationService.", this.AutomationService);
+            this.SetParamObj(map, prefix + "AutomationToolsService.", this.AutomationToolsService);
         }
     }
 }

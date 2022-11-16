@@ -25,13 +25,17 @@ namespace TencentCloud.Mariadb.V20170312.Models
     {
         
         /// <summary>
-        /// 原价，单位：分
+        /// 原价  
+        /// * 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+        /// * 币种：国内站为人民币，国际站为美元
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public long? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// 实际价格，单位：分。受折扣等影响，可能和原价不同。
+        /// 实际价格，受折扣等影响，可能和原价不同
+        /// * 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+        /// * 币种：国内站人民币，国际站美元
         /// </summary>
         [JsonProperty("Price")]
         public long? Price{ get; set; }

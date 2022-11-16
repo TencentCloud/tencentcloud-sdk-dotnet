@@ -66,6 +66,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DatasourceType")]
         public ulong? DatasourceType{ get; set; }
 
+        /// <summary>
+        /// 数据库原始名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginDatabaseName")]
+        public string OriginDatabaseName{ get; set; }
+
+        /// <summary>
+        /// schema名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginSchemaName")]
+        public string OriginSchemaName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +92,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
+            this.SetParamSimple(map, prefix + "OriginDatabaseName", this.OriginDatabaseName);
+            this.SetParamSimple(map, prefix + "OriginSchemaName", this.OriginSchemaName);
         }
     }
 }

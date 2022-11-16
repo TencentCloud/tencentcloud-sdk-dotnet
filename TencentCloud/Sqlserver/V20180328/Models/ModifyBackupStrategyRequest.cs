@@ -66,6 +66,36 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupSaveDays")]
         public ulong? BackupSaveDays{ get; set; }
 
+        /// <summary>
+        /// 定期备份状态 enable-开启，disable-关闭，默认关闭
+        /// </summary>
+        [JsonProperty("RegularBackupEnable")]
+        public string RegularBackupEnable{ get; set; }
+
+        /// <summary>
+        /// 定期备份保留天数 [90 - 3650]天，默认365天
+        /// </summary>
+        [JsonProperty("RegularBackupSaveDays")]
+        public ulong? RegularBackupSaveDays{ get; set; }
+
+        /// <summary>
+        /// 定期备份策略 years-每年，quarters-每季度，months-每月，默认months
+        /// </summary>
+        [JsonProperty("RegularBackupStrategy")]
+        public string RegularBackupStrategy{ get; set; }
+
+        /// <summary>
+        /// 定期备份保留个数，默认1个
+        /// </summary>
+        [JsonProperty("RegularBackupCounts")]
+        public ulong? RegularBackupCounts{ get; set; }
+
+        /// <summary>
+        /// 定期备份开始日期，格式-YYYY-MM-DD 默认当前日期
+        /// </summary>
+        [JsonProperty("RegularBackupStartTime")]
+        public string RegularBackupStartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +109,11 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupModel", this.BackupModel);
             this.SetParamArraySimple(map, prefix + "BackupCycle.", this.BackupCycle);
             this.SetParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
+            this.SetParamSimple(map, prefix + "RegularBackupEnable", this.RegularBackupEnable);
+            this.SetParamSimple(map, prefix + "RegularBackupSaveDays", this.RegularBackupSaveDays);
+            this.SetParamSimple(map, prefix + "RegularBackupStrategy", this.RegularBackupStrategy);
+            this.SetParamSimple(map, prefix + "RegularBackupCounts", this.RegularBackupCounts);
+            this.SetParamSimple(map, prefix + "RegularBackupStartTime", this.RegularBackupStartTime);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public string Lang{ get; set; }
 
         /// <summary>
-        /// 产品简称（查询是否集团服务委派管理员必填）
+        /// 可信服务产品简称。查询是否该可信服务管理员时必须指定
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

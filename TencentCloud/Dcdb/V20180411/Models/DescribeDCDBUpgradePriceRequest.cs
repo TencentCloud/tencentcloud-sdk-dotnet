@@ -57,6 +57,14 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("SplitShardConfig")]
         public SplitShardConfig SplitShardConfig{ get; set; }
 
+        /// <summary>
+        /// 价格金额单位，不传默认单位为分，取值：  
+        /// * pent：分
+        /// * microPent：微分
+        /// </summary>
+        [JsonProperty("AmountUnit")]
+        public string AmountUnit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +76,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamObj(map, prefix + "AddShardConfig.", this.AddShardConfig);
             this.SetParamObj(map, prefix + "ExpandShardConfig.", this.ExpandShardConfig);
             this.SetParamObj(map, prefix + "SplitShardConfig.", this.SplitShardConfig);
+            this.SetParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
         }
     }
 }

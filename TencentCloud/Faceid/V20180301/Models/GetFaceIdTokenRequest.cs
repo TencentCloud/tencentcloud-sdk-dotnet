@@ -37,7 +37,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string IdCard{ get; set; }
 
         /// <summary>
-        /// CompareLib为商业库库时必传。
+        /// CompareLib为商业库时必传。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -68,6 +68,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("UseCos")]
         public bool? UseCos{ get; set; }
 
+        /// <summary>
+        /// 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public Encryption Encryption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Meta", this.Meta);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "UseCos", this.UseCos);
+            this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
         }
     }
 }

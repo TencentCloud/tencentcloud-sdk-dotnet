@@ -36,6 +36,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DatasourceId")]
         public string DatasourceId{ get; set; }
 
+        /// <summary>
+        /// 数据源类型
+        /// </summary>
+        [JsonProperty("DsTypes")]
+        public ulong?[] DsTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+            this.SetParamArraySimple(map, prefix + "DsTypes.", this.DsTypes);
         }
     }
 }

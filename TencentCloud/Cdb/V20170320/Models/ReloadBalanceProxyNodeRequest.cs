@@ -30,6 +30,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
+        /// <summary>
+        /// 代理组地址ID
+        /// </summary>
+        [JsonProperty("ProxyAddressId")]
+        public string ProxyAddressId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
+            this.SetParamSimple(map, prefix + "ProxyAddressId", this.ProxyAddressId);
         }
     }
 }

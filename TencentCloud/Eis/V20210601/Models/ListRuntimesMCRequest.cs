@@ -24,12 +24,19 @@ namespace TencentCloud.Eis.V20210601.Models
     public class ListRuntimesMCRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 环境运行类型：0:运行时类型、1:api类型
+        /// </summary>
+        [JsonProperty("RuntimeClass")]
+        public long? RuntimeClass{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
         }
     }
 }

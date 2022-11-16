@@ -85,7 +85,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Strategy{ get; set; }
 
         /// <summary>
-        /// 备份方式，0-定时备份；1-手动临时备份
+        /// 备份方式，0-定时备份；1-手动临时备份；2-定期备份
         /// </summary>
         [JsonProperty("BackupWay")]
         public long? BackupWay{ get; set; }

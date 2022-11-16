@@ -31,13 +31,13 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? MemberUin{ get; set; }
 
         /// <summary>
-        /// 策略ID。
+        /// 策略ID。可以调用DescribeOrganizationMemberPolicies获取
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }
 
         /// <summary>
-        /// 组织子账号Uin。
+        /// 组织管理员子账号Uin列表。最大5个
         /// </summary>
         [JsonProperty("OrgSubAccountUins")]
         public long?[] OrgSubAccountUins{ get; set; }

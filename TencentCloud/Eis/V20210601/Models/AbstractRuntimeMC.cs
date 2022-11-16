@@ -25,52 +25,65 @@ namespace TencentCloud.Eis.V20210601.Models
     {
         
         /// <summary>
-        /// 运行时id
+        /// 环境id
         /// </summary>
         [JsonProperty("RuntimeId")]
         public long? RuntimeId{ get; set; }
 
         /// <summary>
-        /// 运行时名称，用户输入，同一uin内唯一
+        /// 环境名称，用户输入，同一uin内唯一
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// 运行时类型：0: sandbox, 1:shared, 2:private
+        /// 环境类型：0: sandbox, 1:shared, 2:private
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 运行时所在地域，tianjin，beijiing，guangzhou等
+        /// 环境所在地域，tianjin，beijiing，guangzhou等
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 运行时所在地域，tianjin，beijiing，guangzhou等（同Zone）
+        /// 环境所在地域，tianjin，beijiing，guangzhou等（同Zone）
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 运行时应用listener地址后缀
+        /// 环境应用listener地址后缀
         /// </summary>
         [JsonProperty("Addr")]
         public string Addr{ get; set; }
 
         /// <summary>
-        /// 运行时状态
+        /// 环境状态
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 运行时过期时间
+        /// 环境过期时间
         /// </summary>
         [JsonProperty("ExpiredAt")]
         public long? ExpiredAt{ get; set; }
+
+        /// <summary>
+        /// 环境运行类型：0:运行时类型、1:api类型
+        /// </summary>
+        [JsonProperty("RuntimeClass")]
+        public long? RuntimeClass{ get; set; }
+
+        /// <summary>
+        /// 是否已在当前环境发布
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Deployed")]
+        public bool? Deployed{ get; set; }
 
 
         /// <summary>
@@ -86,6 +99,8 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "Addr", this.Addr);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
+            this.SetParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
+            this.SetParamSimple(map, prefix + "Deployed", this.Deployed);
         }
     }
 }

@@ -60,6 +60,12 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }
 
+        /// <summary>
+        /// 环境运行类型：0:运行时类型、1:api类型
+        /// </summary>
+        [JsonProperty("RuntimeClass")]
+        public long? RuntimeClass{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "MetricType", this.MetricType);
             this.SetParamSimple(map, prefix + "RateType", this.RateType);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
+            this.SetParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
         }
     }
 }

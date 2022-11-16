@@ -25,61 +25,61 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 名称
+        /// 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 关系策略  取值：Financial
+        /// 关系策略。取值：Financial
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// 关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
+        /// 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费，1、2 默认必须
         /// </summary>
         [JsonProperty("PermissionIds")]
         public ulong?[] PermissionIds{ get; set; }
 
         /// <summary>
-        /// 成员所属部门的节点ID
+        /// 成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }
 
         /// <summary>
-        /// 账号名
+        /// 账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// 备注。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 重试创建传记录ID
+        /// 成员创建记录ID。创建异常重试时需要
         /// </summary>
         [JsonProperty("RecordId")]
         public long? RecordId{ get; set; }
 
         /// <summary>
-        /// 代付者Uin
+        /// 代付者Uin。成员代付费时需要
         /// </summary>
         [JsonProperty("PayUin")]
         public string PayUin{ get; set; }
 
         /// <summary>
-        /// 管理身份
+        /// 成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
         /// </summary>
         [JsonProperty("IdentityRoleID")]
         public ulong?[] IdentityRoleID{ get; set; }
 
         /// <summary>
-        /// 主体关系ID
+        /// 认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
         /// </summary>
         [JsonProperty("AuthRelationId")]
         public long? AuthRelationId{ get; set; }

@@ -90,6 +90,12 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("ProjectType")]
         public long? ProjectType{ get; set; }
 
+        /// <summary>
+        /// 应用版本：0:旧版 1:3.0新控制台
+        /// </summary>
+        [JsonProperty("ProjectVersion")]
+        public long? ProjectVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
             this.SetParamSimple(map, prefix + "ProjectType", this.ProjectType);
+            this.SetParamSimple(map, prefix + "ProjectVersion", this.ProjectVersion);
         }
     }
 }

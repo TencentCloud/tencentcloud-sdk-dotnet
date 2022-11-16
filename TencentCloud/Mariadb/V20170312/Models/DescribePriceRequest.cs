@@ -69,6 +69,14 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("Paymode")]
         public string Paymode{ get; set; }
 
+        /// <summary>
+        /// 价格金额单位，不传默认单位为分，取值：  
+        /// * pent：分
+        /// * microPent：微分
+        /// </summary>
+        [JsonProperty("AmountUnit")]
+        public string AmountUnit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +90,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
+            this.SetParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
         }
     }
 }

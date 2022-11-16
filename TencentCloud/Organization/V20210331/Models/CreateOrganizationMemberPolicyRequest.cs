@@ -31,13 +31,13 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? MemberUin{ get; set; }
 
         /// <summary>
-        /// 策略名。
+        /// 策略名。最大长度为128个字符，支持英文字母、数字、符号+=,.@_-
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 身份ID。
+        /// 成员访问身份ID。可以调用DescribeOrganizationMemberAuthIdentities获取
         /// </summary>
         [JsonProperty("IdentityId")]
         public long? IdentityId{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 成员列表
+        /// 成员列表。
         /// </summary>
         [JsonProperty("Items")]
         public OrgMember[] Items{ get; set; }
 
         /// <summary>
-        /// 总数目
+        /// 总数目。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

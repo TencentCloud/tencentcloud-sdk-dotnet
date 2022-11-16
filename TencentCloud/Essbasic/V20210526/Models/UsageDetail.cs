@@ -57,6 +57,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Cancel")]
         public ulong? Cancel{ get; set; }
 
+        /// <summary>
+        /// 消耗渠道
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlowChannel")]
+        public string FlowChannel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +75,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Date", this.Date);
             this.SetParamSimple(map, prefix + "Usage", this.Usage);
             this.SetParamSimple(map, prefix + "Cancel", this.Cancel);
+            this.SetParamSimple(map, prefix + "FlowChannel", this.FlowChannel);
         }
     }
 }

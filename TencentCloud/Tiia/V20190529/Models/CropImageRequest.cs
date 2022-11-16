@@ -33,7 +33,7 @@ namespace TencentCloud.Tiia.V20190529.Models
 
         /// <summary>
         /// 需要裁剪区域的高度，与Width共同组成所需裁剪的图片宽高比例。
-        /// 输入数字请请大于0、小于图片高度的像素值。
+        /// 输入数字请大于0、小于图片高度的像素值。
         /// 宽高比例（Width : Height）会简化为最简分数，即如果Width输入10、Height输入20，会简化为1：2。
         /// Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响效果。
         /// </summary>

@@ -42,6 +42,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("ShardStorage")]
         public long? ShardStorage{ get; set; }
 
+        /// <summary>
+        /// 分片节点数
+        /// </summary>
+        [JsonProperty("ShardNodeCount")]
+        public long? ShardNodeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamArraySimple(map, prefix + "ShardInstanceIds.", this.ShardInstanceIds);
             this.SetParamSimple(map, prefix + "ShardMemory", this.ShardMemory);
             this.SetParamSimple(map, prefix + "ShardStorage", this.ShardStorage);
+            this.SetParamSimple(map, prefix + "ShardNodeCount", this.ShardNodeCount);
         }
     }
 }

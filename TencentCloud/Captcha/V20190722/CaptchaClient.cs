@@ -533,7 +533,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 查询单个验证的统计数据，包括：票据校验量、票据校验通过量、票据校验拦截量。
+        /// 查询单个CaptchaAppID票据校验数据，包括：票据校验量、票据校验通过量、票据校验拦截量。
         /// </summary>
         /// <param name="req"><see cref="GetTicketStatisticsRequest"/></param>
         /// <returns><see cref="GetTicketStatisticsResponse"/></returns>
@@ -553,7 +553,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 查询单个验证的统计数据，包括：票据校验量、票据校验通过量、票据校验拦截量。
+        /// 查询单个CaptchaAppID票据校验数据，包括：票据校验量、票据校验通过量、票据校验拦截量。
         /// </summary>
         /// <param name="req"><see cref="GetTicketStatisticsRequest"/></param>
         /// <returns><see cref="GetTicketStatisticsResponse"/></returns>
@@ -573,7 +573,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 查询所有验证的统计数据，包括：总票据校验量、总票据校验通过量、总票据校验拦截量。
+        /// 查询全部票据校验的统计数据，包括：总票据校验量、总票据校验通过量、总票据校验拦截量。
         /// </summary>
         /// <param name="req"><see cref="GetTotalTicketStatisticsRequest"/></param>
         /// <returns><see cref="GetTotalTicketStatisticsResponse"/></returns>
@@ -593,7 +593,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 查询所有验证的统计数据，包括：总票据校验量、总票据校验通过量、总票据校验拦截量。
+        /// 查询全部票据校验的统计数据，包括：总票据校验量、总票据校验通过量、总票据校验拦截量。
         /// </summary>
         /// <param name="req"><see cref="GetTotalTicketStatisticsRequest"/></param>
         /// <returns><see cref="GetTotalTicketStatisticsResponse"/></returns>

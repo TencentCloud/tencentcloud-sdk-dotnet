@@ -25,13 +25,13 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 偏移
+        /// 数据偏移量，从1开始。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 容量
+        /// 返回域名的数量
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

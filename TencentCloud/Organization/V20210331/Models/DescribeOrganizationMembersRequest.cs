@@ -25,13 +25,13 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 偏移量
+        /// 偏移量。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数目
+        /// 限制数目。最大50
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Organization.V20210331.Models
         public string Lang{ get; set; }
 
         /// <summary>
-        /// 成员名或者成员ID搜索
+        /// 成员名称或者成员ID搜索。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 主体名称
+        /// 主体名称搜索。
         /// </summary>
         [JsonProperty("AuthName")]
         public string AuthName{ get; set; }
 
         /// <summary>
-        /// 集团服务（服务管理员查询时，必须指定）
+        /// 可信服务产品简称。可信服务管理员查询时必须指定
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

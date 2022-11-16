@@ -36,6 +36,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Staffs")]
         public SeatUserInfo[] Staffs{ get; set; }
 
+        /// <summary>
+        /// 是否发送密码邮件，默认true
+        /// </summary>
+        [JsonProperty("SendPassword")]
+        public bool? SendPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamArrayObj(map, prefix + "Staffs.", this.Staffs);
+            this.SetParamSimple(map, prefix + "SendPassword", this.SendPassword);
         }
     }
 }

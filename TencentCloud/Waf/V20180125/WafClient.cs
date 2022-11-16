@@ -615,6 +615,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 查询单个saas域名详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainDetailsSaasRequest"/></param>
+        /// <returns><see cref="DescribeDomainDetailsSaasResponse"/></returns>
+        public async Task<DescribeDomainDetailsSaasResponse> DescribeDomainDetailsSaas(DescribeDomainDetailsSaasRequest req)
+        {
+             JsonResponseModel<DescribeDomainDetailsSaasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainDetailsSaas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainDetailsSaasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单个saas域名详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainDetailsSaasRequest"/></param>
+        /// <returns><see cref="DescribeDomainDetailsSaasResponse"/></returns>
+        public DescribeDomainDetailsSaasResponse DescribeDomainDetailsSaasSync(DescribeDomainDetailsSaasRequest req)
+        {
+             JsonResponseModel<DescribeDomainDetailsSaasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainDetailsSaas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainDetailsSaasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取域名的规则白名单
         /// 
         /// </summary>

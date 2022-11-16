@@ -30,6 +30,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+        /// </summary>
+        [JsonProperty("DeleteLogSetAndTopic")]
+        public bool? DeleteLogSetAndTopic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "DeleteLogSetAndTopic", this.DeleteLogSetAndTopic);
         }
     }
 }

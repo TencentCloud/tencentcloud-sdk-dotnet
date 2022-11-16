@@ -25,16 +25,22 @@ namespace TencentCloud.Eis.V20210601.Models
     {
         
         /// <summary>
-        /// 运行时id
+        /// 环境id
         /// </summary>
         [JsonProperty("RuntimeId")]
         public long? RuntimeId{ get; set; }
 
         /// <summary>
-        /// 运行时地域
+        /// 环境地域
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
+
+        /// <summary>
+        /// 环境运行类型：0:运行时类型、1:api类型
+        /// </summary>
+        [JsonProperty("RuntimeClass")]
+        public long? RuntimeClass{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Eis.V20210601.Models
         {
             this.SetParamSimple(map, prefix + "RuntimeId", this.RuntimeId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
         }
     }
 }

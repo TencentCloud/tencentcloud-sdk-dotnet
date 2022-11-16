@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 待续费的实例。
+        /// 待续费的实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573 )接口返回值中的InstanceId获取。每次请求批量实例的上限为50。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 是否续费数据盘
+        /// 是否续费数据盘。默认值: false, 即不续费。
         /// </summary>
         [JsonProperty("RenewDataDisk")]
         public bool? RenewDataDisk{ get; set; }
 
         /// <summary>
-        /// 数据盘是否对齐实例到期时间
+        /// 数据盘是否对齐实例到期时间。默认值: false, 即不对齐。
         /// </summary>
         [JsonProperty("AlignInstanceExpiredTime")]
         public bool? AlignInstanceExpiredTime{ get; set; }

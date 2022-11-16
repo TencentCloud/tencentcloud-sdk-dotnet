@@ -96,6 +96,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("IsSM")]
         public long? IsSM{ get; set; }
 
+        /// <summary>
+        /// 筛选证书是否即将过期，传1是筛选，0不筛选
+        /// </summary>
+        [JsonProperty("FilterExpiring")]
+        public ulong? FilterExpiring{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Renew", this.Renew);
             this.SetParamSimple(map, prefix + "FilterSource", this.FilterSource);
             this.SetParamSimple(map, prefix + "IsSM", this.IsSM);
+            this.SetParamSimple(map, prefix + "FilterExpiring", this.FilterExpiring);
         }
     }
 }
