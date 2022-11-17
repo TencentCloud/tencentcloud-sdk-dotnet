@@ -50,7 +50,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// DYNAMIC_TABLE - 动态表格控件；
         /// ATTACHMENT - 附件控件；
         /// SELECTOR - 选择器控件；
-        /// DATE - 日期控件；默认是格式化为xxxx年xx月xx日
+        /// DATE - 日期控件；默认是格式化为xxxx年xx月xx日；
+        /// DISTRICT - 省市区行政区划控件；
         /// 
         /// 如果是SignComponent控件类型，则可选的字段为
         /// SIGN_SEAL - 签署印章控件；
@@ -131,12 +132,27 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 参数控件样式，json格式表述
+        /// 
         /// 不同类型的控件会有部分非通用参数
+        /// 
         /// TEXT/MULTI_LINE_TEXT控件可以指定
         /// 1 Font：目前只支持黑体、宋体
         /// 2 FontSize： 范围12-72
         /// 3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
         /// 例如：{"FontSize":12}
+        /// 
+        /// ComponentType为FILL_IMAGE时，支持以下参数：
+        /// NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
+        /// FillMethod: int. 填充方式。0-铺满（默认）；1-等比例缩放
+        /// 
+        /// ComponentType为SIGN_SIGNATURE类型可以控制签署方式
+        /// {“ComponentTypeLimit”: [“xxx”]}
+        /// xxx可以为：
+        /// HANDWRITE – 手写签名
+        /// BORDERLESS_ESIGN – 自动生成无边框腾讯体
+        /// OCR_ESIGN -- AI智能识别手写签名
+        /// ESIGN -- 个人印章类型
+        /// 如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
         /// </summary>
         [JsonProperty("ComponentExtra")]
         public string ComponentExtra{ get; set; }
@@ -188,6 +204,24 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("OffsetY")]
         public float? OffsetY{ get; set; }
 
+        /// <summary>
+        /// 指定关键字页码
+        /// </summary>
+        [JsonProperty("KeywordPage")]
+        public long? KeywordPage{ get; set; }
+
+        /// <summary>
+        /// 关键字位置模式
+        /// </summary>
+        [JsonProperty("RelativeLocation")]
+        public string RelativeLocation{ get; set; }
+
+        /// <summary>
+        /// 关键字索引
+        /// </summary>
+        [JsonProperty("KeywordIndexes")]
+        public long?[] KeywordIndexes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -213,6 +247,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ComponentDescription", this.ComponentDescription);
             this.SetParamSimple(map, prefix + "OffsetX", this.OffsetX);
             this.SetParamSimple(map, prefix + "OffsetY", this.OffsetY);
+            this.SetParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
+            this.SetParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
+            this.SetParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);
         }
     }
 }

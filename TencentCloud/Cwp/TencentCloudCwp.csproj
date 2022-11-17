@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.642</VersionPrefix>
+    <VersionPrefix>3.0.643</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -275,6 +275,8 @@
     <Compile Include="V20180228\Models\DescribeBruteAttackListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBruteAttackRulesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBruteAttackRulesResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeClientExceptionRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeClientExceptionResponse.cs" />
     <Compile Include="V20180228\Models\DescribeComponentStatisticsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeComponentStatisticsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeESAggregationsRequest.cs" />
@@ -563,6 +565,7 @@
     <Compile Include="V20180228\Models\ProtectMachineInfo.cs" />
     <Compile Include="V20180228\Models\ProtectNetInfo.cs" />
     <Compile Include="V20180228\Models\ProtectStat.cs" />
+    <Compile Include="V20180228\Models\RecordInfo.cs" />
     <Compile Include="V20180228\Models\RecoverMalwaresRequest.cs" />
     <Compile Include="V20180228\Models\RecoverMalwaresResponse.cs" />
     <Compile Include="V20180228\Models\RegionInfo.cs" />

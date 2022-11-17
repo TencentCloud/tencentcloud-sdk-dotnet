@@ -25,7 +25,7 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 后台生成的base64字符串密钥
+        /// 经过加密算法加密后的base64格式密钥
         /// </summary>
         [JsonProperty("DataKey")]
         public string DataKey{ get; set; }
@@ -35,6 +35,13 @@ namespace TencentCloud.Mna.V20210119.Models
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
+
+        /// <summary>
+        /// 签名字符串
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Signature")]
+        public string Signature{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +57,7 @@ namespace TencentCloud.Mna.V20210119.Models
         {
             this.SetParamSimple(map, prefix + "DataKey", this.DataKey);
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "Signature", this.Signature);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

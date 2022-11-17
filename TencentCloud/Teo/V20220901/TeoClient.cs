@@ -53,6 +53,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 将未绑定套餐的站点绑定到已有套餐
+        /// </summary>
+        /// <param name="req"><see cref="BindZoneToPlanRequest"/></param>
+        /// <returns><see cref="BindZoneToPlanResponse"/></returns>
+        public async Task<BindZoneToPlanResponse> BindZoneToPlan(BindZoneToPlanRequest req)
+        {
+             JsonResponseModel<BindZoneToPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindZoneToPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindZoneToPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将未绑定套餐的站点绑定到已有套餐
+        /// </summary>
+        /// <param name="req"><see cref="BindZoneToPlanRequest"/></param>
+        /// <returns><see cref="BindZoneToPlanResponse"/></returns>
+        public BindZoneToPlanResponse BindZoneToPlanSync(BindZoneToPlanRequest req)
+        {
+             JsonResponseModel<BindZoneToPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindZoneToPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindZoneToPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 校验证书
         /// </summary>
         /// <param name="req"><see cref="CheckCertificateRequest"/></param>

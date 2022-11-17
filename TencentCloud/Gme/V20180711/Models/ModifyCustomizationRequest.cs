@@ -31,7 +31,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public long? BizId{ get; set; }
 
         /// <summary>
-        /// 文本文件
+        /// 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
         /// </summary>
         [JsonProperty("TextUrl")]
         public string TextUrl{ get; set; }

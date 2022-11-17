@@ -37,10 +37,28 @@ namespace TencentCloud.Gme.V20180711.Models
         public string ModelId{ get; set; }
 
         /// <summary>
-        /// 模型状态，-1下线状态，1上线状态, 0训练中, -2训练失败
+        /// 模型状态，-1下线状态，1上线状态, 0训练中, -2训练失败, 3上线中, 4下线中
         /// </summary>
         [JsonProperty("ModelState")]
         public long? ModelState{ get; set; }
+
+        /// <summary>
+        /// 模型名称
+        /// </summary>
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
+
+        /// <summary>
+        /// 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
+        /// </summary>
+        [JsonProperty("TextUrl")]
+        public string TextUrl{ get; set; }
+
+        /// <summary>
+        /// 更新时间，11位时间戳
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public long? UpdateTime{ get; set; }
 
 
         /// <summary>
@@ -51,6 +69,9 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamSimple(map, prefix + "BizId", this.BizId);
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
             this.SetParamSimple(map, prefix + "ModelState", this.ModelState);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
+            this.SetParamSimple(map, prefix + "TextUrl", this.TextUrl);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

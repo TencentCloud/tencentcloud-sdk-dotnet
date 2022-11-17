@@ -180,6 +180,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("ProtocolParams")]
         public ProtocolParams ProtocolParams{ get; set; }
 
+        /// <summary>
+        /// 单实例多并发配置。只支持Web函数。
+        /// </summary>
+        [JsonProperty("InstanceConcurrencyConfig")]
+        public InstanceConcurrencyConfig InstanceConcurrencyConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +218,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
             this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
             this.SetParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
+            this.SetParamObj(map, prefix + "InstanceConcurrencyConfig.", this.InstanceConcurrencyConfig);
         }
     }
 }

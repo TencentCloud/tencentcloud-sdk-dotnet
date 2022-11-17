@@ -31,7 +31,7 @@ namespace TencentCloud.Car.V20220110.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户IP
+        /// 用户IP，用户客户端的公网IP，用于就近调度
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }

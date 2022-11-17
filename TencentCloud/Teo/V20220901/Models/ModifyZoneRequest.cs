@@ -44,6 +44,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("VanityNameServers")]
         public VanityNameServers VanityNameServers{ get; set; }
 
+        /// <summary>
+        /// 站点别名。数字、英文、-和_组合，限制20个字符。
+        /// </summary>
+        [JsonProperty("AliasZoneName")]
+        public string AliasZoneName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
+            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
         }
     }
 }

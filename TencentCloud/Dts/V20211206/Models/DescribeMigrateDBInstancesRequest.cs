@@ -67,19 +67,19 @@ namespace TencentCloud.Dts.V20211206.Models
         public string AccountMode{ get; set; }
 
         /// <summary>
-        /// 临时秘钥Id，若为跨账号资源此项必填
+        /// 临时密钥Id，若为跨账号资源此项必填
         /// </summary>
         [JsonProperty("TmpSecretId")]
         public string TmpSecretId{ get; set; }
 
         /// <summary>
-        /// 临时秘钥Key，若为跨账号资源此项必填
+        /// 临时密钥Key，若为跨账号资源此项必填
         /// </summary>
         [JsonProperty("TmpSecretKey")]
         public string TmpSecretKey{ get; set; }
 
         /// <summary>
-        /// 临时秘钥Token，若为跨账号资源此项必填
+        /// 临时密钥Token，若为跨账号资源此项必填
         /// </summary>
         [JsonProperty("TmpToken")]
         public string TmpToken{ get; set; }

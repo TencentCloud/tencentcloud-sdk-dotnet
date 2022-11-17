@@ -144,14 +144,14 @@ namespace TencentCloud.Dts.V20211206.Models
         public string AccountMode{ get; set; }
 
         /// <summary>
-        /// 临时秘钥Id
+        /// 临时密钥Id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TmpSecretId")]
         public string TmpSecretId{ get; set; }
 
         /// <summary>
-        /// 临时秘钥Key
+        /// 临时密钥Key
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TmpSecretKey")]

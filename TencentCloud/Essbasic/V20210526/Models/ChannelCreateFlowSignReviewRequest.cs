@@ -52,6 +52,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ReviewMessage")]
         public string ReviewMessage{ get; set; }
 
+        /// <summary>
+        /// 签署节点审核时需要指定
+        /// </summary>
+        [JsonProperty("RecipientId")]
+        public string RecipientId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +68,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "ReviewType", this.ReviewType);
             this.SetParamSimple(map, prefix + "ReviewMessage", this.ReviewMessage);
+            this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
         }
     }
 }

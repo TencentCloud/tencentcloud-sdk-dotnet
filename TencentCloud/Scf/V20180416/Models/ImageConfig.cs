@@ -64,6 +64,13 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Args")]
         public string Args{ get; set; }
 
+        /// <summary>
+        /// 镜像加速开关，默认False
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerImageAccelerate")]
+        public bool? ContainerImageAccelerate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +83,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "Args", this.Args);
+            this.SetParamSimple(map, prefix + "ContainerImageAccelerate", this.ContainerImageAccelerate);
         }
     }
 }

@@ -42,6 +42,12 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("DataKey")]
         public string DataKey{ get; set; }
 
+        /// <summary>
+        /// 是否设置预置密钥
+        /// </summary>
+        [JsonProperty("Encrypted")]
+        public bool? Encrypted{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "DataKey", this.DataKey);
+            this.SetParamSimple(map, prefix + "Encrypted", this.Encrypted);
         }
     }
 }

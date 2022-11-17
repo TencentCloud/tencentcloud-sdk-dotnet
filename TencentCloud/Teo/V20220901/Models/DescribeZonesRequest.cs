@@ -43,6 +43,26 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 排序字段，取值有：
+        /// <li> type：接入类型；</li>
+        /// <li> area：加速区域；</li>
+        /// <li> create-time：创建时间；</li>
+        /// <li> zone-name：站点名称；</li>
+        /// <li> use-time：最近使用时间；</li>
+        /// <li> active-status：生效状态。</li>不填写使用默认值create-time。
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 排序方向，取值有：
+        /// <li> asc：从小到大排序；</li>
+        /// <li> desc：从大到小排序。</li>不填写使用默认值desc。
+        /// </summary>
+        [JsonProperty("Direction")]
+        public string Direction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +72,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "Direction", this.Direction);
         }
     }
 }

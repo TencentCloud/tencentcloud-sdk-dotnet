@@ -31,7 +31,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string LiveChannelId{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// 过期时间 秒级unix时间戳
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }

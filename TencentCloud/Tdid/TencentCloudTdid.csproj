@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D6E217E7-C778-31C0-B3BE-9508ABB1A7BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.642</VersionPrefix>
+    <VersionPrefix>3.0.643</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,26 +45,123 @@
 
   <ItemGroup>
     <Compile Include="V20210519\TdidClient.cs" />
+    <Compile Include="V20210519\Models\AddLabelRequest.cs" />
+    <Compile Include="V20210519\Models\AddLabelResponse.cs" />
+    <Compile Include="V20210519\Models\Authority.cs" />
+    <Compile Include="V20210519\Models\BcosClusterItem.cs" />
+    <Compile Include="V20210519\Models\CancelAuthorityIssuerRequest.cs" />
+    <Compile Include="V20210519\Models\CancelAuthorityIssuerResponse.cs" />
+    <Compile Include="V20210519\Models\CheckChainRequest.cs" />
+    <Compile Include="V20210519\Models\CheckChainResponse.cs" />
+    <Compile Include="V20210519\Models\CheckDidDeployRequest.cs" />
+    <Compile Include="V20210519\Models\CheckDidDeployResponse.cs" />
+    <Compile Include="V20210519\Models\ConsortiumItem.cs" />
+    <Compile Include="V20210519\Models\Contract.cs" />
+    <Compile Include="V20210519\Models\CptIssueRank.cs" />
+    <Compile Include="V20210519\Models\CptListData.cs" />
     <Compile Include="V20210519\Models\CreateCredentialRequest.cs" />
     <Compile Include="V20210519\Models\CreateCredentialResponse.cs" />
+    <Compile Include="V20210519\Models\CreateDidServiceRequest.cs" />
+    <Compile Include="V20210519\Models\CreateDidServiceResponse.cs" />
+    <Compile Include="V20210519\Models\CreateLabelRequest.cs" />
+    <Compile Include="V20210519\Models\CreateLabelResponse.cs" />
     <Compile Include="V20210519\Models\CreateSelectiveCredentialRequest.cs" />
     <Compile Include="V20210519\Models\CreateSelectiveCredentialResponse.cs" />
+    <Compile Include="V20210519\Models\CreateTDidByPrivateKeyRequest.cs" />
+    <Compile Include="V20210519\Models\CreateTDidByPrivateKeyResponse.cs" />
     <Compile Include="V20210519\Models\CreateTDidByPublicKeyRequest.cs" />
     <Compile Include="V20210519\Models\CreateTDidByPublicKeyResponse.cs" />
     <Compile Include="V20210519\Models\CreateTDidRequest.cs" />
     <Compile Include="V20210519\Models\CreateTDidResponse.cs" />
     <Compile Include="V20210519\Models\CredentialStatus.cs" />
+    <Compile Include="V20210519\Models\DeployByNameRequest.cs" />
+    <Compile Include="V20210519\Models\DeployByNameResponse.cs" />
+    <Compile Include="V20210519\Models\DidCluster.cs" />
+    <Compile Include="V20210519\Models\DidData.cs" />
+    <Compile Include="V20210519\Models\DidServiceInfo.cs" />
+    <Compile Include="V20210519\Models\DownCptRequest.cs" />
+    <Compile Include="V20210519\Models\DownCptResponse.cs" />
+    <Compile Include="V20210519\Models\EnableHashRequest.cs" />
+    <Compile Include="V20210519\Models\EnableHashResponse.cs" />
     <Compile Include="V20210519\Models\FunctionArg.cs" />
+    <Compile Include="V20210519\Models\GetAgencyTDidRequest.cs" />
+    <Compile Include="V20210519\Models\GetAgencyTDidResponse.cs" />
+    <Compile Include="V20210519\Models\GetAuthoritiesListRequest.cs" />
+    <Compile Include="V20210519\Models\GetAuthoritiesListResponse.cs" />
     <Compile Include="V20210519\Models\GetAuthorityIssuerRequest.cs" />
     <Compile Include="V20210519\Models\GetAuthorityIssuerResponse.cs" />
+    <Compile Include="V20210519\Models\GetConsortiumClusterListRequest.cs" />
+    <Compile Include="V20210519\Models\GetConsortiumClusterListResponse.cs" />
+    <Compile Include="V20210519\Models\GetConsortiumListRequest.cs" />
+    <Compile Include="V20210519\Models\GetConsortiumListResponse.cs" />
+    <Compile Include="V20210519\Models\GetCptInfoRequest.cs" />
+    <Compile Include="V20210519\Models\GetCptInfoResponse.cs" />
+    <Compile Include="V20210519\Models\GetCptListRequest.cs" />
+    <Compile Include="V20210519\Models\GetCptListResponse.cs" />
+    <Compile Include="V20210519\Models\GetCredentialCptRankRequest.cs" />
+    <Compile Include="V20210519\Models\GetCredentialCptRankResponse.cs" />
+    <Compile Include="V20210519\Models\GetCredentialIssueRankRequest.cs" />
+    <Compile Include="V20210519\Models\GetCredentialIssueRankResponse.cs" />
+    <Compile Include="V20210519\Models\GetCredentialIssueTrendRequest.cs" />
+    <Compile Include="V20210519\Models\GetCredentialIssueTrendResponse.cs" />
+    <Compile Include="V20210519\Models\GetCredentialStatusRequest.cs" />
+    <Compile Include="V20210519\Models\GetCredentialStatusResponse.cs" />
+    <Compile Include="V20210519\Models\GetDataPanelRequest.cs" />
+    <Compile Include="V20210519\Models\GetDataPanelResponse.cs" />
+    <Compile Include="V20210519\Models\GetDeployInfoRequest.cs" />
+    <Compile Include="V20210519\Models\GetDeployInfoResponse.cs" />
+    <Compile Include="V20210519\Models\GetDeployListRequest.cs" />
+    <Compile Include="V20210519\Models\GetDeployListResponse.cs" />
+    <Compile Include="V20210519\Models\GetDidClusterDetailRequest.cs" />
+    <Compile Include="V20210519\Models\GetDidClusterDetailResponse.cs" />
+    <Compile Include="V20210519\Models\GetDidClusterListRequest.cs" />
+    <Compile Include="V20210519\Models\GetDidClusterListResponse.cs" />
+    <Compile Include="V20210519\Models\GetDidDetailRequest.cs" />
+    <Compile Include="V20210519\Models\GetDidDetailResponse.cs" />
     <Compile Include="V20210519\Models\GetDidDocumentRequest.cs" />
     <Compile Include="V20210519\Models\GetDidDocumentResponse.cs" />
+    <Compile Include="V20210519\Models\GetDidListRequest.cs" />
+    <Compile Include="V20210519\Models\GetDidListResponse.cs" />
+    <Compile Include="V20210519\Models\GetDidRegisterTrendRequest.cs" />
+    <Compile Include="V20210519\Models\GetDidRegisterTrendResponse.cs" />
+    <Compile Include="V20210519\Models\GetDidServiceDetailRequest.cs" />
+    <Compile Include="V20210519\Models\GetDidServiceDetailResponse.cs" />
+    <Compile Include="V20210519\Models\GetDidServiceListRequest.cs" />
+    <Compile Include="V20210519\Models\GetDidServiceListResponse.cs" />
+    <Compile Include="V20210519\Models\GetGroupListRequest.cs" />
+    <Compile Include="V20210519\Models\GetGroupListResponse.cs" />
+    <Compile Include="V20210519\Models\GetLabelListRequest.cs" />
+    <Compile Include="V20210519\Models\GetLabelListResponse.cs" />
+    <Compile Include="V20210519\Models\GetPolicyListRequest.cs" />
+    <Compile Include="V20210519\Models\GetPolicyListResponse.cs" />
+    <Compile Include="V20210519\Models\GetPublicKeyRequest.cs" />
+    <Compile Include="V20210519\Models\GetPublicKeyResponse.cs" />
+    <Compile Include="V20210519\Models\Group.cs" />
+    <Compile Include="V20210519\Models\Identity.cs" />
+    <Compile Include="V20210519\Models\Label.cs" />
+    <Compile Include="V20210519\Models\Policy.cs" />
     <Compile Include="V20210519\Models\Proof.cs" />
+    <Compile Include="V20210519\Models\QueryPolicyRequest.cs" />
+    <Compile Include="V20210519\Models\QueryPolicyResponse.cs" />
+    <Compile Include="V20210519\Models\RecognizeAuthorityIssuerRequest.cs" />
+    <Compile Include="V20210519\Models\RecognizeAuthorityIssuerResponse.cs" />
+    <Compile Include="V20210519\Models\RegisterClaimPolicyRequest.cs" />
+    <Compile Include="V20210519\Models\RegisterClaimPolicyResponse.cs" />
+    <Compile Include="V20210519\Models\RegisterCptRequest.cs" />
+    <Compile Include="V20210519\Models\RegisterCptResponse.cs" />
+    <Compile Include="V20210519\Models\RegisterIssuerRequest.cs" />
+    <Compile Include="V20210519\Models\RegisterIssuerResponse.cs" />
+    <Compile Include="V20210519\Models\RemoveHashRequest.cs" />
+    <Compile Include="V20210519\Models\RemoveHashResponse.cs" />
     <Compile Include="V20210519\Models\SetCredentialStatusRequest.cs" />
     <Compile Include="V20210519\Models\SetCredentialStatusResponse.cs" />
+    <Compile Include="V20210519\Models\Task.cs" />
     <Compile Include="V20210519\Models\TransactionArg.cs" />
+    <Compile Include="V20210519\Models\Trend.cs" />
     <Compile Include="V20210519\Models\VerifyCredentialRequest.cs" />
     <Compile Include="V20210519\Models\VerifyCredentialResponse.cs" />
     <Compile Include="V20210519\Models\VerifyFunctionArg.cs" />
+    <Compile Include="V20210519\Models\VerifyPurchaseRequest.cs" />
+    <Compile Include="V20210519\Models\VerifyPurchaseResponse.cs" />
   </ItemGroup>
 </Project>

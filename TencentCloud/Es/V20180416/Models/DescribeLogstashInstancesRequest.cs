@@ -72,6 +72,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("VpcIds")]
         public string[] VpcIds{ get; set; }
 
+        /// <summary>
+        /// 标签信息列表
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagInfo[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "OrderByKey", this.OrderByKey);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
             this.SetParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

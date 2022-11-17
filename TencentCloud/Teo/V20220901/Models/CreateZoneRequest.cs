@@ -58,6 +58,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("AllowDuplicates")]
         public bool? AllowDuplicates{ get; set; }
 
+        /// <summary>
+        /// 站点别名。数字、英文、-和_组合，限制20个字符。
+        /// </summary>
+        [JsonProperty("AliasZoneName")]
+        public string AliasZoneName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +75,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "JumpStart", this.JumpStart);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AllowDuplicates", this.AllowDuplicates);
+            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
         }
     }
 }

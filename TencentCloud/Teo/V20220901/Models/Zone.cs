@@ -135,6 +135,22 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("VanityNameServersIps")]
         public VanityNameServersIps[] VanityNameServersIps{ get; set; }
 
+        /// <summary>
+        /// 展示状态，取值有：
+        /// <li> active：已启用；</li>
+        /// <li> inactive：未生效；</li>
+        /// <li> paused：已停用。</li>
+        /// </summary>
+        [JsonProperty("ActiveStatus")]
+        public string ActiveStatus{ get; set; }
+
+        /// <summary>
+        /// 站点别名。数字、英文、-和_组合，限制20个字符。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AliasZoneName")]
+        public string AliasZoneName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +173,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
             this.SetParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
+            this.SetParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
+            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
         }
     }
 }

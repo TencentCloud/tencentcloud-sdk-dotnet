@@ -42,6 +42,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }
 
+        /// <summary>
+        /// 可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place"
+        /// </summary>
+        [JsonProperty("RestartMode")]
+        public string RestartMode{ get; set; }
+
+        /// <summary>
+        /// 节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
+        /// </summary>
+        [JsonProperty("IsOffline")]
+        public bool? IsOffline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "NodeNames.", this.NodeNames);
             this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
+            this.SetParamSimple(map, prefix + "RestartMode", this.RestartMode);
+            this.SetParamSimple(map, prefix + "IsOffline", this.IsOffline);
         }
     }
 }

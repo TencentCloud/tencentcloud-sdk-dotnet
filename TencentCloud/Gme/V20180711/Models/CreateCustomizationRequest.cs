@@ -36,6 +36,12 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("TextUrl")]
         public string TextUrl{ get; set; }
 
+        /// <summary>
+        /// 模型名称，名称长度不超过36，默认为BizId。
+        /// </summary>
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Gme.V20180711.Models
         {
             this.SetParamSimple(map, prefix + "BizId", this.BizId);
             this.SetParamSimple(map, prefix + "TextUrl", this.TextUrl);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
         }
     }
 }

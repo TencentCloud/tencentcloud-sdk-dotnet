@@ -37,13 +37,27 @@ namespace TencentCloud.Tem.V20210701.Models
         public long? MaxReplicas{ get; set; }
 
         /// <summary>
-        /// 指标度量（CPU or MEMORY）
+        /// 指标度量
+        /// CPU（CPU使用率，%）
+        /// MEMORY（内存使用率，%）
+        /// CPU_CORE_USED（CPU使用量，core）
+        /// MEMORY_SIZE_USED(内存使用量，MiB)
+        /// NETWORK_BANDWIDTH_RECEIVE(网络入带宽，MBps)
+        /// NETWORK_BANDWIDTH_TRANSMIT(网络出带宽，MBps)
+        /// NETWORK_TRAFFIC_RECEIVE(网络入流量，MiB/s)
+        /// NETWORK_TRAFFIC_TRANSMIT(网络出流量，MiB/s)
+        /// NETWORK_PACKETS_RECEIVE(网络入包量，Count/s)
+        /// NETWORK_PACKETS_TRANSMIT(网络出包量，Count/s)
+        /// FS_IOPS_WRITE(磁盘写次数，Count/s)
+        /// FS_IOPS_READ(磁盘读次数，Count/s)
+        /// FS_SIZE_WRITE(磁盘写大小，MiB/s)
+        /// FS_SIZE_READ(磁盘读大小，MiB/s)
         /// </summary>
         [JsonProperty("Metrics")]
         public string Metrics{ get; set; }
 
         /// <summary>
-        /// 阈值（百分比）
+        /// 阈值（整数）
         /// </summary>
         [JsonProperty("Threshold")]
         public long? Threshold{ get; set; }
@@ -53,6 +67,13 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
+
+        /// <summary>
+        /// 阈值（小数，优先使用）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DoubleThreshold")]
+        public float? DoubleThreshold{ get; set; }
 
 
         /// <summary>
@@ -65,6 +86,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "Metrics", this.Metrics);
             this.SetParamSimple(map, prefix + "Threshold", this.Threshold);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "DoubleThreshold", this.DoubleThreshold);
         }
     }
 }

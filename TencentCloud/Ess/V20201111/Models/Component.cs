@@ -33,7 +33,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// DYNAMIC_TABLE - 动态表格控件；
         /// ATTACHMENT - 附件控件；
         /// SELECTOR - 选择器控件；
-        /// DATE - 日期控件；默认是格式化为xxxx年xx月xx日
+        /// DATE - 日期控件；默认是格式化为xxxx年xx月xx日；
+        /// DISTRICT - 省市区行政区划控件；
         /// 
         /// 如果是SignComponent控件类型，则可选的字段为
         /// SIGN_SEAL - 签署印章控件；
@@ -104,6 +105,12 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 扩展参数：
+        /// 为JSON格式。
+        /// 
+        /// ComponentType为FILL_IMAGE时，支持以下参数：
+        /// NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
+        /// FillMethod: int. 填充方式。0-铺满（默认）；1-等比例缩放
+        /// 
         /// ComponentType为SIGN_SIGNATURE类型可以控制签署方式
         /// {“ComponentTypeLimit”: [“xxx”]}
         /// xxx可以为：
@@ -169,6 +176,30 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("OffsetY")]
         public float? OffsetY{ get; set; }
 
+        /// <summary>
+        /// 指定关键字排序规则
+        /// </summary>
+        [JsonProperty("KeywordOrder")]
+        public string KeywordOrder{ get; set; }
+
+        /// <summary>
+        /// 指定关键字页码
+        /// </summary>
+        [JsonProperty("KeywordPage")]
+        public long? KeywordPage{ get; set; }
+
+        /// <summary>
+        /// 关键字位置模式
+        /// </summary>
+        [JsonProperty("RelativeLocation")]
+        public string RelativeLocation{ get; set; }
+
+        /// <summary>
+        /// 关键字索引
+        /// </summary>
+        [JsonProperty("KeywordIndexes")]
+        public long?[] KeywordIndexes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -193,6 +224,10 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ComponentDateFontSize", this.ComponentDateFontSize);
             this.SetParamSimple(map, prefix + "OffsetX", this.OffsetX);
             this.SetParamSimple(map, prefix + "OffsetY", this.OffsetY);
+            this.SetParamSimple(map, prefix + "KeywordOrder", this.KeywordOrder);
+            this.SetParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
+            this.SetParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
+            this.SetParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);
         }
     }
 }

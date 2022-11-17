@@ -183,6 +183,27 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("OperationDuration")]
         public OperationDuration OperationDuration{ get; set; }
 
+        /// <summary>
+        /// CPU数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CpuNum")]
+        public ulong? CpuNum{ get; set; }
+
+        /// <summary>
+        /// 实例标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagInfo[] TagList{ get; set; }
+
+        /// <summary>
+        /// 内存大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MemSize")]
+        public ulong? MemSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -215,6 +236,9 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "YMLConfig", this.YMLConfig);
             this.SetParamArrayObj(map, prefix + "ExtendedFiles.", this.ExtendedFiles);
             this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+            this.SetParamSimple(map, prefix + "CpuNum", this.CpuNum);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
         }
     }
 }

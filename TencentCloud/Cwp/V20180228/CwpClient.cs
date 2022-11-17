@@ -3619,6 +3619,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取客户端异常事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientExceptionRequest"/></param>
+        /// <returns><see cref="DescribeClientExceptionResponse"/></returns>
+        public async Task<DescribeClientExceptionResponse> DescribeClientException(DescribeClientExceptionRequest req)
+        {
+             JsonResponseModel<DescribeClientExceptionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClientException");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClientExceptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取客户端异常事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientExceptionRequest"/></param>
+        /// <returns><see cref="DescribeClientExceptionResponse"/></returns>
+        public DescribeClientExceptionResponse DescribeClientExceptionSync(DescribeClientExceptionRequest req)
+        {
+             JsonResponseModel<DescribeClientExceptionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClientException");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClientExceptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeComponentStatisticsRequest"/></param>
