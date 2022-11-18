@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.643</VersionPrefix>
+    <VersionPrefix>3.0.644</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -168,6 +168,7 @@
     <Compile Include="V20190612\Models\CreateImageSpriteTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateImageSpriteTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateInput.cs" />
+    <Compile Include="V20190612\Models\CreateInputHLSPullSettings.cs" />
     <Compile Include="V20190612\Models\CreateInputRTMPPullSettings.cs" />
     <Compile Include="V20190612\Models\CreateInputRTPSettings.cs" />
     <Compile Include="V20190612\Models\CreateInputRTSPPullSettings.cs" />
@@ -238,9 +239,11 @@
     <Compile Include="V20190612\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeFlow.cs" />
+    <Compile Include="V20190612\Models\DescribeHLSPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeInput.cs" />
+    <Compile Include="V20190612\Models\DescribeInputHLSPullSettings.cs" />
     <Compile Include="V20190612\Models\DescribeInputRTMPPullSettings.cs" />
     <Compile Include="V20190612\Models\DescribeInputRTMPSettings.cs" />
     <Compile Include="V20190612\Models\DescribeInputRTPSettings.cs" />
@@ -249,6 +252,8 @@
     <Compile Include="V20190612\Models\DescribeMediaMetaDataRequest.cs" />
     <Compile Include="V20190612\Models\DescribeMediaMetaDataResponse.cs" />
     <Compile Include="V20190612\Models\DescribeOutput.cs" />
+    <Compile Include="V20190612\Models\DescribeOutputHLSPullServerUrl.cs" />
+    <Compile Include="V20190612\Models\DescribeOutputHLSPullSettings.cs" />
     <Compile Include="V20190612\Models\DescribeOutputRTMPPullServerUrl.cs" />
     <Compile Include="V20190612\Models\DescribeOutputRTMPPullSettings.cs" />
     <Compile Include="V20190612\Models\DescribeOutputRTMPSettings.cs" />
@@ -329,6 +334,7 @@
     <Compile Include="V20190612\Models\FrameRateConfig.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfo.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\HLSPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\HdrConfig.cs" />
     <Compile Include="V20190612\Models\HeadTailParameter.cs" />
     <Compile Include="V20190612\Models\ImageQualityEnhanceConfig.cs" />

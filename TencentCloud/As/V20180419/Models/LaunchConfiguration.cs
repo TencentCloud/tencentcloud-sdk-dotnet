@@ -206,6 +206,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }
 
+        /// <summary>
+        /// IPv6公网带宽相关信息设置。
+        /// </summary>
+        [JsonProperty("IPv6InternetAccessible")]
+        public IPv6InternetAccessible IPv6InternetAccessible{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -241,6 +247,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
             this.SetParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+            this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
         }
     }
 }

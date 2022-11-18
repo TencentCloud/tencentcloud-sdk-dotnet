@@ -1893,6 +1893,46 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 增量更新在线推理服务的部分配置，不更新的配置项不需要传入
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelServicePartialConfigRequest"/></param>
+        /// <returns><see cref="ModifyModelServicePartialConfigResponse"/></returns>
+        public async Task<ModifyModelServicePartialConfigResponse> ModifyModelServicePartialConfig(ModifyModelServicePartialConfigRequest req)
+        {
+             JsonResponseModel<ModifyModelServicePartialConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyModelServicePartialConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModelServicePartialConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 增量更新在线推理服务的部分配置，不更新的配置项不需要传入
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelServicePartialConfigRequest"/></param>
+        /// <returns><see cref="ModifyModelServicePartialConfigResponse"/></returns>
+        public ModifyModelServicePartialConfigResponse ModifyModelServicePartialConfigSync(ModifyModelServicePartialConfigRequest req)
+        {
+             JsonResponseModel<ModifyModelServicePartialConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyModelServicePartialConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModelServicePartialConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新推理服务组流量分配
         /// </summary>
         /// <param name="req"><see cref="ModifyServiceGroupWeightsRequest"/></param>

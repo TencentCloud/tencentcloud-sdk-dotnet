@@ -85,7 +85,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? CreatedOn{ get; set; }
 
         /// <summary>
-        /// 模板的预览链接
+        /// 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreviewUrl")]

@@ -97,11 +97,19 @@ namespace TencentCloud.Live.V20180801.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 拉流源所在地域（请就近选取）：
+        /// 任务创建所在地域：
         /// ap-beijing - 华北地区(北京)，
         /// ap-shanghai -华东地区(上海)，
         /// ap-guangzhou -华南地区(广州)，
-        /// ap-mumbai - 印度。
+        /// ap-mumbai - 印度，
+        /// ap-hongkong - 香港，
+        /// eu-frankfurt - 德国，
+        /// ap-seoul - 韩国，
+        /// ap-bangkok - 泰国，
+        /// ap-singapore - 新加坡，
+        /// na-siliconvalley - 美西，
+        /// na-ashburn - 美东，
+        /// ap-tokyo - 日本。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

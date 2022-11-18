@@ -133,7 +133,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 取消组织成员和子账号的授权绑定关系
+        /// 取消组织成员和组织管理员子账号的授权关系
         /// </summary>
         /// <param name="req"><see cref="CancelOrganizationMemberAuthAccountRequest"/></param>
         /// <returns><see cref="CancelOrganizationMemberAuthAccountResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 取消组织成员和子账号的授权绑定关系
+        /// 取消组织成员和组织管理员子账号的授权关系
         /// </summary>
         /// <param name="req"><see cref="CancelOrganizationMemberAuthAccountRequest"/></param>
         /// <returns><see cref="CancelOrganizationMemberAuthAccountResponse"/></returns>
@@ -413,7 +413,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 获取组织成员被绑定的子账号列表
+        /// 获取组织成员被绑定授权关系的子账号列表
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMemberAuthAccountsRequest"/></param>
         /// <returns><see cref="DescribeOrganizationMemberAuthAccountsResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 获取组织成员被绑定的子账号列表
+        /// 获取组织成员被绑定授权关系的子账号列表
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMemberAuthAccountsRequest"/></param>
         /// <returns><see cref="DescribeOrganizationMemberAuthAccountsResponse"/></returns>

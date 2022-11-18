@@ -93,6 +93,46 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 通过此接口设置和更新预置密钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateEncryptedKeyRequest"/></param>
+        /// <returns><see cref="CreateEncryptedKeyResponse"/></returns>
+        public async Task<CreateEncryptedKeyResponse> CreateEncryptedKey(CreateEncryptedKeyRequest req)
+        {
+             JsonResponseModel<CreateEncryptedKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateEncryptedKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEncryptedKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口设置和更新预置密钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateEncryptedKeyRequest"/></param>
+        /// <returns><see cref="CreateEncryptedKeyResponse"/></returns>
+        public CreateEncryptedKeyResponse CreateEncryptedKeySync(CreateEncryptedKeyRequest req)
+        {
+             JsonResponseModel<CreateEncryptedKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEncryptedKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEncryptedKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 移动网络发起Qos加速过程
         /// </summary>
         /// <param name="req"><see cref="CreateQosRequest"/></param>
@@ -364,6 +404,46 @@ namespace TencentCloud.Mna.V20210119
              {
                  var strResp = this.InternalRequestSync(req, "GetFlowStatistic");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFlowStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取公钥用于验签
+        /// </summary>
+        /// <param name="req"><see cref="GetPublicKeyRequest"/></param>
+        /// <returns><see cref="GetPublicKeyResponse"/></returns>
+        public async Task<GetPublicKeyResponse> GetPublicKey(GetPublicKeyRequest req)
+        {
+             JsonResponseModel<GetPublicKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetPublicKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPublicKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取公钥用于验签
+        /// </summary>
+        /// <param name="req"><see cref="GetPublicKeyRequest"/></param>
+        /// <returns><see cref="GetPublicKeyResponse"/></returns>
+        public GetPublicKeyResponse GetPublicKeySync(GetPublicKeyRequest req)
+        {
+             JsonResponseModel<GetPublicKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetPublicKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPublicKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

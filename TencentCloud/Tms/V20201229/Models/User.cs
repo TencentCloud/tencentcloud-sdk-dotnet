@@ -85,6 +85,24 @@ namespace TencentCloud.Tms.V20201229.Models
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
+        /// <summary>
+        /// 该字段表示业务群聊场景时的房间ID。
+        /// </summary>
+        [JsonProperty("RoomId")]
+        public string RoomId{ get; set; }
+
+        /// <summary>
+        /// 该字段表示消息接受者ID
+        /// </summary>
+        [JsonProperty("ReceiverId")]
+        public string ReceiverId{ get; set; }
+
+        /// <summary>
+        /// 消息生成时间，精确到毫秒
+        /// </summary>
+        [JsonProperty("SendTime")]
+        public long? SendTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +118,9 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "HeadUrl", this.HeadUrl);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
+            this.SetParamSimple(map, prefix + "ReceiverId", this.ReceiverId);
+            this.SetParamSimple(map, prefix + "SendTime", this.SendTime);
         }
     }
 }

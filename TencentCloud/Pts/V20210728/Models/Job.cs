@@ -292,6 +292,20 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("NotificationHooks")]
         public NotificationHook[] NotificationHooks{ get; set; }
 
+        /// <summary>
+        /// 每秒接收字节数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetworkReceiveRate")]
+        public float? NetworkReceiveRate{ get; set; }
+
+        /// <summary>
+        /// 每秒发送字节数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetworkSendRate")]
+        public float? NetworkSendRate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -336,6 +350,8 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
+            this.SetParamSimple(map, prefix + "NetworkReceiveRate", this.NetworkReceiveRate);
+            this.SetParamSimple(map, prefix + "NetworkSendRate", this.NetworkSendRate);
         }
     }
 }

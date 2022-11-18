@@ -78,6 +78,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("RTSPPullSettings")]
         public CreateInputRTSPPullSettings RTSPPullSettings{ get; set; }
 
+        /// <summary>
+        /// 输入的HLS_PULL配置信息。
+        /// </summary>
+        [JsonProperty("HLSPullSettings")]
+        public CreateInputHLSPullSettings HLSPullSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "FailOver", this.FailOver);
             this.SetParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
             this.SetParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
+            this.SetParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
         }
     }
 }

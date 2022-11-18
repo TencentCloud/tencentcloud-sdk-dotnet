@@ -95,6 +95,12 @@ namespace TencentCloud.Tts.V20190823.Models
         [JsonProperty("EnableSubtitle")]
         public bool? EnableSubtitle{ get; set; }
 
+        /// <summary>
+        /// 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
+        /// </summary>
+        [JsonProperty("SegmentRate")]
+        public ulong? SegmentRate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +118,7 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "EnableSubtitle", this.EnableSubtitle);
+            this.SetParamSimple(map, prefix + "SegmentRate", this.SegmentRate);
         }
     }
 }

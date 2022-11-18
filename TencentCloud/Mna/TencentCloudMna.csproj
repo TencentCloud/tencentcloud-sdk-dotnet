@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03830C96-3E28-3E4E-924E-998E4E6827D1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.643</VersionPrefix>
+    <VersionPrefix>3.0.644</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,8 @@
     <Compile Include="V20210119\Models\AddDeviceResponse.cs" />
     <Compile Include="V20210119\Models\Capacity.cs" />
     <Compile Include="V20210119\Models\Context.cs" />
+    <Compile Include="V20210119\Models\CreateEncryptedKeyRequest.cs" />
+    <Compile Include="V20210119\Models\CreateEncryptedKeyResponse.cs" />
     <Compile Include="V20210119\Models\CreateQosRequest.cs" />
     <Compile Include="V20210119\Models\CreateQosResponse.cs" />
     <Compile Include="V20210119\Models\DeleteDeviceRequest.cs" />
@@ -69,6 +71,8 @@
     <Compile Include="V20210119\Models\GetDevicesResponse.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticRequest.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticResponse.cs" />
+    <Compile Include="V20210119\Models\GetPublicKeyRequest.cs" />
+    <Compile Include="V20210119\Models\GetPublicKeyResponse.cs" />
     <Compile Include="V20210119\Models\GetStatisticDataRequest.cs" />
     <Compile Include="V20210119\Models\GetStatisticDataResponse.cs" />
     <Compile Include="V20210119\Models\NetDetails.cs" />

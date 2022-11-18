@@ -111,6 +111,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("RTSPPullSettings")]
         public DescribeOutputRTSPPullSettings RTSPPullSettings{ get; set; }
 
+        /// <summary>
+        /// 输出的HLS拉流配置信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HLSPullSettings")]
+        public DescribeOutputHLSPullSettings HLSPullSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +137,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
             this.SetParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
             this.SetParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
+            this.SetParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
         }
     }
 }

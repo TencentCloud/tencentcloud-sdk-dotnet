@@ -164,6 +164,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }
 
+        /// <summary>
+        /// IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+        /// </summary>
+        [JsonProperty("IPv6InternetAccessible")]
+        public IPv6InternetAccessible IPv6InternetAccessible{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -189,6 +195,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+            this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
         }
     }
 }
