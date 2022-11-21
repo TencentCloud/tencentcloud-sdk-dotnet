@@ -43,11 +43,18 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 关联资源ID或关联域名
+        /// 不建议使用。字段返回和Resources相同。本字段后续只返回null
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
+
+        /// <summary>
+        /// 关联资源ID或关联域名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Resources")]
+        public string[] Resources{ get; set; }
 
 
         /// <summary>
@@ -59,6 +66,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+            this.SetParamArraySimple(map, prefix + "Resources.", this.Resources);
         }
     }
 }

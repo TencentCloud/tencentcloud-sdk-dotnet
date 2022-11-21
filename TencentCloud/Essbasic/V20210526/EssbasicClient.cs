@@ -233,6 +233,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 此接口（CreateConsoleLoginUrl）用于渠道子客领取合同，经办人需要有相应的角色，领取后的合同不能重复领取
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateBoundFlowsRequest"/></param>
+        /// <returns><see cref="ChannelCreateBoundFlowsResponse"/></returns>
+        public async Task<ChannelCreateBoundFlowsResponse> ChannelCreateBoundFlows(ChannelCreateBoundFlowsRequest req)
+        {
+             JsonResponseModel<ChannelCreateBoundFlowsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateBoundFlows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateBoundFlowsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（CreateConsoleLoginUrl）用于渠道子客领取合同，经办人需要有相应的角色，领取后的合同不能重复领取
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateBoundFlowsRequest"/></param>
+        /// <returns><see cref="ChannelCreateBoundFlowsResponse"/></returns>
+        public ChannelCreateBoundFlowsResponse ChannelCreateBoundFlowsSync(ChannelCreateBoundFlowsRequest req)
+        {
+             JsonResponseModel<ChannelCreateBoundFlowsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateBoundFlows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateBoundFlowsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 渠道创建文件转换任务
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateConvertTaskApiRequest"/></param>

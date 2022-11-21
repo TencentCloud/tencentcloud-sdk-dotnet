@@ -1373,6 +1373,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取实时位置解析
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceLocationSolveRequest"/></param>
+        /// <returns><see cref="DescribeDeviceLocationSolveResponse"/></returns>
+        public async Task<DescribeDeviceLocationSolveResponse> DescribeDeviceLocationSolve(DescribeDeviceLocationSolveRequest req)
+        {
+             JsonResponseModel<DescribeDeviceLocationSolveResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeviceLocationSolve");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceLocationSolveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实时位置解析
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceLocationSolveRequest"/></param>
+        /// <returns><see cref="DescribeDeviceLocationSolveResponse"/></returns>
+        public DescribeDeviceLocationSolveResponse DescribeDeviceLocationSolveSync(DescribeDeviceLocationSolveRequest req)
+        {
+             JsonResponseModel<DescribeDeviceLocationSolveResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeviceLocationSolve");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceLocationSolveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取设备位置列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDevicePositionListRequest"/></param>

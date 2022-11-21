@@ -85,6 +85,24 @@ namespace TencentCloud.Tke.V20180525.Models
         public string OsCustomizeType{ get; set; }
 
         /// <summary>
+        /// GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+        /// </summary>
+        [JsonProperty("GPUArgs")]
+        public GPUArgs GPUArgs{ get; set; }
+
+        /// <summary>
+        /// base64编码后的自定义脚本
+        /// </summary>
+        [JsonProperty("UserScript")]
+        public string UserScript{ get; set; }
+
+        /// <summary>
+        /// 更新label和taint时忽略存量节点
+        /// </summary>
+        [JsonProperty("IgnoreExistedNode")]
+        public bool? IgnoreExistedNode{ get; set; }
+
+        /// <summary>
         /// 节点自定义参数
         /// </summary>
         [JsonProperty("ExtraArgs")]
@@ -108,6 +126,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
+        /// <summary>
+        /// dockerd --graph 指定值, 默认为 /var/lib/docker
+        /// </summary>
+        [JsonProperty("DockerGraphPath")]
+        public string DockerGraphPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,10 +148,14 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "EnableAutoscale", this.EnableAutoscale);
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+            this.SetParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
+            this.SetParamSimple(map, prefix + "UserScript", this.UserScript);
+            this.SetParamSimple(map, prefix + "IgnoreExistedNode", this.IgnoreExistedNode);
             this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
         }
     }
 }

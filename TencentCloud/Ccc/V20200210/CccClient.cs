@@ -213,6 +213,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 用于无限频率地呼叫坐席手机
+        /// </summary>
+        /// <param name="req"><see cref="CreateCarrierPrivilegeNumberApplicantRequest"/></param>
+        /// <returns><see cref="CreateCarrierPrivilegeNumberApplicantResponse"/></returns>
+        public async Task<CreateCarrierPrivilegeNumberApplicantResponse> CreateCarrierPrivilegeNumberApplicant(CreateCarrierPrivilegeNumberApplicantRequest req)
+        {
+             JsonResponseModel<CreateCarrierPrivilegeNumberApplicantResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCarrierPrivilegeNumberApplicant");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCarrierPrivilegeNumberApplicantResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于无限频率地呼叫坐席手机
+        /// </summary>
+        /// <param name="req"><see cref="CreateCarrierPrivilegeNumberApplicantRequest"/></param>
+        /// <returns><see cref="CreateCarrierPrivilegeNumberApplicantResponse"/></returns>
+        public CreateCarrierPrivilegeNumberApplicantResponse CreateCarrierPrivilegeNumberApplicantSync(CreateCarrierPrivilegeNumberApplicantRequest req)
+        {
+             JsonResponseModel<CreateCarrierPrivilegeNumberApplicantResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCarrierPrivilegeNumberApplicant");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCarrierPrivilegeNumberApplicantResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建话机账号
         /// </summary>
         /// <param name="req"><see cref="CreateExtensionRequest"/></param>
@@ -453,6 +493,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 查询生效运营商白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActiveCarrierPrivilegeNumberRequest"/></param>
+        /// <returns><see cref="DescribeActiveCarrierPrivilegeNumberResponse"/></returns>
+        public async Task<DescribeActiveCarrierPrivilegeNumberResponse> DescribeActiveCarrierPrivilegeNumber(DescribeActiveCarrierPrivilegeNumberRequest req)
+        {
+             JsonResponseModel<DescribeActiveCarrierPrivilegeNumberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeActiveCarrierPrivilegeNumber");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeActiveCarrierPrivilegeNumberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询生效运营商白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActiveCarrierPrivilegeNumberRequest"/></param>
+        /// <returns><see cref="DescribeActiveCarrierPrivilegeNumberResponse"/></returns>
+        public DescribeActiveCarrierPrivilegeNumberResponse DescribeActiveCarrierPrivilegeNumberSync(DescribeActiveCarrierPrivilegeNumberRequest req)
+        {
+             JsonResponseModel<DescribeActiveCarrierPrivilegeNumberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeActiveCarrierPrivilegeNumber");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeActiveCarrierPrivilegeNumberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询自动外呼任务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoCalloutTaskRequest"/></param>
@@ -604,6 +684,46 @@ namespace TencentCloud.Ccc.V20200210
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCallInMetrics");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallInMetricsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCarrierPrivilegeNumberApplicantsRequest"/></param>
+        /// <returns><see cref="DescribeCarrierPrivilegeNumberApplicantsResponse"/></returns>
+        public async Task<DescribeCarrierPrivilegeNumberApplicantsResponse> DescribeCarrierPrivilegeNumberApplicants(DescribeCarrierPrivilegeNumberApplicantsRequest req)
+        {
+             JsonResponseModel<DescribeCarrierPrivilegeNumberApplicantsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCarrierPrivilegeNumberApplicants");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCarrierPrivilegeNumberApplicantsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCarrierPrivilegeNumberApplicantsRequest"/></param>
+        /// <returns><see cref="DescribeCarrierPrivilegeNumberApplicantsResponse"/></returns>
+        public DescribeCarrierPrivilegeNumberApplicantsResponse DescribeCarrierPrivilegeNumberApplicantsSync(DescribeCarrierPrivilegeNumberApplicantsRequest req)
+        {
+             JsonResponseModel<DescribeCarrierPrivilegeNumberApplicantsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCarrierPrivilegeNumberApplicants");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCarrierPrivilegeNumberApplicantsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

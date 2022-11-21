@@ -699,7 +699,7 @@ namespace TencentCloud.Trtc.V20190722
         /// networkDelay ：网络延迟率。
         /// 注意：
         /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2、查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
         /// </summary>
         /// <param name="req"><see cref="DescribeTRTCMarketQualityMetricDataRequest"/></param>
         /// <returns><see cref="DescribeTRTCMarketQualityMetricDataResponse"/></returns>
@@ -727,7 +727,7 @@ namespace TencentCloud.Trtc.V20190722
         /// networkDelay ：网络延迟率。
         /// 注意：
         /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2、查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
         /// </summary>
         /// <param name="req"><see cref="DescribeTRTCMarketQualityMetricDataRequest"/></param>
         /// <returns><see cref="DescribeTRTCMarketQualityMetricDataResponse"/></returns>
@@ -754,7 +754,7 @@ namespace TencentCloud.Trtc.V20190722
         /// peakCurrentUsers：峰值同时在线人数。
         /// 注意：
         /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2、查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
         /// </summary>
         /// <param name="req"><see cref="DescribeTRTCMarketScaleMetricDataRequest"/></param>
         /// <returns><see cref="DescribeTRTCMarketScaleMetricDataResponse"/></returns>
@@ -781,7 +781,7 @@ namespace TencentCloud.Trtc.V20190722
         /// peakCurrentUsers：峰值同时在线人数。
         /// 注意：
         /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2、查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
         /// </summary>
         /// <param name="req"><see cref="DescribeTRTCMarketScaleMetricDataRequest"/></param>
         /// <returns><see cref="DescribeTRTCMarketScaleMetricDataResponse"/></returns>
@@ -806,7 +806,7 @@ namespace TencentCloud.Trtc.V20190722
         /// -音频卡顿率
         /// 注意：
         /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2、查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeTRTCRealTimeQualityMetricDataRequest"/></param>
         /// <returns><see cref="DescribeTRTCRealTimeQualityMetricDataResponse"/></returns>
@@ -831,7 +831,7 @@ namespace TencentCloud.Trtc.V20190722
         /// -音频卡顿率
         /// 注意：
         /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2、查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeTRTCRealTimeQualityMetricDataRequest"/></param>
         /// <returns><see cref="DescribeTRTCRealTimeQualityMetricDataResponse"/></returns>
@@ -856,7 +856,7 @@ namespace TencentCloud.Trtc.V20190722
         /// -roomCount（在线房间数）
         /// 注意：
         /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2、查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeTRTCRealTimeScaleMetricDataRequest"/></param>
         /// <returns><see cref="DescribeTRTCRealTimeScaleMetricDataResponse"/></returns>
@@ -881,7 +881,7 @@ namespace TencentCloud.Trtc.V20190722
         /// -roomCount（在线房间数）
         /// 注意：
         /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2、查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeTRTCRealTimeScaleMetricDataRequest"/></param>
         /// <returns><see cref="DescribeTRTCRealTimeScaleMetricDataResponse"/></returns>
