@@ -42,6 +42,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }
 
+        /// <summary>
+        /// 系统
+        /// </summary>
+        [JsonProperty("Os")]
+        public string Os{ get; set; }
+
+        /// <summary>
+        /// 硬件架构
+        /// </summary>
+        [JsonProperty("Arch")]
+        public string Arch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+            this.SetParamSimple(map, prefix + "Os", this.Os);
+            this.SetParamSimple(map, prefix + "Arch", this.Arch);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.645</VersionPrefix>
+    <VersionPrefix>3.0.646</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -474,6 +474,7 @@
     <Compile Include="V20190612\Models\RegionInfo.cs" />
     <Compile Include="V20190612\Models\ResetWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\ResetWorkflowResponse.cs" />
+    <Compile Include="V20190612\Models\ResilientStreamConf.cs" />
     <Compile Include="V20190612\Models\SRTAddressDestination.cs" />
     <Compile Include="V20190612\Models\SRTSourceAddressReq.cs" />
     <Compile Include="V20190612\Models\SRTSourceAddressResp.cs" />

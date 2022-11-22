@@ -205,6 +205,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public float? OffsetY{ get; set; }
 
         /// <summary>
+        /// 渠道控件ID。
+        /// 如果不为空，属于渠道预设控件；
+        /// </summary>
+        [JsonProperty("ChannelComponentId")]
+        public string ChannelComponentId{ get; set; }
+
+        /// <summary>
         /// 指定关键字页码
         /// </summary>
         [JsonProperty("KeywordPage")]
@@ -247,6 +254,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ComponentDescription", this.ComponentDescription);
             this.SetParamSimple(map, prefix + "OffsetX", this.OffsetX);
             this.SetParamSimple(map, prefix + "OffsetY", this.OffsetY);
+            this.SetParamSimple(map, prefix + "ChannelComponentId", this.ChannelComponentId);
             this.SetParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
             this.SetParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
             this.SetParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);

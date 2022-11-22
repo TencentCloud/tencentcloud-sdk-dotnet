@@ -66,6 +66,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 用户侧第三方id，最大长度64个字符
+        /// 当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }

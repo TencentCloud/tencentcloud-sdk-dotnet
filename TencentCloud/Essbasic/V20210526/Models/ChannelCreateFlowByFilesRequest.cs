@@ -117,6 +117,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ApproverVerifyType")]
         public string ApproverVerifyType{ get; set; }
 
+        /// <summary>
+        /// 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+        /// </summary>
+        [JsonProperty("SignBeanTag")]
+        public long? SignBeanTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +144,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
+            this.SetParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
         }
     }
 }

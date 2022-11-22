@@ -361,6 +361,68 @@ namespace TencentCloud.Tiia.V20190529
         }
 
         /// <summary>
+        /// 可对图片中厨师穿戴进行识别，支持厨师服识别，厨师帽识别，赤膊识别和口罩识别,可应用于明厨亮灶场景。
+        /// "被优选过滤"标签值在人体优选开关开启时才会返回。
+        /// 厨师服：厨师服定义为白色上衣
+        /// 厨师服识别(酒店版)：厨师服定义为红色，白色，黑色上衣
+        /// 
+        /// |序号 | 标签名称 | 标签值 |
+        /// | :-----|  :----------   |:-----------------  |
+        /// | 1 | 厨师服识别<div style="width: 70pt"> |无厨师服、有厨师服、被优选过滤|
+        /// | 2 | 厨师服识别（酒店版）<div style="width: 70pt"> |无厨师服、有厨师服、被优选过滤|
+        /// | 3 | 厨师帽识别<div style="width: 70pt"> |无厨师帽、有厨师帽、被优选过滤	|
+        /// | 4 | 赤膊识别<div style="width: 70pt"> |非赤膊、赤膊、被优选过滤|
+        /// | 5 | 口罩识别<div style="width: 70pt"> |无口罩、有口罩、口罩不确定、被优选过滤	|
+        /// </summary>
+        /// <param name="req"><see cref="DetectChefDressRequest"/></param>
+        /// <returns><see cref="DetectChefDressResponse"/></returns>
+        public async Task<DetectChefDressResponse> DetectChefDress(DetectChefDressRequest req)
+        {
+             JsonResponseModel<DetectChefDressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectChefDress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectChefDressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可对图片中厨师穿戴进行识别，支持厨师服识别，厨师帽识别，赤膊识别和口罩识别,可应用于明厨亮灶场景。
+        /// "被优选过滤"标签值在人体优选开关开启时才会返回。
+        /// 厨师服：厨师服定义为白色上衣
+        /// 厨师服识别(酒店版)：厨师服定义为红色，白色，黑色上衣
+        /// 
+        /// |序号 | 标签名称 | 标签值 |
+        /// | :-----|  :----------   |:-----------------  |
+        /// | 1 | 厨师服识别<div style="width: 70pt"> |无厨师服、有厨师服、被优选过滤|
+        /// | 2 | 厨师服识别（酒店版）<div style="width: 70pt"> |无厨师服、有厨师服、被优选过滤|
+        /// | 3 | 厨师帽识别<div style="width: 70pt"> |无厨师帽、有厨师帽、被优选过滤	|
+        /// | 4 | 赤膊识别<div style="width: 70pt"> |非赤膊、赤膊、被优选过滤|
+        /// | 5 | 口罩识别<div style="width: 70pt"> |无口罩、有口罩、口罩不确定、被优选过滤	|
+        /// </summary>
+        /// <param name="req"><see cref="DetectChefDressRequest"/></param>
+        /// <returns><see cref="DetectChefDressResponse"/></returns>
+        public DetectChefDressResponse DetectChefDressSync(DetectChefDressRequest req)
+        {
+             JsonResponseModel<DetectChefDressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetectChefDress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectChefDressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 输入一张图片，返回AI针对一张图片是否是恶心的一系列判断值。
         /// 
         /// 通过恶心图片识别, 可以判断一张图片是否令人恶心, 同时给出它属于的潜在类别, 让您能够过滤掉使人不愉快的图片。
@@ -804,6 +866,72 @@ namespace TencentCloud.Tiia.V20190529
              {
                  var strResp = this.InternalRequestSync(req, "DetectProductBeta");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectProductBetaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 识别常安全属性识别可对图片中人体安全防护属性进行识别，支持识别安全帽，反光衣，护目镜，工服，手套，工地安全带，口罩，抽烟，玩手机等多种属性。
+        /// "被优选过滤"标签值在人体优选开关开启时才会返回。
+        /// 
+        /// |序号 | 标签名称 | 标签值 |
+        /// | :-----|  :----------   |:-----------------  |
+        /// | 1 | 安全帽识别<div style="width: 70pt"> |无安全帽、有安全帽、被优选过滤|
+        /// | 2 | 玩手机识别<div style="width: 70pt"> |没有电话、打电话、玩手机、被优选过滤|
+        /// | 3 | 抽烟识别<div style="width: 70pt"> |没有抽烟、抽烟、被优选过滤	|
+        /// | 4 | 口罩识别<div style="width: 70pt"> |无口罩、有口罩、口罩不确定、被优选过滤|
+        /// | 5 | 工地安全带识别<div style="width: 70pt"> |无工地安全带、工地安全带、被优选过滤	|
+        /// | 6 | 手套识别<div style="width: 70pt"> |无手套、有手套、手套不确定、被优选过滤	|
+        /// | 7 | 工服识别<div style="width: 70pt"> |无工服、有工服、被优选过滤|
+        /// | 8 | 护目镜识别<div style="width: 70pt"> |无护目镜、有护目镜、被优选过滤|
+        /// | 9 | 反光衣识别<div style="width: 70pt"> |无反光衣、有反光衣、被优选过滤|
+        /// </summary>
+        /// <param name="req"><see cref="DetectSecurityRequest"/></param>
+        /// <returns><see cref="DetectSecurityResponse"/></returns>
+        public async Task<DetectSecurityResponse> DetectSecurity(DetectSecurityRequest req)
+        {
+             JsonResponseModel<DetectSecurityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectSecurity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectSecurityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 识别常安全属性识别可对图片中人体安全防护属性进行识别，支持识别安全帽，反光衣，护目镜，工服，手套，工地安全带，口罩，抽烟，玩手机等多种属性。
+        /// "被优选过滤"标签值在人体优选开关开启时才会返回。
+        /// 
+        /// |序号 | 标签名称 | 标签值 |
+        /// | :-----|  :----------   |:-----------------  |
+        /// | 1 | 安全帽识别<div style="width: 70pt"> |无安全帽、有安全帽、被优选过滤|
+        /// | 2 | 玩手机识别<div style="width: 70pt"> |没有电话、打电话、玩手机、被优选过滤|
+        /// | 3 | 抽烟识别<div style="width: 70pt"> |没有抽烟、抽烟、被优选过滤	|
+        /// | 4 | 口罩识别<div style="width: 70pt"> |无口罩、有口罩、口罩不确定、被优选过滤|
+        /// | 5 | 工地安全带识别<div style="width: 70pt"> |无工地安全带、工地安全带、被优选过滤	|
+        /// | 6 | 手套识别<div style="width: 70pt"> |无手套、有手套、手套不确定、被优选过滤	|
+        /// | 7 | 工服识别<div style="width: 70pt"> |无工服、有工服、被优选过滤|
+        /// | 8 | 护目镜识别<div style="width: 70pt"> |无护目镜、有护目镜、被优选过滤|
+        /// | 9 | 反光衣识别<div style="width: 70pt"> |无反光衣、有反光衣、被优选过滤|
+        /// </summary>
+        /// <param name="req"><see cref="DetectSecurityRequest"/></param>
+        /// <returns><see cref="DetectSecurityResponse"/></returns>
+        public DetectSecurityResponse DetectSecuritySync(DetectSecurityRequest req)
+        {
+             JsonResponseModel<DetectSecurityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetectSecurity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectSecurityResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -91,6 +91,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("PreviewUrl")]
         public string PreviewUrl{ get; set; }
 
+        /// <summary>
+        /// 渠道模板ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelTemplateId")]
+        public string ChannelTemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +115,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
+            this.SetParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
         }
     }
 }

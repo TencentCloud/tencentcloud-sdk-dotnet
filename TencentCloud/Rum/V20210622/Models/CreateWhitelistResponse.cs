@@ -31,6 +31,12 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Msg{ get; set; }
 
         /// <summary>
+        /// 白名单ID
+        /// </summary>
+        [JsonProperty("ID")]
+        public ulong? ID{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Msg", this.Msg);
+            this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

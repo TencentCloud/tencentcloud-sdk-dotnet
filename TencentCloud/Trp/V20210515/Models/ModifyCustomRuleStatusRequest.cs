@@ -36,6 +36,12 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 企业ID
+        /// </summary>
+        [JsonProperty("CorpId")]
+        public ulong? CorpId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Trp.V20210515.Models
         {
             this.SetParamSimple(map, prefix + "CustomId", this.CustomId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
         }
     }
 }

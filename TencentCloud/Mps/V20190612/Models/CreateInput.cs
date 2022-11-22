@@ -84,6 +84,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("HLSPullSettings")]
         public CreateInputHLSPullSettings HLSPullSettings{ get; set; }
 
+        /// <summary>
+        /// 延播平滑吐流配置信息。
+        /// </summary>
+        [JsonProperty("ResilientStream")]
+        public ResilientStreamConf ResilientStream{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
             this.SetParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
             this.SetParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
+            this.SetParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
         }
     }
 }

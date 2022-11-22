@@ -25,7 +25,7 @@ namespace TencentCloud.Captcha.V20190722.Models
     {
         
         /// <summary>
-        /// 验证码appid
+        /// 验证码AppId
         /// </summary>
         [JsonProperty("CaptchaAppId")]
         public string CaptchaAppId{ get; set; }

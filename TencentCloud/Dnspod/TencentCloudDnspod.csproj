@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.645</VersionPrefix>
+    <VersionPrefix>3.0.646</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,10 @@
     <Compile Include="V20210323\DnspodClient.cs" />
     <Compile Include="V20210323\Models\AddRecordBatch.cs" />
     <Compile Include="V20210323\Models\BatchRecordInfo.cs" />
+    <Compile Include="V20210323\Models\CheckRecordSnapshotRollbackRequest.cs" />
+    <Compile Include="V20210323\Models\CheckRecordSnapshotRollbackResponse.cs" />
+    <Compile Include="V20210323\Models\CheckSnapshotRollbackRequest.cs" />
+    <Compile Include="V20210323\Models\CheckSnapshotRollbackResponse.cs" />
     <Compile Include="V20210323\Models\CreateDealRequest.cs" />
     <Compile Include="V20210323\Models\CreateDealResponse.cs" />
     <Compile Include="V20210323\Models\CreateDomainAliasRequest.cs" />
@@ -65,6 +69,8 @@
     <Compile Include="V20210323\Models\CreateRecordBatchResponse.cs" />
     <Compile Include="V20210323\Models\CreateRecordRequest.cs" />
     <Compile Include="V20210323\Models\CreateRecordResponse.cs" />
+    <Compile Include="V20210323\Models\CreateSnapshotRequest.cs" />
+    <Compile Include="V20210323\Models\CreateSnapshotResponse.cs" />
     <Compile Include="V20210323\Models\Deals.cs" />
     <Compile Include="V20210323\Models\DeleteDomainAliasRequest.cs" />
     <Compile Include="V20210323\Models\DeleteDomainAliasResponse.cs" />
@@ -74,6 +80,8 @@
     <Compile Include="V20210323\Models\DeleteRecordResponse.cs" />
     <Compile Include="V20210323\Models\DeleteShareDomainRequest.cs" />
     <Compile Include="V20210323\Models\DeleteShareDomainResponse.cs" />
+    <Compile Include="V20210323\Models\DeleteSnapshotRequest.cs" />
+    <Compile Include="V20210323\Models\DeleteSnapshotResponse.cs" />
     <Compile Include="V20210323\Models\DescribeBatchTaskDetail.cs" />
     <Compile Include="V20210323\Models\DescribeBatchTaskRequest.cs" />
     <Compile Include="V20210323\Models\DescribeBatchTaskResponse.cs" />
@@ -99,8 +107,18 @@
     <Compile Include="V20210323\Models\DescribeRecordListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeRecordRequest.cs" />
     <Compile Include="V20210323\Models\DescribeRecordResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordSnapshotRollbackResultRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordSnapshotRollbackResultResponse.cs" />
     <Compile Include="V20210323\Models\DescribeRecordTypeRequest.cs" />
     <Compile Include="V20210323\Models\DescribeRecordTypeResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeSnapshotConfigRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeSnapshotConfigResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeSnapshotListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeSnapshotListResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeSnapshotRollbackResultRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeSnapshotRollbackResultResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeSnapshotRollbackTaskRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeSnapshotRollbackTaskResponse.cs" />
     <Compile Include="V20210323\Models\DescribeSubdomainAnalyticsRequest.cs" />
     <Compile Include="V20210323\Models\DescribeSubdomainAnalyticsResponse.cs" />
     <Compile Include="V20210323\Models\DescribeUserDetailRequest.cs" />
@@ -114,6 +132,8 @@
     <Compile Include="V20210323\Models\DomainInfo.cs" />
     <Compile Include="V20210323\Models\DomainListItem.cs" />
     <Compile Include="V20210323\Models\DomainShareInfo.cs" />
+    <Compile Include="V20210323\Models\DownloadSnapshotRequest.cs" />
+    <Compile Include="V20210323\Models\DownloadSnapshotResponse.cs" />
     <Compile Include="V20210323\Models\GroupInfo.cs" />
     <Compile Include="V20210323\Models\LineGroupInfo.cs" />
     <Compile Include="V20210323\Models\LineInfo.cs" />
@@ -141,6 +161,8 @@
     <Compile Include="V20210323\Models\ModifyRecordResponse.cs" />
     <Compile Include="V20210323\Models\ModifyRecordStatusRequest.cs" />
     <Compile Include="V20210323\Models\ModifyRecordStatusResponse.cs" />
+    <Compile Include="V20210323\Models\ModifySnapshotConfigRequest.cs" />
+    <Compile Include="V20210323\Models\ModifySnapshotConfigResponse.cs" />
     <Compile Include="V20210323\Models\ModifySubdomainStatusRequest.cs" />
     <Compile Include="V20210323\Models\ModifySubdomainStatusResponse.cs" />
     <Compile Include="V20210323\Models\ModifyVasAutoRenewStatusRequest.cs" />
@@ -151,6 +173,14 @@
     <Compile Include="V20210323\Models\RecordCountInfo.cs" />
     <Compile Include="V20210323\Models\RecordInfo.cs" />
     <Compile Include="V20210323\Models\RecordListItem.cs" />
+    <Compile Include="V20210323\Models\RollbackRecordSnapshotRequest.cs" />
+    <Compile Include="V20210323\Models\RollbackRecordSnapshotResponse.cs" />
+    <Compile Include="V20210323\Models\RollbackSnapshotRequest.cs" />
+    <Compile Include="V20210323\Models\RollbackSnapshotResponse.cs" />
+    <Compile Include="V20210323\Models\SnapshotConfig.cs" />
+    <Compile Include="V20210323\Models\SnapshotInfo.cs" />
+    <Compile Include="V20210323\Models\SnapshotPageInfo.cs" />
+    <Compile Include="V20210323\Models\SnapshotRecord.cs" />
     <Compile Include="V20210323\Models\SubdomainAliasAnalyticsItem.cs" />
     <Compile Include="V20210323\Models\SubdomainAnalyticsInfo.cs" />
     <Compile Include="V20210323\Models\UserInfo.cs" />

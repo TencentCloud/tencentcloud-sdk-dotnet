@@ -72,6 +72,12 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("PackSpec")]
         public PackSpec[] PackSpec{ get; set; }
 
+        /// <summary>
+        /// 批次ID，如果传了生码后会同时绑定批次，并激活码
+        /// </summary>
+        [JsonProperty("BatchId")]
+        public string BatchId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "PackType", this.PackType);
             this.SetParamSimple(map, prefix + "PackLevel", this.PackLevel);
             this.SetParamArrayObj(map, prefix + "PackSpec.", this.PackSpec);
+            this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
         }
     }
 }

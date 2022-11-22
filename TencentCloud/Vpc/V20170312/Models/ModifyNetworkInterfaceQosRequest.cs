@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }
 
+        /// <summary>
+        /// DirectSend端口范围最大值。
+        /// </summary>
+        [JsonProperty("DirectSendMaxPort")]
+        public ulong? DirectSendMaxPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamArraySimple(map, prefix + "NetworkInterfaceIds.", this.NetworkInterfaceIds);
             this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
+            this.SetParamSimple(map, prefix + "DirectSendMaxPort", this.DirectSendMaxPort);
         }
     }
 }

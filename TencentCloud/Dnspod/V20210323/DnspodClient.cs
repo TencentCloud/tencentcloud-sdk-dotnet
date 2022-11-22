@@ -53,6 +53,86 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 回滚前检查单条记录
+        /// </summary>
+        /// <param name="req"><see cref="CheckRecordSnapshotRollbackRequest"/></param>
+        /// <returns><see cref="CheckRecordSnapshotRollbackResponse"/></returns>
+        public async Task<CheckRecordSnapshotRollbackResponse> CheckRecordSnapshotRollback(CheckRecordSnapshotRollbackRequest req)
+        {
+             JsonResponseModel<CheckRecordSnapshotRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckRecordSnapshotRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckRecordSnapshotRollbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 回滚前检查单条记录
+        /// </summary>
+        /// <param name="req"><see cref="CheckRecordSnapshotRollbackRequest"/></param>
+        /// <returns><see cref="CheckRecordSnapshotRollbackResponse"/></returns>
+        public CheckRecordSnapshotRollbackResponse CheckRecordSnapshotRollbackSync(CheckRecordSnapshotRollbackRequest req)
+        {
+             JsonResponseModel<CheckRecordSnapshotRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckRecordSnapshotRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckRecordSnapshotRollbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 快照回滚前检查
+        /// </summary>
+        /// <param name="req"><see cref="CheckSnapshotRollbackRequest"/></param>
+        /// <returns><see cref="CheckSnapshotRollbackResponse"/></returns>
+        public async Task<CheckSnapshotRollbackResponse> CheckSnapshotRollback(CheckSnapshotRollbackRequest req)
+        {
+             JsonResponseModel<CheckSnapshotRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckSnapshotRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckSnapshotRollbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 快照回滚前检查
+        /// </summary>
+        /// <param name="req"><see cref="CheckSnapshotRollbackRequest"/></param>
+        /// <returns><see cref="CheckSnapshotRollbackResponse"/></returns>
+        public CheckSnapshotRollbackResponse CheckSnapshotRollbackSync(CheckSnapshotRollbackRequest req)
+        {
+             JsonResponseModel<CheckSnapshotRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckSnapshotRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckSnapshotRollbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DNSPod商品下单
         /// </summary>
         /// <param name="req"><see cref="CreateDealRequest"/></param>
@@ -333,6 +413,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 创建快照
+        /// </summary>
+        /// <param name="req"><see cref="CreateSnapshotRequest"/></param>
+        /// <returns><see cref="CreateSnapshotResponse"/></returns>
+        public async Task<CreateSnapshotResponse> CreateSnapshot(CreateSnapshotRequest req)
+        {
+             JsonResponseModel<CreateSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建快照
+        /// </summary>
+        /// <param name="req"><see cref="CreateSnapshotRequest"/></param>
+        /// <returns><see cref="CreateSnapshotResponse"/></returns>
+        public CreateSnapshotResponse CreateSnapshotSync(CreateSnapshotRequest req)
+        {
+             JsonResponseModel<CreateSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除域名
         /// </summary>
         /// <param name="req"><see cref="DeleteDomainRequest"/></param>
@@ -484,6 +604,46 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "DeleteShareDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteShareDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除快照
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSnapshotRequest"/></param>
+        /// <returns><see cref="DeleteSnapshotResponse"/></returns>
+        public async Task<DeleteSnapshotResponse> DeleteSnapshot(DeleteSnapshotRequest req)
+        {
+             JsonResponseModel<DeleteSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除快照
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSnapshotRequest"/></param>
+        /// <returns><see cref="DeleteSnapshotResponse"/></returns>
+        public DeleteSnapshotResponse DeleteSnapshotSync(DeleteSnapshotRequest req)
+        {
+             JsonResponseModel<DeleteSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSnapshotResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -973,6 +1133,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 查询解析记录重新回滚的结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordSnapshotRollbackResultRequest"/></param>
+        /// <returns><see cref="DescribeRecordSnapshotRollbackResultResponse"/></returns>
+        public async Task<DescribeRecordSnapshotRollbackResultResponse> DescribeRecordSnapshotRollbackResult(DescribeRecordSnapshotRollbackResultRequest req)
+        {
+             JsonResponseModel<DescribeRecordSnapshotRollbackResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordSnapshotRollbackResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordSnapshotRollbackResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询解析记录重新回滚的结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordSnapshotRollbackResultRequest"/></param>
+        /// <returns><see cref="DescribeRecordSnapshotRollbackResultResponse"/></returns>
+        public DescribeRecordSnapshotRollbackResultResponse DescribeRecordSnapshotRollbackResultSync(DescribeRecordSnapshotRollbackResultRequest req)
+        {
+             JsonResponseModel<DescribeRecordSnapshotRollbackResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordSnapshotRollbackResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordSnapshotRollbackResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取等级允许的记录类型
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordTypeRequest"/></param>
@@ -1004,6 +1204,166 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRecordType");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询解析快照配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotConfigRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotConfigResponse"/></returns>
+        public async Task<DescribeSnapshotConfigResponse> DescribeSnapshotConfig(DescribeSnapshotConfigRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSnapshotConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询解析快照配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotConfigRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotConfigResponse"/></returns>
+        public DescribeSnapshotConfigResponse DescribeSnapshotConfigSync(DescribeSnapshotConfigRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSnapshotConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询快照列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotListRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotListResponse"/></returns>
+        public async Task<DescribeSnapshotListResponse> DescribeSnapshotList(DescribeSnapshotListRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSnapshotList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询快照列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotListRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotListResponse"/></returns>
+        public DescribeSnapshotListResponse DescribeSnapshotListSync(DescribeSnapshotListRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSnapshotList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询快照回滚结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotRollbackResultRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotRollbackResultResponse"/></returns>
+        public async Task<DescribeSnapshotRollbackResultResponse> DescribeSnapshotRollbackResult(DescribeSnapshotRollbackResultRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotRollbackResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSnapshotRollbackResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotRollbackResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询快照回滚结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotRollbackResultRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotRollbackResultResponse"/></returns>
+        public DescribeSnapshotRollbackResultResponse DescribeSnapshotRollbackResultSync(DescribeSnapshotRollbackResultRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotRollbackResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSnapshotRollbackResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotRollbackResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询最近一次回滚
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotRollbackTaskRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotRollbackTaskResponse"/></returns>
+        public async Task<DescribeSnapshotRollbackTaskResponse> DescribeSnapshotRollbackTask(DescribeSnapshotRollbackTaskRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotRollbackTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSnapshotRollbackTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotRollbackTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询最近一次回滚
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotRollbackTaskRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotRollbackTaskResponse"/></returns>
+        public DescribeSnapshotRollbackTaskResponse DescribeSnapshotRollbackTaskSync(DescribeSnapshotRollbackTaskRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotRollbackTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSnapshotRollbackTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotRollbackTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1084,6 +1444,46 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUserDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下载快照
+        /// </summary>
+        /// <param name="req"><see cref="DownloadSnapshotRequest"/></param>
+        /// <returns><see cref="DownloadSnapshotResponse"/></returns>
+        public async Task<DownloadSnapshotResponse> DownloadSnapshot(DownloadSnapshotRequest req)
+        {
+             JsonResponseModel<DownloadSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DownloadSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下载快照
+        /// </summary>
+        /// <param name="req"><see cref="DownloadSnapshotRequest"/></param>
+        /// <returns><see cref="DownloadSnapshotResponse"/></returns>
+        public DownloadSnapshotResponse DownloadSnapshotSync(DownloadSnapshotRequest req)
+        {
+             JsonResponseModel<DownloadSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DownloadSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadSnapshotResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1533,6 +1933,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 修改快照配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifySnapshotConfigRequest"/></param>
+        /// <returns><see cref="ModifySnapshotConfigResponse"/></returns>
+        public async Task<ModifySnapshotConfigResponse> ModifySnapshotConfig(ModifySnapshotConfigRequest req)
+        {
+             JsonResponseModel<ModifySnapshotConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySnapshotConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySnapshotConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改快照配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifySnapshotConfigRequest"/></param>
+        /// <returns><see cref="ModifySnapshotConfigResponse"/></returns>
+        public ModifySnapshotConfigResponse ModifySnapshotConfigSync(ModifySnapshotConfigRequest req)
+        {
+             JsonResponseModel<ModifySnapshotConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySnapshotConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySnapshotConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 暂停子域名的解析记录
         /// </summary>
         /// <param name="req"><see cref="ModifySubdomainStatusRequest"/></param>
@@ -1644,6 +2084,86 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "PayOrderWithBalance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PayOrderWithBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新回滚指定解析记录快照
+        /// </summary>
+        /// <param name="req"><see cref="RollbackRecordSnapshotRequest"/></param>
+        /// <returns><see cref="RollbackRecordSnapshotResponse"/></returns>
+        public async Task<RollbackRecordSnapshotResponse> RollbackRecordSnapshot(RollbackRecordSnapshotRequest req)
+        {
+             JsonResponseModel<RollbackRecordSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RollbackRecordSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackRecordSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新回滚指定解析记录快照
+        /// </summary>
+        /// <param name="req"><see cref="RollbackRecordSnapshotRequest"/></param>
+        /// <returns><see cref="RollbackRecordSnapshotResponse"/></returns>
+        public RollbackRecordSnapshotResponse RollbackRecordSnapshotSync(RollbackRecordSnapshotRequest req)
+        {
+             JsonResponseModel<RollbackRecordSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RollbackRecordSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackRecordSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 回滚快照
+        /// </summary>
+        /// <param name="req"><see cref="RollbackSnapshotRequest"/></param>
+        /// <returns><see cref="RollbackSnapshotResponse"/></returns>
+        public async Task<RollbackSnapshotResponse> RollbackSnapshot(RollbackSnapshotRequest req)
+        {
+             JsonResponseModel<RollbackSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RollbackSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 回滚快照
+        /// </summary>
+        /// <param name="req"><see cref="RollbackSnapshotRequest"/></param>
+        /// <returns><see cref="RollbackSnapshotResponse"/></returns>
+        public RollbackSnapshotResponse RollbackSnapshotSync(RollbackSnapshotRequest req)
+        {
+             JsonResponseModel<RollbackSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RollbackSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackSnapshotResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

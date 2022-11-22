@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E63812DF-A192-30BF-985E-E5282DD5F582}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.645</VersionPrefix>
+    <VersionPrefix>3.0.646</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
     <Compile Include="V20190529\Models\AssessQualityRequest.cs" />
     <Compile Include="V20190529\Models\AssessQualityResponse.cs" />
     <Compile Include="V20190529\Models\Attribute.cs" />
+    <Compile Include="V20190529\Models\AttributesForBody.cs" />
+    <Compile Include="V20190529\Models\BodyAttributes.cs" />
     <Compile Include="V20190529\Models\Box.cs" />
     <Compile Include="V20190529\Models\CarPlateContent.cs" />
     <Compile Include="V20190529\Models\CarTagItem.cs" />
@@ -65,6 +67,8 @@
     <Compile Include="V20190529\Models\DescribeGroupsResponse.cs" />
     <Compile Include="V20190529\Models\DescribeImagesRequest.cs" />
     <Compile Include="V20190529\Models\DescribeImagesResponse.cs" />
+    <Compile Include="V20190529\Models\DetectChefDressRequest.cs" />
+    <Compile Include="V20190529\Models\DetectChefDressResponse.cs" />
     <Compile Include="V20190529\Models\DetectDisgustRequest.cs" />
     <Compile Include="V20190529\Models\DetectDisgustResponse.cs" />
     <Compile Include="V20190529\Models\DetectEnvelopeRequest.cs" />
@@ -84,6 +88,8 @@
     <Compile Include="V20190529\Models\DetectProductBetaResponse.cs" />
     <Compile Include="V20190529\Models\DetectProductRequest.cs" />
     <Compile Include="V20190529\Models\DetectProductResponse.cs" />
+    <Compile Include="V20190529\Models\DetectSecurityRequest.cs" />
+    <Compile Include="V20190529\Models\DetectSecurityResponse.cs" />
     <Compile Include="V20190529\Models\EnhanceImageRequest.cs" />
     <Compile Include="V20190529\Models\EnhanceImageResponse.cs" />
     <Compile Include="V20190529\Models\GroupInfo.cs" />

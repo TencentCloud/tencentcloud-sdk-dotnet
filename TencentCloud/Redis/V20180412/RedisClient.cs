@@ -3293,7 +3293,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 升级实例
+        /// 变更实例配置
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
         /// <returns><see cref="UpgradeInstanceResponse"/></returns>
@@ -3313,7 +3313,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 升级实例
+        /// 变更实例配置
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
         /// <returns><see cref="UpgradeInstanceResponse"/></returns>
