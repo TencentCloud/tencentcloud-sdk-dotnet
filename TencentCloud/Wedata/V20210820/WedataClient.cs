@@ -1423,6 +1423,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 文件路径的根目录为 /datastudio/resource，如果要在根目录下创建 aaa 文件夹，FilePath的值应该为 /datastudio/resource，如果根目录下已经创建了 aaa 文件夹，要在 aaa 下创建  bbb 文件夹，FilePath的值应该为 /datastudio/resource/aaa
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourcePathRequest"/></param>
+        /// <returns><see cref="CreateResourcePathResponse"/></returns>
+        public async Task<CreateResourcePathResponse> CreateResourcePath(CreateResourcePathRequest req)
+        {
+             JsonResponseModel<CreateResourcePathResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateResourcePath");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateResourcePathResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 文件路径的根目录为 /datastudio/resource，如果要在根目录下创建 aaa 文件夹，FilePath的值应该为 /datastudio/resource，如果根目录下已经创建了 aaa 文件夹，要在 aaa 下创建  bbb 文件夹，FilePath的值应该为 /datastudio/resource/aaa
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourcePathRequest"/></param>
+        /// <returns><see cref="CreateResourcePathResponse"/></returns>
+        public CreateResourcePathResponse CreateResourcePathSync(CreateResourcePathRequest req)
+        {
+             JsonResponseModel<CreateResourcePathResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateResourcePath");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateResourcePathResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建质量规则接口
         /// </summary>
         /// <param name="req"><see cref="CreateRuleRequest"/></param>

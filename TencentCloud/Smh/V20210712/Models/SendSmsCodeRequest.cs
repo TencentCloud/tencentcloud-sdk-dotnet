@@ -25,22 +25,22 @@ namespace TencentCloud.Smh.V20210712.Models
     {
         
         /// <summary>
-        /// 验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。
+        /// 验证码目的，当前支持换绑超级管理员账号， BindSuperAdmin；体验版企业升级，ChannelUpdateVerify等
         /// </summary>
         [JsonProperty("Purpose")]
         public string Purpose{ get; set; }
-
-        /// <summary>
-        /// 官方云盘实例 ID
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
 
         /// <summary>
         /// 将作为超级管理员账号的手机号码
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
+
+        /// <summary>
+        /// 官方云盘实例 ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
         /// 将作为超级管理员账号的手机号码的国家代码。默认为 +86。
@@ -55,8 +55,8 @@ namespace TencentCloud.Smh.V20210712.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Purpose", this.Purpose);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "CountryCode", this.CountryCode);
         }
     }

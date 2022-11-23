@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.646</VersionPrefix>
+    <VersionPrefix>3.0.647</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,8 @@
     <Compile Include="V20210323\Models\CreateRecordBatchRecord.cs" />
     <Compile Include="V20210323\Models\CreateRecordBatchRequest.cs" />
     <Compile Include="V20210323\Models\CreateRecordBatchResponse.cs" />
+    <Compile Include="V20210323\Models\CreateRecordGroupRequest.cs" />
+    <Compile Include="V20210323\Models\CreateRecordGroupResponse.cs" />
     <Compile Include="V20210323\Models\CreateRecordRequest.cs" />
     <Compile Include="V20210323\Models\CreateRecordResponse.cs" />
     <Compile Include="V20210323\Models\CreateSnapshotRequest.cs" />
@@ -76,6 +78,8 @@
     <Compile Include="V20210323\Models\DeleteDomainAliasResponse.cs" />
     <Compile Include="V20210323\Models\DeleteDomainRequest.cs" />
     <Compile Include="V20210323\Models\DeleteDomainResponse.cs" />
+    <Compile Include="V20210323\Models\DeleteRecordGroupRequest.cs" />
+    <Compile Include="V20210323\Models\DeleteRecordGroupResponse.cs" />
     <Compile Include="V20210323\Models\DeleteRecordRequest.cs" />
     <Compile Include="V20210323\Models\DeleteRecordResponse.cs" />
     <Compile Include="V20210323\Models\DeleteShareDomainRequest.cs" />
@@ -101,6 +105,8 @@
     <Compile Include="V20210323\Models\DescribeDomainResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainShareInfoRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainShareInfoResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordGroupListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordGroupListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeRecordLineListRequest.cs" />
     <Compile Include="V20210323\Models\DescribeRecordLineListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeRecordListRequest.cs" />
@@ -155,12 +161,16 @@
     <Compile Include="V20210323\Models\ModifyRecordBatchDetail.cs" />
     <Compile Include="V20210323\Models\ModifyRecordBatchRequest.cs" />
     <Compile Include="V20210323\Models\ModifyRecordBatchResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordGroupRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordGroupResponse.cs" />
     <Compile Include="V20210323\Models\ModifyRecordRemarkRequest.cs" />
     <Compile Include="V20210323\Models\ModifyRecordRemarkResponse.cs" />
     <Compile Include="V20210323\Models\ModifyRecordRequest.cs" />
     <Compile Include="V20210323\Models\ModifyRecordResponse.cs" />
     <Compile Include="V20210323\Models\ModifyRecordStatusRequest.cs" />
     <Compile Include="V20210323\Models\ModifyRecordStatusResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordToGroupRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordToGroupResponse.cs" />
     <Compile Include="V20210323\Models\ModifySnapshotConfigRequest.cs" />
     <Compile Include="V20210323\Models\ModifySnapshotConfigResponse.cs" />
     <Compile Include="V20210323\Models\ModifySubdomainStatusRequest.cs" />
@@ -171,6 +181,7 @@
     <Compile Include="V20210323\Models\PayOrderWithBalanceResponse.cs" />
     <Compile Include="V20210323\Models\PurviewInfo.cs" />
     <Compile Include="V20210323\Models\RecordCountInfo.cs" />
+    <Compile Include="V20210323\Models\RecordGroupInfo.cs" />
     <Compile Include="V20210323\Models\RecordInfo.cs" />
     <Compile Include="V20210323\Models\RecordListItem.cs" />
     <Compile Include="V20210323\Models\RollbackRecordSnapshotRequest.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.646</VersionPrefix>
+    <VersionPrefix>3.0.647</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -127,6 +127,8 @@
     <Compile Include="V20210820\Models\CreateOfflineTaskResponse.cs" />
     <Compile Include="V20210820\Models\CreateOrUpdateResourceRequest.cs" />
     <Compile Include="V20210820\Models\CreateOrUpdateResourceResponse.cs" />
+    <Compile Include="V20210820\Models\CreateResourcePathRequest.cs" />
+    <Compile Include="V20210820\Models\CreateResourcePathResponse.cs" />
     <Compile Include="V20210820\Models\CreateRuleRequest.cs" />
     <Compile Include="V20210820\Models\CreateRuleResponse.cs" />
     <Compile Include="V20210820\Models\CreateRuleTemplateRequest.cs" />
@@ -521,6 +523,7 @@
     <Compile Include="V20210820\Models\SetTaskAlarmNewRequest.cs" />
     <Compile Include="V20210820\Models\SetTaskAlarmNewResponse.cs" />
     <Compile Include="V20210820\Models\SimpleTaskInfo.cs" />
+    <Compile Include="V20210820\Models\SourceFieldInfo.cs" />
     <Compile Include="V20210820\Models\SourceObject.cs" />
     <Compile Include="V20210820\Models\SpeedValue.cs" />
     <Compile Include="V20210820\Models\StartIntegrationTaskRequest.cs" />

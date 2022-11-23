@@ -37,6 +37,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        /// 字段所在行，下标从0开始，非行字段或未能识别行号的返回-1
+        /// </summary>
+        [JsonProperty("Row")]
+        public long? Row{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Row", this.Row);
         }
     }
 }

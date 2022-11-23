@@ -49,7 +49,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+        /// 只有创建实例且已完成发货的订单会填充该字段，表示该订单创建的实例的 ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceIds")]

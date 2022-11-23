@@ -55,7 +55,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 训练框架名称，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
+        /// 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrameworkName")]
@@ -270,7 +270,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -15,34 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Dnspod.V20210323.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBillingDataResponse : AbstractModel
+    public class ModifyRecordToGroupRequest : AbstractModel
     {
         
         /// <summary>
-        /// 统计曲线数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 域名
         /// </summary>
-        [JsonProperty("Data")]
-        public DnsData[] Data{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// 时间粒度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 分组 ID
         /// </summary>
-        [JsonProperty("Interval")]
-        public string Interval{ get; set; }
+        [JsonProperty("GroupId")]
+        public ulong? GroupId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 记录 ID，多个 ID 用竖线“|”分割
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("RecordId")]
+        public string RecordId{ get; set; }
+
+        /// <summary>
+        /// 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+        /// </summary>
+        [JsonProperty("DomainId")]
+        public ulong? DomainId{ get; set; }
 
 
         /// <summary>
@@ -50,9 +54,10 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "Interval", this.Interval);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
         }
     }
 }

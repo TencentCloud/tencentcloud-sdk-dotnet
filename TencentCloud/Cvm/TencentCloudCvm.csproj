@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.646</VersionPrefix>
+    <VersionPrefix>3.0.647</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,6 +64,8 @@
     <Compile Include="V20170312\Models\ConfigureChcDeployVpcResponse.cs" />
     <Compile Include="V20170312\Models\CreateDisasterRecoverGroupRequest.cs" />
     <Compile Include="V20170312\Models\CreateDisasterRecoverGroupResponse.cs" />
+    <Compile Include="V20170312\Models\CreateHpcClusterRequest.cs" />
+    <Compile Include="V20170312\Models\CreateHpcClusterResponse.cs" />
     <Compile Include="V20170312\Models\CreateImageRequest.cs" />
     <Compile Include="V20170312\Models\CreateImageResponse.cs" />
     <Compile Include="V20170312\Models\CreateKeyPairRequest.cs" />
@@ -75,6 +77,8 @@
     <Compile Include="V20170312\Models\DataDisk.cs" />
     <Compile Include="V20170312\Models\DeleteDisasterRecoverGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteDisasterRecoverGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteHpcClustersRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteHpcClustersResponse.cs" />
     <Compile Include="V20170312\Models\DeleteImagesRequest.cs" />
     <Compile Include="V20170312\Models\DeleteImagesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteKeyPairsRequest.cs" />
@@ -95,6 +99,8 @@
     <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeHostsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeHostsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeHpcClustersRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeHpcClustersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeImageQuotaRequest.cs" />
     <Compile Include="V20170312\Models\DescribeImageQuotaResponse.cs" />
     <Compile Include="V20170312\Models\DescribeImageSharePermissionRequest.cs" />
@@ -153,6 +159,7 @@
     <Compile Include="V20170312\Models\GPUInfo.cs" />
     <Compile Include="V20170312\Models\HostItem.cs" />
     <Compile Include="V20170312\Models\HostResource.cs" />
+    <Compile Include="V20170312\Models\HpcClusterInfo.cs" />
     <Compile Include="V20170312\Models\Image.cs" />
     <Compile Include="V20170312\Models\ImageOsList.cs" />
     <Compile Include="V20170312\Models\ImageQuota.cs" />
@@ -204,6 +211,8 @@
     <Compile Include="V20170312\Models\ModifyDisasterRecoverGroupAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyHostsAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyHostsAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyHpcClusterAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyHpcClusterAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyImageAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyImageAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyImageSharePermissionRequest.cs" />

@@ -162,6 +162,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
 
+        /// <summary>
+        /// 独享集群实例Id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "PidTag", this.PidTag);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

@@ -132,6 +132,26 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
+        /// <summary>
+        /// DCN复制的配置信息；对于主实例，此字段为null
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReplicaConfig")]
+        public DCNReplicaConfig ReplicaConfig{ get; set; }
+
+        /// <summary>
+        /// DCN复制的状态；对于主实例，此字段为null
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReplicaStatus")]
+        public DCNReplicaStatus ReplicaStatus{ get; set; }
+
+        /// <summary>
+        /// 是否开启了 kms
+        /// </summary>
+        [JsonProperty("EncryptStatus")]
+        public long? EncryptStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +176,9 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamObj(map, prefix + "ReplicaConfig.", this.ReplicaConfig);
+            this.SetParamObj(map, prefix + "ReplicaStatus.", this.ReplicaStatus);
+            this.SetParamSimple(map, prefix + "EncryptStatus", this.EncryptStatus);
         }
     }
 }

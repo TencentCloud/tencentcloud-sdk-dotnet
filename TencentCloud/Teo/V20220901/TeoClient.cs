@@ -1413,46 +1413,6 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 获取计费数据。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
-        /// <returns><see cref="DescribeBillingDataResponse"/></returns>
-        public async Task<DescribeBillingDataResponse> DescribeBillingData(DescribeBillingDataRequest req)
-        {
-             JsonResponseModel<DescribeBillingDataResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBillingData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取计费数据。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
-        /// <returns><see cref="DescribeBillingDataResponse"/></returns>
-        public DescribeBillingDataResponse DescribeBillingDataSync(DescribeBillingDataRequest req)
-        {
-             JsonResponseModel<DescribeBillingDataResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBillingData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（DescribeBotClientIpList）用于查询Bot攻击客户端Ip信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeBotClientIpListRequest"/></param>

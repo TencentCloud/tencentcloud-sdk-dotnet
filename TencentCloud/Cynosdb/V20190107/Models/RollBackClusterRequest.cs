@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ExpectTime{ get; set; }
 
         /// <summary>
-        /// 期望阈值
+        /// 期望阈值（已废弃）
         /// </summary>
         [JsonProperty("ExpectTimeThresh")]
         public ulong? ExpectTimeThresh{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public RollbackDatabase[] RollbackDatabases{ get; set; }
 
         /// <summary>
-        /// 回档数据库表
+        /// 回档数据库表列表
         /// </summary>
         [JsonProperty("RollbackTables")]
         public RollbackTable[] RollbackTables{ get; set; }

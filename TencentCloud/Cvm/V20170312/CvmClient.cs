@@ -307,6 +307,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 创建高性能计算集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateHpcClusterRequest"/></param>
+        /// <returns><see cref="CreateHpcClusterResponse"/></returns>
+        public async Task<CreateHpcClusterResponse> CreateHpcCluster(CreateHpcClusterRequest req)
+        {
+             JsonResponseModel<CreateHpcClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateHpcCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHpcClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建高性能计算集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateHpcClusterRequest"/></param>
+        /// <returns><see cref="CreateHpcClusterResponse"/></returns>
+        public CreateHpcClusterResponse CreateHpcClusterSync(CreateHpcClusterRequest req)
+        {
+             JsonResponseModel<CreateHpcClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateHpcCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHpcClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
         /// </summary>
         /// <param name="req"><see cref="CreateImageRequest"/></param>
@@ -516,6 +556,46 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDisasterRecoverGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDisasterRecoverGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 当高性能计算集群为空, 即集群内没有任何设备时候, 可以删除改集群。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHpcClustersRequest"/></param>
+        /// <returns><see cref="DeleteHpcClustersResponse"/></returns>
+        public async Task<DeleteHpcClustersResponse> DeleteHpcClusters(DeleteHpcClustersRequest req)
+        {
+             JsonResponseModel<DeleteHpcClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteHpcClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteHpcClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 当高性能计算集群为空, 即集群内没有任何设备时候, 可以删除改集群。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHpcClustersRequest"/></param>
+        /// <returns><see cref="DeleteHpcClustersResponse"/></returns>
+        public DeleteHpcClustersResponse DeleteHpcClustersSync(DeleteHpcClustersRequest req)
+        {
+             JsonResponseModel<DeleteHpcClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteHpcClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteHpcClustersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -936,6 +1016,46 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeHosts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询高性能集群信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHpcClustersRequest"/></param>
+        /// <returns><see cref="DescribeHpcClustersResponse"/></returns>
+        public async Task<DescribeHpcClustersResponse> DescribeHpcClusters(DescribeHpcClustersRequest req)
+        {
+             JsonResponseModel<DescribeHpcClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHpcClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHpcClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询高性能集群信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHpcClustersRequest"/></param>
+        /// <returns><see cref="DescribeHpcClustersResponse"/></returns>
+        public DescribeHpcClustersResponse DescribeHpcClustersSync(DescribeHpcClustersRequest req)
+        {
+             JsonResponseModel<DescribeHpcClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHpcClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHpcClustersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2634,6 +2754,46 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyHostsAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostsAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改高性能计算集群属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHpcClusterAttributeRequest"/></param>
+        /// <returns><see cref="ModifyHpcClusterAttributeResponse"/></returns>
+        public async Task<ModifyHpcClusterAttributeResponse> ModifyHpcClusterAttribute(ModifyHpcClusterAttributeRequest req)
+        {
+             JsonResponseModel<ModifyHpcClusterAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyHpcClusterAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHpcClusterAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改高性能计算集群属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHpcClusterAttributeRequest"/></param>
+        /// <returns><see cref="ModifyHpcClusterAttributeResponse"/></returns>
+        public ModifyHpcClusterAttributeResponse ModifyHpcClusterAttributeSync(ModifyHpcClusterAttributeRequest req)
+        {
+             JsonResponseModel<ModifyHpcClusterAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyHpcClusterAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHpcClusterAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

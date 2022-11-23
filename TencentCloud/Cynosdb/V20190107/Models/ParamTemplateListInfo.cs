@@ -48,6 +48,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
+        /// <summary>
+        /// 数据库类型，可选值：NORMAL，SERVERLESS
+        /// </summary>
+        [JsonProperty("DbMode")]
+        public string DbMode{ get; set; }
+
+        /// <summary>
+        /// 参数模板详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParamInfoSet")]
+        public TemplateParamInfo[] ParamInfoSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +71,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
             this.SetParamSimple(map, prefix + "TemplateDescription", this.TemplateDescription);
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
+            this.SetParamArrayObj(map, prefix + "ParamInfoSet.", this.ParamInfoSet);
         }
     }
 }

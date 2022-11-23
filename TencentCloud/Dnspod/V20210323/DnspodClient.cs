@@ -413,6 +413,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 添加记录分组
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordGroupRequest"/></param>
+        /// <returns><see cref="CreateRecordGroupResponse"/></returns>
+        public async Task<CreateRecordGroupResponse> CreateRecordGroup(CreateRecordGroupRequest req)
+        {
+             JsonResponseModel<CreateRecordGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRecordGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加记录分组
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordGroupRequest"/></param>
+        /// <returns><see cref="CreateRecordGroupResponse"/></returns>
+        public CreateRecordGroupResponse CreateRecordGroupSync(CreateRecordGroupRequest req)
+        {
+             JsonResponseModel<CreateRecordGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRecordGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建快照
         /// </summary>
         /// <param name="req"><see cref="CreateSnapshotRequest"/></param>
@@ -564,6 +604,46 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "DeleteRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除记录分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordGroupRequest"/></param>
+        /// <returns><see cref="DeleteRecordGroupResponse"/></returns>
+        public async Task<DeleteRecordGroupResponse> DeleteRecordGroup(DeleteRecordGroupRequest req)
+        {
+             JsonResponseModel<DeleteRecordGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRecordGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除记录分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordGroupRequest"/></param>
+        /// <returns><see cref="DeleteRecordGroupResponse"/></returns>
+        public DeleteRecordGroupResponse DeleteRecordGroupSync(DeleteRecordGroupRequest req)
+        {
+             JsonResponseModel<DeleteRecordGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRecordGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1044,6 +1124,46 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询解析记录分组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordGroupListRequest"/></param>
+        /// <returns><see cref="DescribeRecordGroupListResponse"/></returns>
+        public async Task<DescribeRecordGroupListResponse> DescribeRecordGroupList(DescribeRecordGroupListRequest req)
+        {
+             JsonResponseModel<DescribeRecordGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询解析记录分组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordGroupListRequest"/></param>
+        /// <returns><see cref="DescribeRecordGroupListResponse"/></returns>
+        public DescribeRecordGroupListResponse DescribeRecordGroupListSync(DescribeRecordGroupListRequest req)
+        {
+             JsonResponseModel<DescribeRecordGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordGroupListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1853,6 +1973,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 修改记录分组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordGroupRequest"/></param>
+        /// <returns><see cref="ModifyRecordGroupResponse"/></returns>
+        public async Task<ModifyRecordGroupResponse> ModifyRecordGroup(ModifyRecordGroupRequest req)
+        {
+             JsonResponseModel<ModifyRecordGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRecordGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改记录分组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordGroupRequest"/></param>
+        /// <returns><see cref="ModifyRecordGroupResponse"/></returns>
+        public ModifyRecordGroupResponse ModifyRecordGroupSync(ModifyRecordGroupRequest req)
+        {
+             JsonResponseModel<ModifyRecordGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRecordGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 设置记录备注
         /// </summary>
         /// <param name="req"><see cref="ModifyRecordRemarkRequest"/></param>
@@ -1924,6 +2084,46 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "ModifyRecordStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将记录添加到分组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordToGroupRequest"/></param>
+        /// <returns><see cref="ModifyRecordToGroupResponse"/></returns>
+        public async Task<ModifyRecordToGroupResponse> ModifyRecordToGroup(ModifyRecordToGroupRequest req)
+        {
+             JsonResponseModel<ModifyRecordToGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRecordToGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordToGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将记录添加到分组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordToGroupRequest"/></param>
+        /// <returns><see cref="ModifyRecordToGroupResponse"/></returns>
+        public ModifyRecordToGroupResponse ModifyRecordToGroupSync(ModifyRecordToGroupRequest req)
+        {
+             JsonResponseModel<ModifyRecordToGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRecordToGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordToGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -56,6 +56,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Properties")]
         public RecordField[] Properties{ get; set; }
 
+        /// <summary>
+        /// schema别名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +74,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
         }
     }
 }

@@ -78,6 +78,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
+        /// <summary>
+        /// 上游节点的字段信息
+        /// </summary>
+        [JsonProperty("SourceFieldInfoList")]
+        public SourceFieldInfo[] SourceFieldInfoList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
             this.SetParamSimple(map, prefix + "SinkType", this.SinkType);
             this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
+            this.SetParamArrayObj(map, prefix + "SourceFieldInfoList.", this.SourceFieldInfoList);
         }
     }
 }

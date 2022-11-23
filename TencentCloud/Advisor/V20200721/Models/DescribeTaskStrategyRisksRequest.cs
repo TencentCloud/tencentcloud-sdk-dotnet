@@ -31,7 +31,7 @@ namespace TencentCloud.Advisor.V20200721.Models
         public ulong? StrategyId{ get; set; }
 
         /// <summary>
-        /// 限制数量,默认100
+        /// 返回数量,默认值为100,最大值为200
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

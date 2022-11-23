@@ -1893,6 +1893,46 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 用于更新模型服务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelServiceRequest"/></param>
+        /// <returns><see cref="ModifyModelServiceResponse"/></returns>
+        public async Task<ModifyModelServiceResponse> ModifyModelService(ModifyModelServiceRequest req)
+        {
+             JsonResponseModel<ModifyModelServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyModelService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModelServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于更新模型服务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModelServiceRequest"/></param>
+        /// <returns><see cref="ModifyModelServiceResponse"/></returns>
+        public ModifyModelServiceResponse ModifyModelServiceSync(ModifyModelServiceRequest req)
+        {
+             JsonResponseModel<ModifyModelServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyModelService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModelServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 增量更新在线推理服务的部分配置，不更新的配置项不需要传入
         /// </summary>
         /// <param name="req"><see cref="ModifyModelServicePartialConfigRequest"/></param>

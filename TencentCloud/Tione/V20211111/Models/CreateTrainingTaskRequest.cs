@@ -109,7 +109,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public StartCmdInfo StartCmdInfo{ get; set; }
 
         /// <summary>
-        /// 数据配置
+        /// 数据配置，依赖DataSource字段
         /// </summary>
         [JsonProperty("DataConfigs")]
         public DataConfig[] DataConfigs{ get; set; }

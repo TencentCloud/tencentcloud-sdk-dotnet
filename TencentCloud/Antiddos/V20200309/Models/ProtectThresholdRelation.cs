@@ -104,6 +104,48 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("UdpFloodPktThreshold")]
         public ulong? UdpFloodPktThreshold{ get; set; }
 
+        /// <summary>
+        /// ACK FLOOD流量阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AckFloodThreshold")]
+        public ulong? AckFloodThreshold{ get; set; }
+
+        /// <summary>
+        /// ACK FLOOD包量阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AckFloodPktThreshold")]
+        public ulong? AckFloodPktThreshold{ get; set; }
+
+        /// <summary>
+        /// SYNACK FLOOD流量阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SynAckFloodThreshold")]
+        public ulong? SynAckFloodThreshold{ get; set; }
+
+        /// <summary>
+        /// SYNACK FLOOD包量阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SynAckFloodPktThreshold")]
+        public ulong? SynAckFloodPktThreshold{ get; set; }
+
+        /// <summary>
+        /// RST FLOOD流量阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RstFloodThreshold")]
+        public ulong? RstFloodThreshold{ get; set; }
+
+        /// <summary>
+        /// RST FLOOD包量阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RstFloodPktThreshold")]
+        public ulong? RstFloodPktThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +163,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "SynFloodPktThreshold", this.SynFloodPktThreshold);
             this.SetParamSimple(map, prefix + "UdpFloodThreshold", this.UdpFloodThreshold);
             this.SetParamSimple(map, prefix + "UdpFloodPktThreshold", this.UdpFloodPktThreshold);
+            this.SetParamSimple(map, prefix + "AckFloodThreshold", this.AckFloodThreshold);
+            this.SetParamSimple(map, prefix + "AckFloodPktThreshold", this.AckFloodPktThreshold);
+            this.SetParamSimple(map, prefix + "SynAckFloodThreshold", this.SynAckFloodThreshold);
+            this.SetParamSimple(map, prefix + "SynAckFloodPktThreshold", this.SynAckFloodPktThreshold);
+            this.SetParamSimple(map, prefix + "RstFloodThreshold", this.RstFloodThreshold);
+            this.SetParamSimple(map, prefix + "RstFloodPktThreshold", this.RstFloodPktThreshold);
         }
     }
 }
