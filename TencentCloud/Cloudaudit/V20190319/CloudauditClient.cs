@@ -261,6 +261,46 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
+        /// 查询云审计跟踪集详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditTrackRequest"/></param>
+        /// <returns><see cref="DescribeAuditTrackResponse"/></returns>
+        public async Task<DescribeAuditTrackResponse> DescribeAuditTrack(DescribeAuditTrackRequest req)
+        {
+             JsonResponseModel<DescribeAuditTrackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditTrack");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditTrackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询云审计跟踪集详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditTrackRequest"/></param>
+        /// <returns><see cref="DescribeAuditTrackResponse"/></returns>
+        public DescribeAuditTrackResponse DescribeAuditTrackSync(DescribeAuditTrackRequest req)
+        {
+             JsonResponseModel<DescribeAuditTrackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditTrack");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditTrackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询云审计跟踪集列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditTracksRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27664084-899E-3873-B6E4-FE25D3A68B6F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.647</VersionPrefix>
+    <VersionPrefix>3.0.648</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,8 @@
     <Compile Include="V20210413\Models\DeleteMeshRequest.cs" />
     <Compile Include="V20210413\Models\DeleteMeshResponse.cs" />
     <Compile Include="V20210413\Models\DeployConfig.cs" />
+    <Compile Include="V20210413\Models\DescribeAccessLogConfigRequest.cs" />
+    <Compile Include="V20210413\Models\DescribeAccessLogConfigResponse.cs" />
     <Compile Include="V20210413\Models\DescribeMeshListRequest.cs" />
     <Compile Include="V20210413\Models\DescribeMeshListResponse.cs" />
     <Compile Include="V20210413\Models\DescribeMeshRequest.cs" />
@@ -86,6 +88,8 @@
     <Compile Include="V20210413\Models\MeshConfig.cs" />
     <Compile Include="V20210413\Models\MeshStatus.cs" />
     <Compile Include="V20210413\Models\MetricSpec.cs" />
+    <Compile Include="V20210413\Models\ModifyAccessLogConfigRequest.cs" />
+    <Compile Include="V20210413\Models\ModifyAccessLogConfigResponse.cs" />
     <Compile Include="V20210413\Models\ModifyMeshRequest.cs" />
     <Compile Include="V20210413\Models\ModifyMeshResponse.cs" />
     <Compile Include="V20210413\Models\ModifyTracingConfigRequest.cs" />

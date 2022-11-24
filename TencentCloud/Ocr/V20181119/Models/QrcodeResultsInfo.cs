@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
+        /// 二维码/条形码坐标
         /// </summary>
         [JsonProperty("Position")]
         public QrcodePositionObj Position{ get; set; }

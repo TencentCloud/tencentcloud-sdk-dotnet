@@ -135,7 +135,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 查询硬件节点信息
+        /// 查询集群节点信息
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>
         /// <returns><see cref="DescribeClusterNodesResponse"/></returns>
@@ -155,7 +155,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 查询硬件节点信息
+        /// 查询集群节点信息
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>
         /// <returns><see cref="DescribeClusterNodesResponse"/></returns>
@@ -737,7 +737,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 修改yarn资源调度的资源配置
+        /// 修改YARN资源调度的资源配置
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceScheduleConfigRequest"/></param>
         /// <returns><see cref="ModifyResourceScheduleConfigResponse"/></returns>
@@ -757,7 +757,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 修改yarn资源调度的资源配置
+        /// 修改YARN资源调度的资源配置
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceScheduleConfigRequest"/></param>
         /// <returns><see cref="ModifyResourceScheduleConfigResponse"/></returns>
@@ -857,7 +857,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 实例扩容
+        /// 扩容节点
         /// </summary>
         /// <param name="req"><see cref="ScaleOutInstanceRequest"/></param>
         /// <returns><see cref="ScaleOutInstanceResponse"/></returns>
@@ -877,7 +877,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 实例扩容
+        /// 扩容节点
         /// </summary>
         /// <param name="req"><see cref="ScaleOutInstanceRequest"/></param>
         /// <returns><see cref="ScaleOutInstanceResponse"/></returns>

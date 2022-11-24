@@ -25,6 +25,18 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
+        /// 跟踪集列表
+        /// </summary>
+        [JsonProperty("Tracks")]
+        public Tracks[] Tracks{ get; set; }
+
+        /// <summary>
+        /// 总数目
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Tracks.", this.Tracks);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

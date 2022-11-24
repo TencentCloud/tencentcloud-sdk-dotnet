@@ -177,25 +177,26 @@ namespace TencentCloud.Ess.V20201111.Models
         public float? OffsetY{ get; set; }
 
         /// <summary>
-        /// 指定关键字排序规则
+        /// 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+        /// 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
         /// </summary>
         [JsonProperty("KeywordOrder")]
         public string KeywordOrder{ get; set; }
 
         /// <summary>
-        /// 指定关键字页码
+        /// 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
         /// </summary>
         [JsonProperty("KeywordPage")]
         public long? KeywordPage{ get; set; }
 
         /// <summary>
-        /// 关键字位置模式
+        /// 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
         /// </summary>
         [JsonProperty("RelativeLocation")]
         public string RelativeLocation{ get; set; }
 
         /// <summary>
-        /// 关键字索引
+        /// 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
         /// </summary>
         [JsonProperty("KeywordIndexes")]
         public long?[] KeywordIndexes{ get; set; }

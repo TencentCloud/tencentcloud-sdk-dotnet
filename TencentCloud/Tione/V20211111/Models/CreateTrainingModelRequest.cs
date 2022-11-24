@@ -150,7 +150,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ModelVersionType{ get; set; }
 
         /// <summary>
-        /// 模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML）
+        /// 模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML/MMDETECTION/ONNX/HUGGING_FACE）
         /// </summary>
         [JsonProperty("ModelFormat")]
         public string ModelFormat{ get; set; }

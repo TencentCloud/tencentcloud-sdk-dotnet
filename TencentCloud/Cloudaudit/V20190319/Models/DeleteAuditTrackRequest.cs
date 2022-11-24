@@ -24,12 +24,19 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     public class DeleteAuditTrackRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 跟踪集 ID
+        /// </summary>
+        [JsonProperty("TrackId")]
+        public ulong? TrackId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TrackId", this.TrackId);
         }
     }
 }

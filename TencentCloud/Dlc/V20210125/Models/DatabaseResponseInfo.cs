@@ -79,6 +79,20 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("UserSubUin")]
         public string UserSubUin{ get; set; }
 
+        /// <summary>
+        /// 数据治理配置项
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GovernPolicy")]
+        public DataGovernPolicy GovernPolicy{ get; set; }
+
+        /// <summary>
+        /// 数据库ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatabaseId")]
+        public string DatabaseId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +107,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
             this.SetParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
+            this.SetParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
+            this.SetParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
         }
     }
 }

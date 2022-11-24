@@ -473,6 +473,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 本接口(DescribeApplicationList)用于查询自己账号下的应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationListRequest"/></param>
+        /// <returns><see cref="DescribeApplicationListResponse"/></returns>
+        public async Task<DescribeApplicationListResponse> DescribeApplicationList(DescribeApplicationListRequest req)
+        {
+             JsonResponseModel<DescribeApplicationListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApplicationList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeApplicationList)用于查询自己账号下的应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationListRequest"/></param>
+        /// <returns><see cref="DescribeApplicationListResponse"/></returns>
+        public DescribeApplicationListResponse DescribeApplicationListSync(DescribeApplicationListRequest req)
+        {
+             JsonResponseModel<DescribeApplicationListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApplicationList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取用户自定义送检信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRealtimeScanConfigRequest"/></param>

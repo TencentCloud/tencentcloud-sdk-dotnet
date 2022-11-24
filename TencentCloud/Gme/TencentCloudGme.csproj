@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5B725517-C450-383B-A194-A17CAF39F71A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.647</VersionPrefix>
+    <VersionPrefix>3.0.648</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,7 @@
     <Compile Include="V20180711\Models\AgeDetectTaskResult.cs" />
     <Compile Include="V20180711\Models\AppStatisticsItem.cs" />
     <Compile Include="V20180711\Models\ApplicationDataStatistics.cs" />
+    <Compile Include="V20180711\Models\ApplicationList.cs" />
     <Compile Include="V20180711\Models\AudioTextStatisticsItem.cs" />
     <Compile Include="V20180711\Models\CreateAgeDetectTaskRequest.cs" />
     <Compile Include="V20180711\Models\CreateAgeDetectTaskResponse.cs" />
@@ -74,6 +75,8 @@
     <Compile Include="V20180711\Models\DescribeAppStatisticsResponse.cs" />
     <Compile Include="V20180711\Models\DescribeApplicationDataRequest.cs" />
     <Compile Include="V20180711\Models\DescribeApplicationDataResponse.cs" />
+    <Compile Include="V20180711\Models\DescribeApplicationListRequest.cs" />
+    <Compile Include="V20180711\Models\DescribeApplicationListResponse.cs" />
     <Compile Include="V20180711\Models\DescribeRealtimeScanConfigRequest.cs" />
     <Compile Include="V20180711\Models\DescribeRealtimeScanConfigResponse.cs" />
     <Compile Include="V20180711\Models\DescribeRoomInfoRequest.cs" />
@@ -83,6 +86,7 @@
     <Compile Include="V20180711\Models\DescribeScanResultListResponse.cs" />
     <Compile Include="V20180711\Models\DescribeUserInAndOutTimeRequest.cs" />
     <Compile Include="V20180711\Models\DescribeUserInAndOutTimeResponse.cs" />
+    <Compile Include="V20180711\Models\Filter.cs" />
     <Compile Include="V20180711\Models\GetCustomizationListRequest.cs" />
     <Compile Include="V20180711\Models\GetCustomizationListResponse.cs" />
     <Compile Include="V20180711\Models\InOutTimeInfo.cs" />
@@ -105,7 +109,9 @@
     <Compile Include="V20180711\Models\ScanVoiceRequest.cs" />
     <Compile Include="V20180711\Models\ScanVoiceResponse.cs" />
     <Compile Include="V20180711\Models\ScanVoiceResult.cs" />
+    <Compile Include="V20180711\Models\ServiceStatus.cs" />
     <Compile Include="V20180711\Models\StatisticsItem.cs" />
+    <Compile Include="V20180711\Models\StatusInfo.cs" />
     <Compile Include="V20180711\Models\StreamTextStatisticsItem.cs" />
     <Compile Include="V20180711\Models\Tag.cs" />
     <Compile Include="V20180711\Models\Task.cs" />

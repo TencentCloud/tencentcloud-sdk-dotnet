@@ -133,6 +133,46 @@ namespace TencentCloud.Tcm.V20210413
         }
 
         /// <summary>
+        /// 获取AccessLog配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessLogConfigRequest"/></param>
+        /// <returns><see cref="DescribeAccessLogConfigResponse"/></returns>
+        public async Task<DescribeAccessLogConfigResponse> DescribeAccessLogConfig(DescribeAccessLogConfigRequest req)
+        {
+             JsonResponseModel<DescribeAccessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取AccessLog配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessLogConfigRequest"/></param>
+        /// <returns><see cref="DescribeAccessLogConfigResponse"/></returns>
+        public DescribeAccessLogConfigResponse DescribeAccessLogConfigSync(DescribeAccessLogConfigRequest req)
+        {
+             JsonResponseModel<DescribeAccessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询网格详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMeshRequest"/></param>
@@ -284,6 +324,46 @@ namespace TencentCloud.Tcm.V20210413
              {
                  var strResp = this.InternalRequestSync(req, "LinkPrometheus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<LinkPrometheusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改访问日志配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessLogConfigRequest"/></param>
+        /// <returns><see cref="ModifyAccessLogConfigResponse"/></returns>
+        public async Task<ModifyAccessLogConfigResponse> ModifyAccessLogConfig(ModifyAccessLogConfigRequest req)
+        {
+             JsonResponseModel<ModifyAccessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccessLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改访问日志配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessLogConfigRequest"/></param>
+        /// <returns><see cref="ModifyAccessLogConfigResponse"/></returns>
+        public ModifyAccessLogConfigResponse ModifyAccessLogConfigSync(ModifyAccessLogConfigRequest req)
+        {
+             JsonResponseModel<ModifyAccessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccessLogConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

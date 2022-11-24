@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.647</VersionPrefix>
+    <VersionPrefix>3.0.648</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -728,6 +728,7 @@
     <Compile Include="V20201101\Models\ProcessDetailBaseInfo.cs" />
     <Compile Include="V20201101\Models\ProcessDetailInfo.cs" />
     <Compile Include="V20201101\Models\ProcessInfo.cs" />
+    <Compile Include="V20201101\Models\ProjectInfo.cs" />
     <Compile Include="V20201101\Models\PromotionActivityContent.cs" />
     <Compile Include="V20201101\Models\RaspInfo.cs" />
     <Compile Include="V20201101\Models\RegionInfo.cs" />
@@ -779,6 +780,7 @@
     <Compile Include="V20201101\Models\SwitchImageAutoAuthorizedRuleResponse.cs" />
     <Compile Include="V20201101\Models\SyncAssetImageRegistryAssetRequest.cs" />
     <Compile Include="V20201101\Models\SyncAssetImageRegistryAssetResponse.cs" />
+    <Compile Include="V20201101\Models\TagInfo.cs" />
     <Compile Include="V20201101\Models\UnauthorizedCoresTendency.cs" />
     <Compile Include="V20201101\Models\UpdateAndPublishNetworkFirewallPolicyDetailRequest.cs" />
     <Compile Include="V20201101\Models\UpdateAndPublishNetworkFirewallPolicyDetailResponse.cs" />

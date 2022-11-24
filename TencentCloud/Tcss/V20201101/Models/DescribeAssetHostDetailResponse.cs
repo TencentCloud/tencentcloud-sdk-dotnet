@@ -169,6 +169,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? RegionID{ get; set; }
 
         /// <summary>
+        /// 所属项目
+        /// </summary>
+        [JsonProperty("Project")]
+        public ProjectInfo Project{ get; set; }
+
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -204,6 +216,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "RegionID", this.RegionID);
+            this.SetParamObj(map, prefix + "Project.", this.Project);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

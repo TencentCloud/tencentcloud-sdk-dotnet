@@ -53,6 +53,46 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 批量申请长安链用户签名证书
+        /// </summary>
+        /// <param name="req"><see cref="ApplyChainMakerBatchUserCertRequest"/></param>
+        /// <returns><see cref="ApplyChainMakerBatchUserCertResponse"/></returns>
+        public async Task<ApplyChainMakerBatchUserCertResponse> ApplyChainMakerBatchUserCert(ApplyChainMakerBatchUserCertRequest req)
+        {
+             JsonResponseModel<ApplyChainMakerBatchUserCertResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyChainMakerBatchUserCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyChainMakerBatchUserCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量申请长安链用户签名证书
+        /// </summary>
+        /// <param name="req"><see cref="ApplyChainMakerBatchUserCertRequest"/></param>
+        /// <returns><see cref="ApplyChainMakerBatchUserCertResponse"/></returns>
+        public ApplyChainMakerBatchUserCertResponse ApplyChainMakerBatchUserCertSync(ApplyChainMakerBatchUserCertRequest req)
+        {
+             JsonResponseModel<ApplyChainMakerBatchUserCertResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyChainMakerBatchUserCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyChainMakerBatchUserCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 申请用户证书
         /// </summary>
         /// <param name="req"><see cref="ApplyUserCertRequest"/></param>

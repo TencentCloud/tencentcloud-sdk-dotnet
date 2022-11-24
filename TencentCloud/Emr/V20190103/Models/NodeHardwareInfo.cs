@@ -361,6 +361,20 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ServiceClient")]
         public string ServiceClient{ get; set; }
 
+        /// <summary>
+        /// 该实例是否开启实例保护，true为开启 false为关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DisableApiTermination")]
+        public bool? DisableApiTermination{ get; set; }
+
+        /// <summary>
+        /// 0表示老计费，1表示新计费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TradeVersion")]
+        public long? TradeVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -415,6 +429,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "IsFederation", this.IsFederation);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "ServiceClient", this.ServiceClient);
+            this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+            this.SetParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
         }
     }
 }

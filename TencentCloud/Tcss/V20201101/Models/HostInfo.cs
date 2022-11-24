@@ -114,6 +114,20 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("RegionID")]
         public long? RegionID{ get; set; }
 
+        /// <summary>
+        /// 所属项目
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Project")]
+        public ProjectInfo Project{ get; set; }
+
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +149,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "RegionID", this.RegionID);
+            this.SetParamObj(map, prefix + "Project.", this.Project);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

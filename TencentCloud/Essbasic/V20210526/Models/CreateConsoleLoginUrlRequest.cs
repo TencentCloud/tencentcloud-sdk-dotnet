@@ -85,6 +85,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证
+        /// </summary>
+        [JsonProperty("AuthorizationTypes")]
+        public long?[] AuthorizationTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
             this.SetParamSimple(map, prefix + "AutoJumpBackEvent", this.AutoJumpBackEvent);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
         }
     }
 }

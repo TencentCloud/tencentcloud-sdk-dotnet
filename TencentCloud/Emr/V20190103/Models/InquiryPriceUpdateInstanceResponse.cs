@@ -55,6 +55,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? TimeSpan{ get; set; }
 
         /// <summary>
+        /// 价格详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PriceDetail")]
+        public PriceDetail[] PriceDetail{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -70,6 +77,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamArrayObj(map, prefix + "PriceDetail.", this.PriceDetail);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -27,6 +27,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// <summary>
         /// 过滤器
         /// ModelAccTaskName 任务名称
+        /// ModelSource 模型来源
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -50,7 +51,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回记录条数，默认20
+        /// 返回记录条数，默认10
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

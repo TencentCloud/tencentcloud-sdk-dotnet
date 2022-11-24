@@ -122,6 +122,7 @@ namespace TencentCloud.Tione.V20211111.Models
 
         /// <summary>
         /// 模型处理状态
+        /// STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING：导入中
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrainingModelStatus")]
