@@ -88,6 +88,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("IsVip")]
         public bool? IsVip{ get; set; }
 
+        /// <summary>
+        /// Rocketmq集群标识
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RocketMQFlag")]
+        public bool? RocketMQFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +111,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "SupportNamespaceEndpoint", this.SupportNamespaceEndpoint);
             this.SetParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
             this.SetParamSimple(map, prefix + "IsVip", this.IsVip);
+            this.SetParamSimple(map, prefix + "RocketMQFlag", this.RocketMQFlag);
         }
     }
 }

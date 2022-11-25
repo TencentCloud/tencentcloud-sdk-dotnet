@@ -773,7 +773,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询备份Rdb下载地址(接口灰度中，需要加白名单使用)
+        /// 查询备份Rdb下载地址
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupUrlRequest"/></param>
         /// <returns><see cref="DescribeBackupUrlResponse"/></returns>
@@ -793,7 +793,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询备份Rdb下载地址(接口灰度中，需要加白名单使用)
+        /// 查询备份Rdb下载地址
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupUrlRequest"/></param>
         /// <returns><see cref="DescribeBackupUrlResponse"/></returns>

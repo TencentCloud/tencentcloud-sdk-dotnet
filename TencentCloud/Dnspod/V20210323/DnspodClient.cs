@@ -1213,7 +1213,7 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
-        /// 获取某个域名下的解析记录
+        /// 获取某个域名下的解析记录列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordListRequest"/></param>
         /// <returns><see cref="DescribeRecordListResponse"/></returns>
@@ -1233,7 +1233,7 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
-        /// 获取某个域名下的解析记录
+        /// 获取某个域名下的解析记录列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordListRequest"/></param>
         /// <returns><see cref="DescribeRecordListResponse"/></returns>
@@ -1964,6 +1964,46 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "ModifyRecordBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改记录可选字段
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordFieldsRequest"/></param>
+        /// <returns><see cref="ModifyRecordFieldsResponse"/></returns>
+        public async Task<ModifyRecordFieldsResponse> ModifyRecordFields(ModifyRecordFieldsRequest req)
+        {
+             JsonResponseModel<ModifyRecordFieldsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRecordFields");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordFieldsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改记录可选字段
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordFieldsRequest"/></param>
+        /// <returns><see cref="ModifyRecordFieldsResponse"/></returns>
+        public ModifyRecordFieldsResponse ModifyRecordFieldsSync(ModifyRecordFieldsRequest req)
+        {
+             JsonResponseModel<ModifyRecordFieldsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRecordFields");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordFieldsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

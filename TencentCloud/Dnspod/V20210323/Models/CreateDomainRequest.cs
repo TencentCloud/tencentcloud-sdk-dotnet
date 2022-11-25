@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名分组ID
+        /// 域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }

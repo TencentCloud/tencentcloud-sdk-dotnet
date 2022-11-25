@@ -209,6 +209,22 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("PaymentMethod")]
         public string PaymentMethod{ get; set; }
 
+        /// <summary>
+        /// 平台应收金额
+        /// 单位：分，需要注意的是，TotalAmt=TotalPlatformIncome+TotalMchIncome
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalPlatformIncome")]
+        public long? TotalPlatformIncome{ get; set; }
+
+        /// <summary>
+        /// 商户应收金额
+        /// 单位：分，需要注意的是，TotalAmt=TotalPlatformIncome+TotalMchIncome
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalMchIncome")]
+        public long? TotalMchIncome{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -243,6 +259,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "PayScene", this.PayScene);
             this.SetParamSimple(map, prefix + "PaymentMethod", this.PaymentMethod);
+            this.SetParamSimple(map, prefix + "TotalPlatformIncome", this.TotalPlatformIncome);
+            this.SetParamSimple(map, prefix + "TotalMchIncome", this.TotalMchIncome);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string[] BigDealIdList{ get; set; }
 
         /// <summary>
-        /// 代金券ID数组
+        /// 代金券ID数组。可以从控制台查到拥有的代金券
         /// </summary>
         [JsonProperty("VoucherIdList")]
         public string[] VoucherIdList{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 记录ID。
+        /// 记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
         /// </summary>
         [JsonProperty("RecordId")]
         public ulong? RecordId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Value{ get; set; }
 
         /// <summary>
-        /// 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+        /// 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }

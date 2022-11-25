@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.648</VersionPrefix>
+    <VersionPrefix>3.0.649</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -91,6 +91,7 @@
     <Compile Include="V20201101\Models\AddNetworkFirewallPolicyYamlDetailResponse.cs" />
     <Compile Include="V20201101\Models\AffectedNodeItem.cs" />
     <Compile Include="V20201101\Models\AffectedWorkloadItem.cs" />
+    <Compile Include="V20201101\Models\AssetClusterListItem.cs" />
     <Compile Include="V20201101\Models\AssetFilters.cs" />
     <Compile Include="V20201101\Models\AssetSimpleImageInfo.cs" />
     <Compile Include="V20201101\Models\AutoAuthorizedImageInfo.cs" />
@@ -167,6 +168,12 @@
     <Compile Include="V20201101\Models\CreateHostExportJobResponse.cs" />
     <Compile Include="V20201101\Models\CreateImageExportJobRequest.cs" />
     <Compile Include="V20201101\Models\CreateImageExportJobResponse.cs" />
+    <Compile Include="V20201101\Models\CreateK8sApiAbnormalEventExportJobRequest.cs" />
+    <Compile Include="V20201101\Models\CreateK8sApiAbnormalEventExportJobResponse.cs" />
+    <Compile Include="V20201101\Models\CreateK8sApiAbnormalRuleExportJobRequest.cs" />
+    <Compile Include="V20201101\Models\CreateK8sApiAbnormalRuleExportJobResponse.cs" />
+    <Compile Include="V20201101\Models\CreateK8sApiAbnormalRuleInfoRequest.cs" />
+    <Compile Include="V20201101\Models\CreateK8sApiAbnormalRuleInfoResponse.cs" />
     <Compile Include="V20201101\Models\CreateNetworkFirewallClusterRefreshRequest.cs" />
     <Compile Include="V20201101\Models\CreateNetworkFirewallClusterRefreshResponse.cs" />
     <Compile Include="V20201101\Models\CreateNetworkFirewallPolicyDiscoverRequest.cs" />
@@ -219,6 +226,8 @@
     <Compile Include="V20201101\Models\DeleteEscapeWhiteListResponse.cs" />
     <Compile Include="V20201101\Models\DeleteIgnoreVulRequest.cs" />
     <Compile Include="V20201101\Models\DeleteIgnoreVulResponse.cs" />
+    <Compile Include="V20201101\Models\DeleteK8sApiAbnormalRuleRequest.cs" />
+    <Compile Include="V20201101\Models\DeleteK8sApiAbnormalRuleResponse.cs" />
     <Compile Include="V20201101\Models\DeleteMachineRequest.cs" />
     <Compile Include="V20201101\Models\DeleteMachineResponse.cs" />
     <Compile Include="V20201101\Models\DeleteNetworkFirewallPolicyDetailRequest.cs" />
@@ -275,6 +284,8 @@
     <Compile Include="V20201101\Models\DescribeAgentInstallCommandResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAssetAppServiceListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAssetAppServiceListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetClusterListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetClusterListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAssetComponentListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAssetComponentListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAssetContainerDetailRequest.cs" />
@@ -439,6 +450,20 @@
     <Compile Include="V20201101\Models\DescribeIndexListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeInspectionReportRequest.cs" />
     <Compile Include="V20201101\Models\DescribeInspectionReportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalEventInfoRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalEventInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalEventListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalEventListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalRuleInfoRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalRuleInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalRuleListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalRuleListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalRuleScopeListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalRuleScopeListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalSummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalSummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalTendencyRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeK8sApiAbnormalTendencyResponse.cs" />
     <Compile Include="V20201101\Models\DescribeLogStorageStatisticRequest.cs" />
     <Compile Include="V20201101\Models\DescribeLogStorageStatisticResponse.cs" />
     <Compile Include="V20201101\Models\DescribeNetworkFirewallAuditRecordRequest.cs" />
@@ -651,6 +676,12 @@
     <Compile Include="V20201101\Models\ImagesVul.cs" />
     <Compile Include="V20201101\Models\InitializeUserComplianceEnvironmentRequest.cs" />
     <Compile Include="V20201101\Models\InitializeUserComplianceEnvironmentResponse.cs" />
+    <Compile Include="V20201101\Models\K8sApiAbnormalEventInfo.cs" />
+    <Compile Include="V20201101\Models\K8sApiAbnormalEventListItem.cs" />
+    <Compile Include="V20201101\Models\K8sApiAbnormalRuleInfo.cs" />
+    <Compile Include="V20201101\Models\K8sApiAbnormalRuleListItem.cs" />
+    <Compile Include="V20201101\Models\K8sApiAbnormalRuleScopeInfo.cs" />
+    <Compile Include="V20201101\Models\K8sApiAbnormalTendencyItem.cs" />
     <Compile Include="V20201101\Models\ModifyAbnormalProcessRuleStatusRequest.cs" />
     <Compile Include="V20201101\Models\ModifyAbnormalProcessRuleStatusResponse.cs" />
     <Compile Include="V20201101\Models\ModifyAbnormalProcessStatusRequest.cs" />
@@ -680,6 +711,12 @@
     <Compile Include="V20201101\Models\ModifyIgnoreVul.cs" />
     <Compile Include="V20201101\Models\ModifyImageAuthorizedRequest.cs" />
     <Compile Include="V20201101\Models\ModifyImageAuthorizedResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyK8sApiAbnormalEventStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyK8sApiAbnormalEventStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyK8sApiAbnormalRuleInfoRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyK8sApiAbnormalRuleInfoResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyK8sApiAbnormalRuleStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyK8sApiAbnormalRuleStatusResponse.cs" />
     <Compile Include="V20201101\Models\ModifyReverseShellStatusRequest.cs" />
     <Compile Include="V20201101\Models\ModifyReverseShellStatusResponse.cs" />
     <Compile Include="V20201101\Models\ModifyRiskSyscallStatusRequest.cs" />

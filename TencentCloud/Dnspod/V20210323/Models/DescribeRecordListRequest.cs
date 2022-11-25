@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数
+        /// 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string RecordType{ get; set; }
 
         /// <summary>
-        /// 获取某条线路名称的解析记录
+        /// 获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
         /// </summary>
         [JsonProperty("RecordLine")]
         public string RecordLine{ get; set; }
 
         /// <summary>
-        /// 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数
+        /// 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
         /// </summary>
         [JsonProperty("RecordLineId")]
         public string RecordLineId{ get; set; }
 
         /// <summary>
-        /// 获取某个分组下的解析记录时，传这个分组Id
+        /// 获取某个分组下的解析记录时，传这个分组Id。
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }

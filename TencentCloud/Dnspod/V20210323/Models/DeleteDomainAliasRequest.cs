@@ -25,7 +25,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 域名别名ID
+        /// 域名别名ID。可以通过接口DescribeDomainAliasList查到所有的域名别名列表以及对应的ID
         /// </summary>
         [JsonProperty("DomainAliasId")]
         public long? DomainAliasId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
+        /// 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
         /// </summary>
         [JsonProperty("DomainId")]
         public long? DomainId{ get; set; }

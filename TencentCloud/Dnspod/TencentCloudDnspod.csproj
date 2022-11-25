@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.648</VersionPrefix>
+    <VersionPrefix>3.0.649</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -141,6 +141,7 @@
     <Compile Include="V20210323\Models\DownloadSnapshotRequest.cs" />
     <Compile Include="V20210323\Models\DownloadSnapshotResponse.cs" />
     <Compile Include="V20210323\Models\GroupInfo.cs" />
+    <Compile Include="V20210323\Models\KeyValue.cs" />
     <Compile Include="V20210323\Models\LineGroupInfo.cs" />
     <Compile Include="V20210323\Models\LineInfo.cs" />
     <Compile Include="V20210323\Models\LockInfo.cs" />
@@ -161,6 +162,8 @@
     <Compile Include="V20210323\Models\ModifyRecordBatchDetail.cs" />
     <Compile Include="V20210323\Models\ModifyRecordBatchRequest.cs" />
     <Compile Include="V20210323\Models\ModifyRecordBatchResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordFieldsRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordFieldsResponse.cs" />
     <Compile Include="V20210323\Models\ModifyRecordGroupRequest.cs" />
     <Compile Include="V20210323\Models\ModifyRecordGroupResponse.cs" />
     <Compile Include="V20210323\Models\ModifyRecordRemarkRequest.cs" />

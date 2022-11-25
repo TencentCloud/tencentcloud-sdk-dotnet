@@ -1457,6 +1457,126 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 创建k8s api异常事件导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateK8sApiAbnormalEventExportJobRequest"/></param>
+        /// <returns><see cref="CreateK8sApiAbnormalEventExportJobResponse"/></returns>
+        public async Task<CreateK8sApiAbnormalEventExportJobResponse> CreateK8sApiAbnormalEventExportJob(CreateK8sApiAbnormalEventExportJobRequest req)
+        {
+             JsonResponseModel<CreateK8sApiAbnormalEventExportJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateK8sApiAbnormalEventExportJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateK8sApiAbnormalEventExportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建k8s api异常事件导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateK8sApiAbnormalEventExportJobRequest"/></param>
+        /// <returns><see cref="CreateK8sApiAbnormalEventExportJobResponse"/></returns>
+        public CreateK8sApiAbnormalEventExportJobResponse CreateK8sApiAbnormalEventExportJobSync(CreateK8sApiAbnormalEventExportJobRequest req)
+        {
+             JsonResponseModel<CreateK8sApiAbnormalEventExportJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateK8sApiAbnormalEventExportJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateK8sApiAbnormalEventExportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建k8sApi异常规则导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateK8sApiAbnormalRuleExportJobRequest"/></param>
+        /// <returns><see cref="CreateK8sApiAbnormalRuleExportJobResponse"/></returns>
+        public async Task<CreateK8sApiAbnormalRuleExportJobResponse> CreateK8sApiAbnormalRuleExportJob(CreateK8sApiAbnormalRuleExportJobRequest req)
+        {
+             JsonResponseModel<CreateK8sApiAbnormalRuleExportJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateK8sApiAbnormalRuleExportJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateK8sApiAbnormalRuleExportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建k8sApi异常规则导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateK8sApiAbnormalRuleExportJobRequest"/></param>
+        /// <returns><see cref="CreateK8sApiAbnormalRuleExportJobResponse"/></returns>
+        public CreateK8sApiAbnormalRuleExportJobResponse CreateK8sApiAbnormalRuleExportJobSync(CreateK8sApiAbnormalRuleExportJobRequest req)
+        {
+             JsonResponseModel<CreateK8sApiAbnormalRuleExportJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateK8sApiAbnormalRuleExportJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateK8sApiAbnormalRuleExportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建k8sapi异常事件规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateK8sApiAbnormalRuleInfoRequest"/></param>
+        /// <returns><see cref="CreateK8sApiAbnormalRuleInfoResponse"/></returns>
+        public async Task<CreateK8sApiAbnormalRuleInfoResponse> CreateK8sApiAbnormalRuleInfo(CreateK8sApiAbnormalRuleInfoRequest req)
+        {
+             JsonResponseModel<CreateK8sApiAbnormalRuleInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateK8sApiAbnormalRuleInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateK8sApiAbnormalRuleInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建k8sapi异常事件规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateK8sApiAbnormalRuleInfoRequest"/></param>
+        /// <returns><see cref="CreateK8sApiAbnormalRuleInfoResponse"/></returns>
+        public CreateK8sApiAbnormalRuleInfoResponse CreateK8sApiAbnormalRuleInfoSync(CreateK8sApiAbnormalRuleInfoRequest req)
+        {
+             JsonResponseModel<CreateK8sApiAbnormalRuleInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateK8sApiAbnormalRuleInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateK8sApiAbnormalRuleInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 容器网络集群下发刷新任务
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallClusterRefreshRequest"/></param>
@@ -2490,6 +2610,46 @@ namespace TencentCloud.Tcss.V20201101
              {
                  var strResp = this.InternalRequestSync(req, "DeleteIgnoreVul");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIgnoreVulResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除k8sapi异常事件规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteK8sApiAbnormalRuleRequest"/></param>
+        /// <returns><see cref="DeleteK8sApiAbnormalRuleResponse"/></returns>
+        public async Task<DeleteK8sApiAbnormalRuleResponse> DeleteK8sApiAbnormalRule(DeleteK8sApiAbnormalRuleRequest req)
+        {
+             JsonResponseModel<DeleteK8sApiAbnormalRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteK8sApiAbnormalRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteK8sApiAbnormalRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除k8sapi异常事件规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteK8sApiAbnormalRuleRequest"/></param>
+        /// <returns><see cref="DeleteK8sApiAbnormalRuleResponse"/></returns>
+        public DeleteK8sApiAbnormalRuleResponse DeleteK8sApiAbnormalRuleSync(DeleteK8sApiAbnormalRuleRequest req)
+        {
+             JsonResponseModel<DeleteK8sApiAbnormalRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteK8sApiAbnormalRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteK8sApiAbnormalRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3610,6 +3770,46 @@ namespace TencentCloud.Tcss.V20201101
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAssetAppServiceList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetAppServiceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetClusterListRequest"/></param>
+        /// <returns><see cref="DescribeAssetClusterListResponse"/></returns>
+        public async Task<DescribeAssetClusterListResponse> DescribeAssetClusterList(DescribeAssetClusterListRequest req)
+        {
+             JsonResponseModel<DescribeAssetClusterListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAssetClusterList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetClusterListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetClusterListRequest"/></param>
+        /// <returns><see cref="DescribeAssetClusterListResponse"/></returns>
+        public DescribeAssetClusterListResponse DescribeAssetClusterListSync(DescribeAssetClusterListRequest req)
+        {
+             JsonResponseModel<DescribeAssetClusterListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAssetClusterList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetClusterListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -6890,6 +7090,286 @@ namespace TencentCloud.Tcss.V20201101
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInspectionReport");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInspectionReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8s api 异常事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalEventInfoRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalEventInfoResponse"/></returns>
+        public async Task<DescribeK8sApiAbnormalEventInfoResponse> DescribeK8sApiAbnormalEventInfo(DescribeK8sApiAbnormalEventInfoRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalEventInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeK8sApiAbnormalEventInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalEventInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8s api 异常事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalEventInfoRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalEventInfoResponse"/></returns>
+        public DescribeK8sApiAbnormalEventInfoResponse DescribeK8sApiAbnormalEventInfoSync(DescribeK8sApiAbnormalEventInfoRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalEventInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeK8sApiAbnormalEventInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalEventInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8s api异常事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalEventListRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalEventListResponse"/></returns>
+        public async Task<DescribeK8sApiAbnormalEventListResponse> DescribeK8sApiAbnormalEventList(DescribeK8sApiAbnormalEventListRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeK8sApiAbnormalEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8s api异常事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalEventListRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalEventListResponse"/></returns>
+        public DescribeK8sApiAbnormalEventListResponse DescribeK8sApiAbnormalEventListSync(DescribeK8sApiAbnormalEventListRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeK8sApiAbnormalEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8sapi异常请求规则详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleInfoRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalRuleInfoResponse"/></returns>
+        public async Task<DescribeK8sApiAbnormalRuleInfoResponse> DescribeK8sApiAbnormalRuleInfo(DescribeK8sApiAbnormalRuleInfoRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalRuleInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeK8sApiAbnormalRuleInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalRuleInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8sapi异常请求规则详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleInfoRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalRuleInfoResponse"/></returns>
+        public DescribeK8sApiAbnormalRuleInfoResponse DescribeK8sApiAbnormalRuleInfoSync(DescribeK8sApiAbnormalRuleInfoRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalRuleInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeK8sApiAbnormalRuleInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalRuleInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8sapi异常请求规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleListRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalRuleListResponse"/></returns>
+        public async Task<DescribeK8sApiAbnormalRuleListResponse> DescribeK8sApiAbnormalRuleList(DescribeK8sApiAbnormalRuleListRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalRuleListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeK8sApiAbnormalRuleList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalRuleListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8sapi异常请求规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleListRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalRuleListResponse"/></returns>
+        public DescribeK8sApiAbnormalRuleListResponse DescribeK8sApiAbnormalRuleListSync(DescribeK8sApiAbnormalRuleListRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalRuleListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeK8sApiAbnormalRuleList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalRuleListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8s api 异常规则中范围列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleScopeListRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalRuleScopeListResponse"/></returns>
+        public async Task<DescribeK8sApiAbnormalRuleScopeListResponse> DescribeK8sApiAbnormalRuleScopeList(DescribeK8sApiAbnormalRuleScopeListRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalRuleScopeListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeK8sApiAbnormalRuleScopeList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalRuleScopeListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8s api 异常规则中范围列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleScopeListRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalRuleScopeListResponse"/></returns>
+        public DescribeK8sApiAbnormalRuleScopeListResponse DescribeK8sApiAbnormalRuleScopeListSync(DescribeK8sApiAbnormalRuleScopeListRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalRuleScopeListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeK8sApiAbnormalRuleScopeList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalRuleScopeListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8sapi异常事件统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalSummaryRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalSummaryResponse"/></returns>
+        public async Task<DescribeK8sApiAbnormalSummaryResponse> DescribeK8sApiAbnormalSummary(DescribeK8sApiAbnormalSummaryRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeK8sApiAbnormalSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8sapi异常事件统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalSummaryRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalSummaryResponse"/></returns>
+        public DescribeK8sApiAbnormalSummaryResponse DescribeK8sApiAbnormalSummarySync(DescribeK8sApiAbnormalSummaryRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeK8sApiAbnormalSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8sapi异常事件趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalTendencyRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalTendencyResponse"/></returns>
+        public async Task<DescribeK8sApiAbnormalTendencyResponse> DescribeK8sApiAbnormalTendency(DescribeK8sApiAbnormalTendencyRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalTendencyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeK8sApiAbnormalTendency");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalTendencyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询k8sapi异常事件趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeK8sApiAbnormalTendencyRequest"/></param>
+        /// <returns><see cref="DescribeK8sApiAbnormalTendencyResponse"/></returns>
+        public DescribeK8sApiAbnormalTendencyResponse DescribeK8sApiAbnormalTendencySync(DescribeK8sApiAbnormalTendencyRequest req)
+        {
+             JsonResponseModel<DescribeK8sApiAbnormalTendencyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeK8sApiAbnormalTendency");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeK8sApiAbnormalTendencyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -11170,6 +11650,126 @@ namespace TencentCloud.Tcss.V20201101
              {
                  var strResp = this.InternalRequestSync(req, "ModifyImageAuthorized");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyImageAuthorizedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改k8sapi异常事件状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyK8sApiAbnormalEventStatusRequest"/></param>
+        /// <returns><see cref="ModifyK8sApiAbnormalEventStatusResponse"/></returns>
+        public async Task<ModifyK8sApiAbnormalEventStatusResponse> ModifyK8sApiAbnormalEventStatus(ModifyK8sApiAbnormalEventStatusRequest req)
+        {
+             JsonResponseModel<ModifyK8sApiAbnormalEventStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyK8sApiAbnormalEventStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyK8sApiAbnormalEventStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改k8sapi异常事件状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyK8sApiAbnormalEventStatusRequest"/></param>
+        /// <returns><see cref="ModifyK8sApiAbnormalEventStatusResponse"/></returns>
+        public ModifyK8sApiAbnormalEventStatusResponse ModifyK8sApiAbnormalEventStatusSync(ModifyK8sApiAbnormalEventStatusRequest req)
+        {
+             JsonResponseModel<ModifyK8sApiAbnormalEventStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyK8sApiAbnormalEventStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyK8sApiAbnormalEventStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改k8sapi异常规则信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyK8sApiAbnormalRuleInfoRequest"/></param>
+        /// <returns><see cref="ModifyK8sApiAbnormalRuleInfoResponse"/></returns>
+        public async Task<ModifyK8sApiAbnormalRuleInfoResponse> ModifyK8sApiAbnormalRuleInfo(ModifyK8sApiAbnormalRuleInfoRequest req)
+        {
+             JsonResponseModel<ModifyK8sApiAbnormalRuleInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyK8sApiAbnormalRuleInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyK8sApiAbnormalRuleInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改k8sapi异常规则信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyK8sApiAbnormalRuleInfoRequest"/></param>
+        /// <returns><see cref="ModifyK8sApiAbnormalRuleInfoResponse"/></returns>
+        public ModifyK8sApiAbnormalRuleInfoResponse ModifyK8sApiAbnormalRuleInfoSync(ModifyK8sApiAbnormalRuleInfoRequest req)
+        {
+             JsonResponseModel<ModifyK8sApiAbnormalRuleInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyK8sApiAbnormalRuleInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyK8sApiAbnormalRuleInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改k8sapi异常事件规则状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyK8sApiAbnormalRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyK8sApiAbnormalRuleStatusResponse"/></returns>
+        public async Task<ModifyK8sApiAbnormalRuleStatusResponse> ModifyK8sApiAbnormalRuleStatus(ModifyK8sApiAbnormalRuleStatusRequest req)
+        {
+             JsonResponseModel<ModifyK8sApiAbnormalRuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyK8sApiAbnormalRuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyK8sApiAbnormalRuleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改k8sapi异常事件规则状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyK8sApiAbnormalRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyK8sApiAbnormalRuleStatusResponse"/></returns>
+        public ModifyK8sApiAbnormalRuleStatusResponse ModifyK8sApiAbnormalRuleStatusSync(ModifyK8sApiAbnormalRuleStatusRequest req)
+        {
+             JsonResponseModel<ModifyK8sApiAbnormalRuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyK8sApiAbnormalRuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyK8sApiAbnormalRuleStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -103,7 +103,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+        /// 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。 自定义密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -180,6 +180,24 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("MongosNodeNum")]
         public ulong? MongosNodeNum{ get; set; }
 
+        /// <summary>
+        /// 只读节点数量，最大不超过7个
+        /// </summary>
+        [JsonProperty("ReadonlyNodeNum")]
+        public ulong? ReadonlyNodeNum{ get; set; }
+
+        /// <summary>
+        /// 只读节点部署可用区
+        /// </summary>
+        [JsonProperty("ReadonlyNodeAvailabilityZoneList")]
+        public string[] ReadonlyNodeAvailabilityZoneList{ get; set; }
+
+        /// <summary>
+        /// Hidden节点所在的可用区，跨可用区实例必传
+        /// </summary>
+        [JsonProperty("HiddenZone")]
+        public string HiddenZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +230,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "MongosCpu", this.MongosCpu);
             this.SetParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
             this.SetParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
+            this.SetParamSimple(map, prefix + "ReadonlyNodeNum", this.ReadonlyNodeNum);
+            this.SetParamArraySimple(map, prefix + "ReadonlyNodeAvailabilityZoneList.", this.ReadonlyNodeAvailabilityZoneList);
+            this.SetParamSimple(map, prefix + "HiddenZone", this.HiddenZone);
         }
     }
 }

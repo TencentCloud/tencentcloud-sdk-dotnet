@@ -25,7 +25,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// 任务ID。操作批量接口时会返回JobId
         /// </summary>
         [JsonProperty("JobId")]
         public ulong? JobId{ get; set; }
