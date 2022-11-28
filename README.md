@@ -6,7 +6,7 @@
 
 # 依赖环境
 
-1. 依赖环境：.NET Framework 4.5+ 或者 .NET Core 2.1。
+1. 依赖环境：兼容 .NET standard 2.0（.NET Framework 4.5+ 或者 .NET Core 2.1）。
 2. 从 腾讯云控制台 开通相应产品。
 3. 获取 SecretID 、 SecretKey 以及调用地址（ endpoint ）， endpoint 一般形式为 \*.tencentcloudapi.com ，如 CVM 的调用地址为 cvm.tencentcloudapi.com ，具体参考各产品说明。
 4. 下载相关资料并做好相关文件配置。
