@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{6227C841-08B9-39DD-91B5-C3CB4FE07CD6}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.650</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Cdwch</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200915\CdwchClient.cs" />
+    <Compile Include="V20200915\Models\ActionAlterCkUserRequest.cs" />
+    <Compile Include="V20200915\Models\ActionAlterCkUserResponse.cs" />
+    <Compile Include="V20200915\Models\BackupTableContent.cs" />
+    <Compile Include="V20200915\Models\CkUserAlterInfo.cs" />
+    <Compile Include="V20200915\Models\ConfigSubmitContext.cs" />
+    <Compile Include="V20200915\Models\CreateBackUpScheduleRequest.cs" />
+    <Compile Include="V20200915\Models\CreateBackUpScheduleResponse.cs" />
+    <Compile Include="V20200915\Models\DescribeCkSqlApisRequest.cs" />
+    <Compile Include="V20200915\Models\DescribeCkSqlApisResponse.cs" />
+    <Compile Include="V20200915\Models\DescribeInstanceShardsRequest.cs" />
+    <Compile Include="V20200915\Models\DescribeInstanceShardsResponse.cs" />
+    <Compile Include="V20200915\Models\ModifyClusterConfigsRequest.cs" />
+    <Compile Include="V20200915\Models\ModifyClusterConfigsResponse.cs" />
+    <Compile Include="V20200915\Models\ModifyUserNewPrivilegeRequest.cs" />
+    <Compile Include="V20200915\Models\ModifyUserNewPrivilegeResponse.cs" />
+    <Compile Include="V20200915\Models\OpenBackUpRequest.cs" />
+    <Compile Include="V20200915\Models\OpenBackUpResponse.cs" />
+  </ItemGroup>
+</Project>

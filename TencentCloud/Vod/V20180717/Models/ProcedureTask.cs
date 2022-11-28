@@ -132,6 +132,20 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
+        /// <summary>
+        /// 操作者。取值范围：
+        /// <li>System: 表示系统触发。</li>
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
+        /// <summary>
+        /// 操作类型。取值范围：
+        /// <li>TSC: 表示使用极速高清进行智能降码。</li>
+        /// </summary>
+        [JsonProperty("OperationType")]
+        public string OperationType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +168,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "TasksNotifyMode", this.TasksNotifyMode);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
         }
     }
 }

@@ -80,6 +80,20 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("SpeakerId")]
         public long? SpeakerId{ get; set; }
 
+        /// <summary>
+        /// 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EmotionalEnergy")]
+        public float? EmotionalEnergy{ get; set; }
+
+        /// <summary>
+        /// 本句与上一句之间的静音时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SilenceTime")]
+        public long? SilenceTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +108,8 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamArrayObj(map, prefix + "Words.", this.Words);
             this.SetParamSimple(map, prefix + "SpeechSpeed", this.SpeechSpeed);
             this.SetParamSimple(map, prefix + "SpeakerId", this.SpeakerId);
+            this.SetParamSimple(map, prefix + "EmotionalEnergy", this.EmotionalEnergy);
+            this.SetParamSimple(map, prefix + "SilenceTime", this.SilenceTime);
         }
     }
 }

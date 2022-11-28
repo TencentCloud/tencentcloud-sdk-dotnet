@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 1拦截列表 2 忽略列表
+        /// 1封禁列表 2 放通列表
         /// </summary>
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+        /// 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

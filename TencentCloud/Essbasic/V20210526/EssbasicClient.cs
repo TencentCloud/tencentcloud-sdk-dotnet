@@ -643,6 +643,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 创建出证报告，返回报告 ID
+        /// </summary>
+        /// <param name="req"><see cref="CreateChannelFlowEvidenceReportRequest"/></param>
+        /// <returns><see cref="CreateChannelFlowEvidenceReportResponse"/></returns>
+        public async Task<CreateChannelFlowEvidenceReportResponse> CreateChannelFlowEvidenceReport(CreateChannelFlowEvidenceReportRequest req)
+        {
+             JsonResponseModel<CreateChannelFlowEvidenceReportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateChannelFlowEvidenceReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateChannelFlowEvidenceReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建出证报告，返回报告 ID
+        /// </summary>
+        /// <param name="req"><see cref="CreateChannelFlowEvidenceReportRequest"/></param>
+        /// <returns><see cref="CreateChannelFlowEvidenceReportResponse"/></returns>
+        public CreateChannelFlowEvidenceReportResponse CreateChannelFlowEvidenceReportSync(CreateChannelFlowEvidenceReportRequest req)
+        {
+             JsonResponseModel<CreateChannelFlowEvidenceReportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateChannelFlowEvidenceReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateChannelFlowEvidenceReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口（CreateConsoleLoginUrl）用于创建渠道子客企业控制台Web/移动登录链接。登录链接是子客控制台的唯一入口。
         /// 若子客企业未激活，会进入企业激活流程，首次参与激活流程的经办人会成为超管。（若企业激活过程中填写信息有误，需要重置激活流程，可以换一个经办人OpenId获取新的链接进入。）
         /// 若子客企业已激活，使用了新的经办人OpenId进入，则会进入经办人的实名流程。
@@ -836,6 +876,46 @@ namespace TencentCloud.Essbasic.V20210526
              {
                  var strResp = this.InternalRequestSync(req, "CreateSignUrls");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSignUrlsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询出证报告，返回报告 URL。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelFlowEvidenceReportRequest"/></param>
+        /// <returns><see cref="DescribeChannelFlowEvidenceReportResponse"/></returns>
+        public async Task<DescribeChannelFlowEvidenceReportResponse> DescribeChannelFlowEvidenceReport(DescribeChannelFlowEvidenceReportRequest req)
+        {
+             JsonResponseModel<DescribeChannelFlowEvidenceReportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeChannelFlowEvidenceReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChannelFlowEvidenceReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询出证报告，返回报告 URL。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelFlowEvidenceReportRequest"/></param>
+        /// <returns><see cref="DescribeChannelFlowEvidenceReportResponse"/></returns>
+        public DescribeChannelFlowEvidenceReportResponse DescribeChannelFlowEvidenceReportSync(DescribeChannelFlowEvidenceReportRequest req)
+        {
+             JsonResponseModel<DescribeChannelFlowEvidenceReportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeChannelFlowEvidenceReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChannelFlowEvidenceReportResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -36,7 +36,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>FastClipMedia：快速剪辑任务；</li>
         /// <li>RemoveWatermarkTask：智能去除水印任务；</li>
         /// <li> ReviewAudioVideo：音视频审核任务。</li>
-        /// <li> ReduceMediaBitrate：降码率任务。</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -174,7 +173,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ReviewAudioVideoTask ReviewAudioVideoTask{ get; set; }
 
         /// <summary>
-        /// 降码率任务信息，仅当 TaskType 为 ReduceMediaBitrate，该字段有值。
+        /// 该字段已无效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReduceMediaBitrateTask")]

@@ -96,6 +96,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
+        /// <summary>
+        /// 转拉任务进度，取值范围 [0-100] 。
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +119,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }
     }
 }

@@ -773,7 +773,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询备份Rdb下载地址
+        /// 本接口（DescribeBackupUrl）用于查询备份 Rdb 文件的下载地址。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupUrlRequest"/></param>
         /// <returns><see cref="DescribeBackupUrlResponse"/></returns>
@@ -793,7 +793,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询备份Rdb下载地址
+        /// 本接口（DescribeBackupUrl）用于查询备份 Rdb 文件的下载地址。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupUrlRequest"/></param>
         /// <returns><see cref="DescribeBackupUrlResponse"/></returns>

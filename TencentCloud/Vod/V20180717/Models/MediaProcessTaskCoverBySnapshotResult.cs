@@ -60,6 +60,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Output")]
         public CoverBySnapshotTaskOutput Output{ get; set; }
 
+        /// <summary>
+        /// 对视频截图做封面任务进度，取值范围 [0-100] 。
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }
     }
 }

@@ -39,6 +39,8 @@ namespace TencentCloud.Asr.V20190614.Models
         /// • 16k_en_edu 英文教育；
         /// • 16k_zh_medical  医疗；
         /// • 16k_th 泰语；
+        /// • 16k_zh-PY 中英粤;
+        /// • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
         /// </summary>
         [JsonProperty("EngineModelType")]
         public string EngineModelType{ get; set; }
@@ -141,6 +143,18 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("FilterModal")]
         public long? FilterModal{ get; set; }
 
+        /// <summary>
+        /// 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。0:不开启，1:开启
+        /// </summary>
+        [JsonProperty("EmotionalEnergy")]
+        public long? EmotionalEnergy{ get; set; }
+
+        /// <summary>
+        /// 热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”、“蜜汁”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
+        /// </summary>
+        [JsonProperty("ReinforceHotword")]
+        public long? ReinforceHotword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +178,8 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
             this.SetParamSimple(map, prefix + "FilterModal", this.FilterModal);
+            this.SetParamSimple(map, prefix + "EmotionalEnergy", this.EmotionalEnergy);
+            this.SetParamSimple(map, prefix + "ReinforceHotword", this.ReinforceHotword);
         }
     }
 }

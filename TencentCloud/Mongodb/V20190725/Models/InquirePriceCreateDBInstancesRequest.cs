@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 每个分片的主从节点数量。<br>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinStorage与MaxStorage分别对应其最小磁盘规格与最大磁盘规格。</br>
+        /// 每个分片的主从节点数量。<br>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。</li></ul>
         /// </summary>
         [JsonProperty("NodeNum")]
         public long? NodeNum{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例硬盘大小。<ul><li>单位：GB。</li><li>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。</li></ul>
+        /// 实例硬盘大小。<ul><li>单位：GB。</li><li>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinStorage与MaxStorage分别对应其最小磁盘规格与最大磁盘规格。</br>
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
