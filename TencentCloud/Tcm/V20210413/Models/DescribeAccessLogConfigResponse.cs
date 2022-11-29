@@ -51,10 +51,40 @@ namespace TencentCloud.Tcm.V20210413.Models
 
         /// <summary>
         /// 采用的模板，可取值为"istio, trace，默认为istio
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Template")]
         public string Template{ get; set; }
+
+        /// <summary>
+        /// 腾讯云日志服务相关参数
+        /// </summary>
+        [JsonProperty("CLS")]
+        public CLS CLS{ get; set; }
+
+        /// <summary>
+        /// GRPC第三方服务器地址
+        /// </summary>
+        [JsonProperty("Address")]
+        public string Address{ get; set; }
+
+        /// <summary>
+        /// 是否启用GRPC第三方服务器
+        /// </summary>
+        [JsonProperty("EnableServer")]
+        public bool? EnableServer{ get; set; }
+
+        /// <summary>
+        /// 是否启用标准输出
+        /// </summary>
+        [JsonProperty("EnableStdout")]
+        public bool? EnableStdout{ get; set; }
+
+        /// <summary>
+        /// 是否启用访问日志采集
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Enable")]
+        public bool? Enable{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -73,6 +103,11 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamSimple(map, prefix + "Encoding", this.Encoding);
             this.SetParamObj(map, prefix + "SelectedRange.", this.SelectedRange);
             this.SetParamSimple(map, prefix + "Template", this.Template);
+            this.SetParamObj(map, prefix + "CLS.", this.CLS);
+            this.SetParamSimple(map, prefix + "Address", this.Address);
+            this.SetParamSimple(map, prefix + "EnableServer", this.EnableServer);
+            this.SetParamSimple(map, prefix + "EnableStdout", this.EnableStdout);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

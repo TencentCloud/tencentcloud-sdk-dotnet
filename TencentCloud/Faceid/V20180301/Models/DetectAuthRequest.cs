@@ -86,6 +86,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("IntentionQuestions")]
         public IntentionQuestion[] IntentionQuestions{ get; set; }
 
+        /// <summary>
+        /// RuleId相关配置
+        /// </summary>
+        [JsonProperty("Config")]
+        public RuleIdConfig Config{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
             this.SetParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
             this.SetParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
+            this.SetParamObj(map, prefix + "Config.", this.Config);
         }
     }
 }

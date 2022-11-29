@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{700BCB15-E440-34BE-979B-260C57587D11}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.650</VersionPrefix>
+    <VersionPrefix>3.0.651</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20180411\DcdbClient.cs" />
+    <Compile Include="V20180411\Models\Account.cs" />
     <Compile Include="V20180411\Models\ActiveHourDCDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\ActiveHourDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\AddShardConfig.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="V20180411\Models\CloneAccountResponse.cs" />
     <Compile Include="V20180411\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="V20180411\Models\CloseDBExtranetAccessResponse.cs" />
+    <Compile Include="V20180411\Models\ColumnPrivilege.cs" />
     <Compile Include="V20180411\Models\ConstraintRange.cs" />
     <Compile Include="V20180411\Models\CopyAccountPrivilegesRequest.cs" />
     <Compile Include="V20180411\Models\CopyAccountPrivilegesResponse.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="V20180411\Models\DCDBShardInfo.cs" />
     <Compile Include="V20180411\Models\Database.cs" />
     <Compile Include="V20180411\Models\DatabaseFunction.cs" />
+    <Compile Include="V20180411\Models\DatabasePrivilege.cs" />
     <Compile Include="V20180411\Models\DatabaseProcedure.cs" />
     <Compile Include="V20180411\Models\DatabaseTable.cs" />
     <Compile Include="V20180411\Models\DatabaseView.cs" />
@@ -153,6 +156,8 @@
     <Compile Include="V20180411\Models\LogFileInfo.cs" />
     <Compile Include="V20180411\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20180411\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="V20180411\Models\ModifyAccountPrivilegesRequest.cs" />
+    <Compile Include="V20180411\Models\ModifyAccountPrivilegesResponse.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
@@ -195,11 +200,13 @@
     <Compile Include="V20180411\Models\SwitchDBInstanceHARequest.cs" />
     <Compile Include="V20180411\Models\SwitchDBInstanceHAResponse.cs" />
     <Compile Include="V20180411\Models\TableColumn.cs" />
+    <Compile Include="V20180411\Models\TablePrivilege.cs" />
     <Compile Include="V20180411\Models\TerminateDedicatedDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\TerminateDedicatedDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\UpgradeDCDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\UpgradeDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\UserTaskInfo.cs" />
+    <Compile Include="V20180411\Models\ViewPrivileges.cs" />
     <Compile Include="V20180411\Models\ZonesInfo.cs" />
   </ItemGroup>
 </Project>

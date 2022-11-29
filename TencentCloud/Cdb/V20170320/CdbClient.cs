@@ -3913,46 +3913,6 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 配置数据库代理读写分离
-        /// </summary>
-        /// <param name="req"><see cref="ModifyCDBProxyRequest"/></param>
-        /// <returns><see cref="ModifyCDBProxyResponse"/></returns>
-        public async Task<ModifyCDBProxyResponse> ModifyCDBProxy(ModifyCDBProxyRequest req)
-        {
-             JsonResponseModel<ModifyCDBProxyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCDBProxy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 配置数据库代理读写分离
-        /// </summary>
-        /// <param name="req"><see cref="ModifyCDBProxyRequest"/></param>
-        /// <returns><see cref="ModifyCDBProxyResponse"/></returns>
-        public ModifyCDBProxyResponse ModifyCDBProxySync(ModifyCDBProxyRequest req)
-        {
-             JsonResponseModel<ModifyCDBProxyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCDBProxy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 请求该接口配置数据库连接池；支持的连接池配置请求DescribeProxyConnectionPoolConf接口获取。
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyConnectionPoolRequest"/></param>

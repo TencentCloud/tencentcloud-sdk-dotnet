@@ -25,7 +25,7 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 腾讯云项目 ID，废弃参数，默认填写0即可。
+        /// 腾讯云项目 ID，废弃参数，填写0即可。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
@@ -66,7 +66,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public string VoiceFormat{ get; set; }
 
         /// <summary>
-        /// 用户端对此任务的唯一标识。废弃参数，忽略即可。
+        /// 废弃参数，填写任意字符串即可。
         /// </summary>
         [JsonProperty("UsrAudioKey")]
         public string UsrAudioKey{ get; set; }

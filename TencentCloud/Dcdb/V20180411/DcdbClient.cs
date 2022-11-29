@@ -1903,6 +1903,56 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口(ModifyAccountPrivileges)用于修改云数据库的账户的权限信息。
+        /// 
+        /// **注意**
+        /// - 系统保留库："mysql"，只开放["SELECT"]权限
+        /// - 只读账号授予读写权限会报错
+        /// - 不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public async Task<ModifyAccountPrivilegesResponse> ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAccountPrivileges)用于修改云数据库的账户的权限信息。
+        /// 
+        /// **注意**
+        /// - 系统保留库："mysql"，只开放["SELECT"]权限
+        /// - 只读账号授予读写权限会报错
+        /// - 不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public ModifyAccountPrivilegesResponse ModifyAccountPrivilegesSync(ModifyAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstanceName）用于修改实例名字
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>

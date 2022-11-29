@@ -481,6 +481,48 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 渠道版发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
+        /// 合同发起人必须在电子签已经进行实名。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateReleaseFlowRequest"/></param>
+        /// <returns><see cref="ChannelCreateReleaseFlowResponse"/></returns>
+        public async Task<ChannelCreateReleaseFlowResponse> ChannelCreateReleaseFlow(ChannelCreateReleaseFlowRequest req)
+        {
+             JsonResponseModel<ChannelCreateReleaseFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateReleaseFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateReleaseFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道版发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
+        /// 合同发起人必须在电子签已经进行实名。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateReleaseFlowRequest"/></param>
+        /// <returns><see cref="ChannelCreateReleaseFlowResponse"/></returns>
+        public ChannelCreateReleaseFlowResponse ChannelCreateReleaseFlowSync(ChannelCreateReleaseFlowRequest req)
+        {
+             JsonResponseModel<ChannelCreateReleaseFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateReleaseFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateReleaseFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询企业员工列表
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeEmployeesRequest"/></param>

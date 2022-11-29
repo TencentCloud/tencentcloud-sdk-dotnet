@@ -48,6 +48,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
+        /// <summary>
+        /// 是否需要返回目的地域的镜像ID。
+        /// </summary>
+        [JsonProperty("ImageSetRequired")]
+        public bool? ImageSetRequired{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "DestinationRegions.", this.DestinationRegions);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
+            this.SetParamSimple(map, prefix + "ImageSetRequired", this.ImageSetRequired);
         }
     }
 }

@@ -162,6 +162,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
+        /// <summary>
+        /// 是否是 lora 设备
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsLora")]
+        public bool? IsLora{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +195,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamSimple(map, prefix + "IsLora", this.IsLora);
         }
     }
 }

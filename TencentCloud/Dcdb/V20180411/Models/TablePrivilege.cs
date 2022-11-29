@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyCDBProxyResponse : AbstractModel
+    public class TablePrivilege : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 数据库名
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Database")]
+        public string Database{ get; set; }
+
+        /// <summary>
+        /// 数据库表名
+        /// </summary>
+        [JsonProperty("Table")]
+        public string Table{ get; set; }
+
+        /// <summary>
+        /// 权限信息
+        /// </summary>
+        [JsonProperty("Privileges")]
+        public string[] Privileges{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Database", this.Database);
+            this.SetParamSimple(map, prefix + "Table", this.Table);
+            this.SetParamArraySimple(map, prefix + "Privileges.", this.Privileges);
         }
     }
 }

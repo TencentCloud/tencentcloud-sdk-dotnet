@@ -133,7 +133,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public Cache Cache{ get; set; }
 
         /// <summary>
-        /// 跨国链路优化配置
+        /// 跨国链路优化配置（已下线）
         /// </summary>
         [JsonProperty("OriginPullOptimization")]
         public OriginPullOptimization OriginPullOptimization{ get; set; }

@@ -60,6 +60,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("ShowIpv6")]
         public bool? ShowIpv6{ get; set; }
 
+        /// <summary>
+        /// 是否对IPV6进行缩写。
+        /// </summary>
+        [JsonProperty("AbbreviationIpv6")]
+        public bool? AbbreviationIpv6{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,6 +77,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Segment", this.Segment);
             this.SetParamSimple(map, prefix + "ShowIpv6", this.ShowIpv6);
+            this.SetParamSimple(map, prefix + "AbbreviationIpv6", this.AbbreviationIpv6);
         }
     }
 }

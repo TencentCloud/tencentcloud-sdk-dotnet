@@ -43,7 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 查询信息类型，为0时不返回授权用户，为1时返回
+        /// 查询信息类型，为1时返回授权用户，为其他值时不返回
         /// </summary>
         [JsonProperty("InfoType")]
         public long? InfoType{ get; set; }

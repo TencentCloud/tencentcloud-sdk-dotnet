@@ -33,6 +33,8 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 是否自动续费，默认为否。
+        /// <li>true：是</li>
+        /// <li>false：否</li>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public bool? RenewFlag{ get; set; }

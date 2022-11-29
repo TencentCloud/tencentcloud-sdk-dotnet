@@ -71,6 +71,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("StatefulSetCondition")]
         public StatefulSetCondition[] StatefulSetCondition{ get; set; }
 
+        /// <summary>
+        /// 工作负载历史的状况信息
+        /// </summary>
+        [JsonProperty("Conditions")]
+        public StatefulSetCondition[] Conditions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +90,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "UnavailableReplicas", this.UnavailableReplicas);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "StatefulSetCondition.", this.StatefulSetCondition);
+            this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
         }
     }
 }

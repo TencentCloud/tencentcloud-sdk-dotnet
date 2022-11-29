@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string ParamValueType{ get; set; }
 
         /// <summary>
-        /// 参数值 单位。参数没有单位是，该字段返回空
+        /// 参数值 单位。参数没有单位时，该字段返回空
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
@@ -70,18 +70,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// 枚举类型参数，取值范围
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("EnumValue")]
-        public string[] EnumValue{ get; set; }
-
-        /// <summary>
         /// 数值类型（integer、real）参数，取值下界
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Max")]
         public float? Max{ get; set; }
+
+        /// <summary>
+        /// 枚举类型参数，取值范围
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnumValue")]
+        public string[] EnumValue{ get; set; }
 
         /// <summary>
         /// 数值类型（integer、real）参数，取值上界
@@ -146,6 +146,27 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("LastModifyTime")]
         public string LastModifyTime{ get; set; }
 
+        /// <summary>
+        /// 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StandbyRelated")]
+        public long? StandbyRelated{ get; set; }
+
+        /// <summary>
+        /// 参数版本关联信息，存储具体内核版本下的具体参数信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VersionRelationSet")]
+        public ParamVersionRelation[] VersionRelationSet{ get; set; }
+
+        /// <summary>
+        /// 参数规格关联信息，存储具体规格下具体的参数信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpecRelationSet")]
+        public ParamSpecRelation[] SpecRelationSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,8 +179,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
             this.SetParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
             this.SetParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
-            this.SetParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
             this.SetParamSimple(map, prefix + "Max", this.Max);
+            this.SetParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
             this.SetParamSimple(map, prefix + "Min", this.Min);
             this.SetParamSimple(map, prefix + "ParamDescriptionCH", this.ParamDescriptionCH);
             this.SetParamSimple(map, prefix + "ParamDescriptionEN", this.ParamDescriptionEN);
@@ -169,6 +190,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "SpecRelated", this.SpecRelated);
             this.SetParamSimple(map, prefix + "Advanced", this.Advanced);
             this.SetParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
+            this.SetParamSimple(map, prefix + "StandbyRelated", this.StandbyRelated);
+            this.SetParamArrayObj(map, prefix + "VersionRelationSet.", this.VersionRelationSet);
+            this.SetParamArrayObj(map, prefix + "SpecRelationSet.", this.SpecRelationSet);
         }
     }
 }

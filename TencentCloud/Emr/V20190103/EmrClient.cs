@@ -255,7 +255,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 预付费集群隔离后续费资源查询
+        /// 查询待续费节点信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRenewNodesRequest"/></param>
         /// <returns><see cref="DescribeInstanceRenewNodesResponse"/></returns>
@@ -275,7 +275,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 预付费集群隔离后续费资源查询
+        /// 查询待续费节点信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRenewNodesRequest"/></param>
         /// <returns><see cref="DescribeInstanceRenewNodesResponse"/></returns>
@@ -295,7 +295,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 查询EMR实例
+        /// 查询集群实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -315,7 +315,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 查询EMR实例
+        /// 查询集群实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -335,7 +335,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// EMR集群实例列表查询
+        /// 查询集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesListRequest"/></param>
         /// <returns><see cref="DescribeInstancesListResponse"/></returns>
@@ -355,7 +355,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// EMR集群实例列表查询
+        /// 查询集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesListRequest"/></param>
         /// <returns><see cref="DescribeInstancesListResponse"/></returns>
@@ -415,7 +415,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 获取yarn资源调度页面的数据
+        /// 查询YARN资源调度数据信息
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
         /// <returns><see cref="DescribeResourceScheduleResponse"/></returns>
@@ -435,7 +435,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 获取yarn资源调度页面的数据
+        /// 查询YARN资源调度数据信息
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
         /// <returns><see cref="DescribeResourceScheduleResponse"/></returns>
@@ -697,7 +697,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 刷新动态资源池
+        /// 刷新YARN的动态资源池
         /// </summary>
         /// <param name="req"><see cref="ModifyResourcePoolsRequest"/></param>
         /// <returns><see cref="ModifyResourcePoolsResponse"/></returns>
@@ -717,7 +717,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 刷新动态资源池
+        /// 刷新YARN的动态资源池
         /// </summary>
         /// <param name="req"><see cref="ModifyResourcePoolsRequest"/></param>
         /// <returns><see cref="ModifyResourcePoolsResponse"/></returns>
