@@ -49,16 +49,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Component[] Components{ get; set; }
 
         /// <summary>
-        /// 签署区模板信息结构
-        /// </summary>
-        [JsonProperty("SignComponents")]
-        public Component[] SignComponents{ get; set; }
-
-        /// <summary>
         /// 模板中的流程参与人信息
         /// </summary>
         [JsonProperty("Recipients")]
         public Recipient[] Recipients{ get; set; }
+
+        /// <summary>
+        /// 签署区模板信息结构
+        /// </summary>
+        [JsonProperty("SignComponents")]
+        public Component[] SignComponents{ get; set; }
 
         /// <summary>
         /// 模板类型：1-静默签；3-普通模板
@@ -93,10 +93,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 渠道模板ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelTemplateId")]
         public string ChannelTemplateId{ get; set; }
+
+        /// <summary>
+        /// 渠道版-模板PDF文件链接
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PdfUrl")]
+        public string PdfUrl{ get; set; }
 
 
         /// <summary>
@@ -108,14 +114,15 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
-            this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
             this.SetParamArrayObj(map, prefix + "Recipients.", this.Recipients);
+            this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
             this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
             this.SetParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
             this.SetParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
+            this.SetParamSimple(map, prefix + "PdfUrl", this.PdfUrl);
         }
     }
 }

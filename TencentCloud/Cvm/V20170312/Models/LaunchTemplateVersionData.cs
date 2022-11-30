@@ -137,7 +137,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string UserData{ get; set; }
 
         /// <summary>
-        /// 置放群组id，仅支持指定一个。
+        /// 置放群组ID，仅支持指定一个。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]

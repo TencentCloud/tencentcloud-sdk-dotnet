@@ -115,7 +115,9 @@ namespace TencentCloud.Es.V20180416.Models
         public NodeInfo[] NodeInfoList{ get; set; }
 
         /// <summary>
-        /// 公网访问状态
+        /// ES集群公网访问状态
+        /// OPEN 开启
+        /// CLOSE 关闭
         /// </summary>
         [JsonProperty("PublicAccess")]
         public string PublicAccess{ get; set; }
@@ -128,12 +130,16 @@ namespace TencentCloud.Es.V20180416.Models
 
         /// <summary>
         /// Kibana公网访问状态
+        /// OPEN 开启
+        /// CLOSE 关闭
         /// </summary>
         [JsonProperty("KibanaPublicAccess")]
         public string KibanaPublicAccess{ get; set; }
 
         /// <summary>
         /// Kibana内网访问状态
+        /// OPEN 开启
+        /// CLOSE 关闭
         /// </summary>
         [JsonProperty("KibanaPrivateAccess")]
         public string KibanaPrivateAccess{ get; set; }
@@ -194,12 +200,16 @@ namespace TencentCloud.Es.V20180416.Models
 
         /// <summary>
         /// Cerebro公网访问状态
+        /// OPEN 开启
+        /// CLOSE 关闭
         /// </summary>
         [JsonProperty("CerebroPublicAccess")]
         public string CerebroPublicAccess{ get; set; }
 
         /// <summary>
         /// Cerebro内网访问状态
+        /// OPEN 开启
+        /// CLOSE 关闭
         /// </summary>
         [JsonProperty("CerebroPrivateAccess")]
         public string CerebroPrivateAccess{ get; set; }
@@ -217,7 +227,9 @@ namespace TencentCloud.Es.V20180416.Models
         public OperationDurationUpdated OperationDuration{ get; set; }
 
         /// <summary>
-        /// 是否开启Altering 外网告警输出
+        /// 是否开启Alerting 外网告警输出：
+        /// OPEN 开启
+        /// CLOSE 关闭
         /// </summary>
         [JsonProperty("KibanaAlteringPublicAccess")]
         public string KibanaAlteringPublicAccess{ get; set; }

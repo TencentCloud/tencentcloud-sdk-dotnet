@@ -78,6 +78,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("WithPreviewUrl")]
         public bool? WithPreviewUrl{ get; set; }
 
+        /// <summary>
+        /// 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
+        /// </summary>
+        [JsonProperty("WithPdfUrl")]
+        public bool? WithPdfUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
+            this.SetParamSimple(map, prefix + "WithPdfUrl", this.WithPdfUrl);
         }
     }
 }

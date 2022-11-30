@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// 专用宿主机实例id
+        /// 专用宿主机实例ID
         /// </summary>
         [JsonProperty("HostId")]
         public string HostId{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string HostState{ get; set; }
 
         /// <summary>
-        /// 专用宿主机实例ip
+        /// 专用宿主机实例IP
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }

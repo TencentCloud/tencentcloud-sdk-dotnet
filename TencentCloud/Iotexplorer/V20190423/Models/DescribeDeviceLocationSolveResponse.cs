@@ -31,7 +31,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public float? Longitude{ get; set; }
 
         /// <summary>
-        /// 维度
+        /// 纬度
         /// </summary>
         [JsonProperty("Latitude")]
         public float? Latitude{ get; set; }

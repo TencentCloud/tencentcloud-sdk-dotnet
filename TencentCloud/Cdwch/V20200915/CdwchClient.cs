@@ -213,6 +213,46 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
+        /// 购买页拉取集群的数据节点和zookeeper节点的规格列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpecRequest"/></param>
+        /// <returns><see cref="DescribeSpecResponse"/></returns>
+        public async Task<DescribeSpecResponse> DescribeSpec(DescribeSpecRequest req)
+        {
+             JsonResponseModel<DescribeSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 购买页拉取集群的数据节点和zookeeper节点的规格列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpecRequest"/></param>
+        /// <returns><see cref="DescribeSpecResponse"/></returns>
+        public DescribeSpecResponse DescribeSpecSync(DescribeSpecRequest req)
+        {
+             JsonResponseModel<DescribeSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在集群配置页面修改集群配置文件接口，xml模式
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterConfigsRequest"/></param>

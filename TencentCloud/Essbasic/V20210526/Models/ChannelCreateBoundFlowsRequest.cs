@@ -38,7 +38,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
+        /// 暂未开放
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }

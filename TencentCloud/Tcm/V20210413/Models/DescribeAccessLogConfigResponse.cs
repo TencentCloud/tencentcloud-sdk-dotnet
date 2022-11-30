@@ -37,7 +37,7 @@ namespace TencentCloud.Tcm.V20210413.Models
         public string Format{ get; set; }
 
         /// <summary>
-        /// 访问日志输出编码。默认 “TEXT”。除此之外还有“JSON”
+        /// 访问日志输出编码，可取值为 "TEXT" 或 "JSON"，默认 TEXT"
         /// </summary>
         [JsonProperty("Encoding")]
         public string Encoding{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Tcm.V20210413.Models
         public SelectedRange SelectedRange{ get; set; }
 
         /// <summary>
-        /// 采用的模板，可取值为"istio, trace，默认为istio
+        /// 采用的模板，可取值为"istio" 或 "trace"，默认为"istio"
         /// </summary>
         [JsonProperty("Template")]
         public string Template{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 用户在渠道的编号，最大64位字符串
+        /// 渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
-        /// 用户的来源渠道
+        /// 内部参数，暂未开放使用
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
 
         /// <summary>
-        /// 自定义用户编号
+        /// 内部参数，暂未开放使用
         /// </summary>
         [JsonProperty("CustomUserId")]
         public string CustomUserId{ get; set; }
 
         /// <summary>
-        /// 用户真实IP
+        /// 内部参数，暂未开放使用
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }
 
         /// <summary>
-        /// 用户代理IP
+        /// 内部参数，暂未开放使用
         /// </summary>
         [JsonProperty("ProxyIp")]
         public string ProxyIp{ get; set; }

@@ -631,6 +631,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口(DescribeAllScenes)用于查询全地域使用场景列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllScenesRequest"/></param>
+        /// <returns><see cref="DescribeAllScenesResponse"/></returns>
+        public async Task<DescribeAllScenesResponse> DescribeAllScenes(DescribeAllScenesRequest req)
+        {
+             JsonResponseModel<DescribeAllScenesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAllScenes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllScenesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAllScenes)用于查询全地域使用场景列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllScenesRequest"/></param>
+        /// <returns><see cref="DescribeAllScenesResponse"/></returns>
+        public DescribeAllScenesResponse DescribeAllScenesSync(DescribeAllScenesRequest req)
+        {
+             JsonResponseModel<DescribeAllScenesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAllScenes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllScenesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeBlueprintInstances）用于查询镜像实例信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeBlueprintInstancesRequest"/></param>
@@ -1616,6 +1656,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DescribeResetInstanceBlueprints");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResetInstanceBlueprintsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeScenes)用于查看使用场景列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScenesRequest"/></param>
+        /// <returns><see cref="DescribeScenesResponse"/></returns>
+        public async Task<DescribeScenesResponse> DescribeScenes(DescribeScenesRequest req)
+        {
+             JsonResponseModel<DescribeScenesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScenes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScenesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeScenes)用于查看使用场景列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScenesRequest"/></param>
+        /// <returns><see cref="DescribeScenesResponse"/></returns>
+        public DescribeScenesResponse DescribeScenesSync(DescribeScenesRequest req)
+        {
+             JsonResponseModel<DescribeScenesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScenes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScenesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -43,7 +43,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public string[] HostIds{ get; set; }
 
         /// <summary>
-        /// 指定母机ip生产子机
+        /// 指定母机IP生产子机
         /// </summary>
         [JsonProperty("HostIps")]
         public string[] HostIps{ get; set; }

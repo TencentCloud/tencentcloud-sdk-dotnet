@@ -31,13 +31,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 印章名称，最大长度不超过30字符
+        /// 印章名称，最大长度不超过50字符
         /// </summary>
         [JsonProperty("SealName")]
         public string SealName{ get; set; }
 
         /// <summary>
-        /// 印章图片base64
+        /// 印章图片base64，大小不超过10M（原始图片不超过7.6M）
         /// </summary>
         [JsonProperty("SealImage")]
         public string SealImage{ get; set; }

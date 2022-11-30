@@ -59,7 +59,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Sysprep{ get; set; }
 
         /// <summary>
-        /// 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
+        /// 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
         /// </summary>
         [JsonProperty("DataDiskIds")]
         public string[] DataDiskIds{ get; set; }

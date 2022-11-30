@@ -25,13 +25,13 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 专用宿主机实例总cpu核数
+        /// 专用宿主机实例总CPU核数
         /// </summary>
         [JsonProperty("CpuTotal")]
         public ulong? CpuTotal{ get; set; }
 
         /// <summary>
-        /// 专用宿主机实例可用cpu核数
+        /// 专用宿主机实例可用CPU核数
         /// </summary>
         [JsonProperty("CpuAvailable")]
         public ulong? CpuAvailable{ get; set; }

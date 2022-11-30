@@ -64,7 +64,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Resolution{ get; set; }
 
         /// <summary>
-        /// 最大连麦人数（不包括老师）。取值范围[0, 17)
+        /// 最大连麦人数（不包括老师）。取值范围[0, 16]
         /// </summary>
         [JsonProperty("MaxMicNumber")]
         public ulong? MaxMicNumber{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.651</VersionPrefix>
+    <VersionPrefix>3.0.652</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -80,6 +80,8 @@
     <Compile Include="V20200324\Models\DeleteSnapshotsRequest.cs" />
     <Compile Include="V20200324\Models\DeleteSnapshotsResponse.cs" />
     <Compile Include="V20200324\Models\DeniedAction.cs" />
+    <Compile Include="V20200324\Models\DescribeAllScenesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeAllScenesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeBlueprintInstancesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeBlueprintInstancesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeBlueprintsRequest.cs" />
@@ -128,6 +130,8 @@
     <Compile Include="V20200324\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20200324\Models\DescribeResetInstanceBlueprintsRequest.cs" />
     <Compile Include="V20200324\Models\DescribeResetInstanceBlueprintsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeScenesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeScenesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeSnapshotsDeniedActionsRequest.cs" />
     <Compile Include="V20200324\Models\DescribeSnapshotsDeniedActionsResponse.cs" />
     <Compile Include="V20200324\Models\DescribeSnapshotsRequest.cs" />
@@ -216,6 +220,8 @@
     <Compile Include="V20200324\Models\ResetInstanceResponse.cs" />
     <Compile Include="V20200324\Models\ResetInstancesPasswordRequest.cs" />
     <Compile Include="V20200324\Models\ResetInstancesPasswordResponse.cs" />
+    <Compile Include="V20200324\Models\Scene.cs" />
+    <Compile Include="V20200324\Models\SceneInfo.cs" />
     <Compile Include="V20200324\Models\Snapshot.cs" />
     <Compile Include="V20200324\Models\SnapshotDeniedActions.cs" />
     <Compile Include="V20200324\Models\Software.cs" />

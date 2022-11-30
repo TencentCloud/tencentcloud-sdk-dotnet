@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 支付类型，PrePay：包年包月  PostPay：按时按量
+        /// 付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
@@ -61,31 +61,31 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Specification{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 标签信息
         /// </summary>
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
 
         /// <summary>
-        /// 同步任务数量
+        /// 一次购买的同步任务数量，取值范围为[1, 10]，默认为1
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 自动续费标识
+        /// 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费，默认为此值）
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
 
         /// <summary>
-        /// 同步链路规格
+        /// 同步链路规格，如micro,small,medium,large，默认为medium
         /// </summary>
         [JsonProperty("InstanceClass")]
         public string InstanceClass{ get; set; }
 
         /// <summary>
-        /// 同步链路名称
+        /// 同步任务名称
         /// </summary>
         [JsonProperty("JobName")]
         public string JobName{ get; set; }

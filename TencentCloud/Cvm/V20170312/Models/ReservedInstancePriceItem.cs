@@ -62,8 +62,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? Duration{ get; set; }
 
         /// <summary>
-        /// 预留实例计费的平台描述（即操作系统）。形如：linux。
-        /// 返回项： linux 。
+        /// 预留实例计费的平台描述（即操作系统）。形如：Linux。
+        /// 返回项： Linux 。
         /// </summary>
         [JsonProperty("ProductDescription")]
         public string ProductDescription{ get; set; }
