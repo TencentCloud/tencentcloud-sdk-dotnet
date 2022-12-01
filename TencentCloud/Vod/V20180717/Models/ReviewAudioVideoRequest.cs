@@ -37,6 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
+        /// 音视频审核模板 ID，默认值为 10。取值范围：
+        /// <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
+        /// </summary>
+        [JsonProperty("Definition")]
+        public ulong? Definition{ get; set; }
+
+        /// <summary>
         /// 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
         /// </summary>
         [JsonProperty("TasksPriority")]
@@ -68,6 +75,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);

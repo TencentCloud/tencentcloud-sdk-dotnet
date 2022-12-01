@@ -30,6 +30,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
+        /// <summary>
+        /// 音视频审核模板 ID。
+        /// </summary>
+        [JsonProperty("Definition")]
+        public ulong? Definition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
         }
     }
 }
