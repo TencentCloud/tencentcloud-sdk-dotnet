@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.653</VersionPrefix>
+    <VersionPrefix>3.0.654</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,6 +97,8 @@
     <Compile Include="V20180525\Models\CreateClusterNodePoolFromExistingAsgResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterReleaseRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterReleaseResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterRouteRequest.cs" />
@@ -438,6 +440,7 @@
     <Compile Include="V20180525\Models\NodePool.cs" />
     <Compile Include="V20180525\Models\NodePoolOption.cs" />
     <Compile Include="V20180525\Models\OIDCConfigAuthenticationOptions.cs" />
+    <Compile Include="V20180525\Models\PendingRelease.cs" />
     <Compile Include="V20180525\Models\PodLimitsByType.cs" />
     <Compile Include="V20180525\Models\PodLimitsInstance.cs" />
     <Compile Include="V20180525\Models\Probe.cs" />
@@ -465,6 +468,7 @@
     <Compile Include="V20180525\Models\PrometheusTemplateModify.cs" />
     <Compile Include="V20180525\Models\PrometheusTemplateSyncTarget.cs" />
     <Compile Include="V20180525\Models\RegionInstance.cs" />
+    <Compile Include="V20180525\Models\ReleaseValues.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\ResourceDeleteOption.cs" />

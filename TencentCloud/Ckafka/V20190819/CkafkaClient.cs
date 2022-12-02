@@ -493,6 +493,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 创建按量计费实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstancePostRequest"/></param>
+        /// <returns><see cref="CreateInstancePostResponse"/></returns>
+        public async Task<CreateInstancePostResponse> CreateInstancePost(CreateInstancePostRequest req)
+        {
+             JsonResponseModel<CreateInstancePostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInstancePost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancePostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建按量计费实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstancePostRequest"/></param>
+        /// <returns><see cref="CreateInstancePostResponse"/></returns>
+        public CreateInstancePostResponse CreateInstancePostSync(CreateInstancePostRequest req)
+        {
+             JsonResponseModel<CreateInstancePostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInstancePost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancePostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建实例(预付费包年包月)
         /// </summary>
         /// <param name="req"><see cref="CreateInstancePreRequest"/></param>
@@ -2326,6 +2366,46 @@ namespace TencentCloud.Ckafka.V20190819
              {
                  var strResp = this.InternalRequestSync(req, "FetchMessageListByOffset");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageListByOffsetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Ckafka实例购买/续费询价
+        /// </summary>
+        /// <param name="req"><see cref="InquireCkafkaPriceRequest"/></param>
+        /// <returns><see cref="InquireCkafkaPriceResponse"/></returns>
+        public async Task<InquireCkafkaPriceResponse> InquireCkafkaPrice(InquireCkafkaPriceRequest req)
+        {
+             JsonResponseModel<InquireCkafkaPriceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquireCkafkaPrice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquireCkafkaPriceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Ckafka实例购买/续费询价
+        /// </summary>
+        /// <param name="req"><see cref="InquireCkafkaPriceRequest"/></param>
+        /// <returns><see cref="InquireCkafkaPriceResponse"/></returns>
+        public InquireCkafkaPriceResponse InquireCkafkaPriceSync(InquireCkafkaPriceRequest req)
+        {
+             JsonResponseModel<InquireCkafkaPriceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquireCkafkaPrice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquireCkafkaPriceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

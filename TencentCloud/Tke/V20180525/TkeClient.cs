@@ -573,6 +573,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 在应用市场中集群创建应用
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterReleaseRequest"/></param>
+        /// <returns><see cref="CreateClusterReleaseResponse"/></returns>
+        public async Task<CreateClusterReleaseResponse> CreateClusterRelease(CreateClusterReleaseRequest req)
+        {
+             JsonResponseModel<CreateClusterReleaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClusterRelease");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterReleaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在应用市场中集群创建应用
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterReleaseRequest"/></param>
+        /// <returns><see cref="CreateClusterReleaseResponse"/></returns>
+        public CreateClusterReleaseResponse CreateClusterReleaseSync(CreateClusterReleaseRequest req)
+        {
+             JsonResponseModel<CreateClusterReleaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateClusterRelease");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterReleaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建集群路由
         /// </summary>
         /// <param name="req"><see cref="CreateClusterRouteRequest"/></param>

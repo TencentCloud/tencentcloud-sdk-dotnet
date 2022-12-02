@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.653</VersionPrefix>
+    <VersionPrefix>3.0.654</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -93,6 +93,8 @@
     <Compile Include="V20190819\Models\CreateDatahubTaskRequest.cs" />
     <Compile Include="V20190819\Models\CreateDatahubTaskRes.cs" />
     <Compile Include="V20190819\Models\CreateDatahubTaskResponse.cs" />
+    <Compile Include="V20190819\Models\CreateInstancePostRequest.cs" />
+    <Compile Include="V20190819\Models\CreateInstancePostResponse.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreData.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreRequest.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreResp.cs" />
@@ -225,8 +227,17 @@
     <Compile Include="V20190819\Models\GroupOffsetResponse.cs" />
     <Compile Include="V20190819\Models\GroupOffsetTopic.cs" />
     <Compile Include="V20190819\Models\GroupResponse.cs" />
+    <Compile Include="V20190819\Models\InquireCkafkaPriceRequest.cs" />
+    <Compile Include="V20190819\Models\InquireCkafkaPriceResp.cs" />
+    <Compile Include="V20190819\Models\InquireCkafkaPriceResponse.cs" />
+    <Compile Include="V20190819\Models\InquiryBasePrice.cs" />
+    <Compile Include="V20190819\Models\InquiryDetailPrice.cs" />
+    <Compile Include="V20190819\Models\InquiryDiskParam.cs" />
+    <Compile Include="V20190819\Models\InquiryPrice.cs" />
+    <Compile Include="V20190819\Models\InquiryPublicNetworkParam.cs" />
     <Compile Include="V20190819\Models\Instance.cs" />
     <Compile Include="V20190819\Models\InstanceAttributesResponse.cs" />
+    <Compile Include="V20190819\Models\InstanceChargeParam.cs" />
     <Compile Include="V20190819\Models\InstanceConfigDO.cs" />
     <Compile Include="V20190819\Models\InstanceDetail.cs" />
     <Compile Include="V20190819\Models\InstanceDetailResponse.cs" />
