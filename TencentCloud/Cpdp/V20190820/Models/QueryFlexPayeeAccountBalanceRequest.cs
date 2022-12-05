@@ -48,6 +48,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Environment")]
         public string Environment{ get; set; }
 
+        /// <summary>
+        /// 快照日期。格式yyyy-MM-dd
+        /// </summary>
+        [JsonProperty("SnapshotDate")]
+        public string SnapshotDate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -57,6 +63,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "PayeeId", this.PayeeId);
             this.SetParamSimple(map, prefix + "IncomeType", this.IncomeType);
             this.SetParamSimple(map, prefix + "Environment", this.Environment);
+            this.SetParamSimple(map, prefix + "SnapshotDate", this.SnapshotDate);
         }
     }
 }

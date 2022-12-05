@@ -138,6 +138,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 备份文件是否加密， on-加密， off-未加密
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EncryptionFlag")]
+        public string EncryptionFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +170,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
             this.SetParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "EncryptionFlag", this.EncryptionFlag);
         }
     }
 }

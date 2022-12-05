@@ -26,6 +26,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
         
         /// <summary>
         /// 转账类型
+        /// 1 微信企业付款 
+        /// 2 支付宝转账 
+        /// 3 平安银企直连代发转账
         /// </summary>
         [JsonProperty("TransferType")]
         public ulong? TransferType{ get; set; }

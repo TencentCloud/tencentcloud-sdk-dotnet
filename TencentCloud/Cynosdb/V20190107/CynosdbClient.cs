@@ -2333,6 +2333,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口(ResetAccountPassword)用于重置实例的数据库账号密码。
+        /// </summary>
+        /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetAccountPasswordResponse"/></returns>
+        public async Task<ResetAccountPasswordResponse> ResetAccountPassword(ResetAccountPasswordRequest req)
+        {
+             JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetAccountPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAccountPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ResetAccountPassword)用于重置实例的数据库账号密码。
+        /// </summary>
+        /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetAccountPasswordResponse"/></returns>
+        public ResetAccountPasswordResponse ResetAccountPasswordSync(ResetAccountPasswordRequest req)
+        {
+             JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetAccountPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAccountPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 恢复serverless集群
         /// </summary>
         /// <param name="req"><see cref="ResumeServerlessRequest"/></param>
@@ -2453,6 +2493,86 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口(SearchClusterDatabases)搜索集群database列表
+        /// </summary>
+        /// <param name="req"><see cref="SearchClusterDatabasesRequest"/></param>
+        /// <returns><see cref="SearchClusterDatabasesResponse"/></returns>
+        public async Task<SearchClusterDatabasesResponse> SearchClusterDatabases(SearchClusterDatabasesRequest req)
+        {
+             JsonResponseModel<SearchClusterDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchClusterDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchClusterDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(SearchClusterDatabases)搜索集群database列表
+        /// </summary>
+        /// <param name="req"><see cref="SearchClusterDatabasesRequest"/></param>
+        /// <returns><see cref="SearchClusterDatabasesResponse"/></returns>
+        public SearchClusterDatabasesResponse SearchClusterDatabasesSync(SearchClusterDatabasesRequest req)
+        {
+             JsonResponseModel<SearchClusterDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchClusterDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchClusterDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(SearchClusterTables)搜索集群数据表列表
+        /// </summary>
+        /// <param name="req"><see cref="SearchClusterTablesRequest"/></param>
+        /// <returns><see cref="SearchClusterTablesResponse"/></returns>
+        public async Task<SearchClusterTablesResponse> SearchClusterTables(SearchClusterTablesRequest req)
+        {
+             JsonResponseModel<SearchClusterTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchClusterTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchClusterTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(SearchClusterTables)搜索集群数据表列表
+        /// </summary>
+        /// <param name="req"><see cref="SearchClusterTablesRequest"/></param>
+        /// <returns><see cref="SearchClusterTablesResponse"/></returns>
+        public SearchClusterTablesResponse SearchClusterTablesSync(SearchClusterTablesRequest req)
+        {
+             JsonResponseModel<SearchClusterTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchClusterTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchClusterTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// SetRenewFlag设置实例的自动续费功能
         /// </summary>
         /// <param name="req"><see cref="SetRenewFlagRequest"/></param>
@@ -2524,6 +2644,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "SwitchClusterZone");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchClusterZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(SwitchProxyVpc)更换数据库代理vpc
+        /// </summary>
+        /// <param name="req"><see cref="SwitchProxyVpcRequest"/></param>
+        /// <returns><see cref="SwitchProxyVpcResponse"/></returns>
+        public async Task<SwitchProxyVpcResponse> SwitchProxyVpc(SwitchProxyVpcRequest req)
+        {
+             JsonResponseModel<SwitchProxyVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchProxyVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchProxyVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(SwitchProxyVpc)更换数据库代理vpc
+        /// </summary>
+        /// <param name="req"><see cref="SwitchProxyVpcRequest"/></param>
+        /// <returns><see cref="SwitchProxyVpcResponse"/></returns>
+        public SwitchProxyVpcResponse SwitchProxyVpcSync(SwitchProxyVpcRequest req)
+        {
+             JsonResponseModel<SwitchProxyVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchProxyVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchProxyVpcResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

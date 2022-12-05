@@ -178,6 +178,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("TmpToken")]
         public string TmpToken{ get; set; }
 
+        /// <summary>
+        /// 外部角色id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RoleExternalId")]
+        public string RoleExternalId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +213,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
             this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
             this.SetParamSimple(map, prefix + "TmpToken", this.TmpToken);
+            this.SetParamSimple(map, prefix + "RoleExternalId", this.RoleExternalId);
         }
     }
 }

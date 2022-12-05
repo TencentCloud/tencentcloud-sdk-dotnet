@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 同步任务id
+        /// 同步任务id，如sync-werwfs23
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

@@ -60,6 +60,13 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("DelayOnRetry")]
         public ulong? DelayOnRetry{ get; set; }
 
+        /// <summary>
+        /// Docker命令运行参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DockerRunOption")]
+        public string DockerRunOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "Server", this.Server);
             this.SetParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
             this.SetParamSimple(map, prefix + "DelayOnRetry", this.DelayOnRetry);
+            this.SetParamSimple(map, prefix + "DockerRunOption", this.DockerRunOption);
         }
     }
 }

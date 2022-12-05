@@ -25,7 +25,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// 是否为付费用户
+        /// 是否为付费用户，true：付费用户， false：普通用户
         /// </summary>
         [JsonProperty("IsPaidUsr")]
         public bool? IsPaidUsr{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 来自 [腾讯云控制台](https://console.cloud.tencent.com/gamegme) 的 GME 服务提供的 AppID，获取请参考 [语音服务开通指引](https://cloud.tencent.com/document/product/607/10782#.E9.87.8D.E7.82.B9.E5.8F.82.E6.95.B0)。
         /// </summary>
         [JsonProperty("BizId")]
         public long? BizId{ get; set; }
 
         /// <summary>
-        /// 房间ID
+        /// 实时语音房间号。
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 用户麦克风状态，数组长度不超过20
+        /// 需要操作的房间内用户以及该用户的目标麦克风状态。
         /// </summary>
         [JsonProperty("Users")]
         public UserMicStatus[] Users{ get; set; }

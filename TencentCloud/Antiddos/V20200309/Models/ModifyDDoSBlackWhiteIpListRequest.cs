@@ -31,7 +31,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 当前黑名单类型，取值black时黑名单；取值white时白名单
+        /// 当前配置的黑白名单类型，取值black时表示黑名单；取值white时表示白名单
         /// </summary>
         [JsonProperty("OldIpType")]
         public string OldIpType{ get; set; }

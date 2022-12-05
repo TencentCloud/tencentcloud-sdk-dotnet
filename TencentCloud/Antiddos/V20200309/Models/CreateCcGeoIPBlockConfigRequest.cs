@@ -49,7 +49,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// CC区域封禁配置，填写参数时配置ID请为空
+        /// CC区域封禁配置
         /// </summary>
         [JsonProperty("CcGeoIPBlockConfig")]
         public CcGeoIPBlockConfig CcGeoIPBlockConfig{ get; set; }

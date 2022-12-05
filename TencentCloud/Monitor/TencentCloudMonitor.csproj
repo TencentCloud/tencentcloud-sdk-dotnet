@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.654</VersionPrefix>
+    <VersionPrefix>3.0.655</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -223,6 +223,8 @@
     <Compile Include="V20180724\Models\DescribePrometheusInstancesResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusScrapeJobsRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusScrapeJobsResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusZonesRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusZonesResponse.cs" />
     <Compile Include="V20180724\Models\DescribeRecordingRulesRequest.cs" />
     <Compile Include="V20180724\Models\DescribeRecordingRulesResponse.cs" />
     <Compile Include="V20180724\Models\DescribeSSOAccountRequest.cs" />
@@ -309,6 +311,7 @@
     <Compile Include="V20180724\Models\PrometheusRuleSet.cs" />
     <Compile Include="V20180724\Models\PrometheusScrapeJob.cs" />
     <Compile Include="V20180724\Models\PrometheusTag.cs" />
+    <Compile Include="V20180724\Models\PrometheusZoneItem.cs" />
     <Compile Include="V20180724\Models\PutMonitorDataRequest.cs" />
     <Compile Include="V20180724\Models\PutMonitorDataResponse.cs" />
     <Compile Include="V20180724\Models\ReceiverInfo.cs" />

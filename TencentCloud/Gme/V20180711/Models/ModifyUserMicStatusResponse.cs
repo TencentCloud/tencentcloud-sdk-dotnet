@@ -25,13 +25,13 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 返回结果：0为成功，非0为失败
+        /// 返回结果：0为成功，非0为失败。
         /// </summary>
         [JsonProperty("Result")]
         public long? Result{ get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// 错误信息。
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }

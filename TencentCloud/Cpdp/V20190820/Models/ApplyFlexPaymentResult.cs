@@ -48,6 +48,34 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Tax")]
         public string Tax{ get; set; }
 
+        /// <summary>
+        /// 增值税
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Vat")]
+        public string Vat{ get; set; }
+
+        /// <summary>
+        /// 个人所得税
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndividualIncomeTax")]
+        public string IndividualIncomeTax{ get; set; }
+
+        /// <summary>
+        /// 附加税总税额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdditionalTaxSum")]
+        public string AdditionalTaxSum{ get; set; }
+
+        /// <summary>
+        /// 附加税税项。格式为JSON格式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdditionalTaxItem")]
+        public string AdditionalTaxItem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +86,10 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "AmountBeforeTax", this.AmountBeforeTax);
             this.SetParamSimple(map, prefix + "AmountAfterTax", this.AmountAfterTax);
             this.SetParamSimple(map, prefix + "Tax", this.Tax);
+            this.SetParamSimple(map, prefix + "Vat", this.Vat);
+            this.SetParamSimple(map, prefix + "IndividualIncomeTax", this.IndividualIncomeTax);
+            this.SetParamSimple(map, prefix + "AdditionalTaxSum", this.AdditionalTaxSum);
+            this.SetParamSimple(map, prefix + "AdditionalTaxItem", this.AdditionalTaxItem);
         }
     }
 }

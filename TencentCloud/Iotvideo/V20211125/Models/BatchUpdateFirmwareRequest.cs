@@ -72,6 +72,12 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         [JsonProperty("DeviceNames")]
         public string[] DeviceNames{ get; set; }
 
+        /// <summary>
+        /// 固件升级任务默认超时时间。 最小取值60秒，最大为3600秒
+        /// </summary>
+        [JsonProperty("TimeoutInterval")]
+        public long? TimeoutInterval{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "FileMd5", this.FileMd5);
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
             this.SetParamArraySimple(map, prefix + "DeviceNames.", this.DeviceNames);
+            this.SetParamSimple(map, prefix + "TimeoutInterval", this.TimeoutInterval);
         }
     }
 }

@@ -62,6 +62,7 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// 函数所属命名空间
+        /// 默认值: default
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

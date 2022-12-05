@@ -25,13 +25,13 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 用户ID
+        /// 客户端用于标识用户的Openid。
         /// </summary>
         [JsonProperty("Uid")]
         public long? Uid{ get; set; }
 
         /// <summary>
-        /// 是否开麦 。1闭麦  2开麦
+        /// 开麦状态。1表示关闭麦克风，2表示打开麦克风。
         /// </summary>
         [JsonProperty("EnableMic")]
         public long? EnableMic{ get; set; }

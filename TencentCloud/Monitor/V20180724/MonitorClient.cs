@@ -2677,6 +2677,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 列出 Prometheus 服务可用区
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusZonesRequest"/></param>
+        /// <returns><see cref="DescribePrometheusZonesResponse"/></returns>
+        public async Task<DescribePrometheusZonesResponse> DescribePrometheusZones(DescribePrometheusZonesRequest req)
+        {
+             JsonResponseModel<DescribePrometheusZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Prometheus 服务可用区
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusZonesRequest"/></param>
+        /// <returns><see cref="DescribePrometheusZonesResponse"/></returns>
+        public DescribePrometheusZonesResponse DescribePrometheusZonesSync(DescribePrometheusZonesRequest req)
+        {
+             JsonResponseModel<DescribePrometheusZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据条件查询 Prometheus 预聚合规则
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordingRulesRequest"/></param>

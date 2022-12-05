@@ -32,12 +32,14 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// 函数的版本号
+        /// 默认值: $LATEST
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
 
         /// <summary>
         /// 函数所属命名空间
+        /// 默认值: default
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

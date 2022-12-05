@@ -60,7 +60,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string BankAbbreviation{ get; set; }
 
         /// <summary>
-        /// 页码。Index和Count必须大于等于1。
+        /// 页码。Index和Count必须大于等于1。Count建议不超过100。
         /// </summary>
         [JsonProperty("PageNumber")]
         public Paging PageNumber{ get; set; }

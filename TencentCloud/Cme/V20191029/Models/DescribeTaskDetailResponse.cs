@@ -61,7 +61,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 导出项目输出信息。
+        /// 导出项目输出信息。仅当 TaskType 为 VIDEO_EDIT_PROJECT_EXPORT 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoEditProjectOutput")]

@@ -52,6 +52,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("HelpDoc")]
         public string HelpDoc{ get; set; }
 
+        /// <summary>
+        /// 当前步骤跳过信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SkipInfo")]
+        public string SkipInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "Solution", this.Solution);
             this.SetParamSimple(map, prefix + "HelpDoc", this.HelpDoc);
+            this.SetParamSimple(map, prefix + "SkipInfo", this.SkipInfo);
         }
     }
 }

@@ -45,6 +45,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public InstancePriceDetail[] InstancePriceDetailSet{ get; set; }
 
         /// <summary>
+        /// 总计价格。
+        /// </summary>
+        [JsonProperty("TotalPrice")]
+        public TotalPrice TotalPrice{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -59,6 +65,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamObj(map, prefix + "Price.", this.Price);
             this.SetParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
             this.SetParamArrayObj(map, prefix + "InstancePriceDetailSet.", this.InstancePriceDetailSet);
+            this.SetParamObj(map, prefix + "TotalPrice.", this.TotalPrice);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
