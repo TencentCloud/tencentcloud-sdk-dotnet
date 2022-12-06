@@ -43,13 +43,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 统计开始时间
+        /// 防护概览攻击趋势开始时间
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 统计结束时间
+        /// 防护概览攻击趋势结束时间
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

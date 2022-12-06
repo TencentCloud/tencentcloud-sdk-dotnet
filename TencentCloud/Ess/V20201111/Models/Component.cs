@@ -39,10 +39,10 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 如果是SignComponent控件类型，则可选的字段为
         /// SIGN_SEAL - 签署印章控件；
         /// SIGN_DATE - 签署日期控件；
-        /// DATE， 日期控件，默认是格式化为xxxx年xx月xx日
         /// SIGN_SIGNATURE - 用户签名控件；
         /// SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
         /// SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY、ComponentWidth、ComponentHeight
+        /// SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认
         /// 
         /// 表单域的控件不能作为印章和签名控件
         /// </summary>
@@ -50,16 +50,22 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ComponentType{ get; set; }
 
         /// <summary>
-        /// 参数控件宽度，单位pt
+        /// 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
         /// </summary>
-        [JsonProperty("ComponentWidth")]
-        public float? ComponentWidth{ get; set; }
+        [JsonProperty("FileIndex")]
+        public long? FileIndex{ get; set; }
 
         /// <summary>
         /// 参数控件高度，单位pt
         /// </summary>
         [JsonProperty("ComponentHeight")]
         public float? ComponentHeight{ get; set; }
+
+        /// <summary>
+        /// 参数控件宽度，单位pt
+        /// </summary>
+        [JsonProperty("ComponentWidth")]
+        public float? ComponentWidth{ get; set; }
 
         /// <summary>
         /// 参数控件所在页码，取值为：1-N
@@ -80,12 +86,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public float? ComponentPosY{ get; set; }
 
         /// <summary>
-        /// 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
-        /// </summary>
-        [JsonProperty("FileIndex")]
-        public long? FileIndex{ get; set; }
-
-        /// <summary>
         /// GenerateMode==KEYWORD 指定关键字
         /// </summary>
         [JsonProperty("ComponentId")]
@@ -102,6 +102,12 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("ComponentRequired")]
         public bool? ComponentRequired{ get; set; }
+
+        /// <summary>
+        /// 控件关联的签署人ID
+        /// </summary>
+        [JsonProperty("ComponentRecipientId")]
+        public string ComponentRecipientId{ get; set; }
 
         /// <summary>
         /// 扩展参数：
@@ -124,10 +130,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ComponentExtra{ get; set; }
 
         /// <summary>
-        /// 控件关联的签署人ID
+        /// 是否是表单域类型，默认不存在
         /// </summary>
-        [JsonProperty("ComponentRecipientId")]
-        public string ComponentRecipientId{ get; set; }
+        [JsonProperty("IsFormType")]
+        public bool? IsFormType{ get; set; }
 
         /// <summary>
         /// 控件填充vaule，ComponentType和传入值类型对应关系：
@@ -145,12 +151,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ComponentValue{ get; set; }
 
         /// <summary>
-        /// 是否是表单域类型，默认不存在
-        /// </summary>
-        [JsonProperty("IsFormType")]
-        public bool? IsFormType{ get; set; }
-
-        /// <summary>
         /// NORMAL 正常模式，使用坐标制定签署控件位置
         /// FIELD 表单域，需使用ComponentName指定表单域名称
         /// KEYWORD 关键字，使用ComponentId指定关键字
@@ -159,10 +159,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public string GenerateMode{ get; set; }
 
         /// <summary>
-        /// 日期控件类型字号
+        /// 日期签署控件的字号，默认为 12
         /// </summary>
         [JsonProperty("ComponentDateFontSize")]
         public long? ComponentDateFontSize{ get; set; }
+
+        /// <summary>
+        /// 渠道版控件 id 标识
+        /// </summary>
+        [JsonProperty("ChannelComponentId")]
+        public string ChannelComponentId{ get; set; }
 
         /// <summary>
         /// 指定关键字时横坐标偏移量，单位pt
@@ -175,6 +181,12 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("OffsetY")]
         public float? OffsetY{ get; set; }
+
+        /// <summary>
+        /// //渠道子客控件来源。0-渠道指定；1-用户自定义
+        /// </summary>
+        [JsonProperty("ChannelComponentSource")]
+        public ulong? ChannelComponentSource{ get; set; }
 
         /// <summary>
         /// 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
@@ -208,23 +220,25 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ComponentType", this.ComponentType);
-            this.SetParamSimple(map, prefix + "ComponentWidth", this.ComponentWidth);
+            this.SetParamSimple(map, prefix + "FileIndex", this.FileIndex);
             this.SetParamSimple(map, prefix + "ComponentHeight", this.ComponentHeight);
+            this.SetParamSimple(map, prefix + "ComponentWidth", this.ComponentWidth);
             this.SetParamSimple(map, prefix + "ComponentPage", this.ComponentPage);
             this.SetParamSimple(map, prefix + "ComponentPosX", this.ComponentPosX);
             this.SetParamSimple(map, prefix + "ComponentPosY", this.ComponentPosY);
-            this.SetParamSimple(map, prefix + "FileIndex", this.FileIndex);
             this.SetParamSimple(map, prefix + "ComponentId", this.ComponentId);
             this.SetParamSimple(map, prefix + "ComponentName", this.ComponentName);
             this.SetParamSimple(map, prefix + "ComponentRequired", this.ComponentRequired);
-            this.SetParamSimple(map, prefix + "ComponentExtra", this.ComponentExtra);
             this.SetParamSimple(map, prefix + "ComponentRecipientId", this.ComponentRecipientId);
-            this.SetParamSimple(map, prefix + "ComponentValue", this.ComponentValue);
+            this.SetParamSimple(map, prefix + "ComponentExtra", this.ComponentExtra);
             this.SetParamSimple(map, prefix + "IsFormType", this.IsFormType);
+            this.SetParamSimple(map, prefix + "ComponentValue", this.ComponentValue);
             this.SetParamSimple(map, prefix + "GenerateMode", this.GenerateMode);
             this.SetParamSimple(map, prefix + "ComponentDateFontSize", this.ComponentDateFontSize);
+            this.SetParamSimple(map, prefix + "ChannelComponentId", this.ChannelComponentId);
             this.SetParamSimple(map, prefix + "OffsetX", this.OffsetX);
             this.SetParamSimple(map, prefix + "OffsetY", this.OffsetY);
+            this.SetParamSimple(map, prefix + "ChannelComponentSource", this.ChannelComponentSource);
             this.SetParamSimple(map, prefix + "KeywordOrder", this.KeywordOrder);
             this.SetParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
             this.SetParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);

@@ -49,7 +49,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DstRegion{ get; set; }
 
         /// <summary>
-        /// 实例规格，包括：micro、small、medium、large、xlarge、2xlarge
+        /// 实例规格，包括：small、medium、large、xlarge、2xlarge
         /// </summary>
         [JsonProperty("InstanceClass")]
         public string InstanceClass{ get; set; }

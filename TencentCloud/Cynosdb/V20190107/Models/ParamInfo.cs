@@ -91,6 +91,34 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 是否为全局参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsGlobal")]
+        public long? IsGlobal{ get; set; }
+
+        /// <summary>
+        /// 参数是否可修改
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModifiableInfo")]
+        public ModifiableInfo ModifiableInfo{ get; set; }
+
+        /// <summary>
+        /// 是否为函数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsFunc")]
+        public bool? IsFunc{ get; set; }
+
+        /// <summary>
+        /// 函数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Func")]
+        public string Func{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +136,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MatchType", this.MatchType);
             this.SetParamSimple(map, prefix + "MatchValue", this.MatchValue);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
+            this.SetParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
+            this.SetParamSimple(map, prefix + "IsFunc", this.IsFunc);
+            this.SetParamSimple(map, prefix + "Func", this.Func);
         }
     }
 }

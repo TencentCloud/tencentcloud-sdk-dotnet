@@ -293,7 +293,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建特殊采集配置任务
+        /// 本接口用于创建特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
         /// </summary>
         /// <param name="req"><see cref="CreateConfigExtraRequest"/></param>
         /// <returns><see cref="CreateConfigExtraResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建特殊采集配置任务
+        /// 本接口用于创建特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
         /// </summary>
         /// <param name="req"><see cref="CreateConfigExtraRequest"/></param>
         /// <returns><see cref="CreateConfigExtraResponse"/></returns>
@@ -733,7 +733,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除特殊采集规则配置
+        /// 本接口用于删除特殊采集规则配置，特殊采集配置应用于自建K8S环境的采集Agent
         /// </summary>
         /// <param name="req"><see cref="DeleteConfigExtraRequest"/></param>
         /// <returns><see cref="DeleteConfigExtraResponse"/></returns>
@@ -753,7 +753,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除特殊采集规则配置
+        /// 本接口用于删除特殊采集规则配置，特殊采集配置应用于自建K8S环境的采集Agent
         /// </summary>
         /// <param name="req"><see cref="DeleteConfigExtraRequest"/></param>
         /// <returns><see cref="DeleteConfigExtraResponse"/></returns>
@@ -1213,7 +1213,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取特殊采集配置
+        /// 本接口用于获取特殊采集配置，特殊采集配置应用于自建K8S环境的采集Agent
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigExtrasRequest"/></param>
         /// <returns><see cref="DescribeConfigExtrasResponse"/></returns>
@@ -1233,7 +1233,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取特殊采集配置
+        /// 本接口用于获取特殊采集配置，特殊采集配置应用于自建K8S环境的采集Agent
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigExtrasRequest"/></param>
         /// <returns><see cref="DescribeConfigExtrasResponse"/></returns>
@@ -2053,7 +2053,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于修改特殊采集配置任务
+        /// 本接口用于修改特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
         /// </summary>
         /// <param name="req"><see cref="ModifyConfigExtraRequest"/></param>
         /// <returns><see cref="ModifyConfigExtraResponse"/></returns>
@@ -2073,7 +2073,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于修改特殊采集配置任务
+        /// 本接口用于修改特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
         /// </summary>
         /// <param name="req"><see cref="ModifyConfigExtraRequest"/></param>
         /// <returns><see cref="ModifyConfigExtraResponse"/></returns>

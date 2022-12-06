@@ -133,6 +133,46 @@ namespace TencentCloud.Tds.V20220801
         }
 
         /// <summary>
+        /// 查询设备标识及风险（旗舰版）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFraudUltimateRequest"/></param>
+        /// <returns><see cref="DescribeFraudUltimateResponse"/></returns>
+        public async Task<DescribeFraudUltimateResponse> DescribeFraudUltimate(DescribeFraudUltimateRequest req)
+        {
+             JsonResponseModel<DescribeFraudUltimateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFraudUltimate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFraudUltimateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询设备标识及风险（旗舰版）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFraudUltimateRequest"/></param>
+        /// <returns><see cref="DescribeFraudUltimateResponse"/></returns>
+        public DescribeFraudUltimateResponse DescribeFraudUltimateSync(DescribeFraudUltimateRequest req)
+        {
+             JsonResponseModel<DescribeFraudUltimateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFraudUltimate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFraudUltimateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询设备标识
         /// </summary>
         /// <param name="req"><see cref="DescribeTrustedIDRequest"/></param>

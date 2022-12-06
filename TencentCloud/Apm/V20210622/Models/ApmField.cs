@@ -58,6 +58,13 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
+        /// <summary>
+        /// 同环比上周期具体数值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastPeriodValue")]
+        public APMKV[] LastPeriodValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +76,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
             this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamArrayObj(map, prefix + "LastPeriodValue.", this.LastPeriodValue);
         }
     }
 }

@@ -133,7 +133,7 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
-        /// 针对驱动sql命令查询ck集群接口
+        /// 查询集群用户、集群表，数据库等相关信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCkSqlApisRequest"/></param>
         /// <returns><see cref="DescribeCkSqlApisResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
-        /// 针对驱动sql命令查询ck集群接口
+        /// 查询集群用户、集群表，数据库等相关信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCkSqlApisRequest"/></param>
         /// <returns><see cref="DescribeCkSqlApisResponse"/></returns>

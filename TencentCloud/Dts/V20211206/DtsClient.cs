@@ -1467,7 +1467,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 终止同步任务
+        /// 结束同步任务，操作后可通过查询同步任务信息接口DescribeSyncJobs，获取操作后的状态。
         /// </summary>
         /// <param name="req"><see cref="StopSyncJobRequest"/></param>
         /// <returns><see cref="StopSyncJobResponse"/></returns>
@@ -1487,7 +1487,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 终止同步任务
+        /// 结束同步任务，操作后可通过查询同步任务信息接口DescribeSyncJobs，获取操作后的状态。
         /// </summary>
         /// <param name="req"><see cref="StopSyncJobRequest"/></param>
         /// <returns><see cref="StopSyncJobResponse"/></returns>

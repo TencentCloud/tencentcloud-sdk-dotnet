@@ -31,7 +31,8 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public CkUserAlterInfo UserInfo{ get; set; }
 
         /// <summary>
-        /// api接口类型
+        /// api接口类型，
+        /// AddSystemUser新增用户，UpdateSystemUser，修改用户
         /// </summary>
         [JsonProperty("ApiType")]
         public string ApiType{ get; set; }

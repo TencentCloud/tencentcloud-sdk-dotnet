@@ -279,6 +279,40 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
+        /// <summary>
+        /// 物理区
+        /// </summary>
+        [JsonProperty("PhysicalZone")]
+        public string PhysicalZone{ get; set; }
+
+        /// <summary>
+        /// 商业类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BusinessType")]
+        public string BusinessType{ get; set; }
+
+        /// <summary>
+        /// 任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tasks")]
+        public ObjectTask[] Tasks{ get; set; }
+
+        /// <summary>
+        /// 是否冻结
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsFreeze")]
+        public string IsFreeze{ get; set; }
+
+        /// <summary>
+        /// 资源标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public Tag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -327,6 +361,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
             this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
             this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+            this.SetParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
+            this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
+            this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

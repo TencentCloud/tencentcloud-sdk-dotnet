@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? OldIpReserveHours{ get; set; }
 
         /// <summary>
-        /// 数据库代理组Id
+        /// 数据库代理组Id（该参数为必填项，可以通过DescribeProxies接口获得）
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }

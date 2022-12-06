@@ -56,7 +56,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 访问控制列表
+        /// 可视化组件（Kibana、Cerebro）的公网访问策略
         /// </summary>
         [JsonProperty("EsAcl")]
         public EsAcl EsAcl{ get; set; }
