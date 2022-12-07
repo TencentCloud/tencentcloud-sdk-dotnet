@@ -135,6 +135,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 删除用户列表（用户管理）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserManagerUserListRequest"/></param>
+        /// <returns><see cref="DeleteUserManagerUserListResponse"/></returns>
+        public async Task<DeleteUserManagerUserListResponse> DeleteUserManagerUserList(DeleteUserManagerUserListRequest req)
+        {
+             JsonResponseModel<DeleteUserManagerUserListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteUserManagerUserList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserManagerUserListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户列表（用户管理）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserManagerUserListRequest"/></param>
+        /// <returns><see cref="DeleteUserManagerUserListResponse"/></returns>
+        public DeleteUserManagerUserListResponse DeleteUserManagerUserListSync(DeleteUserManagerUserListRequest req)
+        {
+             JsonResponseModel<DeleteUserManagerUserListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteUserManagerUserList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserManagerUserListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群节点信息
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>

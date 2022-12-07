@@ -37,7 +37,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string SkillGroupName{ get; set; }
 
         /// <summary>
-        /// 类型：IM、TEL、ALL（全媒体）
+        /// （废弃）类型：IM、TEL、ALL（全媒体）
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -70,6 +70,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("LastModifyTimestamp")]
         public long? LastModifyTimestamp{ get; set; }
 
+        /// <summary>
+        /// 技能组类型0-电话，1-在线，3-音频，4-视频	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SkillGroupType")]
+        public long? SkillGroupType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +90,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "UsingLastSeat", this.UsingLastSeat);
             this.SetParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
             this.SetParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
+            this.SetParamSimple(map, prefix + "SkillGroupType", this.SkillGroupType);
         }
     }
 }

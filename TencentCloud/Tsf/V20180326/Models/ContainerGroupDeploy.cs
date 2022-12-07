@@ -276,6 +276,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("RepoType")]
         public string RepoType{ get; set; }
 
+        /// <summary>
+        /// 预热配置设置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WarmupSetting")]
+        public WarmupSetting WarmupSetting{ get; set; }
+
+        /// <summary>
+        /// Envoy网关服务配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GatewayConfig")]
+        public GatewayConfig GatewayConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -318,6 +332,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "VolumeMountInfos.", this.VolumeMountInfos);
             this.SetParamSimple(map, prefix + "KubeInjectEnable", this.KubeInjectEnable);
             this.SetParamSimple(map, prefix + "RepoType", this.RepoType);
+            this.SetParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
+            this.SetParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
         }
     }
 }

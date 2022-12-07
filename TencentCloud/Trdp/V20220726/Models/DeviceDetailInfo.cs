@@ -178,7 +178,7 @@ namespace TencentCloud.Trdp.V20220726.Models
         public string VendorId{ get; set; }
 
         /// <summary>
-        /// 安卓API等级
+        /// Android API等级
         /// Android设备
         /// </summary>
         [JsonProperty("AndroidApiLevel")]
@@ -276,14 +276,14 @@ namespace TencentCloud.Trdp.V20220726.Models
         public string ChargeStatus{ get; set; }
 
         /// <summary>
-        /// 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+        /// 网络类型：2G/3G/4G/5G/Wi-Fi/WWAN/other
         /// Android设备
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// WiFi MAC地址
+        /// Wi-Fi MAC地址
         /// Android设备
         /// </summary>
         [JsonProperty("WifiMac")]

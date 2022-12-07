@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.656</VersionPrefix>
+    <VersionPrefix>3.0.657</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -538,6 +538,7 @@
     <Compile Include="V20210820\Models\SubmitWorkflowRequest.cs" />
     <Compile Include="V20210820\Models\SubmitWorkflowResponse.cs" />
     <Compile Include="V20210820\Models\SubscribeReceiver.cs" />
+    <Compile Include="V20210820\Models\SubscribeWebHook.cs" />
     <Compile Include="V20210820\Models\SuspendIntegrationTaskRequest.cs" />
     <Compile Include="V20210820\Models\SuspendIntegrationTaskResponse.cs" />
     <Compile Include="V20210820\Models\TableConfig.cs" />

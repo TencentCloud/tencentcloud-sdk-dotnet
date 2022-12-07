@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7B36C41A-5976-3538-93E0-40A089B50522}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.656</VersionPrefix>
+    <VersionPrefix>3.0.657</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20210515\Models\CodeItem.cs" />
     <Compile Include="V20210515\Models\CodePack.cs" />
     <Compile Include="V20210515\Models\CodePart.cs" />
+    <Compile Include="V20210515\Models\CorpQuota.cs" />
     <Compile Include="V20210515\Models\CreateCodeBatchRequest.cs" />
     <Compile Include="V20210515\Models\CreateCodeBatchResponse.cs" />
     <Compile Include="V20210515\Models\CreateCodePackRequest.cs" />
@@ -93,6 +94,8 @@
     <Compile Include="V20210515\Models\DescribeCodePacksResponse.cs" />
     <Compile Include="V20210515\Models\DescribeCodesByPackRequest.cs" />
     <Compile Include="V20210515\Models\DescribeCodesByPackResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeCorpQuotasRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeCorpQuotasResponse.cs" />
     <Compile Include="V20210515\Models\DescribeCustomRuleByIdRequest.cs" />
     <Compile Include="V20210515\Models\DescribeCustomRuleByIdResponse.cs" />
     <Compile Include="V20210515\Models\DescribeCustomRulesRequest.cs" />
@@ -137,8 +140,10 @@
     <Compile Include="V20210515\Models\PackSpec.cs" />
     <Compile Include="V20210515\Models\PhaseData.cs" />
     <Compile Include="V20210515\Models\Product.cs" />
+    <Compile Include="V20210515\Models\Quota.cs" />
     <Compile Include="V20210515\Models\TraceCode.cs" />
     <Compile Include="V20210515\Models\TraceData.cs" />
     <Compile Include="V20210515\Models\TraceItem.cs" />
+    <Compile Include="V20210515\Models\UsageQuota.cs" />
   </ItemGroup>
 </Project>

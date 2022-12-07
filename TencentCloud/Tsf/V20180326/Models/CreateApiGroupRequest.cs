@@ -60,6 +60,30 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("GatewayInstanceId")]
         public string GatewayInstanceId{ get; set; }
 
+        /// <summary>
+        /// 命名空间参数key值
+        /// </summary>
+        [JsonProperty("NamespaceNameKey")]
+        public string NamespaceNameKey{ get; set; }
+
+        /// <summary>
+        /// 微服务名参数key值
+        /// </summary>
+        [JsonProperty("ServiceNameKey")]
+        public string ServiceNameKey{ get; set; }
+
+        /// <summary>
+        /// 命名空间参数位置，path，header或query，默认是path
+        /// </summary>
+        [JsonProperty("NamespaceNameKeyPosition")]
+        public string NamespaceNameKeyPosition{ get; set; }
+
+        /// <summary>
+        /// 微服务名参数位置，path，header或query，默认是path
+        /// </summary>
+        [JsonProperty("ServiceNameKeyPosition")]
+        public string ServiceNameKeyPosition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +96,10 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
             this.SetParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
+            this.SetParamSimple(map, prefix + "NamespaceNameKey", this.NamespaceNameKey);
+            this.SetParamSimple(map, prefix + "ServiceNameKey", this.ServiceNameKey);
+            this.SetParamSimple(map, prefix + "NamespaceNameKeyPosition", this.NamespaceNameKeyPosition);
+            this.SetParamSimple(map, prefix + "ServiceNameKeyPosition", this.ServiceNameKeyPosition);
         }
     }
 }

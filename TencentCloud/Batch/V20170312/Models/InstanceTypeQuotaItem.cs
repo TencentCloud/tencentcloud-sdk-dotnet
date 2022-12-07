@@ -146,6 +146,18 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+        /// </summary>
+        [JsonProperty("GpuCount")]
+        public float? GpuCount{ get; set; }
+
+        /// <summary>
+        /// 实例的CPU主频信息
+        /// </summary>
+        [JsonProperty("Frequency")]
+        public string Frequency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +184,8 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "Gpu", this.Gpu);
             this.SetParamSimple(map, prefix + "Fpga", this.Fpga);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "GpuCount", this.GpuCount);
+            this.SetParamSimple(map, prefix + "Frequency", this.Frequency);
         }
     }
 }

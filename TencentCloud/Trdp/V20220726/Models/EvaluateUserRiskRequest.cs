@@ -51,7 +51,7 @@ namespace TencentCloud.Trdp.V20220726.Models
         /// <summary>
         /// 场景Code，不传默认活动防刷；
         /// e_activity_antirush；活动防刷场景
-        /// e_login_protection；登陆保护场景
+        /// e_login_protection；登录保护场景
         /// e_register_protection：注册保护场景
         /// </summary>
         [JsonProperty("SceneCode")]

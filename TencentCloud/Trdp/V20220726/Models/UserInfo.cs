@@ -37,7 +37,7 @@ namespace TencentCloud.Trdp.V20220726.Models
         public string ChannelSource{ get; set; }
 
         /// <summary>
-        /// 用户登录平台。1：安卓 2：iOS 3：H5 4：小程序
+        /// 用户登录平台。1：Android 2：iOS 3：H5 4：小程序
         /// </summary>
         [JsonProperty("Platform")]
         public long? Platform{ get; set; }

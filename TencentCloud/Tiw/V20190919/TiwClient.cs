@@ -377,6 +377,50 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 查询互动白板房间维度每天计费用量。
+        /// 1. 单次查询统计区间最多不能超过31天。
+        /// 2. 由于统计延迟等原因，暂时不支持查询当天数据，建议在次日上午7点以后再来查询前一天的用量，例如在10月27日上午7点后，再来查询到10月26日整天的用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTIWRoomDailyUsageRequest"/></param>
+        /// <returns><see cref="DescribeTIWRoomDailyUsageResponse"/></returns>
+        public async Task<DescribeTIWRoomDailyUsageResponse> DescribeTIWRoomDailyUsage(DescribeTIWRoomDailyUsageRequest req)
+        {
+             JsonResponseModel<DescribeTIWRoomDailyUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTIWRoomDailyUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTIWRoomDailyUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询互动白板房间维度每天计费用量。
+        /// 1. 单次查询统计区间最多不能超过31天。
+        /// 2. 由于统计延迟等原因，暂时不支持查询当天数据，建议在次日上午7点以后再来查询前一天的用量，例如在10月27日上午7点后，再来查询到10月26日整天的用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTIWRoomDailyUsageRequest"/></param>
+        /// <returns><see cref="DescribeTIWRoomDailyUsageResponse"/></returns>
+        public DescribeTIWRoomDailyUsageResponse DescribeTIWRoomDailyUsageSync(DescribeTIWRoomDailyUsageRequest req)
+        {
+             JsonResponseModel<DescribeTIWRoomDailyUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTIWRoomDailyUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTIWRoomDailyUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询文档转码任务的执行进度与转码结果
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeRequest"/></param>

@@ -93,46 +93,6 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 针对主实例申请创建数据库代理。
-        /// </summary>
-        /// <param name="req"><see cref="ApplyCDBProxyRequest"/></param>
-        /// <returns><see cref="ApplyCDBProxyResponse"/></returns>
-        public async Task<ApplyCDBProxyResponse> ApplyCDBProxy(ApplyCDBProxyRequest req)
-        {
-             JsonResponseModel<ApplyCDBProxyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ApplyCDBProxy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyCDBProxyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 针对主实例申请创建数据库代理。
-        /// </summary>
-        /// <param name="req"><see cref="ApplyCDBProxyRequest"/></param>
-        /// <returns><see cref="ApplyCDBProxyResponse"/></returns>
-        public ApplyCDBProxyResponse ApplyCDBProxySync(ApplyCDBProxyRequest req)
-        {
-             JsonResponseModel<ApplyCDBProxyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ApplyCDBProxy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyCDBProxyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口(AssociateSecurityGroups)用于安全组批量绑定实例。
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>

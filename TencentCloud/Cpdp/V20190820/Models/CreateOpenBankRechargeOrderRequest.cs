@@ -91,7 +91,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string NotifyUrl{ get; set; }
 
         /// <summary>
-        /// 备注信息。
+        /// 备注信息。限制200个字符。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

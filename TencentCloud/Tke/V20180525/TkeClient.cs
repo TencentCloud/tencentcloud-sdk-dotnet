@@ -573,7 +573,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 在应用市场中集群创建应用
+        /// 在应用市场中给集群创建应用
         /// </summary>
         /// <param name="req"><see cref="CreateClusterReleaseRequest"/></param>
         /// <returns><see cref="CreateClusterReleaseResponse"/></returns>
@@ -593,7 +593,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 在应用市场中集群创建应用
+        /// 在应用市场中给集群创建应用
         /// </summary>
         /// <param name="req"><see cref="CreateClusterReleaseRequest"/></param>
         /// <returns><see cref="CreateClusterReleaseResponse"/></returns>

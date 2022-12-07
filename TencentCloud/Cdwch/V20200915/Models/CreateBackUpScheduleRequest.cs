@@ -31,7 +31,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public long? ScheduleId{ get; set; }
 
         /// <summary>
-        /// 选择的星期 逗号分隔
+        /// 选择的星期 逗号分隔，例如 2 代表周二
         /// </summary>
         [JsonProperty("WeekDays")]
         public string WeekDays{ get; set; }

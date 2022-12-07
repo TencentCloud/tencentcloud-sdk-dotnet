@@ -90,6 +90,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Sqls")]
         public string[] Sqls{ get; set; }
 
+        /// <summary>
+        /// 返回行数。
+        /// </summary>
+        [JsonProperty("SentRows")]
+        public ulong? SentRows{ get; set; }
+
+        /// <summary>
+        /// 线程ID。
+        /// </summary>
+        [JsonProperty("ThreadId")]
+        public string[] ThreadId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "AffectRows", this.AffectRows);
             this.SetParamArraySimple(map, prefix + "SqlTypes.", this.SqlTypes);
             this.SetParamArraySimple(map, prefix + "Sqls.", this.Sqls);
+            this.SetParamSimple(map, prefix + "SentRows", this.SentRows);
+            this.SetParamArraySimple(map, prefix + "ThreadId.", this.ThreadId);
         }
     }
 }

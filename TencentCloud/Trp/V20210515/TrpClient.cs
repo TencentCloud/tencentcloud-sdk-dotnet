@@ -893,6 +893,46 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 查询渠道商下属企业额度使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCorpQuotasRequest"/></param>
+        /// <returns><see cref="DescribeCorpQuotasResponse"/></returns>
+        public async Task<DescribeCorpQuotasResponse> DescribeCorpQuotas(DescribeCorpQuotasRequest req)
+        {
+             JsonResponseModel<DescribeCorpQuotasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCorpQuotas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCorpQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询渠道商下属企业额度使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCorpQuotasRequest"/></param>
+        /// <returns><see cref="DescribeCorpQuotasResponse"/></returns>
+        public DescribeCorpQuotasResponse DescribeCorpQuotasSync(DescribeCorpQuotasRequest req)
+        {
+             JsonResponseModel<DescribeCorpQuotasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCorpQuotas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCorpQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查自定义码规则
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomRuleByIdRequest"/></param>

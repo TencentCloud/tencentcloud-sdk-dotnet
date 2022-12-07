@@ -31,7 +31,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string TagName{ get; set; }
 
         /// <summary>
-        /// 镜像Id
+        /// 制品的 ID
         /// </summary>
         [JsonProperty("TagId")]
         public string TagId{ get; set; }
@@ -49,50 +49,50 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string Size{ get; set; }
 
         /// <summary>
-        /// 镜像的创建时间
+        /// 制品的创建时间
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// 镜像创建至今时间长度
+        /// 制品创建至今时间长度
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DurationDays")]
         public string DurationDays{ get; set; }
 
         /// <summary>
-        /// 镜像的作者
+        /// 标注的制品作者
         /// </summary>
         [JsonProperty("Author")]
         public string Author{ get; set; }
 
         /// <summary>
-        /// 次镜像建议运行的系统架构
+        /// 标注的制品平台
         /// </summary>
         [JsonProperty("Architecture")]
         public string Architecture{ get; set; }
 
         /// <summary>
-        /// 创建此镜像的docker版本
+        /// 创建制品的 Docker 版本
         /// </summary>
         [JsonProperty("DockerVersion")]
         public string DockerVersion{ get; set; }
 
         /// <summary>
-        /// 此镜像建议运行系统
+        /// 标注的制品操作系统
         /// </summary>
         [JsonProperty("OS")]
         public string OS{ get; set; }
 
         /// <summary>
-        /// SizeByte
+        /// 制品大小
         /// </summary>
         [JsonProperty("SizeByte")]
         public long? SizeByte{ get; set; }
 
         /// <summary>
-        /// Id
+        /// 序号
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
@@ -104,10 +104,16 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 镜像更新时间
+        /// 制品更新时间
         /// </summary>
         [JsonProperty("PushTime")]
         public string PushTime{ get; set; }
+
+        /// <summary>
+        /// 制品类型
+        /// </summary>
+        [JsonProperty("Kind")]
+        public string Kind{ get; set; }
 
 
         /// <summary>
@@ -129,6 +135,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "PushTime", this.PushTime);
+            this.SetParamSimple(map, prefix + "Kind", this.Kind);
         }
     }
 }

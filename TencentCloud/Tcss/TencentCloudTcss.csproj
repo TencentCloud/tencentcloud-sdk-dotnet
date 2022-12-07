@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.656</VersionPrefix>
+    <VersionPrefix>3.0.657</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -136,6 +136,10 @@
     <Compile Include="V20201101\Models\ContainerInfo.cs" />
     <Compile Include="V20201101\Models\ContainerMount.cs" />
     <Compile Include="V20201101\Models\ContainerNetwork.cs" />
+    <Compile Include="V20201101\Models\CreateAbnormalProcessRulesExportJobRequest.cs" />
+    <Compile Include="V20201101\Models\CreateAbnormalProcessRulesExportJobResponse.cs" />
+    <Compile Include="V20201101\Models\CreateAccessControlsRuleExportJobRequest.cs" />
+    <Compile Include="V20201101\Models\CreateAccessControlsRuleExportJobResponse.cs" />
     <Compile Include="V20201101\Models\CreateAssetImageRegistryScanTaskOneKeyRequest.cs" />
     <Compile Include="V20201101\Models\CreateAssetImageRegistryScanTaskOneKeyResponse.cs" />
     <Compile Include="V20201101\Models\CreateAssetImageRegistryScanTaskRequest.cs" />

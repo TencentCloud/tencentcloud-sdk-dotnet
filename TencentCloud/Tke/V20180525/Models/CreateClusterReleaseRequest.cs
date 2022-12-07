@@ -55,7 +55,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public ReleaseValues Values{ get; set; }
 
         /// <summary>
-        /// 制品来源，范围：tke-market/tcr/other
+        /// 制品来源，范围：tke 应用市场/第三方chart
         /// </summary>
         [JsonProperty("ChartFrom")]
         public string ChartFrom{ get; set; }
@@ -90,6 +90,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ChartNamespace")]
         public string ChartNamespace{ get; set; }
 
+        /// <summary>
+        /// 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "ChartNamespace", this.ChartNamespace);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
         }
     }
 }

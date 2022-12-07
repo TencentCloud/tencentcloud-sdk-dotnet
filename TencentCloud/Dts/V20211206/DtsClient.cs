@@ -341,7 +341,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 删除一致性校验任务
+        /// 删除一致性校验任务。当一致性校验任务状态为success、failed、canceled 时可以执行此操作。
         /// </summary>
         /// <param name="req"><see cref="DeleteCompareTaskRequest"/></param>
         /// <returns><see cref="DeleteCompareTaskResponse"/></returns>
@@ -361,7 +361,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 删除一致性校验任务
+        /// 删除一致性校验任务。当一致性校验任务状态为success、failed、canceled 时可以执行此操作。
         /// </summary>
         /// <param name="req"><see cref="DeleteCompareTaskRequest"/></param>
         /// <returns><see cref="DeleteCompareTaskResponse"/></returns>

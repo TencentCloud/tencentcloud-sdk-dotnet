@@ -42,6 +42,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// 数据库名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 排序规则（desc-降序，asc-升序），默认desc
+        /// </summary>
+        [JsonProperty("OrderByType")]
+        public string OrderByType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
         }
     }
 }

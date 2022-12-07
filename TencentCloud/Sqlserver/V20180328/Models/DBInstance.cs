@@ -331,6 +331,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
 
+        /// <summary>
+        /// 是否跨AZ
+        /// </summary>
+        [JsonProperty("IsDrZone")]
+        public bool? IsDrZone{ get; set; }
+
+        /// <summary>
+        /// 备可用区信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SlaveZones")]
+        public SlaveZones SlaveZones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -387,6 +400,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
             this.SetParamSimple(map, prefix + "Collation", this.Collation);
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "IsDrZone", this.IsDrZone);
+            this.SetParamObj(map, prefix + "SlaveZones.", this.SlaveZones);
         }
     }
 }

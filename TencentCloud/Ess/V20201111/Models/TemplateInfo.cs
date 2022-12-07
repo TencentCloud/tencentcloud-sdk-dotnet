@@ -108,6 +108,19 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Promoter")]
         public Recipient Promoter{ get; set; }
 
+        /// <summary>
+        /// 模板创建组织id
+        /// </summary>
+        [JsonProperty("OrganizationId")]
+        public string OrganizationId{ get; set; }
+
+        /// <summary>
+        /// 模板预览链接
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PreviewUrl")]
+        public string PreviewUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +141,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamObj(map, prefix + "Promoter.", this.Promoter);
+            this.SetParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
+            this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         }
     }
 }

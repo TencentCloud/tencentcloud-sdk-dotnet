@@ -45,6 +45,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SubscribeType")]
         public ulong?[] SubscribeType{ get; set; }
 
+        /// <summary>
+        /// 群机器人配置的webhook信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WebHooks")]
+        public SubscribeWebHook[] WebHooks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RuleGroupId", this.RuleGroupId);
             this.SetParamArrayObj(map, prefix + "Receivers.", this.Receivers);
             this.SetParamArraySimple(map, prefix + "SubscribeType.", this.SubscribeType);
+            this.SetParamArrayObj(map, prefix + "WebHooks.", this.WebHooks);
         }
     }
 }

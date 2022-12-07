@@ -66,6 +66,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TableId")]
         public string TableId{ get; set; }
 
+        /// <summary>
+        /// 群机器人webhook信息
+        /// </summary>
+        [JsonProperty("WebHooks")]
+        public SubscribeWebHook[] WebHooks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
+            this.SetParamArrayObj(map, prefix + "WebHooks.", this.WebHooks);
         }
     }
 }

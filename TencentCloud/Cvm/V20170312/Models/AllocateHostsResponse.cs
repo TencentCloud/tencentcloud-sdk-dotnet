@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 新创建云子机的实例id列表。
+        /// 新创建云子机的实例ID列表。
         /// </summary>
         [JsonProperty("HostIdSet")]
         public string[] HostIdSet{ get; set; }

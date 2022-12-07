@@ -60,6 +60,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }
