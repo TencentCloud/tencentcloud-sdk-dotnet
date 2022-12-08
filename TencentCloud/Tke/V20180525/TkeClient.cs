@@ -253,6 +253,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 在应用市场中取消安装失败的应用
+        /// </summary>
+        /// <param name="req"><see cref="CancelClusterReleaseRequest"/></param>
+        /// <returns><see cref="CancelClusterReleaseResponse"/></returns>
+        public async Task<CancelClusterReleaseResponse> CancelClusterRelease(CancelClusterReleaseRequest req)
+        {
+             JsonResponseModel<CancelClusterReleaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelClusterRelease");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelClusterReleaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在应用市场中取消安装失败的应用
+        /// </summary>
+        /// <param name="req"><see cref="CancelClusterReleaseRequest"/></param>
+        /// <returns><see cref="CancelClusterReleaseResponse"/></returns>
+        public CancelClusterReleaseResponse CancelClusterReleaseSync(CancelClusterReleaseRequest req)
+        {
+             JsonResponseModel<CancelClusterReleaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelClusterRelease");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelClusterReleaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 检查边缘计算集群的CIDR是否冲突
         /// </summary>
         /// <param name="req"><see cref="CheckEdgeClusterCIDRRequest"/></param>
@@ -2924,6 +2964,166 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClusterNodePools");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterNodePoolsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在应用市场中查询正在安装中的应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPendingReleasesRequest"/></param>
+        /// <returns><see cref="DescribeClusterPendingReleasesResponse"/></returns>
+        public async Task<DescribeClusterPendingReleasesResponse> DescribeClusterPendingReleases(DescribeClusterPendingReleasesRequest req)
+        {
+             JsonResponseModel<DescribeClusterPendingReleasesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterPendingReleases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterPendingReleasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在应用市场中查询正在安装中的应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPendingReleasesRequest"/></param>
+        /// <returns><see cref="DescribeClusterPendingReleasesResponse"/></returns>
+        public DescribeClusterPendingReleasesResponse DescribeClusterPendingReleasesSync(DescribeClusterPendingReleasesRequest req)
+        {
+             JsonResponseModel<DescribeClusterPendingReleasesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterPendingReleases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterPendingReleasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询通过应用市场安装的某个应用详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterReleaseDetailsRequest"/></param>
+        /// <returns><see cref="DescribeClusterReleaseDetailsResponse"/></returns>
+        public async Task<DescribeClusterReleaseDetailsResponse> DescribeClusterReleaseDetails(DescribeClusterReleaseDetailsRequest req)
+        {
+             JsonResponseModel<DescribeClusterReleaseDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterReleaseDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterReleaseDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询通过应用市场安装的某个应用详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterReleaseDetailsRequest"/></param>
+        /// <returns><see cref="DescribeClusterReleaseDetailsResponse"/></returns>
+        public DescribeClusterReleaseDetailsResponse DescribeClusterReleaseDetailsSync(DescribeClusterReleaseDetailsRequest req)
+        {
+             JsonResponseModel<DescribeClusterReleaseDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterReleaseDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterReleaseDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群在应用市场中某个已安装应用的版本历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterReleaseHistoryRequest"/></param>
+        /// <returns><see cref="DescribeClusterReleaseHistoryResponse"/></returns>
+        public async Task<DescribeClusterReleaseHistoryResponse> DescribeClusterReleaseHistory(DescribeClusterReleaseHistoryRequest req)
+        {
+             JsonResponseModel<DescribeClusterReleaseHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterReleaseHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterReleaseHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群在应用市场中某个已安装应用的版本历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterReleaseHistoryRequest"/></param>
+        /// <returns><see cref="DescribeClusterReleaseHistoryResponse"/></returns>
+        public DescribeClusterReleaseHistoryResponse DescribeClusterReleaseHistorySync(DescribeClusterReleaseHistoryRequest req)
+        {
+             JsonResponseModel<DescribeClusterReleaseHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterReleaseHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterReleaseHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群在应用市场中已安装应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterReleasesRequest"/></param>
+        /// <returns><see cref="DescribeClusterReleasesResponse"/></returns>
+        public async Task<DescribeClusterReleasesResponse> DescribeClusterReleases(DescribeClusterReleasesRequest req)
+        {
+             JsonResponseModel<DescribeClusterReleasesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterReleases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterReleasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群在应用市场中已安装应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterReleasesRequest"/></param>
+        /// <returns><see cref="DescribeClusterReleasesResponse"/></returns>
+        public DescribeClusterReleasesResponse DescribeClusterReleasesSync(DescribeClusterReleasesRequest req)
+        {
+             JsonResponseModel<DescribeClusterReleasesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterReleases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterReleasesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -6373,6 +6573,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 在应用市场中集群回滚应用至某个历史版本
+        /// </summary>
+        /// <param name="req"><see cref="RollbackClusterReleaseRequest"/></param>
+        /// <returns><see cref="RollbackClusterReleaseResponse"/></returns>
+        public async Task<RollbackClusterReleaseResponse> RollbackClusterRelease(RollbackClusterReleaseRequest req)
+        {
+             JsonResponseModel<RollbackClusterReleaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RollbackClusterRelease");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackClusterReleaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在应用市场中集群回滚应用至某个历史版本
+        /// </summary>
+        /// <param name="req"><see cref="RollbackClusterReleaseRequest"/></param>
+        /// <returns><see cref="RollbackClusterReleaseResponse"/></returns>
+        public RollbackClusterReleaseResponse RollbackClusterReleaseSync(RollbackClusterReleaseRequest req)
+        {
+             JsonResponseModel<RollbackClusterReleaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RollbackClusterRelease");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackClusterReleaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 初始化TMP实例，开启集成中心时调用
         /// </summary>
         /// <param name="req"><see cref="RunPrometheusInstanceRequest"/></param>
@@ -6604,6 +6844,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "SyncPrometheusTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncPrometheusTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在应用市场中集群删除某个应用
+        /// </summary>
+        /// <param name="req"><see cref="UninstallClusterReleaseRequest"/></param>
+        /// <returns><see cref="UninstallClusterReleaseResponse"/></returns>
+        public async Task<UninstallClusterReleaseResponse> UninstallClusterRelease(UninstallClusterReleaseRequest req)
+        {
+             JsonResponseModel<UninstallClusterReleaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UninstallClusterRelease");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallClusterReleaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在应用市场中集群删除某个应用
+        /// </summary>
+        /// <param name="req"><see cref="UninstallClusterReleaseRequest"/></param>
+        /// <returns><see cref="UninstallClusterReleaseResponse"/></returns>
+        public UninstallClusterReleaseResponse UninstallClusterReleaseSync(UninstallClusterReleaseRequest req)
+        {
+             JsonResponseModel<UninstallClusterReleaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UninstallClusterRelease");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallClusterReleaseResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -6964,6 +7244,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "UpgradeClusterInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeClusterInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级集群中已安装的应用
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeClusterReleaseRequest"/></param>
+        /// <returns><see cref="UpgradeClusterReleaseResponse"/></returns>
+        public async Task<UpgradeClusterReleaseResponse> UpgradeClusterRelease(UpgradeClusterReleaseRequest req)
+        {
+             JsonResponseModel<UpgradeClusterReleaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeClusterRelease");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeClusterReleaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级集群中已安装的应用
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeClusterReleaseRequest"/></param>
+        /// <returns><see cref="UpgradeClusterReleaseResponse"/></returns>
+        public UpgradeClusterReleaseResponse UpgradeClusterReleaseSync(UpgradeClusterReleaseRequest req)
+        {
+             JsonResponseModel<UpgradeClusterReleaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeClusterRelease");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeClusterReleaseResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

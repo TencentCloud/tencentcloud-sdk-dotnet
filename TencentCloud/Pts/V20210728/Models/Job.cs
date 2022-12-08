@@ -46,7 +46,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public Load Load{ get; set; }
 
         /// <summary>
-        /// deprecated
+        /// 此字段不再使用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Configs")]
@@ -60,7 +60,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public TestData[] Datasets{ get; set; }
 
         /// <summary>
-        /// deprecated
+        /// 此字段不再使用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extensions")]
@@ -118,7 +118,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public string JobOwner{ get; set; }
 
         /// <summary>
-        /// deprecated
+        /// 此字段不再使用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadSources")]
@@ -181,7 +181,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public float? ResponseTimeP90{ get; set; }
 
         /// <summary>
-        /// deprecated
+        /// 此字段不再使用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scripts")]
@@ -306,6 +306,13 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("NetworkSendRate")]
         public float? NetworkSendRate{ get; set; }
 
+        /// <summary>
+        /// 任务状态描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -352,6 +359,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
             this.SetParamSimple(map, prefix + "NetworkReceiveRate", this.NetworkReceiveRate);
             this.SetParamSimple(map, prefix + "NetworkSendRate", this.NetworkSendRate);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

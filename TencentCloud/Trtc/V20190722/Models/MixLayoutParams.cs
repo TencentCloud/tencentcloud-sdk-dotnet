@@ -88,7 +88,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? BackgroundImageRenderMode{ get; set; }
 
         /// <summary>
-        /// 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+        /// 子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
         /// </summary>
         [JsonProperty("DefaultSubBackgroundImage")]
         public string DefaultSubBackgroundImage{ get; set; }
@@ -98,6 +98,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         [JsonProperty("WaterMarkList")]
         public WaterMark[] WaterMarkList{ get; set; }
+
+        /// <summary>
+        /// 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+        /// </summary>
+        [JsonProperty("RenderMode")]
+        public ulong? RenderMode{ get; set; }
+
+        /// <summary>
+        /// 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+        /// </summary>
+        [JsonProperty("MaxResolutionUserAlign")]
+        public ulong? MaxResolutionUserAlign{ get; set; }
 
 
         /// <summary>
@@ -115,6 +127,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "BackgroundImageRenderMode", this.BackgroundImageRenderMode);
             this.SetParamSimple(map, prefix + "DefaultSubBackgroundImage", this.DefaultSubBackgroundImage);
             this.SetParamArrayObj(map, prefix + "WaterMarkList.", this.WaterMarkList);
+            this.SetParamSimple(map, prefix + "RenderMode", this.RenderMode);
+            this.SetParamSimple(map, prefix + "MaxResolutionUserAlign", this.MaxResolutionUserAlign);
         }
     }
 }

@@ -30,6 +30,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
+        /// <summary>
+        /// 用户类型，新客户传1，老客户可不传
+        /// </summary>
+        [JsonProperty("UserType")]
+        public ulong? UserType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Text", this.Text);
+            this.SetParamSimple(map, prefix + "UserType", this.UserType);
         }
     }
 }

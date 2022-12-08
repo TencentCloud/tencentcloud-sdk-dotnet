@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.657</VersionPrefix>
+    <VersionPrefix>3.0.658</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,8 @@
     <Compile Include="V20180525\Models\AutoUpgradeClusterLevel.cs" />
     <Compile Include="V20180525\Models\AutoscalingAdded.cs" />
     <Compile Include="V20180525\Models\CUDNN.cs" />
+    <Compile Include="V20180525\Models\CancelClusterReleaseRequest.cs" />
+    <Compile Include="V20180525\Models\CancelClusterReleaseResponse.cs" />
     <Compile Include="V20180525\Models\Capabilities.cs" />
     <Compile Include="V20180525\Models\CbsVolume.cs" />
     <Compile Include="V20180525\Models\CheckEdgeClusterCIDRRequest.cs" />
@@ -221,6 +223,14 @@
     <Compile Include="V20180525\Models\DescribeClusterNodePoolDetailResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterNodePoolsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterNodePoolsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterPendingReleasesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterPendingReleasesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterReleaseDetailsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterReleaseDetailsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterReleaseHistoryRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterReleaseHistoryResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterReleasesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterReleasesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterRouteTablesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterRouteTablesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterRoutesRequest.cs" />
@@ -468,6 +478,9 @@
     <Compile Include="V20180525\Models\PrometheusTemplateModify.cs" />
     <Compile Include="V20180525\Models\PrometheusTemplateSyncTarget.cs" />
     <Compile Include="V20180525\Models\RegionInstance.cs" />
+    <Compile Include="V20180525\Models\Release.cs" />
+    <Compile Include="V20180525\Models\ReleaseDetails.cs" />
+    <Compile Include="V20180525\Models\ReleaseHistory.cs" />
     <Compile Include="V20180525\Models\ReleaseValues.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
@@ -476,6 +489,8 @@
     <Compile Include="V20180525\Models\ResourceUsageDetail.cs" />
     <Compile Include="V20180525\Models\RestartEKSContainerInstancesRequest.cs" />
     <Compile Include="V20180525\Models\RestartEKSContainerInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\RollbackClusterReleaseRequest.cs" />
+    <Compile Include="V20180525\Models\RollbackClusterReleaseResponse.cs" />
     <Compile Include="V20180525\Models\RouteInfo.cs" />
     <Compile Include="V20180525\Models\RouteTableConflict.cs" />
     <Compile Include="V20180525\Models\RouteTableInfo.cs" />
@@ -505,6 +520,8 @@
     <Compile Include="V20180525\Models\TaskStepInfo.cs" />
     <Compile Include="V20180525\Models\TcpSocket.cs" />
     <Compile Include="V20180525\Models\Toleration.cs" />
+    <Compile Include="V20180525\Models\UninstallClusterReleaseRequest.cs" />
+    <Compile Include="V20180525\Models\UninstallClusterReleaseResponse.cs" />
     <Compile Include="V20180525\Models\UninstallEdgeLogAgentRequest.cs" />
     <Compile Include="V20180525\Models\UninstallEdgeLogAgentResponse.cs" />
     <Compile Include="V20180525\Models\UninstallLogAgentRequest.cs" />
@@ -524,6 +541,8 @@
     <Compile Include="V20180525\Models\UpgradeAbleInstancesItem.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\UpgradeClusterReleaseRequest.cs" />
+    <Compile Include="V20180525\Models\UpgradeClusterReleaseResponse.cs" />
     <Compile Include="V20180525\Models\UpgradeNodeResetParam.cs" />
     <Compile Include="V20180525\Models\VersionInstance.cs" />
     <Compile Include="V20180525\Models\VolumeMount.cs" />

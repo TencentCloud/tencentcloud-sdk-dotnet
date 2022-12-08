@@ -49,6 +49,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("IsUsedClassify")]
         public bool? IsUsedClassify{ get; set; }
 
+        /// <summary>
+        /// 用户类型，新客户传1，老客户可不传
+        /// </summary>
+        [JsonProperty("UserType")]
+        public long? UserType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamObj(map, prefix + "HandleParam.", this.HandleParam);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "IsUsedClassify", this.IsUsedClassify);
+            this.SetParamSimple(map, prefix + "UserType", this.UserType);
         }
     }
 }

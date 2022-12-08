@@ -131,7 +131,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 用户账号的 App ID
+        /// 此字段不再使用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppID")]

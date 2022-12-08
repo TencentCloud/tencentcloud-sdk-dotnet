@@ -213,6 +213,27 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ScheduledAction")]
         public ScheduledAction ScheduledAction{ get; set; }
 
+        /// <summary>
+        /// 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateFailedReason")]
+        public string CreateFailedReason{ get; set; }
+
+        /// <summary>
+        /// 预付费服务对应的资源组名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceGroupName")]
+        public string ResourceGroupName{ get; set; }
+
+        /// <summary>
+        /// 服务的标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -245,6 +266,9 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "IngressName", this.IngressName);
             this.SetParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
             this.SetParamObj(map, prefix + "ScheduledAction.", this.ScheduledAction);
+            this.SetParamSimple(map, prefix + "CreateFailedReason", this.CreateFailedReason);
+            this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

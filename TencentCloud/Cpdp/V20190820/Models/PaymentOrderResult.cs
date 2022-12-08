@@ -147,6 +147,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("AdditionalTaxItem")]
         public string AdditionalTaxItem{ get; set; }
 
+        /// <summary>
+        /// 失败原因。当Status为FAILED时，改字段为失败的原因。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailReason")]
+        public string FailReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +178,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "IndividualIncomeTax", this.IndividualIncomeTax);
             this.SetParamSimple(map, prefix + "AdditionalTaxSum", this.AdditionalTaxSum);
             this.SetParamSimple(map, prefix + "AdditionalTaxItem", this.AdditionalTaxItem);
+            this.SetParamSimple(map, prefix + "FailReason", this.FailReason);
         }
     }
 }

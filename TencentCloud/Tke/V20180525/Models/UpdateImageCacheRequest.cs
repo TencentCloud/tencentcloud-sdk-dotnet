@@ -36,6 +36,36 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ImageCacheName")]
         public string ImageCacheName{ get; set; }
 
+        /// <summary>
+        /// 镜像仓库凭证数组
+        /// </summary>
+        [JsonProperty("ImageRegistryCredentials")]
+        public ImageRegistryCredential[] ImageRegistryCredentials{ get; set; }
+
+        /// <summary>
+        /// 用于制作镜像缓存的容器镜像列表
+        /// </summary>
+        [JsonProperty("Images")]
+        public string[] Images{ get; set; }
+
+        /// <summary>
+        /// 镜像缓存的大小。默认为20 GiB。取值范围参考[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)中的高性能云盘类型的大小限制。
+        /// </summary>
+        [JsonProperty("ImageCacheSize")]
+        public ulong? ImageCacheSize{ get; set; }
+
+        /// <summary>
+        /// 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+        /// </summary>
+        [JsonProperty("RetentionDays")]
+        public ulong? RetentionDays{ get; set; }
+
+        /// <summary>
+        /// 安全组Id
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +74,11 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "ImageCacheId", this.ImageCacheId);
             this.SetParamSimple(map, prefix + "ImageCacheName", this.ImageCacheName);
+            this.SetParamArrayObj(map, prefix + "ImageRegistryCredentials.", this.ImageRegistryCredentials);
+            this.SetParamArraySimple(map, prefix + "Images.", this.Images);
+            this.SetParamSimple(map, prefix + "ImageCacheSize", this.ImageCacheSize);
+            this.SetParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

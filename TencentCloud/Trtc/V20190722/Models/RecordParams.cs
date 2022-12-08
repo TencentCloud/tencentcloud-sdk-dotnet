@@ -54,7 +54,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public SubscribeStreamUserIds SubscribeStreamUserIds{ get; set; }
 
         /// <summary>
-        /// 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
+        /// 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4。2：输出文件格式为hls+aac 。
         /// </summary>
         [JsonProperty("OutputFormat")]
         public ulong? OutputFormat{ get; set; }
@@ -64,6 +64,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         [JsonProperty("AvMerge")]
         public ulong? AvMerge{ get; set; }
+
+        /// <summary>
+        /// 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
+        /// Hls 格式录制此参数不生效。
+        /// </summary>
+        [JsonProperty("MaxMediaFileDuration")]
+        public ulong? MaxMediaFileDuration{ get; set; }
 
 
         /// <summary>
@@ -77,6 +84,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "SubscribeStreamUserIds.", this.SubscribeStreamUserIds);
             this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
             this.SetParamSimple(map, prefix + "AvMerge", this.AvMerge);
+            this.SetParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
         }
     }
 }
