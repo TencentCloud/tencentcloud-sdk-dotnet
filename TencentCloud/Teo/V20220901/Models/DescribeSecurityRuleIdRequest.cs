@@ -25,12 +25,6 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 规则Id数组。
-        /// </summary>
-        [JsonProperty("RuleIdList")]
-        public long?[] RuleIdList{ get; set; }
-
-        /// <summary>
         /// 规则类型，取值有：
         /// <li>waf：web托管规则；</li>
         /// <li>acl：自定义规则；</li>
@@ -46,15 +40,28 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Entity")]
         public string Entity{ get; set; }
 
+        /// <summary>
+        /// 规则Id数组。 当为空时查询 子域名或者应用名下所有规则
+        /// </summary>
+        [JsonProperty("RuleIdList")]
+        public long?[] RuleIdList{ get; set; }
+
+        /// <summary>
+        /// 子域名数组。
+        /// </summary>
+        [JsonProperty("Domains")]
+        public string[] Domains{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "RuleIdList.", this.RuleIdList);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamSimple(map, prefix + "Entity", this.Entity);
+            this.SetParamArraySimple(map, prefix + "RuleIdList.", this.RuleIdList);
+            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
         }
     }
 }

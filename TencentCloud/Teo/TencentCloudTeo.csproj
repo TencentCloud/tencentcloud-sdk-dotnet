@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.658</VersionPrefix>
+    <VersionPrefix>3.0.659</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -752,6 +752,7 @@
     <Compile Include="V20220901\Models\SecRuleRelatedInfo.cs" />
     <Compile Include="V20220901\Models\SecurityConfig.cs" />
     <Compile Include="V20220901\Models\SecurityEntity.cs" />
+    <Compile Include="V20220901\Models\SecurityRule.cs" />
     <Compile Include="V20220901\Models\SecurityType.cs" />
     <Compile Include="V20220901\Models\ServerCertInfo.cs" />
     <Compile Include="V20220901\Models\ShieldArea.cs" />

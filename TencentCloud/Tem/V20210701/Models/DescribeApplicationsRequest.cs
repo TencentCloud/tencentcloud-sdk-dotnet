@@ -66,6 +66,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("Filters")]
         public QueryFilter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("SortInfo")]
+        public SortType SortInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamObj(map, prefix + "SortInfo.", this.SortInfo);
         }
     }
 }

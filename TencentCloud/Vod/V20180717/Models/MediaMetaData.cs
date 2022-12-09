@@ -90,6 +90,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("AudioDuration")]
         public float? AudioDuration{ get; set; }
 
+        /// <summary>
+        /// 媒体文件的 Md5 值。
+        /// <li><font color=red>注意</font>：如需要获取媒体文件的 Md5，调用 DescribeFileAttributes 接口，待任务执行完成后获取。</li>
+        /// </summary>
+        [JsonProperty("Md5")]
+        public string Md5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +114,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
             this.SetParamSimple(map, prefix + "VideoDuration", this.VideoDuration);
             this.SetParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
+            this.SetParamSimple(map, prefix + "Md5", this.Md5);
         }
     }
 }

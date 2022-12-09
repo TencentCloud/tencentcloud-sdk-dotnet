@@ -87,6 +87,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ReqMethod")]
         public string ReqMethod{ get; set; }
 
+        /// <summary>
+        /// 日志所属区域。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +110,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "AttackContent", this.AttackContent);
             this.SetParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
             this.SetParamSimple(map, prefix + "ReqMethod", this.ReqMethod);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

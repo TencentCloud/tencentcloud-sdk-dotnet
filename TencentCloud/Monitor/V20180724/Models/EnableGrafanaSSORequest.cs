@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 是否开启 SSO
+        /// 是否开启 SSO，true为开启，false 为不开启
         /// </summary>
         [JsonProperty("EnableSSO")]
         public bool? EnableSSO{ get; set; }
 
         /// <summary>
-        /// 实例 ID
+        /// Grafana 实例 ID，例如：grafana-abcdefgh
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

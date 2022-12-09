@@ -35,6 +35,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>PullUpload：拉取上传媒体文件任务；</li>
         /// <li>FastClipMedia：快速剪辑任务；</li>
         /// <li>RemoveWatermarkTask：智能去除水印任务；</li>
+        /// <li>DescribeFileAttributesTask：获取文件属性任务；</li>
         /// <li> ReviewAudioVideo：音视频审核任务。</li>
         /// </summary>
         [JsonProperty("TaskType")]
@@ -180,6 +181,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ReduceMediaBitrateTask ReduceMediaBitrateTask{ get; set; }
 
         /// <summary>
+        /// 获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DescribeFileAttributesTask")]
+        public DescribeFileAttributesTask DescribeFileAttributesTask{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -212,6 +220,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ExtractTraceWatermarkTask.", this.ExtractTraceWatermarkTask);
             this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
             this.SetParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);
+            this.SetParamObj(map, prefix + "DescribeFileAttributesTask.", this.DescribeFileAttributesTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

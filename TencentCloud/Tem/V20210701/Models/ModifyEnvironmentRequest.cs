@@ -60,6 +60,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("SourceChannel")]
         public long? SourceChannel{ get; set; }
 
+        /// <summary>
+        /// 环境类型：test、pre、prod
+        /// </summary>
+        [JsonProperty("EnvType")]
+        public string EnvType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "Vpc", this.Vpc);
             this.SetParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
             this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+            this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
         }
     }
 }

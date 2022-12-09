@@ -42,6 +42,17 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("OtherTexts")]
         public string[] OtherTexts{ get; set; }
 
+        /// <summary>
+        /// 印章类型，表示为:
+        /// 圆形印章：0
+        /// 椭圆形印章：1
+        /// 方形印章：2
+        /// 菱形印章：3
+        /// 三角形印章：4
+        /// </summary>
+        [JsonProperty("SealShape")]
+        public string SealShape{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +62,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "SealBody", this.SealBody);
             this.SetParamObj(map, prefix + "Location.", this.Location);
             this.SetParamArraySimple(map, prefix + "OtherTexts.", this.OtherTexts);
+            this.SetParamSimple(map, prefix + "SealShape", this.SealShape);
         }
     }
 }

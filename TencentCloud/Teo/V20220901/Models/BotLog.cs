@@ -49,13 +49,6 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RequestUri{ get; set; }
 
         /// <summary>
-        /// 攻击类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("AttackType")]
-        public string AttackType{ get; set; }
-
-        /// <summary>
         /// 请求方法。
         /// </summary>
         [JsonProperty("RequestMethod")]
@@ -68,11 +61,22 @@ namespace TencentCloud.Teo.V20220901.Models
         public string AttackContent{ get; set; }
 
         /// <summary>
-        /// 攻击等级。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
         /// </summary>
-        [JsonProperty("RiskLevel")]
-        public string RiskLevel{ get; set; }
+        [JsonProperty("SipCountryCode")]
+        public string SipCountryCode{ get; set; }
+
+        /// <summary>
+        /// user agent。
+        /// </summary>
+        [JsonProperty("Ua")]
+        public string Ua{ get; set; }
+
+        /// <summary>
+        /// 攻击事件ID。
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
 
         /// <summary>
         /// 规则ID。
@@ -82,16 +86,11 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? RuleId{ get; set; }
 
         /// <summary>
-        /// IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
+        /// 攻击类型。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("SipCountryCode")]
-        public string SipCountryCode{ get; set; }
-
-        /// <summary>
-        /// 请求（事件）ID。
-        /// </summary>
-        [JsonProperty("EventId")]
-        public string EventId{ get; set; }
+        [JsonProperty("AttackType")]
+        public string AttackType{ get; set; }
 
         /// <summary>
         /// 处置方式。
@@ -108,10 +107,11 @@ namespace TencentCloud.Teo.V20220901.Models
         public string HttpLog{ get; set; }
 
         /// <summary>
-        /// user agent。
+        /// 攻击等级。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Ua")]
-        public string Ua{ get; set; }
+        [JsonProperty("RiskLevel")]
+        public string RiskLevel{ get; set; }
 
         /// <summary>
         /// 检出方法。
@@ -148,6 +148,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
+        /// <summary>
+        /// 日志所属的区域。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,21 +165,22 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "AttackIp", this.AttackIp);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "RequestUri", this.RequestUri);
-            this.SetParamSimple(map, prefix + "AttackType", this.AttackType);
             this.SetParamSimple(map, prefix + "RequestMethod", this.RequestMethod);
             this.SetParamSimple(map, prefix + "AttackContent", this.AttackContent);
-            this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
-            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "SipCountryCode", this.SipCountryCode);
+            this.SetParamSimple(map, prefix + "Ua", this.Ua);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "AttackType", this.AttackType);
             this.SetParamSimple(map, prefix + "DisposalMethod", this.DisposalMethod);
             this.SetParamSimple(map, prefix + "HttpLog", this.HttpLog);
-            this.SetParamSimple(map, prefix + "Ua", this.Ua);
+            this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
             this.SetParamSimple(map, prefix + "DetectionMethod", this.DetectionMethod);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamSimple(map, prefix + "Maliciousness", this.Maliciousness);
             this.SetParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
             this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

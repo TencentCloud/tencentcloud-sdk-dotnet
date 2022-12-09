@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Prometheus 实例 ID
+        /// Prometheus 实例 ID，例如：prom-sdfk2342a
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

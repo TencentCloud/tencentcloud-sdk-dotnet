@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Prometheus 实例 ID
+        /// Prometheus 实例 ID，例如：prom-abcd1234
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 规则表达式
+        /// 规则表达式，可参考<a href="https://cloud.tencent.com/document/product/1416/56008">告警规则说明</a>
         /// </summary>
         [JsonProperty("Expr")]
         public string Expr{ get; set; }

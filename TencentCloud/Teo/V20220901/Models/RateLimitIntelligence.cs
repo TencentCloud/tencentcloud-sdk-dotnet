@@ -40,6 +40,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
+        /// <summary>
+        /// 规则id，仅出参使用。
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public long? RuleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -48,6 +54,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "Action", this.Action);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
         }
     }
 }

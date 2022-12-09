@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SSLMode{ get; set; }
 
         /// <summary>
-        /// 服务端证书的 ID。
+        /// 服务端证书的ID。
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
@@ -43,6 +43,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("CertCaId")]
         public string CertCaId{ get; set; }
 
+        /// <summary>
+        /// 多本服务器证书场景扩展的服务器证书ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtCertIds")]
+        public string[] ExtCertIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SSLMode", this.SSLMode);
             this.SetParamSimple(map, prefix + "CertId", this.CertId);
             this.SetParamSimple(map, prefix + "CertCaId", this.CertCaId);
+            this.SetParamArraySimple(map, prefix + "ExtCertIds.", this.ExtCertIds);
         }
     }
 }

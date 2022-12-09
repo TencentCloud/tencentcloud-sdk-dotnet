@@ -94,6 +94,13 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 环境类型：test、pre、prod
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnvType")]
+        public string EnvType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +118,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "ApmInstanceId", this.ApmInstanceId);
             this.SetParamSimple(map, prefix + "Locked", this.Locked);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
         }
     }
 }

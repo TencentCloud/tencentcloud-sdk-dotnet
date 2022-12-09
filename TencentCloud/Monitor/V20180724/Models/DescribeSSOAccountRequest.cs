@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// Grafana 实例 ID，例如：grafana-abcdefgh
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 按账号 UIN 进行过滤
+        /// 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

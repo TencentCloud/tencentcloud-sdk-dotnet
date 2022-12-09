@@ -36,6 +36,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>accept：请求内容类型；</li>
         /// <li>method：请求方式；</li>
         /// <li>header：请求头部；</li>
+        /// <li>app_proto：应用层协议；</li>
         /// <li>sip_proto：网络层协议。</li>
         /// </summary>
         [JsonProperty("MatchFrom")]

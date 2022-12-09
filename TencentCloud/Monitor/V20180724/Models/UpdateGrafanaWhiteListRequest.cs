@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例名
+        /// Grafana 实例 ID，例如：grafana-abcdefgh
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 白名单数组
+        /// 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
         /// </summary>
         [JsonProperty("Whitelist")]
         public string[] Whitelist{ get; set; }

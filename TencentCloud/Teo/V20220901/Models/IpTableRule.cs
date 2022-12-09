@@ -42,10 +42,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public string MatchFrom{ get; set; }
 
         /// <summary>
-        /// 匹配内容。
+        /// 规则的匹配方式，默认为空代表等于。
+        /// 取值有：
+        /// <li> is_emty：配置为空；</li>
+        /// <li> not_exists：配置为不存在；</li>
+        /// <li> include：包含；</li>
+        /// <li> not_include：不包含；</li>
+        /// <li> equal：等于；</li>
+        /// <li> not_equal：不等于。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("MatchContent")]
-        public string MatchContent{ get; set; }
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
 
         /// <summary>
         /// 规则id。仅出参使用。
@@ -68,6 +76,19 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 规则名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
+
+        /// <summary>
+        /// 匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
+        /// </summary>
+        [JsonProperty("MatchContent")]
+        public string MatchContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,10 +97,12 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "MatchFrom", this.MatchFrom);
-            this.SetParamSimple(map, prefix + "MatchContent", this.MatchContent);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "MatchContent", this.MatchContent);
         }
     }
 }

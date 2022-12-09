@@ -169,6 +169,20 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("HasAuthority")]
         public bool? HasAuthority{ get; set; }
 
+        /// <summary>
+        /// 环境类型: test、pre、prod
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnvType")]
+        public string EnvType{ get; set; }
+
+        /// <summary>
+        /// 地域码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public string RegionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +212,8 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "HasAuthority", this.HasAuthority);
+            this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+        /// 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderByKey未传递则按创建时间降序排序
         /// </summary>
         [JsonProperty("OrderByKey")]
         public ulong? OrderByKey{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string[] ZoneList{ get; set; }
 
         /// <summary>
-        /// 健康状态筛列表
+        /// 健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知
         /// </summary>
         [JsonProperty("HealthStatus")]
         public long?[] HealthStatus{ get; set; }

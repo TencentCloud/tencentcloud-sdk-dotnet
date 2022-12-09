@@ -59,6 +59,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LocalZone")]
         public bool? LocalZone{ get; set; }
 
+        /// <summary>
+        /// 可用区是否是EdgeZone可用区，如：false
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EdgeZone")]
+        public bool? EdgeZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "ZoneRegion", this.ZoneRegion);
             this.SetParamSimple(map, prefix + "LocalZone", this.LocalZone);
+            this.SetParamSimple(map, prefix + "EdgeZone", this.EdgeZone);
         }
     }
 }

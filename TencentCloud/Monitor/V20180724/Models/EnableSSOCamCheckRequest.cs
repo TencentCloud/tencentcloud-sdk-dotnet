@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// Grafana 实例 ID，例如：grafana-abcdefgh
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 是否开启cam鉴权
+        /// 是否开启 cam 鉴权，true为开启，false 为不开启
         /// </summary>
         [JsonProperty("EnableSSOCamCheck")]
         public bool? EnableSSOCamCheck{ get; set; }

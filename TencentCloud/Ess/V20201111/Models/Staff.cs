@@ -89,6 +89,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("VerifiedOn")]
         public long? VerifiedOn{ get; set; }
 
+        /// <summary>
+        /// 员工是否离职：0-未离职，1-离职
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QuiteJob")]
+        public long? QuiteJob{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +112,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Verified", this.Verified);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "VerifiedOn", this.VerifiedOn);
+            this.SetParamSimple(map, prefix + "QuiteJob", this.QuiteJob);
         }
     }
 }

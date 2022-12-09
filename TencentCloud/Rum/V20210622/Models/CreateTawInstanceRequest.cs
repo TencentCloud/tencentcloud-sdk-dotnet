@@ -78,6 +78,18 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("BuyingChannel")]
         public string BuyingChannel{ get; set; }
 
+        /// <summary>
+        /// 预付费资源包类型(仅预付费需要)
+        /// </summary>
+        [JsonProperty("ResourcePackageType")]
+        public ulong? ResourcePackageType{ get; set; }
+
+        /// <summary>
+        /// 预付费资源包数量(仅预付费需要)
+        /// </summary>
+        [JsonProperty("ResourcePackageNum")]
+        public ulong? ResourcePackageNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "CountNum", this.CountNum);
             this.SetParamSimple(map, prefix + "PeriodRetain", this.PeriodRetain);
             this.SetParamSimple(map, prefix + "BuyingChannel", this.BuyingChannel);
+            this.SetParamSimple(map, prefix + "ResourcePackageType", this.ResourcePackageType);
+            this.SetParamSimple(map, prefix + "ResourcePackageNum", this.ResourcePackageNum);
         }
     }
 }

@@ -111,6 +111,34 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("CnameSpeedupStatus")]
         public string CnameSpeedupStatus{ get; set; }
 
+        /// <summary>
+        /// 转发规则名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ForwardRuleName")]
+        public string ForwardRuleName{ get; set; }
+
+        /// <summary>
+        /// 转发规则类型：云上到云下，DOWN；云下到云上，UP，目前只支持DOWN
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ForwardRuleType")]
+        public string ForwardRuleType{ get; set; }
+
+        /// <summary>
+        /// 转发的地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ForwardAddress")]
+        public string ForwardAddress{ get; set; }
+
+        /// <summary>
+        /// 终端节点名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndPointName")]
+        public string EndPointName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +159,10 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
             this.SetParamSimple(map, prefix + "IsCustomTld", this.IsCustomTld);
             this.SetParamSimple(map, prefix + "CnameSpeedupStatus", this.CnameSpeedupStatus);
+            this.SetParamSimple(map, prefix + "ForwardRuleName", this.ForwardRuleName);
+            this.SetParamSimple(map, prefix + "ForwardRuleType", this.ForwardRuleType);
+            this.SetParamSimple(map, prefix + "ForwardAddress", this.ForwardAddress);
+            this.SetParamSimple(map, prefix + "EndPointName", this.EndPointName);
         }
     }
 }

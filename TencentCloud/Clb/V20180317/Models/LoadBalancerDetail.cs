@@ -262,6 +262,27 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Domains")]
         public string Domains{ get; set; }
 
+        /// <summary>
+        /// 多可用区负载均衡实例所选备区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SlaveZone")]
+        public string[] SlaveZone{ get; set; }
+
+        /// <summary>
+        /// 内网负载均衡实例所在可用区，由白名单CLB_Internal_Zone控制
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SniSwitch")]
+        public long? SniSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +323,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
             this.SetParamSimple(map, prefix + "TargetHealth", this.TargetHealth);
             this.SetParamSimple(map, prefix + "Domains", this.Domains);
+            this.SetParamArraySimple(map, prefix + "SlaveZone.", this.SlaveZone);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
         }
     }
 }

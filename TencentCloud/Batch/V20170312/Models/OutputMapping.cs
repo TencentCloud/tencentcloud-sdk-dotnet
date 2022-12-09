@@ -36,6 +36,13 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("DestinationPath")]
         public string DestinationPath{ get; set; }
 
+        /// <summary>
+        /// 输出映射选项
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OutputMappingOption")]
+        public OutputMappingOption OutputMappingOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Batch.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "SourcePath", this.SourcePath);
             this.SetParamSimple(map, prefix + "DestinationPath", this.DestinationPath);
+            this.SetParamObj(map, prefix + "OutputMappingOption.", this.OutputMappingOption);
         }
     }
 }

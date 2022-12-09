@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 插件 ID 数组
+        /// 插件 ID 数组，例如"PluginIds": [ "grafana-clock-panel" ]，可通过 DescribePluginOverviews 获取 PluginId
         /// </summary>
         [JsonProperty("PluginIds")]
         public string[] PluginIds{ get; set; }
 
         /// <summary>
-        /// 实例 ID
+        /// Grafana 实例 ID，例如：grafana-abcdefg
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

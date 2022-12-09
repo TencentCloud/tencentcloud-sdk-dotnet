@@ -154,6 +154,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("AttrFlags")]
         public string[] AttrFlags{ get; set; }
 
+        /// <summary>
+        /// 绑定的目标组列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetGroupList")]
+        public BasicTargetGroupInfo[] TargetGroupList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +186,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Toa", this.Toa);
             this.SetParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
             this.SetParamArraySimple(map, prefix + "AttrFlags.", this.AttrFlags);
+            this.SetParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
         }
     }
 }

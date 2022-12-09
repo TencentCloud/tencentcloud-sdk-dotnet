@@ -81,7 +81,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 待翻译的文本列表，批量接口可以以数组方式在一次请求中填写多个待翻译文本。文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度总和需要低于2000。
+        /// 待翻译的文本列表，批量接口可以以数组方式在一次请求中填写多个待翻译文本。文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度总和需要低于2000字符。
         /// </summary>
         [JsonProperty("SourceTextList")]
         public string[] SourceTextList{ get; set; }

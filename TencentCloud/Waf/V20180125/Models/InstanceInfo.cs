@@ -166,6 +166,20 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ElasticBilling")]
         public ulong? ElasticBilling{ get; set; }
 
+        /// <summary>
+        /// 攻击日志投递开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttackLogPost")]
+        public long? AttackLogPost{ get; set; }
+
+        /// <summary>
+        /// 带宽峰值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxBandwidth")]
+        public ulong? MaxBandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -195,6 +209,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamObj(map, prefix + "BotPkg.", this.BotPkg);
             this.SetParamObj(map, prefix + "BotQPS.", this.BotQPS);
             this.SetParamSimple(map, prefix + "ElasticBilling", this.ElasticBilling);
+            this.SetParamSimple(map, prefix + "AttackLogPost", this.AttackLogPost);
+            this.SetParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
         }
     }
 }

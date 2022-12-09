@@ -166,6 +166,20 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("CipherTemplate")]
         public long? CipherTemplate{ get; set; }
 
+        /// <summary>
+        /// 300s
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyReadTimeout")]
+        public long? ProxyReadTimeout{ get; set; }
+
+        /// <summary>
+        /// 300s
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxySendTimeout")]
+        public long? ProxySendTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -195,6 +209,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "TLSVersion", this.TLSVersion);
             this.SetParamArraySimple(map, prefix + "Ciphers.", this.Ciphers);
             this.SetParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
+            this.SetParamSimple(map, prefix + "ProxyReadTimeout", this.ProxyReadTimeout);
+            this.SetParamSimple(map, prefix + "ProxySendTimeout", this.ProxySendTimeout);
         }
     }
 }

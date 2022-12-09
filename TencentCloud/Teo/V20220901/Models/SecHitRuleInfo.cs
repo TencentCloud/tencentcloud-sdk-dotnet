@@ -25,6 +25,12 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
+        /// 站点ID。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
         /// 规则ID。
         /// </summary>
         [JsonProperty("RuleId")]
@@ -35,19 +41,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("RuleTypeName")]
         public string RuleTypeName{ get; set; }
-
-        /// <summary>
-        /// 执行动作（处置方式），取值有：
-        /// <li>trans ：通过 ；</li>
-        /// <li>alg ：算法挑战 ；</li>
-        /// <li>drop ：丢弃 ；</li>
-        /// <li>ban ：封禁源ip ；</li>
-        /// <li>redirect ：重定向 ；</li>
-        /// <li>page ：返回指定页面 ；</li>
-        /// <li>monitor ：观察 。</li>
-        /// </summary>
-        [JsonProperty("Action")]
-        public string Action{ get; set; }
 
         /// <summary>
         /// 命中时间，采用unix秒级时间戳。
@@ -74,6 +67,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Domain{ get; set; }
 
         /// <summary>
+        /// 执行动作（处置方式），取值有：
+        /// <li>trans ：通过 ；</li>
+        /// <li>alg ：算法挑战 ；</li>
+        /// <li>drop ：丢弃 ；</li>
+        /// <li>ban ：封禁源ip ；</li>
+        /// <li>redirect ：重定向 ；</li>
+        /// <li>page ：返回指定页面 ；</li>
+        /// <li>monitor ：观察 。</li>
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
+
+        /// <summary>
         /// Bot标签，取值有:
         /// <li>evil_bot：恶意Bot；</li>
         /// <li>suspect_bot：疑似Bot；</li>
@@ -84,20 +90,44 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("BotLabel")]
         public string BotLabel{ get; set; }
 
+        /// <summary>
+        /// 规则是否启用。
+        /// </summary>
+        [JsonProperty("RuleEnabled")]
+        public bool? RuleEnabled{ get; set; }
+
+        /// <summary>
+        /// 规则是否启用监控告警。
+        /// </summary>
+        [JsonProperty("AlarmEnabled")]
+        public bool? AlarmEnabled{ get; set; }
+
+        /// <summary>
+        /// 规则是否存在，取值有：
+        /// <li>true: 规则不存在；</li>
+        /// <li>false: 规则存在。</li>
+        /// </summary>
+        [JsonProperty("RuleDeleted")]
+        public bool? RuleDeleted{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "RuleTypeName", this.RuleTypeName);
-            this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "HitTime", this.HitTime);
             this.SetParamSimple(map, prefix + "RequestNum", this.RequestNum);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "BotLabel", this.BotLabel);
+            this.SetParamSimple(map, prefix + "RuleEnabled", this.RuleEnabled);
+            this.SetParamSimple(map, prefix + "AlarmEnabled", this.AlarmEnabled);
+            this.SetParamSimple(map, prefix + "RuleDeleted", this.RuleDeleted);
         }
     }
 }
