@@ -34,7 +34,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// 调用方信息
+        /// 调用方信息，其中OperatorId为必填字段，即用户的UserId
         /// </summary>
         [JsonProperty("Caller")]
         public Caller Caller{ get; set; }
@@ -46,20 +46,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public UploadFile[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 不再使用，上传文件链接数组，最多支持20个URL
-        /// </summary>
-        [JsonProperty("FileUrls")]
-        public string FileUrls{ get; set; }
-
-        /// <summary>
-        /// 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
-        /// true--是，处理置白
-        /// false--否，不处理
-        /// </summary>
-        [JsonProperty("CoverRect")]
-        public bool? CoverRect{ get; set; }
-
-        /// <summary>
         /// 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
         /// 如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
         /// </summary>
@@ -67,10 +53,24 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FileType{ get; set; }
 
         /// <summary>
+        /// 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
+        /// true--是，处理置白
+        /// 默认为false--否，不处理
+        /// </summary>
+        [JsonProperty("CoverRect")]
+        public bool? CoverRect{ get; set; }
+
+        /// <summary>
         /// 用户自定义ID数组，与上传文件一一对应
         /// </summary>
         [JsonProperty("CustomIds")]
         public string[] CustomIds{ get; set; }
+
+        /// <summary>
+        /// 不再使用，上传文件链接数组，最多支持20个URL
+        /// </summary>
+        [JsonProperty("FileUrls")]
+        public string FileUrls{ get; set; }
 
 
         /// <summary>
@@ -81,10 +81,10 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
             this.SetParamObj(map, prefix + "Caller.", this.Caller);
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
-            this.SetParamSimple(map, prefix + "FileUrls", this.FileUrls);
-            this.SetParamSimple(map, prefix + "CoverRect", this.CoverRect);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "CoverRect", this.CoverRect);
             this.SetParamArraySimple(map, prefix + "CustomIds.", this.CustomIds);
+            this.SetParamSimple(map, prefix + "FileUrls", this.FileUrls);
         }
     }
 }

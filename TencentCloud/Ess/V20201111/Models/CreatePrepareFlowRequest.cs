@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 资源Id,通过上传uploadfile接口获得
+        /// 资源Id，通过多文件上传（UploadFiles）接口获得
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
