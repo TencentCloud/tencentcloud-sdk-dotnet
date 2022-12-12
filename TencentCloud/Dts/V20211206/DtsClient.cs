@@ -1265,6 +1265,86 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 本接口用于校验检查项不通过后，可进行跳过此校验项操作，后端将不再校验该项。任何校验步骤都是不应该跳过的，通过校验是能正确执行的前置条件。支持跳过的产品及链路的校验项可 [参考文档](https://cloud.tencent.com/document/product/571/61639)。
+        /// </summary>
+        /// <param name="req"><see cref="SkipCheckItemRequest"/></param>
+        /// <returns><see cref="SkipCheckItemResponse"/></returns>
+        public async Task<SkipCheckItemResponse> SkipCheckItem(SkipCheckItemRequest req)
+        {
+             JsonResponseModel<SkipCheckItemResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SkipCheckItem");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SkipCheckItemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验检查项不通过后，可进行跳过此校验项操作，后端将不再校验该项。任何校验步骤都是不应该跳过的，通过校验是能正确执行的前置条件。支持跳过的产品及链路的校验项可 [参考文档](https://cloud.tencent.com/document/product/571/61639)。
+        /// </summary>
+        /// <param name="req"><see cref="SkipCheckItemRequest"/></param>
+        /// <returns><see cref="SkipCheckItemResponse"/></returns>
+        public SkipCheckItemResponse SkipCheckItemSync(SkipCheckItemRequest req)
+        {
+             JsonResponseModel<SkipCheckItemResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SkipCheckItem");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SkipCheckItemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验检查项不通过后，可进行跳过此校验项操作，后端将不再校验该项。任何校验步骤都是不应该跳过的，通过校验是能正确执行的前置条件。支持跳过的产品及链路的校验项可 [参考文档](https://cloud.tencent.com/document/product/571/61639)。
+        /// </summary>
+        /// <param name="req"><see cref="SkipSyncCheckItemRequest"/></param>
+        /// <returns><see cref="SkipSyncCheckItemResponse"/></returns>
+        public async Task<SkipSyncCheckItemResponse> SkipSyncCheckItem(SkipSyncCheckItemRequest req)
+        {
+             JsonResponseModel<SkipSyncCheckItemResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SkipSyncCheckItem");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SkipSyncCheckItemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验检查项不通过后，可进行跳过此校验项操作，后端将不再校验该项。任何校验步骤都是不应该跳过的，通过校验是能正确执行的前置条件。支持跳过的产品及链路的校验项可 [参考文档](https://cloud.tencent.com/document/product/571/61639)。
+        /// </summary>
+        /// <param name="req"><see cref="SkipSyncCheckItemRequest"/></param>
+        /// <returns><see cref="SkipSyncCheckItemResponse"/></returns>
+        public SkipSyncCheckItemResponse SkipSyncCheckItemSync(SkipSyncCheckItemRequest req)
+        {
+             JsonResponseModel<SkipSyncCheckItemResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SkipSyncCheckItem");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SkipSyncCheckItemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 启动一致性校验任务，启动之前需要先通过接口`CreateCompareTask` 创建一致性校验任务，启动后可通过接口`DescribeCompareTasks` 查询一致性校验任务列表来获得启动后的状态
         /// </summary>
         /// <param name="req"><see cref="StartCompareRequest"/></param>

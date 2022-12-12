@@ -93,6 +93,17 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("MinScaleResolution")]
         public string MinScaleResolution{ get; set; }
 
+        /// <summary>
+        /// 是否对不支持元素开启自动处理的功能。默认不开启。
+        /// 
+        /// 在开启自动处理的情况下，会自动进行如下处理：
+        /// 1. 墨迹：移除不支持的墨迹（比如使用WPS画的）
+        /// 2. 自动翻页：移除PPT上所有的自动翻页设置
+        /// 3. 已损坏音视频：移除PPT上对损坏音视频的引用
+        /// </summary>
+        [JsonProperty("AutoHandleUnsupportedElement")]
+        public bool? AutoHandleUnsupportedElement{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +119,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "ExtraData", this.ExtraData);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
+            this.SetParamSimple(map, prefix + "AutoHandleUnsupportedElement", this.AutoHandleUnsupportedElement);
         }
     }
 }

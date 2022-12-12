@@ -38,7 +38,15 @@ namespace TencentCloud.Cat.V20180409.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// 拨测类型
+        /// <li>1 = 页面浏览</li>
+        /// <li> 2 =文件上传 </li>
+        /// <li> 3 = 文件下载</li>
+        /// <li> 4 = 端口性能 </li>
+        /// <li> 5 = 网络质量 </li>
+        /// <li> 6 =流媒体 </li>
+        /// 
+        /// 即时拨测只支持页面浏览，网络质量，文件下载
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
@@ -63,6 +71,16 @@ namespace TencentCloud.Cat.V20180409.Models
 
         /// <summary>
         /// 任务状态
+        /// <li>1 = 创建中</li>
+        /// <li> 2 = 运行中 </li>
+        /// <li> 3 = 运行异常 </li>
+        /// <li> 4 = 暂停中 </li>
+        /// <li> 5 = 暂停异常 </li>
+        /// <li> 6 = 任务暂停 </li>
+        /// <li> 7 = 任务删除中 </li>
+        /// <li> 8 = 任务删除异常 </li>
+        /// <li> 9 = 任务删除</li>
+        /// <li> 10 = 定时任务暂停中 </li>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -112,6 +130,8 @@ namespace TencentCloud.Cat.V20180409.Models
 
         /// <summary>
         /// 定时任务启动状态
+        /// <li>1 = 定时任务表达式生效</li>
+        /// <li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronState")]

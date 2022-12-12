@@ -37,7 +37,9 @@ namespace TencentCloud.Tiia.V20190529.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 图库可容纳的最大图片数量。
+        /// 图库可容纳的最大图片特征数量，一张图片对应一条图片特征数据。
+        /// 达到最大容量后无法在图库中继续创建图片，否则将会报错。
+        /// MaxCapacity不支持修改，请合理评估容量上限，按需创建。
         /// </summary>
         [JsonProperty("MaxCapacity")]
         public ulong? MaxCapacity{ get; set; }
@@ -55,11 +57,14 @@ namespace TencentCloud.Tiia.V20190529.Models
         public ulong? MaxQps{ get; set; }
 
         /// <summary>
-        /// 图库类型，对应不同的图像搜索服务类型，默认为4。1～3为历史版本，不推荐。
+        /// 图库类型，用于决定图像搜索的服务类型和算法版本，默认为4。
+        /// GroupType不支持修改，若不确定适用的服务类型，建议先对不同类型分别小规模测试后再开始正式使用。
         /// 参数取值：
-        /// 4：相同图像搜索。
-        /// 5：商品图像搜索。
-        /// 6：相似图像搜索。
+        /// 4：通用图像搜索1.0版。
+        /// 7：商品图像搜索2.0升级版。
+        /// 5：商品图像搜索1.0版。
+        /// 6：图案花纹搜索1.0版。
+        /// 1 - 3：通用图像搜索旧版，不推荐使用。
         /// </summary>
         [JsonProperty("GroupType")]
         public ulong? GroupType{ get; set; }

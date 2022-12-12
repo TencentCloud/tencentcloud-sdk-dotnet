@@ -115,6 +115,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
+        /// <summary>
+        /// 索引文档数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndexDocs")]
+        public ulong? IndexDocs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "IndexOptionsField.", this.IndexOptionsField);
             this.SetParamObj(map, prefix + "IndexSettingsField.", this.IndexSettingsField);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "IndexDocs", this.IndexDocs);
         }
     }
 }

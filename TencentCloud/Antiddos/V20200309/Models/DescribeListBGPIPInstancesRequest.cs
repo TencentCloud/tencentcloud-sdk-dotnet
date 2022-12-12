@@ -91,7 +91,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public long? FilterDamDDoSStatus{ get; set; }
 
         /// <summary>
-        /// 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+        /// 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking，试用资源填trial
         /// </summary>
         [JsonProperty("FilterStatus")]
         public string FilterStatus{ get; set; }
@@ -120,6 +120,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterPackType")]
         public string[] FilterPackType{ get; set; }
 
+        /// <summary>
+        /// 重保护航搜索
+        /// </summary>
+        [JsonProperty("FilterConvoy")]
+        public ulong? FilterConvoy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,6 +147,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
             this.SetParamObj(map, prefix + "FilterTag.", this.FilterTag);
             this.SetParamArraySimple(map, prefix + "FilterPackType.", this.FilterPackType);
+            this.SetParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
         }
     }
 }

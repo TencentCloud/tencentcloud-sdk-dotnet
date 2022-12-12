@@ -25,19 +25,21 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 数据查询范围:结束时间
+        /// 数据查询范围:结束时间 yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 数据查询范围:开始时间
+        /// 数据查询范围:开始时间 yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 数据类型：ADDED_INVOICE_REPORT  增值税开票数据，NATURAL_FINANCE_REPORT 自然人金融数据
+        /// 数据类型：ADDED_INVOICE_REPORT  增值税开票数据，NATURAL_FINANCE_REPORT 自然人金融数据,
+        /// NATURAL_FINANCE_REPORT_BY_TIME 按次报税数据导出,
+        /// NATURAL_FINANCE_REPORT_STAT_BY_DAY 按日累计报税数据导出
         /// </summary>
         [JsonProperty("DataType")]
         public string DataType{ get; set; }

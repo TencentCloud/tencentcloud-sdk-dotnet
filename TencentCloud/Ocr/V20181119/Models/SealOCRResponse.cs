@@ -49,6 +49,17 @@ namespace TencentCloud.Ocr.V20181119.Models
         public SealInfo[] SealInfos{ get; set; }
 
         /// <summary>
+        /// 印章类型，表示为：
+        /// 圆形印章：0
+        /// 椭圆形印章：1
+        /// 方形印章：2
+        /// 菱形印章：3
+        /// 三角形印章：4
+        /// </summary>
+        [JsonProperty("SealShape")]
+        public string SealShape{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +75,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "Location.", this.Location);
             this.SetParamArraySimple(map, prefix + "OtherTexts.", this.OtherTexts);
             this.SetParamArrayObj(map, prefix + "SealInfos.", this.SealInfos);
+            this.SetParamSimple(map, prefix + "SealShape", this.SealShape);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -108,6 +108,18 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterTag")]
         public TagFilter FilterTag{ get; set; }
 
+        /// <summary>
+        /// 试用资源搜索，1: 应急防护资源；2：PLG试用资源
+        /// </summary>
+        [JsonProperty("FilterTrialFlag")]
+        public ulong? FilterTrialFlag{ get; set; }
+
+        /// <summary>
+        /// 重保护航搜索
+        /// </summary>
+        [JsonProperty("FilterConvoy")]
+        public ulong? FilterConvoy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterLightFlag", this.FilterLightFlag);
             this.SetParamSimple(map, prefix + "FilterChannelFlag", this.FilterChannelFlag);
             this.SetParamObj(map, prefix + "FilterTag.", this.FilterTag);
+            this.SetParamSimple(map, prefix + "FilterTrialFlag", this.FilterTrialFlag);
+            this.SetParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
         }
     }
 }

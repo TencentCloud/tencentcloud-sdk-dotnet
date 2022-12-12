@@ -2886,6 +2886,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持各类印章识别，包括发票章，财务章等，适用于公文，票据等场景。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="SealOCRRequest"/></param>
         /// <returns><see cref="SealOCRResponse"/></returns>
@@ -2906,6 +2908,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持各类印章识别，包括发票章，财务章等，适用于公文，票据等场景。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="SealOCRRequest"/></param>
         /// <returns><see cref="SealOCRResponse"/></returns>
