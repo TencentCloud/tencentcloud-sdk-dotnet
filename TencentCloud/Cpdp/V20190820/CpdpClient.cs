@@ -5273,6 +5273,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 灵云V2-平台账户余额查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPlatformAccountBalanceRequest"/></param>
+        /// <returns><see cref="QueryFlexPlatformAccountBalanceResponse"/></returns>
+        public async Task<QueryFlexPlatformAccountBalanceResponse> QueryFlexPlatformAccountBalance(QueryFlexPlatformAccountBalanceRequest req)
+        {
+             JsonResponseModel<QueryFlexPlatformAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexPlatformAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPlatformAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-平台账户余额查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPlatformAccountBalanceRequest"/></param>
+        /// <returns><see cref="QueryFlexPlatformAccountBalanceResponse"/></returns>
+        public QueryFlexPlatformAccountBalanceResponse QueryFlexPlatformAccountBalanceSync(QueryFlexPlatformAccountBalanceRequest req)
+        {
+             JsonResponseModel<QueryFlexPlatformAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexPlatformAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPlatformAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 灵云V2-查询结算订单列表
         /// </summary>
         /// <param name="req"><see cref="QueryFlexSettlementOrderListRequest"/></param>

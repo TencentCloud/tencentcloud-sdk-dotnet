@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.662</VersionPrefix>
+    <VersionPrefix>3.0.663</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -382,6 +382,7 @@
     <Compile Include="V20190820\Models\PaymentOrderResult.cs" />
     <Compile Include="V20190820\Models\PaymentOrderStatusResult.cs" />
     <Compile Include="V20190820\Models\PaymentOrders.cs" />
+    <Compile Include="V20190820\Models\PlatformAccountBalanceResult.cs" />
     <Compile Include="V20190820\Models\QueryAcctBindingRequest.cs" />
     <Compile Include="V20190820\Models\QueryAcctBindingResponse.cs" />
     <Compile Include="V20190820\Models\QueryAcctInfoListRequest.cs" />
@@ -473,6 +474,8 @@
     <Compile Include="V20190820\Models\QueryFlexPaymentOrderListResponse.cs" />
     <Compile Include="V20190820\Models\QueryFlexPaymentOrderStatusRequest.cs" />
     <Compile Include="V20190820\Models\QueryFlexPaymentOrderStatusResponse.cs" />
+    <Compile Include="V20190820\Models\QueryFlexPlatformAccountBalanceRequest.cs" />
+    <Compile Include="V20190820\Models\QueryFlexPlatformAccountBalanceResponse.cs" />
     <Compile Include="V20190820\Models\QueryFlexSettlementOrderListRequest.cs" />
     <Compile Include="V20190820\Models\QueryFlexSettlementOrderListResponse.cs" />
     <Compile Include="V20190820\Models\QueryFundsTransactionDetailsRequest.cs" />
