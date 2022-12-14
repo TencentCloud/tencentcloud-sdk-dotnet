@@ -38,6 +38,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("InstancePrice")]
         public InstancePrice InstancePrice{ get; set; }
 
+        /// <summary>
+        /// 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountDetail")]
+        public DiscountDetail[] DiscountDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
+            this.SetParamArrayObj(map, prefix + "DiscountDetail.", this.DiscountDetail);
         }
     }
 }

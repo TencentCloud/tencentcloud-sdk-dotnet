@@ -121,6 +121,20 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("PreviewUrl")]
         public string PreviewUrl{ get; set; }
 
+        /// <summary>
+        /// 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TemplateVersion")]
+        public string TemplateVersion{ get; set; }
+
+        /// <summary>
+        /// 模板是否已发布。true-已发布；false-未发布
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Published")]
+        public bool? Published{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +157,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Promoter.", this.Promoter);
             this.SetParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
             this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
+            this.SetParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
+            this.SetParamSimple(map, prefix + "Published", this.Published);
         }
     }
 }

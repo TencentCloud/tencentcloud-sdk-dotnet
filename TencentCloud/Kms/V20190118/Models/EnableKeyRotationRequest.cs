@@ -30,6 +30,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
+        /// <summary>
+        /// 密钥轮转周期，单位天，允许范围 7 ~ 365，默认值 365。
+        /// </summary>
+        [JsonProperty("RotateDays")]
+        public ulong? RotateDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "RotateDays", this.RotateDays);
         }
     }
 }

@@ -345,7 +345,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建回调模板，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板 ID 绑定到域名/路径使用。
+        /// 创建回调模板，数量上限：50，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板 ID 绑定到域名/路径使用。
         /// <br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
         /// 注意：至少填写一个回调 URL。
         /// </summary>
@@ -367,7 +367,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建回调模板，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板 ID 绑定到域名/路径使用。
+        /// 创建回调模板，数量上限：50，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板 ID 绑定到域名/路径使用。
         /// <br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
         /// 注意：至少填写一个回调 URL。
         /// </summary>

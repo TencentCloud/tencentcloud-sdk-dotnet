@@ -73,10 +73,16 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 自动防护授权配置值, 不空则表示开启
+        /// 该字段作废
         /// </summary>
         [JsonProperty("AutoProtectOpenConfig")]
         public string AutoProtectOpenConfig{ get; set; }
+
+        /// <summary>
+        /// 变配参数
+        /// </summary>
+        [JsonProperty("ModifyConfig")]
+        public OrderModifyObject ModifyConfig{ get; set; }
 
 
         /// <summary>
@@ -92,6 +98,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "AutoProtectOpenConfig", this.AutoProtectOpenConfig);
+            this.SetParamObj(map, prefix + "ModifyConfig.", this.ModifyConfig);
         }
     }
 }

@@ -92,17 +92,38 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string PreviewUrl{ get; set; }
 
         /// <summary>
-        /// 渠道模板ID
-        /// </summary>
-        [JsonProperty("ChannelTemplateId")]
-        public string ChannelTemplateId{ get; set; }
-
-        /// <summary>
         /// 渠道版-模板PDF文件链接
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PdfUrl")]
         public string PdfUrl{ get; set; }
+
+        /// <summary>
+        /// 关联的渠道模板ID
+        /// </summary>
+        [JsonProperty("ChannelTemplateId")]
+        public string ChannelTemplateId{ get; set; }
+
+        /// <summary>
+        /// 关联的渠道模板名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelTemplateName")]
+        public string ChannelTemplateName{ get; set; }
+
+        /// <summary>
+        /// 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelAutoSave")]
+        public long? ChannelAutoSave{ get; set; }
+
+        /// <summary>
+        /// 模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TemplateVersion")]
+        public string TemplateVersion{ get; set; }
 
 
         /// <summary>
@@ -121,8 +142,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
-            this.SetParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
             this.SetParamSimple(map, prefix + "PdfUrl", this.PdfUrl);
+            this.SetParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
+            this.SetParamSimple(map, prefix + "ChannelTemplateName", this.ChannelTemplateName);
+            this.SetParamSimple(map, prefix + "ChannelAutoSave", this.ChannelAutoSave);
+            this.SetParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
         }
     }
 }

@@ -45,8 +45,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 证书配置，取值有：
         /// <li> none：不配置；</li>
-        /// <li> hosting：SSL托管证书；</li>
-        /// <li> apply：申请免费证书。</li>默认取值为 none。
+        /// <li> hosting：SSL托管证书。</li>默认取值为 none。
         /// </summary>
         [JsonProperty("CertType")]
         public string CertType{ get; set; }

@@ -37,13 +37,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 实例 ID 数组
+        /// Grafana 实例 ID 数组
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 实例名，支持前缀模糊搜索
+        /// Grafana 实例名，支持前缀模糊搜索
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

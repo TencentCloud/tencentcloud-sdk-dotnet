@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateClusterNodePoolFromExistingAsgRequest : AbstractModel
+    public class DependService : AbstractModel
     {
         
         /// <summary>
-        /// 集群ID
+        /// 共用组件名
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 伸缩组ID
+        /// 共用组件集群
         /// </summary>
-        [JsonProperty("AutoscalingGroupId")]
-        public string AutoscalingGroupId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

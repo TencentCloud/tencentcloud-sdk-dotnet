@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例 ID
+        /// Grafana 实例 ID，例如：grafana-12345678
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 渠道名
+        /// 告警通道名称，例如：test
         /// </summary>
         [JsonProperty("ChannelName")]
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// 渠道 ID
+        /// 告警通道 ID，例如：nchannel-abcd1234
         /// </summary>
         [JsonProperty("ChannelIDs")]
         public string[] ChannelIDs{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 告警通道状态
         /// </summary>
         [JsonProperty("ChannelState")]
         public long? ChannelState{ get; set; }

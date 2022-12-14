@@ -31,7 +31,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 回调地址。
+        /// 回调地址。端口目前仅支持80、443
         /// </summary>
         [JsonProperty("Callback")]
         public string Callback{ get; set; }

@@ -39,7 +39,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 资源状态
+        /// 资源状态，1-正常，2-隔离，3-销毁
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -74,7 +74,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public string Model{ get; set; }
 
         /// <summary>
-        /// 资源类型
+        /// 云加密机类型id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VsmType")]

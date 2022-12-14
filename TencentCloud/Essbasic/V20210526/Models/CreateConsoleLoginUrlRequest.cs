@@ -44,7 +44,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ProxyOperatorName{ get; set; }
 
         /// <summary>
-        /// 控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
+        /// PC控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"。 EndPoint为"CHANNEL"/"APP"只支持"SEAL"-印章管理
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }

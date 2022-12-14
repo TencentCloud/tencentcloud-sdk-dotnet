@@ -97,6 +97,46 @@ namespace TencentCloud.Emr.V20190103
         /// <summary>
         /// 创建EMR集群实例
         /// </summary>
+        /// <param name="req"><see cref="CreateClusterRequest"/></param>
+        /// <returns><see cref="CreateClusterResponse"/></returns>
+        public async Task<CreateClusterResponse> CreateCluster(CreateClusterRequest req)
+        {
+             JsonResponseModel<CreateClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建EMR集群实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterRequest"/></param>
+        /// <returns><see cref="CreateClusterResponse"/></returns>
+        public CreateClusterResponse CreateClusterSync(CreateClusterRequest req)
+        {
+             JsonResponseModel<CreateClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建EMR集群实例
+        /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
         /// <returns><see cref="CreateInstanceResponse"/></returns>
         public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest req)
@@ -888,6 +928,46 @@ namespace TencentCloud.Emr.V20190103
              {
                  var strResp = this.InternalRequestSync(req, "RunJobFlow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunJobFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 扩容集群节点
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOutClusterRequest"/></param>
+        /// <returns><see cref="ScaleOutClusterResponse"/></returns>
+        public async Task<ScaleOutClusterResponse> ScaleOutCluster(ScaleOutClusterRequest req)
+        {
+             JsonResponseModel<ScaleOutClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ScaleOutCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 扩容集群节点
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOutClusterRequest"/></param>
+        /// <returns><see cref="ScaleOutClusterResponse"/></returns>
+        public ScaleOutClusterResponse ScaleOutClusterSync(ScaleOutClusterRequest req)
+        {
+             JsonResponseModel<ScaleOutClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScaleOutCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutClusterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

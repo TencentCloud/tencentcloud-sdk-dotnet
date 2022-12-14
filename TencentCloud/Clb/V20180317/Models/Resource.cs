@@ -36,6 +36,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Isp")]
         public string Isp{ get; set; }
 
+        /// <summary>
+        /// 可用资源。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AvailabilitySet")]
+        public ResourceAvailability[] AvailabilitySet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamArraySimple(map, prefix + "Type.", this.Type);
             this.SetParamSimple(map, prefix + "Isp", this.Isp);
+            this.SetParamArrayObj(map, prefix + "AvailabilitySet.", this.AvailabilitySet);
         }
     }
 }

@@ -115,6 +115,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? AvailableLHLicenseCnt{ get; set; }
 
         /// <summary>
+        /// 自动加购开关, true 开启, false 关闭
+        /// </summary>
+        [JsonProperty("AutoRepurchaseSwitch")]
+        public bool? AutoRepurchaseSwitch{ get; set; }
+
+        /// <summary>
+        /// 自动加购订单是否自动续费 ,true 开启, false 关闭
+        /// </summary>
+        [JsonProperty("AutoRepurchaseRenewSwitch")]
+        public bool? AutoRepurchaseRenewSwitch{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -141,6 +153,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "ProVersionLicenseCnt", this.ProVersionLicenseCnt);
             this.SetParamSimple(map, prefix + "CwpVersionLicenseCnt", this.CwpVersionLicenseCnt);
             this.SetParamSimple(map, prefix + "AvailableLHLicenseCnt", this.AvailableLHLicenseCnt);
+            this.SetParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
+            this.SetParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

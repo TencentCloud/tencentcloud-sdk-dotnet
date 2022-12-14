@@ -91,6 +91,25 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("RetentionDays")]
         public ulong? RetentionDays{ get; set; }
 
+        /// <summary>
+        /// 指定拉取镜像仓库的镜像时不校验证书。如["harbor.example.com"]。
+        /// </summary>
+        [JsonProperty("RegistrySkipVerifyList")]
+        public string[] RegistrySkipVerifyList{ get; set; }
+
+        /// <summary>
+        /// 指定拉取镜像仓库的镜像时使用 HTTP 协议。如["harbor.example.com"]。
+        /// </summary>
+        [JsonProperty("RegistryHttpEndPointList")]
+        public string[] RegistryHttpEndPointList{ get; set; }
+
+        /// <summary>
+        /// 自定义制作镜像缓存过程中容器实例的宿主机上的 DNS。如：
+        /// "nameserver 4.4.4.4\nnameserver 8.8.8.8"
+        /// </summary>
+        [JsonProperty("ResolveConfig")]
+        public string ResolveConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +127,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "AutoCreateEipAttribute.", this.AutoCreateEipAttribute);
             this.SetParamSimple(map, prefix + "ImageCacheSize", this.ImageCacheSize);
             this.SetParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
+            this.SetParamArraySimple(map, prefix + "RegistrySkipVerifyList.", this.RegistrySkipVerifyList);
+            this.SetParamArraySimple(map, prefix + "RegistryHttpEndPointList.", this.RegistryHttpEndPointList);
+            this.SetParamSimple(map, prefix + "ResolveConfig", this.ResolveConfig);
         }
     }
 }

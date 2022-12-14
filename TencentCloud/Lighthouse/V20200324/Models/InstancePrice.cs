@@ -48,6 +48,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
+        /// <summary>
+        /// 价格货币单位。取值范围CNY:人民币。USD:美元。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Currency")]
+        public string Currency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
             this.SetParamSimple(map, prefix + "Discount", this.Discount);
             this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
+            this.SetParamSimple(map, prefix + "Currency", this.Currency);
         }
     }
 }

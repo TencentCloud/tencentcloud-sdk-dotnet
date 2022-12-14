@@ -81,7 +81,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 签署人类型
         /// PERSON-个人/自然人；
         /// PERSON_AUTO_SIGN-个人自动签（定制化场景下使用）；
-        /// ORGANIZATION-企业（企业签署方或模版发起时的企业静默签）；
+        /// ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
         /// ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
         /// </summary>
         [JsonProperty("ApproverType")]

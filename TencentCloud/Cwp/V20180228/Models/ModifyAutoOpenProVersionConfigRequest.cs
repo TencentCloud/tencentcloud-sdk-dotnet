@@ -32,6 +32,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 自动加购/扩容授权开关,默认 1, 0关闭, 1开启
+        /// </summary>
+        [JsonProperty("AutoRepurchaseSwitch")]
+        public ulong? AutoRepurchaseSwitch{ get; set; }
+
+        /// <summary>
+        /// 自动加购的订单是否自动续费,默认0 ,0关闭, 1开启
+        /// </summary>
+        [JsonProperty("AutoRepurchaseRenewSwitch")]
+        public ulong? AutoRepurchaseRenewSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -39,6 +51,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
+            this.SetParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
         }
     }
 }

@@ -573,46 +573,6 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 从伸缩组创建节点池
-        /// </summary>
-        /// <param name="req"><see cref="CreateClusterNodePoolFromExistingAsgRequest"/></param>
-        /// <returns><see cref="CreateClusterNodePoolFromExistingAsgResponse"/></returns>
-        public async Task<CreateClusterNodePoolFromExistingAsgResponse> CreateClusterNodePoolFromExistingAsg(CreateClusterNodePoolFromExistingAsgRequest req)
-        {
-             JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateClusterNodePoolFromExistingAsg");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 从伸缩组创建节点池
-        /// </summary>
-        /// <param name="req"><see cref="CreateClusterNodePoolFromExistingAsgRequest"/></param>
-        /// <returns><see cref="CreateClusterNodePoolFromExistingAsgResponse"/></returns>
-        public CreateClusterNodePoolFromExistingAsgResponse CreateClusterNodePoolFromExistingAsgSync(CreateClusterNodePoolFromExistingAsgRequest req)
-        {
-             JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateClusterNodePoolFromExistingAsg");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 在应用市场中给集群创建应用
         /// </summary>
         /// <param name="req"><see cref="CreateClusterReleaseRequest"/></param>

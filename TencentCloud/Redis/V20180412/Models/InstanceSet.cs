@@ -103,7 +103,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public float? Size{ get; set; }
 
         /// <summary>
-        /// 该字段已废弃。
+        /// 该字段已废弃。可使用云监控 API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内容容量。
         /// </summary>
         [JsonProperty("SizeUsed")]
         public float? SizeUsed{ get; set; }

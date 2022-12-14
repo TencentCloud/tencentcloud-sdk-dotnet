@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateClusterNodePoolFromExistingAsgResponse : AbstractModel
+    public class PodSpecInfo : AbstractModel
     {
         
         /// <summary>
-        /// 节点池ID
+        /// 使用Pod资源扩容时，指定的Pod规格以及来源等信息
         /// </summary>
-        [JsonProperty("NodePoolId")]
-        public string NodePoolId{ get; set; }
+        [JsonProperty("PodSpec")]
+        public PodNewSpec PodSpec{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// POD自定义权限和自定义参数
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("PodParameter")]
+        public PodNewParameter PodParameter{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "PodSpec.", this.PodSpec);
+            this.SetParamObj(map, prefix + "PodParameter.", this.PodParameter);
         }
     }
 }

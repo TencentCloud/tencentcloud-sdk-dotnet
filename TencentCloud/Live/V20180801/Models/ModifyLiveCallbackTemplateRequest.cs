@@ -79,6 +79,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }
 
+        /// <summary>
+        /// 推流异常回调 URL。
+        /// </summary>
+        [JsonProperty("PushExceptionNotifyUrl")]
+        public string PushExceptionNotifyUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
             this.SetParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
             this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
         }
     }
 }

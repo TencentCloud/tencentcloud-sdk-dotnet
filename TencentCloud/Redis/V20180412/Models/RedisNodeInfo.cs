@@ -25,25 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 节点类型，0 为主节点，1 为副本节点
+        /// 节点类型。<ul><li>0：为主节点。</li><li>1：为副本节点。</li></ul>
         /// </summary>
         [JsonProperty("NodeType")]
         public long? NodeType{ get; set; }
 
         /// <summary>
-        /// 主节点或者副本节点的ID，创建时不需要传递此参数。
+        /// 主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance](https://cloud.tencent.com/document/product/239/20013) 则需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }
 
         /// <summary>
-        /// 主节点或者副本节点的可用区ID
+        /// 主节点或者副本节点的可用区 ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 主节点或者副本节点的可用区名称
+        /// 主节点或者副本节点的可用区名称。
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }

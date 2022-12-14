@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例 ID
+        /// Grafana 实例 ID，例如：grafana-12345678
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 集成 ID
+        /// 集成 ID，可在实例详情-云产品集成-集成列表查看。例如：integration-abcd1234
         /// </summary>
         [JsonProperty("IntegrationId")]
         public string IntegrationId{ get; set; }

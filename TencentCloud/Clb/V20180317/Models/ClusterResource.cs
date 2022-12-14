@@ -63,6 +63,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Isp")]
         public string Isp{ get; set; }
 
+        /// <summary>
+        /// 集群所在的可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClustersZone")]
+        public ClustersZone ClustersZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +82,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Idle", this.Idle);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "Isp", this.Isp);
+            this.SetParamObj(map, prefix + "ClustersZone.", this.ClustersZone);
         }
     }
 }
