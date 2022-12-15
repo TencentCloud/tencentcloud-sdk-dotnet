@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例数量，参数默认值20，最大值为1000。
+        /// 每页输出实例的数量，参数默认值20，最大值为1000。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，取Limit整数倍。
+        /// 分页偏移量，取Limit整数倍。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

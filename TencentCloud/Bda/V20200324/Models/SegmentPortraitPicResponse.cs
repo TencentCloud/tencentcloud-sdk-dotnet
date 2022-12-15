@@ -25,14 +25,14 @@ namespace TencentCloud.Bda.V20200324.Models
     {
         
         /// <summary>
-        /// 处理后的图片 base64 数据，透明背景图
+        /// 处理后的图片 base64 数据，透明背景图。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultImage")]
         public string ResultImage{ get; set; }
 
         /// <summary>
-        /// 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）
+        /// 一个通过 base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultMask")]
@@ -46,14 +46,14 @@ namespace TencentCloud.Bda.V20200324.Models
         public bool? HasForeground{ get; set; }
 
         /// <summary>
-        /// 支持将处理过的图片 base64 数据，透明背景图以URL的形式返回值，URL有效期为30分钟。
+        /// 支持将处理过的图片 base64 数据，透明背景图以Url的形式返回值，Url有效期为30分钟。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultImageUrl")]
         public string ResultImageUrl{ get; set; }
 
         /// <summary>
-        /// 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以URL形式的返回值；URL有效期为30分钟。
+        /// 一个通过 base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以Url形式的返回值；Url有效期为30分钟。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultMaskUrl")]

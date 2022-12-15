@@ -30,6 +30,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 参数名字
+        /// </summary>
+        [JsonProperty("ParamName")]
+        public string ParamName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
         }
     }
 }

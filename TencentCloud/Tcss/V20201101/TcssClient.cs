@@ -7339,7 +7339,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 查询k8s api 异常规则中范围列表
+        /// 查询k8sapi 异常规则中范围列表
         /// </summary>
         /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleScopeListRequest"/></param>
         /// <returns><see cref="DescribeK8sApiAbnormalRuleScopeListResponse"/></returns>
@@ -7359,7 +7359,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 查询k8s api 异常规则中范围列表
+        /// 查询k8sapi 异常规则中范围列表
         /// </summary>
         /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleScopeListRequest"/></param>
         /// <returns><see cref="DescribeK8sApiAbnormalRuleScopeListResponse"/></returns>

@@ -146,6 +146,13 @@ namespace TencentCloud.Cdc.V20201214.Models
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
+        /// <summary>
+        /// 订单类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OrderType")]
+        public string OrderType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +178,7 @@ namespace TencentCloud.Cdc.V20201214.Models
             this.SetParamSimple(map, prefix + "PayType", this.PayType);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
         }
     }
 }

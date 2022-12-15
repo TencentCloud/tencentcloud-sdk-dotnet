@@ -262,7 +262,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] AlarmPolicyIds{ get; set; }
 
         /// <summary>
-        /// 参数数组
+        /// 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
         /// </summary>
         [JsonProperty("ClusterParams")]
         public ParamItem[] ClusterParams{ get; set; }

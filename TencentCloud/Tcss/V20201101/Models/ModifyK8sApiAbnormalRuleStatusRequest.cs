@@ -31,7 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string RuleID{ get; set; }
 
         /// <summary>
-        /// 状态(ture:开 false:关)
+        /// 状态(true:开 false:关)
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }

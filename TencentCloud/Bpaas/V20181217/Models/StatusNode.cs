@@ -63,7 +63,7 @@ namespace TencentCloud.Bpaas.V20181217.Models
         public string ScfName{ get; set; }
 
         /// <summary>
-        /// 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）
+        /// 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubStatus")]
@@ -132,6 +132,34 @@ namespace TencentCloud.Bpaas.V20181217.Models
         [JsonProperty("CallMethod")]
         public ulong? CallMethod{ get; set; }
 
+        /// <summary>
+        /// CKafka - 接入资源ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataHubId")]
+        public string DataHubId{ get; set; }
+
+        /// <summary>
+        /// CKafka - 任务名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskName")]
+        public string TaskName{ get; set; }
+
+        /// <summary>
+        /// CKafka - 地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CKafkaRegion")]
+        public string CKafkaRegion{ get; set; }
+
+        /// <summary>
+        /// 外部审批Url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExternalUrl")]
+        public string ExternalUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +182,10 @@ namespace TencentCloud.Bpaas.V20181217.Models
             this.SetParamSimple(map, prefix + "ApproveMethod", this.ApproveMethod);
             this.SetParamSimple(map, prefix + "ApproveType", this.ApproveType);
             this.SetParamSimple(map, prefix + "CallMethod", this.CallMethod);
+            this.SetParamSimple(map, prefix + "DataHubId", this.DataHubId);
+            this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
+            this.SetParamSimple(map, prefix + "CKafkaRegion", this.CKafkaRegion);
+            this.SetParamSimple(map, prefix + "ExternalUrl", this.ExternalUrl);
         }
     }
 }

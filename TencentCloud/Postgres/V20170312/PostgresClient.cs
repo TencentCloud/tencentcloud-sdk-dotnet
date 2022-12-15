@@ -333,6 +333,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口 (CreateParameterTemplate) 用于创建参数模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateParameterTemplateRequest"/></param>
+        /// <returns><see cref="CreateParameterTemplateResponse"/></returns>
+        public async Task<CreateParameterTemplateResponse> CreateParameterTemplate(CreateParameterTemplateRequest req)
+        {
+             JsonResponseModel<CreateParameterTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateParameterTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateParameterTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (CreateParameterTemplate) 用于创建参数模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateParameterTemplateRequest"/></param>
+        /// <returns><see cref="CreateParameterTemplateResponse"/></returns>
+        public CreateParameterTemplateResponse CreateParameterTemplateSync(CreateParameterTemplateRequest req)
+        {
+             JsonResponseModel<CreateParameterTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateParameterTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateParameterTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateReadOnlyDBInstance)用于创建只读实例
         /// </summary>
         /// <param name="req"><see cref="CreateReadOnlyDBInstanceRequest"/></param>
@@ -524,6 +564,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDBInstanceNetworkAccess");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDBInstanceNetworkAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteParameterTemplate）主要用于删除某个参数模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteParameterTemplateRequest"/></param>
+        /// <returns><see cref="DeleteParameterTemplateResponse"/></returns>
+        public async Task<DeleteParameterTemplateResponse> DeleteParameterTemplate(DeleteParameterTemplateRequest req)
+        {
+             JsonResponseModel<DeleteParameterTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteParameterTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParameterTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteParameterTemplate）主要用于删除某个参数模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteParameterTemplateRequest"/></param>
+        /// <returns><see cref="DeleteParameterTemplateResponse"/></returns>
+        public DeleteParameterTemplateResponse DeleteParameterTemplateSync(DeleteParameterTemplateRequest req)
+        {
+             JsonResponseModel<DeleteParameterTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteParameterTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParameterTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -973,6 +1053,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeDBInstanceSecurityGroups）用于查询实例安全组信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceSecurityGroupsResponse"/></returns>
+        public async Task<DescribeDBInstanceSecurityGroupsResponse> DescribeDBInstanceSecurityGroups(DescribeDBInstanceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstanceSecurityGroups）用于查询实例安全组信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceSecurityGroupsResponse"/></returns>
+        public DescribeDBInstanceSecurityGroupsResponse DescribeDBInstanceSecurityGroupsSync(DescribeDBInstanceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeDBInstances) 用于查询一个或多个实例的详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
@@ -1133,6 +1253,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeDefaultParameters）主要用于查询某个数据库版本和引擎支持的所有参数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDefaultParametersRequest"/></param>
+        /// <returns><see cref="DescribeDefaultParametersResponse"/></returns>
+        public async Task<DescribeDefaultParametersResponse> DescribeDefaultParameters(DescribeDefaultParametersRequest req)
+        {
+             JsonResponseModel<DescribeDefaultParametersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDefaultParameters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefaultParametersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDefaultParameters）主要用于查询某个数据库版本和引擎支持的所有参数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDefaultParametersRequest"/></param>
+        /// <returns><see cref="DescribeDefaultParametersResponse"/></returns>
+        public DescribeDefaultParametersResponse DescribeDefaultParametersSync(DescribeDefaultParametersRequest req)
+        {
+             JsonResponseModel<DescribeDefaultParametersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDefaultParameters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefaultParametersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取实例的密钥信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeEncryptionKeysRequest"/></param>
@@ -1204,6 +1364,86 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeOrders");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrdersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeParameterTemplateAttributes）用于查询某个参数模板的具体内容，包括基本信息和参数信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParameterTemplateAttributesRequest"/></param>
+        /// <returns><see cref="DescribeParameterTemplateAttributesResponse"/></returns>
+        public async Task<DescribeParameterTemplateAttributesResponse> DescribeParameterTemplateAttributes(DescribeParameterTemplateAttributesRequest req)
+        {
+             JsonResponseModel<DescribeParameterTemplateAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParameterTemplateAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParameterTemplateAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeParameterTemplateAttributes）用于查询某个参数模板的具体内容，包括基本信息和参数信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParameterTemplateAttributesRequest"/></param>
+        /// <returns><see cref="DescribeParameterTemplateAttributesResponse"/></returns>
+        public DescribeParameterTemplateAttributesResponse DescribeParameterTemplateAttributesSync(DescribeParameterTemplateAttributesRequest req)
+        {
+             JsonResponseModel<DescribeParameterTemplateAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeParameterTemplateAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParameterTemplateAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeParameterTemplates) 用于查询参数模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParameterTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeParameterTemplatesResponse"/></returns>
+        public async Task<DescribeParameterTemplatesResponse> DescribeParameterTemplates(DescribeParameterTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeParameterTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParameterTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParameterTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeParameterTemplates) 用于查询参数模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParameterTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeParameterTemplatesResponse"/></returns>
+        public DescribeParameterTemplatesResponse DescribeParameterTemplatesSync(DescribeParameterTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeParameterTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeParameterTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParameterTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2053,6 +2293,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyDBInstanceSecurityGroups）用于修改实例安全组。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
+        public async Task<ModifyDBInstanceSecurityGroupsResponse> ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBInstanceSecurityGroups）用于修改实例安全组。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
+        public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroupsSync(ModifyDBInstanceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstanceSpec）用于调整实例规格，包括内存、磁盘。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
@@ -2124,6 +2404,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBInstancesProject");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstancesProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyParameterTemplate）主要用于修改参数模板名称，描述，修改，添加和删除参数模板参数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyParameterTemplateRequest"/></param>
+        /// <returns><see cref="ModifyParameterTemplateResponse"/></returns>
+        public async Task<ModifyParameterTemplateResponse> ModifyParameterTemplate(ModifyParameterTemplateRequest req)
+        {
+             JsonResponseModel<ModifyParameterTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyParameterTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParameterTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyParameterTemplate）主要用于修改参数模板名称，描述，修改，添加和删除参数模板参数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyParameterTemplateRequest"/></param>
+        /// <returns><see cref="ModifyParameterTemplateResponse"/></returns>
+        public ModifyParameterTemplateResponse ModifyParameterTemplateSync(ModifyParameterTemplateRequest req)
+        {
+             JsonResponseModel<ModifyParameterTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyParameterTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParameterTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

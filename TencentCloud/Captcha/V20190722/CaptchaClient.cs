@@ -333,7 +333,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 核查验证码小程序插件票据接入风控结果(Beta)
+        /// 核查验证码小程序插件票据接入风控结果(已停用)
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniRiskResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniRiskResultResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 核查验证码小程序插件票据接入风控结果(Beta)
+        /// 核查验证码小程序插件票据接入风控结果(已停用)
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniRiskResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniRiskResultResponse"/></returns>

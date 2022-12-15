@@ -25,32 +25,6 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 操作者的UIN。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Operator")]
-        public string Operator{ get; set; }
-
-        /// <summary>
-        /// 操作类型。取值范围：
-        /// SNAP_OPERATION_DELETE：删除快照
-        /// SNAP_OPERATION_ROLLBACK：回滚快照
-        /// SNAP_OPERATION_MODIFY：修改快照属性
-        /// SNAP_OPERATION_CREATE：创建快照
-        /// SNAP_OPERATION_COPY：跨地域复制快照
-        /// ASP_OPERATION_CREATE_SNAP：由定期快照策略创建快照
-        /// ASP_OPERATION_DELETE_SNAP：由定期快照策略删除快照
-        /// </summary>
-        [JsonProperty("Operation")]
-        public string Operation{ get; set; }
-
-        /// <summary>
-        /// 操作的快照ID。
-        /// </summary>
-        [JsonProperty("SnapshotId")]
-        public string SnapshotId{ get; set; }
-
-        /// <summary>
         /// 操作的状态。取值范围：
         /// SUCCESS :表示操作成功 
         /// FAILED :表示操作失败 
@@ -66,6 +40,32 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string StartTime{ get; set; }
 
         /// <summary>
+        /// 操作者的UIN。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
+        /// <summary>
+        /// 操作的快照ID。
+        /// </summary>
+        [JsonProperty("SnapshotId")]
+        public string SnapshotId{ get; set; }
+
+        /// <summary>
+        /// 操作类型。取值范围：
+        /// SNAP_OPERATION_DELETE：删除快照
+        /// SNAP_OPERATION_ROLLBACK：回滚快照
+        /// SNAP_OPERATION_MODIFY：修改快照属性
+        /// SNAP_OPERATION_CREATE：创建快照
+        /// SNAP_OPERATION_COPY：跨地域复制快照
+        /// ASP_OPERATION_CREATE_SNAP：由定期快照策略创建快照
+        /// ASP_OPERATION_DELETE_SNAP：由定期快照策略删除快照
+        /// </summary>
+        [JsonProperty("Operation")]
+        public string Operation{ get; set; }
+
+        /// <summary>
         /// 结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
@@ -77,11 +77,11 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Operator", this.Operator);
-            this.SetParamSimple(map, prefix + "Operation", this.Operation);
-            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
             this.SetParamSimple(map, prefix + "OperationState", this.OperationState);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }

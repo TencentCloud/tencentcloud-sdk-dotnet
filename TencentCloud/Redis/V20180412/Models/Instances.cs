@@ -25,49 +25,49 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 用户AppID
+        /// 用户AppID。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// 实例名称。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 地域ID 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
+        /// 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li> 5：香港。</li> <li> 6：多伦多。</li> <li> 7：上海金融。</li> <li> 8：北京。</li> <li> 9：新加坡。</li> <li> 11：深圳金融。</li> <li> 15：美西（硅谷）。</li> </ul>
         /// </summary>
         [JsonProperty("RegionId")]
         public ulong? RegionId{ get; set; }
 
         /// <summary>
-        /// 区域ID
+        /// 区域 ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 副本数量
+        /// 副本数量。
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public ulong? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// 分片数量
+        /// 分片数量。
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// 分片大小
+        /// 分片内存大小。
         /// </summary>
         [JsonProperty("RedisShardSize")]
         public long? RedisShardSize{ get; set; }
@@ -80,68 +80,68 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 引擎：社区版Redis、腾讯云CKV
+        /// 引擎：社区版Redis、腾讯云CKV。
         /// </summary>
         [JsonProperty("Engine")]
         public string Engine{ get; set; }
 
         /// <summary>
-        /// 实例角色，rw可读写，r只读
+        /// 实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
         /// <summary>
-        /// 实例VIP
+        /// 实例 VIP 地址。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 内部参数，用户可忽略
+        /// 内部参数，用户可忽略。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
 
         /// <summary>
-        /// vpc网络ID 如：75101
+        /// VPC 网络ID，如：75101。
         /// </summary>
         [JsonProperty("VpcID")]
         public long? VpcID{ get; set; }
 
         /// <summary>
-        /// 实例端口
+        /// 实例端口。
         /// </summary>
         [JsonProperty("VPort")]
         public long? VPort{ get; set; }
 
         /// <summary>
-        /// 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+        /// 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 仓库ID
+        /// 仓库ID。
         /// </summary>
         [JsonProperty("GrocerySysId")]
         public long? GrocerySysId{ get; set; }
 
         /// <summary>
-        /// 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+        /// 实例类型。<ul><li>1：Redis 2.8 内存版（集群架构）。</li><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li></ul>
         /// </summary>
         [JsonProperty("ProductType")]
         public long? ProductType{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 实例加入复制组的时间。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新实例
+        /// 复制组中实例更新的时间。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

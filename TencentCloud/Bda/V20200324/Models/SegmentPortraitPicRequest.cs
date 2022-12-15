@@ -44,10 +44,19 @@ namespace TencentCloud.Bda.V20200324.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+        /// 返回图像方式（base64 或 Url ) ，二选一。url有效期为30分钟。
         /// </summary>
         [JsonProperty("RspImgType")]
         public string RspImgType{ get; set; }
+
+        /// <summary>
+        /// 适用场景类型。
+        /// 
+        /// 取值：GEN/GS。GEN为通用场景模式；GS为绿幕场景模式，针对绿幕场景下的人像分割效果更好。
+        /// 两种模式选择一种传入，默认为GEN。
+        /// </summary>
+        [JsonProperty("Scene")]
+        public string Scene{ get; set; }
 
 
         /// <summary>
@@ -58,6 +67,7 @@ namespace TencentCloud.Bda.V20200324.Models
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "RspImgType", this.RspImgType);
+            this.SetParamSimple(map, prefix + "Scene", this.Scene);
         }
     }
 }

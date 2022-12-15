@@ -54,6 +54,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("SortInfo")]
         public SortType SortInfo{ get; set; }
 
+        /// <summary>
+        /// 环境id
+        /// </summary>
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamObj(map, prefix + "SortInfo.", this.SortInfo);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         }
     }
 }

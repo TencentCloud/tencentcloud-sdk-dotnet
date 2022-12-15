@@ -30,6 +30,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 限制量
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 偏移量
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 搜索关键字
+        /// </summary>
+        [JsonProperty("SearchKey")]
+        public string SearchKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +55,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
         }
     }
 }

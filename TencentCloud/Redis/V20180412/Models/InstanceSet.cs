@@ -31,43 +31,43 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例Id。
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户的Appid。
+        /// 用户的 AppID。
         /// </summary>
         [JsonProperty("Appid")]
         public long? Appid{ get; set; }
 
         /// <summary>
-        /// 项目Id。
+        /// 项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+        /// 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>24：莫斯科。</li><li>25：东京。</li></ul>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 区域id。
+        /// 区域 ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// vpc网络id，例如75101。
+        /// vpc网络 ID，例如75101。
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// vpc网络下子网id 如：46315。
+        /// vpc网络下子网ID，如：46315。
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 实例vip。
+        /// 实例 VIP。
         /// </summary>
         [JsonProperty("WanIp")]
         public string WanIp{ get; set; }
@@ -205,7 +205,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// 计费Id。
+        /// 计费 ID。
         /// </summary>
         [JsonProperty("PriceId")]
         public long? PriceId{ get; set; }

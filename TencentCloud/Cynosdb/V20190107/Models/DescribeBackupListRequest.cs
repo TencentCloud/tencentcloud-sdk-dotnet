@@ -97,6 +97,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("BackupNames")]
         public string[] BackupNames{ get; set; }
 
+        /// <summary>
+        /// 快照备份Id列表
+        /// </summary>
+        [JsonProperty("SnapshotIdList")]
+        public long?[] SnapshotIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +121,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "FileNames.", this.FileNames);
             this.SetParamArraySimple(map, prefix + "BackupNames.", this.BackupNames);
+            this.SetParamArraySimple(map, prefix + "SnapshotIdList.", this.SnapshotIdList);
         }
     }
 }

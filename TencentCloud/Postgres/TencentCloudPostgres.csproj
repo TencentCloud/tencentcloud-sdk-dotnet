@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A06AC0CF-076C-38E8-83FE-C7FFA375814C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.663</VersionPrefix>
+    <VersionPrefix>3.0.664</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,8 @@
     <Compile Include="V20170312\Models\CreateDBInstancesResponse.cs" />
     <Compile Include="V20170312\Models\CreateInstancesRequest.cs" />
     <Compile Include="V20170312\Models\CreateInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\CreateParameterTemplateRequest.cs" />
+    <Compile Include="V20170312\Models\CreateParameterTemplateResponse.cs" />
     <Compile Include="V20170312\Models\CreateReadOnlyDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\CreateReadOnlyDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\CreateReadOnlyGroupNetworkAccessRequest.cs" />
@@ -76,6 +78,8 @@
     <Compile Include="V20170312\Models\DBNode.cs" />
     <Compile Include="V20170312\Models\DeleteDBInstanceNetworkAccessRequest.cs" />
     <Compile Include="V20170312\Models\DeleteDBInstanceNetworkAccessResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteParameterTemplateRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteParameterTemplateResponse.cs" />
     <Compile Include="V20170312\Models\DeleteReadOnlyGroupNetworkAccessRequest.cs" />
     <Compile Include="V20170312\Models\DeleteReadOnlyGroupNetworkAccessResponse.cs" />
     <Compile Include="V20170312\Models\DeleteReadOnlyGroupRequest.cs" />
@@ -98,6 +102,8 @@
     <Compile Include="V20170312\Models\DescribeDBInstanceAttributeResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstanceParametersRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstanceParametersResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBSlowlogsRequest.cs" />
@@ -106,10 +112,16 @@
     <Compile Include="V20170312\Models\DescribeDBXlogsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDefaultParametersRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDefaultParametersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeEncryptionKeysRequest.cs" />
     <Compile Include="V20170312\Models\DescribeEncryptionKeysResponse.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersRequest.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeParameterTemplateAttributesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeParameterTemplateAttributesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeParameterTemplatesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeParameterTemplatesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeParamsEventRequest.cs" />
     <Compile Include="V20170312\Models\DescribeParamsEventResponse.cs" />
     <Compile Include="V20170312\Models\DescribeProductConfigRequest.cs" />
@@ -159,10 +171,14 @@
     <Compile Include="V20170312\Models\ModifyDBInstanceParametersResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceReadOnlyGroupRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceReadOnlyGroupResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceSpecRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceSpecResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyParameterTemplateRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyParameterTemplateResponse.cs" />
     <Compile Include="V20170312\Models\ModifyReadOnlyGroupConfigRequest.cs" />
     <Compile Include="V20170312\Models\ModifyReadOnlyGroupConfigResponse.cs" />
     <Compile Include="V20170312\Models\ModifySwitchTimePeriodRequest.cs" />
@@ -177,7 +193,9 @@
     <Compile Include="V20170312\Models\ParamInfo.cs" />
     <Compile Include="V20170312\Models\ParamSpecRelation.cs" />
     <Compile Include="V20170312\Models\ParamVersionRelation.cs" />
+    <Compile Include="V20170312\Models\ParameterTemplate.cs" />
     <Compile Include="V20170312\Models\PgDeal.cs" />
+    <Compile Include="V20170312\Models\PolicyRule.cs" />
     <Compile Include="V20170312\Models\RawSlowQuery.cs" />
     <Compile Include="V20170312\Models\ReadOnlyGroup.cs" />
     <Compile Include="V20170312\Models\RebalanceReadOnlyGroupRequest.cs" />
@@ -191,6 +209,7 @@
     <Compile Include="V20170312\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="V20170312\Models\RestartDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\RestartDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\SecurityGroup.cs" />
     <Compile Include="V20170312\Models\ServerlessDBAccount.cs" />
     <Compile Include="V20170312\Models\ServerlessDBInstance.cs" />
     <Compile Include="V20170312\Models\ServerlessDBInstanceNetInfo.cs" />
