@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 输入来源对象的类型，支持 COS 和 URL 两种。
+        /// 输入来源对象的类型，支持 COS、URL 两种。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

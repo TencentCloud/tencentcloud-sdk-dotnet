@@ -50,6 +50,8 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+        /// 
+        /// <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }

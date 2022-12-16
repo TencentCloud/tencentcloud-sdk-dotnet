@@ -37,7 +37,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public string TextUrl{ get; set; }
 
         /// <summary>
-        /// 要修改的模型ID
+        /// 修改的模型ID
         /// </summary>
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }

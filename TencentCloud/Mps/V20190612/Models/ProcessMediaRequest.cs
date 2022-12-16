@@ -102,6 +102,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ScheduleId")]
         public long? ScheduleId{ get; set; }
 
+        /// <summary>
+        /// 任务类型，默认Online
+        /// <li> Online：实时任务</li>
+        /// <li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public string TaskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +128,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }
 }

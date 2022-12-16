@@ -455,6 +455,86 @@ namespace TencentCloud.Nlp.V20190408
         }
 
         /// <summary>
+        /// 根据用户输入的命题关键词自动生成一副春联，包括上联、下联和横批。（如需开通请联系商务）
+        /// </summary>
+        /// <param name="req"><see cref="GenerateCoupletRequest"/></param>
+        /// <returns><see cref="GenerateCoupletResponse"/></returns>
+        public async Task<GenerateCoupletResponse> GenerateCouplet(GenerateCoupletRequest req)
+        {
+             JsonResponseModel<GenerateCoupletResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenerateCouplet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateCoupletResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据用户输入的命题关键词自动生成一副春联，包括上联、下联和横批。（如需开通请联系商务）
+        /// </summary>
+        /// <param name="req"><see cref="GenerateCoupletRequest"/></param>
+        /// <returns><see cref="GenerateCoupletResponse"/></returns>
+        public GenerateCoupletResponse GenerateCoupletSync(GenerateCoupletRequest req)
+        {
+             JsonResponseModel<GenerateCoupletResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateCouplet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateCoupletResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据用户输入的命题关键词自动生成一首七言律诗或五言律诗。（如需开通请联系商务）
+        /// </summary>
+        /// <param name="req"><see cref="GeneratePoetryRequest"/></param>
+        /// <returns><see cref="GeneratePoetryResponse"/></returns>
+        public async Task<GeneratePoetryResponse> GeneratePoetry(GeneratePoetryRequest req)
+        {
+             JsonResponseModel<GeneratePoetryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GeneratePoetry");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GeneratePoetryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据用户输入的命题关键词自动生成一首七言律诗或五言律诗。（如需开通请联系商务）
+        /// </summary>
+        /// <param name="req"><see cref="GeneratePoetryRequest"/></param>
+        /// <returns><see cref="GeneratePoetryResponse"/></returns>
+        public GeneratePoetryResponse GeneratePoetrySync(GeneratePoetryRequest req)
+        {
+             JsonResponseModel<GeneratePoetryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GeneratePoetry");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GeneratePoetryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 基于关键词提取平台，通过对文本内容进行深度分析，提取出文本内容中的关键信息，为用户实现诸如新闻内容关键词自动提取、评论关键词提取等提供基础服务。
         /// </summary>
         /// <param name="req"><see cref="KeywordsExtractionRequest"/></param>

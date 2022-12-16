@@ -31,7 +31,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public long? ErrorCode{ get; set; }
 
         /// <summary>
-        /// 自学习模型ID
+        /// 模型ID
         /// </summary>
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }

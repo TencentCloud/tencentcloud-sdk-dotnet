@@ -1253,6 +1253,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 挂断电话
+        /// </summary>
+        /// <param name="req"><see cref="HangUpCallRequest"/></param>
+        /// <returns><see cref="HangUpCallResponse"/></returns>
+        public async Task<HangUpCallResponse> HangUpCall(HangUpCallRequest req)
+        {
+             JsonResponseModel<HangUpCallResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "HangUpCall");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HangUpCallResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 挂断电话
+        /// </summary>
+        /// <param name="req"><see cref="HangUpCallRequest"/></param>
+        /// <returns><see cref="HangUpCallResponse"/></returns>
+        public HangUpCallResponse HangUpCallSync(HangUpCallRequest req)
+        {
+             JsonResponseModel<HangUpCallResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "HangUpCall");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HangUpCallResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改话机账号(绑定技能组、绑定坐席账号)
         /// </summary>
         /// <param name="req"><see cref="ModifyExtensionRequest"/></param>

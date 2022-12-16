@@ -60,7 +60,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>TDMQ-CMQ：消息队列</li>
         /// <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
         /// <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
-        /// 目前 默认CMQ。
+        /// <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }

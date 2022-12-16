@@ -60,6 +60,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Verify")]
         public string Verify{ get; set; }
 
+        /// <summary>
+        /// 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudSdkProxy")]
+        public long? CloudSdkProxy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,6 +78,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamArrayObj(map, prefix + "Listeners.", this.Listeners);
             this.SetParamArrayObj(map, prefix + "Keys.", this.Keys);
             this.SetParamSimple(map, prefix + "Verify", this.Verify);
+            this.SetParamSimple(map, prefix + "CloudSdkProxy", this.CloudSdkProxy);
         }
     }
 }

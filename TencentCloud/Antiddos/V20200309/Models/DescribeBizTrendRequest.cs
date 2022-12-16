@@ -37,7 +37,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Business{ get; set; }
 
         /// <summary>
-        /// 统计周期，可取值300，1800，3600，21600，86400，单位秒
+        /// 统计周期，可取值60，300，1800，3600，21600，86400，单位秒
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }

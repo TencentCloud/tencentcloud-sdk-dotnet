@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{46495F04-57A1-3328-BD3F-406E6BB2D037}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.664</VersionPrefix>
+    <VersionPrefix>3.0.665</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,6 +69,10 @@
     <Compile Include="V20190408\Models\DescribeWordItemsResponse.cs" />
     <Compile Include="V20190408\Models\DictInfo.cs" />
     <Compile Include="V20190408\Models\DpToken.cs" />
+    <Compile Include="V20190408\Models\GenerateCoupletRequest.cs" />
+    <Compile Include="V20190408\Models\GenerateCoupletResponse.cs" />
+    <Compile Include="V20190408\Models\GeneratePoetryRequest.cs" />
+    <Compile Include="V20190408\Models\GeneratePoetryResponse.cs" />
     <Compile Include="V20190408\Models\Keyword.cs" />
     <Compile Include="V20190408\Models\KeywordsExtractionRequest.cs" />
     <Compile Include="V20190408\Models\KeywordsExtractionResponse.cs" />

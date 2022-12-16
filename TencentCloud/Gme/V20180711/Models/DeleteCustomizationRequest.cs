@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 要删除的模型ID
+        /// 删除的模型ID
         /// </summary>
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }

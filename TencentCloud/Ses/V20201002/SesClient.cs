@@ -1017,6 +1017,46 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// 设置邮箱的smtp密码。若要通过smtp发送邮件，必须为邮箱设置smtp密码。初始时，邮箱没有设置smtp密码，不能使用smtp的方式发送邮件。设置smtp密码后，可以修改密码。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEmailSmtpPassWordRequest"/></param>
+        /// <returns><see cref="UpdateEmailSmtpPassWordResponse"/></returns>
+        public async Task<UpdateEmailSmtpPassWordResponse> UpdateEmailSmtpPassWord(UpdateEmailSmtpPassWordRequest req)
+        {
+             JsonResponseModel<UpdateEmailSmtpPassWordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateEmailSmtpPassWord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEmailSmtpPassWordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置邮箱的smtp密码。若要通过smtp发送邮件，必须为邮箱设置smtp密码。初始时，邮箱没有设置smtp密码，不能使用smtp的方式发送邮件。设置smtp密码后，可以修改密码。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEmailSmtpPassWordRequest"/></param>
+        /// <returns><see cref="UpdateEmailSmtpPassWordResponse"/></returns>
+        public UpdateEmailSmtpPassWordResponse UpdateEmailSmtpPassWordSync(UpdateEmailSmtpPassWordRequest req)
+        {
+             JsonResponseModel<UpdateEmailSmtpPassWordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateEmailSmtpPassWord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEmailSmtpPassWordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新邮件模板，更新后需再次审核
         /// </summary>
         /// <param name="req"><see cref="UpdateEmailTemplateRequest"/></param>

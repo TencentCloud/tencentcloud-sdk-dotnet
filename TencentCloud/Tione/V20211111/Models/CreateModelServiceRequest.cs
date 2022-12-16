@@ -203,6 +203,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ServiceLimit")]
         public ServiceLimit ServiceLimit{ get; set; }
 
+        /// <summary>
+        /// 回调地址，用于回调创建服务状态信息
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -235,6 +241,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "ScheduledAction.", this.ScheduledAction);
             this.SetParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
             this.SetParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         }
     }
 }

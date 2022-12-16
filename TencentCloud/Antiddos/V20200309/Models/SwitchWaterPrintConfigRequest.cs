@@ -36,6 +36,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("OpenStatus")]
         public long? OpenStatus{ get; set; }
 
+        /// <summary>
+        /// 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+        /// </summary>
+        [JsonProperty("CloudSdkProxy")]
+        public long? CloudSdkProxy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "OpenStatus", this.OpenStatus);
+            this.SetParamSimple(map, prefix + "CloudSdkProxy", this.CloudSdkProxy);
         }
     }
 }

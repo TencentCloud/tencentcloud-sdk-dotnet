@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D4BEBF31-4FF4-321A-ABD7-95742951DA20}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.664</VersionPrefix>
+    <VersionPrefix>3.0.665</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -108,6 +108,8 @@
     <Compile Include="V20201002\Models\TimedEmailParam.cs" />
     <Compile Include="V20201002\Models\UpdateEmailIdentityRequest.cs" />
     <Compile Include="V20201002\Models\UpdateEmailIdentityResponse.cs" />
+    <Compile Include="V20201002\Models\UpdateEmailSmtpPassWordRequest.cs" />
+    <Compile Include="V20201002\Models\UpdateEmailSmtpPassWordResponse.cs" />
     <Compile Include="V20201002\Models\UpdateEmailTemplateRequest.cs" />
     <Compile Include="V20201002\Models\UpdateEmailTemplateResponse.cs" />
     <Compile Include="V20201002\Models\Volume.cs" />

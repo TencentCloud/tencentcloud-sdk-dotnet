@@ -132,6 +132,19 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("VitalityVersion")]
         public ulong? VitalityVersion{ get; set; }
 
+        /// <summary>
+        /// 网络线路
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Line")]
+        public ulong? Line{ get; set; }
+
+        /// <summary>
+        /// 弹性业务带宽开关
+        /// </summary>
+        [JsonProperty("ElasticServiceBandwidth")]
+        public ulong? ElasticServiceBandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +167,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
             this.SetParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
             this.SetParamSimple(map, prefix + "VitalityVersion", this.VitalityVersion);
+            this.SetParamSimple(map, prefix + "Line", this.Line);
+            this.SetParamSimple(map, prefix + "ElasticServiceBandwidth", this.ElasticServiceBandwidth);
         }
     }
 }
