@@ -15,32 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Thpc.V20220401.Models
+namespace TencentCloud.Ssl.V20191205.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GooseFSOption : AbstractModel
+    public class PreAuditInfo : AbstractModel
     {
         
         /// <summary>
-        /// 文件系统本地挂载路径。
+        /// 证书总年限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("LocalPath")]
-        public string LocalPath{ get; set; }
+        [JsonProperty("TotalPeriod")]
+        public long? TotalPeriod{ get; set; }
 
         /// <summary>
-        /// 文件系统远程挂载路径。
+        /// 证书当前年限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RemotePath")]
-        public string RemotePath{ get; set; }
+        [JsonProperty("NowPeriod")]
+        public long? NowPeriod{ get; set; }
 
         /// <summary>
-        /// 文件系统master的ip和端口。
+        /// 证书预审核管理人ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Masters")]
-        public string[] Masters{ get; set; }
+        [JsonProperty("ManagerId")]
+        public string ManagerId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +51,9 @@ namespace TencentCloud.Thpc.V20220401.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LocalPath", this.LocalPath);
-            this.SetParamSimple(map, prefix + "RemotePath", this.RemotePath);
-            this.SetParamArraySimple(map, prefix + "Masters.", this.Masters);
+            this.SetParamSimple(map, prefix + "TotalPeriod", this.TotalPeriod);
+            this.SetParamSimple(map, prefix + "NowPeriod", this.NowPeriod);
+            this.SetParamSimple(map, prefix + "ManagerId", this.ManagerId);
         }
     }
 }

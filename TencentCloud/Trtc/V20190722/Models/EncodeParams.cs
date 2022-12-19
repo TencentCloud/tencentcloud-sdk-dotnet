@@ -25,19 +25,19 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
+        /// 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
         /// </summary>
         [JsonProperty("AudioSampleRate")]
         public ulong? AudioSampleRate{ get; set; }
 
         /// <summary>
-        /// 混流-输出流音频码率。取值范围[8,500]，单位为kbps。
+        /// 混流-输出流音频码率。取值范围[8,500]，单位为kbps。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
         /// </summary>
         [JsonProperty("AudioBitrate")]
         public ulong? AudioBitrate{ get; set; }
 
         /// <summary>
-        /// 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。
+        /// 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
         /// </summary>
         [JsonProperty("AudioChannels")]
         public ulong? AudioChannels{ get; set; }
@@ -92,7 +92,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? BackgroundImageId{ get; set; }
 
         /// <summary>
-        /// 混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]
+        /// 混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
         /// </summary>
         [JsonProperty("AudioCodec")]
         public ulong? AudioCodec{ get; set; }

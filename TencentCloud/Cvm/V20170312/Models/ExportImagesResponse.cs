@@ -31,6 +31,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? TaskId{ get; set; }
 
         /// <summary>
+        /// 导出镜像的COS文件名列表
+        /// </summary>
+        [JsonProperty("CosPaths")]
+        public string[] CosPaths{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamArraySimple(map, prefix + "CosPaths.", this.CosPaths);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

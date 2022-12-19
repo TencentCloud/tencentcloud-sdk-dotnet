@@ -109,6 +109,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("AddressName")]
         public string AddressName{ get; set; }
 
+        /// <summary>
+        /// 网络出口，默认是：center_egress1
+        /// </summary>
+        [JsonProperty("Egress")]
+        public string Egress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +132,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "AddressName", this.AddressName);
+            this.SetParamSimple(map, prefix + "Egress", this.Egress);
         }
     }
 }

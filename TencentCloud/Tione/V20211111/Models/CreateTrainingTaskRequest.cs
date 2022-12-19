@@ -150,6 +150,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("DataSource")]
         public string DataSource{ get; set; }
 
+        /// <summary>
+        /// 回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "TuningParameters", this.TuningParameters);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         }
     }
 }

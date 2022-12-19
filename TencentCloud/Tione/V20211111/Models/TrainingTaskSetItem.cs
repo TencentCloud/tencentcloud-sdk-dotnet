@@ -174,6 +174,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 回调地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +210,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Thpc.V20220401.Models
     {
         
         /// <summary>
-        /// 文件系统本地挂载路径
+        /// 文件系统本地挂载路径。
         /// </summary>
         [JsonProperty("LocalPath")]
         public string LocalPath{ get; set; }
 
         /// <summary>
-        /// 文件系统远程挂载ip及路径
+        /// 文件系统远程挂载ip及路径。
         /// </summary>
         [JsonProperty("RemotePath")]
         public string RemotePath{ get; set; }

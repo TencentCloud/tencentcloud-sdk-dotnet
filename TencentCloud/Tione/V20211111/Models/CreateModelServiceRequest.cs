@@ -204,7 +204,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public ServiceLimit ServiceLimit{ get; set; }
 
         /// <summary>
-        /// 回调地址，用于回调创建服务状态信息
+        /// 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }

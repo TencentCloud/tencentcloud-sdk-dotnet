@@ -37,16 +37,11 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BandwidthPackageName{ get; set; }
 
         /// <summary>
-        /// 带宽包计费模式
+        /// 带宽包计费模式，示例 ：
+        /// 'TOP5_POSTPAID_BY_MONTH'（后付费-TOP5计费）
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
-
-        /// <summary>
-        /// 退款时迁移为后付费带宽包。默认值：否
-        /// </summary>
-        [JsonProperty("MigrateOnRefund")]
-        public bool? MigrateOnRefund{ get; set; }
 
 
         /// <summary>
@@ -57,7 +52,6 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
-            this.SetParamSimple(map, prefix + "MigrateOnRefund", this.MigrateOnRefund);
         }
     }
 }

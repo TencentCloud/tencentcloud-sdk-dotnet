@@ -49,10 +49,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ServiceInstanceId{ get; set; }
 
         /// <summary>
-        /// 是否是PassService类型。
+        /// ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
         /// </summary>
         [JsonProperty("IsPassService")]
         public bool? IsPassService{ get; set; }
+
+        /// <summary>
+        /// 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+        /// </summary>
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AutoAcceptFlag", this.AutoAcceptFlag);
             this.SetParamSimple(map, prefix + "ServiceInstanceId", this.ServiceInstanceId);
             this.SetParamSimple(map, prefix + "IsPassService", this.IsPassService);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
         }
     }
 }

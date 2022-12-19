@@ -54,6 +54,20 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
+        /// <summary>
+        /// 容量使用，单位GiB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CapacityUsed")]
+        public ulong? CapacityUsed{ get; set; }
+
+        /// <summary>
+        /// 文件使用个数，单位个
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileUsed")]
+        public ulong? FileUsed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +79,8 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "CapacityHardLimit", this.CapacityHardLimit);
             this.SetParamSimple(map, prefix + "FileHardLimit", this.FileHardLimit);
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "CapacityUsed", this.CapacityUsed);
+            this.SetParamSimple(map, prefix + "FileUsed", this.FileUsed);
         }
     }
 }

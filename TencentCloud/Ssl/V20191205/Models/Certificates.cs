@@ -255,6 +255,34 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("EncryptAlgorithm")]
         public string EncryptAlgorithm{ get; set; }
 
+        /// <summary>
+        /// 上传CA证书的加密算法
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CAEncryptAlgorithms")]
+        public string[] CAEncryptAlgorithms{ get; set; }
+
+        /// <summary>
+        /// 上传CA证书的过期时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CAEndTimes")]
+        public string[] CAEndTimes{ get; set; }
+
+        /// <summary>
+        /// 上传CA证书的通用名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CACommonNames")]
+        public string[] CACommonNames{ get; set; }
+
+        /// <summary>
+        /// 证书预审核信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PreAuditInfo")]
+        public PreAuditInfo PreAuditInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +322,10 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "IsIgnore", this.IsIgnore);
             this.SetParamSimple(map, prefix + "IsSM", this.IsSM);
             this.SetParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
+            this.SetParamArraySimple(map, prefix + "CAEncryptAlgorithms.", this.CAEncryptAlgorithms);
+            this.SetParamArraySimple(map, prefix + "CAEndTimes.", this.CAEndTimes);
+            this.SetParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
+            this.SetParamObj(map, prefix + "PreAuditInfo.", this.PreAuditInfo);
         }
     }
 }
