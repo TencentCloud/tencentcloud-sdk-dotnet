@@ -15,34 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Cdwch.V20200915.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLoadBalancingStatusRequest : AbstractModel
+    public class Tag : AbstractModel
     {
         
         /// <summary>
-        /// 站点ID。
+        /// 标签的键
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
 
         /// <summary>
-        /// 负载均衡ID。
+        /// 标签的值
         /// </summary>
-        [JsonProperty("LoadBalancingId")]
-        public string LoadBalancingId{ get; set; }
-
-        /// <summary>
-        /// 负载均衡状态，取值有：
-        /// <li>online：启用；</li>
-        /// <li>offline：停用。</li>
-        /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "LoadBalancingId", this.LoadBalancingId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] FileIds{ get; set; }
 
         /// <summary>
+        /// <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
         /// <li>basicInfo（视频基础信息）。</li>
         /// <li>metaData（视频元信息）。</li>
@@ -42,15 +48,11 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>keyFrameDescInfo（打点信息）。</li>
         /// <li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
         /// <li>miniProgramReviewInfo（小程序审核信息）。</li>
+        /// <li>subtitleInfo（字幕信息）。</li>
+        /// <li>reviewInfo（审核信息）。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public string[] Filters{ get; set; }
-
-        /// <summary>
-        /// 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
 
 
         /// <summary>
@@ -59,8 +61,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
-            this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
         }
     }
 }

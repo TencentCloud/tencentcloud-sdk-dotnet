@@ -133,6 +133,46 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
+        /// 创建集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceNewRequest"/></param>
+        /// <returns><see cref="CreateInstanceNewResponse"/></returns>
+        public async Task<CreateInstanceNewResponse> CreateInstanceNew(CreateInstanceNewRequest req)
+        {
+             JsonResponseModel<CreateInstanceNewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInstanceNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceNewRequest"/></param>
+        /// <returns><see cref="CreateInstanceNewResponse"/></returns>
+        public CreateInstanceNewResponse CreateInstanceNewSync(CreateInstanceNewRequest req)
+        {
+             JsonResponseModel<CreateInstanceNewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInstanceNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群用户、集群表，数据库等相关信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCkSqlApisRequest"/></param>
@@ -164,6 +204,46 @@ namespace TencentCloud.Cdwch.V20200915
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCkSqlApis");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCkSqlApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据实例ID查询某个实例的具体信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
+        /// <returns><see cref="DescribeInstanceResponse"/></returns>
+        public async Task<DescribeInstanceResponse> DescribeInstance(DescribeInstanceRequest req)
+        {
+             JsonResponseModel<DescribeInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据实例ID查询某个实例的具体信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
+        /// <returns><see cref="DescribeInstanceResponse"/></returns>
+        public DescribeInstanceResponse DescribeInstanceSync(DescribeInstanceRequest req)
+        {
+             JsonResponseModel<DescribeInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -31,7 +31,7 @@ namespace TencentCloud.Irp.V20220805.Models
         public string ItemId{ get; set; }
 
         /// <summary>
-        /// 内容类型：<br/>● article -图文<br>● text -纯文本<br/>● video -视频<br/>● short_video -时长15秒以内的视频<br/>● mini_video -竖屏视频<br/>● image -纯图片<br/>（如当前类型不满足，请<a href="https://console.cloud.tencent.com/workorder/category" target="_blank">提单</a>沟通解决方案）
+        /// 内容类型：<br/>● article -图文<br>● text -纯文本<br/>● video -视频<br/>● short_video -时长15秒以内的视频<br/>● mini_video -竖屏视频<br/>● image -纯图片<br/>（如当前类型不满足，请登录控制台进入对应项目，在<b>物料管理->物料类型管理</b>中添加）
         /// </summary>
         [JsonProperty("ItemType")]
         public string ItemType{ get; set; }
@@ -179,7 +179,7 @@ namespace TencentCloud.Irp.V20220805.Models
         public float? Score{ get; set; }
 
         /// <summary>
-        /// json字符串，<b>用于物料池管理的自定义扩展</b>
+        /// json字符串，<b>用于物料池管理的自定义扩展</b>，需要base64加密
         /// </summary>
         [JsonProperty("Extension")]
         public string Extension{ get; set; }

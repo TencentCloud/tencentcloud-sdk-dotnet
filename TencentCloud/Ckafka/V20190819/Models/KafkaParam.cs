@@ -126,6 +126,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("CompressionType")]
         public string CompressionType{ get; set; }
 
+        /// <summary>
+        /// 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MsgMultiple")]
+        public long? MsgMultiple{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +154,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "UseTableMapping", this.UseTableMapping);
             this.SetParamSimple(map, prefix + "UseAutoCreateTopic", this.UseAutoCreateTopic);
             this.SetParamSimple(map, prefix + "CompressionType", this.CompressionType);
+            this.SetParamSimple(map, prefix + "MsgMultiple", this.MsgMultiple);
         }
     }
 }

@@ -133,7 +133,7 @@ namespace TencentCloud.Irp.V20220805.Models
         public long? LastModifyTimestamp{ get; set; }
 
         /// <summary>
-        /// json字符串，用于画像数据的扩展
+        /// json字符串，用于画像数据的扩展，需要base64加密
         /// </summary>
         [JsonProperty("Extension")]
         public string Extension{ get; set; }

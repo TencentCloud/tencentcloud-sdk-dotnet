@@ -120,6 +120,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DatabasePrimaryKey")]
         public string DatabasePrimaryKey{ get; set; }
 
+        /// <summary>
+        /// 死信队列
+        /// </summary>
+        [JsonProperty("DropDlq")]
+        public FailureParam DropDlq{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "IndexType", this.IndexType);
             this.SetParamObj(map, prefix + "DropCls.", this.DropCls);
             this.SetParamSimple(map, prefix + "DatabasePrimaryKey", this.DatabasePrimaryKey);
+            this.SetParamObj(map, prefix + "DropDlq.", this.DropDlq);
         }
     }
 }

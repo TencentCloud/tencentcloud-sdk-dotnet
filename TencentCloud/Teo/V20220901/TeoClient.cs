@@ -4493,46 +4493,6 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改负载均衡状态
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLoadBalancingStatusRequest"/></param>
-        /// <returns><see cref="ModifyLoadBalancingStatusResponse"/></returns>
-        public async Task<ModifyLoadBalancingStatusResponse> ModifyLoadBalancingStatus(ModifyLoadBalancingStatusRequest req)
-        {
-             JsonResponseModel<ModifyLoadBalancingStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyLoadBalancingStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancingStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改负载均衡状态
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLoadBalancingStatusRequest"/></param>
-        /// <returns><see cref="ModifyLoadBalancingStatusResponse"/></returns>
-        public ModifyLoadBalancingStatusResponse ModifyLoadBalancingStatusSync(ModifyLoadBalancingStatusRequest req)
-        {
-             JsonResponseModel<ModifyLoadBalancingStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyLoadBalancingStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancingStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（ModifyLogTopicTask）用于修改日志推送任务信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyLogTopicTaskRequest"/></param>

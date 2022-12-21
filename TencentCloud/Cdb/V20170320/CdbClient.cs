@@ -2825,6 +2825,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DescribeRemoteBackupConfig)用于查询数据库异地备份配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteBackupConfigRequest"/></param>
+        /// <returns><see cref="DescribeRemoteBackupConfigResponse"/></returns>
+        public async Task<DescribeRemoteBackupConfigResponse> DescribeRemoteBackupConfig(DescribeRemoteBackupConfigRequest req)
+        {
+             JsonResponseModel<DescribeRemoteBackupConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRemoteBackupConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRemoteBackupConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeRemoteBackupConfig)用于查询数据库异地备份配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteBackupConfigRequest"/></param>
+        /// <returns><see cref="DescribeRemoteBackupConfigResponse"/></returns>
+        public DescribeRemoteBackupConfigResponse DescribeRemoteBackupConfigSync(DescribeRemoteBackupConfigRequest req)
+        {
+             JsonResponseModel<DescribeRemoteBackupConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRemoteBackupConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRemoteBackupConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeRoGroups)用于查询云数据库实例的所有的RO组的信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeRoGroupsRequest"/></param>
@@ -4384,6 +4424,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyParamTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyRemoteBackupConfig)用于查询数据库异地备份配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRemoteBackupConfigRequest"/></param>
+        /// <returns><see cref="ModifyRemoteBackupConfigResponse"/></returns>
+        public async Task<ModifyRemoteBackupConfigResponse> ModifyRemoteBackupConfig(ModifyRemoteBackupConfigRequest req)
+        {
+             JsonResponseModel<ModifyRemoteBackupConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRemoteBackupConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRemoteBackupConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyRemoteBackupConfig)用于查询数据库异地备份配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRemoteBackupConfigRequest"/></param>
+        /// <returns><see cref="ModifyRemoteBackupConfigResponse"/></returns>
+        public ModifyRemoteBackupConfigResponse ModifyRemoteBackupConfigSync(ModifyRemoteBackupConfigRequest req)
+        {
+             JsonResponseModel<ModifyRemoteBackupConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRemoteBackupConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRemoteBackupConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

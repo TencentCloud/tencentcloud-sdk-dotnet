@@ -2589,6 +2589,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        ///  查询Prometheus按量实例用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusInstanceUsageRequest"/></param>
+        /// <returns><see cref="DescribePrometheusInstanceUsageResponse"/></returns>
+        public async Task<DescribePrometheusInstanceUsageResponse> DescribePrometheusInstanceUsage(DescribePrometheusInstanceUsageRequest req)
+        {
+             JsonResponseModel<DescribePrometheusInstanceUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusInstanceUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusInstanceUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  查询Prometheus按量实例用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusInstanceUsageRequest"/></param>
+        /// <returns><see cref="DescribePrometheusInstanceUsageResponse"/></returns>
+        public DescribePrometheusInstanceUsageResponse DescribePrometheusInstanceUsageSync(DescribePrometheusInstanceUsageRequest req)
+        {
+             JsonResponseModel<DescribePrometheusInstanceUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusInstanceUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusInstanceUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribePrometheusInstances) 用于查询一个或多个实例的详细信息。
         /// <ul>
         /// <li>可以根据实例ID、实例名称或者实例状态等信息来查询实例的详细信息</li>

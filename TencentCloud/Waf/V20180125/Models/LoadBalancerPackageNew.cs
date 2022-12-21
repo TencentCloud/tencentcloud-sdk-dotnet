@@ -24,12 +24,100 @@ namespace TencentCloud.Waf.V20180125.Models
     public class LoadBalancerPackageNew : AbstractModel
     {
         
+        /// <summary>
+        /// 监听id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ListenerId")]
+        public string ListenerId{ get; set; }
+
+        /// <summary>
+        /// 监听名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ListenerName")]
+        public string ListenerName{ get; set; }
+
+        /// <summary>
+        /// 负载均衡id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
+
+        /// <summary>
+        /// 负载均衡名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerName")]
+        public string LoadBalancerName{ get; set; }
+
+        /// <summary>
+        /// 协议
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// 地区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 接入IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
+
+        /// <summary>
+        /// 接入端口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Vport")]
+        public ulong? Vport{ get; set; }
+
+        /// <summary>
+        /// 地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// VPCID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NumericalVpcId")]
+        public long? NumericalVpcId{ get; set; }
+
+        /// <summary>
+        /// CLB类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerType")]
+        public string LoadBalancerType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
+            this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+            this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "Vport", this.Vport);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
+            this.SetParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
         }
     }
 }

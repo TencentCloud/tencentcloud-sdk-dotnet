@@ -53,7 +53,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 添加子用户
+        /// 创建子用户
         /// </summary>
         /// <param name="req"><see cref="AddUserRequest"/></param>
         /// <returns><see cref="AddUserResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 添加子用户
+        /// 创建子用户
         /// </summary>
         /// <param name="req"><see cref="AddUserRequest"/></param>
         /// <returns><see cref="AddUserResponse"/></returns>

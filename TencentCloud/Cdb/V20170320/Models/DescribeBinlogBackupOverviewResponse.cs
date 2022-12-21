@@ -61,6 +61,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? BinlogArchiveCount{ get; set; }
 
         /// <summary>
+        /// 标准存储日志备份容量（单位为字节）。
+        /// </summary>
+        [JsonProperty("BinlogStandbyVolume")]
+        public long? BinlogStandbyVolume{ get; set; }
+
+        /// <summary>
+        /// 标准存储日志备份个数。
+        /// </summary>
+        [JsonProperty("BinlogStandbyCount")]
+        public long? BinlogStandbyCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +90,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "RemoteBinlogCount", this.RemoteBinlogCount);
             this.SetParamSimple(map, prefix + "BinlogArchiveVolume", this.BinlogArchiveVolume);
             this.SetParamSimple(map, prefix + "BinlogArchiveCount", this.BinlogArchiveCount);
+            this.SetParamSimple(map, prefix + "BinlogStandbyVolume", this.BinlogStandbyVolume);
+            this.SetParamSimple(map, prefix + "BinlogStandbyCount", this.BinlogStandbyCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

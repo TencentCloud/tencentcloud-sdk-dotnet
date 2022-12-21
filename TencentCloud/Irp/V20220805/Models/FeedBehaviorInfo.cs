@@ -146,7 +146,7 @@ namespace TencentCloud.Irp.V20220805.Models
         public string DeviceModel{ get; set; }
 
         /// <summary>
-        /// json字符串，<b>用于行为数据的扩展</b>
+        /// json字符串，<b>用于行为数据的扩展</b>，需要base64加密
         /// </summary>
         [JsonProperty("Extension")]
         public string Extension{ get; set; }

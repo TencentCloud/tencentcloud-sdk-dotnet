@@ -45,7 +45,7 @@ namespace TencentCloud.Irp.V20220805.Models
         public string ItemTraceId{ get; set; }
 
         /// <summary>
-        /// 推荐结果分，取值范围[0,1000000]
+        /// 推荐预测分，分值越高被推荐的理由越充分，取值范围[0,1000000]，用于做二次排序的参考
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]

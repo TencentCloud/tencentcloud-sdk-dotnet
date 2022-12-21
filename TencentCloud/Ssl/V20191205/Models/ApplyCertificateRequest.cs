@@ -102,6 +102,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
+        /// <summary>
+        /// 签发后是否删除自动域名验证记录， 默认为否；仅域名为DNS_AUTO验证类型支持传参
+        /// </summary>
+        [JsonProperty("DeleteDnsAutoRecord")]
+        public bool? DeleteDnsAutoRecord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
+            this.SetParamSimple(map, prefix + "DeleteDnsAutoRecord", this.DeleteDnsAutoRecord);
         }
     }
 }

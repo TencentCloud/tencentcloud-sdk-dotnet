@@ -53,6 +53,46 @@ namespace TencentCloud.Thpc.V20220401
         }
 
         /// <summary>
+        /// 本接口（AddClusterStorageOption）用于添加集群存储选项信息。
+        /// </summary>
+        /// <param name="req"><see cref="AddClusterStorageOptionRequest"/></param>
+        /// <returns><see cref="AddClusterStorageOptionResponse"/></returns>
+        public async Task<AddClusterStorageOptionResponse> AddClusterStorageOption(AddClusterStorageOptionRequest req)
+        {
+             JsonResponseModel<AddClusterStorageOptionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddClusterStorageOption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddClusterStorageOptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AddClusterStorageOption）用于添加集群存储选项信息。
+        /// </summary>
+        /// <param name="req"><see cref="AddClusterStorageOptionRequest"/></param>
+        /// <returns><see cref="AddClusterStorageOptionResponse"/></returns>
+        public AddClusterStorageOptionResponse AddClusterStorageOptionSync(AddClusterStorageOptionRequest req)
+        {
+             JsonResponseModel<AddClusterStorageOptionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddClusterStorageOption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddClusterStorageOptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(AddNodes)用于添加一个或者多个计算节点或者登录节点到指定集群。
         /// </summary>
         /// <param name="req"><see cref="AddNodesRequest"/></param>
@@ -213,6 +253,46 @@ namespace TencentCloud.Thpc.V20220401
         }
 
         /// <summary>
+        /// 本接口 (DeleteClusterStorageOption) 用于删除集群存储选项信息。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterStorageOptionRequest"/></param>
+        /// <returns><see cref="DeleteClusterStorageOptionResponse"/></returns>
+        public async Task<DeleteClusterStorageOptionResponse> DeleteClusterStorageOption(DeleteClusterStorageOptionRequest req)
+        {
+             JsonResponseModel<DeleteClusterStorageOptionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteClusterStorageOption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterStorageOptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteClusterStorageOption) 用于删除集群存储选项信息。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterStorageOptionRequest"/></param>
+        /// <returns><see cref="DeleteClusterStorageOptionResponse"/></returns>
+        public DeleteClusterStorageOptionResponse DeleteClusterStorageOptionSync(DeleteClusterStorageOptionRequest req)
+        {
+             JsonResponseModel<DeleteClusterStorageOptionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteClusterStorageOption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterStorageOptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DeleteNodes)用于删除指定集群中一个或者多个计算节点或者登录节点。
         /// </summary>
         /// <param name="req"><see cref="DeleteNodesRequest"/></param>
@@ -284,6 +364,46 @@ namespace TencentCloud.Thpc.V20220401
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClusterActivities");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterActivitiesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeClusterStorageOption) 用于查询集群存储选项信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterStorageOptionRequest"/></param>
+        /// <returns><see cref="DescribeClusterStorageOptionResponse"/></returns>
+        public async Task<DescribeClusterStorageOptionResponse> DescribeClusterStorageOption(DescribeClusterStorageOptionRequest req)
+        {
+             JsonResponseModel<DescribeClusterStorageOptionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterStorageOption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterStorageOptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeClusterStorageOption) 用于查询集群存储选项信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterStorageOptionRequest"/></param>
+        /// <returns><see cref="DescribeClusterStorageOptionResponse"/></returns>
+        public DescribeClusterStorageOptionResponse DescribeClusterStorageOptionSync(DescribeClusterStorageOptionRequest req)
+        {
+             JsonResponseModel<DescribeClusterStorageOptionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterStorageOption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterStorageOptionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

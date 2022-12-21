@@ -729,6 +729,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建用户自定义审核模板，数量上限：50。
+        /// </summary>
+        /// <param name="req"><see cref="CreateReviewTemplateRequest"/></param>
+        /// <returns><see cref="CreateReviewTemplateResponse"/></returns>
+        public async Task<CreateReviewTemplateResponse> CreateReviewTemplate(CreateReviewTemplateRequest req)
+        {
+             JsonResponseModel<CreateReviewTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReviewTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建用户自定义审核模板，数量上限：50。
+        /// </summary>
+        /// <param name="req"><see cref="CreateReviewTemplateRequest"/></param>
+        /// <returns><see cref="CreateReviewTemplateResponse"/></returns>
+        public CreateReviewTemplateResponse CreateReviewTemplateSync(CreateReviewTemplateRequest req)
+        {
+             JsonResponseModel<CreateReviewTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReviewTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户自定义采样截图模板，数量上限：16。
         /// </summary>
         /// <param name="req"><see cref="CreateSampleSnapshotTemplateRequest"/></param>
@@ -1578,6 +1618,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteProcedureTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProcedureTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户自定义审核模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReviewTemplateRequest"/></param>
+        /// <returns><see cref="DeleteReviewTemplateResponse"/></returns>
+        public async Task<DeleteReviewTemplateResponse> DeleteReviewTemplate(DeleteReviewTemplateRequest req)
+        {
+             JsonResponseModel<DeleteReviewTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteReviewTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户自定义审核模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReviewTemplateRequest"/></param>
+        /// <returns><see cref="DeleteReviewTemplateResponse"/></returns>
+        public DeleteReviewTemplateResponse DeleteReviewTemplateSync(DeleteReviewTemplateRequest req)
+        {
+             JsonResponseModel<DeleteReviewTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteReviewTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReviewTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2447,8 +2527,9 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 本 API 是 [旧版本加密](https://cloud.tencent.com/document/product/266/9638) 中[DescribeDrmDataKey 的 API 2017 接口](https://cloud.tencent.com/document/product/266/9643)的升级版本。
-        /// 如果您是新接入点播加密的用户，不要使用该 API。请参考[视频加密综述](https://cloud.tencent.com/document/product/266/45552)使用。
+        /// 本 API 是 [旧版本加密](https://cloud.tencent.com/document/product/266/9638) 中 [DescribeDrmDataKey 的 API 2017 接口](https://cloud.tencent.com/document/product/266/9643) 的升级版本。
+        /// 
+        /// 如果您是新接入点播加密的用户，不要使用该 API，请参考 [视频加密综述](https://cloud.tencent.com/document/product/266/45552) 使用推荐的加密方式。
         /// </summary>
         /// <param name="req"><see cref="DescribeDrmDataKeyRequest"/></param>
         /// <returns><see cref="DescribeDrmDataKeyResponse"/></returns>
@@ -2468,8 +2549,9 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 本 API 是 [旧版本加密](https://cloud.tencent.com/document/product/266/9638) 中[DescribeDrmDataKey 的 API 2017 接口](https://cloud.tencent.com/document/product/266/9643)的升级版本。
-        /// 如果您是新接入点播加密的用户，不要使用该 API。请参考[视频加密综述](https://cloud.tencent.com/document/product/266/45552)使用。
+        /// 本 API 是 [旧版本加密](https://cloud.tencent.com/document/product/266/9638) 中 [DescribeDrmDataKey 的 API 2017 接口](https://cloud.tencent.com/document/product/266/9643) 的升级版本。
+        /// 
+        /// 如果您是新接入点播加密的用户，不要使用该 API，请参考 [视频加密综述](https://cloud.tencent.com/document/product/266/45552) 使用推荐的加密方式。
         /// </summary>
         /// <param name="req"><see cref="DescribeDrmDataKeyRequest"/></param>
         /// <returns><see cref="DescribeDrmDataKeyResponse"/></returns>
@@ -2883,6 +2965,7 @@ namespace TencentCloud.Vod.V20180717
         ///     7. 指定时间点截图信息（snapshotByTimeOffsetInfo）：对视频依照指定时间点截图后，的截图信息。
         ///     8. 视频打点信息（keyFrameDescInfo）：对视频设置的打点信息。
         ///     9. 转自适应码流信息（adaptiveDynamicStreamingInfo）：包括规格、加密类型、打包格式等相关信息。
+        ///     10. 审核信息（reviewInfo）：包括媒体审核及媒体封面审核信息。
         /// 2. 可以指定回包只返回部分信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeMediaInfosRequest"/></param>
@@ -2913,6 +2996,7 @@ namespace TencentCloud.Vod.V20180717
         ///     7. 指定时间点截图信息（snapshotByTimeOffsetInfo）：对视频依照指定时间点截图后，的截图信息。
         ///     8. 视频打点信息（keyFrameDescInfo）：对视频设置的打点信息。
         ///     9. 转自适应码流信息（adaptiveDynamicStreamingInfo）：包括规格、加密类型、打包格式等相关信息。
+        ///     10. 审核信息（reviewInfo）：包括媒体审核及媒体封面审核信息。
         /// 2. 可以指定回包只返回部分信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeMediaInfosRequest"/></param>
@@ -3188,6 +3272,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DescribeReviewDetails");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReviewDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取审核模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReviewTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeReviewTemplatesResponse"/></returns>
+        public async Task<DescribeReviewTemplatesResponse> DescribeReviewTemplates(DescribeReviewTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeReviewTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReviewTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReviewTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取审核模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReviewTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeReviewTemplatesResponse"/></returns>
+        public DescribeReviewTemplatesResponse DescribeReviewTemplatesSync(DescribeReviewTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeReviewTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReviewTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReviewTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4600,6 +4724,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ModifyPersonSample");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户自定义审核模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReviewTemplateRequest"/></param>
+        /// <returns><see cref="ModifyReviewTemplateResponse"/></returns>
+        public async Task<ModifyReviewTemplateResponse> ModifyReviewTemplate(ModifyReviewTemplateRequest req)
+        {
+             JsonResponseModel<ModifyReviewTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyReviewTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户自定义审核模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReviewTemplateRequest"/></param>
+        /// <returns><see cref="ModifyReviewTemplateResponse"/></returns>
+        public ModifyReviewTemplateResponse ModifyReviewTemplateSync(ModifyReviewTemplateRequest req)
+        {
+             JsonResponseModel<ModifyReviewTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyReviewTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyReviewTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -115,6 +115,30 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? BinlogArchiveDays{ get; set; }
 
         /// <summary>
+        /// 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+        /// </summary>
+        [JsonProperty("EnableBackupStandby")]
+        public string EnableBackupStandby{ get; set; }
+
+        /// <summary>
+        /// 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+        /// </summary>
+        [JsonProperty("BackupStandbyDays")]
+        public long? BackupStandbyDays{ get; set; }
+
+        /// <summary>
+        /// 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+        /// </summary>
+        [JsonProperty("EnableBinlogStandby")]
+        public string EnableBinlogStandby{ get; set; }
+
+        /// <summary>
+        /// 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+        /// </summary>
+        [JsonProperty("BinlogStandbyDays")]
+        public long? BinlogStandbyDays{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -141,6 +165,10 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "BackupArchiveDays", this.BackupArchiveDays);
             this.SetParamSimple(map, prefix + "EnableBinlogArchive", this.EnableBinlogArchive);
             this.SetParamSimple(map, prefix + "BinlogArchiveDays", this.BinlogArchiveDays);
+            this.SetParamSimple(map, prefix + "EnableBackupStandby", this.EnableBackupStandby);
+            this.SetParamSimple(map, prefix + "BackupStandbyDays", this.BackupStandbyDays);
+            this.SetParamSimple(map, prefix + "EnableBinlogStandby", this.EnableBinlogStandby);
+            this.SetParamSimple(map, prefix + "BinlogStandbyDays", this.BinlogStandbyDays);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -15,13 +15,13 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLoadBalancingStatusResponse : AbstractModel
+    public class ModifyDiskBackupsAttributeResponse : AbstractModel
     {
         
         /// <summary>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.666</VersionPrefix>
+    <VersionPrefix>3.0.667</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,8 @@
 
   <ItemGroup>
     <Compile Include="V20220401\ThpcClient.cs" />
+    <Compile Include="V20220401\Models\AddClusterStorageOptionRequest.cs" />
+    <Compile Include="V20220401\Models\AddClusterStorageOptionResponse.cs" />
     <Compile Include="V20220401\Models\AddNodesRequest.cs" />
     <Compile Include="V20220401\Models\AddNodesResponse.cs" />
     <Compile Include="V20220401\Models\BindAutoScalingGroupRequest.cs" />
@@ -59,10 +61,14 @@
     <Compile Include="V20220401\Models\DataDisk.cs" />
     <Compile Include="V20220401\Models\DeleteClusterRequest.cs" />
     <Compile Include="V20220401\Models\DeleteClusterResponse.cs" />
+    <Compile Include="V20220401\Models\DeleteClusterStorageOptionRequest.cs" />
+    <Compile Include="V20220401\Models\DeleteClusterStorageOptionResponse.cs" />
     <Compile Include="V20220401\Models\DeleteNodesRequest.cs" />
     <Compile Include="V20220401\Models\DeleteNodesResponse.cs" />
     <Compile Include="V20220401\Models\DescribeClusterActivitiesRequest.cs" />
     <Compile Include="V20220401\Models\DescribeClusterActivitiesResponse.cs" />
+    <Compile Include="V20220401\Models\DescribeClusterStorageOptionRequest.cs" />
+    <Compile Include="V20220401\Models\DescribeClusterStorageOptionResponse.cs" />
     <Compile Include="V20220401\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20220401\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20220401\Models\ExpansionNodeConfig.cs" />

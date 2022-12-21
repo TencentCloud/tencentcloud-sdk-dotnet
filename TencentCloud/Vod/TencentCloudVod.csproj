@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.666</VersionPrefix>
+    <VersionPrefix>3.0.667</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -210,6 +210,8 @@
     <Compile Include="V20180717\Models\CreatePersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\CreateProcedureTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateProcedureTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateReviewTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\CreateReviewTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateSampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateSnapshotByTimeOffsetTemplateRequest.cs" />
@@ -253,6 +255,8 @@
     <Compile Include="V20180717\Models\DeletePersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\DeleteProcedureTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteProcedureTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteReviewTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteReviewTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteSampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteSnapshotByTimeOffsetTemplateRequest.cs" />
@@ -329,6 +333,8 @@
     <Compile Include="V20180717\Models\DescribeProcedureTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeReviewDetailsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeReviewDetailsResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeReviewTemplatesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeReviewTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeSampleSnapshotTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeSampleSnapshotTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeSnapshotByTimeOffsetTemplatesRequest.cs" />
@@ -382,6 +388,7 @@
     <Compile Include="V20180717\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\FileDeleteResultItem.cs" />
     <Compile Include="V20180717\Models\FileDeleteTask.cs" />
+    <Compile Include="V20180717\Models\FileReviewInfo.cs" />
     <Compile Include="V20180717\Models\FileUploadTask.cs" />
     <Compile Include="V20180717\Models\ForbidMediaDistributionRequest.cs" />
     <Compile Include="V20180717\Models\ForbidMediaDistributionResponse.cs" />
@@ -491,6 +498,8 @@
     <Compile Include="V20180717\Models\ModifyMediaStorageClassResponse.cs" />
     <Compile Include="V20180717\Models\ModifyPersonSampleRequest.cs" />
     <Compile Include="V20180717\Models\ModifyPersonSampleResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyReviewTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyReviewTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifySampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifySampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifySnapshotByTimeOffsetTemplateRequest.cs" />
@@ -595,6 +604,8 @@
     <Compile Include="V20180717\Models\ReviewAudioVideoTaskOutput.cs" />
     <Compile Include="V20180717\Models\ReviewImageRequest.cs" />
     <Compile Include="V20180717\Models\ReviewImageResponse.cs" />
+    <Compile Include="V20180717\Models\ReviewInfo.cs" />
+    <Compile Include="V20180717\Models\ReviewTemplate.cs" />
     <Compile Include="V20180717\Models\SDMCDrmKeyProviderInfo.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTemplate.cs" />

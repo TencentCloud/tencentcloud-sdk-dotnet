@@ -53,6 +53,58 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（ApplyDiskBackup）用于回滚指定云硬盘的备份点。
+        /// * 仅支持回滚到原云硬盘。
+        /// * 用于回滚的云硬盘备份点必须处于 NORMAL 状态。
+        ///   云硬盘备份点状态可以通过 DescribeDiskBackups 接口查询。
+        /// * 回滚云硬盘备份点时，云硬盘的状态必须为 UNATTACHED或ATTACHED。
+        ///   云硬盘状态可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口查询。
+        /// * 如果云硬盘处于 ATTACHED状态，相关RUNNING 状态的实例会强制关机，然后回滚云硬盘备份点。
+        /// </summary>
+        /// <param name="req"><see cref="ApplyDiskBackupRequest"/></param>
+        /// <returns><see cref="ApplyDiskBackupResponse"/></returns>
+        public async Task<ApplyDiskBackupResponse> ApplyDiskBackup(ApplyDiskBackupRequest req)
+        {
+             JsonResponseModel<ApplyDiskBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyDiskBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyDiskBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ApplyDiskBackup）用于回滚指定云硬盘的备份点。
+        /// * 仅支持回滚到原云硬盘。
+        /// * 用于回滚的云硬盘备份点必须处于 NORMAL 状态。
+        ///   云硬盘备份点状态可以通过 DescribeDiskBackups 接口查询。
+        /// * 回滚云硬盘备份点时，云硬盘的状态必须为 UNATTACHED或ATTACHED。
+        ///   云硬盘状态可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口查询。
+        /// * 如果云硬盘处于 ATTACHED状态，相关RUNNING 状态的实例会强制关机，然后回滚云硬盘备份点。
+        /// </summary>
+        /// <param name="req"><see cref="ApplyDiskBackupRequest"/></param>
+        /// <returns><see cref="ApplyDiskBackupResponse"/></returns>
+        public ApplyDiskBackupResponse ApplyDiskBackupSync(ApplyDiskBackupRequest req)
+        {
+             JsonResponseModel<ApplyDiskBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyDiskBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyDiskBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ApplyInstanceSnapshot）用于回滚指定实例的系统盘快照。
         /// <li>仅支持回滚到原系统盘。</li>
         /// <li>用于回滚的快照必须处于 NORMAL 状态。快照状态可以通 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。</li>
@@ -262,6 +314,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "CreateBlueprint");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBlueprintResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( CreateDiskBackup  ) 用于创建指定云硬盘（当前只支持数据盘）的备份点。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDiskBackupRequest"/></param>
+        /// <returns><see cref="CreateDiskBackupResponse"/></returns>
+        public async Task<CreateDiskBackupResponse> CreateDiskBackup(CreateDiskBackupRequest req)
+        {
+             JsonResponseModel<CreateDiskBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDiskBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDiskBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( CreateDiskBackup  ) 用于创建指定云硬盘（当前只支持数据盘）的备份点。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDiskBackupRequest"/></param>
+        /// <returns><see cref="CreateDiskBackupResponse"/></returns>
+        public CreateDiskBackupResponse CreateDiskBackupSync(CreateDiskBackupRequest req)
+        {
+             JsonResponseModel<CreateDiskBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDiskBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDiskBackupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -482,6 +574,48 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DeleteBlueprints");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBlueprintsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteDiskBackups）用于删除云硬盘备份点。
+        /// 云硬盘备份点必须处于 NORMAL 状态，云硬盘备份点状态可以通过 DescribeDiskBackups接口查询，见输出参数中 DiskBackupState 字段解释。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDiskBackupsRequest"/></param>
+        /// <returns><see cref="DeleteDiskBackupsResponse"/></returns>
+        public async Task<DeleteDiskBackupsResponse> DeleteDiskBackups(DeleteDiskBackupsRequest req)
+        {
+             JsonResponseModel<DeleteDiskBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDiskBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDiskBackupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteDiskBackups）用于删除云硬盘备份点。
+        /// 云硬盘备份点必须处于 NORMAL 状态，云硬盘备份点状态可以通过 DescribeDiskBackups接口查询，见输出参数中 DiskBackupState 字段解释。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDiskBackupsRequest"/></param>
+        /// <returns><see cref="DeleteDiskBackupsResponse"/></returns>
+        public DeleteDiskBackupsResponse DeleteDiskBackupsSync(DeleteDiskBackupsRequest req)
+        {
+             JsonResponseModel<DeleteDiskBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDiskBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDiskBackupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -862,6 +996,86 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCcnAttachedInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcnAttachedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDiskBackups）用于查询云硬盘备份点的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskBackupsRequest"/></param>
+        /// <returns><see cref="DescribeDiskBackupsResponse"/></returns>
+        public async Task<DescribeDiskBackupsResponse> DescribeDiskBackups(DescribeDiskBackupsRequest req)
+        {
+             JsonResponseModel<DescribeDiskBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiskBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskBackupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDiskBackups）用于查询云硬盘备份点的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskBackupsRequest"/></param>
+        /// <returns><see cref="DescribeDiskBackupsResponse"/></returns>
+        public DescribeDiskBackupsResponse DescribeDiskBackupsSync(DescribeDiskBackupsRequest req)
+        {
+             JsonResponseModel<DescribeDiskBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDiskBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskBackupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDiskBackupsDeniedActions）用于查询一个或多个云硬盘备份点的操作限制列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskBackupsDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeDiskBackupsDeniedActionsResponse"/></returns>
+        public async Task<DescribeDiskBackupsDeniedActionsResponse> DescribeDiskBackupsDeniedActions(DescribeDiskBackupsDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeDiskBackupsDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiskBackupsDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskBackupsDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDiskBackupsDeniedActions）用于查询一个或多个云硬盘备份点的操作限制列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskBackupsDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeDiskBackupsDeniedActionsResponse"/></returns>
+        public DescribeDiskBackupsDeniedActionsResponse DescribeDiskBackupsDeniedActionsSync(DescribeDiskBackupsDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeDiskBackupsDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDiskBackupsDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskBackupsDeniedActionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2276,6 +2490,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBlueprintAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBlueprintAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyDiskBackupsAttribute) 用于修改云硬盘备份点属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDiskBackupsAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDiskBackupsAttributeResponse"/></returns>
+        public async Task<ModifyDiskBackupsAttributeResponse> ModifyDiskBackupsAttribute(ModifyDiskBackupsAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDiskBackupsAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDiskBackupsAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiskBackupsAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyDiskBackupsAttribute) 用于修改云硬盘备份点属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDiskBackupsAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDiskBackupsAttributeResponse"/></returns>
+        public ModifyDiskBackupsAttributeResponse ModifyDiskBackupsAttributeSync(ModifyDiskBackupsAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDiskBackupsAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDiskBackupsAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiskBackupsAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

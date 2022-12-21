@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.666</VersionPrefix>
+    <VersionPrefix>3.0.667</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,8 @@
 
   <ItemGroup>
     <Compile Include="V20200324\LighthouseClient.cs" />
+    <Compile Include="V20200324\Models\ApplyDiskBackupRequest.cs" />
+    <Compile Include="V20200324\Models\ApplyDiskBackupResponse.cs" />
     <Compile Include="V20200324\Models\ApplyInstanceSnapshotRequest.cs" />
     <Compile Include="V20200324\Models\ApplyInstanceSnapshotResponse.cs" />
     <Compile Include="V20200324\Models\AssociateInstancesKeyPairsRequest.cs" />
@@ -62,6 +64,8 @@
     <Compile Include="V20200324\Models\ContainerEnv.cs" />
     <Compile Include="V20200324\Models\CreateBlueprintRequest.cs" />
     <Compile Include="V20200324\Models\CreateBlueprintResponse.cs" />
+    <Compile Include="V20200324\Models\CreateDiskBackupRequest.cs" />
+    <Compile Include="V20200324\Models\CreateDiskBackupResponse.cs" />
     <Compile Include="V20200324\Models\CreateFirewallRulesRequest.cs" />
     <Compile Include="V20200324\Models\CreateFirewallRulesResponse.cs" />
     <Compile Include="V20200324\Models\CreateInstanceSnapshotRequest.cs" />
@@ -73,6 +77,8 @@
     <Compile Include="V20200324\Models\DataDiskPrice.cs" />
     <Compile Include="V20200324\Models\DeleteBlueprintsRequest.cs" />
     <Compile Include="V20200324\Models\DeleteBlueprintsResponse.cs" />
+    <Compile Include="V20200324\Models\DeleteDiskBackupsRequest.cs" />
+    <Compile Include="V20200324\Models\DeleteDiskBackupsResponse.cs" />
     <Compile Include="V20200324\Models\DeleteFirewallRulesRequest.cs" />
     <Compile Include="V20200324\Models\DeleteFirewallRulesResponse.cs" />
     <Compile Include="V20200324\Models\DeleteKeyPairsRequest.cs" />
@@ -92,6 +98,10 @@
     <Compile Include="V20200324\Models\DescribeBundlesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeCcnAttachedInstancesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeCcnAttachedInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeDiskBackupsDeniedActionsRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeDiskBackupsDeniedActionsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeDiskBackupsRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeDiskBackupsResponse.cs" />
     <Compile Include="V20200324\Models\DescribeDiskConfigsRequest.cs" />
     <Compile Include="V20200324\Models\DescribeDiskConfigsResponse.cs" />
     <Compile Include="V20200324\Models\DescribeDiskDiscountRequest.cs" />
@@ -147,6 +157,8 @@
     <Compile Include="V20200324\Models\DisassociateInstancesKeyPairsResponse.cs" />
     <Compile Include="V20200324\Models\DiscountDetail.cs" />
     <Compile Include="V20200324\Models\Disk.cs" />
+    <Compile Include="V20200324\Models\DiskBackup.cs" />
+    <Compile Include="V20200324\Models\DiskBackupDeniedActions.cs" />
     <Compile Include="V20200324\Models\DiskChargePrepaid.cs" />
     <Compile Include="V20200324\Models\DiskConfig.cs" />
     <Compile Include="V20200324\Models\DiskDeniedActions.cs" />
@@ -187,6 +199,8 @@
     <Compile Include="V20200324\Models\ModifyBlueprintAttributeRequest.cs" />
     <Compile Include="V20200324\Models\ModifyBlueprintAttributeResponse.cs" />
     <Compile Include="V20200324\Models\ModifyBundle.cs" />
+    <Compile Include="V20200324\Models\ModifyDiskBackupsAttributeRequest.cs" />
+    <Compile Include="V20200324\Models\ModifyDiskBackupsAttributeResponse.cs" />
     <Compile Include="V20200324\Models\ModifyDisksAttributeRequest.cs" />
     <Compile Include="V20200324\Models\ModifyDisksAttributeResponse.cs" />
     <Compile Include="V20200324\Models\ModifyDisksRenewFlagRequest.cs" />

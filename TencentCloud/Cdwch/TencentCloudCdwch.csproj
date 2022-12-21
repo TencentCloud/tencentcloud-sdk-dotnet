@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6227C841-08B9-39DD-91B5-C3CB4FE07CD6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.666</VersionPrefix>
+    <VersionPrefix>3.0.667</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,23 +48,32 @@
     <Compile Include="V20200915\Models\ActionAlterCkUserRequest.cs" />
     <Compile Include="V20200915\Models\ActionAlterCkUserResponse.cs" />
     <Compile Include="V20200915\Models\BackupTableContent.cs" />
+    <Compile Include="V20200915\Models\Charge.cs" />
     <Compile Include="V20200915\Models\CkUserAlterInfo.cs" />
     <Compile Include="V20200915\Models\ConfigSubmitContext.cs" />
     <Compile Include="V20200915\Models\CreateBackUpScheduleRequest.cs" />
     <Compile Include="V20200915\Models\CreateBackUpScheduleResponse.cs" />
+    <Compile Include="V20200915\Models\CreateInstanceNewRequest.cs" />
+    <Compile Include="V20200915\Models\CreateInstanceNewResponse.cs" />
     <Compile Include="V20200915\Models\DescribeCkSqlApisRequest.cs" />
     <Compile Include="V20200915\Models\DescribeCkSqlApisResponse.cs" />
+    <Compile Include="V20200915\Models\DescribeInstanceRequest.cs" />
+    <Compile Include="V20200915\Models\DescribeInstanceResponse.cs" />
     <Compile Include="V20200915\Models\DescribeInstanceShardsRequest.cs" />
     <Compile Include="V20200915\Models\DescribeInstanceShardsResponse.cs" />
     <Compile Include="V20200915\Models\DescribeSpecRequest.cs" />
     <Compile Include="V20200915\Models\DescribeSpecResponse.cs" />
     <Compile Include="V20200915\Models\DiskSpec.cs" />
+    <Compile Include="V20200915\Models\InstanceInfo.cs" />
     <Compile Include="V20200915\Models\ModifyClusterConfigsRequest.cs" />
     <Compile Include="V20200915\Models\ModifyClusterConfigsResponse.cs" />
     <Compile Include="V20200915\Models\ModifyUserNewPrivilegeRequest.cs" />
     <Compile Include="V20200915\Models\ModifyUserNewPrivilegeResponse.cs" />
+    <Compile Include="V20200915\Models\NodeSpec.cs" />
+    <Compile Include="V20200915\Models\NodesSummary.cs" />
     <Compile Include="V20200915\Models\OpenBackUpRequest.cs" />
     <Compile Include="V20200915\Models\OpenBackUpResponse.cs" />
     <Compile Include="V20200915\Models\ResourceSpec.cs" />
+    <Compile Include="V20200915\Models\Tag.cs" />
   </ItemGroup>
 </Project>

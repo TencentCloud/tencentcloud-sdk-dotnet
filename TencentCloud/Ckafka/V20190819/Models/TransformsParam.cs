@@ -85,6 +85,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("KeepMetadata")]
         public bool? KeepMetadata{ get; set; }
 
+        /// <summary>
+        /// 数组解析
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BatchAnalyse")]
+        public BatchAnalyseParam BatchAnalyse{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
             this.SetParamObj(map, prefix + "RowParam.", this.RowParam);
             this.SetParamSimple(map, prefix + "KeepMetadata", this.KeepMetadata);
+            this.SetParamObj(map, prefix + "BatchAnalyse.", this.BatchAnalyse);
         }
     }
 }

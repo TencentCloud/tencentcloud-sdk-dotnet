@@ -63,6 +63,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? BackupArchiveVolume{ get; set; }
 
         /// <summary>
+        /// 标准存储备份容量，包含数据备份以及日志备份。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupStandbyVolume")]
+        public long? BackupStandbyVolume{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -80,6 +87,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "FreeVolume", this.FreeVolume);
             this.SetParamSimple(map, prefix + "RemoteBackupVolume", this.RemoteBackupVolume);
             this.SetParamSimple(map, prefix + "BackupArchiveVolume", this.BackupArchiveVolume);
+            this.SetParamSimple(map, prefix + "BackupStandbyVolume", this.BackupStandbyVolume);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.666</VersionPrefix>
+    <VersionPrefix>3.0.667</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -152,6 +152,8 @@
     <Compile Include="V20200309\Models\DescribeBasicDeviceStatusResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBgpBizTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeBgpBizTrendResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeBizHttpStatusRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeBizHttpStatusResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBizTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeBizTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
@@ -232,6 +234,7 @@
     <Compile Include="V20200309\Models\EipAddressRelation.cs" />
     <Compile Include="V20200309\Models\EipProductInfo.cs" />
     <Compile Include="V20200309\Models\ForwardListener.cs" />
+    <Compile Include="V20200309\Models\HttpStatusMap.cs" />
     <Compile Include="V20200309\Models\IPAlarmThresholdRelation.cs" />
     <Compile Include="V20200309\Models\IPLineInfo.cs" />
     <Compile Include="V20200309\Models\InsL7Rules.cs" />
