@@ -42,6 +42,14 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("GameRegion")]
         public string GameRegion{ get; set; }
 
+        /// <summary>
+        /// 游戏类型。
+        /// MOBILE：手游
+        /// PC：默认值，端游
+        /// </summary>
+        [JsonProperty("GameType")]
+        public string GameType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +59,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "GameId", this.GameId);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "GameRegion", this.GameRegion);
+            this.SetParamSimple(map, prefix + "GameType", this.GameType);
         }
     }
 }

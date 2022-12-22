@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.667</VersionPrefix>
+    <VersionPrefix>3.0.668</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -163,6 +163,8 @@
     <Compile Include="V20210622\Models\ScoreInfo.cs" />
     <Compile Include="V20210622\Models\StopInstanceRequest.cs" />
     <Compile Include="V20210622\Models\StopInstanceResponse.cs" />
+    <Compile Include="V20210622\Models\StopProjectRequest.cs" />
+    <Compile Include="V20210622\Models\StopProjectResponse.cs" />
     <Compile Include="V20210622\Models\Tag.cs" />
     <Compile Include="V20210622\Models\Whitelist.cs" />
   </ItemGroup>

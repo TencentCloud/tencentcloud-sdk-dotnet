@@ -31,7 +31,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 图片审核模板 ID，当前固定填 10。
+        /// 图片审核模板 ID，取值范围：
+        /// <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

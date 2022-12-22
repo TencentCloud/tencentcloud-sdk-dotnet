@@ -43,6 +43,15 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
+        /// 签署人校验方式
+        /// VerifyCheck: 人脸识别（默认）
+        /// MobileCheck：手机号验证
+        /// 参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
+        /// </summary>
+        [JsonProperty("ApproverVerifyType")]
+        public string ApproverVerifyType{ get; set; }
+
+        /// <summary>
         /// 操作者的信息
         /// </summary>
         [JsonProperty("Operator")]
@@ -57,6 +66,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArrayObj(map, prefix + "FlowFileInfos.", this.FlowFileInfos);
             this.SetParamSimple(map, prefix + "FlowGroupName", this.FlowGroupName);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }

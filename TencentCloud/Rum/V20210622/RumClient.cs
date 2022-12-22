@@ -2238,5 +2238,45 @@ namespace TencentCloud.Rum.V20210622
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 停止项目使用与上报数据
+        /// </summary>
+        /// <param name="req"><see cref="StopProjectRequest"/></param>
+        /// <returns><see cref="StopProjectResponse"/></returns>
+        public async Task<StopProjectResponse> StopProject(StopProjectRequest req)
+        {
+             JsonResponseModel<StopProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止项目使用与上报数据
+        /// </summary>
+        /// <param name="req"><see cref="StopProjectRequest"/></param>
+        /// <returns><see cref="StopProjectResponse"/></returns>
+        public StopProjectResponse StopProjectSync(StopProjectRequest req)
+        {
+             JsonResponseModel<StopProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

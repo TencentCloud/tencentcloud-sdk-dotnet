@@ -39,7 +39,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Reorder{ get; set; }
 
         /// <summary>
-        /// includeAll | excludeAll | includeCustom | excludeAll 使用/排除部分url参数
+        /// includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
