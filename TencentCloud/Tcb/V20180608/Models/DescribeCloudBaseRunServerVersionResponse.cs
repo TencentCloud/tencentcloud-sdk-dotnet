@@ -275,6 +275,20 @@ namespace TencentCloud.Tcb.V20180608.Models
         public HpaPolicy[] PolicyDetail{ get; set; }
 
         /// <summary>
+        /// Tke集群信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TkeClusterInfo")]
+        public TkeClusterInfo TkeClusterInfo{ get; set; }
+
+        /// <summary>
+        /// 版本工作负载类型；deployment/deamonset
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TkeWorkloadType")]
+        public string TkeWorkloadType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -323,6 +337,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
             this.SetParamSimple(map, prefix + "RepoLanguage", this.RepoLanguage);
             this.SetParamArrayObj(map, prefix + "PolicyDetail.", this.PolicyDetail);
+            this.SetParamObj(map, prefix + "TkeClusterInfo.", this.TkeClusterInfo);
+            this.SetParamSimple(map, prefix + "TkeWorkloadType", this.TkeWorkloadType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

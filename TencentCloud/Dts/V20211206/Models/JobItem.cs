@@ -143,6 +143,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
 
+        /// <summary>
+        /// 自动重试时间段信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoRetryTimeRangeMinutes")]
+        public long? AutoRetryTimeRangeMinutes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +173,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamObj(map, prefix + "CompareTask.", this.CompareTask);
             this.SetParamObj(map, prefix + "TradeInfo.", this.TradeInfo);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
         }
     }
 }

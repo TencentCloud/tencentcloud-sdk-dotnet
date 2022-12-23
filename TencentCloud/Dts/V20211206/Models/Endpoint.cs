@@ -32,6 +32,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Region{ get; set; }
 
         /// <summary>
+        /// tdsql mysql版的节点类型，枚举值为proxy、set
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
+        /// <summary>
         /// 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -137,13 +144,6 @@ namespace TencentCloud.Dts.V20211206.Models
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("AccountMode")]
-        public string AccountMode{ get; set; }
-
-        /// <summary>
         /// 实例所属账号，如果为跨账号实例此项必填
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -151,11 +151,25 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Account{ get; set; }
 
         /// <summary>
+        /// 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccountMode")]
+        public string AccountMode{ get; set; }
+
+        /// <summary>
         /// 跨账号同步时的角色，只允许[a-zA-Z0-9\-\_]+，如果为跨账号实例此项必填
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountRole")]
         public string AccountRole{ get; set; }
+
+        /// <summary>
+        /// 外部角色id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RoleExternalId")]
+        public string RoleExternalId{ get; set; }
 
         /// <summary>
         /// 临时密钥Id，如果为跨账号实例此项必填
@@ -179,11 +193,11 @@ namespace TencentCloud.Dts.V20211206.Models
         public string TmpToken{ get; set; }
 
         /// <summary>
-        /// 外部角色id
+        /// 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RoleExternalId")]
-        public string RoleExternalId{ get; set; }
+        [JsonProperty("EncryptConn")]
+        public string EncryptConn{ get; set; }
 
 
         /// <summary>
@@ -192,6 +206,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "DbKernel", this.DbKernel);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
@@ -207,13 +222,14 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
             this.SetParamSimple(map, prefix + "Supplier", this.Supplier);
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
-            this.SetParamSimple(map, prefix + "AccountMode", this.AccountMode);
             this.SetParamSimple(map, prefix + "Account", this.Account);
+            this.SetParamSimple(map, prefix + "AccountMode", this.AccountMode);
             this.SetParamSimple(map, prefix + "AccountRole", this.AccountRole);
+            this.SetParamSimple(map, prefix + "RoleExternalId", this.RoleExternalId);
             this.SetParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
             this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
             this.SetParamSimple(map, prefix + "TmpToken", this.TmpToken);
-            this.SetParamSimple(map, prefix + "RoleExternalId", this.RoleExternalId);
+            this.SetParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
         }
     }
 }

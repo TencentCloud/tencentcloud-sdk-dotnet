@@ -72,6 +72,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
 
+        /// <summary>
+        /// 自动重试的时间段、可设置5至720分钟、0表示不重试
+        /// </summary>
+        [JsonProperty("AutoRetryTimeRangeMinutes")]
+        public long? AutoRetryTimeRangeMinutes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "JobName", this.JobName);
             this.SetParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
         }
     }
 }

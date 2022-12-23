@@ -157,6 +157,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ClientIpCountry")]
         public ClientIpCountry ClientIpCountry{ get; set; }
 
+        /// <summary>
+        /// Grpc协议支持配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Grpc")]
+        public Grpc Grpc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +189,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
             this.SetParamObj(map, prefix + "Https.", this.Https);
             this.SetParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
+            this.SetParamObj(map, prefix + "Grpc.", this.Grpc);
         }
     }
 }

@@ -115,6 +115,34 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("Procedures")]
         public string[] Procedures{ get; set; }
 
+        /// <summary>
+        /// 触发器迁移模式，all(为当前对象下的所有对象)，partial(部分对象)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerMode")]
+        public string TriggerMode{ get; set; }
+
+        /// <summary>
+        /// 当TriggerMode为partial，指定要迁移的触发器名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Triggers")]
+        public string[] Triggers{ get; set; }
+
+        /// <summary>
+        /// 事件迁移模式，all(为当前对象下的所有对象)，partial(部分对象)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EventMode")]
+        public string EventMode{ get; set; }
+
+        /// <summary>
+        /// 当EventMode为partial，指定要迁移的事件名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Events")]
+        public string[] Events{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +162,10 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamArraySimple(map, prefix + "Functions.", this.Functions);
             this.SetParamSimple(map, prefix + "ProcedureMode", this.ProcedureMode);
             this.SetParamArraySimple(map, prefix + "Procedures.", this.Procedures);
+            this.SetParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
+            this.SetParamArraySimple(map, prefix + "Triggers.", this.Triggers);
+            this.SetParamSimple(map, prefix + "EventMode", this.EventMode);
+            this.SetParamArraySimple(map, prefix + "Events.", this.Events);
         }
     }
 }

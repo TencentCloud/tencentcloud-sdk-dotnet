@@ -37,6 +37,13 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("LastUsedDate")]
         public string LastUsedDate{ get; set; }
 
+        /// <summary>
+        /// 最后密钥访问日期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastSecretUsedDate")]
+        public ulong? LastSecretUsedDate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +52,7 @@ namespace TencentCloud.Cam.V20190116.Models
         {
             this.SetParamSimple(map, prefix + "SecretId", this.SecretId);
             this.SetParamSimple(map, prefix + "LastUsedDate", this.LastUsedDate);
+            this.SetParamSimple(map, prefix + "LastSecretUsedDate", this.LastSecretUsedDate);
         }
     }
 }

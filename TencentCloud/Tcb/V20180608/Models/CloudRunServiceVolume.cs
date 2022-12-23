@@ -59,6 +59,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("EmptyDir")]
         public CloudBaseRunEmptyDirVolumeSource EmptyDir{ get; set; }
 
+        /// <summary>
+        /// 主机路径挂载信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostPath")]
+        public CloudBaseRunServiceVolumeHostPath HostPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
             this.SetParamSimple(map, prefix + "EnableEmptyDirVolume", this.EnableEmptyDirVolume);
             this.SetParamObj(map, prefix + "EmptyDir.", this.EmptyDir);
+            this.SetParamObj(map, prefix + "HostPath.", this.HostPath);
         }
     }
 }

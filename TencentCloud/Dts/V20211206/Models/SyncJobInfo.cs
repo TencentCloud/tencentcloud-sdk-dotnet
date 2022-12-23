@@ -123,7 +123,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string SrcAccessType{ get; set; }
 
         /// <summary>
-        /// 源端信息
+        /// 源端信息，单节点数据库使用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcInfo")]
@@ -151,7 +151,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DstAccessType{ get; set; }
 
         /// <summary>
-        /// 目标端信息
+        /// 目标端信息，单节点数据库使用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstInfo")]
@@ -227,6 +227,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
+        /// <summary>
+        /// 自动重试时间段设置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoRetryTimeRangeMinutes")]
+        public long? AutoRetryTimeRangeMinutes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +269,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+            this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
         }
     }
 }

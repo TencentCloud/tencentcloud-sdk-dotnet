@@ -37,22 +37,10 @@ namespace TencentCloud.Dts.V20211206.Models
         public string SrcAccessType{ get; set; }
 
         /// <summary>
-        /// 源端信息
-        /// </summary>
-        [JsonProperty("SrcInfo")]
-        public Endpoint SrcInfo{ get; set; }
-
-        /// <summary>
         /// 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、noProxy,注意具体可选值依赖当前链路
         /// </summary>
         [JsonProperty("DstAccessType")]
         public string DstAccessType{ get; set; }
-
-        /// <summary>
-        /// 目标端信息
-        /// </summary>
-        [JsonProperty("DstInfo")]
-        public Endpoint DstInfo{ get; set; }
 
         /// <summary>
         /// 同步任务选项
@@ -73,6 +61,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public string JobName{ get; set; }
 
         /// <summary>
+        /// 枚举值是 liteMode 和 fullMode ，分别对应精简模式或正常模式
+        /// </summary>
+        [JsonProperty("JobMode")]
+        public string JobMode{ get; set; }
+
+        /// <summary>
         /// 运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
         /// </summary>
         [JsonProperty("RunMode")]
@@ -84,6 +78,24 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("ExpectRunTime")]
         public string ExpectRunTime{ get; set; }
 
+        /// <summary>
+        /// 源端信息，单节点数据库使用
+        /// </summary>
+        [JsonProperty("SrcInfo")]
+        public Endpoint SrcInfo{ get; set; }
+
+        /// <summary>
+        /// 目标端信息，单节点数据库使用
+        /// </summary>
+        [JsonProperty("DstInfo")]
+        public Endpoint DstInfo{ get; set; }
+
+        /// <summary>
+        /// 自动重试的时间段、可设置5至720分钟、0表示不重试
+        /// </summary>
+        [JsonProperty("AutoRetryTimeRangeMinutes")]
+        public long? AutoRetryTimeRangeMinutes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,14 +104,16 @@ namespace TencentCloud.Dts.V20211206.Models
         {
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "SrcAccessType", this.SrcAccessType);
-            this.SetParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
             this.SetParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
-            this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
             this.SetParamObj(map, prefix + "Options.", this.Options);
             this.SetParamObj(map, prefix + "Objects.", this.Objects);
             this.SetParamSimple(map, prefix + "JobName", this.JobName);
+            this.SetParamSimple(map, prefix + "JobMode", this.JobMode);
             this.SetParamSimple(map, prefix + "RunMode", this.RunMode);
             this.SetParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
+            this.SetParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
+            this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
+            this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
         }
     }
 }

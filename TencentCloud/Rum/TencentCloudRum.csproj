@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.668</VersionPrefix>
+    <VersionPrefix>3.0.669</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -133,6 +133,10 @@
     <Compile Include="V20210622\Models\DescribeReleaseFileSignResponse.cs" />
     <Compile Include="V20210622\Models\DescribeReleaseFilesRequest.cs" />
     <Compile Include="V20210622\Models\DescribeReleaseFilesResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeRumLogListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeRumLogListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeRumStatsLogListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeRumStatsLogListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeScoresRequest.cs" />
     <Compile Include="V20210622\Models\DescribeScoresResponse.cs" />
     <Compile Include="V20210622\Models\DescribeTawAreasRequest.cs" />

@@ -285,6 +285,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("SlaveZone")]
         public string SlaveZone{ get; set; }
 
+        /// <summary>
+        /// 实例初始化配置信息，主要用于购买集群时选不同规格实例
+        /// </summary>
+        [JsonProperty("InstanceInitInfos")]
+        public InstanceInitInfo[] InstanceInitInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -331,6 +337,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
+            this.SetParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
         }
     }
 }

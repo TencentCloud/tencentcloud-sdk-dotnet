@@ -42,6 +42,21 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("FinalDiscount")]
         public long? FinalDiscount{ get; set; }
 
+        /// <summary>
+        /// 活动折扣。取值为null，表示无有效值，即没有折扣。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ActivityDiscount")]
+        public float? ActivityDiscount{ get; set; }
+
+        /// <summary>
+        /// 折扣类型。
+        /// user：用户折扣; common：官网折扣; activity：活动折扣。 取值为null，表示无有效值，即没有折扣。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountType")]
+        public string DiscountType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +66,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "UserDiscount", this.UserDiscount);
             this.SetParamSimple(map, prefix + "CommonDiscount", this.CommonDiscount);
             this.SetParamSimple(map, prefix + "FinalDiscount", this.FinalDiscount);
+            this.SetParamSimple(map, prefix + "ActivityDiscount", this.ActivityDiscount);
+            this.SetParamSimple(map, prefix + "DiscountType", this.DiscountType);
         }
     }
 }
