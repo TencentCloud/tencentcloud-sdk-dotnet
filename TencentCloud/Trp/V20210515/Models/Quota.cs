@@ -60,14 +60,14 @@ namespace TencentCloud.Trp.V20210515.Models
         public string[] Services{ get; set; }
 
         /// <summary>
-        /// 工厂配额
+        /// 商户配额
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FactoryQuota")]
         public long? FactoryQuota{ get; set; }
 
         /// <summary>
-        /// 产品配额
+        /// 商品配额
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemQuota")]
@@ -109,7 +109,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public long? TrackType{ get; set; }
 
         /// <summary>
-        /// 开通版本 basic standard enterprise
+        /// 开通版本 lite:轻量版, basic:基础版, standard:标准版
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]

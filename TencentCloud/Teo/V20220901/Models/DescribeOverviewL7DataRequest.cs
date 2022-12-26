@@ -79,20 +79,21 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Interval{ get; set; }
 
         /// <summary>
-        /// 数据归属地区，取值有：
-        /// <li>overseas：全球（除中国大陆地区）数据；</li>
-        /// <li>mainland：中国大陆地区数据。</li>不填将根据用户的地域智能选择地区。
-        /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
-
-        /// <summary>
-        /// 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+        /// 过滤条件，详细的过滤条件如下：
         /// <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
         /// <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }
+
+        /// <summary>
+        /// 数据归属地区，取值有：
+        /// <li>overseas：全球（除中国大陆地区）数据；</li>
+        /// <li>mainland：中国大陆地区数据；</li>
+        /// <li>global：全球数据。</li>不填默认取值为global。
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
 
         /// <summary>
@@ -107,8 +108,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

@@ -50,12 +50,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 筛选条件, key可选的值有：
-        /// <li>country：国家/地区；</li>
-        /// <li>domain：域名；</li>
-        /// <li>protocol：协议类型；</li>
-        /// <li>tagKey：标签Key；</li>
-        /// <li>tagValue；标签Value。</li>
+        /// 过滤条件，详细的过滤条件如下：
+        /// <li>country<br>   按照【<strong>国家/地区</strong>】进行过滤，国家/地区遵循<a href="https://zh.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a>规范。<br>   类型：String<br>   必选：否</li>
+        /// <li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
+        /// <li>protocol<br>   按照【<strong>HTTP协议</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   HTTP/1.0：HTTP 1.0；<br>   HTTP/1.1：HTTP 1.1；<br>   HTTP/2.0：HTTP 2.0；<br>   HTTP/3.0：HTTP 3.0；<br>   WebSocket：WebSocket。</li>
+        /// <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+        /// <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }
@@ -73,7 +73,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 数据归属地区，取值有：
         /// <li>overseas：全球（除中国大陆地区）数据；</li>
-        /// <li>mainland：中国大陆地区数据。</li>不填将根据用户所在地智能选择地区。
+        /// <li>mainland：中国大陆地区数据；</li>
+        /// <li>global：全球数据。</li>不填默认取值为global。
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

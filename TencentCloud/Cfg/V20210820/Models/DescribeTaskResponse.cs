@@ -31,6 +31,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         public Task Task{ get; set; }
 
         /// <summary>
+        /// 任务对应的演练报告信息，null表示未导出报告
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReportInfo")]
+        public TaskReportInfo ReportInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +50,7 @@ namespace TencentCloud.Cfg.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Task.", this.Task);
+            this.SetParamObj(map, prefix + "ReportInfo.", this.ReportInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -2093,6 +2093,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 本接口（DescribeDistributionL4AccessData）用于查询四层连接时长的时序数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDistributionL4AccessDataRequest"/></param>
+        /// <returns><see cref="DescribeDistributionL4AccessDataResponse"/></returns>
+        public async Task<DescribeDistributionL4AccessDataResponse> DescribeDistributionL4AccessData(DescribeDistributionL4AccessDataRequest req)
+        {
+             JsonResponseModel<DescribeDistributionL4AccessDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDistributionL4AccessData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDistributionL4AccessDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDistributionL4AccessData）用于查询四层连接时长的时序数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDistributionL4AccessDataRequest"/></param>
+        /// <returns><see cref="DescribeDistributionL4AccessDataResponse"/></returns>
+        public DescribeDistributionL4AccessDataResponse DescribeDistributionL4AccessDataSync(DescribeDistributionL4AccessDataRequest req)
+        {
+             JsonResponseModel<DescribeDistributionL4AccessDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDistributionL4AccessData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDistributionL4AccessDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取DNS请求数统计曲线
         /// </summary>
         /// <param name="req"><see cref="DescribeDnsDataRequest"/></param>
@@ -3124,6 +3164,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSpeedTestingQuota");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpeedTestingQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTimingL4AccessData）用于查询四层连接数的时序数据列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL4AccessDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL4AccessDataResponse"/></returns>
+        public async Task<DescribeTimingL4AccessDataResponse> DescribeTimingL4AccessData(DescribeTimingL4AccessDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL4AccessDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimingL4AccessData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL4AccessDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTimingL4AccessData）用于查询四层连接数的时序数据列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL4AccessDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL4AccessDataResponse"/></returns>
+        public DescribeTimingL4AccessDataResponse DescribeTimingL4AccessDataSync(DescribeTimingL4AccessDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL4AccessDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimingL4AccessData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL4AccessDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

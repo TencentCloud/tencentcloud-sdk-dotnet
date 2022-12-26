@@ -70,9 +70,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Interval{ get; set; }
 
         /// <summary>
-        /// 筛选条件, key可选的值有：
-        /// <li>ruleId: 根据规则Id进行过滤；</li>
-        /// <li>proxyId: 根据通道Id进行过滤。</li>
+        /// 过滤条件，详细的过滤条件如下：
+        /// <li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+        /// <li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }
@@ -80,7 +80,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 数据归属地区，取值有：
         /// <li>overseas：全球（除中国大陆地区）数据；</li>
-        /// <li>mainland：中国大陆地区数据。</li>不填将根据用户所在地智能选择地区。
+        /// <li>mainland：中国大陆地区数据；</li>
+        /// <li>global：全球数据。</li>不填默认取值为global。
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
