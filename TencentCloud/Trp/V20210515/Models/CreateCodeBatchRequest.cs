@@ -49,7 +49,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public ulong? BatchType{ get; set; }
 
         /// <summary>
-        /// 批次ID，系统自动生成
+        /// 批次ID，留空时系统自动生成
         /// </summary>
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }
@@ -72,6 +72,12 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("CloneId")]
         public string CloneId{ get; set; }
 
+        /// <summary>
+        /// 批次编号，业务字段不判断唯一性
+        /// </summary>
+        [JsonProperty("BatchCode")]
+        public string BatchCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "MpTpl", this.MpTpl);
             this.SetParamSimple(map, prefix + "CloneId", this.CloneId);
+            this.SetParamSimple(map, prefix + "BatchCode", this.BatchCode);
         }
     }
 }

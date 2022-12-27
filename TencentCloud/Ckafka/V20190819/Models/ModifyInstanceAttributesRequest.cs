@@ -61,7 +61,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RebalanceTime{ get; set; }
 
         /// <summary>
-        /// 时间戳
+        /// 公网带宽
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }

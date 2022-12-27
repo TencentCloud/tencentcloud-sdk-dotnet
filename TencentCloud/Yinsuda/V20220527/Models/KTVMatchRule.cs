@@ -37,6 +37,12 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         [JsonProperty("MusicInfo")]
         public KTVMatchRuleMusicInfo MusicInfo{ get; set; }
 
+        /// <summary>
+        /// 音速达歌曲 Id，用于匹配 AME 曲库歌曲。
+        /// </summary>
+        [JsonProperty("MusicIdToMatchAME")]
+        public string MusicIdToMatchAME{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         {
             this.SetParamSimple(map, prefix + "AMEMusicId", this.AMEMusicId);
             this.SetParamObj(map, prefix + "MusicInfo.", this.MusicInfo);
+            this.SetParamSimple(map, prefix + "MusicIdToMatchAME", this.MusicIdToMatchAME);
         }
     }
 }

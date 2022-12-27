@@ -78,6 +78,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("FilterOneGroup")]
         public string FilterOneGroup{ get; set; }
 
+        /// <summary>
+        /// group类型
+        /// </summary>
+        [JsonProperty("Types")]
+        public string[] Types{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "SortedBy", this.SortedBy);
             this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
             this.SetParamSimple(map, prefix + "FilterOneGroup", this.FilterOneGroup);
+            this.SetParamArraySimple(map, prefix + "Types.", this.Types);
         }
     }
 }

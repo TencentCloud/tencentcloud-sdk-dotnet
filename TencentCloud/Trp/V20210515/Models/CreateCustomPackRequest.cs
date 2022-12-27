@@ -78,6 +78,12 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }
 
+        /// <summary>
+        /// 是否有流水码 0:无 1:有
+        /// </summary>
+        [JsonProperty("SerialType")]
+        public ulong? SerialType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "CustomId", this.CustomId);
             this.SetParamArrayObj(map, prefix + "CodeParts.", this.CodeParts);
             this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
+            this.SetParamSimple(map, prefix + "SerialType", this.SerialType);
         }
     }
 }

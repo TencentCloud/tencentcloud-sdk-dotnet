@@ -105,6 +105,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("BroadcastEnabled")]
         public bool? BroadcastEnabled{ get; set; }
 
+        /// <summary>
+        /// Group类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupType")]
+        public string GroupType{ get; set; }
+
+        /// <summary>
+        /// 重试次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetryMaxTimes")]
+        public ulong? RetryMaxTimes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +138,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "ConsumerType", this.ConsumerType);
             this.SetParamSimple(map, prefix + "BroadcastEnabled", this.BroadcastEnabled);
+            this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
+            this.SetParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
         }
     }
 }

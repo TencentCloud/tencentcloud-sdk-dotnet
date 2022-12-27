@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Yinsuda.V20220527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLoadBalancingResponse : AbstractModel
+    public class AMEMusicBaseInfo : AbstractModel
     {
         
         /// <summary>
-        /// 记录总数。
+        /// 歌曲 Id。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("MusicId")]
+        public string MusicId{ get; set; }
 
         /// <summary>
-        /// 负载均衡信息。
+        /// 歌曲名称。
         /// </summary>
-        [JsonProperty("Data")]
-        public LoadBalancing[] Data{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 歌手列表。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("SingerSet")]
+        public string[] SingerSet{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "MusicId", this.MusicId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArraySimple(map, prefix + "SingerSet.", this.SingerSet);
         }
     }
 }

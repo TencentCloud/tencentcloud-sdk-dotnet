@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteDnsRecordsRequest : AbstractModel
+    public class DescribeProxyProcessStatisticsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 待删除记录所属站点 ID。
+        /// 实时会话统计详情。
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("ProcessStatistics")]
+        public ProcessStatistic ProcessStatistics{ get; set; }
 
         /// <summary>
-        /// 待删除记录 ID。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("DnsRecordIds")]
-        public string[] DnsRecordIds{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamArraySimple(map, prefix + "DnsRecordIds.", this.DnsRecordIds);
+            this.SetParamObj(map, prefix + "ProcessStatistics.", this.ProcessStatistics);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

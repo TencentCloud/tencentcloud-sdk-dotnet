@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.670</VersionPrefix>
+    <VersionPrefix>3.0.671</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -387,7 +387,6 @@
     <Compile Include="V20220901\Models\AclUserRule.cs" />
     <Compile Include="V20220901\Models\Action.cs" />
     <Compile Include="V20220901\Models\AdvancedFilter.cs" />
-    <Compile Include="V20220901\Models\AdvancedOriginGroup.cs" />
     <Compile Include="V20220901\Models\AiRule.cs" />
     <Compile Include="V20220901\Models\AliasDomain.cs" />
     <Compile Include="V20220901\Models\ApplicationProxy.cs" />
@@ -424,12 +423,8 @@
     <Compile Include="V20220901\Models\CreateCredentialResponse.cs" />
     <Compile Include="V20220901\Models\CreateCustomErrorPageRequest.cs" />
     <Compile Include="V20220901\Models\CreateCustomErrorPageResponse.cs" />
-    <Compile Include="V20220901\Models\CreateDnsRecordRequest.cs" />
-    <Compile Include="V20220901\Models\CreateDnsRecordResponse.cs" />
     <Compile Include="V20220901\Models\CreateIpTableListRequest.cs" />
     <Compile Include="V20220901\Models\CreateIpTableListResponse.cs" />
-    <Compile Include="V20220901\Models\CreateLoadBalancingRequest.cs" />
-    <Compile Include="V20220901\Models\CreateLoadBalancingResponse.cs" />
     <Compile Include="V20220901\Models\CreateLogSetRequest.cs" />
     <Compile Include="V20220901\Models\CreateLogSetResponse.cs" />
     <Compile Include="V20220901\Models\CreateLogTopicTaskRequest.cs" />
@@ -477,10 +472,6 @@
     <Compile Include="V20220901\Models\DeleteApplicationProxyResponse.cs" />
     <Compile Include="V20220901\Models\DeleteApplicationProxyRuleRequest.cs" />
     <Compile Include="V20220901\Models\DeleteApplicationProxyRuleResponse.cs" />
-    <Compile Include="V20220901\Models\DeleteDnsRecordsRequest.cs" />
-    <Compile Include="V20220901\Models\DeleteDnsRecordsResponse.cs" />
-    <Compile Include="V20220901\Models\DeleteLoadBalancingRequest.cs" />
-    <Compile Include="V20220901\Models\DeleteLoadBalancingResponse.cs" />
     <Compile Include="V20220901\Models\DeleteLogTopicTaskRequest.cs" />
     <Compile Include="V20220901\Models\DeleteLogTopicTaskResponse.cs" />
     <Compile Include="V20220901\Models\DeleteOriginGroupRequest.cs" />
@@ -535,16 +526,12 @@
     <Compile Include="V20220901\Models\DescribeDistributionL4AccessDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDnsDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDnsDataResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeDnsRecordsRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeDnsRecordsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDnssecRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDnssecResponse.cs" />
     <Compile Include="V20220901\Models\DescribeHostsSettingRequest.cs" />
     <Compile Include="V20220901\Models\DescribeHostsSettingResponse.cs" />
     <Compile Include="V20220901\Models\DescribeIdentificationsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeIdentificationsResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeLoadBalancingRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeLoadBalancingResponse.cs" />
     <Compile Include="V20220901\Models\DescribeLogSetsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeLogSetsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeLogTopicTaskDetailRequest.cs" />
@@ -622,7 +609,6 @@
     <Compile Include="V20220901\Models\DetailHost.cs" />
     <Compile Include="V20220901\Models\DistrictStatistics.cs" />
     <Compile Include="V20220901\Models\DnsData.cs" />
-    <Compile Include="V20220901\Models\DnsRecord.cs" />
     <Compile Include="V20220901\Models\DnssecInfo.cs" />
     <Compile Include="V20220901\Models\DownloadL4LogsRequest.cs" />
     <Compile Include="V20220901\Models\DownloadL4LogsResponse.cs" />
@@ -654,7 +640,6 @@
     <Compile Include="V20220901\Models\Ipv6.cs" />
     <Compile Include="V20220901\Models\L4OfflineLog.cs" />
     <Compile Include="V20220901\Models\L7OfflineLog.cs" />
-    <Compile Include="V20220901\Models\LoadBalancing.cs" />
     <Compile Include="V20220901\Models\LogSetInfo.cs" />
     <Compile Include="V20220901\Models\LogTopicDetailInfo.cs" />
     <Compile Include="V20220901\Models\MaxAge.cs" />
@@ -680,14 +665,10 @@
     <Compile Include="V20220901\Models\ModifyDDoSPolicyResponse.cs" />
     <Compile Include="V20220901\Models\ModifyDefaultCertificateRequest.cs" />
     <Compile Include="V20220901\Models\ModifyDefaultCertificateResponse.cs" />
-    <Compile Include="V20220901\Models\ModifyDnsRecordRequest.cs" />
-    <Compile Include="V20220901\Models\ModifyDnsRecordResponse.cs" />
     <Compile Include="V20220901\Models\ModifyDnssecRequest.cs" />
     <Compile Include="V20220901\Models\ModifyDnssecResponse.cs" />
     <Compile Include="V20220901\Models\ModifyHostsCertificateRequest.cs" />
     <Compile Include="V20220901\Models\ModifyHostsCertificateResponse.cs" />
-    <Compile Include="V20220901\Models\ModifyLoadBalancingRequest.cs" />
-    <Compile Include="V20220901\Models\ModifyLoadBalancingResponse.cs" />
     <Compile Include="V20220901\Models\ModifyLogTopicTaskRequest.cs" />
     <Compile Include="V20220901\Models\ModifyLogTopicTaskResponse.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupRequest.cs" />
@@ -714,7 +695,6 @@
     <Compile Include="V20220901\Models\OptimizeAction.cs" />
     <Compile Include="V20220901\Models\Origin.cs" />
     <Compile Include="V20220901\Models\OriginGroup.cs" />
-    <Compile Include="V20220901\Models\OriginGroupCondition.cs" />
     <Compile Include="V20220901\Models\OriginRecord.cs" />
     <Compile Include="V20220901\Models\PartialModule.cs" />
     <Compile Include="V20220901\Models\PlanInfo.cs" />

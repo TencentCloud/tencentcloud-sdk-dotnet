@@ -60,6 +60,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// Group类型（TCP/HTTP）
+        /// </summary>
+        [JsonProperty("GroupType")]
+        public string GroupType{ get; set; }
+
+        /// <summary>
+        /// Group最大重试次数
+        /// </summary>
+        [JsonProperty("RetryMaxTimes")]
+        public ulong? RetryMaxTimes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "BroadcastEnable", this.BroadcastEnable);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
+            this.SetParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
         }
     }
 }

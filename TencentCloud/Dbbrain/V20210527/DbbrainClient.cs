@@ -1013,6 +1013,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 获取当前实例会话统计详情信息。【注意】该接口仅限部分环境调用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxyProcessStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeProxyProcessStatisticsResponse"/></returns>
+        public async Task<DescribeProxyProcessStatisticsResponse> DescribeProxyProcessStatistics(DescribeProxyProcessStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeProxyProcessStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProxyProcessStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxyProcessStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取当前实例会话统计详情信息。【注意】该接口仅限部分环境调用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxyProcessStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeProxyProcessStatisticsResponse"/></returns>
+        public DescribeProxyProcessStatisticsResponse DescribeProxyProcessStatisticsSync(DescribeProxyProcessStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeProxyProcessStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProxyProcessStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxyProcessStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询 redis 执行 kill 会话任务后代理节点的执行结果，入参异步任务 ID 从接口 CreateProxySessionKillTask 调用成功后取得。当前 product 只支持：redis。
         /// </summary>
         /// <param name="req"><see cref="DescribeProxySessionKillTasksRequest"/></param>

@@ -95,6 +95,34 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("RocketMQFlag")]
         public bool? RocketMQFlag{ get; set; }
 
+        /// <summary>
+        /// 计费状态，1表示正常，2表示已停服，3表示已销毁
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 欠费停服时间，毫秒为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsolateTime")]
+        public long? IsolateTime{ get; set; }
+
+        /// <summary>
+        /// HTTP协议公网接入地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HttpPublicEndpoint")]
+        public string HttpPublicEndpoint{ get; set; }
+
+        /// <summary>
+        /// HTTP协议VPC接入地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HttpVpcEndpoint")]
+        public string HttpVpcEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +140,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
             this.SetParamSimple(map, prefix + "IsVip", this.IsVip);
             this.SetParamSimple(map, prefix + "RocketMQFlag", this.RocketMQFlag);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+            this.SetParamSimple(map, prefix + "HttpPublicEndpoint", this.HttpPublicEndpoint);
+            this.SetParamSimple(map, prefix + "HttpVpcEndpoint", this.HttpVpcEndpoint);
         }
     }
 }

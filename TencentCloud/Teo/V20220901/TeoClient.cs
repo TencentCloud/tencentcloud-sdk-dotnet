@@ -333,46 +333,6 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建 DNS 记录
-        /// </summary>
-        /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
-        /// <returns><see cref="CreateDnsRecordResponse"/></returns>
-        public async Task<CreateDnsRecordResponse> CreateDnsRecord(CreateDnsRecordRequest req)
-        {
-             JsonResponseModel<CreateDnsRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateDnsRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDnsRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 创建 DNS 记录
-        /// </summary>
-        /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
-        /// <returns><see cref="CreateDnsRecordResponse"/></returns>
-        public CreateDnsRecordResponse CreateDnsRecordSync(CreateDnsRecordRequest req)
-        {
-             JsonResponseModel<CreateDnsRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateDnsRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDnsRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 创建IP黑白名单列表
         /// </summary>
         /// <param name="req"><see cref="CreateIpTableListRequest"/></param>
@@ -404,46 +364,6 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "CreateIpTableList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIpTableListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 创建负载均衡
-        /// </summary>
-        /// <param name="req"><see cref="CreateLoadBalancingRequest"/></param>
-        /// <returns><see cref="CreateLoadBalancingResponse"/></returns>
-        public async Task<CreateLoadBalancingResponse> CreateLoadBalancing(CreateLoadBalancingRequest req)
-        {
-             JsonResponseModel<CreateLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoadBalancingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 创建负载均衡
-        /// </summary>
-        /// <param name="req"><see cref="CreateLoadBalancingRequest"/></param>
-        /// <returns><see cref="CreateLoadBalancingResponse"/></returns>
-        public CreateLoadBalancingResponse CreateLoadBalancingSync(CreateLoadBalancingRequest req)
-        {
-             JsonResponseModel<CreateLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoadBalancingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1004,86 +924,6 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DeleteApplicationProxyRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationProxyRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 批量删除 DNS 记录
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
-        /// <returns><see cref="DeleteDnsRecordsResponse"/></returns>
-        public async Task<DeleteDnsRecordsResponse> DeleteDnsRecords(DeleteDnsRecordsRequest req)
-        {
-             JsonResponseModel<DeleteDnsRecordsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteDnsRecords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDnsRecordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 批量删除 DNS 记录
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
-        /// <returns><see cref="DeleteDnsRecordsResponse"/></returns>
-        public DeleteDnsRecordsResponse DeleteDnsRecordsSync(DeleteDnsRecordsRequest req)
-        {
-             JsonResponseModel<DeleteDnsRecordsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteDnsRecords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDnsRecordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 删除负载均衡
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLoadBalancingRequest"/></param>
-        /// <returns><see cref="DeleteLoadBalancingResponse"/></returns>
-        public async Task<DeleteLoadBalancingResponse> DeleteLoadBalancing(DeleteLoadBalancingRequest req)
-        {
-             JsonResponseModel<DeleteLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 删除负载均衡
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLoadBalancingRequest"/></param>
-        /// <returns><see cref="DeleteLoadBalancingResponse"/></returns>
-        public DeleteLoadBalancingResponse DeleteLoadBalancingSync(DeleteLoadBalancingRequest req)
-        {
-             JsonResponseModel<DeleteLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2173,46 +2013,6 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 查询 DNS 记录列表，支持搜索、分页、排序、过滤。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDnsRecordsRequest"/></param>
-        /// <returns><see cref="DescribeDnsRecordsResponse"/></returns>
-        public async Task<DescribeDnsRecordsResponse> DescribeDnsRecords(DescribeDnsRecordsRequest req)
-        {
-             JsonResponseModel<DescribeDnsRecordsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDnsRecords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDnsRecordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询 DNS 记录列表，支持搜索、分页、排序、过滤。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDnsRecordsRequest"/></param>
-        /// <returns><see cref="DescribeDnsRecordsResponse"/></returns>
-        public DescribeDnsRecordsResponse DescribeDnsRecordsSync(DescribeDnsRecordsRequest req)
-        {
-             JsonResponseModel<DescribeDnsRecordsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDnsRecords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDnsRecordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 用于查询 DNSSEC 相关信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDnssecRequest"/></param>
@@ -2324,46 +2124,6 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DescribeIdentifications");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIdentificationsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取负载均衡列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLoadBalancingRequest"/></param>
-        /// <returns><see cref="DescribeLoadBalancingResponse"/></returns>
-        public async Task<DescribeLoadBalancingResponse> DescribeLoadBalancing(DescribeLoadBalancingRequest req)
-        {
-             JsonResponseModel<DescribeLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取负载均衡列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLoadBalancingRequest"/></param>
-        /// <returns><see cref="DescribeLoadBalancingResponse"/></returns>
-        public DescribeLoadBalancingResponse DescribeLoadBalancingSync(DescribeLoadBalancingRequest req)
-        {
-             JsonResponseModel<DescribeLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4413,46 +4173,6 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改 DNS 记录
-        /// </summary>
-        /// <param name="req"><see cref="ModifyDnsRecordRequest"/></param>
-        /// <returns><see cref="ModifyDnsRecordResponse"/></returns>
-        public async Task<ModifyDnsRecordResponse> ModifyDnsRecord(ModifyDnsRecordRequest req)
-        {
-             JsonResponseModel<ModifyDnsRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDnsRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDnsRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改 DNS 记录
-        /// </summary>
-        /// <param name="req"><see cref="ModifyDnsRecordRequest"/></param>
-        /// <returns><see cref="ModifyDnsRecordResponse"/></returns>
-        public ModifyDnsRecordResponse ModifyDnsRecordSync(ModifyDnsRecordRequest req)
-        {
-             JsonResponseModel<ModifyDnsRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDnsRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDnsRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 设置站点DNSSEC状态
         /// </summary>
         /// <param name="req"><see cref="ModifyDnssecRequest"/></param>
@@ -4524,46 +4244,6 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "ModifyHostsCertificate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostsCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改负载均衡
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLoadBalancingRequest"/></param>
-        /// <returns><see cref="ModifyLoadBalancingResponse"/></returns>
-        public async Task<ModifyLoadBalancingResponse> ModifyLoadBalancing(ModifyLoadBalancingRequest req)
-        {
-             JsonResponseModel<ModifyLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改负载均衡
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLoadBalancingRequest"/></param>
-        /// <returns><see cref="ModifyLoadBalancingResponse"/></returns>
-        public ModifyLoadBalancingResponse ModifyLoadBalancingSync(ModifyLoadBalancingRequest req)
-        {
-             JsonResponseModel<ModifyLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
