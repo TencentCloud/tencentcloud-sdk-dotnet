@@ -25,18 +25,11 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 出证报告 ID
+        /// 出证报告 ID，用于查询出证报告DescribeFlowEvidenceReport接口时用到
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }
-
-        /// <summary>
-        /// 废除，字段无效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ReportUrl")]
-        public string ReportUrl{ get; set; }
 
         /// <summary>
         /// 执行中：EvidenceStatusExecuting
@@ -45,6 +38,13 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// 废除，字段无效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReportUrl")]
+        public string ReportUrl{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -59,8 +59,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ReportId", this.ReportId);
-            this.SetParamSimple(map, prefix + "ReportUrl", this.ReportUrl);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ReportUrl", this.ReportUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

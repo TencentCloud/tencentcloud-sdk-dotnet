@@ -58,7 +58,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Resolution{ get; set; }
 
         /// <summary>
-        /// 最大连麦人数（不包括老师）。取值范围[0, 17)
+        /// 最大连麦人数（不包括老师）。取值范围[0, 16]
         /// </summary>
         [JsonProperty("MaxMicNumber")]
         public ulong? MaxMicNumber{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string SubType{ get; set; }
 
         /// <summary>
-        /// 老师ID。
+        /// 老师ID。通过[注册用户]接口获取的UserId。
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? DisableRecord{ get; set; }
 
         /// <summary>
-        /// 助教Id列表。
+        /// 助教Id列表。通过[注册用户]接口获取的UserId。
         /// </summary>
         [JsonProperty("Assistants")]
         public string[] Assistants{ get; set; }

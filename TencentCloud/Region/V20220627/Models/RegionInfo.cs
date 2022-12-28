@@ -42,6 +42,34 @@ namespace TencentCloud.Region.V20220627.Models
         [JsonProperty("RegionState")]
         public string RegionState{ get; set; }
 
+        /// <summary>
+        /// 控制台类型，api调用时默认null
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionTypeMC")]
+        public long? RegionTypeMC{ get; set; }
+
+        /// <summary>
+        /// 不同语言的地区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LocationMC")]
+        public string LocationMC{ get; set; }
+
+        /// <summary>
+        /// 控制台展示的地域描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionNameMC")]
+        public string RegionNameMC{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionIdMC")]
+        public string RegionIdMC{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +79,10 @@ namespace TencentCloud.Region.V20220627.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
             this.SetParamSimple(map, prefix + "RegionState", this.RegionState);
+            this.SetParamSimple(map, prefix + "RegionTypeMC", this.RegionTypeMC);
+            this.SetParamSimple(map, prefix + "LocationMC", this.LocationMC);
+            this.SetParamSimple(map, prefix + "RegionNameMC", this.RegionNameMC);
+            this.SetParamSimple(map, prefix + "RegionIdMC", this.RegionIdMC);
         }
     }
 }

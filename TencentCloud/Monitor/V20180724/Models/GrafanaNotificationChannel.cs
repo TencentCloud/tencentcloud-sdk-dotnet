@@ -72,14 +72,14 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgIds")]
-        public string OrgIds{ get; set; }
+        public string[] OrgIds{ get; set; }
 
         /// <summary>
         /// 告警渠道的所有生效组织
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationIds")]
-        public string OrganizationIds{ get; set; }
+        public string[] OrganizationIds{ get; set; }
 
 
         /// <summary>
@@ -94,8 +94,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
             this.SetParamSimple(map, prefix + "OrgId", this.OrgId);
             this.SetParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
-            this.SetParamSimple(map, prefix + "OrgIds", this.OrgIds);
-            this.SetParamSimple(map, prefix + "OrganizationIds", this.OrganizationIds);
+            this.SetParamArraySimple(map, prefix + "OrgIds.", this.OrgIds);
+            this.SetParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
         }
     }
 }

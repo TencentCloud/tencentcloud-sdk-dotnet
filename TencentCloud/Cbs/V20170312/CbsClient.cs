@@ -333,6 +333,46 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 为云硬盘创建一个备份点。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDiskBackupRequest"/></param>
+        /// <returns><see cref="CreateDiskBackupResponse"/></returns>
+        public async Task<CreateDiskBackupResponse> CreateDiskBackup(CreateDiskBackupRequest req)
+        {
+             JsonResponseModel<CreateDiskBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDiskBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDiskBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为云硬盘创建一个备份点。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDiskBackupRequest"/></param>
+        /// <returns><see cref="CreateDiskBackupResponse"/></returns>
+        public CreateDiskBackupResponse CreateDiskBackupSync(CreateDiskBackupRequest req)
+        {
+             JsonResponseModel<CreateDiskBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDiskBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDiskBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateDisks）用于创建云硬盘。
         /// 
         /// * 预付费云盘的购买会预先扣除本次云盘购买所需金额，在调用本接口前请确保账户余额充足。

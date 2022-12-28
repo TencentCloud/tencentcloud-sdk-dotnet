@@ -92,6 +92,48 @@ namespace TencentCloud.Region.V20220627.Models
         [JsonProperty("ZoneState")]
         public string ZoneState{ get; set; }
 
+        /// <summary>
+        /// 父级zone
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParentZone")]
+        public string ParentZone{ get; set; }
+
+        /// <summary>
+        /// 父级可用区ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParentZoneId")]
+        public string ParentZoneId{ get; set; }
+
+        /// <summary>
+        /// 父级可用区描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParentZoneName")]
+        public string ParentZoneName{ get; set; }
+
+        /// <summary>
+        /// zone类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneType")]
+        public string ZoneType{ get; set; }
+
+        /// <summary>
+        /// 控制台类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineRoomTypeMC")]
+        public string MachineRoomTypeMC{ get; set; }
+
+        /// <summary>
+        /// 和ZoneId一样，适用于控制台调用。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneIdMC")]
+        public string ZoneIdMC{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +144,12 @@ namespace TencentCloud.Region.V20220627.Models
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "ZoneState", this.ZoneState);
+            this.SetParamSimple(map, prefix + "ParentZone", this.ParentZone);
+            this.SetParamSimple(map, prefix + "ParentZoneId", this.ParentZoneId);
+            this.SetParamSimple(map, prefix + "ParentZoneName", this.ParentZoneName);
+            this.SetParamSimple(map, prefix + "ZoneType", this.ZoneType);
+            this.SetParamSimple(map, prefix + "MachineRoomTypeMC", this.MachineRoomTypeMC);
+            this.SetParamSimple(map, prefix + "ZoneIdMC", this.ZoneIdMC);
         }
     }
 }

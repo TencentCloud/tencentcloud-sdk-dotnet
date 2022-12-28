@@ -1613,6 +1613,48 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 解绑溯源码和批次的关系，让溯源码重置为未关联的状态，以便关联其他批次
+        /// 注意：溯源码必须属于指定的批次才会解绑
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTraceCodeUnlinkRequest"/></param>
+        /// <returns><see cref="ModifyTraceCodeUnlinkResponse"/></returns>
+        public async Task<ModifyTraceCodeUnlinkResponse> ModifyTraceCodeUnlink(ModifyTraceCodeUnlinkRequest req)
+        {
+             JsonResponseModel<ModifyTraceCodeUnlinkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTraceCodeUnlink");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTraceCodeUnlinkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑溯源码和批次的关系，让溯源码重置为未关联的状态，以便关联其他批次
+        /// 注意：溯源码必须属于指定的批次才会解绑
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTraceCodeUnlinkRequest"/></param>
+        /// <returns><see cref="ModifyTraceCodeUnlinkResponse"/></returns>
+        public ModifyTraceCodeUnlinkResponse ModifyTraceCodeUnlinkSync(ModifyTraceCodeUnlinkRequest req)
+        {
+             JsonResponseModel<ModifyTraceCodeUnlinkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTraceCodeUnlink");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTraceCodeUnlinkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改溯源信息
         /// </summary>
         /// <param name="req"><see cref="ModifyTraceDataRequest"/></param>

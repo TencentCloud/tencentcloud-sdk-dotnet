@@ -90,6 +90,18 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("IgnoreDataset")]
         public bool? IgnoreDataset{ get; set; }
 
+        /// <summary>
+        /// 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter	
+        /// </summary>
+        [JsonProperty("ScenarioType")]
+        public string ScenarioType{ get; set; }
+
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        [JsonProperty("Owner")]
+        public string Owner{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamObj(map, prefix + "ScenarioRelatedJobsParams.", this.ScenarioRelatedJobsParams);
             this.SetParamSimple(map, prefix + "IgnoreScript", this.IgnoreScript);
             this.SetParamSimple(map, prefix + "IgnoreDataset", this.IgnoreDataset);
+            this.SetParamSimple(map, prefix + "ScenarioType", this.ScenarioType);
+            this.SetParamSimple(map, prefix + "Owner", this.Owner);
         }
     }
 }

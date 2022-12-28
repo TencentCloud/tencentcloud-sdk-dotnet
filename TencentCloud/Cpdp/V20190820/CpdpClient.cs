@@ -93,6 +93,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 灵云V2-绑定收款用户资金账号信息
+        /// </summary>
+        /// <param name="req"><see cref="AddFlexFundingAccountRequest"/></param>
+        /// <returns><see cref="AddFlexFundingAccountResponse"/></returns>
+        public async Task<AddFlexFundingAccountResponse> AddFlexFundingAccount(AddFlexFundingAccountRequest req)
+        {
+             JsonResponseModel<AddFlexFundingAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddFlexFundingAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddFlexFundingAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-绑定收款用户资金账号信息
+        /// </summary>
+        /// <param name="req"><see cref="AddFlexFundingAccountRequest"/></param>
+        /// <returns><see cref="AddFlexFundingAccountResponse"/></returns>
+        public AddFlexFundingAccountResponse AddFlexFundingAccountSync(AddFlexFundingAccountRequest req)
+        {
+             JsonResponseModel<AddFlexFundingAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddFlexFundingAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddFlexFundingAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 灵云V2-补充证件信息
         /// </summary>
         /// <param name="req"><see cref="AddFlexIdInfoRequest"/></param>
@@ -3593,6 +3633,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 灵云V2-修改收款用户资金账号信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFlexFundingAccountRequest"/></param>
+        /// <returns><see cref="ModifyFlexFundingAccountResponse"/></returns>
+        public async Task<ModifyFlexFundingAccountResponse> ModifyFlexFundingAccount(ModifyFlexFundingAccountRequest req)
+        {
+             JsonResponseModel<ModifyFlexFundingAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyFlexFundingAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFlexFundingAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-修改收款用户资金账号信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFlexFundingAccountRequest"/></param>
+        /// <returns><see cref="ModifyFlexFundingAccountResponse"/></returns>
+        public ModifyFlexFundingAccountResponse ModifyFlexFundingAccountSync(ModifyFlexFundingAccountRequest req)
+        {
+             JsonResponseModel<ModifyFlexFundingAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyFlexFundingAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFlexFundingAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 灵云V2-收款用户账户权益状态修改
         /// </summary>
         /// <param name="req"><see cref="ModifyFlexPayeeAccountRightStatusRequest"/></param>
@@ -5304,6 +5384,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryFlexPlatformAccountBalance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPlatformAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询服务商账户余额
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexServiceProviderAccountBalanceRequest"/></param>
+        /// <returns><see cref="QueryFlexServiceProviderAccountBalanceResponse"/></returns>
+        public async Task<QueryFlexServiceProviderAccountBalanceResponse> QueryFlexServiceProviderAccountBalance(QueryFlexServiceProviderAccountBalanceRequest req)
+        {
+             JsonResponseModel<QueryFlexServiceProviderAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexServiceProviderAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexServiceProviderAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询服务商账户余额
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexServiceProviderAccountBalanceRequest"/></param>
+        /// <returns><see cref="QueryFlexServiceProviderAccountBalanceResponse"/></returns>
+        public QueryFlexServiceProviderAccountBalanceResponse QueryFlexServiceProviderAccountBalanceSync(QueryFlexServiceProviderAccountBalanceRequest req)
+        {
+             JsonResponseModel<QueryFlexServiceProviderAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexServiceProviderAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexServiceProviderAccountBalanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

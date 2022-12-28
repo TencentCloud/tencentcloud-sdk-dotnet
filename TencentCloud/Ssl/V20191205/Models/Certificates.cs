@@ -283,6 +283,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("PreAuditInfo")]
         public PreAuditInfo PreAuditInfo{ get; set; }
 
+        /// <summary>
+        /// 是否自动续费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -326,6 +333,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamArraySimple(map, prefix + "CAEndTimes.", this.CAEndTimes);
             this.SetParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
             this.SetParamObj(map, prefix + "PreAuditInfo.", this.PreAuditInfo);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         }
     }
 }

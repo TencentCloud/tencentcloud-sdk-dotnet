@@ -150,10 +150,16 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? EmotionalEnergy{ get; set; }
 
         /// <summary>
-        /// 热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”、“蜜汁”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
+        /// 热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
         /// </summary>
         [JsonProperty("ReinforceHotword")]
         public long? ReinforceHotword{ get; set; }
+
+        /// <summary>
+        /// 单标点最多字数，取值范围：[6，40]。默认为0，不开启该功能。该参数可用于字幕生成场景，控制单行字幕最大字数。
+        /// </summary>
+        [JsonProperty("SentenceMaxLength")]
+        public long? SentenceMaxLength{ get; set; }
 
 
         /// <summary>
@@ -180,6 +186,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "FilterModal", this.FilterModal);
             this.SetParamSimple(map, prefix + "EmotionalEnergy", this.EmotionalEnergy);
             this.SetParamSimple(map, prefix + "ReinforceHotword", this.ReinforceHotword);
+            this.SetParamSimple(map, prefix + "SentenceMaxLength", this.SentenceMaxLength);
         }
     }
 }

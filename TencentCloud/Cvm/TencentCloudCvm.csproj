@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.671</VersionPrefix>
+    <VersionPrefix>3.0.672</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -158,6 +158,7 @@
     <Compile Include="V20170312\Models\Filter.cs" />
     <Compile Include="V20170312\Models\GPUInfo.cs" />
     <Compile Include="V20170312\Models\HostItem.cs" />
+    <Compile Include="V20170312\Models\HostPriceInfo.cs" />
     <Compile Include="V20170312\Models\HostResource.cs" />
     <Compile Include="V20170312\Models\HpcClusterInfo.cs" />
     <Compile Include="V20170312\Models\Image.cs" />
@@ -171,6 +172,8 @@
     <Compile Include="V20170312\Models\InquirePricePurchaseReservedInstancesOfferingResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceModifyInstancesChargeTypeRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceModifyInstancesChargeTypeResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRenewHostsRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRenewHostsResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceRenewInstancesRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceRenewInstancesResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResetInstanceRequest.cs" />

@@ -144,6 +144,12 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("NotificationHooks")]
         public Notification[] NotificationHooks{ get; set; }
 
+        /// <summary>
+        /// 创建人名
+        /// </summary>
+        [JsonProperty("Owner")]
+        public string Owner{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamArrayObj(map, prefix + "Plugins.", this.Plugins);
             this.SetParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
             this.SetParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
+            this.SetParamSimple(map, prefix + "Owner", this.Owner);
         }
     }
 }

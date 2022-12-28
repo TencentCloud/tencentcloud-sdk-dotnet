@@ -43,7 +43,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 模版ID，或者活动ID
+        /// 模板ID，或者活动ID
         /// </summary>
         [JsonProperty("MpTpl")]
         public string MpTpl{ get; set; }

@@ -2319,6 +2319,48 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口 (InquiryPriceRenewHosts) 用于续费包年包月`CDH`实例询价。
+        /// * 只支持查询包年包月`CDH`实例的续费价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewHostsRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewHostsResponse"/></returns>
+        public async Task<InquiryPriceRenewHostsResponse> InquiryPriceRenewHosts(InquiryPriceRenewHostsRequest req)
+        {
+             JsonResponseModel<InquiryPriceRenewHostsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceRenewHosts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewHostsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (InquiryPriceRenewHosts) 用于续费包年包月`CDH`实例询价。
+        /// * 只支持查询包年包月`CDH`实例的续费价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewHostsRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewHostsResponse"/></returns>
+        public InquiryPriceRenewHostsResponse InquiryPriceRenewHostsSync(InquiryPriceRenewHostsRequest req)
+        {
+             JsonResponseModel<InquiryPriceRenewHostsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceRenewHosts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewHostsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (InquiryPriceRenewInstances) 用于续费包年包月实例询价。
         /// 
         /// * 只支持查询包年包月实例的续费价格。

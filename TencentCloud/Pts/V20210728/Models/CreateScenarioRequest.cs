@@ -126,6 +126,12 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("DomainNameConfig")]
         public DomainNameConfig DomainNameConfig{ get; set; }
 
+        /// <summary>
+        /// 创建人名
+        /// </summary>
+        [JsonProperty("Owner")]
+        public string Owner{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamObj(map, prefix + "SLAPolicy.", this.SLAPolicy);
             this.SetParamArrayObj(map, prefix + "Plugins.", this.Plugins);
             this.SetParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
+            this.SetParamSimple(map, prefix + "Owner", this.Owner);
         }
     }
 }

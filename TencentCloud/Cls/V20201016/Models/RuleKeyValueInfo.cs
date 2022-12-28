@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? CaseSensitive{ get; set; }
 
         /// <summary>
-        /// 需要建立索引的键值对信息；最大只能配置100个键值对
+        /// 需要建立索引的键值对信息
         /// </summary>
         [JsonProperty("KeyValues")]
         public KeyValueInfo[] KeyValues{ get; set; }
