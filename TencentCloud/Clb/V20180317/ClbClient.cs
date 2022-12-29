@@ -903,6 +903,68 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// DeregisterFunctionTargets 接口用来将一个云函数从负载均衡的转发规则上解绑，对于七层监听器，还需通过 LocationId 或 Domain+Url 指定转发规则。
+        /// 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
+        /// <br/>限制说明：
+        /// 
+        /// - 仅广州、深圳金融、上海、上海金融、北京、成都、中国香港、新加坡、孟买、东京、硅谷地域支持绑定 SCF。
+        /// - 仅标准账户类型支持绑定 SCF，传统账户类型不支持。建议升级为标准账户类型，详情可参见 [账户类型升级说明](https://cloud.tencent.com/document/product/1199/49090)。
+        /// - 传统型负载均衡不支持绑定 SCF。
+        /// - 基础网络类型不支持绑定 SCF。
+        /// - CLB 默认支持绑定同地域下的所有 SCF，可支持跨 VPC 绑定 SCF，不支持跨地域绑定。
+        /// - 目前仅 IPv4、IPv6 NAT64 版本的负载均衡支持绑定 SCF，IPv6 版本的暂不支持。
+        /// - 仅七层（HTTP、HTTPS）监听器支持绑定 SCF，四层（TCP、UDP、TCP SSL）监听器和七层 QUIC 监听器不支持。
+        /// - CLB 绑定 SCF 仅支持绑定“Event 函数”类型的云函数。
+        /// </summary>
+        /// <param name="req"><see cref="DeregisterFunctionTargetsRequest"/></param>
+        /// <returns><see cref="DeregisterFunctionTargetsResponse"/></returns>
+        public async Task<DeregisterFunctionTargetsResponse> DeregisterFunctionTargets(DeregisterFunctionTargetsRequest req)
+        {
+             JsonResponseModel<DeregisterFunctionTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeregisterFunctionTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeregisterFunctionTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DeregisterFunctionTargets 接口用来将一个云函数从负载均衡的转发规则上解绑，对于七层监听器，还需通过 LocationId 或 Domain+Url 指定转发规则。
+        /// 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
+        /// <br/>限制说明：
+        /// 
+        /// - 仅广州、深圳金融、上海、上海金融、北京、成都、中国香港、新加坡、孟买、东京、硅谷地域支持绑定 SCF。
+        /// - 仅标准账户类型支持绑定 SCF，传统账户类型不支持。建议升级为标准账户类型，详情可参见 [账户类型升级说明](https://cloud.tencent.com/document/product/1199/49090)。
+        /// - 传统型负载均衡不支持绑定 SCF。
+        /// - 基础网络类型不支持绑定 SCF。
+        /// - CLB 默认支持绑定同地域下的所有 SCF，可支持跨 VPC 绑定 SCF，不支持跨地域绑定。
+        /// - 目前仅 IPv4、IPv6 NAT64 版本的负载均衡支持绑定 SCF，IPv6 版本的暂不支持。
+        /// - 仅七层（HTTP、HTTPS）监听器支持绑定 SCF，四层（TCP、UDP、TCP SSL）监听器和七层 QUIC 监听器不支持。
+        /// - CLB 绑定 SCF 仅支持绑定“Event 函数”类型的云函数。
+        /// </summary>
+        /// <param name="req"><see cref="DeregisterFunctionTargetsRequest"/></param>
+        /// <returns><see cref="DeregisterFunctionTargetsResponse"/></returns>
+        public DeregisterFunctionTargetsResponse DeregisterFunctionTargetsSync(DeregisterFunctionTargetsRequest req)
+        {
+             JsonResponseModel<DeregisterFunctionTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeregisterFunctionTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeregisterFunctionTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 从目标组中解绑服务器。
         /// 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
@@ -2844,6 +2906,66 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "ModifyTargetWeight");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetWeightResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// RegisterFunctionTargets 接口用来将一个云函数绑定到负载均衡的7层转发规则，在此之前您需要先行创建相关的7层监听器（HTTP、HTTPS）和转发规则。
+        /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。<br/>
+        /// 限制说明：
+        /// - 仅广州、深圳金融、上海、上海金融、北京、成都、中国香港、新加坡、孟买、东京、硅谷地域支持绑定 SCF。
+        /// - 仅标准账户类型支持绑定 SCF，传统账户类型不支持。建议升级为标准账户类型，详情可参见 [账户类型升级说明](https://cloud.tencent.com/document/product/1199/49090)。 
+        /// - 传统型负载均衡不支持绑定 SCF。
+        /// - 基础网络类型不支持绑定 SCF。
+        /// - CLB 默认支持绑定同地域下的所有 SCF，可支持跨 VPC 绑定 SCF，不支持跨地域绑定。
+        /// - 目前仅 IPv4、IPv6 NAT64 版本的负载均衡支持绑定 SCF，IPv6 版本的暂不支持。
+        /// - 仅七层（HTTP、HTTPS）监听器支持绑定 SCF，四层（TCP、UDP、TCP SSL）监听器和七层 QUIC 监听器不支持。
+        /// - CLB 绑定 SCF 仅支持绑定“Event 函数”类型的云函数。
+        /// </summary>
+        /// <param name="req"><see cref="RegisterFunctionTargetsRequest"/></param>
+        /// <returns><see cref="RegisterFunctionTargetsResponse"/></returns>
+        public async Task<RegisterFunctionTargetsResponse> RegisterFunctionTargets(RegisterFunctionTargetsRequest req)
+        {
+             JsonResponseModel<RegisterFunctionTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RegisterFunctionTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterFunctionTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// RegisterFunctionTargets 接口用来将一个云函数绑定到负载均衡的7层转发规则，在此之前您需要先行创建相关的7层监听器（HTTP、HTTPS）和转发规则。
+        /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。<br/>
+        /// 限制说明：
+        /// - 仅广州、深圳金融、上海、上海金融、北京、成都、中国香港、新加坡、孟买、东京、硅谷地域支持绑定 SCF。
+        /// - 仅标准账户类型支持绑定 SCF，传统账户类型不支持。建议升级为标准账户类型，详情可参见 [账户类型升级说明](https://cloud.tencent.com/document/product/1199/49090)。 
+        /// - 传统型负载均衡不支持绑定 SCF。
+        /// - 基础网络类型不支持绑定 SCF。
+        /// - CLB 默认支持绑定同地域下的所有 SCF，可支持跨 VPC 绑定 SCF，不支持跨地域绑定。
+        /// - 目前仅 IPv4、IPv6 NAT64 版本的负载均衡支持绑定 SCF，IPv6 版本的暂不支持。
+        /// - 仅七层（HTTP、HTTPS）监听器支持绑定 SCF，四层（TCP、UDP、TCP SSL）监听器和七层 QUIC 监听器不支持。
+        /// - CLB 绑定 SCF 仅支持绑定“Event 函数”类型的云函数。
+        /// </summary>
+        /// <param name="req"><see cref="RegisterFunctionTargetsRequest"/></param>
+        /// <returns><see cref="RegisterFunctionTargetsResponse"/></returns>
+        public RegisterFunctionTargetsResponse RegisterFunctionTargetsSync(RegisterFunctionTargetsRequest req)
+        {
+             JsonResponseModel<RegisterFunctionTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RegisterFunctionTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterFunctionTargetsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

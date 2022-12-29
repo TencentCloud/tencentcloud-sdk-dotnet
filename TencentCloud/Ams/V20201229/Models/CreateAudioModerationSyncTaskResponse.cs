@@ -112,6 +112,13 @@ namespace TencentCloud.Ams.V20201229.Models
         public RecognitionResult[] RecognitionResults{ get; set; }
 
         /// <summary>
+        /// 识别音频时长，单位为毫秒；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Duration")]
+        public string Duration{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -135,6 +142,7 @@ namespace TencentCloud.Ams.V20201229.Models
             this.SetParamArrayObj(map, prefix + "LanguageResults.", this.LanguageResults);
             this.SetParamArrayObj(map, prefix + "SpeakerResults.", this.SpeakerResults);
             this.SetParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

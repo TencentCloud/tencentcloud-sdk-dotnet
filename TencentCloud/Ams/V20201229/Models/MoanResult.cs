@@ -46,13 +46,13 @@ namespace TencentCloud.Ams.V20201229.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 违规事件开始时间，单位为毫秒（ms）；
+        /// 违规事件开始时间，单位为秒（s）；
         /// </summary>
         [JsonProperty("StartTime")]
         public float? StartTime{ get; set; }
 
         /// <summary>
-        /// 违规事件结束时间，单位为毫秒（ms）；
+        /// 违规事件结束时间，单位为秒（s）；
         /// </summary>
         [JsonProperty("EndTime")]
         public float? EndTime{ get; set; }

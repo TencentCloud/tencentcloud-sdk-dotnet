@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 账户名
+        /// 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 密码
+        /// 密码，密码长度范围为8到64个字符
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 用户最大连接数，不能大于10240
+        /// </summary>
+        [JsonProperty("MaxUserConnections")]
+        public long? MaxUserConnections{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         }
     }
 }

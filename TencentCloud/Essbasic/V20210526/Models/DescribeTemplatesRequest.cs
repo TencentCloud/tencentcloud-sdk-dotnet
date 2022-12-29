@@ -84,6 +84,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("WithPdfUrl")]
         public bool? WithPdfUrl{ get; set; }
 
+        /// <summary>
+        /// 渠道模板ID
+        /// </summary>
+        [JsonProperty("ChannelTemplateId")]
+        public string ChannelTemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
             this.SetParamSimple(map, prefix + "WithPdfUrl", this.WithPdfUrl);
+            this.SetParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
         }
     }
 }

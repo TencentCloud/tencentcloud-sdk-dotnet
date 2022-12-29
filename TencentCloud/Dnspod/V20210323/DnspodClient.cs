@@ -1853,7 +1853,7 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
-        ///  DNS 解析套餐自动续费设置
+        /// DNS 解析套餐自动续费设置
         /// </summary>
         /// <param name="req"><see cref="ModifyPackageAutoRenewRequest"/></param>
         /// <returns><see cref="ModifyPackageAutoRenewResponse"/></returns>
@@ -1873,7 +1873,7 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
-        ///  DNS 解析套餐自动续费设置
+        /// DNS 解析套餐自动续费设置
         /// </summary>
         /// <param name="req"><see cref="ModifyPackageAutoRenewRequest"/></param>
         /// <returns><see cref="ModifyPackageAutoRenewResponse"/></returns>

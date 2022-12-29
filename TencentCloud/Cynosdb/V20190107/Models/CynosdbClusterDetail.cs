@@ -172,6 +172,160 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
+        /// <summary>
+        /// binlog开关，可选值：ON, OFF
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogBin")]
+        public string LogBin{ get; set; }
+
+        /// <summary>
+        /// pitr类型，可选值：normal, redo_pitr
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PitrType")]
+        public string PitrType{ get; set; }
+
+        /// <summary>
+        /// 物理可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PhysicalZone")]
+        public string PhysicalZone{ get; set; }
+
+        /// <summary>
+        /// 存储Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StorageId")]
+        public string StorageId{ get; set; }
+
+        /// <summary>
+        /// 存储大小，单位为G
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Storage")]
+        public long? Storage{ get; set; }
+
+        /// <summary>
+        /// 最大存储规格，单位为G
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxStorageSize")]
+        public long? MaxStorageSize{ get; set; }
+
+        /// <summary>
+        /// 最小存储规格，单位为G
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MinStorageSize")]
+        public long? MinStorageSize{ get; set; }
+
+        /// <summary>
+        /// 存储付费类型，1为包年包月，0为按量计费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StoragePayMode")]
+        public long? StoragePayMode{ get; set; }
+
+        /// <summary>
+        /// 数据库类型，normal，serverless
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DbMode")]
+        public string DbMode{ get; set; }
+
+        /// <summary>
+        /// 存储空间上限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StorageLimit")]
+        public long? StorageLimit{ get; set; }
+
+        /// <summary>
+        /// 集群支持的功能
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ability")]
+        public Ability Ability{ get; set; }
+
+        /// <summary>
+        /// cynos版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CynosVersion")]
+        public string CynosVersion{ get; set; }
+
+        /// <summary>
+        /// 商业类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BusinessType")]
+        public string BusinessType{ get; set; }
+
+        /// <summary>
+        /// 是否有从可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HasSlaveZone")]
+        public string HasSlaveZone{ get; set; }
+
+        /// <summary>
+        /// 是否冻结
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsFreeze")]
+        public string IsFreeze{ get; set; }
+
+        /// <summary>
+        /// 任务列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tasks")]
+        public ObjectTask[] Tasks{ get; set; }
+
+        /// <summary>
+        /// 主可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MasterZone")]
+        public string MasterZone{ get; set; }
+
+        /// <summary>
+        /// 从可用区列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SlaveZones")]
+        public string[] SlaveZones{ get; set; }
+
+        /// <summary>
+        /// Proxy状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyStatus")]
+        public string ProxyStatus{ get; set; }
+
+        /// <summary>
+        /// 是否跳过交易
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSkipTrade")]
+        public string IsSkipTrade{ get; set; }
+
+        /// <summary>
+        /// 是否打开密码复杂度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsOpenPasswordComplexity")]
+        public string IsOpenPasswordComplexity{ get; set; }
+
+        /// <summary>
+        /// 网络类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetworkStatus")]
+        public string NetworkStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -202,6 +356,28 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+            this.SetParamSimple(map, prefix + "LogBin", this.LogBin);
+            this.SetParamSimple(map, prefix + "PitrType", this.PitrType);
+            this.SetParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
+            this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
+            this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
+            this.SetParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
+            this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
+            this.SetParamObj(map, prefix + "Ability.", this.Ability);
+            this.SetParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
+            this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
+            this.SetParamSimple(map, prefix + "HasSlaveZone", this.HasSlaveZone);
+            this.SetParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
+            this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
+            this.SetParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+            this.SetParamSimple(map, prefix + "ProxyStatus", this.ProxyStatus);
+            this.SetParamSimple(map, prefix + "IsSkipTrade", this.IsSkipTrade);
+            this.SetParamSimple(map, prefix + "IsOpenPasswordComplexity", this.IsOpenPasswordComplexity);
+            this.SetParamSimple(map, prefix + "NetworkStatus", this.NetworkStatus);
         }
     }
 }

@@ -106,6 +106,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RouteTableFlag")]
         public bool? RouteTableFlag{ get; set; }
 
+        /// <summary>
+        /// 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RouteBroadcastPolicyFlag")]
+        public bool? RouteBroadcastPolicyFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +132,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);
             this.SetParamSimple(map, prefix + "RouteTableCount", this.RouteTableCount);
             this.SetParamSimple(map, prefix + "RouteTableFlag", this.RouteTableFlag);
+            this.SetParamSimple(map, prefix + "RouteBroadcastPolicyFlag", this.RouteBroadcastPolicyFlag);
         }
     }
 }

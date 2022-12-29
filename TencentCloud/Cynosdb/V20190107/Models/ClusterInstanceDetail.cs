@@ -72,6 +72,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceStorage")]
         public long? InstanceStorage{ get; set; }
 
+        /// <summary>
+        /// 实例角色
+        /// </summary>
+        [JsonProperty("InstanceRole")]
+        public string InstanceRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "InstanceCpu", this.InstanceCpu);
             this.SetParamSimple(map, prefix + "InstanceMemory", this.InstanceMemory);
             this.SetParamSimple(map, prefix + "InstanceStorage", this.InstanceStorage);
+            this.SetParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
         }
     }
 }

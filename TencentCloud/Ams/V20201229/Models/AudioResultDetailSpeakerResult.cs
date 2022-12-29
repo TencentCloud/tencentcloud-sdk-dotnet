@@ -39,14 +39,14 @@ namespace TencentCloud.Ams.V20201229.Models
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为毫秒。
+        /// 该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public float? StartTime{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为毫秒。
+        /// 该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
