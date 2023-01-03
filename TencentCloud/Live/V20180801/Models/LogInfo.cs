@@ -38,6 +38,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 日志生成时间。
+        /// 注：此字段为北京时间（UTC+8时区）。
         /// </summary>
         [JsonProperty("LogTime")]
         public string LogTime{ get; set; }

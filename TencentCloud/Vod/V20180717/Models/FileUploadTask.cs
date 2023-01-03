@@ -37,10 +37,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaBasicInfo MediaBasicInfo{ get; set; }
 
         /// <summary>
-        /// 若视频上传时指定了视频处理流程，则该字段为流程任务 ID。
+        /// 任务类型为 Procedure 的任务 ID。若视频[上传时指定要执行的任务(procedure)](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
         /// </summary>
         [JsonProperty("ProcedureTaskId")]
         public string ProcedureTaskId{ get; set; }
+
+        /// <summary>
+        /// 任务类型为 ReviewAudioVideo 的任务 ID。若视频[上传时指定要执行的任务(procedure)](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
+        /// </summary>
+        [JsonProperty("ReviewAudioVideoTaskId")]
+        public string ReviewAudioVideoTaskId{ get; set; }
 
         /// <summary>
         /// 元信息。包括大小、时长、视频流信息、音频流信息等。
@@ -58,6 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamObj(map, prefix + "MediaBasicInfo.", this.MediaBasicInfo);
             this.SetParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
+            this.SetParamSimple(map, prefix + "ReviewAudioVideoTaskId", this.ReviewAudioVideoTaskId);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
         }
     }

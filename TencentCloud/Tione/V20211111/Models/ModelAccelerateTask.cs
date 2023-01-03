@@ -213,6 +213,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ModelSignature")]
         public string ModelSignature{ get; set; }
 
+        /// <summary>
+        /// 是否是QAT模型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QATModel")]
+        public bool? QATModel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +253,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "IsSaved", this.IsSaved);
             this.SetParamSimple(map, prefix + "ModelSignature", this.ModelSignature);
+            this.SetParamSimple(map, prefix + "QATModel", this.QATModel);
         }
     }
 }

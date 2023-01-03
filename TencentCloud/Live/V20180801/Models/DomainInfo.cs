@@ -48,6 +48,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 添加时间。
+        /// 注：此字段为北京时间（UTC+8时区）。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -97,6 +98,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 失效参数，可忽略。
+        /// 注：此字段为北京时间（UTC+8时区）。
         /// </summary>
         [JsonProperty("RentExpireTime")]
         public string RentExpireTime{ get; set; }

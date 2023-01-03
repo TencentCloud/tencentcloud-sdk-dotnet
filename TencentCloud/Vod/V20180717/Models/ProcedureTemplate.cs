@@ -52,7 +52,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// AI 智能审核类型任务参数。
+        /// AI 智能审核类型任务参数 \*。
+        /// <font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
@@ -80,6 +81,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public WechatMiniProgramPublishTaskInput MiniProgramPublishTask{ get; set; }
 
         /// <summary>
+        /// 音视频审核类型任务参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReviewAudioVideoTask")]
+        public ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask{ get; set; }
+
+        /// <summary>
         /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -105,6 +113,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamObj(map, prefix + "MiniProgramPublishTask.", this.MiniProgramPublishTask);
+            this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

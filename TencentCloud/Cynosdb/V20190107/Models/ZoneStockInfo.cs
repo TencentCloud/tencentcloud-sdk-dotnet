@@ -36,6 +36,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("HasStock")]
         public bool? HasStock{ get; set; }
 
+        /// <summary>
+        /// 库存数量
+        /// </summary>
+        [JsonProperty("StockCount")]
+        public long? StockCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
+            this.SetParamSimple(map, prefix + "StockCount", this.StockCount);
         }
     }
 }

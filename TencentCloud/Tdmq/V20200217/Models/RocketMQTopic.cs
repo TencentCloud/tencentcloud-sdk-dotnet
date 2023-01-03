@@ -31,6 +31,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// 主题的类别，为枚举类型，Normal，GlobalOrder，PartitionedOrder，Transaction，Retry及DeadLetter
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 订阅组数量
+        /// </summary>
+        [JsonProperty("GroupNum")]
+        public ulong? GroupNum{ get; set; }
+
+        /// <summary>
         /// 说明
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -62,6 +74,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "GroupNum", this.GroupNum);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

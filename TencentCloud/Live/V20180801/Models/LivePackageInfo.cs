@@ -58,12 +58,14 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 购买时间。
+        /// 注：此字段为北京时间（UTC+8时区）。
         /// </summary>
         [JsonProperty("BuyTime")]
         public string BuyTime{ get; set; }
 
         /// <summary>
         /// 过期时间。
+        /// 注：此字段为北京时间（UTC+8时区）。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

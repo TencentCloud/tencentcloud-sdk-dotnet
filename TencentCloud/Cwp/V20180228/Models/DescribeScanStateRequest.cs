@@ -32,7 +32,7 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 过滤参数;
-        /// <li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要<li/>
+        /// <li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

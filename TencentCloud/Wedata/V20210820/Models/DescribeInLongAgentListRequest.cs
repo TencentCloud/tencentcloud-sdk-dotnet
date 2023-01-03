@@ -43,7 +43,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string AgentName{ get; set; }
 
         /// <summary>
-        /// 集群类型，1：TKE Agent，2：BOSS SDK，默认：1
+        /// 集群类型，1：TKE Agent，2：BOSS SDK，默认：1，3：CVM，4：自建服务器 【传多个用逗号分割】
         /// </summary>
         [JsonProperty("AgentType")]
         public ulong? AgentType{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Like")]
         public ulong? Like{ get; set; }
 
+        /// <summary>
+        /// agent类型【多个用逗号分隔】
+        /// </summary>
+        [JsonProperty("AgentTypes")]
+        public string AgentTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "Like", this.Like);
+            this.SetParamSimple(map, prefix + "AgentTypes", this.AgentTypes);
         }
     }
 }

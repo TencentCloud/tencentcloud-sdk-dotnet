@@ -179,6 +179,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ModelCleanPeriod")]
         public ulong? ModelCleanPeriod{ get; set; }
 
+        /// <summary>
+        /// 是否QAT模型
+        /// </summary>
+        [JsonProperty("IsQAT")]
+        public bool? IsQAT{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -210,6 +216,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "AutoClean", this.AutoClean);
             this.SetParamSimple(map, prefix + "MaxReservedModels", this.MaxReservedModels);
             this.SetParamSimple(map, prefix + "ModelCleanPeriod", this.ModelCleanPeriod);
+            this.SetParamSimple(map, prefix + "IsQAT", this.IsQAT);
         }
     }
 }

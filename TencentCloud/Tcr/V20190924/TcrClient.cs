@@ -775,46 +775,6 @@ namespace TencentCloud.Tcr.V20190924
         /// <summary>
         /// 创建实例公网访问白名单策略
         /// </summary>
-        /// <param name="req"><see cref="CreateSecurityPoliciesRequest"/></param>
-        /// <returns><see cref="CreateSecurityPoliciesResponse"/></returns>
-        public async Task<CreateSecurityPoliciesResponse> CreateSecurityPolicies(CreateSecurityPoliciesRequest req)
-        {
-             JsonResponseModel<CreateSecurityPoliciesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateSecurityPolicies");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityPoliciesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 创建实例公网访问白名单策略
-        /// </summary>
-        /// <param name="req"><see cref="CreateSecurityPoliciesRequest"/></param>
-        /// <returns><see cref="CreateSecurityPoliciesResponse"/></returns>
-        public CreateSecurityPoliciesResponse CreateSecurityPoliciesSync(CreateSecurityPoliciesRequest req)
-        {
-             JsonResponseModel<CreateSecurityPoliciesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateSecurityPolicies");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityPoliciesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 创建实例公网访问白名单策略
-        /// </summary>
         /// <param name="req"><see cref="CreateSecurityPolicyRequest"/></param>
         /// <returns><see cref="CreateSecurityPolicyResponse"/></returns>
         public async Task<CreateSecurityPolicyResponse> CreateSecurityPolicy(CreateSecurityPolicyRequest req)

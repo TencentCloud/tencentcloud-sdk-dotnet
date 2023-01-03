@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// appId
+        /// 用户appId
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -114,6 +114,45 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceSet")]
         public CynosdbInstance[] InstanceSet{ get; set; }
 
+        /// <summary>
+        /// VPC的ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
+        /// <summary>
+        /// 子网ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
+
+        /// <summary>
+        /// 正在回收IP信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OldAddrInfo")]
+        public OldAddrInfo OldAddrInfo{ get; set; }
+
+        /// <summary>
+        /// 正在进行的任务
+        /// </summary>
+        [JsonProperty("ProcessingTasks")]
+        public string[] ProcessingTasks{ get; set; }
+
+        /// <summary>
+        /// 任务列表
+        /// </summary>
+        [JsonProperty("Tasks")]
+        public ObjectTask[] Tasks{ get; set; }
+
+        /// <summary>
+        /// biz_net_service表id
+        /// </summary>
+        [JsonProperty("NetServiceId")]
+        public long? NetServiceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +174,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "WanPort", this.WanPort);
             this.SetParamSimple(map, prefix + "WanStatus", this.WanStatus);
             this.SetParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamObj(map, prefix + "OldAddrInfo.", this.OldAddrInfo);
+            this.SetParamArraySimple(map, prefix + "ProcessingTasks.", this.ProcessingTasks);
+            this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamSimple(map, prefix + "NetServiceId", this.NetServiceId);
         }
     }
 }

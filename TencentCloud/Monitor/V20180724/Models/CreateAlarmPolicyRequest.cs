@@ -132,6 +132,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("MigrateFlag")]
         public long? MigrateFlag{ get; set; }
 
+        /// <summary>
+        /// 事件配置的告警
+        /// </summary>
+        [JsonProperty("EbSubject")]
+        public string EbSubject{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
             this.SetParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);
             this.SetParamSimple(map, prefix + "MigrateFlag", this.MigrateFlag);
+            this.SetParamSimple(map, prefix + "EbSubject", this.EbSubject);
         }
     }
 }

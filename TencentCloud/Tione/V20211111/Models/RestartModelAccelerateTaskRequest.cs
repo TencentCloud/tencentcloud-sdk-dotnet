@@ -73,7 +73,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public CosPathInfo ModelInputPath{ get; set; }
 
         /// <summary>
-        /// 优化级别（NO_LOSS/FP16），默认FP16
+        /// 优化级别（NO_LOSS/FP16/INT8），默认FP16
         /// </summary>
         [JsonProperty("OptimizationLevel")]
         public string OptimizationLevel{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string[] TensorInfos{ get; set; }
 
         /// <summary>
-        /// GPU类型（T4/V100），默认T4
+        /// GPU类型（T4/V100/A10），默认T4
         /// </summary>
         [JsonProperty("GPUType")]
         public string GPUType{ get; set; }

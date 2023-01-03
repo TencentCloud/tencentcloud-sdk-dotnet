@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSecurityPoliciesRequest : AbstractModel
+    public class DescribeOriginProtectionResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实例Id
+        /// 源站防护信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RegistryId")]
-        public string RegistryId{ get; set; }
+        [JsonProperty("OriginProtectionInfo")]
+        public OriginProtectionInfo[] OriginProtectionInfo{ get; set; }
 
         /// <summary>
-        /// 192.168.0.0/24
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("CidrBlock")]
-        public string CidrBlock{ get; set; }
-
-        /// <summary>
-        /// 描述
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
-            this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArrayObj(map, prefix + "OriginProtectionInfo.", this.OriginProtectionInfo);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

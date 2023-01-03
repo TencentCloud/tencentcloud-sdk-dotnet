@@ -2293,6 +2293,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 查询源站防护信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginProtectionRequest"/></param>
+        /// <returns><see cref="DescribeOriginProtectionResponse"/></returns>
+        public async Task<DescribeOriginProtectionResponse> DescribeOriginProtection(DescribeOriginProtectionRequest req)
+        {
+             JsonResponseModel<DescribeOriginProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOriginProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOriginProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询源站防护信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginProtectionRequest"/></param>
+        /// <returns><see cref="DescribeOriginProtectionResponse"/></returns>
+        public DescribeOriginProtectionResponse DescribeOriginProtectionSync(DescribeOriginProtectionRequest req)
+        {
+             JsonResponseModel<DescribeOriginProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOriginProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOriginProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeOverviewL7Data）用于查询七层监控类时序流量数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeOverviewL7DataRequest"/></param>
@@ -4764,6 +4804,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "SwitchLogTopicTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchLogTopicTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新源站防护IP白名单
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOriginProtectionIPWhitelistRequest"/></param>
+        /// <returns><see cref="UpdateOriginProtectionIPWhitelistResponse"/></returns>
+        public async Task<UpdateOriginProtectionIPWhitelistResponse> UpdateOriginProtectionIPWhitelist(UpdateOriginProtectionIPWhitelistRequest req)
+        {
+             JsonResponseModel<UpdateOriginProtectionIPWhitelistResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateOriginProtectionIPWhitelist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOriginProtectionIPWhitelistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新源站防护IP白名单
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOriginProtectionIPWhitelistRequest"/></param>
+        /// <returns><see cref="UpdateOriginProtectionIPWhitelistResponse"/></returns>
+        public UpdateOriginProtectionIPWhitelistResponse UpdateOriginProtectionIPWhitelistSync(UpdateOriginProtectionIPWhitelistRequest req)
+        {
+             JsonResponseModel<UpdateOriginProtectionIPWhitelistResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateOriginProtectionIPWhitelist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOriginProtectionIPWhitelistResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

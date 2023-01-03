@@ -85,6 +85,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskCount")]
         public ulong? TaskCount{ get; set; }
 
+        /// <summary>
+        /// 采集器组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentGroupId")]
+        public string AgentGroupId{ get; set; }
+
+        /// <summary>
+        /// agent状态统计
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CvmAgentStatusList")]
+        public CvmAgentStatus[] CvmAgentStatusList{ get; set; }
+
+        /// <summary>
+        /// agent数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentTotal")]
+        public ulong? AgentTotal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +122,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
             this.SetParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
             this.SetParamSimple(map, prefix + "TaskCount", this.TaskCount);
+            this.SetParamSimple(map, prefix + "AgentGroupId", this.AgentGroupId);
+            this.SetParamArrayObj(map, prefix + "CvmAgentStatusList.", this.CvmAgentStatusList);
+            this.SetParamSimple(map, prefix + "AgentTotal", this.AgentTotal);
         }
     }
 }

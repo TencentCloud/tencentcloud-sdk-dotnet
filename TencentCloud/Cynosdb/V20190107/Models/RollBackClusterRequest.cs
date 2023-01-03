@@ -66,6 +66,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("RollbackTables")]
         public RollbackTable[] RollbackTables{ get; set; }
 
+        /// <summary>
+        /// 按时间点回档模式，full: 普通; db: 快速; table: 极速  （默认是普通）
+        /// </summary>
+        [JsonProperty("RollbackMode")]
+        public string RollbackMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ExpectTimeThresh", this.ExpectTimeThresh);
             this.SetParamArrayObj(map, prefix + "RollbackDatabases.", this.RollbackDatabases);
             this.SetParamArrayObj(map, prefix + "RollbackTables.", this.RollbackTables);
+            this.SetParamSimple(map, prefix + "RollbackMode", this.RollbackMode);
         }
     }
 }

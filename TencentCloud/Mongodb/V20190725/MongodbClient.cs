@@ -93,6 +93,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 创建实例账号。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountUserRequest"/></param>
+        /// <returns><see cref="CreateAccountUserResponse"/></returns>
+        public async Task<CreateAccountUserResponse> CreateAccountUser(CreateAccountUserRequest req)
+        {
+             JsonResponseModel<CreateAccountUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAccountUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建实例账号。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountUserRequest"/></param>
+        /// <returns><see cref="CreateAccountUserResponse"/></returns>
+        public CreateAccountUserResponse CreateAccountUserSync(CreateAccountUserRequest req)
+        {
+             JsonResponseModel<CreateAccountUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAccountUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 备份实例接口
         /// </summary>
         /// <param name="req"><see cref="CreateBackupDBInstanceRequest"/></param>

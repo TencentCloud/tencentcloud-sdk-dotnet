@@ -72,6 +72,30 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("LogAlarmReqInfo")]
         public LogAlarmReq LogAlarmReqInfo{ get; set; }
 
+        /// <summary>
+        /// 模版id，专供prom使用
+        /// </summary>
+        [JsonProperty("NoticeIds")]
+        public string[] NoticeIds{ get; set; }
+
+        /// <summary>
+        /// 启停状态，0=停用，1=启用
+        /// </summary>
+        [JsonProperty("Enable")]
+        public long? Enable{ get; set; }
+
+        /// <summary>
+        /// 专供prom策略名称
+        /// </summary>
+        [JsonProperty("PolicyName")]
+        public string PolicyName{ get; set; }
+
+        /// <summary>
+        /// 事件配置的告警
+        /// </summary>
+        [JsonProperty("EbSubject")]
+        public string EbSubject{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +110,10 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
             this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
             this.SetParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
+            this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
+            this.SetParamSimple(map, prefix + "EbSubject", this.EbSubject);
         }
     }
 }

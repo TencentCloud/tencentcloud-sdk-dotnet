@@ -54,6 +54,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 证书过期时间。
+        /// 注：此字段为北京时间（UTC+8时区）。
         /// </summary>
         [JsonProperty("CertExpireTime")]
         public string CertExpireTime{ get; set; }
@@ -72,6 +73,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 规则最后更新时间。
+        /// 注：此字段为北京时间（UTC+8时区）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]

@@ -31,10 +31,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 备份文件ID
+        /// 备份文件ID，旧版本使用的字段，不推荐使用
         /// </summary>
         [JsonProperty("SnapshotIdList")]
         public long?[] SnapshotIdList{ get; set; }
+
+        /// <summary>
+        /// 备份文件ID，推荐使用
+        /// </summary>
+        [JsonProperty("BackupIds")]
+        public long?[] BackupIds{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "SnapshotIdList.", this.SnapshotIdList);
+            this.SetParamArraySimple(map, prefix + "BackupIds.", this.BackupIds);
         }
     }
 }

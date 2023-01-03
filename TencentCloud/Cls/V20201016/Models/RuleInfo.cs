@@ -25,21 +25,21 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 全文索引配置
+        /// 全文索引配置, 如果为空时代表未开启全文索引
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FullText")]
         public FullTextInfo FullText{ get; set; }
 
         /// <summary>
-        /// 键值索引配置
+        /// 键值索引配置，如果为空时代表未开启键值索引
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyValue")]
         public RuleKeyValueInfo KeyValue{ get; set; }
 
         /// <summary>
-        /// 元字段索引配置
+        /// 元字段索引配置，如果为空时代表未开启元字段索引
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]

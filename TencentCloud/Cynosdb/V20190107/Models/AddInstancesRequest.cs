@@ -103,6 +103,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }
 
+        /// <summary>
+        /// 参数模版ID
+        /// </summary>
+        [JsonProperty("ParamTemplateId")]
+        public long? ParamTemplateId{ get; set; }
+
+        /// <summary>
+        /// 参数列表，ParamTemplateId 传入时InstanceParams才有效
+        /// </summary>
+        [JsonProperty("InstanceParams")]
+        public ModifyParamItem[] InstanceParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +134,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamSimple(map, prefix + "OrderSource", this.OrderSource);
             this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
+            this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+            this.SetParamArrayObj(map, prefix + "InstanceParams.", this.InstanceParams);
         }
     }
 }

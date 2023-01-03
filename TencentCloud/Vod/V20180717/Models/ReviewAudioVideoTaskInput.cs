@@ -36,6 +36,14 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
+        /// <summary>
+        /// 审核的内容，可选值：
+        /// <li>Media：原始音视频；</li>
+        /// <li>Cover：封面。</li>
+        /// </summary>
+        [JsonProperty("ReviewContents")]
+        public string[] ReviewContents{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +52,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamArraySimple(map, prefix + "ReviewContents.", this.ReviewContents);
         }
     }
 }

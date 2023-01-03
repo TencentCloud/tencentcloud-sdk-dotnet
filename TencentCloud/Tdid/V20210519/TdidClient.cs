@@ -613,6 +613,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口已废弃
+        /// 
         /// 本机构DID详情
         /// </summary>
         /// <param name="req"><see cref="GetAgencyTDidRequest"/></param>
@@ -633,6 +635,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口已废弃
+        /// 
         /// 本机构DID详情
         /// </summary>
         /// <param name="req"><see cref="GetAgencyTDidRequest"/></param>
@@ -1973,6 +1977,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口已废弃
+        /// 
         /// 验证购买
         /// </summary>
         /// <param name="req"><see cref="VerifyPurchaseRequest"/></param>
@@ -1993,6 +1999,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口已废弃
+        /// 
         /// 验证购买
         /// </summary>
         /// <param name="req"><see cref="VerifyPurchaseRequest"/></param>

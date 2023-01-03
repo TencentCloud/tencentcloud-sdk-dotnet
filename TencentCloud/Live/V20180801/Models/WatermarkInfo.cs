@@ -62,6 +62,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 添加时间。
+        /// 注：此字段为北京时间（UTC+8时区）。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
