@@ -58,8 +58,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public IpFilterPathRule[] FilterRules{ get; set; }
 
         /// <summary>
-        /// IP 黑白名单验证失败时返回的 HTTP Code
-        /// 合法值: 400~499
+        /// IP 黑白名单验证失败时返回的 code（即将下线）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReturnCode")]

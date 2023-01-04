@@ -166,6 +166,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
+        /// <summary>
+        /// 附加信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineExtraInfo")]
+        public MachineExtraInfo MachineExtraInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,6 +199,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         }
     }
 }

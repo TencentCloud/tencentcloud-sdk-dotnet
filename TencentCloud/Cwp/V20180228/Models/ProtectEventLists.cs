@@ -78,6 +78,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("FileType")]
         public ulong? FileType{ get; set; }
 
+        /// <summary>
+        /// 主机额外信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineExtraInfo")]
+        public MachineExtraInfo MachineExtraInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +100,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "RestoreTime", this.RestoreTime);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         }
     }
 }

@@ -161,6 +161,20 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetGroupList")]
         public BasicTargetGroupInfo[] TargetGroupList{ get; set; }
 
+        /// <summary>
+        /// 监听器最大连接数，-1表示监听器维度不限速。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxConn")]
+        public long? MaxConn{ get; set; }
+
+        /// <summary>
+        /// 监听器最大新增连接数，-1表示监听器维度不限速。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxCps")]
+        public long? MaxCps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -187,6 +201,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
             this.SetParamArraySimple(map, prefix + "AttrFlags.", this.AttrFlags);
             this.SetParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
+            this.SetParamSimple(map, prefix + "MaxConn", this.MaxConn);
+            this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
         }
     }
 }

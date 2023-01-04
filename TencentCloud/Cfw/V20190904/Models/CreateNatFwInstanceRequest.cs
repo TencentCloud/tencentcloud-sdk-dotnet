@@ -72,6 +72,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("CrossAZone")]
         public long? CrossAZone{ get; set; }
 
+        /// <summary>
+        /// 指定防火墙使用网段信息
+        /// </summary>
+        [JsonProperty("FwCidrInfo")]
+        public FwCidrInfo FwCidrInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ZoneBak", this.ZoneBak);
             this.SetParamSimple(map, prefix + "CrossAZone", this.CrossAZone);
+            this.SetParamObj(map, prefix + "FwCidrInfo.", this.FwCidrInfo);
         }
     }
 }

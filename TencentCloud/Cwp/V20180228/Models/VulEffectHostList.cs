@@ -136,6 +136,20 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("PublicIpAddresses")]
         public string PublicIpAddresses{ get; set; }
 
+        /// <summary>
+        /// 云标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudTags")]
+        public Tags[] CloudTags{ get; set; }
+
+        /// <summary>
+        /// 主机额外信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineExtraInfo")]
+        public MachineExtraInfo MachineExtraInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +172,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "FirstDiscoveryTime", this.FirstDiscoveryTime);
             this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
             this.SetParamSimple(map, prefix + "PublicIpAddresses", this.PublicIpAddresses);
+            this.SetParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
+            this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         }
     }
 }

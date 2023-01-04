@@ -55,6 +55,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public PriceResource PriceSpec{ get; set; }
 
         /// <summary>
+        /// 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MultipleEmrPrice")]
+        public EmrPrice[] MultipleEmrPrice{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -70,6 +77,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
             this.SetParamObj(map, prefix + "PriceSpec.", this.PriceSpec);
+            this.SetParamArrayObj(map, prefix + "MultipleEmrPrice.", this.MultipleEmrPrice);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

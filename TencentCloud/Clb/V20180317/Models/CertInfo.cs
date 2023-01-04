@@ -37,13 +37,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string CertName{ get; set; }
 
         /// <summary>
-        /// 上传证书的公钥，如果没有 CertId，则此项必传。
+        /// 上传证书的公钥；如果没有 CertId，则此项必传。
         /// </summary>
         [JsonProperty("CertContent")]
         public string CertContent{ get; set; }
 
         /// <summary>
-        /// 上传服务端证书的私钥，如果没有 CertId，则此项必传。
+        /// 上传服务端证书的私钥；如果没有 CertId，则此项必传。
         /// </summary>
         [JsonProperty("CertKey")]
         public string CertKey{ get; set; }

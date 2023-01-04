@@ -1065,6 +1065,46 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 暂停处于同步中的数据同步任务。
+        /// </summary>
+        /// <param name="req"><see cref="PauseSyncJobRequest"/></param>
+        /// <returns><see cref="PauseSyncJobResponse"/></returns>
+        public async Task<PauseSyncJobResponse> PauseSyncJob(PauseSyncJobRequest req)
+        {
+             JsonResponseModel<PauseSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PauseSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 暂停处于同步中的数据同步任务。
+        /// </summary>
+        /// <param name="req"><see cref="PauseSyncJobRequest"/></param>
+        /// <returns><see cref="PauseSyncJobResponse"/></returns>
+        public PauseSyncJobResponse PauseSyncJobSync(PauseSyncJobRequest req)
+        {
+             JsonResponseModel<PauseSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PauseSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 解除隔离数据迁移任务，用户手动发起隔离后的手动解隔离，只有任务状态为已隔离(手动操作)状态下才能触发此操作。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
         /// </summary>
         /// <param name="req"><see cref="RecoverMigrateJobRequest"/></param>

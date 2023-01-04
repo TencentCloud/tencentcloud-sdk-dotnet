@@ -31,19 +31,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? AutoBackupType{ get; set; }
 
         /// <summary>
-        /// 日期Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+        /// 自动备份周期。取值为：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
         /// </summary>
         [JsonProperty("WeekDays")]
         public string[] WeekDays{ get; set; }
 
         /// <summary>
-        /// 时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00
+        /// 自动备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
         /// </summary>
         [JsonProperty("TimePeriod")]
         public string TimePeriod{ get; set; }
 
         /// <summary>
-        /// 全量备份文件保存天数,单位：天
+        /// 全量备份文件保存天数,单位：天。
         /// </summary>
         [JsonProperty("BackupStorageDays")]
         public long? BackupStorageDays{ get; set; }

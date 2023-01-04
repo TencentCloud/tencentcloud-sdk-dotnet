@@ -115,6 +115,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("MultiCertInfo")]
         public MultiCertInfo MultiCertInfo{ get; set; }
 
+        /// <summary>
+        /// 监听器最大连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。
+        /// </summary>
+        [JsonProperty("MaxConn")]
+        public long? MaxConn{ get; set; }
+
+        /// <summary>
+        /// 监听器最大新增连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。
+        /// </summary>
+        [JsonProperty("MaxCps")]
+        public long? MaxCps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +148,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "EndPort", this.EndPort);
             this.SetParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
             this.SetParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
+            this.SetParamSimple(map, prefix + "MaxConn", this.MaxConn);
+            this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
         }
     }
 }

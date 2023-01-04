@@ -4433,7 +4433,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(ModifyRemoteBackupConfig)用于查询数据库异地备份配置信息。
+        /// 本接口(ModifyRemoteBackupConfig)用于修改数据库异地备份配置信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyRemoteBackupConfigRequest"/></param>
         /// <returns><see cref="ModifyRemoteBackupConfigResponse"/></returns>
@@ -4453,7 +4453,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(ModifyRemoteBackupConfig)用于查询数据库异地备份配置信息。
+        /// 本接口(ModifyRemoteBackupConfig)用于修改数据库异地备份配置信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyRemoteBackupConfigRequest"/></param>
         /// <returns><see cref="ModifyRemoteBackupConfigResponse"/></returns>

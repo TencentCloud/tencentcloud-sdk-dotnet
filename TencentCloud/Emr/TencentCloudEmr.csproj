@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.674</VersionPrefix>
+    <VersionPrefix>3.0.675</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -89,6 +89,7 @@
     <Compile Include="V20190103\Models\DiskSpecInfo.cs" />
     <Compile Include="V20190103\Models\DynamicPodSpec.cs" />
     <Compile Include="V20190103\Models\EmrListInstance.cs" />
+    <Compile Include="V20190103\Models\EmrPrice.cs" />
     <Compile Include="V20190103\Models\EmrProductConfigOutter.cs" />
     <Compile Include="V20190103\Models\Execution.cs" />
     <Compile Include="V20190103\Models\ExternalService.cs" />
@@ -120,9 +121,11 @@
     <Compile Include="V20190103\Models\MultiDiskMC.cs" />
     <Compile Include="V20190103\Models\MultiZoneSetting.cs" />
     <Compile Include="V20190103\Models\NewResourceSpec.cs" />
+    <Compile Include="V20190103\Models\NodeDetailPriceResult.cs" />
     <Compile Include="V20190103\Models\NodeHardwareInfo.cs" />
     <Compile Include="V20190103\Models\NodeResourceSpec.cs" />
     <Compile Include="V20190103\Models\OutterResource.cs" />
+    <Compile Include="V20190103\Models\PartDetailPriceItem.cs" />
     <Compile Include="V20190103\Models\PersistentVolumeContext.cs" />
     <Compile Include="V20190103\Models\Placement.cs" />
     <Compile Include="V20190103\Models\PodNewParameter.cs" />
@@ -150,6 +153,7 @@
     <Compile Include="V20190103\Models\ScriptBootstrapActionConfig.cs" />
     <Compile Include="V20190103\Models\SearchItem.cs" />
     <Compile Include="V20190103\Models\ShortNodeInfo.cs" />
+    <Compile Include="V20190103\Models\SoftDependInfo.cs" />
     <Compile Include="V20190103\Models\Step.cs" />
     <Compile Include="V20190103\Models\SubnetInfo.cs" />
     <Compile Include="V20190103\Models\SyncPodStateRequest.cs" />
@@ -166,6 +170,7 @@
     <Compile Include="V20190103\Models\UserManagerUserBriefInfo.cs" />
     <Compile Include="V20190103\Models\VPCSettings.cs" />
     <Compile Include="V20190103\Models\VirtualPrivateCloud.cs" />
+    <Compile Include="V20190103\Models\ZoneDetailPriceResult.cs" />
     <Compile Include="V20190103\Models\ZoneResourceConfiguration.cs" />
   </ItemGroup>
 </Project>

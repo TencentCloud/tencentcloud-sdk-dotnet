@@ -49,7 +49,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] RemoteRegion{ get; set; }
 
         /// <summary>
-        /// 异地备份保留天时间，单位为天
+        /// 异地备份保留时间，单位为天
         /// </summary>
         [JsonProperty("ExpireDays")]
         public long? ExpireDays{ get; set; }

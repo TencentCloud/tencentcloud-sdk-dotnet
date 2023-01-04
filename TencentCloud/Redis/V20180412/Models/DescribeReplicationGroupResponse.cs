@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 复制组数
+        /// 复制组数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 复制组信息
+        /// 复制组信息。
         /// </summary>
         [JsonProperty("Groups")]
         public Groups[] Groups{ get; set; }

@@ -168,6 +168,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("PostCKafkaStatus")]
         public long? PostCKafkaStatus{ get; set; }
 
+        /// <summary>
+        /// 应用型负载均衡类型: clb或者apisix，默认clb
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlbType")]
+        public string AlbType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +205,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "PostCLSStatus", this.PostCLSStatus);
             this.SetParamSimple(map, prefix + "PostCKafkaStatus", this.PostCKafkaStatus);
+            this.SetParamSimple(map, prefix + "AlbType", this.AlbType);
         }
     }
 }

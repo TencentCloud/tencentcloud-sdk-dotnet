@@ -121,6 +121,14 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("MachineWanIp")]
         public string MachineWanIp{ get; set; }
 
+        /// <summary>
+        ///  附加信息
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineExtraInfo")]
+        public MachineExtraInfo MachineExtraInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +151,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "FirstTime", this.FirstTime);
             this.SetParamSimple(map, prefix + "IsNew", this.IsNew);
             this.SetParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
+            this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         }
     }
 }

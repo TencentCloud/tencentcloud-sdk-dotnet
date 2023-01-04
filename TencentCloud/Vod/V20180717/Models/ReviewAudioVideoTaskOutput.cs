@@ -76,6 +76,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }
 
+        /// <summary>
+        /// 封面审核结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CoverReviewResult")]
+        public ReviewImageResult CoverReviewResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +95,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
             this.SetParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
             this.SetParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
+            this.SetParamObj(map, prefix + "CoverReviewResult.", this.CoverReviewResult);
         }
     }
 }

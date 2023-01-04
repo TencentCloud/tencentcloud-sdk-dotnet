@@ -49,13 +49,13 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+        /// 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
         /// </summary>
         [JsonProperty("PeerName")]
         public string PeerName{ get; set; }
 
         /// <summary>
-        /// 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+        /// 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
         /// </summary>
         [JsonProperty("PeerGroup")]
         public string PeerGroup{ get; set; }

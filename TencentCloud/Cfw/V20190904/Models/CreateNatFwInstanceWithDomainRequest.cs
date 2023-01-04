@@ -84,6 +84,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
+        /// <summary>
+        /// 指定防火墙使用网段信息
+        /// </summary>
+        [JsonProperty("FwCidrInfo")]
+        public FwCidrInfo FwCidrInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "CrossAZone", this.CrossAZone);
             this.SetParamSimple(map, prefix + "IsCreateDomain", this.IsCreateDomain);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamObj(map, prefix + "FwCidrInfo.", this.FwCidrInfo);
         }
     }
 }

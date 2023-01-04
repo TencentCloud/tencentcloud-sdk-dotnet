@@ -1933,7 +1933,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询复制组
+        /// 本接口（DescribeReplicationGroup）查询复制组。
         /// </summary>
         /// <param name="req"><see cref="DescribeReplicationGroupRequest"/></param>
         /// <returns><see cref="DescribeReplicationGroupResponse"/></returns>
@@ -1953,7 +1953,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询复制组
+        /// 本接口（DescribeReplicationGroup）查询复制组。
         /// </summary>
         /// <param name="req"><see cref="DescribeReplicationGroupRequest"/></param>
         /// <returns><see cref="DescribeReplicationGroupResponse"/></returns>

@@ -108,6 +108,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("HttpContent")]
         public string HttpContent{ get; set; }
 
+        /// <summary>
+        /// 主机额外信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineExtraInfo")]
+        public MachineExtraInfo MachineExtraInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +135,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "DstIp", this.DstIp);
             this.SetParamSimple(map, prefix + "DstPort", this.DstPort);
             this.SetParamSimple(map, prefix + "HttpContent", this.HttpContent);
+            this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         }
     }
 }

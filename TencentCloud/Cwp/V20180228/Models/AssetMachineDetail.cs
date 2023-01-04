@@ -109,7 +109,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string CpuLoad{ get; set; }
 
         /// <summary>
-        /// 防护级别：0基础版，1专业版
+        /// 防护级别：0基础版，1专业版，2旗舰版，3普惠版
         /// </summary>
         [JsonProperty("ProtectLevel")]
         public ulong? ProtectLevel{ get; set; }
@@ -237,6 +237,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 主机二外信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineExtraInfo")]
+        public MachineExtraInfo MachineExtraInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -278,6 +285,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         }
     }
 }

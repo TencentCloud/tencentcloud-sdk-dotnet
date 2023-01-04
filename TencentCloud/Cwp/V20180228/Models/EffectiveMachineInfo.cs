@@ -94,6 +94,20 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("VulNum")]
         public ulong? VulNum{ get; set; }
 
+        /// <summary>
+        /// 云标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudTags")]
+        public Tags[] CloudTags{ get; set; }
+
+        /// <summary>
+        /// 机器instance ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +124,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
             this.SetParamObj(map, prefix + "LicenseOrder.", this.LicenseOrder);
             this.SetParamSimple(map, prefix + "VulNum", this.VulNum);
+            this.SetParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
         }
     }
 }

@@ -48,6 +48,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("VpcList")]
         public string[] VpcList{ get; set; }
 
+        /// <summary>
+        /// 指定防火墙使用网段信息
+        /// </summary>
+        [JsonProperty("FwCidrInfo")]
+        public FwCidrInfo FwCidrInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "CfwInstance", this.CfwInstance);
             this.SetParamArraySimple(map, prefix + "NatGwList.", this.NatGwList);
             this.SetParamArraySimple(map, prefix + "VpcList.", this.VpcList);
+            this.SetParamObj(map, prefix + "FwCidrInfo.", this.FwCidrInfo);
         }
     }
 }

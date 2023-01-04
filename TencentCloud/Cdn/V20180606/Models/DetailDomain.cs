@@ -489,6 +489,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("QnPrivateAccess")]
         public QnPrivateAccess QnPrivateAccess{ get; set; }
 
+        /// <summary>
+        /// https 请求计费开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HttpsBilling")]
+        public HttpsBilling HttpsBilling{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -559,6 +566,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "ParentHost", this.ParentHost);
             this.SetParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
             this.SetParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
+            this.SetParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
         }
     }
 }

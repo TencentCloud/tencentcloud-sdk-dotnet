@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.674</VersionPrefix>
+    <VersionPrefix>3.0.675</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -127,6 +127,8 @@
     <Compile Include="V20211206\Models\Objects.cs" />
     <Compile Include="V20211206\Models\OnlineDDL.cs" />
     <Compile Include="V20211206\Models\Options.cs" />
+    <Compile Include="V20211206\Models\PauseSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\PauseSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\ProcessProgress.cs" />
     <Compile Include="V20211206\Models\ProcessStepTip.cs" />
     <Compile Include="V20211206\Models\RecoverMigrateJobRequest.cs" />
