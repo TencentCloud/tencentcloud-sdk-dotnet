@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 迁移的库
+        /// 数据库名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbName")]
@@ -39,7 +39,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// 迁移的 schema
+        /// schema名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SchemaName")]

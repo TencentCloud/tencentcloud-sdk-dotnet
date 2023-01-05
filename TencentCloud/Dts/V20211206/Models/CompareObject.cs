@@ -25,18 +25,25 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 迁移对象模式 all(所有迁移对象)，partial(部分对象迁移)
+        /// 对象模式 整实例-all,部分对象-partial
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectMode")]
         public string ObjectMode{ get; set; }
 
         /// <summary>
-        /// 迁移对象库表配置
+        /// 对象列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectItems")]
         public CompareObjectItem[] ObjectItems{ get; set; }
+
+        /// <summary>
+        /// 高级对象类型，如account(账号),index(索引),shardkey(片建，后面可能会调整),schema(库表结构)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdvancedObjects")]
+        public string[] AdvancedObjects{ get; set; }
 
 
         /// <summary>
@@ -46,6 +53,7 @@ namespace TencentCloud.Dts.V20211206.Models
         {
             this.SetParamSimple(map, prefix + "ObjectMode", this.ObjectMode);
             this.SetParamArrayObj(map, prefix + "ObjectItems.", this.ObjectItems);
+            this.SetParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
         }
     }
 }

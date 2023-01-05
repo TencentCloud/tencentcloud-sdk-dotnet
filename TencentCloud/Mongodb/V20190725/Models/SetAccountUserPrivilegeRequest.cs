@@ -25,19 +25,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 账号名称
+        /// 账号名称。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 权限信息
+        /// 权限信息。
         /// </summary>
         [JsonProperty("AuthRole")]
         public Auth[] AuthRole{ get; set; }

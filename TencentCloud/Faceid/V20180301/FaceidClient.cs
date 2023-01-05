@@ -813,46 +813,6 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 该接口仅限微信公众号中使用，传入姓名和身份证号获取回调URL，在微信公众号中打开验证姓名和身份证号与微信实名的信息是否一致。
-        /// </summary>
-        /// <param name="req"><see cref="GetRealNameAuthTokenRequest"/></param>
-        /// <returns><see cref="GetRealNameAuthTokenResponse"/></returns>
-        public async Task<GetRealNameAuthTokenResponse> GetRealNameAuthToken(GetRealNameAuthTokenRequest req)
-        {
-             JsonResponseModel<GetRealNameAuthTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetRealNameAuthToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRealNameAuthTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 该接口仅限微信公众号中使用，传入姓名和身份证号获取回调URL，在微信公众号中打开验证姓名和身份证号与微信实名的信息是否一致。
-        /// </summary>
-        /// <param name="req"><see cref="GetRealNameAuthTokenRequest"/></param>
-        /// <returns><see cref="GetRealNameAuthTokenResponse"/></returns>
-        public GetRealNameAuthTokenResponse GetRealNameAuthTokenSync(GetRealNameAuthTokenRequest req)
-        {
-             JsonResponseModel<GetRealNameAuthTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetRealNameAuthToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRealNameAuthTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
         /// </summary>
         /// <param name="req"><see cref="GetWeChatBillDetailsRequest"/></param>

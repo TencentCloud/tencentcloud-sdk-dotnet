@@ -1839,6 +1839,46 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取项目下的日志聚合信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumGroupLogRequest"/></param>
+        /// <returns><see cref="DescribeRumGroupLogResponse"/></returns>
+        public async Task<DescribeRumGroupLogResponse> DescribeRumGroupLog(DescribeRumGroupLogRequest req)
+        {
+             JsonResponseModel<DescribeRumGroupLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRumGroupLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumGroupLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取项目下的日志聚合信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumGroupLogRequest"/></param>
+        /// <returns><see cref="DescribeRumGroupLogResponse"/></returns>
+        public DescribeRumGroupLogResponse DescribeRumGroupLogSync(DescribeRumGroupLogRequest req)
+        {
+             JsonResponseModel<DescribeRumGroupLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRumGroupLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumGroupLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取项目下的日志列表（实例创建的项目下的日志列表）
         /// </summary>
         /// <param name="req"><see cref="DescribeRumLogListRequest"/></param>

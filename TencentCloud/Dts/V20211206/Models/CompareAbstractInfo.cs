@@ -25,6 +25,20 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
+        /// 校验配置参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Options")]
+        public CompareOptions Options{ get; set; }
+
+        /// <summary>
+        /// 一致性校验对比对象
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Objects")]
+        public CompareObject Objects{ get; set; }
+
+        /// <summary>
         /// 对比结论: same,different
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -67,11 +81,46 @@ namespace TencentCloud.Dts.V20211206.Models
         public ulong? SkippedTables{ get; set; }
 
         /// <summary>
+        /// 预估表总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NearlyTableCount")]
+        public ulong? NearlyTableCount{ get; set; }
+
+        /// <summary>
         /// 不一致的数据行数量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DifferentRows")]
         public ulong? DifferentRows{ get; set; }
+
+        /// <summary>
+        /// 源库行数，当对比类型为**行数对比**时此项有意义
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SrcSampleRows")]
+        public ulong? SrcSampleRows{ get; set; }
+
+        /// <summary>
+        /// 目标库行数，当对比类型为**行数对比**时此项有意义
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DstSampleRows")]
+        public ulong? DstSampleRows{ get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartedAt")]
+        public string StartedAt{ get; set; }
+
+        /// <summary>
+        /// 结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FinishedAt")]
+        public string FinishedAt{ get; set; }
 
 
         /// <summary>
@@ -79,13 +128,20 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Options.", this.Options);
+            this.SetParamObj(map, prefix + "Objects.", this.Objects);
             this.SetParamSimple(map, prefix + "Conclusion", this.Conclusion);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "TotalTables", this.TotalTables);
             this.SetParamSimple(map, prefix + "CheckedTables", this.CheckedTables);
             this.SetParamSimple(map, prefix + "DifferentTables", this.DifferentTables);
             this.SetParamSimple(map, prefix + "SkippedTables", this.SkippedTables);
+            this.SetParamSimple(map, prefix + "NearlyTableCount", this.NearlyTableCount);
             this.SetParamSimple(map, prefix + "DifferentRows", this.DifferentRows);
+            this.SetParamSimple(map, prefix + "SrcSampleRows", this.SrcSampleRows);
+            this.SetParamSimple(map, prefix + "DstSampleRows", this.DstSampleRows);
+            this.SetParamSimple(map, prefix + "StartedAt", this.StartedAt);
+            this.SetParamSimple(map, prefix + "FinishedAt", this.FinishedAt);
         }
     }
 }

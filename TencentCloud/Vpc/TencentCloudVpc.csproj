@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.675</VersionPrefix>
+    <VersionPrefix>3.0.676</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,10 +96,14 @@
     <Compile Include="V20170312\Models\AttachClassicLinkVpcResponse.cs" />
     <Compile Include="V20170312\Models\AttachNetworkInterfaceRequest.cs" />
     <Compile Include="V20170312\Models\AttachNetworkInterfaceResponse.cs" />
+    <Compile Include="V20170312\Models\AttachSnapshotInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\AttachSnapshotInstancesResponse.cs" />
     <Compile Include="V20170312\Models\AuditCrossBorderComplianceRequest.cs" />
     <Compile Include="V20170312\Models\AuditCrossBorderComplianceResponse.cs" />
+    <Compile Include="V20170312\Models\BackupPolicy.cs" />
     <Compile Include="V20170312\Models\BandwidthPackage.cs" />
     <Compile Include="V20170312\Models\BandwidthPackageBillBandwidth.cs" />
+    <Compile Include="V20170312\Models\BatchModifySnapshotPolicy.cs" />
     <Compile Include="V20170312\Models\CCN.cs" />
     <Compile Include="V20170312\Models\CcnAttachedInstance.cs" />
     <Compile Include="V20170312\Models\CcnBandwidthInfo.cs" />
@@ -178,6 +182,8 @@
     <Compile Include="V20170312\Models\CreateServiceTemplateGroupResponse.cs" />
     <Compile Include="V20170312\Models\CreateServiceTemplateRequest.cs" />
     <Compile Include="V20170312\Models\CreateServiceTemplateResponse.cs" />
+    <Compile Include="V20170312\Models\CreateSnapshotPoliciesRequest.cs" />
+    <Compile Include="V20170312\Models\CreateSnapshotPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\CreateSubnetRequest.cs" />
     <Compile Include="V20170312\Models\CreateSubnetResponse.cs" />
     <Compile Include="V20170312\Models\CreateSubnetsRequest.cs" />
@@ -258,6 +264,8 @@
     <Compile Include="V20170312\Models\DeleteServiceTemplateGroupResponse.cs" />
     <Compile Include="V20170312\Models\DeleteServiceTemplateRequest.cs" />
     <Compile Include="V20170312\Models\DeleteServiceTemplateResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteSnapshotPoliciesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteSnapshotPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteSubnetRequest.cs" />
     <Compile Include="V20170312\Models\DeleteSubnetResponse.cs" />
     <Compile Include="V20170312\Models\DeleteTemplateMemberRequest.cs" />
@@ -388,6 +396,14 @@
     <Compile Include="V20170312\Models\DescribeServiceTemplateGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeServiceTemplatesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeServiceTemplatesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSgSnapshotFileContentRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSgSnapshotFileContentResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotAttachedInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotAttachedInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotFilesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotFilesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotPoliciesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSubnetsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSubnetsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeTaskResultRequest.cs" />
@@ -437,6 +453,8 @@
     <Compile Include="V20170312\Models\DetachClassicLinkVpcResponse.cs" />
     <Compile Include="V20170312\Models\DetachNetworkInterfaceRequest.cs" />
     <Compile Include="V20170312\Models\DetachNetworkInterfaceResponse.cs" />
+    <Compile Include="V20170312\Models\DetachSnapshotInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DetachSnapshotInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DhcpIp.cs" />
     <Compile Include="V20170312\Models\DirectConnectGateway.cs" />
     <Compile Include="V20170312\Models\DirectConnectGatewayCcnRoute.cs" />
@@ -449,6 +467,8 @@
     <Compile Include="V20170312\Models\DisableGatewayFlowMonitorResponse.cs" />
     <Compile Include="V20170312\Models\DisableRoutesRequest.cs" />
     <Compile Include="V20170312\Models\DisableRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\DisableSnapshotPoliciesRequest.cs" />
+    <Compile Include="V20170312\Models\DisableSnapshotPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\DisableVpnGatewaySslClientCertRequest.cs" />
     <Compile Include="V20170312\Models\DisableVpnGatewaySslClientCertResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateAddressRequest.cs" />
@@ -477,6 +497,8 @@
     <Compile Include="V20170312\Models\EnableGatewayFlowMonitorResponse.cs" />
     <Compile Include="V20170312\Models\EnableRoutesRequest.cs" />
     <Compile Include="V20170312\Models\EnableRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\EnableSnapshotPoliciesRequest.cs" />
+    <Compile Include="V20170312\Models\EnableSnapshotPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\EnableVpcEndPointConnectRequest.cs" />
     <Compile Include="V20170312\Models\EnableVpcEndPointConnectResponse.cs" />
     <Compile Include="V20170312\Models\EnableVpnGatewaySslClientCertRequest.cs" />
@@ -598,6 +620,8 @@
     <Compile Include="V20170312\Models\ModifyServiceTemplateAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyServiceTemplateGroupAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyServiceTemplateGroupAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifySnapshotPoliciesRequest.cs" />
+    <Compile Include="V20170312\Models\ModifySnapshotPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\ModifySubnetAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifySubnetAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyTemplateMemberRequest.cs" />
@@ -675,6 +699,8 @@
     <Compile Include="V20170312\Models\ResetVpnGatewayInternetMaxBandwidthResponse.cs" />
     <Compile Include="V20170312\Models\Resource.cs" />
     <Compile Include="V20170312\Models\ResourceDashboard.cs" />
+    <Compile Include="V20170312\Models\ResumeSnapshotInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\ResumeSnapshotInstanceResponse.cs" />
     <Compile Include="V20170312\Models\ReturnNormalAddressesRequest.cs" />
     <Compile Include="V20170312\Models\ReturnNormalAddressesResponse.cs" />
     <Compile Include="V20170312\Models\Route.cs" />
@@ -695,6 +721,9 @@
     <Compile Include="V20170312\Models\SetCcnRegionBandwidthLimitsResponse.cs" />
     <Compile Include="V20170312\Models\SetVpnGatewaysRenewFlagRequest.cs" />
     <Compile Include="V20170312\Models\SetVpnGatewaysRenewFlagResponse.cs" />
+    <Compile Include="V20170312\Models\SnapshotFileInfo.cs" />
+    <Compile Include="V20170312\Models\SnapshotInstance.cs" />
+    <Compile Include="V20170312\Models\SnapshotPolicy.cs" />
     <Compile Include="V20170312\Models\SourceIpTranslationNatRule.cs" />
     <Compile Include="V20170312\Models\SslClientConfig.cs" />
     <Compile Include="V20170312\Models\SslVpnClient.cs" />

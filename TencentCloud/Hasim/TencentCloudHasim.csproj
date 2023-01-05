@@ -1,0 +1,107 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{ED2E678E-6881-37A9-B188-574A5334849C}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.676</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Hasim</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20210716\HasimClient.cs" />
+    <Compile Include="V20210716\Models\CreateRuleRequest.cs" />
+    <Compile Include="V20210716\Models\CreateRuleResponse.cs" />
+    <Compile Include="V20210716\Models\CreateTacticRequest.cs" />
+    <Compile Include="V20210716\Models\CreateTacticResponse.cs" />
+    <Compile Include="V20210716\Models\CreateTagRequest.cs" />
+    <Compile Include="V20210716\Models\CreateTagResponse.cs" />
+    <Compile Include="V20210716\Models\DeleteRuleRequest.cs" />
+    <Compile Include="V20210716\Models\DeleteRuleResponse.cs" />
+    <Compile Include="V20210716\Models\DeleteTacticRequest.cs" />
+    <Compile Include="V20210716\Models\DeleteTacticResponse.cs" />
+    <Compile Include="V20210716\Models\DeleteTagRequest.cs" />
+    <Compile Include="V20210716\Models\DeleteTagResponse.cs" />
+    <Compile Include="V20210716\Models\DescribeLinkRequest.cs" />
+    <Compile Include="V20210716\Models\DescribeLinkResponse.cs" />
+    <Compile Include="V20210716\Models\DescribeLinksRequest.cs" />
+    <Compile Include="V20210716\Models\DescribeLinksResponse.cs" />
+    <Compile Include="V20210716\Models\DescribeOrdersRequest.cs" />
+    <Compile Include="V20210716\Models\DescribeOrdersResponse.cs" />
+    <Compile Include="V20210716\Models\DescribeRuleRequest.cs" />
+    <Compile Include="V20210716\Models\DescribeRuleResponse.cs" />
+    <Compile Include="V20210716\Models\DescribeRulesRequest.cs" />
+    <Compile Include="V20210716\Models\DescribeRulesResponse.cs" />
+    <Compile Include="V20210716\Models\DescribeTacticRequest.cs" />
+    <Compile Include="V20210716\Models\DescribeTacticResponse.cs" />
+    <Compile Include="V20210716\Models\DescribeTacticsRequest.cs" />
+    <Compile Include="V20210716\Models\DescribeTacticsResponse.cs" />
+    <Compile Include="V20210716\Models\DescribeTagsRequest.cs" />
+    <Compile Include="V20210716\Models\DescribeTagsResponse.cs" />
+    <Compile Include="V20210716\Models\DeviceReport.cs" />
+    <Compile Include="V20210716\Models\LinkDetailInfo.cs" />
+    <Compile Include="V20210716\Models\LinkInfo.cs" />
+    <Compile Include="V20210716\Models\LinkInfos.cs" />
+    <Compile Include="V20210716\Models\ModifyLinkAdvancedLogRequest.cs" />
+    <Compile Include="V20210716\Models\ModifyLinkAdvancedLogResponse.cs" />
+    <Compile Include="V20210716\Models\ModifyLinkTacticRequest.cs" />
+    <Compile Include="V20210716\Models\ModifyLinkTacticResponse.cs" />
+    <Compile Include="V20210716\Models\ModifyLinkTeleRequest.cs" />
+    <Compile Include="V20210716\Models\ModifyLinkTeleResponse.cs" />
+    <Compile Include="V20210716\Models\ModifyRuleRequest.cs" />
+    <Compile Include="V20210716\Models\ModifyRuleResponse.cs" />
+    <Compile Include="V20210716\Models\ModifyRuleStatusRequest.cs" />
+    <Compile Include="V20210716\Models\ModifyRuleStatusResponse.cs" />
+    <Compile Include="V20210716\Models\ModifyTacticRequest.cs" />
+    <Compile Include="V20210716\Models\ModifyTacticResponse.cs" />
+    <Compile Include="V20210716\Models\ModifyTagRequest.cs" />
+    <Compile Include="V20210716\Models\ModifyTagResponse.cs" />
+    <Compile Include="V20210716\Models\OrderInfo.cs" />
+    <Compile Include="V20210716\Models\Orders.cs" />
+    <Compile Include="V20210716\Models\RenewLinkInfoRequest.cs" />
+    <Compile Include="V20210716\Models\RenewLinkInfoResponse.cs" />
+    <Compile Include="V20210716\Models\Rule.cs" />
+    <Compile Include="V20210716\Models\RuleDetail.cs" />
+    <Compile Include="V20210716\Models\RuleInfos.cs" />
+    <Compile Include="V20210716\Models\Tactic.cs" />
+    <Compile Include="V20210716\Models\TacticInfos.cs" />
+    <Compile Include="V20210716\Models\Tag.cs" />
+    <Compile Include="V20210716\Models\TagInfos.cs" />
+    <Compile Include="V20210716\Models\TeleOperatorCard.cs" />
+  </ItemGroup>
+</Project>

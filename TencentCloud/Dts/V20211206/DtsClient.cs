@@ -137,6 +137,86 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 恢复一个暂停中的迁移任务。
+        /// </summary>
+        /// <param name="req"><see cref="ContinueMigrateJobRequest"/></param>
+        /// <returns><see cref="ContinueMigrateJobResponse"/></returns>
+        public async Task<ContinueMigrateJobResponse> ContinueMigrateJob(ContinueMigrateJobRequest req)
+        {
+             JsonResponseModel<ContinueMigrateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ContinueMigrateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContinueMigrateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 恢复一个暂停中的迁移任务。
+        /// </summary>
+        /// <param name="req"><see cref="ContinueMigrateJobRequest"/></param>
+        /// <returns><see cref="ContinueMigrateJobResponse"/></returns>
+        public ContinueMigrateJobResponse ContinueMigrateJobSync(ContinueMigrateJobRequest req)
+        {
+             JsonResponseModel<ContinueMigrateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ContinueMigrateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContinueMigrateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 恢复处于暂停中中的数据同步任务。
+        /// </summary>
+        /// <param name="req"><see cref="ContinueSyncJobRequest"/></param>
+        /// <returns><see cref="ContinueSyncJobResponse"/></returns>
+        public async Task<ContinueSyncJobResponse> ContinueSyncJob(ContinueSyncJobRequest req)
+        {
+             JsonResponseModel<ContinueSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ContinueSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContinueSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 恢复处于暂停中中的数据同步任务。
+        /// </summary>
+        /// <param name="req"><see cref="ContinueSyncJobRequest"/></param>
+        /// <returns><see cref="ContinueSyncJobResponse"/></returns>
+        public ContinueSyncJobResponse ContinueSyncJobSync(ContinueSyncJobRequest req)
+        {
+             JsonResponseModel<ContinueSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ContinueSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContinueSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 校验同步任务，检查必要参数和周边配置。
         /// </summary>
         /// <param name="req"><see cref="CreateCheckSyncJobRequest"/></param>
@@ -1056,6 +1136,46 @@ namespace TencentCloud.Dts.V20211206
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMigrationJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMigrationJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 暂停一个迁移任务。
+        /// </summary>
+        /// <param name="req"><see cref="PauseMigrateJobRequest"/></param>
+        /// <returns><see cref="PauseMigrateJobResponse"/></returns>
+        public async Task<PauseMigrateJobResponse> PauseMigrateJob(PauseMigrateJobRequest req)
+        {
+             JsonResponseModel<PauseMigrateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PauseMigrateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseMigrateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 暂停一个迁移任务。
+        /// </summary>
+        /// <param name="req"><see cref="PauseMigrateJobRequest"/></param>
+        /// <returns><see cref="PauseMigrateJobResponse"/></returns>
+        public PauseMigrateJobResponse PauseMigrateJobSync(PauseMigrateJobRequest req)
+        {
+             JsonResponseModel<PauseMigrateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PauseMigrateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseMigrateJobResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

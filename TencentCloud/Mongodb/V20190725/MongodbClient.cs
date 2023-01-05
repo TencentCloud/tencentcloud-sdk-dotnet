@@ -93,7 +93,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 创建实例账号。
+        /// 本接口(CreateAccountUser)用于创建mongodb实例账号。
         /// </summary>
         /// <param name="req"><see cref="CreateAccountUserRequest"/></param>
         /// <returns><see cref="CreateAccountUserResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 创建实例账号。
+        /// 本接口(CreateAccountUser)用于创建mongodb实例账号。
         /// </summary>
         /// <param name="req"><see cref="CreateAccountUserRequest"/></param>
         /// <returns><see cref="CreateAccountUserResponse"/></returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeAccountUsers)用于获取当前实例的全部账号列表。
+        /// 本接口(DescribeAccountUsers)用于获取当前实例的全部账号。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountUsersRequest"/></param>
         /// <returns><see cref="DescribeAccountUsersResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeAccountUsers)用于获取当前实例的全部账号列表。
+        /// 本接口(DescribeAccountUsers)用于获取当前实例的全部账号。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountUsersRequest"/></param>
         /// <returns><see cref="DescribeAccountUsersResponse"/></returns>
@@ -1373,7 +1373,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 账户权限设置。
+        /// 本接口(SetAccountUserPrivilege)用于设置mongodb实例的账号权限。
         /// </summary>
         /// <param name="req"><see cref="SetAccountUserPrivilegeRequest"/></param>
         /// <returns><see cref="SetAccountUserPrivilegeResponse"/></returns>
@@ -1393,7 +1393,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 账户权限设置。
+        /// 本接口(SetAccountUserPrivilege)用于设置mongodb实例的账号权限。
         /// </summary>
         /// <param name="req"><see cref="SetAccountUserPrivilegeRequest"/></param>
         /// <returns><see cref="SetAccountUserPrivilegeResponse"/></returns>

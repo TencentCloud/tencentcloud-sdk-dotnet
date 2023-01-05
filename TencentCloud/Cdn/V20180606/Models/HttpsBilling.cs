@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// https请求计费开关
+        /// HTTPS服务
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

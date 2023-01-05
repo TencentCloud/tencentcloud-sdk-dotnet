@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Hasim.V20210716.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetRealNameAuthTokenRequest : AbstractModel
+    public class DescribeLinkResponse : AbstractModel
     {
         
         /// <summary>
-        /// 姓名
+        /// 云兔连接详细信息
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Data")]
+        public LinkDetailInfo Data{ get; set; }
 
         /// <summary>
-        /// 身份证号
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("IDCard")]
-        public string IDCard{ get; set; }
-
-        /// <summary>
-        /// 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方。仅支持http或https协议。
-        /// </summary>
-        [JsonProperty("CallbackURL")]
-        public string CallbackURL{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "IDCard", this.IDCard);
-            this.SetParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

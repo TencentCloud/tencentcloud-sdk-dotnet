@@ -93,6 +93,46 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
+        /// 资产条件查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetDetailListRequest"/></param>
+        /// <returns><see cref="DescribeAssetDetailListResponse"/></returns>
+        public async Task<DescribeAssetDetailListResponse> DescribeAssetDetailList(DescribeAssetDetailListRequest req)
+        {
+             JsonResponseModel<DescribeAssetDetailListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAssetDetailList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetDetailListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 资产条件查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetDetailListRequest"/></param>
+        /// <returns><see cref="DescribeAssetDetailListResponse"/></returns>
+        public DescribeAssetDetailListResponse DescribeAssetDetailListSync(DescribeAssetDetailListRequest req)
+        {
+             JsonResponseModel<DescribeAssetDetailListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAssetDetailList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetDetailListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 资产安全资产列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetListRequest"/></param>
