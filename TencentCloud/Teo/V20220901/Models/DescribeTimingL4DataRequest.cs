@@ -48,7 +48,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// 站点集合，不填默认选择全部站点。
+        /// 站点集合。
+        /// 若不填写，默认选择全部站点，且最多只能查询近30天的数据；
+        /// 若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
@@ -64,15 +66,15 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>min: 1分钟 ；</li>
         /// <li>5min: 5分钟 ；</li>
         /// <li>hour: 1小时 ；</li>
-        /// <li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
+        /// <li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
 
         /// <summary>
-        /// 过滤条件，详细的过滤条件如下：
-        /// <li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-        /// <li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+        /// 过滤条件，详细的过滤条件Key值如下：
+        /// <li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
+        /// <li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }

@@ -4,12 +4,13 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.676</VersionPrefix>
+    <VersionPrefix>3.0.677</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
     <Company>Tencent Ltd.</Company>
     <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>TencentCloudSDK.Ckafka</PackageId>
     <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
@@ -150,6 +151,7 @@
     <Compile Include="V20190819\Models\DescribeAppInfoResponse.cs" />
     <Compile Include="V20190819\Models\DescribeCkafkaZoneRequest.cs" />
     <Compile Include="V20190819\Models\DescribeCkafkaZoneResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeConnectInfoResultDTO.cs" />
     <Compile Include="V20190819\Models\DescribeConnectResource.cs" />
     <Compile Include="V20190819\Models\DescribeConnectResourceRequest.cs" />
     <Compile Include="V20190819\Models\DescribeConnectResourceResp.cs" />
@@ -188,6 +190,8 @@
     <Compile Include="V20190819\Models\DescribeTopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicDetailRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTopicDetailResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicProduceConnectionRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicProduceConnectionResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTopicResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicSubscribeGroupRequest.cs" />

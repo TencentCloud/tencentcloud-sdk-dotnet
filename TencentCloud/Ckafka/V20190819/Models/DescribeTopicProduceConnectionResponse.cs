@@ -15,27 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeWebProtectionAttackEventsResponse : AbstractModel
+    public class DescribeTopicProduceConnectionResponse : AbstractModel
     {
         
         /// <summary>
-        /// CC相关攻击事件列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 链接信息返回结果集
         /// </summary>
-        [JsonProperty("Data")]
-        public CCInterceptEvent[] Data{ get; set; }
-
-        /// <summary>
-        /// 查询结果的总条数。
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("Result")]
+        public DescribeConnectInfoResultDTO[] Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,8 +42,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 起始时间
+        /// 起始时间（必填），Unix 秒级时间戳
         /// </summary>
         [JsonProperty("StartTimestamp")]
         public long? StartTimestamp{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间（必填），Unix 秒级时间戳
         /// </summary>
         [JsonProperty("EndTimestamp")]
         public long? EndTimestamp{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 返回记录条数 最大为100默认20
+        /// 返回记录条数，最大为100默认20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 返回记录偏移 默认为0
+        /// 返回记录偏移，默认为 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

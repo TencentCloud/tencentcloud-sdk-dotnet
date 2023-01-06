@@ -86,7 +86,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 查询交易类型，如下：
+        /// 查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
         /// 包年包月新购
         /// 包年包月续费
         /// 包年包月配置变更

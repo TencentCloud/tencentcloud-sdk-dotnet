@@ -1013,7 +1013,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 获取当前实例会话统计详情信息。【注意】该接口仅限部分环境调用。
+        /// 获取当前实例下的单个proxy的会话统计详情信息， 返回数据为单个 proxy 的会话统计信息。【注意】该接口仅限部分环境调用。
         /// </summary>
         /// <param name="req"><see cref="DescribeProxyProcessStatisticsRequest"/></param>
         /// <returns><see cref="DescribeProxyProcessStatisticsResponse"/></returns>
@@ -1033,7 +1033,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 获取当前实例会话统计详情信息。【注意】该接口仅限部分环境调用。
+        /// 获取当前实例下的单个proxy的会话统计详情信息， 返回数据为单个 proxy 的会话统计信息。【注意】该接口仅限部分环境调用。
         /// </summary>
         /// <param name="req"><see cref="DescribeProxyProcessStatisticsRequest"/></param>
         /// <returns><see cref="DescribeProxyProcessStatisticsResponse"/></returns>

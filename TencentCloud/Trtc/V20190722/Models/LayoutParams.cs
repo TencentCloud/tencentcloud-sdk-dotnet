@@ -84,6 +84,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("WaterMarkParams")]
         public WaterMarkParams WaterMarkParams{ get; set; }
 
+        /// <summary>
+        /// 屏幕分享模板、悬浮模板、九宫格模板、画中画模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底，不填采用后台的默认渲染方式（屏幕分享大画面为缩放，其他为裁剪）。
+        /// </summary>
+        [JsonProperty("RenderMode")]
+        public ulong? RenderMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
             this.SetParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
             this.SetParamObj(map, prefix + "WaterMarkParams.", this.WaterMarkParams);
+            this.SetParamSimple(map, prefix + "RenderMode", this.RenderMode);
         }
     }
 }

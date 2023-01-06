@@ -773,46 +773,6 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 获取微信实名认证结果
-        /// </summary>
-        /// <param name="req"><see cref="GetRealNameAuthResultRequest"/></param>
-        /// <returns><see cref="GetRealNameAuthResultResponse"/></returns>
-        public async Task<GetRealNameAuthResultResponse> GetRealNameAuthResult(GetRealNameAuthResultRequest req)
-        {
-             JsonResponseModel<GetRealNameAuthResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetRealNameAuthResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRealNameAuthResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取微信实名认证结果
-        /// </summary>
-        /// <param name="req"><see cref="GetRealNameAuthResultRequest"/></param>
-        /// <returns><see cref="GetRealNameAuthResultResponse"/></returns>
-        public GetRealNameAuthResultResponse GetRealNameAuthResultSync(GetRealNameAuthResultRequest req)
-        {
-             JsonResponseModel<GetRealNameAuthResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetRealNameAuthResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRealNameAuthResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
         /// </summary>
         /// <param name="req"><see cref="GetWeChatBillDetailsRequest"/></param>

@@ -15,39 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAlarmDefaultThresholdRequest : AbstractModel
+    public class DescribeConnectInfoResultDTO : AbstractModel
     {
         
         /// <summary>
-        /// 告警服务类型，取值有：
-        /// <li>ddos：ddos告警服务。</li>
+        /// ip地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ServiceType")]
-        public string ServiceType{ get; set; }
+        [JsonProperty("IpAddr")]
+        public string IpAddr{ get; set; }
 
         /// <summary>
-        /// 站点ID。
+        /// 连结时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("Time")]
+        public string Time{ get; set; }
 
         /// <summary>
-        /// 新的阈值，单位为Mbps，最小阈值为10。
+        /// 是否支持的版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Threshold")]
-        public long? Threshold{ get; set; }
-
-        /// <summary>
-        /// 防护实体，如果是四层防护，防护实体为通道ID。如果是七层防护，防护实体为站点名称。
-        /// </summary>
-        [JsonProperty("Entity")]
-        public string Entity{ get; set; }
+        [JsonProperty("IsUnSupportVersion")]
+        public bool? IsUnSupportVersion{ get; set; }
 
 
         /// <summary>
@@ -55,10 +51,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "Threshold", this.Threshold);
-            this.SetParamSimple(map, prefix + "Entity", this.Entity);
+            this.SetParamSimple(map, prefix + "IpAddr", this.IpAddr);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "IsUnSupportVersion", this.IsUnSupportVersion);
         }
     }
 }

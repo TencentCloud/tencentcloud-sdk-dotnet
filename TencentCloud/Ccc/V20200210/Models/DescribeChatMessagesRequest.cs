@@ -37,19 +37,19 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 服务记录ID
+        /// 服务记录ID（废弃）
         /// </summary>
         [JsonProperty("CdrId")]
         public string CdrId{ get; set; }
 
         /// <summary>
-        /// 返回记录条数 最大为100默认20
+        /// 返回记录条数，最大为100 默认20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 返回记录偏移 默认为0
+        /// 返回记录偏移，默认为 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? Order{ get; set; }
 
         /// <summary>
-        /// 服务记录SessionID
+        /// 服务记录 SessionID（必填）
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

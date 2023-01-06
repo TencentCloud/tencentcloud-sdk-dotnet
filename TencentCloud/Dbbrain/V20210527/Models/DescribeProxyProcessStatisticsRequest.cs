@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 当前实例下的 ProxyID。
+        /// 该实例下需要查询的某一个 ProxyID 。
         /// </summary>
         [JsonProperty("InstanceProxyId")]
         public string InstanceProxyId{ get; set; }

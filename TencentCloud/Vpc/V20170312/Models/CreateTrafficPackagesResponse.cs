@@ -15,28 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DDoSPacketFilter : AbstractModel
+    public class CreateTrafficPackagesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 特征过滤规则数组。
+        /// 创建的流量包ID列表。
         /// </summary>
-        [JsonProperty("DDoSFeaturesFilters")]
-        public DDoSFeaturesFilter[] DDoSFeaturesFilters{ get; set; }
+        [JsonProperty("TrafficPackageSet")]
+        public string[] TrafficPackageSet{ get; set; }
 
         /// <summary>
-        /// 特征过滤清空标识，取值有：
-        /// <li>off ：清空特征过滤规则，无需填写 DDoSFeaturesFilters 参数 ；</li>
-        /// <li>on ：配置特征过滤规则，需填写 DDoSFeaturesFilters 参数。</li>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +42,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "DDoSFeaturesFilters.", this.DDoSFeaturesFilters);
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamArraySimple(map, prefix + "TrafficPackageSet.", this.TrafficPackageSet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

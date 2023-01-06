@@ -4,12 +4,13 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{285E4D65-D854-3FAC-912D-5A63E6D8406B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.676</VersionPrefix>
+    <VersionPrefix>3.0.677</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
     <Company>Tencent Ltd.</Company>
     <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>TencentCloudSDK.Faceid</PackageId>
     <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
@@ -90,8 +91,6 @@
     <Compile Include="V20180301\Models\GetFaceIdTokenResponse.cs" />
     <Compile Include="V20180301\Models\GetLiveCodeRequest.cs" />
     <Compile Include="V20180301\Models\GetLiveCodeResponse.cs" />
-    <Compile Include="V20180301\Models\GetRealNameAuthResultRequest.cs" />
-    <Compile Include="V20180301\Models\GetRealNameAuthResultResponse.cs" />
     <Compile Include="V20180301\Models\GetWeChatBillDetailsRequest.cs" />
     <Compile Include="V20180301\Models\GetWeChatBillDetailsResponse.cs" />
     <Compile Include="V20180301\Models\IdCardOCRVerificationRequest.cs" />

@@ -4,12 +4,13 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.676</VersionPrefix>
+    <VersionPrefix>3.0.677</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
     <Company>Tencent Ltd.</Company>
     <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>TencentCloudSDK.Teo</PackageId>
     <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
@@ -395,12 +396,9 @@
     <Compile Include="V20220901\Models\BindZoneToPlanRequest.cs" />
     <Compile Include="V20220901\Models\BindZoneToPlanResponse.cs" />
     <Compile Include="V20220901\Models\BotConfig.cs" />
-    <Compile Include="V20220901\Models\BotLog.cs" />
     <Compile Include="V20220901\Models\BotManagedRule.cs" />
-    <Compile Include="V20220901\Models\BotManagedRuleDetail.cs" />
     <Compile Include="V20220901\Models\BotPortraitRule.cs" />
     <Compile Include="V20220901\Models\CC.cs" />
-    <Compile Include="V20220901\Models\CCInterceptEvent.cs" />
     <Compile Include="V20220901\Models\Cache.cs" />
     <Compile Include="V20220901\Models\CacheConfig.cs" />
     <Compile Include="V20220901\Models\CacheKey.cs" />
@@ -421,14 +419,6 @@
     <Compile Include="V20220901\Models\CreateApplicationProxyRuleResponse.cs" />
     <Compile Include="V20220901\Models\CreateCredentialRequest.cs" />
     <Compile Include="V20220901\Models\CreateCredentialResponse.cs" />
-    <Compile Include="V20220901\Models\CreateCustomErrorPageRequest.cs" />
-    <Compile Include="V20220901\Models\CreateCustomErrorPageResponse.cs" />
-    <Compile Include="V20220901\Models\CreateIpTableListRequest.cs" />
-    <Compile Include="V20220901\Models\CreateIpTableListResponse.cs" />
-    <Compile Include="V20220901\Models\CreateLogSetRequest.cs" />
-    <Compile Include="V20220901\Models\CreateLogSetResponse.cs" />
-    <Compile Include="V20220901\Models\CreateLogTopicTaskRequest.cs" />
-    <Compile Include="V20220901\Models\CreateLogTopicTaskResponse.cs" />
     <Compile Include="V20220901\Models\CreateOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\CreateOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\CreatePlanForZoneRequest.cs" />
@@ -441,30 +431,11 @@
     <Compile Include="V20220901\Models\CreateReplayTaskResponse.cs" />
     <Compile Include="V20220901\Models\CreateRuleRequest.cs" />
     <Compile Include="V20220901\Models\CreateRuleResponse.cs" />
-    <Compile Include="V20220901\Models\CreateSecurityDropPageRequest.cs" />
-    <Compile Include="V20220901\Models\CreateSecurityDropPageResponse.cs" />
     <Compile Include="V20220901\Models\CreateSpeedTestingRequest.cs" />
     <Compile Include="V20220901\Models\CreateSpeedTestingResponse.cs" />
     <Compile Include="V20220901\Models\CreateZoneRequest.cs" />
     <Compile Include="V20220901\Models\CreateZoneResponse.cs" />
     <Compile Include="V20220901\Models\DDoS.cs" />
-    <Compile Include="V20220901\Models\DDoSAcl.cs" />
-    <Compile Include="V20220901\Models\DDoSAclRule.cs" />
-    <Compile Include="V20220901\Models\DDoSAllowBlock.cs" />
-    <Compile Include="V20220901\Models\DDoSAllowBlockRule.cs" />
-    <Compile Include="V20220901\Models\DDoSAntiPly.cs" />
-    <Compile Include="V20220901\Models\DDoSAttackEvent.cs" />
-    <Compile Include="V20220901\Models\DDoSAttackEventDetailData.cs" />
-    <Compile Include="V20220901\Models\DDoSAttackSourceEvent.cs" />
-    <Compile Include="V20220901\Models\DDoSBlockData.cs" />
-    <Compile Include="V20220901\Models\DDoSFeaturesFilter.cs" />
-    <Compile Include="V20220901\Models\DDoSGeoIp.cs" />
-    <Compile Include="V20220901\Models\DDoSHost.cs" />
-    <Compile Include="V20220901\Models\DDoSMajorAttackEvent.cs" />
-    <Compile Include="V20220901\Models\DDoSPacketFilter.cs" />
-    <Compile Include="V20220901\Models\DDoSRule.cs" />
-    <Compile Include="V20220901\Models\DDoSSpeedLimit.cs" />
-    <Compile Include="V20220901\Models\DDoSStatusInfo.cs" />
     <Compile Include="V20220901\Models\DefaultServerCertInfo.cs" />
     <Compile Include="V20220901\Models\DeleteAliasDomainRequest.cs" />
     <Compile Include="V20220901\Models\DeleteAliasDomainResponse.cs" />
@@ -472,8 +443,6 @@
     <Compile Include="V20220901\Models\DeleteApplicationProxyResponse.cs" />
     <Compile Include="V20220901\Models\DeleteApplicationProxyRuleRequest.cs" />
     <Compile Include="V20220901\Models\DeleteApplicationProxyRuleResponse.cs" />
-    <Compile Include="V20220901\Models\DeleteLogTopicTaskRequest.cs" />
-    <Compile Include="V20220901\Models\DeleteLogTopicTaskResponse.cs" />
     <Compile Include="V20220901\Models\DeleteOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\DeleteOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\DeleteRulesRequest.cs" />
@@ -488,54 +457,22 @@
     <Compile Include="V20220901\Models\DescribeApplicationProxiesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeAvailablePlansRequest.cs" />
     <Compile Include="V20220901\Models\DescribeAvailablePlansResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeBotClientIpListRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeBotClientIpListResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeBotDataRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeBotDataResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeBotHitRuleDetailRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeBotHitRuleDetailResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeBotLogRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeBotLogResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeBotManagedRulesRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeBotManagedRulesResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeBotTopDataRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeBotTopDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeClientRuleListRequest.cs" />
     <Compile Include="V20220901\Models\DescribeClientRuleListResponse.cs" />
     <Compile Include="V20220901\Models\DescribeContentQuotaRequest.cs" />
     <Compile Include="V20220901\Models\DescribeContentQuotaResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSAttackDataRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSAttackDataResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSAttackEventDetailRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSAttackEventDetailResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSAttackEventRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSAttackEventResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSAttackSourceEventRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSAttackSourceEventResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackTopDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackTopDataResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSBlockListRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSBlockListResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSMajorAttackEventRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSMajorAttackEventResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSPolicyRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeDDoSPolicyResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDefaultCertificatesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDefaultCertificatesResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeDistributionL4AccessDataRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeDistributionL4AccessDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDnsDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDnsDataResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeDnssecRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeDnssecResponse.cs" />
     <Compile Include="V20220901\Models\DescribeHostsSettingRequest.cs" />
     <Compile Include="V20220901\Models\DescribeHostsSettingResponse.cs" />
     <Compile Include="V20220901\Models\DescribeIdentificationsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeIdentificationsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeLogSetsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeLogSetsResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeLogTopicTaskDetailRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeLogTopicTaskDetailResponse.cs" />
     <Compile Include="V20220901\Models\DescribeLogTopicTasksRequest.cs" />
     <Compile Include="V20220901\Models\DescribeLogTopicTasksResponse.cs" />
     <Compile Include="V20220901\Models\DescribeOriginGroupRequest.cs" />
@@ -548,24 +485,10 @@
     <Compile Include="V20220901\Models\DescribePrefetchTasksResponse.cs" />
     <Compile Include="V20220901\Models\DescribePurgeTasksRequest.cs" />
     <Compile Include="V20220901\Models\DescribePurgeTasksResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeRateLimitIntelligenceRuleRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeRateLimitIntelligenceRuleResponse.cs" />
     <Compile Include="V20220901\Models\DescribeRulesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeRulesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeRulesSettingRequest.cs" />
     <Compile Include="V20220901\Models\DescribeRulesSettingResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeSecurityGroupManagedRulesRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeSecurityGroupManagedRulesResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeSecurityPolicyListRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeSecurityPolicyListResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeSecurityPolicyRegionsRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeSecurityPolicyRegionsResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeSecurityPolicyRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeSecurityPolicyResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeSecurityPortraitRulesRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeSecurityPortraitRulesResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeSecurityRuleIdRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeSecurityRuleIdResponse.cs" />
     <Compile Include="V20220901\Models\DescribeSingleL7AnalysisDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeSingleL7AnalysisDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeSpeedTestingDetailsRequest.cs" />
@@ -574,8 +497,6 @@
     <Compile Include="V20220901\Models\DescribeSpeedTestingMetricDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeSpeedTestingQuotaRequest.cs" />
     <Compile Include="V20220901\Models\DescribeSpeedTestingQuotaResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeTimingL4AccessDataRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeTimingL4AccessDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL4DataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL4DataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL7AnalysisDataRequest.cs" />
@@ -592,8 +513,6 @@
     <Compile Include="V20220901\Models\DescribeWebManagedRulesHitRuleDetailResponse.cs" />
     <Compile Include="V20220901\Models\DescribeWebManagedRulesLogRequest.cs" />
     <Compile Include="V20220901\Models\DescribeWebManagedRulesLogResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeWebProtectionAttackEventsRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeWebProtectionAttackEventsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeWebProtectionClientIpListRequest.cs" />
     <Compile Include="V20220901\Models\DescribeWebProtectionClientIpListResponse.cs" />
     <Compile Include="V20220901\Models\DescribeWebProtectionDataRequest.cs" />
@@ -602,8 +521,6 @@
     <Compile Include="V20220901\Models\DescribeWebProtectionHitRuleDetailResponse.cs" />
     <Compile Include="V20220901\Models\DescribeWebProtectionTopDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeWebProtectionTopDataResponse.cs" />
-    <Compile Include="V20220901\Models\DescribeZoneDDoSPolicyRequest.cs" />
-    <Compile Include="V20220901\Models\DescribeZoneDDoSPolicyResponse.cs" />
     <Compile Include="V20220901\Models\DescribeZoneSettingRequest.cs" />
     <Compile Include="V20220901\Models\DescribeZoneSettingResponse.cs" />
     <Compile Include="V20220901\Models\DescribeZonesRequest.cs" />
@@ -612,7 +529,6 @@
     <Compile Include="V20220901\Models\DiffIPWhitelist.cs" />
     <Compile Include="V20220901\Models\DistrictStatistics.cs" />
     <Compile Include="V20220901\Models\DnsData.cs" />
-    <Compile Include="V20220901\Models\DnssecInfo.cs" />
     <Compile Include="V20220901\Models\DownloadL4LogsRequest.cs" />
     <Compile Include="V20220901\Models\DownloadL4LogsResponse.cs" />
     <Compile Include="V20220901\Models\DownloadL7LogsRequest.cs" />
@@ -628,7 +544,6 @@
     <Compile Include="V20220901\Models\Filter.cs" />
     <Compile Include="V20220901\Models\FollowOrigin.cs" />
     <Compile Include="V20220901\Models\ForceRedirect.cs" />
-    <Compile Include="V20220901\Models\GeoIp.cs" />
     <Compile Include="V20220901\Models\Grpc.cs" />
     <Compile Include="V20220901\Models\Header.cs" />
     <Compile Include="V20220901\Models\Hsts.cs" />
@@ -645,12 +560,7 @@
     <Compile Include="V20220901\Models\L4OfflineLog.cs" />
     <Compile Include="V20220901\Models\L7OfflineLog.cs" />
     <Compile Include="V20220901\Models\LogSetInfo.cs" />
-    <Compile Include="V20220901\Models\LogTopicDetailInfo.cs" />
     <Compile Include="V20220901\Models\MaxAge.cs" />
-    <Compile Include="V20220901\Models\ModifyAlarmConfigRequest.cs" />
-    <Compile Include="V20220901\Models\ModifyAlarmConfigResponse.cs" />
-    <Compile Include="V20220901\Models\ModifyAlarmDefaultThresholdRequest.cs" />
-    <Compile Include="V20220901\Models\ModifyAlarmDefaultThresholdResponse.cs" />
     <Compile Include="V20220901\Models\ModifyAliasDomainRequest.cs" />
     <Compile Include="V20220901\Models\ModifyAliasDomainResponse.cs" />
     <Compile Include="V20220901\Models\ModifyAliasDomainStatusRequest.cs" />
@@ -663,18 +573,10 @@
     <Compile Include="V20220901\Models\ModifyApplicationProxyRuleStatusResponse.cs" />
     <Compile Include="V20220901\Models\ModifyApplicationProxyStatusRequest.cs" />
     <Compile Include="V20220901\Models\ModifyApplicationProxyStatusResponse.cs" />
-    <Compile Include="V20220901\Models\ModifyDDoSPolicyHostRequest.cs" />
-    <Compile Include="V20220901\Models\ModifyDDoSPolicyHostResponse.cs" />
-    <Compile Include="V20220901\Models\ModifyDDoSPolicyRequest.cs" />
-    <Compile Include="V20220901\Models\ModifyDDoSPolicyResponse.cs" />
     <Compile Include="V20220901\Models\ModifyDefaultCertificateRequest.cs" />
     <Compile Include="V20220901\Models\ModifyDefaultCertificateResponse.cs" />
-    <Compile Include="V20220901\Models\ModifyDnssecRequest.cs" />
-    <Compile Include="V20220901\Models\ModifyDnssecResponse.cs" />
     <Compile Include="V20220901\Models\ModifyHostsCertificateRequest.cs" />
     <Compile Include="V20220901\Models\ModifyHostsCertificateResponse.cs" />
-    <Compile Include="V20220901\Models\ModifyLogTopicTaskRequest.cs" />
-    <Compile Include="V20220901\Models\ModifyLogTopicTaskResponse.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\ModifyRulePriorityRequest.cs" />
@@ -685,8 +587,6 @@
     <Compile Include="V20220901\Models\ModifySecurityPolicyResponse.cs" />
     <Compile Include="V20220901\Models\ModifySecurityWafGroupPolicyRequest.cs" />
     <Compile Include="V20220901\Models\ModifySecurityWafGroupPolicyResponse.cs" />
-    <Compile Include="V20220901\Models\ModifyZoneCnameSpeedUpRequest.cs" />
-    <Compile Include="V20220901\Models\ModifyZoneCnameSpeedUpResponse.cs" />
     <Compile Include="V20220901\Models\ModifyZoneRequest.cs" />
     <Compile Include="V20220901\Models\ModifyZoneResponse.cs" />
     <Compile Include="V20220901\Models\ModifyZoneSettingRequest.cs" />
@@ -703,7 +603,6 @@
     <Compile Include="V20220901\Models\OriginRecord.cs" />
     <Compile Include="V20220901\Models\PartialModule.cs" />
     <Compile Include="V20220901\Models\PlanInfo.cs" />
-    <Compile Include="V20220901\Models\PortraitManagedRuleDetail.cs" />
     <Compile Include="V20220901\Models\PostMaxSize.cs" />
     <Compile Include="V20220901\Models\PrivateParameter.cs" />
     <Compile Include="V20220901\Models\QueryCondition.cs" />
@@ -712,7 +611,6 @@
     <Compile Include="V20220901\Models\Quota.cs" />
     <Compile Include="V20220901\Models\RateLimitConfig.cs" />
     <Compile Include="V20220901\Models\RateLimitIntelligence.cs" />
-    <Compile Include="V20220901\Models\RateLimitIntelligenceRuleDetail.cs" />
     <Compile Include="V20220901\Models\RateLimitTemplate.cs" />
     <Compile Include="V20220901\Models\RateLimitTemplateDetail.cs" />
     <Compile Include="V20220901\Models\RateLimitUserRule.cs" />
@@ -739,11 +637,8 @@
     <Compile Include="V20220901\Models\SecHitRuleInfo.cs" />
     <Compile Include="V20220901\Models\SecRuleRelatedInfo.cs" />
     <Compile Include="V20220901\Models\SecurityConfig.cs" />
-    <Compile Include="V20220901\Models\SecurityEntity.cs" />
-    <Compile Include="V20220901\Models\SecurityRule.cs" />
     <Compile Include="V20220901\Models\SecurityType.cs" />
     <Compile Include="V20220901\Models\ServerCertInfo.cs" />
-    <Compile Include="V20220901\Models\ShieldArea.cs" />
     <Compile Include="V20220901\Models\SingleDataRecord.cs" />
     <Compile Include="V20220901\Models\SingleTypeValue.cs" />
     <Compile Include="V20220901\Models\SkipCondition.cs" />
@@ -759,8 +654,6 @@
     <Compile Include="V20220901\Models\SubRuleItem.cs" />
     <Compile Include="V20220901\Models\Sv.cs" />
     <Compile Include="V20220901\Models\SwitchConfig.cs" />
-    <Compile Include="V20220901\Models\SwitchLogTopicTaskRequest.cs" />
-    <Compile Include="V20220901\Models\SwitchLogTopicTaskResponse.cs" />
     <Compile Include="V20220901\Models\Tag.cs" />
     <Compile Include="V20220901\Models\Task.cs" />
     <Compile Include="V20220901\Models\TemplateConfig.cs" />
@@ -779,9 +672,6 @@
     <Compile Include="V20220901\Models\Waf.cs" />
     <Compile Include="V20220901\Models\WafConfig.cs" />
     <Compile Include="V20220901\Models\WafGroup.cs" />
-    <Compile Include="V20220901\Models\WafGroupDetail.cs" />
-    <Compile Include="V20220901\Models\WafGroupInfo.cs" />
-    <Compile Include="V20220901\Models\WafGroupRule.cs" />
     <Compile Include="V20220901\Models\WafRule.cs" />
     <Compile Include="V20220901\Models\WebLogs.cs" />
     <Compile Include="V20220901\Models\WebSocket.cs" />

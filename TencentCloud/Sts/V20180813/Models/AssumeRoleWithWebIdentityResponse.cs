@@ -25,19 +25,19 @@ namespace TencentCloud.Sts.V20180813.Models
     {
         
         /// <summary>
-        /// 临时秘钥过期时间(时间戳)
+        /// 临时密钥过期时间(时间戳)
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public ulong? ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 临时秘钥过期时间
+        /// 临时密钥过期时间
         /// </summary>
         [JsonProperty("Expiration")]
         public string Expiration{ get; set; }
 
         /// <summary>
-        /// 临时秘钥
+        /// 临时密钥
         /// </summary>
         [JsonProperty("Credentials")]
         public Credentials Credentials{ get; set; }

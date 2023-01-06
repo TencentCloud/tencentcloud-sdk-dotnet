@@ -194,6 +194,20 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("ConvoyId")]
         public string ConvoyId{ get; set; }
 
+        /// <summary>
+        /// 带宽后付费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ElasticBandwidth")]
+        public ulong? ElasticBandwidth{ get; set; }
+
+        /// <summary>
+        /// 是否为EO代播的ip: 1是，0不是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EOFlag")]
+        public ulong? EOFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -224,6 +238,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamObj(map, prefix + "AnycastOutPackRelation.", this.AnycastOutPackRelation);
             this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
             this.SetParamSimple(map, prefix + "ConvoyId", this.ConvoyId);
+            this.SetParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
+            this.SetParamSimple(map, prefix + "EOFlag", this.EOFlag);
         }
     }
 }

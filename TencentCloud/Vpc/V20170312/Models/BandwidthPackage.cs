@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// 带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
+        /// 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }

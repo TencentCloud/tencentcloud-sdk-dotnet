@@ -42,6 +42,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("SpecAlias")]
         public string SpecAlias{ get; set; }
 
+        /// <summary>
+        /// 是否售罄
+        /// </summary>
+        [JsonProperty("Available")]
+        public bool? Available{ get; set; }
+
+        /// <summary>
+        /// 当前资源售罄时，可用的区域有哪些
+        /// </summary>
+        [JsonProperty("AvailableRegion")]
+        public string[] AvailableRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SpecId", this.SpecId);
             this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
             this.SetParamSimple(map, prefix + "SpecAlias", this.SpecAlias);
+            this.SetParamSimple(map, prefix + "Available", this.Available);
+            this.SetParamArraySimple(map, prefix + "AvailableRegion.", this.AvailableRegion);
         }
     }
 }

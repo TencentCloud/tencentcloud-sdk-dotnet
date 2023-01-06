@@ -2095,6 +2095,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 查询topic 生产端连接信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicProduceConnectionRequest"/></param>
+        /// <returns><see cref="DescribeTopicProduceConnectionResponse"/></returns>
+        public async Task<DescribeTopicProduceConnectionResponse> DescribeTopicProduceConnection(DescribeTopicProduceConnectionRequest req)
+        {
+             JsonResponseModel<DescribeTopicProduceConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopicProduceConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicProduceConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询topic 生产端连接信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicProduceConnectionRequest"/></param>
+        /// <returns><see cref="DescribeTopicProduceConnectionResponse"/></returns>
+        public DescribeTopicProduceConnectionResponse DescribeTopicProduceConnectionSync(DescribeTopicProduceConnectionRequest req)
+        {
+             JsonResponseModel<DescribeTopicProduceConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopicProduceConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicProduceConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询订阅某主题消息分组信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicSubscribeGroupRequest"/></param>
