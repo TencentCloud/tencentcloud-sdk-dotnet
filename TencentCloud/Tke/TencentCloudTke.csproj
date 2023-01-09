@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.677</VersionPrefix>
+    <VersionPrefix>3.0.678</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -15,6 +15,8 @@
     <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
     <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -106,6 +108,10 @@
     <Compile Include="V20180525\Models\CreateClusterRouteResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterRouteTableRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterVirtualNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterVirtualNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterVirtualNodeRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterVirtualNodeResponse.cs" />
     <Compile Include="V20180525\Models\CreateECMInstancesRequest.cs" />
     <Compile Include="V20180525\Models\CreateECMInstancesResponse.cs" />
     <Compile Include="V20180525\Models\CreateEKSClusterRequest.cs" />
@@ -158,6 +164,10 @@
     <Compile Include="V20180525\Models\DeleteClusterRouteResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteTableRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterVirtualNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterVirtualNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterVirtualNodeRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterVirtualNodeResponse.cs" />
     <Compile Include="V20180525\Models\DeleteECMInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DeleteECMInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DeleteEKSClusterRequest.cs" />
@@ -238,6 +248,10 @@
     <Compile Include="V20180525\Models\DescribeClusterSecurityResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterStatusRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterStatusResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterVirtualNodePoolsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterVirtualNodePoolsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterVirtualNodeRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterVirtualNodeResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20180525\Models\DescribeECMInstancesRequest.cs" />
@@ -343,6 +357,8 @@
     <Compile Include="V20180525\Models\DisableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="V20180525\Models\DisableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="V20180525\Models\DnsServerConf.cs" />
+    <Compile Include="V20180525\Models\DrainClusterVirtualNodeRequest.cs" />
+    <Compile Include="V20180525\Models\DrainClusterVirtualNodeResponse.cs" />
     <Compile Include="V20180525\Models\DriverVersion.cs" />
     <Compile Include="V20180525\Models\ECMEnhancedService.cs" />
     <Compile Include="V20180525\Models\ECMRunMonitorServiceEnabled.cs" />
@@ -424,6 +440,8 @@
     <Compile Include="V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\ModifyNodePoolDesiredCapacityAboutAsgRequest.cs" />
     <Compile Include="V20180525\Models\ModifyNodePoolDesiredCapacityAboutAsgResponse.cs" />
     <Compile Include="V20180525\Models\ModifyNodePoolInstanceTypesRequest.cs" />
@@ -544,6 +562,9 @@
     <Compile Include="V20180525\Models\UpgradeClusterReleaseResponse.cs" />
     <Compile Include="V20180525\Models\UpgradeNodeResetParam.cs" />
     <Compile Include="V20180525\Models\VersionInstance.cs" />
+    <Compile Include="V20180525\Models\VirtualNode.cs" />
+    <Compile Include="V20180525\Models\VirtualNodePool.cs" />
+    <Compile Include="V20180525\Models\VirtualNodeSpec.cs" />
     <Compile Include="V20180525\Models\VolumeMount.cs" />
   </ItemGroup>
 </Project>

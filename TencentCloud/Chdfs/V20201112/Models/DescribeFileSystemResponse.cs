@@ -59,6 +59,20 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public ulong? DegradeCapacityUsed{ get; set; }
 
         /// <summary>
+        /// 已使用COS深度归档存储容量（byte）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeepArchiveCapacityUsed")]
+        public ulong? DeepArchiveCapacityUsed{ get; set; }
+
+        /// <summary>
+        /// 已使用COS智能分层存储容量（byte）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IntelligentCapacityUsed")]
+        public ulong? IntelligentCapacityUsed{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -75,6 +89,8 @@ namespace TencentCloud.Chdfs.V20201112.Models
             this.SetParamSimple(map, prefix + "ArchiveCapacityUsed", this.ArchiveCapacityUsed);
             this.SetParamSimple(map, prefix + "StandardCapacityUsed", this.StandardCapacityUsed);
             this.SetParamSimple(map, prefix + "DegradeCapacityUsed", this.DegradeCapacityUsed);
+            this.SetParamSimple(map, prefix + "DeepArchiveCapacityUsed", this.DeepArchiveCapacityUsed);
+            this.SetParamSimple(map, prefix + "IntelligentCapacityUsed", this.IntelligentCapacityUsed);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -274,6 +274,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 排队技能组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QueuedSkillGroupName")]
+        public string QueuedSkillGroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -311,6 +318,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "AsrUrl", this.AsrUrl);
             this.SetParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "QueuedSkillGroupName", this.QueuedSkillGroupName);
         }
     }
 }

@@ -24,12 +24,33 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     public class ProcessStatistic : AbstractModel
     {
         
+        /// <summary>
+        /// 会话详情数组。
+        /// </summary>
+        [JsonProperty("Items")]
+        public SessionItem[] Items{ get; set; }
+
+        /// <summary>
+        /// 总连接数。
+        /// </summary>
+        [JsonProperty("AllConnSum")]
+        public long? AllConnSum{ get; set; }
+
+        /// <summary>
+        /// 总活跃连接数。
+        /// </summary>
+        [JsonProperty("ActiveConnSum")]
+        public long? ActiveConnSum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "AllConnSum", this.AllConnSum);
+            this.SetParamSimple(map, prefix + "ActiveConnSum", this.ActiveConnSum);
         }
     }
 }

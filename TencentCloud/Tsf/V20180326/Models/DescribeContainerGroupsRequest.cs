@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 分组所属应用ID
+        /// 分组所属应用ID。必填
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }

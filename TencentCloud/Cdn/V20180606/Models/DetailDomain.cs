@@ -490,7 +490,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public QnPrivateAccess QnPrivateAccess{ get; set; }
 
         /// <summary>
-        /// HTTPS服务
+        /// HTTPS服务，缺省时默认开启
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpsBilling")]

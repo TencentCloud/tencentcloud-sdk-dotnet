@@ -25,7 +25,7 @@ namespace TencentCloud.Cfg.V20210820.Models
     {
         
         /// <summary>
-        /// 从经验库中查询到的经验模版ID
+        /// 从经验库中查询到的经验模板ID
         /// </summary>
         [JsonProperty("TemplateId")]
         public ulong? TemplateId{ get; set; }

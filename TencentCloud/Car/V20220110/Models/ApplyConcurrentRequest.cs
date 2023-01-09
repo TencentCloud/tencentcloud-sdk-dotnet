@@ -48,6 +48,12 @@ namespace TencentCloud.Car.V20220110.Models
         [JsonProperty("ApplicationVersionId")]
         public string ApplicationVersionId{ get; set; }
 
+        /// <summary>
+        /// 应用ID。如果是独享项目，将忽略该参数，使用项目绑定的应用。如果是共享项目，使用该参数来指定应用。
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Car.V20220110.Models
             this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ApplicationVersionId", this.ApplicationVersionId);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         }
     }
 }

@@ -79,6 +79,18 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }
 
+        /// <summary>
+        /// 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。
+        /// </summary>
+        [JsonProperty("AddressIPVersion")]
+        public string AddressIPVersion{ get; set; }
+
+        /// <summary>
+        /// 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +106,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+            this.SetParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

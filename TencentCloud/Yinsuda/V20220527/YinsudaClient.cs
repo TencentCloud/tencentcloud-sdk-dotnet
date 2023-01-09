@@ -53,6 +53,46 @@ namespace TencentCloud.Yinsuda.V20220527
         }
 
         /// <summary>
+        /// 申请合唱相关信息，用于标记用户的演唱是在合唱场景下。
+        /// </summary>
+        /// <param name="req"><see cref="ApplyChorusRequest"/></param>
+        /// <returns><see cref="ApplyChorusResponse"/></returns>
+        public async Task<ApplyChorusResponse> ApplyChorus(ApplyChorusRequest req)
+        {
+             JsonResponseModel<ApplyChorusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyChorus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyChorusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 申请合唱相关信息，用于标记用户的演唱是在合唱场景下。
+        /// </summary>
+        /// <param name="req"><see cref="ApplyChorusRequest"/></param>
+        /// <returns><see cref="ApplyChorusResponse"/></returns>
+        public ApplyChorusResponse ApplyChorusSync(ApplyChorusRequest req)
+        {
+             JsonResponseModel<ApplyChorusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyChorus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyChorusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量获取歌曲详细信息，包括：歌词下载链接、播放凭证、音高数据下载链接信息等。
         /// </summary>
         /// <param name="req"><see cref="BatchDescribeKTVMusicDetailsRequest"/></param>

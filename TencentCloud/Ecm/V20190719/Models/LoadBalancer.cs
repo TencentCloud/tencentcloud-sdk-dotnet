@@ -130,6 +130,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("LoadBalancerPassToTarget")]
         public bool? LoadBalancerPassToTarget{ get; set; }
 
+        /// <summary>
+        /// 负载均衡实例的IPv6地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AddressIPv6")]
+        public string AddressIPv6{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +158,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "NetworkAttributes.", this.NetworkAttributes);
             this.SetParamArraySimple(map, prefix + "SecureGroups.", this.SecureGroups);
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+            this.SetParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
         }
     }
 }

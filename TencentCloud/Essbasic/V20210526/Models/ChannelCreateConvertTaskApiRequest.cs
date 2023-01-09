@@ -49,7 +49,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 操作者信息
+        /// 调用方用户信息，userId 必填
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
