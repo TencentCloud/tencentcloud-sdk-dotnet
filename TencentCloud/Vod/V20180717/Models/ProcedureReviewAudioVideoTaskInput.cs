@@ -32,7 +32,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 审核的内容，可选值：
-        /// <li>Media：原始音视频。</li>
+        /// <li>Media：原始音视频；</li>
+        /// <li>Cover：封面。</li>
         /// 不填或填空数组时，默认为审核 Media。
         /// </summary>
         [JsonProperty("ReviewContents")]

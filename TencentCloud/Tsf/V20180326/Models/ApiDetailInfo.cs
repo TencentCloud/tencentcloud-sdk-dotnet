@@ -171,6 +171,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// API路径匹配类型。normal：普通API；wildcard：通配API。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApiMatchType")]
+        public string ApiMatchType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +205,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "ApiType", this.ApiType);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "ApiMatchType", this.ApiMatchType);
         }
     }
 }

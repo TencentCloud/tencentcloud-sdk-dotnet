@@ -73,6 +73,48 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("LineRule")]
         public string LineRule{ get; set; }
 
+        /// <summary>
+        /// 是否需要认证
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableAuth")]
+        public bool? EnableAuth{ get; set; }
+
+        /// <summary>
+        /// 用户名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
+        /// <summary>
+        /// 密码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
+        /// <summary>
+        /// 投递的topic和path
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KafkaInfos")]
+        public DeliveryKafkaInfo[] KafkaInfos{ get; set; }
+
+        /// <summary>
+        /// 是否应用单行规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableGlobalLineRule")]
+        public bool? EnableGlobalLineRule{ get; set; }
+
+        /// <summary>
+        /// 自定义分行规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomRule")]
+        public string CustomRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +128,12 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "KafkaVPort", this.KafkaVPort);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "LineRule", this.LineRule);
+            this.SetParamSimple(map, prefix + "EnableAuth", this.EnableAuth);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamArrayObj(map, prefix + "KafkaInfos.", this.KafkaInfos);
+            this.SetParamSimple(map, prefix + "EnableGlobalLineRule", this.EnableGlobalLineRule);
+            this.SetParamSimple(map, prefix + "CustomRule", this.CustomRule);
         }
     }
 }

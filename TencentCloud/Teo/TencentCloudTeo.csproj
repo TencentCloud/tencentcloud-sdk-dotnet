@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.678</VersionPrefix>
+    <VersionPrefix>3.0.679</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -463,6 +463,8 @@
     <Compile Include="V20220901\Models\DescribeClientRuleListResponse.cs" />
     <Compile Include="V20220901\Models\DescribeContentQuotaRequest.cs" />
     <Compile Include="V20220901\Models\DescribeContentQuotaResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeDDoSAttackDataRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeDDoSAttackDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackTopDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackTopDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDefaultCertificatesRequest.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.678</VersionPrefix>
+    <VersionPrefix>3.0.679</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -175,6 +175,7 @@
     <Compile Include="V20180326\Models\DeleteUnitRuleResponse.cs" />
     <Compile Include="V20180326\Models\DeliveryConfigBindGroup.cs" />
     <Compile Include="V20180326\Models\DeliveryConfigBindGroups.cs" />
+    <Compile Include="V20180326\Models\DeliveryKafkaInfo.cs" />
     <Compile Include="V20180326\Models\DeployContainerGroupRequest.cs" />
     <Compile Include="V20180326\Models\DeployContainerGroupResponse.cs" />
     <Compile Include="V20180326\Models\DeployGroupRequest.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.678</VersionPrefix>
+    <VersionPrefix>3.0.679</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -368,6 +368,7 @@
     <Compile Include="V20180717\Models\DomainHTTPSConfig.cs" />
     <Compile Include="V20180717\Models\DrmStreamingsInfo.cs" />
     <Compile Include="V20180717\Models\DrmStreamingsInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\DynamicRangeInfo.cs" />
     <Compile Include="V20180717\Models\EditMediaFileInfo.cs" />
     <Compile Include="V20180717\Models\EditMediaOutputConfig.cs" />
     <Compile Include="V20180717\Models\EditMediaRequest.cs" />

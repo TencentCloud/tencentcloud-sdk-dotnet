@@ -85,6 +85,27 @@ namespace TencentCloud.Mmps.V20200710.Models
         [JsonProperty("HighRiskCount")]
         public long? HighRiskCount{ get; set; }
 
+        /// <summary>
+        /// 隐私申明文件名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrivacyTextName")]
+        public string PrivacyTextName{ get; set; }
+
+        /// <summary>
+        /// 软件MD5
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SoftwareMD5")]
+        public string SoftwareMD5{ get; set; }
+
+        /// <summary>
+        /// 隐私文本MD5
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrivacyTextMD5")]
+        public string PrivacyTextMD5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +121,9 @@ namespace TencentCloud.Mmps.V20200710.Models
             this.SetParamSimple(map, prefix + "BehaviorUrl", this.BehaviorUrl);
             this.SetParamSimple(map, prefix + "BehaviorTitle", this.BehaviorTitle);
             this.SetParamSimple(map, prefix + "HighRiskCount", this.HighRiskCount);
+            this.SetParamSimple(map, prefix + "PrivacyTextName", this.PrivacyTextName);
+            this.SetParamSimple(map, prefix + "SoftwareMD5", this.SoftwareMD5);
+            this.SetParamSimple(map, prefix + "PrivacyTextMD5", this.PrivacyTextMD5);
         }
     }
 }

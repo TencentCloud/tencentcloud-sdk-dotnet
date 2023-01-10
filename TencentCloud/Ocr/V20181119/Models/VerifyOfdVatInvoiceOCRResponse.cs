@@ -28,6 +28,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 发票类型
         /// 026:增值税电子普通发票
         /// 028:增值税电子专用发票
+        /// 010:电子发票（普通发票）
+        /// 020:电子发票（增值税专用发票）
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

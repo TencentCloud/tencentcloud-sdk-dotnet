@@ -2453,6 +2453,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口用于控制暂停或恢复数据引擎
+        /// </summary>
+        /// <param name="req"><see cref="SuspendResumeDataEngineRequest"/></param>
+        /// <returns><see cref="SuspendResumeDataEngineResponse"/></returns>
+        public async Task<SuspendResumeDataEngineResponse> SuspendResumeDataEngine(SuspendResumeDataEngineRequest req)
+        {
+             JsonResponseModel<SuspendResumeDataEngineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SuspendResumeDataEngine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SuspendResumeDataEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于控制暂停或恢复数据引擎
+        /// </summary>
+        /// <param name="req"><see cref="SuspendResumeDataEngineRequest"/></param>
+        /// <returns><see cref="SuspendResumeDataEngineResponse"/></returns>
+        public SuspendResumeDataEngineResponse SuspendResumeDataEngineSync(SuspendResumeDataEngineRequest req)
+        {
+             JsonResponseModel<SuspendResumeDataEngineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SuspendResumeDataEngine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SuspendResumeDataEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 解绑用户上的用户组
         /// </summary>
         /// <param name="req"><see cref="UnbindWorkGroupsFromUserRequest"/></param>
