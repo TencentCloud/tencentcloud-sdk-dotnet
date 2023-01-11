@@ -115,6 +115,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
+        /// <summary>
+        /// 被抄送人的信息列表。
+        /// 注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
+        /// </summary>
+        [JsonProperty("CcInfos")]
+        public CcInfo[] CcInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +142,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         }
     }
 }

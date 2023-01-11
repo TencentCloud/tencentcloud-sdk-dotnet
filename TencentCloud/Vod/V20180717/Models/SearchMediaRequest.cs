@@ -40,7 +40,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-        /// <li>单个文件名长度限制：40个字符。</li>
+        /// <li>单个文件名长度限制：100个字符。</li>
         /// <li>数组长度限制：10。</li>
         /// </summary>
         [JsonProperty("Names")]
@@ -48,7 +48,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 文件名前缀，前缀匹配媒体文件的文件名。
-        /// <li>单个文件名前缀长度限制：20个字符。</li>
+        /// <li>单个文件名前缀长度限制：100个字符。</li>
         /// <li>数组长度限制：10。</li>
         /// </summary>
         [JsonProperty("NamePrefixes")]
@@ -71,8 +71,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 标签集合，匹配集合中任意元素。
-        /// <li>单个标签长度限制：16个字符。</li>
-        /// <li>数组长度限制：10。</li>
+        /// <li>单个标签长度限制：32个字符。</li>
+        /// <li>数组长度限制：16。</li>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

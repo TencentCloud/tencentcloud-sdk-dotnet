@@ -333,6 +333,46 @@ namespace TencentCloud.Thpc.V20220401
         }
 
         /// <summary>
+        /// 本接口(DescribeAutoScalingConfiguration)用于查询集群弹性伸缩配置信息。本接口仅适用于弹性伸缩类型为THPC_AS的集群。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScalingConfigurationRequest"/></param>
+        /// <returns><see cref="DescribeAutoScalingConfigurationResponse"/></returns>
+        public async Task<DescribeAutoScalingConfigurationResponse> DescribeAutoScalingConfiguration(DescribeAutoScalingConfigurationRequest req)
+        {
+             JsonResponseModel<DescribeAutoScalingConfigurationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAutoScalingConfiguration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoScalingConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAutoScalingConfiguration)用于查询集群弹性伸缩配置信息。本接口仅适用于弹性伸缩类型为THPC_AS的集群。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScalingConfigurationRequest"/></param>
+        /// <returns><see cref="DescribeAutoScalingConfigurationResponse"/></returns>
+        public DescribeAutoScalingConfigurationResponse DescribeAutoScalingConfigurationSync(DescribeAutoScalingConfigurationRequest req)
+        {
+             JsonResponseModel<DescribeAutoScalingConfigurationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAutoScalingConfiguration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoScalingConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeClusterActivities）用于查询集群活动历史记录列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterActivitiesRequest"/></param>

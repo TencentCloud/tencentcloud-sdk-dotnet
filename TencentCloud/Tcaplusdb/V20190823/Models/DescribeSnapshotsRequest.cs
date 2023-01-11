@@ -48,6 +48,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }
 
+        /// <summary>
+        /// 批量拉取快照的表格列表
+        /// </summary>
+        [JsonProperty("SelectedTables")]
+        public SelectedTableInfoNew[] SelectedTables{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
             this.SetParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
+            this.SetParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
         }
     }
 }

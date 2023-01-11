@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.679</VersionPrefix>
+    <VersionPrefix>3.0.680</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,6 +69,8 @@
     <Compile Include="V20220401\Models\DeleteClusterStorageOptionResponse.cs" />
     <Compile Include="V20220401\Models\DeleteNodesRequest.cs" />
     <Compile Include="V20220401\Models\DeleteNodesResponse.cs" />
+    <Compile Include="V20220401\Models\DescribeAutoScalingConfigurationRequest.cs" />
+    <Compile Include="V20220401\Models\DescribeAutoScalingConfigurationResponse.cs" />
     <Compile Include="V20220401\Models\DescribeClusterActivitiesRequest.cs" />
     <Compile Include="V20220401\Models\DescribeClusterActivitiesResponse.cs" />
     <Compile Include="V20220401\Models\DescribeClusterStorageOptionRequest.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="V20220401\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20220401\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20220401\Models\ExpansionNodeConfig.cs" />
+    <Compile Include="V20220401\Models\ExpansionNodeConfigOverview.cs" />
     <Compile Include="V20220401\Models\GooseFSOption.cs" />
     <Compile Include="V20220401\Models\GooseFSOptionOverview.cs" />
     <Compile Include="V20220401\Models\InstanceChargePrepaid.cs" />
@@ -88,6 +91,7 @@
     <Compile Include="V20220401\Models\NodeActivity.cs" />
     <Compile Include="V20220401\Models\Placement.cs" />
     <Compile Include="V20220401\Models\QueueConfig.cs" />
+    <Compile Include="V20220401\Models\QueueConfigOverview.cs" />
     <Compile Include="V20220401\Models\SetAutoScalingConfigurationRequest.cs" />
     <Compile Include="V20220401\Models\SetAutoScalingConfigurationResponse.cs" />
     <Compile Include="V20220401\Models\StorageOption.cs" />

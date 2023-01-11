@@ -93,7 +93,7 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
-        /// 获取云COS文件存储临时密钥，密钥仅限于临时上传文件，有访问限制和时效性。
+        /// 获取云COS文件存储临时密钥，密钥仅限于临时上传文件，有访问限制和时效性，请保管好临时密钥。
         /// </summary>
         /// <param name="req"><see cref="CreateCosSecKeyInstanceRequest"/></param>
         /// <returns><see cref="CreateCosSecKeyInstanceResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
-        /// 获取云COS文件存储临时密钥，密钥仅限于临时上传文件，有访问限制和时效性。
+        /// 获取云COS文件存储临时密钥，密钥仅限于临时上传文件，有访问限制和时效性，请保管好临时密钥。
         /// </summary>
         /// <param name="req"><see cref="CreateCosSecKeyInstanceRequest"/></param>
         /// <returns><see cref="CreateCosSecKeyInstanceResponse"/></returns>

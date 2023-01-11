@@ -49,6 +49,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         public long? RegistryChargeType{ get; set; }
 
         /// <summary>
+        /// 预付费自动续费标识和购买时长
+        /// </summary>
+        [JsonProperty("RegistryChargePrepaid")]
+        public RegistryChargePrepaid RegistryChargePrepaid{ get; set; }
+
+        /// <summary>
         /// 是否同步TCR云标签至生成的COS Bucket
         /// </summary>
         [JsonProperty("SyncTag")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegistryType", this.RegistryType);
             this.SetParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamSimple(map, prefix + "RegistryChargeType", this.RegistryChargeType);
+            this.SetParamObj(map, prefix + "RegistryChargePrepaid.", this.RegistryChargePrepaid);
             this.SetParamSimple(map, prefix + "SyncTag", this.SyncTag);
         }
     }

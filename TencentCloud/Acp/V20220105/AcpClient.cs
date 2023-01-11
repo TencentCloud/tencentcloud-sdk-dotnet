@@ -133,6 +133,46 @@ namespace TencentCloud.Acp.V20220105
         }
 
         /// <summary>
+        /// 获取子渠道的App合规诊断任务报告url
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelTaskReportUrlRequest"/></param>
+        /// <returns><see cref="DescribeChannelTaskReportUrlResponse"/></returns>
+        public async Task<DescribeChannelTaskReportUrlResponse> DescribeChannelTaskReportUrl(DescribeChannelTaskReportUrlRequest req)
+        {
+             JsonResponseModel<DescribeChannelTaskReportUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeChannelTaskReportUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChannelTaskReportUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取子渠道的App合规诊断任务报告url
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelTaskReportUrlRequest"/></param>
+        /// <returns><see cref="DescribeChannelTaskReportUrlResponse"/></returns>
+        public DescribeChannelTaskReportUrlResponse DescribeChannelTaskReportUrlSync(DescribeChannelTaskReportUrlRequest req)
+        {
+             JsonResponseModel<DescribeChannelTaskReportUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeChannelTaskReportUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChannelTaskReportUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取应用合规文件上传凭证，用于上传诊断文件
         /// </summary>
         /// <param name="req"><see cref="DescribeFileTicketRequest"/></param>

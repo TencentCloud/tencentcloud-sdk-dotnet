@@ -44,8 +44,8 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// hive共享元数据库类型。取值范围：
-        /// <li>EMR_NEW_META：表示集群默认创建</li>
-        /// <li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+        /// <li>EMR_DEFAULT_META：表示集群默认创建</li>
+        /// <li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
         /// <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
         /// </summary>
         [JsonProperty("MetaType")]

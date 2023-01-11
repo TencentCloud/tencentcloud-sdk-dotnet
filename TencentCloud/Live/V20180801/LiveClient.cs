@@ -3141,7 +3141,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 支持查询某天或某段时间的转码详细信息。
+        /// 支持查询某天或某段时间的转码详细信息。由于转码数据量较大，如果查询时间跨度太长可能会拉不到数据，可以尝试将查询时间范围缩小些再重试。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeDetailInfoRequest"/></param>
         /// <returns><see cref="DescribeLiveTranscodeDetailInfoResponse"/></returns>
@@ -3161,7 +3161,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 支持查询某天或某段时间的转码详细信息。
+        /// 支持查询某天或某段时间的转码详细信息。由于转码数据量较大，如果查询时间跨度太长可能会拉不到数据，可以尝试将查询时间范围缩小些再重试。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeDetailInfoRequest"/></param>
         /// <returns><see cref="DescribeLiveTranscodeDetailInfoResponse"/></returns>
