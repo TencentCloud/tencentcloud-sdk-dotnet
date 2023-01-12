@@ -36,6 +36,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("StepIds")]
         public string[] StepIds{ get; set; }
 
+        /// <summary>
+        /// 当出现外键依赖检查导致校验不通过时、可以通过该字段选择是否迁移外键依赖，当StepIds包含ConstraintCheck且该字段值为shield时表示不迁移外键依赖、当StepIds包含ConstraintCheck且值为migrate时表示迁移外键依赖
+        /// </summary>
+        [JsonProperty("ForeignKeyFlag")]
+        public string ForeignKeyFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dts.V20211206.Models
         {
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamArraySimple(map, prefix + "StepIds.", this.StepIds);
+            this.SetParamSimple(map, prefix + "ForeignKeyFlag", this.ForeignKeyFlag);
         }
     }
 }

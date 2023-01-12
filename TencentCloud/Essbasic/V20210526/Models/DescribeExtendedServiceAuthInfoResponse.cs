@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Ims.V20200713.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filter : AbstractModel
+    public class DescribeExtendedServiceAuthInfoResponse : AbstractModel
     {
         
         /// <summary>
-        /// 过滤键的名称。
+        /// 企业扩展服务授权信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("AuthInfo")]
+        public ExtentServiceAuthInfo[] AuthInfo{ get; set; }
 
         /// <summary>
-        /// 一个或者多个过滤值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Ims.V20200713.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamArrayObj(map, prefix + "AuthInfo.", this.AuthInfo);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

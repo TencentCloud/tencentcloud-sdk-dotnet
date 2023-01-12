@@ -3499,6 +3499,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取高危命令列表(新)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBashEventsNewRequest"/></param>
+        /// <returns><see cref="DescribeBashEventsNewResponse"/></returns>
+        public async Task<DescribeBashEventsNewResponse> DescribeBashEventsNew(DescribeBashEventsNewRequest req)
+        {
+             JsonResponseModel<DescribeBashEventsNewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBashEventsNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBashEventsNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取高危命令列表(新)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBashEventsNewRequest"/></param>
+        /// <returns><see cref="DescribeBashEventsNewResponse"/></returns>
+        public DescribeBashEventsNewResponse DescribeBashEventsNewSync(DescribeBashEventsNewRequest req)
+        {
+             JsonResponseModel<DescribeBashEventsNewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBashEventsNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBashEventsNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取高危命令规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribeBashRulesRequest"/></param>

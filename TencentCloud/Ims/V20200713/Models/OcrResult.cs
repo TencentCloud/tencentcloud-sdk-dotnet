@@ -68,6 +68,12 @@ namespace TencentCloud.Ims.V20200713.Models
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
+        /// <summary>
+        /// 是否命中结果，0 未命中 1命中
+        /// </summary>
+        [JsonProperty("HitFlag")]
+        public ulong? HitFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Ims.V20200713.Models
             this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamArrayObj(map, prefix + "Details.", this.Details);
             this.SetParamSimple(map, prefix + "Text", this.Text);
+            this.SetParamSimple(map, prefix + "HitFlag", this.HitFlag);
         }
     }
 }

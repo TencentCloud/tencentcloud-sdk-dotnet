@@ -105,6 +105,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("CheckResult")]
         public string CheckResult{ get; set; }
 
+        /// <summary>
+        /// 主机节点的实例id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +129,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "FailedPolicyItemCount", this.FailedPolicyItemCount);
             this.SetParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
             this.SetParamSimple(map, prefix + "CheckResult", this.CheckResult);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

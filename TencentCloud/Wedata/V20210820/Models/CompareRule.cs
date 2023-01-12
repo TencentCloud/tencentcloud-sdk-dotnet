@@ -31,6 +31,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Items")]
         public CompareRuleItem[] Items{ get; set; }
 
+        /// <summary>
+        /// 周期性模板默认周期，单位秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CycleStep")]
+        public ulong? CycleStep{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "CycleStep", this.CycleStep);
         }
     }
 }

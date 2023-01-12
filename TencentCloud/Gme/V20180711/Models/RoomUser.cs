@@ -44,6 +44,13 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("StrRoomId")]
         public string StrRoomId{ get; set; }
 
+        /// <summary>
+        /// 房间里用户字符串uin列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StrUins")]
+        public string[] StrUins{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +60,7 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamArraySimple(map, prefix + "Uins.", this.Uins);
             this.SetParamSimple(map, prefix + "StrRoomId", this.StrRoomId);
+            this.SetParamArraySimple(map, prefix + "StrUins.", this.StrUins);
         }
     }
 }

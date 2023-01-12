@@ -102,6 +102,13 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("PageDuration")]
         public string PageDuration{ get; set; }
 
+        /// <summary>
+        /// 时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +128,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "StaticNum", this.StaticNum);
             this.SetParamSimple(map, prefix + "RecordNum", this.RecordNum);
             this.SetParamSimple(map, prefix + "PageDuration", this.PageDuration);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ims.V20200713.Models
+namespace TencentCloud.Cwp.V20180228.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeImsListRequest : AbstractModel
+    public class DescribeBashEventsNewResponse : AbstractModel
     {
         
         /// <summary>
-        /// 分页 页索引
+        /// 总条数
         /// </summary>
-        [JsonProperty("PageIndex")]
-        public long? PageIndex{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 分页条数
+        /// 高危命令事件列表
         /// </summary>
-        [JsonProperty("PageSize")]
-        public long? PageSize{ get; set; }
+        [JsonProperty("List")]
+        public BashEventNew[] List{ get; set; }
 
         /// <summary>
-        /// 过滤条件
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Ims.V20200713.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

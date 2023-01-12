@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.680</VersionPrefix>
+    <VersionPrefix>3.0.681</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -98,6 +98,8 @@
     <Compile Include="V20210526\Models\Department.cs" />
     <Compile Include="V20210526\Models\DescribeChannelFlowEvidenceReportRequest.cs" />
     <Compile Include="V20210526\Models\DescribeChannelFlowEvidenceReportResponse.cs" />
+    <Compile Include="V20210526\Models\DescribeExtendedServiceAuthInfoRequest.cs" />
+    <Compile Include="V20210526\Models\DescribeExtendedServiceAuthInfoResponse.cs" />
     <Compile Include="V20210526\Models\DescribeFlowDetailInfoRequest.cs" />
     <Compile Include="V20210526\Models\DescribeFlowDetailInfoResponse.cs" />
     <Compile Include="V20210526\Models\DescribeResourceUrlsByFlowsRequest.cs" />
@@ -107,6 +109,7 @@
     <Compile Include="V20210526\Models\DescribeUsageRequest.cs" />
     <Compile Include="V20210526\Models\DescribeUsageResponse.cs" />
     <Compile Include="V20210526\Models\DownloadFlowInfo.cs" />
+    <Compile Include="V20210526\Models\ExtentServiceAuthInfo.cs" />
     <Compile Include="V20210526\Models\Filter.cs" />
     <Compile Include="V20210526\Models\FlowApproverDetail.cs" />
     <Compile Include="V20210526\Models\FlowApproverInfo.cs" />
@@ -117,6 +120,8 @@
     <Compile Include="V20210526\Models\FormField.cs" />
     <Compile Include="V20210526\Models\GetDownloadFlowUrlRequest.cs" />
     <Compile Include="V20210526\Models\GetDownloadFlowUrlResponse.cs" />
+    <Compile Include="V20210526\Models\ModifyExtendedServiceRequest.cs" />
+    <Compile Include="V20210526\Models\ModifyExtendedServiceResponse.cs" />
     <Compile Include="V20210526\Models\OccupiedSeal.cs" />
     <Compile Include="V20210526\Models\OperateChannelTemplateRequest.cs" />
     <Compile Include="V20210526\Models\OperateChannelTemplateResponse.cs" />

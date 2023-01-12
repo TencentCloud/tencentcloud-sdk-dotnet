@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.680</VersionPrefix>
+    <VersionPrefix>3.0.681</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -94,6 +94,7 @@
     <Compile Include="V20180228\Models\BaselineRuleInfo.cs" />
     <Compile Include="V20180228\Models\BaselineRuleTopInfo.cs" />
     <Compile Include="V20180228\Models\BashEvent.cs" />
+    <Compile Include="V20180228\Models\BashEventNew.cs" />
     <Compile Include="V20180228\Models\BashRule.cs" />
     <Compile Include="V20180228\Models\BruteAttackInfo.cs" />
     <Compile Include="V20180228\Models\BruteAttackRule.cs" />
@@ -270,6 +271,8 @@
     <Compile Include="V20180228\Models\DescribeBaselineStrategyListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineTopRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineTopResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBashEventsNewRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBashEventsNewResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBashEventsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBashEventsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBashRulesRequest.cs" />

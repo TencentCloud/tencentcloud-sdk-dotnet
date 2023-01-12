@@ -969,6 +969,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 查询企业扩展服务授权信息，企业经办人需要时企业超管或者法人
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtendedServiceAuthInfoRequest"/></param>
+        /// <returns><see cref="DescribeExtendedServiceAuthInfoResponse"/></returns>
+        public async Task<DescribeExtendedServiceAuthInfoResponse> DescribeExtendedServiceAuthInfo(DescribeExtendedServiceAuthInfoRequest req)
+        {
+             JsonResponseModel<DescribeExtendedServiceAuthInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExtendedServiceAuthInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExtendedServiceAuthInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询企业扩展服务授权信息，企业经办人需要时企业超管或者法人
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtendedServiceAuthInfoRequest"/></param>
+        /// <returns><see cref="DescribeExtendedServiceAuthInfoResponse"/></returns>
+        public DescribeExtendedServiceAuthInfoResponse DescribeExtendedServiceAuthInfoSync(DescribeExtendedServiceAuthInfoRequest req)
+        {
+             JsonResponseModel<DescribeExtendedServiceAuthInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExtendedServiceAuthInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExtendedServiceAuthInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口（DescribeFlowDetailInfo）用于查询合同(签署流程)的详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowDetailInfoRequest"/></param>
@@ -1166,6 +1206,46 @@ namespace TencentCloud.Essbasic.V20210526
              {
                  var strResp = this.InternalRequestSync(req, "GetDownloadFlowUrl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDownloadFlowUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改（操作）企业扩展服务 ，企业经办人需要时企业超管或者法人
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExtendedServiceRequest"/></param>
+        /// <returns><see cref="ModifyExtendedServiceResponse"/></returns>
+        public async Task<ModifyExtendedServiceResponse> ModifyExtendedService(ModifyExtendedServiceRequest req)
+        {
+             JsonResponseModel<ModifyExtendedServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyExtendedService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyExtendedServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改（操作）企业扩展服务 ，企业经办人需要时企业超管或者法人
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExtendedServiceRequest"/></param>
+        /// <returns><see cref="ModifyExtendedServiceResponse"/></returns>
+        public ModifyExtendedServiceResponse ModifyExtendedServiceSync(ModifyExtendedServiceRequest req)
+        {
+             JsonResponseModel<ModifyExtendedServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyExtendedService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyExtendedServiceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

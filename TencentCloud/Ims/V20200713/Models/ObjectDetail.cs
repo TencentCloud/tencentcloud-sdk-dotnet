@@ -55,6 +55,12 @@ namespace TencentCloud.Ims.V20200713.Models
         [JsonProperty("Location")]
         public Location Location{ get; set; }
 
+        /// <summary>
+        /// 二级标签名称
+        /// </summary>
+        [JsonProperty("SubLabel")]
+        public string SubLabel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Ims.V20200713.Models
             this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamObj(map, prefix + "Location.", this.Location);
+            this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
         }
     }
 }

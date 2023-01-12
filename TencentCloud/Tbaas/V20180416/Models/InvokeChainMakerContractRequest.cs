@@ -31,7 +31,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 业务链编号，可在业务链列表中获取
+        /// 业务链ID，可在网络概览页获取
         /// </summary>
         [JsonProperty("ChainId")]
         public string ChainId{ get; set; }

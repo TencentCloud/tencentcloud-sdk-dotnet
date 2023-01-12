@@ -25,13 +25,13 @@ namespace TencentCloud.Facefusion.V20220927.Models
     {
         
         /// <summary>
-        /// 活动 ID，请在人脸融合控制台查看。
+        /// 活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 素材 ID，请在人脸融合控制台查看。
+        /// 素材 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
         /// </summary>
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }

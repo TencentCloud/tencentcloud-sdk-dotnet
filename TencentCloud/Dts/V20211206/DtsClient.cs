@@ -177,7 +177,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 恢复处于暂停中的数据同步任务。
+        /// 恢复处于已暂停状态的数据同步任务。
         /// </summary>
         /// <param name="req"><see cref="ContinueSyncJobRequest"/></param>
         /// <returns><see cref="ContinueSyncJobResponse"/></returns>
@@ -197,7 +197,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 恢复处于暂停中的数据同步任务。
+        /// 恢复处于已暂停状态的数据同步任务。
         /// </summary>
         /// <param name="req"><see cref="ContinueSyncJobRequest"/></param>
         /// <returns><see cref="ContinueSyncJobResponse"/></returns>

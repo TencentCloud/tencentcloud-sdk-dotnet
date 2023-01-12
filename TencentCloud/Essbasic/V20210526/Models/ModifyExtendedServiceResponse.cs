@@ -15,26 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Ims.V20200713.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EvilCount : AbstractModel
+    public class ModifyExtendedServiceResponse : AbstractModel
     {
         
         /// <summary>
-        /// ----非必选，该参数功能暂未对外开放
+        /// 操作跳转链接，有效期24小时
+        /// 仅当操作类型是 OPEN 且 扩展服务类型是  AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回 ，此时需要经办人(操作人)点击链接完成服务开通操作。若开通操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通服务
+        /// 
+        /// 操作类型是CLOSE时，不会返回此链接，会直接关闭企业该扩展服务
         /// </summary>
-        [JsonProperty("EvilType")]
-        public string EvilType{ get; set; }
+        [JsonProperty("OperateUrl")]
+        public string OperateUrl{ get; set; }
 
         /// <summary>
-        /// 分布类型总量
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Count")]
-        public long? Count{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +45,8 @@ namespace TencentCloud.Ims.V20200713.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
-            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "OperateUrl", this.OperateUrl);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
