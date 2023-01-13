@@ -25,12 +25,6 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 要查询的日志主题ID
-        /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
-
-        /// <summary>
         /// 要查询的日志的起始时间，Unix时间戳，单位ms
         /// </summary>
         [JsonProperty("From")]
@@ -49,6 +43,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Query{ get; set; }
 
         /// <summary>
+        /// 要查询的日志主题ID
+        /// </summary>
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
+
+        /// <summary>
         /// 时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
         /// </summary>
         [JsonProperty("Interval")]
@@ -60,10 +60,10 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "To", this.To);
             this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
         }
     }

@@ -1,0 +1,64 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Tiia.V20190529.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class UpdateImageRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 图库ID。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// 物品ID，最多支持64个字符。
+        /// </summary>
+        [JsonProperty("EntityId")]
+        public string EntityId{ get; set; }
+
+        /// <summary>
+        /// 图片名称，最多支持64个字符。
+        /// </summary>
+        [JsonProperty("PicName")]
+        public string PicName{ get; set; }
+
+        /// <summary>
+        /// 新的自定义标签，最多不超过10个，格式为JSON。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public string Tags{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "EntityId", this.EntityId);
+            this.SetParamSimple(map, prefix + "PicName", this.PicName);
+            this.SetParamSimple(map, prefix + "Tags", this.Tags);
+        }
+    }
+}
+

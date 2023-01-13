@@ -253,6 +253,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 获取应用详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppDetailRequest"/></param>
+        /// <returns><see cref="DescribeAppDetailResponse"/></returns>
+        public async Task<DescribeAppDetailResponse> DescribeAppDetail(DescribeAppDetailRequest req)
+        {
+             JsonResponseModel<DescribeAppDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAppDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取应用详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppDetailRequest"/></param>
+        /// <returns><see cref="DescribeAppDetailResponse"/></returns>
+        public DescribeAppDetailResponse DescribeAppDetailSync(DescribeAppDetailRequest req)
+        {
+             JsonResponseModel<DescribeAppDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAppDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取房间信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomRequest"/></param>

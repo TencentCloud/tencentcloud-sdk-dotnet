@@ -114,6 +114,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("PassiveStatusCode")]
         public ulong? PassiveStatusCode{ get; set; }
 
+        /// <summary>
+        /// 被动探测配置状态，0： 正常，1：配置中，2：配置失败
+        /// </summary>
+        [JsonProperty("PassiveStatus")]
+        public ulong? PassiveStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FailedCountInter", this.FailedCountInter);
             this.SetParamSimple(map, prefix + "FailedThreshold", this.FailedThreshold);
             this.SetParamSimple(map, prefix + "PassiveStatusCode", this.PassiveStatusCode);
+            this.SetParamSimple(map, prefix + "PassiveStatus", this.PassiveStatus);
         }
     }
 }

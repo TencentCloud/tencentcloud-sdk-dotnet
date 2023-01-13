@@ -72,6 +72,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("MaxNotReadyPercent")]
         public float? MaxNotReadyPercent{ get; set; }
 
+        /// <summary>
+        /// 是否升级节点运行时，默认false不升级
+        /// </summary>
+        [JsonProperty("UpgradeRunTime")]
+        public bool? UpgradeRunTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +91,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "ResetParam.", this.ResetParam);
             this.SetParamSimple(map, prefix + "SkipPreCheck", this.SkipPreCheck);
             this.SetParamSimple(map, prefix + "MaxNotReadyPercent", this.MaxNotReadyPercent);
+            this.SetParamSimple(map, prefix + "UpgradeRunTime", this.UpgradeRunTime);
         }
     }
 }

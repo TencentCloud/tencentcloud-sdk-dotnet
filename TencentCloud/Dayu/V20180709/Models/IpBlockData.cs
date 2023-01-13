@@ -54,6 +54,12 @@ namespace TencentCloud.Dayu.V20180709.Models
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
+        /// <summary>
+        /// 高防标记，0：非高防，1：高防
+        /// </summary>
+        [JsonProperty("ProtectFlag")]
+        public ulong? ProtectFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dayu.V20180709.Models
             this.SetParamSimple(map, prefix + "BlockTime", this.BlockTime);
             this.SetParamSimple(map, prefix + "UnBlockTime", this.UnBlockTime);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
+            this.SetParamSimple(map, prefix + "ProtectFlag", this.ProtectFlag);
         }
     }
 }

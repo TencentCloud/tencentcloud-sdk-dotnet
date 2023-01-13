@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.681</VersionPrefix>
+    <VersionPrefix>3.0.682</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,6 +68,8 @@
     <Compile Include="V20180724\Models\BindingPolicyTagRequest.cs" />
     <Compile Include="V20180724\Models\BindingPolicyTagResponse.cs" />
     <Compile Include="V20180724\Models\CLSNotice.cs" />
+    <Compile Include="V20180724\Models\CheckIsPrometheusNewUserRequest.cs" />
+    <Compile Include="V20180724\Models\CheckIsPrometheusNewUserResponse.cs" />
     <Compile Include="V20180724\Models\CleanGrafanaInstanceRequest.cs" />
     <Compile Include="V20180724\Models\CleanGrafanaInstanceResponse.cs" />
     <Compile Include="V20180724\Models\CommonNamespace.cs" />
@@ -96,8 +98,12 @@
     <Compile Include="V20180724\Models\CreatePrometheusAgentResponse.cs" />
     <Compile Include="V20180724\Models\CreatePrometheusMultiTenantInstancePostPayModeRequest.cs" />
     <Compile Include="V20180724\Models\CreatePrometheusMultiTenantInstancePostPayModeResponse.cs" />
+    <Compile Include="V20180724\Models\CreatePrometheusRecordRuleYamlRequest.cs" />
+    <Compile Include="V20180724\Models\CreatePrometheusRecordRuleYamlResponse.cs" />
     <Compile Include="V20180724\Models\CreatePrometheusScrapeJobRequest.cs" />
     <Compile Include="V20180724\Models\CreatePrometheusScrapeJobResponse.cs" />
+    <Compile Include="V20180724\Models\CreatePrometheusTempRequest.cs" />
+    <Compile Include="V20180724\Models\CreatePrometheusTempResponse.cs" />
     <Compile Include="V20180724\Models\CreateRecordingRuleRequest.cs" />
     <Compile Include="V20180724\Models\CreateRecordingRuleResponse.cs" />
     <Compile Include="V20180724\Models\CreateSSOAccountRequest.cs" />
@@ -121,8 +127,14 @@
     <Compile Include="V20180724\Models\DeleteGrafanaNotificationChannelResponse.cs" />
     <Compile Include="V20180724\Models\DeletePolicyGroupRequest.cs" />
     <Compile Include="V20180724\Models\DeletePolicyGroupResponse.cs" />
+    <Compile Include="V20180724\Models\DeletePrometheusRecordRuleYamlRequest.cs" />
+    <Compile Include="V20180724\Models\DeletePrometheusRecordRuleYamlResponse.cs" />
     <Compile Include="V20180724\Models\DeletePrometheusScrapeJobsRequest.cs" />
     <Compile Include="V20180724\Models\DeletePrometheusScrapeJobsResponse.cs" />
+    <Compile Include="V20180724\Models\DeletePrometheusTempRequest.cs" />
+    <Compile Include="V20180724\Models\DeletePrometheusTempResponse.cs" />
+    <Compile Include="V20180724\Models\DeletePrometheusTempSyncRequest.cs" />
+    <Compile Include="V20180724\Models\DeletePrometheusTempSyncResponse.cs" />
     <Compile Include="V20180724\Models\DeleteRecordingRulesRequest.cs" />
     <Compile Include="V20180724\Models\DeleteRecordingRulesResponse.cs" />
     <Compile Include="V20180724\Models\DeleteSSOAccountRequest.cs" />
@@ -220,14 +232,34 @@
     <Compile Include="V20180724\Models\DescribeProductEventListResponse.cs" />
     <Compile Include="V20180724\Models\DescribeProductListRequest.cs" />
     <Compile Include="V20180724\Models\DescribeProductListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusAgentInstancesRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusAgentInstancesResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusAgentsRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusAgentsResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusAlertPolicyRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusAlertPolicyResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusConfigRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusConfigResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusInstanceDetailRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusInstanceDetailResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusInstanceInitStatusRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusInstanceInitStatusResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusInstanceUsageRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusInstanceUsageResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusInstancesOverviewRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusInstancesOverviewResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusInstancesRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusInstancesResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusRecordRuleYamlRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusRecordRuleYamlResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusRecordRulesRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusRecordRulesResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusScrapeJobsRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusScrapeJobsResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusTempRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusTempResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusTempSyncRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusTempSyncResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusZonesRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusZonesResponse.cs" />
     <Compile Include="V20180724\Models\DescribeRecordingRulesRequest.cs" />
@@ -250,6 +282,7 @@
     <Compile Include="V20180724\Models\EnableSSOCamCheckRequest.cs" />
     <Compile Include="V20180724\Models\EnableSSOCamCheckResponse.cs" />
     <Compile Include="V20180724\Models\EventCondition.cs" />
+    <Compile Include="V20180724\Models\Filter.cs" />
     <Compile Include="V20180724\Models\GetMonitorDataRequest.cs" />
     <Compile Include="V20180724\Models\GetMonitorDataResponse.cs" />
     <Compile Include="V20180724\Models\GetPrometheusAgentManagementCommandRequest.cs" />
@@ -267,6 +300,7 @@
     <Compile Include="V20180724\Models\InstanceGroup.cs" />
     <Compile Include="V20180724\Models\InstanceGroups.cs" />
     <Compile Include="V20180724\Models\IntegrationConfiguration.cs" />
+    <Compile Include="V20180724\Models\Label.cs" />
     <Compile Include="V20180724\Models\LogAlarmReq.cs" />
     <Compile Include="V20180724\Models\LogFilterInfo.cs" />
     <Compile Include="V20180724\Models\ManagementCommand.cs" />
@@ -300,6 +334,10 @@
     <Compile Include="V20180724\Models\ModifyPolicyGroupResponse.cs" />
     <Compile Include="V20180724\Models\ModifyPrometheusInstanceAttributesRequest.cs" />
     <Compile Include="V20180724\Models\ModifyPrometheusInstanceAttributesResponse.cs" />
+    <Compile Include="V20180724\Models\ModifyPrometheusRecordRuleYamlRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyPrometheusRecordRuleYamlResponse.cs" />
+    <Compile Include="V20180724\Models\ModifyPrometheusTempRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyPrometheusTempResponse.cs" />
     <Compile Include="V20180724\Models\MonitorTypeInfo.cs" />
     <Compile Include="V20180724\Models\MonitorTypeNamespace.cs" />
     <Compile Include="V20180724\Models\NoticeBindPolicys.cs" />
@@ -311,13 +349,23 @@
     <Compile Include="V20180724\Models\PolicyTag.cs" />
     <Compile Include="V20180724\Models\ProductSimple.cs" />
     <Compile Include="V20180724\Models\PrometheusAgent.cs" />
+    <Compile Include="V20180724\Models\PrometheusAlertManagerConfig.cs" />
+    <Compile Include="V20180724\Models\PrometheusAlertPolicyItem.cs" />
+    <Compile Include="V20180724\Models\PrometheusAlertRule.cs" />
+    <Compile Include="V20180724\Models\PrometheusConfigItem.cs" />
     <Compile Include="V20180724\Models\PrometheusInstanceGrantInfo.cs" />
     <Compile Include="V20180724\Models\PrometheusInstanceTenantUsage.cs" />
     <Compile Include="V20180724\Models\PrometheusInstancesItem.cs" />
+    <Compile Include="V20180724\Models\PrometheusInstancesOverview.cs" />
+    <Compile Include="V20180724\Models\PrometheusNotificationItem.cs" />
+    <Compile Include="V20180724\Models\PrometheusRecordRuleYamlItem.cs" />
     <Compile Include="V20180724\Models\PrometheusRuleKV.cs" />
     <Compile Include="V20180724\Models\PrometheusRuleSet.cs" />
     <Compile Include="V20180724\Models\PrometheusScrapeJob.cs" />
     <Compile Include="V20180724\Models\PrometheusTag.cs" />
+    <Compile Include="V20180724\Models\PrometheusTemp.cs" />
+    <Compile Include="V20180724\Models\PrometheusTempModify.cs" />
+    <Compile Include="V20180724\Models\PrometheusTemplateSyncTarget.cs" />
     <Compile Include="V20180724\Models\PrometheusZoneItem.cs" />
     <Compile Include="V20180724\Models\PutMonitorDataRequest.cs" />
     <Compile Include="V20180724\Models\PutMonitorDataResponse.cs" />
@@ -325,13 +373,18 @@
     <Compile Include="V20180724\Models\RecordingRuleSet.cs" />
     <Compile Include="V20180724\Models\ResumeGrafanaInstanceRequest.cs" />
     <Compile Include="V20180724\Models\ResumeGrafanaInstanceResponse.cs" />
+    <Compile Include="V20180724\Models\RunPrometheusInstanceRequest.cs" />
+    <Compile Include="V20180724\Models\RunPrometheusInstanceResponse.cs" />
     <Compile Include="V20180724\Models\SendCustomAlarmMsgRequest.cs" />
     <Compile Include="V20180724\Models\SendCustomAlarmMsgResponse.cs" />
     <Compile Include="V20180724\Models\ServiceDiscoveryItem.cs" />
     <Compile Include="V20180724\Models\SetDefaultAlarmPolicyRequest.cs" />
     <Compile Include="V20180724\Models\SetDefaultAlarmPolicyResponse.cs" />
+    <Compile Include="V20180724\Models\SyncPrometheusTempRequest.cs" />
+    <Compile Include="V20180724\Models\SyncPrometheusTempResponse.cs" />
     <Compile Include="V20180724\Models\Tag.cs" />
     <Compile Include="V20180724\Models\TagInstance.cs" />
+    <Compile Include="V20180724\Models\TaskStepInfo.cs" />
     <Compile Include="V20180724\Models\TemplateGroup.cs" />
     <Compile Include="V20180724\Models\TerminatePrometheusInstancesRequest.cs" />
     <Compile Include="V20180724\Models\TerminatePrometheusInstancesResponse.cs" />

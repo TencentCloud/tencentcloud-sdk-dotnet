@@ -30,6 +30,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
+        /// <summary>
+        /// 扩展参数，其值为序列化的 json字符串。
+        /// 注意：此参数为定制需求参数，需要线下对接。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtendedParameter")]
+        public string ExtendedParameter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +45,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
         }
     }
 }

@@ -108,6 +108,20 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("SerialId")]
         public string SerialId{ get; set; }
 
+        /// <summary>
+        /// 耗时
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TimeConsuming")]
+        public long? TimeConsuming{ get; set; }
+
+        /// <summary>
+        /// 快照路径状态 1：可用；2：不可用；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PathStatus")]
+        public long? PathStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +140,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "SerialId", this.SerialId);
+            this.SetParamSimple(map, prefix + "TimeConsuming", this.TimeConsuming);
+            this.SetParamSimple(map, prefix + "PathStatus", this.PathStatus);
         }
     }
 }

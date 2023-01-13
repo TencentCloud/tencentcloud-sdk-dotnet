@@ -216,6 +216,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 数据库代理 IP 。
+        /// </summary>
+        [JsonProperty("ProxyVips")]
+        public string[] ProxyVips{ get; set; }
+
+        /// <summary>
+        /// 数据库代理 ID 。
+        /// </summary>
+        [JsonProperty("ProxyIds")]
+        public string[] ProxyIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +266,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "UniqueVpcIds.", this.UniqueVpcIds);
             this.SetParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArraySimple(map, prefix + "ProxyVips.", this.ProxyVips);
+            this.SetParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
         }
     }
 }

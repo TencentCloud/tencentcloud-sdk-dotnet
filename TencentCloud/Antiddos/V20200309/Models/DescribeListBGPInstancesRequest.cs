@@ -85,7 +85,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string[] FilterInstanceIdList{ get; set; }
 
         /// <summary>
-        /// 企业版搜索
+        /// 企业版搜索,  1：包含重保护航套餐下的企业版列表, 2: 不包含重保护航套餐的企业版列表
         /// </summary>
         [JsonProperty("FilterEnterpriseFlag")]
         public ulong? FilterEnterpriseFlag{ get; set; }
@@ -120,6 +120,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterConvoy")]
         public ulong? FilterConvoy{ get; set; }
 
+        /// <summary>
+        /// 默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
+        /// </summary>
+        [JsonProperty("ExcludeAdvancedInfo")]
+        public bool? ExcludeAdvancedInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamObj(map, prefix + "FilterTag.", this.FilterTag);
             this.SetParamSimple(map, prefix + "FilterTrialFlag", this.FilterTrialFlag);
             this.SetParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
+            this.SetParamSimple(map, prefix + "ExcludeAdvancedInfo", this.ExcludeAdvancedInfo);
         }
     }
 }

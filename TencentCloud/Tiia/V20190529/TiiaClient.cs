@@ -1157,6 +1157,7 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// >   
         /// - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
+        /// 
         /// </summary>
         /// <param name="req"><see cref="SearchImageRequest"/></param>
         /// <returns><see cref="SearchImageResponse"/></returns>
@@ -1180,6 +1181,7 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// >   
         /// - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
+        /// 
         /// </summary>
         /// <param name="req"><see cref="SearchImageRequest"/></param>
         /// <returns><see cref="SearchImageResponse"/></returns>
@@ -1190,6 +1192,54 @@ namespace TencentCloud.Tiia.V20190529
              {
                  var strResp = this.InternalRequestSync(req, "SearchImage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持根据图库ID、物品ID、图片名称来修改图片信息（暂仅支持修改Tags）
+        /// 
+        /// >   
+        /// - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateImageRequest"/></param>
+        /// <returns><see cref="UpdateImageResponse"/></returns>
+        public async Task<UpdateImageResponse> UpdateImage(UpdateImageRequest req)
+        {
+             JsonResponseModel<UpdateImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持根据图库ID、物品ID、图片名称来修改图片信息（暂仅支持修改Tags）
+        /// 
+        /// >   
+        /// - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateImageRequest"/></param>
+        /// <returns><see cref="UpdateImageResponse"/></returns>
+        public UpdateImageResponse UpdateImageSync(UpdateImageRequest req)
+        {
+             JsonResponseModel<UpdateImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateImageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

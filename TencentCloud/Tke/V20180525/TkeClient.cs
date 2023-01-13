@@ -7493,7 +7493,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 给集群的一批work节点进行升级 
+        /// 给集群的一批work节点进行升级
         /// </summary>
         /// <param name="req"><see cref="UpgradeClusterInstancesRequest"/></param>
         /// <returns><see cref="UpgradeClusterInstancesResponse"/></returns>
@@ -7513,7 +7513,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 给集群的一批work节点进行升级 
+        /// 给集群的一批work节点进行升级
         /// </summary>
         /// <param name="req"><see cref="UpgradeClusterInstancesRequest"/></param>
         /// <returns><see cref="UpgradeClusterInstancesResponse"/></returns>
