@@ -24,12 +24,26 @@ namespace TencentCloud.Lcic.V20220817.Models
     public class DescribeAppDetailRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 应用ID
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// 开发商ID
+        /// </summary>
+        [JsonProperty("DeveloperId")]
+        public string DeveloperId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "DeveloperId", this.DeveloperId);
         }
     }
 }

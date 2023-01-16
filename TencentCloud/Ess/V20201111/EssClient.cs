@@ -491,6 +491,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 创建签署链接，需要联系运营人员开白后才可使用
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowSignUrlRequest"/></param>
+        /// <returns><see cref="CreateFlowSignUrlResponse"/></returns>
+        public async Task<CreateFlowSignUrlResponse> CreateFlowSignUrl(CreateFlowSignUrlRequest req)
+        {
+             JsonResponseModel<CreateFlowSignUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFlowSignUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowSignUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建签署链接，需要联系运营人员开白后才可使用
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowSignUrlRequest"/></param>
+        /// <returns><see cref="CreateFlowSignUrlResponse"/></returns>
+        public CreateFlowSignUrlResponse CreateFlowSignUrlSync(CreateFlowSignUrlRequest req)
+        {
+             JsonResponseModel<CreateFlowSignUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFlowSignUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowSignUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建员工
         /// </summary>
         /// <param name="req"><see cref="CreateIntegrationEmployeesRequest"/></param>

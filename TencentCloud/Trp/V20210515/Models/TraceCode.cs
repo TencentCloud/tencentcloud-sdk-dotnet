@@ -90,6 +90,18 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
+        /// <summary>
+        /// 渠道商ID
+        /// </summary>
+        [JsonProperty("AgentId")]
+        public ulong? AgentId{ get; set; }
+
+        /// <summary>
+        /// 码层级 0: 最小级, 1: 一级, 2: 二级
+        /// </summary>
+        [JsonProperty("Level")]
+        public ulong? Level{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "MerchantName", this.MerchantName);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
         }
     }
 }

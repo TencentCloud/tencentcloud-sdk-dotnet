@@ -36,7 +36,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>plan-support<br>   按照【<strong>站点套餐是否支持源站防护</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：支持<br>   false：不支持<br></li>
         /// </summary>
         [JsonProperty("Filters")]
-        public Filter Filters{ get; set; }
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
         /// 分页查询偏移量，默认为0。
@@ -57,7 +57,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
-            this.SetParamObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

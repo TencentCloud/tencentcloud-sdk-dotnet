@@ -94,6 +94,20 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string CompressFileUrl{ get; set; }
 
         /// <summary>
+        /// 资源清单文件下载URL(内测体验)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceListUrl")]
+        public string ResourceListUrl{ get; set; }
+
+        /// <summary>
+        /// 文档制作方式(内测体验)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ext")]
+        public string Ext{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -115,6 +129,8 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "ThumbnailUrl", this.ThumbnailUrl);
             this.SetParamSimple(map, prefix + "ThumbnailResolution", this.ThumbnailResolution);
             this.SetParamSimple(map, prefix + "CompressFileUrl", this.CompressFileUrl);
+            this.SetParamSimple(map, prefix + "ResourceListUrl", this.ResourceListUrl);
+            this.SetParamSimple(map, prefix + "Ext", this.Ext);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -39,14 +39,14 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? RoomId{ get; set; }
 
         /// <summary>
-        /// 用于白板推流服务进入白板房间的用户ID。在没有进行额外指定的情况下，这个用户ID同时会用于IM登录、IM加群、TRTC进房推流等操作。
-        /// 用户ID最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
+        /// 用于白板推流服务进入白板房间的用户ID。在没有额外指定`IMAuthParam`和`TRTCAuthParam`的情况下，这个用户ID同时会用于IM登录、IM加群、TRTC进房推流等操作。
+        /// 用户ID最大长度不能大于60个字节，该用户ID必须是一个单独的未同时在其他地方使用的用户ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该用户ID和其他地方同时在使用的用户ID重复，会导致白板推流服务与其他使用场景帐号互踢，影响正常推流。
         /// </summary>
         [JsonProperty("PushUserId")]
         public string PushUserId{ get; set; }
 
         /// <summary>
-        /// 与PushUserId对应的签名
+        /// 与PushUserId对应的IM签名(usersig)。
         /// </summary>
         [JsonProperty("PushUserSig")]
         public string PushUserSig{ get; set; }
@@ -178,8 +178,6 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string TRTCRoomIdStr{ get; set; }
 
         /// <summary>
-        /// 内测参数，需开通白名单进行体验。
-        /// 
         /// IM鉴权信息参数，用于IM鉴权。
         /// 当白板信令所使用的IM应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应IM应用鉴权信息。
         /// 
@@ -189,8 +187,6 @@ namespace TencentCloud.Tiw.V20190919.Models
         public AuthParam IMAuthParam{ get; set; }
 
         /// <summary>
-        /// 内测参数，需开通白名单进行体验。
-        /// 
         /// TRTC鉴权信息参数，用于TRTC进房推流鉴权。
         /// 当需要推流到的TRTC房间所对应的TRTC应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应的TRTC应用鉴权信息。
         /// 
@@ -198,6 +194,17 @@ namespace TencentCloud.Tiw.V20190919.Models
         /// </summary>
         [JsonProperty("TRTCAuthParam")]
         public AuthParam TRTCAuthParam{ get; set; }
+
+        /// <summary>
+        /// 内测参数，需要提前申请白名单进行体验。
+        /// 
+        /// 指定白板推流时推流用户进TRTC房间的进房模式。默认为 TRTCAppSceneVideoCall
+        /// 
+        /// TRTCAppSceneVideoCall - 视频通话场景，即绝大多数时间都是两人或两人以上视频通话的场景，内部编码器和网络协议优化侧重流畅性，降低通话延迟和卡顿率。
+        /// TRTCAppSceneLIVE - 直播场景，即绝大多数时间都是一人直播，偶尔有多人视频互动的场景，内部编码器和网络协议优化侧重性能和兼容性，性能和清晰度表现更佳。
+        /// </summary>
+        [JsonProperty("TRTCEnterRoomMode")]
+        public string TRTCEnterRoomMode{ get; set; }
 
 
         /// <summary>
@@ -225,6 +232,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "TRTCRoomIdStr", this.TRTCRoomIdStr);
             this.SetParamObj(map, prefix + "IMAuthParam.", this.IMAuthParam);
             this.SetParamObj(map, prefix + "TRTCAuthParam.", this.TRTCAuthParam);
+            this.SetParamSimple(map, prefix + "TRTCEnterRoomMode", this.TRTCEnterRoomMode);
         }
     }
 }

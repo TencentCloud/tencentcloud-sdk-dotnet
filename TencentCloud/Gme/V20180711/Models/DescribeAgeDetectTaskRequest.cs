@@ -31,7 +31,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public long? BizId{ get; set; }
 
         /// <summary>
-        /// 创建年龄语音识别任务时返回的taskid
+        /// [创建年龄语音识别任务](https://cloud.tencent.com/document/product/607/60620)时返回的taskid
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

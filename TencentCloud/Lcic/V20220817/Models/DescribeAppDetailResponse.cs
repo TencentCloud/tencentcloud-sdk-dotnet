@@ -25,6 +25,24 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
+        /// SdkAppId 
+        /// </summary>
+        [JsonProperty("SdkAppId")]
+        public string SdkAppId{ get; set; }
+
+        /// <summary>
+        /// 应用配置
+        /// </summary>
+        [JsonProperty("AppConfig")]
+        public AppConfig AppConfig{ get; set; }
+
+        /// <summary>
+        /// 场景配置
+        /// </summary>
+        [JsonProperty("SceneConfig")]
+        public SceneItem[] SceneConfig{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +54,9 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamObj(map, prefix + "AppConfig.", this.AppConfig);
+            this.SetParamArrayObj(map, prefix + "SceneConfig.", this.SceneConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

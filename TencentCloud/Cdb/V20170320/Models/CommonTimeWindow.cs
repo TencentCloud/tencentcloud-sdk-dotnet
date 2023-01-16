@@ -66,6 +66,24 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Sunday")]
         public string Sunday{ get; set; }
 
+        /// <summary>
+        /// 常规备份保留策略，weekly-按周备份，monthly-按月备份，默认为weekly
+        /// </summary>
+        [JsonProperty("BackupPeriodStrategy")]
+        public string BackupPeriodStrategy{ get; set; }
+
+        /// <summary>
+        /// 如果设置为按月备份，需填入每月具体备份日期，相邻备份天数不得超过两天。例[1,4,7,9,11,14,17,19,22,25,28,30,31]
+        /// </summary>
+        [JsonProperty("Days")]
+        public long?[] Days{ get; set; }
+
+        /// <summary>
+        /// 月度备份时间窗，BackupPeriodStrategy为monthly时必填。格式如： 02:00-06:00
+        /// </summary>
+        [JsonProperty("BackupPeriodTime")]
+        public string BackupPeriodTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Friday", this.Friday);
             this.SetParamSimple(map, prefix + "Saturday", this.Saturday);
             this.SetParamSimple(map, prefix + "Sunday", this.Sunday);
+            this.SetParamSimple(map, prefix + "BackupPeriodStrategy", this.BackupPeriodStrategy);
+            this.SetParamArraySimple(map, prefix + "Days.", this.Days);
+            this.SetParamSimple(map, prefix + "BackupPeriodTime", this.BackupPeriodTime);
         }
     }
 }
