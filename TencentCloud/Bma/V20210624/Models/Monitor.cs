@@ -108,6 +108,18 @@ namespace TencentCloud.Bma.V20210624.Models
         [JsonProperty("TortSiteNum")]
         public long? TortSiteNum{ get; set; }
 
+        /// <summary>
+        /// 监测截止时间
+        /// </summary>
+        [JsonProperty("MonitorEndTime")]
+        public string MonitorEndTime{ get; set; }
+
+        /// <summary>
+        /// 是否自动续费
+        /// </summary>
+        [JsonProperty("AutoRenew")]
+        public long? AutoRenew{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Bma.V20210624.Models
             this.SetParamSimple(map, prefix + "EvidenceStatus", this.EvidenceStatus);
             this.SetParamSimple(map, prefix + "EvidenceNote", this.EvidenceNote);
             this.SetParamSimple(map, prefix + "TortSiteNum", this.TortSiteNum);
+            this.SetParamSimple(map, prefix + "MonitorEndTime", this.MonitorEndTime);
+            this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         }
     }
 }

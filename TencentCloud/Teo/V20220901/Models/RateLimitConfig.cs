@@ -52,6 +52,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("RateLimitIntelligence")]
         public RateLimitIntelligence RateLimitIntelligence{ get; set; }
 
+        /// <summary>
+        /// 速率限制-托管定制规则。如果为null，默认使用历史配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RateLimitCustomizes")]
+        public RateLimitUserRule[] RateLimitCustomizes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArrayObj(map, prefix + "RateLimitUserRules.", this.RateLimitUserRules);
             this.SetParamObj(map, prefix + "RateLimitTemplate.", this.RateLimitTemplate);
             this.SetParamObj(map, prefix + "RateLimitIntelligence.", this.RateLimitIntelligence);
+            this.SetParamArrayObj(map, prefix + "RateLimitCustomizes.", this.RateLimitCustomizes);
         }
     }
 }

@@ -210,6 +210,12 @@ namespace TencentCloud.Bma.V20210624.Models
         [JsonProperty("ApplierName")]
         public string ApplierName{ get; set; }
 
+        /// <summary>
+        /// 是否自动续期
+        /// </summary>
+        [JsonProperty("IsAutoRenew")]
+        public string IsAutoRenew{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +253,7 @@ namespace TencentCloud.Bma.V20210624.Models
             this.SetParamSimple(map, prefix + "MonitorEndTime", this.MonitorEndTime);
             this.SetParamSimple(map, prefix + "ApplierId", this.ApplierId);
             this.SetParamSimple(map, prefix + "ApplierName", this.ApplierName);
+            this.SetParamSimple(map, prefix + "IsAutoRenew", this.IsAutoRenew);
         }
     }
 }

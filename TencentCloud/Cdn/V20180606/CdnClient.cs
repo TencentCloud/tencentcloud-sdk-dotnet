@@ -1041,6 +1041,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// DescribeEdgePackTaskStatus 用于查询动态打包任务状态列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgePackTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeEdgePackTaskStatusResponse"/></returns>
+        public async Task<DescribeEdgePackTaskStatusResponse> DescribeEdgePackTaskStatus(DescribeEdgePackTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeEdgePackTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEdgePackTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgePackTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeEdgePackTaskStatus 用于查询动态打包任务状态列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgePackTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeEdgePackTaskStatusResponse"/></returns>
+        public DescribeEdgePackTaskStatusResponse DescribeEdgePackTaskStatusSync(DescribeEdgePackTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeEdgePackTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEdgePackTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgePackTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeEventLogData 用于查询事件日志统计曲线
         /// </summary>
         /// <param name="req"><see cref="DescribeEventLogDataRequest"/></param>

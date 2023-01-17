@@ -87,6 +87,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("TemplateConfig")]
         public TemplateConfig TemplateConfig{ get; set; }
 
+        /// <summary>
+        /// 慢速攻击配置。如果为null，默认使用历史配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SlowPostConfig")]
+        public SlowPostConfig SlowPostConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "ExceptConfig.", this.ExceptConfig);
             this.SetParamObj(map, prefix + "DropPageConfig.", this.DropPageConfig);
             this.SetParamObj(map, prefix + "TemplateConfig.", this.TemplateConfig);
+            this.SetParamObj(map, prefix + "SlowPostConfig.", this.SlowPostConfig);
         }
     }
 }

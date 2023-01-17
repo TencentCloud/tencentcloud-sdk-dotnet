@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.683</VersionPrefix>
+    <VersionPrefix>3.0.684</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -546,6 +546,7 @@
     <Compile Include="V20220901\Models\FailReason.cs" />
     <Compile Include="V20220901\Models\FileAscriptionInfo.cs" />
     <Compile Include="V20220901\Models\Filter.cs" />
+    <Compile Include="V20220901\Models\FirstPartConfig.cs" />
     <Compile Include="V20220901\Models\FollowOrigin.cs" />
     <Compile Include="V20220901\Models\ForceRedirect.cs" />
     <Compile Include="V20220901\Models\Grpc.cs" />
@@ -646,6 +647,8 @@
     <Compile Include="V20220901\Models\SingleDataRecord.cs" />
     <Compile Include="V20220901\Models\SingleTypeValue.cs" />
     <Compile Include="V20220901\Models\SkipCondition.cs" />
+    <Compile Include="V20220901\Models\SlowPostConfig.cs" />
+    <Compile Include="V20220901\Models\SlowRateConfig.cs" />
     <Compile Include="V20220901\Models\SmartRouting.cs" />
     <Compile Include="V20220901\Models\SpeedTestingConfig.cs" />
     <Compile Include="V20220901\Models\SpeedTestingDetailData.cs" />

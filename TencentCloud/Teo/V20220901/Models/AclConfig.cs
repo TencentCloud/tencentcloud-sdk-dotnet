@@ -38,6 +38,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("AclUserRules")]
         public AclUserRule[] AclUserRules{ get; set; }
 
+        /// <summary>
+        /// 托管定制规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Customizes")]
+        public AclUserRule[] Customizes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamArrayObj(map, prefix + "AclUserRules.", this.AclUserRules);
+            this.SetParamArrayObj(map, prefix + "Customizes.", this.Customizes);
         }
     }
 }
