@@ -118,7 +118,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// 性能保障规格。
+        /// 性能容量型规格。
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }

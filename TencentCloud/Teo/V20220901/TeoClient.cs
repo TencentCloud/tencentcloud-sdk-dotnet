@@ -1973,6 +1973,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 本接口（DescribeTimingL7SourceData）查询七层回源分析时序数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7SourceDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7SourceDataResponse"/></returns>
+        public async Task<DescribeTimingL7SourceDataResponse> DescribeTimingL7SourceData(DescribeTimingL7SourceDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL7SourceDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimingL7SourceData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL7SourceDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTimingL7SourceData）查询七层回源分析时序数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7SourceDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7SourceDataResponse"/></returns>
+        public DescribeTimingL7SourceDataResponse DescribeTimingL7SourceDataSync(DescribeTimingL7SourceDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL7SourceDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimingL7SourceData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL7SourceDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeTopL7AnalysisData）用于查询七层流量前topN的数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7AnalysisDataRequest"/></param>

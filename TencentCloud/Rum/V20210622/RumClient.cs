@@ -1479,7 +1479,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 获取项目下的日志列表（实例创建的项目下的日志列表）
+        /// (已下线，请用DescribeRumLogList)
         /// </summary>
         /// <param name="req"><see cref="DescribeLogListRequest"/></param>
         /// <returns><see cref="DescribeLogListResponse"/></returns>
@@ -1499,7 +1499,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 获取项目下的日志列表（实例创建的项目下的日志列表）
+        /// (已下线，请用DescribeRumLogList)
         /// </summary>
         /// <param name="req"><see cref="DescribeLogListRequest"/></param>
         /// <returns><see cref="DescribeLogListResponse"/></returns>

@@ -106,10 +106,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 指定VIP申请负载均衡。指定此参数后：
-        /// <ul><li>若创建共享型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。</li>
-        /// <li>若创建独占型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。
-        /// </li></ul>
+        /// 指定VIP申请负载均衡。此参数选填，不填写此参数时自动分配VIP。IPv4和IPv6类型支持此参数，IPv6 NAT64类型不支持。
+        /// 注意：当指定VIP创建内网实例、或公网IPv6 BGP实例时，若VIP不属于指定VPC子网的网段内时，会创建失败；若VIP已被占用，也会创建失败。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
@@ -121,15 +119,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// 独占集群信息。若创建独占集群负载均衡实例，则此参数必填。
+        /// 独占型实例信息。若创建独占型的内网负载均衡实例，则此参数必填。
         /// </summary>
         [JsonProperty("ExclusiveCluster")]
         public ExclusiveCluster ExclusiveCluster{ get; set; }
 
         /// <summary>
-        /// 创建性能容量型 CLB 实例。
-        /// <ul><li>若需要创建性能容量型 CLB 实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认性能保障规格的性能容量型实例。</li>
-        /// <li>若需要创建共享型 CLB 实例，则无需填写此参数。</li></ul>
+        /// 创建性能容量型实例。
+        /// <ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
+        /// <ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+        /// <li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }

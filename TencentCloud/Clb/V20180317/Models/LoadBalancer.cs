@@ -309,7 +309,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public SnatIp[] SnatIps{ get; set; }
 
         /// <summary>
-        /// 性能保障规格
+        /// 性能容量型规格
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaType")]
@@ -379,7 +379,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string HealthLogTopicId{ get; set; }
 
         /// <summary>
-        /// 集群ID.
+        /// 集群ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterIds")]

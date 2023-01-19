@@ -15,20 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Clb.V20180317.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLoadBalancerSlaRequest : AbstractModel
+    public class DescribeTimingL7SourceDataResponse : AbstractModel
     {
         
         /// <summary>
-        /// 负载均衡实例信息。
+        /// 查询结果的总条数。
         /// </summary>
-        [JsonProperty("LoadBalancerSla")]
-        public SlaUpdateParam[] LoadBalancerSla{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 时序流量数据列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TimingDataRecords")]
+        public TimingDataRecord[] TimingDataRecords{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +49,9 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "LoadBalancerSla.", this.LoadBalancerSla);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "TimingDataRecords.", this.TimingDataRecords);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
