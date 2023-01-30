@@ -1859,6 +1859,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DescribeDBFeatures)用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBFeaturesRequest"/></param>
+        /// <returns><see cref="DescribeDBFeaturesResponse"/></returns>
+        public async Task<DescribeDBFeaturesResponse> DescribeDBFeatures(DescribeDBFeaturesRequest req)
+        {
+             JsonResponseModel<DescribeDBFeaturesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBFeatures");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBFeaturesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBFeatures)用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBFeaturesRequest"/></param>
+        /// <returns><see cref="DescribeDBFeaturesResponse"/></returns>
+        public DescribeDBFeaturesResponse DescribeDBFeaturesSync(DescribeDBFeaturesRequest req)
+        {
+             JsonResponseModel<DescribeDBFeaturesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBFeatures");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBFeaturesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBImportRecords)用于查询云数据库导入任务操作日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBImportRecordsRequest"/></param>

@@ -15,17 +15,17 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeGrafanaEnvironmentsRequest : AbstractModel
+    public class DescribeDBFeaturesRequest : AbstractModel
     {
         
         /// <summary>
-        /// Grafana 实例 ID，例如：grafana-abcdefgh
+        /// 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

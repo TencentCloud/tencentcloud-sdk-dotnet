@@ -2564,5 +2564,45 @@ namespace TencentCloud.Dcdb.V20180411
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 本接口（UpgradeHourDCDBInstance）用于升级后付费分布式数据库实例。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeHourDCDBInstanceResponse"/></returns>
+        public async Task<UpgradeHourDCDBInstanceResponse> UpgradeHourDCDBInstance(UpgradeHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeHourDCDBInstance）用于升级后付费分布式数据库实例。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeHourDCDBInstanceResponse"/></returns>
+        public UpgradeHourDCDBInstanceResponse UpgradeHourDCDBInstanceSync(UpgradeHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }
