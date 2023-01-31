@@ -37,7 +37,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] Items{ get; set; }
 
         /// <summary>
-        /// clb-waf或者sparta-waf
+        /// WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }

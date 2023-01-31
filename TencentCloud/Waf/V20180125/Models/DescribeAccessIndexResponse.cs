@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 是否生效
+        /// 是否生效，true表示生效，false表示未生效
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }

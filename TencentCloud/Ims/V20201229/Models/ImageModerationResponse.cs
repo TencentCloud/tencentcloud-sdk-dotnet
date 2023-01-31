@@ -102,6 +102,13 @@ namespace TencentCloud.Ims.V20201229.Models
         public string FileMD5{ get; set; }
 
         /// <summary>
+        /// 该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecognitionResults")]
+        public RecognitionResult[] RecognitionResults{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -125,6 +132,7 @@ namespace TencentCloud.Ims.V20201229.Models
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "FileMD5", this.FileMD5);
+            this.SetParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

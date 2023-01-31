@@ -53,7 +53,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 增加自定义策略
+        /// 增加访问控制（自定义策略）
         /// </summary>
         /// <param name="req"><see cref="AddCustomRuleRequest"/></param>
         /// <returns><see cref="AddCustomRuleResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 增加自定义策略
+        /// 增加访问控制（自定义策略）
         /// </summary>
         /// <param name="req"><see cref="AddCustomRuleRequest"/></param>
         /// <returns><see cref="AddCustomRuleResponse"/></returns>
@@ -1177,7 +1177,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 开启或禁用自定义策略
+        /// 开启或禁用访问控制（自定义策略）
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomRuleStatusRequest"/></param>
         /// <returns><see cref="ModifyCustomRuleStatusResponse"/></returns>
@@ -1197,7 +1197,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 开启或禁用自定义策略
+        /// 开启或禁用访问控制（自定义策略）
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomRuleStatusRequest"/></param>
         /// <returns><see cref="ModifyCustomRuleStatusResponse"/></returns>

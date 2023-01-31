@@ -15,15 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdid.V20210519.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class VerifyPurchaseResponse : AbstractModel
+    public class DescribeDBEncryptAttributesResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 是否启用加密，1-已开启；0-未开启。
+        /// </summary>
+        [JsonProperty("EncryptStatus")]
+        public long? EncryptStatus{ get; set; }
+
+        /// <summary>
+        /// DEK密钥
+        /// </summary>
+        [JsonProperty("CipherText")]
+        public string CipherText{ get; set; }
+
+        /// <summary>
+        /// DEK密钥过期日期。
+        /// </summary>
+        [JsonProperty("ExpireDate")]
+        public string ExpireDate{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +54,9 @@ namespace TencentCloud.Tdid.V20210519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EncryptStatus", this.EncryptStatus);
+            this.SetParamSimple(map, prefix + "CipherText", this.CipherText);
+            this.SetParamSimple(map, prefix + "ExpireDate", this.ExpireDate);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

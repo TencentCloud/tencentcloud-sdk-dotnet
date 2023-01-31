@@ -1976,49 +1976,5 @@ namespace TencentCloud.Tdid.V20210519
              return rsp.Response;
         }
 
-        /// <summary>
-        /// 该接口已废弃
-        /// 
-        /// 验证购买
-        /// </summary>
-        /// <param name="req"><see cref="VerifyPurchaseRequest"/></param>
-        /// <returns><see cref="VerifyPurchaseResponse"/></returns>
-        public async Task<VerifyPurchaseResponse> VerifyPurchase(VerifyPurchaseRequest req)
-        {
-             JsonResponseModel<VerifyPurchaseResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "VerifyPurchase");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyPurchaseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 该接口已废弃
-        /// 
-        /// 验证购买
-        /// </summary>
-        /// <param name="req"><see cref="VerifyPurchaseRequest"/></param>
-        /// <returns><see cref="VerifyPurchaseResponse"/></returns>
-        public VerifyPurchaseResponse VerifyPurchaseSync(VerifyPurchaseRequest req)
-        {
-             JsonResponseModel<VerifyPurchaseResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "VerifyPurchase");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyPurchaseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
     }
 }

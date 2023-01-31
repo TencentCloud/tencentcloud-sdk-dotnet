@@ -657,6 +657,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口(DescribeDBEncryptAttributes)用于查询实例数据加密状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="DescribeDBEncryptAttributesResponse"/></returns>
+        public async Task<DescribeDBEncryptAttributesResponse> DescribeDBEncryptAttributes(DescribeDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<DescribeDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBEncryptAttributes)用于查询实例数据加密状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="DescribeDBEncryptAttributesResponse"/></returns>
+        public DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributesSync(DescribeDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<DescribeDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBInstanceSpecs)用于查询可创建的云数据库可售卖的规格配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceSpecsRequest"/></param>

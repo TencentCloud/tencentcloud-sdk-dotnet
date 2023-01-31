@@ -141,7 +141,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 创建项目（归属于某个团队）
+        /// 创建 RUM 应用（归属于某个团队）
         /// </summary>
         /// <param name="req"><see cref="CreateProjectRequest"/></param>
         /// <returns><see cref="CreateProjectResponse"/></returns>
@@ -161,7 +161,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 创建项目（归属于某个团队）
+        /// 创建 RUM 应用（归属于某个团队）
         /// </summary>
         /// <param name="req"><see cref="CreateProjectRequest"/></param>
         /// <returns><see cref="CreateProjectResponse"/></returns>
@@ -261,7 +261,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 创建Rum实例
+        /// 创建 RUM 业务系统
         /// </summary>
         /// <param name="req"><see cref="CreateTawInstanceRequest"/></param>
         /// <returns><see cref="CreateTawInstanceResponse"/></returns>
@@ -281,7 +281,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 创建Rum实例
+        /// 创建 RUM 业务系统
         /// </summary>
         /// <param name="req"><see cref="CreateTawInstanceRequest"/></param>
         /// <returns><see cref="CreateTawInstanceResponse"/></returns>
@@ -1639,7 +1639,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 获取项目上报率列表
+        /// 获取应用上报抽样信息
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectLimitsRequest"/></param>
         /// <returns><see cref="DescribeProjectLimitsResponse"/></returns>
@@ -1659,7 +1659,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 获取项目上报率列表
+        /// 获取应用上报抽样信息
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectLimitsRequest"/></param>
         /// <returns><see cref="DescribeProjectLimitsResponse"/></returns>
@@ -1799,7 +1799,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 获取项目对应sourcemap文件列表
+        /// 获取应用对应sourcemap文件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeReleaseFilesRequest"/></param>
         /// <returns><see cref="DescribeReleaseFilesResponse"/></returns>
@@ -1819,7 +1819,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 获取项目对应sourcemap文件列表
+        /// 获取应用对应sourcemap文件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeReleaseFilesRequest"/></param>
         /// <returns><see cref="DescribeReleaseFilesResponse"/></returns>
@@ -2159,7 +2159,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 修改实例信息
+        /// 修改 RUM 业务系统
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
         /// <returns><see cref="ModifyInstanceResponse"/></returns>
@@ -2179,7 +2179,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 修改实例信息
+        /// 修改 RUM 业务系统
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
         /// <returns><see cref="ModifyInstanceResponse"/></returns>
@@ -2199,7 +2199,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 修改 rum 项目信息
+        /// 修改 RUM 应用信息
         /// </summary>
         /// <param name="req"><see cref="ModifyProjectRequest"/></param>
         /// <returns><see cref="ModifyProjectResponse"/></returns>
@@ -2219,7 +2219,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 修改 rum 项目信息
+        /// 修改 RUM 应用信息
         /// </summary>
         /// <param name="req"><see cref="ModifyProjectRequest"/></param>
         /// <returns><see cref="ModifyProjectResponse"/></returns>
@@ -2279,7 +2279,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 恢复实例
+        /// 恢复 RUM 业务系统，恢复后，用户可以正常使用和上报数据
         /// </summary>
         /// <param name="req"><see cref="ResumeInstanceRequest"/></param>
         /// <returns><see cref="ResumeInstanceResponse"/></returns>
@@ -2299,7 +2299,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 恢复实例
+        /// 恢复 RUM 业务系统，恢复后，用户可以正常使用和上报数据
         /// </summary>
         /// <param name="req"><see cref="ResumeInstanceRequest"/></param>
         /// <returns><see cref="ResumeInstanceResponse"/></returns>

@@ -1213,6 +1213,86 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 查询扫码日志明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScanLogsRequest"/></param>
+        /// <returns><see cref="DescribeScanLogsResponse"/></returns>
+        public async Task<DescribeScanLogsResponse> DescribeScanLogs(DescribeScanLogsRequest req)
+        {
+             JsonResponseModel<DescribeScanLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScanLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询扫码日志明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScanLogsRequest"/></param>
+        /// <returns><see cref="DescribeScanLogsResponse"/></returns>
+        public DescribeScanLogsResponse DescribeScanLogsSync(DescribeScanLogsRequest req)
+        {
+             JsonResponseModel<DescribeScanLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScanLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某个批次被扫码的统计列表，没有被扫过的不会返回
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScanStatsRequest"/></param>
+        /// <returns><see cref="DescribeScanStatsResponse"/></returns>
+        public async Task<DescribeScanStatsResponse> DescribeScanStats(DescribeScanStatsRequest req)
+        {
+             JsonResponseModel<DescribeScanStatsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScanStats");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanStatsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某个批次被扫码的统计列表，没有被扫过的不会返回
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScanStatsRequest"/></param>
+        /// <returns><see cref="DescribeScanStatsResponse"/></returns>
+        public DescribeScanStatsResponse DescribeScanStatsSync(DescribeScanStatsRequest req)
+        {
+             JsonResponseModel<DescribeScanStatsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScanStats");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanStatsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询临时Token，主要用于上传接口
         /// </summary>
         /// <param name="req"><see cref="DescribeTmpTokenRequest"/></param>

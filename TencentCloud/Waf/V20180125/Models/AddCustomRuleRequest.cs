@@ -67,7 +67,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Redirect{ get; set; }
 
         /// <summary>
-        /// "clb-waf"或者"sparta-waf"
+        /// WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
@@ -77,6 +77,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("Bypass")]
         public string Bypass{ get; set; }
+
+        /// <summary>
+        /// 添加规则的来源，默认为空
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Redirect", this.Redirect);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamSimple(map, prefix + "Bypass", this.Bypass);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
         }
     }
 }

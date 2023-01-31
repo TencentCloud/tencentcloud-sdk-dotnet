@@ -15,21 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdid.V20210519.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class VerifyPurchaseRequest : AbstractModel
+    public class DescribeDBEncryptAttributesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 实例Id，形如：tdsql-ow728lmc。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }
