@@ -26,6 +26,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+        /// 
+        /// 注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

@@ -393,6 +393,54 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 指定需要批量撤销的签署流程Id，批量催办合同
+        /// 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；接口失败后返回错误信息
+        /// 注意:
+        /// 能撤回合同的只能是合同的发起人或者签署人
+        /// 该接口需要开白后使用
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateFlowRemindsRequest"/></param>
+        /// <returns><see cref="ChannelCreateFlowRemindsResponse"/></returns>
+        public async Task<ChannelCreateFlowRemindsResponse> ChannelCreateFlowReminds(ChannelCreateFlowRemindsRequest req)
+        {
+             JsonResponseModel<ChannelCreateFlowRemindsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateFlowReminds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateFlowRemindsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 指定需要批量撤销的签署流程Id，批量催办合同
+        /// 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；接口失败后返回错误信息
+        /// 注意:
+        /// 能撤回合同的只能是合同的发起人或者签署人
+        /// 该接口需要开白后使用
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateFlowRemindsRequest"/></param>
+        /// <returns><see cref="ChannelCreateFlowRemindsResponse"/></returns>
+        public ChannelCreateFlowRemindsResponse ChannelCreateFlowRemindsSync(ChannelCreateFlowRemindsRequest req)
+        {
+             JsonResponseModel<ChannelCreateFlowRemindsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateFlowReminds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateFlowRemindsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提交企业签署流程审批结果
         /// 
         /// 在通过接口(CreateFlowsByTemplates 或者ChannelCreateFlowByFiles)创建签署流程时，若指定了参数 NeedSignReview 为true,则可以调用此接口提交企业内部签署审批结果。
@@ -1009,7 +1057,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 查询企业扩展服务授权信息，企业经办人需要时企业超管或者法人
+        /// 查询企业扩展服务授权信息，企业经办人需要是企业超管或者法人
         /// </summary>
         /// <param name="req"><see cref="DescribeExtendedServiceAuthInfoRequest"/></param>
         /// <returns><see cref="DescribeExtendedServiceAuthInfoResponse"/></returns>
@@ -1029,7 +1077,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 查询企业扩展服务授权信息，企业经办人需要时企业超管或者法人
+        /// 查询企业扩展服务授权信息，企业经办人需要是企业超管或者法人
         /// </summary>
         /// <param name="req"><see cref="DescribeExtendedServiceAuthInfoRequest"/></param>
         /// <returns><see cref="DescribeExtendedServiceAuthInfoResponse"/></returns>
@@ -1255,7 +1303,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 修改（操作）企业扩展服务 ，企业经办人需要时企业超管或者法人
+        /// 修改（操作）企业扩展服务 ，企业经办人需要是企业超管或者法人
         /// </summary>
         /// <param name="req"><see cref="ModifyExtendedServiceRequest"/></param>
         /// <returns><see cref="ModifyExtendedServiceResponse"/></returns>
@@ -1275,7 +1323,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 修改（操作）企业扩展服务 ，企业经办人需要时企业超管或者法人
+        /// 修改（操作）企业扩展服务 ，企业经办人需要是企业超管或者法人
         /// </summary>
         /// <param name="req"><see cref="ModifyExtendedServiceRequest"/></param>
         /// <returns><see cref="ModifyExtendedServiceResponse"/></returns>

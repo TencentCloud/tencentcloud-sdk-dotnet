@@ -230,6 +230,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("DiskEnhance")]
         public ulong? DiskEnhance{ get; set; }
 
+        /// <summary>
+        /// 是否开启智能巡检
+        /// </summary>
+        [JsonProperty("EnableDiagnose")]
+        public bool? EnableDiagnose{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -269,6 +275,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
             this.SetParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
             this.SetParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
+            this.SetParamSimple(map, prefix + "EnableDiagnose", this.EnableDiagnose);
         }
     }
 }

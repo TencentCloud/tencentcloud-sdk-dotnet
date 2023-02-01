@@ -25,7 +25,7 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用ID。低代码互动课堂的SdkAppId。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }

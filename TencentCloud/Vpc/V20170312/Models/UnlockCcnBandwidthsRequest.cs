@@ -24,12 +24,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     public class UnlockCcnBandwidthsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 带宽实例对象数组。
+        /// </summary>
+        [JsonProperty("Instances")]
+        public CcnFlowLock[] Instances{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Instances.", this.Instances);
         }
     }
 }

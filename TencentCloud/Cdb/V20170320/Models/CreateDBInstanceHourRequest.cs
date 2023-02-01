@@ -61,7 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
+        /// 项目 ID，不填为默认项目。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

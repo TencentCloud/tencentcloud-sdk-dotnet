@@ -37,43 +37,43 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 动作
+        /// 动作，40表示查询白名单，42表示查询黑名单
         /// </summary>
         [JsonProperty("ActionType")]
         public ulong? ActionType{ get; set; }
 
         /// <summary>
-        /// 有效时间最小时间戳
+        /// 最小有效时间的时间戳
         /// </summary>
         [JsonProperty("VtsMin")]
         public ulong? VtsMin{ get; set; }
 
         /// <summary>
-        /// 有效时间最大时间戳
+        /// 最大有效时间的时间戳
         /// </summary>
         [JsonProperty("VtsMax")]
         public ulong? VtsMax{ get; set; }
 
         /// <summary>
-        /// 创建时间最小时间戳
+        /// 最小创建时间的时间戳
         /// </summary>
         [JsonProperty("CtsMin")]
         public ulong? CtsMin{ get; set; }
 
         /// <summary>
-        /// 创建时间最大时间戳
+        /// 最大创建时间的时间戳
         /// </summary>
         [JsonProperty("CtsMax")]
         public ulong? CtsMax{ get; set; }
 
         /// <summary>
-        /// 偏移
+        /// 分页开始条数
         /// </summary>
         [JsonProperty("OffSet")]
         public ulong? OffSet{ get; set; }
 
         /// <summary>
-        /// 限制
+        /// 每页的条数
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

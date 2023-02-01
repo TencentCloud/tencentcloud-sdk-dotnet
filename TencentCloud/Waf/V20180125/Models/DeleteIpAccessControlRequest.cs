@@ -37,7 +37,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] Items{ get; set; }
 
         /// <summary>
-        /// 删除对应的域名下的所有黑/白IP名额单
+        /// 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
         /// </summary>
         [JsonProperty("DeleteAll")]
         public bool? DeleteAll{ get; set; }

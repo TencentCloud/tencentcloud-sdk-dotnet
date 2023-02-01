@@ -25,7 +25,7 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// SdkAppId 
+        /// SDK 对应的AppId 
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }
