@@ -2693,6 +2693,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 重启实例
+        /// </summary>
+        /// <param name="req"><see cref="RestartInstanceRequest"/></param>
+        /// <returns><see cref="RestartInstanceResponse"/></returns>
+        public async Task<RestartInstanceResponse> RestartInstance(RestartInstanceRequest req)
+        {
+             JsonResponseModel<RestartInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestartInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重启实例
+        /// </summary>
+        /// <param name="req"><see cref="RestartInstanceRequest"/></param>
+        /// <returns><see cref="RestartInstanceResponse"/></returns>
+        public RestartInstanceResponse RestartInstanceSync(RestartInstanceRequest req)
+        {
+             JsonResponseModel<RestartInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestartInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 恢复serverless集群
         /// </summary>
         /// <param name="req"><see cref="ResumeServerlessRequest"/></param>

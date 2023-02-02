@@ -43,7 +43,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 老师ID。
+        /// 老师的UserId。
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }
@@ -104,7 +104,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? DisableRecord{ get; set; }
 
         /// <summary>
-        /// 助教Id列表。
+        /// 助教UserId列表。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Assistants")]

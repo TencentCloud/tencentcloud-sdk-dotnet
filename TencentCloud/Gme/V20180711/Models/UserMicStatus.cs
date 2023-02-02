@@ -25,16 +25,23 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 客户端用于标识用户的Openid。
+        /// 开麦状态。1表示关闭麦克风，2表示打开麦克风。
+        /// </summary>
+        [JsonProperty("EnableMic")]
+        public long? EnableMic{ get; set; }
+
+        /// <summary>
+        /// 客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
         /// </summary>
         [JsonProperty("Uid")]
         public long? Uid{ get; set; }
 
         /// <summary>
-        /// 开麦状态。1表示关闭麦克风，2表示打开麦克风。
+        /// 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EnableMic")]
-        public long? EnableMic{ get; set; }
+        [JsonProperty("StrUid")]
+        public string StrUid{ get; set; }
 
 
         /// <summary>
@@ -42,8 +49,9 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uid", this.Uid);
             this.SetParamSimple(map, prefix + "EnableMic", this.EnableMic);
+            this.SetParamSimple(map, prefix + "Uid", this.Uid);
+            this.SetParamSimple(map, prefix + "StrUid", this.StrUid);
         }
     }
 }

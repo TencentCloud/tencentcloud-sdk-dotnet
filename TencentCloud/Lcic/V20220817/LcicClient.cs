@@ -53,6 +53,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 如果批量注册的用户已存在，则会被覆盖。一次最多注册1000个用户。默认请求频率限制：10次/秒
+        /// </summary>
+        /// <param name="req"><see cref="BatchRegisterRequest"/></param>
+        /// <returns><see cref="BatchRegisterResponse"/></returns>
+        public async Task<BatchRegisterResponse> BatchRegister(BatchRegisterRequest req)
+        {
+             JsonResponseModel<BatchRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchRegisterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 如果批量注册的用户已存在，则会被覆盖。一次最多注册1000个用户。默认请求频率限制：10次/秒
+        /// </summary>
+        /// <param name="req"><see cref="BatchRegisterRequest"/></param>
+        /// <returns><see cref="BatchRegisterResponse"/></returns>
+        public BatchRegisterResponse BatchRegisterSync(BatchRegisterRequest req)
+        {
+             JsonResponseModel<BatchRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchRegisterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 绑定文档到房间
         /// </summary>
         /// <param name="req"><see cref="BindDocumentToRoomRequest"/></param>
@@ -524,6 +564,46 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "ModifyApp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改房间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoomRequest"/></param>
+        /// <returns><see cref="ModifyRoomResponse"/></returns>
+        public async Task<ModifyRoomResponse> ModifyRoom(ModifyRoomRequest req)
+        {
+             JsonResponseModel<ModifyRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改房间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoomRequest"/></param>
+        /// <returns><see cref="ModifyRoomResponse"/></returns>
+        public ModifyRoomResponse ModifyRoomSync(ModifyRoomRequest req)
+        {
+             JsonResponseModel<ModifyRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoomResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

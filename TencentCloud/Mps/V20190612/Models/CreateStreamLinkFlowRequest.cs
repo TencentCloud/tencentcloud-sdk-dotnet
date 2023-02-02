@@ -42,6 +42,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("InputGroup")]
         public CreateInput[] InputGroup{ get; set; }
 
+        /// <summary>
+        /// 该Flow关联的媒体传输事件ID，每个flow只能关联一个Event。
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
             this.SetParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
             this.SetParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
         }
     }
 }

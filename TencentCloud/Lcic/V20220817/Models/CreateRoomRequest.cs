@@ -73,7 +73,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string SubType{ get; set; }
 
         /// <summary>
-        /// 老师ID。通过[注册用户]接口获取的UserId。
+        /// 老师ID。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有老师权限。
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }
@@ -104,7 +104,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? DisableRecord{ get; set; }
 
         /// <summary>
-        /// 助教Id列表。通过[注册用户]接口获取的UserId。
+        /// 助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
         /// </summary>
         [JsonProperty("Assistants")]
         public string[] Assistants{ get; set; }

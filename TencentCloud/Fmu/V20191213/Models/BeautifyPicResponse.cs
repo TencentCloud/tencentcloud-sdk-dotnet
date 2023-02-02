@@ -26,12 +26,14 @@ namespace TencentCloud.Fmu.V20191213.Models
         
         /// <summary>
         /// RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultImage")]
         public string ResultImage{ get; set; }
 
         /// <summary>
         /// RspImgType 为 url 时，返回处理后的图片 url 数据。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultUrl")]
         public string ResultUrl{ get; set; }

@@ -31,12 +31,6 @@ namespace TencentCloud.Gme.V20180711.Models
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 要剔除的用户列表
-        /// </summary>
-        [JsonProperty("Uids")]
-        public string[] Uids{ get; set; }
-
-        /// <summary>
         /// 剔除类型 1-删除房间 2-剔除用户
         /// </summary>
         [JsonProperty("DeleteType")]
@@ -48,6 +42,12 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
 
+        /// <summary>
+        /// 要剔除的用户列表
+        /// </summary>
+        [JsonProperty("Uids")]
+        public string[] Uids{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,9 +55,9 @@ namespace TencentCloud.Gme.V20180711.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
-            this.SetParamArraySimple(map, prefix + "Uids.", this.Uids);
             this.SetParamSimple(map, prefix + "DeleteType", this.DeleteType);
             this.SetParamSimple(map, prefix + "BizId", this.BizId);
+            this.SetParamArraySimple(map, prefix + "Uids.", this.Uids);
         }
     }
 }

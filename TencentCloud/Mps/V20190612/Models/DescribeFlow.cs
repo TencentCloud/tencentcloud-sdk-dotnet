@@ -61,6 +61,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("OutputGroup")]
         public DescribeOutput[] OutputGroup{ get; set; }
 
+        /// <summary>
+        /// 该Flow关联的媒体传输事件EventId。
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
+
+        /// <summary>
+        /// 媒体传输输入流所属的区域，取值和InputRegion相同。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +85,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
             this.SetParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
             this.SetParamArrayObj(map, prefix + "OutputGroup.", this.OutputGroup);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

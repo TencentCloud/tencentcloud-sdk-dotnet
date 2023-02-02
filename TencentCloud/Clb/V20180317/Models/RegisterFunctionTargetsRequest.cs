@@ -24,12 +24,54 @@ namespace TencentCloud.Clb.V20180317.Models
     public class RegisterFunctionTargetsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 负载均衡实例 ID。
+        /// </summary>
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
+
+        /// <summary>
+        /// 负载均衡监听器 ID。
+        /// </summary>
+        [JsonProperty("ListenerId")]
+        public string ListenerId{ get; set; }
+
+        /// <summary>
+        /// 待绑定的云函数列表。
+        /// </summary>
+        [JsonProperty("FunctionTargets")]
+        public FunctionTarget[] FunctionTargets{ get; set; }
+
+        /// <summary>
+        /// 目标转发规则的 ID，当将云函数绑定到七层转发规则时，必须输入此参数或 Domain+Url 参数。
+        /// </summary>
+        [JsonProperty("LocationId")]
+        public string LocationId{ get; set; }
+
+        /// <summary>
+        /// 目标转发规则的域名，若已经输入 LocationId 参数，则本参数不生效。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 目标转发规则的 URL，若已经输入 LocationId 参数，则本参数不生效。
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
+            this.SetParamArrayObj(map, prefix + "FunctionTargets.", this.FunctionTargets);
+            this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

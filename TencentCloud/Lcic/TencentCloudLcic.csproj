@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.688</VersionPrefix>
+    <VersionPrefix>3.0.689</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,10 @@
     <Compile Include="V20220817\LcicClient.cs" />
     <Compile Include="V20220817\Models\AppConfig.cs" />
     <Compile Include="V20220817\Models\AppCustomContent.cs" />
+    <Compile Include="V20220817\Models\BatchRegisterRequest.cs" />
+    <Compile Include="V20220817\Models\BatchRegisterResponse.cs" />
+    <Compile Include="V20220817\Models\BatchUserInfo.cs" />
+    <Compile Include="V20220817\Models\BatchUserRequest.cs" />
     <Compile Include="V20220817\Models\BindDocumentToRoomRequest.cs" />
     <Compile Include="V20220817\Models\BindDocumentToRoomResponse.cs" />
     <Compile Include="V20220817\Models\CreateDocumentRequest.cs" />
@@ -75,6 +79,8 @@
     <Compile Include="V20220817\Models\MemberRecord.cs" />
     <Compile Include="V20220817\Models\ModifyAppRequest.cs" />
     <Compile Include="V20220817\Models\ModifyAppResponse.cs" />
+    <Compile Include="V20220817\Models\ModifyRoomRequest.cs" />
+    <Compile Include="V20220817\Models\ModifyRoomResponse.cs" />
     <Compile Include="V20220817\Models\RegisterUserRequest.cs" />
     <Compile Include="V20220817\Models\RegisterUserResponse.cs" />
     <Compile Include="V20220817\Models\SceneItem.cs" />
