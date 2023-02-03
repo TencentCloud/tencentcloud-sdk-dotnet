@@ -49,7 +49,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 排序方式
+        /// 排序方式,desc表示降序，asc表示升序
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 动作类型
+        /// 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }

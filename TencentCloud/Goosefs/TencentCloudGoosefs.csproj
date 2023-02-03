@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C8FAE73A-C1CE-3D50-805A-4FB5B32F597E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.689</VersionPrefix>
+    <VersionPrefix>3.0.690</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,5 +50,7 @@
     <Compile Include="V20220519\GoosefsClient.cs" />
     <Compile Include="V20220519\Models\CreateDataRepositoryTaskRequest.cs" />
     <Compile Include="V20220519\Models\CreateDataRepositoryTaskResponse.cs" />
+    <Compile Include="V20220519\Models\DescribeDataRepositoryTaskStatusRequest.cs" />
+    <Compile Include="V20220519\Models\DescribeDataRepositoryTaskStatusResponse.cs" />
   </ItemGroup>
 </Project>

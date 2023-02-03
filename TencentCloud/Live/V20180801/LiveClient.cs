@@ -4005,6 +4005,86 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 前提调用 DescribeTimeShiftStreamList 获得请求必要参数。查询指定范围内的时移流录制详情，最大支持24小时范围查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimeShiftRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeTimeShiftRecordDetailResponse"/></returns>
+        public async Task<DescribeTimeShiftRecordDetailResponse> DescribeTimeShiftRecordDetail(DescribeTimeShiftRecordDetailRequest req)
+        {
+             JsonResponseModel<DescribeTimeShiftRecordDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimeShiftRecordDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimeShiftRecordDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 前提调用 DescribeTimeShiftStreamList 获得请求必要参数。查询指定范围内的时移流录制详情，最大支持24小时范围查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimeShiftRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeTimeShiftRecordDetailResponse"/></returns>
+        public DescribeTimeShiftRecordDetailResponse DescribeTimeShiftRecordDetailSync(DescribeTimeShiftRecordDetailRequest req)
+        {
+             JsonResponseModel<DescribeTimeShiftRecordDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimeShiftRecordDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimeShiftRecordDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某个时间范围内所有时移流列表。最大支持查询24小时内的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimeShiftStreamListRequest"/></param>
+        /// <returns><see cref="DescribeTimeShiftStreamListResponse"/></returns>
+        public async Task<DescribeTimeShiftStreamListResponse> DescribeTimeShiftStreamList(DescribeTimeShiftStreamListRequest req)
+        {
+             JsonResponseModel<DescribeTimeShiftStreamListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimeShiftStreamList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimeShiftStreamListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某个时间范围内所有时移流列表。最大支持查询24小时内的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimeShiftStreamListRequest"/></param>
+        /// <returns><see cref="DescribeTimeShiftStreamListResponse"/></returns>
+        public DescribeTimeShiftStreamListResponse DescribeTimeShiftStreamListSync(DescribeTimeShiftStreamListRequest req)
+        {
+             JsonResponseModel<DescribeTimeShiftStreamListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimeShiftStreamList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimeShiftStreamListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询某段时间top n客户端ip汇总信息（暂支持top 1000）
         /// </summary>
         /// <param name="req"><see cref="DescribeTopClientIpSumInfoListRequest"/></param>

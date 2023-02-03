@@ -25,13 +25,13 @@ namespace TencentCloud.Goosefs.V20220519.Models
     {
         
         /// <summary>
-        /// 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者Bucket到文件系统(COS_TO_FS)
+        /// 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// bucket名
+        /// COS存储桶名
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置位空, 则表示全部数据
+        /// 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据
         /// </summary>
         [JsonProperty("TaskPath")]
         public string TaskPath{ get; set; }
@@ -53,6 +53,18 @@ namespace TencentCloud.Goosefs.V20220519.Models
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
+
+        /// <summary>
+        /// 数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载
+        /// </summary>
+        [JsonProperty("RepositoryType")]
+        public string RepositoryType{ get; set; }
+
+        /// <summary>
+        /// 文件列表下载地址，以http开头
+        /// </summary>
+        [JsonProperty("TextLocation")]
+        public string TextLocation{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
             this.SetParamSimple(map, prefix + "TaskPath", this.TaskPath);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
+            this.SetParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
+            this.SetParamSimple(map, prefix + "TextLocation", this.TextLocation);
         }
     }
 }

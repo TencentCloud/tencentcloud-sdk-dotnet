@@ -92,5 +92,45 @@ namespace TencentCloud.Goosefs.V20220519
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 获取数据流通任务实时状态，用作客户端控制
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataRepositoryTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeDataRepositoryTaskStatusResponse"/></returns>
+        public async Task<DescribeDataRepositoryTaskStatusResponse> DescribeDataRepositoryTaskStatus(DescribeDataRepositoryTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeDataRepositoryTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataRepositoryTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataRepositoryTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取数据流通任务实时状态，用作客户端控制
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataRepositoryTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeDataRepositoryTaskStatusResponse"/></returns>
+        public DescribeDataRepositoryTaskStatusResponse DescribeDataRepositoryTaskStatusSync(DescribeDataRepositoryTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeDataRepositoryTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataRepositoryTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataRepositoryTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

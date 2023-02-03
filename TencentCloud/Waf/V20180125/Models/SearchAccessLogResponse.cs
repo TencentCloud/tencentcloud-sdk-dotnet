@@ -31,13 +31,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Context{ get; set; }
 
         /// <summary>
-        /// 日志查询结果是否全部返回
+        /// 日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }
 
         /// <summary>
-        /// 返回的是否为分析结果
+        /// 返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
         /// </summary>
         [JsonProperty("Analysis")]
         public bool? Analysis{ get; set; }

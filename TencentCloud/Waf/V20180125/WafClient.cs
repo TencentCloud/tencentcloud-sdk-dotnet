@@ -656,7 +656,6 @@ namespace TencentCloud.Waf.V20180125
 
         /// <summary>
         /// 获取域名的规则白名单
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainWhiteRulesRequest"/></param>
         /// <returns><see cref="DescribeDomainWhiteRulesResponse"/></returns>
@@ -677,7 +676,6 @@ namespace TencentCloud.Waf.V20180125
 
         /// <summary>
         /// 获取域名的规则白名单
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainWhiteRulesRequest"/></param>
         /// <returns><see cref="DescribeDomainWhiteRulesResponse"/></returns>

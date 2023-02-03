@@ -31,19 +31,19 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 攻击次数阈值
+        /// 触发IP封禁的攻击次数阈值，范围为2~100次
         /// </summary>
         [JsonProperty("AttackThreshold")]
         public long? AttackThreshold{ get; set; }
 
         /// <summary>
-        /// 攻击时间阈值
+        /// IP封禁统计时间，范围为1-60分钟
         /// </summary>
         [JsonProperty("TimeThreshold")]
         public long? TimeThreshold{ get; set; }
 
         /// <summary>
-        /// 自动封禁时间
+        /// 触发IP封禁后的封禁时间，范围为5~360分钟
         /// </summary>
         [JsonProperty("DenyTimeThreshold")]
         public long? DenyTimeThreshold{ get; set; }
