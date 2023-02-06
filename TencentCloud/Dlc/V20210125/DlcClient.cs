@@ -653,6 +653,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（CreateNotebookSession）用于创建notebook livy session
+        /// </summary>
+        /// <param name="req"><see cref="CreateNotebookSessionRequest"/></param>
+        /// <returns><see cref="CreateNotebookSessionResponse"/></returns>
+        public async Task<CreateNotebookSessionResponse> CreateNotebookSession(CreateNotebookSessionRequest req)
+        {
+             JsonResponseModel<CreateNotebookSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNotebookSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotebookSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateNotebookSession）用于创建notebook livy session
+        /// </summary>
+        /// <param name="req"><see cref="CreateNotebookSessionRequest"/></param>
+        /// <returns><see cref="CreateNotebookSessionResponse"/></returns>
+        public CreateNotebookSessionResponse CreateNotebookSessionSync(CreateNotebookSessionRequest req)
+        {
+             JsonResponseModel<CreateNotebookSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNotebookSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotebookSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建查询结果下载任务
         /// </summary>
         /// <param name="req"><see cref="CreateResultDownloadRequest"/></param>
@@ -1484,6 +1524,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDatabases");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNotebookSession）用于获取notebook livy session详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookSessionRequest"/></param>
+        /// <returns><see cref="DescribeNotebookSessionResponse"/></returns>
+        public async Task<DescribeNotebookSessionResponse> DescribeNotebookSession(DescribeNotebookSessionRequest req)
+        {
+             JsonResponseModel<DescribeNotebookSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNotebookSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNotebookSession）用于获取notebook livy session详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookSessionRequest"/></param>
+        /// <returns><see cref="DescribeNotebookSessionResponse"/></returns>
+        public DescribeNotebookSessionResponse DescribeNotebookSessionSync(DescribeNotebookSessionRequest req)
+        {
+             JsonResponseModel<DescribeNotebookSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNotebookSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

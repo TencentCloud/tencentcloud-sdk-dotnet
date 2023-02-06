@@ -36,6 +36,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 应用信息
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

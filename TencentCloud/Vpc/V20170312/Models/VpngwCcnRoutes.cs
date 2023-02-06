@@ -38,6 +38,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 路由CIDR
+        /// </summary>
+        [JsonProperty("DestinationCidrBlock")]
+        public string DestinationCidrBlock{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "RouteId", this.RouteId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);
         }
     }
 }

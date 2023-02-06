@@ -1175,6 +1175,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 修改防护域名的地域封禁状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAreaBanStatusRequest"/></param>
+        /// <returns><see cref="ModifyAreaBanStatusResponse"/></returns>
+        public async Task<ModifyAreaBanStatusResponse> ModifyAreaBanStatus(ModifyAreaBanStatusRequest req)
+        {
+             JsonResponseModel<ModifyAreaBanStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAreaBanStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAreaBanStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改防护域名的地域封禁状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAreaBanStatusRequest"/></param>
+        /// <returns><see cref="ModifyAreaBanStatusResponse"/></returns>
+        public ModifyAreaBanStatusResponse ModifyAreaBanStatusSync(ModifyAreaBanStatusRequest req)
+        {
+             JsonResponseModel<ModifyAreaBanStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAreaBanStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAreaBanStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 开启或禁用访问控制（自定义策略）
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomRuleStatusRequest"/></param>
@@ -1446,6 +1486,86 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "SearchAccessLog");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchAccessLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新版本CLS接口存在参数变化，query改成了query_string支持lucence语法接口搜索查询。
+        /// </summary>
+        /// <param name="req"><see cref="SearchAttackLogRequest"/></param>
+        /// <returns><see cref="SearchAttackLogResponse"/></returns>
+        public async Task<SearchAttackLogResponse> SearchAttackLog(SearchAttackLogRequest req)
+        {
+             JsonResponseModel<SearchAttackLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchAttackLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchAttackLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新版本CLS接口存在参数变化，query改成了query_string支持lucence语法接口搜索查询。
+        /// </summary>
+        /// <param name="req"><see cref="SearchAttackLogRequest"/></param>
+        /// <returns><see cref="SearchAttackLogResponse"/></returns>
+        public SearchAttackLogResponse SearchAttackLogSync(SearchAttackLogRequest req)
+        {
+             JsonResponseModel<SearchAttackLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchAttackLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchAttackLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 切换域名的规则开关
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDomainRulesRequest"/></param>
+        /// <returns><see cref="SwitchDomainRulesResponse"/></returns>
+        public async Task<SwitchDomainRulesResponse> SwitchDomainRules(SwitchDomainRulesRequest req)
+        {
+             JsonResponseModel<SwitchDomainRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchDomainRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDomainRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 切换域名的规则开关
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDomainRulesRequest"/></param>
+        /// <returns><see cref="SwitchDomainRulesResponse"/></returns>
+        public SwitchDomainRulesResponse SwitchDomainRulesSync(SwitchDomainRulesRequest req)
+        {
+             JsonResponseModel<SwitchDomainRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchDomainRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDomainRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

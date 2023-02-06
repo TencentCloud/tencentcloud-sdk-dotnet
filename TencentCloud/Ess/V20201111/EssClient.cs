@@ -1051,6 +1051,86 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 通过子企业影子账号查询主企业员工账号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationMainOrganizationUserRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationMainOrganizationUserResponse"/></returns>
+        public async Task<DescribeIntegrationMainOrganizationUserResponse> DescribeIntegrationMainOrganizationUser(DescribeIntegrationMainOrganizationUserRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationMainOrganizationUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过子企业影子账号查询主企业员工账号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationMainOrganizationUserRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationMainOrganizationUserResponse"/></returns>
+        public DescribeIntegrationMainOrganizationUserResponse DescribeIntegrationMainOrganizationUserSync(DescribeIntegrationMainOrganizationUserRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationMainOrganizationUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此API接口用户查询加入集团的成员企业
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationGroupOrganizationsRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationGroupOrganizationsResponse"/></returns>
+        public async Task<DescribeOrganizationGroupOrganizationsResponse> DescribeOrganizationGroupOrganizations(DescribeOrganizationGroupOrganizationsRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationGroupOrganizationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOrganizationGroupOrganizations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationGroupOrganizationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此API接口用户查询加入集团的成员企业
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationGroupOrganizationsRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationGroupOrganizationsResponse"/></returns>
+        public DescribeOrganizationGroupOrganizationsResponse DescribeOrganizationGroupOrganizationsSync(DescribeOrganizationGroupOrganizationsRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationGroupOrganizationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOrganizationGroupOrganizations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationGroupOrganizationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询企业印章的列表，需要操作者具有查询印章权限
         /// 客户指定需要获取的印章数量和偏移量，数量最多100，超过100按100处理；入参InfoType控制印章是否携带授权人信息，为1则携带，为0则返回的授权人信息为空数组。接口调用成功返回印章的信息列表还有企业印章的总数。
         /// </summary>

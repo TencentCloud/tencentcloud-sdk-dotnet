@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 需要执行撤回的签署流程id数组，最多100个
+        /// 需要执行催办的签署流程id数组，最多100个
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
