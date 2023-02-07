@@ -42,6 +42,12 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         [JsonProperty("ToDeviceName")]
         public string ToDeviceName{ get; set; }
 
+        /// <summary>
+        /// 未开通云存的设备产品ID
+        /// </summary>
+        [JsonProperty("ToProductId")]
+        public string ToProductId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "ToDeviceName", this.ToDeviceName);
+            this.SetParamSimple(map, prefix + "ToProductId", this.ToProductId);
         }
     }
 }

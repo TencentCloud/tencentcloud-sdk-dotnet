@@ -168,6 +168,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("AppArchives")]
         public string AppArchives{ get; set; }
 
+        /// <summary>
+        /// Spark Image 版本
+        /// </summary>
+        [JsonProperty("SparkImage")]
+        public string SparkImage{ get; set; }
+
+        /// <summary>
+        /// Spark Image 版本名称
+        /// </summary>
+        [JsonProperty("SparkImageVersion")]
+        public string SparkImageVersion{ get; set; }
+
+        /// <summary>
+        /// 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于AppExecutorNums
+        /// </summary>
+        [JsonProperty("AppExecutorMaxNumbers")]
+        public long? AppExecutorMaxNumbers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +216,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
             this.SetParamSimple(map, prefix + "IsLocalArchives", this.IsLocalArchives);
             this.SetParamSimple(map, prefix + "AppArchives", this.AppArchives);
+            this.SetParamSimple(map, prefix + "SparkImage", this.SparkImage);
+            this.SetParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
+            this.SetParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
         }
     }
 }

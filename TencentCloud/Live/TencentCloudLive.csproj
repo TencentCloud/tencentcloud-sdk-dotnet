@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.691</VersionPrefix>
+    <VersionPrefix>3.0.692</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -93,6 +93,10 @@
     <Compile Include="V20180801\Models\CreateLiveSnapshotRuleResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveSnapshotTemplateRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveSnapshotTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveTimeShiftRuleRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveTimeShiftRuleResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveTimeShiftTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveTimeShiftTemplateResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveTranscodeRuleRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveTranscodeRuleResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveTranscodeTemplateRequest.cs" />
@@ -125,6 +129,10 @@
     <Compile Include="V20180801\Models\DeleteLiveSnapshotRuleResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveSnapshotTemplateRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveSnapshotTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveTimeShiftRuleRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveTimeShiftRuleResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveTimeShiftTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveTimeShiftTemplateResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveTranscodeRuleRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveTranscodeRuleResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveTranscodeTemplateRequest.cs" />
@@ -213,6 +221,10 @@
     <Compile Include="V20180801\Models\DescribeLiveStreamStateResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveTimeShiftBillInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveTimeShiftBillInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTimeShiftRulesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTimeShiftRulesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTimeShiftTemplatesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTimeShiftTemplatesResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveTranscodeDetailInfoRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveTranscodeDetailInfoResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveTranscodeRulesRequest.cs" />
@@ -309,6 +321,8 @@
     <Compile Include="V20180801\Models\ModifyLiveRecordTemplateResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveSnapshotTemplateRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveSnapshotTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveTimeShiftTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveTimeShiftTemplateResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveTranscodeTemplateRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveTranscodeTemplateResponse.cs" />
     <Compile Include="V20180801\Models\ModifyPullStreamConfigRequest.cs" />
@@ -355,6 +369,7 @@
     <Compile Include="V20180801\Models\TimeShiftBillData.cs" />
     <Compile Include="V20180801\Models\TimeShiftRecord.cs" />
     <Compile Include="V20180801\Models\TimeShiftStreamInfo.cs" />
+    <Compile Include="V20180801\Models\TimeShiftTemplate.cs" />
     <Compile Include="V20180801\Models\TimeValue.cs" />
     <Compile Include="V20180801\Models\TranscodeDetailInfo.cs" />
     <Compile Include="V20180801\Models\TranscodeTaskNum.cs" />

@@ -683,6 +683,88 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 创建直播时移规则，需要先调用[CreateLiveTimeShiftTemplate](/document/product/267/84589)接口创建录制模板，将返回的模板id绑定到流使用。
+        /// <br>直播时移相关文档：[直播时移](/document/product/267/86134)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveTimeShiftRuleRequest"/></param>
+        /// <returns><see cref="CreateLiveTimeShiftRuleResponse"/></returns>
+        public async Task<CreateLiveTimeShiftRuleResponse> CreateLiveTimeShiftRule(CreateLiveTimeShiftRuleRequest req)
+        {
+             JsonResponseModel<CreateLiveTimeShiftRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveTimeShiftRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveTimeShiftRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建直播时移规则，需要先调用[CreateLiveTimeShiftTemplate](/document/product/267/84589)接口创建录制模板，将返回的模板id绑定到流使用。
+        /// <br>直播时移相关文档：[直播时移](/document/product/267/86134)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveTimeShiftRuleRequest"/></param>
+        /// <returns><see cref="CreateLiveTimeShiftRuleResponse"/></returns>
+        public CreateLiveTimeShiftRuleResponse CreateLiveTimeShiftRuleSync(CreateLiveTimeShiftRuleRequest req)
+        {
+             JsonResponseModel<CreateLiveTimeShiftRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLiveTimeShiftRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveTimeShiftRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建直播垫片模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveTimeShiftTemplateRequest"/></param>
+        /// <returns><see cref="CreateLiveTimeShiftTemplateResponse"/></returns>
+        public async Task<CreateLiveTimeShiftTemplateResponse> CreateLiveTimeShiftTemplate(CreateLiveTimeShiftTemplateRequest req)
+        {
+             JsonResponseModel<CreateLiveTimeShiftTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveTimeShiftTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveTimeShiftTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建直播垫片模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveTimeShiftTemplateRequest"/></param>
+        /// <returns><see cref="CreateLiveTimeShiftTemplateResponse"/></returns>
+        public CreateLiveTimeShiftTemplateResponse CreateLiveTimeShiftTemplateSync(CreateLiveTimeShiftTemplateRequest req)
+        {
+             JsonResponseModel<CreateLiveTimeShiftTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLiveTimeShiftTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveTimeShiftTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建转码规则，需要先调用[CreateLiveTranscodeTemplate](/document/product/267/32646)接口创建转码模板，将返回的模板id绑定到流使用。
         /// <br>转码相关文档：[直播转封装及转码](/document/product/267/32736)。
         /// </summary>
@@ -1324,6 +1406,86 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DeleteLiveSnapshotTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除直播时移规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveTimeShiftRuleRequest"/></param>
+        /// <returns><see cref="DeleteLiveTimeShiftRuleResponse"/></returns>
+        public async Task<DeleteLiveTimeShiftRuleResponse> DeleteLiveTimeShiftRule(DeleteLiveTimeShiftRuleRequest req)
+        {
+             JsonResponseModel<DeleteLiveTimeShiftRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveTimeShiftRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveTimeShiftRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除直播时移规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveTimeShiftRuleRequest"/></param>
+        /// <returns><see cref="DeleteLiveTimeShiftRuleResponse"/></returns>
+        public DeleteLiveTimeShiftRuleResponse DeleteLiveTimeShiftRuleSync(DeleteLiveTimeShiftRuleRequest req)
+        {
+             JsonResponseModel<DeleteLiveTimeShiftRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLiveTimeShiftRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveTimeShiftRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除直播时移模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveTimeShiftTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLiveTimeShiftTemplateResponse"/></returns>
+        public async Task<DeleteLiveTimeShiftTemplateResponse> DeleteLiveTimeShiftTemplate(DeleteLiveTimeShiftTemplateRequest req)
+        {
+             JsonResponseModel<DeleteLiveTimeShiftTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveTimeShiftTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveTimeShiftTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除直播时移模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveTimeShiftTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLiveTimeShiftTemplateResponse"/></returns>
+        public DeleteLiveTimeShiftTemplateResponse DeleteLiveTimeShiftTemplateSync(DeleteLiveTimeShiftTemplateRequest req)
+        {
+             JsonResponseModel<DeleteLiveTimeShiftTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLiveTimeShiftTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveTimeShiftTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3141,6 +3303,86 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 获取直播时移规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTimeShiftRulesRequest"/></param>
+        /// <returns><see cref="DescribeLiveTimeShiftRulesResponse"/></returns>
+        public async Task<DescribeLiveTimeShiftRulesResponse> DescribeLiveTimeShiftRules(DescribeLiveTimeShiftRulesRequest req)
+        {
+             JsonResponseModel<DescribeLiveTimeShiftRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveTimeShiftRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTimeShiftRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播时移规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTimeShiftRulesRequest"/></param>
+        /// <returns><see cref="DescribeLiveTimeShiftRulesResponse"/></returns>
+        public DescribeLiveTimeShiftRulesResponse DescribeLiveTimeShiftRulesSync(DescribeLiveTimeShiftRulesRequest req)
+        {
+             JsonResponseModel<DescribeLiveTimeShiftRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveTimeShiftRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTimeShiftRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播时移模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTimeShiftTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLiveTimeShiftTemplatesResponse"/></returns>
+        public async Task<DescribeLiveTimeShiftTemplatesResponse> DescribeLiveTimeShiftTemplates(DescribeLiveTimeShiftTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveTimeShiftTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播时移模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTimeShiftTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLiveTimeShiftTemplatesResponse"/></returns>
+        public DescribeLiveTimeShiftTemplatesResponse DescribeLiveTimeShiftTemplatesSync(DescribeLiveTimeShiftTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveTimeShiftTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 支持查询某天或某段时间的转码详细信息。由于转码数据量较大，如果查询时间跨度太长可能会拉不到数据，可以尝试将查询时间范围缩小些再重试。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeDetailInfoRequest"/></param>
@@ -4766,6 +5008,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLiveSnapshotTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改直播垫片模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveTimeShiftTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLiveTimeShiftTemplateResponse"/></returns>
+        public async Task<ModifyLiveTimeShiftTemplateResponse> ModifyLiveTimeShiftTemplate(ModifyLiveTimeShiftTemplateRequest req)
+        {
+             JsonResponseModel<ModifyLiveTimeShiftTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveTimeShiftTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveTimeShiftTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改直播垫片模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveTimeShiftTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLiveTimeShiftTemplateResponse"/></returns>
+        public ModifyLiveTimeShiftTemplateResponse ModifyLiveTimeShiftTemplateSync(ModifyLiveTimeShiftTemplateRequest req)
+        {
+             JsonResponseModel<ModifyLiveTimeShiftTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLiveTimeShiftTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveTimeShiftTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

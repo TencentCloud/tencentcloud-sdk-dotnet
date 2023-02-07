@@ -773,6 +773,50 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于创建轮播播单，数量上限：100。
+        /// 轮播播单的每个文件可以指定源文件，也可以指定某个转码文件。
+        /// 指定的文件必须是hls格式，所有的播单文件最好保持相同的码率和分辨率。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoundPlayRequest"/></param>
+        /// <returns><see cref="CreateRoundPlayResponse"/></returns>
+        public async Task<CreateRoundPlayResponse> CreateRoundPlay(CreateRoundPlayRequest req)
+        {
+             JsonResponseModel<CreateRoundPlayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRoundPlay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoundPlayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于创建轮播播单，数量上限：100。
+        /// 轮播播单的每个文件可以指定源文件，也可以指定某个转码文件。
+        /// 指定的文件必须是hls格式，所有的播单文件最好保持相同的码率和分辨率。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoundPlayRequest"/></param>
+        /// <returns><see cref="CreateRoundPlayResponse"/></returns>
+        public CreateRoundPlayResponse CreateRoundPlaySync(CreateRoundPlayRequest req)
+        {
+             JsonResponseModel<CreateRoundPlayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRoundPlay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoundPlayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户自定义采样截图模板，数量上限：16。
         /// </summary>
         /// <param name="req"><see cref="CreateSampleSnapshotTemplateRequest"/></param>
@@ -1666,6 +1710,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteReviewTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于删除轮播播单。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoundPlayRequest"/></param>
+        /// <returns><see cref="DeleteRoundPlayResponse"/></returns>
+        public async Task<DeleteRoundPlayResponse> DeleteRoundPlay(DeleteRoundPlayRequest req)
+        {
+             JsonResponseModel<DeleteRoundPlayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRoundPlay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoundPlayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于删除轮播播单。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoundPlayRequest"/></param>
+        /// <returns><see cref="DeleteRoundPlayResponse"/></returns>
+        public DeleteRoundPlayResponse DeleteRoundPlaySync(DeleteRoundPlayRequest req)
+        {
+             JsonResponseModel<DeleteRoundPlayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRoundPlay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoundPlayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3333,6 +3417,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于获取轮播播单列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoundPlaysRequest"/></param>
+        /// <returns><see cref="DescribeRoundPlaysResponse"/></returns>
+        public async Task<DescribeRoundPlaysResponse> DescribeRoundPlays(DescribeRoundPlaysRequest req)
+        {
+             JsonResponseModel<DescribeRoundPlaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoundPlays");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoundPlaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于获取轮播播单列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoundPlaysRequest"/></param>
+        /// <returns><see cref="DescribeRoundPlaysResponse"/></returns>
+        public DescribeRoundPlaysResponse DescribeRoundPlaysSync(DescribeRoundPlaysRequest req)
+        {
+             JsonResponseModel<DescribeRoundPlaysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoundPlays");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoundPlaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询采样截图模板，支持根据条件，分页查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeSampleSnapshotTemplatesRequest"/></param>
@@ -4780,6 +4904,48 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ModifyReviewTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于修改轮播播单。
+        /// 修改后只有新的播放请求会生效，已经在播放中的用户在七天之内还可以播放修改前的播单。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoundPlayRequest"/></param>
+        /// <returns><see cref="ModifyRoundPlayResponse"/></returns>
+        public async Task<ModifyRoundPlayResponse> ModifyRoundPlay(ModifyRoundPlayRequest req)
+        {
+             JsonResponseModel<ModifyRoundPlayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRoundPlay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoundPlayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于修改轮播播单。
+        /// 修改后只有新的播放请求会生效，已经在播放中的用户在七天之内还可以播放修改前的播单。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoundPlayRequest"/></param>
+        /// <returns><see cref="ModifyRoundPlayResponse"/></returns>
+        public ModifyRoundPlayResponse ModifyRoundPlaySync(ModifyRoundPlayRequest req)
+        {
+             JsonResponseModel<ModifyRoundPlayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRoundPlay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoundPlayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

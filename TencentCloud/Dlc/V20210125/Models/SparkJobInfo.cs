@@ -211,6 +211,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string JobArchives{ get; set; }
 
         /// <summary>
+        /// Spark Image 版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SparkImage")]
+        public string SparkImage{ get; set; }
+
+        /// <summary>
         /// pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -230,6 +237,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("DataEngineStatus")]
         public long? DataEngineStatus{ get; set; }
+
+        /// <summary>
+        /// 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobExecutorMaxNumbers")]
+        public long? JobExecutorMaxNumbers{ get; set; }
 
 
         /// <summary>
@@ -267,9 +281,11 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "AppPythonFiles", this.AppPythonFiles);
             this.SetParamSimple(map, prefix + "IsLocalArchives", this.IsLocalArchives);
             this.SetParamSimple(map, prefix + "JobArchives", this.JobArchives);
+            this.SetParamSimple(map, prefix + "SparkImage", this.SparkImage);
             this.SetParamSimple(map, prefix + "JobPythonFiles", this.JobPythonFiles);
             this.SetParamSimple(map, prefix + "TaskNum", this.TaskNum);
             this.SetParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
+            this.SetParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
         }
     }
 }

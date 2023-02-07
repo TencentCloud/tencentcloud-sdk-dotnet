@@ -173,6 +173,46 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
+        /// 查询备份策略信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackUpScheduleRequest"/></param>
+        /// <returns><see cref="DescribeBackUpScheduleResponse"/></returns>
+        public async Task<DescribeBackUpScheduleResponse> DescribeBackUpSchedule(DescribeBackUpScheduleRequest req)
+        {
+             JsonResponseModel<DescribeBackUpScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackUpSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackUpScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询备份策略信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackUpScheduleRequest"/></param>
+        /// <returns><see cref="DescribeBackUpScheduleResponse"/></returns>
+        public DescribeBackUpScheduleResponse DescribeBackUpScheduleSync(DescribeBackUpScheduleRequest req)
+        {
+             JsonResponseModel<DescribeBackUpScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackUpSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackUpScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群用户、集群表，数据库等相关信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCkSqlApisRequest"/></param>
@@ -213,6 +253,46 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
+        /// 获取集群的最新的几个配置文件（config.xml、metrika.xml、user.xml）的内容，显示给用户
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterConfigsRequest"/></param>
+        /// <returns><see cref="DescribeClusterConfigsResponse"/></returns>
+        public async Task<DescribeClusterConfigsResponse> DescribeClusterConfigs(DescribeClusterConfigsRequest req)
+        {
+             JsonResponseModel<DescribeClusterConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取集群的最新的几个配置文件（config.xml、metrika.xml、user.xml）的内容，显示给用户
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterConfigsRequest"/></param>
+        /// <returns><see cref="DescribeClusterConfigsResponse"/></returns>
+        public DescribeClusterConfigsResponse DescribeClusterConfigsSync(DescribeClusterConfigsRequest req)
+        {
+             JsonResponseModel<DescribeClusterConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据实例ID查询某个实例的具体信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
@@ -244,6 +324,46 @@ namespace TencentCloud.Cdwch.V20200915
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在集群详情页面获取所有参数列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceKeyValConfigsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceKeyValConfigsResponse"/></returns>
+        public async Task<DescribeInstanceKeyValConfigsResponse> DescribeInstanceKeyValConfigs(DescribeInstanceKeyValConfigsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceKeyValConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceKeyValConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceKeyValConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在集群详情页面获取所有参数列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceKeyValConfigsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceKeyValConfigsResponse"/></returns>
+        public DescribeInstanceKeyValConfigsResponse DescribeInstanceKeyValConfigsSync(DescribeInstanceKeyValConfigsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceKeyValConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceKeyValConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceKeyValConfigsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -373,6 +493,46 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
+        /// KV模式修改配置接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceKeyValConfigsRequest"/></param>
+        /// <returns><see cref="ModifyInstanceKeyValConfigsResponse"/></returns>
+        public async Task<ModifyInstanceKeyValConfigsResponse> ModifyInstanceKeyValConfigs(ModifyInstanceKeyValConfigsRequest req)
+        {
+             JsonResponseModel<ModifyInstanceKeyValConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceKeyValConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceKeyValConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// KV模式修改配置接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceKeyValConfigsRequest"/></param>
+        /// <returns><see cref="ModifyInstanceKeyValConfigsResponse"/></returns>
+        public ModifyInstanceKeyValConfigsResponse ModifyInstanceKeyValConfigsSync(ModifyInstanceKeyValConfigsRequest req)
+        {
+             JsonResponseModel<ModifyInstanceKeyValConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceKeyValConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceKeyValConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 针对ck账号的权限做管控（新版）
         /// </summary>
         /// <param name="req"><see cref="ModifyUserNewPrivilegeRequest"/></param>
@@ -444,6 +604,126 @@ namespace TencentCloud.Cdwch.V20200915
              {
                  var strResp = this.InternalRequestSync(req, "OpenBackUp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenBackUpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 扩容磁盘，包含扩容数据节点，zk节点
+        /// </summary>
+        /// <param name="req"><see cref="ResizeDiskRequest"/></param>
+        /// <returns><see cref="ResizeDiskResponse"/></returns>
+        public async Task<ResizeDiskResponse> ResizeDisk(ResizeDiskRequest req)
+        {
+             JsonResponseModel<ResizeDiskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResizeDisk");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResizeDiskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 扩容磁盘，包含扩容数据节点，zk节点
+        /// </summary>
+        /// <param name="req"><see cref="ResizeDiskRequest"/></param>
+        /// <returns><see cref="ResizeDiskResponse"/></returns>
+        public ResizeDiskResponse ResizeDiskSync(ResizeDiskRequest req)
+        {
+             JsonResponseModel<ResizeDiskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResizeDisk");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResizeDiskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调整clickhouse节点数量
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOutInstanceRequest"/></param>
+        /// <returns><see cref="ScaleOutInstanceResponse"/></returns>
+        public async Task<ScaleOutInstanceResponse> ScaleOutInstance(ScaleOutInstanceRequest req)
+        {
+             JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ScaleOutInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调整clickhouse节点数量
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOutInstanceRequest"/></param>
+        /// <returns><see cref="ScaleOutInstanceResponse"/></returns>
+        public ScaleOutInstanceResponse ScaleOutInstanceSync(ScaleOutInstanceRequest req)
+        {
+             JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScaleOutInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 垂直扩缩容节点规格，修改节点cvm的规格cpu，内存。 规格变化阶段，服务不可用。
+        /// </summary>
+        /// <param name="req"><see cref="ScaleUpInstanceRequest"/></param>
+        /// <returns><see cref="ScaleUpInstanceResponse"/></returns>
+        public async Task<ScaleUpInstanceResponse> ScaleUpInstance(ScaleUpInstanceRequest req)
+        {
+             JsonResponseModel<ScaleUpInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ScaleUpInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleUpInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 垂直扩缩容节点规格，修改节点cvm的规格cpu，内存。 规格变化阶段，服务不可用。
+        /// </summary>
+        /// <param name="req"><see cref="ScaleUpInstanceRequest"/></param>
+        /// <returns><see cref="ScaleUpInstanceResponse"/></returns>
+        public ScaleUpInstanceResponse ScaleUpInstanceSync(ScaleUpInstanceRequest req)
+        {
+             JsonResponseModel<ScaleUpInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScaleUpInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleUpInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

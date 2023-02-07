@@ -96,6 +96,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
+        /// <summary>
+        /// 过滤数组。支持的Name：
+        /// BindingStatus 绑定状态
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +121,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamArraySimple(map, prefix + "KindSet.", this.KindSet);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

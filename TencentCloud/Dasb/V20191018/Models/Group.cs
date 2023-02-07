@@ -43,6 +43,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("Department")]
         public Department Department{ get; set; }
 
+        /// <summary>
+        /// 个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Count")]
+        public ulong? Count{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "Department.", this.Department);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

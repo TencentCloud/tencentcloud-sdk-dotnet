@@ -31,6 +31,12 @@ namespace TencentCloud.Tem.V20210701.Models
         public string EnvironmentName{ get; set; }
 
         /// <summary>
+        /// 环境描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
         /// 私有网络名称
         /// </summary>
         [JsonProperty("Vpc")]
@@ -41,12 +47,6 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
-
-        /// <summary>
-        /// 环境描述
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
 
         /// <summary>
         /// K8s version
@@ -84,6 +84,30 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("CreateRegion")]
         public string CreateRegion{ get; set; }
 
+        /// <summary>
+        /// 是否创建私有网络
+        /// </summary>
+        [JsonProperty("SetupVpc")]
+        public bool? SetupVpc{ get; set; }
+
+        /// <summary>
+        /// 是否创建 Prometheus 实例
+        /// </summary>
+        [JsonProperty("SetupPrometheus")]
+        public bool? SetupPrometheus{ get; set; }
+
+        /// <summary>
+        /// prometheus 实例 id
+        /// </summary>
+        [JsonProperty("PrometheusId")]
+        public string PrometheusId{ get; set; }
+
+        /// <summary>
+        /// apm id
+        /// </summary>
+        [JsonProperty("ApmId")]
+        public string ApmId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,15 +115,19 @@ namespace TencentCloud.Tem.V20210701.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EnvironmentName", this.EnvironmentName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Vpc", this.Vpc);
             this.SetParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "K8sVersion", this.K8sVersion);
             this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
             this.SetParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
             this.SetParamSimple(map, prefix + "CreateRegion", this.CreateRegion);
+            this.SetParamSimple(map, prefix + "SetupVpc", this.SetupVpc);
+            this.SetParamSimple(map, prefix + "SetupPrometheus", this.SetupPrometheus);
+            this.SetParamSimple(map, prefix + "PrometheusId", this.PrometheusId);
+            this.SetParamSimple(map, prefix + "ApmId", this.ApmId);
         }
     }
 }

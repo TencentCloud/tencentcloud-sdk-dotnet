@@ -2373,6 +2373,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 修改数据治理事件阈值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernEventRuleRequest"/></param>
+        /// <returns><see cref="ModifyGovernEventRuleResponse"/></returns>
+        public async Task<ModifyGovernEventRuleResponse> ModifyGovernEventRule(ModifyGovernEventRuleRequest req)
+        {
+             JsonResponseModel<ModifyGovernEventRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyGovernEventRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGovernEventRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改数据治理事件阈值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernEventRuleRequest"/></param>
+        /// <returns><see cref="ModifyGovernEventRuleResponse"/></returns>
+        public ModifyGovernEventRuleResponse ModifyGovernEventRuleSync(ModifyGovernEventRuleRequest req)
+        {
+             JsonResponseModel<ModifyGovernEventRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyGovernEventRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGovernEventRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新spark应用
         /// </summary>
         /// <param name="req"><see cref="ModifySparkAppRequest"/></param>
