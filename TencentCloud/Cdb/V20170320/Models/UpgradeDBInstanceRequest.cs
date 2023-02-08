@@ -97,7 +97,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 是否极速变配。0-普通升级，1-极速变配。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
+        /// 是否极速变配。0-普通升级，1-极速变配,，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
         /// </summary>
         [JsonProperty("FastUpgrade")]
         public long? FastUpgrade{ get; set; }

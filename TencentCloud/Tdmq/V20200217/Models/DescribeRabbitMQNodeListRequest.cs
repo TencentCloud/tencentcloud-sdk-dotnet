@@ -42,6 +42,35 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 模糊搜索节点名字
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
+
+        /// <summary>
+        /// 过滤参数的名字和数值
+        /// 现在只有一个nodeStatus
+        /// running/down
+        /// 数组类型，兼容后续添加过滤参数
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 按指定元素排序，现在只有2个
+        /// cpuUsage/diskUsage
+        /// </summary>
+        [JsonProperty("SortElement")]
+        public string SortElement{ get; set; }
+
+        /// <summary>
+        /// 升序/降序
+        /// ascend/descend
+        /// </summary>
+        [JsonProperty("SortOrder")]
+        public string SortOrder{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +80,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "SortElement", this.SortElement);
+            this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
         }
     }
 }

@@ -1,0 +1,150 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{2281582A-F103-30B1-9493-1000175F652D}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.693</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Keewidb</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20220308\KeewidbClient.cs" />
+    <Compile Include="V20220308\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20220308\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20220308\Models\BackupInfo.cs" />
+    <Compile Include="V20220308\Models\BinlogInfo.cs" />
+    <Compile Include="V20220308\Models\ChangeInstanceMasterRequest.cs" />
+    <Compile Include="V20220308\Models\ChangeInstanceMasterResponse.cs" />
+    <Compile Include="V20220308\Models\CleanUpInstanceRequest.cs" />
+    <Compile Include="V20220308\Models\CleanUpInstanceResponse.cs" />
+    <Compile Include="V20220308\Models\ClearInstanceRequest.cs" />
+    <Compile Include="V20220308\Models\ClearInstanceResponse.cs" />
+    <Compile Include="V20220308\Models\CreateBackupManuallyRequest.cs" />
+    <Compile Include="V20220308\Models\CreateBackupManuallyResponse.cs" />
+    <Compile Include="V20220308\Models\CreateInstancesRequest.cs" />
+    <Compile Include="V20220308\Models\CreateInstancesResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeAutoBackupConfigRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeAutoBackupConfigResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeDBSecurityGroupsResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceBackupsRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceBackupsResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceBinlogsRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceBinlogsResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceNodeInfoRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceNodeInfoResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceParamRecordsRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceParamRecordsResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceParamsRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceParamsResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceReplicasRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceReplicasResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeMaintenanceWindowRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeMaintenanceWindowResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeProductInfoRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeProductInfoResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeProxySlowLogRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeProxySlowLogResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeTaskInfoRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeTaskInfoResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeTaskListRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeTaskListResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeTendisSlowLogRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeTendisSlowLogResponse.cs" />
+    <Compile Include="V20220308\Models\DestroyPostpaidInstanceRequest.cs" />
+    <Compile Include="V20220308\Models\DestroyPostpaidInstanceResponse.cs" />
+    <Compile Include="V20220308\Models\DestroyPrepaidInstanceRequest.cs" />
+    <Compile Include="V20220308\Models\DestroyPrepaidInstanceResponse.cs" />
+    <Compile Include="V20220308\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20220308\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20220308\Models\Inbound.cs" />
+    <Compile Include="V20220308\Models\InstanceEnumParam.cs" />
+    <Compile Include="V20220308\Models\InstanceInfo.cs" />
+    <Compile Include="V20220308\Models\InstanceIntegerParam.cs" />
+    <Compile Include="V20220308\Models\InstanceMultiParam.cs" />
+    <Compile Include="V20220308\Models\InstanceNodeInfo.cs" />
+    <Compile Include="V20220308\Models\InstanceParam.cs" />
+    <Compile Include="V20220308\Models\InstanceParamHistory.cs" />
+    <Compile Include="V20220308\Models\InstanceProxySlowlogDetail.cs" />
+    <Compile Include="V20220308\Models\InstanceTagInfo.cs" />
+    <Compile Include="V20220308\Models\InstanceTextParam.cs" />
+    <Compile Include="V20220308\Models\KeeWiDBNode.cs" />
+    <Compile Include="V20220308\Models\ModifyAutoBackupConfigRequest.cs" />
+    <Compile Include="V20220308\Models\ModifyAutoBackupConfigResponse.cs" />
+    <Compile Include="V20220308\Models\ModifyConnectionConfigRequest.cs" />
+    <Compile Include="V20220308\Models\ModifyConnectionConfigResponse.cs" />
+    <Compile Include="V20220308\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="V20220308\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
+    <Compile Include="V20220308\Models\ModifyInstanceParamsRequest.cs" />
+    <Compile Include="V20220308\Models\ModifyInstanceParamsResponse.cs" />
+    <Compile Include="V20220308\Models\ModifyInstanceRequest.cs" />
+    <Compile Include="V20220308\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="V20220308\Models\ModifyMaintenanceWindowRequest.cs" />
+    <Compile Include="V20220308\Models\ModifyMaintenanceWindowResponse.cs" />
+    <Compile Include="V20220308\Models\ModifyNetworkConfigRequest.cs" />
+    <Compile Include="V20220308\Models\ModifyNetworkConfigResponse.cs" />
+    <Compile Include="V20220308\Models\NodeInfo.cs" />
+    <Compile Include="V20220308\Models\Outbound.cs" />
+    <Compile Include="V20220308\Models\ProductConf.cs" />
+    <Compile Include="V20220308\Models\ProxyNodeInfo.cs" />
+    <Compile Include="V20220308\Models\RedisNodeInfo.cs" />
+    <Compile Include="V20220308\Models\RegionConf.cs" />
+    <Compile Include="V20220308\Models\RenewInstanceRequest.cs" />
+    <Compile Include="V20220308\Models\RenewInstanceResponse.cs" />
+    <Compile Include="V20220308\Models\ReplicaGroup.cs" />
+    <Compile Include="V20220308\Models\ResetPasswordRequest.cs" />
+    <Compile Include="V20220308\Models\ResetPasswordResponse.cs" />
+    <Compile Include="V20220308\Models\ResourceTag.cs" />
+    <Compile Include="V20220308\Models\SecurityGroup.cs" />
+    <Compile Include="V20220308\Models\StartUpInstanceRequest.cs" />
+    <Compile Include="V20220308\Models\StartUpInstanceResponse.cs" />
+    <Compile Include="V20220308\Models\TaskInfoDetail.cs" />
+    <Compile Include="V20220308\Models\TendisSlowLogDetail.cs" />
+    <Compile Include="V20220308\Models\UpgradeInstanceRequest.cs" />
+    <Compile Include="V20220308\Models\UpgradeInstanceResponse.cs" />
+    <Compile Include="V20220308\Models\ZoneCapacityConf.cs" />
+  </ItemGroup>
+</Project>

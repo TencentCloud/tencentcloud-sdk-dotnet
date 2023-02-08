@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.692</VersionPrefix>
+    <VersionPrefix>3.0.693</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -173,6 +173,7 @@
     <Compile Include="Iotvideoindustry\**\*.cs" />
     <Compile Include="Irp\**\*.cs" />
     <Compile Include="Ivld\**\*.cs" />
+    <Compile Include="Keewidb\**\*.cs" />
     <Compile Include="Kms\**\*.cs" />
     <Compile Include="Lcic\**\*.cs" />
     <Compile Include="Lighthouse\**\*.cs" />

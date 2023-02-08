@@ -25,31 +25,31 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 慢查询耗时
+        /// 慢查询耗时（单位：毫秒）。
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// 客户端地址
+        /// 客户端地址。
         /// </summary>
         [JsonProperty("Client")]
         public string Client{ get; set; }
 
         /// <summary>
-        /// 命令
+        /// 命令。
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
         /// <summary>
-        /// 详细命令行信息
+        /// 详细命令行信息。
         /// </summary>
         [JsonProperty("CommandLine")]
         public string CommandLine{ get; set; }
 
         /// <summary>
-        /// 执行时间
+        /// 执行时间。
         /// </summary>
         [JsonProperty("ExecuteTime")]
         public string ExecuteTime{ get; set; }

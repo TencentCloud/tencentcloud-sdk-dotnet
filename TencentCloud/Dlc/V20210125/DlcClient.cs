@@ -653,6 +653,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 创建托管存储内表
+        /// </summary>
+        /// <param name="req"><see cref="CreateInternalTableRequest"/></param>
+        /// <returns><see cref="CreateInternalTableResponse"/></returns>
+        public async Task<CreateInternalTableResponse> CreateInternalTable(CreateInternalTableRequest req)
+        {
+             JsonResponseModel<CreateInternalTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInternalTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInternalTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建托管存储内表
+        /// </summary>
+        /// <param name="req"><see cref="CreateInternalTableRequest"/></param>
+        /// <returns><see cref="CreateInternalTableResponse"/></returns>
+        public CreateInternalTableResponse CreateInternalTableSync(CreateInternalTableRequest req)
+        {
+             JsonResponseModel<CreateInternalTableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInternalTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInternalTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateNotebookSession）用于创建notebook livy session
         /// </summary>
         /// <param name="req"><see cref="CreateNotebookSessionRequest"/></param>

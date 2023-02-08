@@ -37,12 +37,6 @@ namespace TencentCloud.Thpc.V20220401.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜。
-        /// </summary>
-        [JsonProperty("ImageId")]
-        public string ImageId{ get; set; }
-
-        /// <summary>
         /// 私有网络相关信息配置。
         /// </summary>
         [JsonProperty("VirtualPrivateCloud")]
@@ -53,6 +47,12 @@ namespace TencentCloud.Thpc.V20220401.Models
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
+
+        /// <summary>
+        /// 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和特定自定义镜像。
+        /// </summary>
+        [JsonProperty("ImageId")]
+        public string ImageId{ get; set; }
 
         /// <summary>
         /// 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
@@ -117,7 +117,8 @@ namespace TencentCloud.Thpc.V20220401.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 队列名称。
+        /// 队列名称。不指定则为默认队列。<br><li>SLURM默认队列为：compute。<br>
+        /// <li>SGE默认队列为：all.q。<br>
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
@@ -146,9 +147,9 @@ namespace TencentCloud.Thpc.V20220401.Models
         {
             this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamObj(map, prefix + "VirtualPrivateCloud.", this.VirtualPrivateCloud);
             this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);

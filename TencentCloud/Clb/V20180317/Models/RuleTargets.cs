@@ -49,6 +49,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Targets")]
         public Backend[] Targets{ get; set; }
 
+        /// <summary>
+        /// 后端云函数的信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FunctionTargets")]
+        public FunctionTarget[] FunctionTargets{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +66,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
+            this.SetParamArrayObj(map, prefix + "FunctionTargets.", this.FunctionTargets);
         }
     }
 }

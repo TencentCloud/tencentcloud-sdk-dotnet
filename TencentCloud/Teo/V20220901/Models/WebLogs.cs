@@ -31,10 +31,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EventId{ get; set; }
 
         /// <summary>
-        /// 攻击源（客户端）Ip。
+        /// http 日志内容。
         /// </summary>
-        [JsonProperty("AttackIp")]
-        public string AttackIp{ get; set; }
+        [JsonProperty("HttpLog")]
+        public string HttpLog{ get; set; }
 
         /// <summary>
         /// 受攻击子域名。
@@ -43,16 +43,28 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// http 日志内容。
+        /// 攻击源（客户端）Ip。
         /// </summary>
-        [JsonProperty("HttpLog")]
-        public string HttpLog{ get; set; }
+        [JsonProperty("AttackIp")]
+        public string AttackIp{ get; set; }
 
         /// <summary>
         /// IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)
         /// </summary>
         [JsonProperty("SipCountryCode")]
         public string SipCountryCode{ get; set; }
+
+        /// <summary>
+        /// 真实客户端Ip。
+        /// </summary>
+        [JsonProperty("RealClientIp")]
+        public string RealClientIp{ get; set; }
+
+        /// <summary>
+        /// 真实客户端Ip所在国家iso-3166中alpha-2编码。
+        /// </summary>
+        [JsonProperty("RealClientIpCountryCode")]
+        public string RealClientIpCountryCode{ get; set; }
 
         /// <summary>
         /// 攻击时间，采用unix秒级时间戳。
@@ -67,11 +79,11 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RequestUri{ get; set; }
 
         /// <summary>
-        /// 攻击内容。
+        /// 请求类型。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AttackContent")]
-        public string AttackContent{ get; set; }
+        [JsonProperty("ReqMethod")]
+        public string ReqMethod{ get; set; }
 
         /// <summary>
         /// 规则相关信息列表。
@@ -81,11 +93,11 @@ namespace TencentCloud.Teo.V20220901.Models
         public SecRuleRelatedInfo[] RuleDetailList{ get; set; }
 
         /// <summary>
-        /// 请求类型。
+        /// 攻击内容。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ReqMethod")]
-        public string ReqMethod{ get; set; }
+        [JsonProperty("AttackContent")]
+        public string AttackContent{ get; set; }
 
         /// <summary>
         /// 日志所属区域。
@@ -101,15 +113,17 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
-            this.SetParamSimple(map, prefix + "AttackIp", this.AttackIp);
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "HttpLog", this.HttpLog);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "AttackIp", this.AttackIp);
             this.SetParamSimple(map, prefix + "SipCountryCode", this.SipCountryCode);
+            this.SetParamSimple(map, prefix + "RealClientIp", this.RealClientIp);
+            this.SetParamSimple(map, prefix + "RealClientIpCountryCode", this.RealClientIpCountryCode);
             this.SetParamSimple(map, prefix + "AttackTime", this.AttackTime);
             this.SetParamSimple(map, prefix + "RequestUri", this.RequestUri);
-            this.SetParamSimple(map, prefix + "AttackContent", this.AttackContent);
-            this.SetParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
             this.SetParamSimple(map, prefix + "ReqMethod", this.ReqMethod);
+            this.SetParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
+            this.SetParamSimple(map, prefix + "AttackContent", this.AttackContent);
             this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }

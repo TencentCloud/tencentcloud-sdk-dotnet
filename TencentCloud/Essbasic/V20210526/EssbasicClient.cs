@@ -607,6 +607,86 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 将指定印章授权给企业下的某些员工
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateSealPolicyRequest"/></param>
+        /// <returns><see cref="ChannelCreateSealPolicyResponse"/></returns>
+        public async Task<ChannelCreateSealPolicyResponse> ChannelCreateSealPolicy(ChannelCreateSealPolicyRequest req)
+        {
+             JsonResponseModel<ChannelCreateSealPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateSealPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateSealPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将指定印章授权给企业下的某些员工
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateSealPolicyRequest"/></param>
+        /// <returns><see cref="ChannelCreateSealPolicyResponse"/></returns>
+        public ChannelCreateSealPolicyResponse ChannelCreateSealPolicySync(ChannelCreateSealPolicyRequest req)
+        {
+             JsonResponseModel<ChannelCreateSealPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateSealPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateSealPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除指定印章下多个授权信息
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDeleteSealPoliciesRequest"/></param>
+        /// <returns><see cref="ChannelDeleteSealPoliciesResponse"/></returns>
+        public async Task<ChannelDeleteSealPoliciesResponse> ChannelDeleteSealPolicies(ChannelDeleteSealPoliciesRequest req)
+        {
+             JsonResponseModel<ChannelDeleteSealPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelDeleteSealPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDeleteSealPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除指定印章下多个授权信息
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDeleteSealPoliciesRequest"/></param>
+        /// <returns><see cref="ChannelDeleteSealPoliciesResponse"/></returns>
+        public ChannelDeleteSealPoliciesResponse ChannelDeleteSealPoliciesSync(ChannelDeleteSealPoliciesRequest req)
+        {
+             JsonResponseModel<ChannelDeleteSealPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelDeleteSealPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDeleteSealPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询企业员工列表
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeEmployeesRequest"/></param>

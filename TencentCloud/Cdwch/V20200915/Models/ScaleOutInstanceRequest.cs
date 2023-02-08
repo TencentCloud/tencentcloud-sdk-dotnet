@@ -56,10 +56,16 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public long? UserSubnetIPNum{ get; set; }
 
         /// <summary>
-        /// 节点同步ip
+        /// 同步元数据节点IP （uip）
         /// </summary>
         [JsonProperty("ScaleOutNodeIp")]
         public string ScaleOutNodeIp{ get; set; }
+
+        /// <summary>
+        /// 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+        /// </summary>
+        [JsonProperty("ReduceShardInfo")]
+        public string[] ReduceShardInfo{ get; set; }
 
 
         /// <summary>
@@ -73,6 +79,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "ScaleOutCluster", this.ScaleOutCluster);
             this.SetParamSimple(map, prefix + "UserSubnetIPNum", this.UserSubnetIPNum);
             this.SetParamSimple(map, prefix + "ScaleOutNodeIp", this.ScaleOutNodeIp);
+            this.SetParamArraySimple(map, prefix + "ReduceShardInfo.", this.ReduceShardInfo);
         }
     }
 }
