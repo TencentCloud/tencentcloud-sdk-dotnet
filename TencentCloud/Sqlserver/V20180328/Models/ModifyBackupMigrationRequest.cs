@@ -60,6 +60,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupFiles")]
         public string[] BackupFiles{ get; set; }
 
+        /// <summary>
+        /// 需要重命名的数据库名称集合
+        /// </summary>
+        [JsonProperty("DBRename")]
+        public RenameRestoreDatabase[] DBRename{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "RecoveryType", this.RecoveryType);
             this.SetParamSimple(map, prefix + "UploadType", this.UploadType);
             this.SetParamArraySimple(map, prefix + "BackupFiles.", this.BackupFiles);
+            this.SetParamArrayObj(map, prefix + "DBRename.", this.DBRename);
         }
     }
 }

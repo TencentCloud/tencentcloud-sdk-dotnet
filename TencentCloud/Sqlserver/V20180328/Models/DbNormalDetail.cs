@@ -132,6 +132,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("UserAccessDesc")]
         public string UserAccessDesc{ get; set; }
 
+        /// <summary>
+        /// 数据库创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "RetentionPeriod", this.RetentionPeriod);
             this.SetParamSimple(map, prefix + "StateDesc", this.StateDesc);
             this.SetParamSimple(map, prefix + "UserAccessDesc", this.UserAccessDesc);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

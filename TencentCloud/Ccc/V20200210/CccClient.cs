@@ -53,6 +53,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 绑定号码外呼技能组
+        /// </summary>
+        /// <param name="req"><see cref="BindNumberCallOutSkillGroupRequest"/></param>
+        /// <returns><see cref="BindNumberCallOutSkillGroupResponse"/></returns>
+        public async Task<BindNumberCallOutSkillGroupResponse> BindNumberCallOutSkillGroup(BindNumberCallOutSkillGroupRequest req)
+        {
+             JsonResponseModel<BindNumberCallOutSkillGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindNumberCallOutSkillGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindNumberCallOutSkillGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定号码外呼技能组
+        /// </summary>
+        /// <param name="req"><see cref="BindNumberCallOutSkillGroupRequest"/></param>
+        /// <returns><see cref="BindNumberCallOutSkillGroupResponse"/></returns>
+        public BindNumberCallOutSkillGroupResponse BindNumberCallOutSkillGroupSync(BindNumberCallOutSkillGroupRequest req)
+        {
+             JsonResponseModel<BindNumberCallOutSkillGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindNumberCallOutSkillGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindNumberCallOutSkillGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 绑定坐席所属技能组
         /// </summary>
         /// <param name="req"><see cref="BindStaffSkillGroupListRequest"/></param>
@@ -897,6 +937,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 查询号码列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNumbersRequest"/></param>
+        /// <returns><see cref="DescribeNumbersResponse"/></returns>
+        public async Task<DescribeNumbersResponse> DescribeNumbers(DescribeNumbersRequest req)
+        {
+             JsonResponseModel<DescribeNumbersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNumbers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNumbersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询号码列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNumbersRequest"/></param>
+        /// <returns><see cref="DescribeNumbersResponse"/></returns>
+        public DescribeNumbersResponse DescribeNumbersSync(DescribeNumbersRequest req)
+        {
+             JsonResponseModel<DescribeNumbersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNumbers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNumbersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取当前正在通话的会话列表
         /// </summary>
         /// <param name="req"><see cref="DescribePSTNActiveSessionListRequest"/></param>
@@ -1448,6 +1528,46 @@ namespace TencentCloud.Ccc.V20200210
              {
                  var strResp = this.InternalRequestSync(req, "StopAutoCalloutTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopAutoCalloutTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑号码外呼技能组
+        /// </summary>
+        /// <param name="req"><see cref="UnbindNumberCallOutSkillGroupRequest"/></param>
+        /// <returns><see cref="UnbindNumberCallOutSkillGroupResponse"/></returns>
+        public async Task<UnbindNumberCallOutSkillGroupResponse> UnbindNumberCallOutSkillGroup(UnbindNumberCallOutSkillGroupRequest req)
+        {
+             JsonResponseModel<UnbindNumberCallOutSkillGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindNumberCallOutSkillGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindNumberCallOutSkillGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑号码外呼技能组
+        /// </summary>
+        /// <param name="req"><see cref="UnbindNumberCallOutSkillGroupRequest"/></param>
+        /// <returns><see cref="UnbindNumberCallOutSkillGroupResponse"/></returns>
+        public UnbindNumberCallOutSkillGroupResponse UnbindNumberCallOutSkillGroupSync(UnbindNumberCallOutSkillGroupRequest req)
+        {
+             JsonResponseModel<UnbindNumberCallOutSkillGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindNumberCallOutSkillGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindNumberCallOutSkillGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -94,6 +94,13 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("SilenceTime")]
         public long? SilenceTime{ get; set; }
 
+        /// <summary>
+        /// 情绪类型（可能为空）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EmotionType")]
+        public string[] EmotionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "SpeakerId", this.SpeakerId);
             this.SetParamSimple(map, prefix + "EmotionalEnergy", this.EmotionalEnergy);
             this.SetParamSimple(map, prefix + "SilenceTime", this.SilenceTime);
+            this.SetParamArraySimple(map, prefix + "EmotionType.", this.EmotionType);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.693</VersionPrefix>
+    <VersionPrefix>3.0.694</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,11 @@
     <Compile Include="V20220817\LcicClient.cs" />
     <Compile Include="V20220817\Models\AppConfig.cs" />
     <Compile Include="V20220817\Models\AppCustomContent.cs" />
+    <Compile Include="V20220817\Models\BackgroundPictureConfig.cs" />
+    <Compile Include="V20220817\Models\BatchCreateRoomRequest.cs" />
+    <Compile Include="V20220817\Models\BatchCreateRoomResponse.cs" />
+    <Compile Include="V20220817\Models\BatchDeleteRecordRequest.cs" />
+    <Compile Include="V20220817\Models\BatchDeleteRecordResponse.cs" />
     <Compile Include="V20220817\Models\BatchRegisterRequest.cs" />
     <Compile Include="V20220817\Models\BatchRegisterResponse.cs" />
     <Compile Include="V20220817\Models\BatchUserInfo.cs" />
@@ -62,16 +67,29 @@
     <Compile Include="V20220817\Models\CreateRoomResponse.cs" />
     <Compile Include="V20220817\Models\CreateSupervisorRequest.cs" />
     <Compile Include="V20220817\Models\CreateSupervisorResponse.cs" />
+    <Compile Include="V20220817\Models\DeleteDocumentRequest.cs" />
+    <Compile Include="V20220817\Models\DeleteDocumentResponse.cs" />
+    <Compile Include="V20220817\Models\DeleteRecordRequest.cs" />
+    <Compile Include="V20220817\Models\DeleteRecordResponse.cs" />
     <Compile Include="V20220817\Models\DeleteRoomRequest.cs" />
     <Compile Include="V20220817\Models\DeleteRoomResponse.cs" />
     <Compile Include="V20220817\Models\DescribeAppDetailRequest.cs" />
     <Compile Include="V20220817\Models\DescribeAppDetailResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeDocumentRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeDocumentResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeDocumentsByRoomRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeDocumentsByRoomResponse.cs" />
     <Compile Include="V20220817\Models\DescribeRoomRequest.cs" />
     <Compile Include="V20220817\Models\DescribeRoomResponse.cs" />
     <Compile Include="V20220817\Models\DescribeRoomStatisticsRequest.cs" />
     <Compile Include="V20220817\Models\DescribeRoomStatisticsResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeSdkAppIdUsersRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeSdkAppIdUsersResponse.cs" />
     <Compile Include="V20220817\Models\DescribeUserRequest.cs" />
     <Compile Include="V20220817\Models\DescribeUserResponse.cs" />
+    <Compile Include="V20220817\Models\DocumentInfo.cs" />
+    <Compile Include="V20220817\Models\GetWatermarkRequest.cs" />
+    <Compile Include="V20220817\Models\GetWatermarkResponse.cs" />
     <Compile Include="V20220817\Models\LoginOriginIdRequest.cs" />
     <Compile Include="V20220817\Models\LoginOriginIdResponse.cs" />
     <Compile Include="V20220817\Models\LoginUserRequest.cs" />
@@ -81,12 +99,20 @@
     <Compile Include="V20220817\Models\ModifyAppResponse.cs" />
     <Compile Include="V20220817\Models\ModifyRoomRequest.cs" />
     <Compile Include="V20220817\Models\ModifyRoomResponse.cs" />
+    <Compile Include="V20220817\Models\ModifyUserProfileRequest.cs" />
+    <Compile Include="V20220817\Models\ModifyUserProfileResponse.cs" />
     <Compile Include="V20220817\Models\RegisterUserRequest.cs" />
     <Compile Include="V20220817\Models\RegisterUserResponse.cs" />
+    <Compile Include="V20220817\Models\RoomInfo.cs" />
     <Compile Include="V20220817\Models\SceneItem.cs" />
     <Compile Include="V20220817\Models\SetAppCustomContentRequest.cs" />
     <Compile Include="V20220817\Models\SetAppCustomContentResponse.cs" />
+    <Compile Include="V20220817\Models\SetWatermarkRequest.cs" />
+    <Compile Include="V20220817\Models\SetWatermarkResponse.cs" />
+    <Compile Include="V20220817\Models\TextMarkConfig.cs" />
     <Compile Include="V20220817\Models\UnbindDocumentFromRoomRequest.cs" />
     <Compile Include="V20220817\Models\UnbindDocumentFromRoomResponse.cs" />
+    <Compile Include="V20220817\Models\UserInfo.cs" />
+    <Compile Include="V20220817\Models\WatermarkConfig.cs" />
   </ItemGroup>
 </Project>

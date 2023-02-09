@@ -281,6 +281,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("QueuedSkillGroupName")]
         public string QueuedSkillGroupName{ get; set; }
 
+        /// <summary>
+        /// 通话中语音留言录音URL
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VoicemailRecordURL")]
+        public string[] VoicemailRecordURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -319,6 +326,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "QueuedSkillGroupName", this.QueuedSkillGroupName);
+            this.SetParamArraySimple(map, prefix + "VoicemailRecordURL.", this.VoicemailRecordURL);
         }
     }
 }

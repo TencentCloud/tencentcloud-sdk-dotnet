@@ -49,7 +49,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 是否为管理员账户，默认为否
+        /// 是否为管理员账户，当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false，等价于AccountType=L3
         /// </summary>
         [JsonProperty("IsAdmin")]
         public bool? IsAdmin{ get; set; }
@@ -59,6 +59,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         [JsonProperty("Authentication")]
         public string Authentication{ get; set; }
+
+        /// <summary>
+        /// 账号类型，IsAdmin的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
             this.SetParamSimple(map, prefix + "Authentication", this.Authentication);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

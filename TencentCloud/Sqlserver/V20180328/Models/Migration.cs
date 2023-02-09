@@ -122,6 +122,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("IsRecovery")]
         public string IsRecovery{ get; set; }
 
+        /// <summary>
+        /// 重命名的数据库名称集合
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DBRename")]
+        public DBRenameRes[] DBRename{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +151,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamObj(map, prefix + "Detail.", this.Detail);
             this.SetParamObj(map, prefix + "Action.", this.Action);
             this.SetParamSimple(map, prefix + "IsRecovery", this.IsRecovery);
+            this.SetParamArrayObj(map, prefix + "DBRename.", this.DBRename);
         }
     }
 }

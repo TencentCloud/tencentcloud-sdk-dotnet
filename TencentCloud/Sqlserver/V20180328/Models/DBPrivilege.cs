@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string DBName{ get; set; }
 
         /// <summary>
-        /// 数据库权限，ReadWrite表示可读写，ReadOnly表示只读
+        /// 数据库权限，ReadWrite表示可读写，ReadOnly表示只读，DBOwner所有者
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }

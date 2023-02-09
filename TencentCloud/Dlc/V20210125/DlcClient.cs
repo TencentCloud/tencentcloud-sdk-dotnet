@@ -373,6 +373,86 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（CancelNotebookSessionStatement）用于取消session statement
+        /// </summary>
+        /// <param name="req"><see cref="CancelNotebookSessionStatementRequest"/></param>
+        /// <returns><see cref="CancelNotebookSessionStatementResponse"/></returns>
+        public async Task<CancelNotebookSessionStatementResponse> CancelNotebookSessionStatement(CancelNotebookSessionStatementRequest req)
+        {
+             JsonResponseModel<CancelNotebookSessionStatementResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelNotebookSessionStatement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelNotebookSessionStatementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CancelNotebookSessionStatement）用于取消session statement
+        /// </summary>
+        /// <param name="req"><see cref="CancelNotebookSessionStatementRequest"/></param>
+        /// <returns><see cref="CancelNotebookSessionStatementResponse"/></returns>
+        public CancelNotebookSessionStatementResponse CancelNotebookSessionStatementSync(CancelNotebookSessionStatementRequest req)
+        {
+             JsonResponseModel<CancelNotebookSessionStatementResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelNotebookSessionStatement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelNotebookSessionStatementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CancelNotebookSessionStatementBatch）用于按批取消Session statement。
+        /// </summary>
+        /// <param name="req"><see cref="CancelNotebookSessionStatementBatchRequest"/></param>
+        /// <returns><see cref="CancelNotebookSessionStatementBatchResponse"/></returns>
+        public async Task<CancelNotebookSessionStatementBatchResponse> CancelNotebookSessionStatementBatch(CancelNotebookSessionStatementBatchRequest req)
+        {
+             JsonResponseModel<CancelNotebookSessionStatementBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelNotebookSessionStatementBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelNotebookSessionStatementBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CancelNotebookSessionStatementBatch）用于按批取消Session statement。
+        /// </summary>
+        /// <param name="req"><see cref="CancelNotebookSessionStatementBatchRequest"/></param>
+        /// <returns><see cref="CancelNotebookSessionStatementBatchResponse"/></returns>
+        public CancelNotebookSessionStatementBatchResponse CancelNotebookSessionStatementBatchSync(CancelNotebookSessionStatementBatchRequest req)
+        {
+             JsonResponseModel<CancelNotebookSessionStatementBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelNotebookSessionStatementBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelNotebookSessionStatementBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CancelTask），用于取消任务执行
         /// </summary>
         /// <param name="req"><see cref="CancelTaskRequest"/></param>
@@ -653,7 +733,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 创建托管存储内表
+        /// 创建托管存储内表（该接口已废弃）
         /// </summary>
         /// <param name="req"><see cref="CreateInternalTableRequest"/></param>
         /// <returns><see cref="CreateInternalTableResponse"/></returns>
@@ -673,7 +753,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 创建托管存储内表
+        /// 创建托管存储内表（该接口已废弃）
         /// </summary>
         /// <param name="req"><see cref="CreateInternalTableRequest"/></param>
         /// <returns><see cref="CreateInternalTableResponse"/></returns>
@@ -724,6 +804,86 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "CreateNotebookSession");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotebookSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateNotebookSessionStatement）用于创建session statement
+        /// </summary>
+        /// <param name="req"><see cref="CreateNotebookSessionStatementRequest"/></param>
+        /// <returns><see cref="CreateNotebookSessionStatementResponse"/></returns>
+        public async Task<CreateNotebookSessionStatementResponse> CreateNotebookSessionStatement(CreateNotebookSessionStatementRequest req)
+        {
+             JsonResponseModel<CreateNotebookSessionStatementResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNotebookSessionStatement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotebookSessionStatementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateNotebookSessionStatement）用于创建session statement
+        /// </summary>
+        /// <param name="req"><see cref="CreateNotebookSessionStatementRequest"/></param>
+        /// <returns><see cref="CreateNotebookSessionStatementResponse"/></returns>
+        public CreateNotebookSessionStatementResponse CreateNotebookSessionStatementSync(CreateNotebookSessionStatementRequest req)
+        {
+             JsonResponseModel<CreateNotebookSessionStatementResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNotebookSessionStatement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotebookSessionStatementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateNotebookSessionStatementSupportBatchSQL）用于创建Statement批量运行SQL任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateNotebookSessionStatementSupportBatchSQLRequest"/></param>
+        /// <returns><see cref="CreateNotebookSessionStatementSupportBatchSQLResponse"/></returns>
+        public async Task<CreateNotebookSessionStatementSupportBatchSQLResponse> CreateNotebookSessionStatementSupportBatchSQL(CreateNotebookSessionStatementSupportBatchSQLRequest req)
+        {
+             JsonResponseModel<CreateNotebookSessionStatementSupportBatchSQLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNotebookSessionStatementSupportBatchSQL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotebookSessionStatementSupportBatchSQLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateNotebookSessionStatementSupportBatchSQL）用于创建Statement批量运行SQL任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateNotebookSessionStatementSupportBatchSQLRequest"/></param>
+        /// <returns><see cref="CreateNotebookSessionStatementSupportBatchSQLResponse"/></returns>
+        public CreateNotebookSessionStatementSupportBatchSQLResponse CreateNotebookSessionStatementSupportBatchSQLSync(CreateNotebookSessionStatementSupportBatchSQLRequest req)
+        {
+             JsonResponseModel<CreateNotebookSessionStatementSupportBatchSQLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNotebookSessionStatementSupportBatchSQL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotebookSessionStatementSupportBatchSQLResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1173,6 +1333,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（DeleteNotebookSession）用于删除notebook livy session
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNotebookSessionRequest"/></param>
+        /// <returns><see cref="DeleteNotebookSessionResponse"/></returns>
+        public async Task<DeleteNotebookSessionResponse> DeleteNotebookSession(DeleteNotebookSessionRequest req)
+        {
+             JsonResponseModel<DeleteNotebookSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNotebookSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNotebookSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteNotebookSession）用于删除notebook livy session
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNotebookSessionRequest"/></param>
+        /// <returns><see cref="DeleteNotebookSessionResponse"/></returns>
+        public DeleteNotebookSessionResponse DeleteNotebookSessionSync(DeleteNotebookSessionRequest req)
+        {
+             JsonResponseModel<DeleteNotebookSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNotebookSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNotebookSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（DeleteScript）用于删除sql脚本。
         /// </summary>
         /// <param name="req"><see cref="DeleteScriptRequest"/></param>
@@ -1533,6 +1733,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（DescribeDataEngines）用于获取DataEngines信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEnginesRequest"/></param>
+        /// <returns><see cref="DescribeDataEnginesResponse"/></returns>
+        public async Task<DescribeDataEnginesResponse> DescribeDataEngines(DescribeDataEnginesRequest req)
+        {
+             JsonResponseModel<DescribeDataEnginesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataEngines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataEnginesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDataEngines）用于获取DataEngines信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEnginesRequest"/></param>
+        /// <returns><see cref="DescribeDataEnginesResponse"/></returns>
+        public DescribeDataEnginesResponse DescribeDataEnginesSync(DescribeDataEnginesRequest req)
+        {
+             JsonResponseModel<DescribeDataEnginesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataEngines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataEnginesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDatabases）用于查询数据库列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
@@ -1604,6 +1844,206 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeNotebookSession");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNotebookSessionLog）用于获取notebook livy session日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookSessionLogRequest"/></param>
+        /// <returns><see cref="DescribeNotebookSessionLogResponse"/></returns>
+        public async Task<DescribeNotebookSessionLogResponse> DescribeNotebookSessionLog(DescribeNotebookSessionLogRequest req)
+        {
+             JsonResponseModel<DescribeNotebookSessionLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNotebookSessionLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNotebookSessionLog）用于获取notebook livy session日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookSessionLogRequest"/></param>
+        /// <returns><see cref="DescribeNotebookSessionLogResponse"/></returns>
+        public DescribeNotebookSessionLogResponse DescribeNotebookSessionLogSync(DescribeNotebookSessionLogRequest req)
+        {
+             JsonResponseModel<DescribeNotebookSessionLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNotebookSessionLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNotebookSessionStatement）用于获取session statement信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookSessionStatementRequest"/></param>
+        /// <returns><see cref="DescribeNotebookSessionStatementResponse"/></returns>
+        public async Task<DescribeNotebookSessionStatementResponse> DescribeNotebookSessionStatement(DescribeNotebookSessionStatementRequest req)
+        {
+             JsonResponseModel<DescribeNotebookSessionStatementResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNotebookSessionStatement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionStatementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNotebookSessionStatement）用于获取session statement信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookSessionStatementRequest"/></param>
+        /// <returns><see cref="DescribeNotebookSessionStatementResponse"/></returns>
+        public DescribeNotebookSessionStatementResponse DescribeNotebookSessionStatementSync(DescribeNotebookSessionStatementRequest req)
+        {
+             JsonResponseModel<DescribeNotebookSessionStatementResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNotebookSessionStatement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionStatementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNotebookSessionStatementSqlResult）用于获取statement运行结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookSessionStatementSqlResultRequest"/></param>
+        /// <returns><see cref="DescribeNotebookSessionStatementSqlResultResponse"/></returns>
+        public async Task<DescribeNotebookSessionStatementSqlResultResponse> DescribeNotebookSessionStatementSqlResult(DescribeNotebookSessionStatementSqlResultRequest req)
+        {
+             JsonResponseModel<DescribeNotebookSessionStatementSqlResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNotebookSessionStatementSqlResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionStatementSqlResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNotebookSessionStatementSqlResult）用于获取statement运行结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookSessionStatementSqlResultRequest"/></param>
+        /// <returns><see cref="DescribeNotebookSessionStatementSqlResultResponse"/></returns>
+        public DescribeNotebookSessionStatementSqlResultResponse DescribeNotebookSessionStatementSqlResultSync(DescribeNotebookSessionStatementSqlResultRequest req)
+        {
+             JsonResponseModel<DescribeNotebookSessionStatementSqlResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNotebookSessionStatementSqlResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionStatementSqlResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNotebookSessionStatements）用于获取Session Statement列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookSessionStatementsRequest"/></param>
+        /// <returns><see cref="DescribeNotebookSessionStatementsResponse"/></returns>
+        public async Task<DescribeNotebookSessionStatementsResponse> DescribeNotebookSessionStatements(DescribeNotebookSessionStatementsRequest req)
+        {
+             JsonResponseModel<DescribeNotebookSessionStatementsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNotebookSessionStatements");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionStatementsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNotebookSessionStatements）用于获取Session Statement列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookSessionStatementsRequest"/></param>
+        /// <returns><see cref="DescribeNotebookSessionStatementsResponse"/></returns>
+        public DescribeNotebookSessionStatementsResponse DescribeNotebookSessionStatementsSync(DescribeNotebookSessionStatementsRequest req)
+        {
+             JsonResponseModel<DescribeNotebookSessionStatementsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNotebookSessionStatements");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionStatementsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNotebookSessions）用于获取notebook livy session列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookSessionsRequest"/></param>
+        /// <returns><see cref="DescribeNotebookSessionsResponse"/></returns>
+        public async Task<DescribeNotebookSessionsResponse> DescribeNotebookSessions(DescribeNotebookSessionsRequest req)
+        {
+             JsonResponseModel<DescribeNotebookSessionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNotebookSessions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNotebookSessions）用于获取notebook livy session列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookSessionsRequest"/></param>
+        /// <returns><see cref="DescribeNotebookSessionsResponse"/></returns>
+        public DescribeNotebookSessionsResponse DescribeNotebookSessionsSync(DescribeNotebookSessionsRequest req)
+        {
+             JsonResponseModel<DescribeNotebookSessionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNotebookSessions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookSessionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2324,6 +2764,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "DropDMSTable");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropDMSTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成创建托管表语句
+        /// </summary>
+        /// <param name="req"><see cref="GenerateCreateMangedTableSqlRequest"/></param>
+        /// <returns><see cref="GenerateCreateMangedTableSqlResponse"/></returns>
+        public async Task<GenerateCreateMangedTableSqlResponse> GenerateCreateMangedTableSql(GenerateCreateMangedTableSqlRequest req)
+        {
+             JsonResponseModel<GenerateCreateMangedTableSqlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenerateCreateMangedTableSql");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateCreateMangedTableSqlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成创建托管表语句
+        /// </summary>
+        /// <param name="req"><see cref="GenerateCreateMangedTableSqlRequest"/></param>
+        /// <returns><see cref="GenerateCreateMangedTableSqlResponse"/></returns>
+        public GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSqlSync(GenerateCreateMangedTableSqlRequest req)
+        {
+             JsonResponseModel<GenerateCreateMangedTableSqlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateCreateMangedTableSql");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateCreateMangedTableSqlResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

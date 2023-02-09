@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.693</VersionPrefix>
+    <VersionPrefix>3.0.694</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,10 @@
     <Compile Include="V20210125\Models\BindWorkGroupsToUserResponse.cs" />
     <Compile Include="V20210125\Models\CSV.cs" />
     <Compile Include="V20210125\Models\CSVSerde.cs" />
+    <Compile Include="V20210125\Models\CancelNotebookSessionStatementBatchRequest.cs" />
+    <Compile Include="V20210125\Models\CancelNotebookSessionStatementBatchResponse.cs" />
+    <Compile Include="V20210125\Models\CancelNotebookSessionStatementRequest.cs" />
+    <Compile Include="V20210125\Models\CancelNotebookSessionStatementResponse.cs" />
     <Compile Include="V20210125\Models\CancelTaskRequest.cs" />
     <Compile Include="V20210125\Models\CancelTaskResponse.cs" />
     <Compile Include="V20210125\Models\CheckLockMetaDataRequest.cs" />
@@ -86,6 +90,10 @@
     <Compile Include="V20210125\Models\CreateInternalTableResponse.cs" />
     <Compile Include="V20210125\Models\CreateNotebookSessionRequest.cs" />
     <Compile Include="V20210125\Models\CreateNotebookSessionResponse.cs" />
+    <Compile Include="V20210125\Models\CreateNotebookSessionStatementRequest.cs" />
+    <Compile Include="V20210125\Models\CreateNotebookSessionStatementResponse.cs" />
+    <Compile Include="V20210125\Models\CreateNotebookSessionStatementSupportBatchSQLRequest.cs" />
+    <Compile Include="V20210125\Models\CreateNotebookSessionStatementSupportBatchSQLResponse.cs" />
     <Compile Include="V20210125\Models\CreateResultDownloadRequest.cs" />
     <Compile Include="V20210125\Models\CreateResultDownloadResponse.cs" />
     <Compile Include="V20210125\Models\CreateScriptRequest.cs" />
@@ -108,16 +116,20 @@
     <Compile Include="V20210125\Models\CreateUserResponse.cs" />
     <Compile Include="V20210125\Models\CreateWorkGroupRequest.cs" />
     <Compile Include="V20210125\Models\CreateWorkGroupResponse.cs" />
+    <Compile Include="V20210125\Models\CrontabResumeSuspendStrategy.cs" />
     <Compile Include="V20210125\Models\DMSColumn.cs" />
     <Compile Include="V20210125\Models\DMSColumnOrder.cs" />
     <Compile Include="V20210125\Models\DMSPartition.cs" />
     <Compile Include="V20210125\Models\DMSSds.cs" />
     <Compile Include="V20210125\Models\DMSTable.cs" />
     <Compile Include="V20210125\Models\DMSTableInfo.cs" />
+    <Compile Include="V20210125\Models\DataEngineInfo.cs" />
     <Compile Include="V20210125\Models\DataFormat.cs" />
     <Compile Include="V20210125\Models\DataGovernPolicy.cs" />
     <Compile Include="V20210125\Models\DatabaseInfo.cs" />
     <Compile Include="V20210125\Models\DatabaseResponseInfo.cs" />
+    <Compile Include="V20210125\Models\DeleteNotebookSessionRequest.cs" />
+    <Compile Include="V20210125\Models\DeleteNotebookSessionResponse.cs" />
     <Compile Include="V20210125\Models\DeleteScriptRequest.cs" />
     <Compile Include="V20210125\Models\DeleteScriptResponse.cs" />
     <Compile Include="V20210125\Models\DeleteSparkAppRequest.cs" />
@@ -136,10 +148,22 @@
     <Compile Include="V20210125\Models\DescribeDMSTableResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDMSTablesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDMSTablesResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeDataEnginesRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeDataEnginesResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeNotebookSessionLogRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeNotebookSessionLogResponse.cs" />
     <Compile Include="V20210125\Models\DescribeNotebookSessionRequest.cs" />
     <Compile Include="V20210125\Models\DescribeNotebookSessionResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeNotebookSessionStatementRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeNotebookSessionStatementResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeNotebookSessionStatementSqlResultRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeNotebookSessionStatementSqlResultResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeNotebookSessionStatementsRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeNotebookSessionStatementsResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeNotebookSessionsRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeNotebookSessionsResponse.cs" />
     <Compile Include="V20210125\Models\DescribeResultDownloadRequest.cs" />
     <Compile Include="V20210125\Models\DescribeResultDownloadResponse.cs" />
     <Compile Include="V20210125\Models\DescribeScriptsRequest.cs" />
@@ -178,6 +202,8 @@
     <Compile Include="V20210125\Models\DropDMSTableResponse.cs" />
     <Compile Include="V20210125\Models\Execution.cs" />
     <Compile Include="V20210125\Models\Filter.cs" />
+    <Compile Include="V20210125\Models\GenerateCreateMangedTableSqlRequest.cs" />
+    <Compile Include="V20210125\Models\GenerateCreateMangedTableSqlResponse.cs" />
     <Compile Include="V20210125\Models\JobLogResult.cs" />
     <Compile Include="V20210125\Models\KVPair.cs" />
     <Compile Include="V20210125\Models\ListTaskJobLogDetailRequest.cs" />
@@ -193,7 +219,11 @@
     <Compile Include="V20210125\Models\ModifyUserResponse.cs" />
     <Compile Include="V20210125\Models\ModifyWorkGroupRequest.cs" />
     <Compile Include="V20210125\Models\ModifyWorkGroupResponse.cs" />
+    <Compile Include="V20210125\Models\NetworkConnection.cs" />
     <Compile Include="V20210125\Models\NotebookSessionInfo.cs" />
+    <Compile Include="V20210125\Models\NotebookSessionStatementBatchInformation.cs" />
+    <Compile Include="V20210125\Models\NotebookSessionStatementInfo.cs" />
+    <Compile Include="V20210125\Models\NotebookSessions.cs" />
     <Compile Include="V20210125\Models\Other.cs" />
     <Compile Include="V20210125\Models\Partition.cs" />
     <Compile Include="V20210125\Models\Policy.cs" />
@@ -203,6 +233,7 @@
     <Compile Include="V20210125\Models\SQLTask.cs" />
     <Compile Include="V20210125\Models\Script.cs" />
     <Compile Include="V20210125\Models\SparkJobInfo.cs" />
+    <Compile Include="V20210125\Models\StatementOutput.cs" />
     <Compile Include="V20210125\Models\StreamingStatistics.cs" />
     <Compile Include="V20210125\Models\SuspendResumeDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\SuspendResumeDataEngineResponse.cs" />
@@ -211,6 +242,7 @@
     <Compile Include="V20210125\Models\TableBaseInfo.cs" />
     <Compile Include="V20210125\Models\TableInfo.cs" />
     <Compile Include="V20210125\Models\TableResponseInfo.cs" />
+    <Compile Include="V20210125\Models\TagInfo.cs" />
     <Compile Include="V20210125\Models\Task.cs" />
     <Compile Include="V20210125\Models\TaskResponseInfo.cs" />
     <Compile Include="V20210125\Models\TaskResultInfo.cs" />

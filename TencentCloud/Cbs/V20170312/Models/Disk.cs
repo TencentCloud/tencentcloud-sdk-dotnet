@@ -254,6 +254,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         public long? DeleteSnapshot{ get; set; }
 
         /// <summary>
+        /// 云硬盘备份点配额。表示最大可以保留的备份点数量。
+        /// </summary>
+        [JsonProperty("DiskBackupQuota")]
+        public ulong? DiskBackupQuota{ get; set; }
+
+        /// <summary>
         /// 云硬盘备份点已使用的数量。
         /// </summary>
         [JsonProperty("DiskBackupCount")]
@@ -307,6 +313,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
+            this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
             this.SetParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }

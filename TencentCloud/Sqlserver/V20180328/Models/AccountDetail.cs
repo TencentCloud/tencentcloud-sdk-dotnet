@@ -90,6 +90,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
+        /// <summary>
+        /// 账号类型。L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
             this.SetParamSimple(map, prefix + "Authentication", this.Authentication);
             this.SetParamSimple(map, prefix + "Host", this.Host);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

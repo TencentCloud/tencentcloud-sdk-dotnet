@@ -37,10 +37,16 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public DBPrivilegeModifyInfo[] DBPrivileges{ get; set; }
 
         /// <summary>
-        /// 是否为管理员账户
+        /// 是否为管理员账户,当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false时，表示删除管理员权限，默认false
         /// </summary>
         [JsonProperty("IsAdmin")]
         public bool? IsAdmin{ get; set; }
+
+        /// <summary>
+        /// 账号类型，IsAdmin字段的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
             this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

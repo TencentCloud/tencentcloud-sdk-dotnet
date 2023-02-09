@@ -31,10 +31,16 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 数据库权限。ReadWrite表示可读写，ReadOnly表示只读
+        /// 数据库权限。ReadWrite表示可读写，ReadOnly表示只读,Delete表示删除DB对该账户的权限，DBOwner所有者
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
+
+        /// <summary>
+        /// 账户名称，L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         {
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }
