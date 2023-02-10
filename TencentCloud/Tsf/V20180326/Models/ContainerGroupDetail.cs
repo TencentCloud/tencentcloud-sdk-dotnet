@@ -283,6 +283,34 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("HealthCheckSettings")]
         public HealthCheckSettings HealthCheckSettings{ get; set; }
 
+        /// <summary>
+        /// 允许PlainYamlDeploy
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AllowPlainYamlDeploy")]
+        public bool? AllowPlainYamlDeploy{ get; set; }
+
+        /// <summary>
+        /// 是否不等于ServiceConfig
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsNotEqualServiceConfig")]
+        public bool? IsNotEqualServiceConfig{ get; set; }
+
+        /// <summary>
+        /// 仓库名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RepoName")]
+        public string RepoName{ get; set; }
+
+        /// <summary>
+        /// 别名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -326,6 +354,10 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "MaxSurge", this.MaxSurge);
             this.SetParamSimple(map, prefix + "MaxUnavailable", this.MaxUnavailable);
             this.SetParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
+            this.SetParamSimple(map, prefix + "AllowPlainYamlDeploy", this.AllowPlainYamlDeploy);
+            this.SetParamSimple(map, prefix + "IsNotEqualServiceConfig", this.IsNotEqualServiceConfig);
+            this.SetParamSimple(map, prefix + "RepoName", this.RepoName);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
         }
     }
 }

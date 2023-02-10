@@ -1493,6 +1493,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 删除文件配置项
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFileConfigRequest"/></param>
+        /// <returns><see cref="DeleteFileConfigResponse"/></returns>
+        public async Task<DeleteFileConfigResponse> DeleteFileConfig(DeleteFileConfigRequest req)
+        {
+             JsonResponseModel<DeleteFileConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteFileConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFileConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除文件配置项
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFileConfigRequest"/></param>
+        /// <returns><see cref="DeleteFileConfigResponse"/></returns>
+        public DeleteFileConfigResponse DeleteFileConfigSync(DeleteFileConfigRequest req)
+        {
+             JsonResponseModel<DeleteFileConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteFileConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFileConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除容器部署组
         /// </summary>
         /// <param name="req"><see cref="DeleteGroupRequest"/></param>

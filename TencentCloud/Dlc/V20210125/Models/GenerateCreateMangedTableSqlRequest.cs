@@ -24,12 +24,40 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class GenerateCreateMangedTableSqlRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 表基本信息
+        /// </summary>
+        [JsonProperty("TableBaseInfo")]
+        public TableBaseInfo TableBaseInfo{ get; set; }
+
+        /// <summary>
+        /// 表字段信息
+        /// </summary>
+        [JsonProperty("Columns")]
+        public TColumn[] Columns{ get; set; }
+
+        /// <summary>
+        /// 表分区信息
+        /// </summary>
+        [JsonProperty("Partitions")]
+        public TPartition[] Partitions{ get; set; }
+
+        /// <summary>
+        /// 表属性信息
+        /// </summary>
+        [JsonProperty("Properties")]
+        public Property[] Properties{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "TableBaseInfo.", this.TableBaseInfo);
+            this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
+            this.SetParamArrayObj(map, prefix + "Partitions.", this.Partitions);
+            this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
         }
     }
 }

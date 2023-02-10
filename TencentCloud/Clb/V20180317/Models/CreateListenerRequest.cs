@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long?[] Ports{ get; set; }
 
         /// <summary>
-        /// 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）。
+        /// 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

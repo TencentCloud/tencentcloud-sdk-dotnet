@@ -1881,6 +1881,86 @@ namespace TencentCloud.Rum.V20210622
         /// <summary>
         /// 获取项目下的日志列表（实例创建的项目下的日志列表）
         /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogExportRequest"/></param>
+        /// <returns><see cref="DescribeRumLogExportResponse"/></returns>
+        public async Task<DescribeRumLogExportResponse> DescribeRumLogExport(DescribeRumLogExportRequest req)
+        {
+             JsonResponseModel<DescribeRumLogExportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRumLogExport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumLogExportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取项目下的日志列表（实例创建的项目下的日志列表）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogExportRequest"/></param>
+        /// <returns><see cref="DescribeRumLogExportResponse"/></returns>
+        public DescribeRumLogExportResponse DescribeRumLogExportSync(DescribeRumLogExportRequest req)
+        {
+             JsonResponseModel<DescribeRumLogExportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRumLogExport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumLogExportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取项目下的日志导出列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogExportsRequest"/></param>
+        /// <returns><see cref="DescribeRumLogExportsResponse"/></returns>
+        public async Task<DescribeRumLogExportsResponse> DescribeRumLogExports(DescribeRumLogExportsRequest req)
+        {
+             JsonResponseModel<DescribeRumLogExportsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRumLogExports");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumLogExportsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取项目下的日志导出列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogExportsRequest"/></param>
+        /// <returns><see cref="DescribeRumLogExportsResponse"/></returns>
+        public DescribeRumLogExportsResponse DescribeRumLogExportsSync(DescribeRumLogExportsRequest req)
+        {
+             JsonResponseModel<DescribeRumLogExportsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRumLogExports");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumLogExportsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取项目下的日志列表（实例创建的项目下的日志列表）
+        /// </summary>
         /// <param name="req"><see cref="DescribeRumLogListRequest"/></param>
         /// <returns><see cref="DescribeRumLogListResponse"/></returns>
         public async Task<DescribeRumLogListResponse> DescribeRumLogList(DescribeRumLogListRequest req)
@@ -2310,6 +2390,46 @@ namespace TencentCloud.Rum.V20210622
              {
                  var strResp = this.InternalRequestSync(req, "ResumeInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 恢复应用使用与上报数据
+        /// </summary>
+        /// <param name="req"><see cref="ResumeProjectRequest"/></param>
+        /// <returns><see cref="ResumeProjectResponse"/></returns>
+        public async Task<ResumeProjectResponse> ResumeProject(ResumeProjectRequest req)
+        {
+             JsonResponseModel<ResumeProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResumeProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 恢复应用使用与上报数据
+        /// </summary>
+        /// <param name="req"><see cref="ResumeProjectRequest"/></param>
+        /// <returns><see cref="ResumeProjectResponse"/></returns>
+        public ResumeProjectResponse ResumeProjectSync(ResumeProjectRequest req)
+        {
+             JsonResponseModel<ResumeProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResumeProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeProjectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

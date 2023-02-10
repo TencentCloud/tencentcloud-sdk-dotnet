@@ -32,6 +32,9 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 环境内引擎的节点规格 ID
+        /// -1C2G
+        /// -2C4G
+        /// 兼容原spec-xxxxxx形式的规格ID
         /// </summary>
         [JsonProperty("EngineResourceSpec")]
         public string EngineResourceSpec{ get; set; }
@@ -60,6 +63,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// 环境描述
+        /// </summary>
+        [JsonProperty("EnvDesc")]
+        public string EnvDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +81,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "StorageCapacity", this.StorageCapacity);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "EnvDesc", this.EnvDesc);
         }
     }
 }

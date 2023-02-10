@@ -45,6 +45,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }
 
+        /// <summary>
+        /// 端口号：0~65535
+        /// </summary>
+        [JsonProperty("Port")]
+        public long? Port{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +60,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "RealServer", this.RealServer);
             this.SetParamSimple(map, prefix + "RsType", this.RsType);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
         }
     }
 }

@@ -395,7 +395,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 指定需要批量催办的签署流程Id，批量催办合同，最多100个；接口失败后返回错误信息
         /// 注意:
-        /// 该接口需要开白后使用
+        /// 该接口不可直接调用，请联系电子签运营开通后方可调用。
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateFlowRemindsRequest"/></param>
         /// <returns><see cref="ChannelCreateFlowRemindsResponse"/></returns>
@@ -417,7 +417,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 指定需要批量催办的签署流程Id，批量催办合同，最多100个；接口失败后返回错误信息
         /// 注意:
-        /// 该接口需要开白后使用
+        /// 该接口不可直接调用，请联系电子签运营开通后方可调用。
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateFlowRemindsRequest"/></param>
         /// <returns><see cref="ChannelCreateFlowRemindsResponse"/></returns>

@@ -74,7 +74,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+        /// 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BandwidthLimitType")]
@@ -87,7 +87,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+        /// 是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
         /// </summary>
         [JsonProperty("RoutePriorityFlag")]
         public bool? RoutePriorityFlag{ get; set; }
@@ -100,11 +100,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? RouteTableCount{ get; set; }
 
         /// <summary>
-        /// 是否开启云联网多路由表特性。False：未开启，True：开启。
+        /// 是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RouteTableFlag")]
         public bool? RouteTableFlag{ get; set; }
+
+        /// <summary>
+        /// `true`：实例已被封禁，流量不通，`false`:解封禁。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSecurityLock")]
+        public bool? IsSecurityLock{ get; set; }
 
         /// <summary>
         /// 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
@@ -132,6 +139,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);
             this.SetParamSimple(map, prefix + "RouteTableCount", this.RouteTableCount);
             this.SetParamSimple(map, prefix + "RouteTableFlag", this.RouteTableFlag);
+            this.SetParamSimple(map, prefix + "IsSecurityLock", this.IsSecurityLock);
             this.SetParamSimple(map, prefix + "RouteBroadcastPolicyFlag", this.RouteBroadcastPolicyFlag);
         }
     }

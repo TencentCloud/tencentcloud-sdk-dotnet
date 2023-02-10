@@ -78,6 +78,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MaxLatencyTime")]
         public ulong? MaxLatencyTime{ get; set; }
 
+        /// <summary>
+        /// 单个主题最大队列数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxQueuesPerTopic")]
+        public ulong? MaxQueuesPerTopic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +100,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "UsedGroupNum", this.UsedGroupNum);
             this.SetParamSimple(map, prefix + "MaxRetentionTime", this.MaxRetentionTime);
             this.SetParamSimple(map, prefix + "MaxLatencyTime", this.MaxLatencyTime);
+            this.SetParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
         }
     }
 }

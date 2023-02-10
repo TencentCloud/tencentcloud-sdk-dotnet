@@ -5109,7 +5109,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeCcnRoutes）用于查询已加入云联网（CCN）的路由
+        /// 本接口（DescribeCcnRoutes）用于查询已加入云联网（CCN）的路由。
         /// </summary>
         /// <param name="req"><see cref="DescribeCcnRoutesRequest"/></param>
         /// <returns><see cref="DescribeCcnRoutesResponse"/></returns>
@@ -5129,7 +5129,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeCcnRoutes）用于查询已加入云联网（CCN）的路由
+        /// 本接口（DescribeCcnRoutes）用于查询已加入云联网（CCN）的路由。
         /// </summary>
         /// <param name="req"><see cref="DescribeCcnRoutesRequest"/></param>
         /// <returns><see cref="DescribeCcnRoutesResponse"/></returns>
@@ -8037,7 +8037,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DisableCcnRoutes）用于禁用已经启用的云联网（CCN）路由
+        /// 本接口（DisableCcnRoutes）用于禁用已经启用的云联网（CCN）路由。
         /// </summary>
         /// <param name="req"><see cref="DisableCcnRoutesRequest"/></param>
         /// <returns><see cref="DisableCcnRoutesResponse"/></returns>
@@ -8057,7 +8057,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DisableCcnRoutes）用于禁用已经启用的云联网（CCN）路由
+        /// 本接口（DisableCcnRoutes）用于禁用已经启用的云联网（CCN）路由。
         /// </summary>
         /// <param name="req"><see cref="DisableCcnRoutesRequest"/></param>
         /// <returns><see cref="DisableCcnRoutesResponse"/></returns>

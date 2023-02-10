@@ -32,7 +32,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 过滤条件，参数不支持同时指定CcnIds和Filters。
-        /// <li>ccn-id - String - （过滤条件）CCN唯一ID，形如：vpc-f49l6u0z。</li>
+        /// <li>ccn-id - String - （过滤条件）CCN唯一ID，形如：`ccn-f49l6u0z`。</li>
         /// <li>ccn-name - String - （过滤条件）CCN名称。</li>
         /// <li>ccn-description - String - （过滤条件）CCN描述。</li>
         /// <li>state - String - （过滤条件）实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。</li>

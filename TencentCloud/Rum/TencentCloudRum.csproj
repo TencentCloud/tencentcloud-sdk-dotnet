@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.694</VersionPrefix>
+    <VersionPrefix>3.0.695</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -138,6 +138,10 @@
     <Compile Include="V20210622\Models\DescribeReleaseFilesResponse.cs" />
     <Compile Include="V20210622\Models\DescribeRumGroupLogRequest.cs" />
     <Compile Include="V20210622\Models\DescribeRumGroupLogResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeRumLogExportRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeRumLogExportResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeRumLogExportsRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeRumLogExportsResponse.cs" />
     <Compile Include="V20210622\Models\DescribeRumLogListRequest.cs" />
     <Compile Include="V20210622\Models\DescribeRumLogListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeRumStatsLogListRequest.cs" />
@@ -164,6 +168,8 @@
     <Compile Include="V20210622\Models\ReleaseFile.cs" />
     <Compile Include="V20210622\Models\ResumeInstanceRequest.cs" />
     <Compile Include="V20210622\Models\ResumeInstanceResponse.cs" />
+    <Compile Include="V20210622\Models\ResumeProjectRequest.cs" />
+    <Compile Include="V20210622\Models\ResumeProjectResponse.cs" />
     <Compile Include="V20210622\Models\RumAreaInfo.cs" />
     <Compile Include="V20210622\Models\RumInstanceInfo.cs" />
     <Compile Include="V20210622\Models\RumProject.cs" />

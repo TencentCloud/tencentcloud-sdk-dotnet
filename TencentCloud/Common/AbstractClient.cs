@@ -29,7 +29,7 @@ namespace TencentCloud.Common
     public class AbstractClient
     {
         public const int HTTP_RSP_OK = 200;
-        public const string SDK_VERSION = "SDK_NET_3.0.694";
+        public const string SDK_VERSION = "SDK_NET_3.0.695";
 
         public AbstractClient(string endpoint, string version, Credential credential, string region, ClientProfile profile)
         {

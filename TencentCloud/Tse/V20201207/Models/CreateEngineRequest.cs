@@ -48,12 +48,17 @@ namespace TencentCloud.Tse.V20201207.Models
         /// 
         /// 引擎各版本及可选择的规格、节点数说明：
         /// apollo - STANDARD版本
-        /// 规格列表：spec-qcr53kf1t（1C2G）,spec-qdr53kf2w（2C4G）
+        /// 规格列表：1C2G、2C4G、4C8G、8C16G、16C32G
         /// 节点数：1，2，3，4，5
         /// 
         /// eureka - STANDARD版本
-        /// 规格列表：spec-qvj6k7t4q（1C2G）,spec-qcr53kfjt（2C4G）,spec-qvj6k7t4m（4G8G）,spec-qcr54kfjt（8C16G）,spec-qcr55kfjt（16C32G）
+        /// 规格列表：1C2G、2C4G、4C8G、8C16G、16C32G
         /// 节点数：3，4，5
+        /// 
+        /// polarismesh - STANDARD版本
+        /// 规格列表：NUM50、NUM100、NUM200、NUM500、NUM1000、NUM5000、NUM10000、NUM50000
+        /// 
+        /// 兼容原spec-xxxxxx形式的规格ID
         /// </summary>
         [JsonProperty("EngineProductVersion")]
         public string EngineProductVersion{ get; set; }
@@ -92,7 +97,7 @@ namespace TencentCloud.Tse.V20201207.Models
         /// <summary>
         /// 付费类型。参考值：
         /// - 0：后付费
-        /// - 1：预付费
+        /// - 1：预付费（接口暂不支持创建预付费实例）
         /// </summary>
         [JsonProperty("TradeType")]
         public long? TradeType{ get; set; }

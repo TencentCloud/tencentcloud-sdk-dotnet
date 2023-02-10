@@ -54,6 +54,18 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("InstanceDetailRule")]
         public RuleInstanceRelation[] InstanceDetailRule{ get; set; }
 
+        /// <summary>
+        /// 协议
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// 端口号
+        /// </summary>
+        [JsonProperty("Vport")]
+        public long? Vport{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamArrayObj(map, prefix + "RealServers.", this.RealServers);
             this.SetParamArrayObj(map, prefix + "InstanceDetails.", this.InstanceDetails);
             this.SetParamArrayObj(map, prefix + "InstanceDetailRule.", this.InstanceDetailRule);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "Vport", this.Vport);
         }
     }
 }

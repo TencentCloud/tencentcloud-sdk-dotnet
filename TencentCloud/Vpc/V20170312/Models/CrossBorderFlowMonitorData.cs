@@ -25,25 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 入带宽
+        /// 入带宽，单位：`bps`。
         /// </summary>
         [JsonProperty("InBandwidth")]
         public long?[] InBandwidth{ get; set; }
 
         /// <summary>
-        /// 出带宽
+        /// 出带宽，单位：`bps`。
         /// </summary>
         [JsonProperty("OutBandwidth")]
         public long?[] OutBandwidth{ get; set; }
 
         /// <summary>
-        /// 入包
+        /// 入包，单位：`pps`。
         /// </summary>
         [JsonProperty("InPkg")]
         public long?[] InPkg{ get; set; }
 
         /// <summary>
-        /// 出包
+        /// 出包，单位：`pps`。
         /// </summary>
         [JsonProperty("OutPkg")]
         public long?[] OutPkg{ get; set; }

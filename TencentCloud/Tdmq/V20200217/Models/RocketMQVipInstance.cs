@@ -44,7 +44,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string InstanceVersion{ get; set; }
 
         /// <summary>
-        /// 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常
+        /// 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

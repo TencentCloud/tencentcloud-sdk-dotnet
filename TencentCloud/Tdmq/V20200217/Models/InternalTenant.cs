@@ -153,6 +153,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MaxRetentionSizeInMB")]
         public ulong? MaxRetentionSizeInMB{ get; set; }
 
+        /// <summary>
+        /// public Access Enabled
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicAccessEnabled")]
+        public bool? PublicAccessEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -180,6 +187,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxDispatchRateInBytes", this.MaxDispatchRateInBytes);
             this.SetParamSimple(map, prefix + "MaxPublishRateInBytes", this.MaxPublishRateInBytes);
             this.SetParamSimple(map, prefix + "MaxRetentionSizeInMB", this.MaxRetentionSizeInMB);
+            this.SetParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
         }
     }
 }

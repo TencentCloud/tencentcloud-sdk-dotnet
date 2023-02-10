@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// CCN实例ID，形如：ccn-gree226l。
+        /// CCN实例ID，形如：`ccn-gree226l`。
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+        /// CCN路由策略唯一ID，形如：`ccnr-f49l6u0z`。
         /// </summary>
         [JsonProperty("RouteIds")]
         public string[] RouteIds{ get; set; }
