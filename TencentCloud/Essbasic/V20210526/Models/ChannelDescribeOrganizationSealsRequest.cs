@@ -54,6 +54,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("SealId")]
         public string SealId{ get; set; }
 
+        /// <summary>
+        /// 印章类型列表（都是组织机构印章）。
+        /// 为空时查询所有类型的印章。
+        /// 目前支持以下类型：
+        /// OFFICIAL：企业公章；
+        /// CONTRACT：合同专用章；
+        /// ORGANIZATION_SEAL：企业印章(图片上传创建)；
+        /// LEGAL_PERSON_SEAL：法定代表人章
+        /// </summary>
+        [JsonProperty("SealTypes")]
+        public string[] SealTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "InfoType", this.InfoType);
             this.SetParamSimple(map, prefix + "SealId", this.SealId);
+            this.SetParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
         }
     }
 }

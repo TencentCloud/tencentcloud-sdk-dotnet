@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// CCN实例ID。形如：ccn-f49l6u0z。
+        /// CCN实例ID，形如：ccn-f49l6u0z。
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }

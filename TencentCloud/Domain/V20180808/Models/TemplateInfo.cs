@@ -90,6 +90,12 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("InvalidReason")]
         public string InvalidReason{ get; set; }
 
+        /// <summary>
+        /// 是包含黑名单手机或邮箱
+        /// </summary>
+        [JsonProperty("IsBlack")]
+        public bool? IsBlack{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamObj(map, prefix + "ContactInfo.", this.ContactInfo);
             this.SetParamSimple(map, prefix + "IsValidTemplate", this.IsValidTemplate);
             this.SetParamSimple(map, prefix + "InvalidReason", this.InvalidReason);
+            this.SetParamSimple(map, prefix + "IsBlack", this.IsBlack);
         }
     }
 }

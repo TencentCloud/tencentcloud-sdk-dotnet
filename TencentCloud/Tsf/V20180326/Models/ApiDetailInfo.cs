@@ -178,6 +178,34 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ApiMatchType")]
         public string ApiMatchType{ get; set; }
 
+        /// <summary>
+        /// RPC 额外信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RpcExt")]
+        public string RpcExt{ get; set; }
+
+        /// <summary>
+        /// 部署组id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GatewayDeployGroupId")]
+        public string GatewayDeployGroupId{ get; set; }
+
+        /// <summary>
+        /// md5
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Md5")]
+        public string Md5{ get; set; }
+
+        /// <summary>
+        /// RPC 类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RpcType")]
+        public string RpcType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +234,10 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ApiType", this.ApiType);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ApiMatchType", this.ApiMatchType);
+            this.SetParamSimple(map, prefix + "RpcExt", this.RpcExt);
+            this.SetParamSimple(map, prefix + "GatewayDeployGroupId", this.GatewayDeployGroupId);
+            this.SetParamSimple(map, prefix + "Md5", this.Md5);
+            this.SetParamSimple(map, prefix + "RpcType", this.RpcType);
         }
     }
 }

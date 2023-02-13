@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePrometheusZonesRequest : AbstractModel
+    public class CcnInstanceInfo : AbstractModel
     {
         
-        /// <summary>
-        /// 地域 ID（RegionId 和 RegionName 只需要填一个）
-        /// </summary>
-        [JsonProperty("RegionId")]
-        public long? RegionId{ get; set; }
-
-        /// <summary>
-        /// 地域名（RegionId 和 RegionName 只需要填一个）
-        /// </summary>
-        [JsonProperty("RegionName")]
-        public string RegionName{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
-            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
         }
     }
 }

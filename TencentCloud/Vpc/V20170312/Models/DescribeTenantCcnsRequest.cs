@@ -24,12 +24,35 @@ namespace TencentCloud.Vpc.V20170312.Models
     public class DescribeTenantCcnsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 过滤条件，目前`value`值个数只支持一个，允许可支持的字段有：
+        /// <li>`ccn-ids` 云联网ID数组，值形如：`["ccn-12345678"]`</li> 
+        /// <li>`user-account-id` 用户账号ID，值形如：`["12345678"]`</li><li>`is-security-lock` 是否锁定，值形如：`["true"]`</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 偏移量，默认0。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 单页返回数据量，可选值0到100之间的整数，默认20。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

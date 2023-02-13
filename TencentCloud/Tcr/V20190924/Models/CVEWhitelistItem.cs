@@ -15,26 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Tcr.V20190924.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePrometheusZonesRequest : AbstractModel
+    public class CVEWhitelistItem : AbstractModel
     {
         
         /// <summary>
-        /// 地域 ID（RegionId 和 RegionName 只需要填一个）
+        /// 漏洞白名单 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RegionId")]
-        public long? RegionId{ get; set; }
-
-        /// <summary>
-        /// 地域名（RegionId 和 RegionName 只需要填一个）
-        /// </summary>
-        [JsonProperty("RegionName")]
-        public string RegionName{ get; set; }
+        [JsonProperty("CVEID")]
+        public string CVEID{ get; set; }
 
 
         /// <summary>
@@ -42,8 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
-            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamSimple(map, prefix + "CVEID", this.CVEID);
         }
     }
 }

@@ -25,43 +25,43 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 源地域
+        /// 源地域。
         /// </summary>
         [JsonProperty("SourceRegion")]
         public string SourceRegion{ get; set; }
 
         /// <summary>
-        /// 目的地域
+        /// 目的地域。
         /// </summary>
         [JsonProperty("DestinationRegion")]
         public string DestinationRegion{ get; set; }
 
         /// <summary>
-        /// 云联网Id
+        /// 云联网ID。
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// 云联网所属账号
+        /// 云联网所属账号。
         /// </summary>
         [JsonProperty("CcnUin")]
         public string CcnUin{ get; set; }
 
         /// <summary>
-        /// 时间粒度
+        /// 时间粒度。
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 开始时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

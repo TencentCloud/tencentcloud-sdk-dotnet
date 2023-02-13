@@ -3893,7 +3893,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// 更新命名空间信息，当前仅支持修改命名空间访问级别
+        /// 更新命名空间信息
         /// </summary>
         /// <param name="req"><see cref="ModifyNamespaceRequest"/></param>
         /// <returns><see cref="ModifyNamespaceResponse"/></returns>
@@ -3913,7 +3913,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// 更新命名空间信息，当前仅支持修改命名空间访问级别
+        /// 更新命名空间信息
         /// </summary>
         /// <param name="req"><see cref="ModifyNamespaceRequest"/></param>
         /// <returns><see cref="ModifyNamespaceResponse"/></returns>

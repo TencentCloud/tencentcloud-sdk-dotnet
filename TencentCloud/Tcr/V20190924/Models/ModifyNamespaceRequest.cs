@@ -42,6 +42,30 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("IsPublic")]
         public bool? IsPublic{ get; set; }
 
+        /// <summary>
+        /// 扫描级别，True为自动，False为手动
+        /// </summary>
+        [JsonProperty("IsAutoScan")]
+        public bool? IsAutoScan{ get; set; }
+
+        /// <summary>
+        /// 阻断开关，True为开放，False为关闭
+        /// </summary>
+        [JsonProperty("IsPreventVUL")]
+        public bool? IsPreventVUL{ get; set; }
+
+        /// <summary>
+        /// 阻断漏洞等级，目前仅支持 low、medium、high
+        /// </summary>
+        [JsonProperty("Severity")]
+        public string Severity{ get; set; }
+
+        /// <summary>
+        /// 漏洞白名单列表
+        /// </summary>
+        [JsonProperty("CVEWhitelistItems")]
+        public CVEWhitelistItem[] CVEWhitelistItems{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +75,10 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "IsPublic", this.IsPublic);
+            this.SetParamSimple(map, prefix + "IsAutoScan", this.IsAutoScan);
+            this.SetParamSimple(map, prefix + "IsPreventVUL", this.IsPreventVUL);
+            this.SetParamSimple(map, prefix + "Severity", this.Severity);
+            this.SetParamArrayObj(map, prefix + "CVEWhitelistItems.", this.CVEWhitelistItems);
         }
     }
 }

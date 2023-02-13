@@ -30,6 +30,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }
 
+        /// <summary>
+        /// 是否全部删除
+        /// </summary>
+        [JsonProperty("IsAll")]
+        public bool? IsAll{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
+            this.SetParamSimple(map, prefix + "IsAll", this.IsAll);
         }
     }
 }
