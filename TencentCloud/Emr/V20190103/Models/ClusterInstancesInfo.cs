@@ -338,6 +338,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("IsMultiZoneCluster")]
         public bool? IsMultiZoneCluster{ get; set; }
 
+        /// <summary>
+        /// 是否开通异常节点自动补偿
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsCvmReplace")]
+        public bool? IsCvmReplace{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -385,6 +392,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
             this.SetParamArrayObj(map, prefix + "TopologyInfoList.", this.TopologyInfoList);
             this.SetParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
+            this.SetParamSimple(map, prefix + "IsCvmReplace", this.IsCvmReplace);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// `IPv6`网段。形如：`3402:4e00:20:1000::/56`
+        /// `IPv6`网段。形如：`3402:4e00:20:1000::/56`。
         /// </summary>
         [JsonProperty("Ipv6CidrBlock")]
         public string Ipv6CidrBlock{ get; set; }

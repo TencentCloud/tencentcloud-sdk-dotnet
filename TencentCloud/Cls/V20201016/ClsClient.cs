@@ -1813,7 +1813,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        ///  本接口用于获取日志主题列表，支持分页
+        /// 本接口用于获取日志主题列表，支持分页
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
         /// <returns><see cref="DescribeTopicsResponse"/></returns>
@@ -1833,7 +1833,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        ///  本接口用于获取日志主题列表，支持分页
+        /// 本接口用于获取日志主题列表，支持分页
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
         /// <returns><see cref="DescribeTopicsResponse"/></returns>

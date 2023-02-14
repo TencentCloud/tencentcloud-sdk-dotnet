@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// 要检查的与之冲突的目的端列表
+        /// 要检查的与之冲突的目的端列表。
         /// </summary>
         [JsonProperty("DestinationCidrBlocks")]
         public string[] DestinationCidrBlocks{ get; set; }

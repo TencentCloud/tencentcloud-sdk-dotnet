@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 本地网关信息集合
+        /// 本地网关信息集合。
         /// </summary>
         [JsonProperty("LocalGatewaySet")]
         public LocalGateway[] LocalGatewaySet{ get; set; }
 
         /// <summary>
-        /// 本地网关总数
+        /// 本地网关总数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

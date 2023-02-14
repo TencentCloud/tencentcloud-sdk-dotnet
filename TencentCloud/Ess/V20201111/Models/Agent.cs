@@ -24,12 +24,43 @@ namespace TencentCloud.Ess.V20201111.Models
     public class Agent : AbstractModel
     {
         
+        /// <summary>
+        /// 应用编号,32位字符串
+        /// </summary>
+        [JsonProperty("AppId")]
+        public string AppId{ get; set; }
+
+        /// <summary>
+        /// 主组织的应用号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyAppId")]
+        public string ProxyAppId{ get; set; }
+
+        /// <summary>
+        /// 主组织在平台的机构编号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyOrganizationId")]
+        public string ProxyOrganizationId{ get; set; }
+
+        /// <summary>
+        /// 主组织的操作人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyOperator")]
+        public string ProxyOperator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "ProxyAppId", this.ProxyAppId);
+            this.SetParamSimple(map, prefix + "ProxyOrganizationId", this.ProxyOrganizationId);
+            this.SetParamSimple(map, prefix + "ProxyOperator", this.ProxyOperator);
         }
     }
 }

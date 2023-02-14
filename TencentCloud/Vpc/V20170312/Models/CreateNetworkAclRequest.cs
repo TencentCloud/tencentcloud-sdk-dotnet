@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkAclName{ get; set; }
 
         /// <summary>
-        /// 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)
+        /// 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
         /// </summary>
         [JsonProperty("NetworkAclType")]
         public string NetworkAclType{ get; set; }

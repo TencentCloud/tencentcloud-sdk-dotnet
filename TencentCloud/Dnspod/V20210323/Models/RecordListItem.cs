@@ -104,6 +104,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("MX")]
         public ulong? MX{ get; set; }
 
+        /// <summary>
+        /// 是否是默认的ns记录
+        /// </summary>
+        [JsonProperty("DefaultNS")]
+        public bool? DefaultNS{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +129,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "TTL", this.TTL);
             this.SetParamSimple(map, prefix + "MX", this.MX);
+            this.SetParamSimple(map, prefix + "DefaultNS", this.DefaultNS);
         }
     }
 }

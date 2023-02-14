@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 用户账号属性对象
+        /// 用户账号属性对象。
         /// </summary>
         [JsonProperty("AccountAttributeSet")]
         public AccountAttribute[] AccountAttributeSet{ get; set; }

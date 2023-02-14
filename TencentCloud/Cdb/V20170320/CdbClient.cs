@@ -1495,6 +1495,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DescribeBackupEncryptionStatus)用于查询实例默认备份加密状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupEncryptionStatusRequest"/></param>
+        /// <returns><see cref="DescribeBackupEncryptionStatusResponse"/></returns>
+        public async Task<DescribeBackupEncryptionStatusResponse> DescribeBackupEncryptionStatus(DescribeBackupEncryptionStatusRequest req)
+        {
+             JsonResponseModel<DescribeBackupEncryptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupEncryptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupEncryptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBackupEncryptionStatus)用于查询实例默认备份加密状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupEncryptionStatusRequest"/></param>
+        /// <returns><see cref="DescribeBackupEncryptionStatusResponse"/></returns>
+        public DescribeBackupEncryptionStatusResponse DescribeBackupEncryptionStatusSync(DescribeBackupEncryptionStatusRequest req)
+        {
+             JsonResponseModel<DescribeBackupEncryptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupEncryptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupEncryptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeBackupOverview)用于查询用户的备份概览。返回用户当前备份总个数、备份总的占用容量、赠送的免费容量、计费容量（容量单位为字节）。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupOverviewRequest"/></param>
@@ -3953,6 +3993,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(ModifyBackupEncryptionStatus)用于设置实例备份文件是否加密。 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupEncryptionStatusRequest"/></param>
+        /// <returns><see cref="ModifyBackupEncryptionStatusResponse"/></returns>
+        public async Task<ModifyBackupEncryptionStatusResponse> ModifyBackupEncryptionStatus(ModifyBackupEncryptionStatusRequest req)
+        {
+             JsonResponseModel<ModifyBackupEncryptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBackupEncryptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupEncryptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyBackupEncryptionStatus)用于设置实例备份文件是否加密。 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupEncryptionStatusRequest"/></param>
+        /// <returns><see cref="ModifyBackupEncryptionStatusResponse"/></returns>
+        public ModifyBackupEncryptionStatusResponse ModifyBackupEncryptionStatusSync(ModifyBackupEncryptionStatusRequest req)
+        {
+             JsonResponseModel<ModifyBackupEncryptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBackupEncryptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupEncryptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 请求该接口配置数据库连接池；支持的连接池配置请求DescribeProxyConnectionPoolConf接口获取。
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyConnectionPoolRequest"/></param>
@@ -5373,6 +5453,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 接口已经废弃，请使用AdjustCdbProxy进行数据库代理的配置
+        /// 
         /// 调整数据库代理配置
         /// </summary>
         /// <param name="req"><see cref="UpgradeCDBProxyRequest"/></param>
@@ -5393,6 +5475,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 接口已经废弃，请使用AdjustCdbProxy进行数据库代理的配置
+        /// 
         /// 调整数据库代理配置
         /// </summary>
         /// <param name="req"><see cref="UpgradeCDBProxyRequest"/></param>

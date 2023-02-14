@@ -66,6 +66,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("SealTypes")]
         public string[] SealTypes{ get; set; }
 
+        /// <summary>
+        /// 主企业代子企业操作 或 渠道子客应用相关信息
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +84,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "InfoType", this.InfoType);
             this.SetParamSimple(map, prefix + "SealId", this.SealId);
             this.SetParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

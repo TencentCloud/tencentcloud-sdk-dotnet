@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkAclId{ get; set; }
 
         /// <summary>
-        /// 子网实例ID数组。例如：[subnet-12345678]
+        /// 子网实例ID数组。例如：[subnet-12345678]。
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }

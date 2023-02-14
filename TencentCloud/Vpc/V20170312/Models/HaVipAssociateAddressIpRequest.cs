@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
+        /// `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`。
         /// </summary>
         [JsonProperty("HaVipId")]
         public string HaVipId{ get; set; }
 
         /// <summary>
-        /// 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+        /// 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`。
         /// </summary>
         [JsonProperty("AddressIp")]
         public string AddressIp{ get; set; }

@@ -33,13 +33,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public FilterObject[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量，默认值0。
         /// </summary>
         [JsonProperty("Offset")]
         public string Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量
+        /// 返回数量，默认为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public string Limit{ get; set; }

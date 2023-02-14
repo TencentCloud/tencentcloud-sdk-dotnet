@@ -115,6 +115,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("CustomRule")]
         public string CustomRule{ get; set; }
 
+        /// <summary>
+        /// KafkaAddress
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KafkaAddress")]
+        public string KafkaAddress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "KafkaInfos.", this.KafkaInfos);
             this.SetParamSimple(map, prefix + "EnableGlobalLineRule", this.EnableGlobalLineRule);
             this.SetParamSimple(map, prefix + "CustomRule", this.CustomRule);
+            this.SetParamSimple(map, prefix + "KafkaAddress", this.KafkaAddress);
         }
     }
 }

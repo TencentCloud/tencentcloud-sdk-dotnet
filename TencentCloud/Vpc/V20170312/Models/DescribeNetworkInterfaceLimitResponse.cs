@@ -25,40 +25,40 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 标准型弹性网卡配额
+        /// 标准型弹性网卡配额。
         /// </summary>
         [JsonProperty("EniQuantity")]
         public long? EniQuantity{ get; set; }
 
         /// <summary>
-        /// 每个标准型弹性网卡可以分配的IP配额
+        /// 每个标准型弹性网卡可以分配的IP配额。
         /// </summary>
         [JsonProperty("EniPrivateIpAddressQuantity")]
         public long? EniPrivateIpAddressQuantity{ get; set; }
 
         /// <summary>
-        /// 扩展型网卡配额
+        /// 扩展型网卡配额。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtendEniQuantity")]
         public long? ExtendEniQuantity{ get; set; }
 
         /// <summary>
-        /// 每个扩展型弹性网卡可以分配的IP配额
+        /// 每个扩展型弹性网卡可以分配的IP配额。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtendEniPrivateIpAddressQuantity")]
         public long? ExtendEniPrivateIpAddressQuantity{ get; set; }
 
         /// <summary>
-        /// 中继网卡配额
+        /// 中继网卡配额。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubEniQuantity")]
         public long? SubEniQuantity{ get; set; }
 
         /// <summary>
-        /// 每个中继网卡可以分配的IP配额
+        /// 每个中继网卡可以分配的IP配额。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubEniPrivateIpAddressQuantity")]

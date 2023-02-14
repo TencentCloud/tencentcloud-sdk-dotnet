@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+        /// `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public SubnetInput[] Subnets{ get; set; }
 
         /// <summary>
-        /// 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
+        /// 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

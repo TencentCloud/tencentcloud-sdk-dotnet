@@ -49,6 +49,20 @@ namespace TencentCloud.Lcic.V20220817.Models
         public MemberRecord[] MemberRecords{ get; set; }
 
         /// <summary>
+        /// 秒级unix时间戳，实际房间开始时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RealStartTime")]
+        public ulong? RealStartTime{ get; set; }
+
+        /// <summary>
+        /// 秒级unix时间戳，实际房间结束时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RealEndTime")]
+        public ulong? RealEndTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +78,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "MemberNumber", this.MemberNumber);
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamArrayObj(map, prefix + "MemberRecords.", this.MemberRecords);
+            this.SetParamSimple(map, prefix + "RealStartTime", this.RealStartTime);
+            this.SetParamSimple(map, prefix + "RealEndTime", this.RealEndTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

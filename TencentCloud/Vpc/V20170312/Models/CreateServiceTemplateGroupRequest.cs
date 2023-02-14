@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 协议端口模板集合名称
+        /// 协议端口模板集合名称。
         /// </summary>
         [JsonProperty("ServiceTemplateGroupName")]
         public string ServiceTemplateGroupName{ get; set; }

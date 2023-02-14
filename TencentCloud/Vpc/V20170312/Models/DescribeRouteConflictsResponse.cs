@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 路由策略冲突列表
+        /// 路由策略冲突列表。
         /// </summary>
         [JsonProperty("RouteConflictSet")]
         public RouteConflict[] RouteConflictSet{ get; set; }

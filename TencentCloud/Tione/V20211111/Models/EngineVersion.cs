@@ -38,6 +38,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
+        /// <summary>
+        /// 是否支持int8量化
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportIntEightQuantization")]
+        public bool? IsSupportIntEightQuantization{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "Image", this.Image);
+            this.SetParamSimple(map, prefix + "IsSupportIntEightQuantization", this.IsSupportIntEightQuantization);
         }
     }
 }

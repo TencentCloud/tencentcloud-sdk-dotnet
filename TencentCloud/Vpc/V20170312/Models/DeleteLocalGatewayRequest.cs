@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 本地网关实例ID
+        /// 本地网关实例ID。
         /// </summary>
         [JsonProperty("LocalGatewayId")]
         public string LocalGatewayId{ get; set; }
 
         /// <summary>
-        /// CDC实例ID
+        /// CDC实例ID。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
-        /// VPC实例ID
+        /// VPC实例ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 本地网关信息
+        /// 本地网关信息。
         /// </summary>
         [JsonProperty("LocalGateway")]
         public LocalGateway LocalGateway{ get; set; }

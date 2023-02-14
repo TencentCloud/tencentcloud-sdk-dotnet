@@ -73,6 +73,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DisableMetricAS")]
+        public ulong? DisableMetricAS{ get; set; }
+
+        /// <summary>
+        /// 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableCronAS")]
+        public ulong? EnableCronAS{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +100,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "GroupCount", this.GroupCount);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "DisableMetricAS", this.DisableMetricAS);
+            this.SetParamSimple(map, prefix + "EnableCronAS", this.EnableCronAS);
         }
     }
 }

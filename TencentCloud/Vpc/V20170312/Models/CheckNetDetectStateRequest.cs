@@ -31,28 +31,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] DetectDestinationIp{ get; set; }
 
         /// <summary>
-        /// 下一跳类型，目前我们支持的类型有：
-        /// VPN：VPN网关；
-        /// DIRECTCONNECT：专线网关；
-        /// PEERCONNECTION：对等连接；
-        /// NAT：NAT网关；
-        /// NORMAL_CVM：普通云服务器；
-        /// </summary>
-        [JsonProperty("NextHopType")]
-        public string NextHopType{ get; set; }
-
-        /// <summary>
-        /// 下一跳目的网关，取值与“下一跳类型”相关：
-        /// 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
-        /// 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
-        /// 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
-        /// 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
-        /// 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-        /// </summary>
-        [JsonProperty("NextHopDestination")]
-        public string NextHopDestination{ get; set; }
-
-        /// <summary>
         /// 网络探测实例ID。形如：netd-12345678。该参数与（VpcId，SubnetId，NetDetectName），至少要有一个。当NetDetectId存在时，使用NetDetectId。
         /// </summary>
         [JsonProperty("NetDetectId")]
@@ -76,6 +54,32 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NetDetectName")]
         public string NetDetectName{ get; set; }
 
+        /// <summary>
+        /// 下一跳类型，目前我们支持的类型有：
+        /// VPN：VPN网关；
+        /// DIRECTCONNECT：专线网关；
+        /// PEERCONNECTION：对等连接；
+        /// NAT：NAT网关；
+        /// NORMAL_CVM：普通云服务器；
+        /// CCN：云联网网关；
+        /// NONEXTHOP：无下一跳；
+        /// </summary>
+        [JsonProperty("NextHopType")]
+        public string NextHopType{ get; set; }
+
+        /// <summary>
+        /// 下一跳目的网关，取值与“下一跳类型”相关：
+        /// 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
+        /// 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
+        /// 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
+        /// 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
+        /// 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
+        /// 下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
+        /// 下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
+        /// </summary>
+        [JsonProperty("NextHopDestination")]
+        public string NextHopDestination{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,12 +87,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "DetectDestinationIp.", this.DetectDestinationIp);
-            this.SetParamSimple(map, prefix + "NextHopType", this.NextHopType);
-            this.SetParamSimple(map, prefix + "NextHopDestination", this.NextHopDestination);
             this.SetParamSimple(map, prefix + "NetDetectId", this.NetDetectId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "NetDetectName", this.NetDetectName);
+            this.SetParamSimple(map, prefix + "NextHopType", this.NextHopType);
+            this.SetParamSimple(map, prefix + "NextHopDestination", this.NextHopDestination);
         }
     }
 }

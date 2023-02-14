@@ -395,7 +395,7 @@ namespace TencentCloud.Vpc.V20170312
         /// <summary>
         /// 本接口（AssignIpv6CidrBlock）用于分配IPv6网段。
         /// * 使用本接口前，您需要已有VPC实例，如果没有可通过接口<a href="https://cloud.tencent.com/document/api/215/15774" title="CreateVpc" target="_blank">CreateVpc</a>创建。
-        /// * 每个VPC只能申请一个IPv6网段
+        /// * 每个VPC只能申请一个IPv6网段。
         /// </summary>
         /// <param name="req"><see cref="AssignIpv6CidrBlockRequest"/></param>
         /// <returns><see cref="AssignIpv6CidrBlockResponse"/></returns>
@@ -417,7 +417,7 @@ namespace TencentCloud.Vpc.V20170312
         /// <summary>
         /// 本接口（AssignIpv6CidrBlock）用于分配IPv6网段。
         /// * 使用本接口前，您需要已有VPC实例，如果没有可通过接口<a href="https://cloud.tencent.com/document/api/215/15774" title="CreateVpc" target="_blank">CreateVpc</a>创建。
-        /// * 每个VPC只能申请一个IPv6网段
+        /// * 每个VPC只能申请一个IPv6网段。
         /// </summary>
         /// <param name="req"><see cref="AssignIpv6CidrBlockRequest"/></param>
         /// <returns><see cref="AssignIpv6CidrBlockResponse"/></returns>
@@ -709,7 +709,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（AssociateNetworkAclSubnets）用于网络ACL关联vpc下的子网。
+        /// 本接口（AssociateNetworkAclSubnets）用于网络ACL关联VPC下的子网。
         /// </summary>
         /// <param name="req"><see cref="AssociateNetworkAclSubnetsRequest"/></param>
         /// <returns><see cref="AssociateNetworkAclSubnetsResponse"/></returns>
@@ -729,7 +729,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（AssociateNetworkAclSubnets）用于网络ACL关联vpc下的子网。
+        /// 本接口（AssociateNetworkAclSubnets）用于网络ACL关联VPC下的子网。
         /// </summary>
         /// <param name="req"><see cref="AssociateNetworkAclSubnetsRequest"/></param>
         /// <returns><see cref="AssociateNetworkAclSubnetsResponse"/></returns>
@@ -1017,7 +1017,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CheckAssistantCidr)用于检查辅助CIDR是否与存量路由、对等连接（对端VPC的CIDR）等资源存在冲突。如果存在重叠，则返回重叠的资源。
+        /// 本接口（CheckAssistantCidr）用于检查辅助CIDR是否与存量路由、对等连接（对端VPC的CIDR）等资源存在冲突。如果存在重叠，则返回重叠的资源。
         /// * 检测辅助CIDR是否与当前VPC的主CIDR和辅助CIDR存在重叠。
         /// * 检测辅助CIDR是否与当前VPC的路由的目的端存在重叠。
         /// * 检测辅助CIDR是否与当前VPC的对等连接，对端VPC下的主CIDR或辅助CIDR存在重叠。
@@ -1040,7 +1040,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CheckAssistantCidr)用于检查辅助CIDR是否与存量路由、对等连接（对端VPC的CIDR）等资源存在冲突。如果存在重叠，则返回重叠的资源。
+        /// 本接口（CheckAssistantCidr）用于检查辅助CIDR是否与存量路由、对等连接（对端VPC的CIDR）等资源存在冲突。如果存在重叠，则返回重叠的资源。
         /// * 检测辅助CIDR是否与当前VPC的主CIDR和辅助CIDR存在重叠。
         /// * 检测辅助CIDR是否与当前VPC的路由的目的端存在重叠。
         /// * 检测辅助CIDR是否与当前VPC的对等连接，对端VPC下的主CIDR或辅助CIDR存在重叠。
@@ -1103,7 +1103,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CheckNetDetectState)用于验证网络探测。
+        /// 本接口（CheckNetDetectState）用于验证网络探测。
         /// </summary>
         /// <param name="req"><see cref="CheckNetDetectStateRequest"/></param>
         /// <returns><see cref="CheckNetDetectStateResponse"/></returns>
@@ -1123,7 +1123,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CheckNetDetectState)用于验证网络探测。
+        /// 本接口（CheckNetDetectState）用于验证网络探测。
         /// </summary>
         /// <param name="req"><see cref="CheckNetDetectStateRequest"/></param>
         /// <returns><see cref="CheckNetDetectStateResponse"/></returns>
@@ -1223,7 +1223,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateAddressTemplateGroup）用于创建IP地址模板集合
+        /// 本接口（CreateAddressTemplateGroup）用于创建IP地址模板集合。
         /// </summary>
         /// <param name="req"><see cref="CreateAddressTemplateGroupRequest"/></param>
         /// <returns><see cref="CreateAddressTemplateGroupResponse"/></returns>
@@ -1243,7 +1243,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateAddressTemplateGroup）用于创建IP地址模板集合
+        /// 本接口（CreateAddressTemplateGroup）用于创建IP地址模板集合。
         /// </summary>
         /// <param name="req"><see cref="CreateAddressTemplateGroupRequest"/></param>
         /// <returns><see cref="CreateAddressTemplateGroupResponse"/></returns>
@@ -1317,7 +1317,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateAssistantCidr)用于批量创建辅助CIDR。
+        /// 本接口（CreateAssistantCidr）用于批量创建辅助CIDR。
         /// </summary>
         /// <param name="req"><see cref="CreateAssistantCidrRequest"/></param>
         /// <returns><see cref="CreateAssistantCidrResponse"/></returns>
@@ -1337,7 +1337,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateAssistantCidr)用于批量创建辅助CIDR。
+        /// 本接口（CreateAssistantCidr）用于批量创建辅助CIDR。
         /// </summary>
         /// <param name="req"><see cref="CreateAssistantCidrRequest"/></param>
         /// <returns><see cref="CreateAssistantCidrResponse"/></returns>
@@ -1583,7 +1583,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateDhcpIp）用于创建DhcpIp
+        /// 本接口（CreateDhcpIp）用于创建DhcpIp。
         /// </summary>
         /// <param name="req"><see cref="CreateDhcpIpRequest"/></param>
         /// <returns><see cref="CreateDhcpIpResponse"/></returns>
@@ -1603,7 +1603,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateDhcpIp）用于创建DhcpIp
+        /// 本接口（CreateDhcpIp）用于创建DhcpIp。
         /// </summary>
         /// <param name="req"><see cref="CreateDhcpIpRequest"/></param>
         /// <returns><see cref="CreateDhcpIpResponse"/></returns>
@@ -1825,7 +1825,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于创建用于CDC的本地网关。
+        /// 本接口（CreateLocalGateway）用于创建用于CDC的本地网关。
         /// </summary>
         /// <param name="req"><see cref="CreateLocalGatewayRequest"/></param>
         /// <returns><see cref="CreateLocalGatewayResponse"/></returns>
@@ -1845,7 +1845,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于创建用于CDC的本地网关。
+        /// 本接口（CreateLocalGateway）用于创建用于CDC的本地网关。
         /// </summary>
         /// <param name="req"><see cref="CreateLocalGatewayRequest"/></param>
         /// <returns><see cref="CreateLocalGatewayResponse"/></returns>
@@ -2429,7 +2429,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateServiceTemplate）用于创建协议端口模板
+        /// 本接口（CreateServiceTemplate）用于创建协议端口模板。
         /// </summary>
         /// <param name="req"><see cref="CreateServiceTemplateRequest"/></param>
         /// <returns><see cref="CreateServiceTemplateResponse"/></returns>
@@ -2449,7 +2449,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateServiceTemplate）用于创建协议端口模板
+        /// 本接口（CreateServiceTemplate）用于创建协议端口模板。
         /// </summary>
         /// <param name="req"><see cref="CreateServiceTemplateRequest"/></param>
         /// <returns><see cref="CreateServiceTemplateResponse"/></returns>
@@ -2469,7 +2469,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateServiceTemplateGroup）用于创建协议端口模板集合
+        /// 本接口（CreateServiceTemplateGroup）用于创建协议端口模板集合。
         /// </summary>
         /// <param name="req"><see cref="CreateServiceTemplateGroupRequest"/></param>
         /// <returns><see cref="CreateServiceTemplateGroupResponse"/></returns>
@@ -2489,7 +2489,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateServiceTemplateGroup）用于创建协议端口模板集合
+        /// 本接口（CreateServiceTemplateGroup）用于创建协议端口模板集合。
         /// </summary>
         /// <param name="req"><see cref="CreateServiceTemplateGroupRequest"/></param>
         /// <returns><see cref="CreateServiceTemplateGroupResponse"/></returns>
@@ -2549,7 +2549,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateSubnet)用于创建子网。
+        /// 本接口（CreateSubnet）用于创建子网。
         /// * 创建子网前必须创建好 VPC。
         /// * 子网创建成功后，子网网段不能修改。子网网段必须在VPC网段内，可以和VPC网段相同（VPC有且只有一个子网时），建议子网网段在VPC网段内，预留网段给其他子网使用。
         /// * 您可以创建的最小网段子网掩码为28（有16个IP地址），最大网段子网掩码为16（65,536个IP地址）。
@@ -2575,7 +2575,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateSubnet)用于创建子网。
+        /// 本接口（CreateSubnet）用于创建子网。
         /// * 创建子网前必须创建好 VPC。
         /// * 子网创建成功后，子网网段不能修改。子网网段必须在VPC网段内，可以和VPC网段相同（VPC有且只有一个子网时），建议子网网段在VPC网段内，预留网段给其他子网使用。
         /// * 您可以创建的最小网段子网掩码为28（有16个IP地址），最大网段子网掩码为16（65,536个IP地址）。
@@ -2601,7 +2601,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateSubnets)用于批量创建子网。
+        /// 本接口（CreateSubnets）用于批量创建子网。
         /// * 创建子网前必须创建好 VPC。
         /// * 子网创建成功后，子网网段不能修改。子网网段必须在VPC网段内，可以和VPC网段相同（VPC有且只有一个子网时），建议子网网段在VPC网段内，预留网段给其他子网使用。
         /// * 您可以创建的最小网段子网掩码为28（有16个IP地址），最大网段子网掩码为16（65,536个IP地址）。
@@ -2627,7 +2627,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateSubnets)用于批量创建子网。
+        /// 本接口（CreateSubnets）用于批量创建子网。
         /// * 创建子网前必须创建好 VPC。
         /// * 子网创建成功后，子网网段不能修改。子网网段必须在VPC网段内，可以和VPC网段相同（VPC有且只有一个子网时），建议子网网段在VPC网段内，预留网段给其他子网使用。
         /// * 您可以创建的最小网段子网掩码为28（有16个IP地址），最大网段子网掩码为16（65,536个IP地址）。
@@ -2693,7 +2693,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateVpc)用于创建私有网络(VPC)。
+        /// 本接口（CreateVpc）用于创建私有网络（VPC）。
         /// * 用户可以创建的最小网段子网掩码为28（有16个IP地址），10.0.0.0/12，172.16.0.0/12最大网段子网掩码为12（1,048,576个IP地址），192.168.0.0/16最大网段子网掩码为16（65,536个IP地址）如果需要规划VPC网段请参见[网络规划](https://cloud.tencent.com/document/product/215/30313)。
         /// * 同一个地域能创建的VPC资源个数也是有限制的，详见 <a href="https://cloud.tencent.com/doc/product/215/537" title="VPC使用限制">VPC使用限制</a>，如果需要申请更多资源，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。
         /// * 创建VPC同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
@@ -2716,7 +2716,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateVpc)用于创建私有网络(VPC)。
+        /// 本接口（CreateVpc）用于创建私有网络（VPC）。
         /// * 用户可以创建的最小网段子网掩码为28（有16个IP地址），10.0.0.0/12，172.16.0.0/12最大网段子网掩码为12（1,048,576个IP地址），192.168.0.0/16最大网段子网掩码为16（65,536个IP地址）如果需要规划VPC网段请参见[网络规划](https://cloud.tencent.com/document/product/215/30313)。
         /// * 同一个地域能创建的VPC资源个数也是有限制的，详见 <a href="https://cloud.tencent.com/doc/product/215/537" title="VPC使用限制">VPC使用限制</a>，如果需要申请更多资源，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。
         /// * 创建VPC同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
@@ -2739,7 +2739,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 创建终端节点。
+        /// 本接口（CreateVpcEndPoint）用于创建终端节点。
         /// </summary>
         /// <param name="req"><see cref="CreateVpcEndPointRequest"/></param>
         /// <returns><see cref="CreateVpcEndPointResponse"/></returns>
@@ -2759,7 +2759,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 创建终端节点。
+        /// 本接口（CreateVpcEndPoint）用于创建终端节点。
         /// </summary>
         /// <param name="req"><see cref="CreateVpcEndPointRequest"/></param>
         /// <returns><see cref="CreateVpcEndPointResponse"/></returns>
@@ -2779,7 +2779,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateVpcEndPointService)用于创建终端节点服务。
+        /// 本接口（CreateVpcEndPointService）用于创建终端节点服务。
         /// </summary>
         /// <param name="req"><see cref="CreateVpcEndPointServiceRequest"/></param>
         /// <returns><see cref="CreateVpcEndPointServiceResponse"/></returns>
@@ -2799,7 +2799,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateVpcEndPointService)用于创建终端节点服务。
+        /// 本接口（CreateVpcEndPointService）用于创建终端节点服务。
         /// </summary>
         /// <param name="req"><see cref="CreateVpcEndPointServiceRequest"/></param>
         /// <returns><see cref="CreateVpcEndPointServiceResponse"/></returns>
@@ -2819,7 +2819,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 创建终端服务白名单。
+        /// 本接口（CreateVpcEndPointServiceWhiteList）创建终端服务白名单。
         /// </summary>
         /// <param name="req"><see cref="CreateVpcEndPointServiceWhiteListRequest"/></param>
         /// <returns><see cref="CreateVpcEndPointServiceWhiteListResponse"/></returns>
@@ -2839,7 +2839,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 创建终端服务白名单。
+        /// 本接口（CreateVpcEndPointServiceWhiteList）创建终端服务白名单。
         /// </summary>
         /// <param name="req"><see cref="CreateVpcEndPointServiceWhiteListRequest"/></param>
         /// <returns><see cref="CreateVpcEndPointServiceWhiteListResponse"/></returns>
@@ -3063,7 +3063,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteAddressTemplate）用于删除IP地址模板
+        /// 本接口（DeleteAddressTemplate）用于删除IP地址模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteAddressTemplateRequest"/></param>
         /// <returns><see cref="DeleteAddressTemplateResponse"/></returns>
@@ -3083,7 +3083,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteAddressTemplate）用于删除IP地址模板
+        /// 本接口（DeleteAddressTemplate）用于删除IP地址模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteAddressTemplateRequest"/></param>
         /// <returns><see cref="DeleteAddressTemplateResponse"/></returns>
@@ -3103,7 +3103,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合
+        /// 本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合。
         /// </summary>
         /// <param name="req"><see cref="DeleteAddressTemplateGroupRequest"/></param>
         /// <returns><see cref="DeleteAddressTemplateGroupResponse"/></returns>
@@ -3123,7 +3123,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合
+        /// 本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合。
         /// </summary>
         /// <param name="req"><see cref="DeleteAddressTemplateGroupRequest"/></param>
         /// <returns><see cref="DeleteAddressTemplateGroupResponse"/></returns>
@@ -3143,7 +3143,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(DeleteAssistantCidr)用于删除辅助CIDR。
+        /// 本接口（DeleteAssistantCidr）用于删除辅助CIDR。
         /// </summary>
         /// <param name="req"><see cref="DeleteAssistantCidrRequest"/></param>
         /// <returns><see cref="DeleteAssistantCidrResponse"/></returns>
@@ -3163,7 +3163,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(DeleteAssistantCidr)用于删除辅助CIDR。
+        /// 本接口（DeleteAssistantCidr）用于删除辅助CIDR。
         /// </summary>
         /// <param name="req"><see cref="DeleteAssistantCidrRequest"/></param>
         /// <returns><see cref="DeleteAssistantCidrResponse"/></returns>
@@ -3561,7 +3561,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于删除CDC的本地网关。
+        /// 本接口（DeleteLocalGateway）用于删除CDC的本地网关。
         /// </summary>
         /// <param name="req"><see cref="DeleteLocalGatewayRequest"/></param>
         /// <returns><see cref="DeleteLocalGatewayResponse"/></returns>
@@ -3581,7 +3581,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于删除CDC的本地网关。
+        /// 本接口（DeleteLocalGateway）用于删除CDC的本地网关。
         /// </summary>
         /// <param name="req"><see cref="DeleteLocalGatewayRequest"/></param>
         /// <returns><see cref="DeleteLocalGatewayResponse"/></returns>
@@ -4059,7 +4059,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteServiceTemplate）用于删除协议端口模板
+        /// 本接口（DeleteServiceTemplate）用于删除协议端口模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceTemplateRequest"/></param>
         /// <returns><see cref="DeleteServiceTemplateResponse"/></returns>
@@ -4079,7 +4079,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteServiceTemplate）用于删除协议端口模板
+        /// 本接口（DeleteServiceTemplate）用于删除协议端口模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceTemplateRequest"/></param>
         /// <returns><see cref="DeleteServiceTemplateResponse"/></returns>
@@ -4099,7 +4099,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteServiceTemplateGroup）用于删除协议端口模板集合
+        /// 本接口（DeleteServiceTemplateGroup）用于删除协议端口模板集合。
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceTemplateGroupRequest"/></param>
         /// <returns><see cref="DeleteServiceTemplateGroupResponse"/></returns>
@@ -4119,7 +4119,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteServiceTemplateGroup）用于删除协议端口模板集合
+        /// 本接口（DeleteServiceTemplateGroup）用于删除协议端口模板集合。
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceTemplateGroupRequest"/></param>
         /// <returns><see cref="DeleteServiceTemplateGroupResponse"/></returns>
@@ -4179,8 +4179,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteSubnet）用于用于删除子网(Subnet)。
-        /// * 删除子网前，请清理该子网下所有资源，包括云服务器、负载均衡、云数据、noSql、弹性网卡等资源。
+        /// 本接口（DeleteSubnet）用于用于删除子网（Subnet）。
+        /// * 删除子网前，请清理该子网下所有资源，包括云服务器、负载均衡、云数据、NoSQL、弹性网卡等资源。
         /// </summary>
         /// <param name="req"><see cref="DeleteSubnetRequest"/></param>
         /// <returns><see cref="DeleteSubnetResponse"/></returns>
@@ -4200,8 +4200,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteSubnet）用于用于删除子网(Subnet)。
-        /// * 删除子网前，请清理该子网下所有资源，包括云服务器、负载均衡、云数据、noSql、弹性网卡等资源。
+        /// 本接口（DeleteSubnet）用于用于删除子网（Subnet）。
+        /// * 删除子网前，请清理该子网下所有资源，包括云服务器、负载均衡、云数据、NoSQL、弹性网卡等资源。
         /// </summary>
         /// <param name="req"><see cref="DeleteSubnetRequest"/></param>
         /// <returns><see cref="DeleteSubnetResponse"/></returns>
@@ -4305,7 +4305,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除终端节点。
+        /// 本接口（DeleteVpcEndPoint）用于删除终端节点。
         /// </summary>
         /// <param name="req"><see cref="DeleteVpcEndPointRequest"/></param>
         /// <returns><see cref="DeleteVpcEndPointResponse"/></returns>
@@ -4325,7 +4325,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除终端节点。
+        /// 本接口（DeleteVpcEndPoint）用于删除终端节点。
         /// </summary>
         /// <param name="req"><see cref="DeleteVpcEndPointRequest"/></param>
         /// <returns><see cref="DeleteVpcEndPointResponse"/></returns>
@@ -4345,8 +4345,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除终端节点服务。
-        /// 
+        /// 本接口（DeleteVpcEndPointService）用于删除终端节点服务。
         /// </summary>
         /// <param name="req"><see cref="DeleteVpcEndPointServiceRequest"/></param>
         /// <returns><see cref="DeleteVpcEndPointServiceResponse"/></returns>
@@ -4366,8 +4365,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除终端节点服务。
-        /// 
+        /// 本接口（DeleteVpcEndPointService）用于删除终端节点服务。
         /// </summary>
         /// <param name="req"><see cref="DeleteVpcEndPointServiceRequest"/></param>
         /// <returns><see cref="DeleteVpcEndPointServiceResponse"/></returns>
@@ -4387,7 +4385,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除终端节点服务白名单。
+        /// 本接口（DeleteVpcEndPointServiceWhiteList）用于删除终端节点服务白名单。
         /// </summary>
         /// <param name="req"><see cref="DeleteVpcEndPointServiceWhiteListRequest"/></param>
         /// <returns><see cref="DeleteVpcEndPointServiceWhiteListResponse"/></returns>
@@ -4407,7 +4405,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除终端节点服务白名单。
+        /// 本接口（DeleteVpcEndPointServiceWhiteList）用于删除终端节点服务白名单。
         /// </summary>
         /// <param name="req"><see cref="DeleteVpcEndPointServiceWhiteListRequest"/></param>
         /// <returns><see cref="DeleteVpcEndPointServiceWhiteListResponse"/></returns>
@@ -4707,7 +4705,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合
+        /// 本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合。
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressTemplateGroupsRequest"/></param>
         /// <returns><see cref="DescribeAddressTemplateGroupsResponse"/></returns>
@@ -4727,7 +4725,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合
+        /// 本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合。
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressTemplateGroupsRequest"/></param>
         /// <returns><see cref="DescribeAddressTemplateGroupsResponse"/></returns>
@@ -4747,7 +4745,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeAddressTemplates）用于查询IP地址模板
+        /// 本接口（DescribeAddressTemplates）用于查询IP地址模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAddressTemplatesResponse"/></returns>
@@ -4767,7 +4765,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeAddressTemplates）用于查询IP地址模板
+        /// 本接口（DescribeAddressTemplates）用于查询IP地址模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAddressTemplatesResponse"/></returns>
@@ -5189,7 +5187,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(DescribeClassicLinkInstances)用于查询私有网络和基础网络设备互通列表。
+        /// 本接口（DescribeClassicLinkInstances）用于查询私有网络和基础网络设备互通列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeClassicLinkInstancesRequest"/></param>
         /// <returns><see cref="DescribeClassicLinkInstancesResponse"/></returns>
@@ -5209,7 +5207,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(DescribeClassicLinkInstances)用于查询私有网络和基础网络设备互通列表。
+        /// 本接口（DescribeClassicLinkInstances）用于查询私有网络和基础网络设备互通列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeClassicLinkInstancesRequest"/></param>
         /// <returns><see cref="DescribeClassicLinkInstancesResponse"/></returns>
@@ -5963,7 +5961,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于查询CDC的本地网关。
+        /// 本接口（DescribeLocalGateway）用于查询CDC的本地网关。
         /// </summary>
         /// <param name="req"><see cref="DescribeLocalGatewayRequest"/></param>
         /// <returns><see cref="DescribeLocalGatewayResponse"/></returns>
@@ -5983,7 +5981,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于查询CDC的本地网关。
+        /// 本接口（DescribeLocalGateway）用于查询CDC的本地网关。
         /// </summary>
         /// <param name="req"><see cref="DescribeLocalGatewayRequest"/></param>
         /// <returns><see cref="DescribeLocalGatewayResponse"/></returns>
@@ -6243,6 +6241,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 判断用户在网络侧的用户类型，如标准（带宽上移），传统（非上移）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkAccountTypeRequest"/></param>
+        /// <returns><see cref="DescribeNetworkAccountTypeResponse"/></returns>
+        public async Task<DescribeNetworkAccountTypeResponse> DescribeNetworkAccountType(DescribeNetworkAccountTypeRequest req)
+        {
+             JsonResponseModel<DescribeNetworkAccountTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNetworkAccountType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkAccountTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 判断用户在网络侧的用户类型，如标准（带宽上移），传统（非上移）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkAccountTypeRequest"/></param>
+        /// <returns><see cref="DescribeNetworkAccountTypeResponse"/></returns>
+        public DescribeNetworkAccountTypeResponse DescribeNetworkAccountTypeSync(DescribeNetworkAccountTypeRequest req)
+        {
+             JsonResponseModel<DescribeNetworkAccountTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNetworkAccountType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkAccountTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeNetworkAclQuintupleEntries）查询入方向或出方向网络ACL五元组条目列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkAclQuintupleEntriesRequest"/></param>
@@ -6323,7 +6361,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeNetworkInterfaceLimit）根据CVM实例ID或弹性网卡ID查询弹性网卡配额，返回该CVM实例或弹性网卡能绑定的弹性网卡配额，以及弹性网卡可以分配的IP配额
+        /// 本接口（DescribeNetworkInterfaceLimit）根据CVM实例ID或弹性网卡ID查询弹性网卡配额，返回该CVM实例或弹性网卡能绑定的弹性网卡配额，以及弹性网卡可以分配的IP配额。
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkInterfaceLimitRequest"/></param>
         /// <returns><see cref="DescribeNetworkInterfaceLimitResponse"/></returns>
@@ -6343,7 +6381,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeNetworkInterfaceLimit）根据CVM实例ID或弹性网卡ID查询弹性网卡配额，返回该CVM实例或弹性网卡能绑定的弹性网卡配额，以及弹性网卡可以分配的IP配额
+        /// 本接口（DescribeNetworkInterfaceLimit）根据CVM实例ID或弹性网卡ID查询弹性网卡配额，返回该CVM实例或弹性网卡能绑定的弹性网卡配额，以及弹性网卡可以分配的IP配额。
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkInterfaceLimitRequest"/></param>
         /// <returns><see cref="DescribeNetworkInterfaceLimitResponse"/></returns>
@@ -6403,7 +6441,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口用于查询网络产品的配额信息
+        /// 本接口（DescribeProductQuota）用于查询网络产品的配额信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductQuotaRequest"/></param>
         /// <returns><see cref="DescribeProductQuotaResponse"/></returns>
@@ -6423,7 +6461,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口用于查询网络产品的配额信息
+        /// 本接口（DescribeProductQuota）用于查询网络产品的配额信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductQuotaRequest"/></param>
         /// <returns><see cref="DescribeProductQuotaResponse"/></returns>
@@ -6443,7 +6481,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeRouteConflicts）用于查询自定义路由策略与云联网路由策略冲突列表
+        /// 本接口（DescribeRouteConflicts）用于查询自定义路由策略与云联网路由策略冲突列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRouteConflictsRequest"/></param>
         /// <returns><see cref="DescribeRouteConflictsResponse"/></returns>
@@ -6463,7 +6501,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeRouteConflicts）用于查询自定义路由策略与云联网路由策略冲突列表
+        /// 本接口（DescribeRouteConflicts）用于查询自定义路由策略与云联网路由策略冲突列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRouteConflictsRequest"/></param>
         /// <returns><see cref="DescribeRouteConflictsResponse"/></returns>
@@ -6723,7 +6761,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeServiceTemplateGroups）用于查询协议端口模板集合
+        /// 本接口（DescribeServiceTemplateGroups）用于查询协议端口模板集合。
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceTemplateGroupsRequest"/></param>
         /// <returns><see cref="DescribeServiceTemplateGroupsResponse"/></returns>
@@ -6743,7 +6781,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeServiceTemplateGroups）用于查询协议端口模板集合
+        /// 本接口（DescribeServiceTemplateGroups）用于查询协议端口模板集合。
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceTemplateGroupsRequest"/></param>
         /// <returns><see cref="DescribeServiceTemplateGroupsResponse"/></returns>
@@ -6763,7 +6801,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeServiceTemplates）用于查询协议端口模板
+        /// 本接口（DescribeServiceTemplates）用于查询协议端口模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceTemplatesRequest"/></param>
         /// <returns><see cref="DescribeServiceTemplatesResponse"/></returns>
@@ -6783,7 +6821,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeServiceTemplates）用于查询协议端口模板
+        /// 本接口（DescribeServiceTemplates）用于查询协议端口模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceTemplatesRequest"/></param>
         /// <returns><see cref="DescribeServiceTemplatesResponse"/></returns>
@@ -7247,7 +7285,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询终端节点服务的服务白名单列表。
+        /// 本接口（DescribeVpcEndPointServiceWhiteList）用于查询终端节点服务的服务白名单列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcEndPointServiceWhiteListRequest"/></param>
         /// <returns><see cref="DescribeVpcEndPointServiceWhiteListResponse"/></returns>
@@ -7267,7 +7305,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询终端节点服务的服务白名单列表。
+        /// 本接口（DescribeVpcEndPointServiceWhiteList）用于查询终端节点服务的服务白名单列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcEndPointServiceWhiteListRequest"/></param>
         /// <returns><see cref="DescribeVpcEndPointServiceWhiteListResponse"/></returns>
@@ -7287,7 +7325,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        ///  本接口（DescribeVpcInstances）用于查询VPC下的云主机实例列表。
+        /// 本接口（DescribeVpcInstances）用于查询VPC下的云主机实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcInstancesRequest"/></param>
         /// <returns><see cref="DescribeVpcInstancesResponse"/></returns>
@@ -7307,7 +7345,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        ///  本接口（DescribeVpcInstances）用于查询VPC下的云主机实例列表。
+        /// 本接口（DescribeVpcInstances）用于查询VPC下的云主机实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcInstancesRequest"/></param>
         /// <returns><see cref="DescribeVpcInstancesResponse"/></returns>
@@ -7369,36 +7407,38 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 获取私有网络配额，部分私有网络的配额有地域属性。
+        /// 本接口（DescribeVpcLimits）用于获取私有网络配额，部分私有网络的配额有地域属性。
         /// LimitTypes取值范围：
-        /// * appid-max-vpcs （每个开发商每个地域可创建的VPC数）
-        /// * vpc-max-subnets（每个VPC可创建的子网数）
-        /// * vpc-max-route-tables（每个VPC可创建的路由表数）
-        /// * route-table-max-policies（每个路由表可添加的策略数）
-        /// * vpc-max-vpn-gateways（每个VPC可创建的VPN网关数）
-        /// * appid-max-custom-gateways（每个开发商可创建的对端网关数）
-        /// * appid-max-vpn-connections（每个开发商可创建的VPN通道数）
-        /// * custom-gateway-max-vpn-connections（每个对端网关可创建的VPN通道数）
-        /// * vpn-gateway-max-custom-gateways（每个VPNGW可以创建的通道数）
-        /// * vpc-max-network-acls（每个VPC可创建的网络ACL数）
-        /// * network-acl-max-inbound-policies（每个网络ACL可添加的入站规则数）
-        /// * network-acl-max-outbound-policies（每个网络ACL可添加的出站规则数）
-        /// * vpc-max-vpcpeers（每个VPC可创建的对等连接数）
-        /// * vpc-max-available-vpcpeers（每个VPC可创建的有效对等连接数）
-        /// * vpc-max-basic-network-interconnections（每个VPC可创建的基础网络云主机与VPC互通数）
-        /// * direct-connection-max-snats（每个专线网关可创建的SNAT数）
-        /// * direct-connection-max-dnats（每个专线网关可创建的DNAT数）
-        /// * direct-connection-max-snapts（每个专线网关可创建的SNAPT数）
-        /// * direct-connection-max-dnapts（每个专线网关可创建的DNAPT数）
-        /// * vpc-max-nat-gateways（每个VPC可创建的NAT网关数）
-        /// * nat-gateway-max-eips（每个NAT可以购买的外网IP数量）
-        /// * vpc-max-enis（每个VPC可创建弹性网卡数）
-        /// * vpc-max-havips（每个VPC可创建HAVIP数）
-        /// * eni-max-private-ips（每个ENI可以绑定的内网IP数（ENI未绑定子机））
-        /// * nat-gateway-max-dnapts（每个NAT网关可创建的DNAPT数）
-        /// * vpc-max-ipv6s（每个VPC可分配的IPv6地址数）
-        /// * eni-max-ipv6s（每个ENI可分配的IPv6地址数）
-        /// * vpc-max-assistant_cidrs（每个VPC可分配的辅助CIDR数）
+        /// * appid-max-vpcs （每个开发商每个地域可创建的VPC数）。
+        /// * vpc-max-subnets（每个VPC可创建的子网数）。
+        /// * vpc-max-route-tables（每个VPC可创建的路由表数）。
+        /// * route-table-max-policies（每个路由表可添加的策略数）。
+        /// * vpc-max-vpn-gateways（每个VPC可创建的VPN网关数）。
+        /// * appid-max-custom-gateways（每个开发商可创建的对端网关数）。
+        /// * appid-max-vpn-connections（每个开发商可创建的VPN通道数）。
+        /// * custom-gateway-max-vpn-connections（每个对端网关可创建的VPN通道数）。
+        /// * vpn-gateway-max-custom-gateways（每个VPNGW可以创建的通道数）。
+        /// * vpc-max-network-acls（每个VPC可创建的网络ACL数）。
+        /// * network-acl-max-inbound-policies（每个网络ACL可添加的入站规则数）。
+        /// * network-acl-max-outbound-policies（每个网络ACL可添加的出站规则数）。
+        /// * vpc-max-vpcpeers（每个VPC可创建的对等连接数）。
+        /// * vpc-max-available-vpcpeers（每个VPC可创建的有效对等连接数）。
+        /// * vpc-max-basic-network-interconnections（每个VPC可创建的基础网络云主机与VPC互通数）。
+        /// * direct-connection-max-snats（每个专线网关可创建的SNAT数）。
+        /// * direct-connection-max-dnats（每个专线网关可创建的DNAT数）。
+        /// * direct-connection-max-snapts（每个专线网关可创建的SNAPT数）。
+        /// * direct-connection-max-dnapts（每个专线网关可创建的DNAPT数）。
+        /// * vpc-max-nat-gateways（每个VPC可创建的NAT网关数）。
+        /// * nat-gateway-max-eips（每个NAT可以购买的外网IP数量）。
+        /// * vpc-max-enis（每个VPC可创建弹性网卡数）。
+        /// * vpc-max-havips（每个VPC可创建HAVIP数）。
+        /// * eni-max-private-ips（每个ENI可以绑定的内网IP数（ENI未绑定子机））。
+        /// * nat-gateway-max-dnapts（每个NAT网关可创建的DNAPT数）。
+        /// * vpc-max-ipv6s（每个VPC可分配的IPv6地址数）。
+        /// * eni-max-ipv6s（每个ENI可分配的IPv6地址数）。
+        /// * vpc-max-assistant_cidrs（每个VPC可分配的辅助CIDR数）。
+        /// * appid-max-end-point-services （每个开发商每个地域可创建的终端节点服务个数）。
+        /// * appid-max-end-point-service-white-lists （每个开发商每个地域可创建的终端节点服务白名单个数）。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcLimitsRequest"/></param>
         /// <returns><see cref="DescribeVpcLimitsResponse"/></returns>
@@ -7418,36 +7458,38 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 获取私有网络配额，部分私有网络的配额有地域属性。
+        /// 本接口（DescribeVpcLimits）用于获取私有网络配额，部分私有网络的配额有地域属性。
         /// LimitTypes取值范围：
-        /// * appid-max-vpcs （每个开发商每个地域可创建的VPC数）
-        /// * vpc-max-subnets（每个VPC可创建的子网数）
-        /// * vpc-max-route-tables（每个VPC可创建的路由表数）
-        /// * route-table-max-policies（每个路由表可添加的策略数）
-        /// * vpc-max-vpn-gateways（每个VPC可创建的VPN网关数）
-        /// * appid-max-custom-gateways（每个开发商可创建的对端网关数）
-        /// * appid-max-vpn-connections（每个开发商可创建的VPN通道数）
-        /// * custom-gateway-max-vpn-connections（每个对端网关可创建的VPN通道数）
-        /// * vpn-gateway-max-custom-gateways（每个VPNGW可以创建的通道数）
-        /// * vpc-max-network-acls（每个VPC可创建的网络ACL数）
-        /// * network-acl-max-inbound-policies（每个网络ACL可添加的入站规则数）
-        /// * network-acl-max-outbound-policies（每个网络ACL可添加的出站规则数）
-        /// * vpc-max-vpcpeers（每个VPC可创建的对等连接数）
-        /// * vpc-max-available-vpcpeers（每个VPC可创建的有效对等连接数）
-        /// * vpc-max-basic-network-interconnections（每个VPC可创建的基础网络云主机与VPC互通数）
-        /// * direct-connection-max-snats（每个专线网关可创建的SNAT数）
-        /// * direct-connection-max-dnats（每个专线网关可创建的DNAT数）
-        /// * direct-connection-max-snapts（每个专线网关可创建的SNAPT数）
-        /// * direct-connection-max-dnapts（每个专线网关可创建的DNAPT数）
-        /// * vpc-max-nat-gateways（每个VPC可创建的NAT网关数）
-        /// * nat-gateway-max-eips（每个NAT可以购买的外网IP数量）
-        /// * vpc-max-enis（每个VPC可创建弹性网卡数）
-        /// * vpc-max-havips（每个VPC可创建HAVIP数）
-        /// * eni-max-private-ips（每个ENI可以绑定的内网IP数（ENI未绑定子机））
-        /// * nat-gateway-max-dnapts（每个NAT网关可创建的DNAPT数）
-        /// * vpc-max-ipv6s（每个VPC可分配的IPv6地址数）
-        /// * eni-max-ipv6s（每个ENI可分配的IPv6地址数）
-        /// * vpc-max-assistant_cidrs（每个VPC可分配的辅助CIDR数）
+        /// * appid-max-vpcs （每个开发商每个地域可创建的VPC数）。
+        /// * vpc-max-subnets（每个VPC可创建的子网数）。
+        /// * vpc-max-route-tables（每个VPC可创建的路由表数）。
+        /// * route-table-max-policies（每个路由表可添加的策略数）。
+        /// * vpc-max-vpn-gateways（每个VPC可创建的VPN网关数）。
+        /// * appid-max-custom-gateways（每个开发商可创建的对端网关数）。
+        /// * appid-max-vpn-connections（每个开发商可创建的VPN通道数）。
+        /// * custom-gateway-max-vpn-connections（每个对端网关可创建的VPN通道数）。
+        /// * vpn-gateway-max-custom-gateways（每个VPNGW可以创建的通道数）。
+        /// * vpc-max-network-acls（每个VPC可创建的网络ACL数）。
+        /// * network-acl-max-inbound-policies（每个网络ACL可添加的入站规则数）。
+        /// * network-acl-max-outbound-policies（每个网络ACL可添加的出站规则数）。
+        /// * vpc-max-vpcpeers（每个VPC可创建的对等连接数）。
+        /// * vpc-max-available-vpcpeers（每个VPC可创建的有效对等连接数）。
+        /// * vpc-max-basic-network-interconnections（每个VPC可创建的基础网络云主机与VPC互通数）。
+        /// * direct-connection-max-snats（每个专线网关可创建的SNAT数）。
+        /// * direct-connection-max-dnats（每个专线网关可创建的DNAT数）。
+        /// * direct-connection-max-snapts（每个专线网关可创建的SNAPT数）。
+        /// * direct-connection-max-dnapts（每个专线网关可创建的DNAPT数）。
+        /// * vpc-max-nat-gateways（每个VPC可创建的NAT网关数）。
+        /// * nat-gateway-max-eips（每个NAT可以购买的外网IP数量）。
+        /// * vpc-max-enis（每个VPC可创建弹性网卡数）。
+        /// * vpc-max-havips（每个VPC可创建HAVIP数）。
+        /// * eni-max-private-ips（每个ENI可以绑定的内网IP数（ENI未绑定子机））。
+        /// * nat-gateway-max-dnapts（每个NAT网关可创建的DNAPT数）。
+        /// * vpc-max-ipv6s（每个VPC可分配的IPv6地址数）。
+        /// * eni-max-ipv6s（每个ENI可分配的IPv6地址数）。
+        /// * vpc-max-assistant_cidrs（每个VPC可分配的辅助CIDR数）。
+        /// * appid-max-end-point-services （每个开发商每个地域可创建的终端节点服务个数）。
+        /// * appid-max-end-point-service-white-lists （每个开发商每个地域可创建的终端节点服务白名单个数）。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcLimitsRequest"/></param>
         /// <returns><see cref="DescribeVpcLimitsResponse"/></returns>
@@ -8449,7 +8491,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DisassociateNetworkAclSubnets）用于网络ACL解关联vpc下的子网。
+        /// 本接口（DisassociateNetworkAclSubnets）用于网络ACL解关联VPC下的子网。
         /// </summary>
         /// <param name="req"><see cref="DisassociateNetworkAclSubnetsRequest"/></param>
         /// <returns><see cref="DisassociateNetworkAclSubnetsResponse"/></returns>
@@ -8469,7 +8511,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DisassociateNetworkAclSubnets）用于网络ACL解关联vpc下的子网。
+        /// 本接口（DisassociateNetworkAclSubnets）用于网络ACL解关联VPC下的子网。
         /// </summary>
         /// <param name="req"><see cref="DisassociateNetworkAclSubnetsRequest"/></param>
         /// <returns><see cref="DisassociateNetworkAclSubnetsResponse"/></returns>
@@ -8529,7 +8571,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 终端节点解绑安全组。
+        /// 本接口（DisassociateVpcEndPointSecurityGroups）用于终端节点解绑安全组。
         /// </summary>
         /// <param name="req"><see cref="DisassociateVpcEndPointSecurityGroupsRequest"/></param>
         /// <returns><see cref="DisassociateVpcEndPointSecurityGroupsResponse"/></returns>
@@ -8549,7 +8591,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 终端节点解绑安全组。
+        /// 本接口（DisassociateVpcEndPointSecurityGroups）用于终端节点解绑安全组。
         /// </summary>
         /// <param name="req"><see cref="DisassociateVpcEndPointSecurityGroupsRequest"/></param>
         /// <returns><see cref="DisassociateVpcEndPointSecurityGroupsResponse"/></returns>
@@ -8853,7 +8895,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 是否接受终端节点连接请求。
+        /// 本接口（EnableVpcEndPointConnect）用于是否接受终端节点连接请求。
         /// </summary>
         /// <param name="req"><see cref="EnableVpcEndPointConnectRequest"/></param>
         /// <returns><see cref="EnableVpcEndPointConnectResponse"/></returns>
@@ -8873,7 +8915,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 是否接受终端节点连接请求。
+        /// 本接口（EnableVpcEndPointConnect）用于是否接受终端节点连接请求。
         /// </summary>
         /// <param name="req"><see cref="EnableVpcEndPointConnectRequest"/></param>
         /// <returns><see cref="EnableVpcEndPointConnectResponse"/></returns>
@@ -9485,7 +9527,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板
+        /// 本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressTemplateAttributeRequest"/></param>
         /// <returns><see cref="ModifyAddressTemplateAttributeResponse"/></returns>
@@ -9505,7 +9547,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板
+        /// 本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressTemplateAttributeRequest"/></param>
         /// <returns><see cref="ModifyAddressTemplateAttributeResponse"/></returns>
@@ -9525,7 +9567,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyAddressTemplateGroupAttribute）用于修改IP地址模板集合
+        /// 本接口（ModifyAddressTemplateGroupAttribute）用于修改IP地址模板集合。
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressTemplateGroupAttributeRequest"/></param>
         /// <returns><see cref="ModifyAddressTemplateGroupAttributeResponse"/></returns>
@@ -9545,7 +9587,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyAddressTemplateGroupAttribute）用于修改IP地址模板集合
+        /// 本接口（ModifyAddressTemplateGroupAttribute）用于修改IP地址模板集合。
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressTemplateGroupAttributeRequest"/></param>
         /// <returns><see cref="ModifyAddressTemplateGroupAttributeResponse"/></returns>
@@ -9605,7 +9647,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(ModifyAssistantCidr)用于批量修改辅助CIDR，支持新增和删除。
+        /// 本接口（ModifyAssistantCidr）用于批量修改辅助CIDR，支持新增和删除。
         /// </summary>
         /// <param name="req"><see cref="ModifyAssistantCidrRequest"/></param>
         /// <returns><see cref="ModifyAssistantCidrResponse"/></returns>
@@ -9625,7 +9667,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(ModifyAssistantCidr)用于批量修改辅助CIDR，支持新增和删除。
+        /// 本接口（ModifyAssistantCidr）用于批量修改辅助CIDR，支持新增和删除。
         /// </summary>
         /// <param name="req"><see cref="ModifyAssistantCidrRequest"/></param>
         /// <returns><see cref="ModifyAssistantCidrResponse"/></returns>
@@ -10005,7 +10047,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyHaVipAttribute）用于修改高可用虚拟IP（HAVIP）属性
+        /// 本接口（ModifyHaVipAttribute）用于修改高可用虚拟IP（HAVIP）属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyHaVipAttributeRequest"/></param>
         /// <returns><see cref="ModifyHaVipAttributeResponse"/></returns>
@@ -10025,7 +10067,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyHaVipAttribute）用于修改高可用虚拟IP（HAVIP）属性
+        /// 本接口（ModifyHaVipAttribute）用于修改高可用虚拟IP（HAVIP）属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyHaVipAttributeRequest"/></param>
         /// <returns><see cref="ModifyHaVipAttributeResponse"/></returns>
@@ -10205,7 +10247,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于修改CDC的本地网关。
+        /// 本接口（ModifyLocalGateway）用于修改CDC的本地网关。
         /// </summary>
         /// <param name="req"><see cref="ModifyLocalGatewayRequest"/></param>
         /// <returns><see cref="ModifyLocalGatewayResponse"/></returns>
@@ -10225,7 +10267,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于修改CDC的本地网关。
+        /// 本接口（ModifyLocalGateway）用于修改CDC的本地网关。
         /// </summary>
         /// <param name="req"><see cref="ModifyLocalGatewayRequest"/></param>
         /// <returns><see cref="ModifyLocalGatewayResponse"/></returns>
@@ -10569,7 +10611,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改弹性网卡服务质量。
+        /// 本接口（ModifyNetworkInterfaceQos）用于修改弹性网卡服务质量。
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkInterfaceQosRequest"/></param>
         /// <returns><see cref="ModifyNetworkInterfaceQosResponse"/></returns>
@@ -10589,7 +10631,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改弹性网卡服务质量。
+        /// 本接口（ModifyNetworkInterfaceQos）用于修改弹性网卡服务质量。
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkInterfaceQosRequest"/></param>
         /// <returns><see cref="ModifyNetworkInterfaceQosResponse"/></returns>
@@ -10799,7 +10841,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyServiceTemplateAttribute）用于修改协议端口模板
+        /// 本接口（ModifyServiceTemplateAttribute）用于修改协议端口模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyServiceTemplateAttributeRequest"/></param>
         /// <returns><see cref="ModifyServiceTemplateAttributeResponse"/></returns>
@@ -10819,7 +10861,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyServiceTemplateAttribute）用于修改协议端口模板
+        /// 本接口（ModifyServiceTemplateAttribute）用于修改协议端口模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyServiceTemplateAttributeRequest"/></param>
         /// <returns><see cref="ModifyServiceTemplateAttributeResponse"/></returns>
@@ -11039,7 +11081,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改终端节点属性。
+        /// 本接口（ModifyVpcEndPointAttribute）用于修改终端节点属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyVpcEndPointAttributeRequest"/></param>
         /// <returns><see cref="ModifyVpcEndPointAttributeResponse"/></returns>
@@ -11059,7 +11101,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改终端节点属性。
+        /// 本接口（ModifyVpcEndPointAttribute）用于修改终端节点属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyVpcEndPointAttributeRequest"/></param>
         /// <returns><see cref="ModifyVpcEndPointAttributeResponse"/></returns>
@@ -11121,7 +11163,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改终端节点服务白名单属性。
+        /// 本接口（ModifyVpcEndPointServiceWhiteList）用于修改终端节点服务白名单属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyVpcEndPointServiceWhiteListRequest"/></param>
         /// <returns><see cref="ModifyVpcEndPointServiceWhiteListResponse"/></returns>
@@ -11141,7 +11183,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改终端节点服务白名单属性。
+        /// 本接口（ModifyVpcEndPointServiceWhiteList）用于修改终端节点服务白名单属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyVpcEndPointServiceWhiteListRequest"/></param>
         /// <returns><see cref="ModifyVpcEndPointServiceWhiteListResponse"/></returns>
@@ -11727,7 +11769,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ReplaceRouteTableAssociation)用于修改子网（Subnet）关联的路由表（RouteTable）。
+        /// 本接口（ReplaceRouteTableAssociation）用于修改子网（Subnet）关联的路由表（RouteTable）。
         /// * 一个子网只能关联一个路由表。
         /// </summary>
         /// <param name="req"><see cref="ReplaceRouteTableAssociationRequest"/></param>
@@ -11748,7 +11790,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ReplaceRouteTableAssociation)用于修改子网（Subnet）关联的路由表（RouteTable）。
+        /// 本接口（ReplaceRouteTableAssociation）用于修改子网（Subnet）关联的路由表（RouteTable）。
         /// * 一个子网只能关联一个路由表。
         /// </summary>
         /// <param name="req"><see cref="ReplaceRouteTableAssociationRequest"/></param>
@@ -12523,7 +12565,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 路由表列表页操作增加“从云联网撤销”，用于撤销已发布到云联网的路由。
+        /// 本接口（WithdrawNotifyRoutes）用于撤销已发布到云联网的路由。路由表列表页操作增加“从云联网撤销”。
         /// </summary>
         /// <param name="req"><see cref="WithdrawNotifyRoutesRequest"/></param>
         /// <returns><see cref="WithdrawNotifyRoutesResponse"/></returns>
@@ -12543,7 +12585,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 路由表列表页操作增加“从云联网撤销”，用于撤销已发布到云联网的路由。
+        /// 本接口（WithdrawNotifyRoutes）用于撤销已发布到云联网的路由。路由表列表页操作增加“从云联网撤销”。
         /// </summary>
         /// <param name="req"><see cref="WithdrawNotifyRoutesRequest"/></param>
         /// <returns><see cref="WithdrawNotifyRoutesResponse"/></returns>

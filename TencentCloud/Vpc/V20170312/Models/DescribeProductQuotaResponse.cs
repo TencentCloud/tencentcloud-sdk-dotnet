@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// ProductQuota对象数组
+        /// ProductQuota对象数组。
         /// </summary>
         [JsonProperty("ProductQuotaSet")]
         public ProductQuota[] ProductQuotaSet{ get; set; }
 
         /// <summary>
-        /// 符合条件的产品类型个数
+        /// 符合条件的产品类型个数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

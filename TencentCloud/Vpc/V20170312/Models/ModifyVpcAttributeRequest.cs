@@ -43,13 +43,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EnableMulticast{ get; set; }
 
         /// <summary>
-        /// DNS地址，最多支持4个，第1个默认为主，其余为备
+        /// DNS地址，最多支持4个，第1个默认为主，其余为备。
         /// </summary>
         [JsonProperty("DnsServers")]
         public string[] DnsServers{ get; set; }
 
         /// <summary>
-        /// 域名
+        /// 域名。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }

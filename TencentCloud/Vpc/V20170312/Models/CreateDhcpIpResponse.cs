@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 新创建的`DhcpIp`信息
+        /// 新创建的`DhcpIp`信息。
         /// </summary>
         [JsonProperty("DhcpIpSet")]
         public DhcpIp[] DhcpIpSet{ get; set; }

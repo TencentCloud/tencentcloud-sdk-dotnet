@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// 指定的内网IPv6`地址信息。
+        /// 指定的内网IPv6地址信息。
         /// </summary>
         [JsonProperty("Ipv6Addresses")]
         public Ipv6Address[] Ipv6Addresses{ get; set; }

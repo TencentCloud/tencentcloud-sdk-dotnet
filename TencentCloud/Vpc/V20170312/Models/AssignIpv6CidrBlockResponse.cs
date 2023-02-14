@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`
+        /// 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
         /// </summary>
         [JsonProperty("Ipv6CidrBlock")]
         public string Ipv6CidrBlock{ get; set; }

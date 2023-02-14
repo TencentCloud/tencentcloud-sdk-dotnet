@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+        /// `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]
+        /// CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]。
         /// </summary>
         [JsonProperty("CidrBlocks")]
         public string[] CidrBlocks{ get; set; }
