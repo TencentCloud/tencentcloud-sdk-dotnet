@@ -493,6 +493,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 获取当前房间的成员列表，房间结束或过期后无法使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurrentMemberListRequest"/></param>
+        /// <returns><see cref="DescribeCurrentMemberListResponse"/></returns>
+        public async Task<DescribeCurrentMemberListResponse> DescribeCurrentMemberList(DescribeCurrentMemberListRequest req)
+        {
+             JsonResponseModel<DescribeCurrentMemberListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCurrentMemberList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCurrentMemberListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取当前房间的成员列表，房间结束或过期后无法使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurrentMemberListRequest"/></param>
+        /// <returns><see cref="DescribeCurrentMemberListResponse"/></returns>
+        public DescribeCurrentMemberListResponse DescribeCurrentMemberListSync(DescribeCurrentMemberListRequest req)
+        {
+             JsonResponseModel<DescribeCurrentMemberListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCurrentMemberList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCurrentMemberListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取文档信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDocumentRequest"/></param>

@@ -66,6 +66,20 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("ControlBits")]
         public string ControlBits{ get; set; }
 
+        /// <summary>
+        /// 告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostRange")]
+        public long? HostRange{ get; set; }
+
+        /// <summary>
+        /// 配置的告警范围主机个数，前端用此判断展示提示信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +93,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
             this.SetParamSimple(map, prefix + "ControlBit", this.ControlBit);
             this.SetParamSimple(map, prefix + "ControlBits", this.ControlBits);
+            this.SetParamSimple(map, prefix + "HostRange", this.HostRange);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

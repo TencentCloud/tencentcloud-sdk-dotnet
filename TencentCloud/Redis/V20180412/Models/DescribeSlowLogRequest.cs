@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 慢查询平均执行时间阈值（单位：微秒）。
+        /// 慢查询平均执行时间阈值（单位：毫秒）。
         /// </summary>
         [JsonProperty("MinQueryTime")]
         public long? MinQueryTime{ get; set; }

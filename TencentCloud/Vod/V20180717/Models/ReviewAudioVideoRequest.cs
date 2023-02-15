@@ -47,7 +47,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 审核模板 ID，默认值为 10。取值范围：
-        /// <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
+        /// <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴力（Terror）和不适宜的信息（Polity）。</li>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

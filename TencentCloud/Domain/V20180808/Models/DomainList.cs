@@ -48,6 +48,7 @@ namespace TencentCloud.Domain.V20180808.Models
         /// 是否已设置自动续费 。
         /// 0：未设置 
         /// 1：已设置
+        /// 2：设置后，关闭
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }

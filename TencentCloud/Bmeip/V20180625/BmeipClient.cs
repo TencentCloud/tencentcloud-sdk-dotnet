@@ -173,7 +173,7 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
-        /// 黑石EIP绑定VPCIP
+        /// 黑石EIP绑定VPC IP
         /// </summary>
         /// <param name="req"><see cref="BindVpcIpRequest"/></param>
         /// <returns><see cref="BindVpcIpResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
-        /// 黑石EIP绑定VPCIP
+        /// 黑石EIP绑定VPC IP
         /// </summary>
         /// <param name="req"><see cref="BindVpcIpRequest"/></param>
         /// <returns><see cref="BindVpcIpResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
-        /// 创建黑石弹性公网 EIPACL
+        /// 创建黑石弹性公网 EIP ACL
         /// </summary>
         /// <param name="req"><see cref="CreateEipAclRequest"/></param>
         /// <returns><see cref="CreateEipAclResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
-        /// 创建黑石弹性公网 EIPACL
+        /// 创建黑石弹性公网 EIP ACL
         /// </summary>
         /// <param name="req"><see cref="CreateEipAclRequest"/></param>
         /// <returns><see cref="CreateEipAclResponse"/></returns>

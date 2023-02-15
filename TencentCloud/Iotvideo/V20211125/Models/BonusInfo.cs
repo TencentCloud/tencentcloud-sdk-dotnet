@@ -66,6 +66,13 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
+        /// <summary>
+        /// 资源包状态 0.未使用 1.使用中 2.已退款 3.已过期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +86,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "Used", this.Used);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

@@ -42,6 +42,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("RealTotalCost")]
         public ulong? RealTotalCost{ get; set; }
 
+        /// <summary>
+        /// 计费项数量
+        /// </summary>
+        [JsonProperty("SpecCount")]
+        public ulong? SpecCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
+            this.SetParamSimple(map, prefix + "SpecCount", this.SpecCount);
         }
     }
 }

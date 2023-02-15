@@ -573,6 +573,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 批量删除域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDomainBatchRequest"/></param>
+        /// <returns><see cref="DeleteDomainBatchResponse"/></returns>
+        public async Task<DeleteDomainBatchResponse> DeleteDomainBatch(DeleteDomainBatchRequest req)
+        {
+             JsonResponseModel<DeleteDomainBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDomainBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDomainBatchRequest"/></param>
+        /// <returns><see cref="DeleteDomainBatchResponse"/></returns>
+        public DeleteDomainBatchResponse DeleteDomainBatchSync(DeleteDomainBatchRequest req)
+        {
+             JsonResponseModel<DeleteDomainBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDomainBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除记录
         /// </summary>
         /// <param name="req"><see cref="DeleteRecordRequest"/></param>
@@ -1013,6 +1053,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 获取域名概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainPreviewRequest"/></param>
+        /// <returns><see cref="DescribeDomainPreviewResponse"/></returns>
+        public async Task<DescribeDomainPreviewResponse> DescribeDomainPreview(DescribeDomainPreviewRequest req)
+        {
+             JsonResponseModel<DescribeDomainPreviewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainPreview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainPreviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainPreviewRequest"/></param>
+        /// <returns><see cref="DescribeDomainPreviewResponse"/></returns>
+        public DescribeDomainPreviewResponse DescribeDomainPreviewSync(DescribeDomainPreviewRequest req)
+        {
+             JsonResponseModel<DescribeDomainPreviewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainPreview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainPreviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取域名权限
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainPurviewRequest"/></param>
@@ -1093,6 +1173,86 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 获取域名Whois信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainWhoisRequest"/></param>
+        /// <returns><see cref="DescribeDomainWhoisResponse"/></returns>
+        public async Task<DescribeDomainWhoisResponse> DescribeDomainWhois(DescribeDomainWhoisRequest req)
+        {
+             JsonResponseModel<DescribeDomainWhoisResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainWhois");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainWhoisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名Whois信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainWhoisRequest"/></param>
+        /// <returns><see cref="DescribeDomainWhoisResponse"/></returns>
+        public DescribeDomainWhoisResponse DescribeDomainWhoisSync(DescribeDomainWhoisRequest req)
+        {
+             JsonResponseModel<DescribeDomainWhoisResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainWhois");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainWhoisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取各套餐配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackageDetailRequest"/></param>
+        /// <returns><see cref="DescribePackageDetailResponse"/></returns>
+        public async Task<DescribePackageDetailResponse> DescribePackageDetail(DescribePackageDetailRequest req)
+        {
+             JsonResponseModel<DescribePackageDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePackageDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePackageDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取各套餐配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackageDetailRequest"/></param>
+        /// <returns><see cref="DescribePackageDetailResponse"/></returns>
+        public DescribePackageDetailResponse DescribePackageDetailSync(DescribePackageDetailRequest req)
+        {
+             JsonResponseModel<DescribePackageDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePackageDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePackageDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取记录信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordRequest"/></param>
@@ -1124,6 +1284,46 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 判断是否有除系统默认的@-NS记录之外的记录存在
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordExistExceptDefaultNSRequest"/></param>
+        /// <returns><see cref="DescribeRecordExistExceptDefaultNSResponse"/></returns>
+        public async Task<DescribeRecordExistExceptDefaultNSResponse> DescribeRecordExistExceptDefaultNS(DescribeRecordExistExceptDefaultNSRequest req)
+        {
+             JsonResponseModel<DescribeRecordExistExceptDefaultNSResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordExistExceptDefaultNS");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordExistExceptDefaultNSResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 判断是否有除系统默认的@-NS记录之外的记录存在
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordExistExceptDefaultNSRequest"/></param>
+        /// <returns><see cref="DescribeRecordExistExceptDefaultNSResponse"/></returns>
+        public DescribeRecordExistExceptDefaultNSResponse DescribeRecordExistExceptDefaultNSSync(DescribeRecordExistExceptDefaultNSRequest req)
+        {
+             JsonResponseModel<DescribeRecordExistExceptDefaultNSResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordExistExceptDefaultNS");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordExistExceptDefaultNSResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1564,6 +1764,46 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUserDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名增值服务用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVASStatisticRequest"/></param>
+        /// <returns><see cref="DescribeVASStatisticResponse"/></returns>
+        public async Task<DescribeVASStatisticResponse> DescribeVASStatistic(DescribeVASStatisticRequest req)
+        {
+             JsonResponseModel<DescribeVASStatisticResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVASStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVASStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名增值服务用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVASStatisticRequest"/></param>
+        /// <returns><see cref="DescribeVASStatisticResponse"/></returns>
+        public DescribeVASStatisticResponse DescribeVASStatisticSync(DescribeVASStatisticRequest req)
+        {
+             JsonResponseModel<DescribeVASStatisticResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVASStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVASStatisticResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

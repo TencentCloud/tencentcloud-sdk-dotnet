@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.697</VersionPrefix>
+    <VersionPrefix>3.0.698</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -462,7 +462,9 @@
     <Compile Include="V20210820\Models\OrderField.cs" />
     <Compile Include="V20210820\Models\OrganizationalFunction.cs" />
     <Compile Include="V20210820\Models\ParamInfo.cs" />
+    <Compile Include="V20210820\Models\Partition.cs" />
     <Compile Include="V20210820\Models\ProdSchedulerTask.cs" />
+    <Compile Include="V20210820\Models\Property.cs" />
     <Compile Include="V20210820\Models\QualityScore.cs" />
     <Compile Include="V20210820\Models\QualityScoreTrend.cs" />
     <Compile Include="V20210820\Models\RealTimeTaskInstanceNodeInfo.cs" />

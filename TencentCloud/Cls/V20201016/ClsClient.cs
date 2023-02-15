@@ -533,7 +533,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 创建新的投递规则，【！！！注意】使用此接口，需要检查是否配置了投递COS的角色和权限。如果没有配置，请参考文档投递权限查看和配置https://cloud.tencent.com/document/product/614/71623。
+        /// 新建投递到COS的任务，【！！！注意】使用此接口，需要检查是否配置了投递COS的角色和权限。如果没有配置，请参考文档投递权限查看和配置https://cloud.tencent.com/document/product/614/71623。
         /// </summary>
         /// <param name="req"><see cref="CreateShipperRequest"/></param>
         /// <returns><see cref="CreateShipperResponse"/></returns>
@@ -553,7 +553,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 创建新的投递规则，【！！！注意】使用此接口，需要检查是否配置了投递COS的角色和权限。如果没有配置，请参考文档投递权限查看和配置https://cloud.tencent.com/document/product/614/71623。
+        /// 新建投递到COS的任务，【！！！注意】使用此接口，需要检查是否配置了投递COS的角色和权限。如果没有配置，请参考文档投递权限查看和配置https://cloud.tencent.com/document/product/614/71623。
         /// </summary>
         /// <param name="req"><see cref="CreateShipperRequest"/></param>
         /// <returns><see cref="CreateShipperResponse"/></returns>
@@ -1773,7 +1773,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 获取投递规则信息列表
+        /// 获取投递到COS的任务配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeShippersRequest"/></param>
         /// <returns><see cref="DescribeShippersResponse"/></returns>
@@ -1793,7 +1793,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 获取投递规则信息列表
+        /// 获取投递到COS的任务配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeShippersRequest"/></param>
         /// <returns><see cref="DescribeShippersResponse"/></returns>

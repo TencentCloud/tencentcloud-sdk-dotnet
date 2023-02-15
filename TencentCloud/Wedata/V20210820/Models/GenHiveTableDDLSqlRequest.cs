@@ -84,6 +84,66 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SourceFieldInfoList")]
         public SourceFieldInfo[] SourceFieldInfoList{ get; set; }
 
+        /// <summary>
+        /// 分区字段
+        /// </summary>
+        [JsonProperty("Partitions")]
+        public Partition[] Partitions{ get; set; }
+
+        /// <summary>
+        /// 建表属性
+        /// </summary>
+        [JsonProperty("Properties")]
+        public Property[] Properties{ get; set; }
+
+        /// <summary>
+        /// 建表模式，0:向导模式，1:ddl
+        /// </summary>
+        [JsonProperty("TableMode")]
+        public long? TableMode{ get; set; }
+
+        /// <summary>
+        /// DLC表版本，v1/v2
+        /// </summary>
+        [JsonProperty("TableVersion")]
+        public string TableVersion{ get; set; }
+
+        /// <summary>
+        /// 是否upsert写入
+        /// </summary>
+        [JsonProperty("UpsertFlag")]
+        public bool? UpsertFlag{ get; set; }
+
+        /// <summary>
+        /// 表描述信息
+        /// </summary>
+        [JsonProperty("TableComment")]
+        public string TableComment{ get; set; }
+
+        /// <summary>
+        /// 增加的文件数量阈值, 超过值将触发小文件合并
+        /// </summary>
+        [JsonProperty("AddDataFiles")]
+        public long? AddDataFiles{ get; set; }
+
+        /// <summary>
+        /// 增加的Equality delete数量阈值, 超过值将触发小文件合并
+        /// </summary>
+        [JsonProperty("AddEqualityDeletes")]
+        public long? AddEqualityDeletes{ get; set; }
+
+        /// <summary>
+        /// 增加的Position delete数量阈值, 超过值将触发小文件合并
+        /// </summary>
+        [JsonProperty("AddPositionDeletes")]
+        public long? AddPositionDeletes{ get; set; }
+
+        /// <summary>
+        /// 增加的delete file数量阈值
+        /// </summary>
+        [JsonProperty("AddDeleteFiles")]
+        public long? AddDeleteFiles{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +160,16 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SinkType", this.SinkType);
             this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
             this.SetParamArrayObj(map, prefix + "SourceFieldInfoList.", this.SourceFieldInfoList);
+            this.SetParamArrayObj(map, prefix + "Partitions.", this.Partitions);
+            this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
+            this.SetParamSimple(map, prefix + "TableMode", this.TableMode);
+            this.SetParamSimple(map, prefix + "TableVersion", this.TableVersion);
+            this.SetParamSimple(map, prefix + "UpsertFlag", this.UpsertFlag);
+            this.SetParamSimple(map, prefix + "TableComment", this.TableComment);
+            this.SetParamSimple(map, prefix + "AddDataFiles", this.AddDataFiles);
+            this.SetParamSimple(map, prefix + "AddEqualityDeletes", this.AddEqualityDeletes);
+            this.SetParamSimple(map, prefix + "AddPositionDeletes", this.AddPositionDeletes);
+            this.SetParamSimple(map, prefix + "AddDeleteFiles", this.AddDeleteFiles);
         }
     }
 }

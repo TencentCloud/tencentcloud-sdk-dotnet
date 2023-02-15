@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.697</VersionPrefix>
+    <VersionPrefix>3.0.698</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,9 @@
     <Compile Include="V20210323\Models\Deals.cs" />
     <Compile Include="V20210323\Models\DeleteDomainAliasRequest.cs" />
     <Compile Include="V20210323\Models\DeleteDomainAliasResponse.cs" />
+    <Compile Include="V20210323\Models\DeleteDomainBatchDetail.cs" />
+    <Compile Include="V20210323\Models\DeleteDomainBatchRequest.cs" />
+    <Compile Include="V20210323\Models\DeleteDomainBatchResponse.cs" />
     <Compile Include="V20210323\Models\DeleteDomainRequest.cs" />
     <Compile Include="V20210323\Models\DeleteDomainResponse.cs" />
     <Compile Include="V20210323\Models\DeleteRecordGroupRequest.cs" />
@@ -102,12 +105,20 @@
     <Compile Include="V20210323\Models\DescribeDomainListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainLogListRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainLogListResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainPreviewRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainPreviewResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainPurviewRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainPurviewResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainShareInfoRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainShareInfoResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainWhoisRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainWhoisResponse.cs" />
+    <Compile Include="V20210323\Models\DescribePackageDetailRequest.cs" />
+    <Compile Include="V20210323\Models\DescribePackageDetailResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordExistExceptDefaultNSRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordExistExceptDefaultNSResponse.cs" />
     <Compile Include="V20210323\Models\DescribeRecordGroupListRequest.cs" />
     <Compile Include="V20210323\Models\DescribeRecordGroupListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeRecordLineListRequest.cs" />
@@ -132,6 +143,8 @@
     <Compile Include="V20210323\Models\DescribeSubdomainAnalyticsResponse.cs" />
     <Compile Include="V20210323\Models\DescribeUserDetailRequest.cs" />
     <Compile Include="V20210323\Models\DescribeUserDetailResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeVASStatisticRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeVASStatisticResponse.cs" />
     <Compile Include="V20210323\Models\DomainAliasAnalyticsItem.cs" />
     <Compile Include="V20210323\Models\DomainAliasInfo.cs" />
     <Compile Include="V20210323\Models\DomainAnalyticsDetail.cs" />
@@ -183,8 +196,10 @@
     <Compile Include="V20210323\Models\ModifySubdomainStatusResponse.cs" />
     <Compile Include="V20210323\Models\ModifyVasAutoRenewStatusRequest.cs" />
     <Compile Include="V20210323\Models\ModifyVasAutoRenewStatusResponse.cs" />
+    <Compile Include="V20210323\Models\PackageDetailItem.cs" />
     <Compile Include="V20210323\Models\PayOrderWithBalanceRequest.cs" />
     <Compile Include="V20210323\Models\PayOrderWithBalanceResponse.cs" />
+    <Compile Include="V20210323\Models\PreviewDetail.cs" />
     <Compile Include="V20210323\Models\PurviewInfo.cs" />
     <Compile Include="V20210323\Models\RecordCountInfo.cs" />
     <Compile Include="V20210323\Models\RecordGroupInfo.cs" />
@@ -201,5 +216,9 @@
     <Compile Include="V20210323\Models\SubdomainAliasAnalyticsItem.cs" />
     <Compile Include="V20210323\Models\SubdomainAnalyticsInfo.cs" />
     <Compile Include="V20210323\Models\UserInfo.cs" />
+    <Compile Include="V20210323\Models\VASStatisticItem.cs" />
+    <Compile Include="V20210323\Models\WhoisContact.cs" />
+    <Compile Include="V20210323\Models\WhoisContactAddress.cs" />
+    <Compile Include="V20210323\Models\WhoisInfo.cs" />
   </ItemGroup>
 </Project>

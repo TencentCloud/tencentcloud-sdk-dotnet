@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.697</VersionPrefix>
+    <VersionPrefix>3.0.698</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -75,6 +75,8 @@
     <Compile Include="V20220817\Models\DeleteRoomResponse.cs" />
     <Compile Include="V20220817\Models\DescribeAppDetailRequest.cs" />
     <Compile Include="V20220817\Models\DescribeAppDetailResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeCurrentMemberListRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeCurrentMemberListResponse.cs" />
     <Compile Include="V20220817\Models\DescribeDocumentRequest.cs" />
     <Compile Include="V20220817\Models\DescribeDocumentResponse.cs" />
     <Compile Include="V20220817\Models\DescribeDocumentsByRoomRequest.cs" />

@@ -87,6 +87,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("IsNotEqualServiceConfig")]
         public bool? IsNotEqualServiceConfig{ get; set; }
 
+        /// <summary>
+        /// HealthCheckSettings
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HealthCheckSettings")]
+        public HealthCheckSettings HealthCheckSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "OffInstanceCount", this.OffInstanceCount);
             this.SetParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
             this.SetParamSimple(map, prefix + "IsNotEqualServiceConfig", this.IsNotEqualServiceConfig);
+            this.SetParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
         }
     }
 }

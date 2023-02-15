@@ -185,6 +185,27 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("DatasetScope")]
         public string DatasetScope{ get; set; }
 
+        /// <summary>
+        /// 数据集OCR子场景
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OcrScene")]
+        public string OcrScene{ get; set; }
+
+        /// <summary>
+        /// 数据集字典修改状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnnotationKeyStatus")]
+        public string AnnotationKeyStatus{ get; set; }
+
+        /// <summary>
+        /// 文本数据集导入方式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContentType")]
+        public string ContentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +235,9 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "AnnotationType", this.AnnotationType);
             this.SetParamSimple(map, prefix + "AnnotationFormat", this.AnnotationFormat);
             this.SetParamSimple(map, prefix + "DatasetScope", this.DatasetScope);
+            this.SetParamSimple(map, prefix + "OcrScene", this.OcrScene);
+            this.SetParamSimple(map, prefix + "AnnotationKeyStatus", this.AnnotationKeyStatus);
+            this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
         }
     }
 }

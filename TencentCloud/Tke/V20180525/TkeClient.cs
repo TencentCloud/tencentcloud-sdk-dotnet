@@ -6533,7 +6533,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改告警规则 
+        /// 修改告警规则
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusAlertRuleRequest"/></param>
         /// <returns><see cref="ModifyPrometheusAlertRuleResponse"/></returns>
@@ -6553,7 +6553,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改告警规则 
+        /// 修改告警规则
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusAlertRuleRequest"/></param>
         /// <returns><see cref="ModifyPrometheusAlertRuleResponse"/></returns>
