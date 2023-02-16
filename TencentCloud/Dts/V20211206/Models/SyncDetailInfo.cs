@@ -80,6 +80,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("StepInfos")]
         public StepInfo[] StepInfos{ get; set; }
 
+        /// <summary>
+        /// 不能发起一致性校验的原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CauseOfCompareDisable")]
+        public string CauseOfCompareDisable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "SecondsBehindMaster", this.SecondsBehindMaster);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamArrayObj(map, prefix + "StepInfos.", this.StepInfos);
+            this.SetParamSimple(map, prefix + "CauseOfCompareDisable", this.CauseOfCompareDisable);
         }
     }
 }

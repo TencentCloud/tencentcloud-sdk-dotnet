@@ -38,6 +38,13 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("StartedApplicationNum")]
         public long? StartedApplicationNum{ get; set; }
 
+        /// <summary>
+        /// 启动失败的应用数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartFailedApplicationNum")]
+        public long? StartFailedApplicationNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Tem.V20210701.Models
         {
             this.SetParamSimple(map, prefix + "ApplicationNumNeedToStart", this.ApplicationNumNeedToStart);
             this.SetParamSimple(map, prefix + "StartedApplicationNum", this.StartedApplicationNum);
+            this.SetParamSimple(map, prefix + "StartFailedApplicationNum", this.StartFailedApplicationNum);
         }
     }
 }

@@ -63,6 +63,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
+        /// <summary>
+        /// 消息headers
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Headers")]
+        public string Headers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +82,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamSimple(map, prefix + "Headers", this.Headers);
         }
     }
 }

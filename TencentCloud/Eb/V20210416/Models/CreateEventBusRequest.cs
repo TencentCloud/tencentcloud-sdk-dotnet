@@ -36,6 +36,12 @@ namespace TencentCloud.Eb.V20210416.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// EB存储时长
+        /// </summary>
+        [JsonProperty("SaveDays")]
+        public long? SaveDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Eb.V20210416.Models
         {
             this.SetParamSimple(map, prefix + "EventBusName", this.EventBusName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "SaveDays", this.SaveDays);
         }
     }
 }

@@ -31,13 +31,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、noProxy,注意具体可选值依赖当前链路
+        /// 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
         /// </summary>
         [JsonProperty("SrcAccessType")]
         public string SrcAccessType{ get; set; }
 
         /// <summary>
-        /// 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、noProxy,注意具体可选值依赖当前链路
+        /// 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
         /// </summary>
         [JsonProperty("DstAccessType")]
         public string DstAccessType{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string ExpectRunTime{ get; set; }
 
         /// <summary>
-        /// 源端信息，单节点数据库使用
+        /// 源端信息，单节点数据库使用，且SrcNodeType传single
         /// </summary>
         [JsonProperty("SrcInfo")]
         public Endpoint SrcInfo{ get; set; }

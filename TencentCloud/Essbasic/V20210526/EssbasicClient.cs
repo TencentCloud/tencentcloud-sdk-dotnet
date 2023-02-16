@@ -809,6 +809,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 本接口（ChannelUpdateSealStatus）由于渠道版更新印章状态
+        /// </summary>
+        /// <param name="req"><see cref="ChannelUpdateSealStatusRequest"/></param>
+        /// <returns><see cref="ChannelUpdateSealStatusResponse"/></returns>
+        public async Task<ChannelUpdateSealStatusResponse> ChannelUpdateSealStatus(ChannelUpdateSealStatusRequest req)
+        {
+             JsonResponseModel<ChannelUpdateSealStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelUpdateSealStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelUpdateSealStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ChannelUpdateSealStatus）由于渠道版更新印章状态
+        /// </summary>
+        /// <param name="req"><see cref="ChannelUpdateSealStatusRequest"/></param>
+        /// <returns><see cref="ChannelUpdateSealStatusResponse"/></returns>
+        public ChannelUpdateSealStatusResponse ChannelUpdateSealStatusSync(ChannelUpdateSealStatusRequest req)
+        {
+             JsonResponseModel<ChannelUpdateSealStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelUpdateSealStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelUpdateSealStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 合同文件验签
         /// </summary>
         /// <param name="req"><see cref="ChannelVerifyPdfRequest"/></param>

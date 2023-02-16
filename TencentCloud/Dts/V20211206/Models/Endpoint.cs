@@ -199,6 +199,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("EncryptConn")]
         public string EncryptConn{ get; set; }
 
+        /// <summary>
+        /// 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatabaseNetEnv")]
+        public string DatabaseNetEnv{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +237,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
             this.SetParamSimple(map, prefix + "TmpToken", this.TmpToken);
             this.SetParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
+            this.SetParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
         }
     }
 }

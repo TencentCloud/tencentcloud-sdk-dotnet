@@ -608,6 +608,20 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 是否编码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PreStopEncoded")]
+        public string PreStopEncoded{ get; set; }
+
+        /// <summary>
+        /// 是否编码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PostStartEncoded")]
+        public string PostStartEncoded{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -700,6 +714,8 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamObj(map, prefix + "PodList.", this.PodList);
             this.SetParamSimple(map, prefix + "ConfEdited", this.ConfEdited);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "PreStopEncoded", this.PreStopEncoded);
+            this.SetParamSimple(map, prefix + "PostStartEncoded", this.PostStartEncoded);
         }
     }
 }

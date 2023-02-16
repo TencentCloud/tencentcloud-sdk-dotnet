@@ -87,6 +87,20 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("UnMatchedKey")]
         public string UnMatchedKey{ get; set; }
 
+        /// <summary>
+        /// tracking
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Backtracking")]
+        public string Backtracking{ get; set; }
+
+        /// <summary>
+        /// 分隔符
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Delimiter")]
+        public string Delimiter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +116,8 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "TimeFormat", this.TimeFormat);
             this.SetParamSimple(map, prefix + "UnMatchUpload", this.UnMatchUpload);
             this.SetParamSimple(map, prefix + "UnMatchedKey", this.UnMatchedKey);
+            this.SetParamSimple(map, prefix + "Backtracking", this.Backtracking);
+            this.SetParamSimple(map, prefix + "Delimiter", this.Delimiter);
         }
     }
 }

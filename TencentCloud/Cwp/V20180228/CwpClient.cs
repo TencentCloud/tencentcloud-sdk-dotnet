@@ -8419,6 +8419,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 修改主机备注信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMachineRemarkRequest"/></param>
+        /// <returns><see cref="ModifyMachineRemarkResponse"/></returns>
+        public async Task<ModifyMachineRemarkResponse> ModifyMachineRemark(ModifyMachineRemarkRequest req)
+        {
+             JsonResponseModel<ModifyMachineRemarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMachineRemark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMachineRemarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改主机备注信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMachineRemarkRequest"/></param>
+        /// <returns><see cref="ModifyMachineRemarkResponse"/></returns>
+        public ModifyMachineRemarkResponse ModifyMachineRemarkSync(ModifyMachineRemarkRequest req)
+        {
+             JsonResponseModel<ModifyMachineRemarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMachineRemark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMachineRemarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 定时扫描设置
         /// </summary>
         /// <param name="req"><see cref="ModifyMalwareTimingScanSettingsRequest"/></param>

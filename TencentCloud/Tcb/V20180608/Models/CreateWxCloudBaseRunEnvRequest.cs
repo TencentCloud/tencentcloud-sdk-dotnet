@@ -68,6 +68,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("IsOpenCloudInvoke")]
         public bool? IsOpenCloudInvoke{ get; set; }
 
+        /// <summary>
+        /// 创建来源：wechat | cloud
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
+        /// <summary>
+        /// 渠道：wechat | cloud
+        /// </summary>
+        [JsonProperty("Channel")]
+        public string Channel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +93,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamArraySimple(map, prefix + "SubNetIds.", this.SubNetIds);
             this.SetParamSimple(map, prefix + "IsOpenCloudInvoke", this.IsOpenCloudInvoke);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "Channel", this.Channel);
         }
     }
 }

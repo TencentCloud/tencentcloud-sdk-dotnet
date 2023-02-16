@@ -2501,6 +2501,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 修改负载均衡转发规则上所绑定的云函数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionTargetsRequest"/></param>
+        /// <returns><see cref="ModifyFunctionTargetsResponse"/></returns>
+        public async Task<ModifyFunctionTargetsResponse> ModifyFunctionTargets(ModifyFunctionTargetsRequest req)
+        {
+             JsonResponseModel<ModifyFunctionTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyFunctionTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFunctionTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改负载均衡转发规则上所绑定的云函数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionTargetsRequest"/></param>
+        /// <returns><see cref="ModifyFunctionTargetsResponse"/></returns>
+        public ModifyFunctionTargetsResponse ModifyFunctionTargetsSync(ModifyFunctionTargetsRequest req)
+        {
+             JsonResponseModel<ModifyFunctionTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyFunctionTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFunctionTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// ModifyListener接口用来修改负载均衡监听器的属性，包括监听器名称、健康检查参数、证书信息、转发策略等。本接口不支持传统型负载均衡。
         /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
         /// </summary>

@@ -35,13 +35,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>NewFileUpload：视频上传完成；</li>
         /// <li>ProcedureStateChanged：任务流状态变更；</li>
         /// <li>FileDeleted：视频删除完成；</li>
+        /// <li>RestoreMediaComplete：视频取回完成；</li>
         /// <li>PullComplete：视频转拉完成；</li>
         /// <li>EditMediaComplete：视频编辑完成；</li>
         /// <li>SplitMediaComplete：视频拆分完成；</li>
-        /// <li>WechatPublishComplete：微信发布完成；</li>
         /// <li>ComposeMediaComplete：制作媒体文件完成；</li>
         /// <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-        /// <li>FastClipMediaComplete：快速剪辑完成；</li>
+        /// <li>RemoveWatermark：智能去除水印完成。</li>
+        /// <li>RebuildMediaComplete：音画质重生完成事件。</li>
         /// <li>ReviewAudioVideoComplete：音视频审核完成；</li>
         /// <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
         /// <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
@@ -91,7 +92,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public EditMediaTask EditMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// 视频拆条完成事件，当事件类型为 SplitMediaComplete 时有效。
+        /// 视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SplitMediaCompleteEvent")]
@@ -154,21 +155,28 @@ namespace TencentCloud.Vod.V20180717.Models
         public WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent{ get; set; }
 
         /// <summary>
-        /// 智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+        /// 智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemoveWatermarkCompleteEvent")]
         public RemoveWatermarkTask RemoveWatermarkCompleteEvent{ get; set; }
 
         /// <summary>
-        /// 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
+        /// 视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RestoreMediaCompleteEvent")]
         public RestoreMediaTask RestoreMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// 溯源水印提取完成事件，当事件类型为ExtractTraceWatermarkComplete 时有效。
+        /// 音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RebuildMediaCompleteEvent")]
+        public RebuildMediaTask RebuildMediaCompleteEvent{ get; set; }
+
+        /// <summary>
+        /// 溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtractTraceWatermarkCompleteEvent")]
@@ -219,6 +227,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
             this.SetParamObj(map, prefix + "RemoveWatermarkCompleteEvent.", this.RemoveWatermarkCompleteEvent);
             this.SetParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
+            this.SetParamObj(map, prefix + "RebuildMediaCompleteEvent.", this.RebuildMediaCompleteEvent);
             this.SetParamObj(map, prefix + "ExtractTraceWatermarkCompleteEvent.", this.ExtractTraceWatermarkCompleteEvent);
             this.SetParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
             this.SetParamObj(map, prefix + "ReduceMediaBitrateCompleteEvent.", this.ReduceMediaBitrateCompleteEvent);

@@ -25,7 +25,7 @@ namespace TencentCloud.Bma.V20221115.Models
     {
         
         /// <summary>
-        /// 仿冒网址下载链接：请严格按照模版要求填写，https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221124/ff3273b24104d03fa3a8d0629a7f71a9/批量仿冒网址举报模板.xlsx
+        /// 批量模版
         /// </summary>
         [JsonProperty("FakeURLs")]
         public string FakeURLs{ get; set; }

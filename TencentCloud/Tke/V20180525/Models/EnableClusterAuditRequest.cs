@@ -42,6 +42,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
+        /// <summary>
+        /// topic所在region，默认为集群当前region
+        /// </summary>
+        [JsonProperty("TopicRegion")]
+        public string TopicRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "TopicRegion", this.TopicRegion);
         }
     }
 }

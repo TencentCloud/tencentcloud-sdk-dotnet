@@ -90,6 +90,24 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Rewords")]
         public ulong? Rewords{ get; set; }
 
+        /// <summary>
+        /// 用户IP。
+        /// </summary>
+        [JsonProperty("IPAddress")]
+        public string IPAddress{ get; set; }
+
+        /// <summary>
+        /// 用户位置信息。
+        /// </summary>
+        [JsonProperty("Location")]
+        public string Location{ get; set; }
+
+        /// <summary>
+        /// 用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序）
+        /// </summary>
+        [JsonProperty("Device")]
+        public long? Device{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +125,9 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "FirstJoinTimestamp", this.FirstJoinTimestamp);
             this.SetParamSimple(map, prefix + "LastQuitTimestamp", this.LastQuitTimestamp);
             this.SetParamSimple(map, prefix + "Rewords", this.Rewords);
+            this.SetParamSimple(map, prefix + "IPAddress", this.IPAddress);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
+            this.SetParamSimple(map, prefix + "Device", this.Device);
         }
     }
 }

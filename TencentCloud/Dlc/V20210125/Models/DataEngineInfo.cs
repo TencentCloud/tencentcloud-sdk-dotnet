@@ -235,6 +235,34 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("UiURL")]
         public string UiURL{ get; set; }
 
+        /// <summary>
+        /// 引擎的资源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// 集群镜像版本ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageVersionId")]
+        public string ImageVersionId{ get; set; }
+
+        /// <summary>
+        /// 集群镜像小版本ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChildImageVersionId")]
+        public string ChildImageVersionId{ get; set; }
+
+        /// <summary>
+        /// 集群镜像版本名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageVersionName")]
+        public string ImageVersionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -273,6 +301,10 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "AutoSuspendTime", this.AutoSuspendTime);
             this.SetParamArrayObj(map, prefix + "NetworkConnectionSet.", this.NetworkConnectionSet);
             this.SetParamSimple(map, prefix + "UiURL", this.UiURL);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "ImageVersionId", this.ImageVersionId);
+            this.SetParamSimple(map, prefix + "ChildImageVersionId", this.ChildImageVersionId);
+            this.SetParamSimple(map, prefix + "ImageVersionName", this.ImageVersionName);
         }
     }
 }
