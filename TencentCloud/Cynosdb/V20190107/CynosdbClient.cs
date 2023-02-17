@@ -3053,6 +3053,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 更换集群vpc
+        /// </summary>
+        /// <param name="req"><see cref="SwitchClusterVpcRequest"/></param>
+        /// <returns><see cref="SwitchClusterVpcResponse"/></returns>
+        public async Task<SwitchClusterVpcResponse> SwitchClusterVpc(SwitchClusterVpcRequest req)
+        {
+             JsonResponseModel<SwitchClusterVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchClusterVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchClusterVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更换集群vpc
+        /// </summary>
+        /// <param name="req"><see cref="SwitchClusterVpcRequest"/></param>
+        /// <returns><see cref="SwitchClusterVpcResponse"/></returns>
+        public SwitchClusterVpcResponse SwitchClusterVpcSync(SwitchClusterVpcRequest req)
+        {
+             JsonResponseModel<SwitchClusterVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchClusterVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchClusterVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 切换到从可用区
         /// </summary>
         /// <param name="req"><see cref="SwitchClusterZoneRequest"/></param>

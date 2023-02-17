@@ -118,11 +118,18 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string RecordUrl{ get; set; }
 
         /// <summary>
-        /// 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+        /// 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// 房间绑定的群组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -150,6 +157,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamArraySimple(map, prefix + "Assistants.", this.Assistants);
             this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

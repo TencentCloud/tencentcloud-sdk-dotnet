@@ -932,5 +932,45 @@ namespace TencentCloud.Ssa.V20180608
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 安全事件通用字段
+        /// </summary>
+        /// <param name="req"><see cref="SaEventPubRequest"/></param>
+        /// <returns><see cref="SaEventPubResponse"/></returns>
+        public async Task<SaEventPubResponse> SaEventPub(SaEventPubRequest req)
+        {
+             JsonResponseModel<SaEventPubResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SaEventPub");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SaEventPubResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 安全事件通用字段
+        /// </summary>
+        /// <param name="req"><see cref="SaEventPubRequest"/></param>
+        /// <returns><see cref="SaEventPubResponse"/></returns>
+        public SaEventPubResponse SaEventPubSync(SaEventPubRequest req)
+        {
+             JsonResponseModel<SaEventPubResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SaEventPub");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SaEventPubResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

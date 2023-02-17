@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 开始时间（必填）
+        /// 开始时间（必填）格式为时间戳 毫秒
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// 结束时间（必填）
+        /// 结束时间（必填）格式为时间戳 毫秒
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

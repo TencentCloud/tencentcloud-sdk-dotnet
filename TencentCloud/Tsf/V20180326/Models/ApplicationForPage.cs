@@ -115,6 +115,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ServiceConfigList")]
         public ServiceConfig[] ServiceConfigList{ get; set; }
 
+        /// <summary>
+        /// IgnoreCreateImageRepository
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IgnoreCreateImageRepository")]
+        public bool? IgnoreCreateImageRepository{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ApigatewayServiceId", this.ApigatewayServiceId);
             this.SetParamSimple(map, prefix + "ApplicationRemarkName", this.ApplicationRemarkName);
             this.SetParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
+            this.SetParamSimple(map, prefix + "IgnoreCreateImageRepository", this.IgnoreCreateImageRepository);
         }
     }
 }

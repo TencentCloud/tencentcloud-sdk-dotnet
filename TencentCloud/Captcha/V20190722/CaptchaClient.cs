@@ -533,6 +533,46 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
+        /// 查询单个CaptchaAppID验证的统计数据，包括：请求量、验证量、验证通过量、验证拦截量。
+        /// </summary>
+        /// <param name="req"><see cref="GetRequestStatisticsRequest"/></param>
+        /// <returns><see cref="GetRequestStatisticsResponse"/></returns>
+        public async Task<GetRequestStatisticsResponse> GetRequestStatistics(GetRequestStatisticsRequest req)
+        {
+             JsonResponseModel<GetRequestStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRequestStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRequestStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单个CaptchaAppID验证的统计数据，包括：请求量、验证量、验证通过量、验证拦截量。
+        /// </summary>
+        /// <param name="req"><see cref="GetRequestStatisticsRequest"/></param>
+        /// <returns><see cref="GetRequestStatisticsResponse"/></returns>
+        public GetRequestStatisticsResponse GetRequestStatisticsSync(GetRequestStatisticsRequest req)
+        {
+             JsonResponseModel<GetRequestStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRequestStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRequestStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询单个CaptchaAppID票据校验数据，包括：票据校验量、票据校验通过量、票据校验拦截量。
         /// </summary>
         /// <param name="req"><see cref="GetTicketStatisticsRequest"/></param>
@@ -564,6 +604,46 @@ namespace TencentCloud.Captcha.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "GetTicketStatistics");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTicketStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询全部验证的统计数据，包括：总请求量、总验证量、总验证通过量、总验证拦截量等数据。
+        /// </summary>
+        /// <param name="req"><see cref="GetTotalRequestStatisticsRequest"/></param>
+        /// <returns><see cref="GetTotalRequestStatisticsResponse"/></returns>
+        public async Task<GetTotalRequestStatisticsResponse> GetTotalRequestStatistics(GetTotalRequestStatisticsRequest req)
+        {
+             JsonResponseModel<GetTotalRequestStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetTotalRequestStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTotalRequestStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询全部验证的统计数据，包括：总请求量、总验证量、总验证通过量、总验证拦截量等数据。
+        /// </summary>
+        /// <param name="req"><see cref="GetTotalRequestStatisticsRequest"/></param>
+        /// <returns><see cref="GetTotalRequestStatisticsResponse"/></returns>
+        public GetTotalRequestStatisticsResponse GetTotalRequestStatisticsSync(GetTotalRequestStatisticsRequest req)
+        {
+             JsonResponseModel<GetTotalRequestStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetTotalRequestStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTotalRequestStatisticsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

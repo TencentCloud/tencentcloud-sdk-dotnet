@@ -120,6 +120,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Assistants")]
         public string[] Assistants{ get; set; }
 
+        /// <summary>
+        /// 房间绑定的群组ID
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +145,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "SubType", this.SubType);
             this.SetParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
             this.SetParamArraySimple(map, prefix + "Assistants.", this.Assistants);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

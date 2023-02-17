@@ -1053,7 +1053,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例大Key
+        /// 腾讯云数据库 Redis 已经于2022年10月31日下线查询实例大 Key 接口。具体公告，请参见[查询实例大 Key 接口下线公告](https://cloud.tencent.com/document/product/239/81005)。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeyResponse"/></returns>
@@ -1073,7 +1073,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例大Key
+        /// 腾讯云数据库 Redis 已经于2022年10月31日下线查询实例大 Key 接口。具体公告，请参见[查询实例大 Key 接口下线公告](https://cloud.tencent.com/document/product/239/81005)。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeyResponse"/></returns>
@@ -1093,7 +1093,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例大Key大小分布
+        /// 腾讯云数据库 Redis 已经于2022年10月31日下线查询实例大 Key 接口。具体公告，请参见 [查询实例大 Key 接口下线公告](https://cloud.tencent.com/document/product/239/81005)。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeySizeDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeySizeDistResponse"/></returns>
@@ -1113,7 +1113,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例大Key大小分布
+        /// 腾讯云数据库 Redis 已经于2022年10月31日下线查询实例大 Key 接口。具体公告，请参见 [查询实例大 Key 接口下线公告](https://cloud.tencent.com/document/product/239/81005)。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeySizeDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeySizeDistResponse"/></returns>
@@ -1133,7 +1133,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例大Key类型分布
+        /// 腾讯云数据库 Redis 已经于2022年10月31日下线查询实例大 Key 接口。具体公告，请参见 [查询实例大 Key 接口下线公告](https://cloud.tencent.com/document/product/239/81005)。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyTypeDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeyTypeDistResponse"/></returns>
@@ -1153,7 +1153,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例大Key类型分布
+        /// 腾讯云数据库 Redis 已经于2022年10月31日下线查询实例大 Key 接口。具体公告，请参见 [查询实例大 Key 接口下线公告](https://cloud.tencent.com/document/product/239/81005)。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyTypeDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeyTypeDistResponse"/></returns>

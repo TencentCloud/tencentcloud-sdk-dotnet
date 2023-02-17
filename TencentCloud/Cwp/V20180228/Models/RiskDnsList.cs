@@ -152,7 +152,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineWanIp{ get; set; }
 
         /// <summary>
-        /// 主机在线状态 OFFLINE  ONLINE
+        /// 主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineStatus")]

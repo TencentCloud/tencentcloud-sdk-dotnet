@@ -5747,6 +5747,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 发起音画质重生
+        /// </summary>
+        /// <param name="req"><see cref="RebuildMediaRequest"/></param>
+        /// <returns><see cref="RebuildMediaResponse"/></returns>
+        public async Task<RebuildMediaResponse> RebuildMedia(RebuildMediaRequest req)
+        {
+             JsonResponseModel<RebuildMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RebuildMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebuildMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发起音画质重生
+        /// </summary>
+        /// <param name="req"><see cref="RebuildMediaRequest"/></param>
+        /// <returns><see cref="RebuildMediaResponse"/></returns>
+        public RebuildMediaResponse RebuildMediaSync(RebuildMediaRequest req)
+        {
+             JsonResponseModel<RebuildMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RebuildMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebuildMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 1. 刷新指定的 URL 列表。
         /// 2. URL 的域名必须已在云点播中注册。
         /// 3. 单次请求最多指定20个 URL。

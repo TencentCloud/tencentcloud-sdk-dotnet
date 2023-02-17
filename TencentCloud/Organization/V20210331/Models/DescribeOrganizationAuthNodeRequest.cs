@@ -36,6 +36,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 互信主体名称。
+        /// </summary>
+        [JsonProperty("AuthName")]
+        public string AuthName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Organization.V20210331.Models
         {
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "AuthName", this.AuthName);
         }
     }
 }

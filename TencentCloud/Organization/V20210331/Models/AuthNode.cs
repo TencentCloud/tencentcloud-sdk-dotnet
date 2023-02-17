@@ -25,18 +25,25 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 主体关系ID
+        /// 互信主体关系ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelationId")]
         public long? RelationId{ get; set; }
 
         /// <summary>
-        /// 主体名称
+        /// 互信主体名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthName")]
         public string AuthName{ get; set; }
+
+        /// <summary>
+        /// 主体管理员
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Manager")]
+        public MemberMainInfo Manager{ get; set; }
 
 
         /// <summary>
@@ -46,6 +53,7 @@ namespace TencentCloud.Organization.V20210331.Models
         {
             this.SetParamSimple(map, prefix + "RelationId", this.RelationId);
             this.SetParamSimple(map, prefix + "AuthName", this.AuthName);
+            this.SetParamObj(map, prefix + "Manager.", this.Manager);
         }
     }
 }

@@ -65,6 +65,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("UnitRuleItemList")]
         public UnitRuleItem[] UnitRuleItemList{ get; set; }
 
+        /// <summary>
+        /// CreatedTime
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
+        /// <summary>
+        /// UpdatedTime
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdatedTime")]
+        public string UpdatedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +91,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "UnitRuleItemList.", this.UnitRuleItemList);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         }
     }
 }

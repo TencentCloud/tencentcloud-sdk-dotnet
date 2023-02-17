@@ -57,6 +57,83 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// KafkaVIp
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KafkaVIp")]
+        public string KafkaVIp{ get; set; }
+
+        /// <summary>
+        /// KafkaAddress
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KafkaAddress")]
+        public string KafkaAddress{ get; set; }
+
+        /// <summary>
+        /// KafkaVPort
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KafkaVPort")]
+        public string KafkaVPort{ get; set; }
+
+        /// <summary>
+        /// Topic
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Topic")]
+        public string Topic{ get; set; }
+
+        /// <summary>
+        /// LineRule
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LineRule")]
+        public string LineRule{ get; set; }
+
+        /// <summary>
+        /// CustomRule
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomRule")]
+        public string CustomRule{ get; set; }
+
+        /// <summary>
+        /// EnableGlobalLineRule
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableGlobalLineRule")]
+        public bool? EnableGlobalLineRule{ get; set; }
+
+        /// <summary>
+        /// EnableAuth
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableAuth")]
+        public bool? EnableAuth{ get; set; }
+
+        /// <summary>
+        /// Username
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
+        /// <summary>
+        /// Password
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
+        /// <summary>
+        /// KafkaInfos
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KafkaInfos")]
+        public DeliveryKafkaInfo[] KafkaInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +145,17 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArraySimple(map, prefix + "CollectPath.", this.CollectPath);
             this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "KafkaVIp", this.KafkaVIp);
+            this.SetParamSimple(map, prefix + "KafkaAddress", this.KafkaAddress);
+            this.SetParamSimple(map, prefix + "KafkaVPort", this.KafkaVPort);
+            this.SetParamSimple(map, prefix + "Topic", this.Topic);
+            this.SetParamSimple(map, prefix + "LineRule", this.LineRule);
+            this.SetParamSimple(map, prefix + "CustomRule", this.CustomRule);
+            this.SetParamSimple(map, prefix + "EnableGlobalLineRule", this.EnableGlobalLineRule);
+            this.SetParamSimple(map, prefix + "EnableAuth", this.EnableAuth);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamArrayObj(map, prefix + "KafkaInfos.", this.KafkaInfos);
         }
     }
 }

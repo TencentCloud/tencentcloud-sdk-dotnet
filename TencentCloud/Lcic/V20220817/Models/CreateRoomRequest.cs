@@ -115,6 +115,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("RecordLayout")]
         public ulong? RecordLayout{ get; set; }
 
+        /// <summary>
+        /// 房间绑定的群组ID,非空时限制组成员进入
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +140,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
             this.SetParamArraySimple(map, prefix + "Assistants.", this.Assistants);
             this.SetParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

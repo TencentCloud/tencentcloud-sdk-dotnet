@@ -133,6 +133,52 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
+        /// 为代客or申请中代客分派跟进人（业务员）
+        /// - 代客列表获取API： [DescribeAgentAuditedClients](https://cloud.tencent.com/document/product/563/19184)
+        /// - 申请中代客列表获取API：[DescribeAgentClients](https://cloud.tencent.com/document/product/563/16046)
+        /// - 业务员列表获取API：[DescribeSalesmans](https://cloud.tencent.com/document/product/563/35196)
+        /// </summary>
+        /// <param name="req"><see cref="AssignClientsToSalesRequest"/></param>
+        /// <returns><see cref="AssignClientsToSalesResponse"/></returns>
+        public async Task<AssignClientsToSalesResponse> AssignClientsToSales(AssignClientsToSalesRequest req)
+        {
+             JsonResponseModel<AssignClientsToSalesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssignClientsToSales");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignClientsToSalesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为代客or申请中代客分派跟进人（业务员）
+        /// - 代客列表获取API： [DescribeAgentAuditedClients](https://cloud.tencent.com/document/product/563/19184)
+        /// - 申请中代客列表获取API：[DescribeAgentClients](https://cloud.tencent.com/document/product/563/16046)
+        /// - 业务员列表获取API：[DescribeSalesmans](https://cloud.tencent.com/document/product/563/35196)
+        /// </summary>
+        /// <param name="req"><see cref="AssignClientsToSalesRequest"/></param>
+        /// <returns><see cref="AssignClientsToSalesResponse"/></returns>
+        public AssignClientsToSalesResponse AssignClientsToSalesSync(AssignClientsToSalesRequest req)
+        {
+             JsonResponseModel<AssignClientsToSalesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssignClientsToSales");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignClientsToSalesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 代理商可以审核其名下申请中代客
         /// </summary>
         /// <param name="req"><see cref="AuditApplyClientRequest"/></param>

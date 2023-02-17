@@ -373,7 +373,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 获取可创建组织成员的认证主体关系列表
+        /// 获取已设置管理员的互信主体关系列表
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationAuthNodeRequest"/></param>
         /// <returns><see cref="DescribeOrganizationAuthNodeResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 获取可创建组织成员的认证主体关系列表
+        /// 获取已设置管理员的互信主体关系列表
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationAuthNodeRequest"/></param>
         /// <returns><see cref="DescribeOrganizationAuthNodeResponse"/></returns>

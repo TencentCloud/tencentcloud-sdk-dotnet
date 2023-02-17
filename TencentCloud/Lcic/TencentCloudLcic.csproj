@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.699</VersionPrefix>
+    <VersionPrefix>3.0.700</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,11 +48,19 @@
 
   <ItemGroup>
     <Compile Include="V20220817\LcicClient.cs" />
+    <Compile Include="V20220817\Models\AddGroupMemberRequest.cs" />
+    <Compile Include="V20220817\Models\AddGroupMemberResponse.cs" />
     <Compile Include="V20220817\Models\AppConfig.cs" />
     <Compile Include="V20220817\Models\AppCustomContent.cs" />
     <Compile Include="V20220817\Models\BackgroundPictureConfig.cs" />
+    <Compile Include="V20220817\Models\BatchAddGroupMemberRequest.cs" />
+    <Compile Include="V20220817\Models\BatchAddGroupMemberResponse.cs" />
+    <Compile Include="V20220817\Models\BatchCreateGroupWithMembersRequest.cs" />
+    <Compile Include="V20220817\Models\BatchCreateGroupWithMembersResponse.cs" />
     <Compile Include="V20220817\Models\BatchCreateRoomRequest.cs" />
     <Compile Include="V20220817\Models\BatchCreateRoomResponse.cs" />
+    <Compile Include="V20220817\Models\BatchDeleteGroupMemberRequest.cs" />
+    <Compile Include="V20220817\Models\BatchDeleteGroupMemberResponse.cs" />
     <Compile Include="V20220817\Models\BatchDeleteRecordRequest.cs" />
     <Compile Include="V20220817\Models\BatchDeleteRecordResponse.cs" />
     <Compile Include="V20220817\Models\BatchRegisterRequest.cs" />
@@ -63,12 +71,20 @@
     <Compile Include="V20220817\Models\BindDocumentToRoomResponse.cs" />
     <Compile Include="V20220817\Models\CreateDocumentRequest.cs" />
     <Compile Include="V20220817\Models\CreateDocumentResponse.cs" />
+    <Compile Include="V20220817\Models\CreateGroupWithMembersRequest.cs" />
+    <Compile Include="V20220817\Models\CreateGroupWithMembersResponse.cs" />
+    <Compile Include="V20220817\Models\CreateGroupWithSubGroupRequest.cs" />
+    <Compile Include="V20220817\Models\CreateGroupWithSubGroupResponse.cs" />
     <Compile Include="V20220817\Models\CreateRoomRequest.cs" />
     <Compile Include="V20220817\Models\CreateRoomResponse.cs" />
     <Compile Include="V20220817\Models\CreateSupervisorRequest.cs" />
     <Compile Include="V20220817\Models\CreateSupervisorResponse.cs" />
     <Compile Include="V20220817\Models\DeleteDocumentRequest.cs" />
     <Compile Include="V20220817\Models\DeleteDocumentResponse.cs" />
+    <Compile Include="V20220817\Models\DeleteGroupMemberRequest.cs" />
+    <Compile Include="V20220817\Models\DeleteGroupMemberResponse.cs" />
+    <Compile Include="V20220817\Models\DeleteGroupRequest.cs" />
+    <Compile Include="V20220817\Models\DeleteGroupResponse.cs" />
     <Compile Include="V20220817\Models\DeleteRecordRequest.cs" />
     <Compile Include="V20220817\Models\DeleteRecordResponse.cs" />
     <Compile Include="V20220817\Models\DeleteRoomRequest.cs" />
@@ -81,6 +97,12 @@
     <Compile Include="V20220817\Models\DescribeDocumentResponse.cs" />
     <Compile Include="V20220817\Models\DescribeDocumentsByRoomRequest.cs" />
     <Compile Include="V20220817\Models\DescribeDocumentsByRoomResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeGroupListRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeGroupListResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeGroupMemberListRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeGroupMemberListResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeGroupRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeGroupResponse.cs" />
     <Compile Include="V20220817\Models\DescribeRoomRequest.cs" />
     <Compile Include="V20220817\Models\DescribeRoomResponse.cs" />
     <Compile Include="V20220817\Models\DescribeRoomStatisticsRequest.cs" />
@@ -92,6 +114,8 @@
     <Compile Include="V20220817\Models\DocumentInfo.cs" />
     <Compile Include="V20220817\Models\GetWatermarkRequest.cs" />
     <Compile Include="V20220817\Models\GetWatermarkResponse.cs" />
+    <Compile Include="V20220817\Models\GroupBaseInfo.cs" />
+    <Compile Include="V20220817\Models\GroupInfo.cs" />
     <Compile Include="V20220817\Models\LoginOriginIdRequest.cs" />
     <Compile Include="V20220817\Models\LoginOriginIdResponse.cs" />
     <Compile Include="V20220817\Models\LoginUserRequest.cs" />
@@ -99,6 +123,8 @@
     <Compile Include="V20220817\Models\MemberRecord.cs" />
     <Compile Include="V20220817\Models\ModifyAppRequest.cs" />
     <Compile Include="V20220817\Models\ModifyAppResponse.cs" />
+    <Compile Include="V20220817\Models\ModifyGroupRequest.cs" />
+    <Compile Include="V20220817\Models\ModifyGroupResponse.cs" />
     <Compile Include="V20220817\Models\ModifyRoomRequest.cs" />
     <Compile Include="V20220817\Models\ModifyRoomResponse.cs" />
     <Compile Include="V20220817\Models\ModifyUserProfileRequest.cs" />

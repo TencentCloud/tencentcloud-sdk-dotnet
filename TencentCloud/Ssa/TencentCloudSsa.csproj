@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2D2665D3-3EFE-35CA-BBCD-325648942550}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.699</VersionPrefix>
+    <VersionPrefix>3.0.700</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -111,7 +111,9 @@
     <Compile Include="V20180608\Models\DescribeVulListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeVulListResponse.cs" />
     <Compile Include="V20180608\Models\Filter.cs" />
+    <Compile Include="V20180608\Models\ListDataSaEventPub.cs" />
     <Compile Include="V20180608\Models\MappingResult.cs" />
+    <Compile Include="V20180608\Models\ObjDataSaEventPub.cs" />
     <Compile Include="V20180608\Models\QueryFilter.cs" />
     <Compile Include="V20180608\Models\QuerySort.cs" />
     <Compile Include="V20180608\Models\Results.cs" />
@@ -119,6 +121,8 @@
     <Compile Include="V20180608\Models\SaDivulgeDataQueryPubList.cs" />
     <Compile Include="V20180608\Models\SaDivulgeDataQueryPubRequest.cs" />
     <Compile Include="V20180608\Models\SaDivulgeDataQueryPubResponse.cs" />
+    <Compile Include="V20180608\Models\SaEventPubRequest.cs" />
+    <Compile Include="V20180608\Models\SaEventPubResponse.cs" />
     <Compile Include="V20180608\Models\SecurityStatus.cs" />
     <Compile Include="V20180608\Models\SocCheckItem.cs" />
     <Compile Include="V20180608\Models\SocCheckItemV1.cs" />

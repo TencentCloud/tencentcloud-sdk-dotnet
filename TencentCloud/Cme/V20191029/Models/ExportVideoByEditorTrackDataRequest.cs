@@ -48,7 +48,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string ExportDestination{ get; set; }
 
         /// <summary>
-        /// 在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
+        /// 轨道数据，用于描述待导出视频的内容。关于轨道数据的格式请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。文档中也描述了如何在页面上查看一个剪辑项目的轨道数据，该能力可以帮助开发者更方便地构造自己的轨道数据。
         /// </summary>
         [JsonProperty("TrackData")]
         public string TrackData{ get; set; }

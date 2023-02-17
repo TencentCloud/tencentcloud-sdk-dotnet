@@ -42,6 +42,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>libfdk_aac。</li>
         /// 当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
         /// <li>libfdk_aac。</li>
+        /// 当外层参数 Container 为 wav 时，可选值为：
+        /// <li>pcm16。</li>
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
@@ -54,6 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 音频流的采样率，可选值：
+        /// <li>16000，仅当 Codec 为 pcm16 时可选。</li>
         /// <li>32000</li>
         /// <li>44100</li>
         /// <li>48000</li>

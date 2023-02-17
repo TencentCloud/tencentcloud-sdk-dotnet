@@ -15,27 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Lcic.V20220817.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeCDBProxyResponse : AbstractModel
+    public class ModifyGroupRequest : AbstractModel
     {
         
         /// <summary>
-        /// 异步处理ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 需要修改的群组ID
         /// </summary>
-        [JsonProperty("AsyncRequestId")]
-        public string AsyncRequestId{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 低代码平台应用ID
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
+
+        /// <summary>
+        /// 默认绑定主讲老师ID
+        /// </summary>
+        [JsonProperty("TeacherId")]
+        public string TeacherId{ get; set; }
+
+        /// <summary>
+        /// 待修改的群组名称
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
 
 
         /// <summary>
@@ -43,8 +54,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "TeacherId", this.TeacherId);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
         }
     }
 }
