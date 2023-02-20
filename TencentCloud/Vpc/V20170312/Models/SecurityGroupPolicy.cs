@@ -68,7 +68,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// IP地址ID或者ID地址组ID。
+        /// IP地址ID或者IP地址组ID。
         /// </summary>
         [JsonProperty("AddressTemplate")]
         public AddressTemplateSpecification AddressTemplate{ get; set; }

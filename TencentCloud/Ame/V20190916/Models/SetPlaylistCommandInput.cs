@@ -50,10 +50,17 @@ namespace TencentCloud.Ame.V20190916.Models
         public long? ChangedIndex{ get; set; }
 
         /// <summary>
-        /// 歌曲 ID 列表，当 Type 取 Add 时，必填。
+        /// 歌曲 ID 列表，当 Type 取 Add 时，与MusicURLs必填其中一项。
         /// </summary>
         [JsonProperty("MusicIds")]
         public string[] MusicIds{ get; set; }
+
+        /// <summary>
+        /// 歌曲 URL 列表，当 Type 取 Add 时，与MusicIds必填其中一项。
+        /// 注：URL必须以.mp3结尾且必须是mp3编码文件。
+        /// </summary>
+        [JsonProperty("MusicURLs")]
+        public string[] MusicURLs{ get; set; }
 
 
         /// <summary>
@@ -65,6 +72,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamSimple(map, prefix + "Index", this.Index);
             this.SetParamSimple(map, prefix + "ChangedIndex", this.ChangedIndex);
             this.SetParamArraySimple(map, prefix + "MusicIds.", this.MusicIds);
+            this.SetParamArraySimple(map, prefix + "MusicURLs.", this.MusicURLs);
         }
     }
 }

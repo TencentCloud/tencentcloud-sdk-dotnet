@@ -24,12 +24,33 @@ namespace TencentCloud.Captcha.V20190722.Models
     public class GetTotalRequestStatisticsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 开始时间字符串
+        /// </summary>
+        [JsonProperty("StartTimeStr")]
+        public string StartTimeStr{ get; set; }
+
+        /// <summary>
+        /// 结束时间字符串
+        /// </summary>
+        [JsonProperty("EndTimeStr")]
+        public string EndTimeStr{ get; set; }
+
+        /// <summary>
+        /// 查询粒度
+        /// </summary>
+        [JsonProperty("Dimension")]
+        public string Dimension{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "StartTimeStr", this.StartTimeStr);
+            this.SetParamSimple(map, prefix + "EndTimeStr", this.EndTimeStr);
+            this.SetParamSimple(map, prefix + "Dimension", this.Dimension);
         }
     }
 }

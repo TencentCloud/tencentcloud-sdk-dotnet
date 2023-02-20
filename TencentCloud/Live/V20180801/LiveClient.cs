@@ -725,7 +725,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建直播垫片模板。
+        /// 创建直播时移模板。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveTimeShiftTemplateRequest"/></param>
         /// <returns><see cref="CreateLiveTimeShiftTemplateResponse"/></returns>
@@ -745,7 +745,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建直播垫片模板。
+        /// 创建直播时移模板。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveTimeShiftTemplateRequest"/></param>
         /// <returns><see cref="CreateLiveTimeShiftTemplateResponse"/></returns>
@@ -5025,7 +5025,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 修改直播垫片模板。
+        /// 修改直播时移模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyLiveTimeShiftTemplateRequest"/></param>
         /// <returns><see cref="ModifyLiveTimeShiftTemplateResponse"/></returns>
@@ -5045,7 +5045,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 修改直播垫片模板。
+        /// 修改直播时移模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyLiveTimeShiftTemplateRequest"/></param>
         /// <returns><see cref="ModifyLiveTimeShiftTemplateResponse"/></returns>

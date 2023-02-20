@@ -25,61 +25,61 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 私用网络ID或者统一ID，建议使用统一ID
+        /// 私用网络ID或者统一ID，建议使用统一ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 流日志唯一ID
+        /// 流日志唯一ID。
         /// </summary>
         [JsonProperty("FlowLogId")]
         public string FlowLogId{ get; set; }
 
         /// <summary>
-        /// 流日志实例名字
+        /// 流日志实例名字。
         /// </summary>
         [JsonProperty("FlowLogName")]
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+        /// 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 资源唯一ID
+        /// 资源唯一ID。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 流日志采集类型，ACCEPT|REJECT|ALL
+        /// 流日志采集类型，ACCEPT|REJECT|ALL。
         /// </summary>
         [JsonProperty("TrafficType")]
         public string TrafficType{ get; set; }
 
         /// <summary>
-        /// 流日志存储ID
+        /// 流日志存储ID。
         /// </summary>
         [JsonProperty("CloudLogId")]
         public string CloudLogId{ get; set; }
 
         /// <summary>
-        /// 流日志存储ID状态
+        /// 流日志存储ID状态。
         /// </summary>
         [JsonProperty("CloudLogState")]
         public string CloudLogState{ get; set; }
 
         /// <summary>
-        /// 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime
+        /// 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 升序（asc）还是降序（desc）,默认：desc
+        /// 升序（asc）还是降序（desc）,默认：desc。
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页行数，默认为10
+        /// 每页行数，默认为10。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -105,7 +105,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Filter Filters{ get; set; }
 
         /// <summary>
-        /// 流日志存储ID对应的地域信息
+        /// 流日志存储ID对应的地域信息。
         /// </summary>
         [JsonProperty("CloudLogRegion")]
         public string CloudLogRegion{ get; set; }

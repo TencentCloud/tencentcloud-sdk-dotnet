@@ -104,14 +104,14 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// 消费端信息，当消费端类型为ckafka时返回
+        /// 消费端信息，当消费端类型为ckafka时返回。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowLogStorage")]
         public FlowLogStorage FlowLogStorage{ get; set; }
 
         /// <summary>
-        /// 流日志存储ID对应的地域信息
+        /// 流日志存储ID对应的地域信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudLogRegion")]

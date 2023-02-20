@@ -58,6 +58,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("Environment")]
         public string Environment{ get; set; }
 
+        /// <summary>
+        /// Agent 支持的功能列表。
+        /// </summary>
+        [JsonProperty("SupportFeatures")]
+        public string[] SupportFeatures{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +75,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "LastHeartbeatTime", this.LastHeartbeatTime);
             this.SetParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
             this.SetParamSimple(map, prefix + "Environment", this.Environment);
+            this.SetParamArraySimple(map, prefix + "SupportFeatures.", this.SupportFeatures);
         }
     }
 }

@@ -48,6 +48,21 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 进房钥匙，若需要权限控制请携带该参数。
+        ///  [privateMapKey 权限设置](/document/product/647/32240) 
+        /// </summary>
+        [JsonProperty("PrivateMapKey")]
+        public string PrivateMapKey{ get; set; }
+
+        /// <summary>
+        /// 用户角色，目前支持两种角色：
+        /// <li>anchor：主播</li>
+        /// <li>audience：观众</li>
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +73,8 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
         }
     }
 }

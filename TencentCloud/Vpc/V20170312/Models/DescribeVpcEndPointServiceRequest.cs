@@ -26,9 +26,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 过滤条件。
-        /// <li> service-id- String - （过滤条件）终端节点服务唯一ID。</li>
+        /// <li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
         /// <li>service-name - String - （过滤条件）终端节点实例名称。</li>
         /// <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
+        /// <li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

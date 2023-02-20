@@ -733,6 +733,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 查询入侵防御放通封禁列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockIgnoreListRequest"/></param>
+        /// <returns><see cref="DescribeBlockIgnoreListResponse"/></returns>
+        public async Task<DescribeBlockIgnoreListResponse> DescribeBlockIgnoreList(DescribeBlockIgnoreListRequest req)
+        {
+             JsonResponseModel<DescribeBlockIgnoreListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBlockIgnoreList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlockIgnoreListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询入侵防御放通封禁列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockIgnoreListRequest"/></param>
+        /// <returns><see cref="DescribeBlockIgnoreListResponse"/></returns>
+        public DescribeBlockIgnoreListResponse DescribeBlockIgnoreListSync(DescribeBlockIgnoreListRequest req)
+        {
+             JsonResponseModel<DescribeBlockIgnoreListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBlockIgnoreList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlockIgnoreListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeBlockStaticList 告警中心柱形图
         /// </summary>
         /// <param name="req"><see cref="DescribeBlockStaticListRequest"/></param>

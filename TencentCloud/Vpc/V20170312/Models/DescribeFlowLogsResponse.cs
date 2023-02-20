@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 流日志实例集合
+        /// 流日志实例集合。
         /// </summary>
         [JsonProperty("FlowLog")]
         public FlowLog[] FlowLog{ get; set; }
 
         /// <summary>
-        /// 流日志总数目
+        /// 流日志总数目。
         /// </summary>
         [JsonProperty("TotalNum")]
         public ulong? TotalNum{ get; set; }

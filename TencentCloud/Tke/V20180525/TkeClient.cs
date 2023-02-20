@@ -5973,7 +5973,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 获得节点升级当前的进度 
+        /// 获得节点升级当前的进度
         /// </summary>
         /// <param name="req"><see cref="GetUpgradeInstanceProgressRequest"/></param>
         /// <returns><see cref="GetUpgradeInstanceProgressResponse"/></returns>
@@ -5993,7 +5993,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 获得节点升级当前的进度 
+        /// 获得节点升级当前的进度
         /// </summary>
         /// <param name="req"><see cref="GetUpgradeInstanceProgressRequest"/></param>
         /// <returns><see cref="GetUpgradeInstanceProgressResponse"/></returns>
