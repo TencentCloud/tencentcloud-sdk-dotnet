@@ -42,6 +42,14 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("EntityType")]
         public string EntityType{ get; set; }
 
+        /// <summary>
+        /// 服务区域，取值有：
+        /// <li>mainland：中国大陆境内；</li>
+        /// <li>overseas：全球（不含中国大陆）。</li>若为国内站账号，则默认取值为mainland；若为国际站账号，则默认取值为overseas。
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -50,6 +58,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "EntityType", this.EntityType);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

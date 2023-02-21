@@ -73,6 +73,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string EnLastName{ get; set; }
 
         /// <summary>
+        /// 证件人像照片抠取
+        /// </summary>
+        [JsonProperty("PortraitImage")]
+        public string PortraitImage{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -92,6 +98,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "IssueDate", this.IssueDate);
             this.SetParamSimple(map, prefix + "ExpirationDate", this.ExpirationDate);
             this.SetParamSimple(map, prefix + "EnLastName", this.EnLastName);
+            this.SetParamSimple(map, prefix + "PortraitImage", this.PortraitImage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

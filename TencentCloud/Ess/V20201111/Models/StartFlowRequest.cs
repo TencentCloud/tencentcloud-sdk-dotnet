@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方用户信息，userId 必填
+        /// 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }

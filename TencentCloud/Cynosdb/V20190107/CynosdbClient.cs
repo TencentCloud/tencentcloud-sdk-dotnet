@@ -2533,6 +2533,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 修改实例组ip，端口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVipVportRequest"/></param>
+        /// <returns><see cref="ModifyVipVportResponse"/></returns>
+        public async Task<ModifyVipVportResponse> ModifyVipVport(ModifyVipVportRequest req)
+        {
+             JsonResponseModel<ModifyVipVportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVipVport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVipVportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例组ip，端口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVipVportRequest"/></param>
+        /// <returns><see cref="ModifyVipVportResponse"/></returns>
+        public ModifyVipVportResponse ModifyVipVportSync(ModifyVipVportRequest req)
+        {
+             JsonResponseModel<ModifyVipVportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVipVport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVipVportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 下线集群
         /// </summary>
         /// <param name="req"><see cref="OfflineClusterRequest"/></param>

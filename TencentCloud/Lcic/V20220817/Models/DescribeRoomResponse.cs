@@ -89,7 +89,6 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// 房间子类型，可以有以下取值：
         /// videodoc 文档+视频
         /// video 纯视频
-        /// coteaching 双师
         /// </summary>
         [JsonProperty("SubType")]
         public string SubType{ get; set; }

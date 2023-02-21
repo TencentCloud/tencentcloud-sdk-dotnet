@@ -1255,7 +1255,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 查询安全设置
+        /// 获取子账号安全设置
         /// </summary>
         /// <param name="req"><see cref="DescribeSafeAuthFlagCollRequest"/></param>
         /// <returns><see cref="DescribeSafeAuthFlagCollResponse"/></returns>
@@ -1275,7 +1275,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 查询安全设置
+        /// 获取子账号安全设置
         /// </summary>
         /// <param name="req"><see cref="DescribeSafeAuthFlagCollRequest"/></param>
         /// <returns><see cref="DescribeSafeAuthFlagCollResponse"/></returns>

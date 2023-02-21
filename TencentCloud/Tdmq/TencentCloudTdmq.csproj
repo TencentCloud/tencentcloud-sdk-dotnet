@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1732CBF0-BE93-36A0-A593-39E6D6FF17BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.701</VersionPrefix>
+    <VersionPrefix>3.0.702</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -209,6 +209,8 @@
     <Compile Include="V20200217\Models\DescribeRocketMQNamespacesResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQTopicsRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQTopicsResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQVipInstanceDetailRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQVipInstanceDetailResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQVipInstancesRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQVipInstancesResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRolesRequest.cs" />
@@ -221,6 +223,7 @@
     <Compile Include="V20200217\Models\EnvironmentRole.cs" />
     <Compile Include="V20200217\Models\Filter.cs" />
     <Compile Include="V20200217\Models\FilterSubscription.cs" />
+    <Compile Include="V20200217\Models\InstanceNodeDistribution.cs" />
     <Compile Include="V20200217\Models\InternalTenant.cs" />
     <Compile Include="V20200217\Models\ModifyAMQPClusterRequest.cs" />
     <Compile Include="V20200217\Models\ModifyAMQPClusterResponse.cs" />
@@ -274,8 +277,10 @@
     <Compile Include="V20200217\Models\RocketMQClusterInfo.cs" />
     <Compile Include="V20200217\Models\RocketMQClusterRecentStats.cs" />
     <Compile Include="V20200217\Models\RocketMQGroup.cs" />
+    <Compile Include="V20200217\Models\RocketMQInstanceConfig.cs" />
     <Compile Include="V20200217\Models\RocketMQNamespace.cs" />
     <Compile Include="V20200217\Models\RocketMQTopic.cs" />
+    <Compile Include="V20200217\Models\RocketMQTopicDistribution.cs" />
     <Compile Include="V20200217\Models\RocketMQVipInstance.cs" />
     <Compile Include="V20200217\Models\Role.cs" />
     <Compile Include="V20200217\Models\SendBatchMessagesRequest.cs" />

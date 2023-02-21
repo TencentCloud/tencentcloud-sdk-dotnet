@@ -72,6 +72,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("MaxMediaFileDuration")]
         public ulong? MaxMediaFileDuration{ get; set; }
 
+        /// <summary>
+        /// 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MediaId")]
+        public ulong? MediaId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +92,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
             this.SetParamSimple(map, prefix + "AvMerge", this.AvMerge);
             this.SetParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
+            this.SetParamSimple(map, prefix + "MediaId", this.MediaId);
         }
     }
 }

@@ -25,25 +25,25 @@ namespace TencentCloud.Ssa.V20180608.Models
     {
         
         /// <summary>
-        /// 受影响资产
+        /// 时间
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// 安全事件名称
+        /// 安全事件1级分类
         /// </summary>
         [JsonProperty("EventType1")]
         public long? EventType1{ get; set; }
 
         /// <summary>
-        /// 安全事件1级分类
+        /// 安全事件2级分类
         /// </summary>
         [JsonProperty("EventType2")]
         public long? EventType2{ get; set; }
 
         /// <summary>
-        /// 安全事件2级分类
+        /// 安全事件名称
         /// </summary>
         [JsonProperty("EventName")]
         public string EventName{ get; set; }

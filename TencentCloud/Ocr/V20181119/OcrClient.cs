@@ -427,6 +427,50 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口可创建智能表单录入任务，支持多个识别图片和PDF的URL上传，返回含有识别内容的操作页面URL。
+        /// 
+        /// 智能表单录入产品提供高准确率的表单识别技术和人工核对工具，支持自定义字段，将识别结果自动填入到自定义条目中，并提供人工操作工具，完成整个表单识别过程。适用性强，可对票据、合同、货单等文件的识别，适用于金融、货代、保险、档案等领域。本产品免费公测中，您可以点击demo（超连接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAIFormTaskRequest"/></param>
+        /// <returns><see cref="CreateAIFormTaskResponse"/></returns>
+        public async Task<CreateAIFormTaskResponse> CreateAIFormTask(CreateAIFormTaskRequest req)
+        {
+             JsonResponseModel<CreateAIFormTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAIFormTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAIFormTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口可创建智能表单录入任务，支持多个识别图片和PDF的URL上传，返回含有识别内容的操作页面URL。
+        /// 
+        /// 智能表单录入产品提供高准确率的表单识别技术和人工核对工具，支持自定义字段，将识别结果自动填入到自定义条目中，并提供人工操作工具，完成整个表单识别过程。适用性强，可对票据、合同、货单等文件的识别，适用于金融、货代、保险、档案等领域。本产品免费公测中，您可以点击demo（超连接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAIFormTaskRequest"/></param>
+        /// <returns><see cref="CreateAIFormTaskResponse"/></returns>
+        public CreateAIFormTaskResponse CreateAIFormTaskSync(CreateAIFormTaskRequest req)
+        {
+             JsonResponseModel<CreateAIFormTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAIFormTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAIFormTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持驾驶证主页和副页所有字段的自动定位与识别，重点字段的识别准确度达到99%以上。
         /// 
         /// 驾驶证主页：包括证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限、发证单位
@@ -1426,6 +1470,46 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = this.InternalRequestSync(req, "GeneralHandwritingOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GeneralHandwritingOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 支持查询智能表单录入任务的状态。本产品免费公测中，您可以点击demo（超连接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskStateRequest"/></param>
+        /// <returns><see cref="GetTaskStateResponse"/></returns>
+        public async Task<GetTaskStateResponse> GetTaskState(GetTaskStateRequest req)
+        {
+             JsonResponseModel<GetTaskStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetTaskState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTaskStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 支持查询智能表单录入任务的状态。本产品免费公测中，您可以点击demo（超连接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskStateRequest"/></param>
+        /// <returns><see cref="GetTaskStateResponse"/></returns>
+        public GetTaskStateResponse GetTaskStateSync(GetTaskStateRequest req)
+        {
+             JsonResponseModel<GetTaskStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetTaskState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTaskStateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2628,6 +2712,50 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = this.InternalRequestSync(req, "RecognizePhilippinesVoteIDOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持中英文图片/PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。识别效果比表格识别V2更好，覆盖场景更加广泛，对表格难例场景，如无线表格、嵌套表格（有线表格中包含无线表格）的识别效果均优于表格识别V2。
+        /// 
+        /// 默认接口请求频率限制：2次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeTableAccurateOCRRequest"/></param>
+        /// <returns><see cref="RecognizeTableAccurateOCRResponse"/></returns>
+        public async Task<RecognizeTableAccurateOCRResponse> RecognizeTableAccurateOCR(RecognizeTableAccurateOCRRequest req)
+        {
+             JsonResponseModel<RecognizeTableAccurateOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeTableAccurateOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeTableAccurateOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持中英文图片/PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。识别效果比表格识别V2更好，覆盖场景更加广泛，对表格难例场景，如无线表格、嵌套表格（有线表格中包含无线表格）的识别效果均优于表格识别V2。
+        /// 
+        /// 默认接口请求频率限制：2次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeTableAccurateOCRRequest"/></param>
+        /// <returns><see cref="RecognizeTableAccurateOCRResponse"/></returns>
+        public RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCRSync(RecognizeTableAccurateOCRRequest req)
+        {
+             JsonResponseModel<RecognizeTableAccurateOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeTableAccurateOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeTableAccurateOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

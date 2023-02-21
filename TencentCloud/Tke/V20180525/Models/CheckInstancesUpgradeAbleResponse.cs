@@ -51,6 +51,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? Total{ get; set; }
 
         /// <summary>
+        /// 不可升级原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UnavailableVersionReason")]
+        public UnavailableReason[] UnavailableVersionReason{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -66,6 +73,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
             this.SetParamArrayObj(map, prefix + "UpgradeAbleInstances.", this.UpgradeAbleInstances);
             this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "UnavailableVersionReason.", this.UnavailableVersionReason);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

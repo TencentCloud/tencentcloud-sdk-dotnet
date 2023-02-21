@@ -2893,6 +2893,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取单个RocketMQ专享集群信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQVipInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQVipInstanceDetailResponse"/></returns>
+        public async Task<DescribeRocketMQVipInstanceDetailResponse> DescribeRocketMQVipInstanceDetail(DescribeRocketMQVipInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQVipInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQVipInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQVipInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取单个RocketMQ专享集群信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQVipInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQVipInstanceDetailResponse"/></returns>
+        public DescribeRocketMQVipInstanceDetailResponse DescribeRocketMQVipInstanceDetailSync(DescribeRocketMQVipInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQVipInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQVipInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQVipInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询用户已购的RocketMQ专享实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQVipInstancesRequest"/></param>

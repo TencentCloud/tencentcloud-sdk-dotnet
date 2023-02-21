@@ -38,6 +38,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
+        /// <summary>
+        /// 图片开关。默认为false，不返回泰国身份证头像照片的base64编码。
+        /// 设置为true时，返回旋转矫正后的泰国身份证头像照片的base64编码
+        /// </summary>
+        [JsonProperty("CropPortrait")]
+        public bool? CropPortrait{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "CropPortrait", this.CropPortrait);
         }
     }
 }

@@ -333,7 +333,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 检查给定节点列表中哪些是可升级的 
+        /// 检查给定节点列表中哪些是可升级的
         /// </summary>
         /// <param name="req"><see cref="CheckInstancesUpgradeAbleRequest"/></param>
         /// <returns><see cref="CheckInstancesUpgradeAbleResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 检查给定节点列表中哪些是可升级的 
+        /// 检查给定节点列表中哪些是可升级的
         /// </summary>
         /// <param name="req"><see cref="CheckInstancesUpgradeAbleRequest"/></param>
         /// <returns><see cref="CheckInstancesUpgradeAbleResponse"/></returns>
@@ -2853,7 +2853,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        ///  查询集群下节点实例信息 
+        /// 查询集群下节点实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterInstancesRequest"/></param>
         /// <returns><see cref="DescribeClusterInstancesResponse"/></returns>
@@ -2873,7 +2873,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        ///  查询集群下节点实例信息 
+        /// 查询集群下节点实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterInstancesRequest"/></param>
         /// <returns><see cref="DescribeClusterInstancesResponse"/></returns>
