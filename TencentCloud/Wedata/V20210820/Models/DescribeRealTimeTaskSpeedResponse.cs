@@ -37,6 +37,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         public BytesSpeed[] BytesSpeedList{ get; set; }
 
         /// <summary>
+        /// 同步速度，包括了RecordsSpeedList和BytesSpeedList
+        /// </summary>
+        [JsonProperty("Data")]
+        public RealTimeTaskSpeed Data{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamArrayObj(map, prefix + "RecordsSpeedList.", this.RecordsSpeedList);
             this.SetParamArrayObj(map, prefix + "BytesSpeedList.", this.BytesSpeedList);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

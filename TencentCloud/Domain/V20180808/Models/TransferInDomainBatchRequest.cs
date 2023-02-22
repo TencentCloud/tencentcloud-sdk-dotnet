@@ -76,6 +76,24 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("TransferProhibition")]
         public long? TransferProhibition{ get; set; }
 
+        /// <summary>
+        /// 渠道来源，pc/miniprogram/h5等
+        /// </summary>
+        [JsonProperty("ChannelFrom")]
+        public string ChannelFrom{ get; set; }
+
+        /// <summary>
+        /// 订单来源，common正常/dianshi_active点石活动等
+        /// </summary>
+        [JsonProperty("OrderFrom")]
+        public string OrderFrom{ get; set; }
+
+        /// <summary>
+        /// 活动id
+        /// </summary>
+        [JsonProperty("ActivityId")]
+        public string ActivityId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +108,9 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "LockTransfer", this.LockTransfer);
             this.SetParamSimple(map, prefix + "UpdateProhibition", this.UpdateProhibition);
             this.SetParamSimple(map, prefix + "TransferProhibition", this.TransferProhibition);
+            this.SetParamSimple(map, prefix + "ChannelFrom", this.ChannelFrom);
+            this.SetParamSimple(map, prefix + "OrderFrom", this.OrderFrom);
+            this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
         }
     }
 }

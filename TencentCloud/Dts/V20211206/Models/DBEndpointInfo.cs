@@ -74,6 +74,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("ExtraAttr")]
         public KeyValuePairOption[] ExtraAttr{ get; set; }
 
+        /// <summary>
+        /// 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatabaseNetEnv")]
+        public string DatabaseNetEnv{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamArrayObj(map, prefix + "Info.", this.Info);
             this.SetParamSimple(map, prefix + "Supplier", this.Supplier);
             this.SetParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
+            this.SetParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
         }
     }
 }

@@ -84,6 +84,13 @@ namespace TencentCloud.Cdc.V20201214.Models
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 宿主机id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostId")]
+        public string HostId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Cdc.V20201214.Models
             this.SetParamSimple(map, prefix + "MemTotal", this.MemTotal);
             this.SetParamSimple(map, prefix + "RunTime", this.RunTime);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "HostId", this.HostId);
         }
     }
 }

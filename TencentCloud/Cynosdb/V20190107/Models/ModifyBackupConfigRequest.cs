@@ -31,6 +31,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
+        /// 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
+        /// </summary>
+        [JsonProperty("ReserveDuration")]
+        public ulong? ReserveDuration{ get; set; }
+
+        /// <summary>
         /// 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
         /// </summary>
         [JsonProperty("BackupTimeBeg")]
@@ -41,12 +47,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("BackupTimeEnd")]
         public ulong? BackupTimeEnd{ get; set; }
-
-        /// <summary>
-        /// 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
-        /// </summary>
-        [JsonProperty("ReserveDuration")]
-        public ulong? ReserveDuration{ get; set; }
 
         /// <summary>
         /// 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
@@ -67,9 +67,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
             this.SetParamSimple(map, prefix + "BackupTimeBeg", this.BackupTimeBeg);
             this.SetParamSimple(map, prefix + "BackupTimeEnd", this.BackupTimeEnd);
-            this.SetParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
             this.SetParamArraySimple(map, prefix + "BackupFreq.", this.BackupFreq);
             this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
         }

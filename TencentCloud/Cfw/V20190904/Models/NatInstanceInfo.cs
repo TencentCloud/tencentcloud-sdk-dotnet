@@ -121,6 +121,20 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("ZoneZhBak")]
         public string ZoneZhBak{ get; set; }
 
+        /// <summary>
+        /// 已使用规则数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleUsed")]
+        public ulong? RuleUsed{ get; set; }
+
+        /// <summary>
+        /// 实例的规则限制最大规格数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleMax")]
+        public ulong? RuleMax{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +156,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "RegionDetail", this.RegionDetail);
             this.SetParamSimple(map, prefix + "ZoneZh", this.ZoneZh);
             this.SetParamSimple(map, prefix + "ZoneZhBak", this.ZoneZhBak);
+            this.SetParamSimple(map, prefix + "RuleUsed", this.RuleUsed);
+            this.SetParamSimple(map, prefix + "RuleMax", this.RuleMax);
         }
     }
 }

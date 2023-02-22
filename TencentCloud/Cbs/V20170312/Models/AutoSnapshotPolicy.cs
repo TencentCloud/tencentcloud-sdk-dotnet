@@ -105,6 +105,27 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("InstanceIdSet")]
         public string[] InstanceIdSet{ get; set; }
 
+        /// <summary>
+        /// 该定期快照创建的快照可以保留的月数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetentionMonths")]
+        public ulong? RetentionMonths{ get; set; }
+
+        /// <summary>
+        /// 该定期快照创建的快照最大保留数量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetentionAmount")]
+        public ulong? RetentionAmount{ get; set; }
+
+        /// <summary>
+        /// 定期快照高级保留策略。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdvancedRetentionPolicy")]
+        public AdvancedRetentionPolicy AdvancedRetentionPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +145,9 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
             this.SetParamSimple(map, prefix + "CopyToAccountUin", this.CopyToAccountUin);
             this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
+            this.SetParamSimple(map, prefix + "RetentionMonths", this.RetentionMonths);
+            this.SetParamSimple(map, prefix + "RetentionAmount", this.RetentionAmount);
+            this.SetParamObj(map, prefix + "AdvancedRetentionPolicy.", this.AdvancedRetentionPolicy);
         }
     }
 }

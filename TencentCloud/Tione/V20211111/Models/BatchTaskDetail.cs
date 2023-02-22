@@ -228,6 +228,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("BillingInfo")]
         public string BillingInfo{ get; set; }
 
+        /// <summary>
+        /// 运行中的Pod的名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PodList")]
+        public string[] PodList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -265,6 +272,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "FailureReason", this.FailureReason);
             this.SetParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
+            this.SetParamArraySimple(map, prefix + "PodList.", this.PodList);
         }
     }
 }

@@ -39,6 +39,13 @@ namespace TencentCloud.Tione.V20211111.Models
         public InferGatewayCallInfo InferGatewayCallInfo{ get; set; }
 
         /// <summary>
+        /// 默认nginx网关的调用信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultNginxGatewayCallInfo")]
+        public DefaultNginxGatewayCallInfo DefaultNginxGatewayCallInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +59,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamObj(map, prefix + "ServiceCallInfo.", this.ServiceCallInfo);
             this.SetParamObj(map, prefix + "InferGatewayCallInfo.", this.InferGatewayCallInfo);
+            this.SetParamObj(map, prefix + "DefaultNginxGatewayCallInfo.", this.DefaultNginxGatewayCallInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

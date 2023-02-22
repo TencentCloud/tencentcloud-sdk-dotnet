@@ -191,6 +191,41 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ModelHotUpdatePath")]
         public CosPathInfo ModelHotUpdatePath{ get; set; }
 
+        /// <summary>
+        /// 推理环境id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReasoningEnvironmentId")]
+        public string ReasoningEnvironmentId{ get; set; }
+
+        /// <summary>
+        /// 训练任务版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrainingJobVersion")]
+        public string TrainingJobVersion{ get; set; }
+
+        /// <summary>
+        /// 训练偏好
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrainingPreference")]
+        public string TrainingPreference{ get; set; }
+
+        /// <summary>
+        /// 自动学习任务id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoMLTaskId")]
+        public string AutoMLTaskId{ get; set; }
+
+        /// <summary>
+        /// 是否QAT模型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsQAT")]
+        public bool? IsQAT{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -223,6 +258,11 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ModelCleanPeriod", this.ModelCleanPeriod);
             this.SetParamSimple(map, prefix + "MaxReservedModels", this.MaxReservedModels);
             this.SetParamObj(map, prefix + "ModelHotUpdatePath.", this.ModelHotUpdatePath);
+            this.SetParamSimple(map, prefix + "ReasoningEnvironmentId", this.ReasoningEnvironmentId);
+            this.SetParamSimple(map, prefix + "TrainingJobVersion", this.TrainingJobVersion);
+            this.SetParamSimple(map, prefix + "TrainingPreference", this.TrainingPreference);
+            this.SetParamSimple(map, prefix + "AutoMLTaskId", this.AutoMLTaskId);
+            this.SetParamSimple(map, prefix + "IsQAT", this.IsQAT);
         }
     }
 }

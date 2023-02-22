@@ -157,6 +157,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ModelHotUpdateEnable")]
         public bool? ModelHotUpdateEnable{ get; set; }
 
+        /// <summary>
+        /// Pod列表信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Pods")]
+        public Pod Pods{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -181,6 +188,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "HybridBillingPrepaidReplicas", this.HybridBillingPrepaidReplicas);
             this.SetParamSimple(map, prefix + "OldHybridBillingPrepaidReplicas", this.OldHybridBillingPrepaidReplicas);
             this.SetParamSimple(map, prefix + "ModelHotUpdateEnable", this.ModelHotUpdateEnable);
+            this.SetParamObj(map, prefix + "Pods.", this.Pods);
         }
     }
 }

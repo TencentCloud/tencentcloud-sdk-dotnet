@@ -31,6 +31,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Token{ get; set; }
 
         /// <summary>
+        /// 长连接临时token。与Token相同含义，优先取Data，Data为空时，取Token。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Data")]
+        public string Data{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +50,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Token", this.Token);
+            this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

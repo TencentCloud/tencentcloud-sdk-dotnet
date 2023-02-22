@@ -36,6 +36,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DayOfWeek")]
         public ulong?[] DayOfWeek{ get; set; }
 
+        /// <summary>
+        /// 指定每月从月初到月底需要触发定期快照的日期,取值范围：[1, 31]，1-31分别表示每月的具体日期，比如5表示每月的5号。注：若设置29、30、31等部分月份不存在的日期，则对应不存在日期的月份会跳过不打定期快照。
+        /// </summary>
+        [JsonProperty("DayOfMonth")]
+        public ulong?[] DayOfMonth{ get; set; }
+
+        /// <summary>
+        /// 指定创建定期快照的间隔天数，取值范围：[1, 365]，例如设置为5，则间隔5天即触发定期快照创建。注：当选择按天备份时，理论上第一次备份的时间为备份策略创建当天。如果当天备份策略创建的时间已经晚于设置的备份时间，那么将会等到第二个备份周期再进行第一次备份。
+        /// </summary>
+        [JsonProperty("IntervalDays")]
+        public ulong? IntervalDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         {
             this.SetParamArraySimple(map, prefix + "Hour.", this.Hour);
             this.SetParamArraySimple(map, prefix + "DayOfWeek.", this.DayOfWeek);
+            this.SetParamArraySimple(map, prefix + "DayOfMonth.", this.DayOfMonth);
+            this.SetParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
         }
     }
 }

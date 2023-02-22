@@ -2493,6 +2493,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 内部替换接口+DescribeInstanceAllForCoding
+        /// 
         /// 查询全部实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAllRequest"/></param>
@@ -2513,6 +2515,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 内部替换接口+DescribeInstanceAllForCoding
+        /// 
         /// 查询全部实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAllRequest"/></param>

@@ -2341,6 +2341,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 日志存储设置，可以修改存储时间和清空日志
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStorageSettingRequest"/></param>
+        /// <returns><see cref="ModifyStorageSettingResponse"/></returns>
+        public async Task<ModifyStorageSettingResponse> ModifyStorageSetting(ModifyStorageSettingRequest req)
+        {
+             JsonResponseModel<ModifyStorageSettingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyStorageSetting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStorageSettingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 日志存储设置，可以修改存储时间和清空日志
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStorageSettingRequest"/></param>
+        /// <returns><see cref="ModifyStorageSettingResponse"/></returns>
+        public ModifyStorageSettingResponse ModifyStorageSettingSync(ModifyStorageSettingRequest req)
+        {
+             JsonResponseModel<ModifyStorageSettingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyStorageSetting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStorageSettingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改规则表状态
         /// </summary>
         /// <param name="req"><see cref="ModifyTableStatusRequest"/></param>

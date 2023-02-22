@@ -145,6 +145,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("ElasticServiceBandwidth")]
         public ulong? ElasticServiceBandwidth{ get; set; }
 
+        /// <summary>
+        /// 赠送的业务带宽
+        /// </summary>
+        [JsonProperty("GiftServiceBandWidth")]
+        public long? GiftServiceBandWidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -169,6 +175,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "VitalityVersion", this.VitalityVersion);
             this.SetParamSimple(map, prefix + "Line", this.Line);
             this.SetParamSimple(map, prefix + "ElasticServiceBandwidth", this.ElasticServiceBandwidth);
+            this.SetParamSimple(map, prefix + "GiftServiceBandWidth", this.GiftServiceBandWidth);
         }
     }
 }

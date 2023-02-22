@@ -117,14 +117,13 @@ namespace TencentCloud.Thpc.V20220401.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 队列名称。不指定则为默认队列。<br><li>SLURM默认队列为：compute。<br>
-        /// <li>SGE默认队列为：all.q。<br>
+        /// 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。<li>SGE默认队列为：all.q。
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// 添加节点类型。默认值：Compute<br><li>Compute：计算节点。<br><li>Login：登录节点。
+        /// 添加节点角色。默认值：Compute<br><li>Compute：计算节点。<br><li>Login：登录节点。
         /// </summary>
         [JsonProperty("NodeRole")]
         public string NodeRole{ get; set; }
@@ -138,6 +137,12 @@ namespace TencentCloud.Thpc.V20220401.Models
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
+
+        /// <summary>
+        /// 添加节点类型。默认取值：STATIC。<li>STATIC：静态节点，不会参与弹性伸缩流程。<li>DYNAMIC：弹性节点，会被弹性缩容的节点。管控节点和登录节点不支持此参数。
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
 
 
         /// <summary>
@@ -163,6 +168,7 @@ namespace TencentCloud.Thpc.V20220401.Models
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
         }
     }
 }
