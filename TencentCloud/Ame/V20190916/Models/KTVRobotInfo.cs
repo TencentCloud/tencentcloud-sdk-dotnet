@@ -87,10 +87,16 @@ namespace TencentCloud.Ame.V20190916.Models
         public SetPlayModeCommandInput SetPlayModeInput{ get; set; }
 
         /// <summary>
-        /// 音量，范围 0~100，默认为 50。
+        /// <del>音量，范围 0~100，默认为 50。</del>（已废弃，请采用 SetRealVolumeInput ）
         /// </summary>
         [JsonProperty("SetVolumeInput")]
         public SetVolumeCommandInput SetVolumeInput{ get; set; }
+
+        /// <summary>
+        /// 真实音量，范围 0~100，默认为 50。
+        /// </summary>
+        [JsonProperty("SetRealVolumeInput")]
+        public SetRealVolumeCommandInput SetRealVolumeInput{ get; set; }
 
 
         /// <summary>
@@ -108,6 +114,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamSimple(map, prefix + "RTCSystem", this.RTCSystem);
             this.SetParamObj(map, prefix + "SetPlayModeInput.", this.SetPlayModeInput);
             this.SetParamObj(map, prefix + "SetVolumeInput.", this.SetVolumeInput);
+            this.SetParamObj(map, prefix + "SetRealVolumeInput.", this.SetRealVolumeInput);
         }
     }
 }

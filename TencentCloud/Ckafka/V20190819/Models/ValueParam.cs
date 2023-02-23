@@ -93,6 +93,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("UrlDecode")]
         public UrlDecodeParam UrlDecode{ get; set; }
 
+        /// <summary>
+        /// 小写字符解析
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Lowercase")]
+        public LowercaseParam Lowercase{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamObj(map, prefix + "JsonPathReplace.", this.JsonPathReplace);
             this.SetParamObj(map, prefix + "UrlDecode.", this.UrlDecode);
+            this.SetParamObj(map, prefix + "Lowercase.", this.Lowercase);
         }
     }
 }

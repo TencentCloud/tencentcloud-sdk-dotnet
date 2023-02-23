@@ -25,16 +25,16 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 时间点，单位：s
-        /// </summary>
-        [JsonProperty("Time")]
-        public string Time{ get; set; }
-
-        /// <summary>
         /// 流量值（bit）
         /// </summary>
         [JsonProperty("Current")]
         public float? Current{ get; set; }
+
+        /// <summary>
+        /// 时间点，单位：s
+        /// </summary>
+        [JsonProperty("Time")]
+        public string Time{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Mna.V20210119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Time", this.Time);
             this.SetParamSimple(map, prefix + "Current", this.Current);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
         }
     }
 }

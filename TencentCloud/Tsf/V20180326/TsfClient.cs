@@ -653,7 +653,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建容器部署组
+        /// （已废弃，请使用 CreateGroup 和 DeployContainerGroup 创建和部署容器部署组）创建容器部署组
         /// </summary>
         /// <param name="req"><see cref="CreateContainGroupRequest"/></param>
         /// <returns><see cref="CreateContainGroupResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建容器部署组
+        /// （已废弃，请使用 CreateGroup 和 DeployContainerGroup 创建和部署容器部署组）创建容器部署组
         /// </summary>
         /// <param name="req"><see cref="CreateContainGroupRequest"/></param>
         /// <returns><see cref="CreateContainGroupResponse"/></returns>

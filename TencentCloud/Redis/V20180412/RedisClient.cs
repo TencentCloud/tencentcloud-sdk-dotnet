@@ -933,7 +933,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询 CRS 实例备份列表
+        /// 本接口（DescribeInstanceBackups）用于查询实例备份列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceBackupsRequest"/></param>
         /// <returns><see cref="DescribeInstanceBackupsResponse"/></returns>
@@ -953,7 +953,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询 CRS 实例备份列表
+        /// 本接口（DescribeInstanceBackups）用于查询实例备份列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceBackupsRequest"/></param>
         /// <returns><see cref="DescribeInstanceBackupsResponse"/></returns>
@@ -2893,7 +2893,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例网络配置
+        /// 本接口（ModifyNetworkConfig）用于修改实例网络配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkConfigRequest"/></param>
         /// <returns><see cref="ModifyNetworkConfigResponse"/></returns>
@@ -2913,7 +2913,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例网络配置
+        /// 本接口（ModifyNetworkConfig）用于修改实例网络配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkConfigRequest"/></param>
         /// <returns><see cref="ModifyNetworkConfigResponse"/></returns>

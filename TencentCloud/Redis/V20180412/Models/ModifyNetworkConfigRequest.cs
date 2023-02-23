@@ -25,40 +25,54 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
+        /// 指预修改网络的类别，包括：
+        /// - changeVip：指切换私有网络，包含其内网IPv4地址及端口。
+        /// - changeVpc：指切换私有网络所属子网。
+        /// - changeBaseToVpc：指基础网络切换为私有网络。
+        /// - changeVPort：指仅修改实例网络端口。
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// VIP地址，changeVip的时候填写，不填则默认分配
+        /// 指实例私有网络内网 IPv4 地址。当**Operation**为**changeVip**时，需配置该参数。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
+        /// 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网ID，changeVpc、changeBaseToVpc的时候需要提供
+        /// 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
+        /// 原内网 IPv4 地址保留时长。
+        /// - 单位：天。
+        /// - 取值范围：0、1、2、3、7、15。
+        /// 
+        /// **说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
         /// </summary>
         [JsonProperty("Recycle")]
         public long? Recycle{ get; set; }
+
+        /// <summary>
+        /// 指修改后的网络端口。当**Operation**为**changeVPort**或**changeVip**时，需配置该参数。取值范围为[1024,65535]。
+        /// </summary>
+        [JsonProperty("VPort")]
+        public long? VPort{ get; set; }
 
 
         /// <summary>
@@ -72,6 +86,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Recycle", this.Recycle);
+            this.SetParamSimple(map, prefix + "VPort", this.VPort);
         }
     }
 }

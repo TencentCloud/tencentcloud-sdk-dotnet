@@ -42,6 +42,13 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("LoadBalancerVip")]
         public string LoadBalancerVip{ get; set; }
 
+        /// <summary>
+        /// 负载均衡实例 Hostname
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerHostname")]
+        public string LoadBalancerHostname{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
             this.SetParamSimple(map, prefix + "LoadBalancerVip", this.LoadBalancerVip);
+            this.SetParamSimple(map, prefix + "LoadBalancerHostname", this.LoadBalancerHostname);
         }
     }
 }

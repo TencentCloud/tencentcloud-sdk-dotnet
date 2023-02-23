@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Billing.V20180709.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDosageCosDetailByDateRequest : AbstractModel
+    public class BackupLimitVpcItem : AbstractModel
     {
         
         /// <summary>
-        /// 查询用量开始时间，例如：2020-09-01
+        /// 自定义下载备份文件的VPC 所属地域。
         /// </summary>
-        [JsonProperty("StartDate")]
-        public string StartDate{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
         /// <summary>
-        /// 查询用量结束时间，例如：2020-09-30（与开始时间同月，不支持跨月查询）
+        /// 自定义下载备份文件的 VPC 列表。
         /// </summary>
-        [JsonProperty("EndDate")]
-        public string EndDate{ get; set; }
-
-        /// <summary>
-        /// COS 存储桶名称，可通过Get Service 接口是用来获取请求者名下的所有存储空间列表（Bucket list）https://cloud.tencent.com/document/product/436/8291
-        /// </summary>
-        [JsonProperty("BucketName")]
-        public string BucketName{ get; set; }
+        [JsonProperty("VpcList")]
+        public string[] VpcList{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Billing.V20180709.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartDate", this.StartDate);
-            this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
-            this.SetParamSimple(map, prefix + "BucketName", this.BucketName);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamArraySimple(map, prefix + "VpcList.", this.VpcList);
         }
     }
 }

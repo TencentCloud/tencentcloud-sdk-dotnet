@@ -43,13 +43,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string DosageEndTime{ get; set; }
 
         /// <summary>
-        /// 一级产品类型名称
+        /// 子产品名称
         /// </summary>
         [JsonProperty("SubProductCodeName")]
         public string SubProductCodeName{ get; set; }
 
         /// <summary>
-        /// 二级产品类型名称
+        /// 计费项名称
         /// </summary>
         [JsonProperty("BillingItemCodeName")]
         public string BillingItemCodeName{ get; set; }

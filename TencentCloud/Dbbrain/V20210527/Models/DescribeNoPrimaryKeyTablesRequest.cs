@@ -49,7 +49,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+        /// 服务产品类型，支持值："mysql" - 云数据库 MySQL，默认为"mysql"。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

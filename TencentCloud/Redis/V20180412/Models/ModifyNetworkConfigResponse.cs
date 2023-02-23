@@ -25,28 +25,34 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 执行状态：true|false
+        /// 执行状态，请忽略该参数。
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// 指实例新私有网络所属子网 ID。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 私有网络ID
+        /// 指实例新的私有网络ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VIP地址
+        /// 指实例新的内网 IPv4 地址。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
+
+        /// <summary>
+        /// 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -64,6 +70,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

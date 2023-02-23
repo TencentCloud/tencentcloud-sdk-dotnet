@@ -68,6 +68,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public ApproverRestriction[] Restrictions{ get; set; }
 
         /// <summary>
+        /// 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
+        /// <summary>
         /// 回调地址,最大长度1000字符串
         /// 回调时机：
         /// 用户通过签署二维码发起签署流程时，企业额度不足导致失败
@@ -100,6 +106,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
             this.SetParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
             this.SetParamArrayObj(map, prefix + "Restrictions.", this.Restrictions);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);

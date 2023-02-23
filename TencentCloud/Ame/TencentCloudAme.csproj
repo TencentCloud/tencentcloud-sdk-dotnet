@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D56E3EFD-C760-38D8-8424-8856F2207A21}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.703</VersionPrefix>
+    <VersionPrefix>3.0.704</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -142,6 +142,7 @@
     <Compile Include="V20190916\Models\SetDestroyModeCommandInput.cs" />
     <Compile Include="V20190916\Models\SetPlayModeCommandInput.cs" />
     <Compile Include="V20190916\Models\SetPlaylistCommandInput.cs" />
+    <Compile Include="V20190916\Models\SetRealVolumeCommandInput.cs" />
     <Compile Include="V20190916\Models\SetVolumeCommandInput.cs" />
     <Compile Include="V20190916\Models\SortBy.cs" />
     <Compile Include="V20190916\Models\Station.cs" />

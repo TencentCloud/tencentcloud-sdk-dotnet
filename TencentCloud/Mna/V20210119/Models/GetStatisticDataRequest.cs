@@ -25,7 +25,7 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 设备ID，设备ID="-1"获取所有设备流量统计
+        /// 设备ID
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }

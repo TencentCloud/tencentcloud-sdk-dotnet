@@ -122,6 +122,20 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("NetInfoName")]
         public string NetInfoName{ get; set; }
 
+        /// <summary>
+        /// 下行实时速率（浮点数类型代替上一版本DataRx的整型）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DownRate")]
+        public float? DownRate{ get; set; }
+
+        /// <summary>
+        /// 上行实时速率（浮点数类型代替上一版本TxRate的整型）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpRate")]
+        public float? UpRate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +154,8 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "SignalStrength", this.SignalStrength);
             this.SetParamSimple(map, prefix + "Rat", this.Rat);
             this.SetParamSimple(map, prefix + "NetInfoName", this.NetInfoName);
+            this.SetParamSimple(map, prefix + "DownRate", this.DownRate);
+            this.SetParamSimple(map, prefix + "UpRate", this.UpRate);
         }
     }
 }
