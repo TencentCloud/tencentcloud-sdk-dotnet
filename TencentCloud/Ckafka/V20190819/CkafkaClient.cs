@@ -1653,6 +1653,86 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 获取Datahub主题属性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatahubTopicRequest"/></param>
+        /// <returns><see cref="DescribeDatahubTopicResponse"/></returns>
+        public async Task<DescribeDatahubTopicResponse> DescribeDatahubTopic(DescribeDatahubTopicRequest req)
+        {
+             JsonResponseModel<DescribeDatahubTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatahubTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatahubTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Datahub主题属性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatahubTopicRequest"/></param>
+        /// <returns><see cref="DescribeDatahubTopicResponse"/></returns>
+        public DescribeDatahubTopicResponse DescribeDatahubTopicSync(DescribeDatahubTopicRequest req)
+        {
+             JsonResponseModel<DescribeDatahubTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatahubTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatahubTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询DIP主题列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatahubTopicsRequest"/></param>
+        /// <returns><see cref="DescribeDatahubTopicsResponse"/></returns>
+        public async Task<DescribeDatahubTopicsResponse> DescribeDatahubTopics(DescribeDatahubTopicsRequest req)
+        {
+             JsonResponseModel<DescribeDatahubTopicsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatahubTopics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatahubTopicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询DIP主题列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatahubTopicsRequest"/></param>
+        /// <returns><see cref="DescribeDatahubTopicsResponse"/></returns>
+        public DescribeDatahubTopicsResponse DescribeDatahubTopicsSync(DescribeDatahubTopicsRequest req)
+        {
+             JsonResponseModel<DescribeDatahubTopicsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatahubTopics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatahubTopicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 枚举消费分组(精简版)
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupRequest"/></param>

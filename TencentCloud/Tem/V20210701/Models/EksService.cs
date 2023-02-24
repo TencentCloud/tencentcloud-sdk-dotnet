@@ -136,6 +136,13 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("AllIpDone")]
         public bool? AllIpDone{ get; set; }
 
+        /// <summary>
+        /// clb 域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExternalDomain")]
+        public string ExternalDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "EnableRegistryNextDeploy", this.EnableRegistryNextDeploy);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "AllIpDone", this.AllIpDone);
+            this.SetParamSimple(map, prefix + "ExternalDomain", this.ExternalDomain);
         }
     }
 }

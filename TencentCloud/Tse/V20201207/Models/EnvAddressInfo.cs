@@ -56,6 +56,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("EnableConfigIntranet")]
         public bool? EnableConfigIntranet{ get; set; }
 
+        /// <summary>
+        /// 客户端公网带宽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InternetBandWidth")]
+        public long? InternetBandWidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +74,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ConfigInternetServiceIp", this.ConfigInternetServiceIp);
             this.SetParamSimple(map, prefix + "ConfigIntranetAddress", this.ConfigIntranetAddress);
             this.SetParamSimple(map, prefix + "EnableConfigIntranet", this.EnableConfigIntranet);
+            this.SetParamSimple(map, prefix + "InternetBandWidth", this.InternetBandWidth);
         }
     }
 }

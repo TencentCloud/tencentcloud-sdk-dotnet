@@ -37,6 +37,34 @@ namespace TencentCloud.Cdc.V20201214.Models
         public ulong? HostCount{ get; set; }
 
         /// <summary>
+        /// vpn通道状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpnConnectionState")]
+        public string VpnConnectionState{ get; set; }
+
+        /// <summary>
+        /// vpn网关监控数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpngwBandwidthData")]
+        public VpngwBandwidthData VpngwBandwidthData{ get; set; }
+
+        /// <summary>
+        /// 本地网关信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LocalNetInfo")]
+        public LocalNetInfo LocalNetInfo{ get; set; }
+
+        /// <summary>
+        /// vpn网关通道监控数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpnConnectionBandwidthData")]
+        public VpngwBandwidthData[] VpnConnectionBandwidthData{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +78,10 @@ namespace TencentCloud.Cdc.V20201214.Models
         {
             this.SetParamSimple(map, prefix + "CvmCount", this.CvmCount);
             this.SetParamSimple(map, prefix + "HostCount", this.HostCount);
+            this.SetParamSimple(map, prefix + "VpnConnectionState", this.VpnConnectionState);
+            this.SetParamObj(map, prefix + "VpngwBandwidthData.", this.VpngwBandwidthData);
+            this.SetParamObj(map, prefix + "LocalNetInfo.", this.LocalNetInfo);
+            this.SetParamArrayObj(map, prefix + "VpnConnectionBandwidthData.", this.VpnConnectionBandwidthData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

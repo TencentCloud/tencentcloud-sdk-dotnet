@@ -37,7 +37,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 应用信息
+        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

@@ -120,12 +120,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UserData{ get; set; }
 
         /// <summary>
-        /// 应用号信息
-        /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
-
-        /// <summary>
         /// 签署人校验方式
         /// VerifyCheck: 人脸识别（默认）
         /// MobileCheck：手机号验证
@@ -145,6 +139,12 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("SignBeanTag")]
         public long? SignBeanTag{ get; set; }
+
+        /// <summary>
+        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
 
 
         /// <summary>
@@ -166,10 +166,10 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
             this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

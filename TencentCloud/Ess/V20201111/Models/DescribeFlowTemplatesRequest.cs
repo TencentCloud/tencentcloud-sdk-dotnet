@@ -31,13 +31,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 企业组织相关信息
+        /// 企业组织相关信息，一般不用填
         /// </summary>
         [JsonProperty("Organization")]
         public OrganizationInfo Organization{ get; set; }
 
         /// <summary>
-        /// 应用相关信息
+        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

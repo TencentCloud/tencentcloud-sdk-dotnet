@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.704</VersionPrefix>
+    <VersionPrefix>3.0.705</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,10 +53,13 @@
     <Compile Include="V20190904\Models\AddAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\AddEnterpriseSecurityGroupRulesRequest.cs" />
     <Compile Include="V20190904\Models\AddEnterpriseSecurityGroupRulesResponse.cs" />
+    <Compile Include="V20190904\Models\AddNatAcRuleRequest.cs" />
+    <Compile Include="V20190904\Models\AddNatAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\AssetZone.cs" />
     <Compile Include="V20190904\Models\AssociatedInstanceInfo.cs" />
     <Compile Include="V20190904\Models\BlockIgnoreRule.cs" />
     <Compile Include="V20190904\Models\CfwNatDnatRule.cs" />
+    <Compile Include="V20190904\Models\CommonFilter.cs" />
     <Compile Include="V20190904\Models\CreateAcRulesRequest.cs" />
     <Compile Include="V20190904\Models\CreateAcRulesResponse.cs" />
     <Compile Include="V20190904\Models\CreateChooseVpcsRequest.cs" />
@@ -67,6 +70,7 @@
     <Compile Include="V20190904\Models\CreateNatFwInstanceResponse.cs" />
     <Compile Include="V20190904\Models\CreateNatFwInstanceWithDomainRequest.cs" />
     <Compile Include="V20190904\Models\CreateNatFwInstanceWithDomainResponse.cs" />
+    <Compile Include="V20190904\Models\CreateNatRuleItem.cs" />
     <Compile Include="V20190904\Models\CreateSecurityGroupRulesRequest.cs" />
     <Compile Include="V20190904\Models\CreateSecurityGroupRulesResponse.cs" />
     <Compile Include="V20190904\Models\DatabaseWhiteListRuleData.cs" />
@@ -82,6 +86,7 @@
     <Compile Include="V20190904\Models\DeleteSecurityGroupRuleResponse.cs" />
     <Compile Include="V20190904\Models\DeleteVpcInstanceRequest.cs" />
     <Compile Include="V20190904\Models\DeleteVpcInstanceResponse.cs" />
+    <Compile Include="V20190904\Models\DescAcItem.cs" />
     <Compile Include="V20190904\Models\DescribeAcListsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeAcListsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeAssociatedInstanceListRequest.cs" />
@@ -102,6 +107,8 @@
     <Compile Include="V20190904\Models\DescribeGuideScanInfoResponse.cs" />
     <Compile Include="V20190904\Models\DescribeIPStatusListRequest.cs" />
     <Compile Include="V20190904\Models\DescribeIPStatusListResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeNatAcRuleRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeNatAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwInfoCountRequest.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwInfoCountResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwInstanceRequest.cs" />
@@ -155,6 +162,8 @@
     <Compile Include="V20190904\Models\ModifyBlockIgnoreListResponse.cs" />
     <Compile Include="V20190904\Models\ModifyBlockTopRequest.cs" />
     <Compile Include="V20190904\Models\ModifyBlockTopResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyNatAcRuleRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyNatAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\ModifyNatFwReSelectRequest.cs" />
     <Compile Include="V20190904\Models\ModifyNatFwReSelectResponse.cs" />
     <Compile Include="V20190904\Models\ModifyNatFwSwitchRequest.cs" />
@@ -188,6 +197,8 @@
     <Compile Include="V20190904\Models\RemoveAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\RemoveEnterpriseSecurityGroupRuleRequest.cs" />
     <Compile Include="V20190904\Models\RemoveEnterpriseSecurityGroupRuleResponse.cs" />
+    <Compile Include="V20190904\Models\RemoveNatAcRuleRequest.cs" />
+    <Compile Include="V20190904\Models\RemoveNatAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\RuleInfoData.cs" />
     <Compile Include="V20190904\Models\ScanInfo.cs" />
     <Compile Include="V20190904\Models\ScanResultInfo.cs" />

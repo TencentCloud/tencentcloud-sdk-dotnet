@@ -53,6 +53,13 @@ namespace TencentCloud.Bma.V20221115.Models
         public string FakeURL{ get; set; }
 
         /// <summary>
+        /// 仿冒域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FakeDomain")]
+        public string FakeDomain{ get; set; }
+
+        /// <summary>
         /// 热度
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -167,6 +174,7 @@ namespace TencentCloud.Bma.V20221115.Models
             this.SetParamSimple(map, prefix + "BrandName", this.BrandName);
             this.SetParamSimple(map, prefix + "Origin", this.Origin);
             this.SetParamSimple(map, prefix + "FakeURL", this.FakeURL);
+            this.SetParamSimple(map, prefix + "FakeDomain", this.FakeDomain);
             this.SetParamSimple(map, prefix + "Heat", this.Heat);
             this.SetParamSimple(map, prefix + "BlockStatus", this.BlockStatus);
             this.SetParamSimple(map, prefix + "BlockNote", this.BlockNote);

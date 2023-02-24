@@ -413,6 +413,46 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 批量获取设备流量统计曲线
+        /// </summary>
+        /// <param name="req"><see cref="GetMultiFlowStatisticRequest"/></param>
+        /// <returns><see cref="GetMultiFlowStatisticResponse"/></returns>
+        public async Task<GetMultiFlowStatisticResponse> GetMultiFlowStatistic(GetMultiFlowStatisticRequest req)
+        {
+             JsonResponseModel<GetMultiFlowStatisticResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetMultiFlowStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetMultiFlowStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量获取设备流量统计曲线
+        /// </summary>
+        /// <param name="req"><see cref="GetMultiFlowStatisticRequest"/></param>
+        /// <returns><see cref="GetMultiFlowStatisticResponse"/></returns>
+        public GetMultiFlowStatisticResponse GetMultiFlowStatisticSync(GetMultiFlowStatisticRequest req)
+        {
+             JsonResponseModel<GetMultiFlowStatisticResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetMultiFlowStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetMultiFlowStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取公钥用于验签
         /// </summary>
         /// <param name="req"><see cref="GetPublicKeyRequest"/></param>

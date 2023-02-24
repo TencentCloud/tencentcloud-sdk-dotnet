@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// 负载均衡绑定的后端服务的地域信息
+        /// 设置负载均衡跨地域绑定1.0的后端服务信息
         /// </summary>
         [JsonProperty("TargetRegionInfo")]
         public TargetRegionInfo TargetRegionInfo{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? LoadBalancerPassToTarget{ get; set; }
 
         /// <summary>
-        /// 是否开启SnatPro
+        /// 是否开启跨地域绑定2.0功能
         /// </summary>
         [JsonProperty("SnatPro")]
         public bool? SnatPro{ get; set; }

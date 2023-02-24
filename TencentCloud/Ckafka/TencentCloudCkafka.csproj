@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.704</VersionPrefix>
+    <VersionPrefix>3.0.705</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -122,6 +122,7 @@
     <Compile Include="V20190819\Models\DatahubResource.cs" />
     <Compile Include="V20190819\Models\DatahubTaskIdRes.cs" />
     <Compile Include="V20190819\Models\DatahubTaskInfo.cs" />
+    <Compile Include="V20190819\Models\DatahubTopicDTO.cs" />
     <Compile Include="V20190819\Models\DateParam.cs" />
     <Compile Include="V20190819\Models\DeleteAclRequest.cs" />
     <Compile Include="V20190819\Models\DeleteAclResponse.cs" />
@@ -171,6 +172,12 @@
     <Compile Include="V20190819\Models\DescribeDatahubTasksRequest.cs" />
     <Compile Include="V20190819\Models\DescribeDatahubTasksRes.cs" />
     <Compile Include="V20190819\Models\DescribeDatahubTasksResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeDatahubTopicRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeDatahubTopicResp.cs" />
+    <Compile Include="V20190819\Models\DescribeDatahubTopicResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeDatahubTopicsRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeDatahubTopicsResp.cs" />
+    <Compile Include="V20190819\Models\DescribeDatahubTopicsResponse.cs" />
     <Compile Include="V20190819\Models\DescribeGroup.cs" />
     <Compile Include="V20190819\Models\DescribeGroupInfoRequest.cs" />
     <Compile Include="V20190819\Models\DescribeGroupInfoResponse.cs" />

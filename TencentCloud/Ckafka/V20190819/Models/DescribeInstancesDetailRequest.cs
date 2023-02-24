@@ -78,6 +78,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("InstanceIdList")]
         public string[] InstanceIdList{ get; set; }
 
+        /// <summary>
+        /// 根据标签列表过滤实例（取交集）
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "InstanceIds", this.InstanceIds);
             this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

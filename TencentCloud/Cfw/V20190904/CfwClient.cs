@@ -133,6 +133,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 添加nat访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="AddNatAcRuleRequest"/></param>
+        /// <returns><see cref="AddNatAcRuleResponse"/></returns>
+        public async Task<AddNatAcRuleResponse> AddNatAcRule(AddNatAcRuleRequest req)
+        {
+             JsonResponseModel<AddNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddNatAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加nat访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="AddNatAcRuleRequest"/></param>
+        /// <returns><see cref="AddNatAcRuleResponse"/></returns>
+        public AddNatAcRuleResponse AddNatAcRuleSync(AddNatAcRuleRequest req)
+        {
+             JsonResponseModel<AddNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddNatAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建访问控制规则
         /// </summary>
         /// <param name="req"><see cref="CreateAcRulesRequest"/></param>
@@ -1004,6 +1044,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "DescribeIPStatusList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPStatusListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询NAT访问控制列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatAcRuleRequest"/></param>
+        /// <returns><see cref="DescribeNatAcRuleResponse"/></returns>
+        public async Task<DescribeNatAcRuleResponse> DescribeNatAcRule(DescribeNatAcRuleRequest req)
+        {
+             JsonResponseModel<DescribeNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询NAT访问控制列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatAcRuleRequest"/></param>
+        /// <returns><see cref="DescribeNatAcRuleResponse"/></returns>
+        public DescribeNatAcRuleResponse DescribeNatAcRuleSync(DescribeNatAcRuleRequest req)
+        {
+             JsonResponseModel<DescribeNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatAcRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1939,6 +2019,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 修改NAT访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatAcRuleRequest"/></param>
+        /// <returns><see cref="ModifyNatAcRuleResponse"/></returns>
+        public async Task<ModifyNatAcRuleResponse> ModifyNatAcRule(ModifyNatAcRuleRequest req)
+        {
+             JsonResponseModel<ModifyNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改NAT访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatAcRuleRequest"/></param>
+        /// <returns><see cref="ModifyNatAcRuleResponse"/></returns>
+        public ModifyNatAcRuleResponse ModifyNatAcRuleSync(ModifyNatAcRuleRequest req)
+        {
+             JsonResponseModel<ModifyNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 防火墙实例重新选择vpc或nat
         /// </summary>
         /// <param name="req"><see cref="ModifyNatFwReSelectRequest"/></param>
@@ -2492,6 +2612,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "RemoveEnterpriseSecurityGroupRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveEnterpriseSecurityGroupRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除NAT访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="RemoveNatAcRuleRequest"/></param>
+        /// <returns><see cref="RemoveNatAcRuleResponse"/></returns>
+        public async Task<RemoveNatAcRuleResponse> RemoveNatAcRule(RemoveNatAcRuleRequest req)
+        {
+             JsonResponseModel<RemoveNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveNatAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除NAT访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="RemoveNatAcRuleRequest"/></param>
+        /// <returns><see cref="RemoveNatAcRuleResponse"/></returns>
+        public RemoveNatAcRuleResponse RemoveNatAcRuleSync(RemoveNatAcRuleRequest req)
+        {
+             JsonResponseModel<RemoveNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveNatAcRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

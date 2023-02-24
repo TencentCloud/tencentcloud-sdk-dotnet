@@ -67,7 +67,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string[] SealTypes{ get; set; }
 
         /// <summary>
-        /// 主企业代子企业操作 或 渠道子客应用相关信息
+        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

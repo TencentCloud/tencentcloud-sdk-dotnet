@@ -70,6 +70,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("AliasName")]
         public string AliasName{ get; set; }
 
+        /// <summary>
+        /// VPC ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +90,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
         }
     }
 }

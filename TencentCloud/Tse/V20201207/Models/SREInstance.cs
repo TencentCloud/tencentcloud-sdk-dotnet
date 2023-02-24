@@ -226,6 +226,27 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("RegionInfos")]
         public DescribeInstanceRegionInfo[] RegionInfos{ get; set; }
 
+        /// <summary>
+        /// 所在EKS环境，分为common和yunti
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EKSType")]
+        public string EKSType{ get; set; }
+
+        /// <summary>
+        /// 引擎的产品版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FeatureVersion")]
+        public string FeatureVersion{ get; set; }
+
+        /// <summary>
+        /// 引擎实例是否开启客户端内网访问地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableClientIntranet")]
+        public bool? EnableClientIntranet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +283,9 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "CurDeadline", this.CurDeadline);
             this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
             this.SetParamArrayObj(map, prefix + "RegionInfos.", this.RegionInfos);
+            this.SetParamSimple(map, prefix + "EKSType", this.EKSType);
+            this.SetParamSimple(map, prefix + "FeatureVersion", this.FeatureVersion);
+            this.SetParamSimple(map, prefix + "EnableClientIntranet", this.EnableClientIntranet);
         }
     }
 }
