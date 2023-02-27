@@ -33,6 +33,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// <summary>
         /// 独享集群的详细信息列表
         /// </summary>
+        [JsonProperty("CdcSet")]
+        public Cdc[] CdcSet{ get; set; }
+
+        /// <summary>
+        /// 独享集群的详细信息列表
+        /// </summary>
         [JsonProperty("DiskStoragePoolSet")]
         public Cdc[] DiskStoragePoolSet{ get; set; }
 
@@ -49,6 +55,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "CdcSet.", this.CdcSet);
             this.SetParamArrayObj(map, prefix + "DiskStoragePoolSet.", this.DiskStoragePoolSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

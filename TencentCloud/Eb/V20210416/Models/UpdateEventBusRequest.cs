@@ -54,6 +54,12 @@ namespace TencentCloud.Eb.V20210416.Models
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
 
+        /// <summary>
+        /// 是否开启存储
+        /// </summary>
+        [JsonProperty("EnableStore")]
+        public bool? EnableStore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "EventBusName", this.EventBusName);
             this.SetParamSimple(map, prefix + "SaveDays", this.SaveDays);
             this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+            this.SetParamSimple(map, prefix + "EnableStore", this.EnableStore);
         }
     }
 }

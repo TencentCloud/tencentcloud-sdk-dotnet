@@ -133,6 +133,46 @@ namespace TencentCloud.Thpc.V20220401
         }
 
         /// <summary>
+        /// 本接口(AddQueue)用于添加队列到指定集群。
+        /// </summary>
+        /// <param name="req"><see cref="AddQueueRequest"/></param>
+        /// <returns><see cref="AddQueueResponse"/></returns>
+        public async Task<AddQueueResponse> AddQueue(AddQueueRequest req)
+        {
+             JsonResponseModel<AddQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(AddQueue)用于添加队列到指定集群。
+        /// </summary>
+        /// <param name="req"><see cref="AddQueueRequest"/></param>
+        /// <returns><see cref="AddQueueResponse"/></returns>
+        public AddQueueResponse AddQueueSync(AddQueueRequest req)
+        {
+             JsonResponseModel<AddQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(BindAutoScalingGroup)用于为集群队列绑定弹性伸缩组
         /// </summary>
         /// <param name="req"><see cref="BindAutoScalingGroupRequest"/></param>
@@ -333,6 +373,50 @@ namespace TencentCloud.Thpc.V20220401
         }
 
         /// <summary>
+        /// 本接口(DeleteQueue)用于从指定集群删除队列。
+        /// 
+        /// * 删除队列时，需要保证队列内不存在节点。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQueueRequest"/></param>
+        /// <returns><see cref="DeleteQueueResponse"/></returns>
+        public async Task<DeleteQueueResponse> DeleteQueue(DeleteQueueRequest req)
+        {
+             JsonResponseModel<DeleteQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteQueue)用于从指定集群删除队列。
+        /// 
+        /// * 删除队列时，需要保证队列内不存在节点。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQueueRequest"/></param>
+        /// <returns><see cref="DeleteQueueResponse"/></returns>
+        public DeleteQueueResponse DeleteQueueSync(DeleteQueueRequest req)
+        {
+             JsonResponseModel<DeleteQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeAutoScalingConfiguration)用于查询集群弹性伸缩配置信息。本接口仅适用于弹性伸缩类型为THPC_AS的集群。
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScalingConfigurationRequest"/></param>
@@ -484,6 +568,86 @@ namespace TencentCloud.Thpc.V20220401
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClusters");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeNodes) 用于查询指定集群节点概览信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodesRequest"/></param>
+        /// <returns><see cref="DescribeNodesResponse"/></returns>
+        public async Task<DescribeNodesResponse> DescribeNodes(DescribeNodesRequest req)
+        {
+             JsonResponseModel<DescribeNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeNodes) 用于查询指定集群节点概览信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodesRequest"/></param>
+        /// <returns><see cref="DescribeNodesResponse"/></returns>
+        public DescribeNodesResponse DescribeNodesSync(DescribeNodesRequest req)
+        {
+             JsonResponseModel<DescribeNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeQueues)用于查询指定集群队列概览信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQueuesRequest"/></param>
+        /// <returns><see cref="DescribeQueuesResponse"/></returns>
+        public async Task<DescribeQueuesResponse> DescribeQueues(DescribeQueuesRequest req)
+        {
+             JsonResponseModel<DescribeQueuesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeQueues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQueuesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeQueues)用于查询指定集群队列概览信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQueuesRequest"/></param>
+        /// <returns><see cref="DescribeQueuesResponse"/></returns>
+        public DescribeQueuesResponse DescribeQueuesSync(DescribeQueuesRequest req)
+        {
+             JsonResponseModel<DescribeQueuesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeQueues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQueuesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -1953,6 +1953,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口(ModifyDBEncryptAttributes)用于修改实例数据加密。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="ModifyDBEncryptAttributesResponse"/></returns>
+        public async Task<ModifyDBEncryptAttributesResponse> ModifyDBEncryptAttributes(ModifyDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDBEncryptAttributes)用于修改实例数据加密。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="ModifyDBEncryptAttributesResponse"/></returns>
+        public ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributesSync(ModifyDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstanceName）用于修改实例名字
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>

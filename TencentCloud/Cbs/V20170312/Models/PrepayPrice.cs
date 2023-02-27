@@ -87,6 +87,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
 
+        /// <summary>
+        /// 计费项目明细列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DetailPrices")]
+        public DetailPrice[] DetailPrices{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "UnitPriceDiscountHigh", this.UnitPriceDiscountHigh);
             this.SetParamSimple(map, prefix + "DiscountPriceHigh", this.DiscountPriceHigh);
             this.SetParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
+            this.SetParamArrayObj(map, prefix + "DetailPrices.", this.DetailPrices);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.705</VersionPrefix>
+    <VersionPrefix>3.0.706</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,8 @@
     <Compile Include="V20220401\Models\AddClusterStorageOptionResponse.cs" />
     <Compile Include="V20220401\Models\AddNodesRequest.cs" />
     <Compile Include="V20220401\Models\AddNodesResponse.cs" />
+    <Compile Include="V20220401\Models\AddQueueRequest.cs" />
+    <Compile Include="V20220401\Models\AddQueueResponse.cs" />
     <Compile Include="V20220401\Models\BindAutoScalingGroupRequest.cs" />
     <Compile Include="V20220401\Models\BindAutoScalingGroupResponse.cs" />
     <Compile Include="V20220401\Models\CFSOption.cs" />
@@ -96,6 +98,8 @@
     <Compile Include="V20220401\Models\DeleteClusterStorageOptionResponse.cs" />
     <Compile Include="V20220401\Models\DeleteNodesRequest.cs" />
     <Compile Include="V20220401\Models\DeleteNodesResponse.cs" />
+    <Compile Include="V20220401\Models\DeleteQueueRequest.cs" />
+    <Compile Include="V20220401\Models\DeleteQueueResponse.cs" />
     <Compile Include="V20220401\Models\DescribeAutoScalingConfigurationRequest.cs" />
     <Compile Include="V20220401\Models\DescribeAutoScalingConfigurationResponse.cs" />
     <Compile Include="V20220401\Models\DescribeClusterActivitiesRequest.cs" />
@@ -104,8 +108,13 @@
     <Compile Include="V20220401\Models\DescribeClusterStorageOptionResponse.cs" />
     <Compile Include="V20220401\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20220401\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20220401\Models\DescribeNodesRequest.cs" />
+    <Compile Include="V20220401\Models\DescribeNodesResponse.cs" />
+    <Compile Include="V20220401\Models\DescribeQueuesRequest.cs" />
+    <Compile Include="V20220401\Models\DescribeQueuesResponse.cs" />
     <Compile Include="V20220401\Models\ExpansionNodeConfig.cs" />
     <Compile Include="V20220401\Models\ExpansionNodeConfigOverview.cs" />
+    <Compile Include="V20220401\Models\Filter.cs" />
     <Compile Include="V20220401\Models\GooseFSOption.cs" />
     <Compile Include="V20220401\Models\GooseFSOptionOverview.cs" />
     <Compile Include="V20220401\Models\InstanceChargePrepaid.cs" />
@@ -116,9 +125,11 @@
     <Compile Include="V20220401\Models\ManagerNode.cs" />
     <Compile Include="V20220401\Models\ManagerNodeOverview.cs" />
     <Compile Include="V20220401\Models\NodeActivity.cs" />
+    <Compile Include="V20220401\Models\NodeOverview.cs" />
     <Compile Include="V20220401\Models\Placement.cs" />
     <Compile Include="V20220401\Models\QueueConfig.cs" />
     <Compile Include="V20220401\Models\QueueConfigOverview.cs" />
+    <Compile Include="V20220401\Models\QueueOverview.cs" />
     <Compile Include="V20220401\Models\SetAutoScalingConfigurationRequest.cs" />
     <Compile Include="V20220401\Models\SetAutoScalingConfigurationResponse.cs" />
     <Compile Include="V20220401\Models\StorageOption.cs" />

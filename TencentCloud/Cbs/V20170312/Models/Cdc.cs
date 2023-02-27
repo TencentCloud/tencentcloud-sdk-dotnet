@@ -75,6 +75,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
+        /// <summary>
+        /// 存储池创建时间。
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
+        /// <summary>
+        /// 当前集群中已创建的云盘数量。
+        /// </summary>
+        [JsonProperty("DiskNumber")]
+        public ulong? DiskNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +101,8 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "DiskNumber", this.DiskNumber);
         }
     }
 }

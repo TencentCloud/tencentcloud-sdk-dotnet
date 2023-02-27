@@ -126,6 +126,20 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("AdvancedRetentionPolicy")]
         public AdvancedRetentionPolicy AdvancedRetentionPolicy{ get; set; }
 
+        /// <summary>
+        /// 该复制快照策略的源端账户ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CopyFromAccountUin")]
+        public string CopyFromAccountUin{ get; set; }
+
+        /// <summary>
+        /// 标签。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +162,8 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "RetentionMonths", this.RetentionMonths);
             this.SetParamSimple(map, prefix + "RetentionAmount", this.RetentionAmount);
             this.SetParamObj(map, prefix + "AdvancedRetentionPolicy.", this.AdvancedRetentionPolicy);
+            this.SetParamSimple(map, prefix + "CopyFromAccountUin", this.CopyFromAccountUin);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

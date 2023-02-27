@@ -1388,8 +1388,6 @@ namespace TencentCloud.Cbs.V20170312
 
         /// <summary>
         /// 本接口（InquiryPriceResizeDisk）用于扩容云硬盘询价。
-        /// 
-        /// * 只支持预付费模式的云硬盘扩容询价。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceResizeDiskRequest"/></param>
         /// <returns><see cref="InquiryPriceResizeDiskResponse"/></returns>
@@ -1410,8 +1408,6 @@ namespace TencentCloud.Cbs.V20170312
 
         /// <summary>
         /// 本接口（InquiryPriceResizeDisk）用于扩容云硬盘询价。
-        /// 
-        /// * 只支持预付费模式的云硬盘扩容询价。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceResizeDiskRequest"/></param>
         /// <returns><see cref="InquiryPriceResizeDiskResponse"/></returns>

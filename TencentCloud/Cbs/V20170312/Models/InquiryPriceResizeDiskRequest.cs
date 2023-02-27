@@ -25,16 +25,16 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-        /// </summary>
-        [JsonProperty("DiskId")]
-        public string DiskId{ get; set; }
-
-        /// <summary>
         /// 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
+
+        /// <summary>
+        /// 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+        /// </summary>
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
 
         /// <summary>
         /// 云盘所属项目ID。 如传入则仅用于鉴权。
@@ -48,8 +48,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }

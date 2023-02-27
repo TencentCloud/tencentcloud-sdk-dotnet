@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A6E782C7-FC94-3EC6-A8AC-DB20F13405F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.705</VersionPrefix>
+    <VersionPrefix>3.0.706</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -102,6 +102,7 @@
     <Compile Include="V20170312\Models\DescribeSnapshotsResponse.cs" />
     <Compile Include="V20170312\Models\DetachDisksRequest.cs" />
     <Compile Include="V20170312\Models\DetachDisksResponse.cs" />
+    <Compile Include="V20170312\Models\DetailPrice.cs" />
     <Compile Include="V20170312\Models\Disk.cs" />
     <Compile Include="V20170312\Models\DiskBackup.cs" />
     <Compile Include="V20170312\Models\DiskChargePrepaid.cs" />

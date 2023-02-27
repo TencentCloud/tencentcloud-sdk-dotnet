@@ -25,7 +25,7 @@ namespace TencentCloud.Bma.V20221115.Models
     {
         
         /// <summary>
-        /// 批量模版
+        /// 批量模板
         /// </summary>
         [JsonProperty("FakeURLs")]
         public string FakeURLs{ get; set; }

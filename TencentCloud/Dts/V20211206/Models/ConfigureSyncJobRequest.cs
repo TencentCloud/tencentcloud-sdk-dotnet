@@ -43,12 +43,6 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DstAccessType{ get; set; }
 
         /// <summary>
-        /// 同步任务选项
-        /// </summary>
-        [JsonProperty("Options")]
-        public Options Options{ get; set; }
-
-        /// <summary>
         /// 同步库表对象信息
         /// </summary>
         [JsonProperty("Objects")]
@@ -91,6 +85,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public Endpoint DstInfo{ get; set; }
 
         /// <summary>
+        /// 同步任务选项
+        /// </summary>
+        [JsonProperty("Options")]
+        public Options Options{ get; set; }
+
+        /// <summary>
         /// 自动重试的时间段、可设置5至720分钟、0表示不重试
         /// </summary>
         [JsonProperty("AutoRetryTimeRangeMinutes")]
@@ -105,7 +105,6 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "SrcAccessType", this.SrcAccessType);
             this.SetParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
-            this.SetParamObj(map, prefix + "Options.", this.Options);
             this.SetParamObj(map, prefix + "Objects.", this.Objects);
             this.SetParamSimple(map, prefix + "JobName", this.JobName);
             this.SetParamSimple(map, prefix + "JobMode", this.JobMode);
@@ -113,6 +112,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
             this.SetParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
             this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
+            this.SetParamObj(map, prefix + "Options.", this.Options);
             this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
         }
     }

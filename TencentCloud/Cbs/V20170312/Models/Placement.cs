@@ -44,6 +44,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
+        /// 实例所属项目名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProjectName")]
+        public string ProjectName{ get; set; }
+
+        /// <summary>
         /// 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -72,6 +79,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "CageId", this.CageId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "CdcName", this.CdcName);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);

@@ -116,7 +116,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string[] Procedures{ get; set; }
 
         /// <summary>
-        /// 触发器迁移模式，All(为当前对象下的所有对象)，partial(部分对象)，如果整库同步此处应该为All。
+        /// 触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerMode")]
@@ -130,7 +130,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string[] Triggers{ get; set; }
 
         /// <summary>
-        /// 事件迁移模式，All(为当前对象下的所有对象)，partial(部分对象)，如果整库同步此处应该为All。
+        /// 事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventMode")]

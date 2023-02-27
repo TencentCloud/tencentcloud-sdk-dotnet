@@ -31,16 +31,16 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string BundleId{ get; set; }
 
         /// <summary>
+        /// 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+        /// </summary>
+        [JsonProperty("InstanceChargePrepaid")]
+        public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
+
+        /// <summary>
         /// 创建数量，默认为 1。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
-
-        /// <summary>
-        /// 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-        /// </summary>
-        [JsonProperty("InstanceChargePrepaid")]
-        public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
         /// 应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
@@ -55,8 +55,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
-            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "BlueprintId", this.BlueprintId);
         }
     }

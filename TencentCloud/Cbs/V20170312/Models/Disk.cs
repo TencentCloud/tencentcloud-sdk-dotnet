@@ -271,6 +271,20 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
+        /// <summary>
+        /// 云硬盘最后一次挂载的实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastAttachInsId")]
+        public string LastAttachInsId{ get; set; }
+
+        /// <summary>
+        /// 云硬盘最后一次操作错误提示
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrorPrompt")]
+        public string ErrorPrompt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -316,6 +330,8 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
             this.SetParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "LastAttachInsId", this.LastAttachInsId);
+            this.SetParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
         }
     }
 }

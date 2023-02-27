@@ -25,12 +25,6 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 客户端session信息，从JSSDK请求中获得
-        /// </summary>
-        [JsonProperty("ClientSession")]
-        public string ClientSession{ get; set; }
-
-        /// <summary>
         /// 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
         /// </summary>
         [JsonProperty("UserId")]
@@ -53,6 +47,12 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         [JsonProperty("GameParas")]
         public string GameParas{ get; set; }
+
+        /// <summary>
+        /// 客户端session信息，从JSSDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
+        /// </summary>
+        [JsonProperty("ClientSession")]
+        public string ClientSession{ get; set; }
 
         /// <summary>
         /// 分辨率,，可设置为1080p或720p或1920x1080格式
@@ -140,11 +140,11 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClientSession", this.ClientSession);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "GameId", this.GameId);
             this.SetParamSimple(map, prefix + "GameRegion", this.GameRegion);
             this.SetParamSimple(map, prefix + "GameParas", this.GameParas);
+            this.SetParamSimple(map, prefix + "ClientSession", this.ClientSession);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "SetNo", this.SetNo);
