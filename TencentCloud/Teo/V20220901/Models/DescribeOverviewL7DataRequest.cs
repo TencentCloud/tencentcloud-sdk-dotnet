@@ -81,6 +81,7 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 过滤条件，详细的过滤条件Key值如下：
+        /// <li>socket<br>   按照【<strong>HTTP协议类型</strong>】进行过滤。<br>   对应的Value可选项如下：<br>   HTTP：HTTP 协议；<br>   HTTPS：HTTPS协议；<br>   QUIC：QUIC协议。</li>
         /// <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。</li>
         /// <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。</li>
         /// </summary>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{773BF0CA-2F21-3865-B1F5-ADC28ACADE8A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.706</VersionPrefix>
+    <VersionPrefix>3.0.707</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,7 @@
     <Compile Include="V20210416\Models\CkafkaParams.cs" />
     <Compile Include="V20210416\Models\CkafkaTargetParams.cs" />
     <Compile Include="V20210416\Models\Connection.cs" />
+    <Compile Include="V20210416\Models\ConnectionBrief.cs" />
     <Compile Include="V20210416\Models\ConnectionDescription.cs" />
     <Compile Include="V20210416\Models\CreateConnectionRequest.cs" />
     <Compile Include="V20210416\Models\CreateConnectionResponse.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="V20210416\Models\CreateTargetResponse.cs" />
     <Compile Include="V20210416\Models\CreateTransformationRequest.cs" />
     <Compile Include="V20210416\Models\CreateTransformationResponse.cs" />
+    <Compile Include="V20210416\Models\DTSParams.cs" />
     <Compile Include="V20210416\Models\DeadLetterConfig.cs" />
     <Compile Include="V20210416\Models\DeleteConnectionRequest.cs" />
     <Compile Include="V20210416\Models\DeleteConnectionResponse.cs" />

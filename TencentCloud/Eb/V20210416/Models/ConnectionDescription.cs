@@ -44,6 +44,13 @@ namespace TencentCloud.Eb.V20210416.Models
         [JsonProperty("CkafkaParams")]
         public CkafkaParams CkafkaParams{ get; set; }
 
+        /// <summary>
+        /// data transfer service (DTS)参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DTSParams")]
+        public DTSParams DTSParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +60,7 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "ResourceDescription", this.ResourceDescription);
             this.SetParamObj(map, prefix + "APIGWParams.", this.APIGWParams);
             this.SetParamObj(map, prefix + "CkafkaParams.", this.CkafkaParams);
+            this.SetParamObj(map, prefix + "DTSParams.", this.DTSParams);
         }
     }
 }

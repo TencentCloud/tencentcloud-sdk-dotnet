@@ -1121,6 +1121,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// DescribeHttpsPackages 用于查询 CDN HTTPS请求包详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHttpsPackagesRequest"/></param>
+        /// <returns><see cref="DescribeHttpsPackagesResponse"/></returns>
+        public async Task<DescribeHttpsPackagesResponse> DescribeHttpsPackages(DescribeHttpsPackagesRequest req)
+        {
+             JsonResponseModel<DescribeHttpsPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHttpsPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHttpsPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeHttpsPackages 用于查询 CDN HTTPS请求包详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHttpsPackagesRequest"/></param>
+        /// <returns><see cref="DescribeHttpsPackagesResponse"/></returns>
+        public DescribeHttpsPackagesResponse DescribeHttpsPackagesSync(DescribeHttpsPackagesRequest req)
+        {
+             JsonResponseModel<DescribeHttpsPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHttpsPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHttpsPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG、 Guetzli 和 Avif。 
         /// </summary>
         /// <param name="req"><see cref="DescribeImageConfigRequest"/></param>

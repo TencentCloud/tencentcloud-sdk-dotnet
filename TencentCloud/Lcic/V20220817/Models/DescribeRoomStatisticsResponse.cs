@@ -63,6 +63,18 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? RealEndTime{ get; set; }
 
         /// <summary>
+        /// 房间消息总数。
+        /// </summary>
+        [JsonProperty("MessageCount")]
+        public ulong? MessageCount{ get; set; }
+
+        /// <summary>
+        /// 房间连麦总数。
+        /// </summary>
+        [JsonProperty("MicCount")]
+        public ulong? MicCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -80,6 +92,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamArrayObj(map, prefix + "MemberRecords.", this.MemberRecords);
             this.SetParamSimple(map, prefix + "RealStartTime", this.RealStartTime);
             this.SetParamSimple(map, prefix + "RealEndTime", this.RealEndTime);
+            this.SetParamSimple(map, prefix + "MessageCount", this.MessageCount);
+            this.SetParamSimple(map, prefix + "MicCount", this.MicCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

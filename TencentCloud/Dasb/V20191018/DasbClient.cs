@@ -133,6 +133,86 @@ namespace TencentCloud.Dasb.V20191018
         }
 
         /// <summary>
+        /// 绑定主机账号密码
+        /// </summary>
+        /// <param name="req"><see cref="BindDeviceAccountPasswordRequest"/></param>
+        /// <returns><see cref="BindDeviceAccountPasswordResponse"/></returns>
+        public async Task<BindDeviceAccountPasswordResponse> BindDeviceAccountPassword(BindDeviceAccountPasswordRequest req)
+        {
+             JsonResponseModel<BindDeviceAccountPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindDeviceAccountPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindDeviceAccountPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定主机账号密码
+        /// </summary>
+        /// <param name="req"><see cref="BindDeviceAccountPasswordRequest"/></param>
+        /// <returns><see cref="BindDeviceAccountPasswordResponse"/></returns>
+        public BindDeviceAccountPasswordResponse BindDeviceAccountPasswordSync(BindDeviceAccountPasswordRequest req)
+        {
+             JsonResponseModel<BindDeviceAccountPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindDeviceAccountPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindDeviceAccountPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定主机账号私钥
+        /// </summary>
+        /// <param name="req"><see cref="BindDeviceAccountPrivateKeyRequest"/></param>
+        /// <returns><see cref="BindDeviceAccountPrivateKeyResponse"/></returns>
+        public async Task<BindDeviceAccountPrivateKeyResponse> BindDeviceAccountPrivateKey(BindDeviceAccountPrivateKeyRequest req)
+        {
+             JsonResponseModel<BindDeviceAccountPrivateKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindDeviceAccountPrivateKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindDeviceAccountPrivateKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定主机账号私钥
+        /// </summary>
+        /// <param name="req"><see cref="BindDeviceAccountPrivateKeyRequest"/></param>
+        /// <returns><see cref="BindDeviceAccountPrivateKeyResponse"/></returns>
+        public BindDeviceAccountPrivateKeyResponse BindDeviceAccountPrivateKeySync(BindDeviceAccountPrivateKeyRequest req)
+        {
+             JsonResponseModel<BindDeviceAccountPrivateKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindDeviceAccountPrivateKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindDeviceAccountPrivateKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改资产绑定的堡垒机服务
         /// </summary>
         /// <param name="req"><see cref="BindDeviceResourceRequest"/></param>
@@ -204,6 +284,126 @@ namespace TencentCloud.Dasb.V20191018
              {
                  var strResp = this.InternalRequestSync(req, "CreateAcl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建手工资产同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetSyncJobRequest"/></param>
+        /// <returns><see cref="CreateAssetSyncJobResponse"/></returns>
+        public async Task<CreateAssetSyncJobResponse> CreateAssetSyncJob(CreateAssetSyncJobRequest req)
+        {
+             JsonResponseModel<CreateAssetSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAssetSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAssetSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建手工资产同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetSyncJobRequest"/></param>
+        /// <returns><see cref="CreateAssetSyncJobResponse"/></returns>
+        public CreateAssetSyncJobResponse CreateAssetSyncJobSync(CreateAssetSyncJobRequest req)
+        {
+             JsonResponseModel<CreateAssetSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAssetSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAssetSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建高危命令模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateCmdTemplateRequest"/></param>
+        /// <returns><see cref="CreateCmdTemplateResponse"/></returns>
+        public async Task<CreateCmdTemplateResponse> CreateCmdTemplate(CreateCmdTemplateRequest req)
+        {
+             JsonResponseModel<CreateCmdTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCmdTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCmdTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建高危命令模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateCmdTemplateRequest"/></param>
+        /// <returns><see cref="CreateCmdTemplateResponse"/></returns>
+        public CreateCmdTemplateResponse CreateCmdTemplateSync(CreateCmdTemplateRequest req)
+        {
+             JsonResponseModel<CreateCmdTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCmdTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCmdTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建主机账号
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceAccountRequest"/></param>
+        /// <returns><see cref="CreateDeviceAccountResponse"/></returns>
+        public async Task<CreateDeviceAccountResponse> CreateDeviceAccount(CreateDeviceAccountRequest req)
+        {
+             JsonResponseModel<CreateDeviceAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDeviceAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDeviceAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建主机账号
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceAccountRequest"/></param>
+        /// <returns><see cref="CreateDeviceAccountResponse"/></returns>
+        public CreateDeviceAccountResponse CreateDeviceAccountSync(CreateDeviceAccountRequest req)
+        {
+             JsonResponseModel<CreateDeviceAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDeviceAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDeviceAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -373,6 +573,86 @@ namespace TencentCloud.Dasb.V20191018
         }
 
         /// <summary>
+        /// 删除高危命令模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCmdTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteCmdTemplatesResponse"/></returns>
+        public async Task<DeleteCmdTemplatesResponse> DeleteCmdTemplates(DeleteCmdTemplatesRequest req)
+        {
+             JsonResponseModel<DeleteCmdTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCmdTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCmdTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除高危命令模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCmdTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteCmdTemplatesResponse"/></returns>
+        public DeleteCmdTemplatesResponse DeleteCmdTemplatesSync(DeleteCmdTemplatesRequest req)
+        {
+             JsonResponseModel<DeleteCmdTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCmdTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCmdTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除主机账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceAccountsRequest"/></param>
+        /// <returns><see cref="DeleteDeviceAccountsResponse"/></returns>
+        public async Task<DeleteDeviceAccountsResponse> DeleteDeviceAccounts(DeleteDeviceAccountsRequest req)
+        {
+             JsonResponseModel<DeleteDeviceAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDeviceAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除主机账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceAccountsRequest"/></param>
+        /// <returns><see cref="DeleteDeviceAccountsResponse"/></returns>
+        public DeleteDeviceAccountsResponse DeleteDeviceAccountsSync(DeleteDeviceAccountsRequest req)
+        {
+             JsonResponseModel<DeleteDeviceAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDeviceAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除资产组成员
         /// </summary>
         /// <param name="req"><see cref="DeleteDeviceGroupMembersRequest"/></param>
@@ -444,6 +724,46 @@ namespace TencentCloud.Dasb.V20191018
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDeviceGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除主机
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDevicesRequest"/></param>
+        /// <returns><see cref="DeleteDevicesResponse"/></returns>
+        public async Task<DeleteDevicesResponse> DeleteDevices(DeleteDevicesRequest req)
+        {
+             JsonResponseModel<DeleteDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除主机
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDevicesRequest"/></param>
+        /// <returns><see cref="DeleteDevicesResponse"/></returns>
+        public DeleteDevicesResponse DeleteDevicesSync(DeleteDevicesRequest req)
+        {
+             JsonResponseModel<DeleteDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDevicesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -573,6 +893,46 @@ namespace TencentCloud.Dasb.V20191018
         }
 
         /// <summary>
+        /// 开通服务，初始化资源，只针对新购资源
+        /// </summary>
+        /// <param name="req"><see cref="DeployResourceRequest"/></param>
+        /// <returns><see cref="DeployResourceResponse"/></returns>
+        public async Task<DeployResourceResponse> DeployResource(DeployResourceRequest req)
+        {
+             JsonResponseModel<DeployResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeployResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开通服务，初始化资源，只针对新购资源
+        /// </summary>
+        /// <param name="req"><see cref="DeployResourceRequest"/></param>
+        /// <returns><see cref="DeployResourceResponse"/></returns>
+        public DeployResourceResponse DeployResourceSync(DeployResourceRequest req)
+        {
+             JsonResponseModel<DeployResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeployResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询访问权限列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAclsRequest"/></param>
@@ -613,6 +973,86 @@ namespace TencentCloud.Dasb.V20191018
         }
 
         /// <summary>
+        /// 查询资产同步状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetSyncStatusRequest"/></param>
+        /// <returns><see cref="DescribeAssetSyncStatusResponse"/></returns>
+        public async Task<DescribeAssetSyncStatusResponse> DescribeAssetSyncStatus(DescribeAssetSyncStatusRequest req)
+        {
+             JsonResponseModel<DescribeAssetSyncStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAssetSyncStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetSyncStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询资产同步状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetSyncStatusRequest"/></param>
+        /// <returns><see cref="DescribeAssetSyncStatusResponse"/></returns>
+        public DescribeAssetSyncStatusResponse DescribeAssetSyncStatusSync(DescribeAssetSyncStatusRequest req)
+        {
+             JsonResponseModel<DescribeAssetSyncStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAssetSyncStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetSyncStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询命令模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmdTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeCmdTemplatesResponse"/></returns>
+        public async Task<DescribeCmdTemplatesResponse> DescribeCmdTemplates(DescribeCmdTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeCmdTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCmdTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmdTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询命令模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmdTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeCmdTemplatesResponse"/></returns>
+        public DescribeCmdTemplatesResponse DescribeCmdTemplatesSync(DescribeCmdTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeCmdTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCmdTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmdTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取镜像列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDasbImageIdsRequest"/></param>
@@ -644,6 +1084,46 @@ namespace TencentCloud.Dasb.V20191018
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDasbImageIds");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDasbImageIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询主机账号列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceAccountsRequest"/></param>
+        /// <returns><see cref="DescribeDeviceAccountsResponse"/></returns>
+        public async Task<DescribeDeviceAccountsResponse> DescribeDeviceAccounts(DescribeDeviceAccountsRequest req)
+        {
+             JsonResponseModel<DescribeDeviceAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeviceAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询主机账号列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceAccountsRequest"/></param>
+        /// <returns><see cref="DescribeDeviceAccountsResponse"/></returns>
+        public DescribeDeviceAccountsResponse DescribeDeviceAccountsSync(DescribeDeviceAccountsRequest req)
+        {
+             JsonResponseModel<DescribeDeviceAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeviceAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceAccountsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -933,6 +1413,46 @@ namespace TencentCloud.Dasb.V20191018
         }
 
         /// <summary>
+        /// 导入外部资产信息
+        /// </summary>
+        /// <param name="req"><see cref="ImportExternalDeviceRequest"/></param>
+        /// <returns><see cref="ImportExternalDeviceResponse"/></returns>
+        public async Task<ImportExternalDeviceResponse> ImportExternalDevice(ImportExternalDeviceRequest req)
+        {
+             JsonResponseModel<ImportExternalDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ImportExternalDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportExternalDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导入外部资产信息
+        /// </summary>
+        /// <param name="req"><see cref="ImportExternalDeviceRequest"/></param>
+        /// <returns><see cref="ImportExternalDeviceResponse"/></returns>
+        public ImportExternalDeviceResponse ImportExternalDeviceSync(ImportExternalDeviceRequest req)
+        {
+             JsonResponseModel<ImportExternalDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImportExternalDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportExternalDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改访问权限
         /// </summary>
         /// <param name="req"><see cref="ModifyAclRequest"/></param>
@@ -973,6 +1493,86 @@ namespace TencentCloud.Dasb.V20191018
         }
 
         /// <summary>
+        /// 修改资产信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceRequest"/></param>
+        /// <returns><see cref="ModifyDeviceResponse"/></returns>
+        public async Task<ModifyDeviceResponse> ModifyDevice(ModifyDeviceRequest req)
+        {
+             JsonResponseModel<ModifyDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改资产信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceRequest"/></param>
+        /// <returns><see cref="ModifyDeviceResponse"/></returns>
+        public ModifyDeviceResponse ModifyDeviceSync(ModifyDeviceRequest req)
+        {
+             JsonResponseModel<ModifyDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改资产组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceGroupRequest"/></param>
+        /// <returns><see cref="ModifyDeviceGroupResponse"/></returns>
+        public async Task<ModifyDeviceGroupResponse> ModifyDeviceGroup(ModifyDeviceGroupRequest req)
+        {
+             JsonResponseModel<ModifyDeviceGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDeviceGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDeviceGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改资产组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceGroupRequest"/></param>
+        /// <returns><see cref="ModifyDeviceGroupResponse"/></returns>
+        public ModifyDeviceGroupResponse ModifyDeviceGroupSync(ModifyDeviceGroupRequest req)
+        {
+             JsonResponseModel<ModifyDeviceGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDeviceGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDeviceGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改用户信息
         /// </summary>
         /// <param name="req"><see cref="ModifyUserRequest"/></param>
@@ -1004,6 +1604,126 @@ namespace TencentCloud.Dasb.V20191018
              {
                  var strResp = this.InternalRequestSync(req, "ModifyUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 清除设备账号绑定密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetDeviceAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetDeviceAccountPasswordResponse"/></returns>
+        public async Task<ResetDeviceAccountPasswordResponse> ResetDeviceAccountPassword(ResetDeviceAccountPasswordRequest req)
+        {
+             JsonResponseModel<ResetDeviceAccountPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetDeviceAccountPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDeviceAccountPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 清除设备账号绑定密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetDeviceAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetDeviceAccountPasswordResponse"/></returns>
+        public ResetDeviceAccountPasswordResponse ResetDeviceAccountPasswordSync(ResetDeviceAccountPasswordRequest req)
+        {
+             JsonResponseModel<ResetDeviceAccountPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetDeviceAccountPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDeviceAccountPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 清除设备账号绑定的密钥
+        /// </summary>
+        /// <param name="req"><see cref="ResetDeviceAccountPrivateKeyRequest"/></param>
+        /// <returns><see cref="ResetDeviceAccountPrivateKeyResponse"/></returns>
+        public async Task<ResetDeviceAccountPrivateKeyResponse> ResetDeviceAccountPrivateKey(ResetDeviceAccountPrivateKeyRequest req)
+        {
+             JsonResponseModel<ResetDeviceAccountPrivateKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetDeviceAccountPrivateKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDeviceAccountPrivateKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 清除设备账号绑定的密钥
+        /// </summary>
+        /// <param name="req"><see cref="ResetDeviceAccountPrivateKeyRequest"/></param>
+        /// <returns><see cref="ResetDeviceAccountPrivateKeyResponse"/></returns>
+        public ResetDeviceAccountPrivateKeyResponse ResetDeviceAccountPrivateKeySync(ResetDeviceAccountPrivateKeyRequest req)
+        {
+             JsonResponseModel<ResetDeviceAccountPrivateKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetDeviceAccountPrivateKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDeviceAccountPrivateKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置用户
+        /// </summary>
+        /// <param name="req"><see cref="ResetUserRequest"/></param>
+        /// <returns><see cref="ResetUserResponse"/></returns>
+        public async Task<ResetUserResponse> ResetUser(ResetUserRequest req)
+        {
+             JsonResponseModel<ResetUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置用户
+        /// </summary>
+        /// <param name="req"><see cref="ResetUserRequest"/></param>
+        /// <returns><see cref="ResetUserResponse"/></returns>
+        public ResetUserResponse ResetUserSync(ResetUserRequest req)
+        {
+             JsonResponseModel<ResetUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetUserResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

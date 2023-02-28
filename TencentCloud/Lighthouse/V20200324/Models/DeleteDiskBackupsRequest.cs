@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 云硬盘备份点ID列表，可通过 DescribeDiskBackups接口查询。
+        /// 云硬盘备份点ID列表，可通过 [DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
         /// </summary>
         [JsonProperty("DiskBackupIds")]
         public string[] DiskBackupIds{ get; set; }

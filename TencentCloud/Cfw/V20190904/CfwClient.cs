@@ -2019,6 +2019,86 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 修改企业安全组下发状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnterpriseSecurityDispatchStatusRequest"/></param>
+        /// <returns><see cref="ModifyEnterpriseSecurityDispatchStatusResponse"/></returns>
+        public async Task<ModifyEnterpriseSecurityDispatchStatusResponse> ModifyEnterpriseSecurityDispatchStatus(ModifyEnterpriseSecurityDispatchStatusRequest req)
+        {
+             JsonResponseModel<ModifyEnterpriseSecurityDispatchStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyEnterpriseSecurityDispatchStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnterpriseSecurityDispatchStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改企业安全组下发状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnterpriseSecurityDispatchStatusRequest"/></param>
+        /// <returns><see cref="ModifyEnterpriseSecurityDispatchStatusResponse"/></returns>
+        public ModifyEnterpriseSecurityDispatchStatusResponse ModifyEnterpriseSecurityDispatchStatusSync(ModifyEnterpriseSecurityDispatchStatusRequest req)
+        {
+             JsonResponseModel<ModifyEnterpriseSecurityDispatchStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEnterpriseSecurityDispatchStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnterpriseSecurityDispatchStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑新企业安全组规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnterpriseSecurityGroupRuleRequest"/></param>
+        /// <returns><see cref="ModifyEnterpriseSecurityGroupRuleResponse"/></returns>
+        public async Task<ModifyEnterpriseSecurityGroupRuleResponse> ModifyEnterpriseSecurityGroupRule(ModifyEnterpriseSecurityGroupRuleRequest req)
+        {
+             JsonResponseModel<ModifyEnterpriseSecurityGroupRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyEnterpriseSecurityGroupRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnterpriseSecurityGroupRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑新企业安全组规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnterpriseSecurityGroupRuleRequest"/></param>
+        /// <returns><see cref="ModifyEnterpriseSecurityGroupRuleResponse"/></returns>
+        public ModifyEnterpriseSecurityGroupRuleResponse ModifyEnterpriseSecurityGroupRuleSync(ModifyEnterpriseSecurityGroupRuleRequest req)
+        {
+             JsonResponseModel<ModifyEnterpriseSecurityGroupRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEnterpriseSecurityGroupRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnterpriseSecurityGroupRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改NAT访问控制规则
         /// </summary>
         /// <param name="req"><see cref="ModifyNatAcRuleRequest"/></param>
@@ -2170,6 +2250,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "ModifyNatFwVpcDnsSwitch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatFwVpcDnsSwitchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// NAT防火墙规则快速排序
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatSequenceRulesRequest"/></param>
+        /// <returns><see cref="ModifyNatSequenceRulesResponse"/></returns>
+        public async Task<ModifyNatSequenceRulesResponse> ModifyNatSequenceRules(ModifyNatSequenceRulesRequest req)
+        {
+             JsonResponseModel<ModifyNatSequenceRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNatSequenceRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatSequenceRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// NAT防火墙规则快速排序
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatSequenceRulesRequest"/></param>
+        /// <returns><see cref="ModifyNatSequenceRulesResponse"/></returns>
+        public ModifyNatSequenceRulesResponse ModifyNatSequenceRulesSync(ModifyNatSequenceRulesRequest req)
+        {
+             JsonResponseModel<ModifyNatSequenceRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNatSequenceRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatSequenceRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

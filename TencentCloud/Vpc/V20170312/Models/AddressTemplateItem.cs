@@ -25,13 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 起始地址。
+        /// ipm-xxxxxxxx
+        /// </summary>
+        [JsonProperty("AddressTemplateId")]
+        public string AddressTemplateId{ get; set; }
+
+        /// <summary>
+        /// IP模板名称
+        /// </summary>
+        [JsonProperty("AddressTemplateName")]
+        public string AddressTemplateName{ get; set; }
+
+        /// <summary>
+        /// 废弃字段
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
 
         /// <summary>
-        /// 结束地址。
+        /// 废弃字段
         /// </summary>
         [JsonProperty("To")]
         public string To{ get; set; }
@@ -42,6 +54,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AddressTemplateId", this.AddressTemplateId);
+            this.SetParamSimple(map, prefix + "AddressTemplateName", this.AddressTemplateName);
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "To", this.To);
         }

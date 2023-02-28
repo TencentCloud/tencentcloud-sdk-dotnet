@@ -1213,6 +1213,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 获取房间历史消息(房间历史消息保存7天)
+        /// </summary>
+        /// <param name="req"><see cref="GetRoomMessageRequest"/></param>
+        /// <returns><see cref="GetRoomMessageResponse"/></returns>
+        public async Task<GetRoomMessageResponse> GetRoomMessage(GetRoomMessageRequest req)
+        {
+             JsonResponseModel<GetRoomMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRoomMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRoomMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取房间历史消息(房间历史消息保存7天)
+        /// </summary>
+        /// <param name="req"><see cref="GetRoomMessageRequest"/></param>
+        /// <returns><see cref="GetRoomMessageResponse"/></returns>
+        public GetRoomMessageResponse GetRoomMessageSync(GetRoomMessageRequest req)
+        {
+             JsonResponseModel<GetRoomMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRoomMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRoomMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取水印设置
         /// </summary>
         /// <param name="req"><see cref="GetWatermarkRequest"/></param>

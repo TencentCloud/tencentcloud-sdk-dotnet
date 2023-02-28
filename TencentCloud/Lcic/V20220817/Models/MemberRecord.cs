@@ -108,6 +108,18 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Device")]
         public long? Device{ get; set; }
 
+        /// <summary>
+        /// 每个成员上麦次数。
+        /// </summary>
+        [JsonProperty("PerMemberMicCount")]
+        public long? PerMemberMicCount{ get; set; }
+
+        /// <summary>
+        /// 每个成员发送消息数量。
+        /// </summary>
+        [JsonProperty("PerMemberMessageCount")]
+        public long? PerMemberMessageCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "IPAddress", this.IPAddress);
             this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamSimple(map, prefix + "Device", this.Device);
+            this.SetParamSimple(map, prefix + "PerMemberMicCount", this.PerMemberMicCount);
+            this.SetParamSimple(map, prefix + "PerMemberMessageCount", this.PerMemberMessageCount);
         }
     }
 }

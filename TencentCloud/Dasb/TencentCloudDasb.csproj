@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4ACC8A01-FDA5-3C33-AEEA-E6EE529B3ACA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.706</VersionPrefix>
+    <VersionPrefix>3.0.707</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,11 +53,22 @@
     <Compile Include="V20191018\Models\AddDeviceGroupMembersResponse.cs" />
     <Compile Include="V20191018\Models\AddUserGroupMembersRequest.cs" />
     <Compile Include="V20191018\Models\AddUserGroupMembersResponse.cs" />
+    <Compile Include="V20191018\Models\AssetSyncStatus.cs" />
+    <Compile Include="V20191018\Models\BindDeviceAccountPasswordRequest.cs" />
+    <Compile Include="V20191018\Models\BindDeviceAccountPasswordResponse.cs" />
+    <Compile Include="V20191018\Models\BindDeviceAccountPrivateKeyRequest.cs" />
+    <Compile Include="V20191018\Models\BindDeviceAccountPrivateKeyResponse.cs" />
     <Compile Include="V20191018\Models\BindDeviceResourceRequest.cs" />
     <Compile Include="V20191018\Models\BindDeviceResourceResponse.cs" />
     <Compile Include="V20191018\Models\CmdTemplate.cs" />
     <Compile Include="V20191018\Models\CreateAclRequest.cs" />
     <Compile Include="V20191018\Models\CreateAclResponse.cs" />
+    <Compile Include="V20191018\Models\CreateAssetSyncJobRequest.cs" />
+    <Compile Include="V20191018\Models\CreateAssetSyncJobResponse.cs" />
+    <Compile Include="V20191018\Models\CreateCmdTemplateRequest.cs" />
+    <Compile Include="V20191018\Models\CreateCmdTemplateResponse.cs" />
+    <Compile Include="V20191018\Models\CreateDeviceAccountRequest.cs" />
+    <Compile Include="V20191018\Models\CreateDeviceAccountResponse.cs" />
     <Compile Include="V20191018\Models\CreateDeviceGroupRequest.cs" />
     <Compile Include="V20191018\Models\CreateDeviceGroupResponse.cs" />
     <Compile Include="V20191018\Models\CreateUserGroupRequest.cs" />
@@ -66,10 +77,16 @@
     <Compile Include="V20191018\Models\CreateUserResponse.cs" />
     <Compile Include="V20191018\Models\DeleteAclsRequest.cs" />
     <Compile Include="V20191018\Models\DeleteAclsResponse.cs" />
+    <Compile Include="V20191018\Models\DeleteCmdTemplatesRequest.cs" />
+    <Compile Include="V20191018\Models\DeleteCmdTemplatesResponse.cs" />
+    <Compile Include="V20191018\Models\DeleteDeviceAccountsRequest.cs" />
+    <Compile Include="V20191018\Models\DeleteDeviceAccountsResponse.cs" />
     <Compile Include="V20191018\Models\DeleteDeviceGroupMembersRequest.cs" />
     <Compile Include="V20191018\Models\DeleteDeviceGroupMembersResponse.cs" />
     <Compile Include="V20191018\Models\DeleteDeviceGroupsRequest.cs" />
     <Compile Include="V20191018\Models\DeleteDeviceGroupsResponse.cs" />
+    <Compile Include="V20191018\Models\DeleteDevicesRequest.cs" />
+    <Compile Include="V20191018\Models\DeleteDevicesResponse.cs" />
     <Compile Include="V20191018\Models\DeleteUserGroupMembersRequest.cs" />
     <Compile Include="V20191018\Models\DeleteUserGroupMembersResponse.cs" />
     <Compile Include="V20191018\Models\DeleteUserGroupsRequest.cs" />
@@ -77,10 +94,18 @@
     <Compile Include="V20191018\Models\DeleteUsersRequest.cs" />
     <Compile Include="V20191018\Models\DeleteUsersResponse.cs" />
     <Compile Include="V20191018\Models\Department.cs" />
+    <Compile Include="V20191018\Models\DeployResourceRequest.cs" />
+    <Compile Include="V20191018\Models\DeployResourceResponse.cs" />
     <Compile Include="V20191018\Models\DescribeAclsRequest.cs" />
     <Compile Include="V20191018\Models\DescribeAclsResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeAssetSyncStatusRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeAssetSyncStatusResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeCmdTemplatesRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeCmdTemplatesResponse.cs" />
     <Compile Include="V20191018\Models\DescribeDasbImageIdsRequest.cs" />
     <Compile Include="V20191018\Models\DescribeDasbImageIdsResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeDeviceAccountsRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeDeviceAccountsResponse.cs" />
     <Compile Include="V20191018\Models\DescribeDeviceGroupMembersRequest.cs" />
     <Compile Include="V20191018\Models\DescribeDeviceGroupMembersResponse.cs" />
     <Compile Include="V20191018\Models\DescribeDeviceGroupsRequest.cs" />
@@ -96,12 +121,26 @@
     <Compile Include="V20191018\Models\DescribeUsersRequest.cs" />
     <Compile Include="V20191018\Models\DescribeUsersResponse.cs" />
     <Compile Include="V20191018\Models\Device.cs" />
+    <Compile Include="V20191018\Models\DeviceAccount.cs" />
+    <Compile Include="V20191018\Models\ExternalDevice.cs" />
     <Compile Include="V20191018\Models\Filter.cs" />
     <Compile Include="V20191018\Models\Group.cs" />
+    <Compile Include="V20191018\Models\ImportExternalDeviceRequest.cs" />
+    <Compile Include="V20191018\Models\ImportExternalDeviceResponse.cs" />
     <Compile Include="V20191018\Models\ModifyAclRequest.cs" />
     <Compile Include="V20191018\Models\ModifyAclResponse.cs" />
+    <Compile Include="V20191018\Models\ModifyDeviceGroupRequest.cs" />
+    <Compile Include="V20191018\Models\ModifyDeviceGroupResponse.cs" />
+    <Compile Include="V20191018\Models\ModifyDeviceRequest.cs" />
+    <Compile Include="V20191018\Models\ModifyDeviceResponse.cs" />
     <Compile Include="V20191018\Models\ModifyUserRequest.cs" />
     <Compile Include="V20191018\Models\ModifyUserResponse.cs" />
+    <Compile Include="V20191018\Models\ResetDeviceAccountPasswordRequest.cs" />
+    <Compile Include="V20191018\Models\ResetDeviceAccountPasswordResponse.cs" />
+    <Compile Include="V20191018\Models\ResetDeviceAccountPrivateKeyRequest.cs" />
+    <Compile Include="V20191018\Models\ResetDeviceAccountPrivateKeyResponse.cs" />
+    <Compile Include="V20191018\Models\ResetUserRequest.cs" />
+    <Compile Include="V20191018\Models\ResetUserResponse.cs" />
     <Compile Include="V20191018\Models\Resource.cs" />
     <Compile Include="V20191018\Models\TagFilter.cs" />
     <Compile Include="V20191018\Models\User.cs" />

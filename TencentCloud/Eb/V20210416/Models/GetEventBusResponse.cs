@@ -73,6 +73,40 @@ namespace TencentCloud.Eb.V20210416.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// 计费模式
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
+        /// <summary>
+        /// EB日志存储时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SaveDays")]
+        public long? SaveDays{ get; set; }
+
+        /// <summary>
+        /// EB日志主题ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogTopicId")]
+        public string LogTopicId{ get; set; }
+
+        /// <summary>
+        /// 是否开启存储
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableStore")]
+        public bool? EnableStore{ get; set; }
+
+        /// <summary>
+        /// 消息序列，是否有序
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LinkMode")]
+        public string LinkMode{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -92,6 +126,11 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "EventBusName", this.EventBusName);
             this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "SaveDays", this.SaveDays);
+            this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+            this.SetParamSimple(map, prefix + "EnableStore", this.EnableStore);
+            this.SetParamSimple(map, prefix + "LinkMode", this.LinkMode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

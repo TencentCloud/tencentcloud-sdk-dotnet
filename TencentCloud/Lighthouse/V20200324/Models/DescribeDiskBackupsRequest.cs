@@ -41,7 +41,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <li>disk-backup-state</li>按照【云硬盘备份点状态】进行过滤。
         /// 类型：String
         /// 必选：否
-        /// 取值：参考数据结构DiskBackup下的DiskBackupState取值。
+        /// 取值：参考数据结构[DiskBackup](https://cloud.tencent.com/document/product/1207/47576#DiskBackup)下的DiskBackupState取值。
         /// <li>disk-usage</li>按照【云硬盘类型】进行过滤。
         /// 类型：String
         /// 必选：否

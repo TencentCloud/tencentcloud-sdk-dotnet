@@ -60,6 +60,27 @@ namespace TencentCloud.Eb.V20210416.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// 计费模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
+        /// <summary>
+        /// 连接器基础信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConnectionBriefs")]
+        public ConnectionBrief[] ConnectionBriefs{ get; set; }
+
+        /// <summary>
+        /// 目标简要信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetBriefs")]
+        public TargetBrief[] TargetBriefs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +93,9 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "EventBusName", this.EventBusName);
             this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamArrayObj(map, prefix + "ConnectionBriefs.", this.ConnectionBriefs);
+            this.SetParamArrayObj(map, prefix + "TargetBriefs.", this.TargetBriefs);
         }
     }
 }
