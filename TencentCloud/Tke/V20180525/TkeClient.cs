@@ -3973,7 +3973,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 获取事件、审计和日志的状态接口
+        /// 获取事件、审计和日志的状态
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeLogSwitchesRequest"/></param>
         /// <returns><see cref="DescribeEdgeLogSwitchesResponse"/></returns>
@@ -3993,7 +3993,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 获取事件、审计和日志的状态接口
+        /// 获取事件、审计和日志的状态
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeLogSwitchesRequest"/></param>
         /// <returns><see cref="DescribeEdgeLogSwitchesResponse"/></returns>

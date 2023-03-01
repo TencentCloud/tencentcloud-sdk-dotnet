@@ -253,7 +253,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(CreateDBInstanceHour)用于创建按量计费的MongoDB云数据库实例。
+        /// 本接口（CreateDBInstanceHour）用于创建按量计费的MongoDB云数据库实例。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceHourRequest"/></param>
         /// <returns><see cref="CreateDBInstanceHourResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(CreateDBInstanceHour)用于创建按量计费的MongoDB云数据库实例。
+        /// 本接口（CreateDBInstanceHour）用于创建按量计费的MongoDB云数据库实例。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceHourRequest"/></param>
         /// <returns><see cref="CreateDBInstanceHourResponse"/></returns>

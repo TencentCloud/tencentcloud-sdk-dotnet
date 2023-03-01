@@ -173,7 +173,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// CreateDiagnoseUrl 用于添加域名诊断任务URL
+        /// CreateDiagnoseUrl 用于添加域名诊断任务URL， <font color=red>将于 **2023年5月31日** 下线</font><br>
         /// </summary>
         /// <param name="req"><see cref="CreateDiagnoseUrlRequest"/></param>
         /// <returns><see cref="CreateDiagnoseUrlResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// CreateDiagnoseUrl 用于添加域名诊断任务URL
+        /// CreateDiagnoseUrl 用于添加域名诊断任务URL， <font color=red>将于 **2023年5月31日** 下线</font><br>
         /// </summary>
         /// <param name="req"><see cref="CreateDiagnoseUrlRequest"/></param>
         /// <returns><see cref="CreateDiagnoseUrlResponse"/></returns>
@@ -879,7 +879,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// DescribeDiagnoseReport 用于获取指定报告id的内容
+        /// DescribeDiagnoseReport 用于获取指定报告id的内容， <font color=red>将于 **2023年5月31日** 下线</font><br>
         /// </summary>
         /// <param name="req"><see cref="DescribeDiagnoseReportRequest"/></param>
         /// <returns><see cref="DescribeDiagnoseReportResponse"/></returns>
@@ -899,7 +899,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// DescribeDiagnoseReport 用于获取指定报告id的内容
+        /// DescribeDiagnoseReport 用于获取指定报告id的内容， <font color=red>将于 **2023年5月31日** 下线</font><br>
         /// </summary>
         /// <param name="req"><see cref="DescribeDiagnoseReportRequest"/></param>
         /// <returns><see cref="DescribeDiagnoseReportResponse"/></returns>
@@ -2333,7 +2333,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
+        /// ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情， <font color=red>将于 **2023年5月31日** 下线</font><br>
         /// </summary>
         /// <param name="req"><see cref="ListDiagnoseReportRequest"/></param>
         /// <returns><see cref="ListDiagnoseReportResponse"/></returns>
@@ -2353,7 +2353,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
+        /// ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情， <font color=red>将于 **2023年5月31日** 下线</font><br>
         /// </summary>
         /// <param name="req"><see cref="ListDiagnoseReportRequest"/></param>
         /// <returns><see cref="ListDiagnoseReportResponse"/></returns>

@@ -53,60 +53,68 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Ocr识别结果。民族。
+        /// 身份校验环节识别结果：民族。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrNation")]
         public string OcrNation{ get; set; }
 
         /// <summary>
-        /// Ocr识别结果。家庭住址。
+        /// 身份校验环节识别结果：家庭住址。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrAddress")]
         public string OcrAddress{ get; set; }
 
         /// <summary>
-        /// Ocr识别结果。生日。
+        /// 身份校验环节识别结果：生日。格式为：YYYY/M/D
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrBirth")]
         public string OcrBirth{ get; set; }
 
         /// <summary>
-        /// Ocr识别结果。签发机关。
+        /// 身份校验环节识别结果：签发机关。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrAuthority")]
         public string OcrAuthority{ get; set; }
 
         /// <summary>
-        /// Ocr识别结果。有效日期。
+        /// 身份校验环节识别结果：有效日期。格式为：YYYY.MM.DD-YYYY.MM.DD
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrValidDate")]
         public string OcrValidDate{ get; set; }
 
         /// <summary>
-        /// Ocr识别结果。姓名。
+        /// 身份校验环节识别结果：姓名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrName")]
         public string OcrName{ get; set; }
 
         /// <summary>
-        /// Ocr识别结果。身份证号。
+        /// 身份校验环节识别结果：身份证号。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrIdCard")]
         public string OcrIdCard{ get; set; }
 
         /// <summary>
-        /// Ocr识别结果。性别。
+        /// 身份校验环节识别结果：性别。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrGender")]
         public string OcrGender{ get; set; }
+
+        /// <summary>
+        /// 身份校验环节采用的信息上传方式。
+        /// 取值有"NFC"、"OCR"、"手动输入"、"其他"
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IdInfoFrom")]
+        public string IdInfoFrom{ get; set; }
 
         /// <summary>
         /// 本次流程最终活体结果。0为成功
@@ -212,6 +220,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "OcrName", this.OcrName);
             this.SetParamSimple(map, prefix + "OcrIdCard", this.OcrIdCard);
             this.SetParamSimple(map, prefix + "OcrGender", this.OcrGender);
+            this.SetParamSimple(map, prefix + "IdInfoFrom", this.IdInfoFrom);
             this.SetParamSimple(map, prefix + "LiveStatus", this.LiveStatus);
             this.SetParamSimple(map, prefix + "LiveMsg", this.LiveMsg);
             this.SetParamSimple(map, prefix + "Comparestatus", this.Comparestatus);

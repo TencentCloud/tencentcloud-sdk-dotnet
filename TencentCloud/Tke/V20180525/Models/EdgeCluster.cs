@@ -105,6 +105,20 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
+        /// <summary>
+        /// 是否支持自动提升集群配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoUpgradeClusterLevel")]
+        public bool? AutoUpgradeClusterLevel{ get; set; }
+
+        /// <summary>
+        /// 集群付费模式，支持POSTPAID_BY_HOUR或者PREPAID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChargeType")]
+        public string ChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +138,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
             this.SetParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
             this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
         }
     }
 }
