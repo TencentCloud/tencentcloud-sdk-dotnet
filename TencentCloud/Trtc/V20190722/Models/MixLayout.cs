@@ -87,7 +87,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? ImageLayer{ get; set; }
 
         /// <summary>
-        /// 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+        /// 图片的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
         /// </summary>
         [JsonProperty("SubBackgroundImage")]
         public string SubBackgroundImage{ get; set; }

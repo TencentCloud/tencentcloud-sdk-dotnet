@@ -1535,7 +1535,7 @@ namespace TencentCloud.Vpc.V20170312
         /// * 支持基础网络、VPC，返回VpcId为0
         /// * 只支持VPC，返回默认VPC信息
         /// 
-        /// 您也可以通过 Force 参数，强制返回默认VPC
+        /// 您也可以通过 Force 参数，强制返回默认VPC。
         /// </summary>
         /// <param name="req"><see cref="CreateDefaultVpcRequest"/></param>
         /// <returns><see cref="CreateDefaultVpcResponse"/></returns>
@@ -1563,7 +1563,7 @@ namespace TencentCloud.Vpc.V20170312
         /// * 支持基础网络、VPC，返回VpcId为0
         /// * 只支持VPC，返回默认VPC信息
         /// 
-        /// 您也可以通过 Force 参数，强制返回默认VPC
+        /// 您也可以通过 Force 参数，强制返回默认VPC。
         /// </summary>
         /// <param name="req"><see cref="CreateDefaultVpcRequest"/></param>
         /// <returns><see cref="CreateDefaultVpcResponse"/></returns>
@@ -1987,7 +1987,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateNetDetect)用于创建网络探测。
+        /// 本接口（CreateNetDetect）用于创建网络探测。
         /// </summary>
         /// <param name="req"><see cref="CreateNetDetectRequest"/></param>
         /// <returns><see cref="CreateNetDetectResponse"/></returns>
@@ -2007,7 +2007,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateNetDetect)用于创建网络探测。
+        /// 本接口（CreateNetDetect）用于创建网络探测。
         /// </summary>
         /// <param name="req"><see cref="CreateNetDetectRequest"/></param>
         /// <returns><see cref="CreateNetDetectResponse"/></returns>
@@ -3723,7 +3723,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(DeleteNetDetect)用于删除网络探测实例。
+        /// 本接口（DeleteNetDetect）用于删除网络探测实例。
         /// </summary>
         /// <param name="req"><see cref="DeleteNetDetectRequest"/></param>
         /// <returns><see cref="DeleteNetDetectResponse"/></returns>
@@ -3743,7 +3743,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(DeleteNetDetect)用于删除网络探测实例。
+        /// 本接口（DeleteNetDetect）用于删除网络探测实例。
         /// </summary>
         /// <param name="req"><see cref="DeleteNetDetectRequest"/></param>
         /// <returns><see cref="DeleteNetDetectResponse"/></returns>
@@ -3891,7 +3891,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除路由表
+        /// 本接口（DeleteRouteTable）用于删除路由表。
         /// </summary>
         /// <param name="req"><see cref="DeleteRouteTableRequest"/></param>
         /// <returns><see cref="DeleteRouteTableResponse"/></returns>
@@ -3911,7 +3911,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除路由表
+        /// 本接口（DeleteRouteTable）用于删除路由表。
         /// </summary>
         /// <param name="req"><see cref="DeleteRouteTableRequest"/></param>
         /// <returns><see cref="DeleteRouteTableResponse"/></returns>

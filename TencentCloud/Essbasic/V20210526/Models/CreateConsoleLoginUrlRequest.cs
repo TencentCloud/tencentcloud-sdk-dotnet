@@ -80,16 +80,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string AutoJumpBackEvent{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
         /// 支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证
         /// </summary>
         [JsonProperty("AuthorizationTypes")]
         public long?[] AuthorizationTypes{ get; set; }
+
+        /// <summary>
+        /// 暂未开放
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -106,8 +106,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "MenuStatus", this.MenuStatus);
             this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
             this.SetParamSimple(map, prefix + "AutoJumpBackEvent", this.AutoJumpBackEvent);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

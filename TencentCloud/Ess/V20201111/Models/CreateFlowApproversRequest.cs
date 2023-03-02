@@ -42,6 +42,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Approvers")]
         public FillApproverInfo[] Approvers{ get; set; }
 
+        /// <summary>
+        /// 企微消息中的发起人
+        /// </summary>
+        [JsonProperty("Initiator")]
+        public string Initiator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
+            this.SetParamSimple(map, prefix + "Initiator", this.Initiator);
         }
     }
 }

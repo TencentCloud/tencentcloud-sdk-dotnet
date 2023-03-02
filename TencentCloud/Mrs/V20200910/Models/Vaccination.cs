@@ -87,6 +87,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
 
+        /// <summary>
+        /// 疫苗批号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Lot")]
+        public string Lot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "Clinic", this.Clinic);
             this.SetParamSimple(map, prefix + "Site", this.Site);
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
+            this.SetParamSimple(map, prefix + "Lot", this.Lot);
         }
     }
 }

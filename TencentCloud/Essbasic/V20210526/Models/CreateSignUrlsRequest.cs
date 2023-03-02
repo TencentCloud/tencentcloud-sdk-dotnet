@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string OrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 渠道合作企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人
+        /// 渠道合作企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string JumpUrl{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
+        /// 暂未开放
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }

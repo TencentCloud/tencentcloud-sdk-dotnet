@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -103,12 +103,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? NeedSignReview{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
         /// 签署人校验方式
         /// VerifyCheck: 人脸识别（默认）
         /// MobileCheck：手机号验证
@@ -122,6 +116,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("SignBeanTag")]
         public long? SignBeanTag{ get; set; }
+
+        /// <summary>
+        /// 操作者的信息，不用传
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -142,9 +142,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
             this.SetParamSimple(map, prefix + "CustomerData", this.CustomerData);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
             this.SetParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

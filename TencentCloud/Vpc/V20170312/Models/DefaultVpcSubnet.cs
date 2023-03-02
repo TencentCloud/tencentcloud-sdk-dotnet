@@ -25,16 +25,34 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 默认VpcId
+        /// 默认VpcId。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 默认SubnetId
+        /// 默认SubnetId。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// 默认Vpc名字。
+        /// </summary>
+        [JsonProperty("VpcName")]
+        public string VpcName{ get; set; }
+
+        /// <summary>
+        /// 默认Subnet名字。
+        /// </summary>
+        [JsonProperty("SubnetName")]
+        public string SubnetName{ get; set; }
+
+        /// <summary>
+        /// 默认子网网段。
+        /// </summary>
+        [JsonProperty("CidrBlock")]
+        public string CidrBlock{ get; set; }
 
 
         /// <summary>
@@ -44,6 +62,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
+            this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
+            this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
         }
     }
 }

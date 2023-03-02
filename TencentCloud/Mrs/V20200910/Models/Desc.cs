@@ -45,6 +45,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Tuber")]
         public TuberInfo[] Tuber{ get; set; }
 
+        /// <summary>
+        /// 坐标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Coords")]
+        public Coord[] Coords{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamArrayObj(map, prefix + "Organ.", this.Organ);
             this.SetParamArrayObj(map, prefix + "Tuber.", this.Tuber);
+            this.SetParamArrayObj(map, prefix + "Coords.", this.Coords);
         }
     }
 }

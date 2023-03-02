@@ -59,6 +59,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("SymDescList")]
         public BlockInfo[] SymDescList{ get; set; }
 
+        /// <summary>
+        /// 坐标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Coords")]
+        public Coord[] Coords{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "Src", this.Src);
             this.SetParamSimple(map, prefix + "PartAlias", this.PartAlias);
             this.SetParamArrayObj(map, prefix + "SymDescList.", this.SymDescList);
+            this.SetParamArrayObj(map, prefix + "Coords.", this.Coords);
         }
     }
 }

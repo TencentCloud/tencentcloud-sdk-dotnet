@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

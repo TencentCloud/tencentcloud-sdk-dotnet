@@ -213,6 +213,46 @@ namespace TencentCloud.Cloudstudio.V20210524
         }
 
         /// <summary>
+        /// 为工作空间创建临时访问凭证，重复调用会创建新的 Token，旧的 Token 将会自动失效
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkspaceTemporaryTokenRequest"/></param>
+        /// <returns><see cref="CreateWorkspaceTemporaryTokenResponse"/></returns>
+        public async Task<CreateWorkspaceTemporaryTokenResponse> CreateWorkspaceTemporaryToken(CreateWorkspaceTemporaryTokenRequest req)
+        {
+             JsonResponseModel<CreateWorkspaceTemporaryTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWorkspaceTemporaryToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWorkspaceTemporaryTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为工作空间创建临时访问凭证，重复调用会创建新的 Token，旧的 Token 将会自动失效
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkspaceTemporaryTokenRequest"/></param>
+        /// <returns><see cref="CreateWorkspaceTemporaryTokenResponse"/></returns>
+        public CreateWorkspaceTemporaryTokenResponse CreateWorkspaceTemporaryTokenSync(CreateWorkspaceTemporaryTokenRequest req)
+        {
+             JsonResponseModel<CreateWorkspaceTemporaryTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateWorkspaceTemporaryToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWorkspaceTemporaryTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除自定义模板
         /// </summary>
         /// <param name="req"><see cref="DeleteCustomizeTemplatesByIdRequest"/></param>

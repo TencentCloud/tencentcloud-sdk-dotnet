@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{40D73980-F3D8-31AD-91A8-DEE12D7F48C3}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.708</VersionPrefix>
+    <VersionPrefix>3.0.709</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,8 @@
     <Compile Include="V20210524\Models\CreateWorkspaceByTemplateResponse.cs" />
     <Compile Include="V20210524\Models\CreateWorkspaceByVersionControlRequest.cs" />
     <Compile Include="V20210524\Models\CreateWorkspaceByVersionControlResponse.cs" />
+    <Compile Include="V20210524\Models\CreateWorkspaceTemporaryTokenRequest.cs" />
+    <Compile Include="V20210524\Models\CreateWorkspaceTemporaryTokenResponse.cs" />
     <Compile Include="V20210524\Models\CustomizeTemplatesPresetsInfo.cs" />
     <Compile Include="V20210524\Models\DeleteCustomizeTemplatesByIdRequest.cs" />
     <Compile Include="V20210524\Models\DeleteCustomizeTemplatesByIdResponse.cs" />
@@ -102,5 +104,7 @@
     <Compile Include="V20210524\Models\WorkspaceShareInfo.cs" />
     <Compile Include="V20210524\Models\WorkspaceStatusInfo.cs" />
     <Compile Include="V20210524\Models\WorkspaceTemplateInfo.cs" />
+    <Compile Include="V20210524\Models\WorkspaceTokenDTO.cs" />
+    <Compile Include="V20210524\Models\WorkspaceTokenInfoV0.cs" />
   </ItemGroup>
 </Project>

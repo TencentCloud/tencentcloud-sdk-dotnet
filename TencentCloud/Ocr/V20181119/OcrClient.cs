@@ -182,7 +182,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持银行回单全字段的识别，包括付款开户行、收款开户行、付款账号、收款账号、回单类型、回单编号、币种、流水号、凭证号码、交易机构、交易金额、手续费、日期等字段信息。
-        ///            
+        /// 
+        /// 默认接口请求频率限制：10次/秒。
         /// </summary>
         /// <param name="req"><see cref="BankSlipOCRRequest"/></param>
         /// <returns><see cref="BankSlipOCRResponse"/></returns>
@@ -203,7 +204,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持银行回单全字段的识别，包括付款开户行、收款开户行、付款账号、收款账号、回单类型、回单编号、币种、流水号、凭证号码、交易机构、交易金额、手续费、日期等字段信息。
-        ///            
+        /// 
+        /// 默认接口请求频率限制：10次/秒。
         /// </summary>
         /// <param name="req"><see cref="BankSlipOCRRequest"/></param>
         /// <returns><see cref="BankSlipOCRResponse"/></returns>
@@ -268,6 +270,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持识别公路汽车客票的发票代码、发票号码、日期、姓名、票价等字段。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="BusInvoiceOCRRequest"/></param>
         /// <returns><see cref="BusInvoiceOCRResponse"/></returns>
@@ -288,6 +292,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持识别公路汽车客票的发票代码、发票号码、日期、姓名、票价等字段。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="BusInvoiceOCRRequest"/></param>
         /// <returns><see cref="BusInvoiceOCRResponse"/></returns>
@@ -532,6 +538,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持对完税证明的税号、纳税人识别号、纳税人名称、金额合计大写、金额合计小写、填发日期、税务机关、填票人等关键字段的识别。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="DutyPaidProofOCRRequest"/></param>
         /// <returns><see cref="DutyPaidProofOCRResponse"/></returns>
@@ -552,6 +560,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持对完税证明的税号、纳税人识别号、纳税人名称、金额合计大写、金额合计小写、填发日期、税务机关、填票人等关键字段的识别。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="DutyPaidProofOCRRequest"/></param>
         /// <returns><see cref="DutyPaidProofOCRResponse"/></returns>
@@ -820,6 +830,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持机票行程单关键字段的识别，包括旅客姓名、有效身份证件号码、电子客票号码、验证码、填开单位、其他税费、燃油附加费、民航发展基金、保险费、销售单位代号、始发地、目的地、航班号、时间、日期、座位等级、承运人、发票消费类型、票价、合计金额、填开日期、国内国际标签、印刷序号、客票级别/类别、客票生效日期、有效期截止日期、免费行李等字段，支持航班信息多行明细输出。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="FlightInvoiceOCRRequest"/></param>
         /// <returns><see cref="FlightInvoiceOCRResponse"/></returns>
@@ -840,6 +852,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持机票行程单关键字段的识别，包括旅客姓名、有效身份证件号码、电子客票号码、验证码、填开单位、其他税费、燃油附加费、民航发展基金、保险费、销售单位代号、始发地、目的地、航班号、时间、日期、座位等级、承运人、发票消费类型、票价、合计金额、填开日期、国内国际标签、印刷序号、客票级别/类别、客票生效日期、有效期截止日期、免费行李等字段，支持航班信息多行明细输出。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="FlightInvoiceOCRRequest"/></param>
         /// <returns><see cref="FlightInvoiceOCRResponse"/></returns>
@@ -1858,6 +1872,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持对通用机打发票的发票代码、发票号码、日期、购买方识别号、销售方识别号、校验码、小写金额等关键字段的识别。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="InvoiceGeneralOCRRequest"/></param>
         /// <returns><see cref="InvoiceGeneralOCRResponse"/></returns>
@@ -1878,6 +1894,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持对通用机打发票的发票代码、发票号码、日期、购买方识别号、销售方识别号、校验码、小写金额等关键字段的识别。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="InvoiceGeneralOCRRequest"/></param>
         /// <returns><see cref="InvoiceGeneralOCRResponse"/></returns>
@@ -2398,6 +2416,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="QuotaInvoiceOCRRequest"/></param>
         /// <returns><see cref="QuotaInvoiceOCRResponse"/></returns>
@@ -2418,6 +2438,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="QuotaInvoiceOCRRequest"/></param>
         /// <returns><see cref="QuotaInvoiceOCRResponse"/></returns>
@@ -2562,6 +2584,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 医疗发票识别目前支持全国统一门诊发票、全国统一住院发票、以及部分地方的门诊和住院发票的识别。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="RecognizeMedicalInvoiceOCRRequest"/></param>
         /// <returns><see cref="RecognizeMedicalInvoiceOCRResponse"/></returns>
@@ -2582,6 +2606,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 医疗发票识别目前支持全国统一门诊发票、全国统一住院发票、以及部分地方的门诊和住院发票的识别。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="RecognizeMedicalInvoiceOCRRequest"/></param>
         /// <returns><see cref="RecognizeMedicalInvoiceOCRResponse"/></returns>
@@ -3054,6 +3080,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持识别轮船票的发票代码、发票号码、日期、姓名、票价、始发地、目的地、姓名、时间、发票消费类型、省、市、币种字段。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="ShipInvoiceOCRRequest"/></param>
         /// <returns><see cref="ShipInvoiceOCRResponse"/></returns>
@@ -3074,6 +3102,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持识别轮船票的发票代码、发票号码、日期、姓名、票价、始发地、目的地、姓名、时间、发票消费类型、省、市、币种字段。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="ShipInvoiceOCRRequest"/></param>
         /// <returns><see cref="ShipInvoiceOCRResponse"/></returns>
@@ -3184,6 +3214,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持出租车发票关键字段的识别，包括发票号码、发票代码、金额、日期、上下车时间、里程、车牌号、发票类型及所属地区等字段。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="TaxiInvoiceOCRRequest"/></param>
         /// <returns><see cref="TaxiInvoiceOCRResponse"/></returns>
@@ -3204,6 +3236,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持出租车发票关键字段的识别，包括发票号码、发票代码、金额、日期、上下车时间、里程、车牌号、发票类型及所属地区等字段。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="TaxiInvoiceOCRRequest"/></param>
         /// <returns><see cref="TaxiInvoiceOCRResponse"/></returns>
@@ -3264,6 +3298,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持对过路过桥费发票的发票代码、发票号码、日期、小写金额等关键字段的识别。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="TollInvoiceOCRRequest"/></param>
         /// <returns><see cref="TollInvoiceOCRResponse"/></returns>
@@ -3284,6 +3320,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持对过路过桥费发票的发票代码、发票号码、日期、小写金额等关键字段的识别。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="TollInvoiceOCRRequest"/></param>
         /// <returns><see cref="TollInvoiceOCRResponse"/></returns>
@@ -3304,6 +3342,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持火车票全字段的识别，包括编号、票价、姓名、座位号、出发时间、出发站、到达站、车次、席别、发票类型及序列号等。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="TrainTicketOCRRequest"/></param>
         /// <returns><see cref="TrainTicketOCRResponse"/></returns>
@@ -3324,6 +3364,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持火车票全字段的识别，包括编号、票价、姓名、座位号、出发时间、出发站、到达站、车次、席别、发票类型及序列号等。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="TrainTicketOCRRequest"/></param>
         /// <returns><see cref="TrainTicketOCRResponse"/></returns>
@@ -3388,6 +3430,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持增值税发票的准确性核验，您可以通过输入增值税发票的关键字段提供所需的验证信息，接口返回真实的票面相关信息，包括发票代码、发票号码、开票日期、金额、消费类型、购方名称、购方税号、销方名称、销方税号等多个常用字段。支持多种发票类型核验，包括增值税专用发票、增值税普通发票（含电子普通发票、卷式发票、通行费发票）、全电发票、机动车销售统一发票、货物运输业增值税专用发票、二手车销售统一发票。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="VatInvoiceVerifyRequest"/></param>
         /// <returns><see cref="VatInvoiceVerifyResponse"/></returns>
@@ -3408,6 +3452,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持增值税发票的准确性核验，您可以通过输入增值税发票的关键字段提供所需的验证信息，接口返回真实的票面相关信息，包括发票代码、发票号码、开票日期、金额、消费类型、购方名称、购方税号、销方名称、销方税号等多个常用字段。支持多种发票类型核验，包括增值税专用发票、增值税普通发票（含电子普通发票、卷式发票、通行费发票）、全电发票、机动车销售统一发票、货物运输业增值税专用发票、二手车销售统一发票。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="VatInvoiceVerifyRequest"/></param>
         /// <returns><see cref="VatInvoiceVerifyResponse"/></returns>
@@ -3428,6 +3474,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持增值税发票的准确性核验，您可以通过输入增值税发票的关键字段提供所需的验证信息，接口返回真实的票面相关信息，包括发票代码、发票号码、开票日期、金额、消费类型、购方名称、购方税号、销方名称、销方税号等多个常用字段。支持多种发票类型核验，包括增值税专用发票、增值税普通发票（含电子普通发票、卷式发票、通行费发票）、全电发票、机动车销售统一发票、货物运输业增值税专用发票、二手车销售统一发票、通用机打电子发票（广东和浙江）。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="VatInvoiceVerifyNewRequest"/></param>
         /// <returns><see cref="VatInvoiceVerifyNewResponse"/></returns>
@@ -3448,6 +3496,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持增值税发票的准确性核验，您可以通过输入增值税发票的关键字段提供所需的验证信息，接口返回真实的票面相关信息，包括发票代码、发票号码、开票日期、金额、消费类型、购方名称、购方税号、销方名称、销方税号等多个常用字段。支持多种发票类型核验，包括增值税专用发票、增值税普通发票（含电子普通发票、卷式发票、通行费发票）、全电发票、机动车销售统一发票、货物运输业增值税专用发票、二手车销售统一发票、通用机打电子发票（广东和浙江）。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="VatInvoiceVerifyNewRequest"/></param>
         /// <returns><see cref="VatInvoiceVerifyNewResponse"/></returns>
@@ -3468,6 +3518,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持对增值税发票（卷票）的发票代码、发票号码、日期、校验码、合计金额（小写）等关键字段的识别。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="VatRollInvoiceOCRRequest"/></param>
         /// <returns><see cref="VatRollInvoiceOCRResponse"/></returns>
@@ -3488,6 +3540,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持对增值税发票（卷票）的发票代码、发票号码、日期、校验码、合计金额（小写）等关键字段的识别。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="VatRollInvoiceOCRRequest"/></param>
         /// <returns><see cref="VatRollInvoiceOCRResponse"/></returns>

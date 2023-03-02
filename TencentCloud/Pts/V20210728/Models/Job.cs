@@ -313,6 +313,20 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
+        /// <summary>
+        /// test-project
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProjectName")]
+        public string ProjectName{ get; set; }
+
+        /// <summary>
+        /// test-scenario
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScenarioName")]
+        public string ScenarioName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -360,6 +374,8 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "NetworkReceiveRate", this.NetworkReceiveRate);
             this.SetParamSimple(map, prefix + "NetworkSendRate", this.NetworkSendRate);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
+            this.SetParamSimple(map, prefix + "ScenarioName", this.ScenarioName);
         }
     }
 }

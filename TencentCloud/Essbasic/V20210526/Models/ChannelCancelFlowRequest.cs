@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -43,12 +43,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string CancelMessage{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
         /// 撤销理由自定义格式；选项：
         /// 0 默认格式
         /// 1 只保留身份信息：展示为【发起方】
@@ -57,6 +51,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("CancelMessageFormat")]
         public long? CancelMessageFormat{ get; set; }
+
+        /// <summary>
+        /// 暂未开放
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -67,8 +67,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "CancelMessage", this.CancelMessage);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "CancelMessageFormat", this.CancelMessageFormat);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

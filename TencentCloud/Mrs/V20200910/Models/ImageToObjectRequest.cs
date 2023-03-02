@@ -50,10 +50,19 @@ namespace TencentCloud.Mrs.V20200910.Models
         public bool? IsUsedClassify{ get; set; }
 
         /// <summary>
-        /// 用户类型，新客户传1，老客户可不传
+        /// 后付费的用户类型，新客户传1，老客户可不传或传 0。2022 年 12 月 15 新增了计费项，在此时间之前已经通过商务指定优惠价格的大客户，请不传这个字段或传 0，如果传 1 会导致以前获得的折扣价格失效。在 2022 年 12 月 15 日之后，通过商务指定优惠价格的大客户请传 1。
         /// </summary>
         [JsonProperty("UserType")]
         public long? UserType{ get; set; }
+
+        /// <summary>
+        /// 可选。用于指定不同报告使用的结构化引擎版本，不同版本返回的JSON 数据结果不兼容。若不指定版本号，就默认用旧的版本号。
+        /// （1）检验报告 11，默认使用 V2，最高支持 V3。
+        /// （2）病理报告 15，默认使用 V1，最高支持 V2。
+        /// （3）入院记录29、出院记录 28、病理记录 216、病程记录 217、门诊记录 210，默认使用 V1，最高支持 V2。
+        /// </summary>
+        [JsonProperty("ReportTypeVersion")]
+        public ReportTypeVersion[] ReportTypeVersion{ get; set; }
 
 
         /// <summary>
@@ -66,6 +75,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "IsUsedClassify", this.IsUsedClassify);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamArrayObj(map, prefix + "ReportTypeVersion.", this.ReportTypeVersion);
         }
     }
 }

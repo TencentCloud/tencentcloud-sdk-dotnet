@@ -59,7 +59,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 15：非税发票
         /// 16：全电发票
         /// ----------------------
-        /// -1：其他发票,（仅返回，本参数不支持传入-1，请在ReturnOther中控制是否返回）
+        /// -1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
         /// </summary>
         [JsonProperty("Types")]
         public long?[] Types{ get; set; }
@@ -84,6 +84,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("PdfPageNumber")]
         public long? PdfPageNumber{ get; set; }
 
+        /// <summary>
+        /// 是否开启PDF多页识别，默认值为false，开启后可同时支持多页PDF的识别返回，仅支持返回文件前30页。开启后IsPDF和PdfPageNumber入参不进行控制。
+        /// </summary>
+        [JsonProperty("ReturnMultiplePage")]
+        public bool? ReturnMultiplePage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +102,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ReturnOther", this.ReturnOther);
             this.SetParamSimple(map, prefix + "IsPdf", this.IsPdf);
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+            this.SetParamSimple(map, prefix + "ReturnMultiplePage", this.ReturnMultiplePage);
         }
     }
 }

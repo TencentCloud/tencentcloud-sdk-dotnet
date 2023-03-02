@@ -178,6 +178,111 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Index")]
         public long?[] Index{ get; set; }
 
+        /// <summary>
+        /// 透声度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Transparent")]
+        public BlockInfo Transparent{ get; set; }
+
+        /// <summary>
+        /// MRI ADC
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MriAdc")]
+        public BlockInfo MriAdc{ get; set; }
+
+        /// <summary>
+        /// MRI DWI
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MriDwi")]
+        public BlockInfo MriDwi{ get; set; }
+
+        /// <summary>
+        /// MRI T1信号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MriT1")]
+        public BlockInfo MriT1{ get; set; }
+
+        /// <summary>
+        /// MRI T2信号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MriT2")]
+        public BlockInfo MriT2{ get; set; }
+
+        /// <summary>
+        /// CT HU值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CtHu")]
+        public BlockInfo CtHu{ get; set; }
+
+        /// <summary>
+        /// SUmax值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Suvmax")]
+        public BlockInfo Suvmax{ get; set; }
+
+        /// <summary>
+        /// 代谢情况
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Metabolism")]
+        public BlockInfo Metabolism{ get; set; }
+
+        /// <summary>
+        /// 放射性摄取
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RadioactiveUptake")]
+        public BlockInfo RadioactiveUptake{ get; set; }
+
+        /// <summary>
+        /// 淋巴结情况
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LymphEnlargement")]
+        public BlockInfo LymphEnlargement{ get; set; }
+
+        /// <summary>
+        /// 影像特征
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageFeature")]
+        public BlockInfo ImageFeature{ get; set; }
+
+        /// <summary>
+        /// 导管
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Duct")]
+        public BlockInfo Duct{ get; set; }
+
+        /// <summary>
+        /// 趋势
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Trend")]
+        public BlockInfo Trend{ get; set; }
+
+        /// <summary>
+        /// 手术情况
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Operation")]
+        public BlockInfo Operation{ get; set; }
+
+        /// <summary>
+        /// 器官在报告图片中的坐标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Coords")]
+        public Coord[] Coords{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +311,21 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamObj(map, prefix + "InnerEchoDistribution.", this.InnerEchoDistribution);
             this.SetParamSimple(map, prefix + "Src", this.Src);
             this.SetParamArraySimple(map, prefix + "Index.", this.Index);
+            this.SetParamObj(map, prefix + "Transparent.", this.Transparent);
+            this.SetParamObj(map, prefix + "MriAdc.", this.MriAdc);
+            this.SetParamObj(map, prefix + "MriDwi.", this.MriDwi);
+            this.SetParamObj(map, prefix + "MriT1.", this.MriT1);
+            this.SetParamObj(map, prefix + "MriT2.", this.MriT2);
+            this.SetParamObj(map, prefix + "CtHu.", this.CtHu);
+            this.SetParamObj(map, prefix + "Suvmax.", this.Suvmax);
+            this.SetParamObj(map, prefix + "Metabolism.", this.Metabolism);
+            this.SetParamObj(map, prefix + "RadioactiveUptake.", this.RadioactiveUptake);
+            this.SetParamObj(map, prefix + "LymphEnlargement.", this.LymphEnlargement);
+            this.SetParamObj(map, prefix + "ImageFeature.", this.ImageFeature);
+            this.SetParamObj(map, prefix + "Duct.", this.Duct);
+            this.SetParamObj(map, prefix + "Trend.", this.Trend);
+            this.SetParamObj(map, prefix + "Operation.", this.Operation);
+            this.SetParamArrayObj(map, prefix + "Coords.", this.Coords);
         }
     }
 }

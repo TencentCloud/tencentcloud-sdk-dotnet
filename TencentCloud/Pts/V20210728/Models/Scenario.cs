@@ -202,6 +202,13 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
+        /// <summary>
+        /// 场景所在的项目的名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProjectName")]
+        public string ProjectName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -234,6 +241,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
             this.SetParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
+            this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
         }
     }
 }

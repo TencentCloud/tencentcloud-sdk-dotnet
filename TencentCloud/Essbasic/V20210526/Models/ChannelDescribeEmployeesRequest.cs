@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -51,7 +51,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
+        /// 暂未开放
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }

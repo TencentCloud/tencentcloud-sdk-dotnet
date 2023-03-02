@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 渠道信息
+        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -43,16 +43,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] UserIds{ get; set; }
 
         /// <summary>
-        /// 操作人（用户）信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 组织机构信息
+        /// 组织机构信息，不用传
         /// </summary>
         [JsonProperty("Organization")]
         public OrganizationInfo Organization{ get; set; }
+
+        /// <summary>
+        /// 操作人（用户）信息，不用传
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -63,8 +63,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "SealId", this.SealId);
             this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamObj(map, prefix + "Organization.", this.Organization);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

@@ -130,7 +130,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public Prescription Prescription{ get; set; }
 
         /// <summary>
-        /// 免疫接种证明
+        /// 疫苗接种凭证
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VaccineCertificate")]
@@ -149,6 +149,83 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// </summary>
         [JsonProperty("OcrResult")]
         public string OcrResult{ get; set; }
+
+        /// <summary>
+        /// 报告类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReportTypeDesc")]
+        public string ReportTypeDesc{ get; set; }
+
+        /// <summary>
+        /// 病理报告v2
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PathologyV2")]
+        public PathologyV2 PathologyV2{ get; set; }
+
+        /// <summary>
+        /// 碳14尿素呼气试验
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("C14")]
+        public Indicator C14{ get; set; }
+
+        /// <summary>
+        /// 体检结论
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Exame")]
+        public Exame Exame{ get; set; }
+
+        /// <summary>
+        /// 出院报告v2，入院报告v2，门诊病历v2
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MedDocV2")]
+        public DischargeInfoBlock MedDocV2{ get; set; }
+
+        /// <summary>
+        /// 检验报告v3
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndicatorV3")]
+        public IndicatorV3 IndicatorV3{ get; set; }
+
+        /// <summary>
+        /// 核酸报告
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Covid")]
+        public CovidItemsInfo Covid{ get; set; }
+
+        /// <summary>
+        /// 孕产报告
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Maternity")]
+        public Maternity Maternity{ get; set; }
+
+        /// <summary>
+        /// 眼科报告
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Eye")]
+        public EyeItemsInfo Eye{ get; set; }
+
+        /// <summary>
+        /// 出生证明
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BirthCert")]
+        public BirthCert BirthCert{ get; set; }
+
+        /// <summary>
+        /// 时间轴
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Timeline")]
+        public TimelineInformation Timeline{ get; set; }
 
 
         /// <summary>
@@ -174,6 +251,17 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamObj(map, prefix + "VaccineCertificate.", this.VaccineCertificate);
             this.SetParamSimple(map, prefix + "OcrText", this.OcrText);
             this.SetParamSimple(map, prefix + "OcrResult", this.OcrResult);
+            this.SetParamSimple(map, prefix + "ReportTypeDesc", this.ReportTypeDesc);
+            this.SetParamObj(map, prefix + "PathologyV2.", this.PathologyV2);
+            this.SetParamObj(map, prefix + "C14.", this.C14);
+            this.SetParamObj(map, prefix + "Exame.", this.Exame);
+            this.SetParamObj(map, prefix + "MedDocV2.", this.MedDocV2);
+            this.SetParamObj(map, prefix + "IndicatorV3.", this.IndicatorV3);
+            this.SetParamObj(map, prefix + "Covid.", this.Covid);
+            this.SetParamObj(map, prefix + "Maternity.", this.Maternity);
+            this.SetParamObj(map, prefix + "Eye.", this.Eye);
+            this.SetParamObj(map, prefix + "BirthCert.", this.BirthCert);
+            this.SetParamObj(map, prefix + "Timeline.", this.Timeline);
         }
     }
 }

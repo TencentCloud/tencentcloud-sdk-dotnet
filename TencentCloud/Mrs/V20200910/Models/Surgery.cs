@@ -31,6 +31,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("SurgeryHistory")]
         public SurgeryHistory SurgeryHistory{ get; set; }
 
+        /// <summary>
+        /// 其他信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OtherInfo")]
+        public OtherInfo OtherInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "SurgeryHistory.", this.SurgeryHistory);
+            this.SetParamObj(map, prefix + "OtherInfo.", this.OtherInfo);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 网络探测实例`ID`。形如：`netd-12345678`
+        /// 网络探测实例`ID`。形如：`netd-12345678`。
         /// </summary>
         [JsonProperty("NetDetectId")]
         public string NetDetectId{ get; set; }

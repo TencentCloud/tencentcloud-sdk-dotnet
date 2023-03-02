@@ -70,7 +70,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? MediaId{ get; set; }
 
         /// <summary>
-        /// 下载的url地址， 只支持jpg， png，大小限制不超过5M。
+        /// 图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
         /// </summary>
         [JsonProperty("BackgroundImageUrl")]
         public string BackgroundImageUrl{ get; set; }

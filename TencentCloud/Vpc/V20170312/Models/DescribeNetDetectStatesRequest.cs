@@ -25,14 +25,14 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 网络探测实例`ID`数组。形如：[`netd-12345678`]
+        /// 网络探测实例`ID`数组。形如：[`netd-12345678`]。
         /// </summary>
         [JsonProperty("NetDetectIds")]
         public string[] NetDetectIds{ get; set; }
 
         /// <summary>
         /// 过滤条件，参数不支持同时指定NetDetectIds和Filters。
-        /// <li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
+        /// <li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

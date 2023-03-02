@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 默认VPC和子网ID
+        /// 默认VPC和子网ID。
         /// </summary>
         [JsonProperty("Vpc")]
         public DefaultVpcSubnet Vpc{ get; set; }

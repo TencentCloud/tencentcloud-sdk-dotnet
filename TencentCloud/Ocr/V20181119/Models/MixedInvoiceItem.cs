@@ -71,6 +71,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("SingleInvoiceInfos")]
         public SingleInvoiceInfo[] SingleInvoiceInfos{ get; set; }
 
+        /// <summary>
+        /// 发票处于识别图片或PDF文件中的页教，默认从1开始。
+        /// </summary>
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +88,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "Rect.", this.Rect);
             this.SetParamSimple(map, prefix + "Angle", this.Angle);
             this.SetParamArrayObj(map, prefix + "SingleInvoiceInfos.", this.SingleInvoiceInfos);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
         }
     }
 }

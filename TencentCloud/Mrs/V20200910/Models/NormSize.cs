@@ -45,6 +45,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
+        /// <summary>
+        /// 归一化值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Impl")]
+        public string Impl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamArraySimple(map, prefix + "Number.", this.Number);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
+            this.SetParamSimple(map, prefix + "Impl", this.Impl);
         }
     }
 }

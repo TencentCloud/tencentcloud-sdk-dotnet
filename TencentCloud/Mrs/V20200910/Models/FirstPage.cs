@@ -45,6 +45,20 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("ClinicalDiagnosis")]
         public BlockInfo ClinicalDiagnosis{ get; set; }
 
+        /// <summary>
+        /// 受伤中毒的外部原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DamagePoi")]
+        public BlockInfoV2 DamagePoi{ get; set; }
+
+        /// <summary>
+        /// 病案首页第二页
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Fp2NdItems")]
+        public Fp2NdItem[] Fp2NdItems{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +68,8 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamArrayObj(map, prefix + "DischargeDiagnosis.", this.DischargeDiagnosis);
             this.SetParamObj(map, prefix + "PathologicalDiagnosis.", this.PathologicalDiagnosis);
             this.SetParamObj(map, prefix + "ClinicalDiagnosis.", this.ClinicalDiagnosis);
+            this.SetParamObj(map, prefix + "DamagePoi.", this.DamagePoi);
+            this.SetParamArrayObj(map, prefix + "Fp2NdItems.", this.Fp2NdItems);
         }
     }
 }

@@ -59,6 +59,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Upper")]
         public string Upper{ get; set; }
 
+        /// <summary>
+        /// 部位详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PartDetail")]
+        public PartDesc PartDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "Tissue", this.Tissue);
             this.SetParamSimple(map, prefix + "TissueDirection", this.TissueDirection);
             this.SetParamSimple(map, prefix + "Upper", this.Upper);
+            this.SetParamObj(map, prefix + "PartDetail.", this.PartDetail);
         }
     }
 }
