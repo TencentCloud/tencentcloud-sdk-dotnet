@@ -99,7 +99,7 @@ namespace TencentCloudExamples
 
                 // 实例化一个client选项，可选的，没有特殊需求可以跳过
                 ClientProfile clientProfile = new ClientProfile();
-                // 指定签名算法（默认为签名方法v1，HmacSHA256）为签名方法v3（TC3-HMAC-SHA256），可以处理超过1MB的请求
+                // 指定签名算法为签名方法v3（TC3-HMAC-SHA256），可以处理超过1MB的请求。（从3.0.711版本起，默认已设置为签名方法v3）
                 clientProfile.SignMethod = ClientProfile.SIGN_TC3SHA256;
                 // 非必要步骤
                 // 实例化一个客户端配置对象，可以指定超时时间等配置

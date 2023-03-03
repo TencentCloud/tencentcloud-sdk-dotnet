@@ -40,7 +40,7 @@ namespace TencentCloud.Common.Profile
         }
 
         public ClientProfile()
-            : this(SIGN_SHA256)
+            : this(SIGN_TC3SHA256)
         {
         }
 
