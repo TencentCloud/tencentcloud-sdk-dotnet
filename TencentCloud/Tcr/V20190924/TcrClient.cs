@@ -2493,50 +2493,6 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// 内部替换接口+DescribeInstanceAllForCoding
-        /// 
-        /// 查询全部实例信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceAllRequest"/></param>
-        /// <returns><see cref="DescribeInstanceAllResponse"/></returns>
-        public async Task<DescribeInstanceAllResponse> DescribeInstanceAll(DescribeInstanceAllRequest req)
-        {
-             JsonResponseModel<DescribeInstanceAllResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeInstanceAll");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceAllResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 内部替换接口+DescribeInstanceAllForCoding
-        /// 
-        /// 查询全部实例信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceAllRequest"/></param>
-        /// <returns><see cref="DescribeInstanceAllResponse"/></returns>
-        public DescribeInstanceAllResponse DescribeInstanceAllSync(DescribeInstanceAllRequest req)
-        {
-             JsonResponseModel<DescribeInstanceAllResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceAll");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceAllResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询所有实例命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAllNamespacesRequest"/></param>

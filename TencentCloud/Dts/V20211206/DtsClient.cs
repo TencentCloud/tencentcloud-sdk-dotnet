@@ -461,7 +461,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 查询同步校验任务结果
+        /// 查询同步校验任务结果，检查必要参数和周边配置
         /// </summary>
         /// <param name="req"><see cref="DescribeCheckSyncJobResultRequest"/></param>
         /// <returns><see cref="DescribeCheckSyncJobResultResponse"/></returns>
@@ -481,7 +481,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 查询同步校验任务结果
+        /// 查询同步校验任务结果，检查必要参数和周边配置
         /// </summary>
         /// <param name="req"><see cref="DescribeCheckSyncJobResultRequest"/></param>
         /// <returns><see cref="DescribeCheckSyncJobResultResponse"/></returns>

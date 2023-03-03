@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.709</VersionPrefix>
+    <VersionPrefix>3.0.710</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -91,6 +91,8 @@
     <Compile Include="V20180412\Models\DeleteReplicationInstanceResponse.cs" />
     <Compile Include="V20180412\Models\DescribeAutoBackupConfigRequest.cs" />
     <Compile Include="V20180412\Models\DescribeAutoBackupConfigResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeBackupDownloadRestrictionRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeBackupDownloadRestrictionResponse.cs" />
     <Compile Include="V20180412\Models\DescribeBackupUrlRequest.cs" />
     <Compile Include="V20180412\Models\DescribeBackupUrlResponse.cs" />
     <Compile Include="V20180412\Models\DescribeCommonDBInstancesRequest.cs" />
@@ -202,6 +204,8 @@
     <Compile Include="V20180412\Models\ModfiyInstancePasswordResponse.cs" />
     <Compile Include="V20180412\Models\ModifyAutoBackupConfigRequest.cs" />
     <Compile Include="V20180412\Models\ModifyAutoBackupConfigResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyBackupDownloadRestrictionRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyBackupDownloadRestrictionResponse.cs" />
     <Compile Include="V20180412\Models\ModifyConnectionConfigRequest.cs" />
     <Compile Include="V20180412\Models\ModifyConnectionConfigResponse.cs" />
     <Compile Include="V20180412\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />

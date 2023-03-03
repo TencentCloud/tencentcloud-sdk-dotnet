@@ -127,7 +127,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 文件状态：Normal：正常，Forbidden：封禁。
         /// 
-        /// *注意：此字段暂不支持。
+        /// *注意：此字段暂不支持。	
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

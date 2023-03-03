@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// 策略组所属视图的名称，若通过模版创建，可不传入
+        /// 策略组所属视图的名称，若通过模板创建，可不传入
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 模版策略组Id, 通过模版创建时才需要传
+        /// 模板策略组Id, 通过模板创建时才需要传
         /// </summary>
         [JsonProperty("ConditionTempGroupId")]
         public long? ConditionTempGroupId{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public CreatePolicyGroupEventCondition[] EventConditions{ get; set; }
 
         /// <summary>
-        /// 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
+        /// 是否为后端调用。当且仅当值为1时，后台拉取策略模板中的规则填充入Conditions以及EventConditions字段
         /// </summary>
         [JsonProperty("BackEndCall")]
         public long? BackEndCall{ get; set; }

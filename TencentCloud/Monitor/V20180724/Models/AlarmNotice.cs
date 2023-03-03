@@ -109,7 +109,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public CLSNotice[] CLSNotices{ get; set; }
 
         /// <summary>
-        /// 通知模版绑定的标签
+        /// 通知模板绑定的标签
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]

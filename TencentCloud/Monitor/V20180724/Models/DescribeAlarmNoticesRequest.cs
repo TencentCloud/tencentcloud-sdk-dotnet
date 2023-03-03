@@ -85,7 +85,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] NoticeIds{ get; set; }
 
         /// <summary>
-        /// 模版根据标签过滤
+        /// 模板根据标签过滤
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

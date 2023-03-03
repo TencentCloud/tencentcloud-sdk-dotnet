@@ -70,6 +70,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 主播 IP。
+        /// 当客户端为内网推流时，展示为: - 。
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }

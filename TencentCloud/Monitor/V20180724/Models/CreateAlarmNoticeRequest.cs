@@ -67,7 +67,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public CLSNotice[] CLSNotices{ get; set; }
 
         /// <summary>
-        /// 模版绑定的标签
+        /// 模板绑定的标签
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

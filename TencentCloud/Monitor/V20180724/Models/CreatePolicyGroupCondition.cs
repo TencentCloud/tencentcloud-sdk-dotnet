@@ -67,7 +67,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? ContinuePeriod{ get; set; }
 
         /// <summary>
-        /// 如果通过模版创建，需要传入模版中该指标的对应RuleId
+        /// 如果通过模板创建，需要传入模板中该指标的对应RuleId
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }

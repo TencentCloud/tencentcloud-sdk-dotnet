@@ -25,6 +25,30 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
+        /// 全局配置
+        /// </summary>
+        [JsonProperty("Config")]
+        public string Config{ get; set; }
+
+        /// <summary>
+        /// ServiceMonitor配置
+        /// </summary>
+        [JsonProperty("ServiceMonitors")]
+        public PrometheusConfigItem[] ServiceMonitors{ get; set; }
+
+        /// <summary>
+        /// PodMonitor配置
+        /// </summary>
+        [JsonProperty("PodMonitors")]
+        public PrometheusConfigItem[] PodMonitors{ get; set; }
+
+        /// <summary>
+        /// 原生Job
+        /// </summary>
+        [JsonProperty("RawJobs")]
+        public PrometheusConfigItem[] RawJobs{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +60,10 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Config", this.Config);
+            this.SetParamArrayObj(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
+            this.SetParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
+            this.SetParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

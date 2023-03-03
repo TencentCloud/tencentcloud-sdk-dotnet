@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 子客Web控制台url注意事项：
+        /// 子客企业Web控制台url注意事项：
         /// 1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
         /// 2. 若企业认证完成且员工认证完成后，重新获取pc端的链接5分钟之内有效，且只能访问一次
         /// 3. 若企业认证完成且员工认证完成后，重新获取H5/APP的链接只要在有效期内（一年）都可以访问
@@ -36,7 +36,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ConsoleUrl{ get; set; }
 
         /// <summary>
-        /// 渠道子客企业是否已开通腾讯电子签
+        /// 子客企业是否已开通腾讯电子签
         /// </summary>
         [JsonProperty("IsActivated")]
         public bool? IsActivated{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li> ent_cm: 中国大陆内容分发网络企业版套餐； </li>
         /// <li> ent_cm_with_bot: 中国大陆内容分发网络企业版套餐附带bot管理。</li>
         /// <li> ent_global ：全球内容分发网络（包括中国大陆）企业版套餐； </li>
-        /// <li> ent_global_with_bot ：全球内容分发网络（包括中国大陆）企业版套餐附带bot管理。</li>当前账户可购买套餐类型请以<a href="https://tcloud4api.woa.com/document/product/1657/80124?!preview&!document=1">DescribeAvailablePlans</a>返回为准。
+        /// <li> ent_global_with_bot ：全球内容分发网络（包括中国大陆）企业版套餐附带bot管理。</li>当前账户可购买套餐类型请以<a href="https://cloud.tencent.com/document/product/1552/80606">DescribeAvailablePlans</a>返回为准。
         /// </summary>
         [JsonProperty("PlanType")]
         public string PlanType{ get; set; }

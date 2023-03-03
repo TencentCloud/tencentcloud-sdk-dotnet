@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.709</VersionPrefix>
+    <VersionPrefix>3.0.710</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -479,6 +479,7 @@
     <Compile Include="V20180717\Models\MediaSnapshotByTimeOffsetItem.cs" />
     <Compile Include="V20180717\Models\MediaSnapshotByTimePicInfoItem.cs" />
     <Compile Include="V20180717\Models\MediaSourceData.cs" />
+    <Compile Include="V20180717\Models\MediaSubStreamInfoItem.cs" />
     <Compile Include="V20180717\Models\MediaSubtitleInfo.cs" />
     <Compile Include="V20180717\Models\MediaSubtitleInput.cs" />
     <Compile Include="V20180717\Models\MediaSubtitleItem.cs" />

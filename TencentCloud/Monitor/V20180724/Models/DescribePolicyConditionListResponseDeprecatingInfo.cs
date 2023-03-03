@@ -15,33 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstanceAllResponse : AbstractModel
+    public class DescribePolicyConditionListResponseDeprecatingInfo : AbstractModel
     {
         
         /// <summary>
-        /// 总实例个数
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// 实例信息列表
+        /// 是否隐藏
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Registries")]
-        public Registry[] Registries{ get; set; }
+        [JsonProperty("Hidden")]
+        public bool? Hidden{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 新视图名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("NewViewNames")]
+        public string[] NewViewNames{ get; set; }
+
+        /// <summary>
+        /// 描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -49,9 +51,9 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Registries.", this.Registries);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Hidden", this.Hidden);
+            this.SetParamArraySimple(map, prefix + "NewViewNames.", this.NewViewNames);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

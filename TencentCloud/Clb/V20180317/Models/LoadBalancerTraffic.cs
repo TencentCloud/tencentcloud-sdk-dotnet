@@ -54,6 +54,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("OutBandwidth")]
         public float? OutBandwidth{ get; set; }
 
+        /// <summary>
+        /// CLB域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "OutBandwidth", this.OutBandwidth);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

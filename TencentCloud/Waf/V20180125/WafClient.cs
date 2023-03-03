@@ -575,6 +575,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 攻击总览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAttackOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAttackOverviewResponse"/></returns>
+        public async Task<DescribeAttackOverviewResponse> DescribeAttackOverview(DescribeAttackOverviewRequest req)
+        {
+             JsonResponseModel<DescribeAttackOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAttackOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAttackOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 攻击总览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAttackOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAttackOverviewResponse"/></returns>
+        public DescribeAttackOverviewResponse DescribeAttackOverviewSync(DescribeAttackOverviewRequest req)
+        {
+             JsonResponseModel<DescribeAttackOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAttackOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAttackOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 描述WAF自动封禁IP详情,对齐自动封堵状态
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoDenyIPRequest"/></param>

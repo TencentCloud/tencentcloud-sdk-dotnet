@@ -37,7 +37,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>RemoveWatermarkTask：智能去除水印任务；</li>
         /// <li>DescribeFileAttributesTask：获取文件属性任务；</li>
         /// <li>RebuildMedia：音画质重生任务；</li>
-        /// <li>ReviewAudioVideo：音视频审核任务。</li>
+        /// <li>ReviewAudioVideo：音视频审核任务；</li>
+        /// <li>ExtractTraceWatermark：提取溯源水印任务。</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

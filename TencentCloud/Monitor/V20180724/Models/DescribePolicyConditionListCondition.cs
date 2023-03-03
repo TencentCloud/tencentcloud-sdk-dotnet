@@ -75,6 +75,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("SupportRegions")]
         public string[] SupportRegions{ get; set; }
 
+        /// <summary>
+        /// 弃用信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeprecatingInfo")]
+        public DescribePolicyConditionListResponseDeprecatingInfo DeprecatingInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +96,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "SortId", this.SortId);
             this.SetParamSimple(map, prefix + "SupportDefault", this.SupportDefault);
             this.SetParamArraySimple(map, prefix + "SupportRegions.", this.SupportRegions);
+            this.SetParamObj(map, prefix + "DeprecatingInfo.", this.DeprecatingInfo);
         }
     }
 }
