@@ -79,13 +79,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? WithPreviewUrl{ get; set; }
 
         /// <summary>
-        /// 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
+        /// 是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
         /// </summary>
         [JsonProperty("WithPdfUrl")]
         public bool? WithPdfUrl{ get; set; }
 
         /// <summary>
-        /// 渠道模板ID
+        /// 模板ID
         /// </summary>
         [JsonProperty("ChannelTemplateId")]
         public string ChannelTemplateId{ get; set; }

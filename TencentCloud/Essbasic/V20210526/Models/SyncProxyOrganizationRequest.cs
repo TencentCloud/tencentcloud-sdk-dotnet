@@ -32,7 +32,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 渠道侧合作企业名称，最大长度64个字符
+        /// 第三方平台子客企业名称，最大长度64个字符
         /// </summary>
         [JsonProperty("ProxyOrganizationName")]
         public string ProxyOrganizationName{ get; set; }
@@ -44,13 +44,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string BusinessLicense{ get; set; }
 
         /// <summary>
-        /// 渠道侧合作企业统一社会信用代码，最大长度200个字符
+        /// 第三方平台子客企业统一社会信用代码，最大长度200个字符
         /// </summary>
         [JsonProperty("UniformSocialCreditCode")]
         public string UniformSocialCreditCode{ get; set; }
 
         /// <summary>
-        /// 渠道侧合作企业法人/负责人姓名
+        /// 第三方平台子客企业法人/负责人姓名
         /// </summary>
         [JsonProperty("ProxyLegalName")]
         public string ProxyLegalName{ get; set; }

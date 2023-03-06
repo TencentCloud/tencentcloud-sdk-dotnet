@@ -553,6 +553,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 查询录制任务信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordInfoRequest"/></param>
+        /// <returns><see cref="DescribeRecordInfoResponse"/></returns>
+        public async Task<DescribeRecordInfoResponse> DescribeRecordInfo(DescribeRecordInfoRequest req)
+        {
+             JsonResponseModel<DescribeRecordInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询录制任务信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordInfoRequest"/></param>
+        /// <returns><see cref="DescribeRecordInfoResponse"/></returns>
+        public DescribeRecordInfoResponse DescribeRecordInfoSync(DescribeRecordInfoRequest req)
+        {
+             JsonResponseModel<DescribeRecordInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取房间内用户信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomInfoRequest"/></param>
@@ -626,6 +666,46 @@ namespace TencentCloud.Gme.V20180711
              {
                  var strResp = this.InternalRequestSync(req, "DescribeScanResultList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanResultListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询房间录制的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
+        /// <returns><see cref="DescribeTaskInfoResponse"/></returns>
+        public async Task<DescribeTaskInfoResponse> DescribeTaskInfo(DescribeTaskInfoRequest req)
+        {
+             JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询房间录制的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
+        /// <returns><see cref="DescribeTaskInfoResponse"/></returns>
+        public DescribeTaskInfoResponse DescribeTaskInfoSync(DescribeTaskInfoRequest req)
+        {
+             JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -826,6 +906,46 @@ namespace TencentCloud.Gme.V20180711
              {
                  var strResp = this.InternalRequestSync(req, "ModifyCustomizationState");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomizationStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改录制配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordInfoRequest"/></param>
+        /// <returns><see cref="ModifyRecordInfoResponse"/></returns>
+        public async Task<ModifyRecordInfoResponse> ModifyRecordInfo(ModifyRecordInfoRequest req)
+        {
+             JsonResponseModel<ModifyRecordInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRecordInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改录制配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordInfoRequest"/></param>
+        /// <returns><see cref="ModifyRecordInfoResponse"/></returns>
+        public ModifyRecordInfoResponse ModifyRecordInfoSync(ModifyRecordInfoRequest req)
+        {
+             JsonResponseModel<ModifyRecordInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRecordInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1180,6 +1300,86 @@ namespace TencentCloud.Gme.V20180711
              {
                  var strResp = this.InternalRequestSync(req, "ScanVoice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScanVoiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启录制
+        /// </summary>
+        /// <param name="req"><see cref="StartRecordRequest"/></param>
+        /// <returns><see cref="StartRecordResponse"/></returns>
+        public async Task<StartRecordResponse> StartRecord(StartRecordRequest req)
+        {
+             JsonResponseModel<StartRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启录制
+        /// </summary>
+        /// <param name="req"><see cref="StartRecordRequest"/></param>
+        /// <returns><see cref="StartRecordResponse"/></returns>
+        public StartRecordResponse StartRecordSync(StartRecordRequest req)
+        {
+             JsonResponseModel<StartRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止录制
+        /// </summary>
+        /// <param name="req"><see cref="StopRecordRequest"/></param>
+        /// <returns><see cref="StopRecordResponse"/></returns>
+        public async Task<StopRecordResponse> StopRecord(StopRecordRequest req)
+        {
+             JsonResponseModel<StopRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止录制
+        /// </summary>
+        /// <param name="req"><see cref="StopRecordRequest"/></param>
+        /// <returns><see cref="StopRecordResponse"/></returns>
+        public StopRecordResponse StopRecordSync(StopRecordRequest req)
+        {
+             JsonResponseModel<StopRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopRecordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

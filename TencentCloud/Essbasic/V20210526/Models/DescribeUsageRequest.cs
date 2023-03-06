@@ -45,8 +45,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 是否汇总数据，默认不汇总。
-        /// 不汇总：返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数；
-        /// 汇总：返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据；
+        /// 不汇总：返回在统计区间内第三方平台下所有企业的每日明细，即每个企业N条数据，N为统计天数；
+        /// 汇总：返回在统计区间内第三方平台下所有企业的汇总后数据，即每个企业一条数据；
         /// </summary>
         [JsonProperty("NeedAggregate")]
         public bool? NeedAggregate{ get; set; }

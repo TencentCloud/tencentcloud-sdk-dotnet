@@ -164,6 +164,13 @@ namespace TencentCloud.Bma.V20221115.Models
         [JsonProperty("CertificationStatus")]
         public long? CertificationStatus{ get; set; }
 
+        /// <summary>
+        /// 网址截图
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Snapshot")]
+        public string Snapshot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +197,7 @@ namespace TencentCloud.Bma.V20221115.Models
             this.SetParamSimple(map, prefix + "WebExpireTime", this.WebExpireTime);
             this.SetParamSimple(map, prefix + "InsertTime", this.InsertTime);
             this.SetParamSimple(map, prefix + "CertificationStatus", this.CertificationStatus);
+            this.SetParamSimple(map, prefix + "Snapshot", this.Snapshot);
         }
     }
 }

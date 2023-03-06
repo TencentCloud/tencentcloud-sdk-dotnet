@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5B725517-C450-383B-A194-A17CAF39F71A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.710</VersionPrefix>
+    <VersionPrefix>3.0.711</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -82,11 +82,15 @@
     <Compile Include="V20180711\Models\DescribeApplicationListResponse.cs" />
     <Compile Include="V20180711\Models\DescribeRealtimeScanConfigRequest.cs" />
     <Compile Include="V20180711\Models\DescribeRealtimeScanConfigResponse.cs" />
+    <Compile Include="V20180711\Models\DescribeRecordInfoRequest.cs" />
+    <Compile Include="V20180711\Models\DescribeRecordInfoResponse.cs" />
     <Compile Include="V20180711\Models\DescribeRoomInfoRequest.cs" />
     <Compile Include="V20180711\Models\DescribeRoomInfoResponse.cs" />
     <Compile Include="V20180711\Models\DescribeScanResult.cs" />
     <Compile Include="V20180711\Models\DescribeScanResultListRequest.cs" />
     <Compile Include="V20180711\Models\DescribeScanResultListResponse.cs" />
+    <Compile Include="V20180711\Models\DescribeTaskInfoRequest.cs" />
+    <Compile Include="V20180711\Models\DescribeTaskInfoResponse.cs" />
     <Compile Include="V20180711\Models\DescribeUserInAndOutTimeRequest.cs" />
     <Compile Include="V20180711\Models\DescribeUserInAndOutTimeResponse.cs" />
     <Compile Include="V20180711\Models\Filter.cs" />
@@ -100,12 +104,15 @@
     <Compile Include="V20180711\Models\ModifyCustomizationResponse.cs" />
     <Compile Include="V20180711\Models\ModifyCustomizationStateRequest.cs" />
     <Compile Include="V20180711\Models\ModifyCustomizationStateResponse.cs" />
+    <Compile Include="V20180711\Models\ModifyRecordInfoRequest.cs" />
+    <Compile Include="V20180711\Models\ModifyRecordInfoResponse.cs" />
     <Compile Include="V20180711\Models\ModifyUserMicStatusRequest.cs" />
     <Compile Include="V20180711\Models\ModifyUserMicStatusResponse.cs" />
     <Compile Include="V20180711\Models\OverseaTextStatisticsItem.cs" />
     <Compile Include="V20180711\Models\RealTimeSpeechStatisticsItem.cs" />
     <Compile Include="V20180711\Models\RealtimeSpeechConf.cs" />
     <Compile Include="V20180711\Models\RealtimeTextStatisticsItem.cs" />
+    <Compile Include="V20180711\Models\RecordInfo.cs" />
     <Compile Include="V20180711\Models\RoomUser.cs" />
     <Compile Include="V20180711\Models\ScanDetail.cs" />
     <Compile Include="V20180711\Models\ScanPiece.cs" />
@@ -113,9 +120,14 @@
     <Compile Include="V20180711\Models\ScanVoiceResponse.cs" />
     <Compile Include="V20180711\Models\ScanVoiceResult.cs" />
     <Compile Include="V20180711\Models\ServiceStatus.cs" />
+    <Compile Include="V20180711\Models\StartRecordRequest.cs" />
+    <Compile Include="V20180711\Models\StartRecordResponse.cs" />
     <Compile Include="V20180711\Models\StatisticsItem.cs" />
     <Compile Include="V20180711\Models\StatusInfo.cs" />
+    <Compile Include="V20180711\Models\StopRecordRequest.cs" />
+    <Compile Include="V20180711\Models\StopRecordResponse.cs" />
     <Compile Include="V20180711\Models\StreamTextStatisticsItem.cs" />
+    <Compile Include="V20180711\Models\SubscribeRecordUserIds.cs" />
     <Compile Include="V20180711\Models\Tag.cs" />
     <Compile Include="V20180711\Models\Task.cs" />
     <Compile Include="V20180711\Models\UpdateScanRoomsRequest.cs" />

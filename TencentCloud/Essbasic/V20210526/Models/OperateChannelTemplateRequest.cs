@@ -37,7 +37,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string OperateType{ get; set; }
 
         /// <summary>
-        /// 渠道方模板库模板唯一标识
+        /// 第三方应用平台模板库模板唯一标识
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

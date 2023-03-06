@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 渠道的业务信息，限制1024字符
+        /// 业务信息，限制1024字符
         /// </summary>
         [JsonProperty("CustomerData")]
         public string[] CustomerData{ get; set; }

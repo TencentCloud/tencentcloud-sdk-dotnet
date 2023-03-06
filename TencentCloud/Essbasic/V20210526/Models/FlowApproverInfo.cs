@@ -58,21 +58,21 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string OrganizationName{ get; set; }
 
         /// <summary>
-        /// 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
-        /// 默认为false，即签署人位于同一个渠道应用号下；
+        /// 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
+        /// 默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
         /// </summary>
         [JsonProperty("NotChannelOrganization")]
         public bool? NotChannelOrganization{ get; set; }
 
         /// <summary>
         /// 用户侧第三方id，最大长度64个字符
-        /// 当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
+        /// 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
-        /// 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+        /// 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
         /// </summary>
         [JsonProperty("OrganizationOpenId")]
         public string OrganizationOpenId{ get; set; }

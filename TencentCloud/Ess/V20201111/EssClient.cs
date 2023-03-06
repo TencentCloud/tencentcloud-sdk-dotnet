@@ -801,6 +801,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 企业方可以通过此接口获取个人用户开启自动签的跳转链接
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserAutoSignEnableUrlRequest"/></param>
+        /// <returns><see cref="CreateUserAutoSignEnableUrlResponse"/></returns>
+        public async Task<CreateUserAutoSignEnableUrlResponse> CreateUserAutoSignEnableUrl(CreateUserAutoSignEnableUrlRequest req)
+        {
+             JsonResponseModel<CreateUserAutoSignEnableUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUserAutoSignEnableUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserAutoSignEnableUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业方可以通过此接口获取个人用户开启自动签的跳转链接
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserAutoSignEnableUrlRequest"/></param>
+        /// <returns><see cref="CreateUserAutoSignEnableUrlResponse"/></returns>
+        public CreateUserAutoSignEnableUrlResponse CreateUserAutoSignEnableUrlSync(CreateUserAutoSignEnableUrlRequest req)
+        {
+             JsonResponseModel<CreateUserAutoSignEnableUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateUserAutoSignEnableUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserAutoSignEnableUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 移除员工
         /// </summary>
         /// <param name="req"><see cref="DeleteIntegrationEmployeesRequest"/></param>
@@ -1282,6 +1322,86 @@ namespace TencentCloud.Ess.V20201111
              {
                  var strResp = this.InternalRequestSync(req, "DescribeThirdPartyAuthCode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeThirdPartyAuthCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业方可以通过此接口查询个人用户自动签开启状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserAutoSignStatusRequest"/></param>
+        /// <returns><see cref="DescribeUserAutoSignStatusResponse"/></returns>
+        public async Task<DescribeUserAutoSignStatusResponse> DescribeUserAutoSignStatus(DescribeUserAutoSignStatusRequest req)
+        {
+             JsonResponseModel<DescribeUserAutoSignStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserAutoSignStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserAutoSignStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业方可以通过此接口查询个人用户自动签开启状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserAutoSignStatusRequest"/></param>
+        /// <returns><see cref="DescribeUserAutoSignStatusResponse"/></returns>
+        public DescribeUserAutoSignStatusResponse DescribeUserAutoSignStatusSync(DescribeUserAutoSignStatusRequest req)
+        {
+             JsonResponseModel<DescribeUserAutoSignStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserAutoSignStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserAutoSignStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业方可以通过此接口关闭个人的自动签功能
+        /// </summary>
+        /// <param name="req"><see cref="DisableUserAutoSignRequest"/></param>
+        /// <returns><see cref="DisableUserAutoSignResponse"/></returns>
+        public async Task<DisableUserAutoSignResponse> DisableUserAutoSign(DisableUserAutoSignRequest req)
+        {
+             JsonResponseModel<DisableUserAutoSignResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableUserAutoSign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableUserAutoSignResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业方可以通过此接口关闭个人的自动签功能
+        /// </summary>
+        /// <param name="req"><see cref="DisableUserAutoSignRequest"/></param>
+        /// <returns><see cref="DisableUserAutoSignResponse"/></returns>
+        public DisableUserAutoSignResponse DisableUserAutoSignSync(DisableUserAutoSignRequest req)
+        {
+             JsonResponseModel<DisableUserAutoSignResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableUserAutoSign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableUserAutoSignResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

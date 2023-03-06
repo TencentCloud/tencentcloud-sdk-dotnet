@@ -25,13 +25,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 渠道侧合作企业唯一标识
+        /// 子客企业唯一标识
         /// </summary>
         [JsonProperty("ProxyOrganizationOpenId")]
         public string ProxyOrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 渠道侧合作企业名
+        /// 子客企业名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyOrganizationName")]

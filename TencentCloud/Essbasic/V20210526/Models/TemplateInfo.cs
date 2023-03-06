@@ -92,27 +92,27 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string PreviewUrl{ get; set; }
 
         /// <summary>
-        /// 渠道版-模板PDF文件链接
+        /// 第三方应用集成-模板PDF文件链接
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PdfUrl")]
         public string PdfUrl{ get; set; }
 
         /// <summary>
-        /// 关联的渠道模板ID
+        /// 关联的平台企业模板ID
         /// </summary>
         [JsonProperty("ChannelTemplateId")]
         public string ChannelTemplateId{ get; set; }
 
         /// <summary>
-        /// 关联的渠道模板名称
+        /// 关联的平台企业模板名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelTemplateName")]
         public string ChannelTemplateName{ get; set; }
 
         /// <summary>
-        /// 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+        /// 0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelAutoSave")]

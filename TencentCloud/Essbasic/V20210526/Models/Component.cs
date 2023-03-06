@@ -273,8 +273,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public float? OffsetY{ get; set; }
 
         /// <summary>
-        /// 渠道控件ID。
-        /// 如果不为空，属于渠道预设控件；
+        /// 平台企业控件ID。
+        /// 如果不为空，属于平台企业预设控件；
         /// </summary>
         [JsonProperty("ChannelComponentId")]
         public string ChannelComponentId{ get; set; }

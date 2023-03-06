@@ -31,20 +31,20 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ReceiptId{ get; set; }
 
         /// <summary>
-        /// 渠道侧企业的第三方id
+        /// 平台企业的第三方id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyOrganizationOpenId")]
         public string ProxyOrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 渠道侧企业操作人的第三方id
+        /// 平台企业操作人的第三方id
         /// </summary>
         [JsonProperty("ProxyOperatorOpenId")]
         public string ProxyOperatorOpenId{ get; set; }
 
         /// <summary>
-        /// 渠道侧企业名称
+        /// 平台企业名称
         /// </summary>
         [JsonProperty("ProxyOrganizationName")]
         public string ProxyOrganizationName{ get; set; }

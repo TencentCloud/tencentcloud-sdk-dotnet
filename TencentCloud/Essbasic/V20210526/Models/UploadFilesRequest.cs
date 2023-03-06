@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息，若是渠道版调用 appid 和proxyappid 必填
+        /// 应用相关信息，若是第三方应用集成调用 appid 和proxyappid 必填
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

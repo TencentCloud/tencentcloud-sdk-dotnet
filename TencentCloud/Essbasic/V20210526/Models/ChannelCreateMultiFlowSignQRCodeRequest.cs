@@ -69,7 +69,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 回调地址，最大长度1000个字符
-        /// 不传默认使用渠道应用号配置的回调地址
+        /// 不传默认使用第三方应用号配置的回调地址
         /// 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
         /// </summary>
         [JsonProperty("CallbackUrl")]

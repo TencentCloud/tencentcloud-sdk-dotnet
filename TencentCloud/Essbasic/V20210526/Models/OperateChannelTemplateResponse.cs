@@ -25,14 +25,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 腾讯电子签颁发给渠道的应用ID
+        /// 腾讯电子签颁发给第三方应用平台的应用ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 渠道方模板库模板唯一标识
+        /// 第三方应用平台模板库模板唯一标识
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateId")]

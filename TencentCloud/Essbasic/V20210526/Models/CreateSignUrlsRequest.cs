@@ -51,8 +51,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 签署链接生成类型，默认是 "ALL"；
         /// "ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-        /// "CHANNEL"：渠道合作企业；
-        /// "NOT_CHANNEL"：非渠道合作企业；
+        /// "CHANNEL"：第三方平台子客企业企业；
+        /// "NOT_CHANNEL"：非第三方平台子客企业企业；
         /// "PERSON"：个人；
         /// "FOLLOWER"：关注方，目前是合同抄送方；
         /// </summary>
@@ -60,7 +60,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string GenerateType{ get; set; }
 
         /// <summary>
-        /// 非渠道合作企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
+        /// 非第三方平台子客企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 渠道合作企业的企业Id，GenerateType为"CHANNEL"时必填
+        /// 第三方平台子客企业的企业OpenId，GenerateType为"CHANNEL"时必填
         /// </summary>
         [JsonProperty("OrganizationOpenId")]
         public string OrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 渠道合作企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
+        /// 第三方平台子客企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
