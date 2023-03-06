@@ -274,6 +274,9 @@ namespace TencentCloud.Common
             {
                 return "";
             }
+            var serializableRequest = request as ISerializable;
+            if (serializableRequest != null)
+                return serializableRequest.Serialize();
             return JsonConvert.SerializeObject(request,
                     Newtonsoft.Json.Formatting.None,
                     new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
