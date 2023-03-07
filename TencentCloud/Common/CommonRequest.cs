@@ -30,11 +30,6 @@ namespace TencentCloud.Common
             _body = JObject.Parse(jsonStr);
         }
 
-        public CommonRequest(JObject jObj)
-        {
-            _body = JObject.FromObject(jObj);
-        }
-
         public CommonRequest(object serializable)
         {
             _body = JObject.Parse(JsonConvert.SerializeObject(serializable));

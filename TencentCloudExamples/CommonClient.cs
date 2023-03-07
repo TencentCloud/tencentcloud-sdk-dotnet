@@ -25,33 +25,46 @@ using TencentCloud.Common.Profile;
 
 namespace TencentCloudExamples
 {
-    class CommonClientExample
+    class CommonClient
     {
         static void MainCommonClientExample(string[] args)
         {
             var client = BuildClient();
-            NonGenericJson(client).Wait();
-            NonGenericJObject(client).Wait();
-            NonGenericDict(client).Wait();
-            GenericExample(client).Wait();
+
+            // 演示如何通过 JsonString 构建 CommonRequest
+            JsonStrRequest(client).Wait();
+
+            // 演示如何通过 Dictionary 构建 CommonRequest
+            DictionaryRequest(client).Wait();
+
+            // 演示如何自定义 Request 类型
+            CustomRequest(client).Wait();
+
+            // 演示如何自定义 Response 类型
+            CustomResponse(client).Wait();
         }
 
-        static async Task NonGenericJson(CommonClient client)
+        static async Task JsonStrRequest(TencentCloud.Common.CommonClient client)
         {
-            var reqJson = "{\"Limit\":1, \"Filters\":[{\"Name\":\"zone\",\"Values\":[\"ap-guangzhou-1\"]}]}";
-            var rep     = await client.CallAsync(new CommonRequest(reqJson), "DescribeInstances");
+            var limit       = 1;
+            var filterName  = "zone";
+            var filterValue = "ap-guangzhou-1";
+            var reqJson = $@"
+    {{
+        ""Limit"": {limit},
+        ""Filters"": [
+            {{
+                ""Name"": ""{filterName}"",
+                ""Values"":[""{filterValue}""]
+            }}
+        ]
+    }}
+";
+            var rep = await client.CallAsync(new CommonRequest(reqJson), "DescribeInstances");
             Console.WriteLine(rep);
         }
 
-        static async Task NonGenericJObject(CommonClient client)
-        {
-            var reqJson    = "{\"Limit\":1, \"Filters\":[{\"Name\":\"zone\",\"Values\":[\"ap-guangzhou-1\"]}]}";
-            var reqJObject = JObject.Parse(reqJson);
-            var rep        = await client.CallAsync(new CommonRequest(reqJObject), "DescribeInstances");
-            Console.WriteLine(rep);
-        }
-
-        static async Task NonGenericDict(CommonClient client)
+        static async Task DictionaryRequest(TencentCloud.Common.CommonClient client)
         {
             var reqDict = new Dictionary<string, object>
             {
@@ -60,7 +73,10 @@ namespace TencentCloudExamples
                     "Filters", new List<object>
                     {
                         new Dictionary<string, object>
-                            { { "Name", "zone" }, { "Values", new List<string> { "ap-guangzhou-1" } } }
+                        {
+                            { "Name", "zone" },
+                            { "Values", new List<string> { "ap-guangzhou-1" } }
+                        }
                     }
                 }
             };
@@ -68,21 +84,58 @@ namespace TencentCloudExamples
             Console.WriteLine(rep);
         }
 
-        class DescribeInstancesRep
+
+        class DescribeInstancesReq
         {
-            public string        RequestId;
-            public int           TotalCount;
-            public List<JObject> ZoneSet;
+            internal class Filter
+            {
+                public string   Name;
+                public string[] Values;
+            }
+
+            public string[] InstanceIds;
+            public Filter[] Filters;
+            public int      Offset;
+            public int      Limit;
         }
 
-        static async Task GenericExample(CommonClient client)
+        static async Task CustomRequest(TencentCloud.Common.CommonClient client)
         {
-            var rep = await client.CallAsync<DescribeInstancesRep>(
-                new CommonRequest("{}"), "DescribeZones");
+            var req = new CommonRequest(
+                new DescribeInstancesReq
+                {
+                    Filters = new[]
+                    {
+                        new DescribeInstancesReq.Filter
+                        {
+                            Name   = "zone",
+                            Values = new[] { "ap-guangzhou-1" }
+                        }
+                    },
+                    Limit  = 5,
+                    Offset = 0,
+                }
+            );
+
+            var rep = await client.CallAsync(req, "DescribeInstances");
+            Console.WriteLine(rep);
+        }
+
+        class DescribeInstancesRep
+        {
+            public string RequestId;
+            public int    TotalCount;
+            public JArray ZoneSet;
+        }
+
+        static async Task CustomResponse(TencentCloud.Common.CommonClient client)
+        {
+            var req = new CommonRequest("{}");
+            var rep = await client.CallAsync<DescribeInstancesRep>(req, "DescribeZones");
             Console.WriteLine(JsonConvert.SerializeObject(rep));
         }
 
-        static CommonClient BuildClient()
+        static TencentCloud.Common.CommonClient BuildClient()
         {
             // 必要步骤：
             // 实例化一个认证对象，入参需要传入腾讯云账户密钥对secretId，secretKey。
@@ -118,7 +171,7 @@ namespace TencentCloudExamples
 
             // 实例化要请求产品(以cvm为例)的client对象
             // 第二个参数是地域信息，可以直接填写字符串ap-guangzhou，或者引用预设的常量，clientProfile是可选的
-            return new CommonClient(
+            return new TencentCloud.Common.CommonClient(
                 "cvm", "2017-03-12", cred, "ap-guangzhou", clientProfile);
         }
     }
