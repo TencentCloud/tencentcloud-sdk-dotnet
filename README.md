@@ -176,6 +176,13 @@ namespace TencentCloudExamples
 
 ```
 
+### CommonClient
+从 v1.0.611 开始，腾讯云 DOTNET SDK 支持使用 泛用型的API调用方式(Common Client) 进行请求。您只需安装 common 包, 即可向任何产品发起调用。
+
+注意，您必须明确知道您调用接口的参数内容，否则会调用失败。
+
+详细使用请参阅示例：[使用 Common Client 进行调用](TencentCloudExamples/CommonClient.cs)
+
 更多示例参见 [github](https://github.com/TencentCloud/tencentcloud-sdk-dotnet) TencentCloudExamples 目录。
 
 ## 同步调用与异步调用

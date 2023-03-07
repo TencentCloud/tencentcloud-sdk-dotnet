@@ -44,9 +44,12 @@
   <ItemGroup>
     <Compile Include="Common\AbstractClient.cs" />
     <Compile Include="Common\AbstractModel.cs" />
+    <Compile Include="Common\CommonClient.cs" />
+    <Compile Include="Common\CommonRequest.cs" />
     <Compile Include="Common\Credential.cs" />
     <Compile Include="Common\Exception\TencentCloudSDKException.cs" />
     <Compile Include="Common\Http\HttpConnection.cs" />
+    <Compile Include="Common\ISerializable.cs" />
     <Compile Include="Common\JsonResponseErrModel.cs" />
     <Compile Include="Common\JsonResponseModel.cs" />
     <Compile Include="Common\Profile\ClientProfile.cs" />
