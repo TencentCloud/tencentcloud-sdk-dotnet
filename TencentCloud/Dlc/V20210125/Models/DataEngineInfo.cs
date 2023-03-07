@@ -263,6 +263,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ImageVersionName")]
         public string ImageVersionName{ get; set; }
 
+        /// <summary>
+        /// 是否开启备集群
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartStandbyCluster")]
+        public bool? StartStandbyCluster{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -305,6 +312,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ImageVersionId", this.ImageVersionId);
             this.SetParamSimple(map, prefix + "ChildImageVersionId", this.ChildImageVersionId);
             this.SetParamSimple(map, prefix + "ImageVersionName", this.ImageVersionName);
+            this.SetParamSimple(map, prefix + "StartStandbyCluster", this.StartStandbyCluster);
         }
     }
 }

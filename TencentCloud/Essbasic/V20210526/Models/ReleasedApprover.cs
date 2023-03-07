@@ -71,14 +71,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
+        /// 企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
         /// </summary>
         [JsonProperty("OrganizationOpenId")]
         public string OrganizationOpenId{ get; set; }
 
         /// <summary>
         /// 用户侧第三方id，最大长度64个字符
-        /// 当签署方为同一渠道下的员工时，该字必传
+        /// 当签署方为同一第三方应用下的员工时，该字必传
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }

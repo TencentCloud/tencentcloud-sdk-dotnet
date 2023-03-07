@@ -72,6 +72,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("EnableScan")]
         public ulong? EnableScan{ get; set; }
 
+        /// <summary>
+        /// 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+        /// </summary>
+        [JsonProperty("Uuids")]
+        public string[] Uuids{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "EnableScan", this.EnableScan);
+            this.SetParamArraySimple(map, prefix + "Uuids.", this.Uuids);
         }
     }
 }

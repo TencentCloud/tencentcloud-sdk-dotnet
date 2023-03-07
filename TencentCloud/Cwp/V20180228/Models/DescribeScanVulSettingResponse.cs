@@ -79,6 +79,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? ClickTimeout{ get; set; }
 
         /// <summary>
+        /// 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+        /// </summary>
+        [JsonProperty("Uuids")]
+        public string[] Uuids{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -99,6 +105,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "EnableScan", this.EnableScan);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "ClickTimeout", this.ClickTimeout);
+            this.SetParamArraySimple(map, prefix + "Uuids.", this.Uuids);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

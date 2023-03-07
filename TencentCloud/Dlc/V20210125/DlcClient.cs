@@ -613,6 +613,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 为用户创建数据引擎
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataEngineRequest"/></param>
+        /// <returns><see cref="CreateDataEngineResponse"/></returns>
+        public async Task<CreateDataEngineResponse> CreateDataEngine(CreateDataEngineRequest req)
+        {
+             JsonResponseModel<CreateDataEngineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDataEngine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDataEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为用户创建数据引擎
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataEngineRequest"/></param>
+        /// <returns><see cref="CreateDataEngineResponse"/></returns>
+        public CreateDataEngineResponse CreateDataEngineSync(CreateDataEngineRequest req)
+        {
+             JsonResponseModel<CreateDataEngineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDataEngine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDataEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateDatabase）用于生成建库SQL语句。
         /// </summary>
         /// <param name="req"><see cref="CreateDatabaseRequest"/></param>
@@ -1804,6 +1844,126 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDatabases");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口根据引擎ID获取数据引擎资源使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEngineUsageInfoRequest"/></param>
+        /// <returns><see cref="DescribeEngineUsageInfoResponse"/></returns>
+        public async Task<DescribeEngineUsageInfoResponse> DescribeEngineUsageInfo(DescribeEngineUsageInfoRequest req)
+        {
+             JsonResponseModel<DescribeEngineUsageInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEngineUsageInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEngineUsageInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口根据引擎ID获取数据引擎资源使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEngineUsageInfoRequest"/></param>
+        /// <returns><see cref="DescribeEngineUsageInfoResponse"/></returns>
+        public DescribeEngineUsageInfoResponse DescribeEngineUsageInfoSync(DescribeEngineUsageInfoRequest req)
+        {
+             JsonResponseModel<DescribeEngineUsageInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEngineUsageInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEngineUsageInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询托管存储指定目录的Summary
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLakeFsDirSummaryRequest"/></param>
+        /// <returns><see cref="DescribeLakeFsDirSummaryResponse"/></returns>
+        public async Task<DescribeLakeFsDirSummaryResponse> DescribeLakeFsDirSummary(DescribeLakeFsDirSummaryRequest req)
+        {
+             JsonResponseModel<DescribeLakeFsDirSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLakeFsDirSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLakeFsDirSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询托管存储指定目录的Summary
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLakeFsDirSummaryRequest"/></param>
+        /// <returns><see cref="DescribeLakeFsDirSummaryResponse"/></returns>
+        public DescribeLakeFsDirSummaryResponse DescribeLakeFsDirSummarySync(DescribeLakeFsDirSummaryRequest req)
+        {
+             JsonResponseModel<DescribeLakeFsDirSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLakeFsDirSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLakeFsDirSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户的托管存储信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLakeFsInfoRequest"/></param>
+        /// <returns><see cref="DescribeLakeFsInfoResponse"/></returns>
+        public async Task<DescribeLakeFsInfoResponse> DescribeLakeFsInfo(DescribeLakeFsInfoRequest req)
+        {
+             JsonResponseModel<DescribeLakeFsInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLakeFsInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLakeFsInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户的托管存储信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLakeFsInfoRequest"/></param>
+        /// <returns><see cref="DescribeLakeFsInfoResponse"/></returns>
+        public DescribeLakeFsInfoResponse DescribeLakeFsInfoSync(DescribeLakeFsInfoRequest req)
+        {
+             JsonResponseModel<DescribeLakeFsInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLakeFsInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLakeFsInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3133,6 +3293,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 切换主备集群
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDataEngineRequest"/></param>
+        /// <returns><see cref="SwitchDataEngineResponse"/></returns>
+        public async Task<SwitchDataEngineResponse> SwitchDataEngine(SwitchDataEngineRequest req)
+        {
+             JsonResponseModel<SwitchDataEngineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchDataEngine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDataEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 切换主备集群
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDataEngineRequest"/></param>
+        /// <returns><see cref="SwitchDataEngineResponse"/></returns>
+        public SwitchDataEngineResponse SwitchDataEngineSync(SwitchDataEngineRequest req)
+        {
+             JsonResponseModel<SwitchDataEngineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchDataEngine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDataEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 解绑用户上的用户组
         /// </summary>
         /// <param name="req"><see cref="UnbindWorkGroupsFromUserRequest"/></param>
@@ -3204,6 +3404,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "UnlockMetaData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlockMetaDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于更新行过滤规则。注意只能更新过滤规则，不能更新规格对象catalog，database和table。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRowFilterRequest"/></param>
+        /// <returns><see cref="UpdateRowFilterResponse"/></returns>
+        public async Task<UpdateRowFilterResponse> UpdateRowFilter(UpdateRowFilterRequest req)
+        {
+             JsonResponseModel<UpdateRowFilterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateRowFilter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRowFilterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于更新行过滤规则。注意只能更新过滤规则，不能更新规格对象catalog，database和table。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRowFilterRequest"/></param>
+        /// <returns><see cref="UpdateRowFilterResponse"/></returns>
+        public UpdateRowFilterResponse UpdateRowFilterSync(UpdateRowFilterRequest req)
+        {
+             JsonResponseModel<UpdateRowFilterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateRowFilter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRowFilterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

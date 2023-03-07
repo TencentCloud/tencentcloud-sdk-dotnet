@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.711</VersionPrefix>
+    <VersionPrefix>3.0.712</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -80,6 +80,8 @@
     <Compile Include="V20210125\Models\CreateDMSDatabaseResponse.cs" />
     <Compile Include="V20210125\Models\CreateDMSTableRequest.cs" />
     <Compile Include="V20210125\Models\CreateDMSTableResponse.cs" />
+    <Compile Include="V20210125\Models\CreateDataEngineRequest.cs" />
+    <Compile Include="V20210125\Models\CreateDataEngineResponse.cs" />
     <Compile Include="V20210125\Models\CreateDatabaseRequest.cs" />
     <Compile Include="V20210125\Models\CreateDatabaseResponse.cs" />
     <Compile Include="V20210125\Models\CreateExportTaskRequest.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="V20210125\Models\DMSSds.cs" />
     <Compile Include="V20210125\Models\DMSTable.cs" />
     <Compile Include="V20210125\Models\DMSTableInfo.cs" />
+    <Compile Include="V20210125\Models\DataEngineConfigPair.cs" />
     <Compile Include="V20210125\Models\DataEngineInfo.cs" />
     <Compile Include="V20210125\Models\DataFormat.cs" />
     <Compile Include="V20210125\Models\DataGovernPolicy.cs" />
@@ -152,6 +155,12 @@
     <Compile Include="V20210125\Models\DescribeDataEnginesResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeEngineUsageInfoRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeEngineUsageInfoResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeLakeFsDirSummaryRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeLakeFsDirSummaryResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeLakeFsInfoRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeLakeFsInfoResponse.cs" />
     <Compile Include="V20210125\Models\DescribeNotebookSessionLogRequest.cs" />
     <Compile Include="V20210125\Models\DescribeNotebookSessionLogResponse.cs" />
     <Compile Include="V20210125\Models\DescribeNotebookSessionRequest.cs" />
@@ -237,6 +246,8 @@
     <Compile Include="V20210125\Models\StreamingStatistics.cs" />
     <Compile Include="V20210125\Models\SuspendResumeDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\SuspendResumeDataEngineResponse.cs" />
+    <Compile Include="V20210125\Models\SwitchDataEngineRequest.cs" />
+    <Compile Include="V20210125\Models\SwitchDataEngineResponse.cs" />
     <Compile Include="V20210125\Models\TColumn.cs" />
     <Compile Include="V20210125\Models\TPartition.cs" />
     <Compile Include="V20210125\Models\TableBaseInfo.cs" />
@@ -253,6 +264,8 @@
     <Compile Include="V20210125\Models\UnbindWorkGroupsFromUserResponse.cs" />
     <Compile Include="V20210125\Models\UnlockMetaDataRequest.cs" />
     <Compile Include="V20210125\Models\UnlockMetaDataResponse.cs" />
+    <Compile Include="V20210125\Models\UpdateRowFilterRequest.cs" />
+    <Compile Include="V20210125\Models\UpdateRowFilterResponse.cs" />
     <Compile Include="V20210125\Models\UserIdSetOfWorkGroupId.cs" />
     <Compile Include="V20210125\Models\UserInfo.cs" />
     <Compile Include="V20210125\Models\UserMessage.cs" />

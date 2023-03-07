@@ -25,7 +25,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 查询条件过滤器
+        /// 查询条件过滤器，支持的查询条件如下：
+        /// instanceIds - 实例ID
+        /// instanceName - 实例名称
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

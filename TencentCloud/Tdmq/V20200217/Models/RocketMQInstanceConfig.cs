@@ -90,6 +90,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("TopicDistribution")]
         public RocketMQTopicDistribution[] TopicDistribution{ get; set; }
 
+        /// <summary>
+        /// 每个主题最大队列数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxQueuesPerTopic")]
+        public ulong? MaxQueuesPerTopic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +114,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
             this.SetParamArrayObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
             this.SetParamArrayObj(map, prefix + "TopicDistribution.", this.TopicDistribution);
+            this.SetParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
         }
     }
 }

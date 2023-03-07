@@ -170,6 +170,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("PrepaidRenewFlag")]
         public long? PrepaidRenewFlag{ get; set; }
 
+        /// <summary>
+        /// 跨地域部署的引擎地域配置详情
+        /// </summary>
+        [JsonProperty("EngineRegionInfos")]
+        public EngineRegionInfo[] EngineRegionInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamObj(map, prefix + "EngineAdmin.", this.EngineAdmin);
             this.SetParamSimple(map, prefix + "PrepaidPeriod", this.PrepaidPeriod);
             this.SetParamSimple(map, prefix + "PrepaidRenewFlag", this.PrepaidRenewFlag);
+            this.SetParamArrayObj(map, prefix + "EngineRegionInfos.", this.EngineRegionInfos);
         }
     }
 }

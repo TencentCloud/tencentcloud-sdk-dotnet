@@ -59,6 +59,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>HIGH: 高危</li>
         /// <li>NORMAL: 中危</li>
         /// <li>LOW: 低危</li>
+        /// <li>UNKNOWNED: 可疑</li>
         /// </summary>
         [JsonProperty("SecurityLevel")]
         public string SecurityLevel{ get; set; }

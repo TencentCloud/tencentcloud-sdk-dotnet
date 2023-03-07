@@ -131,6 +131,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SourceName")]
         public string SourceName{ get; set; }
 
+        /// <summary>
+        /// 策略ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Id")]
+        public long? Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -153,6 +160,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "SourceId", this.SourceId);
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }
