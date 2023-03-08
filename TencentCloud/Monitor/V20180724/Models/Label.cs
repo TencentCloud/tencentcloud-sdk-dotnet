@@ -24,12 +24,26 @@ namespace TencentCloud.Monitor.V20180724.Models
     public class Label : AbstractModel
     {
         
+        /// <summary>
+        /// map表中的Name
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// map表中的Value
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

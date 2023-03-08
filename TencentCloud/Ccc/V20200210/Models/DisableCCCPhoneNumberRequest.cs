@@ -25,12 +25,6 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// TCCC 实例应用 ID
-        /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
-
-        /// <summary>
         /// 号码列表，0086开头
         /// </summary>
         [JsonProperty("PhoneNumbers")]
@@ -42,15 +36,21 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Disabled")]
         public long? Disabled{ get; set; }
 
+        /// <summary>
+        /// TCCC 实例应用 ID
+        /// </summary>
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamArraySimple(map, prefix + "PhoneNumbers.", this.PhoneNumbers);
             this.SetParamSimple(map, prefix + "Disabled", this.Disabled);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         }
     }
 }

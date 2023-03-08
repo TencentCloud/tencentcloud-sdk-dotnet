@@ -24,12 +24,33 @@ namespace TencentCloud.Monitor.V20180724.Models
     public class PrometheusAgentInfo : AbstractModel
     {
         
+        /// <summary>
+        /// 集群类型
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// 集群id
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [JsonProperty("Describe")]
+        public string Describe{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Describe", this.Describe);
         }
     }
 }

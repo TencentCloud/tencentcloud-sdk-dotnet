@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 水印类型，0为图片（默认）。
+        /// 水印类型，0为图片（默认），1为文字。
         /// </summary>
         [JsonProperty("WaterMarkType")]
         public ulong? WaterMarkType{ get; set; }
@@ -36,6 +36,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("WaterMarkImage")]
         public McuWaterMarkImage WaterMarkImage{ get; set; }
 
+        /// <summary>
+        /// 文字水印参数。WaterMarkType为1指定。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WaterMarkText")]
+        public McuWaterMarkText WaterMarkText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         {
             this.SetParamSimple(map, prefix + "WaterMarkType", this.WaterMarkType);
             this.SetParamObj(map, prefix + "WaterMarkImage.", this.WaterMarkImage);
+            this.SetParamObj(map, prefix + "WaterMarkText.", this.WaterMarkText);
         }
     }
 }

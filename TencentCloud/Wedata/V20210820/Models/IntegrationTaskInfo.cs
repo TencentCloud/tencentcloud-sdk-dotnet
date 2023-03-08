@@ -210,6 +210,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InLongManagerVersion")]
         public string InLongManagerVersion{ get; set; }
 
+        /// <summary>
+        /// dataproxy url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataProxyUrl")]
+        public string[] DataProxyUrl{ get; set; }
+
+        /// <summary>
+        /// 任务版本是否已提交运维
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Submit")]
+        public bool? Submit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -243,6 +257,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InLongManagerUrl", this.InLongManagerUrl);
             this.SetParamSimple(map, prefix + "InLongStreamId", this.InLongStreamId);
             this.SetParamSimple(map, prefix + "InLongManagerVersion", this.InLongManagerVersion);
+            this.SetParamArraySimple(map, prefix + "DataProxyUrl.", this.DataProxyUrl);
+            this.SetParamSimple(map, prefix + "Submit", this.Submit);
         }
     }
 }

@@ -38,6 +38,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
+        /// <summary>
+        /// 表databaseName
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginDatabaseName")]
+        public string OriginDatabaseName{ get; set; }
+
+        /// <summary>
+        /// 表schemaName
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginSchemaName")]
+        public string OriginSchemaName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +60,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamSimple(map, prefix + "OriginDatabaseName", this.OriginDatabaseName);
+            this.SetParamSimple(map, prefix + "OriginSchemaName", this.OriginSchemaName);
         }
     }
 }

@@ -283,6 +283,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
 
+        /// <summary>
+        /// 负载均衡实例的域名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerDomain")]
+        public string LoadBalancerDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -326,6 +333,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "SlaveZone.", this.SlaveZone);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+            this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
         }
     }
 }

@@ -565,6 +565,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 创建预发起合同
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreatePrepareFlowRequest"/></param>
+        /// <returns><see cref="ChannelCreatePrepareFlowResponse"/></returns>
+        public async Task<ChannelCreatePrepareFlowResponse> ChannelCreatePrepareFlow(ChannelCreatePrepareFlowRequest req)
+        {
+             JsonResponseModel<ChannelCreatePrepareFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreatePrepareFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreatePrepareFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建预发起合同
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreatePrepareFlowRequest"/></param>
+        /// <returns><see cref="ChannelCreatePrepareFlowResponse"/></returns>
+        public ChannelCreatePrepareFlowResponse ChannelCreatePrepareFlowSync(ChannelCreatePrepareFlowRequest req)
+        {
+             JsonResponseModel<ChannelCreatePrepareFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreatePrepareFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreatePrepareFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
         /// 合同发起人必须在电子签已经进行实名。
         /// </summary>

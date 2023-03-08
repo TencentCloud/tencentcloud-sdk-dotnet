@@ -50,7 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Forward{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
+        /// 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
@@ -392,6 +392,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("AttributeFlags")]
         public string[] AttributeFlags{ get; set; }
 
+        /// <summary>
+        /// 负载均衡实例的域名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerDomain")]
+        public string LoadBalancerDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -451,6 +458,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "HealthLogTopicId", this.HealthLogTopicId);
             this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
             this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
+            this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
         }
     }
 }

@@ -53,7 +53,7 @@ namespace TencentCloud.Tcbr.V20220217
         }
 
         /// <summary>
-        /// 创建云托管环境，并开通资源。	
+        /// 创建云托管环境，并开通资源。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudRunEnvRequest"/></param>
         /// <returns><see cref="CreateCloudRunEnvResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Tcbr.V20220217
         }
 
         /// <summary>
-        /// 创建云托管环境，并开通资源。	
+        /// 创建云托管环境，并开通资源。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudRunEnvRequest"/></param>
         /// <returns><see cref="CreateCloudRunEnvResponse"/></returns>

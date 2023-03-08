@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.712</VersionPrefix>
+    <VersionPrefix>3.0.713</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,7 @@
     <Compile Include="V20210526\Models\ApproverRestriction.cs" />
     <Compile Include="V20210526\Models\AuthFailMessage.cs" />
     <Compile Include="V20210526\Models\AuthorizedUser.cs" />
+    <Compile Include="V20210526\Models\BaseFlowInfo.cs" />
     <Compile Include="V20210526\Models\CcInfo.cs" />
     <Compile Include="V20210526\Models\ChannelBatchCancelFlowsRequest.cs" />
     <Compile Include="V20210526\Models\ChannelBatchCancelFlowsResponse.cs" />
@@ -78,6 +79,8 @@
     <Compile Include="V20210526\Models\ChannelCreateFlowSignUrlResponse.cs" />
     <Compile Include="V20210526\Models\ChannelCreateMultiFlowSignQRCodeRequest.cs" />
     <Compile Include="V20210526\Models\ChannelCreateMultiFlowSignQRCodeResponse.cs" />
+    <Compile Include="V20210526\Models\ChannelCreatePrepareFlowRequest.cs" />
+    <Compile Include="V20210526\Models\ChannelCreatePrepareFlowResponse.cs" />
     <Compile Include="V20210526\Models\ChannelCreateReleaseFlowRequest.cs" />
     <Compile Include="V20210526\Models\ChannelCreateReleaseFlowResponse.cs" />
     <Compile Include="V20210526\Models\ChannelCreateSealPolicyRequest.cs" />
@@ -94,11 +97,14 @@
     <Compile Include="V20210526\Models\ChannelUpdateSealStatusResponse.cs" />
     <Compile Include="V20210526\Models\ChannelVerifyPdfRequest.cs" />
     <Compile Include="V20210526\Models\ChannelVerifyPdfResponse.cs" />
+    <Compile Include="V20210526\Models\CommonApproverOption.cs" />
+    <Compile Include="V20210526\Models\CommonFlowApprover.cs" />
     <Compile Include="V20210526\Models\Component.cs" />
     <Compile Include="V20210526\Models\CreateChannelFlowEvidenceReportRequest.cs" />
     <Compile Include="V20210526\Models\CreateChannelFlowEvidenceReportResponse.cs" />
     <Compile Include="V20210526\Models\CreateConsoleLoginUrlRequest.cs" />
     <Compile Include="V20210526\Models\CreateConsoleLoginUrlResponse.cs" />
+    <Compile Include="V20210526\Models\CreateFlowOption.cs" />
     <Compile Include="V20210526\Models\CreateFlowsByTemplatesRequest.cs" />
     <Compile Include="V20210526\Models\CreateFlowsByTemplatesResponse.cs" />
     <Compile Include="V20210526\Models\CreateSealByImageRequest.cs" />

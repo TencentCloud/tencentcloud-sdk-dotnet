@@ -55,12 +55,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
-        /// 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
-        /// </summary>
-        [JsonProperty("AlarmIndicator")]
-        public ulong? AlarmIndicator{ get; set; }
-
-        /// <summary>
         /// 告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
         /// </summary>
         [JsonProperty("AlarmWay")]
@@ -77,6 +71,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+        /// </summary>
+        [JsonProperty("AlarmIndicator")]
+        public ulong? AlarmIndicator{ get; set; }
 
         /// <summary>
         /// 告警指标描述
@@ -145,10 +145,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RegularName", this.RegularName);
             this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
-            this.SetParamSimple(map, prefix + "AlarmIndicator", this.AlarmIndicator);
             this.SetParamSimple(map, prefix + "AlarmWay", this.AlarmWay);
             this.SetParamSimple(map, prefix + "AlarmRecipientId", this.AlarmRecipientId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "AlarmIndicator", this.AlarmIndicator);
             this.SetParamSimple(map, prefix + "AlarmIndicatorDesc", this.AlarmIndicatorDesc);
             this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
             this.SetParamSimple(map, prefix + "EstimatedTime", this.EstimatedTime);

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.712</VersionPrefix>
+    <VersionPrefix>3.0.713</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -42,20 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Common\AbstractClient.cs" />
-    <Compile Include="Common\AbstractModel.cs" />
-    <Compile Include="Common\CommonClient.cs" />
-    <Compile Include="Common\CommonRequest.cs" />
-    <Compile Include="Common\Credential.cs" />
-    <Compile Include="Common\Exception\TencentCloudSDKException.cs" />
-    <Compile Include="Common\Http\HttpConnection.cs" />
-    <Compile Include="Common\ISerializable.cs" />
-    <Compile Include="Common\JsonResponseErrModel.cs" />
-    <Compile Include="Common\JsonResponseModel.cs" />
-    <Compile Include="Common\Profile\ClientProfile.cs" />
-    <Compile Include="Common\Profile\HttpProfile.cs" />
-    <Compile Include="Common\Profile\Language.cs" />
-    <Compile Include="Common\Sign.cs" />
+    <Compile Include="Common\**\*.cs" />
     <Compile Include="Aa\**\*.cs" />
     <Compile Include="Aai\**\*.cs" />
     <Compile Include="Acp\**\*.cs" />
@@ -168,7 +155,6 @@
     <Compile Include="Iecp\**\*.cs" />
     <Compile Include="Iir\**\*.cs" />
     <Compile Include="Ims\**\*.cs" />
-    <Compile Include="Intlpartnersmgt\**\*.cs" />
     <Compile Include="Iot\**\*.cs" />
     <Compile Include="Iotcloud\**\*.cs" />
     <Compile Include="Iotexplorer\**\*.cs" />
