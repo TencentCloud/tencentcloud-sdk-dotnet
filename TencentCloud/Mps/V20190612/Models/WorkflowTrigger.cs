@@ -25,7 +25,10 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 触发器的类型，目前仅支持 CosFileUpload。
+        /// 触发器的类型，可选值：
+        /// <li>CosFileUpload：COS触发</li>
+        /// <li>AwsS3FileUpload：AWS触发，目前只支持转码任务。只有编排支持，工作流不支持。  </li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -37,6 +40,15 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("CosFileUploadTrigger")]
         public CosFileUploadTrigger CosFileUploadTrigger{ get; set; }
 
+        /// <summary>
+        /// 当 Type 为 AwsS3FileUpload 时必填且有效，为 AWS S3 触发规则。
+        /// 
+        /// 注意：目前AWS的S3、对应触发队列SQS、回调队列SQS的秘钥需要一致。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AwsS3FileUploadTrigger")]
+        public AwsS3FileUploadTrigger AwsS3FileUploadTrigger{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +57,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "CosFileUploadTrigger.", this.CosFileUploadTrigger);
+            this.SetParamObj(map, prefix + "AwsS3FileUploadTrigger.", this.AwsS3FileUploadTrigger);
         }
     }
 }

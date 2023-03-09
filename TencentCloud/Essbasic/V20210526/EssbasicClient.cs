@@ -313,6 +313,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 本接口（ChannelCreateEmbedWebUrl）用于创建嵌入web的链接
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateEmbedWebUrlRequest"/></param>
+        /// <returns><see cref="ChannelCreateEmbedWebUrlResponse"/></returns>
+        public async Task<ChannelCreateEmbedWebUrlResponse> ChannelCreateEmbedWebUrl(ChannelCreateEmbedWebUrlRequest req)
+        {
+             JsonResponseModel<ChannelCreateEmbedWebUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateEmbedWebUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateEmbedWebUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ChannelCreateEmbedWebUrl）用于创建嵌入web的链接
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateEmbedWebUrlRequest"/></param>
+        /// <returns><see cref="ChannelCreateEmbedWebUrlResponse"/></returns>
+        public ChannelCreateEmbedWebUrlResponse ChannelCreateEmbedWebUrlSync(ChannelCreateEmbedWebUrlRequest req)
+        {
+             JsonResponseModel<ChannelCreateEmbedWebUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateEmbedWebUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateEmbedWebUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口（ChannelCreateFlowByFiles）用于通过文件创建签署流程。此接口静默签能力不可直接使用，需要运营申请
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateFlowByFilesRequest"/></param>

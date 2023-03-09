@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Intlpartnersmgt.V20220928.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAccountResponse : AbstractModel
+    public class S3OutputStorage : AbstractModel
     {
         
         /// <summary>
-        /// 账号的uin
+        /// S3 bucket。
         /// </summary>
-        [JsonProperty("Uin")]
-        public string Uin{ get; set; }
+        [JsonProperty("S3Bucket")]
+        public string S3Bucket{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// S3 bucket 对应的区域。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("S3Region")]
+        public string S3Region{ get; set; }
+
+        /// <summary>
+        /// AWS 内网上传 媒体资源的秘钥id。
+        /// </summary>
+        [JsonProperty("S3SecretId")]
+        public string S3SecretId{ get; set; }
+
+        /// <summary>
+        /// AWS 内网上传 媒体资源的秘钥key。
+        /// </summary>
+        [JsonProperty("S3SecretKey")]
+        public string S3SecretKey{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uin", this.Uin);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "S3Bucket", this.S3Bucket);
+            this.SetParamSimple(map, prefix + "S3Region", this.S3Region);
+            this.SetParamSimple(map, prefix + "S3SecretId", this.S3SecretId);
+            this.SetParamSimple(map, prefix + "S3SecretKey", this.S3SecretKey);
         }
     }
 }

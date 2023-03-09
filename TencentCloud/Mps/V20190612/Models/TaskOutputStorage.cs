@@ -25,7 +25,9 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 媒体处理输出对象存储位置的类型，现在仅支持 COS。
+        /// 媒体处理输出对象存储位置的类型，支持：
+        /// <li>COS：COS存储</li>
+        /// <li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -37,6 +39,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("CosOutputStorage")]
         public CosOutputStorage CosOutputStorage{ get; set; }
 
+        /// <summary>
+        /// 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 输出位置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("S3OutputStorage")]
+        public S3OutputStorage S3OutputStorage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +54,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "CosOutputStorage.", this.CosOutputStorage);
+            this.SetParamObj(map, prefix + "S3OutputStorage.", this.S3OutputStorage);
         }
     }
 }

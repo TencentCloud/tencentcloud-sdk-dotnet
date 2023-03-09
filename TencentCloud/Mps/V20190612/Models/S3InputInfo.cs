@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Intlpartnersmgt.V20220928.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryCreditAllocationHistoryData : AbstractModel
+    public class S3InputInfo : AbstractModel
     {
         
         /// <summary>
-        /// 分配时间
+        /// S3 bucket。
         /// </summary>
-        [JsonProperty("AllocatedTime")]
-        public string AllocatedTime{ get; set; }
+        [JsonProperty("S3Bucket")]
+        public string S3Bucket{ get; set; }
 
         /// <summary>
-        /// 操作员
+        /// S3 bucket 对应的区域。
         /// </summary>
-        [JsonProperty("Operator")]
-        public string Operator{ get; set; }
+        [JsonProperty("S3Region")]
+        public string S3Region{ get; set; }
 
         /// <summary>
-        /// 分配的信用值
+        /// S3 bucket 中的媒体资源路径。
         /// </summary>
-        [JsonProperty("Credit")]
-        public float? Credit{ get; set; }
+        [JsonProperty("S3Object")]
+        public string S3Object{ get; set; }
 
         /// <summary>
-        /// 分配的总金额
+        /// AWS 内网访问 媒体资源的秘钥id。
         /// </summary>
-        [JsonProperty("AllocatedCredit")]
-        public float? AllocatedCredit{ get; set; }
+        [JsonProperty("S3SecretId")]
+        public string S3SecretId{ get; set; }
+
+        /// <summary>
+        /// AWS 内网访问 媒体资源的秘钥key。
+        /// </summary>
+        [JsonProperty("S3SecretKey")]
+        public string S3SecretKey{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AllocatedTime", this.AllocatedTime);
-            this.SetParamSimple(map, prefix + "Operator", this.Operator);
-            this.SetParamSimple(map, prefix + "Credit", this.Credit);
-            this.SetParamSimple(map, prefix + "AllocatedCredit", this.AllocatedCredit);
+            this.SetParamSimple(map, prefix + "S3Bucket", this.S3Bucket);
+            this.SetParamSimple(map, prefix + "S3Region", this.S3Region);
+            this.SetParamSimple(map, prefix + "S3Object", this.S3Object);
+            this.SetParamSimple(map, prefix + "S3SecretId", this.S3SecretId);
+            this.SetParamSimple(map, prefix + "S3SecretKey", this.S3SecretKey);
         }
     }
 }

@@ -25,7 +25,10 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 输入来源对象的类型，支持 COS、URL 两种。
+        /// 输入来源对象的类型，支持：
+        /// <li> COS：COS源</li>
+        /// <li> URL：URL源</li>
+        /// <li> AWS-S3：AWS 源，目前只支持转码任务 </li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -43,6 +46,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("UrlInputInfo")]
         public UrlInputInfo UrlInputInfo{ get; set; }
 
+        /// <summary>
+        /// 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 对象信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("S3InputInfo")]
+        public S3InputInfo S3InputInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +62,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "CosInputInfo.", this.CosInputInfo);
             this.SetParamObj(map, prefix + "UrlInputInfo.", this.UrlInputInfo);
+            this.SetParamObj(map, prefix + "S3InputInfo.", this.S3InputInfo);
         }
     }
 }

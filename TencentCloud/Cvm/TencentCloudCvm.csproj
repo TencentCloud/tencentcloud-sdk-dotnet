@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.713</VersionPrefix>
+    <VersionPrefix>3.0.714</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -144,6 +144,8 @@
     <Compile Include="V20170312\Models\DescribeReservedInstancesOfferingsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeReservedInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeReservedInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeTaskInfoRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeTaskInfoResponse.cs" />
     <Compile Include="V20170312\Models\DescribeZoneInstanceConfigInfosRequest.cs" />
     <Compile Include="V20170312\Models\DescribeZoneInstanceConfigInfosResponse.cs" />
     <Compile Include="V20170312\Models\DescribeZonesRequest.cs" />
@@ -260,6 +262,7 @@
     <Compile Include="V20170312\Models\RenewHostsResponse.cs" />
     <Compile Include="V20170312\Models\RenewInstancesRequest.cs" />
     <Compile Include="V20170312\Models\RenewInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\RepairTaskInfo.cs" />
     <Compile Include="V20170312\Models\ReservedInstanceConfigInfoItem.cs" />
     <Compile Include="V20170312\Models\ReservedInstanceFamilyItem.cs" />
     <Compile Include="V20170312\Models\ReservedInstancePrice.cs" />

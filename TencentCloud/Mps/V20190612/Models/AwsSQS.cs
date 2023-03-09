@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Intlpartnersmgt.V20220928.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryVoucherAmountByUinItem : AbstractModel
+    public class AwsSQS : AbstractModel
     {
         
         /// <summary>
-        /// 子客uin
+        /// SQS 队列区域。
         /// </summary>
-        [JsonProperty("ClientUin")]
-        public long? ClientUin{ get; set; }
+        [JsonProperty("SQSRegion")]
+        public string SQSRegion{ get; set; }
 
         /// <summary>
-        /// 代金券额度
+        /// SQS 队列名称。
         /// </summary>
-        [JsonProperty("TotalAmount")]
-        public float? TotalAmount{ get; set; }
+        [JsonProperty("SQSQueueName")]
+        public string SQSQueueName{ get; set; }
 
         /// <summary>
-        /// 代金券余额
+        /// 读写SQS的秘钥id。
         /// </summary>
-        [JsonProperty("RemainAmount")]
-        public float? RemainAmount{ get; set; }
+        [JsonProperty("S3SecretId")]
+        public string S3SecretId{ get; set; }
+
+        /// <summary>
+        /// 读写SQS的秘钥key。
+        /// </summary>
+        [JsonProperty("S3SecretKey")]
+        public string S3SecretKey{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClientUin", this.ClientUin);
-            this.SetParamSimple(map, prefix + "TotalAmount", this.TotalAmount);
-            this.SetParamSimple(map, prefix + "RemainAmount", this.RemainAmount);
+            this.SetParamSimple(map, prefix + "SQSRegion", this.SQSRegion);
+            this.SetParamSimple(map, prefix + "SQSQueueName", this.SQSQueueName);
+            this.SetParamSimple(map, prefix + "S3SecretId", this.S3SecretId);
+            this.SetParamSimple(map, prefix + "S3SecretKey", this.S3SecretKey);
         }
     }
 }

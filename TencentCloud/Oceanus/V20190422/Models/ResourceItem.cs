@@ -111,6 +111,34 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("RefJobCount")]
         public long? RefJobCount{ get; set; }
 
+        /// <summary>
+        /// 作业运行状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsJobRun")]
+        public long? IsJobRun{ get; set; }
+
+        /// <summary>
+        /// 文件名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
+
+        /// <summary>
+        /// 工作空间ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkSpaceId")]
+        public long? WorkSpaceId{ get; set; }
+
+        /// <summary>
+        /// 分状态统计关联作业数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RefJobStatusCountSet")]
+        public RefJobStatusCountItem[] RefJobStatusCountSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +159,10 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "VersionCount", this.VersionCount);
             this.SetParamSimple(map, prefix + "RefJobCount", this.RefJobCount);
+            this.SetParamSimple(map, prefix + "IsJobRun", this.IsJobRun);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+            this.SetParamArrayObj(map, prefix + "RefJobStatusCountSet.", this.RefJobStatusCountSet);
         }
     }
 }

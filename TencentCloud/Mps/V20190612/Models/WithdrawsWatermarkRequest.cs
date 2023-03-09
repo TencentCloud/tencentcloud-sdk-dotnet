@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Intlpartnersmgt.V20220928.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AllocateCustomerCreditResponse : AbstractModel
+    public class WithdrawsWatermarkRequest : AbstractModel
     {
         
         /// <summary>
-        /// 更新后的信用总额
+        /// 输入媒体文件存储信息。
         /// </summary>
-        [JsonProperty("TotalCredit")]
-        public float? TotalCredit{ get; set; }
+        [JsonProperty("InputInfo")]
+        public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// 更新后的信用余额
+        /// 任务的事件通知信息，不填代表不获取事件通知。
         /// </summary>
-        [JsonProperty("RemainingCredit")]
-        public float? RemainingCredit{ get; set; }
+        [JsonProperty("TaskNotifyConfig")]
+        public TaskNotifyConfig TaskNotifyConfig{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("SessionContext")]
+        public string SessionContext{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCredit", this.TotalCredit);
-            this.SetParamSimple(map, prefix + "RemainingCredit", this.RemainingCredit);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
+            this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
+            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
         }
     }
 }

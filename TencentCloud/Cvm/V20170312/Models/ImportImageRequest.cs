@@ -87,6 +87,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("LicenseType")]
         public string LicenseType{ get; set; }
 
+        /// <summary>
+        /// 启动模式
+        /// </summary>
+        [JsonProperty("BootMode")]
+        public string BootMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +109,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Force", this.Force);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
+            this.SetParamSimple(map, prefix + "BootMode", this.BootMode);
         }
     }
 }

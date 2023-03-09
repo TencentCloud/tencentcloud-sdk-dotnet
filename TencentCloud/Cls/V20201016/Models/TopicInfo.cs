@@ -122,6 +122,14 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Describes")]
         public string Describes{ get; set; }
 
+        /// <summary>
+        /// 开启日志沉降，热存储的生命周期， hotPeriod < Period。
+        /// 热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HotPeriod")]
+        public ulong? HotPeriod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +151,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
+            this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
         }
     }
 }

@@ -1933,6 +1933,56 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口 (DescribeTaskInfo) 用于查询云服务器维修任务列表及详细信息。
+        /// 
+        /// - 可以根据实例ID、实例名称或任务状态等信息来查询维修任务列表。过滤信息详情可参考入参说明。
+        /// - 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的维修任务列表。
+        /// 
+        /// 默认接口请求频率限制：10次/秒。</br>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
+        /// <returns><see cref="DescribeTaskInfoResponse"/></returns>
+        public async Task<DescribeTaskInfoResponse> DescribeTaskInfo(DescribeTaskInfoRequest req)
+        {
+             JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeTaskInfo) 用于查询云服务器维修任务列表及详细信息。
+        /// 
+        /// - 可以根据实例ID、实例名称或任务状态等信息来查询维修任务列表。过滤信息详情可参考入参说明。
+        /// - 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的维修任务列表。
+        /// 
+        /// 默认接口请求频率限制：10次/秒。</br>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
+        /// <returns><see cref="DescribeTaskInfoResponse"/></returns>
+        public DescribeTaskInfoResponse DescribeTaskInfoSync(DescribeTaskInfoRequest req)
+        {
+             JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeZoneInstanceConfigInfos) 获取可用区的机型信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneInstanceConfigInfosRequest"/></param>

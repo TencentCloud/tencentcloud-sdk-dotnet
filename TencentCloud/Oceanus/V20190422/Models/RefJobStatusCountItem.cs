@@ -15,32 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Intlpartnersmgt.V20220928.Models
+namespace TencentCloud.Oceanus.V20190422.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryDirectCustomersCreditData : AbstractModel
+    public class RefJobStatusCountItem : AbstractModel
     {
         
         /// <summary>
-        /// 用户Uin
+        /// 作业状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Uin")]
-        public ulong? Uin{ get; set; }
+        [JsonProperty("JobStatus")]
+        public long? JobStatus{ get; set; }
 
         /// <summary>
-        /// 总信用值
+        /// 作业数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TotalCredit")]
-        public float? TotalCredit{ get; set; }
-
-        /// <summary>
-        /// 剩余信用值
-        /// </summary>
-        [JsonProperty("RemainingCredit")]
-        public float? RemainingCredit{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
 
 
         /// <summary>
@@ -48,9 +44,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uin", this.Uin);
-            this.SetParamSimple(map, prefix + "TotalCredit", this.TotalCredit);
-            this.SetParamSimple(map, prefix + "RemainingCredit", this.RemainingCredit);
+            this.SetParamSimple(map, prefix + "JobStatus", this.JobStatus);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

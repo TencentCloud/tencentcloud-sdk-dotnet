@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Intlpartnersmgt.V20220928.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryDirectCustomersCreditResponse : AbstractModel
+    public class ChannelCreateEmbedWebUrlResponse : AbstractModel
     {
         
         /// <summary>
-        /// 直接子客信息列表
+        /// 嵌入的web链接
         /// </summary>
-        [JsonProperty("Data")]
-        public QueryDirectCustomersCreditData[] Data{ get; set; }
+        [JsonProperty("WebUrl")]
+        public string WebUrl{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "WebUrl", this.WebUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

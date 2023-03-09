@@ -173,6 +173,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 创建AMQP集群
         /// </summary>
         /// <param name="req"><see cref="CreateAMQPClusterRequest"/></param>
@@ -193,6 +195,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 创建AMQP集群
         /// </summary>
         /// <param name="req"><see cref="CreateAMQPClusterRequest"/></param>
@@ -213,6 +217,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 创建AMQP Exchange
         /// </summary>
         /// <param name="req"><see cref="CreateAMQPExchangeRequest"/></param>
@@ -233,6 +239,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 创建AMQP Exchange
         /// </summary>
         /// <param name="req"><see cref="CreateAMQPExchangeRequest"/></param>
@@ -253,6 +261,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 创建AMQP队列
         /// </summary>
         /// <param name="req"><see cref="CreateAMQPQueueRequest"/></param>
@@ -273,6 +283,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 创建AMQP队列
         /// </summary>
         /// <param name="req"><see cref="CreateAMQPQueueRequest"/></param>
@@ -293,6 +305,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 创建AMQP路由关系
         /// </summary>
         /// <param name="req"><see cref="CreateAMQPRouteRelationRequest"/></param>
@@ -313,6 +327,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 创建AMQP路由关系
         /// </summary>
         /// <param name="req"><see cref="CreateAMQPRouteRelationRequest"/></param>
@@ -333,6 +349,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 创建Amqp Vhost
         /// </summary>
         /// <param name="req"><see cref="CreateAMQPVHostRequest"/></param>
@@ -353,6 +371,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 创建Amqp Vhost
         /// </summary>
         /// <param name="req"><see cref="CreateAMQPVHostRequest"/></param>
@@ -893,6 +913,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 删除AMQP集群
         /// </summary>
         /// <param name="req"><see cref="DeleteAMQPClusterRequest"/></param>
@@ -913,6 +935,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 删除AMQP集群
         /// </summary>
         /// <param name="req"><see cref="DeleteAMQPClusterRequest"/></param>
@@ -933,6 +957,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 删除Amqp交换机
         /// </summary>
         /// <param name="req"><see cref="DeleteAMQPExchangeRequest"/></param>
@@ -953,6 +979,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 删除Amqp交换机
         /// </summary>
         /// <param name="req"><see cref="DeleteAMQPExchangeRequest"/></param>
@@ -973,6 +1001,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 删除Amqp队列
         /// </summary>
         /// <param name="req"><see cref="DeleteAMQPQueueRequest"/></param>
@@ -993,6 +1023,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 删除Amqp队列
         /// </summary>
         /// <param name="req"><see cref="DeleteAMQPQueueRequest"/></param>
@@ -1013,6 +1045,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 删除Amqp路由关系
         /// </summary>
         /// <param name="req"><see cref="DeleteAMQPRouteRelationRequest"/></param>
@@ -1033,6 +1067,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 删除Amqp路由关系
         /// </summary>
         /// <param name="req"><see cref="DeleteAMQPRouteRelationRequest"/></param>
@@ -1053,6 +1089,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 删除Vhost
         /// </summary>
         /// <param name="req"><see cref="DeleteAMQPVHostRequest"/></param>
@@ -1073,6 +1111,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 删除Vhost
         /// </summary>
         /// <param name="req"><see cref="DeleteAMQPVHostRequest"/></param>
@@ -1613,6 +1653,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 获取单个Amqp集群信息
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPClusterRequest"/></param>
@@ -1633,6 +1675,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 获取单个Amqp集群信息
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPClusterRequest"/></param>
@@ -1693,6 +1737,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 获取用户的配额，如Queue容量，Exchange容量，Vhost容量，单Vhost Tps数,剩余可创建集群数
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPCreateQuotaRequest"/></param>
@@ -1713,6 +1759,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 获取用户的配额，如Queue容量，Exchange容量，Vhost容量，单Vhost Tps数,剩余可创建集群数
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPCreateQuotaRequest"/></param>
@@ -1733,6 +1781,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 获取AMQP Exchange列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPExchangesRequest"/></param>
@@ -1753,6 +1803,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 获取AMQP Exchange列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPExchangesRequest"/></param>
@@ -1773,6 +1825,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 获取Amqp队列列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPQueuesRequest"/></param>
@@ -1793,6 +1847,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 获取Amqp队列列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPQueuesRequest"/></param>
@@ -1813,6 +1869,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 获取Amqp路由关系列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPRouteRelationsRequest"/></param>
@@ -1833,6 +1891,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 获取Amqp路由关系列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPRouteRelationsRequest"/></param>
@@ -1853,6 +1913,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 获取Amqp Vhost 列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPVHostsRequest"/></param>
@@ -1873,6 +1935,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 获取Amqp Vhost 列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPVHostsRequest"/></param>
@@ -3133,6 +3197,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 更新Amqp交换机
         /// </summary>
         /// <param name="req"><see cref="ModifyAMQPExchangeRequest"/></param>
@@ -3153,6 +3219,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 更新Amqp交换机
         /// </summary>
         /// <param name="req"><see cref="ModifyAMQPExchangeRequest"/></param>
@@ -3173,6 +3241,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 更新Amqp队列
         /// </summary>
         /// <param name="req"><see cref="ModifyAMQPQueueRequest"/></param>
@@ -3193,6 +3263,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 更新Amqp队列
         /// </summary>
         /// <param name="req"><see cref="ModifyAMQPQueueRequest"/></param>
@@ -3213,6 +3285,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 更新Vhost
         /// </summary>
         /// <param name="req"><see cref="ModifyAMQPVHostRequest"/></param>
@@ -3233,6 +3307,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 产品下线了，对应的接口也要下线。
+        /// 
         /// 更新Vhost
         /// </summary>
         /// <param name="req"><see cref="ModifyAMQPVHostRequest"/></param>

@@ -3446,5 +3446,45 @@ namespace TencentCloud.Mps.V20190612
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 提取视频中的盲水印。
+        /// </summary>
+        /// <param name="req"><see cref="WithdrawsWatermarkRequest"/></param>
+        /// <returns><see cref="WithdrawsWatermarkResponse"/></returns>
+        public async Task<WithdrawsWatermarkResponse> WithdrawsWatermark(WithdrawsWatermarkRequest req)
+        {
+             JsonResponseModel<WithdrawsWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "WithdrawsWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<WithdrawsWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提取视频中的盲水印。
+        /// </summary>
+        /// <param name="req"><see cref="WithdrawsWatermarkRequest"/></param>
+        /// <returns><see cref="WithdrawsWatermarkResponse"/></returns>
+        public WithdrawsWatermarkResponse WithdrawsWatermarkSync(WithdrawsWatermarkRequest req)
+        {
+             JsonResponseModel<WithdrawsWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "WithdrawsWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<WithdrawsWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

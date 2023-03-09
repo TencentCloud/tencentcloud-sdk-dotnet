@@ -36,6 +36,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Uuids")]
         public string[] Uuids{ get; set; }
 
+        /// <summary>
+        /// 扫描超时时长 ，单位秒
+        /// </summary>
+        [JsonProperty("TimeoutPeriod")]
+        public ulong? TimeoutPeriod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "VulId", this.VulId);
             this.SetParamArraySimple(map, prefix + "Uuids.", this.Uuids);
+            this.SetParamSimple(map, prefix + "TimeoutPeriod", this.TimeoutPeriod);
         }
     }
 }
