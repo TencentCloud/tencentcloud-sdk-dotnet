@@ -40,7 +40,8 @@ namespace TencentCloud.Common.Http
                 });
                 TimeSpan timeSpan = DateTime.Now - result.createTime;
 
-                // 每5分钟创建一个新的连接，放弃旧连接，避免DNS刷新问题。
+                // A new connection is created every 5 minutes
+                // and old connections are discarded to avoid DNS flushing issues.
                 while (timeSpan.TotalSeconds > 300)
                 {
                     ICollection<KeyValuePair<string, HttpClientHolder>> kv = httpclients;

@@ -14,6 +14,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 using System;
 
 namespace TencentCloud.Common
@@ -21,12 +22,11 @@ namespace TencentCloud.Common
     public class TencentCloudSDKException : Exception
     {
         public TencentCloudSDKException(string message)
-            : this(message,"")
+            : this(message, "")
         {
-
         }
 
-        public TencentCloudSDKException(string message,string requestId):
+        public TencentCloudSDKException(string message, string requestId) :
             base(message)
         {
             this.RequestId = requestId;
