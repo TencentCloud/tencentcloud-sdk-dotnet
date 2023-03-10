@@ -1893,6 +1893,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（DescribeForbiddenTablePro）用于获取被禁用的表属性列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeForbiddenTableProRequest"/></param>
+        /// <returns><see cref="DescribeForbiddenTableProResponse"/></returns>
+        public async Task<DescribeForbiddenTableProResponse> DescribeForbiddenTablePro(DescribeForbiddenTableProRequest req)
+        {
+             JsonResponseModel<DescribeForbiddenTableProResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeForbiddenTablePro");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeForbiddenTableProResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeForbiddenTablePro）用于获取被禁用的表属性列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeForbiddenTableProRequest"/></param>
+        /// <returns><see cref="DescribeForbiddenTableProResponse"/></returns>
+        public DescribeForbiddenTableProResponse DescribeForbiddenTableProSync(DescribeForbiddenTableProRequest req)
+        {
+             JsonResponseModel<DescribeForbiddenTableProResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeForbiddenTablePro");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeForbiddenTableProResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询托管存储指定目录的Summary
         /// </summary>
         /// <param name="req"><see cref="DescribeLakeFsDirSummaryRequest"/></param>

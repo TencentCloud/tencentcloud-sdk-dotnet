@@ -54,6 +54,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("SlowProcessSpeed")]
         public long? SlowProcessSpeed{ get; set; }
 
+        /// <summary>
+        /// 版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "ProcessSpeed", this.ProcessSpeed);
             this.SetParamSimple(map, prefix + "AverageProcessDelay", this.AverageProcessDelay);
             this.SetParamSimple(map, prefix + "SlowProcessSpeed", this.SlowProcessSpeed);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
         }
     }
 }

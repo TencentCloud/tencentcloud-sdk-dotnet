@@ -30,6 +30,30 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
+        /// <summary>
+        /// 被抄送人姓名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 被抄送人类型
+        /// 0--个人. 1--员工
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CcType")]
+        public long? CcType{ get; set; }
+
+        /// <summary>
+        /// 被抄送人权限
+        /// 0--可查看
+        /// 1--可查看也可下载
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CcPermission")]
+        public long? CcPermission{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +61,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "CcType", this.CcType);
+            this.SetParamSimple(map, prefix + "CcPermission", this.CcPermission);
         }
     }
 }

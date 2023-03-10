@@ -701,6 +701,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 发起解除协议，主要应用场景为：基于一份已经签署的合同(签署流程)，进行解除操作。
+        /// </summary>
+        /// <param name="req"><see cref="CreateReleaseFlowRequest"/></param>
+        /// <returns><see cref="CreateReleaseFlowResponse"/></returns>
+        public async Task<CreateReleaseFlowResponse> CreateReleaseFlow(CreateReleaseFlowRequest req)
+        {
+             JsonResponseModel<CreateReleaseFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReleaseFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReleaseFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发起解除协议，主要应用场景为：基于一份已经签署的合同(签署流程)，进行解除操作。
+        /// </summary>
+        /// <param name="req"><see cref="CreateReleaseFlowRequest"/></param>
+        /// <returns><see cref="CreateReleaseFlowResponse"/></returns>
+        public CreateReleaseFlowResponse CreateReleaseFlowSync(CreateReleaseFlowRequest req)
+        {
+             JsonResponseModel<CreateReleaseFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReleaseFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReleaseFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取小程序跳转链接
         /// 
         /// 适用场景：如果需要签署人在自己的APP、小程序、H5应用中签署，可以通过此接口获取跳转腾讯电子签小程序的签署跳转链接。

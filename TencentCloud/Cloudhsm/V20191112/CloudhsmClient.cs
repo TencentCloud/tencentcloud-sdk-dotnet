@@ -413,6 +413,86 @@ namespace TencentCloud.Cloudhsm.V20191112
         }
 
         /// <summary>
+        /// 获取告警事件
+        /// </summary>
+        /// <param name="req"><see cref="GetAlarmEventRequest"/></param>
+        /// <returns><see cref="GetAlarmEventResponse"/></returns>
+        public async Task<GetAlarmEventResponse> GetAlarmEvent(GetAlarmEventRequest req)
+        {
+             JsonResponseModel<GetAlarmEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAlarmEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAlarmEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取告警事件
+        /// </summary>
+        /// <param name="req"><see cref="GetAlarmEventRequest"/></param>
+        /// <returns><see cref="GetAlarmEventResponse"/></returns>
+        public GetAlarmEventResponse GetAlarmEventSync(GetAlarmEventRequest req)
+        {
+             JsonResponseModel<GetAlarmEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAlarmEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAlarmEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取VSM监控信息
+        /// </summary>
+        /// <param name="req"><see cref="GetVsmMonitorInfoRequest"/></param>
+        /// <returns><see cref="GetVsmMonitorInfoResponse"/></returns>
+        public async Task<GetVsmMonitorInfoResponse> GetVsmMonitorInfo(GetVsmMonitorInfoRequest req)
+        {
+             JsonResponseModel<GetVsmMonitorInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetVsmMonitorInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetVsmMonitorInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取VSM监控信息
+        /// </summary>
+        /// <param name="req"><see cref="GetVsmMonitorInfoRequest"/></param>
+        /// <returns><see cref="GetVsmMonitorInfoResponse"/></returns>
+        public GetVsmMonitorInfoResponse GetVsmMonitorInfoSync(GetVsmMonitorInfoRequest req)
+        {
+             JsonResponseModel<GetVsmMonitorInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetVsmMonitorInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetVsmMonitorInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 购买询价接口
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceBuyVsmRequest"/></param>
@@ -444,6 +524,46 @@ namespace TencentCloud.Cloudhsm.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "InquiryPriceBuyVsm");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceBuyVsmResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改告警事件
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmEventRequest"/></param>
+        /// <returns><see cref="ModifyAlarmEventResponse"/></returns>
+        public async Task<ModifyAlarmEventResponse> ModifyAlarmEvent(ModifyAlarmEventRequest req)
+        {
+             JsonResponseModel<ModifyAlarmEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAlarmEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改告警事件
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmEventRequest"/></param>
+        /// <returns><see cref="ModifyAlarmEventResponse"/></returns>
+        public ModifyAlarmEventResponse ModifyAlarmEventSync(ModifyAlarmEventRequest req)
+        {
+             JsonResponseModel<ModifyAlarmEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAlarmEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmEventResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

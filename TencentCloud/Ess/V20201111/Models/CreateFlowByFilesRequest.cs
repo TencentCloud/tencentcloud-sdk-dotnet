@@ -146,6 +146,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
+        /// <summary>
+        /// 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+        /// </summary>
+        [JsonProperty("CcNotifyType")]
+        public long? CcNotifyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
         }
     }
 }

@@ -178,6 +178,13 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         [JsonProperty("Manufacturer")]
         public string Manufacturer{ get; set; }
 
+        /// <summary>
+        /// 告警状态，0：停用，1：启用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmStatus")]
+        public long? AlarmStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +213,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
+            this.SetParamSimple(map, prefix + "AlarmStatus", this.AlarmStatus);
         }
     }
 }

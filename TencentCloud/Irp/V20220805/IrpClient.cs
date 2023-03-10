@@ -53,6 +53,46 @@ namespace TencentCloud.Irp.V20220805
         }
 
         /// <summary>
+        /// 获取电商类推荐结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGoodsRecommendRequest"/></param>
+        /// <returns><see cref="DescribeGoodsRecommendResponse"/></returns>
+        public async Task<DescribeGoodsRecommendResponse> DescribeGoodsRecommend(DescribeGoodsRecommendRequest req)
+        {
+             JsonResponseModel<DescribeGoodsRecommendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGoodsRecommend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGoodsRecommendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取电商类推荐结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGoodsRecommendRequest"/></param>
+        /// <returns><see cref="DescribeGoodsRecommendResponse"/></returns>
+        public DescribeGoodsRecommendResponse DescribeGoodsRecommendSync(DescribeGoodsRecommendRequest req)
+        {
+             JsonResponseModel<DescribeGoodsRecommendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGoodsRecommend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGoodsRecommendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取信息流推荐结果
         /// </summary>
         /// <param name="req"><see cref="FeedRecommendRequest"/></param>
@@ -204,6 +244,86 @@ namespace TencentCloud.Irp.V20220805
              {
                  var strResp = this.InternalRequestSync(req, "ReportFeedUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportFeedUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上报电商类行为数据
+        /// </summary>
+        /// <param name="req"><see cref="ReportGoodsBehaviorRequest"/></param>
+        /// <returns><see cref="ReportGoodsBehaviorResponse"/></returns>
+        public async Task<ReportGoodsBehaviorResponse> ReportGoodsBehavior(ReportGoodsBehaviorRequest req)
+        {
+             JsonResponseModel<ReportGoodsBehaviorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReportGoodsBehavior");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportGoodsBehaviorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上报电商类行为数据
+        /// </summary>
+        /// <param name="req"><see cref="ReportGoodsBehaviorRequest"/></param>
+        /// <returns><see cref="ReportGoodsBehaviorResponse"/></returns>
+        public ReportGoodsBehaviorResponse ReportGoodsBehaviorSync(ReportGoodsBehaviorRequest req)
+        {
+             JsonResponseModel<ReportGoodsBehaviorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReportGoodsBehavior");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportGoodsBehaviorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上报电商类商品信息
+        /// </summary>
+        /// <param name="req"><see cref="ReportGoodsInfoRequest"/></param>
+        /// <returns><see cref="ReportGoodsInfoResponse"/></returns>
+        public async Task<ReportGoodsInfoResponse> ReportGoodsInfo(ReportGoodsInfoRequest req)
+        {
+             JsonResponseModel<ReportGoodsInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReportGoodsInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportGoodsInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上报电商类商品信息
+        /// </summary>
+        /// <param name="req"><see cref="ReportGoodsInfoRequest"/></param>
+        /// <returns><see cref="ReportGoodsInfoResponse"/></returns>
+        public ReportGoodsInfoResponse ReportGoodsInfoSync(ReportGoodsInfoRequest req)
+        {
+             JsonResponseModel<ReportGoodsInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReportGoodsInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportGoodsInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -99,6 +99,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("NeedSignReview")]
         public bool? NeedSignReview{ get; set; }
 
+        /// <summary>
+        /// 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+        /// </summary>
+        [JsonProperty("CcNotifyType")]
+        public long? CcNotifyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +123,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
+            this.SetParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
         }
     }
 }

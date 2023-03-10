@@ -117,14 +117,14 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string ApiAccessIpv6{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// 集群类型，0,1:共享集群; 2:独立集群
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
 
         /// <summary>
-        /// 集群状态
+        /// 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterStatus")]
@@ -213,6 +213,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("IsReadOnlyUlogBackupExpireDay")]
         public ulong? IsReadOnlyUlogBackupExpireDay{ get; set; }
 
+        /// <summary>
+        /// restproxy状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RestProxyStatus")]
+        public long? RestProxyStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -248,6 +255,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
             this.SetParamSimple(map, prefix + "UlogBackupExpireDay", this.UlogBackupExpireDay);
             this.SetParamSimple(map, prefix + "IsReadOnlyUlogBackupExpireDay", this.IsReadOnlyUlogBackupExpireDay);
+            this.SetParamSimple(map, prefix + "RestProxyStatus", this.RestProxyStatus);
         }
     }
 }

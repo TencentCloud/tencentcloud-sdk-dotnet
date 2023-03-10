@@ -1937,8 +1937,6 @@ namespace TencentCloud.Cvm.V20170312
         /// 
         /// - 可以根据实例ID、实例名称或任务状态等信息来查询维修任务列表。过滤信息详情可参考入参说明。
         /// - 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的维修任务列表。
-        /// 
-        /// 默认接口请求频率限制：10次/秒。</br>
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
         /// <returns><see cref="DescribeTaskInfoResponse"/></returns>
@@ -1962,8 +1960,6 @@ namespace TencentCloud.Cvm.V20170312
         /// 
         /// - 可以根据实例ID、实例名称或任务状态等信息来查询维修任务列表。过滤信息详情可参考入参说明。
         /// - 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的维修任务列表。
-        /// 
-        /// 默认接口请求频率限制：10次/秒。</br>
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
         /// <returns><see cref="DescribeTaskInfoResponse"/></returns>
@@ -2692,6 +2688,7 @@ namespace TencentCloud.Cvm.V20170312
         /// 本接口 (InquiryPriceTerminateInstances) 用于退还实例询价。
         /// 
         /// * 查询退还实例可以返还的费用。
+        /// * 在退还包年包月实例时，使用ReleasePrepaidDataDisks参数，会在返回值中包含退还挂载的包年包月数据盘返还的费用。
         /// * 支持批量操作，每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceTerminateInstancesRequest"/></param>
@@ -2715,6 +2712,7 @@ namespace TencentCloud.Cvm.V20170312
         /// 本接口 (InquiryPriceTerminateInstances) 用于退还实例询价。
         /// 
         /// * 查询退还实例可以返还的费用。
+        /// * 在退还包年包月实例时，使用ReleasePrepaidDataDisks参数，会在返回值中包含退还挂载的包年包月数据盘返还的费用。
         /// * 支持批量操作，每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceTerminateInstancesRequest"/></param>
@@ -3681,6 +3679,56 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口（RepairTaskControl）用于对待授权状态的维修任务进行授权操作。
+        /// 
+        /// - 仅当任务状态处于`待授权`状态时，可通过此接口对待授权的维修任务进行授权。
+        /// - 调用时需指定产品类型、实例ID、维修任务ID、操作类型。
+        /// - 可授权立即处理，或提前预约计划维护时间之前的指定时间进行处理（预约时间需晚于当前时间至少5分钟，且在48小时之内）。
+        /// - 针对不同类型的维修任务，提供的可选授权处理策略可参见 [维修任务类型与处理策略](https://cloud.tencent.com/document/product/213/67789)。
+        /// </summary>
+        /// <param name="req"><see cref="RepairTaskControlRequest"/></param>
+        /// <returns><see cref="RepairTaskControlResponse"/></returns>
+        public async Task<RepairTaskControlResponse> RepairTaskControl(RepairTaskControlRequest req)
+        {
+             JsonResponseModel<RepairTaskControlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RepairTaskControl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RepairTaskControlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（RepairTaskControl）用于对待授权状态的维修任务进行授权操作。
+        /// 
+        /// - 仅当任务状态处于`待授权`状态时，可通过此接口对待授权的维修任务进行授权。
+        /// - 调用时需指定产品类型、实例ID、维修任务ID、操作类型。
+        /// - 可授权立即处理，或提前预约计划维护时间之前的指定时间进行处理（预约时间需晚于当前时间至少5分钟，且在48小时之内）。
+        /// - 针对不同类型的维修任务，提供的可选授权处理策略可参见 [维修任务类型与处理策略](https://cloud.tencent.com/document/product/213/67789)。
+        /// </summary>
+        /// <param name="req"><see cref="RepairTaskControlRequest"/></param>
+        /// <returns><see cref="RepairTaskControlResponse"/></returns>
+        public RepairTaskControlResponse RepairTaskControlSync(RepairTaskControlRequest req)
+        {
+             JsonResponseModel<RepairTaskControlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RepairTaskControl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RepairTaskControlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (ResetInstance) 用于重装指定实例上的操作系统。
         /// 
         /// * 如果指定了`ImageId`参数，则使用指定的镜像重装；否则按照当前实例使用的镜像进行重装。
@@ -4150,6 +4198,7 @@ namespace TencentCloud.Cvm.V20170312
         /// * 不再使用的实例，可通过本接口主动退还。
         /// * 按量计费的实例通过本接口可直接退还；包年包月实例如符合[退还规则](https://cloud.tencent.com/document/product/213/9711)，也可通过本接口主动退还。
         /// * 包年包月实例首次调用本接口，实例将被移至回收站，再次调用本接口，实例将被销毁，且不可恢复。按量计费实例调用本接口将被直接销毁。
+        /// * 包年包月实例首次调用本接口，入参中包含ReleasePrepaidDataDisks时，包年包月数据盘同时也会被移至回收站。
         /// * 支持批量操作，每次请求批量实例的上限为100。
         /// * 批量操作时，所有实例的付费类型必须一致。
         /// </summary>
@@ -4176,6 +4225,7 @@ namespace TencentCloud.Cvm.V20170312
         /// * 不再使用的实例，可通过本接口主动退还。
         /// * 按量计费的实例通过本接口可直接退还；包年包月实例如符合[退还规则](https://cloud.tencent.com/document/product/213/9711)，也可通过本接口主动退还。
         /// * 包年包月实例首次调用本接口，实例将被移至回收站，再次调用本接口，实例将被销毁，且不可恢复。按量计费实例调用本接口将被直接销毁。
+        /// * 包年包月实例首次调用本接口，入参中包含ReleasePrepaidDataDisks时，包年包月数据盘同时也会被移至回收站。
         /// * 支持批量操作，每次请求批量实例的上限为100。
         /// * 批量操作时，所有实例的付费类型必须一致。
         /// </summary>

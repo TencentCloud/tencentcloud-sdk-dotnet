@@ -373,6 +373,68 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 对 COS 中指定 Bucket 的目录下上传的媒体文件，设置处理规则，包括：
+        /// 1. 视频转码（带水印）；
+        /// 2. 视频转动图；
+        /// 3. 对视频按指定时间点截图；
+        /// 4. 对视频采样截图；
+        /// 5. 对视频截图雪碧图；
+        /// 6. 对视频转自适应码流；
+        /// 7. 智能内容审核（鉴黄、敏感信息检测）；
+        /// 8. 智能内容分析（标签、分类、封面、按帧标签）；
+        /// 9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
+        /// 
+        /// 注意：创建编排成功后是禁用状态，需要手动启用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateScheduleRequest"/></param>
+        /// <returns><see cref="CreateScheduleResponse"/></returns>
+        public async Task<CreateScheduleResponse> CreateSchedule(CreateScheduleRequest req)
+        {
+             JsonResponseModel<CreateScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对 COS 中指定 Bucket 的目录下上传的媒体文件，设置处理规则，包括：
+        /// 1. 视频转码（带水印）；
+        /// 2. 视频转动图；
+        /// 3. 对视频按指定时间点截图；
+        /// 4. 对视频采样截图；
+        /// 5. 对视频截图雪碧图；
+        /// 6. 对视频转自适应码流；
+        /// 7. 智能内容审核（鉴黄、敏感信息检测）；
+        /// 8. 智能内容分析（标签、分类、封面、按帧标签）；
+        /// 9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
+        /// 
+        /// 注意：创建编排成功后是禁用状态，需要手动启用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateScheduleRequest"/></param>
+        /// <returns><see cref="CreateScheduleResponse"/></returns>
+        public CreateScheduleResponse CreateScheduleSync(CreateScheduleRequest req)
+        {
+             JsonResponseModel<CreateScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户自定义指定时间点截图模板，数量上限：16。
         /// </summary>
         /// <param name="req"><see cref="CreateSnapshotByTimeOffsetTemplateRequest"/></param>
@@ -990,6 +1052,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSampleSnapshotTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSampleSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除编排
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScheduleRequest"/></param>
+        /// <returns><see cref="DeleteScheduleResponse"/></returns>
+        public async Task<DeleteScheduleResponse> DeleteSchedule(DeleteScheduleRequest req)
+        {
+             JsonResponseModel<DeleteScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除编排
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScheduleRequest"/></param>
+        /// <returns><see cref="DeleteScheduleResponse"/></returns>
+        public DeleteScheduleResponse DeleteScheduleSync(DeleteScheduleRequest req)
+        {
+             JsonResponseModel<DeleteScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScheduleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1630,6 +1732,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSampleSnapshotTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSampleSnapshotTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询编排。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSchedulesRequest"/></param>
+        /// <returns><see cref="DescribeSchedulesResponse"/></returns>
+        public async Task<DescribeSchedulesResponse> DescribeSchedules(DescribeSchedulesRequest req)
+        {
+             JsonResponseModel<DescribeSchedulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSchedules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSchedulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询编排。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSchedulesRequest"/></param>
+        /// <returns><see cref="DescribeSchedulesResponse"/></returns>
+        public DescribeSchedulesResponse DescribeSchedulesSync(DescribeSchedulesRequest req)
+        {
+             JsonResponseModel<DescribeSchedulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSchedules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSchedulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2283,6 +2425,46 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 禁用自动化触发编排任务。
+        /// </summary>
+        /// <param name="req"><see cref="DisableScheduleRequest"/></param>
+        /// <returns><see cref="DisableScheduleResponse"/></returns>
+        public async Task<DisableScheduleResponse> DisableSchedule(DisableScheduleRequest req)
+        {
+             JsonResponseModel<DisableScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁用自动化触发编排任务。
+        /// </summary>
+        /// <param name="req"><see cref="DisableScheduleRequest"/></param>
+        /// <returns><see cref="DisableScheduleResponse"/></returns>
+        public DisableScheduleResponse DisableScheduleSync(DisableScheduleRequest req)
+        {
+             JsonResponseModel<DisableScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 禁用工作流。
         /// </summary>
         /// <param name="req"><see cref="DisableWorkflowRequest"/></param>
@@ -2362,6 +2544,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "EditMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用自动化触发编排任务。
+        /// </summary>
+        /// <param name="req"><see cref="EnableScheduleRequest"/></param>
+        /// <returns><see cref="EnableScheduleResponse"/></returns>
+        public async Task<EnableScheduleResponse> EnableSchedule(EnableScheduleRequest req)
+        {
+             JsonResponseModel<EnableScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用自动化触发编排任务。
+        /// </summary>
+        /// <param name="req"><see cref="EnableScheduleRequest"/></param>
+        /// <returns><see cref="EnableScheduleResponse"/></returns>
+        public EnableScheduleResponse EnableScheduleSync(EnableScheduleRequest req)
+        {
+             JsonResponseModel<EnableScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableScheduleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2806,6 +3028,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "ModifySampleSnapshotTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySampleSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改编排
+        /// </summary>
+        /// <param name="req"><see cref="ModifyScheduleRequest"/></param>
+        /// <returns><see cref="ModifyScheduleResponse"/></returns>
+        public async Task<ModifyScheduleResponse> ModifySchedule(ModifyScheduleRequest req)
+        {
+             JsonResponseModel<ModifyScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改编排
+        /// </summary>
+        /// <param name="req"><see cref="ModifyScheduleRequest"/></param>
+        /// <returns><see cref="ModifyScheduleResponse"/></returns>
+        public ModifyScheduleResponse ModifyScheduleSync(ModifyScheduleRequest req)
+        {
+             JsonResponseModel<ModifyScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyScheduleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

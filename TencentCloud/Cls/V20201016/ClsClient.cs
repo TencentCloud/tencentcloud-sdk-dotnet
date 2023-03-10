@@ -373,6 +373,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于创建cos导入任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosRechargeRequest"/></param>
+        /// <returns><see cref="CreateCosRechargeResponse"/></returns>
+        public async Task<CreateCosRechargeResponse> CreateCosRecharge(CreateCosRechargeRequest req)
+        {
+             JsonResponseModel<CreateCosRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCosRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCosRechargeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于创建cos导入任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosRechargeRequest"/></param>
+        /// <returns><see cref="CreateCosRechargeResponse"/></returns>
+        public CreateCosRechargeResponse CreateCosRechargeSync(CreateCosRechargeRequest req)
+        {
+             JsonResponseModel<CreateCosRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCosRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCosRechargeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
@@ -1373,6 +1413,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于获取cos导入配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRechargesRequest"/></param>
+        /// <returns><see cref="DescribeCosRechargesResponse"/></returns>
+        public async Task<DescribeCosRechargesResponse> DescribeCosRecharges(DescribeCosRechargesRequest req)
+        {
+             JsonResponseModel<DescribeCosRechargesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCosRecharges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCosRechargesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取cos导入配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRechargesRequest"/></param>
+        /// <returns><see cref="DescribeCosRechargesResponse"/></returns>
+        public DescribeCosRechargesResponse DescribeCosRechargesSync(DescribeCosRechargesRequest req)
+        {
+             JsonResponseModel<DescribeCosRechargesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCosRecharges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCosRechargesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于获取日志下载任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeExportsRequest"/></param>
@@ -2124,6 +2204,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "ModifyConsumer");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于修改cos导入任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosRechargeRequest"/></param>
+        /// <returns><see cref="ModifyCosRechargeResponse"/></returns>
+        public async Task<ModifyCosRechargeResponse> ModifyCosRecharge(ModifyCosRechargeRequest req)
+        {
+             JsonResponseModel<ModifyCosRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCosRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCosRechargeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于修改cos导入任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosRechargeRequest"/></param>
+        /// <returns><see cref="ModifyCosRechargeResponse"/></returns>
+        public ModifyCosRechargeResponse ModifyCosRechargeSync(ModifyCosRechargeRequest req)
+        {
+             JsonResponseModel<ModifyCosRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCosRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCosRechargeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

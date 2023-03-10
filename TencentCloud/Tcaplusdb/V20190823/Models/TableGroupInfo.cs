@@ -54,6 +54,33 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("TotalSize")]
         public ulong? TotalSize{ get; set; }
 
+        /// <summary>
+        /// 表格Txh备份文件多少天后过期删除
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TxhBackupExpireDay")]
+        public ulong? TxhBackupExpireDay{ get; set; }
+
+        /// <summary>
+        /// 是否开启mysql负载均衡,0未开启 1开启中 2已开启
+        /// </summary>
+        [JsonProperty("EnableMysql")]
+        public ulong? EnableMysql{ get; set; }
+
+        /// <summary>
+        /// mysql负载均衡vip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MysqlConnIp")]
+        public string MysqlConnIp{ get; set; }
+
+        /// <summary>
+        /// mysql负载均衡vport
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MysqlConnPort")]
+        public ulong? MysqlConnPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +92,10 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "TableCount", this.TableCount);
             this.SetParamSimple(map, prefix + "TotalSize", this.TotalSize);
+            this.SetParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
+            this.SetParamSimple(map, prefix + "EnableMysql", this.EnableMysql);
+            this.SetParamSimple(map, prefix + "MysqlConnIp", this.MysqlConnIp);
+            this.SetParamSimple(map, prefix + "MysqlConnPort", this.MysqlConnPort);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 签署流程签约方列表，最多不超过5个参与方
+        /// 签署流程签约方列表，最多不超过50个参与方
         /// </summary>
         [JsonProperty("FlowApprovers")]
         public FlowApproverInfo[] FlowApprovers{ get; set; }
@@ -123,6 +123,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 被抄送人信息列表
+        /// </summary>
+        [JsonProperty("CcInfos")]
+        public CcInfo[] CcInfos{ get; set; }
+
+        /// <summary>
+        /// 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+        /// </summary>
+        [JsonProperty("CcNotifyType")]
+        public long? CcNotifyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +157,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
             this.SetParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+            this.SetParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
         }
     }
 }

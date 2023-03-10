@@ -110,7 +110,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string[] Assistants{ get; set; }
 
         /// <summary>
-        /// 录制地址。仅在房间结束后存在。
+        /// 录制地址（协议为https)。仅在房间结束后存在。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordUrl")]

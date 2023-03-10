@@ -101,13 +101,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] Aliases{ get; set; }
 
         /// <summary>
-        /// 时间查询区间的起始位置，会根据`OrderField`中指定的字段进行过滤。未传入时默认为当天`00:00:00`。
+        /// 时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当天`00:00:00`。
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 时间查询区间的终止位置，会根据`OrderField`中指定的字段进行过滤。未传入时默认为当前时刻。
+        /// 时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当前时刻。
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }

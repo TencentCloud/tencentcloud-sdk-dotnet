@@ -36,6 +36,12 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         [JsonProperty("VsmTypes")]
         public VsmInfo[] VsmTypes{ get; set; }
 
+        /// <summary>
+        /// 加密机母机类型：virtualization、GHSM、EHSM、SHSM
+        /// </summary>
+        [JsonProperty("HsmType")]
+        public string HsmType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         {
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamArrayObj(map, prefix + "VsmTypes.", this.VsmTypes);
+            this.SetParamSimple(map, prefix + "HsmType", this.HsmType);
         }
     }
 }

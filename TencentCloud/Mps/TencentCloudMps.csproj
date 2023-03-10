@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.714</VersionPrefix>
+    <VersionPrefix>3.0.715</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,8 @@
     <Compile Include="V20190612\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="V20190612\Models\AIRecognitionTemplateItem.cs" />
     <Compile Include="V20190612\Models\ActionConfigInfo.cs" />
+    <Compile Include="V20190612\Models\Activity.cs" />
+    <Compile Include="V20190612\Models\ActivityPara.cs" />
     <Compile Include="V20190612\Models\ActivityResItem.cs" />
     <Compile Include="V20190612\Models\ActivityResult.cs" />
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingInfoItem.cs" />
@@ -189,6 +191,8 @@
     <Compile Include="V20190612\Models\CreatePersonSampleResponse.cs" />
     <Compile Include="V20190612\Models\CreateSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateSampleSnapshotTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\CreateScheduleRequest.cs" />
+    <Compile Include="V20190612\Models\CreateScheduleResponse.cs" />
     <Compile Include="V20190612\Models\CreateSnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateSnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateStreamLinkFlowRequest.cs" />
@@ -219,6 +223,8 @@
     <Compile Include="V20190612\Models\DeletePersonSampleResponse.cs" />
     <Compile Include="V20190612\Models\DeleteSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteSampleSnapshotTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteScheduleRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteScheduleResponse.cs" />
     <Compile Include="V20190612\Models\DeleteSnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteSnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteStreamLinkFlowRequest.cs" />
@@ -272,6 +278,8 @@
     <Compile Include="V20190612\Models\DescribeRTSPPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\DescribeSampleSnapshotTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeSampleSnapshotTemplatesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeSchedulesRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeSchedulesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeSnapshotByTimeOffsetTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeSnapshotByTimeOffsetTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkActivateStateRequest.cs" />
@@ -304,6 +312,8 @@
     <Compile Include="V20190612\Models\DescribeWordSamplesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeWorkflowsRequest.cs" />
     <Compile Include="V20190612\Models\DescribeWorkflowsResponse.cs" />
+    <Compile Include="V20190612\Models\DisableScheduleRequest.cs" />
+    <Compile Include="V20190612\Models\DisableScheduleResponse.cs" />
     <Compile Include="V20190612\Models\DisableWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\DisableWorkflowResponse.cs" />
     <Compile Include="V20190612\Models\EditMediaFileInfo.cs" />
@@ -313,6 +323,8 @@
     <Compile Include="V20190612\Models\EditMediaTask.cs" />
     <Compile Include="V20190612\Models\EditMediaTaskInput.cs" />
     <Compile Include="V20190612\Models\EditMediaTaskOutput.cs" />
+    <Compile Include="V20190612\Models\EnableScheduleRequest.cs" />
+    <Compile Include="V20190612\Models\EnableScheduleResponse.cs" />
     <Compile Include="V20190612\Models\EnableWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\EnableWorkflowResponse.cs" />
     <Compile Include="V20190612\Models\EnhanceConfig.cs" />
@@ -414,6 +426,8 @@
     <Compile Include="V20190612\Models\ModifyPersonSampleResponse.cs" />
     <Compile Include="V20190612\Models\ModifySampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifySampleSnapshotTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyScheduleRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyScheduleResponse.cs" />
     <Compile Include="V20190612\Models\ModifySnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifySnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyStreamLinkFlowRequest.cs" />
@@ -491,6 +505,7 @@
     <Compile Include="V20190612\Models\ScheduleRecognitionTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleReviewTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleTask.cs" />
+    <Compile Include="V20190612\Models\SchedulesInfo.cs" />
     <Compile Include="V20190612\Models\ScratchRepairConfig.cs" />
     <Compile Include="V20190612\Models\SharpEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTaskInput.cs" />

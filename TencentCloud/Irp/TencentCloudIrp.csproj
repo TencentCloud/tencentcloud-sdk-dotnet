@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B44E8407-A733-37F6-A032-077EE9543AD0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.714</VersionPrefix>
+    <VersionPrefix>3.0.715</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,12 +65,17 @@
     <Compile Include="V20220324\Models\TagInfo.cs" />
     <Compile Include="V20220324\Models\UserIdInfo.cs" />
     <Compile Include="V20220805\IrpClient.cs" />
+    <Compile Include="V20220805\Models\DescribeGoodsRecommendRequest.cs" />
+    <Compile Include="V20220805\Models\DescribeGoodsRecommendResponse.cs" />
     <Compile Include="V20220805\Models\DislikeInfo.cs" />
     <Compile Include="V20220805\Models\DocItem.cs" />
     <Compile Include="V20220805\Models\FeedBehaviorInfo.cs" />
     <Compile Include="V20220805\Models\FeedRecommendRequest.cs" />
     <Compile Include="V20220805\Models\FeedRecommendResponse.cs" />
     <Compile Include="V20220805\Models\FeedUserInfo.cs" />
+    <Compile Include="V20220805\Models\GoodsBehaviorInfo.cs" />
+    <Compile Include="V20220805\Models\GoodsInfo.cs" />
+    <Compile Include="V20220805\Models\RecGoodsData.cs" />
     <Compile Include="V20220805\Models\RecItemData.cs" />
     <Compile Include="V20220805\Models\ReportFeedBehaviorRequest.cs" />
     <Compile Include="V20220805\Models\ReportFeedBehaviorResponse.cs" />
@@ -78,6 +83,12 @@
     <Compile Include="V20220805\Models\ReportFeedItemResponse.cs" />
     <Compile Include="V20220805\Models\ReportFeedUserRequest.cs" />
     <Compile Include="V20220805\Models\ReportFeedUserResponse.cs" />
+    <Compile Include="V20220805\Models\ReportGoodsBehaviorRequest.cs" />
+    <Compile Include="V20220805\Models\ReportGoodsBehaviorResponse.cs" />
+    <Compile Include="V20220805\Models\ReportGoodsInfoRequest.cs" />
+    <Compile Include="V20220805\Models\ReportGoodsInfoResponse.cs" />
+    <Compile Include="V20220805\Models\StrUserIdInfo.cs" />
     <Compile Include="V20220805\Models\UserIdInfo.cs" />
+    <Compile Include="V20220805\Models\UserPortraitInfo.cs" />
   </ItemGroup>
 </Project>

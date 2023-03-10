@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] NoticeIds{ get; set; }
 
         /// <summary>
-        /// 通知模版与策略绑定关系
+        /// 通知模板与策略绑定关系
         /// </summary>
         [JsonProperty("NoticeBindPolicys")]
         public NoticeBindPolicys[] NoticeBindPolicys{ get; set; }

@@ -63,6 +63,12 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// 告警开关，0表示关闭告警，1表示启用告警
+        /// </summary>
+        [JsonProperty("AlarmStatus")]
+        public long? AlarmStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +81,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamArraySimple(map, prefix + "SgIds.", this.SgIds);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "AlarmStatus", this.AlarmStatus);
         }
     }
 }

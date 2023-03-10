@@ -60,6 +60,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("WriteNum")]
         public long? WriteNum{ get; set; }
 
+        /// <summary>
+        /// 版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "DiskRate", this.DiskRate);
             this.SetParamSimple(map, prefix + "ReadNum", this.ReadNum);
             this.SetParamSimple(map, prefix + "WriteNum", this.WriteNum);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
         }
     }
 }
