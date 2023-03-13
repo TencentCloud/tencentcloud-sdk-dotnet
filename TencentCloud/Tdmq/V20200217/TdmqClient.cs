@@ -633,6 +633,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 创建RabbitMQ专享版实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQVipInstanceResponse"/></returns>
+        public async Task<CreateRabbitMQVipInstanceResponse> CreateRabbitMQVipInstance(CreateRabbitMQVipInstanceRequest req)
+        {
+             JsonResponseModel<CreateRabbitMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRabbitMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建RabbitMQ专享版实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQVipInstanceResponse"/></returns>
+        public CreateRabbitMQVipInstanceResponse CreateRabbitMQVipInstanceSync(CreateRabbitMQVipInstanceRequest req)
+        {
+             JsonResponseModel<CreateRabbitMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRabbitMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口用于创建一个RocketMQ集群
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQClusterRequest"/></param>

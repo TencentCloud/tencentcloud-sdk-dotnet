@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Keewidb.V20220308.Models
+namespace TencentCloud.Lcic.V20220817.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RenewInstanceRequest : AbstractModel
+    public class DeleteAppCustomContentRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 应用ID。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 购买时长。单位：月。取值为 [1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。
+        /// 指定需要删除的已设置的scene场景自定义元素，如果为空则删除应用下已设置的所有自定义元素。
         /// </summary>
-        [JsonProperty("Period")]
-        public ulong? Period{ get; set; }
+        [JsonProperty("Scenes")]
+        public string[] Scenes{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Keewidb.V20220308.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamArraySimple(map, prefix + "Scenes.", this.Scenes);
         }
     }
 }

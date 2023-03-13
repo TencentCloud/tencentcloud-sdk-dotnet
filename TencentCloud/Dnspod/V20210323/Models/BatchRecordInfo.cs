@@ -107,6 +107,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("MX")]
         public ulong? MX{ get; set; }
 
+        /// <summary>
+        /// 记录权重
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +132,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "MX", this.MX);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

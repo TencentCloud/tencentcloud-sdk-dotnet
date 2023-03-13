@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// <li>ItemName- string - 是否必填：否 - 项名称</i>
+        /// <li>ItemName- string - 是否必填：否 - 项名称</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

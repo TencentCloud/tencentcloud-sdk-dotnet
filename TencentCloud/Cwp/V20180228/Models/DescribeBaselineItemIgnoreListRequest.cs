@@ -43,7 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// <li>CatgoryId - int64 - 是否必填：否 - 规则Id</i>
+        /// <li>CatgoryId - int64 - 是否必填：否 - 规则Id</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

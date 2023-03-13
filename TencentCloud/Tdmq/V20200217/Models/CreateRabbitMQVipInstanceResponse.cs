@@ -15,44 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePrometheusConfigResponse : AbstractModel
+    public class CreateRabbitMQVipInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// 全局配置
+        /// 订单号Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Config")]
-        public string Config{ get; set; }
+        [JsonProperty("TranId")]
+        public string TranId{ get; set; }
 
         /// <summary>
-        /// ServiceMonitor配置
+        /// 实例Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ServiceMonitors")]
-        public PrometheusConfigItem[] ServiceMonitors{ get; set; }
-
-        /// <summary>
-        /// PodMonitor配置
-        /// </summary>
-        [JsonProperty("PodMonitors")]
-        public PrometheusConfigItem[] PodMonitors{ get; set; }
-
-        /// <summary>
-        /// 原生Job
-        /// </summary>
-        [JsonProperty("RawJobs")]
-        public PrometheusConfigItem[] RawJobs{ get; set; }
-
-        /// <summary>
-        /// Probes
-        /// </summary>
-        [JsonProperty("Probes")]
-        public PrometheusConfigItem[] Probes{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -66,11 +50,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Config", this.Config);
-            this.SetParamArrayObj(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
-            this.SetParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
-            this.SetParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
-            this.SetParamArrayObj(map, prefix + "Probes.", this.Probes);
+            this.SetParamSimple(map, prefix + "TranId", this.TranId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -573,6 +573,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 删除设置自定义元素。如果参数scenes为空则删除所有自定义元素，否则删除指定的scene自定义元素。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAppCustomContentRequest"/></param>
+        /// <returns><see cref="DeleteAppCustomContentResponse"/></returns>
+        public async Task<DeleteAppCustomContentResponse> DeleteAppCustomContent(DeleteAppCustomContentRequest req)
+        {
+             JsonResponseModel<DeleteAppCustomContentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAppCustomContent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAppCustomContentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除设置自定义元素。如果参数scenes为空则删除所有自定义元素，否则删除指定的scene自定义元素。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAppCustomContentRequest"/></param>
+        /// <returns><see cref="DeleteAppCustomContentResponse"/></returns>
+        public DeleteAppCustomContentResponse DeleteAppCustomContentSync(DeleteAppCustomContentRequest req)
+        {
+             JsonResponseModel<DeleteAppCustomContentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAppCustomContent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAppCustomContentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除文档
         /// </summary>
         /// <param name="req"><see cref="DeleteDocumentRequest"/></param>
