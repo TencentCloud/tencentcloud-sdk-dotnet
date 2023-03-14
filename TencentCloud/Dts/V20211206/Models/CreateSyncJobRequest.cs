@@ -43,7 +43,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string SrcRegion{ get; set; }
 
         /// <summary>
-        /// 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
+        /// 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,kafka等
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }

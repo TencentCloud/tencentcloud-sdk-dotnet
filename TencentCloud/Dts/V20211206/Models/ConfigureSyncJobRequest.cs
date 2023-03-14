@@ -79,10 +79,34 @@ namespace TencentCloud.Dts.V20211206.Models
         public Endpoint SrcInfo{ get; set; }
 
         /// <summary>
+        /// 源端信息，多节点数据库使用，且SrcNodeType传cluster
+        /// </summary>
+        [JsonProperty("SrcInfos")]
+        public SyncDBEndpointInfos SrcInfos{ get; set; }
+
+        /// <summary>
+        /// 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
+        /// </summary>
+        [JsonProperty("SrcNodeType")]
+        public string SrcNodeType{ get; set; }
+
+        /// <summary>
         /// 目标端信息，单节点数据库使用
         /// </summary>
         [JsonProperty("DstInfo")]
         public Endpoint DstInfo{ get; set; }
+
+        /// <summary>
+        /// 目标端信息，多节点数据库使用，且DstNodeType传cluster
+        /// </summary>
+        [JsonProperty("DstInfos")]
+        public SyncDBEndpointInfos DstInfos{ get; set; }
+
+        /// <summary>
+        /// 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
+        /// </summary>
+        [JsonProperty("DstNodeType")]
+        public string DstNodeType{ get; set; }
 
         /// <summary>
         /// 同步任务选项
@@ -111,7 +135,11 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "RunMode", this.RunMode);
             this.SetParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
             this.SetParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
+            this.SetParamObj(map, prefix + "SrcInfos.", this.SrcInfos);
+            this.SetParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);
             this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
+            this.SetParamObj(map, prefix + "DstInfos.", this.DstInfos);
+            this.SetParamSimple(map, prefix + "DstNodeType", this.DstNodeType);
             this.SetParamObj(map, prefix + "Options.", this.Options);
             this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
         }

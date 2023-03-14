@@ -30,6 +30,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
+        /// <summary>
+        /// 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

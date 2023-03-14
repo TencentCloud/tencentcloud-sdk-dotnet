@@ -3609,6 +3609,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 修改RabbitMQ专享版实例
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="ModifyRabbitMQVipInstanceResponse"/></returns>
+        public async Task<ModifyRabbitMQVipInstanceResponse> ModifyRabbitMQVipInstance(ModifyRabbitMQVipInstanceRequest req)
+        {
+             JsonResponseModel<ModifyRabbitMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRabbitMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改RabbitMQ专享版实例
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="ModifyRabbitMQVipInstanceResponse"/></returns>
+        public ModifyRabbitMQVipInstanceResponse ModifyRabbitMQVipInstanceSync(ModifyRabbitMQVipInstanceRequest req)
+        {
+             JsonResponseModel<ModifyRabbitMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRabbitMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新RocketMQ集群信息
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQClusterRequest"/></param>

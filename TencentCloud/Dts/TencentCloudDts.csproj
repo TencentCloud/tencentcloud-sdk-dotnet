@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.717</VersionPrefix>
+    <VersionPrefix>3.0.718</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -117,6 +117,7 @@
     <Compile Include="V20211206\Models\IsolateSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\IsolateSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\JobItem.cs" />
+    <Compile Include="V20211206\Models\KafkaOption.cs" />
     <Compile Include="V20211206\Models\KeyValuePairOption.cs" />
     <Compile Include="V20211206\Models\MigrateAction.cs" />
     <Compile Include="V20211206\Models\MigrateDBItem.cs" />
@@ -173,12 +174,14 @@
     <Compile Include="V20211206\Models\StopMigrateJobResponse.cs" />
     <Compile Include="V20211206\Models\StopSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\StopSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\SyncDBEndpointInfos.cs" />
     <Compile Include="V20211206\Models\SyncDetailInfo.cs" />
     <Compile Include="V20211206\Models\SyncJobInfo.cs" />
     <Compile Include="V20211206\Models\Table.cs" />
     <Compile Include="V20211206\Models\TableItem.cs" />
     <Compile Include="V20211206\Models\TagFilter.cs" />
     <Compile Include="V20211206\Models\TagItem.cs" />
+    <Compile Include="V20211206\Models\TopicRule.cs" />
     <Compile Include="V20211206\Models\TradeInfo.cs" />
     <Compile Include="V20211206\Models\View.cs" />
     <Compile Include="V20211206\Models\ViewItem.cs" />

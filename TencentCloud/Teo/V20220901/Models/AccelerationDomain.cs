@@ -72,6 +72,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
 
+        /// <summary>
+        /// 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IdentificationStatus")]
+        public string IdentificationStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +92,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
             this.SetParamSimple(map, prefix + "Cname", this.Cname);
+            this.SetParamSimple(map, prefix + "IdentificationStatus", this.IdentificationStatus);
         }
     }
 }

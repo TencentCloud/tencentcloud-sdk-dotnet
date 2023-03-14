@@ -24,12 +24,26 @@ namespace TencentCloud.Lcic.V20220817.Models
     public class CreateSupervisorRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 应用ID。
+        /// </summary>
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
+
+        /// <summary>
+        /// 用户ID列表。
+        /// </summary>
+        [JsonProperty("Users")]
+        public string[] Users{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamArraySimple(map, prefix + "Users.", this.Users);
         }
     }
 }

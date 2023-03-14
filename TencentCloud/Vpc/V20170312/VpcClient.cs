@@ -11853,6 +11853,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（ReplaceSecurityGroupPolicies）用于批量修改安全组规则（SecurityGroupPolicy）。
+        /// 单个请求中只能替换单个方向的一条或多条规则, 必须要指定索引（PolicyIndex）。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceSecurityGroupPoliciesRequest"/></param>
+        /// <returns><see cref="ReplaceSecurityGroupPoliciesResponse"/></returns>
+        public async Task<ReplaceSecurityGroupPoliciesResponse> ReplaceSecurityGroupPolicies(ReplaceSecurityGroupPoliciesRequest req)
+        {
+             JsonResponseModel<ReplaceSecurityGroupPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReplaceSecurityGroupPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceSecurityGroupPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ReplaceSecurityGroupPolicies）用于批量修改安全组规则（SecurityGroupPolicy）。
+        /// 单个请求中只能替换单个方向的一条或多条规则, 必须要指定索引（PolicyIndex）。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceSecurityGroupPoliciesRequest"/></param>
+        /// <returns><see cref="ReplaceSecurityGroupPoliciesResponse"/></returns>
+        public ReplaceSecurityGroupPoliciesResponse ReplaceSecurityGroupPoliciesSync(ReplaceSecurityGroupPoliciesRequest req)
+        {
+             JsonResponseModel<ReplaceSecurityGroupPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReplaceSecurityGroupPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceSecurityGroupPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ReplaceSecurityGroupPolicy）用于替换单条安全组规则（SecurityGroupPolicy）。
         /// 单个请求中只能替换单个方向的一条规则, 必须要指定索引（PolicyIndex）。
         /// </summary>

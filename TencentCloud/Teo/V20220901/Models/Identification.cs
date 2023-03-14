@@ -31,6 +31,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneName{ get; set; }
 
         /// <summary>
+        /// 验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
         /// 验证状态，取值有：
         /// <li> pending：验证中；</li>
         /// <li> finished：验证完成。</li>
@@ -64,6 +71,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Ascription.", this.Ascription);
             this.SetParamArraySimple(map, prefix + "OriginalNameServers.", this.OriginalNameServers);

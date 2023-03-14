@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.717</VersionPrefix>
+    <VersionPrefix>3.0.718</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -94,6 +94,9 @@
     <Compile Include="V20180125\Models\DescribeAttackOverviewResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAutoDenyIPRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAutoDenyIPResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeCustomRulesRspRuleListItem.cs" />
+    <Compile Include="V20180125\Models\DescribeCustomWhiteRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeCustomWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\DescribeDomainDetailsSaasRequest.cs" />
     <Compile Include="V20180125\Models\DescribeDomainDetailsSaasResponse.cs" />
     <Compile Include="V20180125\Models\DescribeDomainWhiteRulesRequest.cs" />
@@ -108,6 +111,10 @@
     <Compile Include="V20180125\Models\DescribeIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DescribeIpHitItemsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeIpHitItemsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribePolicyStatusRequest.cs" />
+    <Compile Include="V20180125\Models\DescribePolicyStatusResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeRuleLimitRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeRuleLimitResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserCdcClbWafRegionsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeUserCdcClbWafRegionsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserClbWafRegionsRequest.cs" />
@@ -163,6 +170,7 @@
     <Compile Include="V20180125\Models\SwitchDomainRulesResponse.cs" />
     <Compile Include="V20180125\Models\UpsertIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\UpsertIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\WafRuleLimit.cs" />
     <Compile Include="V20180125\Models\WafThreatenIntelligenceDetails.cs" />
   </ItemGroup>
 </Project>
