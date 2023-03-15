@@ -115,6 +115,81 @@ namespace TencentCloud.Wav.V20210129.Models
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
+        /// <summary>
+        /// 线索属性，0：个人，1：企业
+        /// </summary>
+        [JsonProperty("LeadUserType")]
+        public long? LeadUserType{ get; set; }
+
+        /// <summary>
+        /// 线索来源类型，1：线上，2：线下
+        /// </summary>
+        [JsonProperty("LeadType")]
+        public long? LeadType{ get; set; }
+
+        /// <summary>
+        /// 线索渠道对应ID
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
+
+        /// <summary>
+        /// 线索渠道类型，与线索来源对应的渠道名称
+        /// </summary>
+        [JsonProperty("ChannelName")]
+        public string ChannelName{ get; set; }
+
+        /// <summary>
+        /// 线索渠道名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceChannelName")]
+        public string SourceChannelName{ get; set; }
+
+        /// <summary>
+        /// 0：未知，1：男，2：女
+        /// </summary>
+        [JsonProperty("Gender")]
+        public long? Gender{ get; set; }
+
+        /// <summary>
+        /// 线索创建时间戳，单位：秒
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 线索所处状态，101-待分配 201-待建档 301-已建档 401-已邀约 501-跟进中 601-已下订单 701-已成交 801-战败申请中 901-已战败 1001-未知状态 1101-转移申请中 1201-已完成
+        /// </summary>
+        [JsonProperty("LeadStatus")]
+        public long? LeadStatus{ get; set; }
+
+        /// <summary>
+        /// 线索意向等级
+        /// </summary>
+        [JsonProperty("LevelCode")]
+        public string LevelCode{ get; set; }
+
+        /// <summary>
+        /// 线索成功导入的时间戳，单位：秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImportAtTime")]
+        public ulong? ImportAtTime{ get; set; }
+
+        /// <summary>
+        /// 完成线索分配的时间戳，单位：秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DistributeTime")]
+        public ulong? DistributeTime{ get; set; }
+
+        /// <summary>
+        /// 获取线索的时间戳，单位：秒
+        /// </summary>
+        [JsonProperty("CreateAtTime")]
+        public ulong? CreateAtTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +211,18 @@ namespace TencentCloud.Wav.V20210129.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamArraySimple(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "LeadUserType", this.LeadUserType);
+            this.SetParamSimple(map, prefix + "LeadType", this.LeadType);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "ChannelName", this.ChannelName);
+            this.SetParamSimple(map, prefix + "SourceChannelName", this.SourceChannelName);
+            this.SetParamSimple(map, prefix + "Gender", this.Gender);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "LeadStatus", this.LeadStatus);
+            this.SetParamSimple(map, prefix + "LevelCode", this.LevelCode);
+            this.SetParamSimple(map, prefix + "ImportAtTime", this.ImportAtTime);
+            this.SetParamSimple(map, prefix + "DistributeTime", this.DistributeTime);
+            this.SetParamSimple(map, prefix + "CreateAtTime", this.CreateAtTime);
         }
     }
 }

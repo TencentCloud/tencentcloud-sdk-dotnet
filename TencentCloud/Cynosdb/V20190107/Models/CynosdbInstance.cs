@@ -327,6 +327,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("SlaveZones")]
         public string[] SlaveZones{ get; set; }
 
+        /// <summary>
+        /// 实例网络信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceNetInfo")]
+        public InstanceNetInfo[] InstanceNetInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -382,6 +389,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
             this.SetParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+            this.SetParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
         }
     }
 }

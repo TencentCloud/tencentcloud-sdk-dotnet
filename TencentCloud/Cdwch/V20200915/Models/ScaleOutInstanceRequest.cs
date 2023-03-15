@@ -56,13 +56,13 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public long? UserSubnetIPNum{ get; set; }
 
         /// <summary>
-        /// 同步元数据节点IP （uip）
+        /// 同步元数据节点IP （uip），扩容的时候必填
         /// </summary>
         [JsonProperty("ScaleOutNodeIp")]
         public string ScaleOutNodeIp{ get; set; }
 
         /// <summary>
-        /// 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+        /// 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔，缩容的时候必填
         /// </summary>
         [JsonProperty("ReduceShardInfo")]
         public string[] ReduceShardInfo{ get; set; }

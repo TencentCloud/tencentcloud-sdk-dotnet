@@ -36,6 +36,27 @@ namespace TencentCloud.Wav.V20210129.Models
         [JsonProperty("DealerName")]
         public string DealerName{ get; set; }
 
+        /// <summary>
+        /// 所属省份编号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProvinceCode")]
+        public string ProvinceCode{ get; set; }
+
+        /// <summary>
+        /// 所属城市编号列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CityCodeList")]
+        public string[] CityCodeList{ get; set; }
+
+        /// <summary>
+        /// 业务覆盖品牌id列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BrandIdList")]
+        public string[] BrandIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +65,9 @@ namespace TencentCloud.Wav.V20210129.Models
         {
             this.SetParamSimple(map, prefix + "DealerId", this.DealerId);
             this.SetParamSimple(map, prefix + "DealerName", this.DealerName);
+            this.SetParamSimple(map, prefix + "ProvinceCode", this.ProvinceCode);
+            this.SetParamArraySimple(map, prefix + "CityCodeList.", this.CityCodeList);
+            this.SetParamArraySimple(map, prefix + "BrandIdList.", this.BrandIdList);
         }
     }
 }

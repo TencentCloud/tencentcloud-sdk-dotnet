@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1732CBF0-BE93-36A0-A593-39E6D6FF17BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.718</VersionPrefix>
+    <VersionPrefix>3.0.719</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -199,6 +199,8 @@
     <Compile Include="V20200217\Models\DescribePublishersResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRabbitMQNodeListRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRabbitMQNodeListResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRabbitMQVipInstanceRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRabbitMQVipInstanceResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRabbitMQVipInstancesRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRabbitMQVipInstancesResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQClusterRequest.cs" />
@@ -223,6 +225,7 @@
     <Compile Include="V20200217\Models\DescribeTopicsResponse.cs" />
     <Compile Include="V20200217\Models\Environment.cs" />
     <Compile Include="V20200217\Models\EnvironmentRole.cs" />
+    <Compile Include="V20200217\Models\ExchangeQuota.cs" />
     <Compile Include="V20200217\Models\Filter.cs" />
     <Compile Include="V20200217\Models\FilterSubscription.cs" />
     <Compile Include="V20200217\Models\InstanceNodeDistribution.cs" />
@@ -262,9 +265,15 @@
     <Compile Include="V20200217\Models\ModifyTopicRequest.cs" />
     <Compile Include="V20200217\Models\ModifyTopicResponse.cs" />
     <Compile Include="V20200217\Models\PartitionsTopic.cs" />
+    <Compile Include="V20200217\Models\PrometheusEndpointInfo.cs" />
     <Compile Include="V20200217\Models\PublishCmqMsgRequest.cs" />
     <Compile Include="V20200217\Models\PublishCmqMsgResponse.cs" />
     <Compile Include="V20200217\Models\Publisher.cs" />
+    <Compile Include="V20200217\Models\QueueQuota.cs" />
+    <Compile Include="V20200217\Models\RabbitMQClusterAccessInfo.cs" />
+    <Compile Include="V20200217\Models\RabbitMQClusterInfo.cs" />
+    <Compile Include="V20200217\Models\RabbitMQClusterSpecInfo.cs" />
+    <Compile Include="V20200217\Models\RabbitMQClusterWhiteListInfo.cs" />
     <Compile Include="V20200217\Models\RabbitMQPrivateNode.cs" />
     <Compile Include="V20200217\Models\RabbitMQVipInstance.cs" />
     <Compile Include="V20200217\Models\ReceiveMessageRequest.cs" />
@@ -303,7 +312,9 @@
     <Compile Include="V20200217\Models\TopicRecord.cs" />
     <Compile Include="V20200217\Models\UnbindCmqDeadLetterRequest.cs" />
     <Compile Include="V20200217\Models\UnbindCmqDeadLetterResponse.cs" />
+    <Compile Include="V20200217\Models\VirtualHostQuota.cs" />
     <Compile Include="V20200217\Models\VpcBindRecord.cs" />
     <Compile Include="V20200217\Models\VpcConfig.cs" />
+    <Compile Include="V20200217\Models\VpcEndpointInfo.cs" />
   </ItemGroup>
 </Project>

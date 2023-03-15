@@ -37,7 +37,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>method：请求方式；</li>
         /// <li>header：请求头部；</li>
         /// <li>app_proto：应用层协议；</li>
-        /// <li>sip_proto：网络层协议。</li>
+        /// <li>sip_proto：网络层协议；</li>
+        /// <li>uabot：UA 特征规则，仅bot自定义规则可用；</li>
+        /// <li>idcid：IDC 规则，仅bot自定义规则可用；</li>
+        /// <li>sipbot：搜索引擎规则，仅bot自定义规则可用；</li>
+        /// <li>portrait：画像分析，仅bot自定义规则可用；</li>
+        /// <li>header_seq：请求头顺序，仅bot自定义规则可用。</li>
         /// </summary>
         [JsonProperty("MatchFrom")]
         public string MatchFrom{ get; set; }

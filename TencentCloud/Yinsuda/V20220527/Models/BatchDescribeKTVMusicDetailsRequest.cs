@@ -42,6 +42,13 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         [JsonProperty("MusicIds")]
         public string[] MusicIds{ get; set; }
 
+        /// <summary>
+        /// 播放场景。默认为Chat
+        /// <li>Live：直播</li><li>Chat：语聊</li>
+        /// </summary>
+        [JsonProperty("PlayScene")]
+        public string PlayScene{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamArraySimple(map, prefix + "MusicIds.", this.MusicIds);
+            this.SetParamSimple(map, prefix + "PlayScene", this.PlayScene);
         }
     }
 }

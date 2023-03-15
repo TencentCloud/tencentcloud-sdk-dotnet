@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{509DA91F-DACF-378F-8095-070C5AD4268F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.718</VersionPrefix>
+    <VersionPrefix>3.0.719</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,7 @@
     <Compile Include="V20210129\Models\ActivityDetail.cs" />
     <Compile Include="V20210129\Models\ActivityJoinDetail.cs" />
     <Compile Include="V20210129\Models\ChannelCodeInnerDetail.cs" />
+    <Compile Include="V20210129\Models\ChannelTag.cs" />
     <Compile Include="V20210129\Models\ChatArchivingDetail.cs" />
     <Compile Include="V20210129\Models\ChatArchivingMsgTypeVideo.cs" />
     <Compile Include="V20210129\Models\ClueInfoDetail.cs" />
@@ -63,17 +64,22 @@
     <Compile Include="V20210129\Models\CreateLeadResponse.cs" />
     <Compile Include="V20210129\Models\CrmStatisticsData.cs" />
     <Compile Include="V20210129\Models\CustomerActionEventDetail.cs" />
+    <Compile Include="V20210129\Models\CustomerProfile.cs" />
     <Compile Include="V20210129\Models\DealerInfo.cs" />
+    <Compile Include="V20210129\Models\EnterpriseTag.cs" />
     <Compile Include="V20210129\Models\ExternalContact.cs" />
+    <Compile Include="V20210129\Models\ExternalContactDetailPro.cs" />
     <Compile Include="V20210129\Models\ExternalContactSimpleInfo.cs" />
     <Compile Include="V20210129\Models\ExternalContactTag.cs" />
     <Compile Include="V20210129\Models\ExternalUserEventInfo.cs" />
     <Compile Include="V20210129\Models\ExternalUserMappingInfo.cs" />
     <Compile Include="V20210129\Models\FollowUser.cs" />
+    <Compile Include="V20210129\Models\FollowUserPro.cs" />
     <Compile Include="V20210129\Models\LicenseInfo.cs" />
     <Compile Include="V20210129\Models\LiveCodeDetail.cs" />
     <Compile Include="V20210129\Models\MaterialInfo.cs" />
     <Compile Include="V20210129\Models\MiniAppCodeInfo.cs" />
+    <Compile Include="V20210129\Models\PurchaseConcern.cs" />
     <Compile Include="V20210129\Models\QueryActivityJoinListRequest.cs" />
     <Compile Include="V20210129\Models\QueryActivityJoinListResponse.cs" />
     <Compile Include="V20210129\Models\QueryActivityListRequest.cs" />
@@ -90,8 +96,12 @@
     <Compile Include="V20210129\Models\QueryCrmStatisticsResponse.cs" />
     <Compile Include="V20210129\Models\QueryCustomerEventDetailStatisticsRequest.cs" />
     <Compile Include="V20210129\Models\QueryCustomerEventDetailStatisticsResponse.cs" />
+    <Compile Include="V20210129\Models\QueryCustomerProfileListRequest.cs" />
+    <Compile Include="V20210129\Models\QueryCustomerProfileListResponse.cs" />
     <Compile Include="V20210129\Models\QueryDealerInfoListRequest.cs" />
     <Compile Include="V20210129\Models\QueryDealerInfoListResponse.cs" />
+    <Compile Include="V20210129\Models\QueryExternalContactDetailByDateRequest.cs" />
+    <Compile Include="V20210129\Models\QueryExternalContactDetailByDateResponse.cs" />
     <Compile Include="V20210129\Models\QueryExternalContactDetailRequest.cs" />
     <Compile Include="V20210129\Models\QueryExternalContactDetailResponse.cs" />
     <Compile Include="V20210129\Models\QueryExternalContactListRequest.cs" />
@@ -117,6 +127,7 @@
     <Compile Include="V20210129\Models\TagGroup.cs" />
     <Compile Include="V20210129\Models\TagInfo.cs" />
     <Compile Include="V20210129\Models\VehicleInfo.cs" />
+    <Compile Include="V20210129\Models\VehiclePurpose.cs" />
     <Compile Include="V20210129\Models\WeComTagDetail.cs" />
   </ItemGroup>
 </Project>

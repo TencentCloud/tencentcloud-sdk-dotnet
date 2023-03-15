@@ -78,6 +78,18 @@ namespace TencentCloud.Hasim.V20210716.Models
         [JsonProperty("TagIDs")]
         public long?[] TagIDs{ get; set; }
 
+        /// <summary>
+        /// 翻页大小, 默认翻页大小为10，最大数量为500
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 翻页起始
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Hasim.V20210716.Models
             this.SetParamSimple(map, prefix + "TacticID", this.TacticID);
             this.SetParamSimple(map, prefix + "LinkedState", this.LinkedState);
             this.SetParamArraySimple(map, prefix + "TagIDs.", this.TagIDs);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

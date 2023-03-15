@@ -36,6 +36,18 @@ namespace TencentCloud.Wav.V20210129.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 查询开始时间， 单位秒
+        /// </summary>
+        [JsonProperty("BeginTime")]
+        public ulong? BeginTime{ get; set; }
+
+        /// <summary>
+        /// 查询结束时间， 单位秒
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public ulong? EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Wav.V20210129.Models
         {
             this.SetParamSimple(map, prefix + "Cursor", this.Cursor);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

@@ -108,6 +108,20 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string CodeCrc{ get; set; }
 
         /// <summary>
+        /// 姓
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Surname")]
+        public string Surname{ get; set; }
+
+        /// <summary>
+        /// 名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GivenName")]
+        public string GivenName{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -131,6 +145,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
             this.SetParamSimple(map, prefix + "CodeSet", this.CodeSet);
             this.SetParamSimple(map, prefix + "CodeCrc", this.CodeCrc);
+            this.SetParamSimple(map, prefix + "Surname", this.Surname);
+            this.SetParamSimple(map, prefix + "GivenName", this.GivenName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

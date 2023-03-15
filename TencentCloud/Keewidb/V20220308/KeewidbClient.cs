@@ -453,6 +453,46 @@ namespace TencentCloud.Keewidb.V20220308
         }
 
         /// <summary>
+        /// 本接口（DescribeInstanceDealDetail）用于查询预付费订单信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceDealDetailRequest"/></param>
+        /// <returns><see cref="DescribeInstanceDealDetailResponse"/></returns>
+        public async Task<DescribeInstanceDealDetailResponse> DescribeInstanceDealDetail(DescribeInstanceDealDetailRequest req)
+        {
+             JsonResponseModel<DescribeInstanceDealDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceDealDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceDealDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceDealDetail）用于查询预付费订单信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceDealDetailRequest"/></param>
+        /// <returns><see cref="DescribeInstanceDealDetailResponse"/></returns>
+        public DescribeInstanceDealDetailResponse DescribeInstanceDealDetailSync(DescribeInstanceDealDetailRequest req)
+        {
+             JsonResponseModel<DescribeInstanceDealDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceDealDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceDealDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeInstanceNodeInfo）查询实例节点信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>

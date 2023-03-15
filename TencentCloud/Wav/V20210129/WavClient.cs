@@ -493,6 +493,46 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
+        /// 通过接口拉取租户已有潜客客户档案列表信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryCustomerProfileListRequest"/></param>
+        /// <returns><see cref="QueryCustomerProfileListResponse"/></returns>
+        public async Task<QueryCustomerProfileListResponse> QueryCustomerProfileList(QueryCustomerProfileListRequest req)
+        {
+             JsonResponseModel<QueryCustomerProfileListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryCustomerProfileList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCustomerProfileListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过接口拉取租户已有潜客客户档案列表信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryCustomerProfileListRequest"/></param>
+        /// <returns><see cref="QueryCustomerProfileListResponse"/></returns>
+        public QueryCustomerProfileListResponse QueryCustomerProfileListSync(QueryCustomerProfileListRequest req)
+        {
+             JsonResponseModel<QueryCustomerProfileListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryCustomerProfileList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCustomerProfileListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 企业可通过此接口获取录入在企微SaaS平台上的经销商信息。
         /// </summary>
         /// <param name="req"><see cref="QueryDealerInfoListRequest"/></param>
@@ -564,6 +604,46 @@ namespace TencentCloud.Wav.V20210129
              {
                  var strResp = this.InternalRequestSync(req, "QueryExternalContactDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalContactDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业可通过传入起始和结束时间，获取该时间段的外部联系人详情列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryExternalContactDetailByDateRequest"/></param>
+        /// <returns><see cref="QueryExternalContactDetailByDateResponse"/></returns>
+        public async Task<QueryExternalContactDetailByDateResponse> QueryExternalContactDetailByDate(QueryExternalContactDetailByDateRequest req)
+        {
+             JsonResponseModel<QueryExternalContactDetailByDateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryExternalContactDetailByDate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalContactDetailByDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业可通过传入起始和结束时间，获取该时间段的外部联系人详情列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryExternalContactDetailByDateRequest"/></param>
+        /// <returns><see cref="QueryExternalContactDetailByDateResponse"/></returns>
+        public QueryExternalContactDetailByDateResponse QueryExternalContactDetailByDateSync(QueryExternalContactDetailByDateRequest req)
+        {
+             JsonResponseModel<QueryExternalContactDetailByDateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryExternalContactDetailByDate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalContactDetailByDateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

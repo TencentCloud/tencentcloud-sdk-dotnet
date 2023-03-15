@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 水印类型，0为图片（默认），1为文字（暂不支持）。
+        /// 水印类型，0为图片（默认），1为文字，2为时间戳。
         /// </summary>
         [JsonProperty("WaterMarkType")]
         public ulong? WaterMarkType{ get; set; }
@@ -36,6 +36,20 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("WaterMarkImage")]
         public WaterMarkImage WaterMarkImage{ get; set; }
 
+        /// <summary>
+        /// 水印为文字时的参数列表，水印为文字时校验必填。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WaterMarkChar")]
+        public WaterMarkChar WaterMarkChar{ get; set; }
+
+        /// <summary>
+        /// 水印为时间戳时的参数列表，水印为时间戳时校验必填。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WaterMarkTimestamp")]
+        public WaterMarkTimestamp WaterMarkTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +58,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         {
             this.SetParamSimple(map, prefix + "WaterMarkType", this.WaterMarkType);
             this.SetParamObj(map, prefix + "WaterMarkImage.", this.WaterMarkImage);
+            this.SetParamObj(map, prefix + "WaterMarkChar.", this.WaterMarkChar);
+            this.SetParamObj(map, prefix + "WaterMarkTimestamp.", this.WaterMarkTimestamp);
         }
     }
 }

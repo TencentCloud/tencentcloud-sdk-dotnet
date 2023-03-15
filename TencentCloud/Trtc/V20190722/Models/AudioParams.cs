@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 音频采样率:
+        /// 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
         /// 1：48000Hz（默认）;
         /// 2：44100Hz
         /// 3：16000Hz。
@@ -34,7 +34,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? SampleRate{ get; set; }
 
         /// <summary>
-        /// 声道数:
+        /// 声道数枚举值:
         /// 1：单声道;
         /// 2：双声道（默认）。
         /// </summary>

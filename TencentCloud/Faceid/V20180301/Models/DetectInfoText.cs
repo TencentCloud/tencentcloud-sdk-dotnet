@@ -202,6 +202,20 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("LivenessMode")]
         public ulong? LivenessMode{ get; set; }
 
+        /// <summary>
+        /// nfc重复计费requestId列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NFCRequestIds")]
+        public string[] NFCRequestIds{ get; set; }
+
+        /// <summary>
+        /// nfc重复计费计数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NFCBillingCounts")]
+        public long? NFCBillingCounts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -232,6 +246,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "CompareLibType", this.CompareLibType);
             this.SetParamSimple(map, prefix + "LivenessMode", this.LivenessMode);
+            this.SetParamArraySimple(map, prefix + "NFCRequestIds.", this.NFCRequestIds);
+            this.SetParamSimple(map, prefix + "NFCBillingCounts", this.NFCBillingCounts);
         }
     }
 }

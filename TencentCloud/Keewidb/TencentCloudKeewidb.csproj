@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2281582A-F103-30B1-9493-1000175F652D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.718</VersionPrefix>
+    <VersionPrefix>3.0.719</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -70,6 +70,8 @@
     <Compile Include="V20220308\Models\DescribeInstanceBackupsResponse.cs" />
     <Compile Include="V20220308\Models\DescribeInstanceBinlogsRequest.cs" />
     <Compile Include="V20220308\Models\DescribeInstanceBinlogsResponse.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceDealDetailRequest.cs" />
+    <Compile Include="V20220308\Models\DescribeInstanceDealDetailResponse.cs" />
     <Compile Include="V20220308\Models\DescribeInstanceNodeInfoRequest.cs" />
     <Compile Include="V20220308\Models\DescribeInstanceNodeInfoResponse.cs" />
     <Compile Include="V20220308\Models\DescribeInstanceParamRecordsRequest.cs" />
@@ -143,6 +145,7 @@
     <Compile Include="V20220308\Models\StartUpInstanceResponse.cs" />
     <Compile Include="V20220308\Models\TaskInfoDetail.cs" />
     <Compile Include="V20220308\Models\TendisSlowLogDetail.cs" />
+    <Compile Include="V20220308\Models\TradeDealDetail.cs" />
     <Compile Include="V20220308\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="V20220308\Models\UpgradeInstanceResponse.cs" />
     <Compile Include="V20220308\Models\ZoneCapacityConf.cs" />

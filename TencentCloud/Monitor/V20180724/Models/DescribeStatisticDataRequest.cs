@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// 命名空间，目前只支持QCE/TKE
+        /// 命名空间，目前只支持QCE/TKE2
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

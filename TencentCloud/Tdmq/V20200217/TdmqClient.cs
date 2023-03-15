@@ -2757,6 +2757,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取单个RabbitMQ专享实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQVipInstanceResponse"/></returns>
+        public async Task<DescribeRabbitMQVipInstanceResponse> DescribeRabbitMQVipInstance(DescribeRabbitMQVipInstanceRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRabbitMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取单个RabbitMQ专享实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQVipInstanceResponse"/></returns>
+        public DescribeRabbitMQVipInstanceResponse DescribeRabbitMQVipInstanceSync(DescribeRabbitMQVipInstanceRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRabbitMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询用户已购的RabbitMQ专享实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQVipInstancesRequest"/></param>

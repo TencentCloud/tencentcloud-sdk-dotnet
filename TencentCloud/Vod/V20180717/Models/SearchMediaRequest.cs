@@ -171,6 +171,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] StorageClasses{ get; set; }
 
         /// <summary>
+        /// 媒体文件封装格式集合，匹配集合中任意元素。
+        /// <li>数组长度限制：10。</li>
+        /// </summary>
+        [JsonProperty("MediaTypes")]
+        public string[] MediaTypes{ get; set; }
+
+        /// <summary>
         /// TRTC 应用 ID 集合。匹配集合中的任意元素。
         /// <li>数组长度限制：10。</li>
         /// </summary>
@@ -262,6 +269,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
             this.SetParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
+            this.SetParamArraySimple(map, prefix + "MediaTypes.", this.MediaTypes);
             this.SetParamArraySimple(map, prefix + "TrtcSdkAppIds.", this.TrtcSdkAppIds);
             this.SetParamArraySimple(map, prefix + "TrtcRoomIds.", this.TrtcRoomIds);
             this.SetParamSimple(map, prefix + "Text", this.Text);
