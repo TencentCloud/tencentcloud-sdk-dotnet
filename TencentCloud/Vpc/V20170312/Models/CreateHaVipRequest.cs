@@ -48,6 +48,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
+        /// <summary>
+        /// `HAVIP`所在弹性网卡`ID`。
+        /// </summary>
+        [JsonProperty("NetworkInterfaceId")]
+        public string NetworkInterfaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "HaVipName", this.HaVipName);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         }
     }
 }

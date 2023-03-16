@@ -1743,7 +1743,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）
+        /// 本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）。
         /// </summary>
         /// <param name="req"><see cref="CreateHaVipRequest"/></param>
         /// <returns><see cref="CreateHaVipResponse"/></returns>
@@ -1763,7 +1763,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）
+        /// 本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）。
         /// </summary>
         /// <param name="req"><see cref="CreateHaVipRequest"/></param>
         /// <returns><see cref="CreateHaVipResponse"/></returns>

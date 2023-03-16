@@ -453,6 +453,86 @@ namespace TencentCloud.Yinsuda.V20220527
         }
 
         /// <summary>
+        /// 批量获取直播会员充值流水详细信息，包括：流水号，订单状态，下订单时间等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveVipTradeInfosRequest"/></param>
+        /// <returns><see cref="DescribeLiveVipTradeInfosResponse"/></returns>
+        public async Task<DescribeLiveVipTradeInfosResponse> DescribeLiveVipTradeInfos(DescribeLiveVipTradeInfosRequest req)
+        {
+             JsonResponseModel<DescribeLiveVipTradeInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveVipTradeInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveVipTradeInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量获取直播会员充值流水详细信息，包括：流水号，订单状态，下订单时间等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveVipTradeInfosRequest"/></param>
+        /// <returns><see cref="DescribeLiveVipTradeInfosResponse"/></returns>
+        public DescribeLiveVipTradeInfosResponse DescribeLiveVipTradeInfosSync(DescribeLiveVipTradeInfosRequest req)
+        {
+             JsonResponseModel<DescribeLiveVipTradeInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveVipTradeInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveVipTradeInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户信息，包括是否为直播会员，及直播会员信息等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserInfoResponse"/></returns>
+        public async Task<DescribeUserInfoResponse> DescribeUserInfo(DescribeUserInfoRequest req)
+        {
+             JsonResponseModel<DescribeUserInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户信息，包括是否为直播会员，及直播会员信息等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserInfoResponse"/></returns>
+        public DescribeUserInfoResponse DescribeUserInfoSync(DescribeUserInfoRequest req)
+        {
+             JsonResponseModel<DescribeUserInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 销毁机器人，机器人退出 RTC 房间。
         /// </summary>
         /// <param name="req"><see cref="DestroyKTVRobotRequest"/></param>
@@ -484,6 +564,46 @@ namespace TencentCloud.Yinsuda.V20220527
              {
                  var strResp = this.InternalRequestSync(req, "DestroyKTVRobot");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyKTVRobotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 充值直播会员，使该用户可以在直播场景使用
+        /// </summary>
+        /// <param name="req"><see cref="RechargeLiveVipRequest"/></param>
+        /// <returns><see cref="RechargeLiveVipResponse"/></returns>
+        public async Task<RechargeLiveVipResponse> RechargeLiveVip(RechargeLiveVipRequest req)
+        {
+             JsonResponseModel<RechargeLiveVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RechargeLiveVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RechargeLiveVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 充值直播会员，使该用户可以在直播场景使用
+        /// </summary>
+        /// <param name="req"><see cref="RechargeLiveVipRequest"/></param>
+        /// <returns><see cref="RechargeLiveVipResponse"/></returns>
+        public RechargeLiveVipResponse RechargeLiveVipSync(RechargeLiveVipRequest req)
+        {
+             JsonResponseModel<RechargeLiveVipResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RechargeLiveVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RechargeLiveVipResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

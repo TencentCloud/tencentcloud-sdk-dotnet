@@ -66,6 +66,55 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("DiskDesc")]
         public string DiskDesc{ get; set; }
 
+        /// <summary>
+        /// 挂载云盘信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttachCBSSpec")]
+        public AttachCBSSpec AttachCBSSpec{ get; set; }
+
+        /// <summary>
+        /// 子产品类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubProductType")]
+        public string SubProductType{ get; set; }
+
+        /// <summary>
+        /// 规格对应的核数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpecCore")]
+        public long? SpecCore{ get; set; }
+
+        /// <summary>
+        /// 规格对应的内存大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpecMemory")]
+        public long? SpecMemory{ get; set; }
+
+        /// <summary>
+        /// 磁盘的数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiskCount")]
+        public long? DiskCount{ get; set; }
+
+        /// <summary>
+        /// 磁盘的最大大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxDiskSize")]
+        public long? MaxDiskSize{ get; set; }
+
+        /// <summary>
+        /// 是否为加密云盘
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Encrypt")]
+        public long? Encrypt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +128,13 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "Disk", this.Disk);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskDesc", this.DiskDesc);
+            this.SetParamObj(map, prefix + "AttachCBSSpec.", this.AttachCBSSpec);
+            this.SetParamSimple(map, prefix + "SubProductType", this.SubProductType);
+            this.SetParamSimple(map, prefix + "SpecCore", this.SpecCore);
+            this.SetParamSimple(map, prefix + "SpecMemory", this.SpecMemory);
+            this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
+            this.SetParamSimple(map, prefix + "MaxDiskSize", this.MaxDiskSize);
+            this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
         }
     }
 }

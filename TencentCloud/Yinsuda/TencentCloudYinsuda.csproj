@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{213C2BE8-30A9-3154-A66B-F89DE0B01C6C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.719</VersionPrefix>
+    <VersionPrefix>3.0.720</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -70,6 +70,10 @@
     <Compile Include="V20220527\Models\DescribeKTVSuggestionsResponse.cs" />
     <Compile Include="V20220527\Models\DescribeKTVTagsRequest.cs" />
     <Compile Include="V20220527\Models\DescribeKTVTagsResponse.cs" />
+    <Compile Include="V20220527\Models\DescribeLiveVipTradeInfosRequest.cs" />
+    <Compile Include="V20220527\Models\DescribeLiveVipTradeInfosResponse.cs" />
+    <Compile Include="V20220527\Models\DescribeUserInfoRequest.cs" />
+    <Compile Include="V20220527\Models\DescribeUserInfoResponse.cs" />
     <Compile Include="V20220527\Models\DestroyKTVRobotRequest.cs" />
     <Compile Include="V20220527\Models\DestroyKTVRobotResponse.cs" />
     <Compile Include="V20220527\Models\JoinRoomInput.cs" />
@@ -84,9 +88,13 @@
     <Compile Include="V20220527\Models\KTVSuggestionInfo.cs" />
     <Compile Include="V20220527\Models\KTVTagGroupInfo.cs" />
     <Compile Include="V20220527\Models\KTVTagInfo.cs" />
+    <Compile Include="V20220527\Models\LiveVipTradeInfo.cs" />
+    <Compile Include="V20220527\Models\LiveVipUserInfo.cs" />
     <Compile Include="V20220527\Models\MusicAlbumCoverInfo.cs" />
     <Compile Include="V20220527\Models\MusicAlbumInfo.cs" />
     <Compile Include="V20220527\Models\PlayCommandInput.cs" />
+    <Compile Include="V20220527\Models\RechargeLiveVipRequest.cs" />
+    <Compile Include="V20220527\Models\RechargeLiveVipResponse.cs" />
     <Compile Include="V20220527\Models\SearchKTVMusicsRequest.cs" />
     <Compile Include="V20220527\Models\SearchKTVMusicsResponse.cs" />
     <Compile Include="V20220527\Models\SeekCommandInput.cs" />
@@ -100,5 +108,6 @@
     <Compile Include="V20220527\Models\SyncRobotCommand.cs" />
     <Compile Include="V20220527\Models\TRTCJoinRoomInput.cs" />
     <Compile Include="V20220527\Models\TimeRange.cs" />
+    <Compile Include="V20220527\Models\UserInfo.cs" />
   </ItemGroup>
 </Project>

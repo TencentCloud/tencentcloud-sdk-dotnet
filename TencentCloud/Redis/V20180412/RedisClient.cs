@@ -2013,6 +2013,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询SSL状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSSLStatusRequest"/></param>
+        /// <returns><see cref="DescribeSSLStatusResponse"/></returns>
+        public async Task<DescribeSSLStatusResponse> DescribeSSLStatus(DescribeSSLStatusRequest req)
+        {
+             JsonResponseModel<DescribeSSLStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSSLStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSSLStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询SSL状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSSLStatusRequest"/></param>
+        /// <returns><see cref="DescribeSSLStatusResponse"/></returns>
+        public DescribeSSLStatusResponse DescribeSSLStatusSync(DescribeSSLStatusRequest req)
+        {
+             JsonResponseModel<DescribeSSLStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSSLStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSSLStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeSlowLog）查询实例慢查询记录。
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogRequest"/></param>

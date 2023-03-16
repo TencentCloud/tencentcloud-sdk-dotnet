@@ -220,6 +220,48 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WhereFlag")]
         public bool? WhereFlag{ get; set; }
 
+        /// <summary>
+        /// 模版原始SQL
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TemplateSql")]
+        public string TemplateSql{ get; set; }
+
+        /// <summary>
+        /// 模版子维度：0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubQualityDim")]
+        public ulong? SubQualityDim{ get; set; }
+
+        /// <summary>
+        /// 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetObjectType")]
+        public ulong? TargetObjectType{ get; set; }
+
+        /// <summary>
+        /// 规则适用的目标数据对象类型（1：数值，2：字符串）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetObjectDataType")]
+        public ulong? TargetObjectDataType{ get; set; }
+
+        /// <summary>
+        /// 目标字段详细类型，INT、STRING
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetObjectDataTypeName")]
+        public string TargetObjectDataTypeName{ get; set; }
+
+        /// <summary>
+        /// 目标字段名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetObjectValue")]
+        public string TargetObjectValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +296,12 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamObj(map, prefix + "FieldConfig.", this.FieldConfig);
             this.SetParamSimple(map, prefix + "MultiSourceFlag", this.MultiSourceFlag);
             this.SetParamSimple(map, prefix + "WhereFlag", this.WhereFlag);
+            this.SetParamSimple(map, prefix + "TemplateSql", this.TemplateSql);
+            this.SetParamSimple(map, prefix + "SubQualityDim", this.SubQualityDim);
+            this.SetParamSimple(map, prefix + "TargetObjectType", this.TargetObjectType);
+            this.SetParamSimple(map, prefix + "TargetObjectDataType", this.TargetObjectDataType);
+            this.SetParamSimple(map, prefix + "TargetObjectDataTypeName", this.TargetObjectDataTypeName);
+            this.SetParamSimple(map, prefix + "TargetObjectValue", this.TargetObjectValue);
         }
     }
 }

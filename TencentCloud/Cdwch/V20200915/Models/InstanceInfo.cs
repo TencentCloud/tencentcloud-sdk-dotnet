@@ -237,6 +237,90 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("CosMoveFactor")]
         public long? CosMoveFactor{ get; set; }
 
+        /// <summary>
+        /// external/local/yunti
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Kind")]
+        public string Kind{ get; set; }
+
+        /// <summary>
+        /// 是否弹性ck
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsElastic")]
+        public bool? IsElastic{ get; set; }
+
+        /// <summary>
+        /// 集群详细状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceStateInfo")]
+        public InstanceStateInfo InstanceStateInfo{ get; set; }
+
+        /// <summary>
+        /// ZK高可用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HAZk")]
+        public bool? HAZk{ get; set; }
+
+        /// <summary>
+        /// 挂载盘,默认0:没有类型；1:裸盘;2:lvm
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MountDiskType")]
+        public long? MountDiskType{ get; set; }
+
+        /// <summary>
+        /// 无
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CHProxyVip")]
+        public string CHProxyVip{ get; set; }
+
+        /// <summary>
+        /// cos buket的名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CosBucketName")]
+        public string CosBucketName{ get; set; }
+
+        /// <summary>
+        /// 是否可以挂载云盘
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CanAttachCbs")]
+        public bool? CanAttachCbs{ get; set; }
+
+        /// <summary>
+        /// 是否可以挂载云盘阵列
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CanAttachCbsLvm")]
+        public bool? CanAttachCbsLvm{ get; set; }
+
+        /// <summary>
+        /// 是否可以挂载cos
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CanAttachCos")]
+        public bool? CanAttachCos{ get; set; }
+
+        /// <summary>
+        /// 服务信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Components")]
+        public ServiceInfo[] Components{ get; set; }
+
+        /// <summary>
+        /// 可升级的内核版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpgradeVersions")]
+        public string UpgradeVersions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -273,6 +357,18 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "RegionDesc", this.RegionDesc);
             this.SetParamSimple(map, prefix + "Eip", this.Eip);
             this.SetParamSimple(map, prefix + "CosMoveFactor", this.CosMoveFactor);
+            this.SetParamSimple(map, prefix + "Kind", this.Kind);
+            this.SetParamSimple(map, prefix + "IsElastic", this.IsElastic);
+            this.SetParamObj(map, prefix + "InstanceStateInfo.", this.InstanceStateInfo);
+            this.SetParamSimple(map, prefix + "HAZk", this.HAZk);
+            this.SetParamSimple(map, prefix + "MountDiskType", this.MountDiskType);
+            this.SetParamSimple(map, prefix + "CHProxyVip", this.CHProxyVip);
+            this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
+            this.SetParamSimple(map, prefix + "CanAttachCbs", this.CanAttachCbs);
+            this.SetParamSimple(map, prefix + "CanAttachCbsLvm", this.CanAttachCbsLvm);
+            this.SetParamSimple(map, prefix + "CanAttachCos", this.CanAttachCos);
+            this.SetParamArrayObj(map, prefix + "Components.", this.Components);
+            this.SetParamSimple(map, prefix + "UpgradeVersions", this.UpgradeVersions);
         }
     }
 }
