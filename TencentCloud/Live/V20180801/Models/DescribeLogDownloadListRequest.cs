@@ -27,6 +27,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 开始时间，北京时间。
         /// 格式：yyyy-mm-dd HH:MM:SS。
+        /// 注：此字段为北京时间（UTC+8时区）。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -35,6 +36,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 结束时间，北京时间。
         /// 格式：yyyy-mm-dd HH:MM:SS。
         /// 注意：结束时间 - 开始时间 <=7天。
+        /// 注：此字段为北京时间（UTC+8时区）。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -45,6 +47,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PlayDomains")]
         public string[] PlayDomains{ get; set; }
 
+        /// <summary>
+        /// 快直播还是标准直播，0：标准直播，1：快直播。默认为0。
+        /// </summary>
+        [JsonProperty("IsFastLive")]
+        public long? IsFastLive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +62,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
+            this.SetParamSimple(map, prefix + "IsFastLive", this.IsFastLive);
         }
     }
 }

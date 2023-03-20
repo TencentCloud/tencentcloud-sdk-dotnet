@@ -70,6 +70,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }
 
+        /// <summary>
+        /// 外挂音轨参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AddonAudioStream")]
+        public MediaInputInfo[] AddonAudioStream{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +90,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
             this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
+            this.SetParamArrayObj(map, prefix + "AddonAudioStream.", this.AddonAudioStream);
         }
     }
 }

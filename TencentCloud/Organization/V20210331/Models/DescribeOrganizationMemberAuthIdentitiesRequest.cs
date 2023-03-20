@@ -25,13 +25,13 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 偏移量。
+        /// 偏移量。取值是limit的整数倍，默认值 : 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数目。最大50
+        /// 限制数目。取值范围：1~50，默认值：10
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

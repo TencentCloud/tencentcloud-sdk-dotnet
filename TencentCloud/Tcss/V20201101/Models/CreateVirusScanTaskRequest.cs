@@ -66,6 +66,15 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ScanPath")]
         public string[] ScanPath{ get; set; }
 
+        /// <summary>
+        /// 扫描路径模式：
+        /// SCAN_PATH_ALL：全部路径
+        /// SCAN_PATH_DEFAULT：默认路径
+        /// SCAN_PATH_USER_DEFINE：用户自定义路径
+        /// </summary>
+        [JsonProperty("ScanPathMode")]
+        public string ScanPathMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +88,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ScanPathType", this.ScanPathType);
             this.SetParamArraySimple(map, prefix + "ScanIds.", this.ScanIds);
             this.SetParamArraySimple(map, prefix + "ScanPath.", this.ScanPath);
+            this.SetParamSimple(map, prefix + "ScanPathMode", this.ScanPathMode);
         }
     }
 }

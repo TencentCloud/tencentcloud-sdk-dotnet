@@ -49,19 +49,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ReadOnlyCount{ get; set; }
 
         /// <summary>
-        /// 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+        /// 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
         /// </summary>
         [JsonProperty("InstanceGrpId")]
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
-        /// 所属VPC网络ID，该参数已废弃
+        /// 所属VPC网络ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
+        /// 所属子网ID，如果设置了VpcId，则SubnetId必填。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -115,6 +115,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceParams")]
         public ModifyParamItem[] InstanceParams{ get; set; }
 
+        /// <summary>
+        /// 安全组ID，新建只读实例时可以指定安全组。
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +142,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamArrayObj(map, prefix + "InstanceParams.", this.InstanceParams);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

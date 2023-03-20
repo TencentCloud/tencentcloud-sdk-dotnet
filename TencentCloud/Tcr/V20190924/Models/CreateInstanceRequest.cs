@@ -60,6 +60,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("SyncTag")]
         public bool? SyncTag{ get; set; }
 
+        /// <summary>
+        /// 是否开启Cos桶多AZ特性
+        /// </summary>
+        [JsonProperty("EnableCosMAZ")]
+        public bool? EnableCosMAZ{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegistryChargeType", this.RegistryChargeType);
             this.SetParamObj(map, prefix + "RegistryChargePrepaid.", this.RegistryChargePrepaid);
             this.SetParamSimple(map, prefix + "SyncTag", this.SyncTag);
+            this.SetParamSimple(map, prefix + "EnableCosMAZ", this.EnableCosMAZ);
         }
     }
 }

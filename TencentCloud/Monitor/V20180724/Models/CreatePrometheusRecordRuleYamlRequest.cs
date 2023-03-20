@@ -36,6 +36,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
+        /// <summary>
+        /// 规则名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

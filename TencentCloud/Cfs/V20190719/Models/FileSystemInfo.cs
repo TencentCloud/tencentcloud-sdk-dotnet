@@ -144,6 +144,19 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
+        /// <summary>
+        /// 文件系统声明周期管理状态
+        /// </summary>
+        [JsonProperty("TieringState")]
+        public string TieringState{ get; set; }
+
+        /// <summary>
+        /// 分层存储详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TieringDetail")]
+        public TieringDetailInfo TieringDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +183,8 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
             this.SetParamSimple(map, prefix + "Capacity", this.Capacity);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "TieringState", this.TieringState);
+            this.SetParamObj(map, prefix + "TieringDetail.", this.TieringDetail);
         }
     }
 }

@@ -46,7 +46,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li> 智能压缩（Compression）；</li>
         /// <li> Hsts；</li>
         /// <li> ClientIpHeader；</li>
-        /// <li> TlsVersion；</li>
+        /// <li> SslTlsSecureConf；</li>
         /// <li> OcspStapling；</li>
         /// <li> HTTP/2 访问（Http2）；</li>
         /// <li> 回源跟随重定向(UpstreamFollowRedirect)；</li>

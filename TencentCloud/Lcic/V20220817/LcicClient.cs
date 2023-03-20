@@ -1253,6 +1253,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 获取房间事件,仅在课堂结束1小时内有效。
+        /// </summary>
+        /// <param name="req"><see cref="GetRoomEventRequest"/></param>
+        /// <returns><see cref="GetRoomEventResponse"/></returns>
+        public async Task<GetRoomEventResponse> GetRoomEvent(GetRoomEventRequest req)
+        {
+             JsonResponseModel<GetRoomEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRoomEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRoomEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取房间事件,仅在课堂结束1小时内有效。
+        /// </summary>
+        /// <param name="req"><see cref="GetRoomEventRequest"/></param>
+        /// <returns><see cref="GetRoomEventResponse"/></returns>
+        public GetRoomEventResponse GetRoomEventSync(GetRoomEventRequest req)
+        {
+             JsonResponseModel<GetRoomEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRoomEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRoomEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取房间历史消息(房间历史消息保存7天)
         /// </summary>
         /// <param name="req"><see cref="GetRoomMessageRequest"/></param>

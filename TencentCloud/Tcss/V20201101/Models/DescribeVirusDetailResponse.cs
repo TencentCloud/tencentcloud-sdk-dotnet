@@ -373,6 +373,20 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string[] CheckPlatform{ get; set; }
 
         /// <summary>
+        /// 文件访问时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileAccessTime")]
+        public string FileAccessTime{ get; set; }
+
+        /// <summary>
+        /// 文件修改时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileModifyTime")]
+        public string FileModifyTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -431,6 +445,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
             this.SetParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
             this.SetParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
+            this.SetParamSimple(map, prefix + "FileAccessTime", this.FileAccessTime);
+            this.SetParamSimple(map, prefix + "FileModifyTime", this.FileModifyTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

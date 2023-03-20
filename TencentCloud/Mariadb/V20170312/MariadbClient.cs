@@ -617,6 +617,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口(DescribeBackupFiles)用于查看备份文件列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
+        /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
+        public async Task<DescribeBackupFilesResponse> DescribeBackupFiles(DescribeBackupFilesRequest req)
+        {
+             JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBackupFiles)用于查看备份文件列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
+        /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
+        public DescribeBackupFilesResponse DescribeBackupFilesSync(DescribeBackupFilesRequest req)
+        {
+             JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeBackupTime）用于获取云数据库的备份时间。后台系统将根据此配置定期进行实例备份。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupTimeRequest"/></param>

@@ -164,6 +164,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Grpc")]
         public Grpc Grpc{ get; set; }
 
+        /// <summary>
+        /// 图片优化相关配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageOptimize")]
+        public ImageOptimize ImageOptimize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +197,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "Https.", this.Https);
             this.SetParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
             this.SetParamObj(map, prefix + "Grpc.", this.Grpc);
+            this.SetParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
         }
     }
 }

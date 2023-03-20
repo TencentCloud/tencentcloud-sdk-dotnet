@@ -32,21 +32,21 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? IdentityId{ get; set; }
 
         /// <summary>
-        /// 身份角色名。
+        /// 身份的角色名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityRoleName")]
         public string IdentityRoleName{ get; set; }
 
         /// <summary>
-        /// 身份角色别名。
+        /// 身份的角色别名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityRoleAliasName")]
         public string IdentityRoleAliasName{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// 描述。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
@@ -66,6 +66,13 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 身份类型。取值： 1-预设  2-自定义
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IdentityType")]
+        public ulong? IdentityType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "IdentityType", this.IdentityType);
         }
     }
 }

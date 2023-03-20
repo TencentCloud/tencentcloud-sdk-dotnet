@@ -43,16 +43,16 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// Grafana 初始密码
-        /// </summary>
-        [JsonProperty("GrafanaInitPassword")]
-        public string GrafanaInitPassword{ get; set; }
-
-        /// <summary>
         /// 是否启用外网
         /// </summary>
         [JsonProperty("EnableInternet")]
         public bool? EnableInternet{ get; set; }
+
+        /// <summary>
+        /// Grafana 初始密码
+        /// </summary>
+        [JsonProperty("GrafanaInitPassword")]
+        public string GrafanaInitPassword{ get; set; }
 
         /// <summary>
         /// 标签
@@ -69,8 +69,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
-            this.SetParamSimple(map, prefix + "GrafanaInitPassword", this.GrafanaInitPassword);
             this.SetParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
+            this.SetParamSimple(map, prefix + "GrafanaInitPassword", this.GrafanaInitPassword);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }

@@ -73,7 +73,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 有效期截止时间（YYYY-MM-DD）
+        /// 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
+        /// 老版驾驶证返回有效期限 X年）
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }

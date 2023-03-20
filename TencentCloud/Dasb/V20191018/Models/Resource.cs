@@ -192,6 +192,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("PackageNode")]
         public ulong? PackageNode{ get; set; }
 
+        /// <summary>
+        /// 日志投递规格信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogDeliveryArgs")]
+        public string LogDeliveryArgs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +233,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "ExtendPoints", this.ExtendPoints);
             this.SetParamSimple(map, prefix + "PackageBandwidth", this.PackageBandwidth);
             this.SetParamSimple(map, prefix + "PackageNode", this.PackageNode);
+            this.SetParamSimple(map, prefix + "LogDeliveryArgs", this.LogDeliveryArgs);
         }
     }
 }

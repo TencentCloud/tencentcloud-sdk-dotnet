@@ -31,6 +31,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificateId{ get; set; }
 
         /// <summary>
+        /// 重复证书的ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RepeatCertId")]
+        public string RepeatCertId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +50,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
+            this.SetParamSimple(map, prefix + "RepeatCertId", this.RepeatCertId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
