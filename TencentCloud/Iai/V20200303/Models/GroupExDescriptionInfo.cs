@@ -26,7 +26,6 @@ namespace TencentCloud.Iai.V20200303.Models
         
         /// <summary>
         /// 人员库自定义描述字段Index，从0开始
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupExDescriptionIndex")]
         public ulong? GroupExDescriptionIndex{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 是否允许修改合同信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanEditFlow")]
         public bool? CanEditFlow{ get; set; }

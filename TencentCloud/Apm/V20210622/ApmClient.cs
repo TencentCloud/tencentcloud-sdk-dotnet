@@ -294,5 +294,85 @@ namespace TencentCloud.Apm.V20210622
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 修改Apm实例接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmInstanceRequest"/></param>
+        /// <returns><see cref="ModifyApmInstanceResponse"/></returns>
+        public async Task<ModifyApmInstanceResponse> ModifyApmInstance(ModifyApmInstanceRequest req)
+        {
+             JsonResponseModel<ModifyApmInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyApmInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApmInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改Apm实例接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmInstanceRequest"/></param>
+        /// <returns><see cref="ModifyApmInstanceResponse"/></returns>
+        public ModifyApmInstanceResponse ModifyApmInstanceSync(ModifyApmInstanceRequest req)
+        {
+             JsonResponseModel<ModifyApmInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyApmInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApmInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// apm销毁实例
+        /// </summary>
+        /// <param name="req"><see cref="TerminateApmInstanceRequest"/></param>
+        /// <returns><see cref="TerminateApmInstanceResponse"/></returns>
+        public async Task<TerminateApmInstanceResponse> TerminateApmInstance(TerminateApmInstanceRequest req)
+        {
+             JsonResponseModel<TerminateApmInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateApmInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateApmInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// apm销毁实例
+        /// </summary>
+        /// <param name="req"><see cref="TerminateApmInstanceRequest"/></param>
+        /// <returns><see cref="TerminateApmInstanceResponse"/></returns>
+        public TerminateApmInstanceResponse TerminateApmInstanceSync(TerminateApmInstanceRequest req)
+        {
+             JsonResponseModel<TerminateApmInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateApmInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateApmInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

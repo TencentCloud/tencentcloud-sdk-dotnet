@@ -26,21 +26,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 带宽所属的云联网ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
         /// 实例所属用户主账号ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserAccountID")]
         public string UserAccountID{ get; set; }
 
         /// <summary>
         /// 带宽实例的唯一ID。作为`UnlockCcnBandwidths`接口和`LockCcnBandwidths`接口的入参时，该字段必传。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionFlowControlId")]
         public string RegionFlowControlId{ get; set; }

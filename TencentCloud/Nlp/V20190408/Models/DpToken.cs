@@ -26,28 +26,24 @@ namespace TencentCloud.Nlp.V20190408.Models
         
         /// <summary>
         /// 句法依存关系的类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Relation")]
         public string Relation{ get; set; }
 
         /// <summary>
         /// 当前词父节点的序号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeadId")]
         public ulong? HeadId{ get; set; }
 
         /// <summary>
         /// 基础词
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Word")]
         public string Word{ get; set; }
 
         /// <summary>
         /// 基础词的序号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }

@@ -26,22 +26,18 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 签署人姓名，最大长度50个字符
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 签署人手机号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
         /// 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelievedApproverReceiptId")]
         public string RelievedApproverReceiptId{ get; set; }

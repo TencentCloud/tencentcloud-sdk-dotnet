@@ -1253,7 +1253,8 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
-        /// 查询某个批次被扫码的统计列表，没有被扫过的不会返回
+        /// 查询扫码的统计信息列表，支持按照商户ID，产品ID，批次ID，安心码筛选，筛选条件至少有一个
+        /// 没有被扫过的不会返回
         /// </summary>
         /// <param name="req"><see cref="DescribeScanStatsRequest"/></param>
         /// <returns><see cref="DescribeScanStatsResponse"/></returns>
@@ -1273,7 +1274,8 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
-        /// 查询某个批次被扫码的统计列表，没有被扫过的不会返回
+        /// 查询扫码的统计信息列表，支持按照商户ID，产品ID，批次ID，安心码筛选，筛选条件至少有一个
+        /// 没有被扫过的不会返回
         /// </summary>
         /// <param name="req"><see cref="DescribeScanStatsRequest"/></param>
         /// <returns><see cref="DescribeScanStatsResponse"/></returns>

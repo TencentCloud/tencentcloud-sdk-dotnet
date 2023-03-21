@@ -78,6 +78,18 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 商户名称
+        /// </summary>
+        [JsonProperty("MerchantName")]
+        public string MerchantName{ get; set; }
+
+        /// <summary>
+        /// 产品名称
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "Uv", this.Uv);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "MerchantName", this.MerchantName);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
         }
     }
 }

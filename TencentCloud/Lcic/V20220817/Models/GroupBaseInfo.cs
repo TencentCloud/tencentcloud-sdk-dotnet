@@ -26,14 +26,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 待创建群组名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 群组主讲人ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }

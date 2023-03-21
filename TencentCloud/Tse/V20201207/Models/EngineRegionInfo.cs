@@ -26,21 +26,18 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 引擎节点所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineRegion")]
         public string EngineRegion{ get; set; }
 
         /// <summary>
         /// 此地域节点分配数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Replica")]
         public long? Replica{ get; set; }
 
         /// <summary>
         /// 集群网络信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcInfos")]
         public VpcInfo[] VpcInfos{ get; set; }

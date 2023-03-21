@@ -26,21 +26,18 @@ namespace TencentCloud.Ecm.V20190719.Models
         
         /// <summary>
         /// 负载均衡监听器 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
         /// 要修改权重的后端机器列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Targets")]
         public Target[] Targets{ get; set; }
 
         /// <summary>
         /// 后端服务新的转发权重，取值范围：0~100。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

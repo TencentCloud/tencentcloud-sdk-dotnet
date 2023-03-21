@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A06AC0CF-076C-38E8-83FE-C7FFA375814C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.722</VersionPrefix>
+    <VersionPrefix>3.0.723</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,12 +53,17 @@
     <Compile Include="V20170312\Models\AddDBInstanceToReadOnlyGroupResponse.cs" />
     <Compile Include="V20170312\Models\AnalysisItems.cs" />
     <Compile Include="V20170312\Models\BackupPlan.cs" />
+    <Compile Include="V20170312\Models\BackupSummary.cs" />
+    <Compile Include="V20170312\Models\BaseBackup.cs" />
+    <Compile Include="V20170312\Models\ClassInfo.cs" />
     <Compile Include="V20170312\Models\CloneDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\CloneDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\CloseDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\CloseServerlessDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\CloseServerlessDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\CreateBaseBackupRequest.cs" />
+    <Compile Include="V20170312\Models\CreateBaseBackupResponse.cs" />
     <Compile Include="V20170312\Models\CreateDBInstanceNetworkAccessRequest.cs" />
     <Compile Include="V20170312\Models\CreateDBInstanceNetworkAccessResponse.cs" />
     <Compile Include="V20170312\Models\CreateDBInstancesRequest.cs" />
@@ -79,8 +84,12 @@
     <Compile Include="V20170312\Models\DBInstance.cs" />
     <Compile Include="V20170312\Models\DBInstanceNetInfo.cs" />
     <Compile Include="V20170312\Models\DBNode.cs" />
+    <Compile Include="V20170312\Models\DeleteBaseBackupRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteBaseBackupResponse.cs" />
     <Compile Include="V20170312\Models\DeleteDBInstanceNetworkAccessRequest.cs" />
     <Compile Include="V20170312\Models\DeleteDBInstanceNetworkAccessResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteLogBackupRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteLogBackupResponse.cs" />
     <Compile Include="V20170312\Models\DeleteParameterTemplateRequest.cs" />
     <Compile Include="V20170312\Models\DeleteParameterTemplateResponse.cs" />
     <Compile Include="V20170312\Models\DeleteReadOnlyGroupNetworkAccessRequest.cs" />
@@ -93,8 +102,18 @@
     <Compile Include="V20170312\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAvailableRecoveryTimeRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAvailableRecoveryTimeResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeBackupDownloadURLRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeBackupDownloadURLResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeBackupOverviewRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeBackupOverviewResponse.cs" />
     <Compile Include="V20170312\Models\DescribeBackupPlansRequest.cs" />
     <Compile Include="V20170312\Models\DescribeBackupPlansResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeBackupSummariesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeBackupSummariesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeBaseBackupsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeBaseBackupsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeClassesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeClassesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCloneDBInstanceSpecRequest.cs" />
     <Compile Include="V20170312\Models\DescribeCloneDBInstanceSpecResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBBackupsRequest.cs" />
@@ -111,6 +130,8 @@
     <Compile Include="V20170312\Models\DescribeDBInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBSlowlogsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBSlowlogsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBVersionsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBVersionsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBXlogsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBXlogsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDatabasesRequest.cs" />
@@ -119,6 +140,8 @@
     <Compile Include="V20170312\Models\DescribeDefaultParametersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeEncryptionKeysRequest.cs" />
     <Compile Include="V20170312\Models\DescribeEncryptionKeysResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeLogBackupsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeLogBackupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersRequest.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeParameterTemplateAttributesRequest.cs" />
@@ -162,10 +185,13 @@
     <Compile Include="V20170312\Models\InquiryPriceUpgradeDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\IsolateDBInstancesRequest.cs" />
     <Compile Include="V20170312\Models\IsolateDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\LogBackup.cs" />
     <Compile Include="V20170312\Models\ModifyAccountRemarkRequest.cs" />
     <Compile Include="V20170312\Models\ModifyAccountRemarkResponse.cs" />
     <Compile Include="V20170312\Models\ModifyBackupPlanRequest.cs" />
     <Compile Include="V20170312\Models\ModifyBackupPlanResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyBaseBackupExpireTimeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyBaseBackupExpireTimeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceDeploymentRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceDeploymentResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceNameRequest.cs" />
@@ -222,8 +248,11 @@
     <Compile Include="V20170312\Models\SpecInfo.cs" />
     <Compile Include="V20170312\Models\SpecItemInfo.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />
+    <Compile Include="V20170312\Models\UpgradeDBInstanceKernelVersionRequest.cs" />
+    <Compile Include="V20170312\Models\UpgradeDBInstanceKernelVersionResponse.cs" />
     <Compile Include="V20170312\Models\UpgradeDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\UpgradeDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\Version.cs" />
     <Compile Include="V20170312\Models\Xlog.cs" />
     <Compile Include="V20170312\Models\ZoneInfo.cs" />
   </ItemGroup>

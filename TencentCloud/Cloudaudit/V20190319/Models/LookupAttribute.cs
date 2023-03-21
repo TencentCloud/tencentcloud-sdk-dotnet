@@ -26,14 +26,12 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         
         /// <summary>
         /// AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttributeKey")]
         public string AttributeKey{ get; set; }
 
         /// <summary>
         /// AttributeValue的值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttributeValue")]
         public string AttributeValue{ get; set; }

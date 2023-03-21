@@ -38,7 +38,6 @@ namespace TencentCloud.Gme.V20180711.Models
 
         /// <summary>
         /// 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrUid")]
         public string StrUid{ get; set; }

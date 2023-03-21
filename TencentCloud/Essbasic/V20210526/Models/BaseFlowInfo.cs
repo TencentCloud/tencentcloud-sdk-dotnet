@@ -26,56 +26,48 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 合同流程名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
         /// 合同流程类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowType")]
         public string FlowType{ get; set; }
 
         /// <summary>
         /// 合同流程描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowDescription")]
         public string FlowDescription{ get; set; }
 
         /// <summary>
         /// 合同流程截止时间，unix时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
 
         /// <summary>
         /// 是否顺序签署(true:无序签,false:顺序签)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unordered")]
         public bool? Unordered{ get; set; }
 
         /// <summary>
         /// 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntelligentStatus")]
         public string IntelligentStatus{ get; set; }
 
         /// <summary>
         /// 填写控件内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FormFields")]
         public FormField[] FormFields{ get; set; }
 
         /// <summary>
         /// 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NeedSignReview")]
         public bool? NeedSignReview{ get; set; }

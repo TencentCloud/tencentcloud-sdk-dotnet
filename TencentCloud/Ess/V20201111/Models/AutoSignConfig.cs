@@ -26,42 +26,36 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 自动签开通个人用户的三要素
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserInfo")]
         public UserThreeFactor UserInfo{ get; set; }
 
         /// <summary>
         /// 回调链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
         /// <summary>
         /// 是否回调证书信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertInfoCallback")]
         public bool? CertInfoCallback{ get; set; }
 
         /// <summary>
         /// 是否支持用户自定义签名印章
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserDefineSeal")]
         public bool? UserDefineSeal{ get; set; }
 
         /// <summary>
         /// 是否需要回调的时候返回印章(签名) 图片的 base64
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SealImgCallback")]
         public bool? SealImgCallback{ get; set; }
 
         /// <summary>
         /// 开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifyChannels")]
         public string[] VerifyChannels{ get; set; }

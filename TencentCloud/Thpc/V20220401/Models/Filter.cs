@@ -26,14 +26,12 @@ namespace TencentCloud.Thpc.V20220401.Models
         
         /// <summary>
         /// 需要过滤的字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 字段的过滤值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

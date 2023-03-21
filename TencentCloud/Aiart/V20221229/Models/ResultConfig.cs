@@ -31,7 +31,6 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// ● 768:768
         /// ● 768:1024
         /// ● 1024:768
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }

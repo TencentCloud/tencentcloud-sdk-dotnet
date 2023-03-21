@@ -493,6 +493,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 创建Datahub主题
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatahubTopicRequest"/></param>
+        /// <returns><see cref="CreateDatahubTopicResponse"/></returns>
+        public async Task<CreateDatahubTopicResponse> CreateDatahubTopic(CreateDatahubTopicRequest req)
+        {
+             JsonResponseModel<CreateDatahubTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDatahubTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatahubTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建Datahub主题
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatahubTopicRequest"/></param>
+        /// <returns><see cref="CreateDatahubTopicResponse"/></returns>
+        public CreateDatahubTopicResponse CreateDatahubTopicSync(CreateDatahubTopicRequest req)
+        {
+             JsonResponseModel<CreateDatahubTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDatahubTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatahubTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建按量计费实例
         /// </summary>
         /// <param name="req"><see cref="CreateInstancePostRequest"/></param>

@@ -42,6 +42,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
+        /// <summary>
+        /// 是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
+        /// </summary>
+        [JsonProperty("SkipAddingNonMasqueradeCIDRs")]
+        public bool? SkipAddingNonMasqueradeCIDRs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SkipAddingNonMasqueradeCIDRs", this.SkipAddingNonMasqueradeCIDRs);
         }
     }
 }

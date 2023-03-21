@@ -30,21 +30,18 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>COS：COS源。</li>
         /// <li>ORIGIN_GROUP：源站组类型源站。</li>
         /// <li>AWS_S3：AWS S3对象存储源站。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
         /// 源站地址，当OriginType参数指定为ORIGIN_GROUP时，该参数填写源站组ID，其他情况下填写源站地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
         /// <summary>
         /// 备用源站组ID，该参数在OriginType参数指定为ORIGIN_GROUP时生效，为空表示不使用备用源站。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupOrigin")]
         public string BackupOrigin{ get; set; }
@@ -53,14 +50,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 指定是否允许访问私有对象存储源站，当源站类型OriginType=COS或AWS_S3时有效，取值有：
         /// <li>on：使用私有鉴权；</li>
         /// <li>off：不使用私有鉴权。</li>不填写，默认值为：off。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateAccess")]
         public string PrivateAccess{ get; set; }
 
         /// <summary>
         /// 私有鉴权使用参数，当源站类型PrivateAccess=on时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateParameters")]
         public PrivateParameter[] PrivateParameters{ get; set; }

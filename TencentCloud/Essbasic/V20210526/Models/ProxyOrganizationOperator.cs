@@ -62,7 +62,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 业务管理员：admin
         /// 经办人：channel-normal-operator
         /// 业务员：channel-sales-man
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultRole")]
         public string DefaultRole{ get; set; }

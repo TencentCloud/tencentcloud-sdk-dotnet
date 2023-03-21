@@ -38,7 +38,6 @@ namespace TencentCloud.Nlp.V20190408.Models
 
         /// <summary>
         /// 词条的词性。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pos")]
         public string Pos{ get; set; }

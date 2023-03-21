@@ -38,21 +38,18 @@ namespace TencentCloud.Nlp.V20190408.Models
 
         /// <summary>
         /// 自定义词库描述信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

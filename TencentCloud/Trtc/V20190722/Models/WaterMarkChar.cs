@@ -26,56 +26,48 @@ namespace TencentCloud.Trtc.V20190722.Models
         
         /// <summary>
         /// 文字水印的起始坐标Y值，从左上角开始
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Top")]
         public ulong? Top{ get; set; }
 
         /// <summary>
         /// 文字水印的起始坐标X值，从左上角开始
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Left")]
         public ulong? Left{ get; set; }
 
         /// <summary>
         /// 文字水印的宽度，单位像素值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
         /// 文字水印的高度，单位像素值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
         /// 水印文字的内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Chars")]
         public string Chars{ get; set; }
 
         /// <summary>
         /// 水印文字的大小，单位像素，默认14
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FontSize")]
         public ulong? FontSize{ get; set; }
 
         /// <summary>
         /// 水印文字的颜色，默认白色
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FontColor")]
         public string FontColor{ get; set; }
 
         /// <summary>
         /// 水印文字的背景色，为空代表背景透明，默认为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackGroundColor")]
         public string BackGroundColor{ get; set; }

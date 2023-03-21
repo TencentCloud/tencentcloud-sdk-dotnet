@@ -26,35 +26,30 @@ namespace TencentCloud.Ivld.V20210903.Models
         
         /// <summary>
         /// 媒资名称过滤条件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaNameSet")]
         public string[] MediaNameSet{ get; set; }
 
         /// <summary>
         /// 媒资状态数组，媒资状态可选值参见MediaInfo
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusSet")]
         public long?[] StatusSet{ get; set; }
 
         /// <summary>
         /// 媒资ID数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaIdSet")]
         public string[] MediaIdSet{ get; set; }
 
         /// <summary>
         /// 媒资自定义标签数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }
 
         /// <summary>
         /// 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaType")]
         public long? MediaType{ get; set; }

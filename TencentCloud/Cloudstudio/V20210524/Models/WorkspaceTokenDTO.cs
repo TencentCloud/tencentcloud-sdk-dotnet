@@ -26,14 +26,12 @@ namespace TencentCloud.Cloudstudio.V20210524.Models
         
         /// <summary>
         /// 工作空间 SpaceKey
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpaceKey")]
         public string SpaceKey{ get; set; }
 
         /// <summary>
         /// token过期时间，单位是秒，默认 3600
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TokenExpiredLimitSec")]
         public ulong? TokenExpiredLimitSec{ get; set; }

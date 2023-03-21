@@ -25,12 +25,6 @@ namespace TencentCloud.Trp.V20210515.Models
     {
         
         /// <summary>
-        /// 批次ID
-        /// </summary>
-        [JsonProperty("BatchId")]
-        public string BatchId{ get; set; }
-
-        /// <summary>
         /// 企业ID
         /// </summary>
         [JsonProperty("CorpId")]
@@ -48,16 +42,36 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
+        /// <summary>
+        /// 商户ID
+        /// </summary>
+        [JsonProperty("MerchantId")]
+        public string MerchantId{ get; set; }
+
+        /// <summary>
+        /// 产品ID
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
+
+        /// <summary>
+        /// 批次ID
+        /// </summary>
+        [JsonProperty("BatchId")]
+        public string BatchId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
             this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "MerchantId", this.MerchantId);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
         }
     }
 }

@@ -32,7 +32,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 被抄送人姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -41,7 +40,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 被抄送人类型,
         /// 0--个人
         /// 1--员工
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CcType")]
         public long? CcType{ get; set; }
@@ -50,7 +48,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 被抄送人权限
         /// 0--可查看
         /// 1--可查看也可下载
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CcPermission")]
         public long? CcPermission{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 生产的信息是否为json格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DecodeJson")]
         public bool? DecodeJson{ get; set; }
@@ -39,14 +38,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// cls日志集id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogSet")]
         public string LogSet{ get; set; }
 
         /// <summary>
         /// 当DecodeJson为false时必填
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContentKey")]
         public string ContentKey{ get; set; }

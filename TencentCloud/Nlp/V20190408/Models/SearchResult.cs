@@ -38,14 +38,12 @@ namespace TencentCloud.Nlp.V20190408.Models
 
         /// <summary>
         /// 匹配到的词条文本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchText")]
         public string MatchText{ get; set; }
 
         /// <summary>
         /// 词条的词性。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pos")]
         public string Pos{ get; set; }

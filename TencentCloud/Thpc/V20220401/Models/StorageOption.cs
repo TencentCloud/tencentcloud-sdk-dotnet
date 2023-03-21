@@ -25,13 +25,13 @@ namespace TencentCloud.Thpc.V20220401.Models
     {
         
         /// <summary>
-        /// 集群挂载CFS文件系统选项
+        /// 集群挂载CFS文件系统选项。
         /// </summary>
         [JsonProperty("CFSOptions")]
         public CFSOption[] CFSOptions{ get; set; }
 
         /// <summary>
-        /// 集群挂在GooseFS文件系统选项
+        /// 集群挂载GooseFS文件系统选项。
         /// </summary>
         [JsonProperty("GooseFSOptions")]
         public GooseFSOption[] GooseFSOptions{ get; set; }

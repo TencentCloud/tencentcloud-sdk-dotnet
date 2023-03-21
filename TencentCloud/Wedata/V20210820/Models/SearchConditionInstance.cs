@@ -32,14 +32,12 @@ namespace TencentCloud.Wedata.V20210820.Models
 
         /// <summary>
         /// 产品名称，可选
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public ulong? ProductName{ get; set; }
 
         /// <summary>
         /// 资源组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroup")]
         public ulong? ResourceGroup{ get; set; }

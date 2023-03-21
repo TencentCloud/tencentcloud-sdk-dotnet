@@ -26,14 +26,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 检验报告
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportType")]
         public long? ReportType{ get; set; }
 
         /// <summary>
         /// 版本2
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public long? Version{ get; set; }

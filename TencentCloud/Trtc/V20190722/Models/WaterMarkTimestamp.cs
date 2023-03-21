@@ -26,14 +26,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         
         /// <summary>
         /// 时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pos")]
         public ulong? Pos{ get; set; }
 
         /// <summary>
         /// 显示时间戳的时区，默认东八区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeZone")]
         public ulong? TimeZone{ get; set; }

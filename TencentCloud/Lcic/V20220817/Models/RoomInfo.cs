@@ -26,112 +26,96 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 房间名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 预定的房间开始时间，unix时间戳。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
         /// 预定的房间结束时间，unix时间戳。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
         /// 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resolution")]
         public ulong? Resolution{ get; set; }
 
         /// <summary>
         /// 最大连麦人数（不包括老师）。取值范围[0, 16]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMicNumber")]
         public ulong? MaxMicNumber{ get; set; }
 
         /// <summary>
         /// 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubType")]
         public string SubType{ get; set; }
 
         /// <summary>
         /// 老师ID。通过[注册用户]接口获取的UserId。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }
 
         /// <summary>
         /// 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoMic")]
         public ulong? AutoMic{ get; set; }
 
         /// <summary>
         /// 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TurnOffMic")]
         public ulong? TurnOffMic{ get; set; }
 
         /// <summary>
         /// 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioQuality")]
         public ulong? AudioQuality{ get; set; }
 
         /// <summary>
         /// 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisableRecord")]
         public ulong? DisableRecord{ get; set; }
 
         /// <summary>
         /// 助教Id列表。通过[注册用户]接口获取的UserId。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Assistants")]
         public string[] Assistants{ get; set; }
 
         /// <summary>
         /// rtc人数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RTCAudienceNumber")]
         public ulong? RTCAudienceNumber{ get; set; }
 
         /// <summary>
         /// 观看类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudienceType")]
         public ulong? AudienceType{ get; set; }
 
         /// <summary>
         /// 录制布局。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordLayout")]
         public ulong? RecordLayout{ get; set; }
 
         /// <summary>
         /// 房间绑定的群组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

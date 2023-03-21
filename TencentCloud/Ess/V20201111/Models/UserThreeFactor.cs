@@ -26,7 +26,6 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -36,14 +35,12 @@ namespace TencentCloud.Ess.V20201111.Models
         /// ID_CARD 身份证
         /// HONGKONG_AND_MACAO 港澳居民来往内地通行证
         /// HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
 
         /// <summary>
         /// 证件号，如果有 X 请大写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdCardNumber")]
         public string IdCardNumber{ get; set; }

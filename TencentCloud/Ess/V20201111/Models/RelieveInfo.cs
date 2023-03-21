@@ -26,39 +26,30 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 解除理由，最大支持200个字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
         /// <summary>
         /// 解除后仍然有效的条款，保留条款，最大支持200个字
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainInForceItem")]
         public string RemainInForceItem{ get; set; }
 
         /// <summary>
         /// 原合同事项处理-费用结算，最大支持200个字
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalExpenseSettlement")]
         public string OriginalExpenseSettlement{ get; set; }
 
         /// <summary>
         /// 原合同事项处理-其他事项，最大支持200个字
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalOtherSettlement")]
         public string OriginalOtherSettlement{ get; set; }
 
         /// <summary>
         /// 其他约定，最大支持200个字
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OtherDeals")]
         public string OtherDeals{ get; set; }

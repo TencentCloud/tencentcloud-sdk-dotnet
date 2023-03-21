@@ -74,7 +74,6 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaId")]
         public ulong? MediaId{ get; set; }

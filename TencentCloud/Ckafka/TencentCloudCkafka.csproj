@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.722</VersionPrefix>
+    <VersionPrefix>3.0.723</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,6 +97,8 @@
     <Compile Include="V20190819\Models\CreateDatahubTaskRequest.cs" />
     <Compile Include="V20190819\Models\CreateDatahubTaskRes.cs" />
     <Compile Include="V20190819\Models\CreateDatahubTaskResponse.cs" />
+    <Compile Include="V20190819\Models\CreateDatahubTopicRequest.cs" />
+    <Compile Include="V20190819\Models\CreateDatahubTopicResponse.cs" />
     <Compile Include="V20190819\Models\CreateInstancePostRequest.cs" />
     <Compile Include="V20190819\Models\CreateInstancePostResponse.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreData.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="V20190819\Models\DatahubTaskIdRes.cs" />
     <Compile Include="V20190819\Models\DatahubTaskInfo.cs" />
     <Compile Include="V20190819\Models\DatahubTopicDTO.cs" />
+    <Compile Include="V20190819\Models\DatahubTopicResp.cs" />
     <Compile Include="V20190819\Models\DateParam.cs" />
     <Compile Include="V20190819\Models\DeleteAclRequest.cs" />
     <Compile Include="V20190819\Models\DeleteAclResponse.cs" />
@@ -260,6 +263,7 @@
     <Compile Include="V20190819\Models\JgwOperateResponse.cs" />
     <Compile Include="V20190819\Models\JsonPathReplaceParam.cs" />
     <Compile Include="V20190819\Models\KVParam.cs" />
+    <Compile Include="V20190819\Models\KafkaConnectParam.cs" />
     <Compile Include="V20190819\Models\KafkaParam.cs" />
     <Compile Include="V20190819\Models\LowercaseParam.cs" />
     <Compile Include="V20190819\Models\MapParam.cs" />

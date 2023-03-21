@@ -62,7 +62,6 @@ namespace TencentCloud.Oceanus.V20190422.Models
 
         /// <summary>
         /// 使用历史版本系统依赖
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UseOldSystemConnector")]
         public bool? UseOldSystemConnector{ get; set; }

@@ -38,14 +38,12 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// SEI发送间隔，单位毫秒，默认值为1000。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Interval")]
         public ulong? Interval{ get; set; }
 
         /// <summary>
         /// 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FollowIdr")]
         public ulong? FollowIdr{ get; set; }

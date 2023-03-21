@@ -38,14 +38,12 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 标题行，默认为0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeadLines")]
         public long? HeadLines{ get; set; }
 
         /// <summary>
         /// 格式，默认值为CSV
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

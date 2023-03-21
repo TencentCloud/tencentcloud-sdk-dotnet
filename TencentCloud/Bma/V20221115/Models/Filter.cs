@@ -26,14 +26,12 @@ namespace TencentCloud.Bma.V20221115.Models
         
         /// <summary>
         /// 过滤参数键
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 过滤参数值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

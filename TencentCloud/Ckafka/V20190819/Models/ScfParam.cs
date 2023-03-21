@@ -26,21 +26,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// SCF云函数函数名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
 
         /// <summary>
         /// SCF云函数命名空间, 默认为default
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
         /// SCF云函数版本及别名, 默认为$DEFAULT
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }

@@ -157,6 +157,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DorisConnectParam")]
         public DorisConnectParam DorisConnectParam{ get; set; }
 
+        /// <summary>
+        /// Kafka配置，Type 为 KAFKA 时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KafkaConnectParam")]
+        public KafkaConnectParam KafkaConnectParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +189,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "SQLServerConnectParam.", this.SQLServerConnectParam);
             this.SetParamObj(map, prefix + "CtsdbConnectParam.", this.CtsdbConnectParam);
             this.SetParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
+            this.SetParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
         }
     }
 }

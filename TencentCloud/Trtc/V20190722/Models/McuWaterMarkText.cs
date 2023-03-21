@@ -56,21 +56,18 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 字体大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FontSize")]
         public ulong? FontSize{ get; set; }
 
         /// <summary>
         /// 字体颜色，默认为白色。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FontColor")]
         public string FontColor{ get; set; }
 
         /// <summary>
         /// 字体背景色，不配置默认为透明。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackGroundColor")]
         public string BackGroundColor{ get; set; }
