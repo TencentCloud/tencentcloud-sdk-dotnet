@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 策略名
+        /// 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }

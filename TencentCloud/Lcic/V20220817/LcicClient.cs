@@ -893,6 +893,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 服务商信息获取
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeveloperRequest"/></param>
+        /// <returns><see cref="DescribeDeveloperResponse"/></returns>
+        public async Task<DescribeDeveloperResponse> DescribeDeveloper(DescribeDeveloperRequest req)
+        {
+             JsonResponseModel<DescribeDeveloperResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeveloper");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeveloperResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务商信息获取
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeveloperRequest"/></param>
+        /// <returns><see cref="DescribeDeveloperResponse"/></returns>
+        public DescribeDeveloperResponse DescribeDeveloperSync(DescribeDeveloperRequest req)
+        {
+             JsonResponseModel<DescribeDeveloperResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeveloper");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeveloperResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取文档信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDocumentRequest"/></param>

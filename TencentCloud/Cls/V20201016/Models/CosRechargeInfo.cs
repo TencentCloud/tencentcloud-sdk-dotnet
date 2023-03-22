@@ -46,35 +46,35 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// cos导入任务名称
+        /// COS导入任务名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// cos存储桶
+        /// COS存储桶
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// cos存储桶地域
+        /// COS存储桶所在地域
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// cos存储桶前缀地址
+        /// COS文件所在文件夹的前缀
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Prefix")]
         public string Prefix{ get; set; }
 
         /// <summary>
-        /// 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志；
+        /// 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
         /// 默认为minimalist_log
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

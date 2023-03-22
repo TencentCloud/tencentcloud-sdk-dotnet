@@ -90,6 +90,42 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Sqls")]
         public string[] Sqls{ get; set; }
 
+        /// <summary>
+        /// 影响行数，格式为M-N，例如：10-200
+        /// </summary>
+        [JsonProperty("AffectRowsSection")]
+        public string AffectRowsSection{ get; set; }
+
+        /// <summary>
+        /// 返回行数，格式为M-N，例如：10-200
+        /// </summary>
+        [JsonProperty("SentRowsSection")]
+        public string SentRowsSection{ get; set; }
+
+        /// <summary>
+        /// 执行时间，格式为M-N，例如：10-200
+        /// </summary>
+        [JsonProperty("ExecTimeSection")]
+        public string ExecTimeSection{ get; set; }
+
+        /// <summary>
+        /// 锁等待时间，格式为M-N，例如：10-200
+        /// </summary>
+        [JsonProperty("LockWaitTimeSection")]
+        public string LockWaitTimeSection{ get; set; }
+
+        /// <summary>
+        /// IO等待时间，格式为M-N，例如：10-200
+        /// </summary>
+        [JsonProperty("IoWaitTimeSection")]
+        public string IoWaitTimeSection{ get; set; }
+
+        /// <summary>
+        /// 事务持续时间，格式为M-N，例如：10-200
+        /// </summary>
+        [JsonProperty("TransactionLivingTimeSection")]
+        public string TransactionLivingTimeSection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +143,12 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "AffectRows", this.AffectRows);
             this.SetParamArraySimple(map, prefix + "SqlTypes.", this.SqlTypes);
             this.SetParamArraySimple(map, prefix + "Sqls.", this.Sqls);
+            this.SetParamSimple(map, prefix + "AffectRowsSection", this.AffectRowsSection);
+            this.SetParamSimple(map, prefix + "SentRowsSection", this.SentRowsSection);
+            this.SetParamSimple(map, prefix + "ExecTimeSection", this.ExecTimeSection);
+            this.SetParamSimple(map, prefix + "LockWaitTimeSection", this.LockWaitTimeSection);
+            this.SetParamSimple(map, prefix + "IoWaitTimeSection", this.IoWaitTimeSection);
+            this.SetParamSimple(map, prefix + "TransactionLivingTimeSection", this.TransactionLivingTimeSection);
         }
     }
 }

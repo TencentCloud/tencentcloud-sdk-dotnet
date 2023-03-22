@@ -2053,6 +2053,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询网关监控数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayCurveDataRequest"/></param>
+        /// <returns><see cref="DescribeGatewayCurveDataResponse"/></returns>
+        public async Task<DescribeGatewayCurveDataResponse> DescribeGatewayCurveData(DescribeGatewayCurveDataRequest req)
+        {
+             JsonResponseModel<DescribeGatewayCurveDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGatewayCurveData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayCurveDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询网关监控数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayCurveDataRequest"/></param>
+        /// <returns><see cref="DescribeGatewayCurveDataResponse"/></returns>
+        public DescribeGatewayCurveDataResponse DescribeGatewayCurveDataSync(DescribeGatewayCurveDataRequest req)
+        {
+             JsonResponseModel<DescribeGatewayCurveDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGatewayCurveData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayCurveDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询静态托管域名任务状态
         /// </summary>
         /// <param name="req"><see cref="DescribeHostingDomainTaskRequest"/></param>

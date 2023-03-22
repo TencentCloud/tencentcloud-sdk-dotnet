@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 角色名称
+        /// 角色名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }

@@ -253,6 +253,46 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
+        /// 呼叫TRTC设备
+        /// </summary>
+        /// <param name="req"><see cref="CallTRTCDeviceRequest"/></param>
+        /// <returns><see cref="CallTRTCDeviceResponse"/></returns>
+        public async Task<CallTRTCDeviceResponse> CallTRTCDevice(CallTRTCDeviceRequest req)
+        {
+             JsonResponseModel<CallTRTCDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CallTRTCDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CallTRTCDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 呼叫TRTC设备
+        /// </summary>
+        /// <param name="req"><see cref="CallTRTCDeviceRequest"/></param>
+        /// <returns><see cref="CallTRTCDeviceResponse"/></returns>
+        public CallTRTCDeviceResponse CallTRTCDeviceSync(CallTRTCDeviceRequest req)
+        {
+             JsonResponseModel<CallTRTCDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CallTRTCDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CallTRTCDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 取消AI模型申请
         /// </summary>
         /// <param name="req"><see cref="CancelAIModelApplicationRequest"/></param>
