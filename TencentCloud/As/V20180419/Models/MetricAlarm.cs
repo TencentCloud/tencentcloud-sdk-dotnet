@@ -60,6 +60,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("Statistic")]
         public string Statistic{ get; set; }
 
+        /// <summary>
+        /// 精确告警阈值，本参数不作为入参输入，仅用作查询接口出参：<br><li>CPU_UTILIZATION：(0, 100]，单位：%</li><li>MEM_UTILIZATION：(0, 100]，单位：%</li><li>LAN_TRAFFIC_OUT：>0，单位：Mbps </li><li>LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>WAN_TRAFFIC_IN：>0，单位：Mbps</li>
+        /// </summary>
+        [JsonProperty("PreciseThreshold")]
+        public float? PreciseThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "ContinuousTime", this.ContinuousTime);
             this.SetParamSimple(map, prefix + "Statistic", this.Statistic);
+            this.SetParamSimple(map, prefix + "PreciseThreshold", this.PreciseThreshold);
         }
     }
 }

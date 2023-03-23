@@ -25,12 +25,6 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 快照重复日期，星期一到星期日
-        /// </summary>
-        [JsonProperty("DayOfWeek")]
-        public string DayOfWeek{ get; set; }
-
-        /// <summary>
         /// 快照重复时间点
         /// </summary>
         [JsonProperty("Hour")]
@@ -43,10 +37,28 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string PolicyName{ get; set; }
 
         /// <summary>
+        /// 快照重复日期，星期一到星期日
+        /// </summary>
+        [JsonProperty("DayOfWeek")]
+        public string DayOfWeek{ get; set; }
+
+        /// <summary>
         /// 快照保留时长
         /// </summary>
         [JsonProperty("AliveDays")]
         public ulong? AliveDays{ get; set; }
+
+        /// <summary>
+        /// 快照按月重复，每月1-31号，选择一天，每月这一天打快照。
+        /// </summary>
+        [JsonProperty("DayOfMonth")]
+        public string DayOfMonth{ get; set; }
+
+        /// <summary>
+        /// 间隔天数
+        /// </summary>
+        [JsonProperty("IntervalDays")]
+        public ulong? IntervalDays{ get; set; }
 
 
         /// <summary>
@@ -54,10 +66,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DayOfWeek", this.DayOfWeek);
             this.SetParamSimple(map, prefix + "Hour", this.Hour);
             this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
+            this.SetParamSimple(map, prefix + "DayOfWeek", this.DayOfWeek);
             this.SetParamSimple(map, prefix + "AliveDays", this.AliveDays);
+            this.SetParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
+            this.SetParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
         }
     }
 }

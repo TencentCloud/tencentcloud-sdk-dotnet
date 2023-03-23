@@ -121,6 +121,22 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverOption")]
         public ApproverOption ApproverOption{ get; set; }
 
+        /// <summary>
+        /// 签署人查看合同时认证方式, 
+        /// 1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
+        /// 如果不传默认为1
+        /// </summary>
+        [JsonProperty("ApproverVerifyTypes")]
+        public long?[] ApproverVerifyTypes{ get; set; }
+
+        /// <summary>
+        /// 签署人签署合同时的认证方式
+        /// 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+        /// 合同签署认证方式的优先级 verifyChannel>approverSignTypes
+        /// </summary>
+        [JsonProperty("ApproverSignTypes")]
+        public long?[] ApproverSignTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +158,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ApproverSource", this.ApproverSource);
             this.SetParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
             this.SetParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
+            this.SetParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
+            this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
         }
     }
 }

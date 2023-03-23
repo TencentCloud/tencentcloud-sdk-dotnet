@@ -92,7 +92,7 @@ namespace TencentCloud.Aiart.V20221229.Models
 
         /// <summary>
         /// 生成自由度。
-        /// Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.6。
+        /// Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.65。
         /// </summary>
         [JsonProperty("Strength")]
         public float? Strength{ get; set; }

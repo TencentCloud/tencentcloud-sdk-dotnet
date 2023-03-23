@@ -121,6 +121,16 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("AutoScalingGroupName")]
         public string AutoScalingGroupName{ get; set; }
 
+        /// <summary>
+        /// 预热状态，取值如下：
+        /// <li>WAITING_ENTER_WARMUP：等待进入预热
+        /// <li>NO_NEED_WARMUP：无需预热
+        /// <li>IN_WARMUP：预热中
+        /// <li>AFTER_WARMUP：完成预热
+        /// </summary>
+        [JsonProperty("WarmupStatus")]
+        public string WarmupStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +150,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
             this.SetParamSimple(map, prefix + "AutoScalingGroupName", this.AutoScalingGroupName);
+            this.SetParamSimple(map, prefix + "WarmupStatus", this.WarmupStatus);
         }
     }
 }

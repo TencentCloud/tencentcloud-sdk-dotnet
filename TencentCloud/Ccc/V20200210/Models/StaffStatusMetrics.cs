@@ -108,6 +108,20 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("UseMobileCallOut")]
         public bool? UseMobileCallOut{ get; set; }
 
+        /// <summary>
+        /// 最近一次上线时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastOnlineTimestamp")]
+        public long? LastOnlineTimestamp{ get; set; }
+
+        /// <summary>
+        /// 最近一次状态时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastStatusTimestamp")]
+        public long? LastStatusTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +142,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "ReserveNotReady", this.ReserveNotReady);
             this.SetParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
             this.SetParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
+            this.SetParamSimple(map, prefix + "LastOnlineTimestamp", this.LastOnlineTimestamp);
+            this.SetParamSimple(map, prefix + "LastStatusTimestamp", this.LastStatusTimestamp);
         }
     }
 }

@@ -1253,6 +1253,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 本接口（DescribeDDoSAttackEvent）用于查询DDoS攻击事件列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSAttackEventRequest"/></param>
+        /// <returns><see cref="DescribeDDoSAttackEventResponse"/></returns>
+        public async Task<DescribeDDoSAttackEventResponse> DescribeDDoSAttackEvent(DescribeDDoSAttackEventRequest req)
+        {
+             JsonResponseModel<DescribeDDoSAttackEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDoSAttackEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSAttackEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDDoSAttackEvent）用于查询DDoS攻击事件列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSAttackEventRequest"/></param>
+        /// <returns><see cref="DescribeDDoSAttackEventResponse"/></returns>
+        public DescribeDDoSAttackEventResponse DescribeDDoSAttackEventSync(DescribeDDoSAttackEventRequest req)
+        {
+             JsonResponseModel<DescribeDDoSAttackEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDoSAttackEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSAttackEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDDoSAttackTopData）用于查询DDoS攻击Top数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSAttackTopDataRequest"/></param>

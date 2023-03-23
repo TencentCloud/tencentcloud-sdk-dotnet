@@ -118,6 +118,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("HLSPullSettings")]
         public DescribeOutputHLSPullSettings HLSPullSettings{ get; set; }
 
+        /// <summary>
+        /// 最大拉流并发数，最大为4，默认4。
+        /// </summary>
+        [JsonProperty("MaxConcurrent")]
+        public ulong? MaxConcurrent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +144,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
             this.SetParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
             this.SetParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
+            this.SetParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
         }
     }
 }

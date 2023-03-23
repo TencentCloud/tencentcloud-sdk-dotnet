@@ -48,6 +48,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("PolicyIds")]
         public string[] PolicyIds{ get; set; }
 
+        /// <summary>
+        /// 告警分级通知规则配置
+        /// </summary>
+        [JsonProperty("HierarchicalNotices")]
+        public AlarmHierarchicalNotice[] HierarchicalNotices{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
             this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+            this.SetParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);
         }
     }
 }

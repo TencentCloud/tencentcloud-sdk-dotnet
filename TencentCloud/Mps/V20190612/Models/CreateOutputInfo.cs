@@ -73,6 +73,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AllowIpList")]
         public string[] AllowIpList{ get; set; }
 
+        /// <summary>
+        /// 最大拉流并发数，最大4，默认4。
+        /// </summary>
+        [JsonProperty("MaxConcurrent")]
+        public ulong? MaxConcurrent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
             this.SetParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
             this.SetParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
+            this.SetParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
         }
     }
 }

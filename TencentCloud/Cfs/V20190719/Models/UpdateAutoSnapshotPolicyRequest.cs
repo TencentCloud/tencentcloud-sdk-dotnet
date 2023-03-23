@@ -60,6 +60,18 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("IsActivated")]
         public ulong? IsActivated{ get; set; }
 
+        /// <summary>
+        /// 定期快照在月的某几天天，该参数与DayOfWeek互斥
+        /// </summary>
+        [JsonProperty("DayOfMonth")]
+        public string DayOfMonth{ get; set; }
+
+        /// <summary>
+        /// 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+        /// </summary>
+        [JsonProperty("IntervalDays")]
+        public ulong? IntervalDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "Hour", this.Hour);
             this.SetParamSimple(map, prefix + "AliveDays", this.AliveDays);
             this.SetParamSimple(map, prefix + "IsActivated", this.IsActivated);
+            this.SetParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
+            this.SetParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
         }
     }
 }

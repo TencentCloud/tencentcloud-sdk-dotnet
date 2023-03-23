@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 告警伸缩策略ID
+        /// 告警伸缩策略ID，不支持目标追踪策略。
         /// </summary>
         [JsonProperty("AutoScalingPolicyId")]
         public string AutoScalingPolicyId{ get; set; }

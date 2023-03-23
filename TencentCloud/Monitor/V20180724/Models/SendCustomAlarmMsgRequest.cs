@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// 消息策略ID，在云监控自定义消息页面配置
+        /// 消息策略ID，在自定义消息页面配置
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }

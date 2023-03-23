@@ -142,6 +142,20 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ApproverNeedSignReview")]
         public bool? ApproverNeedSignReview{ get; set; }
 
+        /// <summary>
+        /// 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
+        /// 查看合同的签署方式 Flow层级的优先于approver层级的
+        /// </summary>
+        [JsonProperty("ApproverVerifyTypes")]
+        public long?[] ApproverVerifyTypes{ get; set; }
+
+        /// <summary>
+        /// 签署人签署合同时的认证方式
+        /// 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+        /// </summary>
+        [JsonProperty("ApproverSignTypes")]
+        public long?[] ApproverSignTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +180,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
             this.SetParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
             this.SetParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
+            this.SetParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
+            this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
         }
     }
 }

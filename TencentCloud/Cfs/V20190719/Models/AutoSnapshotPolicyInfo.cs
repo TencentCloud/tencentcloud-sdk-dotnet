@@ -49,7 +49,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? FileSystemNums{ get; set; }
 
         /// <summary>
-        /// 快照定期备份在一星期哪一天
+        /// 快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥
         /// </summary>
         [JsonProperty("DayOfWeek")]
         public string DayOfWeek{ get; set; }
@@ -102,6 +102,20 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("FileSystems")]
         public FileSystemByPolicy[] FileSystems{ get; set; }
 
+        /// <summary>
+        /// 快照定期备份在一个月的某个时间；该参数与DayOfWeek,IntervalDays互斥
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DayOfMonth")]
+        public string DayOfMonth{ get; set; }
+
+        /// <summary>
+        /// 快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IntervalDays")]
+        public ulong? IntervalDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +135,8 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "AliveDays", this.AliveDays);
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
             this.SetParamArrayObj(map, prefix + "FileSystems.", this.FileSystems);
+            this.SetParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
+            this.SetParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
         }
     }
 }
