@@ -37,6 +37,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Mail{ get; set; }
 
         /// <summary>
+        /// 工号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StaffNumber")]
+        public string StaffNumber{ get; set; }
+
+        /// <summary>
         /// 坐席电话号码（带0086前缀）
         /// </summary>
         [JsonProperty("Phone")]
@@ -61,13 +68,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("SkillGroupNameList")]
         public string[] SkillGroupNameList{ get; set; }
 
-        /// <summary>
-        /// 工号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("StaffNumber")]
-        public string StaffNumber{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,11 +76,11 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Mail", this.Mail);
+            this.SetParamSimple(map, prefix + "StaffNumber", this.StaffNumber);
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamArraySimple(map, prefix + "SkillGroupNameList.", this.SkillGroupNameList);
-            this.SetParamSimple(map, prefix + "StaffNumber", this.StaffNumber);
         }
     }
 }

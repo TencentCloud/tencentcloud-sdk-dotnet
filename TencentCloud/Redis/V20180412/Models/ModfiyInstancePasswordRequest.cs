@@ -25,19 +25,22 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例旧密码
+        /// 实例旧密码。
         /// </summary>
         [JsonProperty("OldPassword")]
         public string OldPassword{ get; set; }
 
         /// <summary>
-        /// 实例新密码
+        /// 实例新密码。密码复杂度要求如下：
+        /// - 长度8 - 30位, 推荐使用12位以上的密码。
+        /// - 不能以"/"开头。
+        /// - 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

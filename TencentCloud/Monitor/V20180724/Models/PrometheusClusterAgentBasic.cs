@@ -72,6 +72,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("NotScrape")]
         public bool? NotScrape{ get; set; }
 
+        /// <summary>
+        /// 是否开启默认预聚合规则
+        /// </summary>
+        [JsonProperty("OpenDefaultRecord")]
+        public bool? OpenDefaultRecord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "ExternalLabels.", this.ExternalLabels);
             this.SetParamSimple(map, prefix + "NotInstallBasicScrape", this.NotInstallBasicScrape);
             this.SetParamSimple(map, prefix + "NotScrape", this.NotScrape);
+            this.SetParamSimple(map, prefix + "OpenDefaultRecord", this.OpenDefaultRecord);
         }
     }
 }

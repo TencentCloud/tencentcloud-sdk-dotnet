@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

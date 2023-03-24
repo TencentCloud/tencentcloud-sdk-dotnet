@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{773BF0CA-2F21-3865-B1F5-ADC28ACADE8A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.725</VersionPrefix>
+    <VersionPrefix>3.0.726</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,6 +81,8 @@
     <Compile Include="V20210416\Models\DeleteTargetResponse.cs" />
     <Compile Include="V20210416\Models\DeleteTransformationRequest.cs" />
     <Compile Include="V20210416\Models\DeleteTransformationResponse.cs" />
+    <Compile Include="V20210416\Models\DescribeLogTagValueRequest.cs" />
+    <Compile Include="V20210416\Models\DescribeLogTagValueResponse.cs" />
     <Compile Include="V20210416\Models\ESTargetParams.cs" />
     <Compile Include="V20210416\Models\EtlFilter.cs" />
     <Compile Include="V20210416\Models\Event.cs" />
@@ -101,6 +103,8 @@
     <Compile Include="V20210416\Models\ListRulesResponse.cs" />
     <Compile Include="V20210416\Models\ListTargetsRequest.cs" />
     <Compile Include="V20210416\Models\ListTargetsResponse.cs" />
+    <Compile Include="V20210416\Models\LogFilter.cs" />
+    <Compile Include="V20210416\Models\LogFilters.cs" />
     <Compile Include="V20210416\Models\OutputStructParam.cs" />
     <Compile Include="V20210416\Models\PublishEventRequest.cs" />
     <Compile Include="V20210416\Models\PublishEventResponse.cs" />
@@ -109,6 +113,9 @@
     <Compile Include="V20210416\Models\RetryPolicy.cs" />
     <Compile Include="V20210416\Models\Rule.cs" />
     <Compile Include="V20210416\Models\SCFParams.cs" />
+    <Compile Include="V20210416\Models\SearchLogRequest.cs" />
+    <Compile Include="V20210416\Models\SearchLogResponse.cs" />
+    <Compile Include="V20210416\Models\SearchLogResult.cs" />
     <Compile Include="V20210416\Models\Target.cs" />
     <Compile Include="V20210416\Models\TargetBrief.cs" />
     <Compile Include="V20210416\Models\TargetDescription.cs" />

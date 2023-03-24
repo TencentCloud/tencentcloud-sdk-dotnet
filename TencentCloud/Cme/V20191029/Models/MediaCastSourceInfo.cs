@@ -25,6 +25,13 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
+        /// 输入源 Id，由系统分配。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// 输入源的媒体类型，取值有：
         /// <li>CME：多媒体创作引擎的媒体文件；</li>
         /// <li>VOD：云点播的媒资文件。</li>
@@ -33,22 +40,16 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
-        /// </summary>
-        [JsonProperty("MaterialId")]
-        public string MaterialId{ get; set; }
-
-        /// <summary>
         /// 云点播媒体文件 ID。当 Type = VOD 时必填。
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 序号，位于输入源列表中的序号，由系统分配。
+        /// 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
         /// </summary>
-        [JsonProperty("Index")]
-        public long? Index{ get; set; }
+        [JsonProperty("MaterialId")]
+        public string MaterialId{ get; set; }
 
 
         /// <summary>
@@ -56,10 +57,10 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "MaterialId", this.MaterialId);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
-            this.SetParamSimple(map, prefix + "Index", this.Index);
+            this.SetParamSimple(map, prefix + "MaterialId", this.MaterialId);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502
+        /// 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502 GwConnect GwCircuit
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

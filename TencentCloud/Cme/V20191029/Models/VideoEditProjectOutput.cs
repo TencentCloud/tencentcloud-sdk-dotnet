@@ -49,6 +49,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
+        /// <summary>
+        /// 导出视频的封面图片 URL。
+        /// </summary>
+        [JsonProperty("CoverURL")]
+        public string CoverURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "VodFileId", this.VodFileId);
             this.SetParamSimple(map, prefix + "URL", this.URL);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
+            this.SetParamSimple(map, prefix + "CoverURL", this.CoverURL);
         }
     }
 }

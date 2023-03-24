@@ -74,6 +74,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string ErrorMessage{ get; set; }
 
         /// <summary>
+        /// 该连接源关联的Datahub任务数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatahubTaskCount")]
+        public long? DatahubTaskCount{ get; set; }
+
+        /// <summary>
         /// 连接源的当前所处步骤
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -81,11 +88,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string CurrentStep{ get; set; }
 
         /// <summary>
-        /// 该连接源关联的Datahub任务数
+        /// 创建进度百分比
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DatahubTaskCount")]
-        public long? DatahubTaskCount{ get; set; }
+        [JsonProperty("TaskProgress")]
+        public float? TaskProgress{ get; set; }
+
+        /// <summary>
+        /// 步骤列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StepList")]
+        public string[] StepList{ get; set; }
 
         /// <summary>
         /// Dts配置，Type为DTS时返回
@@ -177,8 +191,10 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
-            this.SetParamSimple(map, prefix + "CurrentStep", this.CurrentStep);
             this.SetParamSimple(map, prefix + "DatahubTaskCount", this.DatahubTaskCount);
+            this.SetParamSimple(map, prefix + "CurrentStep", this.CurrentStep);
+            this.SetParamSimple(map, prefix + "TaskProgress", this.TaskProgress);
+            this.SetParamArraySimple(map, prefix + "StepList.", this.StepList);
             this.SetParamObj(map, prefix + "DtsConnectParam.", this.DtsConnectParam);
             this.SetParamObj(map, prefix + "MongoDBConnectParam.", this.MongoDBConnectParam);
             this.SetParamObj(map, prefix + "EsConnectParam.", this.EsConnectParam);

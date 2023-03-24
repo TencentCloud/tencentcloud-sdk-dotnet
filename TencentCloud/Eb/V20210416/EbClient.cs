@@ -533,6 +533,46 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
+        /// 查询日志索引维度值
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogTagValueRequest"/></param>
+        /// <returns><see cref="DescribeLogTagValueResponse"/></returns>
+        public async Task<DescribeLogTagValueResponse> DescribeLogTagValue(DescribeLogTagValueRequest req)
+        {
+             JsonResponseModel<DescribeLogTagValueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogTagValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogTagValueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询日志索引维度值
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogTagValueRequest"/></param>
+        /// <returns><see cref="DescribeLogTagValueResponse"/></returns>
+        public DescribeLogTagValueResponse DescribeLogTagValueSync(DescribeLogTagValueRequest req)
+        {
+             JsonResponseModel<DescribeLogTagValueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogTagValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogTagValueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取事件集详情
         /// </summary>
         /// <param name="req"><see cref="GetEventBusRequest"/></param>
@@ -884,6 +924,46 @@ namespace TencentCloud.Eb.V20210416
              {
                  var strResp = this.InternalRequestSync(req, "PutEvents");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 日志检索
+        /// </summary>
+        /// <param name="req"><see cref="SearchLogRequest"/></param>
+        /// <returns><see cref="SearchLogResponse"/></returns>
+        public async Task<SearchLogResponse> SearchLog(SearchLogRequest req)
+        {
+             JsonResponseModel<SearchLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 日志检索
+        /// </summary>
+        /// <param name="req"><see cref="SearchLogRequest"/></param>
+        /// <returns><see cref="SearchLogResponse"/></returns>
+        public SearchLogResponse SearchLogSync(SearchLogRequest req)
+        {
+             JsonResponseModel<SearchLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchLogResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

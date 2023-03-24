@@ -26,12 +26,14 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 竞价相关选项
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpotOptions")]
         public SpotMarketOptions SpotOptions{ get; set; }
 
         /// <summary>
         /// 市场选项类型，当前只支持取值：spot
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarketType")]
         public string MarketType{ get; set; }

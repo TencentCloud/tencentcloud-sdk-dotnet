@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.725</VersionPrefix>
+    <VersionPrefix>3.0.726</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -103,6 +103,8 @@
     <Compile Include="V20180326\Models\CreateApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\CreateApiRateLimitRuleRequest.cs" />
     <Compile Include="V20180326\Models\CreateApiRateLimitRuleResponse.cs" />
+    <Compile Include="V20180326\Models\CreateApiRateLimitRuleWithDetailRespRequest.cs" />
+    <Compile Include="V20180326\Models\CreateApiRateLimitRuleWithDetailRespResponse.cs" />
     <Compile Include="V20180326\Models\CreateApplicationRequest.cs" />
     <Compile Include="V20180326\Models\CreateApplicationResponse.cs" />
     <Compile Include="V20180326\Models\CreateClusterRequest.cs" />
@@ -111,6 +113,8 @@
     <Compile Include="V20180326\Models\CreateConfigResponse.cs" />
     <Compile Include="V20180326\Models\CreateConfigTemplateRequest.cs" />
     <Compile Include="V20180326\Models\CreateConfigTemplateResponse.cs" />
+    <Compile Include="V20180326\Models\CreateConfigTemplateWithDetailRespRequest.cs" />
+    <Compile Include="V20180326\Models\CreateConfigTemplateWithDetailRespResponse.cs" />
     <Compile Include="V20180326\Models\CreateContainGroupRequest.cs" />
     <Compile Include="V20180326\Models\CreateContainGroupResponse.cs" />
     <Compile Include="V20180326\Models\CreateFileConfigRequest.cs" />
@@ -131,8 +135,12 @@
     <Compile Include="V20180326\Models\CreateNamespaceResponse.cs" />
     <Compile Include="V20180326\Models\CreatePathRewritesRequest.cs" />
     <Compile Include="V20180326\Models\CreatePathRewritesResponse.cs" />
+    <Compile Include="V20180326\Models\CreatePathRewritesWithDetailRespRequest.cs" />
+    <Compile Include="V20180326\Models\CreatePathRewritesWithDetailRespResponse.cs" />
     <Compile Include="V20180326\Models\CreatePublicConfigRequest.cs" />
     <Compile Include="V20180326\Models\CreatePublicConfigResponse.cs" />
+    <Compile Include="V20180326\Models\CreatePublicConfigWithDetailRespRequest.cs" />
+    <Compile Include="V20180326\Models\CreatePublicConfigWithDetailRespResponse.cs" />
     <Compile Include="V20180326\Models\CreateRepositoryRequest.cs" />
     <Compile Include="V20180326\Models\CreateRepositoryResponse.cs" />
     <Compile Include="V20180326\Models\CreateTaskFlowRequest.cs" />
@@ -141,9 +149,13 @@
     <Compile Include="V20180326\Models\CreateTaskResponse.cs" />
     <Compile Include="V20180326\Models\CreateUnitRuleRequest.cs" />
     <Compile Include="V20180326\Models\CreateUnitRuleResponse.cs" />
+    <Compile Include="V20180326\Models\CreateUnitRuleWithDetailRespRequest.cs" />
+    <Compile Include="V20180326\Models\CreateUnitRuleWithDetailRespResponse.cs" />
     <Compile Include="V20180326\Models\CurvePoint.cs" />
     <Compile Include="V20180326\Models\DeleteApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\DeleteApiGroupResponse.cs" />
+    <Compile Include="V20180326\Models\DeleteApiRateLimitRuleRequest.cs" />
+    <Compile Include="V20180326\Models\DeleteApiRateLimitRuleResponse.cs" />
     <Compile Include="V20180326\Models\DeleteApplicationRequest.cs" />
     <Compile Include="V20180326\Models\DeleteApplicationResponse.cs" />
     <Compile Include="V20180326\Models\DeleteClusterRequest.cs" />
@@ -344,6 +356,8 @@
     <Compile Include="V20180326\Models\DescribeRepositoriesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeRepositoryRequest.cs" />
     <Compile Include="V20180326\Models\DescribeRepositoryResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeResourceTaskStatusRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeResourceTaskStatusResponse.cs" />
     <Compile Include="V20180326\Models\DescribeSimpleApplicationsRequest.cs" />
     <Compile Include="V20180326\Models\DescribeSimpleApplicationsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeSimpleClustersRequest.cs" />
@@ -515,6 +529,8 @@
     <Compile Include="V20180326\Models\ReleaseApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\ReleaseConfigRequest.cs" />
     <Compile Include="V20180326\Models\ReleaseConfigResponse.cs" />
+    <Compile Include="V20180326\Models\ReleaseConfigWithDetailRespRequest.cs" />
+    <Compile Include="V20180326\Models\ReleaseConfigWithDetailRespResponse.cs" />
     <Compile Include="V20180326\Models\ReleaseFileConfigRequest.cs" />
     <Compile Include="V20180326\Models\ReleaseFileConfigResponse.cs" />
     <Compile Include="V20180326\Models\ReleasePublicConfigRequest.cs" />
@@ -525,6 +541,7 @@
     <Compile Include="V20180326\Models\RepositoryList.cs" />
     <Compile Include="V20180326\Models\Resource.cs" />
     <Compile Include="V20180326\Models\ResourceFieldRef.cs" />
+    <Compile Include="V20180326\Models\ResourceTaskStatusResult.cs" />
     <Compile Include="V20180326\Models\RevocationConfigRequest.cs" />
     <Compile Include="V20180326\Models\RevocationConfigResponse.cs" />
     <Compile Include="V20180326\Models\RevocationPublicConfigRequest.cs" />

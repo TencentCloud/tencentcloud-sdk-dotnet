@@ -25,16 +25,10 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 输出源序号。由系统进行分配。
+        /// 输出源 Id。由系统进行分配。
         /// </summary>
-        [JsonProperty("Index")]
-        public long? Index{ get; set; }
-
-        /// <summary>
-        /// 输出源的名称。
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
         /// 输出直播流地址。支持的直播流类型为 RTMP 和 SRT。
@@ -42,15 +36,21 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("PushUrl")]
         public string PushUrl{ get; set; }
 
+        /// <summary>
+        /// 输出源的名称。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Index", this.Index);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "PushUrl", this.PushUrl);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

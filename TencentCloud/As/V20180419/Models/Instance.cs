@@ -131,6 +131,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("WarmupStatus")]
         public string WarmupStatus{ get; set; }
 
+        /// <summary>
+        /// 置放群组id，仅支持指定一个。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DisasterRecoverGroupIds")]
+        public string[] DisasterRecoverGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +158,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
             this.SetParamSimple(map, prefix + "AutoScalingGroupName", this.AutoScalingGroupName);
             this.SetParamSimple(map, prefix + "WarmupStatus", this.WarmupStatus);
+            this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         }
     }
 }

@@ -493,6 +493,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 创建API限流规则,并返回规则信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiRateLimitRuleWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreateApiRateLimitRuleWithDetailRespResponse"/></returns>
+        public async Task<CreateApiRateLimitRuleWithDetailRespResponse> CreateApiRateLimitRuleWithDetailResp(CreateApiRateLimitRuleWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreateApiRateLimitRuleWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateApiRateLimitRuleWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApiRateLimitRuleWithDetailRespResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建API限流规则,并返回规则信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiRateLimitRuleWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreateApiRateLimitRuleWithDetailRespResponse"/></returns>
+        public CreateApiRateLimitRuleWithDetailRespResponse CreateApiRateLimitRuleWithDetailRespSync(CreateApiRateLimitRuleWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreateApiRateLimitRuleWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateApiRateLimitRuleWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApiRateLimitRuleWithDetailRespResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建应用
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationRequest"/></param>
@@ -644,6 +684,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "CreateConfigTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConfigTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建参数模板,并返回模版详细信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateConfigTemplateWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreateConfigTemplateWithDetailRespResponse"/></returns>
+        public async Task<CreateConfigTemplateWithDetailRespResponse> CreateConfigTemplateWithDetailResp(CreateConfigTemplateWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreateConfigTemplateWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateConfigTemplateWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConfigTemplateWithDetailRespResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建参数模板,并返回模版详细信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateConfigTemplateWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreateConfigTemplateWithDetailRespResponse"/></returns>
+        public CreateConfigTemplateWithDetailRespResponse CreateConfigTemplateWithDetailRespSync(CreateConfigTemplateWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreateConfigTemplateWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateConfigTemplateWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConfigTemplateWithDetailRespResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1053,6 +1133,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 创建路径重写，并返回路径重写规则信息
+        /// </summary>
+        /// <param name="req"><see cref="CreatePathRewritesWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreatePathRewritesWithDetailRespResponse"/></returns>
+        public async Task<CreatePathRewritesWithDetailRespResponse> CreatePathRewritesWithDetailResp(CreatePathRewritesWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreatePathRewritesWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePathRewritesWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePathRewritesWithDetailRespResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建路径重写，并返回路径重写规则信息
+        /// </summary>
+        /// <param name="req"><see cref="CreatePathRewritesWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreatePathRewritesWithDetailRespResponse"/></returns>
+        public CreatePathRewritesWithDetailRespResponse CreatePathRewritesWithDetailRespSync(CreatePathRewritesWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreatePathRewritesWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePathRewritesWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePathRewritesWithDetailRespResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建公共配置项
         /// </summary>
         /// <param name="req"><see cref="CreatePublicConfigRequest"/></param>
@@ -1084,6 +1204,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "CreatePublicConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePublicConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建公共配置项，并返回配置项详细信息
+        /// </summary>
+        /// <param name="req"><see cref="CreatePublicConfigWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreatePublicConfigWithDetailRespResponse"/></returns>
+        public async Task<CreatePublicConfigWithDetailRespResponse> CreatePublicConfigWithDetailResp(CreatePublicConfigWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreatePublicConfigWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePublicConfigWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePublicConfigWithDetailRespResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建公共配置项，并返回配置项详细信息
+        /// </summary>
+        /// <param name="req"><see cref="CreatePublicConfigWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreatePublicConfigWithDetailRespResponse"/></returns>
+        public CreatePublicConfigWithDetailRespResponse CreatePublicConfigWithDetailRespSync(CreatePublicConfigWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreatePublicConfigWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePublicConfigWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePublicConfigWithDetailRespResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1253,6 +1413,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 创建单元化规则, 并返回详细信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateUnitRuleWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreateUnitRuleWithDetailRespResponse"/></returns>
+        public async Task<CreateUnitRuleWithDetailRespResponse> CreateUnitRuleWithDetailResp(CreateUnitRuleWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreateUnitRuleWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUnitRuleWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUnitRuleWithDetailRespResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建单元化规则, 并返回详细信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateUnitRuleWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreateUnitRuleWithDetailRespResponse"/></returns>
+        public CreateUnitRuleWithDetailRespResponse CreateUnitRuleWithDetailRespSync(CreateUnitRuleWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreateUnitRuleWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateUnitRuleWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUnitRuleWithDetailRespResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除Api分组
         /// </summary>
         /// <param name="req"><see cref="DeleteApiGroupRequest"/></param>
@@ -1284,6 +1484,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DeleteApiGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除API限流规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiRateLimitRuleRequest"/></param>
+        /// <returns><see cref="DeleteApiRateLimitRuleResponse"/></returns>
+        public async Task<DeleteApiRateLimitRuleResponse> DeleteApiRateLimitRule(DeleteApiRateLimitRuleRequest req)
+        {
+             JsonResponseModel<DeleteApiRateLimitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteApiRateLimitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApiRateLimitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除API限流规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiRateLimitRuleRequest"/></param>
+        /// <returns><see cref="DeleteApiRateLimitRuleResponse"/></returns>
+        public DeleteApiRateLimitRuleResponse DeleteApiRateLimitRuleSync(DeleteApiRateLimitRuleRequest req)
+        {
+             JsonResponseModel<DeleteApiRateLimitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteApiRateLimitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApiRateLimitRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5217,6 +5457,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 资源任务的执行状态描述接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeResourceTaskStatusResponse"/></returns>
+        public async Task<DescribeResourceTaskStatusResponse> DescribeResourceTaskStatus(DescribeResourceTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeResourceTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 资源任务的执行状态描述接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeResourceTaskStatusResponse"/></returns>
+        public DescribeResourceTaskStatusResponse DescribeResourceTaskStatusSync(DescribeResourceTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeResourceTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询简单应用列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSimpleApplicationsRequest"/></param>
@@ -7132,6 +7412,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "ReleaseConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发布配置,并且返回配置 ID
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseConfigWithDetailRespRequest"/></param>
+        /// <returns><see cref="ReleaseConfigWithDetailRespResponse"/></returns>
+        public async Task<ReleaseConfigWithDetailRespResponse> ReleaseConfigWithDetailResp(ReleaseConfigWithDetailRespRequest req)
+        {
+             JsonResponseModel<ReleaseConfigWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReleaseConfigWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseConfigWithDetailRespResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发布配置,并且返回配置 ID
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseConfigWithDetailRespRequest"/></param>
+        /// <returns><see cref="ReleaseConfigWithDetailRespResponse"/></returns>
+        public ReleaseConfigWithDetailRespResponse ReleaseConfigWithDetailRespSync(ReleaseConfigWithDetailRespRequest req)
+        {
+             JsonResponseModel<ReleaseConfigWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReleaseConfigWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseConfigWithDetailRespResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

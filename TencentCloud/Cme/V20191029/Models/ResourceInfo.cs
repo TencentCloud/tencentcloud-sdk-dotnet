@@ -26,7 +26,6 @@ namespace TencentCloud.Cme.V20191029.Models
         
         /// <summary>
         /// 媒资和分类资源。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public Resource Resource{ get; set; }

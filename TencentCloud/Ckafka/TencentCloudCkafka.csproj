@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.725</VersionPrefix>
+    <VersionPrefix>3.0.726</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,7 @@
     <Compile Include="V20190819\Models\AclResponse.cs" />
     <Compile Include="V20190819\Models\AclRule.cs" />
     <Compile Include="V20190819\Models\AclRuleInfo.cs" />
+    <Compile Include="V20190819\Models\AclRuleResp.cs" />
     <Compile Include="V20190819\Models\AnalyseParam.cs" />
     <Compile Include="V20190819\Models\AppIdResponse.cs" />
     <Compile Include="V20190819\Models\Assignment.cs" />
@@ -88,6 +89,8 @@
     <Compile Include="V20190819\Models\CosParam.cs" />
     <Compile Include="V20190819\Models\CreateAclRequest.cs" />
     <Compile Include="V20190819\Models\CreateAclResponse.cs" />
+    <Compile Include="V20190819\Models\CreateAclRuleRequest.cs" />
+    <Compile Include="V20190819\Models\CreateAclRuleResponse.cs" />
     <Compile Include="V20190819\Models\CreateCdcClusterRequest.cs" />
     <Compile Include="V20190819\Models\CreateCdcClusterResponse.cs" />
     <Compile Include="V20190819\Models\CreateConnectResourceRequest.cs" />
@@ -153,6 +156,8 @@
     <Compile Include="V20190819\Models\DeleteUserResponse.cs" />
     <Compile Include="V20190819\Models\DescribeACLRequest.cs" />
     <Compile Include="V20190819\Models\DescribeACLResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeAclRuleRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeAclRuleResponse.cs" />
     <Compile Include="V20190819\Models\DescribeAppInfoRequest.cs" />
     <Compile Include="V20190819\Models\DescribeAppInfoResponse.cs" />
     <Compile Include="V20190819\Models\DescribeCkafkaZoneRequest.cs" />
@@ -270,6 +275,8 @@
     <Compile Include="V20190819\Models\MariaDBConnectParam.cs" />
     <Compile Include="V20190819\Models\MariaDBModifyConnectParam.cs" />
     <Compile Include="V20190819\Models\MariaDBParam.cs" />
+    <Compile Include="V20190819\Models\ModifyAclRuleRequest.cs" />
+    <Compile Include="V20190819\Models\ModifyAclRuleResponse.cs" />
     <Compile Include="V20190819\Models\ModifyConnectResourceRequest.cs" />
     <Compile Include="V20190819\Models\ModifyConnectResourceResponse.cs" />
     <Compile Include="V20190819\Models\ModifyDatahubTaskRequest.cs" />

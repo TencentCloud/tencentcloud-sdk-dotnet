@@ -51,6 +51,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ClearInstanceNameSettings")]
         public bool? ClearInstanceNameSettings{ get; set; }
 
+        /// <summary>
+        /// 是否清空置放群组信息，非必填，默认为 false。
+        /// 填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
+        /// </summary>
+        [JsonProperty("ClearDisasterRecoverGroupIds")]
+        public bool? ClearDisasterRecoverGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +68,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ClearDataDisks", this.ClearDataDisks);
             this.SetParamSimple(map, prefix + "ClearHostNameSettings", this.ClearHostNameSettings);
             this.SetParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
+            this.SetParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
         }
     }
 }

@@ -71,6 +71,16 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("ContainerImageAccelerate")]
         public bool? ContainerImageAccelerate{ get; set; }
 
+        /// <summary>
+        /// 镜像函数端口设置
+        /// -1: 无端口镜像函数
+        /// 0: 默认端口，当前默认端口是9000
+        /// 其他: 特殊端口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImagePort")]
+        public long? ImagePort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +94,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "Args", this.Args);
             this.SetParamSimple(map, prefix + "ContainerImageAccelerate", this.ContainerImageAccelerate);
+            this.SetParamSimple(map, prefix + "ImagePort", this.ImagePort);
         }
     }
 }

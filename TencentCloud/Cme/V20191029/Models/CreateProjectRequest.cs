@@ -51,6 +51,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <li>VIDEO_SEGMENTATION：视频拆条。</li>
         /// <li>STREAM_CONNECT：云转推。</li>
         /// <li>RECORD_REPLAY：录制回放。</li>
+        /// <li>MEDIA_CAST：点播转直播。</li>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
@@ -115,6 +116,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("RecordReplayProjectInput")]
         public RecordReplayProjectInput RecordReplayProjectInput{ get; set; }
 
+        /// <summary>
+        /// 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+        /// </summary>
+        [JsonProperty("MediaCastProjectInput")]
+        public MediaCastProjectInput MediaCastProjectInput{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "VideoSegmentationProjectInput.", this.VideoSegmentationProjectInput);
             this.SetParamObj(map, prefix + "StreamConnectProjectInput.", this.StreamConnectProjectInput);
             this.SetParamObj(map, prefix + "RecordReplayProjectInput.", this.RecordReplayProjectInput);
+            this.SetParamObj(map, prefix + "MediaCastProjectInput.", this.MediaCastProjectInput);
         }
     }
 }

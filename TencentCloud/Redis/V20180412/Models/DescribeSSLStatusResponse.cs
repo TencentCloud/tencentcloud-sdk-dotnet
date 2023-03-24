@@ -25,31 +25,37 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 证书下载地址
+        /// SSL 证书下载地址。
         /// </summary>
         [JsonProperty("CertDownloadUrl")]
         public string CertDownloadUrl{ get; set; }
 
         /// <summary>
-        /// 证书下载链接到期时间
+        /// 证书下载链接到期时间。
         /// </summary>
         [JsonProperty("UrlExpiredTime")]
         public string UrlExpiredTime{ get; set; }
 
         /// <summary>
-        /// 实例SSL配置状态， true：开启 false：关闭
+        /// 标识实例开启 SSL 功能。
+        /// - true：开启 。
+        /// - false：关闭。
         /// </summary>
         [JsonProperty("SSLConfig")]
         public bool? SSLConfig{ get; set; }
 
         /// <summary>
-        /// 实例SSL特性支持， true：支持 false：不支持（小版本升级后才能支持SSL特性）
+        /// 标识实例是否支持 SSL特性。
+        /// - true：支持。
+        /// - false：不支持。
         /// </summary>
         [JsonProperty("FeatureSupport")]
         public bool? FeatureSupport{ get; set; }
 
         /// <summary>
-        /// SSL配置状态，1: 配置中 2：配置成功
+        /// 说明配置 SSL 的状态。
+        /// - 1: 配置中。
+        /// - 2：配置成功。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

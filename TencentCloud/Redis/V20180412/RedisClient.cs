@@ -1053,7 +1053,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询订单信息
+        /// 本接口（DescribeInstanceDealDetail）用于查询订单信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceDealDetailRequest"/></param>
         /// <returns><see cref="DescribeInstanceDealDetailResponse"/></returns>
@@ -1073,7 +1073,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询订单信息
+        /// 本接口（DescribeInstanceDealDetail）用于查询订单信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceDealDetailRequest"/></param>
         /// <returns><see cref="DescribeInstanceDealDetailResponse"/></returns>
@@ -2013,7 +2013,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询SSL状态
+        /// 本接口（DescribeSSLStatus）用于查询实例 SSL 认证相关信息，包括开启状态、配置状态、证书地址等。
         /// </summary>
         /// <param name="req"><see cref="DescribeSSLStatusRequest"/></param>
         /// <returns><see cref="DescribeSSLStatusResponse"/></returns>
@@ -2033,7 +2033,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询SSL状态
+        /// 本接口（DescribeSSLStatus）用于查询实例 SSL 认证相关信息，包括开启状态、配置状态、证书地址等。
         /// </summary>
         /// <param name="req"><see cref="DescribeSSLStatusRequest"/></param>
         /// <returns><see cref="DescribeSSLStatusResponse"/></returns>
@@ -2613,7 +2613,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改redis密码
+        /// 本接口（ModfiyInstancePassword）用于修改实例访问密码。
         /// </summary>
         /// <param name="req"><see cref="ModfiyInstancePasswordRequest"/></param>
         /// <returns><see cref="ModfiyInstancePasswordResponse"/></returns>
@@ -2633,7 +2633,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改redis密码
+        /// 本接口（ModfiyInstancePassword）用于修改实例访问密码。
         /// </summary>
         /// <param name="req"><see cref="ModfiyInstancePasswordRequest"/></param>
         /// <returns><see cref="ModfiyInstancePasswordResponse"/></returns>

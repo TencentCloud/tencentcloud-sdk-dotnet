@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 订单详细信息
+        /// 订单详细信息。
         /// </summary>
         [JsonProperty("DealDetails")]
         public TradeDealDetail[] DealDetails{ get; set; }
