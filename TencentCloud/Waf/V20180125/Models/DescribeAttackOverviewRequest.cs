@@ -24,12 +24,54 @@ namespace TencentCloud.Waf.V20180125.Models
     public class DescribeAttackOverviewRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 查询开始时间
+        /// </summary>
+        [JsonProperty("FromTime")]
+        public string FromTime{ get; set; }
+
+        /// <summary>
+        /// 查询结束时间
+        /// </summary>
+        [JsonProperty("ToTime")]
+        public string ToTime{ get; set; }
+
+        /// <summary>
+        /// 客户的Appid
+        /// </summary>
+        [JsonProperty("Appid")]
+        public ulong? Appid{ get; set; }
+
+        /// <summary>
+        /// 被查询的域名
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 只有两个值有效，sparta-waf，clb-waf，不传则不过滤
+        /// </summary>
+        [JsonProperty("Edition")]
+        public string Edition{ get; set; }
+
+        /// <summary>
+        /// WAF实例ID，不传则不过滤
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "FromTime", this.FromTime);
+            this.SetParamSimple(map, prefix + "ToTime", this.ToTime);
+            this.SetParamSimple(map, prefix + "Appid", this.Appid);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Edition", this.Edition);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
         }
     }
 }

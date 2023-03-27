@@ -3517,7 +3517,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 获取与云监控融合实例列表
+        /// 获取与 Prometheus 监控融合实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusInstancesOverviewRequest"/></param>
         /// <returns><see cref="DescribePrometheusInstancesOverviewResponse"/></returns>
@@ -3537,7 +3537,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 获取与云监控融合实例列表
+        /// 获取与 Prometheus 监控融合实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusInstancesOverviewRequest"/></param>
         /// <returns><see cref="DescribePrometheusInstancesOverviewResponse"/></returns>
@@ -4293,7 +4293,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 云监控告警编辑告警通知模板
+        /// 编辑告警通知模板
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmNoticeRequest"/></param>
         /// <returns><see cref="ModifyAlarmNoticeResponse"/></returns>
@@ -4313,7 +4313,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 云监控告警编辑告警通知模板
+        /// 编辑告警通知模板
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmNoticeRequest"/></param>
         /// <returns><see cref="ModifyAlarmNoticeResponse"/></returns>

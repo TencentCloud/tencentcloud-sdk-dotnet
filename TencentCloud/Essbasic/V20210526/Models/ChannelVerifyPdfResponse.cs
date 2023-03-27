@@ -31,8 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? VerifyResult{ get; set; }
 
         /// <summary>
-        /// 验签结果详情,内部状态1-验签成功，在电子签签署；2-验签成功，在其他平台签署；3-验签失败；4-pdf文件没有签名域
-        /// ；5-文件签名格式错误
+        /// 验签结果详情,内部状态1-验签成功，在电子签签署；2-验签成功，在其他平台签署；3-验签失败；4-pdf文件没有签名域；5-文件签名格式错误
         /// </summary>
         [JsonProperty("PdfVerifyResults")]
         public PdfVerifyResult[] PdfVerifyResults{ get; set; }

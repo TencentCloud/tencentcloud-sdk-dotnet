@@ -245,6 +245,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("JobExecutorMaxNumbers")]
         public long? JobExecutorMaxNumbers{ get; set; }
 
+        /// <summary>
+        /// 镜像版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SparkImageVersion")]
+        public string SparkImageVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -286,6 +293,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "TaskNum", this.TaskNum);
             this.SetParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
             this.SetParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
+            this.SetParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
         }
     }
 }

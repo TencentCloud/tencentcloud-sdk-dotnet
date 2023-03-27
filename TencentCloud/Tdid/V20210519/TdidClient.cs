@@ -53,6 +53,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// DID添加标签
         /// </summary>
         /// <param name="req"><see cref="AddLabelRequest"/></param>
@@ -73,6 +75,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// DID添加标签
         /// </summary>
         /// <param name="req"><see cref="AddLabelRequest"/></param>
@@ -93,6 +97,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 撤消权威机构认证
         /// </summary>
         /// <param name="req"><see cref="CancelAuthorityIssuerRequest"/></param>
@@ -113,6 +119,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 撤消权威机构认证
         /// </summary>
         /// <param name="req"><see cref="CancelAuthorityIssuerRequest"/></param>
@@ -173,6 +181,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 检查部署情况
         /// </summary>
         /// <param name="req"><see cref="CheckDidDeployRequest"/></param>
@@ -193,6 +203,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 检查部署情况
         /// </summary>
         /// <param name="req"><see cref="CheckDidDeployRequest"/></param>
@@ -253,6 +265,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 创建DID服务
         /// </summary>
         /// <param name="req"><see cref="CreateDidServiceRequest"/></param>
@@ -273,6 +287,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 创建DID服务
         /// </summary>
         /// <param name="req"><see cref="CreateDidServiceRequest"/></param>
@@ -293,6 +309,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 新建标签
         /// </summary>
         /// <param name="req"><see cref="CreateLabelRequest"/></param>
@@ -313,6 +331,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 新建标签
         /// </summary>
         /// <param name="req"><see cref="CreateLabelRequest"/></param>
@@ -493,6 +513,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 通过Name部署TDID合约
         /// </summary>
         /// <param name="req"><see cref="DeployByNameRequest"/></param>
@@ -513,6 +535,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 通过Name部署TDID合约
         /// </summary>
         /// <param name="req"><see cref="DeployByNameRequest"/></param>
@@ -533,6 +557,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 凭证模版下载
         /// </summary>
         /// <param name="req"><see cref="DownCptRequest"/></param>
@@ -553,6 +579,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 凭证模版下载
         /// </summary>
         /// <param name="req"><see cref="DownCptRequest"/></param>
@@ -573,6 +601,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 启用合约
         /// </summary>
         /// <param name="req"><see cref="EnableHashRequest"/></param>
@@ -593,6 +623,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 启用合约
         /// </summary>
         /// <param name="req"><see cref="EnableHashRequest"/></param>
@@ -657,6 +689,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 权威机构列表
         /// </summary>
         /// <param name="req"><see cref="GetAuthoritiesListRequest"/></param>
@@ -677,6 +711,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 权威机构列表
         /// </summary>
         /// <param name="req"><see cref="GetAuthoritiesListRequest"/></param>
@@ -737,6 +773,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 获取联盟bcos网络列表
         /// </summary>
         /// <param name="req"><see cref="GetConsortiumClusterListRequest"/></param>
@@ -757,6 +795,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 获取联盟bcos网络列表
         /// </summary>
         /// <param name="req"><see cref="GetConsortiumClusterListRequest"/></param>
@@ -777,6 +817,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 获取联盟列表
         /// </summary>
         /// <param name="req"><see cref="GetConsortiumListRequest"/></param>
@@ -797,6 +839,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 获取联盟列表
         /// </summary>
         /// <param name="req"><see cref="GetConsortiumListRequest"/></param>
@@ -857,6 +901,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 凭证模版列表
         /// </summary>
         /// <param name="req"><see cref="GetCptListRequest"/></param>
@@ -877,6 +923,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 凭证模版列表
         /// </summary>
         /// <param name="req"><see cref="GetCptListRequest"/></param>
@@ -897,6 +945,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 凭证颁发按机构排行
         /// </summary>
         /// <param name="req"><see cref="GetCredentialCptRankRequest"/></param>
@@ -917,6 +967,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 凭证颁发按机构排行
         /// </summary>
         /// <param name="req"><see cref="GetCredentialCptRankRequest"/></param>
@@ -937,6 +989,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 凭证颁发按机构排行
         /// </summary>
         /// <param name="req"><see cref="GetCredentialIssueRankRequest"/></param>
@@ -957,6 +1011,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 凭证颁发按机构排行
         /// </summary>
         /// <param name="req"><see cref="GetCredentialIssueRankRequest"/></param>
@@ -977,6 +1033,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 凭证颁发趋势
         /// </summary>
         /// <param name="req"><see cref="GetCredentialIssueTrendRequest"/></param>
@@ -997,6 +1055,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 凭证颁发趋势
         /// </summary>
         /// <param name="req"><see cref="GetCredentialIssueTrendRequest"/></param>
@@ -1057,6 +1117,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 概览
         /// </summary>
         /// <param name="req"><see cref="GetDataPanelRequest"/></param>
@@ -1077,6 +1139,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 概览
         /// </summary>
         /// <param name="req"><see cref="GetDataPanelRequest"/></param>
@@ -1097,6 +1161,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 合约部署详情
         /// </summary>
         /// <param name="req"><see cref="GetDeployInfoRequest"/></param>
@@ -1117,6 +1183,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 合约部署详情
         /// </summary>
         /// <param name="req"><see cref="GetDeployInfoRequest"/></param>
@@ -1137,6 +1205,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 合约部署列表
         /// </summary>
         /// <param name="req"><see cref="GetDeployListRequest"/></param>
@@ -1157,6 +1227,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 合约部署列表
         /// </summary>
         /// <param name="req"><see cref="GetDeployListRequest"/></param>
@@ -1177,6 +1249,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 获取DID区块链网络详情
         /// </summary>
         /// <param name="req"><see cref="GetDidClusterDetailRequest"/></param>
@@ -1197,6 +1271,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 获取DID区块链网络详情
         /// </summary>
         /// <param name="req"><see cref="GetDidClusterDetailRequest"/></param>
@@ -1217,6 +1293,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 获取用户的DID网络列表
         /// </summary>
         /// <param name="req"><see cref="GetDidClusterListRequest"/></param>
@@ -1237,6 +1315,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 获取用户的DID网络列表
         /// </summary>
         /// <param name="req"><see cref="GetDidClusterListRequest"/></param>
@@ -1257,6 +1337,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// DID详情
         /// </summary>
         /// <param name="req"><see cref="GetDidDetailRequest"/></param>
@@ -1277,6 +1359,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// DID详情
         /// </summary>
         /// <param name="req"><see cref="GetDidDetailRequest"/></param>
@@ -1337,6 +1421,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// DID列表
         /// </summary>
         /// <param name="req"><see cref="GetDidListRequest"/></param>
@@ -1357,6 +1443,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// DID列表
         /// </summary>
         /// <param name="req"><see cref="GetDidListRequest"/></param>
@@ -1377,6 +1465,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// DID注册趋势
         /// </summary>
         /// <param name="req"><see cref="GetDidRegisterTrendRequest"/></param>
@@ -1397,6 +1487,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// DID注册趋势
         /// </summary>
         /// <param name="req"><see cref="GetDidRegisterTrendRequest"/></param>
@@ -1417,6 +1509,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 获取DID服务详情
         /// </summary>
         /// <param name="req"><see cref="GetDidServiceDetailRequest"/></param>
@@ -1437,6 +1531,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 获取DID服务详情
         /// </summary>
         /// <param name="req"><see cref="GetDidServiceDetailRequest"/></param>
@@ -1457,6 +1553,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 获取DID服务列表
         /// </summary>
         /// <param name="req"><see cref="GetDidServiceListRequest"/></param>
@@ -1477,6 +1575,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 获取DID服务列表
         /// </summary>
         /// <param name="req"><see cref="GetDidServiceListRequest"/></param>
@@ -1497,6 +1597,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 主群组配置列表
         /// </summary>
         /// <param name="req"><see cref="GetGroupListRequest"/></param>
@@ -1517,6 +1619,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 主群组配置列表
         /// </summary>
         /// <param name="req"><see cref="GetGroupListRequest"/></param>
@@ -1537,6 +1641,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 标签列表
         /// </summary>
         /// <param name="req"><see cref="GetLabelListRequest"/></param>
@@ -1557,6 +1663,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 标签列表
         /// </summary>
         /// <param name="req"><see cref="GetLabelListRequest"/></param>
@@ -1577,6 +1685,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 披露策略Policy管理列表
         /// </summary>
         /// <param name="req"><see cref="GetPolicyListRequest"/></param>
@@ -1597,6 +1707,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 披露策略Policy管理列表
         /// </summary>
         /// <param name="req"><see cref="GetPolicyListRequest"/></param>
@@ -1617,6 +1729,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 查看公钥
         /// </summary>
         /// <param name="req"><see cref="GetPublicKeyRequest"/></param>
@@ -1637,6 +1751,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 查看公钥
         /// </summary>
         /// <param name="req"><see cref="GetPublicKeyRequest"/></param>
@@ -1657,6 +1773,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 披露策略Policy查看
         /// </summary>
         /// <param name="req"><see cref="QueryPolicyRequest"/></param>
@@ -1677,6 +1795,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 披露策略Policy查看
         /// </summary>
         /// <param name="req"><see cref="QueryPolicyRequest"/></param>
@@ -1697,6 +1817,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 认证权威机构
         /// </summary>
         /// <param name="req"><see cref="RecognizeAuthorityIssuerRequest"/></param>
@@ -1717,6 +1839,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 认证权威机构
         /// </summary>
         /// <param name="req"><see cref="RecognizeAuthorityIssuerRequest"/></param>
@@ -1737,6 +1861,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 披露策略Policy注册
         /// </summary>
         /// <param name="req"><see cref="RegisterClaimPolicyRequest"/></param>
@@ -1757,6 +1883,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 披露策略Policy注册
         /// </summary>
         /// <param name="req"><see cref="RegisterClaimPolicyRequest"/></param>
@@ -1817,6 +1945,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 注册为权威机构
         /// </summary>
         /// <param name="req"><see cref="RegisterIssuerRequest"/></param>
@@ -1837,6 +1967,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 注册为权威机构
         /// </summary>
         /// <param name="req"><see cref="RegisterIssuerRequest"/></param>
@@ -1857,6 +1989,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 删除合约
         /// </summary>
         /// <param name="req"><see cref="RemoveHashRequest"/></param>
@@ -1877,6 +2011,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 下线已有内测接口，待上线正式版本的接口
+        /// 
         /// 删除合约
         /// </summary>
         /// <param name="req"><see cref="RemoveHashRequest"/></param>

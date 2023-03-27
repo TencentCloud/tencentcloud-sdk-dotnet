@@ -1703,7 +1703,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateFlowLog）用于创建流日志
+        /// 本接口（CreateFlowLog）用于创建网络流日志。
         /// </summary>
         /// <param name="req"><see cref="CreateFlowLogRequest"/></param>
         /// <returns><see cref="CreateFlowLogResponse"/></returns>
@@ -1723,7 +1723,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateFlowLog）用于创建流日志
+        /// 本接口（CreateFlowLog）用于创建网络流日志。
         /// </summary>
         /// <param name="req"><see cref="CreateFlowLogRequest"/></param>
         /// <returns><see cref="CreateFlowLogResponse"/></returns>

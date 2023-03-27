@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 合同Id，流程Id
+        /// 流程ID
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

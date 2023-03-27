@@ -192,6 +192,26 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("AuditRunningStatus")]
         public string AuditRunningStatus{ get; set; }
 
+        /// <summary>
+        /// 内网vip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InternalVip")]
+        public string InternalVip{ get; set; }
+
+        /// <summary>
+        /// 内网port
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InternalVport")]
+        public long? InternalVport{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +246,9 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "SecAuditStatus", this.SecAuditStatus);
             this.SetParamSimple(map, prefix + "AuditPolicyStatus", this.AuditPolicyStatus);
             this.SetParamSimple(map, prefix + "AuditRunningStatus", this.AuditRunningStatus);
+            this.SetParamSimple(map, prefix + "InternalVip", this.InternalVip);
+            this.SetParamSimple(map, prefix + "InternalVport", this.InternalVport);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

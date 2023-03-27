@@ -413,6 +413,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 本接口（CloneInstances）可基于当前实例的备份文件克隆一个完整的新实例。
+        /// </summary>
+        /// <param name="req"><see cref="CloneInstancesRequest"/></param>
+        /// <returns><see cref="CloneInstancesResponse"/></returns>
+        public async Task<CloneInstancesResponse> CloneInstances(CloneInstancesRequest req)
+        {
+             JsonResponseModel<CloneInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloneInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CloneInstances）可基于当前实例的备份文件克隆一个完整的新实例。
+        /// </summary>
+        /// <param name="req"><see cref="CloneInstancesRequest"/></param>
+        /// <returns><see cref="CloneInstancesResponse"/></returns>
+        public CloneInstancesResponse CloneInstancesSync(CloneInstancesRequest req)
+        {
+             JsonResponseModel<CloneInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloneInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 关闭SSL
         /// </summary>
         /// <param name="req"><see cref="CloseSSLRequest"/></param>

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+        /// VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkAclName{ get; set; }
 
         /// <summary>
-        /// 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
+        /// 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。默认值三元组(TRIPLE)。
         /// </summary>
         [JsonProperty("NetworkAclType")]
         public string NetworkAclType{ get; set; }

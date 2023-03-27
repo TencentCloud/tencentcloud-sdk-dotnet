@@ -573,7 +573,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 创建员工
+        /// 创建员工,如需在此接口提醒员工实名，入参Employees的OpenId不传
         /// </summary>
         /// <param name="req"><see cref="CreateIntegrationEmployeesRequest"/></param>
         /// <returns><see cref="CreateIntegrationEmployeesResponse"/></returns>
@@ -593,7 +593,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 创建员工
+        /// 创建员工,如需在此接口提醒员工实名，入参Employees的OpenId不传
         /// </summary>
         /// <param name="req"><see cref="CreateIntegrationEmployeesRequest"/></param>
         /// <returns><see cref="CreateIntegrationEmployeesResponse"/></returns>
@@ -692,6 +692,46 @@ namespace TencentCloud.Ess.V20201111
              {
                  var strResp = this.InternalRequestSync(req, "CreatePrepareFlow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrepareFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreatePreparedPersonalEsign）由于创建导入个人印章。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePreparedPersonalEsignRequest"/></param>
+        /// <returns><see cref="CreatePreparedPersonalEsignResponse"/></returns>
+        public async Task<CreatePreparedPersonalEsignResponse> CreatePreparedPersonalEsign(CreatePreparedPersonalEsignRequest req)
+        {
+             JsonResponseModel<CreatePreparedPersonalEsignResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePreparedPersonalEsign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePreparedPersonalEsignResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreatePreparedPersonalEsign）由于创建导入个人印章。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePreparedPersonalEsignRequest"/></param>
+        /// <returns><see cref="CreatePreparedPersonalEsignResponse"/></returns>
+        public CreatePreparedPersonalEsignResponse CreatePreparedPersonalEsignSync(CreatePreparedPersonalEsignRequest req)
+        {
+             JsonResponseModel<CreatePreparedPersonalEsignResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePreparedPersonalEsign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePreparedPersonalEsignResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

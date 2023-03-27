@@ -737,6 +737,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口（DescribeDCDBInstanceDetail）用于获取DCDB实例详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDCDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDCDBInstanceDetailResponse"/></returns>
+        public async Task<DescribeDCDBInstanceDetailResponse> DescribeDCDBInstanceDetail(DescribeDCDBInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeDCDBInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDCDBInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDCDBInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDCDBInstanceDetail）用于获取DCDB实例详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDCDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDCDBInstanceDetailResponse"/></returns>
+        public DescribeDCDBInstanceDetailResponse DescribeDCDBInstanceDetailSync(DescribeDCDBInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeDCDBInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDCDBInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDCDBInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDCDBInstanceNodeInfo）用于获取实例节点信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDCDBInstanceNodeInfoRequest"/></param>

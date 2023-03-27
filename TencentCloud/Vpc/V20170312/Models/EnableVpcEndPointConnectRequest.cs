@@ -38,6 +38,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 是否接受终端节点连接请求。
+        /// <li> true：自动接受。</li> <li> false：不自动接受。</li>
         /// </summary>
         [JsonProperty("AcceptFlag")]
         public bool? AcceptFlag{ get; set; }

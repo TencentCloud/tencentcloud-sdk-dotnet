@@ -42,6 +42,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 提示，当创建已存在未实名用户时，改字段有值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Note")]
+        public string Note{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "Note", this.Note);
         }
     }
 }

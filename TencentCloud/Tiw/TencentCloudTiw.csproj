@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9F9DFE1A-9228-3902-AA87-2367ECF8DBFC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.726</VersionPrefix>
+    <VersionPrefix>3.0.727</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,9 +48,16 @@
 
   <ItemGroup>
     <Compile Include="V20190919\TiwClient.cs" />
+    <Compile Include="V20190919\Models\ApplicationItem.cs" />
+    <Compile Include="V20190919\Models\ApplyTiwTrialRequest.cs" />
+    <Compile Include="V20190919\Models\ApplyTiwTrialResponse.cs" />
     <Compile Include="V20190919\Models\AuthParam.cs" />
     <Compile Include="V20190919\Models\Canvas.cs" />
     <Compile Include="V20190919\Models\Concat.cs" />
+    <Compile Include="V20190919\Models\CreateApplicationRequest.cs" />
+    <Compile Include="V20190919\Models\CreateApplicationResponse.cs" />
+    <Compile Include="V20190919\Models\CreateOfflineRecordRequest.cs" />
+    <Compile Include="V20190919\Models\CreateOfflineRecordResponse.cs" />
     <Compile Include="V20190919\Models\CreateSnapshotTaskRequest.cs" />
     <Compile Include="V20190919\Models\CreateSnapshotTaskResponse.cs" />
     <Compile Include="V20190919\Models\CreateTranscodeRequest.cs" />
@@ -58,12 +65,31 @@
     <Compile Include="V20190919\Models\CreateVideoGenerationTaskRequest.cs" />
     <Compile Include="V20190919\Models\CreateVideoGenerationTaskResponse.cs" />
     <Compile Include="V20190919\Models\CustomLayout.cs" />
+    <Compile Include="V20190919\Models\DataItem.cs" />
+    <Compile Include="V20190919\Models\DescribeAPIServiceRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeAPIServiceResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeApplicationInfosRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeApplicationInfosResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeApplicationUsageRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeApplicationUsageResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeBoardSDKLogRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeBoardSDKLogResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeIMApplicationsRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeIMApplicationsResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeOfflineRecordCallbackRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeOfflineRecordCallbackResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeOfflineRecordRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeOfflineRecordResponse.cs" />
     <Compile Include="V20190919\Models\DescribeOnlineRecordCallbackRequest.cs" />
     <Compile Include="V20190919\Models\DescribeOnlineRecordCallbackResponse.cs" />
     <Compile Include="V20190919\Models\DescribeOnlineRecordRequest.cs" />
     <Compile Include="V20190919\Models\DescribeOnlineRecordResponse.cs" />
+    <Compile Include="V20190919\Models\DescribePostpaidUsageRequest.cs" />
+    <Compile Include="V20190919\Models\DescribePostpaidUsageResponse.cs" />
     <Compile Include="V20190919\Models\DescribeQualityMetricsRequest.cs" />
     <Compile Include="V20190919\Models\DescribeQualityMetricsResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeRoomListRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeRoomListResponse.cs" />
     <Compile Include="V20190919\Models\DescribeSnapshotTaskRequest.cs" />
     <Compile Include="V20190919\Models\DescribeSnapshotTaskResponse.cs" />
     <Compile Include="V20190919\Models\DescribeTIWDailyUsageRequest.cs" />
@@ -74,24 +100,52 @@
     <Compile Include="V20190919\Models\DescribeTranscodeCallbackResponse.cs" />
     <Compile Include="V20190919\Models\DescribeTranscodeRequest.cs" />
     <Compile Include="V20190919\Models\DescribeTranscodeResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeTranscodeSearchRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeTranscodeSearchResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeUsageSummaryRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeUsageSummaryResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeUserListRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeUserListResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeUserResourcesRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeUserResourcesResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeUserStatusRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeUserStatusResponse.cs" />
     <Compile Include="V20190919\Models\DescribeVideoGenerationTaskCallbackRequest.cs" />
     <Compile Include="V20190919\Models\DescribeVideoGenerationTaskCallbackResponse.cs" />
     <Compile Include="V20190919\Models\DescribeVideoGenerationTaskRequest.cs" />
     <Compile Include="V20190919\Models\DescribeVideoGenerationTaskResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeWhiteboardApplicationConfigRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeWhiteboardApplicationConfigResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeWhiteboardBucketConfigRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeWhiteboardBucketConfigResponse.cs" />
     <Compile Include="V20190919\Models\DescribeWhiteboardPushCallbackRequest.cs" />
     <Compile Include="V20190919\Models\DescribeWhiteboardPushCallbackResponse.cs" />
     <Compile Include="V20190919\Models\DescribeWhiteboardPushRequest.cs" />
     <Compile Include="V20190919\Models\DescribeWhiteboardPushResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeWhiteboardPushSearchRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeWhiteboardPushSearchResponse.cs" />
+    <Compile Include="V20190919\Models\Detail.cs" />
     <Compile Include="V20190919\Models\Interrupt.cs" />
     <Compile Include="V20190919\Models\LayoutParams.cs" />
     <Compile Include="V20190919\Models\MixStream.cs" />
+    <Compile Include="V20190919\Models\ModifyApplicationRequest.cs" />
+    <Compile Include="V20190919\Models\ModifyApplicationResponse.cs" />
+    <Compile Include="V20190919\Models\ModifyAutoRenewFlagRequest.cs" />
+    <Compile Include="V20190919\Models\ModifyAutoRenewFlagResponse.cs" />
+    <Compile Include="V20190919\Models\ModifyWhiteboardApplicationConfigRequest.cs" />
+    <Compile Include="V20190919\Models\ModifyWhiteboardApplicationConfigResponse.cs" />
+    <Compile Include="V20190919\Models\ModifyWhiteboardBucketConfigRequest.cs" />
+    <Compile Include="V20190919\Models\ModifyWhiteboardBucketConfigResponse.cs" />
     <Compile Include="V20190919\Models\OmittedDuration.cs" />
     <Compile Include="V20190919\Models\PauseOnlineRecordRequest.cs" />
     <Compile Include="V20190919\Models\PauseOnlineRecordResponse.cs" />
     <Compile Include="V20190919\Models\RecordControl.cs" />
     <Compile Include="V20190919\Models\ResumeOnlineRecordRequest.cs" />
     <Compile Include="V20190919\Models\ResumeOnlineRecordResponse.cs" />
+    <Compile Include="V20190919\Models\RoomListItem.cs" />
     <Compile Include="V20190919\Models\RoomUsageDataItem.cs" />
+    <Compile Include="V20190919\Models\SetOfflineRecordCallbackRequest.cs" />
+    <Compile Include="V20190919\Models\SetOfflineRecordCallbackResponse.cs" />
     <Compile Include="V20190919\Models\SetOnlineRecordCallbackKeyRequest.cs" />
     <Compile Include="V20190919\Models\SetOnlineRecordCallbackKeyResponse.cs" />
     <Compile Include="V20190919\Models\SetOnlineRecordCallbackRequest.cs" />
@@ -121,10 +175,17 @@
     <Compile Include="V20190919\Models\StopWhiteboardPushResponse.cs" />
     <Compile Include="V20190919\Models\StreamControl.cs" />
     <Compile Include="V20190919\Models\StreamLayout.cs" />
+    <Compile Include="V20190919\Models\Tag.cs" />
     <Compile Include="V20190919\Models\TimeValue.cs" />
+    <Compile Include="V20190919\Models\TranscodeTaskResult.cs" />
+    <Compile Include="V20190919\Models\TranscodeTaskSearchResult.cs" />
     <Compile Include="V20190919\Models\UsageDataItem.cs" />
+    <Compile Include="V20190919\Models\UserListItem.cs" />
     <Compile Include="V20190919\Models\VideoInfo.cs" />
     <Compile Include="V20190919\Models\Whiteboard.cs" />
+    <Compile Include="V20190919\Models\WhiteboardApplicationConfig.cs" />
     <Compile Include="V20190919\Models\WhiteboardPushBackupParam.cs" />
+    <Compile Include="V20190919\Models\WhiteboardPushResult.cs" />
+    <Compile Include="V20190919\Models\WhiteboardPushTaskSearchResult.cs" />
   </ItemGroup>
 </Project>

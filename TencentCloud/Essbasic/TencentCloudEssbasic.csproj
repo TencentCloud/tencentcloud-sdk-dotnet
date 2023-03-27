@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.726</VersionPrefix>
+    <VersionPrefix>3.0.727</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -87,14 +87,21 @@
     <Compile Include="V20210526\Models\ChannelCreateReleaseFlowResponse.cs" />
     <Compile Include="V20210526\Models\ChannelCreateSealPolicyRequest.cs" />
     <Compile Include="V20210526\Models\ChannelCreateSealPolicyResponse.cs" />
+    <Compile Include="V20210526\Models\ChannelCreateUserRolesRequest.cs" />
+    <Compile Include="V20210526\Models\ChannelCreateUserRolesResponse.cs" />
+    <Compile Include="V20210526\Models\ChannelDeleteRoleUsersRequest.cs" />
+    <Compile Include="V20210526\Models\ChannelDeleteRoleUsersResponse.cs" />
     <Compile Include="V20210526\Models\ChannelDeleteSealPoliciesRequest.cs" />
     <Compile Include="V20210526\Models\ChannelDeleteSealPoliciesResponse.cs" />
     <Compile Include="V20210526\Models\ChannelDescribeEmployeesRequest.cs" />
     <Compile Include="V20210526\Models\ChannelDescribeEmployeesResponse.cs" />
     <Compile Include="V20210526\Models\ChannelDescribeOrganizationSealsRequest.cs" />
     <Compile Include="V20210526\Models\ChannelDescribeOrganizationSealsResponse.cs" />
+    <Compile Include="V20210526\Models\ChannelDescribeRolesRequest.cs" />
+    <Compile Include="V20210526\Models\ChannelDescribeRolesResponse.cs" />
     <Compile Include="V20210526\Models\ChannelGetTaskResultApiRequest.cs" />
     <Compile Include="V20210526\Models\ChannelGetTaskResultApiResponse.cs" />
+    <Compile Include="V20210526\Models\ChannelRole.cs" />
     <Compile Include="V20210526\Models\ChannelUpdateSealStatusRequest.cs" />
     <Compile Include="V20210526\Models\ChannelUpdateSealStatusResponse.cs" />
     <Compile Include="V20210526\Models\ChannelVerifyPdfRequest.cs" />
@@ -128,6 +135,7 @@
     <Compile Include="V20210526\Models\DescribeUsageResponse.cs" />
     <Compile Include="V20210526\Models\DownloadFlowInfo.cs" />
     <Compile Include="V20210526\Models\ExtentServiceAuthInfo.cs" />
+    <Compile Include="V20210526\Models\FailedCreateRoleData.cs" />
     <Compile Include="V20210526\Models\Filter.cs" />
     <Compile Include="V20210526\Models\FlowApproverDetail.cs" />
     <Compile Include="V20210526\Models\FlowApproverInfo.cs" />

@@ -67,13 +67,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
+        /// 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。默认值`OutTraffic`。
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 排序方法。顺序：`ASC`，倒序：`DESC`。
+        /// 排序方法。顺序：`ASC`，倒序：`DESC`。默认值`DESC`。
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }

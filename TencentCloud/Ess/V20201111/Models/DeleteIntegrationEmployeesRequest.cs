@@ -36,6 +36,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Employees")]
         public Staff[] Employees{ get; set; }
 
+        /// <summary>
+        /// 代理信息
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArrayObj(map, prefix + "Employees.", this.Employees);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

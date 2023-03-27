@@ -25,25 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 流日志实例名字
+        /// 流日志实例名字。
         /// </summary>
         [JsonProperty("FlowLogName")]
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
+        /// 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 资源唯一ID
+        /// 资源唯一ID。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 流日志采集类型，ACCEPT|REJECT|ALL
+        /// 流日志采集类型，ACCEPT|REJECT|ALL。
         /// </summary>
         [JsonProperty("TrafficType")]
         public string TrafficType{ get; set; }
@@ -55,25 +55,25 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 流日志实例描述
+        /// 流日志实例描述。
         /// </summary>
         [JsonProperty("FlowLogDescription")]
         public string FlowLogDescription{ get; set; }
 
         /// <summary>
-        /// 流日志存储ID
+        /// 流日志存储ID。
         /// </summary>
         [JsonProperty("CloudLogId")]
         public string CloudLogId{ get; set; }
 
         /// <summary>
-        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 消费端类型：cls、ckafka
+        /// 消费端类型：cls、ckafka。默认值cls。
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

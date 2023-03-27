@@ -50,7 +50,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Email{ get; set; }
 
         /// <summary>
-        /// 用户在第三方平台id
+        /// 用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenId")]
@@ -96,6 +96,18 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("QuiteJob")]
         public long? QuiteJob{ get; set; }
 
+        /// <summary>
+        /// 员工离职交接人用户id
+        /// </summary>
+        [JsonProperty("ReceiveUserId")]
+        public string ReceiveUserId{ get; set; }
+
+        /// <summary>
+        /// 员工离职交接人用户OpenId
+        /// </summary>
+        [JsonProperty("ReceiveOpenId")]
+        public string ReceiveOpenId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +125,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "VerifiedOn", this.VerifiedOn);
             this.SetParamSimple(map, prefix + "QuiteJob", this.QuiteJob);
+            this.SetParamSimple(map, prefix + "ReceiveUserId", this.ReceiveUserId);
+            this.SetParamSimple(map, prefix + "ReceiveOpenId", this.ReceiveOpenId);
         }
     }
 }

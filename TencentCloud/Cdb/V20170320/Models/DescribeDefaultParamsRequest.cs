@@ -36,6 +36,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
+        /// <summary>
+        /// 参数模板引擎，默认值：InnoDB
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }

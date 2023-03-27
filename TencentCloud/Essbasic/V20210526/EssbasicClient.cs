@@ -745,6 +745,86 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 渠道版绑定员工角色
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateUserRolesRequest"/></param>
+        /// <returns><see cref="ChannelCreateUserRolesResponse"/></returns>
+        public async Task<ChannelCreateUserRolesResponse> ChannelCreateUserRoles(ChannelCreateUserRolesRequest req)
+        {
+             JsonResponseModel<ChannelCreateUserRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateUserRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateUserRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道版绑定员工角色
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateUserRolesRequest"/></param>
+        /// <returns><see cref="ChannelCreateUserRolesResponse"/></returns>
+        public ChannelCreateUserRolesResponse ChannelCreateUserRolesSync(ChannelCreateUserRolesRequest req)
+        {
+             JsonResponseModel<ChannelCreateUserRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateUserRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateUserRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道版删除员工绑定角色
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDeleteRoleUsersRequest"/></param>
+        /// <returns><see cref="ChannelDeleteRoleUsersResponse"/></returns>
+        public async Task<ChannelDeleteRoleUsersResponse> ChannelDeleteRoleUsers(ChannelDeleteRoleUsersRequest req)
+        {
+             JsonResponseModel<ChannelDeleteRoleUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelDeleteRoleUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDeleteRoleUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道版删除员工绑定角色
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDeleteRoleUsersRequest"/></param>
+        /// <returns><see cref="ChannelDeleteRoleUsersResponse"/></returns>
+        public ChannelDeleteRoleUsersResponse ChannelDeleteRoleUsersSync(ChannelDeleteRoleUsersRequest req)
+        {
+             JsonResponseModel<ChannelDeleteRoleUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelDeleteRoleUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDeleteRoleUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除指定印章下多个授权信息
         /// </summary>
         /// <param name="req"><see cref="ChannelDeleteSealPoliciesRequest"/></param>
@@ -858,6 +938,46 @@ namespace TencentCloud.Essbasic.V20210526
              {
                  var strResp = this.InternalRequestSync(req, "ChannelDescribeOrganizationSeals");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDescribeOrganizationSealsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道办查询用户角色
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDescribeRolesRequest"/></param>
+        /// <returns><see cref="ChannelDescribeRolesResponse"/></returns>
+        public async Task<ChannelDescribeRolesResponse> ChannelDescribeRoles(ChannelDescribeRolesRequest req)
+        {
+             JsonResponseModel<ChannelDescribeRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelDescribeRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDescribeRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道办查询用户角色
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDescribeRolesRequest"/></param>
+        /// <returns><see cref="ChannelDescribeRolesResponse"/></returns>
+        public ChannelDescribeRolesResponse ChannelDescribeRolesSync(ChannelDescribeRolesRequest req)
+        {
+             JsonResponseModel<ChannelDescribeRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelDescribeRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDescribeRolesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

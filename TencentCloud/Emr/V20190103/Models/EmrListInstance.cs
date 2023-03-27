@@ -217,6 +217,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("OutSideSoftInfo")]
         public SoftDependInfo[] OutSideSoftInfo{ get; set; }
 
+        /// <summary>
+        /// 当前集群的应用场景是否支持体外客户端
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportOutsideCluster")]
+        public bool? IsSupportOutsideCluster{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -252,6 +259,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
             this.SetParamSimple(map, prefix + "IsHandsCluster", this.IsHandsCluster);
             this.SetParamArrayObj(map, prefix + "OutSideSoftInfo.", this.OutSideSoftInfo);
+            this.SetParamSimple(map, prefix + "IsSupportOutsideCluster", this.IsSupportOutsideCluster);
         }
     }
 }

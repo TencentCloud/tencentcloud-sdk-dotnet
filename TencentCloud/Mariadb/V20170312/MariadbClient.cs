@@ -737,6 +737,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口(DescribeDBInstanceDetail)用于查询指定实例的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceDetailResponse"/></returns>
+        public async Task<DescribeDBInstanceDetailResponse> DescribeDBInstanceDetail(DescribeDBInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBInstanceDetail)用于查询指定实例的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceDetailResponse"/></returns>
+        public DescribeDBInstanceDetailResponse DescribeDBInstanceDetailSync(DescribeDBInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBInstanceSpecs)用于查询可创建的云数据库可售卖的规格配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceSpecsRequest"/></param>
