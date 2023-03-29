@@ -37,7 +37,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificatePrivateKey{ get; set; }
 
         /// <summary>
-        /// 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
+        /// 证书类型，默认 SVR。CA = CA证书，SVR = 服务器证书。
         /// </summary>
         [JsonProperty("CertificateType")]
         public string CertificateType{ get; set; }

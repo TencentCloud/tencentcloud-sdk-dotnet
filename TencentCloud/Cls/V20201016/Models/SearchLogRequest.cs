@@ -96,6 +96,14 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("SamplingRate")]
         public float? SamplingRate{ get; set; }
 
+        /// <summary>
+        /// 检索语法规则，默认值为0。
+        /// 0：Lucene语法，1：CQL语法。
+        /// 详细说明参见https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules
+        /// </summary>
+        [JsonProperty("SyntaxRule")]
+        public ulong? SyntaxRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +119,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
             this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
+            this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         }
     }
 }

@@ -733,6 +733,46 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 根据房间号搜索实时录制任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordSearchRequest"/></param>
+        /// <returns><see cref="DescribeRecordSearchResponse"/></returns>
+        public async Task<DescribeRecordSearchResponse> DescribeRecordSearch(DescribeRecordSearchRequest req)
+        {
+             JsonResponseModel<DescribeRecordSearchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordSearch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordSearchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据房间号搜索实时录制任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordSearchRequest"/></param>
+        /// <returns><see cref="DescribeRecordSearchResponse"/></returns>
+        public DescribeRecordSearchResponse DescribeRecordSearchSync(DescribeRecordSearchRequest req)
+        {
+             JsonResponseModel<DescribeRecordSearchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordSearch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordSearchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询白板房间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomListRequest"/></param>

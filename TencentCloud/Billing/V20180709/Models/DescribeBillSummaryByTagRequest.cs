@@ -37,7 +37,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 分账标签键
+        /// 分账标签键，用户自定义
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }

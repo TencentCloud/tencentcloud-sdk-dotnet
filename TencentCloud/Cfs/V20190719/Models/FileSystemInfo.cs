@@ -43,7 +43,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 文件系统状态
+        /// 文件系统状态。取值范围：
+        /// - creating:创建中
+        /// - mounting:挂载中
+        /// - create_failed:创建失败
+        /// - available:可使用
+        /// - unserviced:停服中
+        /// - upgrading:升级中
         /// </summary>
         [JsonProperty("LifeCycleState")]
         public string LifeCycleState{ get; set; }
@@ -145,7 +151,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 文件系统声明周期管理状态
+        /// 文件系统生命周期管理状态
         /// </summary>
         [JsonProperty("TieringState")]
         public string TieringState{ get; set; }

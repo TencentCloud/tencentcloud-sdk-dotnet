@@ -29,7 +29,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>ImagePorn：图片鉴黄</li>
         /// <li>ImageTerrorism：图片涉敏</li>
         /// <li>ImagePolitical：图片涉敏</li>
-        /// <li>PornVoice：声音鉴黄</li>
+        /// <li>VoicePorn：声音违规</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -53,7 +53,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public LiveStreamAiReviewImagePoliticalResult[] ImagePoliticalResultSet{ get; set; }
 
         /// <summary>
-        /// 声音鉴黄的结果，当 Type 为 PornVoice 时有效。
+        /// 声音违规的结果，当 Type 为 VoicePorn 时有效。
         /// </summary>
         [JsonProperty("VoicePornResultSet")]
         public LiveStreamAiReviewVoicePornResult[] VoicePornResultSet{ get; set; }

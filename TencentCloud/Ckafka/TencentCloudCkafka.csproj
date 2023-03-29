@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.727</VersionPrefix>
+    <VersionPrefix>3.0.729</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -281,6 +281,8 @@
     <Compile Include="V20190819\Models\ModifyConnectResourceResponse.cs" />
     <Compile Include="V20190819\Models\ModifyDatahubTaskRequest.cs" />
     <Compile Include="V20190819\Models\ModifyDatahubTaskResponse.cs" />
+    <Compile Include="V20190819\Models\ModifyDatahubTopicRequest.cs" />
+    <Compile Include="V20190819\Models\ModifyDatahubTopicResponse.cs" />
     <Compile Include="V20190819\Models\ModifyGroupOffsetsRequest.cs" />
     <Compile Include="V20190819\Models\ModifyGroupOffsetsResponse.cs" />
     <Compile Include="V20190819\Models\ModifyInstanceAttributesConfig.cs" />

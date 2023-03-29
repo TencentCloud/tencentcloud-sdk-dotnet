@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9F9DFE1A-9228-3902-AA87-2367ECF8DBFC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.727</VersionPrefix>
+    <VersionPrefix>3.0.729</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -88,6 +88,8 @@
     <Compile Include="V20190919\Models\DescribePostpaidUsageResponse.cs" />
     <Compile Include="V20190919\Models\DescribeQualityMetricsRequest.cs" />
     <Compile Include="V20190919\Models\DescribeQualityMetricsResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeRecordSearchRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeRecordSearchResponse.cs" />
     <Compile Include="V20190919\Models\DescribeRoomListRequest.cs" />
     <Compile Include="V20190919\Models\DescribeRoomListResponse.cs" />
     <Compile Include="V20190919\Models\DescribeSnapshotTaskRequest.cs" />
@@ -140,6 +142,8 @@
     <Compile Include="V20190919\Models\PauseOnlineRecordRequest.cs" />
     <Compile Include="V20190919\Models\PauseOnlineRecordResponse.cs" />
     <Compile Include="V20190919\Models\RecordControl.cs" />
+    <Compile Include="V20190919\Models\RecordTaskResult.cs" />
+    <Compile Include="V20190919\Models\RecordTaskSearchResult.cs" />
     <Compile Include="V20190919\Models\ResumeOnlineRecordRequest.cs" />
     <Compile Include="V20190919\Models\ResumeOnlineRecordResponse.cs" />
     <Compile Include="V20190919\Models\RoomListItem.cs" />

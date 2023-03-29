@@ -37,19 +37,19 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public long? CategoryId{ get; set; }
 
         /// <summary>
-        /// 产品类型 填写 ( 0 普通产品 )
+        /// 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
         /// </summary>
         [JsonProperty("ProductType")]
         public long? ProductType{ get; set; }
 
         /// <summary>
-        /// 加密类型 加密类型，1表示证书认证，2表示签名认证。
+        /// 加密类型 ，1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
         /// </summary>
         [JsonProperty("EncryptionType")]
         public string EncryptionType{ get; set; }
 
         /// <summary>
-        /// 连接类型 可以填写 wifi cellular else
+        /// 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }

@@ -24,12 +24,33 @@ namespace TencentCloud.Ess.V20201111.Models
     public class ModifyApplicationCallbackInfoRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 调用方用户信息，userId 必填
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
+
+        /// <summary>
+        /// 操作类型：1-新增，2-删除
+        /// </summary>
+        [JsonProperty("OperateType")]
+        public long? OperateType{ get; set; }
+
+        /// <summary>
+        /// 回调信息
+        /// </summary>
+        [JsonProperty("CallbackInfo")]
+        public CallbackInfo CallbackInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "OperateType", this.OperateType);
+            this.SetParamObj(map, prefix + "CallbackInfo.", this.CallbackInfo);
         }
     }
 }

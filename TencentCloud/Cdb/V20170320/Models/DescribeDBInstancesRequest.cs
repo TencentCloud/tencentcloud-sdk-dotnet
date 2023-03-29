@@ -228,6 +228,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ProxyIds")]
         public string[] ProxyIds{ get; set; }
 
+        /// <summary>
+        /// 数据库引擎类型。
+        /// </summary>
+        [JsonProperty("EngineTypes")]
+        public string[] EngineTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -268,6 +274,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArraySimple(map, prefix + "ProxyVips.", this.ProxyVips);
             this.SetParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
+            this.SetParamArraySimple(map, prefix + "EngineTypes.", this.EngineTypes);
         }
     }
 }

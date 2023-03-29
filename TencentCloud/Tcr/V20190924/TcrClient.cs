@@ -293,6 +293,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 前端与现有逻辑均不再使用，可下线
+        /// 
         /// 用于在个人版中创建清理策略
         /// </summary>
         /// <param name="req"><see cref="CreateImageLifecyclePersonalRequest"/></param>
@@ -313,6 +315,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 前端与现有逻辑均不再使用，可下线
+        /// 
         /// 用于在个人版中创建清理策略
         /// </summary>
         /// <param name="req"><see cref="CreateImageLifecyclePersonalRequest"/></param>
@@ -1213,6 +1217,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 前端与后端目前现有逻辑均不再使用，可下线
+        /// 
         /// 用于在个人版镜像仓库中删除仓库Tag自动清理策略
         /// </summary>
         /// <param name="req"><see cref="DeleteImageLifecyclePersonalRequest"/></param>
@@ -1233,6 +1239,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 前端与后端目前现有逻辑均不再使用，可下线
+        /// 
         /// 用于在个人版镜像仓库中删除仓库Tag自动清理策略
         /// </summary>
         /// <param name="req"><see cref="DeleteImageLifecyclePersonalRequest"/></param>

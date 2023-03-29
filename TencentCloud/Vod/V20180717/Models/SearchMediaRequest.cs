@@ -178,6 +178,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] MediaTypes{ get; set; }
 
         /// <summary>
+        /// 媒体文件状态，匹配集合中任意元素。
+        /// <li> Normal：正常；</li>
+        /// <li> SystemForbidden：平台封禁；</li>
+        /// <li> Forbidden：主动封禁。</li>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string[] Status{ get; set; }
+
+        /// <summary>
+        /// 媒体文件审核结果，匹配集合中任意元素。
+        /// <li> pass：审核通过；</li>
+        /// <li> review：疑似违规，建议复审；</li>
+        /// <li> block：确认违规，建议封禁；</li>
+        /// <li> notModerated：未审核。</li>
+        /// </summary>
+        [JsonProperty("ReviewResults")]
+        public string[] ReviewResults{ get; set; }
+
+        /// <summary>
         /// TRTC 应用 ID 集合。匹配集合中的任意元素。
         /// <li>数组长度限制：10。</li>
         /// </summary>
@@ -270,6 +289,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
             this.SetParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
             this.SetParamArraySimple(map, prefix + "MediaTypes.", this.MediaTypes);
+            this.SetParamArraySimple(map, prefix + "Status.", this.Status);
+            this.SetParamArraySimple(map, prefix + "ReviewResults.", this.ReviewResults);
             this.SetParamArraySimple(map, prefix + "TrtcSdkAppIds.", this.TrtcSdkAppIds);
             this.SetParamArraySimple(map, prefix + "TrtcRoomIds.", this.TrtcRoomIds);
             this.SetParamSimple(map, prefix + "Text", this.Text);

@@ -61,6 +61,36 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? SeriousVulNewestImageCount{ get; set; }
 
         /// <summary>
+        /// 系统漏洞重点关注数
+        /// </summary>
+        [JsonProperty("SystemVulnerabilityFocusCount")]
+        public long? SystemVulnerabilityFocusCount{ get; set; }
+
+        /// <summary>
+        /// web漏洞重点关注数
+        /// </summary>
+        [JsonProperty("WebVulnerabilityFocusCount")]
+        public long? WebVulnerabilityFocusCount{ get; set; }
+
+        /// <summary>
+        /// 受影响本地镜像数
+        /// </summary>
+        [JsonProperty("SeriousVulnerabilityLocalImageCount")]
+        public long? SeriousVulnerabilityLocalImageCount{ get; set; }
+
+        /// <summary>
+        /// 受影响仓库镜像数
+        /// </summary>
+        [JsonProperty("SeriousVulnerabilityRegistryImageCount")]
+        public long? SeriousVulnerabilityRegistryImageCount{ get; set; }
+
+        /// <summary>
+        /// 应急漏洞数量
+        /// </summary>
+        [JsonProperty("EmergencyVulnerabilityCount")]
+        public long? EmergencyVulnerabilityCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +108,11 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "PocExpLevelVulCount", this.PocExpLevelVulCount);
             this.SetParamSimple(map, prefix + "RemoteExpLevelVulCount", this.RemoteExpLevelVulCount);
             this.SetParamSimple(map, prefix + "SeriousVulNewestImageCount", this.SeriousVulNewestImageCount);
+            this.SetParamSimple(map, prefix + "SystemVulnerabilityFocusCount", this.SystemVulnerabilityFocusCount);
+            this.SetParamSimple(map, prefix + "WebVulnerabilityFocusCount", this.WebVulnerabilityFocusCount);
+            this.SetParamSimple(map, prefix + "SeriousVulnerabilityLocalImageCount", this.SeriousVulnerabilityLocalImageCount);
+            this.SetParamSimple(map, prefix + "SeriousVulnerabilityRegistryImageCount", this.SeriousVulnerabilityRegistryImageCount);
+            this.SetParamSimple(map, prefix + "EmergencyVulnerabilityCount", this.EmergencyVulnerabilityCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

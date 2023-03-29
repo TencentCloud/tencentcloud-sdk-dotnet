@@ -54,6 +54,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("EnableProductScript")]
         public string EnableProductScript{ get; set; }
 
+        /// <summary>
+        /// 传1或者2；1代表强踢，2代表非强踢。传其它值不做任何处理
+        /// </summary>
+        [JsonProperty("BindStrategy")]
+        public ulong? BindStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProductDesc", this.ProductDesc);
             this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
             this.SetParamSimple(map, prefix + "EnableProductScript", this.EnableProductScript);
+            this.SetParamSimple(map, prefix + "BindStrategy", this.BindStrategy);
         }
     }
 }

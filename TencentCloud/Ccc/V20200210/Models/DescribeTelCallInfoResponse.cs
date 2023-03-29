@@ -49,6 +49,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? VoipCallInCount{ get; set; }
 
         /// <summary>
+        /// 离线语音转文字套餐包消耗分钟数
+        /// </summary>
+        [JsonProperty("AsrOfflineCount")]
+        public long? AsrOfflineCount{ get; set; }
+
+        /// <summary>
+        /// 实时语音转文字套餐包消耗分钟数
+        /// </summary>
+        [JsonProperty("AsrRealtimeCount")]
+        public long? AsrRealtimeCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +76,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "TelCallInCount", this.TelCallInCount);
             this.SetParamSimple(map, prefix + "SeatUsedCount", this.SeatUsedCount);
             this.SetParamSimple(map, prefix + "VoipCallInCount", this.VoipCallInCount);
+            this.SetParamSimple(map, prefix + "AsrOfflineCount", this.AsrOfflineCount);
+            this.SetParamSimple(map, prefix + "AsrRealtimeCount", this.AsrRealtimeCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

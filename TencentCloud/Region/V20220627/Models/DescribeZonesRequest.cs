@@ -30,6 +30,12 @@ namespace TencentCloud.Region.V20220627.Models
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
+        /// <summary>
+        /// 不传或者0表示不查询【可选业务白名单】，1表示查询【可选业务白名单】，该参数设置了1，只有在业务白名单查不到情况下，才会查该白名单
+        /// </summary>
+        [JsonProperty("Scene")]
+        public long? Scene{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Region.V20220627.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "Scene", this.Scene);
         }
     }
 }

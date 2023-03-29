@@ -73,13 +73,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string VoucherName{ get; set; }
 
         /// <summary>
-        /// 发放开始时间
+        /// 发放开始时间,例：2021-01-01
         /// </summary>
         [JsonProperty("TimeFrom")]
         public string TimeFrom{ get; set; }
 
         /// <summary>
-        /// 发放结束时间
+        /// 发放结束时间，例：2021-01-01
         /// </summary>
         [JsonProperty("TimeTo")]
         public string TimeTo{ get; set; }

@@ -613,6 +613,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 集成版绑定员工角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrationUserRolesRequest"/></param>
+        /// <returns><see cref="CreateIntegrationUserRolesResponse"/></returns>
+        public async Task<CreateIntegrationUserRolesResponse> CreateIntegrationUserRoles(CreateIntegrationUserRolesRequest req)
+        {
+             JsonResponseModel<CreateIntegrationUserRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateIntegrationUserRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIntegrationUserRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 集成版绑定员工角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrationUserRolesRequest"/></param>
+        /// <returns><see cref="CreateIntegrationUserRolesResponse"/></returns>
+        public CreateIntegrationUserRolesResponse CreateIntegrationUserRolesSync(CreateIntegrationUserRolesRequest req)
+        {
+             JsonResponseModel<CreateIntegrationUserRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateIntegrationUserRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIntegrationUserRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口（CreateMultiFlowSignQRCode）用于创建一码多扫流程签署二维码。
         /// 适用场景：无需填写签署人信息，可通过模板id生成签署二维码，签署人可通过扫描二维码补充签署信息进行实名签署。常用于提前不知道签署人的身份信息场景，例如：劳务工招工、大批量员工入职等场景。
         /// 适用的模板仅限于B2C（1、无序签署，2、顺序签署时B静默签署，3、顺序签署时B非首位签署）、单C的模板，且模板中发起方没有填写控件。
@@ -961,6 +1001,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 解绑用户角色绑定关系
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIntegrationRoleUsersRequest"/></param>
+        /// <returns><see cref="DeleteIntegrationRoleUsersResponse"/></returns>
+        public async Task<DeleteIntegrationRoleUsersResponse> DeleteIntegrationRoleUsers(DeleteIntegrationRoleUsersRequest req)
+        {
+             JsonResponseModel<DeleteIntegrationRoleUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteIntegrationRoleUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIntegrationRoleUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑用户角色绑定关系
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIntegrationRoleUsersRequest"/></param>
+        /// <returns><see cref="DeleteIntegrationRoleUsersResponse"/></returns>
+        public DeleteIntegrationRoleUsersResponse DeleteIntegrationRoleUsersSync(DeleteIntegrationRoleUsersRequest req)
+        {
+             JsonResponseModel<DeleteIntegrationRoleUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteIntegrationRoleUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIntegrationRoleUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 撤销员工持有的印章权限
         /// </summary>
         /// <param name="req"><see cref="DeleteSealPoliciesRequest"/></param>
@@ -1280,6 +1360,46 @@ namespace TencentCloud.Ess.V20201111
              {
                  var strResp = this.InternalRequestSync(req, "DescribeIntegrationMainOrganizationUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集成版角色
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationRolesRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationRolesResponse"/></returns>
+        public async Task<DescribeIntegrationRolesResponse> DescribeIntegrationRoles(DescribeIntegrationRolesRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集成版角色
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationRolesRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationRolesResponse"/></returns>
+        public DescribeIntegrationRolesResponse DescribeIntegrationRolesSync(DescribeIntegrationRolesRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationRolesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1610,6 +1730,46 @@ namespace TencentCloud.Ess.V20201111
              {
                  var strResp = this.InternalRequestSync(req, "StartFlow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新集成版员工信息(姓名，手机号，邮件)，用户实名后无法更改姓名与手机号
+        /// </summary>
+        /// <param name="req"><see cref="UpdateIntegrationEmployeesRequest"/></param>
+        /// <returns><see cref="UpdateIntegrationEmployeesResponse"/></returns>
+        public async Task<UpdateIntegrationEmployeesResponse> UpdateIntegrationEmployees(UpdateIntegrationEmployeesRequest req)
+        {
+             JsonResponseModel<UpdateIntegrationEmployeesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateIntegrationEmployees");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateIntegrationEmployeesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新集成版员工信息(姓名，手机号，邮件)，用户实名后无法更改姓名与手机号
+        /// </summary>
+        /// <param name="req"><see cref="UpdateIntegrationEmployeesRequest"/></param>
+        /// <returns><see cref="UpdateIntegrationEmployeesResponse"/></returns>
+        public UpdateIntegrationEmployeesResponse UpdateIntegrationEmployeesSync(UpdateIntegrationEmployeesRequest req)
+        {
+             JsonResponseModel<UpdateIntegrationEmployeesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateIntegrationEmployees");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateIntegrationEmployeesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

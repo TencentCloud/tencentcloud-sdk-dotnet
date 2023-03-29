@@ -49,13 +49,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public AgentParams AgentParams{ get; set; }
 
         /// <summary>
-        /// 是否转码，0表示无需转码，1表示需要转码。
+        /// 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
         /// </summary>
         [JsonProperty("WithTranscoding")]
         public ulong? WithTranscoding{ get; set; }
 
         /// <summary>
-        /// 转推流的音频编码参数。
+        /// 转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
         /// </summary>
         [JsonProperty("AudioParams")]
         public McuAudioParams AudioParams{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public SingleSubscribeParams SingleSubscribeParams{ get; set; }
 
         /// <summary>
-        /// 转推的CDN参数。
+        /// 转推的CDN参数。和回推房间参数必须要有一个。
         /// </summary>
         [JsonProperty("PublishCdnParams")]
         public McuPublishCdnParam[] PublishCdnParams{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public McuSeiParams SeiParams{ get; set; }
 
         /// <summary>
-        /// 回推房间信息
+        /// 回推房间信息，和转推CDN参数必须要有一个。
         /// </summary>
         [JsonProperty("FeedBackRoomParams")]
         public McuFeedBackRoomParams[] FeedBackRoomParams{ get; set; }

@@ -24,12 +24,33 @@ namespace TencentCloud.Trtc.V20190722.Models
     public class DescribeTrtcRoomUsageRequest : AbstractModel
     {
         
+        /// <summary>
+        /// TRTC的SdkAppId，和房间所对应的SdkAppId相同。
+        /// </summary>
+        [JsonProperty("SdkAppid")]
+        public ulong? SdkAppid{ get; set; }
+
+        /// <summary>
+        /// 查询开始时间，格式为YYYY-MM-DD HH:MM，精确到分钟级。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 查询结束时间，格式为YYYY-MM-DD HH:MM，单次查询不超过24h。
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SdkAppid", this.SdkAppid);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

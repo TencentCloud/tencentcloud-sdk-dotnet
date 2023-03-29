@@ -82,7 +82,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public InternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// 购买实例数量。包年包月实例取值范围：[1，300]，按量计费实例取值范围：[1，100]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量，具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。
+        /// 购买实例数量。包年包月实例取值范围：[1，500]，按量计费实例取值范围：[1，500]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量，具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }

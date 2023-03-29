@@ -88,6 +88,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Flag")]
         public string Flag{ get; set; }
 
+        /// <summary>
+        /// 环境别名，无字符类型限制
+        /// </summary>
+        [JsonProperty("EnvAlias")]
+        public string EnvAlias{ get; set; }
+
+        /// <summary>
+        /// 附加字段，用于透传额外的自定义信息
+        /// </summary>
+        [JsonProperty("Extra")]
+        public string Extra{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +115,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
             this.SetParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
             this.SetParamSimple(map, prefix + "Flag", this.Flag);
+            this.SetParamSimple(map, prefix + "EnvAlias", this.EnvAlias);
+            this.SetParamSimple(map, prefix + "Extra", this.Extra);
         }
     }
 }

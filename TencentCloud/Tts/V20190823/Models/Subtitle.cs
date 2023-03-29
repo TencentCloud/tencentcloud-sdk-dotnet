@@ -54,6 +54,13 @@ namespace TencentCloud.Tts.V20190823.Models
         [JsonProperty("EndIndex")]
         public long? EndIndex{ get; set; }
 
+        /// <summary>
+        /// 该字的音素
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Phoneme")]
+        public string Phoneme{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "BeginIndex", this.BeginIndex);
             this.SetParamSimple(map, prefix + "EndIndex", this.EndIndex);
+            this.SetParamSimple(map, prefix + "Phoneme", this.Phoneme);
         }
     }
 }

@@ -232,7 +232,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? ComponentDateFontSize{ get; set; }
 
         /// <summary>
-        /// 渠道版控件 id 标识
+        /// 平台模板控件 id 标识
         /// </summary>
         [JsonProperty("ChannelComponentId")]
         public string ChannelComponentId{ get; set; }
@@ -250,7 +250,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public float? OffsetY{ get; set; }
 
         /// <summary>
-        /// //渠道子客控件来源。0-渠道指定；1-用户自定义
+        /// //子客控件来源。0-平台指定；1-用户自定义
         /// </summary>
         [JsonProperty("ChannelComponentSource")]
         public ulong? ChannelComponentSource{ get; set; }

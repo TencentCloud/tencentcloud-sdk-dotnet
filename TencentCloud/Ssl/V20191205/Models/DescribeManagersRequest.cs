@@ -43,13 +43,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 管理人姓名
+        /// 管理人姓名（将废弃），请使用SearchKey
         /// </summary>
         [JsonProperty("ManagerName")]
         public string ManagerName{ get; set; }
 
         /// <summary>
-        /// 模糊查询管理人邮箱
+        /// 模糊查询管理人邮箱（将废弃），请使用SearchKey
         /// </summary>
         [JsonProperty("ManagerMail")]
         public string ManagerMail{ get; set; }
@@ -68,7 +68,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 管理人姓名/邮箱/部门精准匹配
+        /// 管理人姓/管理人名/邮箱/部门精准匹配
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }

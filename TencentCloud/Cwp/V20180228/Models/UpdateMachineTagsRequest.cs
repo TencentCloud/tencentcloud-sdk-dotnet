@@ -31,6 +31,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Quuid{ get; set; }
 
         /// <summary>
+        /// 标签ID，该操作会覆盖原有的标签列表
+        /// </summary>
+        [JsonProperty("TagIds")]
+        public ulong?[] TagIds{ get; set; }
+
+        /// <summary>
         /// 服务器地区 如: ap-guangzhou
         /// </summary>
         [JsonProperty("MachineRegion")]
@@ -42,12 +48,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("MachineArea")]
         public string MachineArea{ get; set; }
 
-        /// <summary>
-        /// 标签ID，该操作会覆盖原有的标签列表
-        /// </summary>
-        [JsonProperty("TagIds")]
-        public ulong?[] TagIds{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,9 +55,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
+            this.SetParamArraySimple(map, prefix + "TagIds.", this.TagIds);
             this.SetParamSimple(map, prefix + "MachineRegion", this.MachineRegion);
             this.SetParamSimple(map, prefix + "MachineArea", this.MachineArea);
-            this.SetParamArraySimple(map, prefix + "TagIds.", this.TagIds);
         }
     }
 }

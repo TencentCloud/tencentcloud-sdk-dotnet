@@ -48,6 +48,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("MaxVideoUser")]
         public MaxVideoUser MaxVideoUser{ get; set; }
 
+        /// <summary>
+        /// 屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
+        /// </summary>
+        [JsonProperty("RenderMode")]
+        public ulong? RenderMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
             this.SetParamArrayObj(map, prefix + "MixLayoutList.", this.MixLayoutList);
             this.SetParamObj(map, prefix + "MaxVideoUser.", this.MaxVideoUser);
+            this.SetParamSimple(map, prefix + "RenderMode", this.RenderMode);
         }
     }
 }

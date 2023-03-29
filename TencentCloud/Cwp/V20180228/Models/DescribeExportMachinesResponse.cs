@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

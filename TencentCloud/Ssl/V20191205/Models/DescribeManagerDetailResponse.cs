@@ -135,6 +135,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         public long? ManagerId{ get; set; }
 
         /// <summary>
+        /// 审核状态详细信息
+        /// </summary>
+        [JsonProperty("StatusInfo")]
+        public ManagerStatusInfo[] StatusInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -164,6 +170,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamObj(map, prefix + "CompanyInfo.", this.CompanyInfo);
             this.SetParamSimple(map, prefix + "CompanyId", this.CompanyId);
             this.SetParamSimple(map, prefix + "ManagerId", this.ManagerId);
+            this.SetParamArrayObj(map, prefix + "StatusInfo.", this.StatusInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

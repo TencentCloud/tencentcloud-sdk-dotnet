@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 导出的任务号
+        /// 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// 下载地址
+        /// 该参数作废
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }

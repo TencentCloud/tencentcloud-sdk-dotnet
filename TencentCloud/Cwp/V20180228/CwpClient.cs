@@ -8739,7 +8739,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 根据任务id导出指定扫描任务详情 
+        /// 根据任务id导出指定扫描任务详情
         /// </summary>
         /// <param name="req"><see cref="ExportScanTaskDetailsRequest"/></param>
         /// <returns><see cref="ExportScanTaskDetailsResponse"/></returns>
@@ -8759,7 +8759,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 根据任务id导出指定扫描任务详情 
+        /// 根据任务id导出指定扫描任务详情
         /// </summary>
         /// <param name="req"><see cref="ExportScanTaskDetailsRequest"/></param>
         /// <returns><see cref="ExportScanTaskDetailsResponse"/></returns>

@@ -305,6 +305,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("MaxDelayTime")]
         public long? MaxDelayTime{ get; set; }
 
+        /// <summary>
+        /// 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -356,6 +362,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
         }
     }
 }

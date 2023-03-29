@@ -367,6 +367,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? ExclusterType{ get; set; }
 
         /// <summary>
+        /// VPC就近访问
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RsAccessStrategy")]
+        public long? RsAccessStrategy{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -432,6 +439,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamObj(map, prefix + "ReplicaConfig.", this.ReplicaConfig);
             this.SetParamObj(map, prefix + "ReplicaStatus.", this.ReplicaStatus);
             this.SetParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
+            this.SetParamSimple(map, prefix + "RsAccessStrategy", this.RsAccessStrategy);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -43,19 +43,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public long? CategoryId{ get; set; }
 
         /// <summary>
-        /// 加密类型
+        /// 加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
         /// </summary>
         [JsonProperty("EncryptionType")]
         public string EncryptionType{ get; set; }
 
         /// <summary>
-        /// 连接类型
+        /// 连接类型。如：
+        /// wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
         /// <summary>
-        /// 数据协议
+        /// 数据协议 (1 使用物模型 2 为自定义类型)
         /// </summary>
         [JsonProperty("DataProtocol")]
         public long? DataProtocol{ get; set; }
@@ -67,7 +68,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string ProductDesc{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
         /// </summary>
         [JsonProperty("DevStatus")]
         public string DevStatus{ get; set; }
@@ -91,7 +92,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 产品类型
+        /// 产品类型。如： 0 普通产品 ， 5 网关产品
         /// </summary>
         [JsonProperty("ProductType")]
         public long? ProductType{ get; set; }
@@ -129,6 +130,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("CreatorNickName")]
         public string CreatorNickName{ get; set; }
 
+        /// <summary>
+        /// 绑定策略（1：强踢；2：非强踢；0：表示无意义）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BindStrategy")]
+        public ulong? BindStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -152,6 +160,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "EnableProductScript", this.EnableProductScript);
             this.SetParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
             this.SetParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
+            this.SetParamSimple(map, prefix + "BindStrategy", this.BindStrategy);
         }
     }
 }

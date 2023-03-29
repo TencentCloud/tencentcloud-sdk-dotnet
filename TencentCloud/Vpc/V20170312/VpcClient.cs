@@ -8613,7 +8613,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
+        /// 本接口（DownloadCustomerGatewayConfiguration）用于下载VPN通道配置。
         /// </summary>
         /// <param name="req"><see cref="DownloadCustomerGatewayConfigurationRequest"/></param>
         /// <returns><see cref="DownloadCustomerGatewayConfigurationResponse"/></returns>
@@ -8633,7 +8633,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
+        /// 本接口（DownloadCustomerGatewayConfiguration）用于下载VPN通道配置。
         /// </summary>
         /// <param name="req"><see cref="DownloadCustomerGatewayConfigurationRequest"/></param>
         /// <returns><see cref="DownloadCustomerGatewayConfigurationResponse"/></returns>

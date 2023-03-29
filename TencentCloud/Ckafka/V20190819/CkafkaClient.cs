@@ -2775,6 +2775,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 修改Datahub主题属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatahubTopicRequest"/></param>
+        /// <returns><see cref="ModifyDatahubTopicResponse"/></returns>
+        public async Task<ModifyDatahubTopicResponse> ModifyDatahubTopic(ModifyDatahubTopicRequest req)
+        {
+             JsonResponseModel<ModifyDatahubTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDatahubTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatahubTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改Datahub主题属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatahubTopicRequest"/></param>
+        /// <returns><see cref="ModifyDatahubTopicResponse"/></returns>
+        public ModifyDatahubTopicResponse ModifyDatahubTopicSync(ModifyDatahubTopicRequest req)
+        {
+             JsonResponseModel<ModifyDatahubTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDatahubTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatahubTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 设置Groups 消费分组offset
         /// </summary>
         /// <param name="req"><see cref="ModifyGroupOffsetsRequest"/></param>

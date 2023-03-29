@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.727</VersionPrefix>
+    <VersionPrefix>3.0.729</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,6 +55,7 @@
     <Compile Include="V20201111\Models\ApproverRestriction.cs" />
     <Compile Include="V20201111\Models\AuthorizedUser.cs" />
     <Compile Include="V20201111\Models\AutoSignConfig.cs" />
+    <Compile Include="V20201111\Models\CallbackInfo.cs" />
     <Compile Include="V20201111\Models\Caller.cs" />
     <Compile Include="V20201111\Models\CancelFlowRequest.cs" />
     <Compile Include="V20201111\Models\CancelFlowResponse.cs" />
@@ -84,6 +85,8 @@
     <Compile Include="V20201111\Models\CreateFlowSignUrlResponse.cs" />
     <Compile Include="V20201111\Models\CreateIntegrationEmployeesRequest.cs" />
     <Compile Include="V20201111\Models\CreateIntegrationEmployeesResponse.cs" />
+    <Compile Include="V20201111\Models\CreateIntegrationUserRolesRequest.cs" />
+    <Compile Include="V20201111\Models\CreateIntegrationUserRolesResponse.cs" />
     <Compile Include="V20201111\Models\CreateMultiFlowSignQRCodeRequest.cs" />
     <Compile Include="V20201111\Models\CreateMultiFlowSignQRCodeResponse.cs" />
     <Compile Include="V20201111\Models\CreatePrepareFlowRequest.cs" />
@@ -101,6 +104,8 @@
     <Compile Include="V20201111\Models\CreateUserAutoSignEnableUrlResponse.cs" />
     <Compile Include="V20201111\Models\DeleteIntegrationEmployeesRequest.cs" />
     <Compile Include="V20201111\Models\DeleteIntegrationEmployeesResponse.cs" />
+    <Compile Include="V20201111\Models\DeleteIntegrationRoleUsersRequest.cs" />
+    <Compile Include="V20201111\Models\DeleteIntegrationRoleUsersResponse.cs" />
     <Compile Include="V20201111\Models\DeleteSealPoliciesRequest.cs" />
     <Compile Include="V20201111\Models\DeleteSealPoliciesResponse.cs" />
     <Compile Include="V20201111\Models\DeleteStaffsResult.cs" />
@@ -119,6 +124,8 @@
     <Compile Include="V20201111\Models\DescribeIntegrationEmployeesResponse.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationMainOrganizationUserRequest.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationMainOrganizationUserResponse.cs" />
+    <Compile Include="V20201111\Models\DescribeIntegrationRolesRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeIntegrationRolesResponse.cs" />
     <Compile Include="V20201111\Models\DescribeOrganizationGroupOrganizationsRequest.cs" />
     <Compile Include="V20201111\Models\DescribeOrganizationGroupOrganizationsResponse.cs" />
     <Compile Include="V20201111\Models\DescribeOrganizationSealsRequest.cs" />
@@ -129,8 +136,10 @@
     <Compile Include="V20201111\Models\DescribeUserAutoSignStatusResponse.cs" />
     <Compile Include="V20201111\Models\DisableUserAutoSignRequest.cs" />
     <Compile Include="V20201111\Models\DisableUserAutoSignResponse.cs" />
+    <Compile Include="V20201111\Models\FailedCreateRoleData.cs" />
     <Compile Include="V20201111\Models\FailedCreateStaffData.cs" />
     <Compile Include="V20201111\Models\FailedDeleteStaffData.cs" />
+    <Compile Include="V20201111\Models\FailedUpdateStaffData.cs" />
     <Compile Include="V20201111\Models\FileInfo.cs" />
     <Compile Include="V20201111\Models\FileUrl.cs" />
     <Compile Include="V20201111\Models\FillApproverInfo.cs" />
@@ -144,6 +153,7 @@
     <Compile Include="V20201111\Models\GetTaskResultApiRequest.cs" />
     <Compile Include="V20201111\Models\GetTaskResultApiResponse.cs" />
     <Compile Include="V20201111\Models\GroupOrganization.cs" />
+    <Compile Include="V20201111\Models\IntegrateRole.cs" />
     <Compile Include="V20201111\Models\IntegrationMainOrganizationUser.cs" />
     <Compile Include="V20201111\Models\ModifyApplicationCallbackInfoRequest.cs" />
     <Compile Include="V20201111\Models\ModifyApplicationCallbackInfoResponse.cs" />
@@ -163,7 +173,10 @@
     <Compile Include="V20201111\Models\StartFlowResponse.cs" />
     <Compile Include="V20201111\Models\SuccessCreateStaffData.cs" />
     <Compile Include="V20201111\Models\SuccessDeleteStaffData.cs" />
+    <Compile Include="V20201111\Models\SuccessUpdateStaffData.cs" />
     <Compile Include="V20201111\Models\TemplateInfo.cs" />
+    <Compile Include="V20201111\Models\UpdateIntegrationEmployeesRequest.cs" />
+    <Compile Include="V20201111\Models\UpdateIntegrationEmployeesResponse.cs" />
     <Compile Include="V20201111\Models\UploadFile.cs" />
     <Compile Include="V20201111\Models\UploadFilesRequest.cs" />
     <Compile Include="V20201111\Models\UploadFilesResponse.cs" />
