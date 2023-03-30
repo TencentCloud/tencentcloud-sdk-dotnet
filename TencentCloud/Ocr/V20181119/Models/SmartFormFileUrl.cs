@@ -24,12 +24,26 @@ namespace TencentCloud.Ocr.V20181119.Models
     public class SmartFormFileUrl : AbstractModel
     {
         
+        /// <summary>
+        /// 文件url地址
+        /// </summary>
+        [JsonProperty("FileUrl")]
+        public string FileUrl{ get; set; }
+
+        /// <summary>
+        /// 文件的顺序，顺序从1开始
+        /// </summary>
+        [JsonProperty("FileOrderNumber")]
+        public ulong? FileOrderNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
+            this.SetParamSimple(map, prefix + "FileOrderNumber", this.FileOrderNumber);
         }
     }
 }

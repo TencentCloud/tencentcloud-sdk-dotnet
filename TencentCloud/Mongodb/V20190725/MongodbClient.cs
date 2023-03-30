@@ -933,7 +933,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口 (InquirePriceModifyDBInstanceSpec) 用于调整实例的配置询价。
+        /// 本接口 (InquirePriceModifyDBInstanceSpec) 用于查询实例配置变更后的价格。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="InquirePriceModifyDBInstanceSpecResponse"/></returns>
@@ -953,7 +953,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口 (InquirePriceModifyDBInstanceSpec) 用于调整实例的配置询价。
+        /// 本接口 (InquirePriceModifyDBInstanceSpec) 用于查询实例配置变更后的价格。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="InquirePriceModifyDBInstanceSpecResponse"/></returns>

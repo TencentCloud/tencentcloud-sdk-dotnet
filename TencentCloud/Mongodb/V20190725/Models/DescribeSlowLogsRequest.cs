@@ -61,7 +61,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
+        /// 慢日志返回格式。默认返回原生慢日志格式，4.4及以上版本可设置为json。
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

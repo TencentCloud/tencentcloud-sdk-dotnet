@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+        /// 实例 ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// 实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+        /// 实例节点数。默认为不变更节点数，暂不支持变更。
         /// </summary>
         [JsonProperty("NodeNum")]
         public long? NodeNum{ get; set; }
 
         /// <summary>
-        /// 实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+        /// 实例分片数。默认为不变更分片数，暂不支持变更。
         /// </summary>
         [JsonProperty("ReplicateSetNum")]
         public long? ReplicateSetNum{ get; set; }

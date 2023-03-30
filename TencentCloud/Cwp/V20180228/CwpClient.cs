@@ -6299,6 +6299,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取恶意请求事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskDnsEventListRequest"/></param>
+        /// <returns><see cref="DescribeRiskDnsEventListResponse"/></returns>
+        public async Task<DescribeRiskDnsEventListResponse> DescribeRiskDnsEventList(DescribeRiskDnsEventListRequest req)
+        {
+             JsonResponseModel<DescribeRiskDnsEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRiskDnsEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskDnsEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取恶意请求事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskDnsEventListRequest"/></param>
+        /// <returns><see cref="DescribeRiskDnsEventListResponse"/></returns>
+        public DescribeRiskDnsEventListResponse DescribeRiskDnsEventListSync(DescribeRiskDnsEventListRequest req)
+        {
+             JsonResponseModel<DescribeRiskDnsEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRiskDnsEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskDnsEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 入侵检测，获取恶意请求列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskDnsListRequest"/></param>

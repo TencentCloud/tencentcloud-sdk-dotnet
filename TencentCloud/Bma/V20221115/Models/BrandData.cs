@@ -102,6 +102,12 @@ namespace TencentCloud.Bma.V20221115.Models
         [JsonProperty("Services")]
         public ServiceData Services{ get; set; }
 
+        /// <summary>
+        /// 账号id
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Bma.V20221115.Models
             this.SetParamArrayObj(map, prefix + "Trademarks.", this.Trademarks);
             this.SetParamSimple(map, prefix + "InsertTime", this.InsertTime);
             this.SetParamObj(map, prefix + "Services.", this.Services);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
         }
     }
 }
