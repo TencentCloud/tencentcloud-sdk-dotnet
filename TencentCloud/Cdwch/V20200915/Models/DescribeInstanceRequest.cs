@@ -30,6 +30,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 是否是open api查询
+        /// </summary>
+        [JsonProperty("IsOpenApi")]
+        public bool? IsOpenApi{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "IsOpenApi", this.IsOpenApi);
         }
     }
 }

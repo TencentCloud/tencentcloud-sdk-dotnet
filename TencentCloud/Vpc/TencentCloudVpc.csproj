@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.730</VersionPrefix>
+    <VersionPrefix>3.0.731</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -109,11 +109,13 @@
     <Compile Include="V20170312\Models\BatchModifySnapshotPolicy.cs" />
     <Compile Include="V20170312\Models\CCN.cs" />
     <Compile Include="V20170312\Models\CcnAttachedInstance.cs" />
+    <Compile Include="V20170312\Models\CcnBandwidth.cs" />
     <Compile Include="V20170312\Models\CcnBandwidthInfo.cs" />
     <Compile Include="V20170312\Models\CcnFlowLock.cs" />
     <Compile Include="V20170312\Models\CcnInstance.cs" />
     <Compile Include="V20170312\Models\CcnInstanceInfo.cs" />
     <Compile Include="V20170312\Models\CcnRegionBandwidthLimit.cs" />
+    <Compile Include="V20170312\Models\CcnRegionBandwidthLimitInfo.cs" />
     <Compile Include="V20170312\Models\CcnRoute.cs" />
     <Compile Include="V20170312\Models\CheckAssistantCidrRequest.cs" />
     <Compile Include="V20170312\Models\CheckAssistantCidrResponse.cs" />

@@ -74,7 +74,7 @@ namespace TencentCloud.Smop.V20201203.Models
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 当前积分/成长值
+        /// 当前积分
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCoin")]
@@ -108,6 +108,13 @@ namespace TencentCloud.Smop.V20201203.Models
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
+        /// <summary>
+        /// 当前成长值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GrowScore")]
+        public long? GrowScore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +133,7 @@ namespace TencentCloud.Smop.V20201203.Models
             this.SetParamSimple(map, prefix + "DoneTimes", this.DoneTimes);
             this.SetParamSimple(map, prefix + "TotalTimes", this.TotalTimes);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
+            this.SetParamSimple(map, prefix + "GrowScore", this.GrowScore);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Vpn网关路由ID
+        /// VPN网关路由ID。
         /// </summary>
         [JsonProperty("RouteId")]
         public string RouteId{ get; set; }
 
         /// <summary>
-        /// Vpn网关状态, ENABEL 启用, DISABLE禁用
+        /// VPN网关状态, ENABLE 启用, DISABLE禁用。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

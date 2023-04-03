@@ -4505,7 +4505,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteVpnGatewayCcnRoutes）用于删除VPN网关路由
+        /// 本接口（DeleteVpnGatewayRoutes）用于删除VPN网关路由
         /// </summary>
         /// <param name="req"><see cref="DeleteVpnGatewayRoutesRequest"/></param>
         /// <returns><see cref="DeleteVpnGatewayRoutesResponse"/></returns>
@@ -4525,7 +4525,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteVpnGatewayCcnRoutes）用于删除VPN网关路由
+        /// 本接口（DeleteVpnGatewayRoutes）用于删除VPN网关路由
         /// </summary>
         /// <param name="req"><see cref="DeleteVpnGatewayRoutesRequest"/></param>
         /// <returns><see cref="DeleteVpnGatewayRoutesResponse"/></returns>
@@ -7713,7 +7713,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeVpnGatewayCcnRoutes）用于查询VPN网关云联网路由
+        /// 本接口（DescribeVpnGatewayCcnRoutes）用于查询VPN网关云联网路由。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpnGatewayCcnRoutesRequest"/></param>
         /// <returns><see cref="DescribeVpnGatewayCcnRoutesResponse"/></returns>
@@ -7733,7 +7733,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeVpnGatewayCcnRoutes）用于查询VPN网关云联网路由
+        /// 本接口（DescribeVpnGatewayCcnRoutes）用于查询VPN网关云联网路由。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpnGatewayCcnRoutesRequest"/></param>
         /// <returns><see cref="DescribeVpnGatewayCcnRoutesResponse"/></returns>
@@ -7753,7 +7753,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询路由型VPN网关的目的路由
+        /// 本接口（DescribeVpnGatewayRoutes）用于查询VPN网关路由。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpnGatewayRoutesRequest"/></param>
         /// <returns><see cref="DescribeVpnGatewayRoutesResponse"/></returns>
@@ -7773,7 +7773,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询路由型VPN网关的目的路由
+        /// 本接口（DescribeVpnGatewayRoutes）用于查询VPN网关路由。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpnGatewayRoutesRequest"/></param>
         /// <returns><see cref="DescribeVpnGatewayRoutesResponse"/></returns>
@@ -11285,7 +11285,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyVpnGatewayCcnRoutes）用于修改VPN网关云联网路由
+        /// 本接口（ModifyVpnGatewayCcnRoutes）用于修改VPN网关云联网路由。
         /// </summary>
         /// <param name="req"><see cref="ModifyVpnGatewayCcnRoutesRequest"/></param>
         /// <returns><see cref="ModifyVpnGatewayCcnRoutesResponse"/></returns>
@@ -11305,7 +11305,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyVpnGatewayCcnRoutes）用于修改VPN网关云联网路由
+        /// 本接口（ModifyVpnGatewayCcnRoutes）用于修改VPN网关云联网路由。
         /// </summary>
         /// <param name="req"><see cref="ModifyVpnGatewayCcnRoutesRequest"/></param>
         /// <returns><see cref="ModifyVpnGatewayCcnRoutesResponse"/></returns>
@@ -11325,7 +11325,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改VPN路由是否启用
+        /// 本接口（ModifyVpnGatewayRoutes）用于修改VPN路由是否启用。
         /// </summary>
         /// <param name="req"><see cref="ModifyVpnGatewayRoutesRequest"/></param>
         /// <returns><see cref="ModifyVpnGatewayRoutesResponse"/></returns>
@@ -11345,7 +11345,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改VPN路由是否启用
+        /// 本接口（ModifyVpnGatewayRoutes）用于修改VPN路由是否启用。
         /// </summary>
         /// <param name="req"><see cref="ModifyVpnGatewayRoutesRequest"/></param>
         /// <returns><see cref="ModifyVpnGatewayRoutesResponse"/></returns>
@@ -12261,7 +12261,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 设置VPNGW续费标记
+        /// 本接口（SetVpnGatewaysRenewFlag）用于设置VPNGW续费标记。
         /// </summary>
         /// <param name="req"><see cref="SetVpnGatewaysRenewFlagRequest"/></param>
         /// <returns><see cref="SetVpnGatewaysRenewFlagResponse"/></returns>
@@ -12281,7 +12281,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 设置VPNGW续费标记
+        /// 本接口（SetVpnGatewaysRenewFlag）用于设置VPNGW续费标记。
         /// </summary>
         /// <param name="req"><see cref="SetVpnGatewaysRenewFlagRequest"/></param>
         /// <returns><see cref="SetVpnGatewaysRenewFlagResponse"/></returns>

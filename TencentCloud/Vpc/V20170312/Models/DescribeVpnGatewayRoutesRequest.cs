@@ -25,25 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPN网关的ID
+        /// VPN网关实例ID。
         /// </summary>
         [JsonProperty("VpnGatewayId")]
         public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)
+        /// 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量, 默认0
+        /// 偏移量, 默认0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 单页个数, 默认20, 最大值100
+        /// 单页个数, 默认20, 最大值100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

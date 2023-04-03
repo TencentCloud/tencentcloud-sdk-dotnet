@@ -263,7 +263,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public QnPrivateAccess QnPrivateAccess{ get; set; }
 
         /// <summary>
-        /// HTTPS服务
+        /// 其他厂商对象存储回源鉴权
+        /// </summary>
+        [JsonProperty("OthersPrivateAccess")]
+        public OthersPrivateAccess OthersPrivateAccess{ get; set; }
+
+        /// <summary>
+        /// HTTPS服务，默认开启（收费服务，详见计费说明和产品文档）
         /// </summary>
         [JsonProperty("HttpsBilling")]
         public HttpsBilling HttpsBilling{ get; set; }
@@ -312,6 +318,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
             this.SetParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
             this.SetParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
+            this.SetParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);
             this.SetParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
         }
     }

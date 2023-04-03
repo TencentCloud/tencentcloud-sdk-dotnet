@@ -25,88 +25,88 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+        /// 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
+        /// 实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>2：临时实例。</li><li>3：只读实例。</li><li>-1：正式实例、只读、灾备实例。</li></ul>
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
+        /// 集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：所有实例。</li></ul>
         /// </summary>
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
 
         /// <summary>
-        /// 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
+        /// 实例状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程执行中。</li><li>2：实例有效。</li><li>-2：已隔离（包年包月实例）。</li><li>-3：已隔离（按量计费实例）。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// 私有网络的ID，基础网络则不传该参数
+        /// 私有网络的ID，基础网络则不传该参数。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
+        /// 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
+        /// 付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量，最小值为1，最大值为100，默认值为20
+        /// 单次请求返回的数量。默认值为20，取值范围为[1,100]。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认值为0
+        /// 偏移量，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
+        /// 返回结果集排序的字段，目前支持："ProjectId"、"InstanceName"、"CreateTime"，默认为升序排序。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 返回结果集排序方式，目前支持："ASC"或者"DESC"
+        /// 返回结果集排序方式，目前支持："ASC"或者"DESC"。
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// 项目 ID
+        /// 项目 ID。
         /// </summary>
         [JsonProperty("ProjectIds")]
         public ulong?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 搜索关键词，支持实例ID、实例名称、完整IP
+        /// 搜索关键词，支持实例ID、实例名称、完整IP。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// Tag信息
+        /// Tag信息。
         /// </summary>
         [JsonProperty("Tags")]
-        public TagInfo Tags{ get; set; }
+        public TagInfo[] Tags{ get; set; }
 
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
-            this.SetParamObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -2626,6 +2626,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 印尼身份证识别
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="RecognizeIndonesiaIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeIndonesiaIDCardOCRResponse"/></returns>
@@ -2646,6 +2648,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 印尼身份证识别
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="RecognizeIndonesiaIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeIndonesiaIDCardOCRResponse"/></returns>

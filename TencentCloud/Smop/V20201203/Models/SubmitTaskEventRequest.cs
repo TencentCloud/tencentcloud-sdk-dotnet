@@ -49,7 +49,7 @@ namespace TencentCloud.Smop.V20201203.Models
         public string Code{ get; set; }
 
         /// <summary>
-        /// 同步异步方式
+        /// 同步异步方式：0为同步、1位异步
         /// </summary>
         [JsonProperty("Async")]
         public long? Async{ get; set; }

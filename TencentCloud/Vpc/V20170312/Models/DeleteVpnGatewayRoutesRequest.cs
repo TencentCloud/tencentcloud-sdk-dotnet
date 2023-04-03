@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// 路由ID信息列表
+        /// 路由ID信息列表，可以通过[DescribeVpnGatewayRoutes](https://cloud.tencent.com/document/api/215/57676)接口查询。
         /// </summary>
         [JsonProperty("RouteIds")]
         public string[] RouteIds{ get; set; }

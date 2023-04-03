@@ -25,20 +25,20 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPNGW字符型ID列表
+        /// VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
         /// </summary>
         [JsonProperty("VpnGatewayIds")]
         public string[] VpnGatewayIds{ get; set; }
 
         /// <summary>
-        /// 自动续费标记[0, 1, 2]
-        /// 0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费
+        /// 自动续费标记 [0, 1, 2]
+        /// 0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// VPNGW类型['IPSEC', 'SSL']
+        /// VPNGW类型['IPSEC', 'SSL']， 默认为IPSEC。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

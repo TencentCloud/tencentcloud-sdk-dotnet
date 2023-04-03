@@ -25,13 +25,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 符合查询条件的实例总数
+        /// 符合查询条件的实例总数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 实例详细信息列表
+        /// 实例详细信息列表。
         /// </summary>
         [JsonProperty("InstanceDetails")]
         public InstanceDetail[] InstanceDetails{ get; set; }

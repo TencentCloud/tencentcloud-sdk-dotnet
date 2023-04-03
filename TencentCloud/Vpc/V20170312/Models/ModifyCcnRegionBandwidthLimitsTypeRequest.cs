@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。
+        /// 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。默认值：OUTER_REGION_LIMIT。
         /// </summary>
         [JsonProperty("BandwidthLimitType")]
         public string BandwidthLimitType{ get; set; }

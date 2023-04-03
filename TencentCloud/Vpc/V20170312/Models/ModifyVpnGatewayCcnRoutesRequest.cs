@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPN网关实例ID
+        /// VPN网关实例ID。
         /// </summary>
         [JsonProperty("VpnGatewayId")]
         public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// 云联网路由（IDC网段）列表
+        /// 云联网路由（IDC网段）列表。
         /// </summary>
         [JsonProperty("Routes")]
         public VpngwCcnRoutes[] Routes{ get; set; }

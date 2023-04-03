@@ -25,10 +25,17 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPN网关目的路由
+        /// VPN网关目的路由。
         /// </summary>
         [JsonProperty("Routes")]
         public VpnGatewayRoute[] Routes{ get; set; }
+
+        /// <summary>
+        /// 路由条数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Routes.", this.Routes);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

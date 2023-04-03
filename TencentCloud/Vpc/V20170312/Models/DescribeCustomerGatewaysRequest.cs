@@ -40,7 +40,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+        /// 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

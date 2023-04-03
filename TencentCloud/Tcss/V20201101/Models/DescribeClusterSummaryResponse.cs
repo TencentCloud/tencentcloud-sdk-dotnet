@@ -85,6 +85,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? FailedClusterCount{ get; set; }
 
         /// <summary>
+        /// 未导入的集群数量
+        /// </summary>
+        [JsonProperty("NotImportedClusterCount")]
+        public ulong? NotImportedClusterCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -106,6 +112,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "AutoCheckClusterCount", this.AutoCheckClusterCount);
             this.SetParamSimple(map, prefix + "ManualCheckClusterCount", this.ManualCheckClusterCount);
             this.SetParamSimple(map, prefix + "FailedClusterCount", this.FailedClusterCount);
+            this.SetParamSimple(map, prefix + "NotImportedClusterCount", this.NotImportedClusterCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

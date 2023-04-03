@@ -31,45 +31,68 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 地域ID 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+        /// 地域ID 。
+        /// - 1：广州 
+        /// - 4：上海 
+        /// - 5：中国香港 
+        /// - 6：多伦多 
+        /// - 7：上海金融 
+        /// - 8：北京 
+        /// - 9：新加坡
+        /// - 11：深圳金融
+        /// - 15：美西（硅谷）
+        /// - 16：成都 
+        /// - 17：德国 
+        /// - 18：韩国 
+        /// - 19：重庆 
+        /// - 21：印度 
+        /// - 22：美东（弗吉尼亚）
+        /// - 23：泰国 
+        /// - 24：俄罗斯 
+        /// - 25：日本
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 复制组信息
+        /// 复制组 ID。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 复制组名称
+        /// 复制组名称。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 复制组状态，37："绑定复制组中"，38："复制组重连中"，51："解绑复制组中"，52："复制组实例切主中"，53："角色变更中"
+        /// 复制组状态。
+        /// - 37：绑定复制组中。
+        /// - 38：复制组重连中。
+        /// - 51：解绑复制组中。
+        /// - 52：复制组实例切主中。
+        /// - 53：角色变更中。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 复制组数量
+        /// 复制组数量。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// 复制组实例
+        /// 复制组中的实例信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Instances")]
         public Instances[] Instances{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// 备注信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]

@@ -39,25 +39,25 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 排序条件，目前支持带宽（BandwidthLimit）和过期时间（ExpireTime）
+        /// 排序条件，目前支持带宽（`BandwidthLimit`）和过期时间（`ExpireTime`），默认按 `ExpireTime` 排序。
         /// </summary>
         [JsonProperty("SortedBy")]
         public string SortedBy{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量
+        /// 返回数量。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序方式，'ASC':升序,'DESC':降序。
+        /// 排序方式，'ASC':升序,'DESC':降序。默认按'ASC'排序。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

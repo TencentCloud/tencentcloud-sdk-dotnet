@@ -25,55 +25,55 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 目的端IDC网段
+        /// 目的端IDC网段。
         /// </summary>
         [JsonProperty("DestinationCidrBlock")]
         public string DestinationCidrBlock{ get; set; }
 
         /// <summary>
-        /// 下一跳类型（关联实例类型）可选值:"VPNCONN"(VPN通道), "CCN"(CCN实例)
+        /// 下一跳类型（关联实例类型）可选值："VPNCONN"（VPN通道）， "CCN"（CCN实例）。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 下一跳实例ID
+        /// 下一跳实例ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 优先级, 可选值: 0, 100
+        /// 优先级，可选值：0，100。
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// 启用状态, 可选值: "ENABLE"(启用), "DISABLE"(禁用)
+        /// 启用状态，可选值："ENABLE"（启用），"DISABLE"  (禁用)。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 路由条目ID
+        /// 路由条目ID。
         /// </summary>
         [JsonProperty("RouteId")]
         public string RouteId{ get; set; }
 
         /// <summary>
-        /// 路由类型, 可选值: "VPC"(VPC路由), "CCN"(云联网传播路由), "Static"(静态路由), "BGP"(BGP路由)
+        /// 路由类型，可选值："VPC"（VPC路由），"CCN"（云联网传播路由），"Static"（静态路由），"BGP"（BGP路由）。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 更新时间。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

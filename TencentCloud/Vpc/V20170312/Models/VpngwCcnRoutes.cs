@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 路由信息ID
+        /// 路由信息ID。
         /// </summary>
         [JsonProperty("RouteId")]
         public string RouteId{ get; set; }
 
         /// <summary>
-        /// 路由信息是否启用
+        /// 路由信息是否启用。
         /// ENABLE：启用该路由
         /// DISABLE：不启用该路由
         /// </summary>
@@ -39,7 +39,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 路由CIDR
+        /// 路由CIDR。
         /// </summary>
         [JsonProperty("DestinationCidrBlock")]
         public string DestinationCidrBlock{ get; set; }

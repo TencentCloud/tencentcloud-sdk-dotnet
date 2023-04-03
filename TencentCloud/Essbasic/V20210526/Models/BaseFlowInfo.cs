@@ -72,6 +72,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("NeedSignReview")]
         public bool? NeedSignReview{ get; set; }
 
+        /// <summary>
+        /// 用户流程自定义数据参数
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "IntelligentStatus", this.IntelligentStatus);
             this.SetParamArrayObj(map, prefix + "FormFields.", this.FormFields);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
         }
     }
 }

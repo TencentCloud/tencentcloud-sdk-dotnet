@@ -169,6 +169,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? IngressCount{ get; set; }
 
         /// <summary>
+        /// 主节点的ip列表
+        /// </summary>
+        [JsonProperty("MasterIps")]
+        public string MasterIps{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -204,6 +210,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "PodCount", this.PodCount);
             this.SetParamSimple(map, prefix + "ServiceCount", this.ServiceCount);
             this.SetParamSimple(map, prefix + "IngressCount", this.IngressCount);
+            this.SetParamSimple(map, prefix + "MasterIps", this.MasterIps);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

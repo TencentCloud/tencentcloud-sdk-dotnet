@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ServiceProvider{ get; set; }
 
         /// <summary>
-        /// 表单唯一`ID`。
+        /// 表单唯一`ID`。可通过[DescribeCrossBorderCompliance](https://cloud.tencent.com/document/product/215/47838)接口查询ComplianceId信息
         /// </summary>
         [JsonProperty("ComplianceId")]
         public ulong? ComplianceId{ get; set; }

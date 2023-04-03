@@ -121,6 +121,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Photo{ get; set; }
 
         /// <summary>
+        /// 省份，Scene为V2时支持识别
+        /// </summary>
+        [JsonProperty("Provinsi")]
+        public string Provinsi{ get; set; }
+
+        /// <summary>
+        /// 城市，Scene为V2时支持识别
+        /// </summary>
+        [JsonProperty("Kota")]
+        public string Kota{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -148,6 +160,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "BerlakuHingga", this.BerlakuHingga);
             this.SetParamSimple(map, prefix + "IssuedDate", this.IssuedDate);
             this.SetParamSimple(map, prefix + "Photo", this.Photo);
+            this.SetParamSimple(map, prefix + "Provinsi", this.Provinsi);
+            this.SetParamSimple(map, prefix + "Kota", this.Kota);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

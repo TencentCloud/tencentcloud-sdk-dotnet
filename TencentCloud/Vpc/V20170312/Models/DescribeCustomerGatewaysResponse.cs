@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 对端网关对象列表
+        /// 对端网关对象列表。
         /// </summary>
         [JsonProperty("CustomerGatewaySet")]
         public CustomerGateway[] CustomerGatewaySet{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 自动续费标识。取值范围： NOTIFY_AND_AUTO_RENEW：通知过期且自动续费， NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费。默认：NOTIFY_AND_MANUAL_RENEW
+        /// 自动续费标识。取值范围： NOTIFY_AND_AUTO_RENEW：通知过期且自动续费， NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费。默认：NOTIFY_AND_AUTO_RENEW
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }

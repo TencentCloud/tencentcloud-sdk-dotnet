@@ -53,13 +53,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+        /// 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。默认值：`AttachedTime`
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 排序方法。升序：`ASC`，倒序：`DESC`。
+        /// 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPN网关实例ID
+        /// VPN网关实例ID。
         /// </summary>
         [JsonProperty("VpnGatewayId")]
         public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量。默认值：0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量
+        /// 返回数量。默认值：20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

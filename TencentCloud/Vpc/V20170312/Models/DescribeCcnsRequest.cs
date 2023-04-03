@@ -55,13 +55,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
+        /// 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`。默认值: `CreateTime`
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 排序方法。升序：`ASC`，倒序：`DESC`。
+        /// 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }

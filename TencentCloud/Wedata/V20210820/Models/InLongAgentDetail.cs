@@ -106,6 +106,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AgentTotal")]
         public ulong? AgentTotal{ get; set; }
 
+        /// <summary>
+        /// 生命周期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LifeDays")]
+        public long? LifeDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +132,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "AgentGroupId", this.AgentGroupId);
             this.SetParamArrayObj(map, prefix + "CvmAgentStatusList.", this.CvmAgentStatusList);
             this.SetParamSimple(map, prefix + "AgentTotal", this.AgentTotal);
+            this.SetParamSimple(map, prefix + "LifeDays", this.LifeDays);
         }
     }
 }

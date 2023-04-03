@@ -25,7 +25,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT。
+        /// 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT，FREE。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
