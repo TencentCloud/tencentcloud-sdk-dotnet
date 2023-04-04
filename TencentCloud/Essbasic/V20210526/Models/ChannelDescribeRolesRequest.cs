@@ -25,12 +25,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 操作人信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
         /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
         /// </summary>
         [JsonProperty("Agent")]
@@ -49,6 +43,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Limit{ get; set; }
 
         /// <summary>
+        /// 操作人信息
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
+
+        /// <summary>
         /// 查询的关键字段:
         /// Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
         /// Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
@@ -62,10 +62,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }

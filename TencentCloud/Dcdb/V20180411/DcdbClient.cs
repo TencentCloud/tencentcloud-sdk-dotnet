@@ -537,6 +537,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口(DescribeBackupFiles)用于查看备份文件列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
+        /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
+        public async Task<DescribeBackupFilesResponse> DescribeBackupFiles(DescribeBackupFilesRequest req)
+        {
+             JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBackupFiles)用于查看备份文件列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
+        /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
+        public DescribeBackupFilesResponse DescribeBackupFilesSync(DescribeBackupFilesRequest req)
+        {
+             JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBLogFiles)用于获取数据库的各种日志列表，包括冷备、binlog、errlog和slowlog。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBLogFilesRequest"/></param>

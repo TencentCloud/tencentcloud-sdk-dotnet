@@ -25,6 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// 使用TKE默认issuer和jwksuri
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UseTKEDefault")]
+        public bool? UseTKEDefault{ get; set; }
+
+        /// <summary>
         /// service-account-issuer
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -51,6 +58,7 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "UseTKEDefault", this.UseTKEDefault);
             this.SetParamSimple(map, prefix + "Issuer", this.Issuer);
             this.SetParamSimple(map, prefix + "JWKSURI", this.JWKSURI);
             this.SetParamSimple(map, prefix + "AutoCreateDiscoveryAnonymousAuth", this.AutoCreateDiscoveryAnonymousAuth);

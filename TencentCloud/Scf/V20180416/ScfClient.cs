@@ -1826,5 +1826,45 @@ namespace TencentCloud.Scf.V20180416
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 更新触发器状态的值
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerStatusRequest"/></param>
+        /// <returns><see cref="UpdateTriggerStatusResponse"/></returns>
+        public async Task<UpdateTriggerStatusResponse> UpdateTriggerStatus(UpdateTriggerStatusRequest req)
+        {
+             JsonResponseModel<UpdateTriggerStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateTriggerStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateTriggerStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新触发器状态的值
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerStatusRequest"/></param>
+        /// <returns><see cref="UpdateTriggerStatusResponse"/></returns>
+        public UpdateTriggerStatusResponse UpdateTriggerStatusSync(UpdateTriggerStatusRequest req)
+        {
+             JsonResponseModel<UpdateTriggerStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateTriggerStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateTriggerStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

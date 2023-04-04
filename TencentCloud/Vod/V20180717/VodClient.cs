@@ -731,6 +731,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建音画质重生模版。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRebuildMediaTemplateRequest"/></param>
+        /// <returns><see cref="CreateRebuildMediaTemplateResponse"/></returns>
+        public async Task<CreateRebuildMediaTemplateResponse> CreateRebuildMediaTemplate(CreateRebuildMediaTemplateRequest req)
+        {
+             JsonResponseModel<CreateRebuildMediaTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRebuildMediaTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRebuildMediaTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建音画质重生模版。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRebuildMediaTemplateRequest"/></param>
+        /// <returns><see cref="CreateRebuildMediaTemplateResponse"/></returns>
+        public CreateRebuildMediaTemplateResponse CreateRebuildMediaTemplateSync(CreateRebuildMediaTemplateRequest req)
+        {
+             JsonResponseModel<CreateRebuildMediaTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRebuildMediaTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRebuildMediaTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户自定义审核模板，数量上限：50。
         /// >模板仅适用于 [音视频审核(ReviewAudioVideo)](https://cloud.tencent.com/document/api/266/80283) 和 [图片审核(ReviewImage)](https://cloud.tencent.com/document/api/266/73217) 接口。
         /// </summary>
@@ -1668,6 +1708,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteProcedureTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProcedureTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除音画质重生模版。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRebuildMediaTemplateRequest"/></param>
+        /// <returns><see cref="DeleteRebuildMediaTemplateResponse"/></returns>
+        public async Task<DeleteRebuildMediaTemplateResponse> DeleteRebuildMediaTemplate(DeleteRebuildMediaTemplateRequest req)
+        {
+             JsonResponseModel<DeleteRebuildMediaTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRebuildMediaTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRebuildMediaTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除音画质重生模版。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRebuildMediaTemplateRequest"/></param>
+        /// <returns><see cref="DeleteRebuildMediaTemplateResponse"/></returns>
+        public DeleteRebuildMediaTemplateResponse DeleteRebuildMediaTemplateSync(DeleteRebuildMediaTemplateRequest req)
+        {
+             JsonResponseModel<DeleteRebuildMediaTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRebuildMediaTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRebuildMediaTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3325,6 +3405,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 获取音画质重生模版列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRebuildMediaTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeRebuildMediaTemplatesResponse"/></returns>
+        public async Task<DescribeRebuildMediaTemplatesResponse> DescribeRebuildMediaTemplates(DescribeRebuildMediaTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeRebuildMediaTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRebuildMediaTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRebuildMediaTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取音画质重生模版列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRebuildMediaTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeRebuildMediaTemplatesResponse"/></returns>
+        public DescribeRebuildMediaTemplatesResponse DescribeRebuildMediaTemplatesSync(DescribeRebuildMediaTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeRebuildMediaTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRebuildMediaTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRebuildMediaTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <b>本接口已不推荐使用，用 [DescribeMediaProcessUsageData](/document/product/266/41464) 替代</b>
         /// 
         /// 该接口返回查询时间范围内每天使用的视频内容智能识别时长数据，单位： 秒。
@@ -4871,6 +4991,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 修改音画质重生模版。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRebuildMediaTemplateRequest"/></param>
+        /// <returns><see cref="ModifyRebuildMediaTemplateResponse"/></returns>
+        public async Task<ModifyRebuildMediaTemplateResponse> ModifyRebuildMediaTemplate(ModifyRebuildMediaTemplateRequest req)
+        {
+             JsonResponseModel<ModifyRebuildMediaTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRebuildMediaTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRebuildMediaTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改音画质重生模版。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRebuildMediaTemplateRequest"/></param>
+        /// <returns><see cref="ModifyRebuildMediaTemplateResponse"/></returns>
+        public ModifyRebuildMediaTemplateResponse ModifyRebuildMediaTemplateSync(ModifyRebuildMediaTemplateRequest req)
+        {
+             JsonResponseModel<ModifyRebuildMediaTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRebuildMediaTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRebuildMediaTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改用户自定义审核模板。
         /// >模板仅适用于 [音视频审核(ReviewAudioVideo)](https://cloud.tencent.com/document/api/266/80283) 和 [图片审核(ReviewImage)](https://cloud.tencent.com/document/api/266/73217) 接口。
         /// </summary>
@@ -5778,6 +5938,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "RebuildMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebuildMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用模版发起音画质重生。
+        /// </summary>
+        /// <param name="req"><see cref="RebuildMediaByTemplateRequest"/></param>
+        /// <returns><see cref="RebuildMediaByTemplateResponse"/></returns>
+        public async Task<RebuildMediaByTemplateResponse> RebuildMediaByTemplate(RebuildMediaByTemplateRequest req)
+        {
+             JsonResponseModel<RebuildMediaByTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RebuildMediaByTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebuildMediaByTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用模版发起音画质重生。
+        /// </summary>
+        /// <param name="req"><see cref="RebuildMediaByTemplateRequest"/></param>
+        /// <returns><see cref="RebuildMediaByTemplateResponse"/></returns>
+        public RebuildMediaByTemplateResponse RebuildMediaByTemplateSync(RebuildMediaByTemplateRequest req)
+        {
+             JsonResponseModel<RebuildMediaByTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RebuildMediaByTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebuildMediaByTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

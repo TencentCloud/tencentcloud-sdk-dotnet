@@ -120,6 +120,20 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("BoundNormal")]
         public long? BoundNormal{ get; set; }
 
+        /// <summary>
+        /// 资源包状态，0-无可用资源包，1-有可用资源包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourcePackageStatus")]
+        public long? ResourcePackageStatus{ get; set; }
+
+        /// <summary>
+        /// 资源包规格名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourcePackageSpecName")]
+        public string ResourcePackageSpecName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,6 +155,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "BoundTotal", this.BoundTotal);
             this.SetParamSimple(map, prefix + "BoundNormal", this.BoundNormal);
+            this.SetParamSimple(map, prefix + "ResourcePackageStatus", this.ResourcePackageStatus);
+            this.SetParamSimple(map, prefix + "ResourcePackageSpecName", this.ResourcePackageSpecName);
         }
     }
 }

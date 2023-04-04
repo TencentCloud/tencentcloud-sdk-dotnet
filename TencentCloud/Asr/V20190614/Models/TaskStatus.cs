@@ -25,7 +25,7 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 任务标识。
+        /// 任务标识。注意：TaskId数据类型为uint64。
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

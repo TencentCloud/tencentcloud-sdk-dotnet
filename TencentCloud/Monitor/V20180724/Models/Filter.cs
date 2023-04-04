@@ -42,6 +42,18 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        /// 过滤条件名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 过滤条件取值范围
+        /// </summary>
+        [JsonProperty("Values")]
+        public string[] Values{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
         }
     }
 }

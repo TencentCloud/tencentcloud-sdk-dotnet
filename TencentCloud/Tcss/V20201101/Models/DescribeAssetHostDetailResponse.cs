@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 云镜uuid
+        /// 容器安全uuid
         /// </summary>
         [JsonProperty("UUID")]
         public string UUID{ get; set; }

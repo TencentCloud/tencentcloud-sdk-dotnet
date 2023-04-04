@@ -745,7 +745,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 渠道版绑定员工角色
+        /// 绑定员工角色
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateUserRolesRequest"/></param>
         /// <returns><see cref="ChannelCreateUserRolesResponse"/></returns>
@@ -765,7 +765,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 渠道版绑定员工角色
+        /// 绑定员工角色
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateUserRolesRequest"/></param>
         /// <returns><see cref="ChannelCreateUserRolesResponse"/></returns>
@@ -785,7 +785,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 渠道版删除员工绑定角色
+        /// 删除员工绑定角色
         /// </summary>
         /// <param name="req"><see cref="ChannelDeleteRoleUsersRequest"/></param>
         /// <returns><see cref="ChannelDeleteRoleUsersResponse"/></returns>
@@ -805,7 +805,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 渠道版删除员工绑定角色
+        /// 删除员工绑定角色
         /// </summary>
         /// <param name="req"><see cref="ChannelDeleteRoleUsersRequest"/></param>
         /// <returns><see cref="ChannelDeleteRoleUsersResponse"/></returns>
@@ -947,7 +947,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 渠道办查询用户角色
+        /// 查询用户角色
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeRolesRequest"/></param>
         /// <returns><see cref="ChannelDescribeRolesResponse"/></returns>
@@ -967,7 +967,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 渠道办查询用户角色
+        /// 查询用户角色
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeRolesRequest"/></param>
         /// <returns><see cref="ChannelDescribeRolesResponse"/></returns>

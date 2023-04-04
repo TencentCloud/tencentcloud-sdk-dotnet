@@ -32,7 +32,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Key{ get; set; }
 
         /// <summary>
-        /// ip等于10.0.0.8访问了26次实例，即桶内文档数量。
+        /// key值出现的次数。
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }

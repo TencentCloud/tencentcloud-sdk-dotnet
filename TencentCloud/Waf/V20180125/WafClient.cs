@@ -1135,6 +1135,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 根据过滤条件查询VIP信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVipInfoRequest"/></param>
+        /// <returns><see cref="DescribeVipInfoResponse"/></returns>
+        public async Task<DescribeVipInfoResponse> DescribeVipInfo(DescribeVipInfoRequest req)
+        {
+             JsonResponseModel<DescribeVipInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVipInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVipInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据过滤条件查询VIP信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVipInfoRequest"/></param>
+        /// <returns><see cref="DescribeVipInfoResponse"/></returns>
+        public DescribeVipInfoResponse DescribeVipInfoSync(DescribeVipInfoRequest req)
+        {
+             JsonResponseModel<DescribeVipInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVipInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVipInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 返回ip惩罚规则详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeWafAutoDenyRulesRequest"/></param>

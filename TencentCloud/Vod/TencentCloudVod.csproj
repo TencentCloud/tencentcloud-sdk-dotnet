@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.731</VersionPrefix>
+    <VersionPrefix>3.0.732</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -216,6 +216,8 @@
     <Compile Include="V20180717\Models\CreatePersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\CreateProcedureTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateProcedureTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateRebuildMediaTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\CreateRebuildMediaTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateReviewTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateRoundPlayRequest.cs" />
@@ -263,6 +265,8 @@
     <Compile Include="V20180717\Models\DeletePersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\DeleteProcedureTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteProcedureTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteRebuildMediaTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteRebuildMediaTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteReviewTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteRoundPlayRequest.cs" />
@@ -341,6 +345,8 @@
     <Compile Include="V20180717\Models\DescribePrepaidProductsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeProcedureTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeProcedureTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeRebuildMediaTemplatesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeRebuildMediaTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeReviewDetailsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeReviewDetailsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeReviewTemplatesRequest.cs" />
@@ -515,6 +521,8 @@
     <Compile Include="V20180717\Models\ModifyMediaStorageClassResponse.cs" />
     <Compile Include="V20180717\Models\ModifyPersonSampleRequest.cs" />
     <Compile Include="V20180717\Models\ModifyPersonSampleResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyRebuildMediaTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyRebuildMediaTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyReviewTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyRoundPlayRequest.cs" />
@@ -597,6 +605,10 @@
     <Compile Include="V20180717\Models\PullUploadTask.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheRequest.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheResponse.cs" />
+    <Compile Include="V20180717\Models\RebuildAudioInfo.cs" />
+    <Compile Include="V20180717\Models\RebuildMediaByTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\RebuildMediaByTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\RebuildMediaOutputConfig.cs" />
     <Compile Include="V20180717\Models\RebuildMediaRequest.cs" />
     <Compile Include="V20180717\Models\RebuildMediaResponse.cs" />
     <Compile Include="V20180717\Models\RebuildMediaTargetAudioStream.cs" />
@@ -605,6 +617,8 @@
     <Compile Include="V20180717\Models\RebuildMediaTask.cs" />
     <Compile Include="V20180717\Models\RebuildMediaTaskInput.cs" />
     <Compile Include="V20180717\Models\RebuildMediaTaskOutput.cs" />
+    <Compile Include="V20180717\Models\RebuildMediaTemplate.cs" />
+    <Compile Include="V20180717\Models\RebuildVideoInfo.cs" />
     <Compile Include="V20180717\Models\ReduceMediaBitrateAdaptiveDynamicStreamingResult.cs" />
     <Compile Include="V20180717\Models\ReduceMediaBitrateMediaProcessTaskResult.cs" />
     <Compile Include="V20180717\Models\ReduceMediaBitrateTask.cs" />

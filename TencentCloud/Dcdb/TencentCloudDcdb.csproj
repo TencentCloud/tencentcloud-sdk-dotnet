@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{700BCB15-E440-34BE-979B-260C57587D11}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.731</VersionPrefix>
+    <VersionPrefix>3.0.732</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -89,6 +89,8 @@
     <Compile Include="V20180411\Models\DescribeAccountPrivilegesResponse.cs" />
     <Compile Include="V20180411\Models\DescribeAccountsRequest.cs" />
     <Compile Include="V20180411\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeBackupFilesRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeBackupFilesResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDBLogFilesRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDBLogFilesResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDBParametersRequest.cs" />
@@ -152,6 +154,7 @@
     <Compile Include="V20180411\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="V20180411\Models\InitDCDBInstancesRequest.cs" />
     <Compile Include="V20180411\Models\InitDCDBInstancesResponse.cs" />
+    <Compile Include="V20180411\Models\InstanceBackupFileItem.cs" />
     <Compile Include="V20180411\Models\IsolateDedicatedDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\IsolateDedicatedDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\IsolateHourDCDBInstanceRequest.cs" />

@@ -25,10 +25,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 操作人信息
+        /// 代理信息
         /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
 
         /// <summary>
         /// 角色Id
@@ -43,10 +43,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] UserIds{ get; set; }
 
         /// <summary>
-        /// 代理信息
+        /// 操作人信息
         /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
             this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

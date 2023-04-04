@@ -32,6 +32,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string MediaUrl{ get; set; }
 
         /// <summary>
+        /// 媒体文件类型（扩展名），支持的类型详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
+        /// 如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。
+        /// </summary>
+        [JsonProperty("MediaType")]
+        public string MediaType{ get; set; }
+
+        /// <summary>
         /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -106,6 +113,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
+            this.SetParamSimple(map, prefix + "MediaType", this.MediaType);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "MediaName", this.MediaName);
             this.SetParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
