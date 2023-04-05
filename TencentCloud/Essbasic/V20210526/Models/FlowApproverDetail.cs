@@ -69,7 +69,21 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ApproveName{ get; set; }
 
         /// <summary>
-        /// 当前签署人的状态
+        /// 当前签署人的状态, 状态如下
+        /// 
+        /// PENDING 流程等待中 
+        /// FILLPENDING 待填写状态
+        /// FILLACCEPT 参与人已经填写
+        /// FILLREJECT 参与人解决填写
+        /// WAITPICKUP 待签收
+        /// ACCEPT 签收 
+        /// REJECT 拒签 
+        /// DEADLINE 过期没有处理 
+        /// CANCEL 取消
+        /// FORWARD 已经转他人处理
+        /// STOP 流程因为其他原因终止
+        /// RELIEVED 已经解除
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveStatus")]

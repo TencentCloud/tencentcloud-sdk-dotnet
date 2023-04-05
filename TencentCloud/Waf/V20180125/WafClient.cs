@@ -213,6 +213,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// clb-waf中添加防护的域名
+        /// </summary>
+        /// <param name="req"><see cref="CreateHostRequest"/></param>
+        /// <returns><see cref="CreateHostResponse"/></returns>
+        public async Task<CreateHostResponse> CreateHost(CreateHostRequest req)
+        {
+             JsonResponseModel<CreateHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf中添加防护的域名
+        /// </summary>
+        /// <param name="req"><see cref="CreateHostRequest"/></param>
+        /// <returns><see cref="CreateHostResponse"/></returns>
+        public CreateHostResponse CreateHostSync(CreateHostRequest req)
+        {
+             JsonResponseModel<CreateHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于删除访问日志导出
         /// </summary>
         /// <param name="req"><see cref="DeleteAccessExportRequest"/></param>

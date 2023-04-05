@@ -25,7 +25,12 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 无
+        /// "NetworkNum":网络扫描探测
+        ///  "HandleNum": 待处理事件
+        /// "BanNum": 
+        ///   "VulNum": 漏洞利用
+        ///   "OutNum": 失陷主机
+        /// "BruteForceNum": 0
         /// </summary>
         [JsonProperty("Data")]
         public TLogInfo Data{ get; set; }

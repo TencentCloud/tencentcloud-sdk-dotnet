@@ -133,6 +133,46 @@ namespace TencentCloud.Trro.V20220325
         }
 
         /// <summary>
+        /// 为推流设备绑定license，优先绑定到期时间最近的，到期时间相同优先绑定月包
+        /// </summary>
+        /// <param name="req"><see cref="BoundLicensesRequest"/></param>
+        /// <returns><see cref="BoundLicensesResponse"/></returns>
+        public async Task<BoundLicensesResponse> BoundLicenses(BoundLicensesRequest req)
+        {
+             JsonResponseModel<BoundLicensesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BoundLicenses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BoundLicensesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为推流设备绑定license，优先绑定到期时间最近的，到期时间相同优先绑定月包
+        /// </summary>
+        /// <param name="req"><see cref="BoundLicensesRequest"/></param>
+        /// <returns><see cref="BoundLicensesResponse"/></returns>
+        public BoundLicensesResponse BoundLicensesSync(BoundLicensesRequest req)
+        {
+             JsonResponseModel<BoundLicensesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BoundLicenses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BoundLicensesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于创建设备
         /// </summary>
         /// <param name="req"><see cref="CreateDeviceRequest"/></param>
@@ -533,6 +573,46 @@ namespace TencentCloud.Trro.V20220325
         }
 
         /// <summary>
+        /// 获取最新设备会话列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecentSessionListRequest"/></param>
+        /// <returns><see cref="DescribeRecentSessionListResponse"/></returns>
+        public async Task<DescribeRecentSessionListResponse> DescribeRecentSessionList(DescribeRecentSessionListRequest req)
+        {
+             JsonResponseModel<DescribeRecentSessionListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecentSessionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecentSessionListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取最新设备会话列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecentSessionListRequest"/></param>
+        /// <returns><see cref="DescribeRecentSessionListResponse"/></returns>
+        public DescribeRecentSessionListResponse DescribeRecentSessionListSync(DescribeRecentSessionListRequest req)
+        {
+             JsonResponseModel<DescribeRecentSessionListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecentSessionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecentSessionListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取会话统计值
         /// </summary>
         /// <param name="req"><see cref="DescribeSessionStatisticsRequest"/></param>
@@ -604,6 +684,166 @@ namespace TencentCloud.Trro.V20220325
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSessionStatisticsByInterval");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSessionStatisticsByIntervalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备已经绑定的可用授权数量
+        /// </summary>
+        /// <param name="req"><see cref="GetDeviceLicenseRequest"/></param>
+        /// <returns><see cref="GetDeviceLicenseResponse"/></returns>
+        public async Task<GetDeviceLicenseResponse> GetDeviceLicense(GetDeviceLicenseRequest req)
+        {
+             JsonResponseModel<GetDeviceLicenseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDeviceLicense");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceLicenseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备已经绑定的可用授权数量
+        /// </summary>
+        /// <param name="req"><see cref="GetDeviceLicenseRequest"/></param>
+        /// <returns><see cref="GetDeviceLicenseResponse"/></returns>
+        public GetDeviceLicenseResponse GetDeviceLicenseSync(GetDeviceLicenseRequest req)
+        {
+             JsonResponseModel<GetDeviceLicenseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetDeviceLicense");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceLicenseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户设备的授权绑定情况
+        /// </summary>
+        /// <param name="req"><see cref="GetDevicesRequest"/></param>
+        /// <returns><see cref="GetDevicesResponse"/></returns>
+        public async Task<GetDevicesResponse> GetDevices(GetDevicesRequest req)
+        {
+             JsonResponseModel<GetDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户设备的授权绑定情况
+        /// </summary>
+        /// <param name="req"><see cref="GetDevicesRequest"/></param>
+        /// <returns><see cref="GetDevicesResponse"/></returns>
+        public GetDevicesResponse GetDevicesSync(GetDevicesRequest req)
+        {
+             JsonResponseModel<GetDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 统计license类型数量
+        /// </summary>
+        /// <param name="req"><see cref="GetLicenseStatRequest"/></param>
+        /// <returns><see cref="GetLicenseStatResponse"/></returns>
+        public async Task<GetLicenseStatResponse> GetLicenseStat(GetLicenseStatRequest req)
+        {
+             JsonResponseModel<GetLicenseStatResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetLicenseStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLicenseStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 统计license类型数量
+        /// </summary>
+        /// <param name="req"><see cref="GetLicenseStatRequest"/></param>
+        /// <returns><see cref="GetLicenseStatResponse"/></returns>
+        public GetLicenseStatResponse GetLicenseStatSync(GetLicenseStatRequest req)
+        {
+             JsonResponseModel<GetLicenseStatResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetLicenseStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLicenseStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 按授权查看license列表
+        /// </summary>
+        /// <param name="req"><see cref="GetLicensesRequest"/></param>
+        /// <returns><see cref="GetLicensesResponse"/></returns>
+        public async Task<GetLicensesResponse> GetLicenses(GetLicensesRequest req)
+        {
+             JsonResponseModel<GetLicensesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetLicenses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLicensesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 按授权查看license列表
+        /// </summary>
+        /// <param name="req"><see cref="GetLicensesRequest"/></param>
+        /// <returns><see cref="GetLicensesResponse"/></returns>
+        public GetLicensesResponse GetLicensesSync(GetLicensesRequest req)
+        {
+             JsonResponseModel<GetLicensesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetLicenses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLicensesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

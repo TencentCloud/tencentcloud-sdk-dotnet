@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{40D73980-F3D8-31AD-91A8-DEE12D7F48C3}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.733</VersionPrefix>
+    <VersionPrefix>3.0.734</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -70,6 +70,8 @@
     <Compile Include="V20210524\Models\DescribeCustomizeTemplatesResponse.cs" />
     <Compile Include="V20210524\Models\DescribeWorkspaceEnvListRequest.cs" />
     <Compile Include="V20210524\Models\DescribeWorkspaceEnvListResponse.cs" />
+    <Compile Include="V20210524\Models\DescribeWorkspaceIsReadyRequest.cs" />
+    <Compile Include="V20210524\Models\DescribeWorkspaceIsReadyResponse.cs" />
     <Compile Include="V20210524\Models\DescribeWorkspaceNameExistRequest.cs" />
     <Compile Include="V20210524\Models\DescribeWorkspaceNameExistResponse.cs" />
     <Compile Include="V20210524\Models\DescribeWorkspaceStatusListRequest.cs" />

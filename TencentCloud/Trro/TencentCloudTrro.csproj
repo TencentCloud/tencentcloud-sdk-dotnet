@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C1142562-6202-3F63-82C3-66150BEE7B33}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.733</VersionPrefix>
+    <VersionPrefix>3.0.734</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,8 @@
     <Compile Include="V20220325\Models\BatchDeleteDevicesResponse.cs" />
     <Compile Include="V20220325\Models\BatchDeletePolicyRequest.cs" />
     <Compile Include="V20220325\Models\BatchDeletePolicyResponse.cs" />
+    <Compile Include="V20220325\Models\BoundLicensesRequest.cs" />
+    <Compile Include="V20220325\Models\BoundLicensesResponse.cs" />
     <Compile Include="V20220325\Models\CreateDeviceRequest.cs" />
     <Compile Include="V20220325\Models\CreateDeviceResponse.cs" />
     <Compile Include="V20220325\Models\CreateProjectRequest.cs" />
@@ -72,11 +74,23 @@
     <Compile Include="V20220325\Models\DescribeProjectInfoResponse.cs" />
     <Compile Include="V20220325\Models\DescribeProjectListRequest.cs" />
     <Compile Include="V20220325\Models\DescribeProjectListResponse.cs" />
+    <Compile Include="V20220325\Models\DescribeRecentSessionListRequest.cs" />
+    <Compile Include="V20220325\Models\DescribeRecentSessionListResponse.cs" />
     <Compile Include="V20220325\Models\DescribeSessionStatisticsByIntervalRequest.cs" />
     <Compile Include="V20220325\Models\DescribeSessionStatisticsByIntervalResponse.cs" />
     <Compile Include="V20220325\Models\DescribeSessionStatisticsRequest.cs" />
     <Compile Include="V20220325\Models\DescribeSessionStatisticsResponse.cs" />
+    <Compile Include="V20220325\Models\Device.cs" />
     <Compile Include="V20220325\Models\DeviceInfo.cs" />
+    <Compile Include="V20220325\Models\GetDeviceLicenseRequest.cs" />
+    <Compile Include="V20220325\Models\GetDeviceLicenseResponse.cs" />
+    <Compile Include="V20220325\Models\GetDevicesRequest.cs" />
+    <Compile Include="V20220325\Models\GetDevicesResponse.cs" />
+    <Compile Include="V20220325\Models\GetLicenseStatRequest.cs" />
+    <Compile Include="V20220325\Models\GetLicenseStatResponse.cs" />
+    <Compile Include="V20220325\Models\GetLicensesRequest.cs" />
+    <Compile Include="V20220325\Models\GetLicensesResponse.cs" />
+    <Compile Include="V20220325\Models\License.cs" />
     <Compile Include="V20220325\Models\ModifyDeviceRequest.cs" />
     <Compile Include="V20220325\Models\ModifyDeviceResponse.cs" />
     <Compile Include="V20220325\Models\ModifyPolicyRequest.cs" />
@@ -85,6 +99,7 @@
     <Compile Include="V20220325\Models\ModifyProjectResponse.cs" />
     <Compile Include="V20220325\Models\PolicyInfo.cs" />
     <Compile Include="V20220325\Models\ProjectInfo.cs" />
+    <Compile Include="V20220325\Models\RecentSessionInfo.cs" />
     <Compile Include="V20220325\Models\SessionDeviceDetail.cs" />
     <Compile Include="V20220325\Models\SessionInfo.cs" />
     <Compile Include="V20220325\Models\SessionIntervalStatistic.cs" />

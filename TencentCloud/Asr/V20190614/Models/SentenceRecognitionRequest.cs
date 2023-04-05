@@ -25,18 +25,6 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 腾讯云项目 ID，废弃参数，填写0即可。
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public ulong? ProjectId{ get; set; }
-
-        /// <summary>
-        /// 子服务类型。2： 一句话识别。
-        /// </summary>
-        [JsonProperty("SubServiceType")]
-        public ulong? SubServiceType{ get; set; }
-
-        /// <summary>
         /// 引擎模型类型。
         /// 电话场景：
         /// • 8k_zh：中文电话通用；
@@ -54,6 +42,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// • 16k_ms：马来语；
         /// • 16k_id：印度尼西亚语；
         /// • 16k_fil：菲律宾语；
+        /// • 16k_th：泰语；
         /// • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
         /// </summary>
         [JsonProperty("EngSerViceType")]
@@ -72,16 +61,28 @@ namespace TencentCloud.Asr.V20190614.Models
         public string VoiceFormat{ get; set; }
 
         /// <summary>
-        /// 废弃参数，填写任意字符串即可。
+        /// 腾讯云项目 ID，废弃参数，填写0即可。
         /// </summary>
-        [JsonProperty("UsrAudioKey")]
-        public string UsrAudioKey{ get; set; }
+        [JsonProperty("ProjectId")]
+        public ulong? ProjectId{ get; set; }
+
+        /// <summary>
+        /// 子服务类型。2： 一句话识别。
+        /// </summary>
+        [JsonProperty("SubServiceType")]
+        public ulong? SubServiceType{ get; set; }
 
         /// <summary>
         /// 语音的URL地址，需要公网环境浏览器可下载。当 SourceType 值为 0时须填写该字段，为 1 时不填。音频时长不能超过60s，音频文件大小不能超过3MB。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
+
+        /// <summary>
+        /// 废弃参数，填写任意字符串即可。
+        /// </summary>
+        [JsonProperty("UsrAudioKey")]
+        public string UsrAudioKey{ get; set; }
 
         /// <summary>
         /// 语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频时长不能超过60s，音频文件大小不能超过3MB（Base64后）。
@@ -149,13 +150,13 @@ namespace TencentCloud.Asr.V20190614.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "SubServiceType", this.SubServiceType);
             this.SetParamSimple(map, prefix + "EngSerViceType", this.EngSerViceType);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "VoiceFormat", this.VoiceFormat);
-            this.SetParamSimple(map, prefix + "UsrAudioKey", this.UsrAudioKey);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "SubServiceType", this.SubServiceType);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "UsrAudioKey", this.UsrAudioKey);
             this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "DataLen", this.DataLen);
             this.SetParamSimple(map, prefix + "WordInfo", this.WordInfo);

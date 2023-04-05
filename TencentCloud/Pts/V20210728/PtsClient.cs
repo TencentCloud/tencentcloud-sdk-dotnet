@@ -853,6 +853,46 @@ namespace TencentCloud.Pts.V20210728
         }
 
         /// <summary>
+        /// 查询错误详情汇总信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeErrorSummaryRequest"/></param>
+        /// <returns><see cref="DescribeErrorSummaryResponse"/></returns>
+        public async Task<DescribeErrorSummaryResponse> DescribeErrorSummary(DescribeErrorSummaryRequest req)
+        {
+             JsonResponseModel<DescribeErrorSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeErrorSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeErrorSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询错误详情汇总信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeErrorSummaryRequest"/></param>
+        /// <returns><see cref="DescribeErrorSummaryResponse"/></returns>
+        public DescribeErrorSummaryResponse DescribeErrorSummarySync(DescribeErrorSummaryRequest req)
+        {
+             JsonResponseModel<DescribeErrorSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeErrorSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeErrorSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询文件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeFilesRequest"/></param>

@@ -58,6 +58,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public BotUserRule[] BotUserRules{ get; set; }
 
         /// <summary>
+        /// Bot主动特征识别规则。
+        /// </summary>
+        [JsonProperty("AlgDetectRule")]
+        public AlgDetectRule[] AlgDetectRule{ get; set; }
+
+        /// <summary>
         /// Bot托管定制策略，入参可不填，仅出参使用。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -75,6 +81,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "BotPortraitRule.", this.BotPortraitRule);
             this.SetParamObj(map, prefix + "IntelligenceRule.", this.IntelligenceRule);
             this.SetParamArrayObj(map, prefix + "BotUserRules.", this.BotUserRules);
+            this.SetParamArrayObj(map, prefix + "AlgDetectRule.", this.AlgDetectRule);
             this.SetParamArrayObj(map, prefix + "Customizes.", this.Customizes);
         }
     }

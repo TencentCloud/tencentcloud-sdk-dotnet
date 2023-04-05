@@ -37,7 +37,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? RoomId{ get; set; }
 
         /// <summary>
-        /// 消息序列。获取该序列以前前的消息(不包含该seq消息)
+        /// 消息序列。获取该序列以前的消息(不包含该seq消息)
         /// </summary>
         [JsonProperty("Seq")]
         public long? Seq{ get; set; }

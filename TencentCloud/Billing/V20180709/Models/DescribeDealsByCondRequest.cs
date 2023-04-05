@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// 开始时间 2016-01-01 00:00:00
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

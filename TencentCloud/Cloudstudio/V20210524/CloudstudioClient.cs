@@ -453,6 +453,46 @@ namespace TencentCloud.Cloudstudio.V20210524
         }
 
         /// <summary>
+        /// 获取工作空间是否已经启动就绪
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkspaceIsReadyRequest"/></param>
+        /// <returns><see cref="DescribeWorkspaceIsReadyResponse"/></returns>
+        public async Task<DescribeWorkspaceIsReadyResponse> DescribeWorkspaceIsReady(DescribeWorkspaceIsReadyRequest req)
+        {
+             JsonResponseModel<DescribeWorkspaceIsReadyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWorkspaceIsReady");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWorkspaceIsReadyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取工作空间是否已经启动就绪
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkspaceIsReadyRequest"/></param>
+        /// <returns><see cref="DescribeWorkspaceIsReadyResponse"/></returns>
+        public DescribeWorkspaceIsReadyResponse DescribeWorkspaceIsReadySync(DescribeWorkspaceIsReadyRequest req)
+        {
+             JsonResponseModel<DescribeWorkspaceIsReadyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWorkspaceIsReady");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWorkspaceIsReadyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 检查工作空间是否存在
         /// </summary>
         /// <param name="req"><see cref="DescribeWorkspaceNameExistRequest"/></param>

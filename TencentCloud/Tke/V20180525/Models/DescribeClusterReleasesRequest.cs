@@ -43,6 +43,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? Offset{ get; set; }
 
         /// <summary>
+        /// 集群类型, 目前支持传入 tke, eks, tkeedge, external 
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
+        /// <summary>
         /// helm Release 安装的namespace
         /// </summary>
         [JsonProperty("Namespace")]
@@ -69,6 +75,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "ReleaseName", this.ReleaseName);
             this.SetParamSimple(map, prefix + "ChartName", this.ChartName);
