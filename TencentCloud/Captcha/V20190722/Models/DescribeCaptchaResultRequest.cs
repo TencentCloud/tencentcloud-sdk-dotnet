@@ -61,13 +61,13 @@ namespace TencentCloud.Captcha.V20190722.Models
         public string AppSecretKey{ get; set; }
 
         /// <summary>
-        /// 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
+        /// 预留字段
         /// </summary>
         [JsonProperty("BusinessId")]
         public ulong? BusinessId{ get; set; }
 
         /// <summary>
-        /// 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
+        /// 预留字段
         /// </summary>
         [JsonProperty("SceneId")]
         public ulong? SceneId{ get; set; }

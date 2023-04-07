@@ -1539,6 +1539,86 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取告警点所在事件的所有节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmIncidentNodesRequest"/></param>
+        /// <returns><see cref="DescribeAlarmIncidentNodesResponse"/></returns>
+        public async Task<DescribeAlarmIncidentNodesResponse> DescribeAlarmIncidentNodes(DescribeAlarmIncidentNodesRequest req)
+        {
+             JsonResponseModel<DescribeAlarmIncidentNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmIncidentNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmIncidentNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取告警点所在事件的所有节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmIncidentNodesRequest"/></param>
+        /// <returns><see cref="DescribeAlarmIncidentNodesResponse"/></returns>
+        public DescribeAlarmIncidentNodesResponse DescribeAlarmIncidentNodesSync(DescribeAlarmIncidentNodesRequest req)
+        {
+             JsonResponseModel<DescribeAlarmIncidentNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmIncidentNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmIncidentNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询告警点id列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmVertexIdRequest"/></param>
+        /// <returns><see cref="DescribeAlarmVertexIdResponse"/></returns>
+        public async Task<DescribeAlarmVertexIdResponse> DescribeAlarmVertexId(DescribeAlarmVertexIdRequest req)
+        {
+             JsonResponseModel<DescribeAlarmVertexIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmVertexId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmVertexIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询告警点id列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmVertexIdRequest"/></param>
+        /// <returns><see cref="DescribeAlarmVertexIdResponse"/></returns>
+        public DescribeAlarmVertexIdResponse DescribeAlarmVertexIdSync(DescribeAlarmVertexIdRequest req)
+        {
+             JsonResponseModel<DescribeAlarmVertexIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmVertexId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmVertexIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询应用列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetAppListRequest"/></param>
@@ -4579,6 +4659,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 根据事件表名和id查询告警事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventByTableRequest"/></param>
+        /// <returns><see cref="DescribeEventByTableResponse"/></returns>
+        public async Task<DescribeEventByTableResponse> DescribeEventByTable(DescribeEventByTableRequest req)
+        {
+             JsonResponseModel<DescribeEventByTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEventByTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventByTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据事件表名和id查询告警事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventByTableRequest"/></param>
+        /// <returns><see cref="DescribeEventByTableResponse"/></returns>
+        public DescribeEventByTableResponse DescribeEventByTableSync(DescribeEventByTableRequest req)
+        {
+             JsonResponseModel<DescribeEventByTableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEventByTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventByTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 专家服务-安全管家列表
         /// </summary>
         /// <param name="req"><see cref="DescribeExpertServiceListRequest"/></param>
@@ -5939,6 +6059,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 本地提权信息详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivilegeEventInfoRequest"/></param>
+        /// <returns><see cref="DescribePrivilegeEventInfoResponse"/></returns>
+        public async Task<DescribePrivilegeEventInfoResponse> DescribePrivilegeEventInfo(DescribePrivilegeEventInfoRequest req)
+        {
+             JsonResponseModel<DescribePrivilegeEventInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrivilegeEventInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivilegeEventInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本地提权信息详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivilegeEventInfoRequest"/></param>
+        /// <returns><see cref="DescribePrivilegeEventInfoResponse"/></returns>
+        public DescribePrivilegeEventInfoResponse DescribePrivilegeEventInfoSync(DescribePrivilegeEventInfoRequest req)
+        {
+             JsonResponseModel<DescribePrivilegeEventInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrivilegeEventInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivilegeEventInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取本地提权事件列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrivilegeEventsRequest"/></param>
@@ -6259,6 +6419,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 反弹shell信息详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellEventInfoRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellEventInfoResponse"/></returns>
+        public async Task<DescribeReverseShellEventInfoResponse> DescribeReverseShellEventInfo(DescribeReverseShellEventInfoRequest req)
+        {
+             JsonResponseModel<DescribeReverseShellEventInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReverseShellEventInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReverseShellEventInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 反弹shell信息详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellEventInfoRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellEventInfoResponse"/></returns>
+        public DescribeReverseShellEventInfoResponse DescribeReverseShellEventInfoSync(DescribeReverseShellEventInfoRequest req)
+        {
+             JsonResponseModel<DescribeReverseShellEventInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReverseShellEventInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReverseShellEventInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取反弹Shell列表
         /// </summary>
         /// <param name="req"><see cref="DescribeReverseShellEventsRequest"/></param>
@@ -6330,6 +6530,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "DescribeReverseShellRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReverseShellRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询恶意请求事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskDnsEventInfoRequest"/></param>
+        /// <returns><see cref="DescribeRiskDnsEventInfoResponse"/></returns>
+        public async Task<DescribeRiskDnsEventInfoResponse> DescribeRiskDnsEventInfo(DescribeRiskDnsEventInfoRequest req)
+        {
+             JsonResponseModel<DescribeRiskDnsEventInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRiskDnsEventInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskDnsEventInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询恶意请求事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskDnsEventInfoRequest"/></param>
+        /// <returns><see cref="DescribeRiskDnsEventInfoResponse"/></returns>
+        public DescribeRiskDnsEventInfoResponse DescribeRiskDnsEventInfoSync(DescribeRiskDnsEventInfoRequest req)
+        {
+             JsonResponseModel<DescribeRiskDnsEventInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRiskDnsEventInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskDnsEventInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -7290,6 +7530,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "DescribeVersionStatistics");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVersionStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定点属性信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVertexDetailRequest"/></param>
+        /// <returns><see cref="DescribeVertexDetailResponse"/></returns>
+        public async Task<DescribeVertexDetailResponse> DescribeVertexDetail(DescribeVertexDetailRequest req)
+        {
+             JsonResponseModel<DescribeVertexDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVertexDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVertexDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定点属性信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVertexDetailRequest"/></param>
+        /// <returns><see cref="DescribeVertexDetailResponse"/></returns>
+        public DescribeVertexDetailResponse DescribeVertexDetailSync(DescribeVertexDetailRequest req)
+        {
+             JsonResponseModel<DescribeVertexDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVertexDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVertexDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

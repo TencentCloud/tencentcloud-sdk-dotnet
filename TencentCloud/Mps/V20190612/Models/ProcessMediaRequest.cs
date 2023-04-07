@@ -37,10 +37,23 @@ namespace TencentCloud.Mps.V20190612.Models
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
+        /// 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+        /// 如果不填，表示与 InputInfo 中文件所在的目录一致。
         /// </summary>
         [JsonProperty("OutputDir")]
         public string OutputDir{ get; set; }
+
+        /// <summary>
+        /// 编排ID。
+        /// 注意1：对于OutputStorage、OutputDir参数：
+        /// <li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
+        /// <li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若创建任务接口（ProcessMedia）有输出，将覆盖原有编排的默认输出。</li>
+        /// 注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessMedia）有设置，将覆盖原有编排的默认回调。
+        /// 
+        /// 注意3：编排的 Trigger 只是用来自动化触发场景，在手动发起的请求中已经配置的 Trigger 无意义。
+        /// </summary>
+        [JsonProperty("ScheduleId")]
+        public long? ScheduleId{ get; set; }
 
         /// <summary>
         /// 媒体处理类型任务参数。
@@ -67,6 +80,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
+        /// 视频质检类型任务参数。
+        /// </summary>
+        [JsonProperty("AiQualityControlTask")]
+        public AiQualityControlTaskInput AiQualityControlTask{ get; set; }
+
+        /// <summary>
         /// 任务的事件通知信息，不填代表不获取事件通知。
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
@@ -91,18 +110,6 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 编排ID。
-        /// 注意1：对于OutputStorage、OutputDir参数：
-        /// <li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
-        /// <li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若创建任务接口（ProcessMedia）有输出，将覆盖原有编排的默认输出。</li>
-        /// 注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessMedia）有设置，将覆盖原有编排的默认回调。
-        /// 
-        /// 注意3：编排的 Trigger 只是用来自动化触发场景，在手动发起的请求中已经配置的 Trigger 无意义。
-        /// </summary>
-        [JsonProperty("ScheduleId")]
-        public long? ScheduleId{ get; set; }
-
-        /// <summary>
         /// 任务类型，默认Online
         /// <li> Online：实时任务</li>
         /// <li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
@@ -119,15 +126,16 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputDir", this.OutputDir);
+            this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
             this.SetParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
+            this.SetParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
-            this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }

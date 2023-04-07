@@ -78,6 +78,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ModelSignature")]
         public string ModelSignature{ get; set; }
 
+        /// <summary>
+        /// 加速引擎对应的框架版本
+        /// </summary>
+        [JsonProperty("FrameworkVersion")]
+        public string FrameworkVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "ModelInputPath.", this.ModelInputPath);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "ModelSignature", this.ModelSignature);
+            this.SetParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
         }
     }
 }

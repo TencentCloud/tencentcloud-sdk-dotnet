@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例绑定的安全组
+        /// 实例绑定的安全组信息。
         /// </summary>
         [JsonProperty("Groups")]
         public SecurityGroup[] Groups{ get; set; }

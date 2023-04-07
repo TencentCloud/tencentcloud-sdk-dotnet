@@ -164,6 +164,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Pods")]
         public Pod Pods{ get; set; }
 
+        /// <summary>
+        /// Pod列表信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PodInfos")]
+        public Pod[] PodInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -189,6 +196,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "OldHybridBillingPrepaidReplicas", this.OldHybridBillingPrepaidReplicas);
             this.SetParamSimple(map, prefix + "ModelHotUpdateEnable", this.ModelHotUpdateEnable);
             this.SetParamObj(map, prefix + "Pods.", this.Pods);
+            this.SetParamArrayObj(map, prefix + "PodInfos.", this.PodInfos);
         }
     }
 }

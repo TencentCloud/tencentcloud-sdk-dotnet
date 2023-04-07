@@ -31,10 +31,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public long?[] ScheduleIds{ get; set; }
 
         /// <summary>
+        /// 编排触发类型，可选值：
+        /// <li>CosFileUpload： 腾讯云 COS 文件上传触发</li>
+        /// <li>AwsS3FileUpload：Aws S3 文件上传触发。</li>
+        /// 不填或者为空表示全部。
+        /// </summary>
+        [JsonProperty("TriggerType")]
+        public string TriggerType{ get; set; }
+
+        /// <summary>
         /// 状态，取值范围：
         /// <li>Enabled：已启用，</li>
         /// <li>Disabled：已禁用。</li>
-        /// 不填此参数，则不区分工作流状态。
+        /// 不填此参数，则不区编排状态。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -58,6 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "ScheduleIds.", this.ScheduleIds);
+            this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

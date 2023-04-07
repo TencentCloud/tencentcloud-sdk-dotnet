@@ -39,6 +39,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Status{ get; set; }
 
         /// <summary>
+        /// 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+        /// </summary>
+        [JsonProperty("ErrCode")]
+        public long? ErrCode{ get; set; }
+
+        /// <summary>
+        /// 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
+        /// <summary>
         /// 媒体处理的目标文件信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -67,6 +79,8 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
             this.SetParamArrayObj(map, prefix + "ActivityResultSet.", this.ActivityResultSet);

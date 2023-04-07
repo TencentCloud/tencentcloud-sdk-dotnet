@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.734</VersionPrefix>
+    <VersionPrefix>3.0.735</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="V20180228\CwpClient.cs" />
     <Compile Include="V20180228\Models\AccountStatistics.cs" />
+    <Compile Include="V20180228\Models\AlarmInfo.cs" />
     <Compile Include="V20180228\Models\AssetAppBaseInfo.cs" />
     <Compile Include="V20180228\Models\AssetAppProcessInfo.cs" />
     <Compile Include="V20180228\Models\AssetCoreModuleBaseInfo.cs" />
@@ -187,6 +188,10 @@
     <Compile Include="V20180228\Models\DeleteWebPageEventLogResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAccountStatisticsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAccountStatisticsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeAlarmIncidentNodesRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeAlarmIncidentNodesResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeAlarmVertexIdRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeAlarmVertexIdResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAssetAppListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAssetAppListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAssetAppProcessListRequest.cs" />
@@ -339,6 +344,8 @@
     <Compile Include="V20180228\Models\DescribeEmergencyResponseListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeEmergencyVulListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeEmergencyVulListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeEventByTableRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeEventByTableResponse.cs" />
     <Compile Include="V20180228\Models\DescribeExpertServiceListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeExpertServiceListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeExpertServiceOrderListRequest.cs" />
@@ -407,6 +414,8 @@
     <Compile Include="V20180228\Models\DescribeOpenPortStatisticsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeOverviewStatisticsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeOverviewStatisticsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribePrivilegeEventInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribePrivilegeEventInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribePrivilegeEventsRequest.cs" />
     <Compile Include="V20180228\Models\DescribePrivilegeEventsResponse.cs" />
     <Compile Include="V20180228\Models\DescribePrivilegeRulesRequest.cs" />
@@ -423,10 +432,14 @@
     <Compile Include="V20180228\Models\DescribeProtectDirRelatedServerResponse.cs" />
     <Compile Include="V20180228\Models\DescribeProtectNetListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeProtectNetListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeReverseShellEventInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeReverseShellEventInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellEventsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellEventsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellRulesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellRulesResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRiskDnsEventInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRiskDnsEventInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRiskDnsEventListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeRiskDnsEventListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRiskDnsListRequest.cs" />
@@ -475,6 +488,8 @@
     <Compile Include="V20180228\Models\DescribeUsualLoginPlacesResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVersionStatisticsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVersionStatisticsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeVertexDetailRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeVertexDetailResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulCountByDatesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVulCountByDatesResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulEffectHostListRequest.cs" />
@@ -583,6 +598,7 @@
     <Compile Include="V20180228\Models\IgnoreImpactedHostsRequest.cs" />
     <Compile Include="V20180228\Models\IgnoreImpactedHostsResponse.cs" />
     <Compile Include="V20180228\Models\IgnoreRuleEffectHostInfo.cs" />
+    <Compile Include="V20180228\Models\IncidentVertexInfo.cs" />
     <Compile Include="V20180228\Models\Item.cs" />
     <Compile Include="V20180228\Models\JavaMemShellInfo.cs" />
     <Compile Include="V20180228\Models\LicenseBindDetail.cs" />
@@ -641,6 +657,7 @@
     <Compile Include="V20180228\Models\OsName.cs" />
     <Compile Include="V20180228\Models\Place.cs" />
     <Compile Include="V20180228\Models\PrivilegeEscalationProcess.cs" />
+    <Compile Include="V20180228\Models\PrivilegeEventInfo.cs" />
     <Compile Include="V20180228\Models\PrivilegeRule.cs" />
     <Compile Include="V20180228\Models\ProcessStatistics.cs" />
     <Compile Include="V20180228\Models\ProtectDirInfo.cs" />
@@ -657,6 +674,7 @@
     <Compile Include="V20180228\Models\RegionInfo.cs" />
     <Compile Include="V20180228\Models\RegionSet.cs" />
     <Compile Include="V20180228\Models\ReverseShell.cs" />
+    <Compile Include="V20180228\Models\ReverseShellEventInfo.cs" />
     <Compile Include="V20180228\Models\ReverseShellRule.cs" />
     <Compile Include="V20180228\Models\RiskDnsEvent.cs" />
     <Compile Include="V20180228\Models\RiskDnsList.cs" />
@@ -705,6 +723,8 @@
     <Compile Include="V20180228\Models\UpdateMachineTagsRequest.cs" />
     <Compile Include="V20180228\Models\UpdateMachineTagsResponse.cs" />
     <Compile Include="V20180228\Models\UsualPlace.cs" />
+    <Compile Include="V20180228\Models\VertexDetail.cs" />
+    <Compile Include="V20180228\Models\VertexInfo.cs" />
     <Compile Include="V20180228\Models\VulDetailInfo.cs" />
     <Compile Include="V20180228\Models\VulEffectHostList.cs" />
     <Compile Include="V20180228\Models\VulHostTopInfo.cs" />

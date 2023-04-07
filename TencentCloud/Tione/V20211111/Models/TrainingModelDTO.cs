@@ -50,6 +50,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 模型版本列表。默认不返回，仅在指定请求参数开启时返回。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrainingModelVersions")]
+        public TrainingModelVersionDTO[] TrainingModelVersions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +67,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "TrainingModelName", this.TrainingModelName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamArrayObj(map, prefix + "TrainingModelVersions.", this.TrainingModelVersions);
         }
     }
 }

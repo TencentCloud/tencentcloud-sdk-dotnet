@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.734</VersionPrefix>
+    <VersionPrefix>3.0.735</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,12 +69,16 @@
     <Compile Include="V20190612\Models\AiAnalysisTaskFrameTagInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskFrameTagOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskFrameTagResult.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskHighlightInput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskHighlightOutput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskHighlightResult.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskTagInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskTagOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskTagResult.cs" />
     <Compile Include="V20190612\Models\AiContentReviewResult.cs" />
     <Compile Include="V20190612\Models\AiContentReviewTaskInput.cs" />
+    <Compile Include="V20190612\Models\AiQualityControlTaskInput.cs" />
     <Compile Include="V20190612\Models\AiRecognitionResult.cs" />
     <Compile Include="V20190612\Models\AiRecognitionTaskAsrFullTextResult.cs" />
     <Compile Include="V20190612\Models\AiRecognitionTaskAsrFullTextResultInput.cs" />
@@ -354,6 +358,7 @@
     <Compile Include="V20190612\Models\HLSPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\HdrConfig.cs" />
     <Compile Include="V20190612\Models\HeadTailParameter.cs" />
+    <Compile Include="V20190612\Models\HighlightSegmentItem.cs" />
     <Compile Include="V20190612\Models\ImageQualityEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="V20190612\Models\ImageSpriteTemplate.cs" />
@@ -385,6 +390,7 @@
     <Compile Include="V20190612\Models\MediaAiAnalysisCoverItem.cs" />
     <Compile Include="V20190612\Models\MediaAiAnalysisFrameTagItem.cs" />
     <Compile Include="V20190612\Models\MediaAiAnalysisFrameTagSegmentItem.cs" />
+    <Compile Include="V20190612\Models\MediaAiAnalysisHighlightItem.cs" />
     <Compile Include="V20190612\Models\MediaAiAnalysisTagItem.cs" />
     <Compile Include="V20190612\Models\MediaAnimatedGraphicsItem.cs" />
     <Compile Include="V20190612\Models\MediaAudioStreamItem.cs" />
@@ -481,6 +487,9 @@
     <Compile Include="V20190612\Models\ProhibitedConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ProhibitedOcrReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\ProhibitedOcrReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\QualityControlData.cs" />
+    <Compile Include="V20190612\Models\QualityControlItem.cs" />
+    <Compile Include="V20190612\Models\QualityControlResult.cs" />
     <Compile Include="V20190612\Models\RTMPAddressDestination.cs" />
     <Compile Include="V20190612\Models\RTMPPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\RTPAddressDestination.cs" />
@@ -502,6 +511,7 @@
     <Compile Include="V20190612\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20190612\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="V20190612\Models\ScheduleAnalysisTaskResult.cs" />
+    <Compile Include="V20190612\Models\ScheduleQualityControlTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleRecognitionTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleReviewTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleTask.cs" />

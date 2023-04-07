@@ -88,6 +88,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AiRecognitionResultSet")]
         public AiRecognitionResult[] AiRecognitionResultSet{ get; set; }
 
+        /// <summary>
+        /// 视频质检任务的执行状态与结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AiQualityControlTaskResult")]
+        public ScheduleQualityControlTaskResult AiQualityControlTaskResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +111,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "AiContentReviewResultSet.", this.AiContentReviewResultSet);
             this.SetParamArrayObj(map, prefix + "AiAnalysisResultSet.", this.AiAnalysisResultSet);
             this.SetParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
+            this.SetParamObj(map, prefix + "AiQualityControlTaskResult.", this.AiQualityControlTaskResult);
         }
     }
 }

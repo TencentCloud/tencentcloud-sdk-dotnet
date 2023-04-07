@@ -37,18 +37,21 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>action-image-sprite：雪碧图</li>
         /// <li>action-snapshotByTimeOffset: 时间点截图</li>
         /// <li>action-adaptive-substream：自适应码流</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }
 
         /// <summary>
         /// 后驱节点索引数组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReardriveIndex")]
         public long?[] ReardriveIndex{ get; set; }
 
         /// <summary>
         /// 原子任务参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivityPara")]
         public ActivityPara ActivityPara{ get; set; }

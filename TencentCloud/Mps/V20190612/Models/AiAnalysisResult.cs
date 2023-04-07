@@ -63,6 +63,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("FrameTagTask")]
         public AiAnalysisTaskFrameTagResult FrameTagTask{ get; set; }
 
+        /// <summary>
+        /// 视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HighlightTask")]
+        public AiAnalysisTaskHighlightResult HighlightTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +81,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "CoverTask.", this.CoverTask);
             this.SetParamObj(map, prefix + "TagTask.", this.TagTask);
             this.SetParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
+            this.SetParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
         }
     }
 }

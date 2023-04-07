@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 音画质重生模版名称。
+        /// 音画质重生模板名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 模版描述。
+        /// 模板描述。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

@@ -86,7 +86,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public TagSpecification[] TagSpecification{ get; set; }
 
         /// <summary>
-        /// 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
+        /// 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
@@ -174,6 +174,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("RuntimeVersion")]
         public string RuntimeVersion{ get; set; }
 
+        /// <summary>
+        /// 集群当前etcd数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterEtcdNodeNum")]
+        public ulong? ClusterEtcdNodeNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +210,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
             this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
             this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
+            this.SetParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
         }
     }
 }

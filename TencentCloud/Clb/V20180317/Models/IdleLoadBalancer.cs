@@ -67,6 +67,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Forward")]
         public ulong? Forward{ get; set; }
 
+        /// <summary>
+        /// 负载均衡域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +87,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "IdleReason", this.IdleReason);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Forward", this.Forward);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

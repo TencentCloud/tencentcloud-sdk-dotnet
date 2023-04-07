@@ -25,45 +25,45 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 工作流绑定的 AWS S3 存储桶。
+        /// 绑定的 AWS S3 存储桶。
         /// </summary>
         [JsonProperty("S3Bucket")]
         public string S3Bucket{ get; set; }
 
         /// <summary>
-        /// 工作流绑定的桶所在 AWS 区域。
+        /// 绑定的桶所在 AWS 区域。
         /// </summary>
         [JsonProperty("S3Region")]
         public string S3Region{ get; set; }
 
         /// <summary>
-        /// 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
+        /// 绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
         /// </summary>
         [JsonProperty("Dir")]
         public string Dir{ get; set; }
 
         /// <summary>
-        /// 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
+        /// 允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
         /// </summary>
         [JsonProperty("Formats")]
         public string[] Formats{ get; set; }
 
         /// <summary>
-        /// 工作流绑定的 AWS S3 存储桶的秘钥ID。
+        /// 绑定的 AWS S3 存储桶的秘钥ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3SecretId")]
         public string S3SecretId{ get; set; }
 
         /// <summary>
-        /// 工作流绑定的 AWS S3 存储桶的秘钥Key。
+        /// 绑定的 AWS S3 存储桶的秘钥Key。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3SecretKey")]
         public string S3SecretKey{ get; set; }
 
         /// <summary>
-        /// 工作流绑定的 AWS S3 存储桶对应的 SQS事件队列。
+        /// 绑定的 AWS S3 存储桶对应的 SQS事件队列。
         /// 注意：队列和桶需要在同一区域。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

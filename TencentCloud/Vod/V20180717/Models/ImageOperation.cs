@@ -44,6 +44,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("CenterCut")]
         public ImageCenterCut CenterCut{ get; set; }
 
+        /// <summary>
+        /// 图片模糊处理，仅当 Type 为 Blur 时有效。
+        /// </summary>
+        [JsonProperty("Blur")]
+        public ImageBlur Blur{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "Scale.", this.Scale);
             this.SetParamObj(map, prefix + "CenterCut.", this.CenterCut);
+            this.SetParamObj(map, prefix + "Blur.", this.Blur);
         }
     }
 }

@@ -108,6 +108,14 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Ipv6ServiceCIDR")]
         public string Ipv6ServiceCIDR{ get; set; }
 
+        /// <summary>
+        /// 集群Cilium Mode配置
+        /// - clusterIP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CiliumMode")]
+        public string CiliumMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +135,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "IgnoreServiceCIDRConflict", this.IgnoreServiceCIDRConflict);
             this.SetParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
             this.SetParamSimple(map, prefix + "Ipv6ServiceCIDR", this.Ipv6ServiceCIDR);
+            this.SetParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
         }
     }
 }

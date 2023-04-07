@@ -73,6 +73,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Containers")]
         public Container Containers{ get; set; }
 
+        /// <summary>
+        /// 容器列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerInfos")]
+        public Container[] ContainerInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "IP", this.IP);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamObj(map, prefix + "Containers.", this.Containers);
+            this.SetParamArrayObj(map, prefix + "ContainerInfos.", this.ContainerInfos);
         }
     }
 }

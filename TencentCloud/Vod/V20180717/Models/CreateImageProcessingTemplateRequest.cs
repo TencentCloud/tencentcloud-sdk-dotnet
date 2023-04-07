@@ -26,7 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 图片处理操作数组，操作将以其在数组中的顺序执行。
-        /// <li>长度限制：3。</li>
+        /// <li>长度限制：10。</li>
         /// </summary>
         [JsonProperty("Operations")]
         public ImageOperation[] Operations{ get; set; }

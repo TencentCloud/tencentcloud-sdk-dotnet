@@ -38,13 +38,24 @@ namespace TencentCloud.Dc.V20180410.Models
         public string AccessPointId{ get; set; }
 
         /// <summary>
-        /// 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
+        /// 提供接入物理专线的运营商。
+        /// ChinaTelecom：中国电信； 
+        /// ChinaMobile：中国移动；
+        /// ChinaUnicom：中国联通；
+        ///  In-houseWiring：楼内线；
+        /// ChinaOther：中国其他；
+        ///  InternationalOperator：境外其他。
         /// </summary>
         [JsonProperty("LineOperator")]
         public string LineOperator{ get; set; }
 
         /// <summary>
-        /// 物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）。
+        /// 物理专线接入端口类型，取值：
+        /// 100Base-T：百兆电口；
+        /// 1000Base-T（默认值）：千兆电口；
+        /// 1000Base-LX：千兆单模光口（10千米）；
+        /// 10GBase-T：万兆电口；
+        /// 10GBase-LR（默认值）：万兆单模光口（10千米）。
         /// </summary>
         [JsonProperty("PortType")]
         public string PortType{ get; set; }
@@ -122,7 +133,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string FaultReportContactNumber{ get; set; }
 
         /// <summary>
-        /// 物理专线申请者是否签署了用户使用协议。默认已签署
+        /// 物理专线申请者是否签署了用户使用协议。默认已签署。
         /// </summary>
         [JsonProperty("SignLaw")]
         public bool? SignLaw{ get; set; }

@@ -56,7 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 媒体处理生成的文件输出的目标目录。
+        /// 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾。
         /// 注意：如果设置为空，则表示取消老配置的OutputDir值。
         /// </summary>
         [JsonProperty("OutputDir")]

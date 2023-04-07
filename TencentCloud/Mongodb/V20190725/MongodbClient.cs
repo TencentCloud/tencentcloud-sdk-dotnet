@@ -613,7 +613,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
+        /// 本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选主实例、灾备实例和只读实例信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
@@ -633,7 +633,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
+        /// 本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选主实例、灾备实例和只读实例信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
@@ -693,7 +693,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 查询实例绑定的安全组
+        /// 本就口（DescribeSecurityGroup）用于查询实例绑定的安全组。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
         /// <returns><see cref="DescribeSecurityGroupResponse"/></returns>
@@ -713,7 +713,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 查询实例绑定的安全组
+        /// 本就口（DescribeSecurityGroup）用于查询实例绑定的安全组。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
         /// <returns><see cref="DescribeSecurityGroupResponse"/></returns>
@@ -1133,7 +1133,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 修改实例绑定的安全组
+        /// 本接口（ModifyDBInstanceSecurityGroup）用于修改实例绑定的安全组
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSecurityGroupResponse"/></returns>
@@ -1153,7 +1153,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 修改实例绑定的安全组
+        /// 本接口（ModifyDBInstanceSecurityGroup）用于修改实例绑定的安全组
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSecurityGroupResponse"/></returns>

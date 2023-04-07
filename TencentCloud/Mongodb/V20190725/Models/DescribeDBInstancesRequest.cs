@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+        /// 实例ID列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -49,13 +49,17 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// 私有网络的ID，基础网络则不传该参数。
+        /// 私有网络的 ID。
+        /// - 基础网络则无需配置该参数。
+        /// - 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其 ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。
+        /// 私有网络的子网ID。
+        /// - 基础网络则无需配置该参数。
+        /// - 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其子网 ID。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -79,31 +83,33 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回结果集排序的字段，目前支持："ProjectId"、"InstanceName"、"CreateTime"，默认为升序排序。
+        /// 配置返回结果排序依据的字段。目前支持依据"ProjectId"、"InstanceName"、"CreateTime"排序。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 返回结果集排序方式，目前支持："ASC"或者"DESC"。
+        /// 配置返回结果的排序方式。
+        /// - ASC：升序。
+        /// - DESC：降序。
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// 项目 ID。
+        /// 项目 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)，在右上角的账户信息下拉菜单中，选择项目管理查询项目。
         /// </summary>
         [JsonProperty("ProjectIds")]
         public ulong?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 搜索关键词，支持实例ID、实例名称、完整IP。
+        /// 配置查询搜索的关键词。支持配置为实例ID、实例名称或者内网 IP 地址。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// Tag信息。
+        /// 标签信息，包含标签键与标签值。
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }

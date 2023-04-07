@@ -27,11 +27,11 @@ namespace TencentCloud.Tione.V20211111.Models
         /// <summary>
         /// 过滤器
         /// Filter.Name: 枚举值:
-        ///     keyword (模型名称)
-        ///     TrainingModelId (模型ID)
-        ///     ModelVersionType (模型版本类型) 其值Filter.Values支持: NORMAL(通用) ACCELERATE (加速)
-        ///     TrainingModelSource (模型来源)  其值Filter.Values支持： JOB/COS
-        ///     ModelFormat（模型格式）其值Filter.Values支持：
+        /// keyword (模型名称)
+        /// TrainingModelId (模型ID)
+        /// ModelVersionType (模型版本类型) 其值Filter.Values支持: NORMAL(通用) ACCELERATE (加速)
+        /// TrainingModelSource (模型来源) 其值Filter.Values支持： JOB/COS
+        /// ModelFormat（模型格式）其值Filter.Values支持：
         /// PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML/MMDETECTION/ONNX/HUGGING_FACE
         /// Filter.Values: 当长度为1时，支持模糊查询; 不为1时，精确查询
         /// 每次请求的Filters的上限为10，Filter.Values的上限为100
@@ -70,6 +70,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
+        /// <summary>
+        /// 是否同时返回模型版本列表
+        /// </summary>
+        [JsonProperty("WithModelVersions")]
+        public bool? WithModelVersions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +88,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+            this.SetParamSimple(map, prefix + "WithModelVersions", this.WithModelVersions);
         }
     }
 }

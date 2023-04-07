@@ -571,7 +571,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建一个用户自定义的图片处理模板，数量上限：16。最多支持三次操作，例如：裁剪-缩略-裁剪。
+        /// 创建一个用户自定义的图片处理模板，数量上限：16。最多支持十次操作，例如：裁剪-缩略-裁剪-模糊-缩略-裁剪-缩略-裁剪-模糊-缩略。
         /// </summary>
         /// <param name="req"><see cref="CreateImageProcessingTemplateRequest"/></param>
         /// <returns><see cref="CreateImageProcessingTemplateResponse"/></returns>
@@ -591,7 +591,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建一个用户自定义的图片处理模板，数量上限：16。最多支持三次操作，例如：裁剪-缩略-裁剪。
+        /// 创建一个用户自定义的图片处理模板，数量上限：16。最多支持十次操作，例如：裁剪-缩略-裁剪-模糊-缩略-裁剪-缩略-裁剪-模糊-缩略。
         /// </summary>
         /// <param name="req"><see cref="CreateImageProcessingTemplateRequest"/></param>
         /// <returns><see cref="CreateImageProcessingTemplateResponse"/></returns>
@@ -731,7 +731,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建音画质重生模版。
+        /// 创建音画质重生模板。
         /// </summary>
         /// <param name="req"><see cref="CreateRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="CreateRebuildMediaTemplateResponse"/></returns>
@@ -751,7 +751,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建音画质重生模版。
+        /// 创建音画质重生模板。
         /// </summary>
         /// <param name="req"><see cref="CreateRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="CreateRebuildMediaTemplateResponse"/></returns>
@@ -1717,7 +1717,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除音画质重生模版。
+        /// 删除音画质重生模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="DeleteRebuildMediaTemplateResponse"/></returns>
@@ -1737,7 +1737,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除音画质重生模版。
+        /// 删除音画质重生模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="DeleteRebuildMediaTemplateResponse"/></returns>
@@ -3405,7 +3405,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 获取音画质重生模版列表。
+        /// 获取音画质重生模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRebuildMediaTemplatesRequest"/></param>
         /// <returns><see cref="DescribeRebuildMediaTemplatesResponse"/></returns>
@@ -3425,7 +3425,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 获取音画质重生模版列表。
+        /// 获取音画质重生模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRebuildMediaTemplatesRequest"/></param>
         /// <returns><see cref="DescribeRebuildMediaTemplatesResponse"/></returns>
@@ -4991,7 +4991,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 修改音画质重生模版。
+        /// 修改音画质重生模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="ModifyRebuildMediaTemplateResponse"/></returns>
@@ -5011,7 +5011,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 修改音画质重生模版。
+        /// 修改音画质重生模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="ModifyRebuildMediaTemplateResponse"/></returns>
@@ -5947,7 +5947,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 使用模版发起音画质重生。
+        /// 使用模板发起音画质重生。
         /// </summary>
         /// <param name="req"><see cref="RebuildMediaByTemplateRequest"/></param>
         /// <returns><see cref="RebuildMediaByTemplateResponse"/></returns>
@@ -5967,7 +5967,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 使用模版发起音画质重生。
+        /// 使用模板发起音画质重生。
         /// </summary>
         /// <param name="req"><see cref="RebuildMediaByTemplateRequest"/></param>
         /// <returns><see cref="RebuildMediaByTemplateResponse"/></returns>
