@@ -179,7 +179,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 创建文件转换任务
+        /// 上传了word、excel文件后，通过该接口发起文件转换任务，将word、excel文件转换为pdf文件。
         /// </summary>
         /// <param name="req"><see cref="CreateConvertTaskApiRequest"/></param>
         /// <returns><see cref="CreateConvertTaskApiResponse"/></returns>
@@ -199,7 +199,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 创建文件转换任务
+        /// 上传了word、excel文件后，通过该接口发起文件转换任务，将word、excel文件转换为pdf文件。
         /// </summary>
         /// <param name="req"><see cref="CreateConvertTaskApiRequest"/></param>
         /// <returns><see cref="CreateConvertTaskApiResponse"/></returns>

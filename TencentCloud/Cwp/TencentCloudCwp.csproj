@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.735</VersionPrefix>
+    <VersionPrefix>3.0.736</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -352,6 +352,8 @@
     <Compile Include="V20180228\Models\DescribeExpertServiceOrderListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeExportMachinesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeExportMachinesResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeFileTamperEventsRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeFileTamperEventsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeGeneralStatRequest.cs" />
     <Compile Include="V20180228\Models\DescribeGeneralStatResponse.cs" />
     <Compile Include="V20180228\Models\DescribeHistoryAccountsRequest.cs" />
@@ -587,6 +589,7 @@
     <Compile Include="V20180228\Models\ExportVulListResponse.cs" />
     <Compile Include="V20180228\Models\ExportWebPageEventListRequest.cs" />
     <Compile Include="V20180228\Models\ExportWebPageEventListResponse.cs" />
+    <Compile Include="V20180228\Models\FileTamperEvent.cs" />
     <Compile Include="V20180228\Models\Filter.cs" />
     <Compile Include="V20180228\Models\Filters.cs" />
     <Compile Include="V20180228\Models\FixBaselineDetectRequest.cs" />

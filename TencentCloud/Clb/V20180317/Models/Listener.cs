@@ -175,6 +175,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("MaxCps")]
         public long? MaxCps{ get; set; }
 
+        /// <summary>
+        /// 空闲连接超时时间，仅支持TCP监听器。默认值:900；共享型实例和独占型实例取值范围：300～900，性能容量型实例取值范围:300～1980。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IdleConnectTimeout")]
+        public long? IdleConnectTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +210,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
             this.SetParamSimple(map, prefix + "MaxConn", this.MaxConn);
             this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
+            this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
         }
     }
 }

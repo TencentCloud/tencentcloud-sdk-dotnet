@@ -4819,6 +4819,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 核心文件监控事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileTamperEventsRequest"/></param>
+        /// <returns><see cref="DescribeFileTamperEventsResponse"/></returns>
+        public async Task<DescribeFileTamperEventsResponse> DescribeFileTamperEvents(DescribeFileTamperEventsRequest req)
+        {
+             JsonResponseModel<DescribeFileTamperEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFileTamperEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileTamperEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 核心文件监控事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileTamperEventsRequest"/></param>
+        /// <returns><see cref="DescribeFileTamperEventsResponse"/></returns>
+        public DescribeFileTamperEventsResponse DescribeFileTamperEventsSync(DescribeFileTamperEventsRequest req)
+        {
+             JsonResponseModel<DescribeFileTamperEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFileTamperEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileTamperEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取主机相关统计
         /// </summary>
         /// <param name="req"><see cref="DescribeGeneralStatRequest"/></param>

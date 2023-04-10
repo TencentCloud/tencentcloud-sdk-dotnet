@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 客户端连接信息，包括客户端IP和对应IP的连接数量。
+        /// 客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
         /// </summary>
         [JsonProperty("Clients")]
         public ClientConnection[] Clients{ get; set; }

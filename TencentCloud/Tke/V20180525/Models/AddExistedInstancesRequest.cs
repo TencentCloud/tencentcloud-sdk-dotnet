@@ -87,7 +87,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public InstanceAdvancedSettings[] InstanceAdvancedSettingsOverrides{ get; set; }
 
         /// <summary>
-        /// 节点镜像（节点选项时，该参数是必传参数）
+        /// 节点镜像
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }

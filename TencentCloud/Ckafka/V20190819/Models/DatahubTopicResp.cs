@@ -30,6 +30,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
+        /// <summary>
+        /// TopicId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +44,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
         }
     }
 }

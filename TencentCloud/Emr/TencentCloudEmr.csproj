@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.735</VersionPrefix>
+    <VersionPrefix>3.0.736</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,7 @@
     <Compile Include="V20190103\Models\ClusterExternalServiceInfo.cs" />
     <Compile Include="V20190103\Models\ClusterInstancesInfo.cs" />
     <Compile Include="V20190103\Models\ClusterSetting.cs" />
+    <Compile Include="V20190103\Models\ComponentBasicRestartInfo.cs" />
     <Compile Include="V20190103\Models\Configuration.cs" />
     <Compile Include="V20190103\Models\CreateClusterRequest.cs" />
     <Compile Include="V20190103\Models\CreateClusterResponse.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="V20190103\Models\NodeDetailPriceResult.cs" />
     <Compile Include="V20190103\Models\NodeHardwareInfo.cs" />
     <Compile Include="V20190103\Models\NodeResourceSpec.cs" />
+    <Compile Include="V20190103\Models\OpScope.cs" />
     <Compile Include="V20190103\Models\OutterResource.cs" />
     <Compile Include="V20190103\Models\PartDetailPriceItem.cs" />
     <Compile Include="V20190103\Models\PersistentVolumeContext.cs" />
@@ -155,13 +157,18 @@
     <Compile Include="V20190103\Models\SceneSoftwareConfig.cs" />
     <Compile Include="V20190103\Models\ScriptBootstrapActionConfig.cs" />
     <Compile Include="V20190103\Models\SearchItem.cs" />
+    <Compile Include="V20190103\Models\ServiceBasicRestartInfo.cs" />
     <Compile Include="V20190103\Models\ShortNodeInfo.cs" />
     <Compile Include="V20190103\Models\SoftDependInfo.cs" />
+    <Compile Include="V20190103\Models\StartStopServiceOrMonitorRequest.cs" />
+    <Compile Include="V20190103\Models\StartStopServiceOrMonitorResponse.cs" />
     <Compile Include="V20190103\Models\Step.cs" />
     <Compile Include="V20190103\Models\SubnetInfo.cs" />
     <Compile Include="V20190103\Models\SyncPodStateRequest.cs" />
     <Compile Include="V20190103\Models\SyncPodStateResponse.cs" />
     <Compile Include="V20190103\Models\Tag.cs" />
+    <Compile Include="V20190103\Models\TerminateClusterNodesRequest.cs" />
+    <Compile Include="V20190103\Models\TerminateClusterNodesResponse.cs" />
     <Compile Include="V20190103\Models\TerminateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\TerminateInstanceResponse.cs" />
     <Compile Include="V20190103\Models\TerminateTasksRequest.cs" />

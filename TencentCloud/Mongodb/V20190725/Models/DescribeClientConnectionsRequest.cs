@@ -25,19 +25,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+        /// 指定待查询的实例ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
+        /// 单次请求返回的数量。最小值为1，最大值为1000，默认值为1000。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认值为0。
+        /// 偏移量，默认值为0。Offset=Limit*(页码-1)。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

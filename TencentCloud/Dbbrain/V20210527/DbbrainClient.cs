@@ -453,6 +453,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 根据任务id删除健康报告生成任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBDiagReportTasksRequest"/></param>
+        /// <returns><see cref="DeleteDBDiagReportTasksResponse"/></returns>
+        public async Task<DeleteDBDiagReportTasksResponse> DeleteDBDiagReportTasks(DeleteDBDiagReportTasksRequest req)
+        {
+             JsonResponseModel<DeleteDBDiagReportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDBDiagReportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDBDiagReportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据任务id删除健康报告生成任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBDiagReportTasksRequest"/></param>
+        /// <returns><see cref="DeleteDBDiagReportTasksResponse"/></returns>
+        public DeleteDBDiagReportTasksResponse DeleteDBDiagReportTasksSync(DeleteDBDiagReportTasksRequest req)
+        {
+             JsonResponseModel<DeleteDBDiagReportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDBDiagReportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDBDiagReportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除安全审计日志导出任务。
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityAuditLogExportTasksRequest"/></param>

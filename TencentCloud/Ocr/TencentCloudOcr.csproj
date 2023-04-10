@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.735</VersionPrefix>
+    <VersionPrefix>3.0.736</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -118,6 +118,7 @@
     <Compile Include="V20181119\Models\GeneralHandwritingOCRResponse.cs" />
     <Compile Include="V20181119\Models\GetTaskStateRequest.cs" />
     <Compile Include="V20181119\Models\GetTaskStateResponse.cs" />
+    <Compile Include="V20181119\Models\GroupInfo.cs" />
     <Compile Include="V20181119\Models\HKIDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\HKIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\HmtResidentPermitOCRRequest.cs" />
@@ -136,9 +137,12 @@
     <Compile Include="V20181119\Models\InvoiceGeneralOCRRequest.cs" />
     <Compile Include="V20181119\Models\InvoiceGeneralOCRResponse.cs" />
     <Compile Include="V20181119\Models\ItemCoord.cs" />
+    <Compile Include="V20181119\Models\ItemInfo.cs" />
+    <Compile Include="V20181119\Models\Key.cs" />
     <Compile Include="V20181119\Models\LicensePlateInfo.cs" />
     <Compile Include="V20181119\Models\LicensePlateOCRRequest.cs" />
     <Compile Include="V20181119\Models\LicensePlateOCRResponse.cs" />
+    <Compile Include="V20181119\Models\LineInfo.cs" />
     <Compile Include="V20181119\Models\MLIDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\MLIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\MLIDPassportOCRRequest.cs" />
@@ -214,6 +218,8 @@
     <Compile Include="V20181119\Models\SmartFormFileUrl.cs" />
     <Compile Include="V20181119\Models\SmartStructuralOCRRequest.cs" />
     <Compile Include="V20181119\Models\SmartStructuralOCRResponse.cs" />
+    <Compile Include="V20181119\Models\SmartStructuralOCRV2Request.cs" />
+    <Compile Include="V20181119\Models\SmartStructuralOCRV2Response.cs" />
     <Compile Include="V20181119\Models\StructuralItem.cs" />
     <Compile Include="V20181119\Models\TableCell.cs" />
     <Compile Include="V20181119\Models\TableCellInfo.cs" />
@@ -244,6 +250,7 @@
     <Compile Include="V20181119\Models\TrainTicketOCRRequest.cs" />
     <Compile Include="V20181119\Models\TrainTicketOCRResponse.cs" />
     <Compile Include="V20181119\Models\UsedVehicleInvoiceInfo.cs" />
+    <Compile Include="V20181119\Models\Value.cs" />
     <Compile Include="V20181119\Models\VatInvoice.cs" />
     <Compile Include="V20181119\Models\VatInvoiceGoodsInfo.cs" />
     <Compile Include="V20181119\Models\VatInvoiceItem.cs" />

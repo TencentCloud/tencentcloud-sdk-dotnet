@@ -1017,6 +1017,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 用于启动或停止监控或服务
+        /// </summary>
+        /// <param name="req"><see cref="StartStopServiceOrMonitorRequest"/></param>
+        /// <returns><see cref="StartStopServiceOrMonitorResponse"/></returns>
+        public async Task<StartStopServiceOrMonitorResponse> StartStopServiceOrMonitor(StartStopServiceOrMonitorRequest req)
+        {
+             JsonResponseModel<StartStopServiceOrMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartStopServiceOrMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartStopServiceOrMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于启动或停止监控或服务
+        /// </summary>
+        /// <param name="req"><see cref="StartStopServiceOrMonitorRequest"/></param>
+        /// <returns><see cref="StartStopServiceOrMonitorResponse"/></returns>
+        public StartStopServiceOrMonitorResponse StartStopServiceOrMonitorSync(StartStopServiceOrMonitorRequest req)
+        {
+             JsonResponseModel<StartStopServiceOrMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartStopServiceOrMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartStopServiceOrMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// EMR同步TKE中POD状态
         /// </summary>
         /// <param name="req"><see cref="SyncPodStateRequest"/></param>
@@ -1048,6 +1088,46 @@ namespace TencentCloud.Emr.V20190103
              {
                  var strResp = this.InternalRequestSync(req, "SyncPodState");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncPodStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 销毁集群节点
+        /// </summary>
+        /// <param name="req"><see cref="TerminateClusterNodesRequest"/></param>
+        /// <returns><see cref="TerminateClusterNodesResponse"/></returns>
+        public async Task<TerminateClusterNodesResponse> TerminateClusterNodes(TerminateClusterNodesRequest req)
+        {
+             JsonResponseModel<TerminateClusterNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateClusterNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateClusterNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 销毁集群节点
+        /// </summary>
+        /// <param name="req"><see cref="TerminateClusterNodesRequest"/></param>
+        /// <returns><see cref="TerminateClusterNodesResponse"/></returns>
+        public TerminateClusterNodesResponse TerminateClusterNodesSync(TerminateClusterNodesRequest req)
+        {
+             JsonResponseModel<TerminateClusterNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateClusterNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateClusterNodesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

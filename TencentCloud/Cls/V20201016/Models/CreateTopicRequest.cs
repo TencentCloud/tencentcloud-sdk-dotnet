@@ -72,6 +72,19 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
+        /// <summary>
+        /// 日志主题描述
+        /// </summary>
+        [JsonProperty("Describes")]
+        public string Describes{ get; set; }
+
+        /// <summary>
+        /// 0：关闭日志沉降。
+        /// 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+        /// </summary>
+        [JsonProperty("HotPeriod")]
+        public ulong? HotPeriod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +99,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "Describes", this.Describes);
+            this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
         }
     }
 }

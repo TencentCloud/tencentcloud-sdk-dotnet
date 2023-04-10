@@ -38,9 +38,13 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 指标列表，取值有:
-        /// <li>l7Flow_outFlux: 访问流量；</li>
+        /// <li>l7Flow_outFlux: Edgeone响应流量；</li>
+        /// <li>l7Flow_inFlux: Edgeone请求流量；</li>
+        /// <li>l7Flow_outBandwidth: Edgeone响应带宽；</li>
+        /// <li>l7Flow_inBandwidth：Edgeone请求带宽；</li>
         /// <li>l7Flow_request: 访问请求数；</li>
-        /// <li>l7Flow_outBandwidth: 访问带宽。</li>
+        /// <li>l7Flow_flux: 访问请求上行+下行流量；</li>
+        /// <li>l7Flow_bandwidth：访问请求上行+下行带宽。</li>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }

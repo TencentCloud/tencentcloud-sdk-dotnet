@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.735</VersionPrefix>
+    <VersionPrefix>3.0.736</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -130,6 +130,8 @@
     <Compile Include="V20220817\Models\GetRoomEventResponse.cs" />
     <Compile Include="V20220817\Models\GetRoomMessageRequest.cs" />
     <Compile Include="V20220817\Models\GetRoomMessageResponse.cs" />
+    <Compile Include="V20220817\Models\GetRoomsRequest.cs" />
+    <Compile Include="V20220817\Models\GetRoomsResponse.cs" />
     <Compile Include="V20220817\Models\GetWatermarkRequest.cs" />
     <Compile Include="V20220817\Models\GetWatermarkResponse.cs" />
     <Compile Include="V20220817\Models\GroupBaseInfo.cs" />
@@ -153,6 +155,7 @@
     <Compile Include="V20220817\Models\RegisterUserRequest.cs" />
     <Compile Include="V20220817\Models\RegisterUserResponse.cs" />
     <Compile Include="V20220817\Models\RoomInfo.cs" />
+    <Compile Include="V20220817\Models\RoomItem.cs" />
     <Compile Include="V20220817\Models\SceneItem.cs" />
     <Compile Include="V20220817\Models\SetAppCustomContentRequest.cs" />
     <Compile Include="V20220817\Models\SetAppCustomContentResponse.cs" />

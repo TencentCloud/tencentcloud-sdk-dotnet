@@ -30,6 +30,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }
 
+        /// <summary>
+        /// bucket类型，不填默认web，2:app
+        /// </summary>
+        [JsonProperty("FileType")]
+        public long? FileType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
+            this.SetParamSimple(map, prefix + "FileType", this.FileType);
         }
     }
 }

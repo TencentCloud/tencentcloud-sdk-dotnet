@@ -1,0 +1,126 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Lcic.V20220817.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class RoomItem : AbstractModel
+    {
+        
+        /// <summary>
+        /// 名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 房间ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RoomId")]
+        public ulong? RoomId{ get; set; }
+
+        /// <summary>
+        /// 房间状态。0 未开始 ；1进行中  ；2 已结束
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public ulong? StartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public ulong? EndTime{ get; set; }
+
+        /// <summary>
+        /// 实际开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RealStartTime")]
+        public ulong? RealStartTime{ get; set; }
+
+        /// <summary>
+        /// 实际结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RealEndTime")]
+        public ulong? RealEndTime{ get; set; }
+
+        /// <summary>
+        /// 分辨率。1 标清
+        /// 2 高清
+        /// 3 全高清
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Resolution")]
+        public ulong? Resolution{ get; set; }
+
+        /// <summary>
+        /// 最大允许连麦人数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxRTCMember")]
+        public ulong? MaxRTCMember{ get; set; }
+
+        /// <summary>
+        /// 房间录制地址。已废弃，使用新字段 RecordUrl
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReplayUrl")]
+        public string ReplayUrl{ get; set; }
+
+        /// <summary>
+        /// 录制地址（协议为https)。仅在房间结束后存在。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordUrl")]
+        public string RecordUrl{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "RealStartTime", this.RealStartTime);
+            this.SetParamSimple(map, prefix + "RealEndTime", this.RealEndTime);
+            this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "MaxRTCMember", this.MaxRTCMember);
+            this.SetParamSimple(map, prefix + "ReplayUrl", this.ReplayUrl);
+            this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
+        }
+    }
+}
+

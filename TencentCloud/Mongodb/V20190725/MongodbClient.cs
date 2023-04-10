@@ -93,7 +93,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(CreateAccountUser)用于创建mongodb实例账号。
+        /// 本接口（CreateAccountUser）用于自定义实例访问账号。
         /// </summary>
         /// <param name="req"><see cref="CreateAccountUserRequest"/></param>
         /// <returns><see cref="CreateAccountUserResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(CreateAccountUser)用于创建mongodb实例账号。
+        /// 本接口（CreateAccountUser）用于自定义实例访问账号。
         /// </summary>
         /// <param name="req"><see cref="CreateAccountUserRequest"/></param>
         /// <returns><see cref="CreateAccountUserResponse"/></returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeAccountUsers)用于获取当前实例的全部账号。
+        /// 本接口（DescribeAccountUsers）用于获取当前实例的全部账号。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountUsersRequest"/></param>
         /// <returns><see cref="DescribeAccountUsersResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeAccountUsers)用于获取当前实例的全部账号。
+        /// 本接口（DescribeAccountUsers）用于获取当前实例的全部账号。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountUsersRequest"/></param>
         /// <returns><see cref="DescribeAccountUsersResponse"/></returns>
@@ -413,7 +413,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeClientConnections)用于查询实例客户端连接信息，包括连接IP和连接数量。
+        /// 本接口（DescribeClientConnections）用于查询实例客户端连接信息，包括连接 IP 和连接数量。
         /// </summary>
         /// <param name="req"><see cref="DescribeClientConnectionsRequest"/></param>
         /// <returns><see cref="DescribeClientConnectionsResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeClientConnections)用于查询实例客户端连接信息，包括连接IP和连接数量。
+        /// 本接口（DescribeClientConnections）用于查询实例客户端连接信息，包括连接 IP 和连接数量。
         /// </summary>
         /// <param name="req"><see cref="DescribeClientConnectionsRequest"/></param>
         /// <returns><see cref="DescribeClientConnectionsResponse"/></returns>

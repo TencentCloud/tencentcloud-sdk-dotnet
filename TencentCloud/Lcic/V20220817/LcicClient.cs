@@ -1493,6 +1493,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 获取房间列表
+        /// </summary>
+        /// <param name="req"><see cref="GetRoomsRequest"/></param>
+        /// <returns><see cref="GetRoomsResponse"/></returns>
+        public async Task<GetRoomsResponse> GetRooms(GetRoomsRequest req)
+        {
+             JsonResponseModel<GetRoomsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRooms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRoomsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取房间列表
+        /// </summary>
+        /// <param name="req"><see cref="GetRoomsRequest"/></param>
+        /// <returns><see cref="GetRoomsResponse"/></returns>
+        public GetRoomsResponse GetRoomsSync(GetRoomsRequest req)
+        {
+             JsonResponseModel<GetRoomsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRooms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRoomsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取水印设置
         /// </summary>
         /// <param name="req"><see cref="GetWatermarkRequest"/></param>
