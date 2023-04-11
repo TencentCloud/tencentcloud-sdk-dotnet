@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.736</VersionPrefix>
+    <VersionPrefix>3.0.737</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -117,6 +117,8 @@
     <Compile Include="V20210527\Models\DescribeSlowLogTopSqlsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSlowLogUserHostStatsRequest.cs" />
     <Compile Include="V20210527\Models\DescribeSlowLogUserHostStatsResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeSlowLogsRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeSlowLogsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSqlFiltersRequest.cs" />
     <Compile Include="V20210527\Models\DescribeSqlFiltersResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSqlTemplateRequest.cs" />
@@ -166,6 +168,7 @@
     <Compile Include="V20210527\Models\SecLogExportTaskInfo.cs" />
     <Compile Include="V20210527\Models\SessionItem.cs" />
     <Compile Include="V20210527\Models\SlowLogHost.cs" />
+    <Compile Include="V20210527\Models\SlowLogInfoItem.cs" />
     <Compile Include="V20210527\Models\SlowLogTopSqlItem.cs" />
     <Compile Include="V20210527\Models\Table.cs" />
     <Compile Include="V20210527\Models\TableSpaceData.cs" />

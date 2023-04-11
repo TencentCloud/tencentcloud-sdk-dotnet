@@ -45,6 +45,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Tag")]
         public RuleTagInfo Tag{ get; set; }
 
+        /// <summary>
+        /// 动态索引配置，如果为空时代表未开启动态段索引
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DynamicIndex")]
+        public DynamicIndex DynamicIndex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "FullText.", this.FullText);
             this.SetParamObj(map, prefix + "KeyValue.", this.KeyValue);
             this.SetParamObj(map, prefix + "Tag.", this.Tag);
+            this.SetParamObj(map, prefix + "DynamicIndex.", this.DynamicIndex);
         }
     }
 }

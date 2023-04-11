@@ -186,6 +186,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("MainClusterName")]
         public string MainClusterName{ get; set; }
 
+        /// <summary>
+        /// spark jar 包年包月集群是否开启弹性
+        /// </summary>
+        [JsonProperty("ElasticSwitch")]
+        public bool? ElasticSwitch{ get; set; }
+
+        /// <summary>
+        /// spark jar 包年包月集群弹性上限
+        /// </summary>
+        [JsonProperty("ElasticLimit")]
+        public long? ElasticLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +231,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "DataEngineConfigPairs.", this.DataEngineConfigPairs);
             this.SetParamSimple(map, prefix + "ImageVersionName", this.ImageVersionName);
             this.SetParamSimple(map, prefix + "MainClusterName", this.MainClusterName);
+            this.SetParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
+            this.SetParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
         }
     }
 }

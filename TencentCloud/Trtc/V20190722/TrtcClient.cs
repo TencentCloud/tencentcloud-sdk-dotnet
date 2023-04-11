@@ -655,7 +655,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 可查询SdkAppId每天的房间数和用户数，按天统计，可查询最近14天的数据。当天未结束，数据未统计完成，无法查到当天的房间数与用户数。（同老接口DescribeHistoryScale） 
+        /// 可查询SdkAppId每天的房间数和用户数，按天统计，可查询最近14天的数据。当天未结束，数据未统计完成，无法查到当天的房间数与用户数。（同老接口DescribeHistoryScale）
         /// </summary>
         /// <param name="req"><see cref="DescribeScaleInfoRequest"/></param>
         /// <returns><see cref="DescribeScaleInfoResponse"/></returns>
@@ -675,7 +675,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 可查询SdkAppId每天的房间数和用户数，按天统计，可查询最近14天的数据。当天未结束，数据未统计完成，无法查到当天的房间数与用户数。（同老接口DescribeHistoryScale） 
+        /// 可查询SdkAppId每天的房间数和用户数，按天统计，可查询最近14天的数据。当天未结束，数据未统计完成，无法查到当天的房间数与用户数。（同老接口DescribeHistoryScale）
         /// </summary>
         /// <param name="req"><see cref="DescribeScaleInfoRequest"/></param>
         /// <returns><see cref="DescribeScaleInfoResponse"/></returns>

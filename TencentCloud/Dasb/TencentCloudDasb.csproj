@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4ACC8A01-FDA5-3C33-AEEA-E6EE529B3ACA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.736</VersionPrefix>
+    <VersionPrefix>3.0.737</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,7 @@
     <Compile Include="V20191018\Models\AddUserGroupMembersRequest.cs" />
     <Compile Include="V20191018\Models\AddUserGroupMembersResponse.cs" />
     <Compile Include="V20191018\Models\AssetSyncStatus.cs" />
+    <Compile Include="V20191018\Models\AuditLogResult.cs" />
     <Compile Include="V20191018\Models\BindDeviceAccountPasswordRequest.cs" />
     <Compile Include="V20191018\Models\BindDeviceAccountPasswordResponse.cs" />
     <Compile Include="V20191018\Models\BindDeviceAccountPrivateKeyRequest.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="V20191018\Models\BindDeviceResourceRequest.cs" />
     <Compile Include="V20191018\Models\BindDeviceResourceResponse.cs" />
     <Compile Include="V20191018\Models\CmdTemplate.cs" />
+    <Compile Include="V20191018\Models\Command.cs" />
     <Compile Include="V20191018\Models\CreateAclRequest.cs" />
     <Compile Include="V20191018\Models\CreateAclResponse.cs" />
     <Compile Include="V20191018\Models\CreateAssetSyncJobRequest.cs" />
@@ -112,6 +114,10 @@
     <Compile Include="V20191018\Models\DescribeDeviceGroupsResponse.cs" />
     <Compile Include="V20191018\Models\DescribeDevicesRequest.cs" />
     <Compile Include="V20191018\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeLoginEventRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeLoginEventResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeOperationEventRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeOperationEventResponse.cs" />
     <Compile Include="V20191018\Models\DescribeResourcesRequest.cs" />
     <Compile Include="V20191018\Models\DescribeResourcesResponse.cs" />
     <Compile Include="V20191018\Models\DescribeUserGroupMembersRequest.cs" />
@@ -127,6 +133,7 @@
     <Compile Include="V20191018\Models\Group.cs" />
     <Compile Include="V20191018\Models\ImportExternalDeviceRequest.cs" />
     <Compile Include="V20191018\Models\ImportExternalDeviceResponse.cs" />
+    <Compile Include="V20191018\Models\LoginEvent.cs" />
     <Compile Include="V20191018\Models\ModifyAclRequest.cs" />
     <Compile Include="V20191018\Models\ModifyAclResponse.cs" />
     <Compile Include="V20191018\Models\ModifyDeviceGroupRequest.cs" />
@@ -135,6 +142,7 @@
     <Compile Include="V20191018\Models\ModifyDeviceResponse.cs" />
     <Compile Include="V20191018\Models\ModifyUserRequest.cs" />
     <Compile Include="V20191018\Models\ModifyUserResponse.cs" />
+    <Compile Include="V20191018\Models\OperationEvent.cs" />
     <Compile Include="V20191018\Models\ResetDeviceAccountPasswordRequest.cs" />
     <Compile Include="V20191018\Models\ResetDeviceAccountPasswordResponse.cs" />
     <Compile Include="V20191018\Models\ResetDeviceAccountPrivateKeyRequest.cs" />
@@ -142,6 +150,26 @@
     <Compile Include="V20191018\Models\ResetUserRequest.cs" />
     <Compile Include="V20191018\Models\ResetUserResponse.cs" />
     <Compile Include="V20191018\Models\Resource.cs" />
+    <Compile Include="V20191018\Models\SearchAuditLogRequest.cs" />
+    <Compile Include="V20191018\Models\SearchAuditLogResponse.cs" />
+    <Compile Include="V20191018\Models\SearchCommandBySidRequest.cs" />
+    <Compile Include="V20191018\Models\SearchCommandBySidResponse.cs" />
+    <Compile Include="V20191018\Models\SearchCommandRequest.cs" />
+    <Compile Include="V20191018\Models\SearchCommandResponse.cs" />
+    <Compile Include="V20191018\Models\SearchCommandResult.cs" />
+    <Compile Include="V20191018\Models\SearchFileBySidRequest.cs" />
+    <Compile Include="V20191018\Models\SearchFileBySidResponse.cs" />
+    <Compile Include="V20191018\Models\SearchFileBySidResult.cs" />
+    <Compile Include="V20191018\Models\SearchFileRequest.cs" />
+    <Compile Include="V20191018\Models\SearchFileResponse.cs" />
+    <Compile Include="V20191018\Models\SearchFileResult.cs" />
+    <Compile Include="V20191018\Models\SearchFileTypeFilter.cs" />
+    <Compile Include="V20191018\Models\SearchSessionCommandRequest.cs" />
+    <Compile Include="V20191018\Models\SearchSessionCommandResponse.cs" />
+    <Compile Include="V20191018\Models\SearchSessionRequest.cs" />
+    <Compile Include="V20191018\Models\SearchSessionResponse.cs" />
+    <Compile Include="V20191018\Models\SessionCommand.cs" />
+    <Compile Include="V20191018\Models\SessionResult.cs" />
     <Compile Include="V20191018\Models\TagFilter.cs" />
     <Compile Include="V20191018\Models\User.cs" />
   </ItemGroup>

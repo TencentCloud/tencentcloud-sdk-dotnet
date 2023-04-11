@@ -120,6 +120,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
+        /// <summary>
+        /// 针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。
+        /// </summary>
+        [JsonProperty("RoTransType")]
+        public string RoTransType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
             this.SetParamSimple(map, prefix + "CrossCluster", this.CrossCluster);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "RoTransType", this.RoTransType);
         }
     }
 }

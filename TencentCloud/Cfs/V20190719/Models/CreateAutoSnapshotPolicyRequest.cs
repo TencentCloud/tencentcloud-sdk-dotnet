@@ -49,7 +49,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? AliveDays{ get; set; }
 
         /// <summary>
-        /// 快照按月重复，每月1-31号，选择一天，每月这一天打快照。
+        /// 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
         /// </summary>
         [JsonProperty("DayOfMonth")]
         public string DayOfMonth{ get; set; }

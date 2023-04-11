@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 设置任务ID,用于查询是否设置完成
+        /// 任务ID。
         /// </summary>
         [JsonProperty("FlowId")]
         public ulong? FlowId{ get; set; }

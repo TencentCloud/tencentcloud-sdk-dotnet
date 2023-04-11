@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineIp{ get; set; }
 
         /// <summary>
-        /// 受云镜保护天数。
+        /// 受主机安全保护天数。
         /// </summary>
         [JsonProperty("ProtectDays")]
         public ulong? ProtectDays{ get; set; }
@@ -75,7 +75,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// 云镜客户端唯一Uuid。
+        /// 主机安全客户端唯一Uuid。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
@@ -150,7 +150,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? HasAssetScan{ get; set; }
 
         /// <summary>
-        /// 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+        /// 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
         /// </summary>
         [JsonProperty("ProtectType")]
         public string ProtectType{ get; set; }

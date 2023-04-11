@@ -83,6 +83,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public Column[] Columns{ get; set; }
 
         /// <summary>
+        /// 本次统计分析使用的采样率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SamplingRate")]
+        public float? SamplingRate{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -102,6 +109,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "AnalysisResults.", this.AnalysisResults);
             this.SetParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
             this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
+            this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

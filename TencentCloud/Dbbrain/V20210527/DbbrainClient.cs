@@ -1413,6 +1413,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 获取指定时间内某个sql模版的慢日志明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
+        public async Task<DescribeSlowLogsResponse> DescribeSlowLogs(DescribeSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定时间内某个sql模版的慢日志明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
+        public DescribeSlowLogsResponse DescribeSlowLogsSync(DescribeSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询实例SQL限流任务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeSqlFiltersRequest"/></param>

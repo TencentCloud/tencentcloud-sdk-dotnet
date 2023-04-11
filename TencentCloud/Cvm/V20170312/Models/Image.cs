@@ -86,7 +86,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageState{ get; set; }
 
         /// <summary>
-        /// 镜像来源平台
+        /// 镜像来源平台，包括如TencentOS、 CentOS、 Windows、 Ubuntu、 Debian、Fedora等。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }

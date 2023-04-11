@@ -25,25 +25,25 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 值为枚举类型参数集合
+        /// 参数值为枚举类型参数集合。
         /// </summary>
         [JsonProperty("InstanceEnumParam")]
         public InstanceEnumParam[] InstanceEnumParam{ get; set; }
 
         /// <summary>
-        /// 值为integer类型参数集合
+        /// 参数值为 Integer 类型参数集合。
         /// </summary>
         [JsonProperty("InstanceIntegerParam")]
         public InstanceIntegerParam[] InstanceIntegerParam{ get; set; }
 
         /// <summary>
-        /// 值为text类型的参数集合
+        /// 参数值为 Text 类型的参数集合。
         /// </summary>
         [JsonProperty("InstanceTextParam")]
         public InstanceTextParam[] InstanceTextParam{ get; set; }
 
         /// <summary>
-        /// 值为混合类型的参数集合
+        /// 参数值为混合类型的参数集合。
         /// </summary>
         [JsonProperty("InstanceMultiParam")]
         public InstanceMultiParam[] InstanceMultiParam{ get; set; }

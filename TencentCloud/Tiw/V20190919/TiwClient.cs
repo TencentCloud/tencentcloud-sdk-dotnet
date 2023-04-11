@@ -173,6 +173,46 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 检测PPT文件，识别PPT中包含的动态转码任务（Transcode）不支持的元素
+        /// </summary>
+        /// <param name="req"><see cref="CreatePPTCheckTaskRequest"/></param>
+        /// <returns><see cref="CreatePPTCheckTaskResponse"/></returns>
+        public async Task<CreatePPTCheckTaskResponse> CreatePPTCheckTask(CreatePPTCheckTaskRequest req)
+        {
+             JsonResponseModel<CreatePPTCheckTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePPTCheckTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePPTCheckTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 检测PPT文件，识别PPT中包含的动态转码任务（Transcode）不支持的元素
+        /// </summary>
+        /// <param name="req"><see cref="CreatePPTCheckTaskRequest"/></param>
+        /// <returns><see cref="CreatePPTCheckTaskResponse"/></returns>
+        public CreatePPTCheckTaskResponse CreatePPTCheckTaskSync(CreatePPTCheckTaskRequest req)
+        {
+             JsonResponseModel<CreatePPTCheckTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePPTCheckTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePPTCheckTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建白板板书生成任务, 在任务结束后，如果提供了回调地址，将通过回调地址通知板书生成结果
         /// </summary>
         /// <param name="req"><see cref="CreateSnapshotTaskRequest"/></param>
@@ -653,6 +693,86 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 查询PPT检测任务的执行进度或结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribePPTCheckRequest"/></param>
+        /// <returns><see cref="DescribePPTCheckResponse"/></returns>
+        public async Task<DescribePPTCheckResponse> DescribePPTCheck(DescribePPTCheckRequest req)
+        {
+             JsonResponseModel<DescribePPTCheckResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePPTCheck");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePPTCheckResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询PPT检测任务的执行进度或结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribePPTCheckRequest"/></param>
+        /// <returns><see cref="DescribePPTCheckResponse"/></returns>
+        public DescribePPTCheckResponse DescribePPTCheckSync(DescribePPTCheckRequest req)
+        {
+             JsonResponseModel<DescribePPTCheckResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePPTCheck");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePPTCheckResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询PPT检测任务回调地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribePPTCheckCallbackRequest"/></param>
+        /// <returns><see cref="DescribePPTCheckCallbackResponse"/></returns>
+        public async Task<DescribePPTCheckCallbackResponse> DescribePPTCheckCallback(DescribePPTCheckCallbackRequest req)
+        {
+             JsonResponseModel<DescribePPTCheckCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePPTCheckCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePPTCheckCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询PPT检测任务回调地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribePPTCheckCallbackRequest"/></param>
+        /// <returns><see cref="DescribePPTCheckCallbackResponse"/></returns>
+        public DescribePPTCheckCallbackResponse DescribePPTCheckCallbackSync(DescribePPTCheckCallbackRequest req)
+        {
+             JsonResponseModel<DescribePPTCheckCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePPTCheckCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePPTCheckCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询用户后付费用量
         /// </summary>
         /// <param name="req"><see cref="DescribePostpaidUsageRequest"/></param>
@@ -804,6 +924,46 @@ namespace TencentCloud.Tiw.V20190919
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRoomList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据指定的任务类型，获取当前正在执行中的任务列表。只能查询最近3天内创建的任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRunningTasksRequest"/></param>
+        /// <returns><see cref="DescribeRunningTasksResponse"/></returns>
+        public async Task<DescribeRunningTasksResponse> DescribeRunningTasks(DescribeRunningTasksRequest req)
+        {
+             JsonResponseModel<DescribeRunningTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRunningTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRunningTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据指定的任务类型，获取当前正在执行中的任务列表。只能查询最近3天内创建的任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRunningTasksRequest"/></param>
+        /// <returns><see cref="DescribeRunningTasksResponse"/></returns>
+        public DescribeRunningTasksResponse DescribeRunningTasksSync(DescribeRunningTasksRequest req)
+        {
+             JsonResponseModel<DescribeRunningTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRunningTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRunningTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1292,6 +1452,46 @@ namespace TencentCloud.Tiw.V20190919
              {
                  var strResp = this.InternalRequestSync(req, "DescribeVideoGenerationTaskCallback");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoGenerationTaskCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询告警回调地址。此功能需要申请白名单使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWarningCallbackRequest"/></param>
+        /// <returns><see cref="DescribeWarningCallbackResponse"/></returns>
+        public async Task<DescribeWarningCallbackResponse> DescribeWarningCallback(DescribeWarningCallbackRequest req)
+        {
+             JsonResponseModel<DescribeWarningCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWarningCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWarningCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询告警回调地址。此功能需要申请白名单使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWarningCallbackRequest"/></param>
+        /// <returns><see cref="DescribeWarningCallbackResponse"/></returns>
+        public DescribeWarningCallbackResponse DescribeWarningCallbackSync(DescribeWarningCallbackRequest req)
+        {
+             JsonResponseModel<DescribeWarningCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWarningCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWarningCallbackResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1861,6 +2061,86 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 设置PPT检测任务回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
+        /// </summary>
+        /// <param name="req"><see cref="SetPPTCheckCallbackRequest"/></param>
+        /// <returns><see cref="SetPPTCheckCallbackResponse"/></returns>
+        public async Task<SetPPTCheckCallbackResponse> SetPPTCheckCallback(SetPPTCheckCallbackRequest req)
+        {
+             JsonResponseModel<SetPPTCheckCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetPPTCheckCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetPPTCheckCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置PPT检测任务回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
+        /// </summary>
+        /// <param name="req"><see cref="SetPPTCheckCallbackRequest"/></param>
+        /// <returns><see cref="SetPPTCheckCallbackResponse"/></returns>
+        public SetPPTCheckCallbackResponse SetPPTCheckCallbackSync(SetPPTCheckCallbackRequest req)
+        {
+             JsonResponseModel<SetPPTCheckCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetPPTCheckCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetPPTCheckCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置PPT检测任务回调密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
+        /// </summary>
+        /// <param name="req"><see cref="SetPPTCheckCallbackKeyRequest"/></param>
+        /// <returns><see cref="SetPPTCheckCallbackKeyResponse"/></returns>
+        public async Task<SetPPTCheckCallbackKeyResponse> SetPPTCheckCallbackKey(SetPPTCheckCallbackKeyRequest req)
+        {
+             JsonResponseModel<SetPPTCheckCallbackKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetPPTCheckCallbackKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetPPTCheckCallbackKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置PPT检测任务回调密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
+        /// </summary>
+        /// <param name="req"><see cref="SetPPTCheckCallbackKeyRequest"/></param>
+        /// <returns><see cref="SetPPTCheckCallbackKeyResponse"/></returns>
+        public SetPPTCheckCallbackKeyResponse SetPPTCheckCallbackKeySync(SetPPTCheckCallbackKeyRequest req)
+        {
+             JsonResponseModel<SetPPTCheckCallbackKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetPPTCheckCallbackKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetPPTCheckCallbackKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 设置文档转码回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
         /// </summary>
         /// <param name="req"><see cref="SetTranscodeCallbackRequest"/></param>
@@ -2012,6 +2292,46 @@ namespace TencentCloud.Tiw.V20190919
              {
                  var strResp = this.InternalRequestSync(req, "SetVideoGenerationTaskCallbackKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetVideoGenerationTaskCallbackKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置告警回调地址。此功能需要申请白名单使用。
+        /// </summary>
+        /// <param name="req"><see cref="SetWarningCallbackRequest"/></param>
+        /// <returns><see cref="SetWarningCallbackResponse"/></returns>
+        public async Task<SetWarningCallbackResponse> SetWarningCallback(SetWarningCallbackRequest req)
+        {
+             JsonResponseModel<SetWarningCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetWarningCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetWarningCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置告警回调地址。此功能需要申请白名单使用。
+        /// </summary>
+        /// <param name="req"><see cref="SetWarningCallbackRequest"/></param>
+        /// <returns><see cref="SetWarningCallbackResponse"/></returns>
+        public SetWarningCallbackResponse SetWarningCallbackSync(SetWarningCallbackRequest req)
+        {
+             JsonResponseModel<SetWarningCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetWarningCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetWarningCallbackResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

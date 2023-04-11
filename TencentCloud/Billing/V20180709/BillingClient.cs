@@ -173,7 +173,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 查询账单资源汇总数据 
+        /// 查询账单资源汇总数据
         /// </summary>
         /// <param name="req"><see cref="DescribeBillResourceSummaryRequest"/></param>
         /// <returns><see cref="DescribeBillResourceSummaryResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 查询账单资源汇总数据 
+        /// 查询账单资源汇总数据
         /// </summary>
         /// <param name="req"><see cref="DescribeBillResourceSummaryRequest"/></param>
         /// <returns><see cref="DescribeBillResourceSummaryResponse"/></returns>

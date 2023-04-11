@@ -25,19 +25,21 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 0-逻辑备份，1-物理备份
+        /// 设置备份方式。
+        /// - 0：逻辑备份。
+        /// - 1：物理备份。
         /// </summary>
         [JsonProperty("BackupMethod")]
         public long? BackupMethod{ get; set; }
 
         /// <summary>
-        /// 备份备注
+        /// 备份备注信息。
         /// </summary>
         [JsonProperty("BackupRemark")]
         public string BackupRemark{ get; set; }

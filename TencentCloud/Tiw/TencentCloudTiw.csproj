@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9F9DFE1A-9228-3902-AA87-2367ECF8DBFC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.736</VersionPrefix>
+    <VersionPrefix>3.0.737</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,8 @@
     <Compile Include="V20190919\Models\CreateApplicationResponse.cs" />
     <Compile Include="V20190919\Models\CreateOfflineRecordRequest.cs" />
     <Compile Include="V20190919\Models\CreateOfflineRecordResponse.cs" />
+    <Compile Include="V20190919\Models\CreatePPTCheckTaskRequest.cs" />
+    <Compile Include="V20190919\Models\CreatePPTCheckTaskResponse.cs" />
     <Compile Include="V20190919\Models\CreateSnapshotTaskRequest.cs" />
     <Compile Include="V20190919\Models\CreateSnapshotTaskResponse.cs" />
     <Compile Include="V20190919\Models\CreateTranscodeRequest.cs" />
@@ -84,6 +86,10 @@
     <Compile Include="V20190919\Models\DescribeOnlineRecordCallbackResponse.cs" />
     <Compile Include="V20190919\Models\DescribeOnlineRecordRequest.cs" />
     <Compile Include="V20190919\Models\DescribeOnlineRecordResponse.cs" />
+    <Compile Include="V20190919\Models\DescribePPTCheckCallbackRequest.cs" />
+    <Compile Include="V20190919\Models\DescribePPTCheckCallbackResponse.cs" />
+    <Compile Include="V20190919\Models\DescribePPTCheckRequest.cs" />
+    <Compile Include="V20190919\Models\DescribePPTCheckResponse.cs" />
     <Compile Include="V20190919\Models\DescribePostpaidUsageRequest.cs" />
     <Compile Include="V20190919\Models\DescribePostpaidUsageResponse.cs" />
     <Compile Include="V20190919\Models\DescribeQualityMetricsRequest.cs" />
@@ -92,6 +98,8 @@
     <Compile Include="V20190919\Models\DescribeRecordSearchResponse.cs" />
     <Compile Include="V20190919\Models\DescribeRoomListRequest.cs" />
     <Compile Include="V20190919\Models\DescribeRoomListResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeRunningTasksRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeRunningTasksResponse.cs" />
     <Compile Include="V20190919\Models\DescribeSnapshotTaskRequest.cs" />
     <Compile Include="V20190919\Models\DescribeSnapshotTaskResponse.cs" />
     <Compile Include="V20190919\Models\DescribeTIWDailyUsageRequest.cs" />
@@ -116,6 +124,8 @@
     <Compile Include="V20190919\Models\DescribeVideoGenerationTaskCallbackResponse.cs" />
     <Compile Include="V20190919\Models\DescribeVideoGenerationTaskRequest.cs" />
     <Compile Include="V20190919\Models\DescribeVideoGenerationTaskResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeWarningCallbackRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeWarningCallbackResponse.cs" />
     <Compile Include="V20190919\Models\DescribeWhiteboardApplicationConfigRequest.cs" />
     <Compile Include="V20190919\Models\DescribeWhiteboardApplicationConfigResponse.cs" />
     <Compile Include="V20190919\Models\DescribeWhiteboardBucketConfigRequest.cs" />
@@ -139,6 +149,8 @@
     <Compile Include="V20190919\Models\ModifyWhiteboardBucketConfigRequest.cs" />
     <Compile Include="V20190919\Models\ModifyWhiteboardBucketConfigResponse.cs" />
     <Compile Include="V20190919\Models\OmittedDuration.cs" />
+    <Compile Include="V20190919\Models\PPTErr.cs" />
+    <Compile Include="V20190919\Models\PPTErrSlide.cs" />
     <Compile Include="V20190919\Models\PauseOnlineRecordRequest.cs" />
     <Compile Include="V20190919\Models\PauseOnlineRecordResponse.cs" />
     <Compile Include="V20190919\Models\RecordControl.cs" />
@@ -148,12 +160,17 @@
     <Compile Include="V20190919\Models\ResumeOnlineRecordResponse.cs" />
     <Compile Include="V20190919\Models\RoomListItem.cs" />
     <Compile Include="V20190919\Models\RoomUsageDataItem.cs" />
+    <Compile Include="V20190919\Models\RunningTaskItem.cs" />
     <Compile Include="V20190919\Models\SetOfflineRecordCallbackRequest.cs" />
     <Compile Include="V20190919\Models\SetOfflineRecordCallbackResponse.cs" />
     <Compile Include="V20190919\Models\SetOnlineRecordCallbackKeyRequest.cs" />
     <Compile Include="V20190919\Models\SetOnlineRecordCallbackKeyResponse.cs" />
     <Compile Include="V20190919\Models\SetOnlineRecordCallbackRequest.cs" />
     <Compile Include="V20190919\Models\SetOnlineRecordCallbackResponse.cs" />
+    <Compile Include="V20190919\Models\SetPPTCheckCallbackKeyRequest.cs" />
+    <Compile Include="V20190919\Models\SetPPTCheckCallbackKeyResponse.cs" />
+    <Compile Include="V20190919\Models\SetPPTCheckCallbackRequest.cs" />
+    <Compile Include="V20190919\Models\SetPPTCheckCallbackResponse.cs" />
     <Compile Include="V20190919\Models\SetTranscodeCallbackKeyRequest.cs" />
     <Compile Include="V20190919\Models\SetTranscodeCallbackKeyResponse.cs" />
     <Compile Include="V20190919\Models\SetTranscodeCallbackRequest.cs" />
@@ -162,6 +179,8 @@
     <Compile Include="V20190919\Models\SetVideoGenerationTaskCallbackKeyResponse.cs" />
     <Compile Include="V20190919\Models\SetVideoGenerationTaskCallbackRequest.cs" />
     <Compile Include="V20190919\Models\SetVideoGenerationTaskCallbackResponse.cs" />
+    <Compile Include="V20190919\Models\SetWarningCallbackRequest.cs" />
+    <Compile Include="V20190919\Models\SetWarningCallbackResponse.cs" />
     <Compile Include="V20190919\Models\SetWhiteboardPushCallbackKeyRequest.cs" />
     <Compile Include="V20190919\Models\SetWhiteboardPushCallbackKeyResponse.cs" />
     <Compile Include="V20190919\Models\SetWhiteboardPushCallbackRequest.cs" />

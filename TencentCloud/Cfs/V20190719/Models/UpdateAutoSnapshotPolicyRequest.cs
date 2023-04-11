@@ -61,7 +61,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? IsActivated{ get; set; }
 
         /// <summary>
-        /// 定期快照在月的某几天天，该参数与DayOfWeek互斥
+        /// 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
         /// </summary>
         [JsonProperty("DayOfMonth")]
         public string DayOfMonth{ get; set; }

@@ -25,61 +25,65 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 当前值
+        /// 参数当前值。
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// 默认值
+        /// 参数默认值。
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// 最大值
+        /// 参数最大值。
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }
 
         /// <summary>
-        /// 最小值
+        /// 最小值。
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }
 
         /// <summary>
-        /// 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
+        /// 参数修改之后是否需要重启生效。
+        /// - 1:需要重启后生效。
+        /// - 0：无需重启，设置成功即可生效。
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
 
         /// <summary>
-        /// 参数名称
+        /// 参数名称。
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// 参数说明
+        /// 参数说明。
         /// </summary>
         [JsonProperty("Tips")]
         public string[] Tips{ get; set; }
 
         /// <summary>
-        /// 参数类型
+        /// 参数类型。
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }
 
         /// <summary>
-        /// 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+        /// 是否为运行中参数值。
+        /// - 1：运行中参数值。
+        /// - 0：非运行中参数值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 冗余字段，可忽略
+        /// 冗余字段，可忽略。
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }

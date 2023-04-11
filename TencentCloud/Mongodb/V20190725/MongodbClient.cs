@@ -133,7 +133,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 备份实例接口
+        /// 本接口（CreateBackupDBInstance）用于备份实例。
         /// </summary>
         /// <param name="req"><see cref="CreateBackupDBInstanceRequest"/></param>
         /// <returns><see cref="CreateBackupDBInstanceResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 备份实例接口
+        /// 本接口（CreateBackupDBInstance）用于备份实例。
         /// </summary>
         /// <param name="req"><see cref="CreateBackupDBInstanceRequest"/></param>
         /// <returns><see cref="CreateBackupDBInstanceResponse"/></returns>
@@ -284,6 +284,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "CreateDBInstanceHour");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstanceHourResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteAccountUser）用于删除实例的自定义账号。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountUserRequest"/></param>
+        /// <returns><see cref="DeleteAccountUserResponse"/></returns>
+        public async Task<DeleteAccountUserResponse> DeleteAccountUser(DeleteAccountUserRequest req)
+        {
+             JsonResponseModel<DeleteAccountUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAccountUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccountUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteAccountUser）用于删除实例的自定义账号。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountUserRequest"/></param>
+        /// <returns><see cref="DeleteAccountUserResponse"/></returns>
+        public DeleteAccountUserResponse DeleteAccountUserSync(DeleteAccountUserRequest req)
+        {
+             JsonResponseModel<DeleteAccountUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAccountUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccountUserResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -653,7 +693,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeInstanceParams)用于查询当前实例可修改的参数列表。
+        /// 本接口（DescribeInstanceParams）用于查询当前实例可修改的参数列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
@@ -673,7 +713,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeInstanceParams)用于查询当前实例可修改的参数列表。
+        /// 本接口（DescribeInstanceParams）用于查询当前实例可修改的参数列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
@@ -1373,7 +1413,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(SetAccountUserPrivilege)用于设置mongodb实例的账号权限。
+        /// 本接口（SetAccountUserPrivilege）用于设置实例的账号权限。
         /// </summary>
         /// <param name="req"><see cref="SetAccountUserPrivilegeRequest"/></param>
         /// <returns><see cref="SetAccountUserPrivilegeResponse"/></returns>
@@ -1393,7 +1433,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(SetAccountUserPrivilege)用于设置mongodb实例的账号权限。
+        /// 本接口（SetAccountUserPrivilege）用于设置实例的账号权限。
         /// </summary>
         /// <param name="req"><see cref="SetAccountUserPrivilegeRequest"/></param>
         /// <returns><see cref="SetAccountUserPrivilegeResponse"/></returns>

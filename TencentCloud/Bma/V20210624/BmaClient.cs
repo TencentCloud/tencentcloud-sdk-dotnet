@@ -373,6 +373,8 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
+        /// 不对外提供接口能力了
+        /// 
         /// 版权保护-新建取证接口
         /// </summary>
         /// <param name="req"><see cref="CreateCRObtainRequest"/></param>
@@ -393,6 +395,8 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
+        /// 不对外提供接口能力了
+        /// 
         /// 版权保护-新建取证接口
         /// </summary>
         /// <param name="req"><see cref="CreateCRObtainRequest"/></param>

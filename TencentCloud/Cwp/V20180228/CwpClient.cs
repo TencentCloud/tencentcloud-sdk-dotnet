@@ -899,7 +899,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口（DeleteMachine）用于卸载云镜客户端。
+        /// 本接口（DeleteMachine）用于卸载主机安全客户端。
         /// </summary>
         /// <param name="req"><see cref="DeleteMachineRequest"/></param>
         /// <returns><see cref="DeleteMachineResponse"/></returns>
@@ -919,7 +919,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口（DeleteMachine）用于卸载云镜客户端。
+        /// 本接口（DeleteMachine）用于卸载主机安全客户端。
         /// </summary>
         /// <param name="req"><see cref="DeleteMachineRequest"/></param>
         /// <returns><see cref="DeleteMachineResponse"/></returns>

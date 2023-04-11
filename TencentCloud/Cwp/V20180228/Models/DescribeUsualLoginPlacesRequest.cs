@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 云镜客户端UUID
+        /// 主机安全客户端UUID
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
