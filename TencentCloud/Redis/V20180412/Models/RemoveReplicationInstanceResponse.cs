@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Bma.V20210624.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCRObtainResponse : AbstractModel
+    public class RemoveReplicationInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// 侵权ID
+        /// 异步任务ID
         /// </summary>
-        [JsonProperty("TortId")]
-        public long? TortId{ get; set; }
-
-        /// <summary>
-        /// xxx
-        /// </summary>
-        [JsonProperty("TortNum")]
-        public string TortNum{ get; set; }
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +42,7 @@ namespace TencentCloud.Bma.V20210624.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TortId", this.TortId);
-            this.SetParamSimple(map, prefix + "TortNum", this.TortNum);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

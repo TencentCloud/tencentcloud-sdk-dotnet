@@ -21,29 +21,14 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModfiyInstancePasswordRequest : AbstractModel
+    public class DescribeBandwidthRangeRequest : AbstractModel
     {
         
         /// <summary>
-        /// 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// 实例旧密码。
-        /// </summary>
-        [JsonProperty("OldPassword")]
-        public string OldPassword{ get; set; }
-
-        /// <summary>
-        /// 实例新密码。密码复杂度要求如下：
-        /// - 长度8 - 30位, 推荐使用12位以上的密码。
-        /// - 不能以"/"开头。
-        /// - 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
-        /// </summary>
-        [JsonProperty("Password")]
-        public string Password{ get; set; }
 
 
         /// <summary>
@@ -52,8 +37,6 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "OldPassword", this.OldPassword);
-            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }

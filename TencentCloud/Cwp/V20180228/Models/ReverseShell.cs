@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 云镜UUID
+        /// 主机安全UUID
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }

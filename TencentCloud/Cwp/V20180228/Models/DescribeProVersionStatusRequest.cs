@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 云镜客户端UUID、填写"all"表示所有主机。
+        /// 主机安全客户端UUID、填写"all"表示所有主机。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }

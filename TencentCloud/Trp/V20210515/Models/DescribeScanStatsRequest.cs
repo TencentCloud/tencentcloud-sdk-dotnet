@@ -60,6 +60,12 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }
 
+        /// <summary>
+        /// 安心码
+        /// </summary>
+        [JsonProperty("Code")]
+        public string Code{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "MerchantId", this.MerchantId);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
         }
     }
 }

@@ -125,6 +125,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("TemplateVersion")]
         public string TemplateVersion{ get; set; }
 
+        /// <summary>
+        /// 模板可用状态，取值：1启用（默认），2停用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Available")]
+        public long? Available{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +154,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ChannelTemplateName", this.ChannelTemplateName);
             this.SetParamSimple(map, prefix + "ChannelAutoSave", this.ChannelAutoSave);
             this.SetParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
+            this.SetParamSimple(map, prefix + "Available", this.Available);
         }
     }
 }

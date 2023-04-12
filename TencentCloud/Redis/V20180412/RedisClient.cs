@@ -413,7 +413,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口（CloneInstances）可基于当前实例的备份文件克隆一个完整的新实例。
+        /// 本接口（CloneInstances）用于基于当前实例的备份文件克隆一个完整的新实例。
         /// </summary>
         /// <param name="req"><see cref="CloneInstancesRequest"/></param>
         /// <returns><see cref="CloneInstancesResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口（CloneInstances）可基于当前实例的备份文件克隆一个完整的新实例。
+        /// 本接口（CloneInstances）用于基于当前实例的备份文件克隆一个完整的新实例。
         /// </summary>
         /// <param name="req"><see cref="CloneInstancesRequest"/></param>
         /// <returns><see cref="CloneInstancesResponse"/></returns>
@@ -884,6 +884,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBackupUrl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBandwidthRange）用于查询实例带宽信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthRangeRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthRangeResponse"/></returns>
+        public async Task<DescribeBandwidthRangeResponse> DescribeBandwidthRange(DescribeBandwidthRangeRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthRangeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBandwidthRange");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthRangeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBandwidthRange）用于查询实例带宽信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthRangeRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthRangeResponse"/></returns>
+        public DescribeBandwidthRangeResponse DescribeBandwidthRangeSync(DescribeBandwidthRangeRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthRangeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBandwidthRange");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthRangeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3204,6 +3244,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "ReleaseWanAddress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseWanAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 移除复制组成员
+        /// </summary>
+        /// <param name="req"><see cref="RemoveReplicationInstanceRequest"/></param>
+        /// <returns><see cref="RemoveReplicationInstanceResponse"/></returns>
+        public async Task<RemoveReplicationInstanceResponse> RemoveReplicationInstance(RemoveReplicationInstanceRequest req)
+        {
+             JsonResponseModel<RemoveReplicationInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveReplicationInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveReplicationInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 移除复制组成员
+        /// </summary>
+        /// <param name="req"><see cref="RemoveReplicationInstanceRequest"/></param>
+        /// <returns><see cref="RemoveReplicationInstanceResponse"/></returns>
+        public RemoveReplicationInstanceResponse RemoveReplicationInstanceSync(RemoveReplicationInstanceRequest req)
+        {
+             JsonResponseModel<RemoveReplicationInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveReplicationInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveReplicationInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

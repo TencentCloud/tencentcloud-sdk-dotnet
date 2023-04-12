@@ -109,6 +109,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public Recipient Promoter{ get; set; }
 
         /// <summary>
+        /// 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
+        /// </summary>
+        [JsonProperty("Available")]
+        public long? Available{ get; set; }
+
+        /// <summary>
         /// 模板创建组织id
         /// </summary>
         [JsonProperty("OrganizationId")]
@@ -155,6 +161,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamObj(map, prefix + "Promoter.", this.Promoter);
+            this.SetParamSimple(map, prefix + "Available", this.Available);
             this.SetParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
             this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
             this.SetParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);

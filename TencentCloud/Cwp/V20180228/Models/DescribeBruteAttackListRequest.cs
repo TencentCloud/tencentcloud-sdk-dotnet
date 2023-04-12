@@ -39,7 +39,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <summary>
         /// 过滤条件。
         /// <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-        /// <li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+        /// <li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
         /// <li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
         /// <li>Status - String - 是否必填：否 - 状态筛选：失败：FAILED 成功：SUCCESS</li>
         /// <li>UserName - String - 是否必填：否 - UserName筛选</li>

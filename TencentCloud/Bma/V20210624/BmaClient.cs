@@ -373,50 +373,6 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 不对外提供接口能力了
-        /// 
-        /// 版权保护-新建取证接口
-        /// </summary>
-        /// <param name="req"><see cref="CreateCRObtainRequest"/></param>
-        /// <returns><see cref="CreateCRObtainResponse"/></returns>
-        public async Task<CreateCRObtainResponse> CreateCRObtain(CreateCRObtainRequest req)
-        {
-             JsonResponseModel<CreateCRObtainResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCRObtain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCRObtainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 不对外提供接口能力了
-        /// 
-        /// 版权保护-新建取证接口
-        /// </summary>
-        /// <param name="req"><see cref="CreateCRObtainRequest"/></param>
-        /// <returns><see cref="CreateCRObtainResponse"/></returns>
-        public CreateCRObtainResponse CreateCRObtainSync(CreateCRObtainRequest req)
-        {
-             JsonResponseModel<CreateCRObtainResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCRObtain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCRObtainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 版权保护-新建发函接口
         /// </summary>
         /// <param name="req"><see cref="CreateCRRightRequest"/></param>

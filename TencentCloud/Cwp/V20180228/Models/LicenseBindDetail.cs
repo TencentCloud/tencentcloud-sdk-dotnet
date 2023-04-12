@@ -49,7 +49,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// 云镜客户端UUID
+        /// 主机安全客户端UUID
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 云镜客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装
+        /// 主机安全客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装
         /// </summary>
         [JsonProperty("AgentStatus")]
         public string AgentStatus{ get; set; }

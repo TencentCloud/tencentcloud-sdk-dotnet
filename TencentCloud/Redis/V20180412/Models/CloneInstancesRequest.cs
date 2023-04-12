@@ -25,13 +25,15 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 当前实例ID。
+        /// 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 单次克隆实例的数量。包年包月每次购买最大数量为100。按量计费每次购买最大数量为30，每个地域购买数量取值范围为[1,100]。
+        /// 单次克隆实例的数量。
+        /// - 包年包月每次购买最大数量为100。
+        /// - 按量计费每次购买最大数量为30。
         /// </summary>
         [JsonProperty("GoodsNum")]
         public ulong? GoodsNum{ get; set; }
@@ -73,13 +75,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? NoAuth{ get; set; }
 
         /// <summary>
-        /// 私有网络ID。如果未配置该参数，默认选择基础网络。
+        /// 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络所属子网。基础网络时该参数无需配置。
+        /// 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -97,7 +99,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 自动续费标识。<ul><li>0：默认状态（手动续费）。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
+        /// 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
@@ -115,7 +117,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public RedisNodeInfo[] NodeSet{ get; set; }
 
         /// <summary>
-        /// 项目 ID。登录控制台，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
+        /// 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -127,13 +129,15 @@ namespace TencentCloud.Redis.V20180412.Models
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 克隆实例需要应用的参数模板ID,请登录 Redis 控制台，在<b>参数模板</b>页面获取。若不配置该参数，则应用默认的参数模板。
+        /// 指定克隆实例相关的参数模板 ID。
+        /// - 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
+        /// - 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 指定克隆实例的告警策略 ID。请登录控制台，在<b>云监控</b> > <b>告警配置</b> > <b>告警策略</b>页面获取策略 ID 信息。
+        /// 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
         /// </summary>
         [JsonProperty("AlarmPolicyList")]
         public string[] AlarmPolicyList{ get; set; }

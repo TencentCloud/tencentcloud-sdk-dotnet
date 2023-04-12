@@ -55,13 +55,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 分页参数
+        /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页参数
+        /// 查询数目，默认为20，最大为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
