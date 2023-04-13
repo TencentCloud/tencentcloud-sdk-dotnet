@@ -216,6 +216,20 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("NFCBillingCounts")]
         public long? NFCBillingCounts{ get; set; }
 
+        /// <summary>
+        /// 港澳台居住证通行证号码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PassNo")]
+        public string PassNo{ get; set; }
+
+        /// <summary>
+        /// 港澳台居住证签发次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VisaNum")]
+        public string VisaNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -248,6 +262,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "LivenessMode", this.LivenessMode);
             this.SetParamArraySimple(map, prefix + "NFCRequestIds.", this.NFCRequestIds);
             this.SetParamSimple(map, prefix + "NFCBillingCounts", this.NFCBillingCounts);
+            this.SetParamSimple(map, prefix + "PassNo", this.PassNo);
+            this.SetParamSimple(map, prefix + "VisaNum", this.VisaNum);
         }
     }
 }

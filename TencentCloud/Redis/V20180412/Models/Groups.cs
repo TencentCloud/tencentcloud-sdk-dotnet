@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 用户AppID
+        /// 用户 APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 复制组 ID。
+        /// 复制组 ID。格式如：crs-rpl-deind****。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

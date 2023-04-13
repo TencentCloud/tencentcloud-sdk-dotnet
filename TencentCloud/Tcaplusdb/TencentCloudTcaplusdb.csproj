@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F49E6596-6F57-3C30-A1DD-72E843D8E7E5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.738</VersionPrefix>
+    <VersionPrefix>3.0.739</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,8 @@
     <Compile Include="V20190823\Models\Application.cs" />
     <Compile Include="V20190823\Models\ApplyResult.cs" />
     <Compile Include="V20190823\Models\ApplyStatus.cs" />
+    <Compile Include="V20190823\Models\BackupExpireRuleInfo.cs" />
+    <Compile Include="V20190823\Models\BackupRecords.cs" />
     <Compile Include="V20190823\Models\ClearTablesRequest.cs" />
     <Compile Include="V20190823\Models\ClearTablesResponse.cs" />
     <Compile Include="V20190823\Models\ClusterInfo.cs" />
@@ -67,6 +69,8 @@
     <Compile Include="V20190823\Models\CreateTableGroupResponse.cs" />
     <Compile Include="V20190823\Models\CreateTablesRequest.cs" />
     <Compile Include="V20190823\Models\CreateTablesResponse.cs" />
+    <Compile Include="V20190823\Models\DeleteBackupRecordsRequest.cs" />
+    <Compile Include="V20190823\Models\DeleteBackupRecordsResponse.cs" />
     <Compile Include="V20190823\Models\DeleteClusterRequest.cs" />
     <Compile Include="V20190823\Models\DeleteClusterResponse.cs" />
     <Compile Include="V20190823\Models\DeleteIdlFilesRequest.cs" />
@@ -83,6 +87,8 @@
     <Compile Include="V20190823\Models\DeleteTablesResponse.cs" />
     <Compile Include="V20190823\Models\DescribeApplicationsRequest.cs" />
     <Compile Include="V20190823\Models\DescribeApplicationsResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeBackupRecordsRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeBackupRecordsResponse.cs" />
     <Compile Include="V20190823\Models\DescribeClusterTagsRequest.cs" />
     <Compile Include="V20190823\Models\DescribeClusterTagsResponse.cs" />
     <Compile Include="V20190823\Models\DescribeClustersRequest.cs" />
@@ -164,6 +170,8 @@
     <Compile Include="V20190823\Models\SelectedTableWithField.cs" />
     <Compile Include="V20190823\Models\ServerDetailInfo.cs" />
     <Compile Include="V20190823\Models\ServerMachineInfo.cs" />
+    <Compile Include="V20190823\Models\SetBackupExpireRuleRequest.cs" />
+    <Compile Include="V20190823\Models\SetBackupExpireRuleResponse.cs" />
     <Compile Include="V20190823\Models\SetTableDataFlowRequest.cs" />
     <Compile Include="V20190823\Models\SetTableDataFlowResponse.cs" />
     <Compile Include="V20190823\Models\SetTableIndexRequest.cs" />

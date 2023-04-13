@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 参数模板 ID。
+        /// 指定查询的参数模板 ID。请通过接口[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)获取参数模板列表信息。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 慢查询耗时（单位：毫秒）。
+        /// 慢查询耗时时长。单位：毫秒。
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Client{ get; set; }
 
         /// <summary>
-        /// 命令。
+        /// 慢查询的命令。
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
         /// <summary>
-        /// 详细命令行信息。
+        /// 慢查询详细命令行信息。
         /// </summary>
         [JsonProperty("CommandLine")]
         public string CommandLine{ get; set; }

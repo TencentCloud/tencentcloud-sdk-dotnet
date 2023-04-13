@@ -25,31 +25,34 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 参数名称
+        /// 参数名称。
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// 修改前值
+        /// 参数修改之前的值。
         /// </summary>
         [JsonProperty("PreValue")]
         public string PreValue{ get; set; }
 
         /// <summary>
-        /// 修改后值
+        /// 参数修改之后的值。
         /// </summary>
         [JsonProperty("NewValue")]
         public string NewValue{ get; set; }
 
         /// <summary>
-        /// 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
+        /// 参数配置状态。
+        /// - 1：参数配置修改中。
+        /// - 2：参数配置修改成功。
+        /// - 3：参数配置修改失败。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// 修改时间。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }

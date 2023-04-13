@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 自定义下载备份文件的VPC 所属地域。
+        /// 备份文件的下载地址对应VPC 所属的地域。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 自定义下载备份文件的 VPC 列表。
+        /// 备份文件下载地址的 VPC 列表。
         /// </summary>
         [JsonProperty("VpcList")]
         public string[] VpcList{ get; set; }

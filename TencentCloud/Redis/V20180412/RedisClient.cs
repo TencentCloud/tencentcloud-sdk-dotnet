@@ -1813,7 +1813,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询参数模板详情。
+        /// 本接口（DescribeParamTemplateInfo）用于查询参数模板详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateInfoResponse"/></returns>
@@ -1833,7 +1833,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询参数模板详情。
+        /// 本接口（DescribeParamTemplateInfo）用于查询参数模板详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateInfoResponse"/></returns>

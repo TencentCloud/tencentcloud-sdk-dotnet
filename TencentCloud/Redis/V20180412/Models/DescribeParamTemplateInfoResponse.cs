@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例参数个数
+        /// 参数模板的参数数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
@@ -43,19 +43,29 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 产品类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+        /// 产品类型。
+        /// - 2：Redis 2.8内存版（标准架构）。
+        /// - 3：CKV 3.2内存版（标准架构）。
+        /// - 4：CKV 3.2内存版（集群架构）。
+        /// - 5：Redis 2.8内存版（单机）。
+        /// - 6：Redis 4.0内存版（标准架构）。
+        /// - 7：Redis 4.0内存版（集群架构）。
+        /// - 8：Redis 5.0内存版（标准架构）。
+        /// - 9：Redis 5.0内存版（集群架构）。
+        /// - 15：Redis 6.2内存版（标准架构）。
+        /// - 16：Redis 6.2内存版（集群架构）。
         /// </summary>
         [JsonProperty("ProductType")]
         public ulong? ProductType{ get; set; }
 
         /// <summary>
-        /// 参数模板描述
+        /// 参数模板描述。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 参数详情
+        /// 参数详情。包含：参数的名称，当前运行值，默认值，最大值、最小值、枚举值等信息。
         /// </summary>
         [JsonProperty("Items")]
         public ParameterDetail[] Items{ get; set; }

@@ -333,6 +333,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 删除手工备份
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupRecordsRequest"/></param>
+        /// <returns><see cref="DeleteBackupRecordsResponse"/></returns>
+        public async Task<DeleteBackupRecordsResponse> DeleteBackupRecords(DeleteBackupRecordsRequest req)
+        {
+             JsonResponseModel<DeleteBackupRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBackupRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除手工备份
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupRecordsRequest"/></param>
+        /// <returns><see cref="DeleteBackupRecordsResponse"/></returns>
+        public DeleteBackupRecordsResponse DeleteBackupRecordsSync(DeleteBackupRecordsRequest req)
+        {
+             JsonResponseModel<DeleteBackupRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBackupRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除TcaplusDB集群，必须在集群所属所有资源（包括表格组，表）都已经释放的情况下才会成功。
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterRequest"/></param>
@@ -644,6 +684,54 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "DescribeApplications");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询备份记录
+        /// 
+        /// 查询集群级别时， 将TableGroupId设置为"-1", 将TableName设置为"-1"
+        /// 查询集群+表格组级别时， 将TableName设置为"-1"
+        /// 查询集群+表格组+表格级别时， 都不能设置为“-1”
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupRecordsRequest"/></param>
+        /// <returns><see cref="DescribeBackupRecordsResponse"/></returns>
+        public async Task<DescribeBackupRecordsResponse> DescribeBackupRecords(DescribeBackupRecordsRequest req)
+        {
+             JsonResponseModel<DescribeBackupRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询备份记录
+        /// 
+        /// 查询集群级别时， 将TableGroupId设置为"-1", 将TableName设置为"-1"
+        /// 查询集群+表格组级别时， 将TableName设置为"-1"
+        /// 查询集群+表格组+表格级别时， 都不能设置为“-1”
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupRecordsRequest"/></param>
+        /// <returns><see cref="DescribeBackupRecordsResponse"/></returns>
+        public DescribeBackupRecordsResponse DescribeBackupRecordsSync(DescribeBackupRecordsRequest req)
+        {
+             JsonResponseModel<DescribeBackupRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupRecordsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1884,6 +1972,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "RollbackTables");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增、删除、修改备份过期策略， ClusterId必须为具体的集群Id（appid）
+        /// </summary>
+        /// <param name="req"><see cref="SetBackupExpireRuleRequest"/></param>
+        /// <returns><see cref="SetBackupExpireRuleResponse"/></returns>
+        public async Task<SetBackupExpireRuleResponse> SetBackupExpireRule(SetBackupExpireRuleRequest req)
+        {
+             JsonResponseModel<SetBackupExpireRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetBackupExpireRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetBackupExpireRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增、删除、修改备份过期策略， ClusterId必须为具体的集群Id（appid）
+        /// </summary>
+        /// <param name="req"><see cref="SetBackupExpireRuleRequest"/></param>
+        /// <returns><see cref="SetBackupExpireRuleResponse"/></returns>
+        public SetBackupExpireRuleResponse SetBackupExpireRuleSync(SetBackupExpireRuleRequest req)
+        {
+             JsonResponseModel<SetBackupExpireRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetBackupExpireRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetBackupExpireRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

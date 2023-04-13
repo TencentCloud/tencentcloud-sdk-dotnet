@@ -25,85 +25,94 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例名称
+        /// 实例名称。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例id
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户id
+        /// 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 实例所属项目id
+        /// 实例所属项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 实例接入区域
+        /// 实例接入区域。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 实例接入zone
+        /// 实例接入可用区。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 实例网络id
+        /// 实例私有网络 ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网id
+        /// 私有网络所属子网 ID。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
+        /// 实例状态信息。
+        /// - 1-流程中。
+        /// - 2-运行中。
+        /// - -2-实例已隔离。
+        /// - -3-实例待回收。
+        /// - -4-实例已删除。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 实例网络ip
+        /// 实例私有网络 IP 地址。
         /// </summary>
         [JsonProperty("Vips")]
         public string[] Vips{ get; set; }
 
         /// <summary>
-        /// 实例网络端口
+        /// 实例网络端口。
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 实例创建时间
+        /// 实例创建时间。
         /// </summary>
         [JsonProperty("Createtime")]
         public string Createtime{ get; set; }
 
         /// <summary>
-        /// 计费类型，0-按量计费，1-包年包月
+        /// 计费类型。
+        /// - 0：按量计费。
+        /// - 1：包年包月。
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 网络类型，0-基础网络，1-VPC网络
+        /// 网络类型。
+        /// - 0：基础网络。
+        /// - 1：VPC 网络。
         /// </summary>
         [JsonProperty("NetType")]
         public long? NetType{ get; set; }

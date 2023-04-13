@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 用户AppID。
+        /// 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -129,7 +129,17 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? GrocerySysId{ get; set; }
 
         /// <summary>
-        /// 实例类型。<ul><li>1：Redis 2.8 内存版（集群架构）。</li><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li></ul>
+        /// 实例类型。
+        /// - 2：Redis 2.8内存版（标准架构）。
+        /// - 3：CKV 3.2内存版（标准架构）。
+        /// - 4：CKV 3.2内存版（集群架构）。
+        /// - 5：Redis 2.8内存版（单机）。
+        /// - 6：Redis 4.0内存版（标准架构）。
+        /// - 7：Redis 4.0内存版（集群架构）。
+        /// - 8：Redis 5.0内存版（标准架构）。
+        /// - 9：Redis 5.0内存版（集群架构）。
+        /// - 15：Redis 6.2内存版（标准架构）。
+        /// - 16：Redis 6.2内存版（集群架构）。
         /// </summary>
         [JsonProperty("ProductType")]
         public long? ProductType{ get; set; }

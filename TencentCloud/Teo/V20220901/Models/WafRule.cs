@@ -33,13 +33,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 黑名单，ID参考接口 [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1)。
+        /// 黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。
         /// </summary>
         [JsonProperty("BlockRuleIDs")]
         public long?[] BlockRuleIDs{ get; set; }
 
         /// <summary>
-        /// 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1)。
+        /// 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。
         /// </summary>
         [JsonProperty("ObserveRuleIDs")]
         public long?[] ObserveRuleIDs{ get; set; }

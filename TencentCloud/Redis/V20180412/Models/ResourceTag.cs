@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 标签key
+        /// 标签Key。
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 标签value
+        /// 标签 Key 对应的 Value。
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }

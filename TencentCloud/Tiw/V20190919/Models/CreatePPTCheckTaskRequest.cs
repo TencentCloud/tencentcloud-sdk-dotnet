@@ -31,7 +31,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 经过URL编码后的PPT文件地址。URL 编码会将字符转换为可通过因特网传输的格式，比如文档地址为http://example.com/测试.pptx，经过URL编码之后为http://example.com/%E6%B5%8B%E8%AF%95.pptx。为了提高URL解析的成功率，请对URL进行编码。
+        /// 经过URL编码后的PPT文件地址。URL 编码会将字符转换为可通过因特网传输的格式，例如文档地址为http://example.com/测试.pptx，经过URL编码之后为http://example.com/%E6%B5%8B%E8%AF%95.pptx。为了提高URL解析的成功率，请对URL进行编码。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

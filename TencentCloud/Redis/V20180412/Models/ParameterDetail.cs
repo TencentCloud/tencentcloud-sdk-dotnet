@@ -25,57 +25,59 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 参数名称
+        /// 参数名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 参数类型
+        /// 参数类型。
         /// </summary>
         [JsonProperty("ParamType")]
         public string ParamType{ get; set; }
 
         /// <summary>
-        /// 参数默认值
+        /// 参数默认值。
         /// </summary>
         [JsonProperty("Default")]
         public string Default{ get; set; }
 
         /// <summary>
-        /// 参数描述
+        /// 参数描述。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 参数当前值
+        /// 参数当前值。
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
+        /// 修改参数后，是否需要重启数据库以使参数生效。
+        /// - 0：不需要重启。
+        /// - 1：需要重启。
         /// </summary>
         [JsonProperty("NeedReboot")]
         public long? NeedReboot{ get; set; }
 
         /// <summary>
-        /// 参数允许的最大值
+        /// 参数允许的最大值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }
 
         /// <summary>
-        /// 参数允许的最小值
+        /// 参数允许的最小值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }
 
         /// <summary>
-        /// 参数的可选枚举值。如果为非枚举参数，则为空
+        /// 参数可选枚举值。如果为非枚举参数，则为空。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnumValue")]
