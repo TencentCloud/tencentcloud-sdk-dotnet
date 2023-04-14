@@ -31,25 +31,25 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string Scene{ get; set; }
 
         /// <summary>
-        /// logo地址。
+        /// logo地址，用于上课时展示的课堂或平台图标，支持开发商自定义业务品牌展示。
         /// </summary>
         [JsonProperty("LogoUrl")]
         public string LogoUrl{ get; set; }
 
         /// <summary>
-        /// 主页地址，可设置用于跳转。
+        /// HomeUrl：主页地址，用于上课结束后课堂跳转，支持跳转到自己的业务系统。如果配置为空则下课后关闭课堂页面。
         /// </summary>
         [JsonProperty("HomeUrl")]
         public string HomeUrl{ get; set; }
 
         /// <summary>
-        /// 自定义的js。
+        /// JsUrl ：自定义js。针对应用用于开发上自定义课堂界面、模块功能、监控操作，支持数据请求与响应处理。
         /// </summary>
         [JsonProperty("JsUrl")]
         public string JsUrl{ get; set; }
 
         /// <summary>
-        /// 自定义的css。
+        /// Css : 自定义的css。针对应用用于支持课堂界面的、模块的UI渲染修改、皮肤配色修改、功能模块的隐藏和展示。
         /// </summary>
         [JsonProperty("CssUrl")]
         public string CssUrl{ get; set; }

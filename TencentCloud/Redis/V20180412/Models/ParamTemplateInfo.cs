@@ -52,6 +52,8 @@ namespace TencentCloud.Redis.V20180412.Models
         /// - 7：Redis 4.0内存版（集群架构）。
         /// - 8：Redis 5.0内存版（标准架构）。
         /// - 9：Redis 5.0内存版（集群架构）。
+        /// - 15：Redis 6.2内存版（标准架构）。
+        /// - 16：Redis 6.2内存版（集群架构）。
         /// </summary>
         [JsonProperty("ProductType")]
         public ulong? ProductType{ get; set; }

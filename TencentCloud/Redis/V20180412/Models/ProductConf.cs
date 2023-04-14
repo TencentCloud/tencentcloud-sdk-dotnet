@@ -25,79 +25,95 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 产品类型，2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版(单机版)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)，10 – Redis4.0混合存储版Tendis
+        /// 产品类型。
+        /// - 2：Redis 2.8内存版（标准架构）。
+        /// - 3：CKV 3.2内存版（标准架构）。
+        /// - 4：CKV 3.2内存版（集群架构）。
+        /// - 5：Redis 2.8内存版（单机）。
+        /// - 6：Redis 4.0内存版（标准架构）。
+        /// - 7：Redis 4.0内存版（集群架构）。
+        /// - 8：Redis 5.0内存版（标准架构）。
+        /// - 9：Redis 5.0内存版（集群架构）。
+        /// - 15：Redis 6.2内存版（标准架构）。
+        /// - 16：Redis 6.2内存版（集群架构）。
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版，混合存储版Tendis
+        /// 产品名称。包括：Redis 主从版、CKV 主从版、CKV 集群版、Redis 单机版、Redis 集群版。
         /// </summary>
         [JsonProperty("TypeName")]
         public string TypeName{ get; set; }
 
         /// <summary>
-        /// 购买时的最小数量
+        /// 购买时的最小数量。
         /// </summary>
         [JsonProperty("MinBuyNum")]
         public long? MinBuyNum{ get; set; }
 
         /// <summary>
-        /// 购买时的最大数量
+        /// 购买时的最大数量。
         /// </summary>
         [JsonProperty("MaxBuyNum")]
         public long? MaxBuyNum{ get; set; }
 
         /// <summary>
-        /// 产品是否售罄
+        /// 产品是否售罄。
+        /// - true：售罄。
+        /// - false：未售罄。
         /// </summary>
         [JsonProperty("Saleout")]
         public bool? Saleout{ get; set; }
 
         /// <summary>
-        /// 产品引擎，腾讯云CKV或者社区版Redis
+        /// 产品引擎。包括：腾讯云 CKV与社区版 Redis。
         /// </summary>
         [JsonProperty("Engine")]
         public string Engine{ get; set; }
 
         /// <summary>
-        /// 兼容版本，Redis-2.8，Redis-3.2，Redis-4.0
+        /// 兼容版本。包括：Redis-2.8、Redis-3.2、Redis-4.0、Redis-5.0、Redis-6.2。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 规格总大小，单位G
+        /// 规格总大小，单位GB。
         /// </summary>
         [JsonProperty("TotalSize")]
         public string[] TotalSize{ get; set; }
 
         /// <summary>
-        /// 每个分片大小，单位G
+        /// 每个分片大小，单位GB。
         /// </summary>
         [JsonProperty("ShardSize")]
         public string[] ShardSize{ get; set; }
 
         /// <summary>
-        /// 副本数量
+        /// 副本数量。
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public string[] ReplicaNum{ get; set; }
 
         /// <summary>
-        /// 分片数量
+        /// 分片数量。
         /// </summary>
         [JsonProperty("ShardNum")]
         public string[] ShardNum{ get; set; }
 
         /// <summary>
-        /// 支持的计费模式，1-包年包月，0-按量计费
+        /// 支持的计费模式。
+        /// - 1：包年包月。
+        /// - 0：按量计费。
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 是否支持副本只读
+        /// 是否支持副本只读。
+        /// - true：支持副本只读。
+        /// - false：不支持。
         /// </summary>
         [JsonProperty("EnableRepicaReadOnly")]
         public bool? EnableRepicaReadOnly{ get; set; }

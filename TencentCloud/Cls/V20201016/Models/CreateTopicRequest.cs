@@ -85,6 +85,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("HotPeriod")]
         public ulong? HotPeriod{ get; set; }
 
+        /// <summary>
+        /// webtracking开关； false: 关闭 true： 开启
+        /// </summary>
+        [JsonProperty("IsWebTracking")]
+        public bool? IsWebTracking{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
             this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+            this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         }
     }
 }
