@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 签署连接过期时间字符串：年月日-时分秒
+        /// 催办合同详情列表
         /// </summary>
         [JsonProperty("RemindFlowRecords")]
         public RemindFlowRecords[] RemindFlowRecords{ get; set; }

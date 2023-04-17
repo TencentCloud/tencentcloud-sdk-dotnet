@@ -1415,6 +1415,46 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 查询溯源ID查溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTraceDataByIdRequest"/></param>
+        /// <returns><see cref="DescribeTraceDataByIdResponse"/></returns>
+        public async Task<DescribeTraceDataByIdResponse> DescribeTraceDataById(DescribeTraceDataByIdRequest req)
+        {
+             JsonResponseModel<DescribeTraceDataByIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTraceDataById");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTraceDataByIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询溯源ID查溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTraceDataByIdRequest"/></param>
+        /// <returns><see cref="DescribeTraceDataByIdResponse"/></returns>
+        public DescribeTraceDataByIdResponse DescribeTraceDataByIdSync(DescribeTraceDataByIdRequest req)
+        {
+             JsonResponseModel<DescribeTraceDataByIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTraceDataById");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTraceDataByIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的
         /// </summary>
         /// <param name="req"><see cref="DescribeTraceDataListRequest"/></param>

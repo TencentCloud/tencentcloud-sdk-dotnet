@@ -25,12 +25,37 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 意愿核身最终结果：
-        /// 0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
+        /// 意愿核身错误码：
+        /// 0: "成功"       
+        /// -1: "参数错误"    
+        /// -2: "系统异常"    
+        /// -101: "请保持人脸在框内"    
+        /// -102: "检测到多张人脸"   
+        /// -103: "人脸检测失败"   
+        /// -104: "人脸检测不完整"   
+        /// -105: "请勿遮挡眼睛"    
+        /// -106: "请勿遮挡嘴巴"     
+        /// -107: "请勿遮挡鼻子"     
+        /// -201: "人脸比对相似度低"    
+        /// -202: "人脸比对失败"    
+        /// -301: "意愿核验不通过"   
+        /// -800: "前端不兼容错误"    
+        /// -801: "用户未授权摄像头和麦克风权限"   
+        /// -802: "获取视频流失败"   
+        /// -803: "用户主动关闭链接/异常断开链接"   
+        /// -998: "系统数据异常"   
+        /// -999: "系统未知错误，请联系人工核实"   
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FinalResultCode")]
-        public string FinalResultCode{ get; set; }
+        [JsonProperty("FinalResultDetailCode")]
+        public long? FinalResultDetailCode{ get; set; }
+
+        /// <summary>
+        /// 意愿核身错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FinalResultMessage")]
+        public string FinalResultMessage{ get; set; }
 
         /// <summary>
         /// 视频base64（其中包含全程问题和回答音频，mp4格式）
@@ -68,18 +93,28 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Audios")]
         public string[] Audios{ get; set; }
 
+        /// <summary>
+        /// 意愿核身最终结果：
+        /// 0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验。建议使用“FinalResultDetailCode”参数获取详细的错误码信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FinalResultCode")]
+        public string FinalResultCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FinalResultCode", this.FinalResultCode);
+            this.SetParamSimple(map, prefix + "FinalResultDetailCode", this.FinalResultDetailCode);
+            this.SetParamSimple(map, prefix + "FinalResultMessage", this.FinalResultMessage);
             this.SetParamSimple(map, prefix + "Video", this.Video);
             this.SetParamArraySimple(map, prefix + "ScreenShot.", this.ScreenShot);
             this.SetParamArraySimple(map, prefix + "ResultCode.", this.ResultCode);
             this.SetParamArraySimple(map, prefix + "AsrResult.", this.AsrResult);
             this.SetParamArraySimple(map, prefix + "Audios.", this.Audios);
+            this.SetParamSimple(map, prefix + "FinalResultCode", this.FinalResultCode);
         }
     }
 }

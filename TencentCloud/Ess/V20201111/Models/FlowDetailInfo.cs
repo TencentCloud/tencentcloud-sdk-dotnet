@@ -44,13 +44,18 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowType{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的状态
-        /// 1：未签署
-        /// 2：部分签署
-        /// 3：已退回
-        /// 4：完成签署
-        /// 5：已过期
-        /// 6：已取消
+        /// 流程状态
+        /// - 0 还没有发起
+        /// - 1 未签署
+        /// - 2 部分签署
+        /// - 3 已退回
+        /// - 4 完成签署
+        /// - 5 已过期
+        /// - 6 已取消
+        /// - 7 还没有预发起
+        /// - 8 等待填写
+        /// - 9 部分填写
+        /// - 10 拒填
         /// </summary>
         [JsonProperty("FlowStatus")]
         public long? FlowStatus{ get; set; }

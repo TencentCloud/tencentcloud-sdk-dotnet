@@ -293,6 +293,48 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 用于创建迁移任务。
+        /// 此接口需提交工单，开启白名单之后才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMigrationTaskRequest"/></param>
+        /// <returns><see cref="CreateMigrationTaskResponse"/></returns>
+        public async Task<CreateMigrationTaskResponse> CreateMigrationTask(CreateMigrationTaskRequest req)
+        {
+             JsonResponseModel<CreateMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建迁移任务。
+        /// 此接口需提交工单，开启白名单之后才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMigrationTaskRequest"/></param>
+        /// <returns><see cref="CreateMigrationTaskResponse"/></returns>
+        public CreateMigrationTaskResponse CreateMigrationTaskSync(CreateMigrationTaskRequest req)
+        {
+             JsonResponseModel<CreateMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除快照定期策略
         /// </summary>
         /// <param name="req"><see cref="DeleteAutoSnapshotPolicyRequest"/></param>
@@ -493,6 +535,48 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 用于删除迁移任务。
+        /// 此接口需提交工单，开启白名单之后才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMigrationTaskRequest"/></param>
+        /// <returns><see cref="DeleteMigrationTaskResponse"/></returns>
+        public async Task<DeleteMigrationTaskResponse> DeleteMigrationTask(DeleteMigrationTaskRequest req)
+        {
+             JsonResponseModel<DeleteMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除迁移任务。
+        /// 此接口需提交工单，开启白名单之后才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMigrationTaskRequest"/></param>
+        /// <returns><see cref="DeleteMigrationTaskResponse"/></returns>
+        public DeleteMigrationTaskResponse DeleteMigrationTaskSync(DeleteMigrationTaskRequest req)
+        {
+             JsonResponseModel<DeleteMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteMountTarget）用于删除挂载点
         /// </summary>
         /// <param name="req"><see cref="DeleteMountTargetRequest"/></param>
@@ -644,6 +728,48 @@ namespace TencentCloud.Cfs.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAvailableZoneInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailableZoneInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取数据源桶列表。
+        /// 此接口需提交工单，开启白名单之后才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBucketListRequest"/></param>
+        /// <returns><see cref="DescribeBucketListResponse"/></returns>
+        public async Task<DescribeBucketListResponse> DescribeBucketList(DescribeBucketListRequest req)
+        {
+             JsonResponseModel<DescribeBucketListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBucketList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBucketListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取数据源桶列表。
+        /// 此接口需提交工单，开启白名单之后才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBucketListRequest"/></param>
+        /// <returns><see cref="DescribeBucketListResponse"/></returns>
+        public DescribeBucketListResponse DescribeBucketListSync(DescribeBucketListRequest req)
+        {
+             JsonResponseModel<DescribeBucketListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBucketList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBucketListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -933,6 +1059,48 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 用于获取迁移任务列表。
+        /// 此接口需提交工单，开启白名单之后才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigrationTasksRequest"/></param>
+        /// <returns><see cref="DescribeMigrationTasksResponse"/></returns>
+        public async Task<DescribeMigrationTasksResponse> DescribeMigrationTasks(DescribeMigrationTasksRequest req)
+        {
+             JsonResponseModel<DescribeMigrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMigrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMigrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取迁移任务列表。
+        /// 此接口需提交工单，开启白名单之后才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigrationTasksRequest"/></param>
+        /// <returns><see cref="DescribeMigrationTasksResponse"/></returns>
+        public DescribeMigrationTasksResponse DescribeMigrationTasksSync(DescribeMigrationTasksRequest req)
+        {
+             JsonResponseModel<DescribeMigrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMigrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMigrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeMountTargets）用于查询文件系统挂载点信息
         /// </summary>
         /// <param name="req"><see cref="DescribeMountTargetsRequest"/></param>
@@ -1124,6 +1292,48 @@ namespace TencentCloud.Cfs.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "SignUpCfsService");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SignUpCfsServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于终止迁移任务。
+        /// 此接口需提交工单，开启白名单之后才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="StopMigrationTaskRequest"/></param>
+        /// <returns><see cref="StopMigrationTaskResponse"/></returns>
+        public async Task<StopMigrationTaskResponse> StopMigrationTask(StopMigrationTaskRequest req)
+        {
+             JsonResponseModel<StopMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于终止迁移任务。
+        /// 此接口需提交工单，开启白名单之后才能使用。
+        /// </summary>
+        /// <param name="req"><see cref="StopMigrationTaskRequest"/></param>
+        /// <returns><see cref="StopMigrationTaskResponse"/></returns>
+        public StopMigrationTaskResponse StopMigrationTaskSync(StopMigrationTaskRequest req)
+        {
+             JsonResponseModel<StopMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMigrationTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
