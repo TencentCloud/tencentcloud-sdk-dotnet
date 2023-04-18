@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.741</VersionPrefix>
+    <VersionPrefix>3.0.742</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,6 +55,8 @@
     <Compile Include="V20201111\Models\ApproverRestriction.cs" />
     <Compile Include="V20201111\Models\AuthorizedUser.cs" />
     <Compile Include="V20201111\Models\AutoSignConfig.cs" />
+    <Compile Include="V20201111\Models\BindEmployeeUserIdWithClientOpenIdRequest.cs" />
+    <Compile Include="V20201111\Models\BindEmployeeUserIdWithClientOpenIdResponse.cs" />
     <Compile Include="V20201111\Models\CallbackInfo.cs" />
     <Compile Include="V20201111\Models\Caller.cs" />
     <Compile Include="V20201111\Models\CancelFlowRequest.cs" />
@@ -175,6 +177,8 @@
     <Compile Include="V20201111\Models\SuccessDeleteStaffData.cs" />
     <Compile Include="V20201111\Models\SuccessUpdateStaffData.cs" />
     <Compile Include="V20201111\Models\TemplateInfo.cs" />
+    <Compile Include="V20201111\Models\UnbindEmployeeUserIdWithClientOpenIdRequest.cs" />
+    <Compile Include="V20201111\Models\UnbindEmployeeUserIdWithClientOpenIdResponse.cs" />
     <Compile Include="V20201111\Models\UpdateIntegrationEmployeesRequest.cs" />
     <Compile Include="V20201111\Models\UpdateIntegrationEmployeesResponse.cs" />
     <Compile Include="V20201111\Models\UploadFile.cs" />

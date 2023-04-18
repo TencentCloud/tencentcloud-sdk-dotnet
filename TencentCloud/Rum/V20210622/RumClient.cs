@@ -669,6 +669,166 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 用于查询 app 监控多维分析数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppDimensionMetricsRequest"/></param>
+        /// <returns><see cref="DescribeAppDimensionMetricsResponse"/></returns>
+        public async Task<DescribeAppDimensionMetricsResponse> DescribeAppDimensionMetrics(DescribeAppDimensionMetricsRequest req)
+        {
+             JsonResponseModel<DescribeAppDimensionMetricsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAppDimensionMetrics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppDimensionMetricsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询 app 监控多维分析数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppDimensionMetricsRequest"/></param>
+        /// <returns><see cref="DescribeAppDimensionMetricsResponse"/></returns>
+        public DescribeAppDimensionMetricsResponse DescribeAppDimensionMetricsSync(DescribeAppDimensionMetricsRequest req)
+        {
+             JsonResponseModel<DescribeAppDimensionMetricsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAppDimensionMetrics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppDimensionMetricsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取 app 监控指标数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppMetricsDataRequest"/></param>
+        /// <returns><see cref="DescribeAppMetricsDataResponse"/></returns>
+        public async Task<DescribeAppMetricsDataResponse> DescribeAppMetricsData(DescribeAppMetricsDataRequest req)
+        {
+             JsonResponseModel<DescribeAppMetricsDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAppMetricsData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppMetricsDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取 app 监控指标数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppMetricsDataRequest"/></param>
+        /// <returns><see cref="DescribeAppMetricsDataResponse"/></returns>
+        public DescribeAppMetricsDataResponse DescribeAppMetricsDataSync(DescribeAppMetricsDataRequest req)
+        {
+             JsonResponseModel<DescribeAppMetricsDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAppMetricsData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppMetricsDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 app 监控个例样本详情列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppSingleCaseDetailListRequest"/></param>
+        /// <returns><see cref="DescribeAppSingleCaseDetailListResponse"/></returns>
+        public async Task<DescribeAppSingleCaseDetailListResponse> DescribeAppSingleCaseDetailList(DescribeAppSingleCaseDetailListRequest req)
+        {
+             JsonResponseModel<DescribeAppSingleCaseDetailListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAppSingleCaseDetailList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppSingleCaseDetailListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 app 监控个例样本详情列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppSingleCaseDetailListRequest"/></param>
+        /// <returns><see cref="DescribeAppSingleCaseDetailListResponse"/></returns>
+        public DescribeAppSingleCaseDetailListResponse DescribeAppSingleCaseDetailListSync(DescribeAppSingleCaseDetailListRequest req)
+        {
+             JsonResponseModel<DescribeAppSingleCaseDetailListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAppSingleCaseDetailList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppSingleCaseDetailListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 app 监控个例聚合列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppSingleCaseListRequest"/></param>
+        /// <returns><see cref="DescribeAppSingleCaseListResponse"/></returns>
+        public async Task<DescribeAppSingleCaseListResponse> DescribeAppSingleCaseList(DescribeAppSingleCaseListRequest req)
+        {
+             JsonResponseModel<DescribeAppSingleCaseListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAppSingleCaseList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppSingleCaseListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 app 监控个例聚合列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppSingleCaseListRequest"/></param>
+        /// <returns><see cref="DescribeAppSingleCaseListResponse"/></returns>
+        public DescribeAppSingleCaseListResponse DescribeAppSingleCaseListSync(DescribeAppSingleCaseListRequest req)
+        {
+             JsonResponseModel<DescribeAppSingleCaseListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAppSingleCaseList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppSingleCaseListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 转发monitor查询
         /// </summary>
         /// <param name="req"><see cref="DescribeDataRequest"/></param>

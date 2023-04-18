@@ -6979,6 +6979,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 旧版日志下载接口下线
+        /// 
         /// 导出ES查询文档列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSearchExportListRequest"/></param>
@@ -6999,6 +7001,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 旧版日志下载接口下线
+        /// 
         /// 导出ES查询文档列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSearchExportListRequest"/></param>

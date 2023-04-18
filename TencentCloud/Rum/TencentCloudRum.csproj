@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.741</VersionPrefix>
+    <VersionPrefix>3.0.742</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -78,6 +78,14 @@
     <Compile Include="V20210622\Models\DeleteStarProjectResponse.cs" />
     <Compile Include="V20210622\Models\DeleteWhitelistRequest.cs" />
     <Compile Include="V20210622\Models\DeleteWhitelistResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeAppDimensionMetricsRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeAppDimensionMetricsResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeAppMetricsDataRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeAppMetricsDataResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeAppSingleCaseDetailListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeAppSingleCaseDetailListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeAppSingleCaseListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeAppSingleCaseListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataCustomUrlRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataCustomUrlResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataEventUrlRequest.cs" />

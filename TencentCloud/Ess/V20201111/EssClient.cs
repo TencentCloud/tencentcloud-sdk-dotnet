@@ -53,6 +53,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 将电子签系统员工userId与客户系统员工openId进行绑定
+        /// </summary>
+        /// <param name="req"><see cref="BindEmployeeUserIdWithClientOpenIdRequest"/></param>
+        /// <returns><see cref="BindEmployeeUserIdWithClientOpenIdResponse"/></returns>
+        public async Task<BindEmployeeUserIdWithClientOpenIdResponse> BindEmployeeUserIdWithClientOpenId(BindEmployeeUserIdWithClientOpenIdRequest req)
+        {
+             JsonResponseModel<BindEmployeeUserIdWithClientOpenIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindEmployeeUserIdWithClientOpenId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindEmployeeUserIdWithClientOpenIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将电子签系统员工userId与客户系统员工openId进行绑定
+        /// </summary>
+        /// <param name="req"><see cref="BindEmployeeUserIdWithClientOpenIdRequest"/></param>
+        /// <returns><see cref="BindEmployeeUserIdWithClientOpenIdResponse"/></returns>
+        public BindEmployeeUserIdWithClientOpenIdResponse BindEmployeeUserIdWithClientOpenIdSync(BindEmployeeUserIdWithClientOpenIdRequest req)
+        {
+             JsonResponseModel<BindEmployeeUserIdWithClientOpenIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindEmployeeUserIdWithClientOpenId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindEmployeeUserIdWithClientOpenIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于撤销签署流程
         /// 适用场景：如果某个合同流程当前至少还有一方没有签署，则可通过该接口取消该合同流程。常用于合同发错、内容填错，需要及时撤销的场景。
         /// 注：如果合同流程中的参与方均已签署完毕，则无法通过该接口撤销合同。
@@ -1734,6 +1774,46 @@ namespace TencentCloud.Ess.V20201111
              {
                  var strResp = this.InternalRequestSync(req, "StartFlow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将存在绑定关系的电子签系统员工userId与客户系统员工openId进行解绑
+        /// </summary>
+        /// <param name="req"><see cref="UnbindEmployeeUserIdWithClientOpenIdRequest"/></param>
+        /// <returns><see cref="UnbindEmployeeUserIdWithClientOpenIdResponse"/></returns>
+        public async Task<UnbindEmployeeUserIdWithClientOpenIdResponse> UnbindEmployeeUserIdWithClientOpenId(UnbindEmployeeUserIdWithClientOpenIdRequest req)
+        {
+             JsonResponseModel<UnbindEmployeeUserIdWithClientOpenIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindEmployeeUserIdWithClientOpenId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindEmployeeUserIdWithClientOpenIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将存在绑定关系的电子签系统员工userId与客户系统员工openId进行解绑
+        /// </summary>
+        /// <param name="req"><see cref="UnbindEmployeeUserIdWithClientOpenIdRequest"/></param>
+        /// <returns><see cref="UnbindEmployeeUserIdWithClientOpenIdResponse"/></returns>
+        public UnbindEmployeeUserIdWithClientOpenIdResponse UnbindEmployeeUserIdWithClientOpenIdSync(UnbindEmployeeUserIdWithClientOpenIdRequest req)
+        {
+             JsonResponseModel<UnbindEmployeeUserIdWithClientOpenIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindEmployeeUserIdWithClientOpenId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindEmployeeUserIdWithClientOpenIdResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

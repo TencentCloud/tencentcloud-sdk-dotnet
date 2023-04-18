@@ -53,6 +53,46 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 接收客户侧的用户已授权的号码。
+        /// </summary>
+        /// <param name="req"><see cref="AuthorizedTransferRequest"/></param>
+        /// <returns><see cref="AuthorizedTransferResponse"/></returns>
+        public async Task<AuthorizedTransferResponse> AuthorizedTransfer(AuthorizedTransferRequest req)
+        {
+             JsonResponseModel<AuthorizedTransferResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AuthorizedTransfer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuthorizedTransferResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接收客户侧的用户已授权的号码。
+        /// </summary>
+        /// <param name="req"><see cref="AuthorizedTransferRequest"/></param>
+        /// <returns><see cref="AuthorizedTransferResponse"/></returns>
+        public AuthorizedTransferResponse AuthorizedTransferSync(AuthorizedTransferRequest req)
+        {
+             JsonResponseModel<AuthorizedTransferResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AuthorizedTransfer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuthorizedTransferResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 新增批次
         /// </summary>
         /// <param name="req"><see cref="CreateCodeBatchRequest"/></param>
@@ -1495,6 +1535,46 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 接收客户反馈的各环节数据
+        /// </summary>
+        /// <param name="req"><see cref="EffectFeedbackRequest"/></param>
+        /// <returns><see cref="EffectFeedbackResponse"/></returns>
+        public async Task<EffectFeedbackResponse> EffectFeedback(EffectFeedbackRequest req)
+        {
+             JsonResponseModel<EffectFeedbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EffectFeedback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EffectFeedbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接收客户反馈的各环节数据
+        /// </summary>
+        /// <param name="req"><see cref="EffectFeedbackRequest"/></param>
+        /// <returns><see cref="EffectFeedbackResponse"/></returns>
+        public EffectFeedbackResponse EffectFeedbackSync(EffectFeedbackRequest req)
+        {
+             JsonResponseModel<EffectFeedbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EffectFeedback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EffectFeedbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改批次
         /// </summary>
         /// <param name="req"><see cref="ModifyCodeBatchRequest"/></param>
@@ -1848,6 +1928,46 @@ namespace TencentCloud.Trp.V20210515
              {
                  var strResp = this.InternalRequestSync(req, "ModifyTraceDataRanks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTraceDataRanksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接收离线筛选包回执，用于效果统计和分析。
+        /// </summary>
+        /// <param name="req"><see cref="ReportBatchCallbackStatusRequest"/></param>
+        /// <returns><see cref="ReportBatchCallbackStatusResponse"/></returns>
+        public async Task<ReportBatchCallbackStatusResponse> ReportBatchCallbackStatus(ReportBatchCallbackStatusRequest req)
+        {
+             JsonResponseModel<ReportBatchCallbackStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReportBatchCallbackStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportBatchCallbackStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接收离线筛选包回执，用于效果统计和分析。
+        /// </summary>
+        /// <param name="req"><see cref="ReportBatchCallbackStatusRequest"/></param>
+        /// <returns><see cref="ReportBatchCallbackStatusResponse"/></returns>
+        public ReportBatchCallbackStatusResponse ReportBatchCallbackStatusSync(ReportBatchCallbackStatusRequest req)
+        {
+             JsonResponseModel<ReportBatchCallbackStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReportBatchCallbackStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportBatchCallbackStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

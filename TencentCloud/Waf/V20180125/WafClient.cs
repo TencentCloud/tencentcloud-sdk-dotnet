@@ -1015,6 +1015,86 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 查询业务和攻击概要趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribePeakPointsRequest"/></param>
+        /// <returns><see cref="DescribePeakPointsResponse"/></returns>
+        public async Task<DescribePeakPointsResponse> DescribePeakPoints(DescribePeakPointsRequest req)
+        {
+             JsonResponseModel<DescribePeakPointsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePeakPoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePeakPointsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询业务和攻击概要趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribePeakPointsRequest"/></param>
+        /// <returns><see cref="DescribePeakPointsResponse"/></returns>
+        public DescribePeakPointsResponse DescribePeakPointsSync(DescribePeakPointsRequest req)
+        {
+             JsonResponseModel<DescribePeakPointsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePeakPoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePeakPointsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取业务和攻击概览峰值
+        /// </summary>
+        /// <param name="req"><see cref="DescribePeakValueRequest"/></param>
+        /// <returns><see cref="DescribePeakValueResponse"/></returns>
+        public async Task<DescribePeakValueResponse> DescribePeakValue(DescribePeakValueRequest req)
+        {
+             JsonResponseModel<DescribePeakValueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePeakValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePeakValueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取业务和攻击概览峰值
+        /// </summary>
+        /// <param name="req"><see cref="DescribePeakValueRequest"/></param>
+        /// <returns><see cref="DescribePeakValueResponse"/></returns>
+        public DescribePeakValueResponse DescribePeakValueSync(DescribePeakValueRequest req)
+        {
+             JsonResponseModel<DescribePeakValueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePeakValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePeakValueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取防护状态以及生效的实例id
         /// </summary>
         /// <param name="req"><see cref="DescribePolicyStatusRequest"/></param>
