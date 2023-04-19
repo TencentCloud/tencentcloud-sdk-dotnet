@@ -733,6 +733,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 创建配置项，返回详细信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateConfigWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreateConfigWithDetailRespResponse"/></returns>
+        public async Task<CreateConfigWithDetailRespResponse> CreateConfigWithDetailResp(CreateConfigWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreateConfigWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateConfigWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConfigWithDetailRespResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建配置项，返回详细信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateConfigWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreateConfigWithDetailRespResponse"/></returns>
+        public CreateConfigWithDetailRespResponse CreateConfigWithDetailRespSync(CreateConfigWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreateConfigWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateConfigWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConfigWithDetailRespResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// （已废弃，请使用 CreateGroup 和 DeployContainerGroup 创建和部署容器部署组）创建容器部署组
         /// </summary>
         /// <param name="req"><see cref="CreateContainGroupRequest"/></param>
@@ -804,6 +844,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "CreateFileConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFileConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建文件配置项，返回详细信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateFileConfigWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreateFileConfigWithDetailRespResponse"/></returns>
+        public async Task<CreateFileConfigWithDetailRespResponse> CreateFileConfigWithDetailResp(CreateFileConfigWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreateFileConfigWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFileConfigWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFileConfigWithDetailRespResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建文件配置项，返回详细信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateFileConfigWithDetailRespRequest"/></param>
+        /// <returns><see cref="CreateFileConfigWithDetailRespResponse"/></returns>
+        public CreateFileConfigWithDetailRespResponse CreateFileConfigWithDetailRespSync(CreateFileConfigWithDetailRespRequest req)
+        {
+             JsonResponseModel<CreateFileConfigWithDetailRespResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFileConfigWithDetailResp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFileConfigWithDetailRespResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -270,6 +270,20 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("StartStandbyCluster")]
         public bool? StartStandbyCluster{ get; set; }
 
+        /// <summary>
+        /// spark jar 包年包月集群是否开启弹性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ElasticSwitch")]
+        public bool? ElasticSwitch{ get; set; }
+
+        /// <summary>
+        /// spark jar 包年包月集群弹性上限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ElasticLimit")]
+        public long? ElasticLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -313,6 +327,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ChildImageVersionId", this.ChildImageVersionId);
             this.SetParamSimple(map, prefix + "ImageVersionName", this.ImageVersionName);
             this.SetParamSimple(map, prefix + "StartStandbyCluster", this.StartStandbyCluster);
+            this.SetParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
+            this.SetParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
         }
     }
 }

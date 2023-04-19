@@ -70,6 +70,27 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("ImgUrl")]
         public string ImgUrl{ get; set; }
 
+        /// <summary>
+        /// 联系人证件号码。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegistrantCertificateCode")]
+        public string RegistrantCertificateCode{ get; set; }
+
+        /// <summary>
+        /// 联系人证件类型。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegistrantCertificateType")]
+        public string RegistrantCertificateType{ get; set; }
+
+        /// <summary>
+        /// 联系人证件照片地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegistrantImgUrl")]
+        public string RegistrantImgUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +100,9 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "CertificateCode", this.CertificateCode);
             this.SetParamSimple(map, prefix + "CertificateType", this.CertificateType);
             this.SetParamSimple(map, prefix + "ImgUrl", this.ImgUrl);
+            this.SetParamSimple(map, prefix + "RegistrantCertificateCode", this.RegistrantCertificateCode);
+            this.SetParamSimple(map, prefix + "RegistrantCertificateType", this.RegistrantCertificateType);
+            this.SetParamSimple(map, prefix + "RegistrantImgUrl", this.RegistrantImgUrl);
         }
     }
 }

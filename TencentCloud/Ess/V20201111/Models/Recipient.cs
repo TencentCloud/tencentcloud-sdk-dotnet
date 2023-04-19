@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string RecipientId{ get; set; }
 
         /// <summary>
-        /// 参与者类型（ENTERPRISE/INDIVIDUAL）
+        /// 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
         /// </summary>
         [JsonProperty("RecipientType")]
         public string RecipientType{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 发送方式（EMAIL/MOBILE）
+        /// 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
         /// </summary>
         [JsonProperty("DeliveryMethod")]
         public string DeliveryMethod{ get; set; }

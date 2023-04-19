@@ -36,6 +36,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("StatementId")]
         public string StatementId{ get; set; }
 
+        /// <summary>
+        /// 任务唯一标识
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         {
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "StatementId", this.StatementId);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

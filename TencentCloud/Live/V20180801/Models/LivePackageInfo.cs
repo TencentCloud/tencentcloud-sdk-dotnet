@@ -92,6 +92,23 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 是否自动续购。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WillRenew")]
+        public long? WillRenew{ get; set; }
+
+        /// <summary>
+        /// 续购状态。
+        /// 1 ：续购成功。
+        /// 0 ：尚未续购。
+        /// <0  : 续购失败。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RenewalResult")]
+        public long? RenewalResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +123,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "WillRenew", this.WillRenew);
+            this.SetParamSimple(map, prefix + "RenewalResult", this.RenewalResult);
         }
     }
 }

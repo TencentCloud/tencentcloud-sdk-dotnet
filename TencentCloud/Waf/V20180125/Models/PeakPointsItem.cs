@@ -62,10 +62,58 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// Bot qps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BotAccess")]
         public ulong? BotAccess{ get; set; }
+
+        /// <summary>
+        /// WAF返回给客户端状态码次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StatusServerError")]
+        public ulong? StatusServerError{ get; set; }
+
+        /// <summary>
+        /// WAF返回给客户端状态码次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StatusClientError")]
+        public ulong? StatusClientError{ get; set; }
+
+        /// <summary>
+        /// WAF返回给客户端状态码次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StatusRedirect")]
+        public ulong? StatusRedirect{ get; set; }
+
+        /// <summary>
+        /// WAF返回给客户端状态码次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StatusOk")]
+        public ulong? StatusOk{ get; set; }
+
+        /// <summary>
+        /// 源站返回给WAF状态码次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpstreamServerError")]
+        public ulong? UpstreamServerError{ get; set; }
+
+        /// <summary>
+        /// 源站返回给WAF状态码次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpstreamClientError")]
+        public ulong? UpstreamClientError{ get; set; }
+
+        /// <summary>
+        /// 源站返回给WAF状态码次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpstreamRedirect")]
+        public ulong? UpstreamRedirect{ get; set; }
 
 
         /// <summary>
@@ -80,6 +128,13 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Attack", this.Attack);
             this.SetParamSimple(map, prefix + "Cc", this.Cc);
             this.SetParamSimple(map, prefix + "BotAccess", this.BotAccess);
+            this.SetParamSimple(map, prefix + "StatusServerError", this.StatusServerError);
+            this.SetParamSimple(map, prefix + "StatusClientError", this.StatusClientError);
+            this.SetParamSimple(map, prefix + "StatusRedirect", this.StatusRedirect);
+            this.SetParamSimple(map, prefix + "StatusOk", this.StatusOk);
+            this.SetParamSimple(map, prefix + "UpstreamServerError", this.UpstreamServerError);
+            this.SetParamSimple(map, prefix + "UpstreamClientError", this.UpstreamClientError);
+            this.SetParamSimple(map, prefix + "UpstreamRedirect", this.UpstreamRedirect);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// SparkSQL任务唯一ID
+        /// </summary>
+        [JsonProperty("BatchId")]
+        public string BatchId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "Asc", this.Asc);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
         }
     }
 }

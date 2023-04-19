@@ -180,6 +180,34 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ProxySendTimeout")]
         public long? ProxySendTimeout{ get; set; }
 
+        /// <summary>
+        /// 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SniType")]
+        public long? SniType{ get; set; }
+
+        /// <summary>
+        /// SniType=3时，需要填此参数，表示自定义的host；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SniHost")]
+        public string SniHost{ get; set; }
+
+        /// <summary>
+        /// 无
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Weights")]
+        public string[] Weights{ get; set; }
+
+        /// <summary>
+        /// IsCdn=3时，表示自定义header
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IpHeaders")]
+        public string[] IpHeaders{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -211,6 +239,10 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
             this.SetParamSimple(map, prefix + "ProxyReadTimeout", this.ProxyReadTimeout);
             this.SetParamSimple(map, prefix + "ProxySendTimeout", this.ProxySendTimeout);
+            this.SetParamSimple(map, prefix + "SniType", this.SniType);
+            this.SetParamSimple(map, prefix + "SniHost", this.SniHost);
+            this.SetParamArraySimple(map, prefix + "Weights.", this.Weights);
+            this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
         }
     }
 }

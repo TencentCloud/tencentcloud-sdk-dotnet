@@ -30,6 +30,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>ModifyTime - String - 是否必填：否 - 最近发生时间</li>
         /// <li>Uuid- String - 是否必填：否 - 主机uuid查询</li>
         /// <li>RuleCategory- string - 是否必填：否 - 规则类别 0 系统规则 1 自定义规则</li>
+        /// <li>FileAction- string - 是否必填：否 - 威胁行为 read 读取文件 write 写文件</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

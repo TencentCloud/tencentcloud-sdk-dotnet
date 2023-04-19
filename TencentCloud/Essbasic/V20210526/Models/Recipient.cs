@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string RecipientId{ get; set; }
 
         /// <summary>
-        /// 签署方类型：ENTERPRISE-企业INDIVIDUAL-自然人
+        /// 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
         /// </summary>
         [JsonProperty("RecipientType")]
         public string RecipientType{ get; set; }

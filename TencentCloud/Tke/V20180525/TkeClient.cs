@@ -7253,6 +7253,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 对集群的Kubeconfig信息进行更新
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClusterKubeconfigRequest"/></param>
+        /// <returns><see cref="UpdateClusterKubeconfigResponse"/></returns>
+        public async Task<UpdateClusterKubeconfigResponse> UpdateClusterKubeconfig(UpdateClusterKubeconfigRequest req)
+        {
+             JsonResponseModel<UpdateClusterKubeconfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateClusterKubeconfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateClusterKubeconfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对集群的Kubeconfig信息进行更新
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClusterKubeconfigRequest"/></param>
+        /// <returns><see cref="UpdateClusterKubeconfigResponse"/></returns>
+        public UpdateClusterKubeconfigResponse UpdateClusterKubeconfigSync(UpdateClusterKubeconfigRequest req)
+        {
+             JsonResponseModel<UpdateClusterKubeconfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateClusterKubeconfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateClusterKubeconfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 升级集群 Master 组件到指定版本
         /// </summary>
         /// <param name="req"><see cref="UpdateClusterVersionRequest"/></param>

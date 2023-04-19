@@ -186,6 +186,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("AppExecutorMaxNumbers")]
         public long? AppExecutorMaxNumbers{ get; set; }
 
+        /// <summary>
+        /// 关联dlc查询脚本
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +225,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SparkImage", this.SparkImage);
             this.SetParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
             this.SetParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
         }
     }
 }

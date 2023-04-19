@@ -101,10 +101,24 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <summary>
         /// 套餐类型。
         /// 取值范围：
-        /// <li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+        /// <li>STARTER_BUNDLE：入门型</li>
+        /// <li>GENERAL_BUNDLE：通用型</li>
+        /// <li>ENTERPRISE_BUNDLE：企业型</li>
+        /// <li>STORAGE_BUNDLE：存储型</li>
+        /// <li>EXCLUSIVE_BUNDLE：专属型</li>
+        /// <li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
+        /// <li>CAREFREE_BUNDLE：无忧型</li>
+        /// <li>BEFAST_BUNDLE：蜂驰型 </li>
         /// </summary>
         [JsonProperty("BundleType")]
         public string BundleType{ get; set; }
+
+        /// <summary>
+        /// 套餐类型描述信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BundleTypeDescription")]
+        public string BundleTypeDescription{ get; set; }
 
         /// <summary>
         /// 套餐展示标签.
@@ -135,6 +149,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
             this.SetParamSimple(map, prefix + "BundleSalesState", this.BundleSalesState);
             this.SetParamSimple(map, prefix + "BundleType", this.BundleType);
+            this.SetParamSimple(map, prefix + "BundleTypeDescription", this.BundleTypeDescription);
             this.SetParamSimple(map, prefix + "BundleDisplayLabel", this.BundleDisplayLabel);
         }
     }

@@ -31,25 +31,25 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户的来源渠道
+        /// 用户的来源渠道，一般不用传，特定场景根据接口说明传值
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
 
         /// <summary>
-        /// 用户在渠道的编号
+        /// 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
-        /// 用户真实IP
+        /// 用户真实IP，内部字段，暂未开放
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }
 
         /// <summary>
-        /// 用户代理IP
+        /// 用户代理IP，内部字段，暂未开放
         /// </summary>
         [JsonProperty("ProxyIp")]
         public string ProxyIp{ get; set; }

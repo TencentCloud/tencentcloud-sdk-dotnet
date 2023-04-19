@@ -122,6 +122,34 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 课件页数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Pages")]
+        public ulong? Pages{ get; set; }
+
+        /// <summary>
+        /// 宽，仅在静态转码的课件有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Width")]
+        public ulong? Width{ get; set; }
+
+        /// <summary>
+        /// 高，仅在静态转码的课件有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Height")]
+        public ulong? Height{ get; set; }
+
+        /// <summary>
+        /// 封面，仅转码的课件会生成封面
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Cover")]
+        public string Cover{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +170,10 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "DocumentType", this.DocumentType);
             this.SetParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "Pages", this.Pages);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "Cover", this.Cover);
         }
     }
 }

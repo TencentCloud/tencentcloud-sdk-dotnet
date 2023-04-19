@@ -48,6 +48,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("URLExpireTime")]
         public ulong? URLExpireTime{ get; set; }
 
+        /// <summary>
+        /// 备份下载限制
+        /// </summary>
+        [JsonProperty("BackupDownloadRestriction")]
+        public BackupDownloadRestriction BackupDownloadRestriction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "URLExpireTime", this.URLExpireTime);
+            this.SetParamObj(map, prefix + "BackupDownloadRestriction.", this.BackupDownloadRestriction);
         }
     }
 }

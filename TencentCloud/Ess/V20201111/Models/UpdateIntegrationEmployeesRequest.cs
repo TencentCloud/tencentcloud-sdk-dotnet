@@ -31,16 +31,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 代理信息
-        /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
-
-        /// <summary>
         /// 员工信息
         /// </summary>
         [JsonProperty("Employees")]
         public Staff[] Employees{ get; set; }
+
+        /// <summary>
+        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArrayObj(map, prefix + "Employees.", this.Employees);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

@@ -3015,6 +3015,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 续费Ckafka实例, 目前只支持国内站包年包月实例续费
+        /// </summary>
+        /// <param name="req"><see cref="RenewCkafkaInstanceRequest"/></param>
+        /// <returns><see cref="RenewCkafkaInstanceResponse"/></returns>
+        public async Task<RenewCkafkaInstanceResponse> RenewCkafkaInstance(RenewCkafkaInstanceRequest req)
+        {
+             JsonResponseModel<RenewCkafkaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewCkafkaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewCkafkaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 续费Ckafka实例, 目前只支持国内站包年包月实例续费
+        /// </summary>
+        /// <param name="req"><see cref="RenewCkafkaInstanceRequest"/></param>
+        /// <returns><see cref="RenewCkafkaInstanceResponse"/></returns>
+        public RenewCkafkaInstanceResponse RenewCkafkaInstanceSync(RenewCkafkaInstanceRequest req)
+        {
+             JsonResponseModel<RenewCkafkaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RenewCkafkaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewCkafkaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过HTTP接入层发送消息
         /// </summary>
         /// <param name="req"><see cref="SendMessageRequest"/></param>

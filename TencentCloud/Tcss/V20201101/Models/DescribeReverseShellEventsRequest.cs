@@ -37,7 +37,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+        /// 过滤参数
+        /// InnerNetAlarmShow- int - 是否必填：1 - 内网告警展示 0 - 不展示
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }

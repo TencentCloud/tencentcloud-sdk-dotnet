@@ -49,6 +49,18 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("UrlType")]
         public string UrlType{ get; set; }
 
+        /// <summary>
+        /// 通知类型，默认不填为不通知开通方，填写 SMS 为短息通知。
+        /// </summary>
+        [JsonProperty("NotifyType")]
+        public string NotifyType{ get; set; }
+
+        /// <summary>
+        /// 若上方填写为 SMS，则此处为手机号
+        /// </summary>
+        [JsonProperty("NotifyAddress")]
+        public string NotifyAddress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +71,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "SceneKey", this.SceneKey);
             this.SetParamObj(map, prefix + "AutoSignConfig.", this.AutoSignConfig);
             this.SetParamSimple(map, prefix + "UrlType", this.UrlType);
+            this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
+            this.SetParamSimple(map, prefix + "NotifyAddress", this.NotifyAddress);
         }
     }
 }

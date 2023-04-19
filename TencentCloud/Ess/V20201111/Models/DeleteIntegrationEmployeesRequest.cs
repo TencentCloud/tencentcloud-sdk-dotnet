@@ -37,7 +37,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public Staff[] Employees{ get; set; }
 
         /// <summary>
-        /// 代理信息
+        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

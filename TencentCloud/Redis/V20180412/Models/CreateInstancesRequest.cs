@@ -25,32 +25,38 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)，15 – Redis6.0内存版(标准架构)，16 – Redis6.0内存版(集群架构)。
+        /// 实例类型。
+        /// <ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li></ul>
         /// </summary>
         [JsonProperty("TypeId")]
         public ulong? TypeId{ get; set; }
 
         /// <summary>
-        /// 内存容量，单位为MB， 数值需为1024的整数倍，具体规格以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
-        /// TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架构时，MemSize是单分片内存容量。
+        /// 内存容量，单位为MB， 数值需为1024的整数倍。具体规格，请通过 [DescribeProductInfo](https://cloud.tencent.com/document/api/239/30600) 接口查询全地域的售卖规格。
+        /// - **TypeId**为标准架构时，**MemSize**是实例总内存容量；
+        /// - **TypeId**为集群架构时，**MemSize**是单分片内存容量。
         /// </summary>
         [JsonProperty("MemSize")]
         public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// 实例数量，单次购买实例数量以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
+        /// 实例数量，单次购买实例数量。具体信息，请通过 [DescribeProductInfo](https://cloud.tencent.com/document/api/239/30600) 接口查询全地域的售卖规格。
         /// </summary>
         [JsonProperty("GoodsNum")]
         public ulong? GoodsNum{ get; set; }
 
         /// <summary>
-        /// 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+        /// 购买实例的时长。
+        /// - 若 **BillingMode**为**1**，即计费方式为包年包月时，需设置该参数，指定所购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+        /// - 若 **BillingMode**为**0**，即计费方式为按量计费时，该参数配置为1。
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 付费方式:0-按量计费，1-包年包月。
+        /// 计费方式。
+        /// - 0：按量计费。
+        /// - 1：包年包月。
         /// </summary>
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
@@ -62,117 +68,138 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 实例密码，当输入参数NoAuth为true且使用私有网络VPC时，Password为非必填，否则Password为必填参数。
-        /// 当实例类型TypeId为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头；
-        /// 当实例类型TypeId为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字 且 不包含其他字符。
+        /// 访问实例的密码。
+        /// - 当输入参数**NoAuth**为**true**时，指设置实例为免密码访问，Password可不用配置，否则Password为必填参数。
+        /// - 当实例类型**TypeId**为Redis 2.8 内存版标准架构、Redis 4.0、5.0、6.0内存版标准架构或集群架构时，其密码复杂度要求为：8-30个字符，至少包含小写字母、大写字母、数字和字符()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头。
+        /// - 当实例类型**TypeId**为CKV 3.2 内存版标准架构或集群架构时，其密码复杂度为：8-30个字符，必须包含字母和数字，且 不包含其他字符。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk。
+        /// 私有网络ID。如果不配置该参数则默认选择基础网络。请登录 [私有网络](https://console.cloud.tencent.com/vpc)控制台查询具体的ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2。
+        /// 私有网络VPC的子网。基础网络下， 该参数无需配置。请登录 [私有网络](https://console.cloud.tencent.com/vpc)控制台查询子网列表获取具体的 ID。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
+        /// 项目 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)，在右上角的账户信息菜单中，选择**项目管理**查询项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费。
+        /// 自动续费标识。
+        /// - 0：默认状态（手动续费）。
+        /// - 1：自动续费。
+        /// - 2：到期不续费。
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
 
         /// <summary>
-        /// 安全组id数组。
+        /// 安全组 ID 数组。请通过[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)接口获取实例的安全组 ID。
         /// </summary>
         [JsonProperty("SecurityGroupIdList")]
         public string[] SecurityGroupIdList{ get; set; }
 
         /// <summary>
-        /// 用户自定义的端口 不填则默认为6379，范围[1024,65535]。
+        /// 用户自定义的网络端口。默认为6379，范围为 [1024,65535]。
         /// </summary>
         [JsonProperty("VPort")]
         public ulong? VPort{ get; set; }
 
         /// <summary>
-        /// 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]。
+        /// 实例分片数量。
+        /// - 标准版实例无需配置该参数。
+        /// - 集群版实例，分片数量范围为：[1、3、5、8、12、16、24、32、40、48、64、80、96、128]。
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// 实例副本数量，Redis 2.8标准版、CKV标准版只支持1副本，4.0、5.0标准版和集群版支持1-5个副本。
+        /// 实例副本数量。
+        /// - Redis 内存版 4.0、5.0、6.2 标准架构和集群架构支持副本数量范围为[1,5]。
+        /// - Redis 2.8标准版、CKV标准版只支持1副本。
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public long? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2。
+        /// 标识实例是否需支持副本只读。
+        /// - Redis 2.8 标准版、CKV标准版不支持副本只读。
+        /// - 开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点。
+        /// - 如需开启副本只读，建议副本数量大于等于2。
         /// </summary>
         [JsonProperty("ReplicasReadonly")]
         public bool? ReplicasReadonly{ get; set; }
 
         /// <summary>
-        /// 实例名称，长度小于60的中文/英文/数字/"-"/"_"。
+        /// 实例名称。命名要求：仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例，仅VPC网络的实例支持免密码访问。
+        /// 配置实例是否支持免密码访问。
+        /// - true：免密访问实例。
+        /// - false：非免密访问实例。默认为非免密方式，仅VPC网络的实例支持免密码访问。
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
 
         /// <summary>
-        /// 实例的节点信息，目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。
+        /// 实例的节点信息，包含节点 ID、节点类型、节点可用区 ID等。具体信息，请参见[RedisNodeInfo ](https://cloud.tencent.com/document/product/239/20022)。
+        /// 目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }
 
         /// <summary>
-        /// 购买实例绑定标签
+        /// 给实例设定标签。
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+        /// 指定实例所属的可用区名称。具体信息，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 创建实例需要应用的参数模板ID，不传则应用默认的参数模板
+        /// 指定实例相关的参数模板 ID。
+        /// - 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
+        /// - 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// false ：默认值,发送正常请求，通过检查后直接创建实例 true：发送检查请求，不会创建实例。
+        /// 内部参数，标识创建实例是否需要检查。
+        /// - false ：默认值。发送正常请求，通过检查后直接创建实例。
+        /// - true：发送检查请求，不会创建实例。
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
         /// <summary>
-        /// "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认发货为本地盘版本
+        /// 指定实例的产品版本。
+        /// - local：本地盘版。
+        /// - cloud：云盘版，
+        /// - cdc：独享集群版。如果不传默认发货为本地盘版本。
         /// </summary>
         [JsonProperty("ProductVersion")]
         public string ProductVersion{ get; set; }
 
         /// <summary>
-        /// 独享集群id，ProductVersion="cdc"时必传
+        /// 独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
         /// </summary>
         [JsonProperty("RedisClusterId")]
         public string RedisClusterId{ get; set; }

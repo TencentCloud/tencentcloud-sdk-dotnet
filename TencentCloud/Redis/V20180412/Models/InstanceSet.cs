@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户的 AppID。
+        /// 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
         /// </summary>
         [JsonProperty("Appid")]
         public long? Appid{ get; set; }
@@ -91,13 +91,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 实例创建时间。
+        /// 实例创建时间。格式如：2020-01-15 10:20:00。
         /// </summary>
         [JsonProperty("Createtime")]
         public string Createtime{ get; set; }
 
         /// <summary>
-        /// 实例容量大小，单位：MB。
+        /// 实例内存容量大小。单位：MB，1MB=1024KB。
         /// </summary>
         [JsonProperty("Size")]
         public float? Size{ get; set; }
@@ -131,7 +131,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 实例到期时间。
+        /// 包年包月计费实例到期的时间。
         /// </summary>
         [JsonProperty("DeadlineTime")]
         public string DeadlineTime{ get; set; }
@@ -173,7 +173,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceTitle{ get; set; }
 
         /// <summary>
-        /// 计划下线时间。
+        /// 已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
@@ -221,7 +221,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? PriceId{ get; set; }
 
         /// <summary>
-        /// 隔离时间。
+        /// 实例隔离开始的时间。
         /// </summary>
         [JsonProperty("CloseTime")]
         public string CloseTime{ get; set; }
@@ -310,7 +310,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 监控版本。<ul><li>1m：1分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+        /// 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorVersion")]
@@ -352,7 +352,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string WanAddress{ get; set; }
 
         /// <summary>
-        /// 北极星服务地址。
+        /// 北极星服务地址，内部使用。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolarisServer")]

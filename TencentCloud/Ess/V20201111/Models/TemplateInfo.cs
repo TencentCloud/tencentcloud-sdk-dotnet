@@ -109,7 +109,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public Recipient Promoter{ get; set; }
 
         /// <summary>
-        /// 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
+        /// 模板可用状态，取值：1启用（默认），2停用
         /// </summary>
         [JsonProperty("Available")]
         public long? Available{ get; set; }

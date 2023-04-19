@@ -120,6 +120,32 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("PerMemberMessageCount")]
         public long? PerMemberMessageCount{ get; set; }
 
+        /// <summary>
+        /// 用户角色。0代表学生；1代表老师； 2助教；3巡课。
+        /// </summary>
+        [JsonProperty("Role")]
+        public ulong? Role{ get; set; }
+
+        /// <summary>
+        /// 上课班号
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// 子上课班号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubGroupId")]
+        public string[] SubGroupId{ get; set; }
+
+        /// <summary>
+        /// 用户的上台状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Stage")]
+        public long? Stage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +168,10 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "Device", this.Device);
             this.SetParamSimple(map, prefix + "PerMemberMicCount", this.PerMemberMicCount);
             this.SetParamSimple(map, prefix + "PerMemberMessageCount", this.PerMemberMessageCount);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamArraySimple(map, prefix + "SubGroupId.", this.SubGroupId);
+            this.SetParamSimple(map, prefix + "Stage", this.Stage);
         }
     }
 }

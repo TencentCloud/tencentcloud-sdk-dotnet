@@ -43,25 +43,25 @@ namespace TencentCloud.Dlc.V20210125.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 更新时间起始点
+        /// 更新时间起始点，支持格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 更新时间截止点
+        /// 更新时间截止点，支持格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 查询列表偏移量
+        /// 查询列表偏移量, 默认值0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 查询列表限制数量
+        /// 查询列表限制数量, 默认值100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

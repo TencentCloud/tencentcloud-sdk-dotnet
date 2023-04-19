@@ -252,6 +252,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SparkImageVersion")]
         public string SparkImageVersion{ get; set; }
 
+        /// <summary>
+        /// 查询脚本关联id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +301,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
             this.SetParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
             this.SetParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
         }
     }
 }

@@ -1253,6 +1253,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 获取告警历史，例如今天未恢复的告警
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlertRecordHistoryRequest"/></param>
+        /// <returns><see cref="DescribeAlertRecordHistoryResponse"/></returns>
+        public async Task<DescribeAlertRecordHistoryResponse> DescribeAlertRecordHistory(DescribeAlertRecordHistoryRequest req)
+        {
+             JsonResponseModel<DescribeAlertRecordHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlertRecordHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlertRecordHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取告警历史，例如今天未恢复的告警
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlertRecordHistoryRequest"/></param>
+        /// <returns><see cref="DescribeAlertRecordHistoryResponse"/></returns>
+        public DescribeAlertRecordHistoryResponse DescribeAlertRecordHistorySync(DescribeAlertRecordHistoryRequest req)
+        {
+             JsonResponseModel<DescribeAlertRecordHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlertRecordHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlertRecordHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于获取特殊采集配置，特殊采集配置应用于自建K8S环境的采集Agent
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigExtrasRequest"/></param>

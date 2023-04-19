@@ -250,6 +250,15 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
+        /// <summary>
+        /// 文件威胁行为
+        /// <li>read 读取文件</li>
+        /// <li>write 修改文件</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileAction")]
+        public string FileAction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -293,6 +302,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "ExeName", this.ExeName);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+            this.SetParamSimple(map, prefix + "FileAction", this.FileAction);
         }
     }
 }

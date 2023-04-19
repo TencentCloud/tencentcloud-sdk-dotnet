@@ -123,6 +123,20 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("AlbType")]
         public string AlbType{ get; set; }
 
+        /// <summary>
+        /// IsCdn=3时，需要填此参数，表示自定义header
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IpHeaders")]
+        public string[] IpHeaders{ get; set; }
+
+        /// <summary>
+        /// 规则引擎类型， 1: menshen,   2:tiga
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public long? EngineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +159,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamArraySimple(map, prefix + "CdcClusters.", this.CdcClusters);
             this.SetParamSimple(map, prefix + "AlbType", this.AlbType);
+            this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }

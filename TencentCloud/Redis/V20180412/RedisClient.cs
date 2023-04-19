@@ -533,7 +533,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(CreateInstances)用于创建redis实例。
+        /// 本接口（CreateInstances）用于创建 Redis 实例。
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
         /// <returns><see cref="CreateInstancesResponse"/></returns>
@@ -553,7 +553,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(CreateInstances)用于创建redis实例。
+        /// 本接口（CreateInstances）用于创建 Redis 实例。
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
         /// <returns><see cref="CreateInstancesResponse"/></returns>

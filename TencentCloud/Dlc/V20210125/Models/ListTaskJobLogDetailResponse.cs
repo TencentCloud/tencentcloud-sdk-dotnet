@@ -46,6 +46,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public JobLogResult[] Results{ get; set; }
 
         /// <summary>
+        /// 日志url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogUrl")]
+        public string LogUrl{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -60,6 +67,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "ListOver", this.ListOver);
             this.SetParamArrayObj(map, prefix + "Results.", this.Results);
+            this.SetParamSimple(map, prefix + "LogUrl", this.LogUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

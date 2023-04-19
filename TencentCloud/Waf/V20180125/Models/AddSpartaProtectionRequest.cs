@@ -139,7 +139,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public PortItem[] Ports{ get; set; }
 
         /// <summary>
-        /// 版本：sparta-waf、clb-waf、cdn-waf
+        /// WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF，cdn-waf表示CDN上的Web防护能力
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
@@ -204,6 +204,24 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ProxySendTimeout")]
         public long? ProxySendTimeout{ get; set; }
 
+        /// <summary>
+        /// 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+        /// </summary>
+        [JsonProperty("SniType")]
+        public long? SniType{ get; set; }
+
+        /// <summary>
+        /// SniType=3时，需要填此参数，表示自定义的host；
+        /// </summary>
+        [JsonProperty("SniHost")]
+        public string SniHost{ get; set; }
+
+        /// <summary>
+        /// is_cdn=3时，需要填此参数，表示自定义header
+        /// </summary>
+        [JsonProperty("IpHeaders")]
+        public string[] IpHeaders{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -240,6 +258,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
             this.SetParamSimple(map, prefix + "ProxyReadTimeout", this.ProxyReadTimeout);
             this.SetParamSimple(map, prefix + "ProxySendTimeout", this.ProxySendTimeout);
+            this.SetParamSimple(map, prefix + "SniType", this.SniType);
+            this.SetParamSimple(map, prefix + "SniHost", this.SniHost);
+            this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
         }
     }
 }

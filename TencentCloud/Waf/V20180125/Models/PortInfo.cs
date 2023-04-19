@@ -24,12 +24,47 @@ namespace TencentCloud.Waf.V20180125.Models
     public class PortInfo : AbstractModel
     {
         
+        /// <summary>
+        /// Nginx的服务器id
+        /// </summary>
+        [JsonProperty("NginxServerId")]
+        public ulong? NginxServerId{ get; set; }
+
+        /// <summary>
+        /// 监听端口配置
+        /// </summary>
+        [JsonProperty("Port")]
+        public string Port{ get; set; }
+
+        /// <summary>
+        /// 与端口对应的协议
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// 回源端口
+        /// </summary>
+        [JsonProperty("UpstreamPort")]
+        public string UpstreamPort{ get; set; }
+
+        /// <summary>
+        /// 回源协议
+        /// </summary>
+        [JsonProperty("UpstreamProtocol")]
+        public string UpstreamProtocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "NginxServerId", this.NginxServerId);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "UpstreamPort", this.UpstreamPort);
+            this.SetParamSimple(map, prefix + "UpstreamProtocol", this.UpstreamProtocol);
         }
     }
 }

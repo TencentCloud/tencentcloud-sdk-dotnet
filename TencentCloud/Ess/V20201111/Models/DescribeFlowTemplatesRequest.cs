@@ -31,12 +31,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 企业组织相关信息，一般不用填
-        /// </summary>
-        [JsonProperty("Organization")]
-        public OrganizationInfo Organization{ get; set; }
-
-        /// <summary>
         /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
         /// </summary>
         [JsonProperty("Agent")]
@@ -77,16 +71,22 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? IsChannel{ get; set; }
 
         /// <summary>
-        /// 暂未开放
-        /// </summary>
-        [JsonProperty("GenerateSource")]
-        public ulong? GenerateSource{ get; set; }
-
-        /// <summary>
         /// 查询内容：0-模板列表及详情（默认），1-仅模板列表
         /// </summary>
         [JsonProperty("ContentType")]
         public long? ContentType{ get; set; }
+
+        /// <summary>
+        /// 暂未开放
+        /// </summary>
+        [JsonProperty("Organization")]
+        public OrganizationInfo Organization{ get; set; }
+
+        /// <summary>
+        /// 暂未开放
+        /// </summary>
+        [JsonProperty("GenerateSource")]
+        public ulong? GenerateSource{ get; set; }
 
 
         /// <summary>
@@ -95,15 +95,15 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamObj(map, prefix + "Organization.", this.Organization);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "IsChannel", this.IsChannel);
-            this.SetParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
             this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
+            this.SetParamObj(map, prefix + "Organization.", this.Organization);
+            this.SetParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
         }
     }
 }

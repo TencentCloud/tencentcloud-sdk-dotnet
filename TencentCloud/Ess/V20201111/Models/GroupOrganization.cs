@@ -53,7 +53,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 成员企业状态
+        /// 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

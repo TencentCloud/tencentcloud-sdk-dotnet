@@ -25,55 +25,59 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 分片节点名称
+        /// 分片节点名称。
         /// </summary>
         [JsonProperty("ShardName")]
         public string ShardName{ get; set; }
 
         /// <summary>
-        /// 分片节点Id
+        /// 分片节点序号。
         /// </summary>
         [JsonProperty("ShardId")]
         public string ShardId{ get; set; }
 
         /// <summary>
-        /// 角色
+        /// 分片节点的角色。
+        /// - 0：主节点。
+        /// - 1：副本节点。
         /// </summary>
         [JsonProperty("Role")]
         public long? Role{ get; set; }
 
         /// <summary>
-        /// Key数量
+        /// Key数量。
         /// </summary>
         [JsonProperty("Keys")]
         public long? Keys{ get; set; }
 
         /// <summary>
-        /// slot信息
+        /// Slot信息。
         /// </summary>
         [JsonProperty("Slots")]
         public string Slots{ get; set; }
 
         /// <summary>
-        /// 使用容量
+        /// 已使用容量。
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 容量倾斜率
+        /// 容量倾斜率。
         /// </summary>
         [JsonProperty("StorageSlope")]
         public float? StorageSlope{ get; set; }
 
         /// <summary>
-        /// 实例运行时节点Id
+        /// 实例运行时节点 ID。
         /// </summary>
         [JsonProperty("Runid")]
         public string Runid{ get; set; }
 
         /// <summary>
-        /// 服务状态：0-down；1-on
+        /// 服务状态。
+        /// - 0：down。
+        /// - 1：on。
         /// </summary>
         [JsonProperty("Connected")]
         public long? Connected{ get; set; }

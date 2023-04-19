@@ -1819,6 +1819,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 接口已经废弃，请使用+DescribeCdbProxyInfo+进行替换。
+        /// 
         /// 查询数据库代理（待下线，替换接口QueryCDBProxy）
         /// </summary>
         /// <param name="req"><see cref="DescribeCDBProxyRequest"/></param>
@@ -1839,6 +1841,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 接口已经废弃，请使用+DescribeCdbProxyInfo+进行替换。
+        /// 
         /// 查询数据库代理（待下线，替换接口QueryCDBProxy）
         /// </summary>
         /// <param name="req"><see cref="DescribeCDBProxyRequest"/></param>
@@ -2865,6 +2869,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+DescribeCdbProxyInfo+替代。
+        /// 
         /// 获取数据库代理连接池相关规格配置
         /// </summary>
         /// <param name="req"><see cref="DescribeProxyConnectionPoolConfRequest"/></param>
@@ -2885,6 +2891,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+DescribeCdbProxyInfo+替代。
+        /// 
         /// 获取数据库代理连接池相关规格配置
         /// </summary>
         /// <param name="req"><see cref="DescribeProxyConnectionPoolConfRequest"/></param>
@@ -4077,6 +4085,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+AdjustCdbProxyAddress+进行替代。
+        /// 
         /// 请求该接口配置数据库连接池；支持的连接池配置请求DescribeProxyConnectionPoolConf接口获取。
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyConnectionPoolRequest"/></param>
@@ -4097,6 +4107,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+AdjustCdbProxyAddress+进行替代。
+        /// 
         /// 请求该接口配置数据库连接池；支持的连接池配置请求DescribeProxyConnectionPoolConf接口获取。
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyConnectionPoolRequest"/></param>
@@ -4117,6 +4129,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+ModifyCdbProxyAddressDesc+进行替代。
+        /// 
         /// 修改数据库代理描述
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyDescRequest"/></param>
@@ -4137,6 +4151,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+ModifyCdbProxyAddressDesc+进行替代。
+        /// 
         /// 修改数据库代理描述
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyDescRequest"/></param>
@@ -4157,6 +4173,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+ModifyCdbProxyAddressVipAndVPort+进行替代。
+        /// 
         /// 修改数据库代理VIP或端口
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyVipVPortRequest"/></param>
@@ -4177,6 +4195,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+ModifyCdbProxyAddressVipAndVPort+进行替代。
+        /// 
         /// 修改数据库代理VIP或端口
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyVipVPortRequest"/></param>
@@ -4949,6 +4969,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+DescribeCdbProxyInfo+进行替代。
+        /// 
         /// 查询代理详情
         /// </summary>
         /// <param name="req"><see cref="QueryCDBProxyRequest"/></param>
@@ -4969,6 +4991,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+DescribeCdbProxyInfo+进行替代。
+        /// 
         /// 查询代理详情
         /// </summary>
         /// <param name="req"><see cref="QueryCDBProxyRequest"/></param>

@@ -55,7 +55,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 是否到处当前成员企业数据
+        /// 是否导出当前成员企业数据
         /// </summary>
         [JsonProperty("Export")]
         public bool? Export{ get; set; }

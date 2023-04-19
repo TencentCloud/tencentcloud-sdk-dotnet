@@ -52,6 +52,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("LogJson")]
         public string LogJson{ get; set; }
 
+        /// <summary>
+        /// 日志ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PkgLogId")]
+        public string PkgLogId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "LogJson", this.LogJson);
+            this.SetParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
         }
     }
 }
