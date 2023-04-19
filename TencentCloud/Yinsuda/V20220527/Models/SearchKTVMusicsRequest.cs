@@ -62,6 +62,13 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         [JsonProperty("RightFilters")]
         public string[] RightFilters{ get; set; }
 
+        /// <summary>
+        /// 播放场景。默认为Chat
+        /// <li>Live：直播</li><li>Chat：语聊</li>
+        /// </summary>
+        [JsonProperty("PlayScene")]
+        public string PlayScene{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +81,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
             this.SetParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "RightFilters.", this.RightFilters);
+            this.SetParamSimple(map, prefix + "PlayScene", this.PlayScene);
         }
     }
 }
