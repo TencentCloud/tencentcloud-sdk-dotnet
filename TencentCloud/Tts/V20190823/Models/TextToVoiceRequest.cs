@@ -101,6 +101,18 @@ namespace TencentCloud.Tts.V20190823.Models
         [JsonProperty("SegmentRate")]
         public ulong? SegmentRate{ get; set; }
 
+        /// <summary>
+        /// 控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
+        /// </summary>
+        [JsonProperty("EmotionCategory")]
+        public string EmotionCategory{ get; set; }
+
+        /// <summary>
+        /// 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
+        /// </summary>
+        [JsonProperty("EmotionIntensity")]
+        public long? EmotionIntensity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +131,8 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "EnableSubtitle", this.EnableSubtitle);
             this.SetParamSimple(map, prefix + "SegmentRate", this.SegmentRate);
+            this.SetParamSimple(map, prefix + "EmotionCategory", this.EmotionCategory);
+            this.SetParamSimple(map, prefix + "EmotionIntensity", this.EmotionIntensity);
         }
     }
 }

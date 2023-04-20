@@ -43,7 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，佛祖饿为空
+        /// 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }

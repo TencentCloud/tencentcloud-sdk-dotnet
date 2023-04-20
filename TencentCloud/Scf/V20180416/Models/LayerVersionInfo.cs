@@ -69,6 +69,13 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// Stamp
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Stamp")]
+        public string Stamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +89,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "LayerVersion", this.LayerVersion);
             this.SetParamSimple(map, prefix + "LayerName", this.LayerName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Stamp", this.Stamp);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public RecordParams RecordParams{ get; set; }
 
         /// <summary>
-        /// 云端录制文件上传到云存储的参数(目前只支持使用腾讯云点播作为存储)。
+        /// 云端录制文件上传到云存储的参数(目前支持云点播VOD和对象存储COS)。
         /// </summary>
         [JsonProperty("StorageParams")]
         public StorageParams StorageParams{ get; set; }

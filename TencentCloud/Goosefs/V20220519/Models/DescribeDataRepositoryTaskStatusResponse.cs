@@ -37,6 +37,18 @@ namespace TencentCloud.Goosefs.V20220519.Models
         public long? Status{ get; set; }
 
         /// <summary>
+        /// 已完成的文件数量
+        /// </summary>
+        [JsonProperty("FinishedFileNumber")]
+        public ulong? FinishedFileNumber{ get; set; }
+
+        /// <summary>
+        /// 已完成的数据量
+        /// </summary>
+        [JsonProperty("FinishedCapacity")]
+        public ulong? FinishedCapacity{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +62,8 @@ namespace TencentCloud.Goosefs.V20220519.Models
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "FinishedFileNumber", this.FinishedFileNumber);
+            this.SetParamSimple(map, prefix + "FinishedCapacity", this.FinishedCapacity);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

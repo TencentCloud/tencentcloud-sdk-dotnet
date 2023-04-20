@@ -2797,6 +2797,86 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 菲律宾SSSID识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizePhilippinesSssIDOCRRequest"/></param>
+        /// <returns><see cref="RecognizePhilippinesSssIDOCRResponse"/></returns>
+        public async Task<RecognizePhilippinesSssIDOCRResponse> RecognizePhilippinesSssIDOCR(RecognizePhilippinesSssIDOCRRequest req)
+        {
+             JsonResponseModel<RecognizePhilippinesSssIDOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizePhilippinesSssIDOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesSssIDOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 菲律宾SSSID识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizePhilippinesSssIDOCRRequest"/></param>
+        /// <returns><see cref="RecognizePhilippinesSssIDOCRResponse"/></returns>
+        public RecognizePhilippinesSssIDOCRResponse RecognizePhilippinesSssIDOCRSync(RecognizePhilippinesSssIDOCRRequest req)
+        {
+             JsonResponseModel<RecognizePhilippinesSssIDOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizePhilippinesSssIDOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesSssIDOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 菲律宾TinID识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizePhilippinesTinIDOCRRequest"/></param>
+        /// <returns><see cref="RecognizePhilippinesTinIDOCRResponse"/></returns>
+        public async Task<RecognizePhilippinesTinIDOCRResponse> RecognizePhilippinesTinIDOCR(RecognizePhilippinesTinIDOCRRequest req)
+        {
+             JsonResponseModel<RecognizePhilippinesTinIDOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizePhilippinesTinIDOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesTinIDOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 菲律宾TinID识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizePhilippinesTinIDOCRRequest"/></param>
+        /// <returns><see cref="RecognizePhilippinesTinIDOCRResponse"/></returns>
+        public RecognizePhilippinesTinIDOCRResponse RecognizePhilippinesTinIDOCRSync(RecognizePhilippinesTinIDOCRRequest req)
+        {
+             JsonResponseModel<RecognizePhilippinesTinIDOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizePhilippinesTinIDOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesTinIDOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持菲律宾VoteID识别，识别字段包括姓名、姓氏、出生日期、婚姻状况、国籍、地址、地区、菲律宾VoteID的VIN等。
         /// 
         /// 默认接口请求频率限制：20次/秒。

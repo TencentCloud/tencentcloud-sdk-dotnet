@@ -42,6 +42,17 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 是否执行强制关机以制作镜像。
+        /// 取值范围：
+        /// True：表示关机之后制作镜像
+        /// False：表示开机状态制作镜像
+        /// 默认取值：True
+        /// 开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+        /// </summary>
+        [JsonProperty("ForcePowerOff")]
+        public bool? ForcePowerOff{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +62,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "BlueprintName", this.BlueprintName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ForcePowerOff", this.ForcePowerOff);
         }
     }
 }

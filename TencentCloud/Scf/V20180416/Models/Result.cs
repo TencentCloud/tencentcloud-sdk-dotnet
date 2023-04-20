@@ -67,7 +67,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string FunctionRequestId{ get; set; }
 
         /// <summary>
-        /// 0为正确，异步调用返回为空
+        /// 请求 Invoke 接口，该参数已弃用。请求 InvokeFunction 接口，该参数值为请求执行[状态码](https://cloud.tencent.com/document/product/583/42611)。
         /// </summary>
         [JsonProperty("InvokeResult")]
         public long? InvokeResult{ get; set; }
