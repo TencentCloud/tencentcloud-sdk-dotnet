@@ -49,7 +49,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public RenameRestoreDatabase[] RenameRestore{ get; set; }
 
         /// <summary>
-        /// 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+        /// 回档类型，0-覆盖方式；1-重命名方式，默认1
+        /// </summary>
+        [JsonProperty("Type")]
+        public ulong? Type{ get; set; }
+
+        /// <summary>
+        /// 需要覆盖回档的数据库，只有覆盖回档时必填
+        /// </summary>
+        [JsonProperty("DBList")]
+        public string[] DBList{ get; set; }
+
+        /// <summary>
+        /// 备份任务组ID，在单库备份文件模式下
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -64,6 +76,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
             this.SetParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArraySimple(map, prefix + "DBList.", this.DBList);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }

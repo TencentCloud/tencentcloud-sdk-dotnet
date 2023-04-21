@@ -373,6 +373,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 创建备份仓库，指定了存储仓库类型（如COS）、COS桶地区、名称等信息，当前最多允许创建100个仓库， 注意此接口当前是全局接口，多个地域的TKE集群如果要备份到相同的备份仓库中，不需要重复创建备份仓库
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupStorageLocationRequest"/></param>
+        /// <returns><see cref="CreateBackupStorageLocationResponse"/></returns>
+        public async Task<CreateBackupStorageLocationResponse> CreateBackupStorageLocation(CreateBackupStorageLocationRequest req)
+        {
+             JsonResponseModel<CreateBackupStorageLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBackupStorageLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupStorageLocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建备份仓库，指定了存储仓库类型（如COS）、COS桶地区、名称等信息，当前最多允许创建100个仓库， 注意此接口当前是全局接口，多个地域的TKE集群如果要备份到相同的备份仓库中，不需要重复创建备份仓库
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupStorageLocationRequest"/></param>
+        /// <returns><see cref="CreateBackupStorageLocationResponse"/></returns>
+        public CreateBackupStorageLocationResponse CreateBackupStorageLocationSync(CreateBackupStorageLocationRequest req)
+        {
+             JsonResponseModel<CreateBackupStorageLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBackupStorageLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupStorageLocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建集群
         /// </summary>
         /// <param name="req"><see cref="CreateClusterRequest"/></param>
@@ -1404,6 +1444,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "CreateTKEEdgeCluster");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTKEEdgeClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除备份仓库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupStorageLocationRequest"/></param>
+        /// <returns><see cref="DeleteBackupStorageLocationResponse"/></returns>
+        public async Task<DeleteBackupStorageLocationResponse> DeleteBackupStorageLocation(DeleteBackupStorageLocationRequest req)
+        {
+             JsonResponseModel<DeleteBackupStorageLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBackupStorageLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupStorageLocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除备份仓库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupStorageLocationRequest"/></param>
+        /// <returns><see cref="DeleteBackupStorageLocationResponse"/></returns>
+        public DeleteBackupStorageLocationResponse DeleteBackupStorageLocationSync(DeleteBackupStorageLocationRequest req)
+        {
+             JsonResponseModel<DeleteBackupStorageLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBackupStorageLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupStorageLocationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2524,6 +2604,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAvailableTKEEdgeVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailableTKEEdgeVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询备份仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupStorageLocationsRequest"/></param>
+        /// <returns><see cref="DescribeBackupStorageLocationsResponse"/></returns>
+        public async Task<DescribeBackupStorageLocationsResponse> DescribeBackupStorageLocations(DescribeBackupStorageLocationsRequest req)
+        {
+             JsonResponseModel<DescribeBackupStorageLocationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupStorageLocations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupStorageLocationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询备份仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupStorageLocationsRequest"/></param>
+        /// <returns><see cref="DescribeBackupStorageLocationsResponse"/></returns>
+        public DescribeBackupStorageLocationsResponse DescribeBackupStorageLocationsSync(DescribeBackupStorageLocationsRequest req)
+        {
+             JsonResponseModel<DescribeBackupStorageLocationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupStorageLocations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupStorageLocationsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

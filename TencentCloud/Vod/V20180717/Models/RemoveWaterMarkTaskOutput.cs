@@ -25,10 +25,28 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 视频 ID。
+        /// 媒体文件 ID。
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
+
+        /// <summary>
+        /// 文件类型，例如 mp4、mp3 等。
+        /// </summary>
+        [JsonProperty("FileType")]
+        public string FileType{ get; set; }
+
+        /// <summary>
+        /// 媒体文件播放地址。
+        /// </summary>
+        [JsonProperty("FileUrl")]
+        public string FileUrl{ get; set; }
+
+        /// <summary>
+        /// 文件名称，最长 64 个字符。
+        /// </summary>
+        [JsonProperty("MediaName")]
+        public string MediaName{ get; set; }
 
         /// <summary>
         /// 元信息。包括大小、时长、视频流信息、音频流信息等。
@@ -43,6 +61,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
+            this.SetParamSimple(map, prefix + "MediaName", this.MediaName);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
         }
     }

@@ -151,6 +151,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("GiftServiceBandWidth")]
         public long? GiftServiceBandWidth{ get; set; }
 
+        /// <summary>
+        /// 修改时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -176,6 +183,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Line", this.Line);
             this.SetParamSimple(map, prefix + "ElasticServiceBandwidth", this.ElasticServiceBandwidth);
             this.SetParamSimple(map, prefix + "GiftServiceBandWidth", this.GiftServiceBandWidth);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         }
     }
 }

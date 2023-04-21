@@ -533,6 +533,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 查询公司列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCompaniesRequest"/></param>
+        /// <returns><see cref="DescribeCompaniesResponse"/></returns>
+        public async Task<DescribeCompaniesResponse> DescribeCompanies(DescribeCompaniesRequest req)
+        {
+             JsonResponseModel<DescribeCompaniesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCompanies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCompaniesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询公司列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCompaniesRequest"/></param>
+        /// <returns><see cref="DescribeCompaniesResponse"/></returns>
+        public DescribeCompaniesResponse DescribeCompaniesSync(DescribeCompaniesRequest req)
+        {
+             JsonResponseModel<DescribeCompaniesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCompanies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCompaniesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 证书查询关联资源
         /// </summary>
         /// <param name="req"><see cref="DescribeDeployedResourcesRequest"/></param>

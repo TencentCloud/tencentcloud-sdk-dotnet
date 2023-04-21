@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1732CBF0-BE93-36A0-A593-39E6D6FF17BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.745</VersionPrefix>
+    <VersionPrefix>3.0.746</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -197,6 +197,10 @@
     <Compile Include="V20200217\Models\DescribePublisherSummaryResponse.cs" />
     <Compile Include="V20200217\Models\DescribePublishersRequest.cs" />
     <Compile Include="V20200217\Models\DescribePublishersResponse.cs" />
+    <Compile Include="V20200217\Models\DescribePulsarProInstanceDetailRequest.cs" />
+    <Compile Include="V20200217\Models\DescribePulsarProInstanceDetailResponse.cs" />
+    <Compile Include="V20200217\Models\DescribePulsarProInstancesRequest.cs" />
+    <Compile Include="V20200217\Models\DescribePulsarProInstancesResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRabbitMQNodeListRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRabbitMQNodeListResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRabbitMQVipInstanceRequest.cs" />
@@ -269,6 +273,10 @@
     <Compile Include="V20200217\Models\PublishCmqMsgRequest.cs" />
     <Compile Include="V20200217\Models\PublishCmqMsgResponse.cs" />
     <Compile Include="V20200217\Models\Publisher.cs" />
+    <Compile Include="V20200217\Models\PulsarNetworkAccessPointInfo.cs" />
+    <Compile Include="V20200217\Models\PulsarProClusterInfo.cs" />
+    <Compile Include="V20200217\Models\PulsarProClusterSpecInfo.cs" />
+    <Compile Include="V20200217\Models\PulsarProInstance.cs" />
     <Compile Include="V20200217\Models\QueueQuota.cs" />
     <Compile Include="V20200217\Models\RabbitMQClusterAccessInfo.cs" />
     <Compile Include="V20200217\Models\RabbitMQClusterInfo.cs" />

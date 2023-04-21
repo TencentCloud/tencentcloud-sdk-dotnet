@@ -126,6 +126,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("ExcludeAdvancedInfo")]
         public bool? ExcludeAdvancedInfo{ get; set; }
 
+        /// <summary>
+        /// 资产IP数组
+        /// </summary>
+        [JsonProperty("FilterAssetIpList")]
+        public string[] FilterAssetIpList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterTrialFlag", this.FilterTrialFlag);
             this.SetParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
             this.SetParamSimple(map, prefix + "ExcludeAdvancedInfo", this.ExcludeAdvancedInfo);
+            this.SetParamArraySimple(map, prefix + "FilterAssetIpList.", this.FilterAssetIpList);
         }
     }
 }

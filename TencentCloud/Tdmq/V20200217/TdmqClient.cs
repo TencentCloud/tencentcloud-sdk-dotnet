@@ -2717,6 +2717,86 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取Pulsar专业版集群实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePulsarProInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribePulsarProInstanceDetailResponse"/></returns>
+        public async Task<DescribePulsarProInstanceDetailResponse> DescribePulsarProInstanceDetail(DescribePulsarProInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribePulsarProInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePulsarProInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePulsarProInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Pulsar专业版集群实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePulsarProInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribePulsarProInstanceDetailResponse"/></returns>
+        public DescribePulsarProInstanceDetailResponse DescribePulsarProInstanceDetailSync(DescribePulsarProInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribePulsarProInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePulsarProInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePulsarProInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户已购的Pulsar专业版实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePulsarProInstancesRequest"/></param>
+        /// <returns><see cref="DescribePulsarProInstancesResponse"/></returns>
+        public async Task<DescribePulsarProInstancesResponse> DescribePulsarProInstances(DescribePulsarProInstancesRequest req)
+        {
+             JsonResponseModel<DescribePulsarProInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePulsarProInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePulsarProInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户已购的Pulsar专业版实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePulsarProInstancesRequest"/></param>
+        /// <returns><see cref="DescribePulsarProInstancesResponse"/></returns>
+        public DescribePulsarProInstancesResponse DescribePulsarProInstancesSync(DescribePulsarProInstancesRequest req)
+        {
+             JsonResponseModel<DescribePulsarProInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePulsarProInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePulsarProInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// RabbitMQ专享版查询节点列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQNodeListRequest"/></param>

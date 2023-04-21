@@ -344,6 +344,20 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("SlaveZones")]
         public SlaveZones SlaveZones{ get; set; }
 
+        /// <summary>
+        /// 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Architecture")]
+        public string Architecture{ get; set; }
+
+        /// <summary>
+        /// 类型标识，EXCLUSIVE-独享型，SHARED-共享型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Style")]
+        public string Style{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -402,6 +416,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
             this.SetParamSimple(map, prefix + "IsDrZone", this.IsDrZone);
             this.SetParamObj(map, prefix + "SlaveZones.", this.SlaveZones);
+            this.SetParamSimple(map, prefix + "Architecture", this.Architecture);
+            this.SetParamSimple(map, prefix + "Style", this.Style);
         }
     }
 }

@@ -78,6 +78,14 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("ProtoInfo")]
         public ProtocolPort[] ProtoInfo{ get; set; }
 
+        /// <summary>
+        /// 业务类型可取值domain, port
+        /// port：端口业务
+        /// domain：域名业务
+        /// </summary>
+        [JsonProperty("BusinessType")]
+        public string BusinessType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +101,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamArrayObj(map, prefix + "ProtoInfo.", this.ProtoInfo);
+            this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
         }
     }
 }

@@ -133,6 +133,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 用于创建云数据库实例的审计日志文件，最多下载600w审计日志。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
+        /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
+        public async Task<CreateAuditLogFileResponse> CreateAuditLogFile(CreateAuditLogFileRequest req)
+        {
+             JsonResponseModel<CreateAuditLogFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAuditLogFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditLogFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建云数据库实例的审计日志文件，最多下载600w审计日志。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
+        /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
+        public CreateAuditLogFileResponse CreateAuditLogFileSync(CreateAuditLogFileRequest req)
+        {
+             JsonResponseModel<CreateAuditLogFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAuditLogFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditLogFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建健康报告，并可以选择是否发送邮件。
         /// </summary>
         /// <param name="req"><see cref="CreateDBDiagReportTaskRequest"/></param>
@@ -453,6 +493,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 用于删除云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
+        /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
+        public async Task<DeleteAuditLogFileResponse> DeleteAuditLogFile(DeleteAuditLogFileRequest req)
+        {
+             JsonResponseModel<DeleteAuditLogFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAuditLogFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditLogFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
+        /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
+        public DeleteAuditLogFileResponse DeleteAuditLogFileSync(DeleteAuditLogFileRequest req)
+        {
+             JsonResponseModel<DeleteAuditLogFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAuditLogFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditLogFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据任务id删除健康报告生成任务
         /// </summary>
         /// <param name="req"><see cref="DeleteDBDiagReportTasksRequest"/></param>
@@ -644,6 +724,46 @@ namespace TencentCloud.Dbbrain.V20210527
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAllUserGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllUserGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建云数据库实例的审计日志文件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public async Task<DescribeAuditLogFilesResponse> DescribeAuditLogFiles(DescribeAuditLogFilesRequest req)
+        {
+             JsonResponseModel<DescribeAuditLogFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditLogFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditLogFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建云数据库实例的审计日志文件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public DescribeAuditLogFilesResponse DescribeAuditLogFilesSync(DescribeAuditLogFilesRequest req)
+        {
+             JsonResponseModel<DescribeAuditLogFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditLogFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditLogFilesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -61,13 +61,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 购买时间
+        /// 到期时间
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 到期时间
+        /// 购买时间
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

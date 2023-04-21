@@ -54,6 +54,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("ResourceFlag")]
         public long? ResourceFlag{ get; set; }
 
+        /// <summary>
+        /// 域名化资产对应的域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -64,6 +71,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Eip", this.Eip);
             this.SetParamSimple(map, prefix + "Cname", this.Cname);
             this.SetParamSimple(map, prefix + "ResourceFlag", this.ResourceFlag);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.745</VersionPrefix>
+    <VersionPrefix>3.0.746</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,9 +50,13 @@
     <Compile Include="V20210527\DbbrainClient.cs" />
     <Compile Include="V20210527\Models\AddUserContactRequest.cs" />
     <Compile Include="V20210527\Models\AddUserContactResponse.cs" />
+    <Compile Include="V20210527\Models\AuditLogFile.cs" />
+    <Compile Include="V20210527\Models\AuditLogFilter.cs" />
     <Compile Include="V20210527\Models\CancelKillTaskRequest.cs" />
     <Compile Include="V20210527\Models\CancelKillTaskResponse.cs" />
     <Compile Include="V20210527\Models\ContactItem.cs" />
+    <Compile Include="V20210527\Models\CreateAuditLogFileRequest.cs" />
+    <Compile Include="V20210527\Models\CreateAuditLogFileResponse.cs" />
     <Compile Include="V20210527\Models\CreateDBDiagReportTaskRequest.cs" />
     <Compile Include="V20210527\Models\CreateDBDiagReportTaskResponse.cs" />
     <Compile Include="V20210527\Models\CreateDBDiagReportUrlRequest.cs" />
@@ -69,6 +73,8 @@
     <Compile Include="V20210527\Models\CreateSecurityAuditLogExportTaskResponse.cs" />
     <Compile Include="V20210527\Models\CreateSqlFilterRequest.cs" />
     <Compile Include="V20210527\Models\CreateSqlFilterResponse.cs" />
+    <Compile Include="V20210527\Models\DeleteAuditLogFileRequest.cs" />
+    <Compile Include="V20210527\Models\DeleteAuditLogFileResponse.cs" />
     <Compile Include="V20210527\Models\DeleteDBDiagReportTasksRequest.cs" />
     <Compile Include="V20210527\Models\DeleteDBDiagReportTasksResponse.cs" />
     <Compile Include="V20210527\Models\DeleteSecurityAuditLogExportTasksRequest.cs" />
@@ -79,6 +85,8 @@
     <Compile Include="V20210527\Models\DescribeAllUserContactResponse.cs" />
     <Compile Include="V20210527\Models\DescribeAllUserGroupRequest.cs" />
     <Compile Include="V20210527\Models\DescribeAllUserGroupResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeAuditLogFilesRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeAuditLogFilesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBDiagEventRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDBDiagEventResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBDiagEventsRequest.cs" />

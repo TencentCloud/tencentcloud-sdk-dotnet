@@ -38,12 +38,14 @@ namespace TencentCloud.Gme.V20180711.Models
 
         /// <summary>
         /// 需要支持的引擎列表，默认全选。
+        /// 取值：android/ios/unity/cocos/unreal/windows
         /// </summary>
         [JsonProperty("EngineList")]
         public string[] EngineList{ get; set; }
 
         /// <summary>
         /// 服务区域列表，默认全选。
+        /// 取值：mainland-大陆地区，hmt-港澳台，sea-东南亚，na-北美，eu-欧洲，jpkr-日韩亚太，sa-南美，oc-澳洲，me-中东
         /// </summary>
         [JsonProperty("RegionList")]
         public string[] RegionList{ get; set; }
@@ -55,7 +57,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public RealtimeSpeechConf RealtimeSpeechConf{ get; set; }
 
         /// <summary>
-        /// 语音消息及转文本服务配置数据
+        /// 语音消息服务配置数据
         /// </summary>
         [JsonProperty("VoiceMessageConf")]
         public VoiceMessageConf VoiceMessageConf{ get; set; }
@@ -65,6 +67,12 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         [JsonProperty("VoiceFilterConf")]
         public VoiceFilterConf VoiceFilterConf{ get; set; }
+
+        /// <summary>
+        /// 语音转文本配置数据
+        /// </summary>
+        [JsonProperty("AsrConf")]
+        public AsrConf AsrConf{ get; set; }
 
         /// <summary>
         /// 需要添加的标签列表
@@ -85,6 +93,7 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamObj(map, prefix + "RealtimeSpeechConf.", this.RealtimeSpeechConf);
             this.SetParamObj(map, prefix + "VoiceMessageConf.", this.VoiceMessageConf);
             this.SetParamObj(map, prefix + "VoiceFilterConf.", this.VoiceFilterConf);
+            this.SetParamObj(map, prefix + "AsrConf.", this.AsrConf);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

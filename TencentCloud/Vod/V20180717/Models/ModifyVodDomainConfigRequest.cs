@@ -48,6 +48,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("UrlSignatureAuthPolicy")]
         public UrlSignatureAuthPolicy UrlSignatureAuthPolicy{ get; set; }
 
+        /// <summary>
+        /// QUIC 配置。
+        /// </summary>
+        [JsonProperty("QUICConfig")]
+        public DomainQUICConfig QUICConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
             this.SetParamObj(map, prefix + "UrlSignatureAuthPolicy.", this.UrlSignatureAuthPolicy);
+            this.SetParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
         }
     }
 }

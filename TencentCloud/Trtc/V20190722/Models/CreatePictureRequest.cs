@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 图片内容经base64编码后的string格式
+        /// 图片内容经base64编码后的string格式,最大长度为2M
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

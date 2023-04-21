@@ -293,6 +293,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 批量获取文档详情
+        /// </summary>
+        /// <param name="req"><see cref="BatchDescribeDocumentRequest"/></param>
+        /// <returns><see cref="BatchDescribeDocumentResponse"/></returns>
+        public async Task<BatchDescribeDocumentResponse> BatchDescribeDocument(BatchDescribeDocumentRequest req)
+        {
+             JsonResponseModel<BatchDescribeDocumentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchDescribeDocument");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDescribeDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量获取文档详情
+        /// </summary>
+        /// <param name="req"><see cref="BatchDescribeDocumentRequest"/></param>
+        /// <returns><see cref="BatchDescribeDocumentResponse"/></returns>
+        public BatchDescribeDocumentResponse BatchDescribeDocumentSync(BatchDescribeDocumentRequest req)
+        {
+             JsonResponseModel<BatchDescribeDocumentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDescribeDocument");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDescribeDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 如果批量注册的用户已存在，则会被覆盖。一次最多注册1000个用户。默认请求频率限制：10次/秒
         /// </summary>
         /// <param name="req"><see cref="BatchRegisterRequest"/></param>
@@ -1053,7 +1093,9 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// 批量获取文档信息
+        /// 有新接口替换
+        /// 
+        /// 批量获取文档信息（已废弃，替代接口BatchDescribeDocument）
         /// </summary>
         /// <param name="req"><see cref="DescribeDocumentsRequest"/></param>
         /// <returns><see cref="DescribeDocumentsResponse"/></returns>
@@ -1073,7 +1115,9 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// 批量获取文档信息
+        /// 有新接口替换
+        /// 
+        /// 批量获取文档信息（已废弃，替代接口BatchDescribeDocument）
         /// </summary>
         /// <param name="req"><see cref="DescribeDocumentsRequest"/></param>
         /// <returns><see cref="DescribeDocumentsResponse"/></returns>
@@ -2053,7 +2097,7 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// 开始房间的直播
+        /// 开始房间的直播。 说明：开始房间接口调用之前需要有用户进入课堂初始化课堂信息。
         /// </summary>
         /// <param name="req"><see cref="StartRoomRequest"/></param>
         /// <returns><see cref="StartRoomResponse"/></returns>
@@ -2073,7 +2117,7 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// 开始房间的直播
+        /// 开始房间的直播。 说明：开始房间接口调用之前需要有用户进入课堂初始化课堂信息。
         /// </summary>
         /// <param name="req"><see cref="StartRoomRequest"/></param>
         /// <returns><see cref="StartRoomResponse"/></returns>

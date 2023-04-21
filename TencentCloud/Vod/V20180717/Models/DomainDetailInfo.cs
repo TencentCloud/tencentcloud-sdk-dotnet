@@ -74,6 +74,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 域名 QUIC 配置信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QUICConfig")]
+        public DomainQUICConfig QUICConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "UrlSignatureAuthPolicy.", this.UrlSignatureAuthPolicy);
             this.SetParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
         }
     }
 }

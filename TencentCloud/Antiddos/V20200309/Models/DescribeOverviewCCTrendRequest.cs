@@ -25,12 +25,6 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
-        /// </summary>
-        [JsonProperty("Business")]
-        public string Business{ get; set; }
-
-        /// <summary>
         /// 统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
         /// </summary>
         [JsonProperty("Period")]
@@ -55,6 +49,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string MetricName{ get; set; }
 
         /// <summary>
+        /// 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
+        /// </summary>
+        [JsonProperty("Business")]
+        public string Business{ get; set; }
+
+        /// <summary>
         /// 资源的IP
         /// </summary>
         [JsonProperty("IpList")]
@@ -72,11 +72,11 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Business", this.Business);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamSimple(map, prefix + "Business", this.Business);
             this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
             this.SetParamSimple(map, prefix + "Id", this.Id);
         }

@@ -37,6 +37,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string MetricName{ get; set; }
 
         /// <summary>
+        /// 返回DataList中的最大值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxData")]
+        public ulong? MaxData{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         {
             this.SetParamArraySimple(map, prefix + "DataList.", this.DataList);
             this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamSimple(map, prefix + "MaxData", this.MaxData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

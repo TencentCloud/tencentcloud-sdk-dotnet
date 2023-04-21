@@ -37,16 +37,16 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 需要回档的数据库
-        /// </summary>
-        [JsonProperty("DBs")]
-        public string[] DBs{ get; set; }
-
-        /// <summary>
         /// 回档目标时间点
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
+
+        /// <summary>
+        /// 需要回档的数据库
+        /// </summary>
+        [JsonProperty("DBs")]
+        public string[] DBs{ get; set; }
 
         /// <summary>
         /// 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
@@ -68,8 +68,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamArraySimple(map, prefix + "DBs.", this.DBs);
             this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamArraySimple(map, prefix + "DBs.", this.DBs);
             this.SetParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
             this.SetParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
         }

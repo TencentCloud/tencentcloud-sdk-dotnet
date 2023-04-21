@@ -190,6 +190,20 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
+        /// <summary>
+        /// CLS日志集 | ES集群ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogSet")]
+        public string LogSet{ get; set; }
+
+        /// <summary>
+        /// Metric数据保存时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetricDuration")]
+        public long? MetricDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -220,6 +234,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "LogTopicID", this.LogTopicID);
             this.SetParamSimple(map, prefix + "ClientCount", this.ClientCount);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "LogSet", this.LogSet);
+            this.SetParamSimple(map, prefix + "MetricDuration", this.MetricDuration);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 验签结果
+        /// 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
         /// </summary>
         [JsonProperty("VerifyResult")]
         public long? VerifyResult{ get; set; }
 
         /// <summary>
-        /// 签署平台
+        /// 签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。
         /// </summary>
         [JsonProperty("SignPlatform")]
         public string SignPlatform{ get; set; }

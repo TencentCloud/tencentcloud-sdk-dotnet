@@ -42,6 +42,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterDomain")]
         public string FilterDomain{ get; set; }
 
+        /// <summary>
+        /// 运行状态 0 代表未运行  1 正在运行  2 运行异常 
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "FilterDomain", this.FilterDomain);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

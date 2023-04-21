@@ -54,6 +54,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExpiredSeconds")]
         public ulong? ExpiredSeconds{ get; set; }
 
+        /// <summary>
+        /// 是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
+        /// </summary>
+        [JsonProperty("SkipAddingNonMasqueradeCIDRs")]
+        public bool? SkipAddingNonMasqueradeCIDRs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "EnableStaticIp", this.EnableStaticIp);
             this.SetParamArraySimple(map, prefix + "Subnets.", this.Subnets);
             this.SetParamSimple(map, prefix + "ExpiredSeconds", this.ExpiredSeconds);
+            this.SetParamSimple(map, prefix + "SkipAddingNonMasqueradeCIDRs", this.SkipAddingNonMasqueradeCIDRs);
         }
     }
 }

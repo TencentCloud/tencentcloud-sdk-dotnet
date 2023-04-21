@@ -3939,7 +3939,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（RestoreInstance）用于根据备份文件恢复实例。
+        /// 本接口（RestoreInstance）用于按照备份集回档数据库。
         /// </summary>
         /// <param name="req"><see cref="RestoreInstanceRequest"/></param>
         /// <returns><see cref="RestoreInstanceResponse"/></returns>
@@ -3959,7 +3959,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（RestoreInstance）用于根据备份文件恢复实例。
+        /// 本接口（RestoreInstance）用于按照备份集回档数据库。
         /// </summary>
         /// <param name="req"><see cref="RestoreInstanceRequest"/></param>
         /// <returns><see cref="RestoreInstanceResponse"/></returns>
@@ -3979,7 +3979,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（RollbackInstance）用于回档实例
+        /// 本接口（RollbackInstance）用于按照时间点回档实例
         /// </summary>
         /// <param name="req"><see cref="RollbackInstanceRequest"/></param>
         /// <returns><see cref="RollbackInstanceResponse"/></returns>
@@ -3999,7 +3999,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（RollbackInstance）用于回档实例
+        /// 本接口（RollbackInstance）用于按照时间点回档实例
         /// </summary>
         /// <param name="req"><see cref="RollbackInstanceRequest"/></param>
         /// <returns><see cref="RollbackInstanceResponse"/></returns>
