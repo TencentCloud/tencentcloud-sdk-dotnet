@@ -42,6 +42,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("EnabledNumber")]
         public bool? EnabledNumber{ get; set; }
 
+        /// <summary>
+        /// 筛选技能组列表
+        /// </summary>
+        [JsonProperty("GroupIdList")]
+        public long?[] GroupIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "EnabledSkillGroup", this.EnabledSkillGroup);
             this.SetParamSimple(map, prefix + "EnabledNumber", this.EnabledNumber);
+            this.SetParamArraySimple(map, prefix + "GroupIdList.", this.GroupIdList);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.746</VersionPrefix>
+    <VersionPrefix>3.0.747</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,6 +64,7 @@
     <Compile Include="V20170320\Models\AuditLogFilter.cs" />
     <Compile Include="V20170320\Models\AuditPolicy.cs" />
     <Compile Include="V20170320\Models\AuditRule.cs" />
+    <Compile Include="V20170320\Models\AuditRuleFilters.cs" />
     <Compile Include="V20170320\Models\BackupConfig.cs" />
     <Compile Include="V20170320\Models\BackupInfo.cs" />
     <Compile Include="V20170320\Models\BackupItem.cs" />
@@ -375,6 +376,7 @@
     <Compile Include="V20170320\Models\RollbackTask.cs" />
     <Compile Include="V20170320\Models\RollbackTimeRange.cs" />
     <Compile Include="V20170320\Models\Rule.cs" />
+    <Compile Include="V20170320\Models\RuleFilters.cs" />
     <Compile Include="V20170320\Models\SecurityGroup.cs" />
     <Compile Include="V20170320\Models\SlaveConfig.cs" />
     <Compile Include="V20170320\Models\SlaveInfo.cs" />

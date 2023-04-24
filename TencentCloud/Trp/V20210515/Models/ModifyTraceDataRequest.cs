@@ -55,6 +55,24 @@ namespace TencentCloud.Trp.V20210515.Models
         public string PhaseName{ get; set; }
 
         /// <summary>
+        /// 环节数据
+        /// </summary>
+        [JsonProperty("PhaseData")]
+        public PhaseData PhaseData{ get; set; }
+
+        /// <summary>
+        /// 溯源状态 0: 无效, 1: 有效
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// 排序
+        /// </summary>
+        [JsonProperty("Rank")]
+        public ulong? Rank{ get; set; }
+
+        /// <summary>
         /// [无效] 类型
         /// </summary>
         [JsonProperty("Type")]
@@ -65,12 +83,6 @@ namespace TencentCloud.Trp.V20210515.Models
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
-
-        /// <summary>
-        /// [无效] 排序
-        /// </summary>
-        [JsonProperty("Rank")]
-        public ulong? Rank{ get; set; }
 
         /// <summary>
         /// [无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
@@ -114,18 +126,6 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("CorpId")]
         public ulong? CorpId{ get; set; }
 
-        /// <summary>
-        /// 溯源状态 0: 无效, 1: 有效
-        /// </summary>
-        [JsonProperty("Status")]
-        public ulong? Status{ get; set; }
-
-        /// <summary>
-        /// 环节数据
-        /// </summary>
-        [JsonProperty("PhaseData")]
-        public PhaseData PhaseData{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,9 +137,11 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamArrayObj(map, prefix + "TraceItems.", this.TraceItems);
             this.SetParamSimple(map, prefix + "PhaseName", this.PhaseName);
+            this.SetParamObj(map, prefix + "PhaseData.", this.PhaseData);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Rank", this.Rank);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Code", this.Code);
-            this.SetParamSimple(map, prefix + "Rank", this.Rank);
             this.SetParamSimple(map, prefix + "Phase", this.Phase);
             this.SetParamSimple(map, prefix + "TraceTime", this.TraceTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
@@ -147,8 +149,6 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "ChainTime", this.ChainTime);
             this.SetParamObj(map, prefix + "ChainData.", this.ChainData);
             this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamObj(map, prefix + "PhaseData.", this.PhaseData);
         }
     }
 }

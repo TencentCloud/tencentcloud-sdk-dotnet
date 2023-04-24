@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string PreShareKey{ get; set; }
 
         /// <summary>
-        /// SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+        /// SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段，172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
         /// </summary>
         [JsonProperty("SecurityPolicyDatabases")]
         public SecurityPolicyDatabase[] SecurityPolicyDatabases{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Vpc.V20170312.Models
         public IPSECOptionsSpecification IPSECOptionsSpecification{ get; set; }
 
         /// <summary>
-        /// 是否启用通道健康检查
+        /// 是否启用通道健康检查，默认为False。
         /// </summary>
         [JsonProperty("EnableHealthCheck")]
         public bool? EnableHealthCheck{ get; set; }
 
         /// <summary>
-        /// 本端通道探测ip
+        /// 本端通道探测IP。
         /// </summary>
         [JsonProperty("HealthCheckLocalIp")]
         public string HealthCheckLocalIp{ get; set; }
 
         /// <summary>
-        /// 对端通道探测ip
+        /// 对端通道探测IP。
         /// </summary>
         [JsonProperty("HealthCheckRemoteIp")]
         public string HealthCheckRemoteIp{ get; set; }
@@ -102,6 +102,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DpdAction")]
         public string DpdAction{ get; set; }
 
+        /// <summary>
+        /// 对端网关ID，4.0及以上网关下的通道支持更新。
+        /// </summary>
+        [JsonProperty("CustomerGatewayId")]
+        public string CustomerGatewayId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
             this.SetParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
             this.SetParamSimple(map, prefix + "DpdAction", this.DpdAction);
+            this.SetParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
         }
     }
 }

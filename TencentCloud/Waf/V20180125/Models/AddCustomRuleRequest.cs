@@ -37,7 +37,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string SortId{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

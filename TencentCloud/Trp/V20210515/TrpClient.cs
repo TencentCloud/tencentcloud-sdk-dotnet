@@ -413,7 +413,7 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
-        /// 批量导入二维码，只支持平台发的码
+        /// 批量绑定指定批次并激活二维码，只支持平台发的码，且只会激活没有使用过的码
         /// </summary>
         /// <param name="req"><see cref="CreateTraceCodesRequest"/></param>
         /// <returns><see cref="CreateTraceCodesResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
-        /// 批量导入二维码，只支持平台发的码
+        /// 批量绑定指定批次并激活二维码，只支持平台发的码，且只会激活没有使用过的码
         /// </summary>
         /// <param name="req"><see cref="CreateTraceCodesRequest"/></param>
         /// <returns><see cref="CreateTraceCodesResponse"/></returns>

@@ -81,6 +81,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("FlowMessage")]
         public string FlowMessage{ get; set; }
 
+        /// <summary>
+        ///  合同发起人userId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Creator")]
+        public string Creator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "FlowStatus", this.FlowStatus);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "FlowMessage", this.FlowMessage);
+            this.SetParamSimple(map, prefix + "Creator", this.Creator);
         }
     }
 }

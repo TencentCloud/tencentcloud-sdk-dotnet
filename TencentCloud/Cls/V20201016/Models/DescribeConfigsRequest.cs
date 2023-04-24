@@ -25,27 +25,20 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <br><li> configName
+        /// configName
+        /// - 按照【采集配置名称】进行模糊匹配过滤。
+        /// - 类型：String
+        /// - 必选：否
         /// 
-        /// 按照【采集配置名称】进行模糊匹配过滤。
-        /// 类型：String
+        /// configId
+        /// - 按照【采集配置ID】进行过滤。
+        /// - 类型：String
+        /// - 必选：否
         /// 
-        /// 必选：否
-        /// 
-        /// <br><li> configId
-        /// 
-        /// 按照【采集配置ID】进行过滤。
-        /// 类型：String
-        /// 
-        /// 必选：否
-        /// 
-        /// <br><li> topicId
-        /// 
-        /// 按照【日志主题】进行过滤。
-        /// 
-        /// 类型：String
-        /// 
-        /// 必选：否
+        /// topicId
+        /// - 按照【日志主题】进行过滤。
+        /// - 类型：String
+        /// - 必选：否
         /// 
         /// 每次请求的Filters的上限为10，Filter.Values的上限为5。
         /// </summary>

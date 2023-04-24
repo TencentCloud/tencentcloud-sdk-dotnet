@@ -37,16 +37,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public FlowCreateApprover[] FlowApproverInfos{ get; set; }
 
         /// <summary>
-        /// 机构信息，暂未开放
-        /// </summary>
-        [JsonProperty("Organization")]
-        public OrganizationInfo Organization{ get; set; }
-
-        /// <summary>
         /// 用户信息，此结构体UserId必填
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
+
+        /// <summary>
+        /// 机构信息，暂未开放
+        /// </summary>
+        [JsonProperty("Organization")]
+        public OrganizationInfo Organization{ get; set; }
 
 
         /// <summary>
@@ -56,8 +56,8 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
-            this.SetParamObj(map, prefix + "Organization.", this.Organization);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamObj(map, prefix + "Organization.", this.Organization);
         }
     }
 }

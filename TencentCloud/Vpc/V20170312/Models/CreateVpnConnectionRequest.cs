@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+        /// 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
         /// </summary>
         [JsonProperty("CustomerGatewayId")]
         public string CustomerGatewayId{ get; set; }
@@ -80,19 +80,19 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 是否支持隧道内健康检查
+        /// 是否支持隧道内健康检查，默认为False。
         /// </summary>
         [JsonProperty("EnableHealthCheck")]
         public bool? EnableHealthCheck{ get; set; }
 
         /// <summary>
-        /// 健康检查本端地址
+        /// 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
         /// </summary>
         [JsonProperty("HealthCheckLocalIp")]
         public string HealthCheckLocalIp{ get; set; }
 
         /// <summary>
-        /// 健康检查对端地址
+        /// 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
         /// </summary>
         [JsonProperty("HealthCheckRemoteIp")]
         public string HealthCheckRemoteIp{ get; set; }

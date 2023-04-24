@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// name
+        /// Name
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -180,6 +180,40 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("MaxBandwidth")]
         public ulong? MaxBandwidth{ get; set; }
 
+        /// <summary>
+        /// api安全是否购买
+        /// </summary>
+        [JsonProperty("APISecurity")]
+        public ulong? APISecurity{ get; set; }
+
+        /// <summary>
+        /// 购买的qps规格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QpsStandard")]
+        public ulong? QpsStandard{ get; set; }
+
+        /// <summary>
+        /// 购买的带宽规格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BandwidthStandard")]
+        public ulong? BandwidthStandard{ get; set; }
+
+        /// <summary>
+        /// 实例状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// 实例沙箱值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SandboxQps")]
+        public ulong? SandboxQps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -211,6 +245,11 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ElasticBilling", this.ElasticBilling);
             this.SetParamSimple(map, prefix + "AttackLogPost", this.AttackLogPost);
             this.SetParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
+            this.SetParamSimple(map, prefix + "APISecurity", this.APISecurity);
+            this.SetParamSimple(map, prefix + "QpsStandard", this.QpsStandard);
+            this.SetParamSimple(map, prefix + "BandwidthStandard", this.BandwidthStandard);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SandboxQps", this.SandboxQps);
         }
     }
 }

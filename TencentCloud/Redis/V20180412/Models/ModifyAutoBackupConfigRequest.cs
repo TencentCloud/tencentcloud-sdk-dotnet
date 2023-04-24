@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string TimePeriod{ get; set; }
 
         /// <summary>
-        /// 自动备份类型： 1 “定时回档”。
+        /// 自动备份类型。目前仅能配置为：1 ，指定时备份。
         /// </summary>
         [JsonProperty("AutoBackupType")]
         public long? AutoBackupType{ get; set; }

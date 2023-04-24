@@ -26,59 +26,67 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 字段名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 字段值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// 类型 text:文本类型, longtext:长文本类型, banner:单图片类型, image:多图片类型, video:视频类型, mp:小程序类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 字段类型
+        /// text:文本类型, 
+        /// longtext:长文本类型, banner:单图片类型, image:多图片类型,
+        /// video:视频类型,
+        /// mp:小程序类型
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 只读
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadOnly")]
         public bool? ReadOnly{ get; set; }
 
         /// <summary>
         /// 扫码展示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hidden")]
         public bool? Hidden{ get; set; }
 
         /// <summary>
         /// 多个值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
         /// 类型标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
         /// 扩展字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ext")]
         public string Ext{ get; set; }
+
+        /// <summary>
+        /// 额外属性
+        /// </summary>
+        [JsonProperty("Attrs")]
+        public TraceItem[] Attrs{ get; set; }
+
+        /// <summary>
+        /// 子页面，只读
+        /// </summary>
+        [JsonProperty("List")]
+        public TraceData[] List{ get; set; }
 
 
         /// <summary>
@@ -94,6 +102,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Ext", this.Ext);
+            this.SetParamArrayObj(map, prefix + "Attrs.", this.Attrs);
+            this.SetParamArrayObj(map, prefix + "List.", this.List);
         }
     }
 }

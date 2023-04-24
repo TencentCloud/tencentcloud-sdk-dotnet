@@ -79,6 +79,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("RouteId")]
         public ulong? RouteId{ get; set; }
 
+        /// <summary>
+        /// 路由表实例ID，例如：rtb-azd4dt1c。
+        /// </summary>
+        [JsonProperty("RouteTableId")]
+        public string RouteTableId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "RouteType", this.RouteType);
             this.SetParamSimple(map, prefix + "RouteId", this.RouteId);
+            this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         }
     }
 }

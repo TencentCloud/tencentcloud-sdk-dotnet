@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 自动备份类型： 1 “定时回档”
+        /// 自动备份类型。目前仅能配置为：1 ，指定时备份。
         /// </summary>
         [JsonProperty("AutoBackupType")]
         public long? AutoBackupType{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] WeekDays{ get; set; }
 
         /// <summary>
-        /// 自动备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
+        /// 自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
         /// </summary>
         [JsonProperty("TimePeriod")]
         public string TimePeriod{ get; set; }

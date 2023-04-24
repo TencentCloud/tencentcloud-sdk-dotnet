@@ -73,7 +73,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public LogAlarmReq LogAlarmReqInfo{ get; set; }
 
         /// <summary>
-        /// 模版id，专供prom使用
+        /// 模板id，专供prom使用
         /// </summary>
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }

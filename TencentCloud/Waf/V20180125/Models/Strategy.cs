@@ -26,24 +26,28 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 匹配字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Field")]
         public string Field{ get; set; }
 
         /// <summary>
         /// 逻辑符号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompareFunc")]
         public string CompareFunc{ get; set; }
 
         /// <summary>
         /// 匹配内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
         /// 匹配参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Arg")]
         public string Arg{ get; set; }

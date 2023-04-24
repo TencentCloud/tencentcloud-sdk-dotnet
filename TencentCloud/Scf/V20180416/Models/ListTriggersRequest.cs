@@ -61,8 +61,9 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// * Qualifier:
-        /// 函数版本，别名
+        /// * Qualifier: 函数版本，别名
+        /// * TriggerName: 函数触发器名称
+        /// * Description: 函数触发器描述
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

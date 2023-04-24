@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A06AC0CF-076C-38E8-83FE-C7FFA375814C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.746</VersionPrefix>
+    <VersionPrefix>3.0.747</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -103,6 +103,8 @@
     <Compile Include="V20170312\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAvailableRecoveryTimeRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAvailableRecoveryTimeResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeBackupDownloadRestrictionRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeBackupDownloadRestrictionResponse.cs" />
     <Compile Include="V20170312\Models\DescribeBackupDownloadURLRequest.cs" />
     <Compile Include="V20170312\Models\DescribeBackupDownloadURLResponse.cs" />
     <Compile Include="V20170312\Models\DescribeBackupOverviewRequest.cs" />
@@ -189,10 +191,14 @@
     <Compile Include="V20170312\Models\LogBackup.cs" />
     <Compile Include="V20170312\Models\ModifyAccountRemarkRequest.cs" />
     <Compile Include="V20170312\Models\ModifyAccountRemarkResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyBackupDownloadRestrictionRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyBackupDownloadRestrictionResponse.cs" />
     <Compile Include="V20170312\Models\ModifyBackupPlanRequest.cs" />
     <Compile Include="V20170312\Models\ModifyBackupPlanResponse.cs" />
     <Compile Include="V20170312\Models\ModifyBaseBackupExpireTimeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyBaseBackupExpireTimeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceChargeTypeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceChargeTypeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceDeploymentRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceDeploymentResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceNameRequest.cs" />

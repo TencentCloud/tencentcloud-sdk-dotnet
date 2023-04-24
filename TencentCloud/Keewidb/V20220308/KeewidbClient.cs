@@ -333,6 +333,46 @@ namespace TencentCloud.Keewidb.V20220308
         }
 
         /// <summary>
+        /// 本接口（DescribeConnectionConfig）用于查询实例连接配置，包括出流量和入流量带宽、最大连接数限制。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConnectionConfigRequest"/></param>
+        /// <returns><see cref="DescribeConnectionConfigResponse"/></returns>
+        public async Task<DescribeConnectionConfigResponse> DescribeConnectionConfig(DescribeConnectionConfigRequest req)
+        {
+             JsonResponseModel<DescribeConnectionConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeConnectionConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConnectionConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeConnectionConfig）用于查询实例连接配置，包括出流量和入流量带宽、最大连接数限制。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConnectionConfigRequest"/></param>
+        /// <returns><see cref="DescribeConnectionConfigResponse"/></returns>
+        public DescribeConnectionConfigResponse DescribeConnectionConfigSync(DescribeConnectionConfigRequest req)
+        {
+             JsonResponseModel<DescribeConnectionConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeConnectionConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConnectionConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>

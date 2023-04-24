@@ -24,12 +24,36 @@ namespace TencentCloud.Vpc.V20170312.Models
     public class CcnRegionBandwidthLimitInfo : AbstractModel
     {
         
+        /// <summary>
+        /// 源地域，例如：ap-shanghai
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceRegion")]
+        public string SourceRegion{ get; set; }
+
+        /// <summary>
+        /// 目的地域， 例如：ap-shanghai
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DestinationRegion")]
+        public string DestinationRegion{ get; set; }
+
+        /// <summary>
+        /// 出带宽上限，单位：Mbps。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BandwidthLimit")]
+        public ulong? BandwidthLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SourceRegion", this.SourceRegion);
+            this.SetParamSimple(map, prefix + "DestinationRegion", this.DestinationRegion);
+            this.SetParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
         }
     }
 }

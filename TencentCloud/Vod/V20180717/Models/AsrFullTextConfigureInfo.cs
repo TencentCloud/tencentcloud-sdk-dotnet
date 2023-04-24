@@ -49,6 +49,17 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SubtitleFormat")]
         public string SubtitleFormat{ get; set; }
 
+        /// <summary>
+        /// 媒体源语言，取值范围：
+        /// <li>zh：中文普通话；</li>
+        /// <li>en：英语；</li>
+        /// <li>ja：日语；</li>
+        /// <li>zh-ca：粤语。</li>
+        /// <font color=red>注意：</font> 填空字符串，或者不填该参数，则自动识别（效果较难保证，推荐填写原始媒体对应的语言，以提高识别的准确率）。
+        /// </summary>
+        [JsonProperty("SrcLanguage")]
+        public string SrcLanguage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +69,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamArraySimple(map, prefix + "SubtitleFormats.", this.SubtitleFormats);
             this.SetParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
+            this.SetParamSimple(map, prefix + "SrcLanguage", this.SrcLanguage);
         }
     }
 }

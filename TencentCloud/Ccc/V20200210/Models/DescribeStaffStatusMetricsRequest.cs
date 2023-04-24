@@ -36,6 +36,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("StaffList")]
         public string[] StaffList{ get; set; }
 
+        /// <summary>
+        /// 筛选技能组ID列表
+        /// </summary>
+        [JsonProperty("GroupIdList")]
+        public long?[] GroupIdList{ get; set; }
+
+        /// <summary>
+        /// 筛选坐席状态列表
+        /// </summary>
+        [JsonProperty("StatusList")]
+        public string[] StatusList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamArraySimple(map, prefix + "StaffList.", this.StaffList);
+            this.SetParamArraySimple(map, prefix + "GroupIdList.", this.GroupIdList);
+            this.SetParamArraySimple(map, prefix + "StatusList.", this.StatusList);
         }
     }
 }

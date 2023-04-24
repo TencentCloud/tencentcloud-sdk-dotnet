@@ -26,21 +26,18 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 溯源ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TraceId")]
         public string TraceId{ get; set; }
 
         /// <summary>
         /// 企业ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CorpId")]
         public ulong? CorpId{ get; set; }
 
         /// <summary>
         /// 码类型 0: 批次, 1: 码, 2: 生产任务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
@@ -54,21 +51,18 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 排序，在Phase相同情况下，值越小排名靠前
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rank")]
         public ulong? Rank{ get; set; }
 
         /// <summary>
         /// 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Phase")]
         public ulong? Phase{ get; set; }
 
         /// <summary>
         /// 溯源环节名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhaseName")]
         public string PhaseName{ get; set; }
@@ -82,7 +76,6 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 无
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TraceItems")]
         public TraceItem[] TraceItems{ get; set; }
@@ -124,7 +117,6 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 溯源阶段状态 0: 无效, 1: 有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

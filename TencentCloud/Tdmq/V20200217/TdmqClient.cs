@@ -3849,6 +3849,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 本API用于修改RocketMQ专享实例配置，可以支持实例规格、节点数和存储的升配和实例规格的降配。本API发起订单并成功支付后进入实例配置变更的流程，可通过DescribeRocketMQVipInstances查询实例是否已变更完成。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQInstanceSpecRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQInstanceSpecResponse"/></returns>
+        public async Task<ModifyRocketMQInstanceSpecResponse> ModifyRocketMQInstanceSpec(ModifyRocketMQInstanceSpecRequest req)
+        {
+             JsonResponseModel<ModifyRocketMQInstanceSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRocketMQInstanceSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQInstanceSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本API用于修改RocketMQ专享实例配置，可以支持实例规格、节点数和存储的升配和实例规格的降配。本API发起订单并成功支付后进入实例配置变更的流程，可通过DescribeRocketMQVipInstances查询实例是否已变更完成。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQInstanceSpecRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQInstanceSpecResponse"/></returns>
+        public ModifyRocketMQInstanceSpecResponse ModifyRocketMQInstanceSpecSync(ModifyRocketMQInstanceSpecRequest req)
+        {
+             JsonResponseModel<ModifyRocketMQInstanceSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRocketMQInstanceSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQInstanceSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新RocketMQ命名空间
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQNamespaceRequest"/></param>

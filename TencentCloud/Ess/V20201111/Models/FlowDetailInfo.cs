@@ -92,6 +92,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CcInfos")]
         public FlowApproverDetail[] CcInfos{ get; set; }
 
+        /// <summary>
+        /// 合同发起人UserId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Creator")]
+        public string Creator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +114,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+            this.SetParamSimple(map, prefix + "Creator", this.Creator);
         }
     }
 }

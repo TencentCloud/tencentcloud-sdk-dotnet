@@ -84,6 +84,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Strategies")]
         public Strategy[] Strategies{ get; set; }
 
+        /// <summary>
+        /// 事件id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "SortId", this.SortId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Strategies.", this.Strategies);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
         }
     }
 }

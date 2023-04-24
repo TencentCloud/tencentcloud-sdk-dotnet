@@ -85,7 +85,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceRole{ get; set; }
 
         /// <summary>
-        /// 主实例的可用区信息，购买灾备、RO实例时必填。
+        /// 主实例地域信息，购买灾备、RO实例时，该字段必填。
         /// </summary>
         [JsonProperty("MasterRegion")]
         public string MasterRegion{ get; set; }

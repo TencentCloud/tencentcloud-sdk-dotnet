@@ -933,6 +933,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeBackupDownloadRestriction）用于查询备份文件下载限制。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadRestrictionResponse"/></returns>
+        public async Task<DescribeBackupDownloadRestrictionResponse> DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupDownloadRestriction）用于查询备份文件下载限制。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadRestrictionResponse"/></returns>
+        public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestrictionSync(DescribeBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeBackupDownloadURL) 用于获取备份下载链接。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadURLRequest"/></param>
@@ -2493,6 +2533,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyBackupDownloadRestriction）用于修改备份文件下载限制。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadRestrictionResponse"/></returns>
+        public async Task<ModifyBackupDownloadRestrictionResponse> ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyBackupDownloadRestriction）用于修改备份文件下载限制。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadRestrictionResponse"/></returns>
+        public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestrictionSync(ModifyBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (ModifyBackupPlan) 用于实例备份计划的修改，默认是在每天的凌晨开始全量备份，备份保留时长是7天。可以根据此接口指定时间进行实例的备份。
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupPlanRequest"/></param>
@@ -2564,6 +2644,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBaseBackupExpireTime");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBaseBackupExpireTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 支持实例的计费类型转换（目前仅支持按量计费转包年包月）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceChargeTypeResponse"/></returns>
+        public async Task<ModifyDBInstanceChargeTypeResponse> ModifyDBInstanceChargeType(ModifyDBInstanceChargeTypeRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceChargeTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceChargeType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceChargeTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 支持实例的计费类型转换（目前仅支持按量计费转包年包月）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceChargeTypeResponse"/></returns>
+        public ModifyDBInstanceChargeTypeResponse ModifyDBInstanceChargeTypeSync(ModifyDBInstanceChargeTypeRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceChargeTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceChargeType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceChargeTypeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

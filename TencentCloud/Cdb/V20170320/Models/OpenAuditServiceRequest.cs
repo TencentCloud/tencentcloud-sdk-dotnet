@@ -34,6 +34,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 审计日志保存时长。支持值包括：
         /// 7 - 一周
         /// 30 - 一个月；
+        /// 90 - 三个月；
         /// 180 - 六个月；
         /// 365 - 一年；
         /// 1095 - 三年；
@@ -46,13 +47,21 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 高频审计日志保存时长。支持值包括：
         /// 7 - 一周
         /// 30 - 一个月；
-        /// 180 - 六个月；
-        /// 365 - 一年；
-        /// 1095 - 三年；
-        /// 1825 - 五年；
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
+
+        /// <summary>
+        /// 审计规则。同RuleTemplateIds都不填是全审计。
+        /// </summary>
+        [JsonProperty("AuditRuleFilters")]
+        public AuditRuleFilters[] AuditRuleFilters{ get; set; }
+
+        /// <summary>
+        /// 规则模版ID。同AuditRuleFilters都不填是全审计。
+        /// </summary>
+        [JsonProperty("RuleTemplateIds")]
+        public string[] RuleTemplateIds{ get; set; }
 
 
         /// <summary>
@@ -63,6 +72,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "LogExpireDay", this.LogExpireDay);
             this.SetParamSimple(map, prefix + "HighLogExpireDay", this.HighLogExpireDay);
+            this.SetParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
+            this.SetParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
         }
     }
 }

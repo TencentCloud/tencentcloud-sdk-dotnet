@@ -42,6 +42,22 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("Codes")]
         public CodeItem[] Codes{ get; set; }
 
+        /// <summary>
+        /// 码绑定激活策略，默认  0
+        /// 0: 传什么码就激活什么码
+        /// 1: 层级码 + 层级子码
+        /// </summary>
+        [JsonProperty("CodeType")]
+        public ulong? CodeType{ get; set; }
+
+        /// <summary>
+        /// 错误检查类型，默认 0
+        /// 0: 没有新导入码时正常返回
+        /// 1: 没有新导入码时报错，并返回没有导入成功的原因
+        /// </summary>
+        [JsonProperty("CheckType")]
+        public ulong? CheckType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +67,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
             this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
             this.SetParamArrayObj(map, prefix + "Codes.", this.Codes);
+            this.SetParamSimple(map, prefix + "CodeType", this.CodeType);
+            this.SetParamSimple(map, prefix + "CheckType", this.CheckType);
         }
     }
 }

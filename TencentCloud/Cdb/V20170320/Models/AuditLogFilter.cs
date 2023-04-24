@@ -126,6 +126,24 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("TransactionLivingTimeSection")]
         public string TransactionLivingTimeSection{ get; set; }
 
+        /// <summary>
+        /// 线程ID
+        /// </summary>
+        [JsonProperty("ThreadId")]
+        public string[] ThreadId{ get; set; }
+
+        /// <summary>
+        /// 返回行数。表示筛选返回行数大于该值的审计日志。
+        /// </summary>
+        [JsonProperty("SentRows")]
+        public long? SentRows{ get; set; }
+
+        /// <summary>
+        /// mysql错误码
+        /// </summary>
+        [JsonProperty("ErrCode")]
+        public long?[] ErrCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +167,9 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "LockWaitTimeSection", this.LockWaitTimeSection);
             this.SetParamSimple(map, prefix + "IoWaitTimeSection", this.IoWaitTimeSection);
             this.SetParamSimple(map, prefix + "TransactionLivingTimeSection", this.TransactionLivingTimeSection);
+            this.SetParamArraySimple(map, prefix + "ThreadId.", this.ThreadId);
+            this.SetParamSimple(map, prefix + "SentRows", this.SentRows);
+            this.SetParamArraySimple(map, prefix + "ErrCode.", this.ErrCode);
         }
     }
 }

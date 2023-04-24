@@ -1221,6 +1221,46 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 该接口用于对turbo 文件系统扩容使用
+        /// </summary>
+        /// <param name="req"><see cref="ScaleUpFileSystemRequest"/></param>
+        /// <returns><see cref="ScaleUpFileSystemResponse"/></returns>
+        public async Task<ScaleUpFileSystemResponse> ScaleUpFileSystem(ScaleUpFileSystemRequest req)
+        {
+             JsonResponseModel<ScaleUpFileSystemResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ScaleUpFileSystem");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleUpFileSystemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于对turbo 文件系统扩容使用
+        /// </summary>
+        /// <param name="req"><see cref="ScaleUpFileSystemRequest"/></param>
+        /// <returns><see cref="ScaleUpFileSystemResponse"/></returns>
+        public ScaleUpFileSystemResponse ScaleUpFileSystemSync(ScaleUpFileSystemRequest req)
+        {
+             JsonResponseModel<ScaleUpFileSystemResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScaleUpFileSystem");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleUpFileSystemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 设置文件系统配额，提供UID/GID的配额设置的接口
         /// </summary>
         /// <param name="req"><see cref="SetUserQuotaRequest"/></param>
