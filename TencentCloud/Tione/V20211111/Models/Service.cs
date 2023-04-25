@@ -78,7 +78,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 后付费资源组id
+        /// 包年包月服务的资源组id，按量计费的服务为空
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupId")]
@@ -221,7 +221,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string CreateFailedReason{ get; set; }
 
         /// <summary>
-        /// 预付费服务对应的资源组名字
+        /// 包年包月服务对应的资源组名字
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupName")]

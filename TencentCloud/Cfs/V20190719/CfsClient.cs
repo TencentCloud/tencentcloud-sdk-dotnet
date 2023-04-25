@@ -1221,6 +1221,46 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 用来设置文件系统扩容策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFileSystemAutoScaleUpRuleRequest"/></param>
+        /// <returns><see cref="ModifyFileSystemAutoScaleUpRuleResponse"/></returns>
+        public async Task<ModifyFileSystemAutoScaleUpRuleResponse> ModifyFileSystemAutoScaleUpRule(ModifyFileSystemAutoScaleUpRuleRequest req)
+        {
+             JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyFileSystemAutoScaleUpRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用来设置文件系统扩容策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFileSystemAutoScaleUpRuleRequest"/></param>
+        /// <returns><see cref="ModifyFileSystemAutoScaleUpRuleResponse"/></returns>
+        public ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRuleSync(ModifyFileSystemAutoScaleUpRuleRequest req)
+        {
+             JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyFileSystemAutoScaleUpRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于对turbo 文件系统扩容使用
         /// </summary>
         /// <param name="req"><see cref="ScaleUpFileSystemRequest"/></param>

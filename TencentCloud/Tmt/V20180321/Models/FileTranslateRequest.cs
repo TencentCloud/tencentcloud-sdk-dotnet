@@ -81,7 +81,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public long? SourceType{ get; set; }
 
         /// <summary>
-        /// 需要翻译文件url
+        /// 需要翻译文件url，文件需小于100MB。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -93,7 +93,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public string BasicDocumentType{ get; set; }
 
         /// <summary>
-        /// 回调url
+        /// 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中。
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }

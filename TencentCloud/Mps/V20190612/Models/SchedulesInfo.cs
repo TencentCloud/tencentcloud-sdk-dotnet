@@ -44,7 +44,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
-        public string[] Status{ get; set; }
+        public string Status{ get; set; }
 
         /// <summary>
         /// 编排绑定的触发规则。
@@ -103,7 +103,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
             this.SetParamSimple(map, prefix + "ScheduleName", this.ScheduleName);
-            this.SetParamArraySimple(map, prefix + "Status.", this.Status);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Trigger.", this.Trigger);
             this.SetParamArrayObj(map, prefix + "Activities.", this.Activities);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

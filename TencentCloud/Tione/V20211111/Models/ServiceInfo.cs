@@ -171,6 +171,42 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("PodInfos")]
         public Pod[] PodInfos{ get; set; }
 
+        /// <summary>
+        /// 定时伸缩策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScaleStrategy")]
+        public string ScaleStrategy{ get; set; }
+
+        /// <summary>
+        /// 定时伸缩任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CronScaleJobs")]
+        public CronScaleJob[] CronScaleJobs{ get; set; }
+
+        /// <summary>
+        /// 实例数量调节方式,默认为手动
+        /// 支持：自动 - "AUTO", 手动 - "MANUAL"
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScaleMode")]
+        public string ScaleMode{ get; set; }
+
+        /// <summary>
+        /// 服务限速限流相关配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceLimit")]
+        public ServiceLimit ServiceLimit{ get; set; }
+
+        /// <summary>
+        /// 定时停止的配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduledAction")]
+        public string ScheduledAction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -197,6 +233,11 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ModelHotUpdateEnable", this.ModelHotUpdateEnable);
             this.SetParamObj(map, prefix + "Pods.", this.Pods);
             this.SetParamArrayObj(map, prefix + "PodInfos.", this.PodInfos);
+            this.SetParamSimple(map, prefix + "ScaleStrategy", this.ScaleStrategy);
+            this.SetParamArrayObj(map, prefix + "CronScaleJobs.", this.CronScaleJobs);
+            this.SetParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
+            this.SetParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
+            this.SetParamSimple(map, prefix + "ScheduledAction", this.ScheduledAction);
         }
     }
 }

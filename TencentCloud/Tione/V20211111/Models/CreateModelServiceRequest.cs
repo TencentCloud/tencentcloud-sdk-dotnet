@@ -25,12 +25,6 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 镜像信息，配置服务运行所需的镜像地址等信息
-        /// </summary>
-        [JsonProperty("ImageInfo")]
-        public ImageInfo ImageInfo{ get; set; }
-
-        /// <summary>
         /// 新增版本时需要填写
         /// </summary>
         [JsonProperty("ServiceGroupId")]
@@ -49,7 +43,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ServiceDescription{ get; set; }
 
         /// <summary>
-        /// 付费模式,有 PREPAID 、 POSTPAID_BY_HOUR 和 HYBRID_PAID 三种
+        /// 付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
@@ -67,13 +61,19 @@ namespace TencentCloud.Tione.V20211111.Models
         public ModelInfo ModelInfo{ get; set; }
 
         /// <summary>
+        /// 镜像信息，配置服务运行所需的镜像地址等信息
+        /// </summary>
+        [JsonProperty("ImageInfo")]
+        public ImageInfo ImageInfo{ get; set; }
+
+        /// <summary>
         /// 环境变量，可选参数，用于配置容器中的环境变量
         /// </summary>
         [JsonProperty("Env")]
         public EnvVar[] Env{ get; set; }
 
         /// <summary>
-        /// 资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写
+        /// 资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写
         /// </summary>
         [JsonProperty("Resources")]
         public ResourceInfo Resources{ get; set; }
@@ -215,13 +215,13 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
             this.SetParamSimple(map, prefix + "ServiceGroupId", this.ServiceGroupId);
             this.SetParamSimple(map, prefix + "ServiceGroupName", this.ServiceGroupName);
             this.SetParamSimple(map, prefix + "ServiceDescription", this.ServiceDescription);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamObj(map, prefix + "ModelInfo.", this.ModelInfo);
+            this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
             this.SetParamArrayObj(map, prefix + "Env.", this.Env);
             this.SetParamObj(map, prefix + "Resources.", this.Resources);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);

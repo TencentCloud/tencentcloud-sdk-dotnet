@@ -117,6 +117,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ExceptionInformation")]
         public string ExceptionInformation{ get; set; }
 
+        /// <summary>
+        /// 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+        /// 为了和计费区分开，额外开启一个状态位，用于显示。
+        /// </summary>
+        [JsonProperty("ClusterStatus")]
+        public long? ClusterStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +145,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
             this.SetParamSimple(map, prefix + "ExceptionInformation", this.ExceptionInformation);
+            this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         }
     }
 }

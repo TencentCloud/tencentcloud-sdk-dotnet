@@ -71,6 +71,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("FeatureBitmap")]
         public ulong? FeatureBitmap{ get; set; }
 
+        /// <summary>
+        /// 接入区域支持的能力
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SupportFeature")]
+        public SupportFeature SupportFeature{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +90,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RegionAreaName", this.RegionAreaName);
             this.SetParamSimple(map, prefix + "IDCType", this.IDCType);
             this.SetParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
+            this.SetParamObj(map, prefix + "SupportFeature.", this.SupportFeature);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// 未消费消息的保留时间，以毫秒单位，范围60秒到15天
+        /// 已废弃，未消费消息的保留时间，以毫秒单位，范围60秒到15天
         /// </summary>
         [JsonProperty("Ttl")]
         public ulong? Ttl{ get; set; }
@@ -63,6 +63,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("VpcEndpoint")]
         public string VpcEndpoint{ get; set; }
 
+        /// <summary>
+        /// 内部接入点地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InternalEndpoint")]
+        public string InternalEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +82,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "PublicEndpoint", this.PublicEndpoint);
             this.SetParamSimple(map, prefix + "VpcEndpoint", this.VpcEndpoint);
+            this.SetParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
         }
     }
 }

@@ -140,14 +140,14 @@ namespace TencentCloud.Clb.V20180317.Models
         public string WafDomainId{ get; set; }
 
         /// <summary>
-        /// TRPC被调服务器路由，ForwardType为TRPC时有效
+        /// TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrpcCallee")]
         public string TrpcCallee{ get; set; }
 
         /// <summary>
-        /// TRPC调用服务接口，ForwardType为TRPC时有效
+        /// TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrpcFunc")]

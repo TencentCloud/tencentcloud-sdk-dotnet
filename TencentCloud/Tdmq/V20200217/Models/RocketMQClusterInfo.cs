@@ -123,6 +123,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("HttpVpcEndpoint")]
         public string HttpVpcEndpoint{ get; set; }
 
+        /// <summary>
+        /// TCP内部接入地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InternalEndpoint")]
+        public string InternalEndpoint{ get; set; }
+
+        /// <summary>
+        /// HTTP协议内部接入地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HttpInternalEndpoint")]
+        public string HttpInternalEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +158,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
             this.SetParamSimple(map, prefix + "HttpPublicEndpoint", this.HttpPublicEndpoint);
             this.SetParamSimple(map, prefix + "HttpVpcEndpoint", this.HttpVpcEndpoint);
+            this.SetParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
+            this.SetParamSimple(map, prefix + "HttpInternalEndpoint", this.HttpInternalEndpoint);
         }
     }
 }

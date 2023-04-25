@@ -26,54 +26,63 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 视频转码任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public TranscodeTaskInput TranscodeTask{ get; set; }
 
         /// <summary>
         /// 视频转动图任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnimatedGraphicTask")]
         public AnimatedGraphicTaskInput AnimatedGraphicTask{ get; set; }
 
         /// <summary>
         /// 视频按时间点截图任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTask")]
         public SnapshotByTimeOffsetTaskInput SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
         /// 视频采样截图任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleSnapshotTask")]
         public SampleSnapshotTaskInput SampleSnapshotTask{ get; set; }
 
         /// <summary>
         /// 视频截雪碧图任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageSpriteTask")]
         public ImageSpriteTaskInput ImageSpriteTask{ get; set; }
 
         /// <summary>
         /// 转自适应码流任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingTask")]
         public AdaptiveDynamicStreamingTaskInput AdaptiveDynamicStreamingTask{ get; set; }
 
         /// <summary>
         /// 视频内容审核类型任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
 
         /// <summary>
         /// 视频内容分析类型任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiAnalysisTask")]
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
         /// 视频内容识别类型任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }

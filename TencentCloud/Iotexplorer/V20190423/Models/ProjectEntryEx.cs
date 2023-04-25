@@ -93,6 +93,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("DeviceCount")]
         public ulong? DeviceCount{ get; set; }
 
+        /// <summary>
+        /// 是否开通物联使能
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableOpenState")]
+        public ulong? EnableOpenState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ApplicationCount", this.ApplicationCount);
             this.SetParamSimple(map, prefix + "DeviceCount", this.DeviceCount);
+            this.SetParamSimple(map, prefix + "EnableOpenState", this.EnableOpenState);
         }
     }
 }

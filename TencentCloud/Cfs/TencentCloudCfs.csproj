@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BC6405B5-6B40-3410-9D43-1965C0DAEE4C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.747</VersionPrefix>
+    <VersionPrefix>3.0.748</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -117,6 +117,8 @@
     <Compile Include="V20190719\Models\FileSystemInfo.cs" />
     <Compile Include="V20190719\Models\Filter.cs" />
     <Compile Include="V20190719\Models\MigrationTaskInfo.cs" />
+    <Compile Include="V20190719\Models\ModifyFileSystemAutoScaleUpRuleRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyFileSystemAutoScaleUpRuleResponse.cs" />
     <Compile Include="V20190719\Models\MountInfo.cs" />
     <Compile Include="V20190719\Models\PGroup.cs" />
     <Compile Include="V20190719\Models\PGroupInfo.cs" />

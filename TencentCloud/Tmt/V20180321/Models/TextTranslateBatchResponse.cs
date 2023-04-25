@@ -25,7 +25,7 @@ namespace TencentCloud.Tmt.V20180321.Models
     {
         
         /// <summary>
-        /// 源语言，详见入参Target
+        /// 源语言，详见入参Source
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
