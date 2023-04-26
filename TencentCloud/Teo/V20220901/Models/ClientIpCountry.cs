@@ -33,7 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 存放客户端IP所属地域信息的请求头名称，当Switch=on时有效。
+        /// 存放客户端 IP 所属地域信息的请求头名称，当 Switch=on 时有效。
         /// 为空则使用默认值：EO-Client-IPCountry。
         /// </summary>
         [JsonProperty("HeaderName")]

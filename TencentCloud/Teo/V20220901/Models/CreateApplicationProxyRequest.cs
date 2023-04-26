@@ -25,14 +25,14 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点ID。
+        /// 站点 ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 当ProxyType=hostname时，表示域名或子域名；
-        /// 当ProxyType=instance时，表示代理名称。
+        /// 当 ProxyType=hostname 时，表示域名或子域名；
+        /// 当 ProxyType=instance 时，表示代理名称。
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
@@ -77,8 +77,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? SessionPersistTime{ get; set; }
 
         /// <summary>
-        /// Ipv6访问配置。
-        /// 不填写表示关闭Ipv6访问。
+        /// Ipv6 访问配置。
+        /// 不填写表示关闭 Ipv6 访问。
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
@@ -89,6 +89,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("ApplicationProxyRules")]
         public ApplicationProxyRule[] ApplicationProxyRules{ get; set; }
+
+        /// <summary>
+        /// 中国大陆加速优化配置。不填写表示关闭中国大陆加速优化。
+        /// </summary>
+        [JsonProperty("AccelerateMainland")]
+        public AccelerateMainland AccelerateMainland{ get; set; }
 
 
         /// <summary>
@@ -105,6 +111,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
             this.SetParamArrayObj(map, prefix + "ApplicationProxyRules.", this.ApplicationProxyRules);
+            this.SetParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
         }
     }
 }

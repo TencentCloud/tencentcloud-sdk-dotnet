@@ -36,6 +36,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("DomainAlias")]
         public string DomainAlias{ get; set; }
 
+        /// <summary>
+        /// 别名状态：1-DNS不正确；2-正常；3-封禁。
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "DomainAlias", this.DomainAlias);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

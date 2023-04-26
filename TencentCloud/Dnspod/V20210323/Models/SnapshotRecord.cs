@@ -67,6 +67,20 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("MX")]
         public string MX{ get; set; }
 
+        /// <summary>
+        /// 权重
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Weight")]
+        public string Weight{ get; set; }
+
+        /// <summary>
+        /// 失败原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +94,8 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "TTL", this.TTL);
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamSimple(map, prefix + "MX", this.MX);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

@@ -455,6 +455,86 @@ namespace TencentCloud.Nlp.V20190408
         }
 
         /// <summary>
+        /// 通过计算句子间的语义相似性，帮助您快速找到文本中重复或相似的句子，用于文本聚类、相似问题检索等应用场景。
+        /// </summary>
+        /// <param name="req"><see cref="EvaluateSentenceSimilarityRequest"/></param>
+        /// <returns><see cref="EvaluateSentenceSimilarityResponse"/></returns>
+        public async Task<EvaluateSentenceSimilarityResponse> EvaluateSentenceSimilarity(EvaluateSentenceSimilarityRequest req)
+        {
+             JsonResponseModel<EvaluateSentenceSimilarityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EvaluateSentenceSimilarity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluateSentenceSimilarityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过计算句子间的语义相似性，帮助您快速找到文本中重复或相似的句子，用于文本聚类、相似问题检索等应用场景。
+        /// </summary>
+        /// <param name="req"><see cref="EvaluateSentenceSimilarityRequest"/></param>
+        /// <returns><see cref="EvaluateSentenceSimilarityResponse"/></returns>
+        public EvaluateSentenceSimilarityResponse EvaluateSentenceSimilaritySync(EvaluateSentenceSimilarityRequest req)
+        {
+             JsonResponseModel<EvaluateSentenceSimilarityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EvaluateSentenceSimilarity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluateSentenceSimilarityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 评估两个词语在语义空间的相似程度，为您的场景应用提供有力支持，如关键词过滤、热门话题挖掘等。（目前仅支持中文）
+        /// </summary>
+        /// <param name="req"><see cref="EvaluateWordSimilarityRequest"/></param>
+        /// <returns><see cref="EvaluateWordSimilarityResponse"/></returns>
+        public async Task<EvaluateWordSimilarityResponse> EvaluateWordSimilarity(EvaluateWordSimilarityRequest req)
+        {
+             JsonResponseModel<EvaluateWordSimilarityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EvaluateWordSimilarity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluateWordSimilarityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 评估两个词语在语义空间的相似程度，为您的场景应用提供有力支持，如关键词过滤、热门话题挖掘等。（目前仅支持中文）
+        /// </summary>
+        /// <param name="req"><see cref="EvaluateWordSimilarityRequest"/></param>
+        /// <returns><see cref="EvaluateWordSimilarityResponse"/></returns>
+        public EvaluateWordSimilarityResponse EvaluateWordSimilaritySync(EvaluateWordSimilarityRequest req)
+        {
+             JsonResponseModel<EvaluateWordSimilarityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EvaluateWordSimilarity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluateWordSimilarityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据用户输入的命题关键词自动生成一副春联，包括上联、下联和横批。（如需开通请联系商务）
         /// </summary>
         /// <param name="req"><see cref="GenerateCoupletRequest"/></param>
@@ -486,6 +566,46 @@ namespace TencentCloud.Nlp.V20190408
              {
                  var strResp = this.InternalRequestSync(req, "GenerateCouplet");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateCoupletResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提取文本中的关键信息，生成简洁明了的关键句子，便于用户快速获取核心观点。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateKeywordSentenceRequest"/></param>
+        /// <returns><see cref="GenerateKeywordSentenceResponse"/></returns>
+        public async Task<GenerateKeywordSentenceResponse> GenerateKeywordSentence(GenerateKeywordSentenceRequest req)
+        {
+             JsonResponseModel<GenerateKeywordSentenceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenerateKeywordSentence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateKeywordSentenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提取文本中的关键信息，生成简洁明了的关键句子，便于用户快速获取核心观点。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateKeywordSentenceRequest"/></param>
+        /// <returns><see cref="GenerateKeywordSentenceResponse"/></returns>
+        public GenerateKeywordSentenceResponse GenerateKeywordSentenceSync(GenerateKeywordSentenceRequest req)
+        {
+             JsonResponseModel<GenerateKeywordSentenceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateKeywordSentence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateKeywordSentenceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -631,6 +751,86 @@ namespace TencentCloud.Nlp.V20190408
         }
 
         /// <summary>
+        /// 通过精准地对文本进行分词、词性标注、命名实体识别等功能，助您更好地理解文本内容，挖掘出潜在的价值信息。
+        /// </summary>
+        /// <param name="req"><see cref="ParseWordsRequest"/></param>
+        /// <returns><see cref="ParseWordsResponse"/></returns>
+        public async Task<ParseWordsResponse> ParseWords(ParseWordsRequest req)
+        {
+             JsonResponseModel<ParseWordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ParseWords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ParseWordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过精准地对文本进行分词、词性标注、命名实体识别等功能，助您更好地理解文本内容，挖掘出潜在的价值信息。
+        /// </summary>
+        /// <param name="req"><see cref="ParseWordsRequest"/></param>
+        /// <returns><see cref="ParseWordsResponse"/></returns>
+        public ParseWordsResponse ParseWordsSync(ParseWordsRequest req)
+        {
+             JsonResponseModel<ParseWordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ParseWords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ParseWordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 基于大数据和深度学习技术，可以快速地找到与给定词语高度相似的其他词语，有助于提高搜索和推荐的准确性。（目前仅支持中文）
+        /// </summary>
+        /// <param name="req"><see cref="RetrieveSimilarWordsRequest"/></param>
+        /// <returns><see cref="RetrieveSimilarWordsResponse"/></returns>
+        public async Task<RetrieveSimilarWordsResponse> RetrieveSimilarWords(RetrieveSimilarWordsRequest req)
+        {
+             JsonResponseModel<RetrieveSimilarWordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RetrieveSimilarWords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RetrieveSimilarWordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 基于大数据和深度学习技术，可以快速地找到与给定词语高度相似的其他词语，有助于提高搜索和推荐的准确性。（目前仅支持中文）
+        /// </summary>
+        /// <param name="req"><see cref="RetrieveSimilarWordsRequest"/></param>
+        /// <returns><see cref="RetrieveSimilarWordsResponse"/></returns>
+        public RetrieveSimilarWordsResponse RetrieveSimilarWordsSync(RetrieveSimilarWordsRequest req)
+        {
+             JsonResponseModel<RetrieveSimilarWordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RetrieveSimilarWords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RetrieveSimilarWordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询指定自定义词库中的词条是否存在。
         /// </summary>
         /// <param name="req"><see cref="SearchWordItemsRequest"/></param>
@@ -662,6 +862,46 @@ namespace TencentCloud.Nlp.V20190408
              {
                  var strResp = this.InternalRequestSync(req, "SearchWordItems");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchWordItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 智能识别并纠正句子中的语法、拼写、用词等错误，确保文本的准确性和可读性。
+        /// </summary>
+        /// <param name="req"><see cref="SentenceCorrectionRequest"/></param>
+        /// <returns><see cref="SentenceCorrectionResponse"/></returns>
+        public async Task<SentenceCorrectionResponse> SentenceCorrection(SentenceCorrectionRequest req)
+        {
+             JsonResponseModel<SentenceCorrectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SentenceCorrection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SentenceCorrectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 智能识别并纠正句子中的语法、拼写、用词等错误，确保文本的准确性和可读性。
+        /// </summary>
+        /// <param name="req"><see cref="SentenceCorrectionRequest"/></param>
+        /// <returns><see cref="SentenceCorrectionResponse"/></returns>
+        public SentenceCorrectionResponse SentenceCorrectionSync(SentenceCorrectionRequest req)
+        {
+             JsonResponseModel<SentenceCorrectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SentenceCorrection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SentenceCorrectionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -939,6 +1179,46 @@ namespace TencentCloud.Nlp.V20190408
         }
 
         /// <summary>
+        /// 运用先进的自然语言处理技术，对原始文本进行优化润色，提升文本的通顺性、表达力和语言质量。
+        /// </summary>
+        /// <param name="req"><see cref="TextEmbellishRequest"/></param>
+        /// <returns><see cref="TextEmbellishResponse"/></returns>
+        public async Task<TextEmbellishResponse> TextEmbellish(TextEmbellishRequest req)
+        {
+             JsonResponseModel<TextEmbellishResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TextEmbellish");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextEmbellishResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 运用先进的自然语言处理技术，对原始文本进行优化润色，提升文本的通顺性、表达力和语言质量。
+        /// </summary>
+        /// <param name="req"><see cref="TextEmbellishRequest"/></param>
+        /// <returns><see cref="TextEmbellishResponse"/></returns>
+        public TextEmbellishResponse TextEmbellishSync(TextEmbellishRequest req)
+        {
+             JsonResponseModel<TextEmbellishResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TextEmbellish");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextEmbellishResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 句子相似度接口能够基于深度学习技术来计算一个源句子和多个目标句子的相似度，相似度分值越大的两个句子在语义上越相似。目前仅支持短文本（不超过500字符）的相似度计算，长文本的相似度计算也即将推出。
         /// 
         /// 鉴于句子相似度是一个应用非常广泛的功能，腾讯云自然语言处理团队在Bert等领先的深度神经网络模型的基础上，专门针对文本相似任务进行了优化，并持续迭代更新。基于句子相似度，可以轻松实现诸如文本去重、相似推荐等功能。
@@ -1026,6 +1306,46 @@ namespace TencentCloud.Nlp.V20190408
              {
                  var strResp = this.InternalRequestSync(req, "TextSimilarityPro");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextSimilarityProResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过自动补全文本片段，帮助用户快速生成高质量、连贯的完整文本，提高创作效率。
+        /// </summary>
+        /// <param name="req"><see cref="TextWritingRequest"/></param>
+        /// <returns><see cref="TextWritingResponse"/></returns>
+        public async Task<TextWritingResponse> TextWriting(TextWritingRequest req)
+        {
+             JsonResponseModel<TextWritingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TextWriting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextWritingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过自动补全文本片段，帮助用户快速生成高质量、连贯的完整文本，提高创作效率。
+        /// </summary>
+        /// <param name="req"><see cref="TextWritingRequest"/></param>
+        /// <returns><see cref="TextWritingResponse"/></returns>
+        public TextWritingResponse TextWritingSync(TextWritingRequest req)
+        {
+             JsonResponseModel<TextWritingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TextWriting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextWritingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

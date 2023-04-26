@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+        /// 是否开启 POST 请求上传文件限制，平台默认为限制为32MB，取值有：
         /// <li>on：开启限制；</li>
         /// <li>off：关闭限制。</li>
         /// </summary>

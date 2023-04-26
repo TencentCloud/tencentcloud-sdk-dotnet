@@ -33,7 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// MaxAge数值。单位为秒，最大值为1天。
+        /// MaxAge 数值。单位为秒，最大值为1天。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxAge")]

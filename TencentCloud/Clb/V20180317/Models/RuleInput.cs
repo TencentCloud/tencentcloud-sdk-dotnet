@@ -62,7 +62,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
+        /// 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC，TRPC暂未对外开放。
         /// </summary>
         [JsonProperty("ForwardType")]
         public string ForwardType{ get; set; }

@@ -285,6 +285,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("ErrorPrompt")]
         public string ErrorPrompt{ get; set; }
 
+        /// <summary>
+        /// 云盘是否开启性能突发
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BurstPerformance")]
+        public bool? BurstPerformance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -332,6 +339,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "LastAttachInsId", this.LastAttachInsId);
             this.SetParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
+            this.SetParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
         }
     }
 }

@@ -90,6 +90,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("ResourcePackageNum")]
         public ulong? ResourcePackageNum{ get; set; }
 
+        /// <summary>
+        /// 实例类型 1:原web相关类型 2:app端类型
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public long? InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "BuyingChannel", this.BuyingChannel);
             this.SetParamSimple(map, prefix + "ResourcePackageType", this.ResourcePackageType);
             this.SetParamSimple(map, prefix + "ResourcePackageNum", this.ResourcePackageNum);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

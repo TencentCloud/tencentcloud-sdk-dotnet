@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Ipv6访问功能配置，取值有：
+        /// Ipv6 访问功能配置，取值有：
         /// <li>on：开启Ipv6访问功能；</li>
         /// <li>off：关闭Ipv6访问功能。</li>
         /// </summary>

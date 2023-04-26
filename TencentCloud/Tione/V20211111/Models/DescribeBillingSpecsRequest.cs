@@ -31,7 +31,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 付费模式：POSTPAID_BY_HOUR按量付费、PREPAID包年包月
+        /// 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }

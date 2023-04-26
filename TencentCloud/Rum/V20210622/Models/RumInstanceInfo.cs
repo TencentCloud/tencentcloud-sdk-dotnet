@@ -96,6 +96,13 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
+        /// <summary>
+        /// 实例类型 1:原web相关类型 2:app端类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public long? InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +121,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "DataRetentionDays", this.DataRetentionDays);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

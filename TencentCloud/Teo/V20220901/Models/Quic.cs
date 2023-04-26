@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 是否开启Quic配置，取值有：
+        /// 是否开启 Quic 配置，取值有：
         /// <li>on：开启；</li>
         /// <li>off：关闭。</li>
         /// </summary>

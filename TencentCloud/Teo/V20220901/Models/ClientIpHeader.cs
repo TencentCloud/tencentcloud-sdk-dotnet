@@ -33,7 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 回源时，存放客户端IP的请求头名称。
+        /// 回源时，存放客户端 IP 的请求头名称。
         /// 为空则使用默认值：X-Forwarded-IP。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

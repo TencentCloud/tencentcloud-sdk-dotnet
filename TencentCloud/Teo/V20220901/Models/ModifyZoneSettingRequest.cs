@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 待变更的站点ID。
+        /// 待变更的站点 ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -59,14 +59,14 @@ namespace TencentCloud.Teo.V20220901.Models
         public OfflineCache OfflineCache{ get; set; }
 
         /// <summary>
-        /// Quic访问配置。
+        /// Quic 访问配置。
         /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }
 
         /// <summary>
-        /// Post请求传输配置。
+        /// Post 请求传输配置。
         /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("PostMaxSize")]
@@ -80,21 +80,21 @@ namespace TencentCloud.Teo.V20220901.Models
         public Compression Compression{ get; set; }
 
         /// <summary>
-        /// Http2回源配置。
+        /// Http2 回源配置。
         /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("UpstreamHttp2")]
         public UpstreamHttp2 UpstreamHttp2{ get; set; }
 
         /// <summary>
-        /// 访问协议强制Https跳转配置。
+        /// 访问协议强制 Https 跳转配置。
         /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("ForceRedirect")]
         public ForceRedirect ForceRedirect{ get; set; }
 
         /// <summary>
-        /// Https加速配置。
+        /// Https 加速配置。
         /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("Https")]
@@ -115,14 +115,14 @@ namespace TencentCloud.Teo.V20220901.Models
         public SmartRouting SmartRouting{ get; set; }
 
         /// <summary>
-        /// WebSocket配置。
+        /// WebSocket 配置。
         /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }
 
         /// <summary>
-        /// 客户端IP回源请求头配置。
+        /// 客户端 IP 回源请求头配置。
         /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("ClientIpHeader")]
@@ -136,25 +136,32 @@ namespace TencentCloud.Teo.V20220901.Models
         public CachePrefresh CachePrefresh{ get; set; }
 
         /// <summary>
-        /// Ipv6访问配置。
+        /// Ipv6 访问配置。
         /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
 
         /// <summary>
-        /// 回源时是否携带客户端IP所属地域信息的配置。
+        /// 回源时是否携带客户端 IP 所属地域信息的配置。
         /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("ClientIpCountry")]
         public ClientIpCountry ClientIpCountry{ get; set; }
 
         /// <summary>
-        /// Grpc协议支持配置。
+        /// Grpc 协议支持配置。
         /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("Grpc")]
         public Grpc Grpc{ get; set; }
+
+        /// <summary>
+        /// 图片优化配置。
+        /// 不填写表示关闭。
+        /// </summary>
+        [JsonProperty("ImageOptimize")]
+        public ImageOptimize ImageOptimize{ get; set; }
 
 
         /// <summary>
@@ -181,6 +188,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
             this.SetParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
             this.SetParamObj(map, prefix + "Grpc.", this.Grpc);
+            this.SetParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
         }
     }
 }

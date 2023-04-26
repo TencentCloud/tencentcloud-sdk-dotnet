@@ -573,6 +573,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 创建安全 IP 组
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityIPGroupRequest"/></param>
+        /// <returns><see cref="CreateSecurityIPGroupResponse"/></returns>
+        public async Task<CreateSecurityIPGroupResponse> CreateSecurityIPGroup(CreateSecurityIPGroupRequest req)
+        {
+             JsonResponseModel<CreateSecurityIPGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSecurityIPGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityIPGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建安全 IP 组
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityIPGroupRequest"/></param>
+        /// <returns><see cref="CreateSecurityIPGroupResponse"/></returns>
+        public CreateSecurityIPGroupResponse CreateSecurityIPGroupSync(CreateSecurityIPGroupRequest req)
+        {
+             JsonResponseModel<CreateSecurityIPGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSecurityIPGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityIPGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对用户指定的域名进行一次站点拨测
         /// </summary>
         /// <param name="req"><see cref="CreateSpeedTestingRequest"/></param>
@@ -884,6 +924,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DeleteRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除指定 IP 组，如果有规则引用了 IP 组情况，则不允许删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityIPGroupRequest"/></param>
+        /// <returns><see cref="DeleteSecurityIPGroupResponse"/></returns>
+        public async Task<DeleteSecurityIPGroupResponse> DeleteSecurityIPGroup(DeleteSecurityIPGroupRequest req)
+        {
+             JsonResponseModel<DeleteSecurityIPGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSecurityIPGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityIPGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除指定 IP 组，如果有规则引用了 IP 组情况，则不允许删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityIPGroupRequest"/></param>
+        /// <returns><see cref="DeleteSecurityIPGroupResponse"/></returns>
+        public DeleteSecurityIPGroupResponse DeleteSecurityIPGroupSync(DeleteSecurityIPGroupRequest req)
+        {
+             JsonResponseModel<DeleteSecurityIPGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSecurityIPGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityIPGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3244,6 +3324,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "ModifyRulePriority");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRulePriorityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改安全 IP 组。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityIPGroupRequest"/></param>
+        /// <returns><see cref="ModifySecurityIPGroupResponse"/></returns>
+        public async Task<ModifySecurityIPGroupResponse> ModifySecurityIPGroup(ModifySecurityIPGroupRequest req)
+        {
+             JsonResponseModel<ModifySecurityIPGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySecurityIPGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityIPGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改安全 IP 组。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityIPGroupRequest"/></param>
+        /// <returns><see cref="ModifySecurityIPGroupResponse"/></returns>
+        public ModifySecurityIPGroupResponse ModifySecurityIPGroupSync(ModifySecurityIPGroupRequest req)
+        {
+             JsonResponseModel<ModifySecurityIPGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySecurityIPGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityIPGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -2797,7 +2797,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 菲律宾SSSID识别
+        /// 菲律宾SSSID/UMID识别
         /// </summary>
         /// <param name="req"><see cref="RecognizePhilippinesSssIDOCRRequest"/></param>
         /// <returns><see cref="RecognizePhilippinesSssIDOCRResponse"/></returns>
@@ -2817,7 +2817,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 菲律宾SSSID识别
+        /// 菲律宾SSSID/UMID识别
         /// </summary>
         /// <param name="req"><see cref="RecognizePhilippinesSssIDOCRRequest"/></param>
         /// <returns><see cref="RecognizePhilippinesSssIDOCRResponse"/></returns>

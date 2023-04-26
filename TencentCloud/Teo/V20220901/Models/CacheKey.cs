@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string IgnoreCase{ get; set; }
 
         /// <summary>
-        /// CacheKey中包含请求参数。
+        /// CacheKey 中包含请求参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueryString")]

@@ -74,6 +74,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public string GridDaemon{ get; set; }
 
         /// <summary>
+        /// 公网访问kins集群
+        /// </summary>
+        [JsonProperty("UnitCluster")]
+        public string UnitCluster{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -93,6 +99,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "HealthRegion", this.HealthRegion);
             this.SetParamSimple(map, prefix + "Health", this.Health);
             this.SetParamSimple(map, prefix + "GridDaemon", this.GridDaemon);
+            this.SetParamSimple(map, prefix + "UnitCluster", this.UnitCluster);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

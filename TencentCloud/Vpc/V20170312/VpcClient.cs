@@ -8977,6 +8977,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（GenerateVpnConnectionDefaultHealthCheckIp）用于获取一对VPN通道健康检查地址。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateVpnConnectionDefaultHealthCheckIpRequest"/></param>
+        /// <returns><see cref="GenerateVpnConnectionDefaultHealthCheckIpResponse"/></returns>
+        public async Task<GenerateVpnConnectionDefaultHealthCheckIpResponse> GenerateVpnConnectionDefaultHealthCheckIp(GenerateVpnConnectionDefaultHealthCheckIpRequest req)
+        {
+             JsonResponseModel<GenerateVpnConnectionDefaultHealthCheckIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenerateVpnConnectionDefaultHealthCheckIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateVpnConnectionDefaultHealthCheckIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（GenerateVpnConnectionDefaultHealthCheckIp）用于获取一对VPN通道健康检查地址。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateVpnConnectionDefaultHealthCheckIpRequest"/></param>
+        /// <returns><see cref="GenerateVpnConnectionDefaultHealthCheckIpResponse"/></returns>
+        public GenerateVpnConnectionDefaultHealthCheckIpResponse GenerateVpnConnectionDefaultHealthCheckIpSync(GenerateVpnConnectionDefaultHealthCheckIpRequest req)
+        {
+             JsonResponseModel<GenerateVpnConnectionDefaultHealthCheckIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateVpnConnectionDefaultHealthCheckIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateVpnConnectionDefaultHealthCheckIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（GetCcnRegionBandwidthLimits）用于查询云联网相关地域带宽信息，其中预付费模式的云联网仅支持地域间限速，后付费模式的云联网支持地域间限速和地域出口限速。
         /// </summary>
         /// <param name="req"><see cref="GetCcnRegionBandwidthLimitsRequest"/></param>

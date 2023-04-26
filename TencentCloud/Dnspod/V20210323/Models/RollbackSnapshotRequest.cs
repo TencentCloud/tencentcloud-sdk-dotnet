@@ -42,6 +42,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }
 
+        /// <summary>
+        /// 指定需要回滚的记录
+        /// </summary>
+        [JsonProperty("RecordList")]
+        public SnapshotRecord[] RecordList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
             this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
+            this.SetParamArrayObj(map, prefix + "RecordList.", this.RecordList);
         }
     }
 }

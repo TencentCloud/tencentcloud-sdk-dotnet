@@ -108,6 +108,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("RegistryPrefix")]
         public string RegistryPrefix{ get; set; }
 
+        /// <summary>
+        /// 集群绑定的云标签
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification TagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "EdgeVersion", this.EdgeVersion);
             this.SetParamSimple(map, prefix + "RegistryPrefix", this.RegistryPrefix);
+            this.SetParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

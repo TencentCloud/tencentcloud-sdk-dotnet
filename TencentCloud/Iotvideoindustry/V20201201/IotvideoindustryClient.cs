@@ -1755,7 +1755,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
-        /// 本接口(DescribeDevicesList) 用于获取设备列表，支持模糊搜索
+        /// 本接口(DescribeDeviceList) 用于获取设备列表，支持模糊搜索
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceListRequest"/></param>
         /// <returns><see cref="DescribeDeviceListResponse"/></returns>
@@ -1775,7 +1775,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
-        /// 本接口(DescribeDevicesList) 用于获取设备列表，支持模糊搜索
+        /// 本接口(DescribeDeviceList) 用于获取设备列表，支持模糊搜索
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceListRequest"/></param>
         /// <returns><see cref="DescribeDeviceListResponse"/></returns>

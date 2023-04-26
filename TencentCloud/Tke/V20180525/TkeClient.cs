@@ -7613,7 +7613,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改边缘计算集群名称等属性 
+        /// 修改边缘计算集群名称等属性
         /// </summary>
         /// <param name="req"><see cref="UpdateTKEEdgeClusterRequest"/></param>
         /// <returns><see cref="UpdateTKEEdgeClusterResponse"/></returns>
@@ -7633,7 +7633,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改边缘计算集群名称等属性 
+        /// 修改边缘计算集群名称等属性
         /// </summary>
         /// <param name="req"><see cref="UpdateTKEEdgeClusterRequest"/></param>
         /// <returns><see cref="UpdateTKEEdgeClusterResponse"/></returns>

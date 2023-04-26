@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.748</VersionPrefix>
+    <VersionPrefix>3.0.749</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,7 @@
     <Compile Include="V20220106\Models\Zone.cs" />
     <Compile Include="V20220106\Models\ZoneFilter.cs" />
     <Compile Include="V20220901\TeoClient.cs" />
+    <Compile Include="V20220901\Models\AccelerateMainland.cs" />
     <Compile Include="V20220901\Models\AccelerateType.cs" />
     <Compile Include="V20220901\Models\AccelerationDomain.cs" />
     <Compile Include="V20220901\Models\AclCondition.cs" />
@@ -125,6 +126,8 @@
     <Compile Include="V20220901\Models\CreateReplayTaskResponse.cs" />
     <Compile Include="V20220901\Models\CreateRuleRequest.cs" />
     <Compile Include="V20220901\Models\CreateRuleResponse.cs" />
+    <Compile Include="V20220901\Models\CreateSecurityIPGroupRequest.cs" />
+    <Compile Include="V20220901\Models\CreateSecurityIPGroupResponse.cs" />
     <Compile Include="V20220901\Models\CreateSpeedTestingRequest.cs" />
     <Compile Include="V20220901\Models\CreateSpeedTestingResponse.cs" />
     <Compile Include="V20220901\Models\CreateZoneRequest.cs" />
@@ -145,6 +148,8 @@
     <Compile Include="V20220901\Models\DeleteOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\DeleteRulesRequest.cs" />
     <Compile Include="V20220901\Models\DeleteRulesResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteSecurityIPGroupRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteSecurityIPGroupResponse.cs" />
     <Compile Include="V20220901\Models\DeleteZoneRequest.cs" />
     <Compile Include="V20220901\Models\DeleteZoneResponse.cs" />
     <Compile Include="V20220901\Models\DescribeAccelerationDomainsRequest.cs" />
@@ -255,6 +260,7 @@
     <Compile Include="V20220901\Models\Header.cs" />
     <Compile Include="V20220901\Models\Hsts.cs" />
     <Compile Include="V20220901\Models\Https.cs" />
+    <Compile Include="V20220901\Models\IPGroup.cs" />
     <Compile Include="V20220901\Models\IPWhitelist.cs" />
     <Compile Include="V20220901\Models\Identification.cs" />
     <Compile Include="V20220901\Models\IdentifyZoneRequest.cs" />
@@ -295,6 +301,8 @@
     <Compile Include="V20220901\Models\ModifyRulePriorityResponse.cs" />
     <Compile Include="V20220901\Models\ModifyRuleRequest.cs" />
     <Compile Include="V20220901\Models\ModifyRuleResponse.cs" />
+    <Compile Include="V20220901\Models\ModifySecurityIPGroupRequest.cs" />
+    <Compile Include="V20220901\Models\ModifySecurityIPGroupResponse.cs" />
     <Compile Include="V20220901\Models\ModifySecurityPolicyRequest.cs" />
     <Compile Include="V20220901\Models\ModifySecurityPolicyResponse.cs" />
     <Compile Include="V20220901\Models\ModifySecurityWafGroupPolicyRequest.cs" />
