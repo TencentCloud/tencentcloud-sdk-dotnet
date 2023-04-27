@@ -37,13 +37,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// 未消费消息的保留时间，以毫秒为单位，60秒-15天
+        /// 已废弃
         /// </summary>
         [JsonProperty("Ttl")]
         public ulong? Ttl{ get; set; }
 
         /// <summary>
-        /// 消息持久化后保留的时间，以毫秒为单位
+        /// 已废弃
         /// </summary>
         [JsonProperty("RetentionTime")]
         public ulong? RetentionTime{ get; set; }

@@ -6057,6 +6057,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询单元化规则列表V2
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnitRulesV2Request"/></param>
+        /// <returns><see cref="DescribeUnitRulesV2Response"/></returns>
+        public async Task<DescribeUnitRulesV2Response> DescribeUnitRulesV2(DescribeUnitRulesV2Request req)
+        {
+             JsonResponseModel<DescribeUnitRulesV2Response> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUnitRulesV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnitRulesV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单元化规则列表V2
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnitRulesV2Request"/></param>
+        /// <returns><see cref="DescribeUnitRulesV2Response"/></returns>
+        public DescribeUnitRulesV2Response DescribeUnitRulesV2Sync(DescribeUnitRulesV2Request req)
+        {
+             JsonResponseModel<DescribeUnitRulesV2Response> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUnitRulesV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnitRulesV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
         /// COS相关文档请查阅：https://cloud.tencent.com/document/product/436
         /// </summary>

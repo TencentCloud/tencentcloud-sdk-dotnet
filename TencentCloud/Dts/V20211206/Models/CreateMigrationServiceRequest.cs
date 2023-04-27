@@ -25,13 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 源实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+        /// 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
         /// </summary>
         [JsonProperty("SrcDatabaseType")]
         public string SrcDatabaseType{ get; set; }
 
         /// <summary>
-        /// 目标实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+        /// 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }

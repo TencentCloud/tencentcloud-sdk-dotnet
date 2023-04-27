@@ -103,6 +103,20 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("RecordUrl")]
         public string RecordUrl{ get; set; }
 
+        /// <summary>
+        /// 最高房间内人数（包括老师），0表示不限制，默认为0
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxMicNumber")]
+        public ulong? MaxMicNumber{ get; set; }
+
+        /// <summary>
+        /// 打开学生麦克风/摄像头的授权开关 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableDirectControl")]
+        public ulong? EnableDirectControl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +134,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "MaxRTCMember", this.MaxRTCMember);
             this.SetParamSimple(map, prefix + "ReplayUrl", this.ReplayUrl);
             this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
+            this.SetParamSimple(map, prefix + "MaxMicNumber", this.MaxMicNumber);
+            this.SetParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
         }
     }
 }

@@ -2613,7 +2613,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 模拟故障
+        /// 本接口（KillMasterGroup）模拟故障。
         /// </summary>
         /// <param name="req"><see cref="KillMasterGroupRequest"/></param>
         /// <returns><see cref="KillMasterGroupResponse"/></returns>
@@ -2633,7 +2633,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 模拟故障
+        /// 本接口（KillMasterGroup）模拟故障。
         /// </summary>
         /// <param name="req"><see cref="KillMasterGroupRequest"/></param>
         /// <returns><see cref="KillMasterGroupResponse"/></returns>

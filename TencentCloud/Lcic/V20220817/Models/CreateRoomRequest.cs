@@ -140,6 +140,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
+        /// <summary>
+        /// 打开学生麦克风/摄像头的授权开关
+        /// </summary>
+        [JsonProperty("EnableDirectControl")]
+        public ulong? EnableDirectControl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "AudienceType", this.AudienceType);
             this.SetParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
         }
     }
 }

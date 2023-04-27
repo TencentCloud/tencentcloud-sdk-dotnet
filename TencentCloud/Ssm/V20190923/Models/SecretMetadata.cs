@@ -131,6 +131,27 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("TargetUin")]
         public ulong? TargetUin{ get; set; }
 
+        /// <summary>
+        /// 轮转的频率，以天作为单位，在轮转开启状态下生效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RotationFrequency")]
+        public long? RotationFrequency{ get; set; }
+
+        /// <summary>
+        /// 云产品凭据对应的云产品实例 ID 号。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceID")]
+        public string ResourceID{ get; set; }
+
+        /// <summary>
+        /// 用户指定的轮转开始时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RotationBeginTime")]
+        public string RotationBeginTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -153,6 +174,9 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
             this.SetParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
             this.SetParamSimple(map, prefix + "TargetUin", this.TargetUin);
+            this.SetParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
+            this.SetParamSimple(map, prefix + "ResourceID", this.ResourceID);
+            this.SetParamSimple(map, prefix + "RotationBeginTime", this.RotationBeginTime);
         }
     }
 }

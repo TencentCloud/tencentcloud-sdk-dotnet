@@ -25,79 +25,86 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 节点名称
+        /// 节点名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 实例运行时节点Id
+        /// 实例运行时节点 ID。
         /// </summary>
         [JsonProperty("RunId")]
         public string RunId{ get; set; }
 
         /// <summary>
-        /// 集群角色：0-master；1-slave
+        /// 集群角色。
+        /// - 0：master。
+        /// - 1：slave。
         /// </summary>
         [JsonProperty("Role")]
         public long? Role{ get; set; }
 
         /// <summary>
-        /// 节点状态：0-readwrite, 1-read, 2-backup
+        /// 节点状态。
+        /// - 0：readwrite,。
+        /// - 1：read。
+        /// - 2：backup。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 服务状态：0-down；1-on
+        /// 服务状态。
+        /// 0-down。
+        /// 1-on
         /// </summary>
         [JsonProperty("Connected")]
         public long? Connected{ get; set; }
 
         /// <summary>
-        /// 节点创建时间
+        /// 节点创建时间。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 节点下线时间
+        /// 节点下线时间。
         /// </summary>
         [JsonProperty("DownTime")]
         public string DownTime{ get; set; }
 
         /// <summary>
-        /// 节点slot分布
+        /// 节点 Slot 分布区间。
         /// </summary>
         [JsonProperty("Slots")]
         public string Slots{ get; set; }
 
         /// <summary>
-        /// 节点key分布
+        /// 节点 Key分布。
         /// </summary>
         [JsonProperty("Keys")]
         public long? Keys{ get; set; }
 
         /// <summary>
-        /// 节点qps
+        /// 节点 QPS。分片节点每秒执行次数。单位：次/秒。
         /// </summary>
         [JsonProperty("Qps")]
         public long? Qps{ get; set; }
 
         /// <summary>
-        /// 节点qps倾斜度
+        /// 节点 QPS 倾斜度。
         /// </summary>
         [JsonProperty("QpsSlope")]
         public float? QpsSlope{ get; set; }
 
         /// <summary>
-        /// 节点存储
+        /// 节点存储。
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 节点存储倾斜度
+        /// 节点存储倾斜度。
         /// </summary>
         [JsonProperty("StorageSlope")]
         public float? StorageSlope{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// 用户appid
         /// </summary>
         [JsonProperty("AppId")]
-        public string AppId{ get; set; }
+        public ulong? AppId{ get; set; }
 
         /// <summary>
         /// 配额数据

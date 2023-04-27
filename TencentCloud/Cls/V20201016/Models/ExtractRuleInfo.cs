@@ -134,6 +134,25 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("ParseProtocol")]
         public string ParseProtocol{ get; set; }
 
+        /// <summary>
+        /// 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+        /// </summary>
+        [JsonProperty("MetadataType")]
+        public long? MetadataType{ get; set; }
+
+        /// <summary>
+        /// 采集配置路径正则表达式，MetadataType为1时必填
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PathRegex")]
+        public string PathRegex{ get; set; }
+
+        /// <summary>
+        /// 用户自定义元数据信息，MetadataType为2时必填
+        /// </summary>
+        [JsonProperty("MetaTags")]
+        public MetaTagInfo[] MetaTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +174,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "ParseProtocol", this.ParseProtocol);
+            this.SetParamSimple(map, prefix + "MetadataType", this.MetadataType);
+            this.SetParamSimple(map, prefix + "PathRegex", this.PathRegex);
+            this.SetParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Id
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 节点详细信息
+        /// 节点详细信息。
         /// </summary>
         [JsonProperty("InstanceClusterNode")]
         public InstanceClusterNode[] InstanceClusterNode{ get; set; }

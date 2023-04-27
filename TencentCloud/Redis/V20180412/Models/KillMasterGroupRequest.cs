@@ -25,25 +25,22 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 1.长度8-30位,推荐使用12位以上的密码
-        /// 2.不能以"/"开头
-        /// 3.至少包含两项
-        ///     a.小写字母a-z
-        ///     b.大写字母A-Z
-        ///     c.数字0-9
-        ///     d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+        /// 该参数用于配置指定实例的访问密码。若为免密认证，该参数则无需配置。密码复杂度要求如下所示。
+        /// - 长度8-30位,推荐使用12位以上的密码
+        /// - 不能以"/"开头
+        /// - 至少包含小写字母a-z、大写字母A-Z、数字0-9及其 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 单AZ实例节点信息
+        /// 分片集群的分片 ID。
         /// </summary>
         [JsonProperty("ShardIds")]
         public long?[] ShardIds{ get; set; }

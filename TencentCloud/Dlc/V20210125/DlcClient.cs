@@ -2373,7 +2373,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 获取spark应用列表
+        /// 获取spark应用列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppJobsRequest"/></param>
         /// <returns><see cref="DescribeSparkAppJobsResponse"/></returns>
@@ -2393,7 +2393,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 获取spark应用列表
+        /// 获取spark应用列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppJobsRequest"/></param>
         /// <returns><see cref="DescribeSparkAppJobsResponse"/></returns>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5B9686DD-A89E-35E1-B86C-A9051D571534}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.749</VersionPrefix>
+    <VersionPrefix>3.0.750</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -135,6 +135,8 @@
     <Compile Include="V20180529\Models\DescribeAccessRegionsByDestRegionResponse.cs" />
     <Compile Include="V20180529\Models\DescribeAccessRegionsRequest.cs" />
     <Compile Include="V20180529\Models\DescribeAccessRegionsResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeAuthSignatureRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeAuthSignatureResponse.cs" />
     <Compile Include="V20180529\Models\DescribeBlackHeaderRequest.cs" />
     <Compile Include="V20180529\Models\DescribeBlackHeaderResponse.cs" />
     <Compile Include="V20180529\Models\DescribeCertificateDetailRequest.cs" />

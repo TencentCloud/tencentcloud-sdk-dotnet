@@ -66,6 +66,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("ServiceLogging")]
         public bool? ServiceLogging{ get; set; }
 
+        /// <summary>
+        /// 机器组元数据信息列表
+        /// </summary>
+        [JsonProperty("MetaTags")]
+        public MetaTagInfo[] MetaTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "UpdateStartTime", this.UpdateStartTime);
             this.SetParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
             this.SetParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
+            this.SetParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
         }
     }
 }

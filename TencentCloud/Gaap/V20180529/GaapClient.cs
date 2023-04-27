@@ -1577,6 +1577,46 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 为了防止在下单、询价、后付费开通等过程中确保来源合法以及订单参数没有被篡改过，各个业务方使用下单、询价等场景需调用计费签名接口获取签名，获取签名的请求需带上签名以验证身份，本接口可以获取计费签名。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuthSignatureRequest"/></param>
+        /// <returns><see cref="DescribeAuthSignatureResponse"/></returns>
+        public async Task<DescribeAuthSignatureResponse> DescribeAuthSignature(DescribeAuthSignatureRequest req)
+        {
+             JsonResponseModel<DescribeAuthSignatureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuthSignature");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuthSignatureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为了防止在下单、询价、后付费开通等过程中确保来源合法以及订单参数没有被篡改过，各个业务方使用下单、询价等场景需调用计费签名接口获取签名，获取签名的请求需带上签名以验证身份，本接口可以获取计费签名。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuthSignatureRequest"/></param>
+        /// <returns><see cref="DescribeAuthSignatureResponse"/></returns>
+        public DescribeAuthSignatureResponse DescribeAuthSignatureSync(DescribeAuthSignatureRequest req)
+        {
+             JsonResponseModel<DescribeAuthSignatureResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuthSignature");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuthSignatureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeBlackHeader）用于查询禁用的自定义header 名称
         /// </summary>
         /// <param name="req"><see cref="DescribeBlackHeaderRequest"/></param>

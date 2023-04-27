@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.749</VersionPrefix>
+    <VersionPrefix>3.0.750</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -190,6 +190,7 @@
     <Compile Include="V20201016\Models\MachineInfo.cs" />
     <Compile Include="V20201016\Models\MergePartitionRequest.cs" />
     <Compile Include="V20201016\Models\MergePartitionResponse.cs" />
+    <Compile Include="V20201016\Models\MetaTagInfo.cs" />
     <Compile Include="V20201016\Models\ModifyAlarmNoticeRequest.cs" />
     <Compile Include="V20201016\Models\ModifyAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\ModifyAlarmRequest.cs" />

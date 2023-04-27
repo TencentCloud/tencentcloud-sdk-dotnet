@@ -259,6 +259,20 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
+        /// <summary>
+        /// spark_emr_livy
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataEngineClusterType")]
+        public string DataEngineClusterType{ get; set; }
+
+        /// <summary>
+        /// Spark 3.2-EMR
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataEngineImageVersion")]
+        public string DataEngineImageVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +316,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
             this.SetParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "DataEngineClusterType", this.DataEngineClusterType);
+            this.SetParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
         }
     }
 }

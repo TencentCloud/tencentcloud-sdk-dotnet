@@ -44,7 +44,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+        /// 过滤条件,当前只支持按照ClusterName和云标签进行过滤
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
