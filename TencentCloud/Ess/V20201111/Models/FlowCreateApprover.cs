@@ -85,13 +85,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// 签署前置条件：是否需要阅读全文，默认为不需要
+        /// 合同强制需要阅读全文，无需传此参数
         /// </summary>
         [JsonProperty("IsFullText")]
         public bool? IsFullText{ get; set; }
 
         /// <summary>
-        /// 签署前置条件：阅读时长限制，单位秒，默认为不需要
+        /// 合同的强制预览时间：3~300s，未指定则按合同页数计算
         /// </summary>
         [JsonProperty("PreReadTime")]
         public ulong? PreReadTime{ get; set; }

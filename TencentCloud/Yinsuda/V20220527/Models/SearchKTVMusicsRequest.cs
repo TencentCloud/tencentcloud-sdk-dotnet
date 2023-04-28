@@ -69,6 +69,14 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         [JsonProperty("PlayScene")]
         public string PlayScene{ get; set; }
 
+        /// <summary>
+        /// 物料过滤，取值有：
+        /// <li>Lyrics：含有歌词；</li>
+        /// <li>Midi：含有音高线。</li>
+        /// </summary>
+        [JsonProperty("MaterialFilters")]
+        public string[] MaterialFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +90,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "RightFilters.", this.RightFilters);
             this.SetParamSimple(map, prefix + "PlayScene", this.PlayScene);
+            this.SetParamArraySimple(map, prefix + "MaterialFilters.", this.MaterialFilters);
         }
     }
 }

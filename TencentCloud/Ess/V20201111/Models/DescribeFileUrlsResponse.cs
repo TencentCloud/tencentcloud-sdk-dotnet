@@ -25,7 +25,8 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// URL信息
+        /// 文件URL信息；
+        /// 链接不是永久链接，有效期5分钟后链接失效。
         /// </summary>
         [JsonProperty("FileUrls")]
         public FileUrl[] FileUrls{ get; set; }

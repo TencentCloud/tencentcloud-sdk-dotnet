@@ -1735,6 +1735,166 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 本接口使用后量子密码算法密钥，解密密文，并得到明文数据。
+        /// </summary>
+        /// <param name="req"><see cref="PostQuantumCryptoDecryptRequest"/></param>
+        /// <returns><see cref="PostQuantumCryptoDecryptResponse"/></returns>
+        public async Task<PostQuantumCryptoDecryptResponse> PostQuantumCryptoDecrypt(PostQuantumCryptoDecryptRequest req)
+        {
+             JsonResponseModel<PostQuantumCryptoDecryptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PostQuantumCryptoDecrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoDecryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口使用后量子密码算法密钥，解密密文，并得到明文数据。
+        /// </summary>
+        /// <param name="req"><see cref="PostQuantumCryptoDecryptRequest"/></param>
+        /// <returns><see cref="PostQuantumCryptoDecryptResponse"/></returns>
+        public PostQuantumCryptoDecryptResponse PostQuantumCryptoDecryptSync(PostQuantumCryptoDecryptRequest req)
+        {
+             JsonResponseModel<PostQuantumCryptoDecryptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PostQuantumCryptoDecrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoDecryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口使用后量子密码算法密钥，可加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作。
+        /// </summary>
+        /// <param name="req"><see cref="PostQuantumCryptoEncryptRequest"/></param>
+        /// <returns><see cref="PostQuantumCryptoEncryptResponse"/></returns>
+        public async Task<PostQuantumCryptoEncryptResponse> PostQuantumCryptoEncrypt(PostQuantumCryptoEncryptRequest req)
+        {
+             JsonResponseModel<PostQuantumCryptoEncryptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PostQuantumCryptoEncrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoEncryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口使用后量子密码算法密钥，可加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作。
+        /// </summary>
+        /// <param name="req"><see cref="PostQuantumCryptoEncryptRequest"/></param>
+        /// <returns><see cref="PostQuantumCryptoEncryptResponse"/></returns>
+        public PostQuantumCryptoEncryptResponse PostQuantumCryptoEncryptSync(PostQuantumCryptoEncryptRequest req)
+        {
+             JsonResponseModel<PostQuantumCryptoEncryptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PostQuantumCryptoEncrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoEncryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用后量子密码算法签名验签密钥进行签名。
+        /// </summary>
+        /// <param name="req"><see cref="PostQuantumCryptoSignRequest"/></param>
+        /// <returns><see cref="PostQuantumCryptoSignResponse"/></returns>
+        public async Task<PostQuantumCryptoSignResponse> PostQuantumCryptoSign(PostQuantumCryptoSignRequest req)
+        {
+             JsonResponseModel<PostQuantumCryptoSignResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PostQuantumCryptoSign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoSignResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用后量子密码算法签名验签密钥进行签名。
+        /// </summary>
+        /// <param name="req"><see cref="PostQuantumCryptoSignRequest"/></param>
+        /// <returns><see cref="PostQuantumCryptoSignResponse"/></returns>
+        public PostQuantumCryptoSignResponse PostQuantumCryptoSignSync(PostQuantumCryptoSignRequest req)
+        {
+             JsonResponseModel<PostQuantumCryptoSignResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PostQuantumCryptoSign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoSignResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用后量子密码算法密钥对签名进行验证。
+        /// </summary>
+        /// <param name="req"><see cref="PostQuantumCryptoVerifyRequest"/></param>
+        /// <returns><see cref="PostQuantumCryptoVerifyResponse"/></returns>
+        public async Task<PostQuantumCryptoVerifyResponse> PostQuantumCryptoVerify(PostQuantumCryptoVerifyRequest req)
+        {
+             JsonResponseModel<PostQuantumCryptoVerifyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PostQuantumCryptoVerify");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoVerifyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用后量子密码算法密钥对签名进行验证。
+        /// </summary>
+        /// <param name="req"><see cref="PostQuantumCryptoVerifyRequest"/></param>
+        /// <returns><see cref="PostQuantumCryptoVerifyResponse"/></returns>
+        public PostQuantumCryptoVerifyResponse PostQuantumCryptoVerifySync(PostQuantumCryptoVerifyRequest req)
+        {
+             JsonResponseModel<PostQuantumCryptoVerifyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PostQuantumCryptoVerify");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoVerifyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 使用指定CMK对密文重新加密。
         /// </summary>
         /// <param name="req"><see cref="ReEncryptRequest"/></param>

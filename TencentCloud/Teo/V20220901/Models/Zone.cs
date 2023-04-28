@@ -155,10 +155,15 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 是否伪站点，取值有：
         /// <li> 0：非伪站点；</li>
         /// <li> 1：伪站点。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFake")]
         public long? IsFake{ get; set; }
+
+        /// <summary>
+        /// 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+        /// </summary>
+        [JsonProperty("LockStatus")]
+        public string LockStatus{ get; set; }
 
 
         /// <summary>
@@ -185,6 +190,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
             this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
             this.SetParamSimple(map, prefix + "IsFake", this.IsFake);
+            this.SetParamSimple(map, prefix + "LockStatus", this.LockStatus);
         }
     }
 }

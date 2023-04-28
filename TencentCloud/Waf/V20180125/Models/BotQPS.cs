@@ -54,6 +54,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("MaxBotQPS")]
         public ulong? MaxBotQPS{ get; set; }
 
+        /// <summary>
+        /// 续费标志
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public ulong? RenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "MaxBotQPS", this.MaxBotQPS);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         }
     }
 }

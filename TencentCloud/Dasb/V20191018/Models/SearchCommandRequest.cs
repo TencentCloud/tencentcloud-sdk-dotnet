@@ -79,6 +79,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string Cmd{ get; set; }
 
         /// <summary>
+        /// Cmd字段是前端传值是否进行base64.
+        /// 0:否，1：是
+        /// </summary>
+        [JsonProperty("Encoding")]
+        public ulong? Encoding{ get; set; }
+
+        /// <summary>
         /// 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
         /// </summary>
         [JsonProperty("AuditAction")]
@@ -111,6 +118,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
             this.SetParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
             this.SetParamSimple(map, prefix + "Cmd", this.Cmd);
+            this.SetParamSimple(map, prefix + "Encoding", this.Encoding);
             this.SetParamArraySimple(map, prefix + "AuditAction.", this.AuditAction);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

@@ -227,6 +227,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("BizParamsString")]
         public string BizParamsString{ get; set; }
 
+        /// <summary>
+        /// 修改时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModifiedTime")]
+        public long? ModifiedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +269,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ParamsString", this.ParamsString);
             this.SetParamSimple(map, prefix + "BizParamsString", this.BizParamsString);
+            this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
         }
     }
 }

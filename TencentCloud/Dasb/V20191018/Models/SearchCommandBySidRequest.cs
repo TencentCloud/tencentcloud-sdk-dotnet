@@ -37,6 +37,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string Cmd{ get; set; }
 
         /// <summary>
+        /// Cmd字段是前端传值是否进行base64.
+        /// 0:否，1：是
+        /// </summary>
+        [JsonProperty("Encoding")]
+        public ulong? Encoding{ get; set; }
+
+        /// <summary>
         /// 偏移量
         /// </summary>
         [JsonProperty("Offset")]
@@ -62,6 +69,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         {
             this.SetParamSimple(map, prefix + "Sid", this.Sid);
             this.SetParamSimple(map, prefix + "Cmd", this.Cmd);
+            this.SetParamSimple(map, prefix + "Encoding", this.Encoding);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "AuditAction.", this.AuditAction);

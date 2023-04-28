@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 计费类型：
+        /// 计费类型
         /// flux：流量计费
         /// bandwidth：带宽计费
         /// request：请求数计费
@@ -37,7 +37,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string PayType{ get; set; }
 
         /// <summary>
-        /// 计费周期：
+        /// 计费周期
         /// day：日结计费
         /// month：月结计费
         /// hour：小时结计费
@@ -46,6 +46,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string BillingCycle{ get; set; }
 
         /// <summary>
+        /// 统计类型
         /// monthMax：日峰值月平均，月结模式
         /// day95：日 95 带宽，月结模式
         /// month95：月95带宽，月结模式
@@ -56,7 +57,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string StatType{ get; set; }
 
         /// <summary>
-        /// 境外计费类型：
+        /// 计费区域
         /// all：全地区统一计费
         /// multiple：分地区计费
         /// </summary>
@@ -64,7 +65,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string RegionType{ get; set; }
 
         /// <summary>
-        /// 当前生效计费类型：
+        /// 当前生效计费类型
         /// flux：流量计费
         /// bandwidth：带宽计费
         /// request：请求数计费

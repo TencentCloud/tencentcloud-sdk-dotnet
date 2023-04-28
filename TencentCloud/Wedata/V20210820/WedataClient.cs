@@ -3847,6 +3847,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 任务运维列表组合条件查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOperateTasksRequest"/></param>
+        /// <returns><see cref="DescribeOperateTasksResponse"/></returns>
+        public async Task<DescribeOperateTasksResponse> DescribeOperateTasks(DescribeOperateTasksRequest req)
+        {
+             JsonResponseModel<DescribeOperateTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOperateTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOperateTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 任务运维列表组合条件查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOperateTasksRequest"/></param>
+        /// <returns><see cref="DescribeOperateTasksResponse"/></returns>
+        public DescribeOperateTasksResponse DescribeOperateTasksSync(DescribeOperateTasksRequest req)
+        {
+             JsonResponseModel<DescribeOperateTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOperateTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOperateTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询全量函数
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationalFunctionsRequest"/></param>

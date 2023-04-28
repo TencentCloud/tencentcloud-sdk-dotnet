@@ -25,17 +25,17 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 封禁模组启用状态
-        /// </summary>
-        [JsonProperty("DefenseStatus")]
-        public long? DefenseStatus{ get; set; }
-
-        /// <summary>
         /// 封禁属性标签
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
+
+        /// <summary>
+        /// 封禁模组启用状态
+        /// </summary>
+        [JsonProperty("DefenseStatus")]
+        public long? DefenseStatus{ get; set; }
 
         /// <summary>
         /// 最后更新时间
@@ -49,8 +49,8 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DefenseStatus", this.DefenseStatus);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "DefenseStatus", this.DefenseStatus);
             this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
         }
     }

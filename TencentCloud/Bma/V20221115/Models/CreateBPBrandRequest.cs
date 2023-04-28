@@ -37,6 +37,12 @@ namespace TencentCloud.Bma.V20221115.Models
         public string CompanyName{ get; set; }
 
         /// <summary>
+        /// 品牌logo
+        /// </summary>
+        [JsonProperty("BrandLogo")]
+        public string BrandLogo{ get; set; }
+
+        /// <summary>
         /// 联系电话
         /// </summary>
         [JsonProperty("Phone")]
@@ -110,6 +116,7 @@ namespace TencentCloud.Bma.V20221115.Models
         {
             this.SetParamSimple(map, prefix + "BrandName", this.BrandName);
             this.SetParamSimple(map, prefix + "CompanyName", this.CompanyName);
+            this.SetParamSimple(map, prefix + "BrandLogo", this.BrandLogo);
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "License", this.License);
             this.SetParamSimple(map, prefix + "Authorization", this.Authorization);

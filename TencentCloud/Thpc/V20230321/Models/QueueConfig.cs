@@ -31,13 +31,13 @@ namespace TencentCloud.Thpc.V20230321.Models
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// 队列中弹性节点数量最小值。取值范围0～200。
+        /// 队列中弹性节点数量最小值。默认值：0。取值范围：0～200。
         /// </summary>
         [JsonProperty("MinSize")]
         public ulong? MinSize{ get; set; }
 
         /// <summary>
-        /// 队列中弹性节点数量最大值。取值范围0～200。
+        /// 队列中弹性节点数量最大值。默认值：10。取值范围：0～200。
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }

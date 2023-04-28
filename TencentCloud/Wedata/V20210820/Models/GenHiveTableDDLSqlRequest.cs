@@ -144,6 +144,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AddDeleteFiles")]
         public long? AddDeleteFiles{ get; set; }
 
+        /// <summary>
+        /// 下游节点数据源ID
+        /// </summary>
+        [JsonProperty("TargetDatasourceId")]
+        public string TargetDatasourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "AddEqualityDeletes", this.AddEqualityDeletes);
             this.SetParamSimple(map, prefix + "AddPositionDeletes", this.AddPositionDeletes);
             this.SetParamSimple(map, prefix + "AddDeleteFiles", this.AddDeleteFiles);
+            this.SetParamSimple(map, prefix + "TargetDatasourceId", this.TargetDatasourceId);
         }
     }
 }

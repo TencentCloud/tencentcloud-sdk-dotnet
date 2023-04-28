@@ -66,6 +66,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Operator")]
         public ulong? Operator{ get; set; }
 
+        /// <summary>
+        /// 告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmIndicatorUnit")]
+        public string AlarmIndicatorUnit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
             this.SetParamSimple(map, prefix + "EstimatedTime", this.EstimatedTime);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "AlarmIndicatorUnit", this.AlarmIndicatorUnit);
         }
     }
 }

@@ -28,7 +28,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// 指定服务地域查询
         /// mainland：境内计费方式查询
         /// overseas：境外计费方式查询
-        /// 未填充时默认为 mainland
+        /// global：全球计费方式查询
+        /// 未填充时，默认为 mainland
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
@@ -39,6 +40,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
+        /// <summary>
+        /// 指定资源包查询
+        /// flux：流量包
+        /// https：HTTPS请求包
+        /// 未填充时，默认为 flux
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +57,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

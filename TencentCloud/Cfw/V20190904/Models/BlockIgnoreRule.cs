@@ -129,6 +129,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Country")]
         public string Country{ get; set; }
 
+        /// <summary>
+        /// 备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +157,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "UniqueId", this.UniqueId);
             this.SetParamSimple(map, prefix + "MatchTimes", this.MatchTimes);
             this.SetParamSimple(map, prefix + "Country", this.Country);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
         }
     }
 }

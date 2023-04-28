@@ -36,6 +36,14 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("CmdList")]
         public string CmdList{ get; set; }
 
+        /// <summary>
+        /// 标识cmdlist字段前端是否为base64加密传值.
+        /// 0:表示非base64加密
+        /// 1:表示是base64加密
+        /// </summary>
+        [JsonProperty("Encoding")]
+        public ulong? Encoding{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +52,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "CmdList", this.CmdList);
+            this.SetParamSimple(map, prefix + "Encoding", this.Encoding);
         }
     }
 }

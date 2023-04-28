@@ -25,6 +25,12 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
+        /// 过滤参数
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
         /// 如果是hive这里写rpc，如果是其他类型不传
         /// </summary>
         [JsonProperty("ConnectionType")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "ConnectionType", this.ConnectionType);
         }
     }

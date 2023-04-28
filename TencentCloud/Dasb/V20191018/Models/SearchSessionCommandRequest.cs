@@ -49,6 +49,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
+        /// Cmd字段前端是否做base64加密
+        /// 0：否，1：是
+        /// </summary>
+        [JsonProperty("Encoding")]
+        public ulong? Encoding{ get; set; }
+
+        /// <summary>
         /// 结束时间
         /// </summary>
         [JsonProperty("EndTime")]
@@ -64,6 +71,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Encoding", this.Encoding);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }

@@ -49,13 +49,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? RuleType{ get; set; }
 
         /// <summary>
-        /// 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
+        /// 排序类型：desc降序，asc正序
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序类型：desc降序，asc正序
+        /// 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

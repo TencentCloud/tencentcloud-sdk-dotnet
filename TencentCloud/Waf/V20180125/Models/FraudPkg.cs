@@ -73,6 +73,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("UsedNum")]
         public long? UsedNum{ get; set; }
 
+        /// <summary>
+        /// 续费标志
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public ulong? RenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "InquireNum", this.InquireNum);
             this.SetParamSimple(map, prefix + "UsedNum", this.UsedNum);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         }
     }
 }

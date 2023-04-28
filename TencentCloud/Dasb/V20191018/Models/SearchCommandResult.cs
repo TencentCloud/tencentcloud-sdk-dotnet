@@ -90,6 +90,62 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("TimeOffset")]
         public ulong? TimeOffset{ get; set; }
 
+        /// <summary>
+        /// 账号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Account")]
+        public string Account{ get; set; }
+
+        /// <summary>
+        /// source ip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FromIp")]
+        public string FromIp{ get; set; }
+
+        /// <summary>
+        /// 该命令所属会话的会话开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessTime")]
+        public string SessTime{ get; set; }
+
+        /// <summary>
+        /// 复核时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfirmTime")]
+        public string ConfirmTime{ get; set; }
+
+        /// <summary>
+        /// 部门id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserDepartmentId")]
+        public string UserDepartmentId{ get; set; }
+
+        /// <summary>
+        /// 用户部门名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserDepartmentName")]
+        public string UserDepartmentName{ get; set; }
+
+        /// <summary>
+        /// 设备部门id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceDepartmentId")]
+        public string DeviceDepartmentId{ get; set; }
+
+        /// <summary>
+        /// 设备部门名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceDepartmentName")]
+        public string DeviceDepartmentName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +163,14 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "Sid", this.Sid);
             this.SetParamSimple(map, prefix + "TimeOffset", this.TimeOffset);
+            this.SetParamSimple(map, prefix + "Account", this.Account);
+            this.SetParamSimple(map, prefix + "FromIp", this.FromIp);
+            this.SetParamSimple(map, prefix + "SessTime", this.SessTime);
+            this.SetParamSimple(map, prefix + "ConfirmTime", this.ConfirmTime);
+            this.SetParamSimple(map, prefix + "UserDepartmentId", this.UserDepartmentId);
+            this.SetParamSimple(map, prefix + "UserDepartmentName", this.UserDepartmentName);
+            this.SetParamSimple(map, prefix + "DeviceDepartmentId", this.DeviceDepartmentId);
+            this.SetParamSimple(map, prefix + "DeviceDepartmentName", this.DeviceDepartmentName);
         }
     }
 }

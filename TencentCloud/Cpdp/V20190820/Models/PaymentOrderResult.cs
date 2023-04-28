@@ -154,6 +154,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }
 
+        /// <summary>
+        /// 资金账户字类型: WECHATPAY_ACCOUNT 微信零钱, BANK_ACCOUNT 银行卡
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FundingAccountSubType")]
+        public string FundingAccountSubType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +186,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "AdditionalTaxSum", this.AdditionalTaxSum);
             this.SetParamSimple(map, prefix + "AdditionalTaxItem", this.AdditionalTaxItem);
             this.SetParamSimple(map, prefix + "FailReason", this.FailReason);
+            this.SetParamSimple(map, prefix + "FundingAccountSubType", this.FundingAccountSubType);
         }
     }
 }

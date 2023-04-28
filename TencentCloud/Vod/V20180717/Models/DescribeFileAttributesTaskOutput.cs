@@ -30,6 +30,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
+        /// <summary>
+        /// 媒体文件的 Sha1 值。
+        /// </summary>
+        [JsonProperty("Sha1")]
+        public string Sha1{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Md5", this.Md5);
+            this.SetParamSimple(map, prefix + "Sha1", this.Sha1);
         }
     }
 }

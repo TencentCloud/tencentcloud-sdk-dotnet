@@ -69,7 +69,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string SnapshotNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 鉴黄回调 URL，
+        /// 鉴黄回调 URL ，
         /// 相关协议文档：[事件消息通知](/document/product/267/32741)。
         /// </summary>
         [JsonProperty("PornCensorshipNotifyUrl")]
@@ -94,6 +94,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PushExceptionNotifyUrl")]
         public string PushExceptionNotifyUrl{ get; set; }
 
+        /// <summary>
+        /// 音频审核回调 URL。
+        /// </summary>
+        [JsonProperty("AudioAuditNotifyUrl")]
+        public string AudioAuditNotifyUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +116,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
             this.SetParamSimple(map, prefix + "StreamMixNotifyUrl", this.StreamMixNotifyUrl);
             this.SetParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
+            this.SetParamSimple(map, prefix + "AudioAuditNotifyUrl", this.AudioAuditNotifyUrl);
         }
     }
 }

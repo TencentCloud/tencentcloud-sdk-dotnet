@@ -171,6 +171,13 @@ namespace TencentCloud.Bma.V20221115.Models
         [JsonProperty("Snapshot")]
         public string Snapshot{ get; set; }
 
+        /// <summary>
+        /// 账户资源状态：0-不可用 1-可用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccountStatus")]
+        public long? AccountStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +205,7 @@ namespace TencentCloud.Bma.V20221115.Models
             this.SetParamSimple(map, prefix + "InsertTime", this.InsertTime);
             this.SetParamSimple(map, prefix + "CertificationStatus", this.CertificationStatus);
             this.SetParamSimple(map, prefix + "Snapshot", this.Snapshot);
+            this.SetParamSimple(map, prefix + "AccountStatus", this.AccountStatus);
         }
     }
 }

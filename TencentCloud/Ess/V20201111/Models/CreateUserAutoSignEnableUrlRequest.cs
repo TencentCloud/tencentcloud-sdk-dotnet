@@ -50,7 +50,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UrlType{ get; set; }
 
         /// <summary>
-        /// 通知类型，默认不填为不通知开通方，填写 SMS 为短息通知。
+        /// 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }

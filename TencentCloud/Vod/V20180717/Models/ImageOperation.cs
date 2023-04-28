@@ -26,8 +26,9 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 图片处理类型。可选类型有：
-        /// <li>Scale : 图片缩略处理。</li>
-        /// <li>CenterCut : 图片裁剪处理。</li>
+        /// <li>Scale : 图片缩略处理；</li>
+        /// <li>CenterCut : 图片裁剪处理；</li>
+        /// <li>Blur : 图片模糊处理。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

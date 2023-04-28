@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.750</VersionPrefix>
+    <VersionPrefix>3.0.751</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -261,6 +261,8 @@
     <Compile Include="V20210820\Models\DescribeMonitorsByPageResponse.cs" />
     <Compile Include="V20210820\Models\DescribeOfflineTaskTokenRequest.cs" />
     <Compile Include="V20210820\Models\DescribeOfflineTaskTokenResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeOperateTasksRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeOperateTasksResponse.cs" />
     <Compile Include="V20210820\Models\DescribeOrganizationalFunctionsRequest.cs" />
     <Compile Include="V20210820\Models\DescribeOrganizationalFunctionsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeProdTasksRequest.cs" />
@@ -559,6 +561,7 @@
     <Compile Include="V20210820\Models\TaskExtInfo.cs" />
     <Compile Include="V20210820\Models\TaskInfoData.cs" />
     <Compile Include="V20210820\Models\TaskInfoDataPage.cs" />
+    <Compile Include="V20210820\Models\TaskInfoPage.cs" />
     <Compile Include="V20210820\Models\TaskInnerInfo.cs" />
     <Compile Include="V20210820\Models\TaskInstanceDetail.cs" />
     <Compile Include="V20210820\Models\TaskInstanceInfo.cs" />
