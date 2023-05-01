@@ -413,6 +413,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 微工卡开通预核身接口
+        /// </summary>
+        /// <param name="req"><see cref="ApplyFlexWechatPreAuthRequest"/></param>
+        /// <returns><see cref="ApplyFlexWechatPreAuthResponse"/></returns>
+        public async Task<ApplyFlexWechatPreAuthResponse> ApplyFlexWechatPreAuth(ApplyFlexWechatPreAuthRequest req)
+        {
+             JsonResponseModel<ApplyFlexWechatPreAuthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyFlexWechatPreAuth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyFlexWechatPreAuthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 微工卡开通预核身接口
+        /// </summary>
+        /// <param name="req"><see cref="ApplyFlexWechatPreAuthRequest"/></param>
+        /// <returns><see cref="ApplyFlexWechatPreAuthResponse"/></returns>
+        public ApplyFlexWechatPreAuthResponse ApplyFlexWechatPreAuthSync(ApplyFlexWechatPreAuthRequest req)
+        {
+             JsonResponseModel<ApplyFlexWechatPreAuthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyFlexWechatPreAuth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyFlexWechatPreAuthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 云企付-申请单笔交易回单
         /// </summary>
         /// <param name="req"><see cref="ApplyOpenBankOrderDetailReceiptRequest"/></param>
@@ -5464,6 +5504,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryFlexSettlementOrderList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexSettlementOrderListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询微工卡核身结果
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexWechatAuthResultRequest"/></param>
+        /// <returns><see cref="QueryFlexWechatAuthResultResponse"/></returns>
+        public async Task<QueryFlexWechatAuthResultResponse> QueryFlexWechatAuthResult(QueryFlexWechatAuthResultRequest req)
+        {
+             JsonResponseModel<QueryFlexWechatAuthResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexWechatAuthResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexWechatAuthResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询微工卡核身结果
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexWechatAuthResultRequest"/></param>
+        /// <returns><see cref="QueryFlexWechatAuthResultResponse"/></returns>
+        public QueryFlexWechatAuthResultResponse QueryFlexWechatAuthResultSync(QueryFlexWechatAuthResultRequest req)
+        {
+             JsonResponseModel<QueryFlexWechatAuthResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexWechatAuthResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexWechatAuthResultResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

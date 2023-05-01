@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例分片列表信息
+        /// 实例分片列表信息，包括：节点信息、节点ID、Key数量、使用容量、容量倾斜率等信息。
         /// </summary>
         [JsonProperty("InstanceShards")]
         public InstanceClusterShard[] InstanceShards{ get; set; }
 
         /// <summary>
-        /// 实例分片节点总数
+        /// 实例分片节点数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

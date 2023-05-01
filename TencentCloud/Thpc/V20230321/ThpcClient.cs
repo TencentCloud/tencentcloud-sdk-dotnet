@@ -627,6 +627,46 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInitNodeScriptsRequest"/></param>
+        /// <returns><see cref="ModifyInitNodeScriptsResponse"/></returns>
+        public async Task<ModifyInitNodeScriptsResponse> ModifyInitNodeScripts(ModifyInitNodeScriptsRequest req)
+        {
+             JsonResponseModel<ModifyInitNodeScriptsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInitNodeScripts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInitNodeScriptsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInitNodeScriptsRequest"/></param>
+        /// <returns><see cref="ModifyInitNodeScriptsResponse"/></returns>
+        public ModifyInitNodeScriptsResponse ModifyInitNodeScriptsSync(ModifyInitNodeScriptsRequest req)
+        {
+             JsonResponseModel<ModifyInitNodeScriptsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInitNodeScripts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInitNodeScriptsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
         /// </summary>
         /// <param name="req"><see cref="SetAutoScalingConfigurationRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.751</VersionPrefix>
+    <VersionPrefix>3.0.752</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,8 +97,11 @@
     <Compile Include="V20230321\Models\LoginSettings.cs" />
     <Compile Include="V20230321\Models\ManagerNode.cs" />
     <Compile Include="V20230321\Models\ManagerNodeOverview.cs" />
+    <Compile Include="V20230321\Models\ModifyInitNodeScriptsRequest.cs" />
+    <Compile Include="V20230321\Models\ModifyInitNodeScriptsResponse.cs" />
     <Compile Include="V20230321\Models\NodeActivity.cs" />
     <Compile Include="V20230321\Models\NodeOverview.cs" />
+    <Compile Include="V20230321\Models\NodeScript.cs" />
     <Compile Include="V20230321\Models\Placement.cs" />
     <Compile Include="V20230321\Models\QueueConfig.cs" />
     <Compile Include="V20230321\Models\QueueConfigOverview.cs" />

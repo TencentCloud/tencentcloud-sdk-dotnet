@@ -31,19 +31,20 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，取Limit整数倍。
+        /// 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 实例 ID，如：crs-6ubhgouj。
+        /// 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+        /// 
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例排序依据，枚举值如下所示：<ul><li>projectId：项目ID。</li><li>createtime：实例创建时间。</li><li>instancename：实例名称。</li><li>type：实例类型。</li><li>curDeadline：实例到期时间。</li></ul>
+        /// 实例列表排序依据，枚举值如下所示：<ul><li>projectId：依据项目ID排序。</li><li>createtime：依据实例创建时间排序。</li><li>instancename：依据实例名称排序。</li><li>type：依据实例类型排序。</li><li>curDeadline：依据实例到期时间排序。</li></ul>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
@@ -121,7 +122,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string EngineName{ get; set; }
 
         /// <summary>
-        /// 续费模式。<ul><li>0：默认状态（手动续费）。</li><li>1：自动续费。</li><li>2：明确不自动续费。</ul>
+        /// 续费模式。<ul><li>0：手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long?[] AutoRenew{ get; set; }
@@ -169,7 +170,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] TagKeys{ get; set; }
 
         /// <summary>
-        /// 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。<ul><li>local：本地盘版。</li><li>cloud：云盘版。</li><li>cdc：独享集群版。</li></ul>
+        /// 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。<ul><li>local：本地盘版。</li><li>cdc：独享集群版。</li></ul>
         /// </summary>
         [JsonProperty("ProductVersions")]
         public string[] ProductVersions{ get; set; }

@@ -61,6 +61,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? SecondaryPrivateIpAddressCount{ get; set; }
 
         /// <summary>
+        /// IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+        /// </summary>
+        [JsonProperty("QosLevel")]
+        public string QosLevel{ get; set; }
+
+        /// <summary>
         /// 指定绑定的安全组，例如：['sg-1dd51d']。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
@@ -96,6 +102,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
             this.SetParamSimple(map, prefix + "SecondaryPrivateIpAddressCount", this.SecondaryPrivateIpAddressCount);
+            this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);

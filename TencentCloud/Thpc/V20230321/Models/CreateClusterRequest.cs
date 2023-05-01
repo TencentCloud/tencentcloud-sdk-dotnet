@@ -143,6 +143,12 @@ namespace TencentCloud.Thpc.V20230321.Models
         [JsonProperty("AutoScalingType")]
         public string AutoScalingType{ get; set; }
 
+        /// <summary>
+        /// 节点初始化脚本信息列表。
+        /// </summary>
+        [JsonProperty("InitNodeScripts")]
+        public NodeScript[] InitNodeScripts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +174,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamSimple(map, prefix + "LoginNodeCount", this.LoginNodeCount);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AutoScalingType", this.AutoScalingType);
+            this.SetParamArrayObj(map, prefix + "InitNodeScripts.", this.InitNodeScripts);
         }
     }
 }

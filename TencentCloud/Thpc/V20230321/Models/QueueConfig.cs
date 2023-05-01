@@ -84,6 +84,12 @@ namespace TencentCloud.Thpc.V20230321.Models
         [JsonProperty("ExpansionNodeConfigs")]
         public ExpansionNodeConfig[] ExpansionNodeConfigs{ get; set; }
 
+        /// <summary>
+        /// 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+        /// </summary>
+        [JsonProperty("DesiredIdleNodeCapacity")]
+        public long? DesiredIdleNodeCapacity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamArrayObj(map, prefix + "ExpansionNodeConfigs.", this.ExpansionNodeConfigs);
+            this.SetParamSimple(map, prefix + "DesiredIdleNodeCapacity", this.DesiredIdleNodeCapacity);
         }
     }
 }

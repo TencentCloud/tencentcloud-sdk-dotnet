@@ -1653,7 +1653,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 获取集群版实例分片信息
+        /// 本接口（DescribeInstanceShards）用于获取集群架构实例的分片信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceShardsRequest"/></param>
         /// <returns><see cref="DescribeInstanceShardsResponse"/></returns>
@@ -1673,7 +1673,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 获取集群版实例分片信息
+        /// 本接口（DescribeInstanceShards）用于获取集群架构实例的分片信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceShardsRequest"/></param>
         /// <returns><see cref="DescribeInstanceShardsResponse"/></returns>
@@ -1733,7 +1733,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis实例列表
+        /// 本接口（DescribeInstances）用于查询Redis实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -1753,7 +1753,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis实例列表
+        /// 本接口（DescribeInstances）用于查询Redis实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
