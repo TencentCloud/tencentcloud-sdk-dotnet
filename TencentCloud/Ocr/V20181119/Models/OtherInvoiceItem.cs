@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ms.V20180408.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PluginInfo : AbstractModel
+    public class OtherInvoiceItem : AbstractModel
     {
         
         /// <summary>
-        /// 插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
+        /// 票面key值
         /// </summary>
-        [JsonProperty("PluginType")]
-        public ulong? PluginType{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 插件名称
+        /// 票面value值
         /// </summary>
-        [JsonProperty("PluginName")]
-        public string PluginName{ get; set; }
-
-        /// <summary>
-        /// 插件描述
-        /// </summary>
-        [JsonProperty("PluginDesc")]
-        public string PluginDesc{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PluginType", this.PluginType);
-            this.SetParamSimple(map, prefix + "PluginName", this.PluginName);
-            this.SetParamSimple(map, prefix + "PluginDesc", this.PluginDesc);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

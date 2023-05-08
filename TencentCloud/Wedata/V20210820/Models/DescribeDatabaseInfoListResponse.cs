@@ -25,6 +25,12 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
+        /// 数据库列表
+        /// </summary>
+        [JsonProperty("DatabaseInfo")]
+        public DatabaseInfo[] DatabaseInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "DatabaseInfo.", this.DatabaseInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

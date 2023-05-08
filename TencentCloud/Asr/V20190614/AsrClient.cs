@@ -665,6 +665,46 @@ namespace TencentCloud.Asr.V20190614
         }
 
         /// <summary>
+        /// 通过自学习模型id获取自学习模型详细信息
+        /// </summary>
+        /// <param name="req"><see cref="GetModelInfoRequest"/></param>
+        /// <returns><see cref="GetModelInfoResponse"/></returns>
+        public async Task<GetModelInfoResponse> GetModelInfo(GetModelInfoRequest req)
+        {
+             JsonResponseModel<GetModelInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetModelInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetModelInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过自学习模型id获取自学习模型详细信息
+        /// </summary>
+        /// <param name="req"><see cref="GetModelInfoRequest"/></param>
+        /// <returns><see cref="GetModelInfoResponse"/></returns>
+        public GetModelInfoResponse GetModelInfoSync(GetModelInfoRequest req)
+        {
+             JsonResponseModel<GetModelInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetModelInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetModelInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用户通过该接口可以更新自学习模型，如模型名称、模型类型、模型语料。
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomizationRequest"/></param>

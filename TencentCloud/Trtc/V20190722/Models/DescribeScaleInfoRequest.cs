@@ -39,7 +39,7 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
-        /// 注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需晚于20号0点）。
+        /// 注意：按天统计，结束时间大于前一天，否则查询数据为空（如：需查询20号数据，结束时间需晚于20号0点）。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

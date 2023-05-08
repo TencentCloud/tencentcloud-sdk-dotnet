@@ -414,7 +414,6 @@ namespace TencentCloud.Waf.V20180125
 
         /// <summary>
         /// 删除域名规则白名单
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DeleteDomainWhiteRulesRequest"/></param>
         /// <returns><see cref="DeleteDomainWhiteRulesResponse"/></returns>
@@ -435,7 +434,6 @@ namespace TencentCloud.Waf.V20180125
 
         /// <summary>
         /// 删除域名规则白名单
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DeleteDomainWhiteRulesRequest"/></param>
         /// <returns><see cref="DeleteDomainWhiteRulesResponse"/></returns>

@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ms.V20180408.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeScanResultsResponse : AbstractModel
+    public class VatRollItem : AbstractModel
     {
         
         /// <summary>
-        /// 批量扫描的app结果集
+        /// 项目名称
         /// </summary>
-        [JsonProperty("ScanSet")]
-        public ScanSetInfo[] ScanSet{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 批量扫描结果的个数
+        /// 数量
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("Quantity")]
+        public string Quantity{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 单价
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Price")]
+        public string Price{ get; set; }
+
+        /// <summary>
+        /// 金额
+        /// </summary>
+        [JsonProperty("Total")]
+        public string Total{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ScanSet.", this.ScanSet);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Quantity", this.Quantity);
+            this.SetParamSimple(map, prefix + "Price", this.Price);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Ssa.V20180608.Models
         public long? Fid{ get; set; }
 
         /// <summary>
-        /// 标签名称
+        /// 标签名称字段
         /// </summary>
         [JsonProperty("Fname")]
         public string Fname{ get; set; }

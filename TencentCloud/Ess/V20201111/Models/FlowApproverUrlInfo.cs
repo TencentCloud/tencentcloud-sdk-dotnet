@@ -25,18 +25,18 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 签署链接，注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+        /// 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignUrl")]
         public string SignUrl{ get; set; }
 
         /// <summary>
-        /// 签署人手机号
+        /// 签署人类型 1-个人
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ApproverMobile")]
-        public string ApproverMobile{ get; set; }
+        [JsonProperty("ApproverType")]
+        public long? ApproverType{ get; set; }
 
         /// <summary>
         /// 签署人姓名
@@ -46,11 +46,18 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverName{ get; set; }
 
         /// <summary>
-        /// 签署人类型 1-个人
+        /// 签署人手机号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ApproverType")]
-        public long? ApproverType{ get; set; }
+        [JsonProperty("ApproverMobile")]
+        public string ApproverMobile{ get; set; }
+
+        /// <summary>
+        /// 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LongUrl")]
+        public string LongUrl{ get; set; }
 
 
         /// <summary>
@@ -59,9 +66,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SignUrl", this.SignUrl);
-            this.SetParamSimple(map, prefix + "ApproverMobile", this.ApproverMobile);
-            this.SetParamSimple(map, prefix + "ApproverName", this.ApproverName);
             this.SetParamSimple(map, prefix + "ApproverType", this.ApproverType);
+            this.SetParamSimple(map, prefix + "ApproverName", this.ApproverName);
+            this.SetParamSimple(map, prefix + "ApproverMobile", this.ApproverMobile);
+            this.SetParamSimple(map, prefix + "LongUrl", this.LongUrl);
         }
     }
 }

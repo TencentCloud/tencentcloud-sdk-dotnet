@@ -132,6 +132,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverOption")]
         public ApproverOption ApproverOption{ get; set; }
 
+        /// <summary>
+        /// 签署完前端跳转的url，暂未使用
+        /// </summary>
+        [JsonProperty("JumpUrl")]
+        public string JumpUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +161,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
             this.SetParamObj(map, prefix + "RegisterInfo.", this.RegisterInfo);
             this.SetParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
+            this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         }
     }
 }

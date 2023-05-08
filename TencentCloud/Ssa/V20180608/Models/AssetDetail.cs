@@ -327,6 +327,48 @@ namespace TencentCloud.Ssa.V20180608.Models
         [JsonProperty("AssetVulNum")]
         public long? AssetVulNum{ get; set; }
 
+        /// <summary>
+        /// 资产事件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetEventNum")]
+        public long? AssetEventNum{ get; set; }
+
+        /// <summary>
+        /// cspm风险
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetCspmRiskNum")]
+        public long? AssetCspmRiskNum{ get; set; }
+
+        /// <summary>
+        /// 资产删除时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SsaAssetDeleteTime")]
+        public string SsaAssetDeleteTime{ get; set; }
+
+        /// <summary>
+        /// 费用类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChargeType")]
+        public string ChargeType{ get; set; }
+
+        /// <summary>
+        /// 地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetRegionName")]
+        public string AssetRegionName{ get; set; }
+
+        /// <summary>
+        /// vpc信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetVpcid")]
+        public string AssetVpcid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -378,6 +420,12 @@ namespace TencentCloud.Ssa.V20180608.Models
             this.SetParamSimple(map, prefix + "RDPRisk", this.RDPRisk);
             this.SetParamSimple(map, prefix + "EventRisk", this.EventRisk);
             this.SetParamSimple(map, prefix + "AssetVulNum", this.AssetVulNum);
+            this.SetParamSimple(map, prefix + "AssetEventNum", this.AssetEventNum);
+            this.SetParamSimple(map, prefix + "AssetCspmRiskNum", this.AssetCspmRiskNum);
+            this.SetParamSimple(map, prefix + "SsaAssetDeleteTime", this.SsaAssetDeleteTime);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamSimple(map, prefix + "AssetRegionName", this.AssetRegionName);
+            this.SetParamSimple(map, prefix + "AssetVpcid", this.AssetVpcid);
         }
     }
 }

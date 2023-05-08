@@ -199,6 +199,55 @@ namespace TencentCloud.Ssa.V20180608.Models
         [JsonProperty("VictimAssetSub")]
         public string VictimAssetSub{ get; set; }
 
+        /// <summary>
+        /// 资产vpc
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VictimAssetVpc")]
+        public string VictimAssetVpc{ get; set; }
+
+        /// <summary>
+        /// 时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Timestamp")]
+        public string Timestamp{ get; set; }
+
+        /// <summary>
+        /// 资产组名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetGroupName")]
+        public string[] AssetGroupName{ get; set; }
+
+        /// <summary>
+        /// 资产项目名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetProjectName")]
+        public string AssetProjectName{ get; set; }
+
+        /// <summary>
+        /// 失陷资产内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VictimAssetContent")]
+        public string[] VictimAssetContent{ get; set; }
+
+        /// <summary>
+        /// 错误报告状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WrongReportStatus")]
+        public long? WrongReportStatus{ get; set; }
+
+        /// <summary>
+        /// 错误报告Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WrongReportConditionId")]
+        public long? WrongReportConditionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +279,13 @@ namespace TencentCloud.Ssa.V20180608.Models
             this.SetParamArraySimple(map, prefix + "AssetPublicIp.", this.AssetPublicIp);
             this.SetParamSimple(map, prefix + "AttackTactic", this.AttackTactic);
             this.SetParamSimple(map, prefix + "VictimAssetSub", this.VictimAssetSub);
+            this.SetParamSimple(map, prefix + "VictimAssetVpc", this.VictimAssetVpc);
+            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamArraySimple(map, prefix + "AssetGroupName.", this.AssetGroupName);
+            this.SetParamSimple(map, prefix + "AssetProjectName", this.AssetProjectName);
+            this.SetParamArraySimple(map, prefix + "VictimAssetContent.", this.VictimAssetContent);
+            this.SetParamSimple(map, prefix + "WrongReportStatus", this.WrongReportStatus);
+            this.SetParamSimple(map, prefix + "WrongReportConditionId", this.WrongReportConditionId);
         }
     }
 }

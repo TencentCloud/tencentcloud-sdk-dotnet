@@ -29,6 +29,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Traffic：流量，单位为 Byte。</li>
         /// <li>Bandwidth：带宽，单位为 Bps。</li>
         /// <li>Requests：请求数。</li>
+        /// <li>QUICRequests：QUIC 请求数。</li>
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }

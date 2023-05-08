@@ -54,6 +54,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
+        /// <summary>
+        /// 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
+        /// </summary>
+        [JsonProperty("RecordHistory")]
+        public bool? RecordHistory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamArraySimple(map, prefix + "Threads.", this.Threads);
             this.SetParamSimple(map, prefix + "SqlExecId", this.SqlExecId);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "RecordHistory", this.RecordHistory);
         }
     }
 }

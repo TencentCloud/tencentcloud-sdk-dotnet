@@ -36,6 +36,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Role")]
         public long? Role{ get; set; }
 
+        /// <summary>
+        /// 家庭ID，所有者带该参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FamilyId")]
+        public string FamilyId{ get; set; }
+
+        /// <summary>
+        /// 家庭名称，所有者带该参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FamilyName")]
+        public string FamilyName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +58,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         {
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "FamilyId", this.FamilyId);
+            this.SetParamSimple(map, prefix + "FamilyName", this.FamilyName);
         }
     }
 }

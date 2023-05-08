@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.752</VersionPrefix>
+    <VersionPrefix>3.0.753</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,7 @@
     <Compile Include="V20181119\Models\AdvertiseOCRRequest.cs" />
     <Compile Include="V20181119\Models\AdvertiseOCRResponse.cs" />
     <Compile Include="V20181119\Models\AdvertiseTextDetection.cs" />
+    <Compile Include="V20181119\Models\AirTransport.cs" />
     <Compile Include="V20181119\Models\ArithmeticOCRRequest.cs" />
     <Compile Include="V20181119\Models\ArithmeticOCRResponse.cs" />
     <Compile Include="V20181119\Models\BankCardOCRRequest.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="V20181119\Models\BizLicenseOCRRequest.cs" />
     <Compile Include="V20181119\Models\BizLicenseOCRResponse.cs" />
     <Compile Include="V20181119\Models\BizLicenseVerifyResult.cs" />
+    <Compile Include="V20181119\Models\BusInvoice.cs" />
     <Compile Include="V20181119\Models\BusInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\BusInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\BusInvoiceOCRResponse.cs" />
@@ -104,6 +106,7 @@
     <Compile Include="V20181119\Models\FlightInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\FlightInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\FlightInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\FlightItem.cs" />
     <Compile Include="V20181119\Models\FormulaOCRRequest.cs" />
     <Compile Include="V20181119\Models\FormulaOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralAccurateOCRRequest.cs" />
@@ -116,6 +119,7 @@
     <Compile Include="V20181119\Models\GeneralFastOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralHandwritingOCRRequest.cs" />
     <Compile Include="V20181119\Models\GeneralHandwritingOCRResponse.cs" />
+    <Compile Include="V20181119\Models\GeneralMachineItem.cs" />
     <Compile Include="V20181119\Models\GetTaskStateRequest.cs" />
     <Compile Include="V20181119\Models\GetTaskStateResponse.cs" />
     <Compile Include="V20181119\Models\GroupInfo.cs" />
@@ -136,6 +140,7 @@
     <Compile Include="V20181119\Models\InvoiceGeneralInfo.cs" />
     <Compile Include="V20181119\Models\InvoiceGeneralOCRRequest.cs" />
     <Compile Include="V20181119\Models\InvoiceGeneralOCRResponse.cs" />
+    <Compile Include="V20181119\Models\InvoiceItem.cs" />
     <Compile Include="V20181119\Models\ItemCoord.cs" />
     <Compile Include="V20181119\Models\ItemInfo.cs" />
     <Compile Include="V20181119\Models\Key.cs" />
@@ -147,6 +152,7 @@
     <Compile Include="V20181119\Models\MLIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\MLIDPassportOCRRequest.cs" />
     <Compile Include="V20181119\Models\MLIDPassportOCRResponse.cs" />
+    <Compile Include="V20181119\Models\MachinePrintedInvoice.cs" />
     <Compile Include="V20181119\Models\MainlandPermitOCRRequest.cs" />
     <Compile Include="V20181119\Models\MainlandPermitOCRResponse.cs" />
     <Compile Include="V20181119\Models\MedicalInvoiceInfo.cs" />
@@ -156,9 +162,15 @@
     <Compile Include="V20181119\Models\MixedInvoiceItem.cs" />
     <Compile Include="V20181119\Models\MixedInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\MixedInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\MotorVehicleSaleInvoice.cs" />
+    <Compile Include="V20181119\Models\NonTaxIncomeBill.cs" />
+    <Compile Include="V20181119\Models\NonTaxItem.cs" />
     <Compile Include="V20181119\Models\OnlineTaxiItineraryInfo.cs" />
     <Compile Include="V20181119\Models\OrgCodeCertOCRRequest.cs" />
     <Compile Include="V20181119\Models\OrgCodeCertOCRResponse.cs" />
+    <Compile Include="V20181119\Models\OtherInvoice.cs" />
+    <Compile Include="V20181119\Models\OtherInvoiceItem.cs" />
+    <Compile Include="V20181119\Models\OtherInvoiceList.cs" />
     <Compile Include="V20181119\Models\PassInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\PassportOCRRequest.cs" />
     <Compile Include="V20181119\Models\PassportOCRResponse.cs" />
@@ -177,10 +189,13 @@
     <Compile Include="V20181119\Models\QueryBarCodeResponse.cs" />
     <Compile Include="V20181119\Models\QuestionBlockObj.cs" />
     <Compile Include="V20181119\Models\QuestionObj.cs" />
+    <Compile Include="V20181119\Models\QuotaInvoice.cs" />
     <Compile Include="V20181119\Models\QuotaInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\QuotaInvoiceOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeContainerOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeContainerOCRResponse.cs" />
+    <Compile Include="V20181119\Models\RecognizeGeneralInvoiceRequest.cs" />
+    <Compile Include="V20181119\Models\RecognizeGeneralInvoiceResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeHealthCodeOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeHealthCodeOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeIndonesiaIDCardOCRRequest.cs" />
@@ -218,7 +233,9 @@
     <Compile Include="V20181119\Models\ShipInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\ShipInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\ShipInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\ShippingInvoice.cs" />
     <Compile Include="V20181119\Models\SingleInvoiceInfo.cs" />
+    <Compile Include="V20181119\Models\SingleInvoiceItem.cs" />
     <Compile Include="V20181119\Models\SmartFormFileUrl.cs" />
     <Compile Include="V20181119\Models\SmartStructuralOCRRequest.cs" />
     <Compile Include="V20181119\Models\SmartStructuralOCRResponse.cs" />
@@ -234,6 +251,7 @@
     <Compile Include="V20181119\Models\TableTitle.cs" />
     <Compile Include="V20181119\Models\TaxiInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\TaxiInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\TaxiTicket.cs" />
     <Compile Include="V20181119\Models\TextArithmetic.cs" />
     <Compile Include="V20181119\Models\TextDetectRequest.cs" />
     <Compile Include="V20181119\Models\TextDetectResponse.cs" />
@@ -248,18 +266,26 @@
     <Compile Include="V20181119\Models\TextVehicleBack.cs" />
     <Compile Include="V20181119\Models\TextVehicleFront.cs" />
     <Compile Include="V20181119\Models\TextWaybill.cs" />
+    <Compile Include="V20181119\Models\TollInvoice.cs" />
     <Compile Include="V20181119\Models\TollInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\TollInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\TollInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\TrainTicket.cs" />
     <Compile Include="V20181119\Models\TrainTicketOCRRequest.cs" />
     <Compile Include="V20181119\Models\TrainTicketOCRResponse.cs" />
+    <Compile Include="V20181119\Models\UsedCarPurchaseInvoice.cs" />
     <Compile Include="V20181119\Models\UsedVehicleInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\Value.cs" />
+    <Compile Include="V20181119\Models\VatElectronicInfo.cs" />
+    <Compile Include="V20181119\Models\VatElectronicItemInfo.cs" />
     <Compile Include="V20181119\Models\VatInvoice.cs" />
     <Compile Include="V20181119\Models\VatInvoiceGoodsInfo.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\VatInvoiceItem.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceItemInfo.cs" />
     <Compile Include="V20181119\Models\VatInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\VatInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceRoll.cs" />
     <Compile Include="V20181119\Models\VatInvoiceUserInfo.cs" />
     <Compile Include="V20181119\Models\VatInvoiceVerifyNewRequest.cs" />
     <Compile Include="V20181119\Models\VatInvoiceVerifyNewResponse.cs" />
@@ -268,6 +294,7 @@
     <Compile Include="V20181119\Models\VatRollInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\VatRollInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\VatRollInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\VatRollItem.cs" />
     <Compile Include="V20181119\Models\VehicleInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\VehicleLicenseOCRRequest.cs" />
     <Compile Include="V20181119\Models\VehicleLicenseOCRResponse.cs" />

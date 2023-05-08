@@ -140,6 +140,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("ExtensionMode")]
         public ulong? ExtensionMode{ get; set; }
 
+        /// <summary>
+        /// HTTPS请求包是否自动续订
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoExtension")]
+        public bool? AutoExtension{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +171,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "ContractExtension", this.ContractExtension);
             this.SetParamSimple(map, prefix + "ExtensionAvailable", this.ExtensionAvailable);
             this.SetParamSimple(map, prefix + "ExtensionMode", this.ExtensionMode);
+            this.SetParamSimple(map, prefix + "AutoExtension", this.AutoExtension);
         }
     }
 }

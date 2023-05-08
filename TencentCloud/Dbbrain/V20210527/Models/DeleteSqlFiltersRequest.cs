@@ -42,6 +42,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("FilterIds")]
         public long?[] FilterIds{ get; set; }
 
+        /// <summary>
+        /// 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SessionToken", this.SessionToken);
             this.SetParamArraySimple(map, prefix + "FilterIds.", this.FilterIds);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

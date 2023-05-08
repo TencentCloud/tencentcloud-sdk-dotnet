@@ -150,6 +150,20 @@ namespace TencentCloud.Ssa.V20180608.Models
         [JsonProperty("SecurityStatus")]
         public SecurityStatus[] SecurityStatus{ get; set; }
 
+        /// <summary>
+        /// 处置建议
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DisposalRecommendation")]
+        public long? DisposalRecommendation{ get; set; }
+
+        /// <summary>
+        /// 测绘类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MappingType")]
+        public string MappingType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +188,8 @@ namespace TencentCloud.Ssa.V20180608.Models
             this.SetParamSimple(map, prefix + "MappingStatus", this.MappingStatus);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamArrayObj(map, prefix + "SecurityStatus.", this.SecurityStatus);
+            this.SetParamSimple(map, prefix + "DisposalRecommendation", this.DisposalRecommendation);
+            this.SetParamSimple(map, prefix + "MappingType", this.MappingType);
         }
     }
 }

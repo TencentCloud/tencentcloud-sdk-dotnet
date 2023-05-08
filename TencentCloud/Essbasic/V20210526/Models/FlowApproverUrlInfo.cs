@@ -25,16 +25,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 签署链接，注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+        /// 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
         /// </summary>
         [JsonProperty("SignUrl")]
         public string SignUrl{ get; set; }
 
         /// <summary>
-        /// 签署人手机号
+        /// 签署人类型 PERSON-个人
         /// </summary>
-        [JsonProperty("Mobile")]
-        public string Mobile{ get; set; }
+        [JsonProperty("ApproverType")]
+        public string ApproverType{ get; set; }
 
         /// <summary>
         /// 签署人姓名
@@ -43,10 +43,17 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 签署人类型 PERSON-个人
+        /// 签署人手机号
         /// </summary>
-        [JsonProperty("ApproverType")]
-        public string ApproverType{ get; set; }
+        [JsonProperty("Mobile")]
+        public string Mobile{ get; set; }
+
+        /// <summary>
+        /// 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LongUrl")]
+        public string LongUrl{ get; set; }
 
 
         /// <summary>
@@ -55,9 +62,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SignUrl", this.SignUrl);
-            this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ApproverType", this.ApproverType);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
+            this.SetParamSimple(map, prefix + "LongUrl", this.LongUrl);
         }
     }
 }

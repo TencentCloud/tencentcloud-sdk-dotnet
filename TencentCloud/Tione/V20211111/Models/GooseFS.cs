@@ -15,26 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Ms.V20180408.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateScanInstancesRequest : AbstractModel
+    public class GooseFS : AbstractModel
     {
         
         /// <summary>
-        /// 待扫描的app信息列表，一次最多提交20个
+        /// goosefs实例id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AppInfos")]
-        public AppInfo[] AppInfos{ get; set; }
-
-        /// <summary>
-        /// 扫描信息
-        /// </summary>
-        [JsonProperty("ScanInfo")]
-        public ScanInfo ScanInfo{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
 
         /// <summary>
@@ -42,8 +37,7 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "AppInfos.", this.AppInfos);
-            this.SetParamObj(map, prefix + "ScanInfo.", this.ScanInfo);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

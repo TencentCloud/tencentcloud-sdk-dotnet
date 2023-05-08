@@ -37,7 +37,7 @@ namespace TencentCloud.Car.V20220110.Models
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// 客户端session信息，从SDK请求中获得
+        /// 客户端session信息，从SDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
         /// </summary>
         [JsonProperty("ClientSession")]
         public string ClientSession{ get; set; }
@@ -50,6 +50,22 @@ namespace TencentCloud.Car.V20220110.Models
         [JsonProperty("RunMode")]
         public string RunMode{ get; set; }
 
+        /// <summary>
+        /// 【多人互动】房主用户ID，在多人互动模式下为必填字段。
+        /// 如果该用户是房主，HostUserId需要和UserId保持一致；
+        /// 如果该用户非房主，HostUserId需要填写房主的HostUserId。
+        /// </summary>
+        [JsonProperty("HostUserId")]
+        public string HostUserId{ get; set; }
+
+        /// <summary>
+        /// 【多人互动】角色。
+        /// Player：玩家（可通过键鼠等操作应用）
+        /// Viewer：观察者（只能观看，无法操作）
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +76,8 @@ namespace TencentCloud.Car.V20220110.Models
             this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
             this.SetParamSimple(map, prefix + "ClientSession", this.ClientSession);
             this.SetParamSimple(map, prefix + "RunMode", this.RunMode);
+            this.SetParamSimple(map, prefix + "HostUserId", this.HostUserId);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
         }
     }
 }

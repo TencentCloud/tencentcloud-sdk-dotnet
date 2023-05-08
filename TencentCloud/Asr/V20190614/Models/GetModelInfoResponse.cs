@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ms.V20180408.Models
+namespace TencentCloud.Asr.V20190614.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteScanInstancesRequest : AbstractModel
+    public class GetModelInfoResponse : AbstractModel
     {
         
         /// <summary>
-        /// 删除一个或多个扫描的app，最大支持20个
+        /// 模型信息
         /// </summary>
-        [JsonProperty("AppSids")]
-        public string[] AppSids{ get; set; }
+        [JsonProperty("Data")]
+        public Model Data{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "AppSids.", this.AppSids);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

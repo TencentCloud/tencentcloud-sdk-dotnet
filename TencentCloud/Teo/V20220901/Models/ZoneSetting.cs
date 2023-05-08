@@ -171,6 +171,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ImageOptimize")]
         public ImageOptimize ImageOptimize{ get; set; }
 
+        /// <summary>
+        /// 中国大陆加速优化配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccelerateMainland")]
+        public AccelerateMainland AccelerateMainland{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +205,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
             this.SetParamObj(map, prefix + "Grpc.", this.Grpc);
             this.SetParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
+            this.SetParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
         }
     }
 }

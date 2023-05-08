@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ms.V20180408.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScanPermissionInfo : AbstractModel
+    public class OtherInvoiceList : AbstractModel
     {
         
         /// <summary>
-        /// 系统权限
+        /// 列表
         /// </summary>
-        [JsonProperty("Permission")]
-        public string Permission{ get; set; }
+        [JsonProperty("OtherInvoiceItemList")]
+        public OtherInvoiceItem[] OtherInvoiceItemList{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Permission", this.Permission);
+            this.SetParamArrayObj(map, prefix + "OtherInvoiceItemList.", this.OtherInvoiceItemList);
         }
     }
 }

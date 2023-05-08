@@ -15,26 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Ms.V20180408.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeScanResultsRequest : AbstractModel
+    public class RDMAConfig : AbstractModel
     {
         
         /// <summary>
-        /// 任务唯一标识
+        /// 是否开启RDMA
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ItemId")]
-        public string ItemId{ get; set; }
-
-        /// <summary>
-        /// 批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app
-        /// </summary>
-        [JsonProperty("AppMd5s")]
-        public string[] AppMd5s{ get; set; }
+        [JsonProperty("Enable")]
+        public bool? Enable{ get; set; }
 
 
         /// <summary>
@@ -42,8 +37,7 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ItemId", this.ItemId);
-            this.SetParamArraySimple(map, prefix + "AppMd5s.", this.AppMd5s);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
         }
     }
 }

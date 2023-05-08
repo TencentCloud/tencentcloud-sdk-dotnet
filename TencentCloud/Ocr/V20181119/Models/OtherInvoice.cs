@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ms.V20180408.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScanInfo : AbstractModel
+    public class OtherInvoice : AbstractModel
     {
         
         /// <summary>
-        /// 任务处理完成后的反向通知回调地址,批量提交app每扫描完成一个会通知一次,通知为POST请求，post信息{ItemId:
+        /// 发票名称
         /// </summary>
-        [JsonProperty("CallbackUrl")]
-        public string CallbackUrl{ get; set; }
+        [JsonProperty("Title")]
+        public string Title{ get; set; }
 
         /// <summary>
-        /// VULSCAN-漏洞扫描信息，VIRUSSCAN-返回病毒扫描信息， ADSCAN-广告扫描信息，PLUGINSCAN-插件扫描信息，PERMISSION-系统权限信息，SENSITIVE-敏感词信息，可以自由组合
+        /// 金额
         /// </summary>
-        [JsonProperty("ScanTypes")]
-        public string[] ScanTypes{ get; set; }
+        [JsonProperty("Total")]
+        public string Total{ get; set; }
+
+        /// <summary>
+        /// 列表
+        /// </summary>
+        [JsonProperty("OtherInvoiceListItems")]
+        public OtherInvoiceItem[] OtherInvoiceListItems{ get; set; }
+
+        /// <summary>
+        /// 表格
+        /// </summary>
+        [JsonProperty("OtherInvoiceTableItems")]
+        public OtherInvoiceList[] OtherInvoiceTableItems{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
-            this.SetParamArraySimple(map, prefix + "ScanTypes.", this.ScanTypes);
+            this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "OtherInvoiceListItems.", this.OtherInvoiceListItems);
+            this.SetParamArrayObj(map, prefix + "OtherInvoiceTableItems.", this.OtherInvoiceTableItems);
         }
     }
 }

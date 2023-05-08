@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.752</VersionPrefix>
+    <VersionPrefix>3.0.753</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -235,6 +235,7 @@
     <Compile Include="V20211111\Models\FilterLabelInfo.cs" />
     <Compile Include="V20211111\Models\FrameworkInfo.cs" />
     <Compile Include="V20211111\Models\FrameworkVersion.cs" />
+    <Compile Include="V20211111\Models\GooseFS.cs" />
     <Compile Include="V20211111\Models\GpuDetail.cs" />
     <Compile Include="V20211111\Models\GroupResource.cs" />
     <Compile Include="V20211111\Models\HDFSConfig.cs" />
@@ -264,6 +265,7 @@
     <Compile Include="V20211111\Models\PointInfo.cs" />
     <Compile Include="V20211111\Models\PushTrainingMetricsRequest.cs" />
     <Compile Include="V20211111\Models\PushTrainingMetricsResponse.cs" />
+    <Compile Include="V20211111\Models\RDMAConfig.cs" />
     <Compile Include="V20211111\Models\ResourceConfigInfo.cs" />
     <Compile Include="V20211111\Models\ResourceGroup.cs" />
     <Compile Include="V20211111\Models\ResourceInfo.cs" />

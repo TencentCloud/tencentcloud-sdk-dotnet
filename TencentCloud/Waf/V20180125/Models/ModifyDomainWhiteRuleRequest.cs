@@ -55,7 +55,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Function{ get; set; }
 
         /// <summary>
-        /// 规则的开关状态
+        /// 规则的开关状态，0表示关闭开关，1表示打开开关
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

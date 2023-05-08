@@ -109,6 +109,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
+        /// <summary>
+        /// 登陆地
+        /// </summary>
+        [JsonProperty("Locations")]
+        public string Locations{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +135,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "Locations", this.Locations);
         }
     }
 }

@@ -15,44 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ms.V20180408.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateScanInstancesResponse : AbstractModel
+    public class RecognizeGeneralInvoiceResponse : AbstractModel
     {
         
         /// <summary>
-        /// 任务唯一标识
+        /// 混贴票据识别结果，具体内容请点击左侧链接。
         /// </summary>
-        [JsonProperty("ItemId")]
-        public string ItemId{ get; set; }
+        [JsonProperty("MixedInvoiceItems")]
+        public InvoiceItem[] MixedInvoiceItems{ get; set; }
 
         /// <summary>
-        /// 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+        /// PDF文件总页码
         /// </summary>
-        [JsonProperty("Progress")]
-        public ulong? Progress{ get; set; }
-
-        /// <summary>
-        /// 提交成功的app的md5集合
-        /// </summary>
-        [JsonProperty("AppMd5s")]
-        public string[] AppMd5s{ get; set; }
-
-        /// <summary>
-        /// 剩余可用次数
-        /// </summary>
-        [JsonProperty("LimitCount")]
-        public ulong? LimitCount{ get; set; }
-
-        /// <summary>
-        /// 到期时间
-        /// </summary>
-        [JsonProperty("LimitTime")]
-        public ulong? LimitTime{ get; set; }
+        [JsonProperty("TotalPDFCount")]
+        public long? TotalPDFCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -66,11 +48,8 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ItemId", this.ItemId);
-            this.SetParamSimple(map, prefix + "Progress", this.Progress);
-            this.SetParamArraySimple(map, prefix + "AppMd5s.", this.AppMd5s);
-            this.SetParamSimple(map, prefix + "LimitCount", this.LimitCount);
-            this.SetParamSimple(map, prefix + "LimitTime", this.LimitTime);
+            this.SetParamArrayObj(map, prefix + "MixedInvoiceItems.", this.MixedInvoiceItems);
+            this.SetParamSimple(map, prefix + "TotalPDFCount", this.TotalPDFCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

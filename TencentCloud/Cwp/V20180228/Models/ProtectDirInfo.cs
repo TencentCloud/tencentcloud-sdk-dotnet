@@ -78,6 +78,34 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("AutoRestoreSwitchStatus")]
         public ulong? AutoRestoreSwitchStatus{ get; set; }
 
+        /// <summary>
+        /// 首次开启防护时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FirstProtectTime")]
+        public string FirstProtectTime{ get; set; }
+
+        /// <summary>
+        /// 最近开启防护时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LatestProtectTime")]
+        public string LatestProtectTime{ get; set; }
+
+        /// <summary>
+        /// 防护文件类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProtectFileType")]
+        public string ProtectFileType{ get; set; }
+
+        /// <summary>
+        /// 防护文件总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProtectFilesCount")]
+        public long? ProtectFilesCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +121,10 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "ProtectStatus", this.ProtectStatus);
             this.SetParamSimple(map, prefix + "ProtectException", this.ProtectException);
             this.SetParamSimple(map, prefix + "AutoRestoreSwitchStatus", this.AutoRestoreSwitchStatus);
+            this.SetParamSimple(map, prefix + "FirstProtectTime", this.FirstProtectTime);
+            this.SetParamSimple(map, prefix + "LatestProtectTime", this.LatestProtectTime);
+            this.SetParamSimple(map, prefix + "ProtectFileType", this.ProtectFileType);
+            this.SetParamSimple(map, prefix + "ProtectFilesCount", this.ProtectFilesCount);
         }
     }
 }

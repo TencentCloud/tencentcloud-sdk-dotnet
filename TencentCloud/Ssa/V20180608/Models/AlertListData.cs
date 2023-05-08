@@ -38,6 +38,13 @@ namespace TencentCloud.Ssa.V20180608.Models
         [JsonProperty("AlertList")]
         public AlertType[] AlertList{ get; set; }
 
+        /// <summary>
+        /// 聚合参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Aggregations")]
+        public AlertListAggregations Aggregations{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Ssa.V20180608.Models
         {
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamArrayObj(map, prefix + "AlertList.", this.AlertList);
+            this.SetParamObj(map, prefix + "Aggregations.", this.Aggregations);
         }
     }
 }

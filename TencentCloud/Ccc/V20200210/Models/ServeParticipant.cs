@@ -81,6 +81,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string TransferFrom{ get; set; }
 
         /// <summary>
+        /// 转接来源参与者类型，取值与 Type 一致
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TransferFromType")]
+        public string TransferFromType{ get; set; }
+
+        /// <summary>
         /// 转接去向坐席信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -157,6 +164,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "TransferFrom", this.TransferFrom);
+            this.SetParamSimple(map, prefix + "TransferFromType", this.TransferFromType);
             this.SetParamSimple(map, prefix + "TransferTo", this.TransferTo);
             this.SetParamSimple(map, prefix + "TransferToType", this.TransferToType);
             this.SetParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);

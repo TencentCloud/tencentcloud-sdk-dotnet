@@ -15,32 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Ms.V20180408.Models
+namespace TencentCloud.Ssa.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class VirusInfo : AbstractModel
+    public class AlertListAggregations : AbstractModel
     {
         
         /// <summary>
-        /// 软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
+        /// 名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("SafeType")]
-        public long? SafeType{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 病毒名称， utf8编码，非病毒时值为空
+        /// 值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("VirusName")]
-        public string VirusName{ get; set; }
-
-        /// <summary>
-        /// 病毒描述，utf8编码，非病毒时值为空
-        /// </summary>
-        [JsonProperty("VirusDesc")]
-        public string VirusDesc{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -48,9 +44,8 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SafeType", this.SafeType);
-            this.SetParamSimple(map, prefix + "VirusName", this.VirusName);
-            this.SetParamSimple(map, prefix + "VirusDesc", this.VirusDesc);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

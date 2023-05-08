@@ -173,50 +173,6 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
-        /// 由于该产品是线上免费使用产品，无企业版用户，升级迭代成本高及人力安排等原因，安全测评产品不再接入新用户，故下线。
-        /// 
-        /// 用户通过该接口批量提交应用进行应用扫描，扫描后需通过DescribeScanResults接口查询扫描结果
-        /// </summary>
-        /// <param name="req"><see cref="CreateScanInstancesRequest"/></param>
-        /// <returns><see cref="CreateScanInstancesResponse"/></returns>
-        public async Task<CreateScanInstancesResponse> CreateScanInstances(CreateScanInstancesRequest req)
-        {
-             JsonResponseModel<CreateScanInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateScanInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScanInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 由于该产品是线上免费使用产品，无企业版用户，升级迭代成本高及人力安排等原因，安全测评产品不再接入新用户，故下线。
-        /// 
-        /// 用户通过该接口批量提交应用进行应用扫描，扫描后需通过DescribeScanResults接口查询扫描结果
-        /// </summary>
-        /// <param name="req"><see cref="CreateScanInstancesRequest"/></param>
-        /// <returns><see cref="CreateScanInstancesResponse"/></returns>
-        public CreateScanInstancesResponse CreateScanInstancesSync(CreateScanInstancesRequest req)
-        {
-             JsonResponseModel<CreateScanInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateScanInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScanInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 用户通过该接口提交应用进行应用加固，加固后需通过DescribeShieldResult接口查询加固结果。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
         /// </summary>
         /// <param name="req"><see cref="CreateShieldInstanceRequest"/></param>
@@ -288,50 +244,6 @@ namespace TencentCloud.Ms.V20180408
              {
                  var strResp = this.InternalRequestSync(req, "CreateShieldPlanInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateShieldPlanInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 由于该产品是线上免费使用产品，无企业版用户，升级迭代成本高及人力安排等原因，安全测评产品不再接入新用户，故下线。
-        /// 
-        /// 删除一个或者多个app扫描信息
-        /// </summary>
-        /// <param name="req"><see cref="DeleteScanInstancesRequest"/></param>
-        /// <returns><see cref="DeleteScanInstancesResponse"/></returns>
-        public async Task<DeleteScanInstancesResponse> DeleteScanInstances(DeleteScanInstancesRequest req)
-        {
-             JsonResponseModel<DeleteScanInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteScanInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScanInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 由于该产品是线上免费使用产品，无企业版用户，升级迭代成本高及人力安排等原因，安全测评产品不再接入新用户，故下线。
-        /// 
-        /// 删除一个或者多个app扫描信息
-        /// </summary>
-        /// <param name="req"><see cref="DeleteScanInstancesRequest"/></param>
-        /// <returns><see cref="DeleteScanInstancesResponse"/></returns>
-        public DeleteScanInstancesResponse DeleteScanInstancesSync(DeleteScanInstancesRequest req)
-        {
-             JsonResponseModel<DeleteScanInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteScanInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScanInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -452,96 +364,6 @@ namespace TencentCloud.Ms.V20180408
              {
                  var strResp = this.InternalRequestSync(req, "DescribeResourceInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 由于该产品是线上免费使用产品，无企业版用户，升级迭代成本高及人力安排等原因，安全测评产品不再接入新用户，故下线。
-        /// 
-        /// 本接口用于查看app列表。
-        /// 可以通过指定任务唯一标识ItemId来查询指定app的详细信息，或通过设定过滤器来查询满足过滤条件的app的详细信息。 指定偏移(Offset)和限制(Limit)来选择结果中的一部分，默认返回满足条件的前20个app信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScanInstancesRequest"/></param>
-        /// <returns><see cref="DescribeScanInstancesResponse"/></returns>
-        public async Task<DescribeScanInstancesResponse> DescribeScanInstances(DescribeScanInstancesRequest req)
-        {
-             JsonResponseModel<DescribeScanInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeScanInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 由于该产品是线上免费使用产品，无企业版用户，升级迭代成本高及人力安排等原因，安全测评产品不再接入新用户，故下线。
-        /// 
-        /// 本接口用于查看app列表。
-        /// 可以通过指定任务唯一标识ItemId来查询指定app的详细信息，或通过设定过滤器来查询满足过滤条件的app的详细信息。 指定偏移(Offset)和限制(Limit)来选择结果中的一部分，默认返回满足条件的前20个app信息。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScanInstancesRequest"/></param>
-        /// <returns><see cref="DescribeScanInstancesResponse"/></returns>
-        public DescribeScanInstancesResponse DescribeScanInstancesSync(DescribeScanInstancesRequest req)
-        {
-             JsonResponseModel<DescribeScanInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeScanInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 由于该产品是线上免费使用产品，无企业版用户，升级迭代成本高及人力安排等原因，安全测评产品不再接入新用户，故下线。
-        /// 
-        /// 用户通过CreateScanInstances接口提交应用进行风险批量扫描后，用此接口批量获取风险详细信息,包含漏洞信息，广告信息，插件信息和病毒信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScanResultsRequest"/></param>
-        /// <returns><see cref="DescribeScanResultsResponse"/></returns>
-        public async Task<DescribeScanResultsResponse> DescribeScanResults(DescribeScanResultsRequest req)
-        {
-             JsonResponseModel<DescribeScanResultsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeScanResults");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanResultsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 由于该产品是线上免费使用产品，无企业版用户，升级迭代成本高及人力安排等原因，安全测评产品不再接入新用户，故下线。
-        /// 
-        /// 用户通过CreateScanInstances接口提交应用进行风险批量扫描后，用此接口批量获取风险详细信息,包含漏洞信息，广告信息，插件信息和病毒信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScanResultsRequest"/></param>
-        /// <returns><see cref="DescribeScanResultsResponse"/></returns>
-        public DescribeScanResultsResponse DescribeScanResultsSync(DescribeScanResultsRequest req)
-        {
-             JsonResponseModel<DescribeScanResultsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeScanResults");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanResultsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

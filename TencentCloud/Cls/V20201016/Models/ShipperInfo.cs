@@ -112,6 +112,46 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("FilenameMode")]
         public ulong? FilenameMode{ get; set; }
 
+        /// <summary>
+        /// 投递数据范围的开始时间点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
+
+        /// <summary>
+        /// 投递数据范围的结束时间点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
+
+        /// <summary>
+        /// 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Progress")]
+        public float? Progress{ get; set; }
+
+        /// <summary>
+        /// 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemainTime")]
+        public long? RemainTime{ get; set; }
+
+        /// <summary>
+        /// 历史任务状态：
+        /// 0：实时任务
+        /// 1：任务准备中
+        /// 2：任务运行中
+        /// 3：任务运行异常
+        /// 4：任务运行结束
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HistoryStatus")]
+        public long? HistoryStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +172,11 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "RemainTime", this.RemainTime);
+            this.SetParamSimple(map, prefix + "HistoryStatus", this.HistoryStatus);
         }
     }
 }

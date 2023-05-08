@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ms.V20180408.Models
+namespace TencentCloud.Asr.V20190614.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScanSensitiveInfo : AbstractModel
+    public class GetModelInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// 敏感词
+        /// 模型id
         /// </summary>
-        [JsonProperty("WordList")]
-        public string[] WordList{ get; set; }
-
-        /// <summary>
-        /// 敏感词对应的文件信息
-        /// </summary>
-        [JsonProperty("FilePath")]
-        public string FilePath{ get; set; }
-
-        /// <summary>
-        /// 文件sha1值
-        /// </summary>
-        [JsonProperty("FileSha")]
-        public string FileSha{ get; set; }
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "WordList.", this.WordList);
-            this.SetParamSimple(map, prefix + "FilePath", this.FilePath);
-            this.SetParamSimple(map, prefix + "FileSha", this.FileSha);
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
         }
     }
 }

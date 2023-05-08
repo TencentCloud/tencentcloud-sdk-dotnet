@@ -106,6 +106,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("InstanceTypeAlias")]
         public string InstanceTypeAlias{ get; set; }
 
+        /// <summary>
+        /// RDMA配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RDMAConfig")]
+        public RDMAConfig RDMAConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +127,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
             this.SetParamSimple(map, prefix + "InstanceTypeAlias", this.InstanceTypeAlias);
+            this.SetParamObj(map, prefix + "RDMAConfig.", this.RDMAConfig);
         }
     }
 }
