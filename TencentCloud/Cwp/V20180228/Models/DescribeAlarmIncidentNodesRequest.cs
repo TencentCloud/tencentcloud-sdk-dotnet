@@ -42,6 +42,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("AlarmTime")]
         public long? AlarmTime{ get; set; }
 
+        /// <summary>
+        /// 告警来源表ID
+        /// </summary>
+        [JsonProperty("TableId")]
+        public long? TableId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "AlarmVid", this.AlarmVid);
             this.SetParamSimple(map, prefix + "AlarmTime", this.AlarmTime);
+            this.SetParamSimple(map, prefix + "TableId", this.TableId);
         }
     }
 }

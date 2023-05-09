@@ -1533,7 +1533,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 获取指定时间内某个sql模版的慢日志明细
+        /// 获取指定时间内某个sql模板的慢日志明细
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
         /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
@@ -1553,7 +1553,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 获取指定时间内某个sql模版的慢日志明细
+        /// 获取指定时间内某个sql模板的慢日志明细
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
         /// <returns><see cref="DescribeSlowLogsResponse"/></returns>

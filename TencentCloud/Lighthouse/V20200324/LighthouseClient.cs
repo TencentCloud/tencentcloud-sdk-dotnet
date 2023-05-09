@@ -363,6 +363,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口(CreateDisks)用于创建一个或多个云硬盘。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDisksRequest"/></param>
+        /// <returns><see cref="CreateDisksResponse"/></returns>
+        public async Task<CreateDisksResponse> CreateDisks(CreateDisksRequest req)
+        {
+             JsonResponseModel<CreateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateDisks)用于创建一个或多个云硬盘。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDisksRequest"/></param>
+        /// <returns><see cref="CreateDisksResponse"/></returns>
+        public CreateDisksResponse CreateDisksSync(CreateDisksRequest req)
+        {
+             JsonResponseModel<CreateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateFirewallRules）用于在实例上添加防火墙规则。
         /// 
         /// 

@@ -85,7 +85,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string[] User{ get; set; }
 
         /// <summary>
-        /// ip
+        /// IP
         /// </summary>
         [JsonProperty("Ip")]
         public string[] Ip{ get; set; }

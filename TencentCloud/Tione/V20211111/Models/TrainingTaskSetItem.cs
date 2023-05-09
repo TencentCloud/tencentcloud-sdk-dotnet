@@ -142,7 +142,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 计费金额信息，eg：2.00元/小时 (for后付费)
+        /// 计费金额信息，eg：2.00元/小时 (按量计费)
         /// </summary>
         [JsonProperty("BillingInfo")]
         public string BillingInfo{ get; set; }

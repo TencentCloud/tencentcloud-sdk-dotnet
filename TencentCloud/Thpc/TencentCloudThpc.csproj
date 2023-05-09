@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.753</VersionPrefix>
+    <VersionPrefix>3.0.754</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,8 @@
     <Compile Include="V20230321\Models\DescribeClusterStorageOptionResponse.cs" />
     <Compile Include="V20230321\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20230321\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeInitNodeScriptsRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeInitNodeScriptsResponse.cs" />
     <Compile Include="V20230321\Models\DescribeNodesRequest.cs" />
     <Compile Include="V20230321\Models\DescribeNodesResponse.cs" />
     <Compile Include="V20230321\Models\DescribeQueuesRequest.cs" />

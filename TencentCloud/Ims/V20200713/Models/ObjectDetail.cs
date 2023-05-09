@@ -61,6 +61,20 @@ namespace TencentCloud.Ims.V20200713.Models
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
+        /// <summary>
+        /// 图库或人脸库id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// 图或人脸id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ObjectId")]
+        public string ObjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +87,8 @@ namespace TencentCloud.Ims.V20200713.Models
             this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamObj(map, prefix + "Location.", this.Location);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "ObjectId", this.ObjectId);
         }
     }
 }

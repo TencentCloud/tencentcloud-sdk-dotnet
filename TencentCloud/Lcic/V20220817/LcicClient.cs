@@ -1013,7 +1013,7 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// 服务商信息获取
+        /// 开发商信息获取
         /// </summary>
         /// <param name="req"><see cref="DescribeDeveloperRequest"/></param>
         /// <returns><see cref="DescribeDeveloperResponse"/></returns>
@@ -1033,7 +1033,7 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// 服务商信息获取
+        /// 开发商信息获取
         /// </summary>
         /// <param name="req"><see cref="DescribeDeveloperRequest"/></param>
         /// <returns><see cref="DescribeDeveloperResponse"/></returns>

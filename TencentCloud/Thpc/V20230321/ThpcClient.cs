@@ -547,6 +547,46 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 本接口 (DescribeInitNodeScripts) 用于查询节点初始化脚本列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInitNodeScriptsRequest"/></param>
+        /// <returns><see cref="DescribeInitNodeScriptsResponse"/></returns>
+        public async Task<DescribeInitNodeScriptsResponse> DescribeInitNodeScripts(DescribeInitNodeScriptsRequest req)
+        {
+             JsonResponseModel<DescribeInitNodeScriptsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInitNodeScripts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInitNodeScriptsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeInitNodeScripts) 用于查询节点初始化脚本列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInitNodeScriptsRequest"/></param>
+        /// <returns><see cref="DescribeInitNodeScriptsResponse"/></returns>
+        public DescribeInitNodeScriptsResponse DescribeInitNodeScriptsSync(DescribeInitNodeScriptsRequest req)
+        {
+             JsonResponseModel<DescribeInitNodeScriptsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInitNodeScripts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInitNodeScriptsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeNodes) 用于查询指定集群节点概览信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeNodesRequest"/></param>

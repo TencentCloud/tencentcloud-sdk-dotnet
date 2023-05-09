@@ -28,19 +28,19 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// 用户折扣。
         /// </summary>
         [JsonProperty("UserDiscount")]
-        public long? UserDiscount{ get; set; }
+        public float? UserDiscount{ get; set; }
 
         /// <summary>
         /// 公共折扣。
         /// </summary>
         [JsonProperty("CommonDiscount")]
-        public long? CommonDiscount{ get; set; }
+        public float? CommonDiscount{ get; set; }
 
         /// <summary>
         /// 最终折扣。
         /// </summary>
         [JsonProperty("FinalDiscount")]
-        public long? FinalDiscount{ get; set; }
+        public float? FinalDiscount{ get; set; }
 
         /// <summary>
         /// 活动折扣。取值为null，表示无有效值，即没有折扣。

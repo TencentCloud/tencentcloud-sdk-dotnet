@@ -60,6 +60,13 @@ namespace TencentCloud.Ims.V20201229.Models
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
+        /// <summary>
+        /// 该参数用于返回命中的人脸id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ObjectId")]
+        public string ObjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Ims.V20201229.Models
             this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamObj(map, prefix + "Location.", this.Location);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamSimple(map, prefix + "ObjectId", this.ObjectId);
         }
     }
 }

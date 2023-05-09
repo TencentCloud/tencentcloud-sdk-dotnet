@@ -633,6 +633,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 创建RabbitMQ的用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQUserRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQUserResponse"/></returns>
+        public async Task<CreateRabbitMQUserResponse> CreateRabbitMQUser(CreateRabbitMQUserRequest req)
+        {
+             JsonResponseModel<CreateRabbitMQUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRabbitMQUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建RabbitMQ的用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQUserRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQUserResponse"/></returns>
+        public CreateRabbitMQUserResponse CreateRabbitMQUserSync(CreateRabbitMQUserRequest req)
+        {
+             JsonResponseModel<CreateRabbitMQUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRabbitMQUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建RabbitMQ专享版实例
         /// </summary>
         /// <param name="req"><see cref="CreateRabbitMQVipInstanceRequest"/></param>
@@ -664,6 +704,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "CreateRabbitMQVipInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建RabbitMQ的vhost
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQVirtualHostRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQVirtualHostResponse"/></returns>
+        public async Task<CreateRabbitMQVirtualHostResponse> CreateRabbitMQVirtualHost(CreateRabbitMQVirtualHostRequest req)
+        {
+             JsonResponseModel<CreateRabbitMQVirtualHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRabbitMQVirtualHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQVirtualHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建RabbitMQ的vhost
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQVirtualHostRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQVirtualHostResponse"/></returns>
+        public CreateRabbitMQVirtualHostResponse CreateRabbitMQVirtualHostSync(CreateRabbitMQVirtualHostRequest req)
+        {
+             JsonResponseModel<CreateRabbitMQVirtualHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRabbitMQVirtualHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQVirtualHostResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

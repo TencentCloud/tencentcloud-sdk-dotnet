@@ -1,0 +1,79 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.754</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Csip</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20221121\CsipClient.cs" />
+    <Compile Include="V20221121\Models\AddNewBindRoleUserRequest.cs" />
+    <Compile Include="V20221121\Models\AddNewBindRoleUserResponse.cs" />
+    <Compile Include="V20221121\Models\AssetBaseInfoResponse.cs" />
+    <Compile Include="V20221121\Models\CVMAssetVO.cs" />
+    <Compile Include="V20221121\Models\DBAssetVO.cs" />
+    <Compile Include="V20221121\Models\DbAssetInfo.cs" />
+    <Compile Include="V20221121\Models\DescribeCVMAssetInfoRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeCVMAssetInfoResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeCVMAssetsRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeCVMAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDbAssetInfoRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDbAssetInfoResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeDbAssetsRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeDbAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeScanReportListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeScanReportListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSubnetAssetsRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSubnetAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVpcAssetsRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVpcAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\Filter.cs" />
+    <Compile Include="V20221121\Models\FilterDataObject.cs" />
+    <Compile Include="V20221121\Models\ScanTaskInfo.cs" />
+    <Compile Include="V20221121\Models\SubnetAsset.cs" />
+    <Compile Include="V20221121\Models\Tag.cs" />
+    <Compile Include="V20221121\Models\Vpc.cs" />
+    <Compile Include="V20221121\Models\WhereFilter.cs" />
+  </ItemGroup>
+</Project>

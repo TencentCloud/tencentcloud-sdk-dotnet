@@ -36,6 +36,12 @@ namespace TencentCloud.Cloudstudio.V20210524.Models
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
+        /// <summary>
+        /// 工作空间名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cloudstudio.V20210524.Models
         {
             this.SetParamSimple(map, prefix + "CloudStudioSessionTeam", this.CloudStudioSessionTeam);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

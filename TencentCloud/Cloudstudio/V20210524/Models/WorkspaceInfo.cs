@@ -38,6 +38,13 @@ namespace TencentCloud.Cloudstudio.V20210524.Models
         [JsonProperty("SpaceKey")]
         public string SpaceKey{ get; set; }
 
+        /// <summary>
+        /// 工作空间名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Cloudstudio.V20210524.Models
         {
             this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
             this.SetParamSimple(map, prefix + "SpaceKey", this.SpaceKey);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

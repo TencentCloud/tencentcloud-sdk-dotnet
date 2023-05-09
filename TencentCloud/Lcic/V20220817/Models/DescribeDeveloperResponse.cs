@@ -25,7 +25,7 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// 服务商ID
+        /// 开发商ID
         /// </summary>
         [JsonProperty("DeveloperId")]
         public string DeveloperId{ get; set; }
