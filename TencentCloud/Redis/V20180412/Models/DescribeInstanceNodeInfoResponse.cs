@@ -25,39 +25,39 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// proxy节点数量
+        /// Proxy节点数量。
         /// </summary>
         [JsonProperty("ProxyCount")]
         public long? ProxyCount{ get; set; }
 
         /// <summary>
-        /// proxy节点信息
+        /// Proxy节点信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Proxy")]
         public ProxyNodes[] Proxy{ get; set; }
 
         /// <summary>
-        /// redis节点数量
+        /// Redis节点数量。
         /// </summary>
         [JsonProperty("RedisCount")]
         public long? RedisCount{ get; set; }
 
         /// <summary>
-        /// redis节点信息
+        /// Redis节点信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Redis")]
         public RedisNodes[] Redis{ get; set; }
 
         /// <summary>
-        /// tendis节点数量
+        /// 该参数不再使用，请忽略。
         /// </summary>
         [JsonProperty("TendisCount")]
         public long? TendisCount{ get; set; }
 
         /// <summary>
-        /// tendis节点信息
+        /// 该参数不再使用，请忽略。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tendis")]

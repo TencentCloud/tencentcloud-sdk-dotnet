@@ -90,6 +90,18 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("FilenameMode")]
         public ulong? FilenameMode{ get; set; }
 
+        /// <summary>
+        /// 投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
+
+        /// <summary>
+        /// 投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "Compress.", this.Compress);
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

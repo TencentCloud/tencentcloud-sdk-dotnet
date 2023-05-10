@@ -25,25 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 节点ID
+        /// 节点 ID。
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
 
         /// <summary>
-        /// 节点角色
+        /// 节点角色。
         /// </summary>
         [JsonProperty("NodeRole")]
         public string NodeRole{ get; set; }
 
         /// <summary>
-        /// 分片ID
+        /// 分片 ID。
         /// </summary>
         [JsonProperty("ClusterId")]
         public long? ClusterId{ get; set; }
 
         /// <summary>
-        /// 可用区ID
+        /// 可用区 ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }

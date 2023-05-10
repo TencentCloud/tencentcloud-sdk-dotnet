@@ -126,6 +126,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("EdgeVersion")]
         public string EdgeVersion{ get; set; }
 
+        /// <summary>
+        /// 集群绑定的云标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification TagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +155,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "EdgeVersion", this.EdgeVersion);
+            this.SetParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

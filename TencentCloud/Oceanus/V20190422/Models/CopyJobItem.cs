@@ -24,12 +24,54 @@ namespace TencentCloud.Oceanus.V20190422.Models
     public class CopyJobItem : AbstractModel
     {
         
+        /// <summary>
+        /// 需要复制的作业serial id
+        /// </summary>
+        [JsonProperty("SourceId")]
+        public string SourceId{ get; set; }
+
+        /// <summary>
+        /// 目标集群的cluster serial id
+        /// </summary>
+        [JsonProperty("TargetClusterId")]
+        public string TargetClusterId{ get; set; }
+
+        /// <summary>
+        /// 需要复制的作业名称
+        /// </summary>
+        [JsonProperty("SourceName")]
+        public string SourceName{ get; set; }
+
+        /// <summary>
+        /// 新作业的名称
+        /// </summary>
+        [JsonProperty("TargetName")]
+        public string TargetName{ get; set; }
+
+        /// <summary>
+        /// 新作业的目录id
+        /// </summary>
+        [JsonProperty("TargetFolderId")]
+        public string TargetFolderId{ get; set; }
+
+        /// <summary>
+        /// 源作业类型
+        /// </summary>
+        [JsonProperty("JobType")]
+        public long? JobType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SourceId", this.SourceId);
+            this.SetParamSimple(map, prefix + "TargetClusterId", this.TargetClusterId);
+            this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
+            this.SetParamSimple(map, prefix + "TargetName", this.TargetName);
+            this.SetParamSimple(map, prefix + "TargetFolderId", this.TargetFolderId);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
         }
     }
 }

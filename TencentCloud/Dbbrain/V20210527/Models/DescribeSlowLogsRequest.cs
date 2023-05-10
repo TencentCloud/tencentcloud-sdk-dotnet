@@ -37,7 +37,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// sql模版的md5值
+        /// sql模板的md5值
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }

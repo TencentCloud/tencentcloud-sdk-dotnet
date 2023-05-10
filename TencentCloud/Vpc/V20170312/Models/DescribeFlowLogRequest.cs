@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 私用网络ID或者统一ID，建议使用统一ID
+        /// 私用网络ID或者统一ID，建议使用统一ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 流日志唯一ID
+        /// 流日志唯一ID。
         /// </summary>
         [JsonProperty("FlowLogId")]
         public string FlowLogId{ get; set; }

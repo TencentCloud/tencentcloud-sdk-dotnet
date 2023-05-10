@@ -2693,6 +2693,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 开通只读实例独有访问接入组
+        /// </summary>
+        /// <param name="req"><see cref="OpenReadOnlyInstanceExclusiveAccessRequest"/></param>
+        /// <returns><see cref="OpenReadOnlyInstanceExclusiveAccessResponse"/></returns>
+        public async Task<OpenReadOnlyInstanceExclusiveAccessResponse> OpenReadOnlyInstanceExclusiveAccess(OpenReadOnlyInstanceExclusiveAccessRequest req)
+        {
+             JsonResponseModel<OpenReadOnlyInstanceExclusiveAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenReadOnlyInstanceExclusiveAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenReadOnlyInstanceExclusiveAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开通只读实例独有访问接入组
+        /// </summary>
+        /// <param name="req"><see cref="OpenReadOnlyInstanceExclusiveAccessRequest"/></param>
+        /// <returns><see cref="OpenReadOnlyInstanceExclusiveAccessResponse"/></returns>
+        public OpenReadOnlyInstanceExclusiveAccessResponse OpenReadOnlyInstanceExclusiveAccessSync(OpenReadOnlyInstanceExclusiveAccessRequest req)
+        {
+             JsonResponseModel<OpenReadOnlyInstanceExclusiveAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenReadOnlyInstanceExclusiveAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenReadOnlyInstanceExclusiveAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 暂停serverless集群
         /// </summary>
         /// <param name="req"><see cref="PauseServerlessRequest"/></param>

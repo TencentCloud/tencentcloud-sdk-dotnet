@@ -3709,6 +3709,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// P2P流数据查询接口，用来获取流量、卡播和起播信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveXP2PDetailInfoListRequest"/></param>
+        /// <returns><see cref="DescribeLiveXP2PDetailInfoListResponse"/></returns>
+        public async Task<DescribeLiveXP2PDetailInfoListResponse> DescribeLiveXP2PDetailInfoList(DescribeLiveXP2PDetailInfoListRequest req)
+        {
+             JsonResponseModel<DescribeLiveXP2PDetailInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveXP2PDetailInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveXP2PDetailInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// P2P流数据查询接口，用来获取流量、卡播和起播信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveXP2PDetailInfoListRequest"/></param>
+        /// <returns><see cref="DescribeLiveXP2PDetailInfoListResponse"/></returns>
+        public DescribeLiveXP2PDetailInfoListResponse DescribeLiveXP2PDetailInfoListSync(DescribeLiveXP2PDetailInfoListRequest req)
+        {
+             JsonResponseModel<DescribeLiveXP2PDetailInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveXP2PDetailInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveXP2PDetailInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量获取日志URL。
         /// </summary>
         /// <param name="req"><see cref="DescribeLogDownloadListRequest"/></param>

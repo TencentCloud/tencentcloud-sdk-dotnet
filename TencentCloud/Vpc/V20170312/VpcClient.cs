@@ -3437,7 +3437,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteFlowLog）用于删除流日志
+        /// 本接口（DeleteFlowLog）用于删除流日志。
         /// </summary>
         /// <param name="req"><see cref="DeleteFlowLogRequest"/></param>
         /// <returns><see cref="DeleteFlowLogResponse"/></returns>
@@ -3457,7 +3457,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteFlowLog）用于删除流日志
+        /// 本接口（DeleteFlowLog）用于删除流日志。
         /// </summary>
         /// <param name="req"><see cref="DeleteFlowLogRequest"/></param>
         /// <returns><see cref="DeleteFlowLogResponse"/></returns>
@@ -5553,7 +5553,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeFlowLog）用于查询流日志实例信息
+        /// 本接口（DescribeFlowLog）用于查询流日志实例信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowLogRequest"/></param>
         /// <returns><see cref="DescribeFlowLogResponse"/></returns>
@@ -5573,7 +5573,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeFlowLog）用于查询流日志实例信息
+        /// 本接口（DescribeFlowLog）用于查询流日志实例信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowLogRequest"/></param>
         /// <returns><see cref="DescribeFlowLogResponse"/></returns>
@@ -10009,7 +10009,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyFlowLogAttribute）用于修改流日志属性
+        /// 本接口（ModifyFlowLogAttribute）用于修改流日志属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyFlowLogAttributeRequest"/></param>
         /// <returns><see cref="ModifyFlowLogAttributeResponse"/></returns>
@@ -10029,7 +10029,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyFlowLogAttribute）用于修改流日志属性
+        /// 本接口（ModifyFlowLogAttribute）用于修改流日志属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyFlowLogAttributeRequest"/></param>
         /// <returns><see cref="ModifyFlowLogAttributeResponse"/></returns>

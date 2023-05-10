@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+        /// 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。当值类型为布尔类型时，可直接取值为字符串"TRUE"或 "FALSE"。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

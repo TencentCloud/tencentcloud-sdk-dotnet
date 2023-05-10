@@ -53,6 +53,126 @@ namespace TencentCloud.Omics.V20221128
         }
 
         /// <summary>
+        /// 创建组学平台计算环境。
+        /// </summary>
+        /// <param name="req"><see cref="CreateEnvironmentRequest"/></param>
+        /// <returns><see cref="CreateEnvironmentResponse"/></returns>
+        public async Task<CreateEnvironmentResponse> CreateEnvironment(CreateEnvironmentRequest req)
+        {
+             JsonResponseModel<CreateEnvironmentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateEnvironment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEnvironmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建组学平台计算环境。
+        /// </summary>
+        /// <param name="req"><see cref="CreateEnvironmentRequest"/></param>
+        /// <returns><see cref="CreateEnvironmentResponse"/></returns>
+        public CreateEnvironmentResponse CreateEnvironmentSync(CreateEnvironmentRequest req)
+        {
+             JsonResponseModel<CreateEnvironmentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEnvironment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEnvironmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除环境。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEnvironmentRequest"/></param>
+        /// <returns><see cref="DeleteEnvironmentResponse"/></returns>
+        public async Task<DeleteEnvironmentResponse> DeleteEnvironment(DeleteEnvironmentRequest req)
+        {
+             JsonResponseModel<DeleteEnvironmentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteEnvironment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEnvironmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除环境。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEnvironmentRequest"/></param>
+        /// <returns><see cref="DeleteEnvironmentResponse"/></returns>
+        public DeleteEnvironmentResponse DeleteEnvironmentSync(DeleteEnvironmentRequest req)
+        {
+             JsonResponseModel<DeleteEnvironmentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteEnvironment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEnvironmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询环境列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
+        public async Task<DescribeEnvironmentsResponse> DescribeEnvironments(DescribeEnvironmentsRequest req)
+        {
+             JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询环境列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
+        public DescribeEnvironmentsResponse DescribeEnvironmentsSync(DescribeEnvironmentsRequest req)
+        {
+             JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询任务批次列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRunGroupsRequest"/></param>

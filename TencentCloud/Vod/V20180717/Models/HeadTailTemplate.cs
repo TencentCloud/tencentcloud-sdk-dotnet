@@ -65,6 +65,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
 
+        /// <summary>
+        /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +89,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "HeadCandidateSet.", this.HeadCandidateSet);
             this.SetParamArraySimple(map, prefix + "TailCandidateSet.", this.TailCandidateSet);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

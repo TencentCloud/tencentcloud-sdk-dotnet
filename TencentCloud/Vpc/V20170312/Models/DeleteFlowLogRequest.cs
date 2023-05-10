@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 流日志唯一ID
+        /// 流日志唯一ID。
         /// </summary>
         [JsonProperty("FlowLogId")]
         public string FlowLogId{ get; set; }

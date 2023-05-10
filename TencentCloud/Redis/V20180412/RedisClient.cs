@@ -1493,7 +1493,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例节点信息
+        /// 本接口（DescribeInstanceNodeInfo）用于查询实例节点信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>
         /// <returns><see cref="DescribeInstanceNodeInfoResponse"/></returns>
@@ -1513,7 +1513,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例节点信息
+        /// 本接口（DescribeInstanceNodeInfo）用于查询实例节点信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>
         /// <returns><see cref="DescribeInstanceNodeInfoResponse"/></returns>
