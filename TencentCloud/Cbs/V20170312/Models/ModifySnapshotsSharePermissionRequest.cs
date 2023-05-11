@@ -25,6 +25,12 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
+        /// 快照ID, 可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
+        /// </summary>
+        [JsonProperty("SnapshotIds")]
+        public string[] SnapshotIds{ get; set; }
+
+        /// <summary>
         /// 接收分享快照的账号Id列表，array型参数的格式可以参考[API简介](https://cloud.tencent.com/document/api/213/568)。帐号ID不同于QQ号，查询用户帐号ID请查看[帐号信息](https://console.cloud.tencent.com/developer)中的帐号ID栏。
         /// </summary>
         [JsonProperty("AccountIds")]
@@ -36,21 +42,15 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("Permission")]
         public string Permission{ get; set; }
 
-        /// <summary>
-        /// 快照ID, 可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
-        /// </summary>
-        [JsonProperty("SnapshotIds")]
-        public string[] SnapshotIds{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
             this.SetParamArraySimple(map, prefix + "AccountIds.", this.AccountIds);
             this.SetParamSimple(map, prefix + "Permission", this.Permission);
-            this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
         }
     }
 }

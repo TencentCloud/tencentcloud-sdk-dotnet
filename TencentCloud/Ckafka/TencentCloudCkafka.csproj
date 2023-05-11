@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.755</VersionPrefix>
+    <VersionPrefix>3.0.756</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -203,6 +203,8 @@
     <Compile Include="V20190819\Models\DescribeRegionResponse.cs" />
     <Compile Include="V20190819\Models\DescribeRouteRequest.cs" />
     <Compile Include="V20190819\Models\DescribeRouteResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeTaskStatusRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeTaskStatusResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicAttributesRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicDetailRequest.cs" />
@@ -332,6 +334,7 @@
     <Compile Include="V20190819\Models\SubstrParam.cs" />
     <Compile Include="V20190819\Models\TableMapping.cs" />
     <Compile Include="V20190819\Models\Tag.cs" />
+    <Compile Include="V20190819\Models\TaskStatusResponse.cs" />
     <Compile Include="V20190819\Models\TdwParam.cs" />
     <Compile Include="V20190819\Models\Topic.cs" />
     <Compile Include="V20190819\Models\TopicAttributesResponse.cs" />

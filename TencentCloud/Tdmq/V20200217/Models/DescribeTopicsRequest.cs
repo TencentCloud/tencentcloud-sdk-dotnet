@@ -31,6 +31,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
+        /// Pulsar 集群的ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
         /// 主题名模糊匹配。
         /// </summary>
         [JsonProperty("TopicName")]
@@ -59,12 +65,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? TopicType{ get; set; }
 
         /// <summary>
-        /// Pulsar 集群的ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
         /// * TopicName
         /// 按照主题名字查询，精确查询。
         /// 类型：String
@@ -88,11 +88,11 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "TopicCreator", this.TopicCreator);
         }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。
+        /// 一个或多个待操作的云硬盘ID。每次请求批量云硬盘上限为100。
         /// </summary>
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }

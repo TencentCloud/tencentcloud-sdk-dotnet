@@ -1853,6 +1853,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 批量删除API
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGatewayApiRequest"/></param>
+        /// <returns><see cref="DeleteGatewayApiResponse"/></returns>
+        public async Task<DeleteGatewayApiResponse> DeleteGatewayApi(DeleteGatewayApiRequest req)
+        {
+             JsonResponseModel<DeleteGatewayApiResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGatewayApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGatewayApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除API
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGatewayApiRequest"/></param>
+        /// <returns><see cref="DeleteGatewayApiResponse"/></returns>
+        public DeleteGatewayApiResponse DeleteGatewayApiSync(DeleteGatewayApiRequest req)
+        {
+             JsonResponseModel<DeleteGatewayApiResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGatewayApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGatewayApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除容器部署组
         /// </summary>
         /// <param name="req"><see cref="DeleteGroupRequest"/></param>

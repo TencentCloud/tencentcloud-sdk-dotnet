@@ -1373,6 +1373,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 查询实例错误日志列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceErrorLogsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceErrorLogsResponse"/></returns>
+        public async Task<DescribeInstanceErrorLogsResponse> DescribeInstanceErrorLogs(DescribeInstanceErrorLogsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceErrorLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceErrorLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceErrorLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例错误日志列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceErrorLogsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceErrorLogsResponse"/></returns>
+        public DescribeInstanceErrorLogsResponse DescribeInstanceErrorLogsSync(DescribeInstanceErrorLogsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceErrorLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceErrorLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceErrorLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口（DescribeInstanceSlowQueries）用于查询实例慢查询日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSlowQueriesRequest"/></param>
@@ -1804,6 +1844,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "DisassociateSecurityGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ExportInstanceErrorLogs）用于导出实例错误日志。
+        /// </summary>
+        /// <param name="req"><see cref="ExportInstanceErrorLogsRequest"/></param>
+        /// <returns><see cref="ExportInstanceErrorLogsResponse"/></returns>
+        public async Task<ExportInstanceErrorLogsResponse> ExportInstanceErrorLogs(ExportInstanceErrorLogsRequest req)
+        {
+             JsonResponseModel<ExportInstanceErrorLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportInstanceErrorLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportInstanceErrorLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ExportInstanceErrorLogs）用于导出实例错误日志。
+        /// </summary>
+        /// <param name="req"><see cref="ExportInstanceErrorLogsRequest"/></param>
+        /// <returns><see cref="ExportInstanceErrorLogsResponse"/></returns>
+        public ExportInstanceErrorLogsResponse ExportInstanceErrorLogsSync(ExportInstanceErrorLogsRequest req)
+        {
+             JsonResponseModel<ExportInstanceErrorLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportInstanceErrorLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportInstanceErrorLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

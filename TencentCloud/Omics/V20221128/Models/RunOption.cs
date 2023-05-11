@@ -44,6 +44,20 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("UseErrorOnHold")]
         public bool? UseErrorOnHold{ get; set; }
 
+        /// <summary>
+        /// 输出归档COS路径。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FinalWorkflowOutputsDir")]
+        public string FinalWorkflowOutputsDir{ get; set; }
+
+        /// <summary>
+        /// 是否使用相对目录归档输出。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UseRelativeOutputPaths")]
+        public bool? UseRelativeOutputPaths{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +67,8 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "FailureMode", this.FailureMode);
             this.SetParamSimple(map, prefix + "UseCallCache", this.UseCallCache);
             this.SetParamSimple(map, prefix + "UseErrorOnHold", this.UseErrorOnHold);
+            this.SetParamSimple(map, prefix + "FinalWorkflowOutputsDir", this.FinalWorkflowOutputsDir);
+            this.SetParamSimple(map, prefix + "UseRelativeOutputPaths", this.UseRelativeOutputPaths);
         }
     }
 }

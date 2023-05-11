@@ -2173,6 +2173,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 查询任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
+        public async Task<DescribeTaskStatusResponse> DescribeTaskStatus(DescribeTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
+        public DescribeTaskStatusResponse DescribeTaskStatusSync(DescribeTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口请求域名：https://ckafka.tencentcloudapi.com
         /// 本接口（DescribeTopic）用于在用户获取消息队列 CKafka 实例的主题列表
         /// </summary>

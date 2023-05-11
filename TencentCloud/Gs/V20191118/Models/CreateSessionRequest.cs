@@ -31,7 +31,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 游戏ID
+        /// 【已废弃】只在TrylockWorker时生效
         /// </summary>
         [JsonProperty("GameId")]
         public string GameId{ get; set; }

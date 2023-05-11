@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.755</VersionPrefix>
+    <VersionPrefix>3.0.756</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -84,6 +84,7 @@
     <Compile Include="V20190107\Models\CreateClustersResponse.cs" />
     <Compile Include="V20190107\Models\CynosdbCluster.cs" />
     <Compile Include="V20190107\Models\CynosdbClusterDetail.cs" />
+    <Compile Include="V20190107\Models\CynosdbErrorLogItem.cs" />
     <Compile Include="V20190107\Models\CynosdbInstance.cs" />
     <Compile Include="V20190107\Models\CynosdbInstanceDetail.cs" />
     <Compile Include="V20190107\Models\CynosdbInstanceGrp.cs" />
@@ -136,6 +137,8 @@
     <Compile Include="V20190107\Models\DescribeFlowResponse.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceDetailRequest.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceDetailResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeInstanceErrorLogsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeInstanceErrorLogsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceSlowQueriesRequest.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceSlowQueriesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceSpecsRequest.cs" />
@@ -158,6 +161,9 @@
     <Compile Include="V20190107\Models\DescribeZonesResponse.cs" />
     <Compile Include="V20190107\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="V20190107\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20190107\Models\ErrorLogItemExport.cs" />
+    <Compile Include="V20190107\Models\ExportInstanceErrorLogsRequest.cs" />
+    <Compile Include="V20190107\Models\ExportInstanceErrorLogsResponse.cs" />
     <Compile Include="V20190107\Models\ExportInstanceSlowQueriesRequest.cs" />
     <Compile Include="V20190107\Models\ExportInstanceSlowQueriesResponse.cs" />
     <Compile Include="V20190107\Models\GrantAccountPrivilegesRequest.cs" />

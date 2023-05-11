@@ -48,6 +48,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
+        /// <summary>
+        /// 集群节点ID
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
         }
     }
 }

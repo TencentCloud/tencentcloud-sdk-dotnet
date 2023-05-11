@@ -31,7 +31,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Source{ get; set; }
 
         /// <summary>
-        /// 权重值，取值[0,100]
+        /// 权重值，取值[0,100]，暂不支持
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

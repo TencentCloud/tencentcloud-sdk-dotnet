@@ -1601,11 +1601,9 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// 接口请求域名： cbs.tencentcloudapi.com 。
+        /// 本接口 (ModifyDisksChargeType) 用于切换云硬盘的计费模式。
         /// 
-        /// 本接口 (ModifyDisksChargeType) 用于切换云盘的计费模式。
-        /// 
-        /// 非弹性云盘不支持此接口，请通过修改实例计费模式接口将实例连同非弹性云盘一起转换。
+        /// 非弹性云硬盘不支持此接口，请通过修改实例计费模式接口将实例连同非弹性云硬盘一起转换。
         /// 默认接口请求频率限制：10次/秒。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksChargeTypeRequest"/></param>
@@ -1626,11 +1624,9 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// 接口请求域名： cbs.tencentcloudapi.com 。
+        /// 本接口 (ModifyDisksChargeType) 用于切换云硬盘的计费模式。
         /// 
-        /// 本接口 (ModifyDisksChargeType) 用于切换云盘的计费模式。
-        /// 
-        /// 非弹性云盘不支持此接口，请通过修改实例计费模式接口将实例连同非弹性云盘一起转换。
+        /// 非弹性云硬盘不支持此接口，请通过修改实例计费模式接口将实例连同非弹性云硬盘一起转换。
         /// 默认接口请求频率限制：10次/秒。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksChargeTypeRequest"/></param>

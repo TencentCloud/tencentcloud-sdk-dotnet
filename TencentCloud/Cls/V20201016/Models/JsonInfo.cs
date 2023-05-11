@@ -37,6 +37,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MetaFields")]
         public string[] MetaFields{ get; set; }
 
+        /// <summary>
+        /// 投递Json格式，0：字符串方式投递；1:以结构化方式投递
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JsonType")]
+        public long? JsonType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +52,7 @@ namespace TencentCloud.Cls.V20201016.Models
         {
             this.SetParamSimple(map, prefix + "EnableTag", this.EnableTag);
             this.SetParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
+            this.SetParamSimple(map, prefix + "JsonType", this.JsonType);
         }
     }
 }

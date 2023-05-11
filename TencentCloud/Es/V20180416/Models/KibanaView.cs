@@ -72,6 +72,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// ts-0noqayxu-az6-hot-03222010-0
+        /// </summary>
+        [JsonProperty("NodeId")]
+        public string NodeId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CpuNum", this.CpuNum);
             this.SetParamSimple(map, prefix + "CpuUsage", this.CpuUsage);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
         }
     }
 }
