@@ -114,6 +114,27 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("DefenseAttackCount")]
         public ulong? DefenseAttackCount{ get; set; }
 
+        /// <summary>
+        /// 检测规则 0 - 版本比对, 1 - POC验证
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Method")]
+        public ulong? Method{ get; set; }
+
+        /// <summary>
+        /// 攻击热度级别
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttackLevel")]
+        public ulong? AttackLevel{ get; set; }
+
+        /// <summary>
+        /// 是否有漏洞主机开启漏洞防御
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefenseState")]
+        public bool? DefenseState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +155,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "HostCount", this.HostCount);
             this.SetParamSimple(map, prefix + "IsSupportDefense", this.IsSupportDefense);
             this.SetParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
+            this.SetParamSimple(map, prefix + "DefenseState", this.DefenseState);
         }
     }
 }

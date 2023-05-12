@@ -25,49 +25,53 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 参数名
+        /// 参数名称。
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// 参数类型：enum
+        /// 参数类型，例如：Enum。
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }
 
         /// <summary>
-        /// 修改后是否需要重启：true，false
+        /// 参数值修改后是否需要重启。
+        /// - true：需要。
+        /// - false：不需要。
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
 
         /// <summary>
-        /// 参数默认值
+        /// 参数默认值。
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// 当前运行参数值
+        /// 参数当前运行值。
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// 参数说明
+        /// 参数说明。
         /// </summary>
         [JsonProperty("Tips")]
         public string Tips{ get; set; }
 
         /// <summary>
-        /// 参数可取值
+        /// 参数可取的值。
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// 参数状态, 1: 修改中， 2：修改完成
+        /// 参数修改状态。
+        /// - 1: 修改中。
+        /// - 2：修改完成。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

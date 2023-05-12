@@ -31,7 +31,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
+        /// 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
@@ -49,6 +49,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string KmsKeyId{ get; set; }
 
         /// <summary>
+        /// 凭据类型，默认为自定义凭据。
+        /// </summary>
+        [JsonProperty("SecretType")]
+        public ulong? SecretType{ get; set; }
+
+        /// <summary>
         /// 二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持4096字节。
         /// </summary>
         [JsonProperty("SecretBinary")]
@@ -59,6 +65,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// </summary>
         [JsonProperty("SecretString")]
         public string SecretString{ get; set; }
+
+        /// <summary>
+        /// JSON 格式字符串，用于指定特定凭据类型的额外配置。
+        /// </summary>
+        [JsonProperty("AdditionalConfig")]
+        public string AdditionalConfig{ get; set; }
 
         /// <summary>
         /// 标签列表
@@ -76,8 +88,10 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
             this.SetParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
             this.SetParamSimple(map, prefix + "SecretString", this.SecretString);
+            this.SetParamSimple(map, prefix + "AdditionalConfig", this.AdditionalConfig);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

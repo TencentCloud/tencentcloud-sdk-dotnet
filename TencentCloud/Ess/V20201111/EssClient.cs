@@ -221,6 +221,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 生成子客编辑企业信息二维码
+        /// </summary>
+        /// <param name="req"><see cref="CreateChannelSubOrganizationModifyQrCodeRequest"/></param>
+        /// <returns><see cref="CreateChannelSubOrganizationModifyQrCodeResponse"/></returns>
+        public async Task<CreateChannelSubOrganizationModifyQrCodeResponse> CreateChannelSubOrganizationModifyQrCode(CreateChannelSubOrganizationModifyQrCodeRequest req)
+        {
+             JsonResponseModel<CreateChannelSubOrganizationModifyQrCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateChannelSubOrganizationModifyQrCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateChannelSubOrganizationModifyQrCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成子客编辑企业信息二维码
+        /// </summary>
+        /// <param name="req"><see cref="CreateChannelSubOrganizationModifyQrCodeRequest"/></param>
+        /// <returns><see cref="CreateChannelSubOrganizationModifyQrCodeResponse"/></returns>
+        public CreateChannelSubOrganizationModifyQrCodeResponse CreateChannelSubOrganizationModifyQrCodeSync(CreateChannelSubOrganizationModifyQrCodeRequest req)
+        {
+             JsonResponseModel<CreateChannelSubOrganizationModifyQrCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateChannelSubOrganizationModifyQrCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateChannelSubOrganizationModifyQrCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 上传了word、excel文件后，通过该接口发起文件转换任务，将word、excel文件转换为pdf文件。
         /// </summary>
         /// <param name="req"><see cref="CreateConvertTaskApiRequest"/></param>

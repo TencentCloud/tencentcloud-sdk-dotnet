@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 安全组信息
+        /// 安全组信息，包括：安全组 ID、安全组名称、安全组出入站规则。
         /// </summary>
         [JsonProperty("SecurityGroupDetails")]
         public SecurityGroupDetail[] SecurityGroupDetails{ get; set; }

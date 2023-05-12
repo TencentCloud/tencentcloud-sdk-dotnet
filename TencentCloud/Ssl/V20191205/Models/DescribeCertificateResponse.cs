@@ -249,6 +249,27 @@ namespace TencentCloud.Ssl.V20191205.Models
         public Tags[] Tags{ get; set; }
 
         /// <summary>
+        /// CA证书的所有加密方式	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CAEncryptAlgorithms")]
+        public string[] CAEncryptAlgorithms{ get; set; }
+
+        /// <summary>
+        /// CA证书的所有通用名称	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CACommonNames")]
+        public string[] CACommonNames{ get; set; }
+
+        /// <summary>
+        /// CA证书所有的到期时间	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CAEndTimes")]
+        public string[] CAEndTimes{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -292,6 +313,9 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamObj(map, prefix + "SubmittedData.", this.SubmittedData);
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArraySimple(map, prefix + "CAEncryptAlgorithms.", this.CAEncryptAlgorithms);
+            this.SetParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
+            this.SetParamArraySimple(map, prefix + "CAEndTimes.", this.CAEndTimes);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

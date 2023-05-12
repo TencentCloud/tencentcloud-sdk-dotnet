@@ -25,31 +25,31 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 节点key的个数
+        /// Redis 节点上 Key 的个数。
         /// </summary>
         [JsonProperty("Keys")]
         public long? Keys{ get; set; }
 
         /// <summary>
-        /// 节点slot分布
+        /// Redis 节点 Slot 分布范围。例如：0-5460。
         /// </summary>
         [JsonProperty("Slot")]
         public string Slot{ get; set; }
 
         /// <summary>
-        /// 节点的序列ID
+        /// 节点的序列 ID。
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
 
         /// <summary>
-        /// 节点的状态
+        /// 节点的状态。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 节点角色
+        /// 节点角色。
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }

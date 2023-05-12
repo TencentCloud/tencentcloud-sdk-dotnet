@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public SecurityGroup[] Groups{ get; set; }
 
         /// <summary>
-        /// 安全组生效内网地址。
+        /// 实例内网IPv4地址。
         /// </summary>
         [JsonProperty("VIP")]
         public string VIP{ get; set; }
 
         /// <summary>
-        /// 安全组生效内网端口。
+        /// 内网端口。
         /// </summary>
         [JsonProperty("VPort")]
         public string VPort{ get; set; }

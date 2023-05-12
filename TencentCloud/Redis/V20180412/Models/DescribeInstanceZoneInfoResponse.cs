@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例节点组的个数
+        /// 实例节点组的个数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 实例节点组列表
+        /// 实例节点组列表。
         /// </summary>
         [JsonProperty("ReplicaGroups")]
         public ReplicaGroup[] ReplicaGroups{ get; set; }

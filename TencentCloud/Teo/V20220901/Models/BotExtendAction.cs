@@ -27,7 +27,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 处置动作，取值有：
         /// <li>monitor：观察；</li>
-        /// <li>trans：放行；</li>
         /// <li>alg：JavaScript挑战；</li>
         /// <li>captcha：托管挑战；</li>
         /// <li>random：随机，按照ExtendActions分配处置动作和比例；</li>

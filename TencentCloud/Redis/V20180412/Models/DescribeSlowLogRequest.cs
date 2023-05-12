@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// 每个页面展示的慢查询条数，默认值为20。
+        /// 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

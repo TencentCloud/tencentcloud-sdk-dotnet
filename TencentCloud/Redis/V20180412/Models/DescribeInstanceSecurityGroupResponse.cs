@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例安全组信息
+        /// 实例安全组信息。
         /// </summary>
         [JsonProperty("InstanceSecurityGroupsDetail")]
         public InstanceSecurityGroupDetail[] InstanceSecurityGroupsDetail{ get; set; }

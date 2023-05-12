@@ -25,25 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 执行动作
+        /// 标识出入数据库的IP与端口是否被允许。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// IP地址
+        /// 出入数据库的IP地址
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 端口号
+        /// 端口号。
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
-        /// 协议类型
+        /// 协议类型。
         /// </summary>
         [JsonProperty("Proto")]
         public string Proto{ get; set; }

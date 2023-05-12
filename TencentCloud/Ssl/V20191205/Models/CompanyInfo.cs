@@ -66,6 +66,20 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("CompanyPhone")]
         public string CompanyPhone{ get; set; }
 
+        /// <summary>
+        /// 类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IdType")]
+        public string IdType{ get; set; }
+
+        /// <summary>
+        /// ID号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IdNumber")]
+        public string IdNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +93,8 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CompanyCity", this.CompanyCity);
             this.SetParamSimple(map, prefix + "CompanyAddress", this.CompanyAddress);
             this.SetParamSimple(map, prefix + "CompanyPhone", this.CompanyPhone);
+            this.SetParamSimple(map, prefix + "IdType", this.IdType);
+            this.SetParamSimple(map, prefix + "IdNumber", this.IdNumber);
         }
     }
 }

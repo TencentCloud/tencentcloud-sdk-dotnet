@@ -50,7 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ServiceTemplateSpecification ServiceTemplate{ get; set; }
 
         /// <summary>
-        /// 网段或IP(互斥)。
+        /// 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }

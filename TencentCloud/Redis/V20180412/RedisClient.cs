@@ -973,7 +973,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
+        /// 本接口（DescribeDBSecurityGroups）用于查询实例的安全组详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
@@ -993,7 +993,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
+        /// 本接口（DescribeDBSecurityGroups）用于查询实例的安全组详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
@@ -1013,7 +1013,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查看实例子账号信息
+        /// 本接口（DescribeInstanceAccount）用于查看实例子账号信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAccountRequest"/></param>
         /// <returns><see cref="DescribeInstanceAccountResponse"/></returns>
@@ -1033,7 +1033,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查看实例子账号信息
+        /// 本接口（DescribeInstanceAccount）用于查看实例子账号信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAccountRequest"/></param>
         /// <returns><see cref="DescribeInstanceAccountResponse"/></returns>
@@ -1573,7 +1573,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例参数列表
+        /// 本接口（DescribeInstanceParams）用于查询实例参数列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
@@ -1593,7 +1593,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例参数列表
+        /// 本接口（DescribeInstanceParams）用于查询实例参数列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
@@ -1613,7 +1613,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例安全组信息
+        /// 本接口（DescribeInstanceSecurityGroup）用于查询实例安全组信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSecurityGroupRequest"/></param>
         /// <returns><see cref="DescribeInstanceSecurityGroupResponse"/></returns>
@@ -1633,7 +1633,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例安全组信息
+        /// 本接口（DescribeInstanceSecurityGroup）用于查询实例安全组信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSecurityGroupRequest"/></param>
         /// <returns><see cref="DescribeInstanceSecurityGroupResponse"/></returns>
@@ -1693,7 +1693,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis节点详细信息
+        /// 本接口（DescribeInstanceZoneInfo）用于查询 Redis 节点详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceZoneInfoRequest"/></param>
         /// <returns><see cref="DescribeInstanceZoneInfoResponse"/></returns>
@@ -1713,7 +1713,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis节点详细信息
+        /// 本接口（DescribeInstanceZoneInfo）用于查询 Redis 节点详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceZoneInfoRequest"/></param>
         /// <returns><see cref="DescribeInstanceZoneInfoResponse"/></returns>
@@ -2653,7 +2653,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 手动备份Redis实例
+        /// 本接口（ManualBackupInstance）用于手动备份Redis实例。
         /// </summary>
         /// <param name="req"><see cref="ManualBackupInstanceRequest"/></param>
         /// <returns><see cref="ManualBackupInstanceResponse"/></returns>
@@ -2673,7 +2673,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 手动备份Redis实例
+        /// 本接口（ManualBackupInstance）用于手动备份Redis实例。
         /// </summary>
         /// <param name="req"><see cref="ManualBackupInstanceRequest"/></param>
         /// <returns><see cref="ManualBackupInstanceResponse"/></returns>

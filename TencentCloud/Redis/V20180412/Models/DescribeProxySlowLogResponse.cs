@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 慢查询总数
+        /// 慢查询总数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 慢查询详情
+        /// 慢查询详情。
         /// </summary>
         [JsonProperty("InstanceProxySlowLogDetail")]
         public InstanceProxySlowlogDetail[] InstanceProxySlowLogDetail{ get; set; }

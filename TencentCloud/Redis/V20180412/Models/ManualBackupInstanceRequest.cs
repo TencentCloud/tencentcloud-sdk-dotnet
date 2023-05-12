@@ -25,19 +25,22 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
+        /// 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 备份的备注信息
+        /// 手动备份任务的备注信息。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 保存天数。0代表指定默认保留时间
+        /// 备份数据的保存天数。
+        /// - 单位：天；默认值为7天；取值范围：[0.1825]。如果超过 7天，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+        /// - 如果不配置该参数，默认与自动备份的保留时间一致。
+        /// - 如果未设置自动备份，默认为7天。
         /// </summary>
         [JsonProperty("StorageDays")]
         public long? StorageDays{ get; set; }

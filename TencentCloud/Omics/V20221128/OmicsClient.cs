@@ -253,6 +253,86 @@ namespace TencentCloud.Omics.V20221128
         }
 
         /// <summary>
+        /// 查询表格。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablesRequest"/></param>
+        /// <returns><see cref="DescribeTablesResponse"/></returns>
+        public async Task<DescribeTablesResponse> DescribeTables(DescribeTablesRequest req)
+        {
+             JsonResponseModel<DescribeTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询表格。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablesRequest"/></param>
+        /// <returns><see cref="DescribeTablesResponse"/></returns>
+        public DescribeTablesResponse DescribeTablesSync(DescribeTablesRequest req)
+        {
+             JsonResponseModel<DescribeTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询表格行数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablesRowsRequest"/></param>
+        /// <returns><see cref="DescribeTablesRowsResponse"/></returns>
+        public async Task<DescribeTablesRowsResponse> DescribeTablesRows(DescribeTablesRowsRequest req)
+        {
+             JsonResponseModel<DescribeTablesRowsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTablesRows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTablesRowsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询表格行数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablesRowsRequest"/></param>
+        /// <returns><see cref="DescribeTablesRowsResponse"/></returns>
+        public DescribeTablesRowsResponse DescribeTablesRowsSync(DescribeTablesRowsRequest req)
+        {
+             JsonResponseModel<DescribeTablesRowsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTablesRows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTablesRowsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询作业详情。
         /// </summary>
         /// <param name="req"><see cref="GetRunCallsRequest"/></param>
@@ -364,6 +444,46 @@ namespace TencentCloud.Omics.V20221128
              {
                  var strResp = this.InternalRequestSync(req, "ImportTableFile");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportTableFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重试任务。
+        /// </summary>
+        /// <param name="req"><see cref="RetryRunsRequest"/></param>
+        /// <returns><see cref="RetryRunsResponse"/></returns>
+        public async Task<RetryRunsResponse> RetryRuns(RetryRunsRequest req)
+        {
+             JsonResponseModel<RetryRunsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RetryRuns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RetryRunsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重试任务。
+        /// </summary>
+        /// <param name="req"><see cref="RetryRunsRequest"/></param>
+        /// <returns><see cref="RetryRunsResponse"/></returns>
+        public RetryRunsResponse RetryRunsSync(RetryRunsRequest req)
+        {
+             JsonResponseModel<RetryRunsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RetryRuns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RetryRunsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

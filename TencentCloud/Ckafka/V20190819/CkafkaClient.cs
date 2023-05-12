@@ -2335,6 +2335,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 获取Topic流量排行，消费者流量排行
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicFlowRankingRequest"/></param>
+        /// <returns><see cref="DescribeTopicFlowRankingResponse"/></returns>
+        public async Task<DescribeTopicFlowRankingResponse> DescribeTopicFlowRanking(DescribeTopicFlowRankingRequest req)
+        {
+             JsonResponseModel<DescribeTopicFlowRankingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopicFlowRanking");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicFlowRankingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Topic流量排行，消费者流量排行
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicFlowRankingRequest"/></param>
+        /// <returns><see cref="DescribeTopicFlowRankingResponse"/></returns>
+        public DescribeTopicFlowRankingResponse DescribeTopicFlowRankingSync(DescribeTopicFlowRankingRequest req)
+        {
+             JsonResponseModel<DescribeTopicFlowRankingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopicFlowRanking");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicFlowRankingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询topic 生产端连接信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicProduceConnectionRequest"/></param>

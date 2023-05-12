@@ -60,6 +60,13 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 设备的sdk日志等级，0：关闭，1：错误，2：告警，3：信息，4：调试
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogLevel")]
+        public ulong? LogLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "DevicePsk", this.DevicePsk);
             this.SetParamSimple(map, prefix + "EnableState", this.EnableState);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "LogLevel", this.LogLevel);
         }
     }
 }

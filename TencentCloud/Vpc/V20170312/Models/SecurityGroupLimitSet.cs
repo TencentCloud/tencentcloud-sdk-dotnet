@@ -54,6 +54,24 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InstanceSecurityGroupLimit")]
         public ulong? InstanceSecurityGroupLimit{ get; set; }
 
+        /// <summary>
+        /// 安全组展开后的规则数限制
+        /// </summary>
+        [JsonProperty("SecurityGroupExtendedPolicyLimit")]
+        public ulong? SecurityGroupExtendedPolicyLimit{ get; set; }
+
+        /// <summary>
+        /// 被引用的安全组关联CVM、ENI的实例配额
+        /// </summary>
+        [JsonProperty("SecurityGroupReferedCvmAndEniLimit")]
+        public ulong? SecurityGroupReferedCvmAndEniLimit{ get; set; }
+
+        /// <summary>
+        /// 被引用的安全组关联数据库、LB等服务实例配额
+        /// </summary>
+        [JsonProperty("SecurityGroupReferedSvcLimit")]
+        public ulong? SecurityGroupReferedSvcLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ReferedSecurityGroupLimit", this.ReferedSecurityGroupLimit);
             this.SetParamSimple(map, prefix + "SecurityGroupInstanceLimit", this.SecurityGroupInstanceLimit);
             this.SetParamSimple(map, prefix + "InstanceSecurityGroupLimit", this.InstanceSecurityGroupLimit);
+            this.SetParamSimple(map, prefix + "SecurityGroupExtendedPolicyLimit", this.SecurityGroupExtendedPolicyLimit);
+            this.SetParamSimple(map, prefix + "SecurityGroupReferedCvmAndEniLimit", this.SecurityGroupReferedCvmAndEniLimit);
+            this.SetParamSimple(map, prefix + "SecurityGroupReferedSvcLimit", this.SecurityGroupReferedSvcLimit);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03F46F93-2F0A-340C-A860-01D9CA0C0BCB}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.756</VersionPrefix>
+    <VersionPrefix>3.0.757</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,10 @@
     <Compile Include="V20221128\Models\DescribeRunGroupsResponse.cs" />
     <Compile Include="V20221128\Models\DescribeRunsRequest.cs" />
     <Compile Include="V20221128\Models\DescribeRunsResponse.cs" />
+    <Compile Include="V20221128\Models\DescribeTablesRequest.cs" />
+    <Compile Include="V20221128\Models\DescribeTablesResponse.cs" />
+    <Compile Include="V20221128\Models\DescribeTablesRowsRequest.cs" />
+    <Compile Include="V20221128\Models\DescribeTablesRowsResponse.cs" />
     <Compile Include="V20221128\Models\Environment.cs" />
     <Compile Include="V20221128\Models\EnvironmentConfig.cs" />
     <Compile Include="V20221128\Models\ExecutionTime.cs" />
@@ -72,6 +76,8 @@
     <Compile Include="V20221128\Models\ImportTableFileRequest.cs" />
     <Compile Include="V20221128\Models\ImportTableFileResponse.cs" />
     <Compile Include="V20221128\Models\ResourceIds.cs" />
+    <Compile Include="V20221128\Models\RetryRunsRequest.cs" />
+    <Compile Include="V20221128\Models\RetryRunsResponse.cs" />
     <Compile Include="V20221128\Models\Run.cs" />
     <Compile Include="V20221128\Models\RunApplicationRequest.cs" />
     <Compile Include="V20221128\Models\RunApplicationResponse.cs" />
@@ -80,6 +86,9 @@
     <Compile Include="V20221128\Models\RunOption.cs" />
     <Compile Include="V20221128\Models\RunStatusCount.cs" />
     <Compile Include="V20221128\Models\StorageOption.cs" />
+    <Compile Include="V20221128\Models\Table.cs" />
+    <Compile Include="V20221128\Models\TableColumn.cs" />
+    <Compile Include="V20221128\Models\TableRow.cs" />
     <Compile Include="V20221128\Models\VPCOption.cs" />
   </ItemGroup>
 </Project>

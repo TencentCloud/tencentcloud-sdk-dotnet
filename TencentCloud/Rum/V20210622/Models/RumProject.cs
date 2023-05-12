@@ -125,6 +125,13 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("ProjectStatus")]
         public long? ProjectStatus{ get; set; }
 
+        /// <summary>
+        /// 日志接入点，用户忽略。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessPoint")]
+        public string AccessPoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +154,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "IsStar", this.IsStar);
             this.SetParamSimple(map, prefix + "ProjectStatus", this.ProjectStatus);
+            this.SetParamSimple(map, prefix + "AccessPoint", this.AccessPoint);
         }
     }
 }

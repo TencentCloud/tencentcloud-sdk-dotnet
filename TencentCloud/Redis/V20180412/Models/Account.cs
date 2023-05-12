@@ -25,42 +25,50 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 账号名称（如果是主账号，名称为root）
+        /// 账号名称。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 账号描述信息
+        /// 账号描述信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 读写策略：r-只读，w-只写，rw-读写
+        /// 读写权限策略。
+        /// - r：只读。
+        /// - w：只写。
+        /// - rw：读写。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// 路由策略：master-主节点，replication-从节点
+        /// 只读路由策略。
+        /// - master：主节点。
+        /// - replication：从节点。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// 子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
+        /// 子账号状态.
+        /// - 1：账号变更中。
+        /// - 2：账号有效。
+        /// - 4：账号已删除。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

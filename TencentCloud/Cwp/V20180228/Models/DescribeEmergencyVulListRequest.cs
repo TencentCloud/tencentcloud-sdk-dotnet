@@ -59,6 +59,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("By")]
         public string By{ get; set; }
 
+        /// <summary>
+        /// 是否热点漏洞
+        /// </summary>
+        [JsonProperty("HotspotAttack")]
+        public bool? HotspotAttack{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +76,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamSimple(map, prefix + "HotspotAttack", this.HotspotAttack);
         }
     }
 }

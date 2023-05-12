@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 加速域名所属站点ID。不填写该参数默认返回所有站点下的加速域名。
+        /// 加速域名所属站点ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }

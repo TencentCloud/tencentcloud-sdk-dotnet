@@ -25,43 +25,43 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 项目Id
+        /// 项目ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建安全组的时间。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 安全组Id
+        /// 安全组 ID。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// 安全组名称
+        /// 安全组名称。
         /// </summary>
         [JsonProperty("SecurityGroupName")]
         public string SecurityGroupName{ get; set; }
 
         /// <summary>
-        /// 安全组标记
+        /// 安全组标记。
         /// </summary>
         [JsonProperty("SecurityGroupRemark")]
         public string SecurityGroupRemark{ get; set; }
 
         /// <summary>
-        /// 安全组入站规则
+        /// 安全组入站规则，即控制访问数据库的来源。
         /// </summary>
         [JsonProperty("InboundRule")]
         public SecurityGroupsInboundAndOutbound[] InboundRule{ get; set; }
 
         /// <summary>
-        /// 安全组出站规则
+        /// 安全组出站规则。
         /// </summary>
         [JsonProperty("OutboundRule")]
         public SecurityGroupsInboundAndOutbound[] OutboundRule{ get; set; }

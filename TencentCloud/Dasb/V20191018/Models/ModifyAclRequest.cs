@@ -133,6 +133,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         public ulong?[] CmdTemplateIdSet{ get; set; }
 
         /// <summary>
+        /// 关联高危DB模版ID
+        /// </summary>
+        [JsonProperty("ACTemplateIdSet")]
+        public string[] ACTemplateIdSet{ get; set; }
+
+        /// <summary>
         /// 是否开启 RDP 磁盘映射文件上传
         /// </summary>
         [JsonProperty("AllowDiskFileUp")]
@@ -206,6 +212,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamArraySimple(map, prefix + "DeviceGroupIdSet.", this.DeviceGroupIdSet);
             this.SetParamArraySimple(map, prefix + "AccountSet.", this.AccountSet);
             this.SetParamArraySimple(map, prefix + "CmdTemplateIdSet.", this.CmdTemplateIdSet);
+            this.SetParamArraySimple(map, prefix + "ACTemplateIdSet.", this.ACTemplateIdSet);
             this.SetParamSimple(map, prefix + "AllowDiskFileUp", this.AllowDiskFileUp);
             this.SetParamSimple(map, prefix + "AllowDiskFileDown", this.AllowDiskFileDown);
             this.SetParamSimple(map, prefix + "AllowShellFileUp", this.AllowShellFileUp);

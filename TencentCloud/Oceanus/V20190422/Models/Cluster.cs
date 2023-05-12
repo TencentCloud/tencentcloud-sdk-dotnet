@@ -252,6 +252,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("IsNeedManageNode")]
         public long? IsNeedManageNode{ get; set; }
 
+        /// <summary>
+        /// session集群信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterSessions")]
+        public ClusterSession[] ClusterSessions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -293,6 +300,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "RunningCu", this.RunningCu);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "IsNeedManageNode", this.IsNeedManageNode);
+            this.SetParamArrayObj(map, prefix + "ClusterSessions.", this.ClusterSessions);
         }
     }
 }

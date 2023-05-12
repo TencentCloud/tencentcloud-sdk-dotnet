@@ -25,31 +25,31 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例参数个数
+        /// 参数列表总数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 实例枚举类型参数
+        /// 实例枚举类型参数。
         /// </summary>
         [JsonProperty("InstanceEnumParam")]
         public InstanceEnumParam[] InstanceEnumParam{ get; set; }
 
         /// <summary>
-        /// 实例整型参数
+        /// 实例整型参数。
         /// </summary>
         [JsonProperty("InstanceIntegerParam")]
         public InstanceIntegerParam[] InstanceIntegerParam{ get; set; }
 
         /// <summary>
-        /// 实例字符型参数
+        /// 实例字符型参数。
         /// </summary>
         [JsonProperty("InstanceTextParam")]
         public InstanceTextParam[] InstanceTextParam{ get; set; }
 
         /// <summary>
-        /// 实例多选项型参数
+        /// 实例多选项型参数。
         /// </summary>
         [JsonProperty("InstanceMultiParam")]
         public InstanceMultiParam[] InstanceMultiParam{ get; set; }

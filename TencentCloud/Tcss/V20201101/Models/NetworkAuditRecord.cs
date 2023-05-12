@@ -79,6 +79,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
+        /// <summary>
+        /// 策略id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PolicyId")]
+        public ulong? PolicyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "OperationTime", this.OperationTime);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
         }
     }
 }

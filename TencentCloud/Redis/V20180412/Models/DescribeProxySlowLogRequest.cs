@@ -25,37 +25,37 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 慢查询的开始时间。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 慢查询的结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 慢查询阈值（单位：毫秒）
+        /// 慢查询阈值，单位：毫秒。
         /// </summary>
         [JsonProperty("MinQueryTime")]
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// 页面大小
+        /// 分页大小。默认为 20，取值范围[20,1000]。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，取Limit整数倍
+        /// 偏移量，取Limit整数倍。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

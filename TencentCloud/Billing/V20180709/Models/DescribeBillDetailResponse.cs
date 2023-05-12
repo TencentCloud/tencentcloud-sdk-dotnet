@@ -31,11 +31,18 @@ namespace TencentCloud.Billing.V20180709.Models
         public BillDetail[] DetailSet{ get; set; }
 
         /// <summary>
-        /// 总记录数
+        /// 总记录数，24小时缓存一次，可能比实际总记录数少
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
+
+        /// <summary>
+        /// 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Context")]
+        public string Context{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,6 +58,7 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamArrayObj(map, prefix + "DetailSet.", this.DetailSet);
             this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

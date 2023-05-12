@@ -24,12 +24,33 @@ namespace TencentCloud.Eis.V20210601.Models
     public class ListDeployableRuntimesMCRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 应用id
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
+
+        /// <summary>
+        /// 实例id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public long? InstanceId{ get; set; }
+
+        /// <summary>
+        /// 版本类型 0-pro 1-lite
+        /// </summary>
+        [JsonProperty("PlanType")]
+        public long? PlanType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "PlanType", this.PlanType);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.756</VersionPrefix>
+    <VersionPrefix>3.0.757</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -84,6 +84,7 @@
     <Compile Include="V20190819\Models\Connection.cs" />
     <Compile Include="V20190819\Models\ConsumerGroup.cs" />
     <Compile Include="V20190819\Models\ConsumerGroupResponse.cs" />
+    <Compile Include="V20190819\Models\ConsumerGroupSpeed.cs" />
     <Compile Include="V20190819\Models\ConsumerGroupTopic.cs" />
     <Compile Include="V20190819\Models\ConsumerRecord.cs" />
     <Compile Include="V20190819\Models\CosParam.cs" />
@@ -209,6 +210,8 @@
     <Compile Include="V20190819\Models\DescribeTopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicDetailRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTopicDetailResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicFlowRankingRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicFlowRankingResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicProduceConnectionRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTopicProduceConnectionResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicRequest.cs" />
@@ -340,8 +343,11 @@
     <Compile Include="V20190819\Models\TopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\TopicDetail.cs" />
     <Compile Include="V20190819\Models\TopicDetailResponse.cs" />
+    <Compile Include="V20190819\Models\TopicFlowRanking.cs" />
+    <Compile Include="V20190819\Models\TopicFlowRankingResult.cs" />
     <Compile Include="V20190819\Models\TopicInSyncReplicaInfo.cs" />
     <Compile Include="V20190819\Models\TopicInSyncReplicaResult.cs" />
+    <Compile Include="V20190819\Models\TopicMessageHeapRanking.cs" />
     <Compile Include="V20190819\Models\TopicParam.cs" />
     <Compile Include="V20190819\Models\TopicPartitionDO.cs" />
     <Compile Include="V20190819\Models\TopicResult.cs" />

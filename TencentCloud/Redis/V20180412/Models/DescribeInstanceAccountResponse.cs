@@ -25,14 +25,14 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 账号详细信息
+        /// 账号详细信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }
 
         /// <summary>
-        /// 账号个数
+        /// 账号个数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]

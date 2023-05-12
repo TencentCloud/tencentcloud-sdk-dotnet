@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 节点组ID
+        /// 节点组 ID。
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 节点组的名称，主节点为空
+        /// 节点组的名称，主节点为空。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }

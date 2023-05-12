@@ -2349,6 +2349,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 获取prom实例中集群详细的关联状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAgentCreatingProgressRequest"/></param>
+        /// <returns><see cref="DescribeClusterAgentCreatingProgressResponse"/></returns>
+        public async Task<DescribeClusterAgentCreatingProgressResponse> DescribeClusterAgentCreatingProgress(DescribeClusterAgentCreatingProgressRequest req)
+        {
+             JsonResponseModel<DescribeClusterAgentCreatingProgressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterAgentCreatingProgress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAgentCreatingProgressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取prom实例中集群详细的关联状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAgentCreatingProgressRequest"/></param>
+        /// <returns><see cref="DescribeClusterAgentCreatingProgressResponse"/></returns>
+        public DescribeClusterAgentCreatingProgressResponse DescribeClusterAgentCreatingProgressSync(DescribeClusterAgentCreatingProgressRequest req)
+        {
+             JsonResponseModel<DescribeClusterAgentCreatingProgressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterAgentCreatingProgress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAgentCreatingProgressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取条件模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeConditionsTemplateListRequest"/></param>
