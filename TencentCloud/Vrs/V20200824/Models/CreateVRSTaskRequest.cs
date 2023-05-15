@@ -39,7 +39,7 @@ namespace TencentCloud.Vrs.V20200824.Models
         /// <summary>
         /// 音频采样率：
         /// 
-        /// 16000：16k（默认）
+        /// 16000：16k
         /// </summary>
         [JsonProperty("SampleRate")]
         public long? SampleRate{ get; set; }
@@ -57,7 +57,7 @@ namespace TencentCloud.Vrs.V20200824.Models
         /// <summary>
         /// 语言类型：
         /// 
-        /// 1-中文（默认）
+        /// 1-中文
         /// </summary>
         [JsonProperty("VoiceLanguage")]
         public long? VoiceLanguage{ get; set; }

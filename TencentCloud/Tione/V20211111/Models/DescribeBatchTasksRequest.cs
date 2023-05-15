@@ -31,7 +31,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// Name（名称）：task1
         /// Id（task ID）：train-23091792777383936
         /// Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-        /// ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
+        /// ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
         /// CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
         /// </summary>
         [JsonProperty("Filters")]

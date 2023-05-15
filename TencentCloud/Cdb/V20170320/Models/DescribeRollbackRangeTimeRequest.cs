@@ -30,6 +30,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
+        /// <summary>
+        /// 克隆实例与源实例是否在同一可用区，是:"false"，否:"true"
+        /// </summary>
+        [JsonProperty("IsRemoteZone")]
+        public string IsRemoteZone{ get; set; }
+
+        /// <summary>
+        /// 克隆实例与源实例不在同一地域时需填写克隆实例所在地域，例："ap-guangzhou"
+        /// </summary>
+        [JsonProperty("BackupRegion")]
+        public string BackupRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "IsRemoteZone", this.IsRemoteZone);
+            this.SetParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
         }
     }
 }

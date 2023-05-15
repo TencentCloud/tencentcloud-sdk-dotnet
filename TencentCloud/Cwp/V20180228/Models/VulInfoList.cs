@@ -177,6 +177,27 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("VulCategory")]
         public ulong? VulCategory{ get; set; }
 
+        /// <summary>
+        /// 攻击热度级别
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttackLevel")]
+        public ulong? AttackLevel{ get; set; }
+
+        /// <summary>
+        /// 漏洞修复后是否需要重启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FixNoNeedRestart")]
+        public bool? FixNoNeedRestart{ get; set; }
+
+        /// <summary>
+        /// 检测方式0 - 版本比对, 1 - POC验证
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Method")]
+        public ulong? Method{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +227,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
             this.SetParamSimple(map, prefix + "FirstAppearTime", this.FirstAppearTime);
             this.SetParamSimple(map, prefix + "VulCategory", this.VulCategory);
+            this.SetParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
+            this.SetParamSimple(map, prefix + "FixNoNeedRestart", this.FixNoNeedRestart);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
         }
     }
 }

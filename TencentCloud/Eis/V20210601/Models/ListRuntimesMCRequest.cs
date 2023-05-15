@@ -30,6 +30,12 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("RuntimeClass")]
         public long? RuntimeClass{ get; set; }
 
+        /// <summary>
+        /// 计划类型：0-pro 1-lite
+        /// </summary>
+        [JsonProperty("PlanType")]
+        public long? PlanType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Eis.V20210601.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
+            this.SetParamSimple(map, prefix + "PlanType", this.PlanType);
         }
     }
 }

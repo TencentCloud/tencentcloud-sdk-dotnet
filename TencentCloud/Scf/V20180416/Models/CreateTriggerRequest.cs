@@ -72,6 +72,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("CustomArgument")]
         public string CustomArgument{ get; set; }
 
+        /// <summary>
+        /// 触发器描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

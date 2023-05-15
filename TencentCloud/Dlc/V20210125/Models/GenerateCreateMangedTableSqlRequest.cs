@@ -48,6 +48,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Properties")]
         public Property[] Properties{ get; set; }
 
+        /// <summary>
+        /// V2 upsert表 upsert键
+        /// </summary>
+        [JsonProperty("UpsertKeys")]
+        public string[] UpsertKeys{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
             this.SetParamArrayObj(map, prefix + "Partitions.", this.Partitions);
             this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
+            this.SetParamArraySimple(map, prefix + "UpsertKeys.", this.UpsertKeys);
         }
     }
 }

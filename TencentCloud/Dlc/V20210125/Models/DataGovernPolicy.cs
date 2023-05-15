@@ -24,12 +24,28 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class DataGovernPolicy : AbstractModel
     {
         
+        /// <summary>
+        /// 治理规则类型，Customize: 自定义；Intelligence: 智能治理
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
+
+        /// <summary>
+        /// 治理引擎
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GovernEngine")]
+        public string GovernEngine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "GovernEngine", this.GovernEngine);
         }
     }
 }

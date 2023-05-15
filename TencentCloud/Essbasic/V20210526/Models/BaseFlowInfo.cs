@@ -78,6 +78,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
+        /// <summary>
+        /// 抄送人信息
+        /// </summary>
+        [JsonProperty("CcInfos")]
+        public CcInfo[] CcInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArrayObj(map, prefix + "FormFields.", this.FormFields);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         }
     }
 }

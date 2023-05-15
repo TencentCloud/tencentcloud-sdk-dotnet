@@ -61,14 +61,14 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 预付费专用资源组id
+        /// 包年包月资源组id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
-        /// 预付费专用资源组名称
+        /// 包年包月资源组名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupName")]
@@ -235,6 +235,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("PodList")]
         public string[] PodList{ get; set; }
 
+        /// <summary>
+        /// 模型推理代码信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModelInferenceCodeInfo")]
+        public CosPathInfo ModelInferenceCodeInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -273,6 +280,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "FailureReason", this.FailureReason);
             this.SetParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
             this.SetParamArraySimple(map, prefix + "PodList.", this.PodList);
+            this.SetParamObj(map, prefix + "ModelInferenceCodeInfo.", this.ModelInferenceCodeInfo);
         }
     }
 }

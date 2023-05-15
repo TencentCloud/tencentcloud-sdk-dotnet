@@ -85,6 +85,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("GovernPolicy")]
         public DataGovernPolicy GovernPolicy{ get; set; }
 
+        /// <summary>
+        /// 库数据治理是否关闭，关闭：true，开启：false
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DbGovernPolicyIsDisable")]
+        public string DbGovernPolicyIsDisable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
             this.SetParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
             this.SetParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
+            this.SetParamSimple(map, prefix + "DbGovernPolicyIsDisable", this.DbGovernPolicyIsDisable);
         }
     }
 }

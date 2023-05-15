@@ -62,7 +62,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ChargeStatus{ get; set; }
 
         /// <summary>
-        /// 预付费专用资源组
+        /// 包年包月资源组ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupId")]
@@ -128,7 +128,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public DataConfig[] Outputs{ get; set; }
 
         /// <summary>
-        /// 预付费专用资源组名称
+        /// 包年包月资源组名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupName")]
@@ -141,7 +141,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string FailureReason{ get; set; }
 
         /// <summary>
-        /// 计费金额信息，eg：2.00元/小时 (for后付费)
+        /// 计费金额信息，eg：2.00元/小时 (for 按量计费)
         /// </summary>
         [JsonProperty("BillingInfo")]
         public string BillingInfo{ get; set; }

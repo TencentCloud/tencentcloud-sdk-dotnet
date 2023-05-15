@@ -78,6 +78,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 数据源版本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +99,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
         }
     }
 }

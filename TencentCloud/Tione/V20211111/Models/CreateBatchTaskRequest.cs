@@ -31,7 +31,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string BatchTaskName{ get; set; }
 
         /// <summary>
-        /// 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
+        /// 计费模式，eg：PREPAID 包年包月；POSTPAID_BY_HOUR 按量计费
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public CronInfo CronInfo{ get; set; }
 
         /// <summary>
-        /// 预付费专用资源组
+        /// 包年包月资源组ID
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
