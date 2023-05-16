@@ -170,6 +170,41 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("ProtocolPortType")]
         public ulong? ProtocolPortType{ get; set; }
 
+        /// <summary>
+        /// Uuid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Uuid")]
+        public string Uuid{ get; set; }
+
+        /// <summary>
+        /// 地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 资产分组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetGroupNameIn")]
+        public string AssetGroupNameIn{ get; set; }
+
+        /// <summary>
+        /// 资产分组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetGroupNameOut")]
+        public string AssetGroupNameOut{ get; set; }
+
+        /// <summary>
+        /// 模板名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParameterName")]
+        public string ParameterName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -199,6 +234,11 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamArrayObj(map, prefix + "BothWayInfo.", this.BothWayInfo);
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
             this.SetParamSimple(map, prefix + "ProtocolPortType", this.ProtocolPortType);
+            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "AssetGroupNameIn", this.AssetGroupNameIn);
+            this.SetParamSimple(map, prefix + "AssetGroupNameOut", this.AssetGroupNameOut);
+            this.SetParamSimple(map, prefix + "ParameterName", this.ParameterName);
         }
     }
 }

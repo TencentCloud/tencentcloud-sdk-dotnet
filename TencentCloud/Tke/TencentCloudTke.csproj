@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.758</VersionPrefix>
+    <VersionPrefix>3.0.759</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -227,6 +227,8 @@
     <Compile Include="V20180525\Models\DescribeClusterEndpointVipStatusResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterEndpointsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterEndpointsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterInspectionResultsOverviewRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterInspectionResultsOverviewResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterKubeconfigRequest.cs" />
@@ -431,7 +433,20 @@
     <Compile Include="V20180525\Models\InstanceUpgradePreCheckResult.cs" />
     <Compile Include="V20180525\Models\InstanceUpgradePreCheckResultItem.cs" />
     <Compile Include="V20180525\Models\InstanceUpgradeProgressItem.cs" />
+    <Compile Include="V20180525\Models\KubeJarvisStateCatalogue.cs" />
+    <Compile Include="V20180525\Models\KubeJarvisStateDiagnostic.cs" />
+    <Compile Include="V20180525\Models\KubeJarvisStateDiagnosticOverview.cs" />
+    <Compile Include="V20180525\Models\KubeJarvisStateInspectionOverview.cs" />
+    <Compile Include="V20180525\Models\KubeJarvisStateInspectionResult.cs" />
+    <Compile Include="V20180525\Models\KubeJarvisStateInspectionResultsItem.cs" />
+    <Compile Include="V20180525\Models\KubeJarvisStateResultObjInfo.cs" />
+    <Compile Include="V20180525\Models\KubeJarvisStateResultsItem.cs" />
+    <Compile Include="V20180525\Models\KubeJarvisStateStatistic.cs" />
     <Compile Include="V20180525\Models\Label.cs" />
+    <Compile Include="V20180525\Models\ListClusterInspectionResultsItemsRequest.cs" />
+    <Compile Include="V20180525\Models\ListClusterInspectionResultsItemsResponse.cs" />
+    <Compile Include="V20180525\Models\ListClusterInspectionResultsRequest.cs" />
+    <Compile Include="V20180525\Models\ListClusterInspectionResultsResponse.cs" />
     <Compile Include="V20180525\Models\LivenessOrReadinessProbe.cs" />
     <Compile Include="V20180525\Models\LoginSettings.cs" />
     <Compile Include="V20180525\Models\ManuallyAdded.cs" />

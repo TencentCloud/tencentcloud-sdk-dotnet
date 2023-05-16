@@ -31,7 +31,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public string S3Bucket{ get; set; }
 
         /// <summary>
-        /// 绑定的桶所在 AWS 区域。
+        /// 绑定的桶所在 AWS 区域，目前支持：  
+        /// us-east-1  
+        /// eu-west-3
         /// </summary>
         [JsonProperty("S3Region")]
         public string S3Region{ get; set; }

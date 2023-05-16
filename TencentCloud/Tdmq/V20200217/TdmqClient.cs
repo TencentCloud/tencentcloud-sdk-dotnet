@@ -3117,6 +3117,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// rocketmq消息详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQMsgRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQMsgResponse"/></returns>
+        public async Task<DescribeRocketMQMsgResponse> DescribeRocketMQMsg(DescribeRocketMQMsgRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// rocketmq消息详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQMsgRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQMsgResponse"/></returns>
+        public DescribeRocketMQMsgResponse DescribeRocketMQMsgSync(DescribeRocketMQMsgRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取RocketMQ命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQNamespacesRequest"/></param>

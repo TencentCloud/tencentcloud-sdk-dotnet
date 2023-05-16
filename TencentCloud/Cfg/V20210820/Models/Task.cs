@@ -160,6 +160,20 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("Tags")]
         public TagWithDescribe[] Tags{ get; set; }
 
+        /// <summary>
+        /// 关联的演练计划ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskPlanId")]
+        public long? TaskPlanId{ get; set; }
+
+        /// <summary>
+        /// 关联的演练计划名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskPlanTitle")]
+        public string TaskPlanTitle{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -187,6 +201,8 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamArrayObj(map, prefix + "TaskMonitors.", this.TaskMonitors);
             this.SetParamObj(map, prefix + "TaskPolicy.", this.TaskPolicy);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "TaskPlanId", this.TaskPlanId);
+            this.SetParamSimple(map, prefix + "TaskPlanTitle", this.TaskPlanTitle);
         }
     }
 }

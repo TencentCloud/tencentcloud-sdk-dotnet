@@ -108,6 +108,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ClientBandWidth")]
         public ulong? ClientBandWidth{ get; set; }
 
+        /// <summary>
+        /// 客户端内网开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableConfigIntranet")]
+        public bool? EnableConfigIntranet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +135,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "AliasEnvName", this.AliasEnvName);
             this.SetParamSimple(map, prefix + "EnvDesc", this.EnvDesc);
             this.SetParamSimple(map, prefix + "ClientBandWidth", this.ClientBandWidth);
+            this.SetParamSimple(map, prefix + "EnableConfigIntranet", this.EnableConfigIntranet);
         }
     }
 }

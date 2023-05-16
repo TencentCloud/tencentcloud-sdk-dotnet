@@ -1737,6 +1737,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 从房间里面踢出用户
+        /// </summary>
+        /// <param name="req"><see cref="KickUserFromRoomRequest"/></param>
+        /// <returns><see cref="KickUserFromRoomResponse"/></returns>
+        public async Task<KickUserFromRoomResponse> KickUserFromRoom(KickUserFromRoomRequest req)
+        {
+             JsonResponseModel<KickUserFromRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "KickUserFromRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KickUserFromRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 从房间里面踢出用户
+        /// </summary>
+        /// <param name="req"><see cref="KickUserFromRoomRequest"/></param>
+        /// <returns><see cref="KickUserFromRoomResponse"/></returns>
+        public KickUserFromRoomResponse KickUserFromRoomSync(KickUserFromRoomRequest req)
+        {
+             JsonResponseModel<KickUserFromRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "KickUserFromRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KickUserFromRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 使用源账号登录，源账号为注册时填入的originId
         /// </summary>
         /// <param name="req"><see cref="LoginOriginIdRequest"/></param>

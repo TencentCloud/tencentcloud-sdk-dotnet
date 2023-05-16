@@ -2207,7 +2207,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateRoutes)用于创建路由策略。
+        /// 本接口（CreateRoutes）用于创建路由策略。
         /// * 向指定路由表批量新增路由策略。
         /// </summary>
         /// <param name="req"><see cref="CreateRoutesRequest"/></param>
@@ -2228,7 +2228,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(CreateRoutes)用于创建路由策略。
+        /// 本接口（CreateRoutes）用于创建路由策略。
         /// * 向指定路由表批量新增路由策略。
         /// </summary>
         /// <param name="req"><see cref="CreateRoutesRequest"/></param>
@@ -7198,6 +7198,48 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTrafficPackages");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrafficPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeUsedIpAddress)用于查询Subnet或者Vpc内的ip的使用情况，
+        /// 如被ip被占用，返回占用ip的资源类别与id；如未被占用，返回空值
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsedIpAddressRequest"/></param>
+        /// <returns><see cref="DescribeUsedIpAddressResponse"/></returns>
+        public async Task<DescribeUsedIpAddressResponse> DescribeUsedIpAddress(DescribeUsedIpAddressRequest req)
+        {
+             JsonResponseModel<DescribeUsedIpAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUsedIpAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsedIpAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeUsedIpAddress)用于查询Subnet或者Vpc内的ip的使用情况，
+        /// 如被ip被占用，返回占用ip的资源类别与id；如未被占用，返回空值
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsedIpAddressRequest"/></param>
+        /// <returns><see cref="DescribeUsedIpAddressResponse"/></returns>
+        public DescribeUsedIpAddressResponse DescribeUsedIpAddressSync(DescribeUsedIpAddressRequest req)
+        {
+             JsonResponseModel<DescribeUsedIpAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUsedIpAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsedIpAddressResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

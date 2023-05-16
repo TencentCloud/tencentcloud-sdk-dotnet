@@ -42,6 +42,19 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
+        /// <summary>
+        /// 修复建议
+        /// </summary>
+        [JsonProperty("FixMessage")]
+        public string FixMessage{ get; set; }
+
+        /// <summary>
+        /// 机器额外信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineExtraInfo")]
+        public MachineExtraInfo MachineExtraInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +64,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "FixMessage", this.FixMessage);
+            this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         }
     }
 }

@@ -48,7 +48,7 @@ namespace TencentCloud.Fmu.V20191213.Models
         public ulong? Whitening{ get; set; }
 
         /// <summary>
-        /// 磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。
+        /// 磨皮程度，取值范围[0,30]。0不磨皮，30代表最高程度。默认值10。
         /// </summary>
         [JsonProperty("Smoothing")]
         public ulong? Smoothing{ get; set; }

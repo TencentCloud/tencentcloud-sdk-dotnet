@@ -73,6 +73,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("MinBlockSizeTf")]
         public string MinBlockSizeTf{ get; set; }
 
+        /// <summary>
+        /// Stable Diffusion 模型优化参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PipelineArgs")]
+        public string PipelineArgs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "EnableDistributed", this.EnableDistributed);
             this.SetParamSimple(map, prefix + "MinBlockSizePt", this.MinBlockSizePt);
             this.SetParamSimple(map, prefix + "MinBlockSizeTf", this.MinBlockSizeTf);
+            this.SetParamSimple(map, prefix + "PipelineArgs", this.PipelineArgs);
         }
     }
 }

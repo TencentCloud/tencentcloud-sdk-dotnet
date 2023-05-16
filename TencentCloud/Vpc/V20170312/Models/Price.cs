@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ItemPrice InstancePrice{ get; set; }
 
         /// <summary>
-        /// 网络价格。
+        /// 带宽价格。
         /// </summary>
         [JsonProperty("BandwidthPrice")]
         public ItemPrice BandwidthPrice{ get; set; }

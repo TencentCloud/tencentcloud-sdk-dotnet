@@ -133,7 +133,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         public ulong?[] CmdTemplateIdSet{ get; set; }
 
         /// <summary>
-        /// 关联高危DB模版ID
+        /// 关联高危DB模板ID
         /// </summary>
         [JsonProperty("ACTemplateIdSet")]
         public string[] ACTemplateIdSet{ get; set; }
