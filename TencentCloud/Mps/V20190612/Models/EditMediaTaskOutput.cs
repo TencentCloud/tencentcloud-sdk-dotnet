@@ -36,6 +36,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
+        /// <summary>
+        /// 编辑后的视频文件元信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetaData")]
+        public MediaMetaData MetaData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
         }
     }
 }

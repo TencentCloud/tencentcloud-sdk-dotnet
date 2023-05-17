@@ -25,13 +25,18 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 起始时间，格式为%Y-%m-%d %H:%M:%S。
+        /// 起始时间点，接口查询支持两种时间格式：
+        /// 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+        /// 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，格式为%Y-%m-%d %H:%M:%S，支持最近三个月的数据查询，时间跨度最大是1个月。
+        /// 结束时间点，接口查询支持两种时间格式：
+        /// 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+        /// 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+        /// 支持最近三个月的数据查询，时间跨度最大是1个月。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

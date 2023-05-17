@@ -26,7 +26,8 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 极速高清类型，可选值：
-        /// <li>TEHD-100：极速高清-100。</li>
+        /// <li>TEHD-100：极速高清-100（视频极速高清）。</li>
+        /// <li>TEHD-200：极速高清-200（音频极速高清）。</li>
         /// 不填代表不修改。
         /// </summary>
         [JsonProperty("Type")]

@@ -2181,7 +2181,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询3天之内提交的任务）。
+        /// 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
@@ -2201,7 +2201,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询3天之内提交的任务）。
+        /// 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeTaskDetailResponse"/></returns>

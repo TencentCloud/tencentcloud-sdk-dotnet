@@ -25,9 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
-        /// 
-        /// * WebSocket 为ECDN产品功能，如需使用请通过ECDN域名配置.
+        /// WebSocket 超时配置开关，取值有：
+        /// on：开启，可以调整超时时间
+        /// off：关闭，平台仍支持WebSocket连接，此时超时时间默认为15秒
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

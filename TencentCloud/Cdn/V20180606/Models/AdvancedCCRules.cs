@@ -80,7 +80,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ScdnSevenLayerRules[] Configure{ get; set; }
 
         /// <summary>
-        /// 是否开启改规则 on 开启，off关闭
+        /// 自定义cc规则配置开关，取值有：
+        /// on：开启
+        /// off：关闭
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Switch")]

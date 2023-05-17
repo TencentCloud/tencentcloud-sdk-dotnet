@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// SEO 配置开关
+        /// SEO 搜索引擎优化配置开关，取值有：
         /// on：开启
         /// off：关闭
         /// 注意：此字段可能返回 null，表示取不到有效值。

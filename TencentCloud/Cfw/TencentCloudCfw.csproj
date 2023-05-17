@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.759</VersionPrefix>
+    <VersionPrefix>3.0.760</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -214,6 +214,7 @@
     <Compile Include="V20190904\Models\SecurityGroupListData.cs" />
     <Compile Include="V20190904\Models\SecurityGroupOrderIndexData.cs" />
     <Compile Include="V20190904\Models\SecurityGroupRule.cs" />
+    <Compile Include="V20190904\Models\SecurityGroupSimplifyRule.cs" />
     <Compile Include="V20190904\Models\SequenceData.cs" />
     <Compile Include="V20190904\Models\SetNatFwDnatRuleRequest.cs" />
     <Compile Include="V20190904\Models\SetNatFwDnatRuleResponse.cs" />

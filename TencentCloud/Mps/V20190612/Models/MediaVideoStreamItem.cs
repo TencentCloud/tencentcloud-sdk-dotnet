@@ -82,6 +82,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("HdrType")]
         public string HdrType{ get; set; }
 
+        /// <summary>
+        /// 视频Codecs。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Codecs")]
+        public string Codecs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +104,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ColorSpace", this.ColorSpace);
             this.SetParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
             this.SetParamSimple(map, prefix + "HdrType", this.HdrType);
+            this.SetParamSimple(map, prefix + "Codecs", this.Codecs);
         }
     }
 }

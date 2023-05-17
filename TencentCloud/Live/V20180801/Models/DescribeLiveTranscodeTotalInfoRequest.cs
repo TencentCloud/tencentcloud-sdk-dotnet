@@ -25,15 +25,18 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 开始时间，北京时间。
-        /// 格式：yyyy-mm-dd HH:MM:SS。
+        /// 结束时间点，接口查询支持两种时间格式：
+        /// 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+        /// 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，北京时间。
-        /// 格式：yyyy-mm-dd HH:MM:SS。
+        /// 结束时间，
+        /// 使用UTC格式时间，
+        /// 例如：2019-01-08T10:00:00Z。
+        /// 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

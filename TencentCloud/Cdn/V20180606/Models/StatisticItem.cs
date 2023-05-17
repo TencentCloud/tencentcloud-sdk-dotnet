@@ -60,7 +60,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ulong? AlertPercentage{ get; set; }
 
         /// <summary>
-        /// 提醒开关 on/off
+        /// 累计用量封顶告警配置，取值有：
+        /// on：开启
+        /// off：关闭
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlertSwitch")]
@@ -81,7 +83,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ulong? Cycle{ get; set; }
 
         /// <summary>
-        /// 是否开启该选项，on/off
+        /// 累计用量封顶配置开关，取值有：
+        /// on：开启
+        /// off：关闭
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Switch")]

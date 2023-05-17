@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.759</VersionPrefix>
+    <VersionPrefix>3.0.760</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -279,6 +279,8 @@
     <Compile Include="V20170312\Models\DeleteSubnetResponse.cs" />
     <Compile Include="V20170312\Models\DeleteTemplateMemberRequest.cs" />
     <Compile Include="V20170312\Models\DeleteTemplateMemberResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteTrafficPackagesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteTrafficPackagesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteVpcEndPointRequest.cs" />
     <Compile Include="V20170312\Models\DeleteVpcEndPointResponse.cs" />
     <Compile Include="V20170312\Models\DeleteVpcEndPointServiceRequest.cs" />
@@ -415,6 +417,8 @@
     <Compile Include="V20170312\Models\DescribeSnapshotFilesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSnapshotPoliciesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSnapshotPoliciesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSubnetResourceDashboardRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSubnetResourceDashboardResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSubnetsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSubnetsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeTaskResultRequest.cs" />
@@ -717,6 +721,8 @@
     <Compile Include="V20170312\Models\ResetVpnGatewayInternetMaxBandwidthResponse.cs" />
     <Compile Include="V20170312\Models\Resource.cs" />
     <Compile Include="V20170312\Models\ResourceDashboard.cs" />
+    <Compile Include="V20170312\Models\ResourceStatistics.cs" />
+    <Compile Include="V20170312\Models\ResourceStatisticsItem.cs" />
     <Compile Include="V20170312\Models\ResumeSnapshotInstanceRequest.cs" />
     <Compile Include="V20170312\Models\ResumeSnapshotInstanceResponse.cs" />
     <Compile Include="V20170312\Models\ReturnNormalAddressesRequest.cs" />

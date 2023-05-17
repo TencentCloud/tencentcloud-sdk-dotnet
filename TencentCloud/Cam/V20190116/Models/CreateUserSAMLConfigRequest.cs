@@ -30,6 +30,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("SAMLMetadataDocument")]
         public string SAMLMetadataDocument{ get; set; }
 
+        /// <summary>
+        /// 辅助域名
+        /// </summary>
+        [JsonProperty("AuxiliaryDomain")]
+        public string AuxiliaryDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SAMLMetadataDocument", this.SAMLMetadataDocument);
+            this.SetParamSimple(map, prefix + "AuxiliaryDomain", this.AuxiliaryDomain);
         }
     }
 }

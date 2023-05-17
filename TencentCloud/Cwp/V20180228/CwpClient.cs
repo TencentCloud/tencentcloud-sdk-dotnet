@@ -5419,6 +5419,86 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取日志存储配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogStorageConfigRequest"/></param>
+        /// <returns><see cref="DescribeLogStorageConfigResponse"/></returns>
+        public async Task<DescribeLogStorageConfigResponse> DescribeLogStorageConfig(DescribeLogStorageConfigRequest req)
+        {
+             JsonResponseModel<DescribeLogStorageConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogStorageConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogStorageConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取日志存储配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogStorageConfigRequest"/></param>
+        /// <returns><see cref="DescribeLogStorageConfigResponse"/></returns>
+        public DescribeLogStorageConfigResponse DescribeLogStorageConfigSync(DescribeLogStorageConfigRequest req)
+        {
+             JsonResponseModel<DescribeLogStorageConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogStorageConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogStorageConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取日志存储量记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogStorageRecordRequest"/></param>
+        /// <returns><see cref="DescribeLogStorageRecordResponse"/></returns>
+        public async Task<DescribeLogStorageRecordResponse> DescribeLogStorageRecord(DescribeLogStorageRecordRequest req)
+        {
+             JsonResponseModel<DescribeLogStorageRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogStorageRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogStorageRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取日志存储量记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogStorageRecordRequest"/></param>
+        /// <returns><see cref="DescribeLogStorageRecordResponse"/></returns>
+        public DescribeLogStorageRecordResponse DescribeLogStorageRecordSync(DescribeLogStorageRecordRequest req)
+        {
+             JsonResponseModel<DescribeLogStorageRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogStorageRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogStorageRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取日志检索容量使用统计
         /// </summary>
         /// <param name="req"><see cref="DescribeLogStorageStatisticRequest"/></param>
@@ -9974,6 +10054,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLicenseUnBinds");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLicenseUnBindsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改日志存储配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLogStorageConfigRequest"/></param>
+        /// <returns><see cref="ModifyLogStorageConfigResponse"/></returns>
+        public async Task<ModifyLogStorageConfigResponse> ModifyLogStorageConfig(ModifyLogStorageConfigRequest req)
+        {
+             JsonResponseModel<ModifyLogStorageConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLogStorageConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLogStorageConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改日志存储配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLogStorageConfigRequest"/></param>
+        /// <returns><see cref="ModifyLogStorageConfigResponse"/></returns>
+        public ModifyLogStorageConfigResponse ModifyLogStorageConfigSync(ModifyLogStorageConfigRequest req)
+        {
+             JsonResponseModel<ModifyLogStorageConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLogStorageConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLogStorageConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

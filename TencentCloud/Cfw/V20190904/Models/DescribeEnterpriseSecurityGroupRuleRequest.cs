@@ -107,6 +107,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("ServiceTemplateId")]
         public string ServiceTemplateId{ get; set; }
 
+        /// <summary>
+        /// 规则的uuid
+        /// </summary>
+        [JsonProperty("RuleUuid")]
+        public long? RuleUuid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +129,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);
+            this.SetParamSimple(map, prefix + "RuleUuid", this.RuleUuid);
         }
     }
 }

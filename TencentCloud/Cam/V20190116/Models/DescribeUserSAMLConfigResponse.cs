@@ -37,6 +37,12 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
+        /// 辅助域名
+        /// </summary>
+        [JsonProperty("AuxiliaryDomain")]
+        public string AuxiliaryDomain{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Cam.V20190116.Models
         {
             this.SetParamSimple(map, prefix + "SAMLMetadata", this.SAMLMetadata);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "AuxiliaryDomain", this.AuxiliaryDomain);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -133,7 +133,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 添加nat访问控制规则
+        /// 添加nat访问控制规则(地域必填)
         /// </summary>
         /// <param name="req"><see cref="AddNatAcRuleRequest"/></param>
         /// <returns><see cref="AddNatAcRuleResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 添加nat访问控制规则
+        /// 添加nat访问控制规则(地域必填)
         /// </summary>
         /// <param name="req"><see cref="AddNatAcRuleRequest"/></param>
         /// <returns><see cref="AddNatAcRuleResponse"/></returns>

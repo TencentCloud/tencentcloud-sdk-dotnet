@@ -49,7 +49,7 @@ namespace TencentCloud.Cfg.V20210820.Models
         public string[] TaskTag{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }

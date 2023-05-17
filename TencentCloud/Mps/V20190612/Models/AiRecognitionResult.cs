@@ -78,7 +78,8 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 翻译结果，当 Type 为
-        ///  TransTextRecognition 时有效。
+        /// 
+        /// TransTextRecognition 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransTextTask")]

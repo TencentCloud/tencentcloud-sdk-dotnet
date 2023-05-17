@@ -25,9 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// ShareCname 配置开关, 开关为off时，域名使用默认CNAME，若需要使用共享CNAME，将开关置为on.
-        /// 
-        /// * ShareCname 为内测功能,如需使用,请联系腾讯云工程师开白.
+        /// ShareCname 配置开关, 取值有：
+        /// on：开启，使用共享CNAME
+        /// off：关闭，使用默认CNAME
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

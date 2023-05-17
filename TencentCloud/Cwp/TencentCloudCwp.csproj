@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.759</VersionPrefix>
+    <VersionPrefix>3.0.760</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -382,6 +382,10 @@
     <Compile Include="V20180228\Models\DescribeLicenseGeneralResponse.cs" />
     <Compile Include="V20180228\Models\DescribeLicenseListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeLicenseListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeLogStorageConfigRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeLogStorageConfigResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeLogStorageRecordRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeLogStorageRecordResponse.cs" />
     <Compile Include="V20180228\Models\DescribeLogStorageStatisticRequest.cs" />
     <Compile Include="V20180228\Models\DescribeLogStorageStatisticResponse.cs" />
     <Compile Include="V20180228\Models\DescribeLoginWhiteCombinedListRequest.cs" />
@@ -609,6 +613,7 @@
     <Compile Include="V20180228\Models\LicenseDetail.cs" />
     <Compile Include="V20180228\Models\LicenseOrder.cs" />
     <Compile Include="V20180228\Models\LicenseUnBindRsp.cs" />
+    <Compile Include="V20180228\Models\LogStorageRecord.cs" />
     <Compile Include="V20180228\Models\LoginWhiteCombinedInfo.cs" />
     <Compile Include="V20180228\Models\LoginWhiteLists.cs" />
     <Compile Include="V20180228\Models\Machine.cs" />
@@ -640,6 +645,8 @@
     <Compile Include="V20180228\Models\ModifyLicenseBindsResponse.cs" />
     <Compile Include="V20180228\Models\ModifyLicenseUnBindsRequest.cs" />
     <Compile Include="V20180228\Models\ModifyLicenseUnBindsResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyLogStorageConfigRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyLogStorageConfigResponse.cs" />
     <Compile Include="V20180228\Models\ModifyMachineRemarkRequest.cs" />
     <Compile Include="V20180228\Models\ModifyMachineRemarkResponse.cs" />
     <Compile Include="V20180228\Models\ModifyMalwareTimingScanSettingsRequest.cs" />

@@ -49,6 +49,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Channel")]
         public long? Channel{ get; set; }
 
+        /// <summary>
+        /// 音频Codecs。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Codecs")]
+        public string Codecs{ get; set; }
+
+        /// <summary>
+        /// 音频响度。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Loudness")]
+        public float? Loudness{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +73,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
+            this.SetParamSimple(map, prefix + "Codecs", this.Codecs);
+            this.SetParamSimple(map, prefix + "Loudness", this.Loudness);
         }
     }
 }

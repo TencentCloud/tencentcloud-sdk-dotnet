@@ -4261,6 +4261,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 删除共享带宽包（仅非活动状态的流量包可删除）。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrafficPackagesRequest"/></param>
+        /// <returns><see cref="DeleteTrafficPackagesResponse"/></returns>
+        public async Task<DeleteTrafficPackagesResponse> DeleteTrafficPackages(DeleteTrafficPackagesRequest req)
+        {
+             JsonResponseModel<DeleteTrafficPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTrafficPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTrafficPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除共享带宽包（仅非活动状态的流量包可删除）。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrafficPackagesRequest"/></param>
+        /// <returns><see cref="DeleteTrafficPackagesResponse"/></returns>
+        public DeleteTrafficPackagesResponse DeleteTrafficPackagesSync(DeleteTrafficPackagesRequest req)
+        {
+             JsonResponseModel<DeleteTrafficPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTrafficPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTrafficPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteVpc）用于删除私有网络。
         /// * 删除前请确保 VPC 内已经没有相关资源，例如云服务器、云数据库、NoSQL、VPN网关、专线网关、负载均衡、对等连接、与之互通的基础网络设备等。
         /// * 删除私有网络是不可逆的操作，请谨慎处理。
@@ -6994,6 +7034,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSnapshotPolicies");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSubnetResourceDashboard)用于查看Subnet资源信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubnetResourceDashboardRequest"/></param>
+        /// <returns><see cref="DescribeSubnetResourceDashboardResponse"/></returns>
+        public async Task<DescribeSubnetResourceDashboardResponse> DescribeSubnetResourceDashboard(DescribeSubnetResourceDashboardRequest req)
+        {
+             JsonResponseModel<DescribeSubnetResourceDashboardResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSubnetResourceDashboard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubnetResourceDashboardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSubnetResourceDashboard)用于查看Subnet资源信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubnetResourceDashboardRequest"/></param>
+        /// <returns><see cref="DescribeSubnetResourceDashboardResponse"/></returns>
+        public DescribeSubnetResourceDashboardResponse DescribeSubnetResourceDashboardSync(DescribeSubnetResourceDashboardRequest req)
+        {
+             JsonResponseModel<DescribeSubnetResourceDashboardResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSubnetResourceDashboard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubnetResourceDashboardResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

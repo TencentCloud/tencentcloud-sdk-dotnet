@@ -35,7 +35,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// • 16k_zh-PY：中英粤;
         /// • 16k_zh_medical：中文医疗；
         /// • 16k_en：英语；
-        /// • 16k_ca：粤语；
+        /// • 16k_yue：粤语；
         /// • 16k_ja：日语；
         /// • 16k_ko：韩语；
         /// • 16k_vi：越南语；
@@ -57,7 +57,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public ulong? SourceType{ get; set; }
 
         /// <summary>
-        /// 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
+        /// 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac、amr。
         /// </summary>
         [JsonProperty("VoiceFormat")]
         public string VoiceFormat{ get; set; }

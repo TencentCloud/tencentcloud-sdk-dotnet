@@ -4447,7 +4447,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 直播上行路数查询
+        /// 直播上行路数查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeUploadStreamNumsRequest"/></param>
         /// <returns><see cref="DescribeUploadStreamNumsResponse"/></returns>
@@ -4467,7 +4467,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 直播上行路数查询
+        /// 直播上行路数查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeUploadStreamNumsRequest"/></param>
         /// <returns><see cref="DescribeUploadStreamNumsResponse"/></returns>

@@ -25,7 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// on | off CacheKey是否由QueryString组成
+        /// CacheKey是否由QueryString组成配置开关，取值有：
+        /// on：开启
+        /// off：关闭
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Switch")]
@@ -39,7 +41,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Reorder{ get; set; }
 
         /// <summary>
-        /// includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
+        /// 使用/排除部分url参数，取值有：
+        /// includeAll：包含所有
+        /// excludeAll：排除所有
+        /// includeCustom：自定义包含
+        /// excludeCustom：自定义排除
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]

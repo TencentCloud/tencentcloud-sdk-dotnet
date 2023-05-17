@@ -84,6 +84,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Variables")]
         public Variable[] Variables{ get; set; }
 
+        /// <summary>
+        /// UUI
+        /// </summary>
+        [JsonProperty("UUI")]
+        public string UUI{ get; set; }
+
+        /// <summary>
+        /// 被叫属性
+        /// </summary>
+        [JsonProperty("CalleeAttributes")]
+        public CalleeAttribute[] CalleeAttributes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "NotAfter", this.NotAfter);
             this.SetParamSimple(map, prefix + "Tries", this.Tries);
             this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
+            this.SetParamSimple(map, prefix + "UUI", this.UUI);
+            this.SetParamArrayObj(map, prefix + "CalleeAttributes.", this.CalleeAttributes);
         }
     }
 }

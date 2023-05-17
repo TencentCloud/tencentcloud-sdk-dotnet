@@ -31,16 +31,14 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 检索的值
+        /// 检索的值，各检索值间为OR关系
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// 枚举类型，代表name与values之间的匹配关系
+        /// 枚举类型，代表Name与Values之间的匹配关系
         /// enum FilterOperatorType {
-        ///     //INVALID
-        ///     FILTER_OPERATOR_TYPE_INVALID = 0;
         ///     //等于
         ///     FILTER_OPERATOR_TYPE_EQUAL = 1;
         ///     //大于
@@ -53,18 +51,10 @@ namespace TencentCloud.Cfw.V20190904.Models
         ///     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
         ///     //不等于
         ///     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-        ///     //in，数组中包含
-        ///     FILTER_OPERATOR_TYPE_IN = 7;
         ///     //not in
         ///     FILTER_OPERATOR_TYPE_NOT_IN = 8;
         ///     //模糊匹配
         ///     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-        ///     //存在
-        ///     FILTER_OPERATOR_TYPE_EXIST = 10;
-        ///     //不存在
-        ///     FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-        ///     //正则
-        ///     FILTER_OPERATOR_TYPE_REGULAR = 12;
         /// }
         /// </summary>
         [JsonProperty("OperatorType")]

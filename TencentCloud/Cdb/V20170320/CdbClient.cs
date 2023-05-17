@@ -1695,6 +1695,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DescribeBackupDecryptionKey)用于查询备份文件解密密钥。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDecryptionKeyRequest"/></param>
+        /// <returns><see cref="DescribeBackupDecryptionKeyResponse"/></returns>
+        public async Task<DescribeBackupDecryptionKeyResponse> DescribeBackupDecryptionKey(DescribeBackupDecryptionKeyRequest req)
+        {
+             JsonResponseModel<DescribeBackupDecryptionKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupDecryptionKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDecryptionKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBackupDecryptionKey)用于查询备份文件解密密钥。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDecryptionKeyRequest"/></param>
+        /// <returns><see cref="DescribeBackupDecryptionKeyResponse"/></returns>
+        public DescribeBackupDecryptionKeyResponse DescribeBackupDecryptionKeySync(DescribeBackupDecryptionKeyRequest req)
+        {
+             JsonResponseModel<DescribeBackupDecryptionKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupDecryptionKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDecryptionKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用户查询当前地域用户设置的默认备份下载来源限制。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>

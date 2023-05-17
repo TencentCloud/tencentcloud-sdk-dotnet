@@ -37,7 +37,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 撤销理由
+        /// 撤销理由,不超过200个字符
         /// </summary>
         [JsonProperty("CancelMessage")]
         public string CancelMessage{ get; set; }

@@ -25,7 +25,9 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+        /// 峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：
+        /// 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+        /// 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
         /// </summary>
         [JsonProperty("PeakBandwidthTime")]
         public string PeakBandwidthTime{ get; set; }
@@ -37,7 +39,9 @@ namespace TencentCloud.Live.V20180801.Models
         public float? PeakBandwidth{ get; set; }
 
         /// <summary>
-        /// 95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+        /// 95峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：
+        /// 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+        /// 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
         /// </summary>
         [JsonProperty("P95PeakBandwidthTime")]
         public string P95PeakBandwidthTime{ get; set; }
