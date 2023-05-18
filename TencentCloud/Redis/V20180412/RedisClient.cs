@@ -773,7 +773,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 获取备份配置
+        /// 本接口（DescribeAutoBackupConfig）用于获取自动备份配置规则。
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoBackupConfigRequest"/></param>
         /// <returns><see cref="DescribeAutoBackupConfigResponse"/></returns>
@@ -793,7 +793,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 获取备份配置
+        /// 本接口（DescribeAutoBackupConfig）用于获取自动备份配置规则。
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoBackupConfigRequest"/></param>
         /// <returns><see cref="DescribeAutoBackupConfigResponse"/></returns>

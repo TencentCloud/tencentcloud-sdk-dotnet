@@ -15,22 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Tsf.V20180326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OfflineCache : AbstractModel
+    public class CreateUnitNamespacesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 离线缓存配置开关，取值有：
-        /// on：开启
-        /// off：关闭
+        /// 网关实体ID
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("GatewayInstanceId")]
+        public string GatewayInstanceId{ get; set; }
+
+        /// <summary>
+        /// 单元化命名空间对象列表
+        /// </summary>
+        [JsonProperty("UnitNamespaceList")]
+        public UnitNamespace[] UnitNamespaceList{ get; set; }
 
 
         /// <summary>
@@ -38,7 +42,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
+            this.SetParamArrayObj(map, prefix + "UnitNamespaceList.", this.UnitNamespaceList);
         }
     }
 }

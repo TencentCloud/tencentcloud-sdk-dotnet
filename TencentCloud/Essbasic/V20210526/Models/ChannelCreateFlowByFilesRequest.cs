@@ -91,7 +91,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string CustomShowMap{ get; set; }
 
         /// <summary>
-        /// 业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+        /// 业务信息，最大长度1000个字符。
         /// </summary>
         [JsonProperty("CustomerData")]
         public string CustomerData{ get; set; }
@@ -135,6 +135,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("CcNotifyType")]
         public long? CcNotifyType{ get; set; }
 
+        /// <summary>
+        /// 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+        /// </summary>
+        [JsonProperty("AutoSignScene")]
+        public string AutoSignScene{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +165,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
             this.SetParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
+            this.SetParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
         }
     }
 }

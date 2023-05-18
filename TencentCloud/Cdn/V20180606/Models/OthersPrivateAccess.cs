@@ -25,7 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 开关， on/off。
+        /// 其他厂商对象存储回源鉴权配置开关，取值有：
+        /// on：开启
+        /// off：关闭
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

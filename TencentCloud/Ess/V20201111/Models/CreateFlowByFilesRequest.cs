@@ -152,6 +152,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CcNotifyType")]
         public long? CcNotifyType{ get; set; }
 
+        /// <summary>
+        /// 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+        /// </summary>
+        [JsonProperty("AutoSignScene")]
+        public string AutoSignScene{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
+            this.SetParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
         }
     }
 }

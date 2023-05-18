@@ -71,6 +71,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong?[] Id{ get; set; }
 
         /// <summary>
+        /// 是否扫描最新版本镜像
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Latest")]
+        public bool? Latest{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -89,6 +96,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "All", this.All);
             this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamArraySimple(map, prefix + "Id.", this.Id);
+            this.SetParamSimple(map, prefix + "Latest", this.Latest);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 自定义响应头开关
+        /// 自定义响应头配置开关，取值有：
         /// on：开启
         /// off：关闭
         /// </summary>

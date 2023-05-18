@@ -66,6 +66,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Id")]
         public ulong?[] Id{ get; set; }
 
+        /// <summary>
+        /// 是否扫描最新版本
+        /// </summary>
+        [JsonProperty("Latest")]
+        public bool? Latest{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamSimple(map, prefix + "All", this.All);
             this.SetParamArraySimple(map, prefix + "Id.", this.Id);
+            this.SetParamSimple(map, prefix + "Latest", this.Latest);
         }
     }
 }

@@ -67,6 +67,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string TemplateType{ get; set; }
 
         /// <summary>
+        /// 参数模板引擎。支持值包括："InnoDB"，"RocksDB"。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +92,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

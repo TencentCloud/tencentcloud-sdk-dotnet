@@ -1453,6 +1453,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 批量创建单元化命名空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateUnitNamespacesRequest"/></param>
+        /// <returns><see cref="CreateUnitNamespacesResponse"/></returns>
+        public async Task<CreateUnitNamespacesResponse> CreateUnitNamespaces(CreateUnitNamespacesRequest req)
+        {
+             JsonResponseModel<CreateUnitNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUnitNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUnitNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量创建单元化命名空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateUnitNamespacesRequest"/></param>
+        /// <returns><see cref="CreateUnitNamespacesResponse"/></returns>
+        public CreateUnitNamespacesResponse CreateUnitNamespacesSync(CreateUnitNamespacesRequest req)
+        {
+             JsonResponseModel<CreateUnitNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateUnitNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUnitNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建单元化规则
         /// </summary>
         /// <param name="req"><see cref="CreateUnitRuleRequest"/></param>

@@ -25,7 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 是否开启，on | off
+        /// SCDN访问控制配置开关，取值有：
+        /// on：开启
+        /// off：关闭
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

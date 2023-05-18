@@ -15,37 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Tsf.V20180326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RemoteAuthentication : AbstractModel
+    public class CreateUnitNamespacesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 远程鉴权配置开关，取值有：
-        /// on：开启
-        /// off：关闭
+        /// 是否成功
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("Result")]
+        public bool? Result{ get; set; }
 
         /// <summary>
-        /// 远程鉴权规则配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("RemoteAuthenticationRules")]
-        public RemoteAuthenticationRule[] RemoteAuthenticationRules{ get; set; }
-
-        /// <summary>
-        /// 远程鉴权Server
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Server")]
-        public string Server{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -53,9 +43,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamArrayObj(map, prefix + "RemoteAuthenticationRules.", this.RemoteAuthenticationRules);
-            this.SetParamSimple(map, prefix + "Server", this.Server);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -71,6 +71,13 @@ namespace TencentCloud.Domain.V20180808.Models
         public string ImgUrl{ get; set; }
 
         /// <summary>
+        /// 原始照片地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginImgUrl")]
+        public string OriginImgUrl{ get; set; }
+
+        /// <summary>
         /// 联系人证件号码。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -100,6 +107,7 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "CertificateCode", this.CertificateCode);
             this.SetParamSimple(map, prefix + "CertificateType", this.CertificateType);
             this.SetParamSimple(map, prefix + "ImgUrl", this.ImgUrl);
+            this.SetParamSimple(map, prefix + "OriginImgUrl", this.OriginImgUrl);
             this.SetParamSimple(map, prefix + "RegistrantCertificateCode", this.RegistrantCertificateCode);
             this.SetParamSimple(map, prefix + "RegistrantCertificateType", this.RegistrantCertificateType);
             this.SetParamSimple(map, prefix + "RegistrantImgUrl", this.RegistrantImgUrl);

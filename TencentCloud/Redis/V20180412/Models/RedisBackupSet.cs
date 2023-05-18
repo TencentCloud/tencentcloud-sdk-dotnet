@@ -38,7 +38,7 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 备份类型。
-        /// - 1：凌晨系统发起的备份。
+        /// - 1：凌晨系统发起的自动备份。
         /// - 0：用户发起的手动备份。
         /// </summary>
         [JsonProperty("BackupType")]

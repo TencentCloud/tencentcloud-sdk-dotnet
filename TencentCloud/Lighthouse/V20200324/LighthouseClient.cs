@@ -2079,7 +2079,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口 (AttachCcn) 用于解除与云联网的关联。
+        /// 本接口 (DetachCcn) 用于解除与云联网的关联。
         /// </summary>
         /// <param name="req"><see cref="DetachCcnRequest"/></param>
         /// <returns><see cref="DetachCcnResponse"/></returns>
@@ -2099,7 +2099,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口 (AttachCcn) 用于解除与云联网的关联。
+        /// 本接口 (DetachCcn) 用于解除与云联网的关联。
         /// </summary>
         /// <param name="req"><see cref="DetachCcnRequest"/></param>
         /// <returns><see cref="DetachCcnResponse"/></returns>

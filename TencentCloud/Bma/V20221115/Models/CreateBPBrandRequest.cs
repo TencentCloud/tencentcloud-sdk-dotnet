@@ -108,6 +108,12 @@ namespace TencentCloud.Bma.V20221115.Models
         [JsonProperty("ProtectMiniPrograms")]
         public string[] ProtectMiniPrograms{ get; set; }
 
+        /// <summary>
+        /// 请求来源：0-反钓鱼 2-反假冒
+        /// </summary>
+        [JsonProperty("APISource")]
+        public long? APISource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Bma.V20221115.Models
             this.SetParamArraySimple(map, prefix + "ProtectAPPs.", this.ProtectAPPs);
             this.SetParamArraySimple(map, prefix + "ProtectOfficialAccounts.", this.ProtectOfficialAccounts);
             this.SetParamArraySimple(map, prefix + "ProtectMiniPrograms.", this.ProtectMiniPrograms);
+            this.SetParamSimple(map, prefix + "APISource", this.APISource);
         }
     }
 }
