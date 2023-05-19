@@ -45,6 +45,11 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// <li>HostIP- string - 是否必填：否 - 主机ip搜索</li>
         /// <li>OrderBy - String 是否必填：否 -排序字段，支持：cpu_usage, mem_usage的动态排序 ["cpu_usage","+"]  '+'升序、'-'降序</li>
         /// <li>NetStatus - String -是否必填: 否 -  容器网络状态筛选 normal isolated isolating isolate_failed restoring restore_failed</li>
+        /// <li>PodID - String -是否必填: 否 - PodID筛选</li>
+        /// <li>NodeUniqueID - String -是否必填: 否 - SuperNode筛选</li>
+        /// <li>PodUid - String -是否必填: 否 - Pod筛选</li>
+        /// <li>PodIP - String -是否必填: 否 - PodIP筛选</li>
+        /// <li>NodeType - String -是否必填: 否 - 节点类型筛选:NORMAL:普通节点;SUPER:超级节点</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }

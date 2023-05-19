@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 用量封顶配置开关
+        /// 用量封顶配置开关，取值有：
         /// on：开启
         /// off：关闭
         /// </summary>
@@ -55,7 +55,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string LastTriggerTime{ get; set; }
 
         /// <summary>
-        /// 用量封顶提醒开关
+        /// 用量封顶提醒配置开关，取值有：
         /// on：开启
         /// off：关闭
         /// 注意：此字段可能返回 null，表示取不到有效值。

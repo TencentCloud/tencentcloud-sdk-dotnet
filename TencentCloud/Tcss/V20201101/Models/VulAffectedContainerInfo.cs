@@ -72,6 +72,42 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("PublicIP")]
         public string PublicIP{ get; set; }
 
+        /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// 集群名称
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// 节点类型[NORMAL:普通节点|SUPER:超级节点]
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// 超级节点唯一ID
+        /// </summary>
+        [JsonProperty("NodeUniqueID")]
+        public string NodeUniqueID{ get; set; }
+
+        /// <summary>
+        /// 超级节点ID
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// 超级节点名称
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +122,12 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamSimple(map, prefix + "HostID", this.HostID);
             this.SetParamSimple(map, prefix + "PublicIP", this.PublicIP);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
         }
     }
 }

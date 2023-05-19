@@ -49,13 +49,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 主机名称
+        /// 节点名
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// 主机ip
+        /// 节点内网ip
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
@@ -116,6 +116,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
+        /// <summary>
+        /// 节点类型：NORMAL普通节点、SUPER超级节点
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// 节点外网IP
+        /// </summary>
+        [JsonProperty("PublicIP")]
+        public string PublicIP{ get; set; }
+
+        /// <summary>
+        /// 节点ID
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +152,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RiskCnt", this.RiskCnt);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "PublicIP", this.PublicIP);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
         }
     }
 }

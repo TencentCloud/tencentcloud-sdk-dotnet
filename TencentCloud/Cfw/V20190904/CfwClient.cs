@@ -1053,6 +1053,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 日志审计日志查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogsRequest"/></param>
+        /// <returns><see cref="DescribeLogsResponse"/></returns>
+        public async Task<DescribeLogsResponse> DescribeLogs(DescribeLogsRequest req)
+        {
+             JsonResponseModel<DescribeLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 日志审计日志查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogsRequest"/></param>
+        /// <returns><see cref="DescribeLogsResponse"/></returns>
+        public DescribeLogsResponse DescribeLogsSync(DescribeLogsRequest req)
+        {
+             JsonResponseModel<DescribeLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询NAT访问控制列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNatAcRuleRequest"/></param>

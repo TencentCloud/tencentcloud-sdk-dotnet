@@ -37,13 +37,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 需排序的字段
+        /// 排序采用升序还是降序 升:asc 降 desc
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序采用升序还是降序 升:asc 降 desc
+        /// 需排序的字段
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

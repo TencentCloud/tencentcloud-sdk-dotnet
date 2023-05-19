@@ -373,6 +373,126 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 证书部署到云资源实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DeployCertificateInstanceRequest"/></param>
+        /// <returns><see cref="DeployCertificateInstanceResponse"/></returns>
+        public async Task<DeployCertificateInstanceResponse> DeployCertificateInstance(DeployCertificateInstanceRequest req)
+        {
+             JsonResponseModel<DeployCertificateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeployCertificateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployCertificateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 证书部署到云资源实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DeployCertificateInstanceRequest"/></param>
+        /// <returns><see cref="DeployCertificateInstanceResponse"/></returns>
+        public DeployCertificateInstanceResponse DeployCertificateInstanceSync(DeployCertificateInstanceRequest req)
+        {
+             JsonResponseModel<DeployCertificateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeployCertificateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployCertificateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云资源部署重试部署记录
+        /// </summary>
+        /// <param name="req"><see cref="DeployCertificateRecordRetryRequest"/></param>
+        /// <returns><see cref="DeployCertificateRecordRetryResponse"/></returns>
+        public async Task<DeployCertificateRecordRetryResponse> DeployCertificateRecordRetry(DeployCertificateRecordRetryRequest req)
+        {
+             JsonResponseModel<DeployCertificateRecordRetryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeployCertificateRecordRetry");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployCertificateRecordRetryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云资源部署重试部署记录
+        /// </summary>
+        /// <param name="req"><see cref="DeployCertificateRecordRetryRequest"/></param>
+        /// <returns><see cref="DeployCertificateRecordRetryResponse"/></returns>
+        public DeployCertificateRecordRetryResponse DeployCertificateRecordRetrySync(DeployCertificateRecordRetryRequest req)
+        {
+             JsonResponseModel<DeployCertificateRecordRetryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeployCertificateRecordRetry");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployCertificateRecordRetryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云资源部署一键回滚
+        /// </summary>
+        /// <param name="req"><see cref="DeployCertificateRecordRollbackRequest"/></param>
+        /// <returns><see cref="DeployCertificateRecordRollbackResponse"/></returns>
+        public async Task<DeployCertificateRecordRollbackResponse> DeployCertificateRecordRollback(DeployCertificateRecordRollbackRequest req)
+        {
+             JsonResponseModel<DeployCertificateRecordRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeployCertificateRecordRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployCertificateRecordRollbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云资源部署一键回滚
+        /// </summary>
+        /// <param name="req"><see cref="DeployCertificateRecordRollbackRequest"/></param>
+        /// <returns><see cref="DeployCertificateRecordRollbackResponse"/></returns>
+        public DeployCertificateRecordRollbackResponse DeployCertificateRecordRollbackSync(DeployCertificateRecordRollbackRequest req)
+        {
+             JsonResponseModel<DeployCertificateRecordRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeployCertificateRecordRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployCertificateRecordRollbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeCertificate）用于获取证书信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateRequest"/></param>
@@ -604,6 +724,606 @@ namespace TencentCloud.Ssl.V20191205
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDeployedResources");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeployedResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书apiGateway云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostApiGatewayInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostApiGatewayInstanceListResponse"/></returns>
+        public async Task<DescribeHostApiGatewayInstanceListResponse> DescribeHostApiGatewayInstanceList(DescribeHostApiGatewayInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostApiGatewayInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostApiGatewayInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostApiGatewayInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书apiGateway云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostApiGatewayInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostApiGatewayInstanceListResponse"/></returns>
+        public DescribeHostApiGatewayInstanceListResponse DescribeHostApiGatewayInstanceListSync(DescribeHostApiGatewayInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostApiGatewayInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostApiGatewayInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostApiGatewayInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书cdn云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostCdnInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostCdnInstanceListResponse"/></returns>
+        public async Task<DescribeHostCdnInstanceListResponse> DescribeHostCdnInstanceList(DescribeHostCdnInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostCdnInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostCdnInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostCdnInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书cdn云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostCdnInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostCdnInstanceListResponse"/></returns>
+        public DescribeHostCdnInstanceListResponse DescribeHostCdnInstanceListSync(DescribeHostCdnInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostCdnInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostCdnInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostCdnInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书clb云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostClbInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostClbInstanceListResponse"/></returns>
+        public async Task<DescribeHostClbInstanceListResponse> DescribeHostClbInstanceList(DescribeHostClbInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostClbInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostClbInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostClbInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书clb云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostClbInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostClbInstanceListResponse"/></returns>
+        public DescribeHostClbInstanceListResponse DescribeHostClbInstanceListSync(DescribeHostClbInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostClbInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostClbInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostClbInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书cos云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostCosInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostCosInstanceListResponse"/></returns>
+        public async Task<DescribeHostCosInstanceListResponse> DescribeHostCosInstanceList(DescribeHostCosInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostCosInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostCosInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostCosInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书cos云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostCosInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostCosInstanceListResponse"/></returns>
+        public DescribeHostCosInstanceListResponse DescribeHostCosInstanceListSync(DescribeHostCosInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostCosInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostCosInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostCosInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书ddos云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostDdosInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostDdosInstanceListResponse"/></returns>
+        public async Task<DescribeHostDdosInstanceListResponse> DescribeHostDdosInstanceList(DescribeHostDdosInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostDdosInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostDdosInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostDdosInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书ddos云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostDdosInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostDdosInstanceListResponse"/></returns>
+        public DescribeHostDdosInstanceListResponse DescribeHostDdosInstanceListSync(DescribeHostDdosInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostDdosInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostDdosInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostDdosInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书云资源部署记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostDeployRecordRequest"/></param>
+        /// <returns><see cref="DescribeHostDeployRecordResponse"/></returns>
+        public async Task<DescribeHostDeployRecordResponse> DescribeHostDeployRecord(DescribeHostDeployRecordRequest req)
+        {
+             JsonResponseModel<DescribeHostDeployRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostDeployRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostDeployRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书云资源部署记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostDeployRecordRequest"/></param>
+        /// <returns><see cref="DescribeHostDeployRecordResponse"/></returns>
+        public DescribeHostDeployRecordResponse DescribeHostDeployRecordSync(DescribeHostDeployRecordRequest req)
+        {
+             JsonResponseModel<DescribeHostDeployRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostDeployRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostDeployRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书云资源部署记录详情列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostDeployRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeHostDeployRecordDetailResponse"/></returns>
+        public async Task<DescribeHostDeployRecordDetailResponse> DescribeHostDeployRecordDetail(DescribeHostDeployRecordDetailRequest req)
+        {
+             JsonResponseModel<DescribeHostDeployRecordDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostDeployRecordDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostDeployRecordDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书云资源部署记录详情列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostDeployRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeHostDeployRecordDetailResponse"/></returns>
+        public DescribeHostDeployRecordDetailResponse DescribeHostDeployRecordDetailSync(DescribeHostDeployRecordDetailRequest req)
+        {
+             JsonResponseModel<DescribeHostDeployRecordDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostDeployRecordDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostDeployRecordDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书Lighthouse云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostLighthouseInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostLighthouseInstanceListResponse"/></returns>
+        public async Task<DescribeHostLighthouseInstanceListResponse> DescribeHostLighthouseInstanceList(DescribeHostLighthouseInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostLighthouseInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostLighthouseInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostLighthouseInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书Lighthouse云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostLighthouseInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostLighthouseInstanceListResponse"/></returns>
+        public DescribeHostLighthouseInstanceListResponse DescribeHostLighthouseInstanceListSync(DescribeHostLighthouseInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostLighthouseInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostLighthouseInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostLighthouseInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书live云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostLiveInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostLiveInstanceListResponse"/></returns>
+        public async Task<DescribeHostLiveInstanceListResponse> DescribeHostLiveInstanceList(DescribeHostLiveInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostLiveInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostLiveInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostLiveInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书live云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostLiveInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostLiveInstanceListResponse"/></returns>
+        public DescribeHostLiveInstanceListResponse DescribeHostLiveInstanceListSync(DescribeHostLiveInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostLiveInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostLiveInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostLiveInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书EdgeOne云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostTeoInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostTeoInstanceListResponse"/></returns>
+        public async Task<DescribeHostTeoInstanceListResponse> DescribeHostTeoInstanceList(DescribeHostTeoInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostTeoInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostTeoInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostTeoInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书EdgeOne云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostTeoInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostTeoInstanceListResponse"/></returns>
+        public DescribeHostTeoInstanceListResponse DescribeHostTeoInstanceListSync(DescribeHostTeoInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostTeoInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostTeoInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostTeoInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书tke云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostTkeInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostTkeInstanceListResponse"/></returns>
+        public async Task<DescribeHostTkeInstanceListResponse> DescribeHostTkeInstanceList(DescribeHostTkeInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostTkeInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostTkeInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostTkeInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书tke云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostTkeInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostTkeInstanceListResponse"/></returns>
+        public DescribeHostTkeInstanceListResponse DescribeHostTkeInstanceListSync(DescribeHostTkeInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostTkeInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostTkeInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostTkeInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书云资源更新记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUpdateRecordRequest"/></param>
+        /// <returns><see cref="DescribeHostUpdateRecordResponse"/></returns>
+        public async Task<DescribeHostUpdateRecordResponse> DescribeHostUpdateRecord(DescribeHostUpdateRecordRequest req)
+        {
+             JsonResponseModel<DescribeHostUpdateRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostUpdateRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostUpdateRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书云资源更新记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUpdateRecordRequest"/></param>
+        /// <returns><see cref="DescribeHostUpdateRecordResponse"/></returns>
+        public DescribeHostUpdateRecordResponse DescribeHostUpdateRecordSync(DescribeHostUpdateRecordRequest req)
+        {
+             JsonResponseModel<DescribeHostUpdateRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostUpdateRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostUpdateRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书云资源更新记录详情列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUpdateRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeHostUpdateRecordDetailResponse"/></returns>
+        public async Task<DescribeHostUpdateRecordDetailResponse> DescribeHostUpdateRecordDetail(DescribeHostUpdateRecordDetailRequest req)
+        {
+             JsonResponseModel<DescribeHostUpdateRecordDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostUpdateRecordDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostUpdateRecordDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书云资源更新记录详情列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUpdateRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeHostUpdateRecordDetailResponse"/></returns>
+        public DescribeHostUpdateRecordDetailResponse DescribeHostUpdateRecordDetailSync(DescribeHostUpdateRecordDetailRequest req)
+        {
+             JsonResponseModel<DescribeHostUpdateRecordDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostUpdateRecordDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostUpdateRecordDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书Vod云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVodInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostVodInstanceListResponse"/></returns>
+        public async Task<DescribeHostVodInstanceListResponse> DescribeHostVodInstanceList(DescribeHostVodInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostVodInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostVodInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostVodInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书Vod云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVodInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostVodInstanceListResponse"/></returns>
+        public DescribeHostVodInstanceListResponse DescribeHostVodInstanceListSync(DescribeHostVodInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostVodInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostVodInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostVodInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书waf云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostWafInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostWafInstanceListResponse"/></returns>
+        public async Task<DescribeHostWafInstanceListResponse> DescribeHostWafInstanceList(DescribeHostWafInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostWafInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostWafInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostWafInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询证书waf云资源部署实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostWafInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostWafInstanceListResponse"/></returns>
+        public DescribeHostWafInstanceListResponse DescribeHostWafInstanceListSync(DescribeHostWafInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostWafInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostWafInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostWafInstanceListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1084,6 +1804,126 @@ namespace TencentCloud.Ssl.V20191205
              {
                  var strResp = this.InternalRequestSync(req, "SubmitCertificateInformation");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitCertificateInformationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 一键更新旧证书资源
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCertificateInstanceRequest"/></param>
+        /// <returns><see cref="UpdateCertificateInstanceResponse"/></returns>
+        public async Task<UpdateCertificateInstanceResponse> UpdateCertificateInstance(UpdateCertificateInstanceRequest req)
+        {
+             JsonResponseModel<UpdateCertificateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateCertificateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 一键更新旧证书资源
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCertificateInstanceRequest"/></param>
+        /// <returns><see cref="UpdateCertificateInstanceResponse"/></returns>
+        public UpdateCertificateInstanceResponse UpdateCertificateInstanceSync(UpdateCertificateInstanceRequest req)
+        {
+             JsonResponseModel<UpdateCertificateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateCertificateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云资源更新重试部署记录
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCertificateRecordRetryRequest"/></param>
+        /// <returns><see cref="UpdateCertificateRecordRetryResponse"/></returns>
+        public async Task<UpdateCertificateRecordRetryResponse> UpdateCertificateRecordRetry(UpdateCertificateRecordRetryRequest req)
+        {
+             JsonResponseModel<UpdateCertificateRecordRetryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateCertificateRecordRetry");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateRecordRetryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云资源更新重试部署记录
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCertificateRecordRetryRequest"/></param>
+        /// <returns><see cref="UpdateCertificateRecordRetryResponse"/></returns>
+        public UpdateCertificateRecordRetryResponse UpdateCertificateRecordRetrySync(UpdateCertificateRecordRetryRequest req)
+        {
+             JsonResponseModel<UpdateCertificateRecordRetryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateCertificateRecordRetry");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateRecordRetryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云资源更新一键回滚
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCertificateRecordRollbackRequest"/></param>
+        /// <returns><see cref="UpdateCertificateRecordRollbackResponse"/></returns>
+        public async Task<UpdateCertificateRecordRollbackResponse> UpdateCertificateRecordRollback(UpdateCertificateRecordRollbackRequest req)
+        {
+             JsonResponseModel<UpdateCertificateRecordRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateCertificateRecordRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateRecordRollbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云资源更新一键回滚
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCertificateRecordRollbackRequest"/></param>
+        /// <returns><see cref="UpdateCertificateRecordRollbackResponse"/></returns>
+        public UpdateCertificateRecordRollbackResponse UpdateCertificateRecordRollbackSync(UpdateCertificateRecordRollbackRequest req)
+        {
+             JsonResponseModel<UpdateCertificateRecordRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateCertificateRecordRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateRecordRollbackResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

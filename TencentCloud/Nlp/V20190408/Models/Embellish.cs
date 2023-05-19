@@ -32,7 +32,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// 润色类型。类型列表
+        /// 润色类型。类型如下：
         /// expansion：扩写
         /// rewriting：改写
         /// translation_m2a：从现代文改写为古文

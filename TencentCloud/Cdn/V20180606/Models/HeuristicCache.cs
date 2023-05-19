@@ -25,8 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// on 代表开启启发式缓存
-        /// off 代表关闭启发式缓存
+        /// 启发式缓存配置开关，取值有：
+        /// on：开启
+        /// off：关闭
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

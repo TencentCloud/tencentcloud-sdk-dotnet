@@ -25,22 +25,28 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// SSL-VPN-CLIENT 实例ID。
+        /// SSL-VPN-CLIENT 实例ID。不可以和SslVpnClientIds同时使用。
         /// </summary>
         [JsonProperty("SslVpnClientId")]
         public string SslVpnClientId{ get; set; }
 
         /// <summary>
-        /// SAML-TOKEN
+        /// SAML Token（SAML令牌）。
         /// </summary>
         [JsonProperty("SamlToken")]
         public string SamlToken{ get; set; }
 
         /// <summary>
-        /// VPN门户网站使用。默认Flase
+        /// VPN门户网站使用。默认False
         /// </summary>
         [JsonProperty("IsVpnPortal")]
         public bool? IsVpnPortal{ get; set; }
+
+        /// <summary>
+        /// SSL-VPN-CLIENT 实例ID列表。批量下载时使用。不可以和SslVpnClientId同时使用。
+        /// </summary>
+        [JsonProperty("SslVpnClientIds")]
+        public string[] SslVpnClientIds{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "SslVpnClientId", this.SslVpnClientId);
             this.SetParamSimple(map, prefix + "SamlToken", this.SamlToken);
             this.SetParamSimple(map, prefix + "IsVpnPortal", this.IsVpnPortal);
+            this.SetParamArraySimple(map, prefix + "SslVpnClientIds.", this.SslVpnClientIds);
         }
     }
 }

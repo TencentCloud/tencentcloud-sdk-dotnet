@@ -30,6 +30,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 媒体文件 ID。Url 对应的原始媒体文件 ID。
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }
 }

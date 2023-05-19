@@ -94,6 +94,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("TotalQuasiMass")]
         public string TotalQuasiMass{ get; set; }
 
+        /// <summary>
+        /// 副页编码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubPageCode")]
+        public string SubPageCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Marks", this.Marks);
             this.SetParamSimple(map, prefix + "Record", this.Record);
             this.SetParamSimple(map, prefix + "TotalQuasiMass", this.TotalQuasiMass);
+            this.SetParamSimple(map, prefix + "SubPageCode", this.SubPageCode);
         }
     }
 }

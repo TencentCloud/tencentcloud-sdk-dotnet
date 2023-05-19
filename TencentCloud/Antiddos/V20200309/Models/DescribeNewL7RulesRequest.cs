@@ -72,6 +72,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
 
+        /// <summary>
+        /// 默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则
+        /// </summary>
+        [JsonProperty("Export")]
+        public bool? Export{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArraySimple(map, prefix + "ProtocolList.", this.ProtocolList);
             this.SetParamSimple(map, prefix + "Cname", this.Cname);
+            this.SetParamSimple(map, prefix + "Export", this.Export);
         }
     }
 }

@@ -48,6 +48,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SslVpnCert")]
         public string SslVpnCert{ get; set; }
 
+        /// <summary>
+        /// SSL-VPN-CLIENT 实例ID。
+        /// </summary>
+        [JsonProperty("SslVpnClientId")]
+        public string SslVpnClientId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "SslVpnRootCert", this.SslVpnRootCert);
             this.SetParamSimple(map, prefix + "SslVpnKey", this.SslVpnKey);
             this.SetParamSimple(map, prefix + "SslVpnCert", this.SslVpnCert);
+            this.SetParamSimple(map, prefix + "SslVpnClientId", this.SslVpnClientId);
         }
     }
 }

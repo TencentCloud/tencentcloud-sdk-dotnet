@@ -67,12 +67,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// Pod名称
-        /// </summary>
-        [JsonProperty("PodName")]
-        public string PodName{ get; set; }
-
-        /// <summary>
         /// 状态， “EVENT_UNDEAL”:事件未处理
         ///     "EVENT_DEALED":事件已经处理
         ///     "EVENT_INGNORE"：事件已经忽略
@@ -166,6 +160,78 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ContainerIsolateOperationSrc")]
         public string ContainerIsolateOperationSrc{ get; set; }
 
+        /// <summary>
+        /// 节点ID
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// 节点类型:NORMAL:普通节点;SUPER:超级节点
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// 节点子网ID
+        /// </summary>
+        [JsonProperty("NodeSubNetID")]
+        public string NodeSubNetID{ get; set; }
+
+        /// <summary>
+        /// 节点子网名称
+        /// </summary>
+        [JsonProperty("NodeSubNetName")]
+        public string NodeSubNetName{ get; set; }
+
+        /// <summary>
+        /// 节点子网网段
+        /// </summary>
+        [JsonProperty("NodeSubNetCIDR")]
+        public string NodeSubNetCIDR{ get; set; }
+
+        /// <summary>
+        /// pod名称
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
+
+        /// <summary>
+        /// podIP
+        /// </summary>
+        [JsonProperty("PodIP")]
+        public string PodIP{ get; set; }
+
+        /// <summary>
+        /// pod状态
+        /// </summary>
+        [JsonProperty("PodStatus")]
+        public string PodStatus{ get; set; }
+
+        /// <summary>
+        /// 集群id
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// 集群名称
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// 节点唯一id
+        /// </summary>
+        [JsonProperty("NodeUniqueID")]
+        public string NodeUniqueID{ get; set; }
+
+        /// <summary>
+        /// uuid
+        /// </summary>
+        [JsonProperty("HostID")]
+        public string HostID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,7 +245,6 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
             this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
-            this.SetParamSimple(map, prefix + "PodName", this.PodName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "EventName", this.EventName);
             this.SetParamSimple(map, prefix + "EventType", this.EventType);
@@ -190,6 +255,18 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerNetStatus", this.ContainerNetStatus);
             this.SetParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
             this.SetParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+            this.SetParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+            this.SetParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
+            this.SetParamSimple(map, prefix + "PodIP", this.PodIP);
+            this.SetParamSimple(map, prefix + "PodStatus", this.PodStatus);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+            this.SetParamSimple(map, prefix + "HostID", this.HostID);
         }
     }
 }

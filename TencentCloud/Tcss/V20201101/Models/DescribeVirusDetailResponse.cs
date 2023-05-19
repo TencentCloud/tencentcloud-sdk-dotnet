@@ -179,13 +179,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? SourceType{ get; set; }
 
         /// <summary>
-        /// 集群名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PodName")]
-        public string PodName{ get; set; }
-
-        /// <summary>
         /// 标签
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -233,6 +226,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
+
+        /// <summary>
+        /// 集群名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
 
         /// <summary>
         /// DEAL_NONE:文件待处理
@@ -387,6 +387,66 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string FileModifyTime{ get; set; }
 
         /// <summary>
+        /// 节点子网ID
+        /// </summary>
+        [JsonProperty("NodeSubNetID")]
+        public string NodeSubNetID{ get; set; }
+
+        /// <summary>
+        /// 节点子网名称
+        /// </summary>
+        [JsonProperty("NodeSubNetName")]
+        public string NodeSubNetName{ get; set; }
+
+        /// <summary>
+        /// 节点子网网段
+        /// </summary>
+        [JsonProperty("NodeSubNetCIDR")]
+        public string NodeSubNetCIDR{ get; set; }
+
+        /// <summary>
+        /// 集群id
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// pod ip
+        /// </summary>
+        [JsonProperty("PodIP")]
+        public string PodIP{ get; set; }
+
+        /// <summary>
+        /// pod状态
+        /// </summary>
+        [JsonProperty("PodStatus")]
+        public string PodStatus{ get; set; }
+
+        /// <summary>
+        /// 节点唯一ID
+        /// </summary>
+        [JsonProperty("NodeUniqueID")]
+        public string NodeUniqueID{ get; set; }
+
+        /// <summary>
+        /// 节点类型：NORMAL普通节点、SUPER超级节点
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// 节点ID
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// 集群名称
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -420,7 +480,6 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ProcessStartAccount", this.ProcessStartAccount);
             this.SetParamSimple(map, prefix + "ProcessFileAuthority", this.ProcessFileAuthority);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
-            this.SetParamSimple(map, prefix + "PodName", this.PodName);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "HarmDescribe", this.HarmDescribe);
             this.SetParamSimple(map, prefix + "SuggestScheme", this.SuggestScheme);
@@ -428,6 +487,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "FileMd5", this.FileMd5);
             this.SetParamSimple(map, prefix + "EventType", this.EventType);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SubStatus", this.SubStatus);
             this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
@@ -447,6 +507,16 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
             this.SetParamSimple(map, prefix + "FileAccessTime", this.FileAccessTime);
             this.SetParamSimple(map, prefix + "FileModifyTime", this.FileModifyTime);
+            this.SetParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+            this.SetParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+            this.SetParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "PodIP", this.PodIP);
+            this.SetParamSimple(map, prefix + "PodStatus", this.PodStatus);
+            this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

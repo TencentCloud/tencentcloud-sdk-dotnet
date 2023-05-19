@@ -26,12 +26,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// 事件类型
-        ///    ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-        ///    ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-        ///    ESCAPE_PRIVILEDGE:程序提权逃逸
-        ///    ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-        ///    ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-        ///    ESCAPE_SYSCALL:Syscall逃逸
+        ///    ESCAPE_CGROUPS：利用cgroup机制逃逸
+        ///    ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+        ///    ESCAPE_DOCKER_API：访问Docker API接口逃逸
+        ///    ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+        ///    MOUNT_SENSITIVE_PTAH：敏感路径挂载
+        ///    PRIVILEGE_CONTAINER_START：特权容器
+        ///    PRIVILEGE：程序提权逃逸
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
@@ -187,6 +188,54 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ContainerStatus")]
         public string ContainerStatus{ get; set; }
 
+        /// <summary>
+        /// 节点所属集群ID
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// 节点类型：NORMAL普通节点、SUPER超级节点
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// pod ip
+        /// </summary>
+        [JsonProperty("PodIP")]
+        public string PodIP{ get; set; }
+
+        /// <summary>
+        /// 节点唯一id
+        /// </summary>
+        [JsonProperty("NodeUniqueID")]
+        public string NodeUniqueID{ get; set; }
+
+        /// <summary>
+        /// 节点公网ip
+        /// </summary>
+        [JsonProperty("PublicIP")]
+        public string PublicIP{ get; set; }
+
+        /// <summary>
+        /// 节点id
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// 节点内网ip
+        /// </summary>
+        [JsonProperty("HostIP")]
+        public string HostIP{ get; set; }
+
+        /// <summary>
+        /// 集群名称
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +263,14 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
             this.SetParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
             this.SetParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "PodIP", this.PodIP);
+            this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+            this.SetParamSimple(map, prefix + "PublicIP", this.PublicIP);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// 待润色文本的语言类型，支持语言列表
+        /// 待润色文本的语言类型，支持语言如下：
         /// zh：中文
         /// en：英文
         /// </summary>
@@ -46,7 +46,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         public long? Number{ get; set; }
 
         /// <summary>
-        /// 控制润色类型，类型列表
+        /// 控制润色类型，类型如下：
         /// both：同时返回改写和扩写
         /// expansion：扩写
         /// rewriting：改写

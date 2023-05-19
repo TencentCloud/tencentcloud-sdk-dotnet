@@ -54,6 +54,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("CopyPolicy")]
         public string CopyPolicy{ get; set; }
 
+        /// <summary>
+        /// 如果该资源实例为域名化资产则，该参数必填
+        /// </summary>
+        [JsonProperty("FilterRegion")]
+        public string FilterRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamArrayObj(map, prefix + "BoundDevList.", this.BoundDevList);
             this.SetParamArrayObj(map, prefix + "UnBoundDevList.", this.UnBoundDevList);
             this.SetParamSimple(map, prefix + "CopyPolicy", this.CopyPolicy);
+            this.SetParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
         }
     }
 }

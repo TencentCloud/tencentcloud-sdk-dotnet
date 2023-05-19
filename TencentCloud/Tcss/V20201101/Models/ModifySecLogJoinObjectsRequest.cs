@@ -45,6 +45,14 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("UnBindList")]
         public string[] UnBindList{ get; set; }
 
+        /// <summary>
+        /// 节点类型:
+        /// NORMAL: 普通节点(默认值)
+        /// SUPER: 超级节点
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +62,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
             this.SetParamArraySimple(map, prefix + "BindList.", this.BindList);
             this.SetParamArraySimple(map, prefix + "UnBindList.", this.UnBindList);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
         }
     }
 }

@@ -25,8 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// on 代表开启自定义启发式缓存时间
-        /// off 代表关闭自定义启发式缓存时间
+        /// 启发式自定义时间缓存配置开关，取值有：
+        /// on：开启
+        /// off：关闭
         /// </summary>
         [JsonProperty("HeuristicCacheTimeSwitch")]
         public string HeuristicCacheTimeSwitch{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 主机HostID即quuid
+        /// 主机HostID或超级节点UniqueId
         /// </summary>
         [JsonProperty("HostID")]
         public string HostID{ get; set; }
@@ -44,7 +44,9 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 过滤条件。
-        /// <li>Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT</li>
+        /// <li>
+        /// Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT
+        /// </li>
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }

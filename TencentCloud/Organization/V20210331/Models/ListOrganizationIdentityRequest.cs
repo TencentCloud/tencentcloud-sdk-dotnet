@@ -25,13 +25,13 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 偏移量。
+        /// 偏移量。取值是limit的整数倍。默认值 : 0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数目。最大50
+        /// 限制数目。取值范围：1~50。默认值：10。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("IdentityId")]
         public ulong? IdentityId{ get; set; }
 
+        /// <summary>
+        /// 身份类型。取值范围 1-预设, 2-自定义
+        /// </summary>
+        [JsonProperty("IdentityType")]
+        public ulong? IdentityType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
             this.SetParamSimple(map, prefix + "IdentityId", this.IdentityId);
+            this.SetParamSimple(map, prefix + "IdentityType", this.IdentityType);
         }
     }
 }

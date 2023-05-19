@@ -68,6 +68,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
+        /// <summary>
+        /// 视频拆条任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// </summary>
+        [JsonProperty("BeginProcessTime")]
+        public string BeginProcessTime{ get; set; }
+
+        /// <summary>
+        /// 视频拆条任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +93,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
         }
     }
 }

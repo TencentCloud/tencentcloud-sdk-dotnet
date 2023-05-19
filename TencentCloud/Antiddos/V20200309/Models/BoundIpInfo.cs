@@ -54,6 +54,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("IspCode")]
         public ulong? IspCode{ get; set; }
 
+        /// <summary>
+        /// 域名化资产对应的域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "IspCode", this.IspCode);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

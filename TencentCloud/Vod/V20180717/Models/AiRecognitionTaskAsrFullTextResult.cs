@@ -62,10 +62,22 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskAsrFullTextResultOutput Output{ get; set; }
 
         /// <summary>
-        /// 任务进度，取值范围 [0-100] 。
+        /// 语音全文识别任务进度，取值范围 [0-100] 。
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
+
+        /// <summary>
+        /// 语音全文识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// </summary>
+        [JsonProperty("BeginProcessTime")]
+        public string BeginProcessTime{ get; set; }
+
+        /// <summary>
+        /// 语音全文识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
 
 
         /// <summary>
@@ -80,6 +92,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 智能压缩配置开关
+        /// 智能压缩配置开关，取值有：
         /// on：开启
         /// off：关闭
         /// </summary>

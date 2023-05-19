@@ -31,16 +31,28 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? IsEnabled{ get; set; }
 
         /// <summary>
-        /// 漏洞防御主机范围:0：自选 1: 全部主机。IsEnabled为1时必填
+        /// 漏洞防御主机范围:0：自选 1: 全部主机
         /// </summary>
         [JsonProperty("Scope")]
         public long? Scope{ get; set; }
 
         /// <summary>
-        /// 自选漏洞防御主机,Scope为0时必填
+        /// 自选漏洞防御主机
         /// </summary>
         [JsonProperty("HostIDs")]
         public string[] HostIDs{ get; set; }
+
+        /// <summary>
+        /// 漏洞防御超级节点范围:0：自选 1: 全部
+        /// </summary>
+        [JsonProperty("SuperScope")]
+        public long? SuperScope{ get; set; }
+
+        /// <summary>
+        /// 超级节点Id列表
+        /// </summary>
+        [JsonProperty("NodeIds")]
+        public string[] NodeIds{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
             this.SetParamSimple(map, prefix + "Scope", this.Scope);
             this.SetParamArraySimple(map, prefix + "HostIDs.", this.HostIDs);
+            this.SetParamSimple(map, prefix + "SuperScope", this.SuperScope);
+            this.SetParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
         }
     }
 }

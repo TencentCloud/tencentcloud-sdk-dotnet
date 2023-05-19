@@ -25,10 +25,16 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// SSL-VPN-CLIENT 实例ID。
+        /// SSL-VPN-CLIENT 实例ID。不可和SslVpnClientIds同时使用。
         /// </summary>
         [JsonProperty("SslVpnClientId")]
         public string SslVpnClientId{ get; set; }
+
+        /// <summary>
+        /// SSL-VPN-CLIENT 实例ID列表。批量启用时使用。不可和SslVpnClientId同时使用。
+        /// </summary>
+        [JsonProperty("SslVpnClientIds")]
+        public string[] SslVpnClientIds{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SslVpnClientId", this.SslVpnClientId);
+            this.SetParamArraySimple(map, prefix + "SslVpnClientIds.", this.SslVpnClientIds);
         }
     }
 }

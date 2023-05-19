@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 无
+        /// SSL-VPN 客户端配置。
         /// </summary>
         [JsonProperty("SslClientConfigsSet")]
         public string SslClientConfigsSet{ get; set; }
 
         /// <summary>
-        /// SSL-VPN client配置
+        /// SSL-VPN 客户端配置。
         /// </summary>
         [JsonProperty("SslClientConfig")]
         public SslClientConfig[] SslClientConfig{ get; set; }
 
         /// <summary>
-        /// 是否鉴权成功 只有传入SamlToken 才生效
+        /// 是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。
         /// </summary>
         [JsonProperty("Authenticated")]
         public ulong? Authenticated{ get; set; }

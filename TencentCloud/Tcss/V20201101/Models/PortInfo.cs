@@ -108,6 +108,36 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
+        /// <summary>
+        /// 节点id
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// podip
+        /// </summary>
+        [JsonProperty("PodIP")]
+        public string PodIP{ get; set; }
+
+        /// <summary>
+        /// pod名称
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
+
+        /// <summary>
+        /// 节点类型
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// 超级节点唯一id
+        /// </summary>
+        [JsonProperty("NodeUniqueID")]
+        public string NodeUniqueID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +158,11 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RunAs", this.RunAs);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "PodIP", this.PodIP);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
         }
     }
 }

@@ -164,7 +164,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ContainerIsolateOperationSrc{ get; set; }
 
         /// <summary>
-        /// 主机QUUID
+        /// 主机QUUID/超级节点ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QUUID")]
@@ -178,11 +178,47 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string HostIP{ get; set; }
 
         /// <summary>
-        /// 主机名称
+        /// 主机名称/超级节点名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
+
+        /// <summary>
+        /// 节点类型[NORMAL:普通节点|SUPER:超级节点]
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// 外网IP
+        /// </summary>
+        [JsonProperty("PublicIP")]
+        public string PublicIP{ get; set; }
+
+        /// <summary>
+        /// 超级节点唯一ID
+        /// </summary>
+        [JsonProperty("NodeUniqueID")]
+        public string NodeUniqueID{ get; set; }
+
+        /// <summary>
+        /// 超级节点ID
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// 集群名称
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
 
 
         /// <summary>
@@ -212,6 +248,12 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "QUUID", this.QUUID);
             this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "PublicIP", this.PublicIP);
+            this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
         }
     }
 }

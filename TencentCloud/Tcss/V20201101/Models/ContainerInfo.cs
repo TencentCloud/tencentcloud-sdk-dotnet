@@ -152,6 +152,48 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
+        /// <summary>
+        /// 超级节点id
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// podip
+        /// </summary>
+        [JsonProperty("PodIP")]
+        public string PodIP{ get; set; }
+
+        /// <summary>
+        /// pod名称
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
+
+        /// <summary>
+        /// 节点类型:节点类型：NORMAL普通节点、SUPER超级节点
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// 超级节点唯一id
+        /// </summary>
+        [JsonProperty("NodeUniqueID")]
+        public string NodeUniqueID{ get; set; }
+
+        /// <summary>
+        /// 所属Pod的CPU
+        /// </summary>
+        [JsonProperty("PodCpu")]
+        public long? PodCpu{ get; set; }
+
+        /// <summary>
+        /// 所属Pod的内存
+        /// </summary>
+        [JsonProperty("PodMem")]
+        public long? PodMem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,6 +220,13 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "NetSubStatus", this.NetSubStatus);
             this.SetParamSimple(map, prefix + "IsolateSource", this.IsolateSource);
             this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "PodIP", this.PodIP);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+            this.SetParamSimple(map, prefix + "PodCpu", this.PodCpu);
+            this.SetParamSimple(map, prefix + "PodMem", this.PodMem);
         }
     }
 }

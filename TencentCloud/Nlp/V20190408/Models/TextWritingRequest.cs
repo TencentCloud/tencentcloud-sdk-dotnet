@@ -31,7 +31,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// 待续写文本的语言类型，支持语言列表
+        /// 待续写文本的语言类型，支持语言如下：
         /// zh：中文
         /// en：英文
         /// </summary>
@@ -46,7 +46,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         public long? Number{ get; set; }
 
         /// <summary>
-        /// 指定续写领域，支持领域列表
+        /// 指定续写领域，支持领域如下：
         /// general：通用领域，支持中英文补全
         /// academic：学术领域，仅支持英文补全
         /// 默认为general（通用领域）。
@@ -55,7 +55,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 指定续写风格，支持风格列表
+        /// 指定续写风格，支持风格如下：
         /// science_fiction：科幻
         /// military_history：军事
         /// xuanhuan_wuxia：武侠

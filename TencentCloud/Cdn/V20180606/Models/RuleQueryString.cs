@@ -25,7 +25,10 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// on | off CacheKey是否由QueryString组成
+        /// 路径保留参数配置开关，取值有：
+        /// on：开启，CacheKey由QueryString组成
+        /// off：关闭，CacheKey不由QueryString组成
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Switch")]

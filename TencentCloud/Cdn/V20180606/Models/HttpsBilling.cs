@@ -25,7 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// HTTPS服务，缺省时默认开启【会产生计费】
+        /// HTTPS服务配置开关，取值有：
+        /// on：开启，缺省时默认开启【会产生计费】
+        /// off：关闭，拦截https请求
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

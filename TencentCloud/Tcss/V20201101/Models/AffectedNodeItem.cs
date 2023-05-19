@@ -78,6 +78,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("VerifyInfo")]
         public string VerifyInfo{ get; set; }
 
+        /// <summary>
+        /// 节点名称
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "VerifyInfo", this.VerifyInfo);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
         }
     }
 }

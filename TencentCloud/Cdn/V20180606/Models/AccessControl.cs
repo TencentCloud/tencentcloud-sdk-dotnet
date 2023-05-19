@@ -25,7 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// on | off 是否启用请求头部及请求url访问控制
+        /// 启用请求头部及请求url访问控制开关，取值有：
+        /// on：开启
+        /// off：关闭
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

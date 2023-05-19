@@ -34,6 +34,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public KeyValue[] Data{ get; set; }
 
         /// <summary>
+        /// 域名化资产的名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CLBData")]
+        public KeyValue[] CLBData{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -46,6 +53,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamArrayObj(map, prefix + "CLBData.", this.CLBData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

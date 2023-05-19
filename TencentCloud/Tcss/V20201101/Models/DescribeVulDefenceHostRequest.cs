@@ -27,7 +27,11 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// <summary>
         /// 过滤条件。
         /// <li>Status- String - 是否必填：否 - 插件状态，正常：SUCCESS，异常：FAIL， NO_DEFENCE:未防御</li>
-        /// <li>KeyWords- string - 是否必填：否 - 主机名称/IP。</li>
+        /// <li>HostName- String - 是否必填：否 - 主机名称/超级节点名称</li>
+        /// <li>HostIP- String - 是否必填：否 - 主机IP</li>
+        /// <li>NodeType- String - 是否必填：否 - 节点类型</li>
+        /// <li>HostName- String - 是否必填：否 - 超级节点名称</li>
+        /// <li>NodeSubNetCIDR- String - 是否必填：否 - 超级节点CIDR</li>
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }

@@ -215,6 +215,72 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ContainerStatus")]
         public string ContainerStatus{ get; set; }
 
+        /// <summary>
+        /// 节点名称：如果是超级节点，展示的实质上是它的node_id
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
+
+        /// <summary>
+        /// pod名称
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
+
+        /// <summary>
+        /// pod ip
+        /// </summary>
+        [JsonProperty("PodIP")]
+        public string PodIP{ get; set; }
+
+        /// <summary>
+        /// 节点类型：NORMAL普通节点、SUPER超级节点
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// 集群id
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// 节点的唯一id，主要是超级节点使用
+        /// </summary>
+        [JsonProperty("NodeUniqueID")]
+        public string NodeUniqueID{ get; set; }
+
+        /// <summary>
+        /// 节点公网IP
+        /// </summary>
+        [JsonProperty("PublicIP")]
+        public string PublicIP{ get; set; }
+
+        /// <summary>
+        /// 节点id
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// uuid
+        /// </summary>
+        [JsonProperty("HostID")]
+        public string HostID{ get; set; }
+
+        /// <summary>
+        /// 节点内网ip
+        /// </summary>
+        [JsonProperty("HostIP")]
+        public string HostIP{ get; set; }
+
+        /// <summary>
+        /// 集群名称
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -248,6 +314,17 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
             this.SetParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
             this.SetParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
+            this.SetParamSimple(map, prefix + "PodIP", this.PodIP);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+            this.SetParamSimple(map, prefix + "PublicIP", this.PublicIP);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "HostID", this.HostID);
+            this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
         }
     }
 }

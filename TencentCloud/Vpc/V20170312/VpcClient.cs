@@ -4585,7 +4585,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除SSL-VPN-CLIENT
+        /// 本接口（DeleteVpnGatewaySslClient）用于删除SSL-VPN-CLIENT。
         /// </summary>
         /// <param name="req"><see cref="DeleteVpnGatewaySslClientRequest"/></param>
         /// <returns><see cref="DeleteVpnGatewaySslClientResponse"/></returns>
@@ -4605,7 +4605,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除SSL-VPN-CLIENT
+        /// 本接口（DeleteVpnGatewaySslClient）用于删除SSL-VPN-CLIENT。
         /// </summary>
         /// <param name="req"><see cref="DeleteVpnGatewaySslClientRequest"/></param>
         /// <returns><see cref="DeleteVpnGatewaySslClientResponse"/></returns>
@@ -8775,7 +8775,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 下载SSL-VPN-CLIENT 客户端证书
+        /// 本接口（DownloadVpnGatewaySslClientCert）用于下载SSL-VPN-CLIENT 客户端证书。
         /// </summary>
         /// <param name="req"><see cref="DownloadVpnGatewaySslClientCertRequest"/></param>
         /// <returns><see cref="DownloadVpnGatewaySslClientCertResponse"/></returns>
@@ -8795,7 +8795,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 下载SSL-VPN-CLIENT 客户端证书
+        /// 本接口（DownloadVpnGatewaySslClientCert）用于下载SSL-VPN-CLIENT 客户端证书。
         /// </summary>
         /// <param name="req"><see cref="DownloadVpnGatewaySslClientCertRequest"/></param>
         /// <returns><see cref="DownloadVpnGatewaySslClientCertResponse"/></returns>
@@ -9059,7 +9059,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 启用SSL-VPN-CLIENT 证书
+        /// 本接口（EnableVpnGatewaySslClientCert）用于启用SSL-VPN-CLIENT 证书。
         /// </summary>
         /// <param name="req"><see cref="EnableVpnGatewaySslClientCertRequest"/></param>
         /// <returns><see cref="EnableVpnGatewaySslClientCertResponse"/></returns>
@@ -9079,7 +9079,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 启用SSL-VPN-CLIENT 证书
+        /// 本接口（EnableVpnGatewaySslClientCert）用于启用SSL-VPN-CLIENT 证书。
         /// </summary>
         /// <param name="req"><see cref="EnableVpnGatewaySslClientCertRequest"/></param>
         /// <returns><see cref="EnableVpnGatewaySslClientCertResponse"/></returns>

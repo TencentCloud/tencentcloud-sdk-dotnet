@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 回源跟随开关
+        /// 回源跟随配置开关，取值有：
         /// on：开启
         /// off：关闭
         /// </summary>

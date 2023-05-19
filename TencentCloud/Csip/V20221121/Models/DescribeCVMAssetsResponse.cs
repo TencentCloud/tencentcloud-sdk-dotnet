@@ -95,6 +95,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public FilterDataObject[] ZoneList{ get; set; }
 
         /// <summary>
+        /// os列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OsList")]
+        public FilterDataObject[] OsList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -116,6 +123,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "IpTypeList.", this.IpTypeList);
             this.SetParamArrayObj(map, prefix + "AppIdList.", this.AppIdList);
             this.SetParamArrayObj(map, prefix + "ZoneList.", this.ZoneList);
+            this.SetParamArrayObj(map, prefix + "OsList.", this.OsList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

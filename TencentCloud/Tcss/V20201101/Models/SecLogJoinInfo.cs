@@ -25,10 +25,16 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 已接入数量
+        /// 已接入普通主机数量
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
+
+        /// <summary>
+        /// 已接入超级节点数量
+        /// </summary>
+        [JsonProperty("SuperNodeCount")]
+        public ulong? SuperNodeCount{ get; set; }
 
         /// <summary>
         /// 是否已接入(true:已接入 false:未接入)
@@ -53,6 +59,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
             this.SetParamSimple(map, prefix + "IsJoined", this.IsJoined);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
         }

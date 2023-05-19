@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 防盗链配置开关
+        /// 防盗链配置开关，取值有：
         /// on：开启
         /// off：关闭
         /// 开启时必须且只配置一种模式，其余模式需要设置为 null

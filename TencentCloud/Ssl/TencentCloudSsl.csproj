@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.761</VersionPrefix>
+    <VersionPrefix>3.0.762</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,26 +48,42 @@
 
   <ItemGroup>
     <Compile Include="V20191205\SslClient.cs" />
+    <Compile Include="V20191205\Models\ApiGatewayInstanceDetail.cs" />
     <Compile Include="V20191205\Models\ApplyCertificateRequest.cs" />
     <Compile Include="V20191205\Models\ApplyCertificateResponse.cs" />
     <Compile Include="V20191205\Models\CancelCertificateOrderRequest.cs" />
     <Compile Include="V20191205\Models\CancelCertificateOrderResponse.cs" />
+    <Compile Include="V20191205\Models\CdnInstanceDetail.cs" />
     <Compile Include="V20191205\Models\CertHostingInfo.cs" />
+    <Compile Include="V20191205\Models\Certificate.cs" />
     <Compile Include="V20191205\Models\CertificateExtra.cs" />
     <Compile Include="V20191205\Models\Certificates.cs" />
     <Compile Include="V20191205\Models\CheckCertificateChainRequest.cs" />
     <Compile Include="V20191205\Models\CheckCertificateChainResponse.cs" />
+    <Compile Include="V20191205\Models\ClbInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\ClbListener.cs" />
+    <Compile Include="V20191205\Models\ClbListenerRule.cs" />
     <Compile Include="V20191205\Models\CommitCertificateInformationRequest.cs" />
     <Compile Include="V20191205\Models\CommitCertificateInformationResponse.cs" />
     <Compile Include="V20191205\Models\CompanyInfo.cs" />
     <Compile Include="V20191205\Models\CompleteCertificateRequest.cs" />
     <Compile Include="V20191205\Models\CompleteCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\CosInstanceDetail.cs" />
     <Compile Include="V20191205\Models\CreateCertificateRequest.cs" />
     <Compile Include="V20191205\Models\CreateCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\DdosInstanceDetail.cs" />
     <Compile Include="V20191205\Models\DeleteCertificateRequest.cs" />
     <Compile Include="V20191205\Models\DeleteCertificateResponse.cs" />
     <Compile Include="V20191205\Models\DeleteManagerRequest.cs" />
     <Compile Include="V20191205\Models\DeleteManagerResponse.cs" />
+    <Compile Include="V20191205\Models\DeployCertificateInstanceRequest.cs" />
+    <Compile Include="V20191205\Models\DeployCertificateInstanceResponse.cs" />
+    <Compile Include="V20191205\Models\DeployCertificateRecordRetryRequest.cs" />
+    <Compile Include="V20191205\Models\DeployCertificateRecordRetryResponse.cs" />
+    <Compile Include="V20191205\Models\DeployCertificateRecordRollbackRequest.cs" />
+    <Compile Include="V20191205\Models\DeployCertificateRecordRollbackResponse.cs" />
+    <Compile Include="V20191205\Models\DeployRecordDetail.cs" />
+    <Compile Include="V20191205\Models\DeployRecordInfo.cs" />
     <Compile Include="V20191205\Models\DeployedResources.cs" />
     <Compile Include="V20191205\Models\DescribeCertificateDetailRequest.cs" />
     <Compile Include="V20191205\Models\DescribeCertificateDetailResponse.cs" />
@@ -81,6 +97,36 @@
     <Compile Include="V20191205\Models\DescribeCompaniesResponse.cs" />
     <Compile Include="V20191205\Models\DescribeDeployedResourcesRequest.cs" />
     <Compile Include="V20191205\Models\DescribeDeployedResourcesResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostApiGatewayInstanceListRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostApiGatewayInstanceListResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostCdnInstanceListRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostCdnInstanceListResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostClbInstanceListRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostClbInstanceListResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostCosInstanceListRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostCosInstanceListResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostDdosInstanceListRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostDdosInstanceListResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostDeployRecordDetailRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostDeployRecordDetailResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostDeployRecordRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostDeployRecordResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostLighthouseInstanceListRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostLighthouseInstanceListResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostLiveInstanceListRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostLiveInstanceListResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostTeoInstanceListRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostTeoInstanceListResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostTkeInstanceListRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostTkeInstanceListResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostUpdateRecordDetailRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostUpdateRecordDetailResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostUpdateRecordRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostUpdateRecordResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostVodInstanceListRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostVodInstanceListResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostWafInstanceListRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostWafInstanceListResponse.cs" />
     <Compile Include="V20191205\Models\DescribeManagerDetailRequest.cs" />
     <Compile Include="V20191205\Models\DescribeManagerDetailResponse.cs" />
     <Compile Include="V20191205\Models\DescribeManagersRequest.cs" />
@@ -91,8 +137,11 @@
     <Compile Include="V20191205\Models\DownloadCertificateResponse.cs" />
     <Compile Include="V20191205\Models\DvAuthDetail.cs" />
     <Compile Include="V20191205\Models\DvAuths.cs" />
+    <Compile Include="V20191205\Models\Filter.cs" />
     <Compile Include="V20191205\Models\HostCertificateRequest.cs" />
     <Compile Include="V20191205\Models\HostCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\LighthouseInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\LiveInstanceDetail.cs" />
     <Compile Include="V20191205\Models\ManagerInfo.cs" />
     <Compile Include="V20191205\Models\ManagerStatusInfo.cs" />
     <Compile Include="V20191205\Models\ModifyCertificateAliasRequest.cs" />
@@ -108,6 +157,7 @@
     <Compile Include="V20191205\Models\ProjectInfo.cs" />
     <Compile Include="V20191205\Models\ReplaceCertificateRequest.cs" />
     <Compile Include="V20191205\Models\ReplaceCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\ResourceTypeRegions.cs" />
     <Compile Include="V20191205\Models\RevokeCertificateRequest.cs" />
     <Compile Include="V20191205\Models\RevokeCertificateResponse.cs" />
     <Compile Include="V20191205\Models\RevokeDomainValidateAuths.cs" />
@@ -118,6 +168,20 @@
     <Compile Include="V20191205\Models\SubmitCertificateInformationResponse.cs" />
     <Compile Include="V20191205\Models\SubmittedData.cs" />
     <Compile Include="V20191205\Models\Tags.cs" />
+    <Compile Include="V20191205\Models\TeoInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\TkeIngressDetail.cs" />
+    <Compile Include="V20191205\Models\TkeInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\TkeNameSpaceDetail.cs" />
+    <Compile Include="V20191205\Models\TkeSecretDetail.cs" />
+    <Compile Include="V20191205\Models\UpdateCertificateInstanceRequest.cs" />
+    <Compile Include="V20191205\Models\UpdateCertificateInstanceResponse.cs" />
+    <Compile Include="V20191205\Models\UpdateCertificateRecordRetryRequest.cs" />
+    <Compile Include="V20191205\Models\UpdateCertificateRecordRetryResponse.cs" />
+    <Compile Include="V20191205\Models\UpdateCertificateRecordRollbackRequest.cs" />
+    <Compile Include="V20191205\Models\UpdateCertificateRecordRollbackResponse.cs" />
+    <Compile Include="V20191205\Models\UpdateRecordDetail.cs" />
+    <Compile Include="V20191205\Models\UpdateRecordDetails.cs" />
+    <Compile Include="V20191205\Models\UpdateRecordInfo.cs" />
     <Compile Include="V20191205\Models\UploadCertificateRequest.cs" />
     <Compile Include="V20191205\Models\UploadCertificateResponse.cs" />
     <Compile Include="V20191205\Models\UploadConfirmLetterRequest.cs" />
@@ -126,5 +190,6 @@
     <Compile Include="V20191205\Models\UploadRevokeLetterResponse.cs" />
     <Compile Include="V20191205\Models\VerifyManagerRequest.cs" />
     <Compile Include="V20191205\Models\VerifyManagerResponse.cs" />
+    <Compile Include="V20191205\Models\VodInstanceDetail.cs" />
   </ItemGroup>
 </Project>

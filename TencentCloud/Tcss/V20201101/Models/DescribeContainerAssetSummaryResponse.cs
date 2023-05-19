@@ -91,6 +91,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? HostUnInstallCnt{ get; set; }
 
         /// <summary>
+        /// 超级节点个数
+        /// </summary>
+        [JsonProperty("HostSuperNodeCnt")]
+        public ulong? HostSuperNodeCnt{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -113,6 +119,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ImageRegistryCnt", this.ImageRegistryCnt);
             this.SetParamSimple(map, prefix + "ImageTotalCnt", this.ImageTotalCnt);
             this.SetParamSimple(map, prefix + "HostUnInstallCnt", this.HostUnInstallCnt);
+            this.SetParamSimple(map, prefix + "HostSuperNodeCnt", this.HostSuperNodeCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

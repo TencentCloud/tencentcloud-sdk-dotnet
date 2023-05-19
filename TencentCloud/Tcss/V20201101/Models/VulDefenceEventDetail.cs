@@ -109,7 +109,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? EventID{ get; set; }
 
         /// <summary>
-        /// 主机名称
+        /// 主机名称/超级节点名称
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
@@ -200,7 +200,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ServerArg{ get; set; }
 
         /// <summary>
-        /// 主机QUUID
+        /// 主机QUUID/超级节点ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QUUID")]
@@ -268,6 +268,60 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("RaspDetail")]
         public RaspInfo[] RaspDetail{ get; set; }
 
+        /// <summary>
+        /// 超级节点子网名称
+        /// </summary>
+        [JsonProperty("NodeSubNetName")]
+        public string NodeSubNetName{ get; set; }
+
+        /// <summary>
+        /// 超级节点子网网段
+        /// </summary>
+        [JsonProperty("NodeSubNetCIDR")]
+        public string NodeSubNetCIDR{ get; set; }
+
+        /// <summary>
+        /// pod ip
+        /// </summary>
+        [JsonProperty("PodIP")]
+        public string PodIP{ get; set; }
+
+        /// <summary>
+        /// 节点类型[NORMAL:普通节点|SUPER:超级节点]
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// 超级节点ID
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// 超级节点唯一ID
+        /// </summary>
+        [JsonProperty("NodeUniqueID")]
+        public string NodeUniqueID{ get; set; }
+
+        /// <summary>
+        /// 超级节点子网ID
+        /// </summary>
+        [JsonProperty("NodeSubNetID")]
+        public string NodeSubNetID{ get; set; }
+
+        /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// 集群名称
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -309,6 +363,15 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
             this.SetParamSimple(map, prefix + "JNDIUrl", this.JNDIUrl);
             this.SetParamArrayObj(map, prefix + "RaspDetail.", this.RaspDetail);
+            this.SetParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+            this.SetParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+            this.SetParamSimple(map, prefix + "PodIP", this.PodIP);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+            this.SetParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
         }
     }
 }

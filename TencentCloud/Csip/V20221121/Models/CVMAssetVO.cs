@@ -360,6 +360,13 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Os")]
         public string Os{ get; set; }
 
+        /// <summary>
+        /// 风险服务暴露
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RiskExposure")]
+        public long? RiskExposure{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -414,6 +421,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
             this.SetParamSimple(map, prefix + "MemberId", this.MemberId);
             this.SetParamSimple(map, prefix + "Os", this.Os);
+            this.SetParamSimple(map, prefix + "RiskExposure", this.RiskExposure);
         }
     }
 }

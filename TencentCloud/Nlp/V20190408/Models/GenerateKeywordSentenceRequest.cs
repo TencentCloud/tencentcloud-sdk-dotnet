@@ -38,7 +38,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         public long? Number{ get; set; }
 
         /// <summary>
-        /// 指定生成句子的领域，支持领域列表
+        /// 指定生成句子的领域，支持领域如下：
         /// general：通用领域，支持中英文
         /// academic：学术领域，仅支持英文
         /// 默认为general（通用领域）。
