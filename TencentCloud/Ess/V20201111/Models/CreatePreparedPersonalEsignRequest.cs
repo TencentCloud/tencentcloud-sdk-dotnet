@@ -66,7 +66,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string IdCardType{ get; set; }
 
         /// <summary>
-        /// 手机号码
+        /// 手机号码；当需要开通自动签时，该参数必传
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }

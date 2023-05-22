@@ -115,6 +115,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Weekday")]
         public long?[] Weekday{ get; set; }
 
+        /// <summary>
+        /// 值班表id列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OnCallFormIDs")]
+        public string[] OnCallFormIDs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "NeedPhoneArriveNotice", this.NeedPhoneArriveNotice);
             this.SetParamSimple(map, prefix + "PhoneCallType", this.PhoneCallType);
             this.SetParamArraySimple(map, prefix + "Weekday.", this.Weekday);
+            this.SetParamArraySimple(map, prefix + "OnCallFormIDs.", this.OnCallFormIDs);
         }
     }
 }

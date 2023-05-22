@@ -1899,54 +1899,6 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口已废弃，需要下线
-        /// 
-        /// 本接口(DescribeBackupTables)用于查询指定的数据库的备份数据表名 (已废弃)。
-        /// 旧版本支持全量备份后，用户如果分库表下载逻辑备份文件，需要用到此接口。
-        /// 新版本支持(CreateBackup)创建逻辑备份的时候，直接发起指定库表备份，用户直接下载该备份文件即可。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBackupTablesRequest"/></param>
-        /// <returns><see cref="DescribeBackupTablesResponse"/></returns>
-        public async Task<DescribeBackupTablesResponse> DescribeBackupTables(DescribeBackupTablesRequest req)
-        {
-             JsonResponseModel<DescribeBackupTablesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBackupTables");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupTablesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 该接口已废弃，需要下线
-        /// 
-        /// 本接口(DescribeBackupTables)用于查询指定的数据库的备份数据表名 (已废弃)。
-        /// 旧版本支持全量备份后，用户如果分库表下载逻辑备份文件，需要用到此接口。
-        /// 新版本支持(CreateBackup)创建逻辑备份的时候，直接发起指定库表备份，用户直接下载该备份文件即可。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBackupTablesRequest"/></param>
-        /// <returns><see cref="DescribeBackupTablesResponse"/></returns>
-        public DescribeBackupTablesResponse DescribeBackupTablesSync(DescribeBackupTablesRequest req)
-        {
-             JsonResponseModel<DescribeBackupTablesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBackupTables");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupTablesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口(DescribeBackups)用于查询云数据库实例的备份数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupsRequest"/></param>

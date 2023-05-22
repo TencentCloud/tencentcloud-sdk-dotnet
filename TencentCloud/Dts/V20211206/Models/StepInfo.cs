@@ -74,7 +74,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public StepTip[] Warnings{ get; set; }
 
         /// <summary>
-        /// 当前步骤进度，范围为[0-100]
+        /// 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]

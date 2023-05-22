@@ -15,28 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Csxg.V20230303.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TableNameInfo : AbstractModel
+    public class Create5GInstanceRequest : AbstractModel
     {
         
-        /// <summary>
-        /// 表名
-        /// </summary>
-        [JsonProperty("TableName")]
-        public string TableName{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TableName", this.TableName);
         }
     }
 }

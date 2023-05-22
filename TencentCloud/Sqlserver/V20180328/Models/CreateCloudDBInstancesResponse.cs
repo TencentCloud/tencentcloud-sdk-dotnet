@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBackupTablesResponse : AbstractModel
+    public class CreateCloudDBInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 返回的数据个数。
+        /// 订单名称
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// 符合条件的数据表数组。
-        /// </summary>
-        [JsonProperty("Items")]
-        public TableNameInfo[] Items{ get; set; }
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +42,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,10 +25,22 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 是否开通
+        /// 是否已开通自动签
         /// </summary>
         [JsonProperty("IsOpen")]
         public bool? IsOpen{ get; set; }
+
+        /// <summary>
+        /// 自动签许可生效时间。当且仅当已开通自动签时有值。
+        /// </summary>
+        [JsonProperty("LicenseFrom")]
+        public long? LicenseFrom{ get; set; }
+
+        /// <summary>
+        /// 自动签许可到期时间。当且仅当已开通自动签时有值。
+        /// </summary>
+        [JsonProperty("LicenseTo")]
+        public long? LicenseTo{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +55,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "IsOpen", this.IsOpen);
+            this.SetParamSimple(map, prefix + "LicenseFrom", this.LicenseFrom);
+            this.SetParamSimple(map, prefix + "LicenseTo", this.LicenseTo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

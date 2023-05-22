@@ -32,7 +32,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// 新view名
+        /// 预留字段、目前暂时不支持view的重命名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewViewName")]

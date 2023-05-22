@@ -85,6 +85,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PushExceptionNotifyUrl")]
         public string PushExceptionNotifyUrl{ get; set; }
 
+        /// <summary>
+        /// 音频审核回调 URL。
+        /// </summary>
+        [JsonProperty("AudioAuditNotifyUrl")]
+        public string AudioAuditNotifyUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
             this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
             this.SetParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
+            this.SetParamSimple(map, prefix + "AudioAuditNotifyUrl", this.AudioAuditNotifyUrl);
         }
     }
 }

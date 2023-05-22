@@ -493,6 +493,86 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（CreateCloudDBInstances）用于创建高可用实例(虚拟机版本)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateCloudDBInstancesResponse"/></returns>
+        public async Task<CreateCloudDBInstancesResponse> CreateCloudDBInstances(CreateCloudDBInstancesRequest req)
+        {
+             JsonResponseModel<CreateCloudDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCloudDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateCloudDBInstances）用于创建高可用实例(虚拟机版本)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateCloudDBInstancesResponse"/></returns>
+        public CreateCloudDBInstancesResponse CreateCloudDBInstancesSync(CreateCloudDBInstancesRequest req)
+        {
+             JsonResponseModel<CreateCloudDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCloudDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateCloudReadOnlyDBInstances）用于添加只读副本实例(虚拟机版本)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudReadOnlyDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateCloudReadOnlyDBInstancesResponse"/></returns>
+        public async Task<CreateCloudReadOnlyDBInstancesResponse> CreateCloudReadOnlyDBInstances(CreateCloudReadOnlyDBInstancesRequest req)
+        {
+             JsonResponseModel<CreateCloudReadOnlyDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCloudReadOnlyDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudReadOnlyDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateCloudReadOnlyDBInstances）用于添加只读副本实例(虚拟机版本)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudReadOnlyDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateCloudReadOnlyDBInstancesResponse"/></returns>
+        public CreateCloudReadOnlyDBInstancesResponse CreateCloudReadOnlyDBInstancesSync(CreateCloudReadOnlyDBInstancesRequest req)
+        {
+             JsonResponseModel<CreateCloudReadOnlyDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCloudReadOnlyDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudReadOnlyDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateDB）用于创建数据库。
         /// </summary>
         /// <param name="req"><see cref="CreateDBRequest"/></param>

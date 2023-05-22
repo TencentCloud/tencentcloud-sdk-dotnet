@@ -111,7 +111,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 通知模版的id列表，可查询通知模版列表获取。
+        /// 通知模板的id列表，可查询通知模板列表获取。
         /// 可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
         /// </summary>
         [JsonProperty("NoticeIds")]
@@ -160,13 +160,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] OneClickPolicyType{ get; set; }
 
         /// <summary>
-        /// 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+        /// 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
         /// </summary>
         [JsonProperty("NotBindAll")]
         public long? NotBindAll{ get; set; }
 
         /// <summary>
-        /// 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+        /// 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
         /// </summary>
         [JsonProperty("NotInstanceGroup")]
         public long? NotInstanceGroup{ get; set; }
@@ -176,6 +176,18 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// prom实例id，自定义指标策略时会用到
+        /// </summary>
+        [JsonProperty("PromInsId")]
+        public string PromInsId{ get; set; }
+
+        /// <summary>
+        /// 根据排班表搜索
+        /// </summary>
+        [JsonProperty("ReceiverOnCallFormIDs")]
+        public string[] ReceiverOnCallFormIDs{ get; set; }
 
 
         /// <summary>
@@ -207,6 +219,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "NotBindAll", this.NotBindAll);
             this.SetParamSimple(map, prefix + "NotInstanceGroup", this.NotInstanceGroup);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "PromInsId", this.PromInsId);
+            this.SetParamArraySimple(map, prefix + "ReceiverOnCallFormIDs.", this.ReceiverOnCallFormIDs);
         }
     }
 }
