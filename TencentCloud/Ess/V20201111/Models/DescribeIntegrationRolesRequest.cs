@@ -44,7 +44,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 查询的关键字段:
-        /// Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
+        /// Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
         /// Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
         /// Key:"IsGroupRole"，Values:["0"],查询非集团角色，Values:["1"]表示查询集团角色
         /// </summary>

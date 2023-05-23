@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 过滤条件。
+        /// 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
         /// <li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
         /// <li>service-name - String - （过滤条件）终端节点实例名称。</li>
         /// <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
@@ -47,7 +47,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 终端节点服务ID。
+        /// 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
         /// </summary>
         [JsonProperty("EndPointServiceIds")]
         public string[] EndPointServiceIds{ get; set; }

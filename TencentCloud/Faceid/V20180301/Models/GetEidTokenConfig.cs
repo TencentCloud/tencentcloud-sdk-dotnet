@@ -66,6 +66,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("IntentionRecognition")]
         public bool? IntentionRecognition{ get; set; }
 
+        /// <summary>
+        /// 是否支持港澳台居住证识别
+        /// </summary>
+        [JsonProperty("IsSupportHMTResidentPermitOCR")]
+        public bool? IsSupportHMTResidentPermitOCR{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +84,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
             this.SetParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
             this.SetParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
+            this.SetParamSimple(map, prefix + "IsSupportHMTResidentPermitOCR", this.IsSupportHMTResidentPermitOCR);
         }
     }
 }

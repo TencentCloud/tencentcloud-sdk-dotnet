@@ -30,6 +30,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("AutoName")]
         public string AutoName{ get; set; }
 
+        /// <summary>
+        /// 定义的字段名称（传key的名称）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigName")]
+        public string ConfigName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +44,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AutoName", this.AutoName);
+            this.SetParamSimple(map, prefix + "ConfigName", this.ConfigName);
         }
     }
 }

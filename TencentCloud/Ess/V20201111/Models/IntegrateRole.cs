@@ -39,7 +39,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string RoleName{ get; set; }
 
         /// <summary>
-        /// 角色类型：1-系统角色，2-自定义角色
+        /// 角色状态，1-启用，2-禁用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleStatus")]

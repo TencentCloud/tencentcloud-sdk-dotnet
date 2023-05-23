@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大为200。
+        /// 返回数量，默认为20，最大为100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

@@ -375,6 +375,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 创建独享集群DCDB实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateDedicatedClusterDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDedicatedClusterDCDBInstanceResponse"/></returns>
+        public async Task<CreateDedicatedClusterDCDBInstanceResponse> CreateDedicatedClusterDCDBInstance(CreateDedicatedClusterDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDedicatedClusterDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建独享集群DCDB实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateDedicatedClusterDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDedicatedClusterDCDBInstanceResponse"/></returns>
+        public CreateDedicatedClusterDCDBInstanceResponse CreateDedicatedClusterDCDBInstanceSync(CreateDedicatedClusterDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDedicatedClusterDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建DCDB后付费实例
         /// </summary>
         /// <param name="req"><see cref="CreateHourDCDBInstanceRequest"/></param>
@@ -568,6 +608,46 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBackupFiles");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBEncryptAttributes)用于查询实例数据加密状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="DescribeDBEncryptAttributesResponse"/></returns>
+        public async Task<DescribeDBEncryptAttributesResponse> DescribeDBEncryptAttributes(DescribeDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<DescribeDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBEncryptAttributes)用于查询实例数据加密状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="DescribeDBEncryptAttributesResponse"/></returns>
+        public DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributesSync(DescribeDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<DescribeDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBEncryptAttributesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1499,6 +1579,8 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 已废弃接口
+        /// 
         /// 本接口（DescribeSqlLogs）用于获取实例SQL日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeSqlLogsRequest"/></param>
@@ -1519,6 +1601,8 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 已废弃接口
+        /// 
         /// 本接口（DescribeSqlLogs）用于获取实例SQL日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeSqlLogsRequest"/></param>
@@ -2676,6 +2760,46 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "UpgradeDCDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeDedicatedDCDBInstance）用于升级独享DCDB实例
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDedicatedDCDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDedicatedDCDBInstanceResponse"/></returns>
+        public async Task<UpgradeDedicatedDCDBInstanceResponse> UpgradeDedicatedDCDBInstance(UpgradeDedicatedDCDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeDedicatedDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeDedicatedDCDBInstance）用于升级独享DCDB实例
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDedicatedDCDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDedicatedDCDBInstanceResponse"/></returns>
+        public UpgradeDedicatedDCDBInstanceResponse UpgradeDedicatedDCDBInstanceSync(UpgradeDedicatedDCDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeDedicatedDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

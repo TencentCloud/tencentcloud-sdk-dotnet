@@ -2884,5 +2884,45 @@ namespace TencentCloud.Mariadb.V20170312
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 本接口(UpgradeDedicatedDBInstance)用于扩容独享云数据库实例。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDedicatedDBInstanceResponse"/></returns>
+        public async Task<UpgradeDedicatedDBInstanceResponse> UpgradeDedicatedDBInstance(UpgradeDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(UpgradeDedicatedDBInstance)用于扩容独享云数据库实例。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDedicatedDBInstanceResponse"/></returns>
+        public UpgradeDedicatedDBInstanceResponse UpgradeDedicatedDBInstanceSync(UpgradeDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

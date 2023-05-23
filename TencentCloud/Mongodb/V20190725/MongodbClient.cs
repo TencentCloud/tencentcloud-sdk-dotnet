@@ -733,7 +733,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本就口（DescribeSecurityGroup）用于查询实例绑定的安全组。
+        /// 本接口（DescribeSecurityGroup）用于查询实例绑定的安全组。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
         /// <returns><see cref="DescribeSecurityGroupResponse"/></returns>
@@ -753,7 +753,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本就口（DescribeSecurityGroup）用于查询实例绑定的安全组。
+        /// 本接口（DescribeSecurityGroup）用于查询实例绑定的安全组。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
         /// <returns><see cref="DescribeSecurityGroupResponse"/></returns>

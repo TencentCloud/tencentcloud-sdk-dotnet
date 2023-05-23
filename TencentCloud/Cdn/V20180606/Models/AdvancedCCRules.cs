@@ -45,7 +45,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ulong? FrequencyLimit{ get; set; }
 
         /// <summary>
-        /// IP 惩罚开关，可选on|off
+        /// IP 惩罚配置开关，取值有：
+        /// on：开启
+        /// off：关闭
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PunishmentSwitch")]

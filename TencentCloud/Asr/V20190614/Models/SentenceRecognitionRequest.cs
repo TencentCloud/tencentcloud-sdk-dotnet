@@ -66,12 +66,14 @@ namespace TencentCloud.Asr.V20190614.Models
         /// 腾讯云项目 ID，废弃参数，填写0即可。
         /// </summary>
         [JsonProperty("ProjectId")]
+        [System.Obsolete]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
         /// 子服务类型。2： 一句话识别。
         /// </summary>
         [JsonProperty("SubServiceType")]
+        [System.Obsolete]
         public ulong? SubServiceType{ get; set; }
 
         /// <summary>
@@ -84,6 +86,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// 废弃参数，填写任意字符串即可。
         /// </summary>
         [JsonProperty("UsrAudioKey")]
+        [System.Obsolete]
         public string UsrAudioKey{ get; set; }
 
         /// <summary>

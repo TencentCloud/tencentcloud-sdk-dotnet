@@ -60,6 +60,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
+        /// <summary>
+        /// 开启/关闭云盘性能突发功能
+        /// </summary>
+        [JsonProperty("BurstPerformanceOperation")]
+        public string BurstPerformanceOperation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "BurstPerformanceOperation", this.BurstPerformanceOperation);
         }
     }
 }

@@ -25,9 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 是调整POST请求限制，平台默认为32MB。
-        /// 关闭：off，
-        /// 开启：on。
+        /// POST请求上传文件流式传输最大限制配置开关，取值有：
+        /// on：开启，平台默认为32MB
+        /// off：关闭
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
