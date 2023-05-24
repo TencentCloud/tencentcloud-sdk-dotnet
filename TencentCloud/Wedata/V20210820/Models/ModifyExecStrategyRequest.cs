@@ -125,6 +125,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TableId")]
         public string TableId{ get; set; }
 
+        /// <summary>
+        /// 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+        /// </summary>
+        [JsonProperty("ExecEngineType")]
+        public string ExecEngineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +153,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
+            this.SetParamSimple(map, prefix + "ExecEngineType", this.ExecEngineType);
         }
     }
 }

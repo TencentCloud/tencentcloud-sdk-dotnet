@@ -219,7 +219,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 获取按付费模式汇总费用分布
+        /// 获取按计费模式汇总费用分布
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByPayModeRequest"/></param>
         /// <returns><see cref="DescribeBillSummaryByPayModeResponse"/></returns>
@@ -239,7 +239,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 获取按付费模式汇总费用分布
+        /// 获取按计费模式汇总费用分布
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByPayModeRequest"/></param>
         /// <returns><see cref="DescribeBillSummaryByPayModeResponse"/></returns>

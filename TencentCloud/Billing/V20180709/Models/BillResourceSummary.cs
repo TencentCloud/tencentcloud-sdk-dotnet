@@ -25,110 +25,109 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+        /// 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
         /// </summary>
         [JsonProperty("BusinessCodeName")]
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+        /// 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
 
         /// <summary>
-        /// 计费模式：包年包月和按量计费
+        /// 计费模式：资源的计费模式，区分为包年包月和按量计费
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }
 
         /// <summary>
-        /// 项目
+        /// 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// 地域：资源所属地域，如华南地区（广州）
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// 可用区：资源所属可用区，如广州三区
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 资源实例ID
+        /// 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID	
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源实例名称
+        /// 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
+        /// 交易类型：如包年包月新购、包年包月续费、按量计费扣费等类型
         /// </summary>
         [JsonProperty("ActionTypeName")]
         public string ActionTypeName{ get; set; }
 
         /// <summary>
-        /// 订单ID
+        /// 订单ID：包年包月计费模式下订购的订单号
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// 扣费时间
+        /// 扣费时间：结算扣费时间
         /// </summary>
         [JsonProperty("PayTime")]
         public string PayTime{ get; set; }
 
         /// <summary>
-        /// 开始使用时间
+        /// 开始使用时间：产品服务开始使用时间
         /// </summary>
         [JsonProperty("FeeBeginTime")]
         public string FeeBeginTime{ get; set; }
 
         /// <summary>
-        /// 结束使用时间
+        /// 结束使用时间：产品服务结束使用时间
         /// </summary>
         [JsonProperty("FeeEndTime")]
         public string FeeEndTime{ get; set; }
 
         /// <summary>
-        /// 配置描述
+        /// 配置描述：该资源下的计费项名称和用量合并展示，仅在资源账单体现
         /// </summary>
         [JsonProperty("ConfigDesc")]
         public string ConfigDesc{ get; set; }
 
         /// <summary>
-        /// 扩展字段1
+        /// 扩展字段1：产品对应的扩展属性信息，仅在资源账单体现
         /// </summary>
         [JsonProperty("ExtendField1")]
         public string ExtendField1{ get; set; }
 
         /// <summary>
-        /// 扩展字段2
+        /// 扩展字段2：产品对应的扩展属性信息，仅在资源账单体现
         /// </summary>
         [JsonProperty("ExtendField2")]
         public string ExtendField2{ get; set; }
 
         /// <summary>
-        /// 原价，单位为元
+        /// 原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示）
         /// </summary>
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
 
         /// <summary>
-        /// 折扣率
-        /// 当聚合之后折扣不唯一或者合同价的情况下，返回“-”
+        /// 折扣率：本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
         /// </summary>
         [JsonProperty("Discount")]
         public string Discount{ get; set; }
@@ -140,118 +139,118 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ReduceType{ get; set; }
 
         /// <summary>
-        /// 优惠后总价，单位为元
+        /// 优惠后总价
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// 代金券支付金额，单位为元
+        /// 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// 现金账户支付金额，单位为元
+        /// 现金账户支出：通过现金账户支付的金额
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// 赠送账户支付金额，单位为元
+        /// 赠送账户支出：使用赠送金支付的金额
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// 扩展字段3
+        /// 分成金账户支出：通过分成金账户支付的金额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TransferPayAmount")]
+        public string TransferPayAmount{ get; set; }
+
+        /// <summary>
+        /// 扩展字段3：产品对应的扩展属性信息，仅在资源账单体现
         /// </summary>
         [JsonProperty("ExtendField3")]
         public string ExtendField3{ get; set; }
 
         /// <summary>
-        /// 扩展字段4
+        /// 扩展字段4：产品对应的扩展属性信息，仅在资源账单体现
         /// </summary>
         [JsonProperty("ExtendField4")]
         public string ExtendField4{ get; set; }
 
         /// <summary>
-        /// 扩展字段5
+        /// 扩展字段5：产品对应的扩展属性信息，仅在资源账单体现
         /// </summary>
         [JsonProperty("ExtendField5")]
         public string ExtendField5{ get; set; }
 
         /// <summary>
-        /// Tag 信息
+        /// 标签信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public BillTagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 付款方uin
+        /// 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
         /// <summary>
-        /// 资源所有者uin,无值则返回"-"
+        /// 使用者UIN：实际使用资源的账号 ID
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 操作者uin,无值则返回"-"
+        /// 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
 
         /// <summary>
-        /// 产品名称代码
+        /// 产品编码
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// 子产品名称代码
+        /// 子产品编码
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// 区域ID
+        /// 地域ID
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
-        /// 
-        /// ri=Standard RI
-        /// 
-        /// svp=Savings Plan
-        /// 
-        /// si=Spot Instances
-        /// 
-        /// rp=Resource Pack
+        /// 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 按组件原价的口径换算的预留实例抵扣金额
+        /// 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额	
         /// </summary>
         [JsonProperty("OriginalCostWithRI")]
         public string OriginalCostWithRI{ get; set; }
 
         /// <summary>
-        /// 节省计划抵扣的SP包面值
+        /// 节省计划抵扣金额（已废弃）
         /// </summary>
         [JsonProperty("SPDeduction")]
+        [System.Obsolete]
         public string SPDeduction{ get; set; }
 
         /// <summary>
-        /// 按组件原价的口径换算的节省计划抵扣金额
+        /// 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率	
         /// </summary>
         [JsonProperty("OriginalCostWithSP")]
         public string OriginalCostWithSP{ get; set; }
@@ -285,6 +284,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+            this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
             this.SetParamSimple(map, prefix + "ExtendField3", this.ExtendField3);
             this.SetParamSimple(map, prefix + "ExtendField4", this.ExtendField4);
             this.SetParamSimple(map, prefix + "ExtendField5", this.ExtendField5);

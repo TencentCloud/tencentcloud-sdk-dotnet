@@ -45,6 +45,20 @@ namespace TencentCloud.Taf.V20200210.Models
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
+        /// <summary>
+        /// 模型类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModelType")]
+        public ulong? ModelType{ get; set; }
+
+        /// <summary>
+        /// 入参Uid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Uid")]
+        public string Uid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +68,8 @@ namespace TencentCloud.Taf.V20200210.Models
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
             this.SetParamSimple(map, prefix + "IsFound", this.IsFound);
             this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
+            this.SetParamSimple(map, prefix + "Uid", this.Uid);
         }
     }
 }

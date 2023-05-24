@@ -49,7 +49,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CcnUin{ get; set; }
 
         /// <summary>
-        /// 时间粒度。
+        /// 时间粒度。单位为:秒，如60为60s的时间粒度
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

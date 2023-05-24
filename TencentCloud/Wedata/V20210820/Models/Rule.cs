@@ -262,6 +262,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TargetObjectValue")]
         public string TargetObjectValue{ get; set; }
 
+        /// <summary>
+        /// 源端对应的引擎类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceEngineTypes")]
+        public ulong?[] SourceEngineTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +309,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TargetObjectDataType", this.TargetObjectDataType);
             this.SetParamSimple(map, prefix + "TargetObjectDataTypeName", this.TargetObjectDataTypeName);
             this.SetParamSimple(map, prefix + "TargetObjectValue", this.TargetObjectValue);
+            this.SetParamArraySimple(map, prefix + "SourceEngineTypes.", this.SourceEngineTypes);
         }
     }
 }

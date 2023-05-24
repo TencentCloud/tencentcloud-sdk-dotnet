@@ -38,6 +38,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecutorGroupId")]
         public string ExecutorGroupId{ get; set; }
 
+        /// <summary>
+        /// 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }

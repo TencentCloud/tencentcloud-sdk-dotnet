@@ -54,6 +54,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
+        /// <summary>
+        /// 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "ExecRuleConfig.", this.ExecRuleConfig);
             this.SetParamObj(map, prefix + "ExecConfig.", this.ExecConfig);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }

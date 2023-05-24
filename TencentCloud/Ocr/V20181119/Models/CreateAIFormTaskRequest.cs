@@ -42,6 +42,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("SecondNotes")]
         public string SecondNotes{ get; set; }
 
+        /// <summary>
+        /// 文件类型
+        /// </summary>
+        [JsonProperty("FileType")]
+        public ulong? FileType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArrayObj(map, prefix + "FileList.", this.FileList);
             this.SetParamSimple(map, prefix + "FirstNotes", this.FirstNotes);
             this.SetParamSimple(map, prefix + "SecondNotes", this.SecondNotes);
+            this.SetParamSimple(map, prefix + "FileType", this.FileType);
         }
     }
 }

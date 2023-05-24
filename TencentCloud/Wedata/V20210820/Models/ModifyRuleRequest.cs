@@ -156,6 +156,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TargetObjectValue")]
         public string TargetObjectValue{ get; set; }
 
+        /// <summary>
+        /// 该规则适配的执行引擎
+        /// </summary>
+        [JsonProperty("SourceEngineTypes")]
+        public ulong?[] SourceEngineTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RelConditionExpr", this.RelConditionExpr);
             this.SetParamObj(map, prefix + "FieldConfig.", this.FieldConfig);
             this.SetParamSimple(map, prefix + "TargetObjectValue", this.TargetObjectValue);
+            this.SetParamArraySimple(map, prefix + "SourceEngineTypes.", this.SourceEngineTypes);
         }
     }
 }

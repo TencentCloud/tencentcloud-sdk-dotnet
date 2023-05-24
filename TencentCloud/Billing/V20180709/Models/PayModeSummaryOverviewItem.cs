@@ -25,22 +25,16 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 付费模式
+        /// 计费模式编码
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 付费模式名称
+        /// 计费模式：区分为包年包月和按量计费
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }
-
-        /// <summary>
-        /// 实际花费
-        /// </summary>
-        [JsonProperty("RealTotalCost")]
-        public string RealTotalCost{ get; set; }
 
         /// <summary>
         /// 费用所占百分比，两位小数
@@ -49,28 +43,34 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RealTotalCostRatio{ get; set; }
 
         /// <summary>
-        /// 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
+        /// 优惠后总价
         /// </summary>
-        [JsonProperty("Detail")]
-        public ActionSummaryOverviewItem[] Detail{ get; set; }
+        [JsonProperty("RealTotalCost")]
+        public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// 现金金额
+        /// 现金账户支出：通过现金账户支付的金额
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// 赠送金金额
+        /// 赠送账户支出：使用赠送金支付的金额
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// 代金券金额
+        /// 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
+
+        /// <summary>
+        /// 分成金账户支出：通过分成金账户支付的金额
+        /// </summary>
+        [JsonProperty("TransferPayAmount")]
+        public string TransferPayAmount{ get; set; }
 
         /// <summary>
         /// 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
@@ -79,10 +79,10 @@ namespace TencentCloud.Billing.V20180709.Models
         public string TotalCost{ get; set; }
 
         /// <summary>
-        /// 分成金金额
+        /// 按交易类型汇总消费详情
         /// </summary>
-        [JsonProperty("TransferPayAmount")]
-        public string TransferPayAmount{ get; set; }
+        [JsonProperty("Detail")]
+        public ActionSummaryOverviewItem[] Detail{ get; set; }
 
 
         /// <summary>
@@ -92,14 +92,14 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "PayModeName", this.PayModeName);
-            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
-            this.SetParamArrayObj(map, prefix + "Detail.", this.Detail);
+            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
-            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
             this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
+            this.SetParamArrayObj(map, prefix + "Detail.", this.Detail);
         }
     }
 }

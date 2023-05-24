@@ -36,6 +36,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RuleGroupId")]
         public ulong? RuleGroupId{ get; set; }
 
+        /// <summary>
+        /// 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "RuleGroupId", this.RuleGroupId);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }

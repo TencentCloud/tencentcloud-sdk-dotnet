@@ -108,6 +108,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskAction")]
         public string TaskAction{ get; set; }
 
+        /// <summary>
+        /// 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecEngineType")]
+        public string ExecEngineType{ get; set; }
+
+        /// <summary>
+        /// 执行计划
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecPlan")]
+        public string ExecPlan{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +140,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DelayTime", this.DelayTime);
             this.SetParamSimple(map, prefix + "CycleStep", this.CycleStep);
             this.SetParamSimple(map, prefix + "TaskAction", this.TaskAction);
+            this.SetParamSimple(map, prefix + "ExecEngineType", this.ExecEngineType);
+            this.SetParamSimple(map, prefix + "ExecPlan", this.ExecPlan);
         }
     }
 }

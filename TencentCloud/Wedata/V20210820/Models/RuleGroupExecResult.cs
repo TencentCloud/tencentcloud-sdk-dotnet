@@ -122,6 +122,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecDetail")]
         public string ExecDetail{ get; set; }
 
+        /// <summary>
+        /// 实际执行引擎
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
             this.SetParamSimple(map, prefix + "Permission", this.Permission);
             this.SetParamSimple(map, prefix + "ExecDetail", this.ExecDetail);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }

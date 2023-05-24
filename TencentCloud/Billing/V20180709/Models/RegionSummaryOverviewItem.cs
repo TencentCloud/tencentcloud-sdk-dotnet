@@ -32,16 +32,10 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// 地域名称
+        /// 地域名称：资源所属地域，例如华南地区（广州）
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
-
-        /// <summary>
-        /// 实际花费
-        /// </summary>
-        [JsonProperty("RealTotalCost")]
-        public string RealTotalCost{ get; set; }
 
         /// <summary>
         /// 费用所占百分比，两位小数
@@ -50,22 +44,34 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RealTotalCostRatio{ get; set; }
 
         /// <summary>
-        /// 现金金额
+        /// 优惠后总价
+        /// </summary>
+        [JsonProperty("RealTotalCost")]
+        public string RealTotalCost{ get; set; }
+
+        /// <summary>
+        /// 现金账户支出：通过现金账户支付的金额
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// 赠送金金额
+        /// 赠送账户支出：使用赠送金支付的金额
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// 代金券金额
+        /// 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
+
+        /// <summary>
+        /// 分成金账户支出：通过分成金账户支付的金额
+        /// </summary>
+        [JsonProperty("TransferPayAmount")]
+        public string TransferPayAmount{ get; set; }
 
         /// <summary>
         /// 账单月份，格式2019-08
@@ -79,12 +85,6 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
 
-        /// <summary>
-        /// 分成金金额
-        /// </summary>
-        [JsonProperty("TransferPayAmount")]
-        public string TransferPayAmount{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,14 +93,14 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
-            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
+            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+            this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
             this.SetParamSimple(map, prefix + "BillMonth", this.BillMonth);
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
-            this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
         }
     }
 }

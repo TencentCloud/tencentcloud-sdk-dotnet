@@ -3023,7 +3023,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 创建 Server端
+        /// 本接口（CreateVpnGatewaySslServer）用于创建SSL-VPN Server端。
         /// </summary>
         /// <param name="req"><see cref="CreateVpnGatewaySslServerRequest"/></param>
         /// <returns><see cref="CreateVpnGatewaySslServerResponse"/></returns>
@@ -3043,7 +3043,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 创建 Server端
+        /// 本接口（CreateVpnGatewaySslServer）用于创建SSL-VPN Server端。
         /// </summary>
         /// <param name="req"><see cref="CreateVpnGatewaySslServerRequest"/></param>
         /// <returns><see cref="CreateVpnGatewaySslServerResponse"/></returns>

@@ -55,6 +55,14 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
+        /// <summary>
+        /// 视频帧率，取值范围：[0, 100]，单位：Hz。
+        /// 当取值为0，将自动为视频设置帧率。
+        /// 默认值为 0。
+        /// </summary>
+        [JsonProperty("Fps")]
+        public long? Fps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -64,6 +72,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "Fps", this.Fps);
         }
     }
 }

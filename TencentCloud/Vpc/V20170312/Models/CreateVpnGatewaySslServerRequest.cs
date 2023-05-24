@@ -25,73 +25,73 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPN实例ID
+        /// VPN网关实例ID。
         /// </summary>
         [JsonProperty("VpnGatewayId")]
         public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// SSL_VPN_SERVER 实例名
+        /// SSL-VPN-SERVER 实例名称，长度不超过60个字节。
         /// </summary>
         [JsonProperty("SslVpnServerName")]
         public string SslVpnServerName{ get; set; }
 
         /// <summary>
-        /// 本端地址网段
+        /// 云端地址（CIDR）列表。
         /// </summary>
         [JsonProperty("LocalAddress")]
         public string[] LocalAddress{ get; set; }
 
         /// <summary>
-        /// 客户端地址网段
+        /// 客户端地址网段。
         /// </summary>
         [JsonProperty("RemoteAddress")]
         public string RemoteAddress{ get; set; }
 
         /// <summary>
-        /// SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
+        /// SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
         /// </summary>
         [JsonProperty("SslVpnProtocol")]
         public string SslVpnProtocol{ get; set; }
 
         /// <summary>
-        /// SSL VPN服务端监听协议端口。默认1194。
+        /// SSL VPN服务端监听协议端口，默认1194。
         /// </summary>
         [JsonProperty("SslVpnPort")]
         public long? SslVpnPort{ get; set; }
 
         /// <summary>
-        /// 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
+        /// 认证算法。可选 'SHA1', 'MD5', 'NONE'，默认NONE。
         /// </summary>
         [JsonProperty("IntegrityAlgorithm")]
         public string IntegrityAlgorithm{ get; set; }
 
         /// <summary>
-        /// 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
+        /// 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 'NONE'，默认NONE。
         /// </summary>
         [JsonProperty("EncryptAlgorithm")]
         public string EncryptAlgorithm{ get; set; }
 
         /// <summary>
-        /// 是否支持压缩。当前仅支持不支持压缩。默认False
+        /// 是否支持压缩。当前仅支持不支持压缩，默认False。
         /// </summary>
         [JsonProperty("Compress")]
         public bool? Compress{ get; set; }
 
         /// <summary>
-        /// 是否开启SSO认证
+        /// 是否开启SSO认证。默认为False
         /// </summary>
         [JsonProperty("SsoEnabled")]
         public bool? SsoEnabled{ get; set; }
 
         /// <summary>
-        /// 是否开启策略访问控制
+        /// 是否开启策略访问控制。默认为False
         /// </summary>
         [JsonProperty("AccessPolicyEnabled")]
         public bool? AccessPolicyEnabled{ get; set; }
 
         /// <summary>
-        /// SAML-DATA
+        /// SAML-DATA，开启SSO时传。
         /// </summary>
         [JsonProperty("SamlData")]
         public string SamlData{ get; set; }

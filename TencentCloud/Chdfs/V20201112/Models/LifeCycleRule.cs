@@ -60,6 +60,18 @@ namespace TencentCloud.Chdfs.V20201112.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 生命周期规则当前路径具体存储量
+        /// </summary>
+        [JsonProperty("Summary")]
+        public Summary Summary{ get; set; }
+
+        /// <summary>
+        /// Summary更新时间
+        /// </summary>
+        [JsonProperty("LastSummaryTime")]
+        public string LastSummaryTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Chdfs.V20201112.Models
             this.SetParamArrayObj(map, prefix + "Transitions.", this.Transitions);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamObj(map, prefix + "Summary.", this.Summary);
+            this.SetParamSimple(map, prefix + "LastSummaryTime", this.LastSummaryTime);
         }
     }
 }
