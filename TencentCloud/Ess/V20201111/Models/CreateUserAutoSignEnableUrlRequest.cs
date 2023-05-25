@@ -61,6 +61,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("NotifyAddress")]
         public string NotifyAddress{ get; set; }
 
+        /// <summary>
+        /// 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+        /// </summary>
+        [JsonProperty("ExpiredTime")]
+        public long? ExpiredTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "UrlType", this.UrlType);
             this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamSimple(map, prefix + "NotifyAddress", this.NotifyAddress);
+            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
         }
     }
 }

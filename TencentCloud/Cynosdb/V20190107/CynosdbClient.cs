@@ -253,6 +253,126 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口（CloseClusterPasswordComplexity）用于关闭集群密码复杂度
+        /// </summary>
+        /// <param name="req"><see cref="CloseClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="CloseClusterPasswordComplexityResponse"/></returns>
+        public async Task<CloseClusterPasswordComplexityResponse> CloseClusterPasswordComplexity(CloseClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<CloseClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CloseClusterPasswordComplexity）用于关闭集群密码复杂度
+        /// </summary>
+        /// <param name="req"><see cref="CloseClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="CloseClusterPasswordComplexityResponse"/></returns>
+        public CloseClusterPasswordComplexityResponse CloseClusterPasswordComplexitySync(CloseClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<CloseClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CloseWan）用于关闭外网
+        /// </summary>
+        /// <param name="req"><see cref="CloseWanRequest"/></param>
+        /// <returns><see cref="CloseWanResponse"/></returns>
+        public async Task<CloseWanResponse> CloseWan(CloseWanRequest req)
+        {
+             JsonResponseModel<CloseWanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseWan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseWanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CloseWan）用于关闭外网
+        /// </summary>
+        /// <param name="req"><see cref="CloseWanRequest"/></param>
+        /// <returns><see cref="CloseWanResponse"/></returns>
+        public CloseWanResponse CloseWanSync(CloseWanRequest req)
+        {
+             JsonResponseModel<CloseWanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseWan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseWanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CopyClusterPasswordComplexity）用于复制集群密码复杂度
+        /// </summary>
+        /// <param name="req"><see cref="CopyClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="CopyClusterPasswordComplexityResponse"/></returns>
+        public async Task<CopyClusterPasswordComplexityResponse> CopyClusterPasswordComplexity(CopyClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<CopyClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CopyClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CopyClusterPasswordComplexity）用于复制集群密码复杂度
+        /// </summary>
+        /// <param name="req"><see cref="CopyClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="CopyClusterPasswordComplexityResponse"/></returns>
+        public CopyClusterPasswordComplexityResponse CopyClusterPasswordComplexitySync(CopyClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<CopyClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CopyClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建账号
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
@@ -413,6 +533,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 创建数据库
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterDatabaseRequest"/></param>
+        /// <returns><see cref="CreateClusterDatabaseResponse"/></returns>
+        public async Task<CreateClusterDatabaseResponse> CreateClusterDatabase(CreateClusterDatabaseRequest req)
+        {
+             JsonResponseModel<CreateClusterDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClusterDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建数据库
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterDatabaseRequest"/></param>
+        /// <returns><see cref="CreateClusterDatabaseResponse"/></returns>
+        public CreateClusterDatabaseResponse CreateClusterDatabaseSync(CreateClusterDatabaseRequest req)
+        {
+             JsonResponseModel<CreateClusterDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateClusterDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建集群
         /// </summary>
         /// <param name="req"><see cref="CreateClustersRequest"/></param>
@@ -444,6 +604,86 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "CreateClusters");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateParamTemplate）用于创建参数模版
+        /// </summary>
+        /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
+        /// <returns><see cref="CreateParamTemplateResponse"/></returns>
+        public async Task<CreateParamTemplateResponse> CreateParamTemplate(CreateParamTemplateRequest req)
+        {
+             JsonResponseModel<CreateParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateParamTemplate）用于创建参数模版
+        /// </summary>
+        /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
+        /// <returns><see cref="CreateParamTemplateResponse"/></returns>
+        public CreateParamTemplateResponse CreateParamTemplateSync(CreateParamTemplateRequest req)
+        {
+             JsonResponseModel<CreateParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountsRequest"/></param>
+        /// <returns><see cref="DeleteAccountsResponse"/></returns>
+        public async Task<DeleteAccountsResponse> DeleteAccounts(DeleteAccountsRequest req)
+        {
+             JsonResponseModel<DeleteAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountsRequest"/></param>
+        /// <returns><see cref="DeleteAccountsResponse"/></returns>
+        public DeleteAccountsResponse DeleteAccountsSync(DeleteAccountsRequest req)
+        {
+             JsonResponseModel<DeleteAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccountsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -573,6 +813,86 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 删除数据库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterDatabaseRequest"/></param>
+        /// <returns><see cref="DeleteClusterDatabaseResponse"/></returns>
+        public async Task<DeleteClusterDatabaseResponse> DeleteClusterDatabase(DeleteClusterDatabaseRequest req)
+        {
+             JsonResponseModel<DeleteClusterDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteClusterDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除数据库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterDatabaseRequest"/></param>
+        /// <returns><see cref="DeleteClusterDatabaseResponse"/></returns>
+        public DeleteClusterDatabaseResponse DeleteClusterDatabaseSync(DeleteClusterDatabaseRequest req)
+        {
+             JsonResponseModel<DeleteClusterDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteClusterDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteParamTemplate）用于删除用户创建的参数模版。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
+        /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
+        public async Task<DeleteParamTemplateResponse> DeleteParamTemplate(DeleteParamTemplateRequest req)
+        {
+             JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteParamTemplate）用于删除用户创建的参数模版。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
+        /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
+        public DeleteParamTemplateResponse DeleteParamTemplateSync(DeleteParamTemplateRequest req)
+        {
+             JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 账号所有权限
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountAllGrantPrivilegesRequest"/></param>
@@ -604,6 +924,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAccountAllGrantPrivileges");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountAllGrantPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询账号已有权限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
+        public async Task<DescribeAccountPrivilegesResponse> DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询账号已有权限
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
+        public DescribeAccountPrivilegesResponse DescribeAccountPrivilegesSync(DescribeAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountPrivilegesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1093,6 +1453,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 查询数据库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDetailDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeClusterDetailDatabasesResponse"/></returns>
+        public async Task<DescribeClusterDetailDatabasesResponse> DescribeClusterDetailDatabases(DescribeClusterDetailDatabasesRequest req)
+        {
+             JsonResponseModel<DescribeClusterDetailDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterDetailDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterDetailDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询数据库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDetailDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeClusterDetailDatabasesResponse"/></returns>
+        public DescribeClusterDetailDatabasesResponse DescribeClusterDetailDatabasesSync(DescribeClusterDetailDatabasesRequest req)
+        {
+             JsonResponseModel<DescribeClusterDetailDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterDetailDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterDetailDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeClusterInstanceGrps）用于查询实例组信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterInstanceGrpsRequest"/></param>
@@ -1204,6 +1604,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClusterParams");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeClusterPasswordComplexity）用于查看集群密码复杂度详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="DescribeClusterPasswordComplexityResponse"/></returns>
+        public async Task<DescribeClusterPasswordComplexityResponse> DescribeClusterPasswordComplexity(DescribeClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<DescribeClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeClusterPasswordComplexity）用于查看集群密码复杂度详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="DescribeClusterPasswordComplexityResponse"/></returns>
+        public DescribeClusterPasswordComplexityResponse DescribeClusterPasswordComplexitySync(DescribeClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<DescribeClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterPasswordComplexityResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1413,6 +1853,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 该接口(DescribeInstanceParams)查询实例参数列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
+        public async Task<DescribeInstanceParamsResponse> DescribeInstanceParams(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口(DescribeInstanceParams)查询实例参数列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
+        public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口（DescribeInstanceSlowQueries）用于查询实例慢查询日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSlowQueriesRequest"/></param>
@@ -1564,6 +2044,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "DescribeMaintainPeriod");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMaintainPeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeParamTemplateDetail）用于查询用户参数模版详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamTemplateDetailRequest"/></param>
+        /// <returns><see cref="DescribeParamTemplateDetailResponse"/></returns>
+        public async Task<DescribeParamTemplateDetailResponse> DescribeParamTemplateDetail(DescribeParamTemplateDetailRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplateDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParamTemplateDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplateDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeParamTemplateDetail）用于查询用户参数模版详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamTemplateDetailRequest"/></param>
+        /// <returns><see cref="DescribeParamTemplateDetailResponse"/></returns>
+        public DescribeParamTemplateDetailResponse DescribeParamTemplateDetailSync(DescribeParamTemplateDetailRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplateDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeParamTemplateDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplateDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2133,6 +2653,86 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口(ModifyAccountDescription)用于修改数据库账号描述信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyAccountDescriptionResponse"/></returns>
+        public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescription(ModifyAccountDescriptionRequest req)
+        {
+             JsonResponseModel<ModifyAccountDescriptionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountDescription");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAccountDescription)用于修改数据库账号描述信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyAccountDescriptionResponse"/></returns>
+        public ModifyAccountDescriptionResponse ModifyAccountDescriptionSync(ModifyAccountDescriptionRequest req)
+        {
+             JsonResponseModel<ModifyAccountDescriptionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountDescription");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改账号主机
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountHostRequest"/></param>
+        /// <returns><see cref="ModifyAccountHostResponse"/></returns>
+        public async Task<ModifyAccountHostResponse> ModifyAccountHost(ModifyAccountHostRequest req)
+        {
+             JsonResponseModel<ModifyAccountHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改账号主机
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountHostRequest"/></param>
+        /// <returns><see cref="ModifyAccountHostResponse"/></returns>
+        public ModifyAccountHostResponse ModifyAccountHostSync(ModifyAccountHostRequest req)
+        {
+             JsonResponseModel<ModifyAccountHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改账号参数
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountParamsRequest"/></param>
@@ -2164,6 +2764,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAccountParams");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改账号权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public async Task<ModifyAccountPrivilegesResponse> ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改账号权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public ModifyAccountPrivilegesResponse ModifyAccountPrivilegesSync(ModifyAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2333,6 +2973,86 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 此接口（ModifyBinlogSaveDays）用于修改集群Binlog保留天数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBinlogSaveDaysRequest"/></param>
+        /// <returns><see cref="ModifyBinlogSaveDaysResponse"/></returns>
+        public async Task<ModifyBinlogSaveDaysResponse> ModifyBinlogSaveDays(ModifyBinlogSaveDaysRequest req)
+        {
+             JsonResponseModel<ModifyBinlogSaveDaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBinlogSaveDays");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBinlogSaveDaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ModifyBinlogSaveDays）用于修改集群Binlog保留天数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBinlogSaveDaysRequest"/></param>
+        /// <returns><see cref="ModifyBinlogSaveDaysResponse"/></returns>
+        public ModifyBinlogSaveDaysResponse ModifyBinlogSaveDaysSync(ModifyBinlogSaveDaysRequest req)
+        {
+             JsonResponseModel<ModifyBinlogSaveDaysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBinlogSaveDays");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBinlogSaveDaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改数据库
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterDatabaseRequest"/></param>
+        /// <returns><see cref="ModifyClusterDatabaseResponse"/></returns>
+        public async Task<ModifyClusterDatabaseResponse> ModifyClusterDatabase(ModifyClusterDatabaseRequest req)
+        {
+             JsonResponseModel<ModifyClusterDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改数据库
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterDatabaseRequest"/></param>
+        /// <returns><see cref="ModifyClusterDatabaseResponse"/></returns>
+        public ModifyClusterDatabaseResponse ModifyClusterDatabaseSync(ModifyClusterDatabaseRequest req)
+        {
+             JsonResponseModel<ModifyClusterDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改集群名称
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterNameRequest"/></param>
@@ -2404,6 +3124,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "ModifyClusterParam");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyClusterPasswordComplexity）用于修改/开启集群密码复杂度
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="ModifyClusterPasswordComplexityResponse"/></returns>
+        public async Task<ModifyClusterPasswordComplexityResponse> ModifyClusterPasswordComplexity(ModifyClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<ModifyClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyClusterPasswordComplexity）用于修改/开启集群密码复杂度
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="ModifyClusterPasswordComplexityResponse"/></returns>
+        public ModifyClusterPasswordComplexityResponse ModifyClusterPasswordComplexitySync(ModifyClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<ModifyClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterPasswordComplexityResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2573,6 +3333,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口（ModifyInstanceParam）用于修改实例参数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceParamRequest"/></param>
+        /// <returns><see cref="ModifyInstanceParamResponse"/></returns>
+        public async Task<ModifyInstanceParamResponse> ModifyInstanceParam(ModifyInstanceParamRequest req)
+        {
+             JsonResponseModel<ModifyInstanceParamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceParam");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceParam）用于修改实例参数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceParamRequest"/></param>
+        /// <returns><see cref="ModifyInstanceParamResponse"/></returns>
+        public ModifyInstanceParamResponse ModifyInstanceParamSync(ModifyInstanceParamRequest req)
+        {
+             JsonResponseModel<ModifyInstanceParamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceParam");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改维护时间配置
         /// </summary>
         /// <param name="req"><see cref="ModifyMaintainPeriodConfigRequest"/></param>
@@ -2604,6 +3404,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMaintainPeriodConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMaintainPeriodConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyParamTemplate）用于修改用户参数模版。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
+        /// <returns><see cref="ModifyParamTemplateResponse"/></returns>
+        public async Task<ModifyParamTemplateResponse> ModifyParamTemplate(ModifyParamTemplateRequest req)
+        {
+             JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyParamTemplate）用于修改用户参数模版。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
+        /// <returns><see cref="ModifyParamTemplateResponse"/></returns>
+        public ModifyParamTemplateResponse ModifyParamTemplateSync(ModifyParamTemplateRequest req)
+        {
+             JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParamTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2773,6 +3613,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口（OpenClusterPasswordComplexity）用于开启集群密码复杂度
+        /// </summary>
+        /// <param name="req"><see cref="OpenClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="OpenClusterPasswordComplexityResponse"/></returns>
+        public async Task<OpenClusterPasswordComplexityResponse> OpenClusterPasswordComplexity(OpenClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<OpenClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（OpenClusterPasswordComplexity）用于开启集群密码复杂度
+        /// </summary>
+        /// <param name="req"><see cref="OpenClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="OpenClusterPasswordComplexityResponse"/></returns>
+        public OpenClusterPasswordComplexityResponse OpenClusterPasswordComplexitySync(OpenClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<OpenClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 开通只读实例独有访问接入组
         /// </summary>
         /// <param name="req"><see cref="OpenReadOnlyInstanceExclusiveAccessRequest"/></param>
@@ -2804,6 +3684,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "OpenReadOnlyInstanceExclusiveAccess");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenReadOnlyInstanceExclusiveAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（OpenWan）用于开通外网
+        /// </summary>
+        /// <param name="req"><see cref="OpenWanRequest"/></param>
+        /// <returns><see cref="OpenWanResponse"/></returns>
+        public async Task<OpenWanResponse> OpenWan(OpenWanRequest req)
+        {
+             JsonResponseModel<OpenWanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenWan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenWanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（OpenWan）用于开通外网
+        /// </summary>
+        /// <param name="req"><see cref="OpenWanRequest"/></param>
+        /// <returns><see cref="OpenWanResponse"/></returns>
+        public OpenWanResponse OpenWanSync(OpenWanRequest req)
+        {
+             JsonResponseModel<OpenWanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenWan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenWanResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3324,6 +4244,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "SwitchProxyVpc");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchProxyVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新集群Cynos内核版本
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeClusterVersionRequest"/></param>
+        /// <returns><see cref="UpgradeClusterVersionResponse"/></returns>
+        public async Task<UpgradeClusterVersionResponse> UpgradeClusterVersion(UpgradeClusterVersionRequest req)
+        {
+             JsonResponseModel<UpgradeClusterVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeClusterVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeClusterVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新集群Cynos内核版本
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeClusterVersionRequest"/></param>
+        /// <returns><see cref="UpgradeClusterVersionResponse"/></returns>
+        public UpgradeClusterVersionResponse UpgradeClusterVersionSync(UpgradeClusterVersionRequest req)
+        {
+             JsonResponseModel<UpgradeClusterVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeClusterVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeClusterVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -7915,7 +7915,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询SSL-VPN-CLIENT 列表
+        /// 本接口（DescribeVpnGatewaySslClients）用于查询SSL-VPN-CLIENT 列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpnGatewaySslClientsRequest"/></param>
         /// <returns><see cref="DescribeVpnGatewaySslClientsResponse"/></returns>
@@ -7935,7 +7935,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询SSL-VPN-CLIENT 列表
+        /// 本接口（DescribeVpnGatewaySslClients）用于查询SSL-VPN-CLIENT 列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpnGatewaySslClientsRequest"/></param>
         /// <returns><see cref="DescribeVpnGatewaySslClientsResponse"/></returns>

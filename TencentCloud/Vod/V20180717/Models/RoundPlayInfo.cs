@@ -54,6 +54,30 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
+        /// <summary>
+        /// 播放状态，可选值：
+        /// <li>Enabled：启动状态；</li>
+        /// <li>Disabled：停止状态。</li>
+        /// 默认值：Enabled。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 播放模式，可选值：
+        /// <li>Loop：循环播放播单；</li>
+        /// <li>Linear：单次播放，播单播放完停止播放。</li>
+        /// 默认值：Loop。
+        /// </summary>
+        [JsonProperty("PlayBackMode")]
+        public string PlayBackMode{ get; set; }
+
+        /// <summary>
+        /// 轮播播放地址。
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +89,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "RoundPlaylist.", this.RoundPlaylist);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

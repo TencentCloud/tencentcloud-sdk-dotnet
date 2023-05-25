@@ -31,19 +31,19 @@ namespace TencentCloud.Mna.V20210119.Models
         public NetDetails[] NetDetails{ get; set; }
 
         /// <summary>
-        /// 查找时间段流量使用最大值（单位：bit）
+        /// 查找时间段流量使用最大值（单位：byte）
         /// </summary>
         [JsonProperty("MaxValue")]
         public float? MaxValue{ get; set; }
 
         /// <summary>
-        /// 查找时间段流量使用平均值（单位：bit）
+        /// 查找时间段流量使用平均值（单位：byte）
         /// </summary>
         [JsonProperty("AvgValue")]
         public float? AvgValue{ get; set; }
 
         /// <summary>
-        /// 查找时间段流量使用总量（单位：bit）
+        /// 查找时间段流量使用总量（单位：byte）
         /// </summary>
         [JsonProperty("TotalValue")]
         public float? TotalValue{ get; set; }

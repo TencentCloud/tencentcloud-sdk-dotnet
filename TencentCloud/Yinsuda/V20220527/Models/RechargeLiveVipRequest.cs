@@ -59,6 +59,19 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         [JsonProperty("VipDays")]
         public long? VipDays{ get; set; }
 
+        /// <summary>
+        /// 充值分类。取值有：room_card-包月房卡; 其他-保留。
+        /// </summary>
+        [JsonProperty("GiveType")]
+        public string GiveType{ get; set; }
+
+        /// <summary>
+        /// 播放场景。默认为Live
+        /// <li>Live：直播</li><li>Chat：语聊</li>
+        /// </summary>
+        [JsonProperty("PlayScene")]
+        public string PlayScene{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +83,8 @@ namespace TencentCloud.Yinsuda.V20220527.Models
             this.SetParamSimple(map, prefix + "TradeSerialNo", this.TradeSerialNo);
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "VipDays", this.VipDays);
+            this.SetParamSimple(map, prefix + "GiveType", this.GiveType);
+            this.SetParamSimple(map, prefix + "PlayScene", this.PlayScene);
         }
     }
 }

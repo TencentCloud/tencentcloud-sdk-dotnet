@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过20个字符。<br> <li> 镜像名称不能与已有镜像重复。
+        /// 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }

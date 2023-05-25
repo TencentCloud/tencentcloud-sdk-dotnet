@@ -84,6 +84,48 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("TaxClassifyCode")]
         public string TaxClassifyCode{ get; set; }
 
+        /// <summary>
+        /// 运输工具类型
+        /// </summary>
+        [JsonProperty("VehicleType")]
+        public string VehicleType{ get; set; }
+
+        /// <summary>
+        /// 运输工具牌号
+        /// </summary>
+        [JsonProperty("VehicleBrand")]
+        public string VehicleBrand{ get; set; }
+
+        /// <summary>
+        /// 起始地
+        /// </summary>
+        [JsonProperty("DeparturePlace")]
+        public string DeparturePlace{ get; set; }
+
+        /// <summary>
+        /// 到达地
+        /// </summary>
+        [JsonProperty("ArrivalPlace")]
+        public string ArrivalPlace{ get; set; }
+
+        /// <summary>
+        /// 运输货物名称
+        /// </summary>
+        [JsonProperty("TransportItemsName")]
+        public string TransportItemsName{ get; set; }
+
+        /// <summary>
+        /// 建筑服务发生地
+        /// </summary>
+        [JsonProperty("ConstructionPlace")]
+        public string ConstructionPlace{ get; set; }
+
+        /// <summary>
+        /// 建筑项目名称
+        /// </summary>
+        [JsonProperty("ConstructionName")]
+        public string ConstructionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +142,13 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "TaxRate", this.TaxRate);
             this.SetParamSimple(map, prefix + "TaxAmount", this.TaxAmount);
             this.SetParamSimple(map, prefix + "TaxClassifyCode", this.TaxClassifyCode);
+            this.SetParamSimple(map, prefix + "VehicleType", this.VehicleType);
+            this.SetParamSimple(map, prefix + "VehicleBrand", this.VehicleBrand);
+            this.SetParamSimple(map, prefix + "DeparturePlace", this.DeparturePlace);
+            this.SetParamSimple(map, prefix + "ArrivalPlace", this.ArrivalPlace);
+            this.SetParamSimple(map, prefix + "TransportItemsName", this.TransportItemsName);
+            this.SetParamSimple(map, prefix + "ConstructionPlace", this.ConstructionPlace);
+            this.SetParamSimple(map, prefix + "ConstructionName", this.ConstructionName);
         }
     }
 }

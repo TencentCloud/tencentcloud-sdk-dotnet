@@ -84,6 +84,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("CcInfos")]
         public CcInfo[] CcInfos{ get; set; }
 
+        /// <summary>
+        /// 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+        /// </summary>
+        [JsonProperty("NeedCreateReview")]
+        public bool? NeedCreateReview{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+            this.SetParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 符合条件的实例个数。
+        /// SSL-VPN-CLIENT 实例列表。
         /// </summary>
         [JsonProperty("SslVpnClientSet")]
         public SslVpnClient[] SslVpnClientSet{ get; set; }

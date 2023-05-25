@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC实例ID
+        /// VPC实例ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// SSL-VPN-SERVER 实例ID
+        /// SSL-VPN-SERVER 实例ID。
         /// </summary>
         [JsonProperty("SslVpnServerId")]
         public string SslVpnServerId{ get; set; }
 
         /// <summary>
-        /// 证书状态. 
+        /// 证书状态。
         /// 0:创建中
         /// 1:正常
         /// 2:已停用
@@ -48,25 +48,25 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? CertStatus{ get; set; }
 
         /// <summary>
-        /// SSL-VPN-CLIENT 实例ID
+        /// SSL-VPN-CLIENT 实例ID。
         /// </summary>
         [JsonProperty("SslVpnClientId")]
         public string SslVpnClientId{ get; set; }
 
         /// <summary>
-        /// 证书开始时间
+        /// 证书开始时间。
         /// </summary>
         [JsonProperty("CertBeginTime")]
         public string CertBeginTime{ get; set; }
 
         /// <summary>
-        /// 证书到期时间
+        /// 证书到期时间。
         /// </summary>
         [JsonProperty("CertEndTime")]
         public string CertEndTime{ get; set; }
 
         /// <summary>
-        /// CLIENT NAME
+        /// CLIENT NAME。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

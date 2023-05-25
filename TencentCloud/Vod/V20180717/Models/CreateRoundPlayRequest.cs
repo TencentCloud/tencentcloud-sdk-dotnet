@@ -55,6 +55,15 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
+        /// <summary>
+        /// 播放模式，可选值：
+        /// <li>Loop：循环播放播单；</li>
+        /// <li>Linear：单次播放，播单播放完停止播放。</li>
+        /// 默认值：Loop。
+        /// </summary>
+        [JsonProperty("PlayBackMode")]
+        public string PlayBackMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +75,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
         }
     }
 }

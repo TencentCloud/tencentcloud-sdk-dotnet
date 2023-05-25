@@ -93,6 +93,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("CcInfos")]
         public FlowApproverDetail[] CcInfos{ get; set; }
 
+        /// <summary>
+        /// 是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
+        /// </summary>
+        [JsonProperty("NeedCreateReview")]
+        public bool? NeedCreateReview{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +115,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CustomData", this.CustomData);
             this.SetParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+            this.SetParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
         }
     }
 }
