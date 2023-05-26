@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.766</VersionPrefix>
+    <VersionPrefix>3.0.767</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -205,6 +205,8 @@
     <Compile Include="V20180717\Models\CreateClassResponse.cs" />
     <Compile Include="V20180717\Models\CreateContentReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateContentReviewTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateEnhanceMediaTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\CreateEnhanceMediaTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateHeadTailTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateHeadTailTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateImageProcessingTemplateRequest.cs" />
@@ -253,6 +255,8 @@
     <Compile Include="V20180717\Models\DeleteClassResponse.cs" />
     <Compile Include="V20180717\Models\DeleteContentReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteContentReviewTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteEnhanceMediaTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteEnhanceMediaTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteHeadTailTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteHeadTailTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteImageProcessingTemplateRequest.cs" />
@@ -315,6 +319,8 @@
     <Compile Include="V20180717\Models\DescribeDrmDataKeyResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeEnhanceMediaTemplatesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeEnhanceMediaTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeEventConfigRequest.cs" />
     <Compile Include="V20180717\Models\DescribeEventConfigResponse.cs" />
     <Compile Include="V20180717\Models\DescribeEventsStateRequest.cs" />
@@ -396,6 +402,8 @@
     <Compile Include="V20180717\Models\EditMediaTaskOutput.cs" />
     <Compile Include="V20180717\Models\EditMediaVideoStream.cs" />
     <Compile Include="V20180717\Models\EmptyTrackItem.cs" />
+    <Compile Include="V20180717\Models\EnhanceMediaByTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\EnhanceMediaByTemplateResponse.cs" />
     <Compile Include="V20180717\Models\EventContent.cs" />
     <Compile Include="V20180717\Models\ExecuteFunctionRequest.cs" />
     <Compile Include="V20180717\Models\ExecuteFunctionResponse.cs" />
@@ -511,6 +519,8 @@
     <Compile Include="V20180717\Models\ModifyContentReviewTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyDefaultStorageRegionRequest.cs" />
     <Compile Include="V20180717\Models\ModifyDefaultStorageRegionResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyEnhanceMediaTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyEnhanceMediaTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyEventConfigRequest.cs" />
     <Compile Include="V20180717\Models\ModifyEventConfigResponse.cs" />
     <Compile Include="V20180717\Models\ModifyHeadTailTemplateRequest.cs" />

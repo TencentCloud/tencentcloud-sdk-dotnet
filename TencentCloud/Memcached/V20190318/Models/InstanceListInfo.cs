@@ -62,6 +62,7 @@ namespace TencentCloud.Memcached.V20190318.Models
 
         /// <summary>
         /// 实例关联的标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }

@@ -63,6 +63,15 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
+        /// <summary>
+        /// TRTC房间号的类型：
+        /// <li>Integer：数字类型</li>
+        /// <li> String：字符串类型</li>
+        /// 默认为：Integer 。
+        /// </summary>
+        [JsonProperty("RoomIdType")]
+        public string RoomIdType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +84,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
             this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
         }
     }
 }

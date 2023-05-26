@@ -88,6 +88,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
+        /// <summary>
+        /// 合同过期时间，时间戳，单位秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public long? Deadline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "FlowMessage", this.FlowMessage);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
         }
     }
 }

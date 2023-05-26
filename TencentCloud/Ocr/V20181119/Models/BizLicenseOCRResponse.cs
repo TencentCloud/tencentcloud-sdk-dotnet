@@ -103,6 +103,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string[] RecognizeWarnMsg{ get; set; }
 
         /// <summary>
+        /// 是否为副本。1为是，-1为不是。
+        /// </summary>
+        [JsonProperty("IsDuplication")]
+        public long? IsDuplication{ get; set; }
+
+        /// <summary>
+        /// 登记日期
+        /// </summary>
+        [JsonProperty("RegistrationDate")]
+        public string RegistrationDate{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -126,6 +138,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "SetDate", this.SetDate);
             this.SetParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
             this.SetParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
+            this.SetParamSimple(map, prefix + "IsDuplication", this.IsDuplication);
+            this.SetParamSimple(map, prefix + "RegistrationDate", this.RegistrationDate);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

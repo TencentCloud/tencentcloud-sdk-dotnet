@@ -253,7 +253,7 @@ namespace TencentCloud.Iotvideo.V20201215
         }
 
         /// <summary>
-        /// 判断是否开启的转发的权限
+        /// 判断是否开启转发的权限
         /// </summary>
         /// <param name="req"><see cref="CheckForwardAuthRequest"/></param>
         /// <returns><see cref="CheckForwardAuthResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Iotvideo.V20201215
         }
 
         /// <summary>
-        /// 判断是否开启的转发的权限
+        /// 判断是否开启转发的权限
         /// </summary>
         /// <param name="req"><see cref="CheckForwardAuthRequest"/></param>
         /// <returns><see cref="CheckForwardAuthResponse"/></returns>

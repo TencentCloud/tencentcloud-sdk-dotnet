@@ -36,6 +36,19 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
+        /// <summary>
+        /// 区域ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// 域名状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +57,8 @@ namespace TencentCloud.Ssl.V20191205.Models
         {
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

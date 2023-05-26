@@ -1053,7 +1053,7 @@ namespace TencentCloud.Pts.V20210728
         }
 
         /// <summary>
-        /// 压测过程日志日志包括引擎输出日志及用户输出日志
+        /// 压测过程日志包括引擎输出日志及用户输出日志
         /// </summary>
         /// <param name="req"><see cref="DescribeNormalLogsRequest"/></param>
         /// <returns><see cref="DescribeNormalLogsResponse"/></returns>
@@ -1073,7 +1073,7 @@ namespace TencentCloud.Pts.V20210728
         }
 
         /// <summary>
-        /// 压测过程日志日志包括引擎输出日志及用户输出日志
+        /// 压测过程日志包括引擎输出日志及用户输出日志
         /// </summary>
         /// <param name="req"><see cref="DescribeNormalLogsRequest"/></param>
         /// <returns><see cref="DescribeNormalLogsResponse"/></returns>
