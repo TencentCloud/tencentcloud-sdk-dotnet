@@ -4453,7 +4453,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 告警修改告警策略绑定的告警通知模板
+        /// 修改告警策略绑定的告警通知模板
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmPolicyNoticeRequest"/></param>
         /// <returns><see cref="ModifyAlarmPolicyNoticeResponse"/></returns>
@@ -4473,7 +4473,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 告警修改告警策略绑定的告警通知模板
+        /// 修改告警策略绑定的告警通知模板
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmPolicyNoticeRequest"/></param>
         /// <returns><see cref="ModifyAlarmPolicyNoticeResponse"/></returns>

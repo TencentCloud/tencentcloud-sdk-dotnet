@@ -61,7 +61,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public CreateFlowOption FlowOption{ get; set; }
 
         /// <summary>
-        /// 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+        /// 通过flowid快速获得之前成功通过页面发起的合同生成链接
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

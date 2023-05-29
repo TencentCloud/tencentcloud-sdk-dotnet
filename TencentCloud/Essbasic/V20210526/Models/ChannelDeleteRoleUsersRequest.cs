@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 角色Id
+        /// 角色Id（非超管或法人角色Id）
         /// </summary>
         [JsonProperty("RoleId")]
         public string RoleId{ get; set; }

@@ -64,6 +64,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("FolderId")]
         public string FolderId{ get; set; }
 
+        /// <summary>
+        /// 分状态统计关联作业数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RefJobStatusCountSet")]
+        public RefJobStatusCountItem[] RefJobStatusCountSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +83,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "FolderId", this.FolderId);
+            this.SetParamArrayObj(map, prefix + "RefJobStatusCountSet.", this.RefJobStatusCountSet);
         }
     }
 }

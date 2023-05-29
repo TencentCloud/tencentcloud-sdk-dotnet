@@ -31,7 +31,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public long? RuleType{ get; set; }
 
         /// <summary>
-        /// IP、Domain二选一，不能同时为空
+        /// IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
         /// </summary>
         [JsonProperty("IOC")]
         public IocListData[] IOC{ get; set; }

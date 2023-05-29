@@ -91,7 +91,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 是否支持IPv6
+        /// 是否支持IPv6，0:不支持，1:支持
         /// </summary>
         [JsonProperty("Ipv6Flag")]
         public long? Ipv6Flag{ get; set; }
@@ -123,7 +123,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public DBParamValue[] InitParams{ get; set; }
 
         /// <summary>
-        /// 回档源实例ID
+        /// 回档源实例ID，例如“2021-11-22 00:00:00”
         /// </summary>
         [JsonProperty("RollbackInstanceId")]
         public string RollbackInstanceId{ get; set; }

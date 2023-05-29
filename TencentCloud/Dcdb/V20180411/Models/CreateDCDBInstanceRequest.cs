@@ -119,7 +119,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 是否支持IPv6
+        /// 是否支持IPv6，0:不支持，1:支持
         /// </summary>
         [JsonProperty("Ipv6Flag")]
         public long? Ipv6Flag{ get; set; }
@@ -149,7 +149,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string DcnInstanceId{ get; set; }
 
         /// <summary>
-        /// 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+        /// 自动续费标记，0:默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1:自动续费，2:明确不自动续费(用户设置)。若业务无续费概念或无需自动续费，需要设置为0
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

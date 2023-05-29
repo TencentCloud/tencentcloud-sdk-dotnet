@@ -53,7 +53,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 解隔离DCDB后付费实例
+        /// 解隔离TDSQL按量计费实例
         /// </summary>
         /// <param name="req"><see cref="ActiveHourDCDBInstanceRequest"/></param>
         /// <returns><see cref="ActiveHourDCDBInstanceResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 解隔离DCDB后付费实例
+        /// 解隔离TDSQL按量计费实例
         /// </summary>
         /// <param name="req"><see cref="ActiveHourDCDBInstanceRequest"/></param>
         /// <returns><see cref="ActiveHourDCDBInstanceResponse"/></returns>
@@ -335,7 +335,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（CreateDCDBInstance）用于创建包年包月的云数据库实例，可通过传入实例规格、数据库版本号、购买时长等信息创建云数据库实例。
+        /// 本接口（CreateDCDBInstance）用于创建包年包月的TDSQL实例，可通过传入实例规格、数据库版本号、购买时长等信息创建云数据库实例。
         /// </summary>
         /// <param name="req"><see cref="CreateDCDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDCDBInstanceResponse"/></returns>
@@ -355,7 +355,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（CreateDCDBInstance）用于创建包年包月的云数据库实例，可通过传入实例规格、数据库版本号、购买时长等信息创建云数据库实例。
+        /// 本接口（CreateDCDBInstance）用于创建包年包月的TDSQL实例，可通过传入实例规格、数据库版本号、购买时长等信息创建云数据库实例。
         /// </summary>
         /// <param name="req"><see cref="CreateDCDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDCDBInstanceResponse"/></returns>
@@ -375,7 +375,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 创建独享集群DCDB实例
+        /// 创建TDSQL独享集群实例
         /// </summary>
         /// <param name="req"><see cref="CreateDedicatedClusterDCDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDedicatedClusterDCDBInstanceResponse"/></returns>
@@ -395,7 +395,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 创建独享集群DCDB实例
+        /// 创建TDSQL独享集群实例
         /// </summary>
         /// <param name="req"><see cref="CreateDedicatedClusterDCDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDedicatedClusterDCDBInstanceResponse"/></returns>
@@ -415,7 +415,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 创建DCDB后付费实例
+        /// 创建TDSQL按量计费实例
         /// </summary>
         /// <param name="req"><see cref="CreateHourDCDBInstanceRequest"/></param>
         /// <returns><see cref="CreateHourDCDBInstanceResponse"/></returns>
@@ -435,7 +435,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 创建DCDB后付费实例
+        /// 创建TDSQL按量计费实例
         /// </summary>
         /// <param name="req"><see cref="CreateHourDCDBInstanceRequest"/></param>
         /// <returns><see cref="CreateHourDCDBInstanceResponse"/></returns>
@@ -446,6 +446,46 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "CreateHourDCDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 回档TDSQL实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateTmpDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateTmpDCDBInstanceResponse"/></returns>
+        public async Task<CreateTmpDCDBInstanceResponse> CreateTmpDCDBInstance(CreateTmpDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateTmpDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTmpDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTmpDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 回档TDSQL实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateTmpDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateTmpDCDBInstanceResponse"/></returns>
+        public CreateTmpDCDBInstanceResponse CreateTmpDCDBInstanceSync(CreateTmpDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateTmpDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTmpDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTmpDCDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -857,7 +897,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（DescribeDCDBInstanceDetail）用于获取DCDB实例详情
+        /// 本接口（DescribeDCDBInstanceDetail）用于获取TDSQL实例详情
         /// </summary>
         /// <param name="req"><see cref="DescribeDCDBInstanceDetailRequest"/></param>
         /// <returns><see cref="DescribeDCDBInstanceDetailResponse"/></returns>
@@ -877,7 +917,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（DescribeDCDBInstanceDetail）用于获取DCDB实例详情
+        /// 本接口（DescribeDCDBInstanceDetail）用于获取TDSQL实例详情
         /// </summary>
         /// <param name="req"><see cref="DescribeDCDBInstanceDetailRequest"/></param>
         /// <returns><see cref="DescribeDCDBInstanceDetailResponse"/></returns>
@@ -1663,7 +1703,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口(DestroyDCDBInstance)用于销毁已隔离的包年包月实例。
+        /// 本接口(DestroyDCDBInstance)用于销毁已隔离的TDSQL包年包月实例。
         /// </summary>
         /// <param name="req"><see cref="DestroyDCDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDCDBInstanceResponse"/></returns>
@@ -1683,7 +1723,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口(DestroyDCDBInstance)用于销毁已隔离的包年包月实例。
+        /// 本接口(DestroyDCDBInstance)用于销毁已隔离的TDSQL包年包月实例。
         /// </summary>
         /// <param name="req"><see cref="DestroyDCDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDCDBInstanceResponse"/></returns>
@@ -1703,7 +1743,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（DestroyHourDCDBInstance）用于销毁按量计费实例。
+        /// 本接口（DestroyHourDCDBInstance）用于TDSQL销毁按量计费实例。
         /// </summary>
         /// <param name="req"><see cref="DestroyHourDCDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyHourDCDBInstanceResponse"/></returns>
@@ -1723,7 +1763,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（DestroyHourDCDBInstance）用于销毁按量计费实例。
+        /// 本接口（DestroyHourDCDBInstance）用于TDSQL销毁按量计费实例。
         /// </summary>
         /// <param name="req"><see cref="DestroyHourDCDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyHourDCDBInstanceResponse"/></returns>
@@ -1945,7 +1985,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 隔离DCDB后付费实例
+        /// 隔离TDSQL按量计费实例
         /// </summary>
         /// <param name="req"><see cref="IsolateHourDCDBInstanceRequest"/></param>
         /// <returns><see cref="IsolateHourDCDBInstanceResponse"/></returns>
@@ -1965,7 +2005,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 隔离DCDB后付费实例
+        /// 隔离TDSQL按量计费实例
         /// </summary>
         /// <param name="req"><see cref="IsolateHourDCDBInstanceRequest"/></param>
         /// <returns><see cref="IsolateHourDCDBInstanceResponse"/></returns>
@@ -2769,7 +2809,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（UpgradeDedicatedDCDBInstance）用于升级独享DCDB实例
+        /// 本接口（UpgradeDedicatedDCDBInstance）用于升级TDSQL独享集群实例
         /// </summary>
         /// <param name="req"><see cref="UpgradeDedicatedDCDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDedicatedDCDBInstanceResponse"/></returns>
@@ -2789,7 +2829,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（UpgradeDedicatedDCDBInstance）用于升级独享DCDB实例
+        /// 本接口（UpgradeDedicatedDCDBInstance）用于升级TDSQL独享集群实例
         /// </summary>
         /// <param name="req"><see cref="UpgradeDedicatedDCDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDedicatedDCDBInstanceResponse"/></returns>
@@ -2809,7 +2849,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（UpgradeHourDCDBInstance）用于升级后付费分布式数据库实例。
+        /// 本接口（UpgradeHourDCDBInstance）用于升级分布式数据库TDSQL按量计费实例。
         /// </summary>
         /// <param name="req"><see cref="UpgradeHourDCDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeHourDCDBInstanceResponse"/></returns>
@@ -2829,7 +2869,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（UpgradeHourDCDBInstance）用于升级后付费分布式数据库实例。
+        /// 本接口（UpgradeHourDCDBInstance）用于升级分布式数据库TDSQL按量计费实例。
         /// </summary>
         /// <param name="req"><see cref="UpgradeHourDCDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeHourDCDBInstanceResponse"/></returns>

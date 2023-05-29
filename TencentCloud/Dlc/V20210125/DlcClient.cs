@@ -453,6 +453,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（CancelSparkSessionBatchSQL）用于取消Spark SQL批任务。
+        /// </summary>
+        /// <param name="req"><see cref="CancelSparkSessionBatchSQLRequest"/></param>
+        /// <returns><see cref="CancelSparkSessionBatchSQLResponse"/></returns>
+        public async Task<CancelSparkSessionBatchSQLResponse> CancelSparkSessionBatchSQL(CancelSparkSessionBatchSQLRequest req)
+        {
+             JsonResponseModel<CancelSparkSessionBatchSQLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelSparkSessionBatchSQL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelSparkSessionBatchSQLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CancelSparkSessionBatchSQL）用于取消Spark SQL批任务。
+        /// </summary>
+        /// <param name="req"><see cref="CancelSparkSessionBatchSQLRequest"/></param>
+        /// <returns><see cref="CancelSparkSessionBatchSQLResponse"/></returns>
+        public CancelSparkSessionBatchSQLResponse CancelSparkSessionBatchSQLSync(CancelSparkSessionBatchSQLRequest req)
+        {
+             JsonResponseModel<CancelSparkSessionBatchSQLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelSparkSessionBatchSQL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelSparkSessionBatchSQLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CancelTask），用于取消任务执行
         /// </summary>
         /// <param name="req"><see cref="CancelTaskRequest"/></param>
@@ -1084,6 +1124,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "CreateSparkAppTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSparkAppTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateSparkSessionBatchSQL）用于提交Spark SQL批任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSparkSessionBatchSQLRequest"/></param>
+        /// <returns><see cref="CreateSparkSessionBatchSQLResponse"/></returns>
+        public async Task<CreateSparkSessionBatchSQLResponse> CreateSparkSessionBatchSQL(CreateSparkSessionBatchSQLRequest req)
+        {
+             JsonResponseModel<CreateSparkSessionBatchSQLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSparkSessionBatchSQL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSparkSessionBatchSQLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateSparkSessionBatchSQL）用于提交Spark SQL批任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSparkSessionBatchSQLRequest"/></param>
+        /// <returns><see cref="CreateSparkSessionBatchSQLResponse"/></returns>
+        public CreateSparkSessionBatchSQLResponse CreateSparkSessionBatchSQLSync(CreateSparkSessionBatchSQLRequest req)
+        {
+             JsonResponseModel<CreateSparkSessionBatchSQLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSparkSessionBatchSQL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSparkSessionBatchSQLResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2444,6 +2524,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSparkAppTasks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkAppTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSparkSessionBatchSqlLog）用于获取SparkSQL批任务日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkSessionBatchSqlLogRequest"/></param>
+        /// <returns><see cref="DescribeSparkSessionBatchSqlLogResponse"/></returns>
+        public async Task<DescribeSparkSessionBatchSqlLogResponse> DescribeSparkSessionBatchSqlLog(DescribeSparkSessionBatchSqlLogRequest req)
+        {
+             JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSparkSessionBatchSqlLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSparkSessionBatchSqlLog）用于获取SparkSQL批任务日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkSessionBatchSqlLogRequest"/></param>
+        /// <returns><see cref="DescribeSparkSessionBatchSqlLogResponse"/></returns>
+        public DescribeSparkSessionBatchSqlLogResponse DescribeSparkSessionBatchSqlLogSync(DescribeSparkSessionBatchSqlLogRequest req)
+        {
+             JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSparkSessionBatchSqlLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

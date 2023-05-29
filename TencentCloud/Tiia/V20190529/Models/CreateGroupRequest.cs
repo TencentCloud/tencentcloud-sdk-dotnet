@@ -25,7 +25,7 @@ namespace TencentCloud.Tiia.V20190529.Models
     {
         
         /// <summary>
-        /// 图库ID，不可重复，仅支持字母、数字和下划线。
+        /// 图库ID，不可重复，仅支持字母、数字和下划线。图库数量单个用户上限为30。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

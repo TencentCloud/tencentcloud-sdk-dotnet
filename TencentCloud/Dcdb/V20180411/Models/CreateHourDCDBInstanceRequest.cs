@@ -107,7 +107,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 是否支持IPv6
+        /// 是否支持IPv6，0:不支持，1:支持
         /// </summary>
         [JsonProperty("Ipv6Flag")]
         public long? Ipv6Flag{ get; set; }
@@ -143,7 +143,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string RollbackInstanceId{ get; set; }
 
         /// <summary>
-        /// 回档时间
+        /// 回档时间，例如“2021-11-22 00:00:00”
         /// </summary>
         [JsonProperty("RollbackTime")]
         public string RollbackTime{ get; set; }

@@ -342,6 +342,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? RsAccessStrategy{ get; set; }
 
         /// <summary>
+        /// 尚未回收的网络资源
+        /// </summary>
+        [JsonProperty("ReservedNetResources")]
+        public ReservedNetResource[] ReservedNetResources{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -403,6 +409,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "EncryptStatus", this.EncryptStatus);
             this.SetParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
             this.SetParamSimple(map, prefix + "RsAccessStrategy", this.RsAccessStrategy);
+            this.SetParamArrayObj(map, prefix + "ReservedNetResources.", this.ReservedNetResources);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

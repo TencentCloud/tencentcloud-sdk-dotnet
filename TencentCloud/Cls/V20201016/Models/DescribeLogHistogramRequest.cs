@@ -54,6 +54,14 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }
 
+        /// <summary>
+        /// 检索语法规则，默认值为0。
+        /// 0：Lucene语法，1：CQL语法。
+        /// 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+        /// </summary>
+        [JsonProperty("SyntaxRule")]
+        public ulong? SyntaxRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +73,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
+            this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         }
     }
 }

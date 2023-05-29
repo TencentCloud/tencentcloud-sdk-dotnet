@@ -128,7 +128,6 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// >   
         /// - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="CreateGroupRequest"/></param>
         /// <returns><see cref="CreateGroupResponse"/></returns>
@@ -175,7 +174,6 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// >   
         /// - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="CreateGroupRequest"/></param>
         /// <returns><see cref="CreateGroupResponse"/></returns>
