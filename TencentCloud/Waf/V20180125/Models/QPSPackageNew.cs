@@ -54,6 +54,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
+        /// <summary>
+        /// 计费项
+        /// </summary>
+        [JsonProperty("BillingItem")]
+        public string BillingItem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "BillingItem", this.BillingItem);
         }
     }
 }

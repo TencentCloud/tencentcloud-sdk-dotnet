@@ -48,6 +48,27 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
+        /// <summary>
+        /// 识别开始UTC时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 识别结束UTC时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 稳态标记。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SteadyState")]
+        public bool? SteadyState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +79,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "StartPtsTime", this.StartPtsTime);
             this.SetParamSimple(map, prefix + "EndPtsTime", this.EndPtsTime);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "SteadyState", this.SteadyState);
         }
     }
 }

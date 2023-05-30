@@ -30,6 +30,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
+        /// <summary>
+        /// 域名验证方式
+        /// </summary>
+        [JsonProperty("VerifyType")]
+        public string VerifyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
+            this.SetParamSimple(map, prefix + "VerifyType", this.VerifyType);
         }
     }
 }

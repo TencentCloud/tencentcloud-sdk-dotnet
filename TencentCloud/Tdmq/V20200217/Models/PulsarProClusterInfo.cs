@@ -73,6 +73,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MaxStorage")]
         public ulong? MaxStorage{ get; set; }
 
+        /// <summary>
+        /// 是否可以修改路由
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CanEditRoute")]
+        public bool? CanEditRoute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamArrayObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
             this.SetParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
+            this.SetParamSimple(map, prefix + "CanEditRoute", this.CanEditRoute);
         }
     }
 }

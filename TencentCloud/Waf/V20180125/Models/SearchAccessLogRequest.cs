@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 客户要查询的日志主题ID，每个客户都有对应的一个主题
+        /// 客户要查询的日志主题ID，每个客户都有对应的一个主题，新版本此字段填空字符串
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -55,7 +55,8 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+        /// 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
+        /// 新版本此字段填空填
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
@@ -65,6 +66,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
+
+        /// <summary>
+        /// 第几页，从0开始。新版本接口字段
+        /// </summary>
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
 
 
         /// <summary>
@@ -79,6 +86,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
         }
     }
 }

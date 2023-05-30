@@ -381,6 +381,46 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 在修改同步任务的配置后、通过该接口校验当前任务是否支持修改对象操作
+        /// </summary>
+        /// <param name="req"><see cref="CreateModifyCheckSyncJobRequest"/></param>
+        /// <returns><see cref="CreateModifyCheckSyncJobResponse"/></returns>
+        public async Task<CreateModifyCheckSyncJobResponse> CreateModifyCheckSyncJob(CreateModifyCheckSyncJobRequest req)
+        {
+             JsonResponseModel<CreateModifyCheckSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateModifyCheckSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModifyCheckSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在修改同步任务的配置后、通过该接口校验当前任务是否支持修改对象操作
+        /// </summary>
+        /// <param name="req"><see cref="CreateModifyCheckSyncJobRequest"/></param>
+        /// <returns><see cref="CreateModifyCheckSyncJobResponse"/></returns>
+        public CreateModifyCheckSyncJobResponse CreateModifyCheckSyncJobSync(CreateModifyCheckSyncJobRequest req)
+        {
+             JsonResponseModel<CreateModifyCheckSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateModifyCheckSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModifyCheckSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建一个同步任务
         /// </summary>
         /// <param name="req"><see cref="CreateSyncJobRequest"/></param>
@@ -736,6 +776,46 @@ namespace TencentCloud.Dts.V20211206
              {
                  var strResp = this.InternalRequestSync(req, "DescribeMigrationJobs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMigrationJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在创建修改对象的校验任务后、通过该接口查看校验任务的结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModifyCheckSyncJobResultRequest"/></param>
+        /// <returns><see cref="DescribeModifyCheckSyncJobResultResponse"/></returns>
+        public async Task<DescribeModifyCheckSyncJobResultResponse> DescribeModifyCheckSyncJobResult(DescribeModifyCheckSyncJobResultRequest req)
+        {
+             JsonResponseModel<DescribeModifyCheckSyncJobResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeModifyCheckSyncJobResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeModifyCheckSyncJobResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在创建修改对象的校验任务后、通过该接口查看校验任务的结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModifyCheckSyncJobResultRequest"/></param>
+        /// <returns><see cref="DescribeModifyCheckSyncJobResultResponse"/></returns>
+        public DescribeModifyCheckSyncJobResultResponse DescribeModifyCheckSyncJobResultSync(DescribeModifyCheckSyncJobResultRequest req)
+        {
+             JsonResponseModel<DescribeModifyCheckSyncJobResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeModifyCheckSyncJobResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeModifyCheckSyncJobResultResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1136,6 +1216,48 @@ namespace TencentCloud.Dts.V20211206
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMigrationJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMigrationJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口支持在同步任务启动后修改任务的配置
+        /// 修改同步配置的完整流程：修改同步任务配置->创建修改同步任务配置的校验任务->查询修改配置的校验任务的结果->启动修改配置任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncJobConfigRequest"/></param>
+        /// <returns><see cref="ModifySyncJobConfigResponse"/></returns>
+        public async Task<ModifySyncJobConfigResponse> ModifySyncJobConfig(ModifySyncJobConfigRequest req)
+        {
+             JsonResponseModel<ModifySyncJobConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySyncJobConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncJobConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口支持在同步任务启动后修改任务的配置
+        /// 修改同步配置的完整流程：修改同步任务配置->创建修改同步任务配置的校验任务->查询修改配置的校验任务的结果->启动修改配置任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncJobConfigRequest"/></param>
+        /// <returns><see cref="ModifySyncJobConfigResponse"/></returns>
+        public ModifySyncJobConfigResponse ModifySyncJobConfigSync(ModifySyncJobConfigRequest req)
+        {
+             JsonResponseModel<ModifySyncJobConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySyncJobConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncJobConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1576,6 +1698,46 @@ namespace TencentCloud.Dts.V20211206
              {
                  var strResp = this.InternalRequestSync(req, "StartMigrateJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMigrateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在查询修改对象的校验任务的结果中的status为success后、通过该接口开始修改配置流程
+        /// </summary>
+        /// <param name="req"><see cref="StartModifySyncJobRequest"/></param>
+        /// <returns><see cref="StartModifySyncJobResponse"/></returns>
+        public async Task<StartModifySyncJobResponse> StartModifySyncJob(StartModifySyncJobRequest req)
+        {
+             JsonResponseModel<StartModifySyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartModifySyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartModifySyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在查询修改对象的校验任务的结果中的status为success后、通过该接口开始修改配置流程
+        /// </summary>
+        /// <param name="req"><see cref="StartModifySyncJobRequest"/></param>
+        /// <returns><see cref="StartModifySyncJobResponse"/></returns>
+        public StartModifySyncJobResponse StartModifySyncJobSync(StartModifySyncJobRequest req)
+        {
+             JsonResponseModel<StartModifySyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartModifySyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartModifySyncJobResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -63,6 +63,18 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
+        /// <summary>
+        /// 背景水印宽度。默认宽度1920。
+        /// </summary>
+        [JsonProperty("BackgroundWidth")]
+        public long? BackgroundWidth{ get; set; }
+
+        /// <summary>
+        /// 背景水印高度。默认高度1080。
+        /// </summary>
+        [JsonProperty("BackgroundHeight")]
+        public long? BackgroundHeight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +87,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "YPosition", this.YPosition);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "BackgroundWidth", this.BackgroundWidth);
+            this.SetParamSimple(map, prefix + "BackgroundHeight", this.BackgroundHeight);
         }
     }
 }

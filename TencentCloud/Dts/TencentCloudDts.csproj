@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.768</VersionPrefix>
+    <VersionPrefix>3.0.769</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -77,6 +77,8 @@
     <Compile Include="V20211206\Models\CreateMigrateCheckJobResponse.cs" />
     <Compile Include="V20211206\Models\CreateMigrationServiceRequest.cs" />
     <Compile Include="V20211206\Models\CreateMigrationServiceResponse.cs" />
+    <Compile Include="V20211206\Models\CreateModifyCheckSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\CreateModifyCheckSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\CreateSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\CreateSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\DBEndpointInfo.cs" />
@@ -101,6 +103,8 @@
     <Compile Include="V20211206\Models\DescribeMigrationDetailResponse.cs" />
     <Compile Include="V20211206\Models\DescribeMigrationJobsRequest.cs" />
     <Compile Include="V20211206\Models\DescribeMigrationJobsResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeModifyCheckSyncJobResultRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeModifyCheckSyncJobResultResponse.cs" />
     <Compile Include="V20211206\Models\DescribeSyncJobsRequest.cs" />
     <Compile Include="V20211206\Models\DescribeSyncJobsResponse.cs" />
     <Compile Include="V20211206\Models\DestroyMigrateJobRequest.cs" />
@@ -110,6 +114,7 @@
     <Compile Include="V20211206\Models\DetailCheckItem.cs" />
     <Compile Include="V20211206\Models\DifferenceDetail.cs" />
     <Compile Include="V20211206\Models\DifferenceItem.cs" />
+    <Compile Include="V20211206\Models\DynamicOptions.cs" />
     <Compile Include="V20211206\Models\Endpoint.cs" />
     <Compile Include="V20211206\Models\ErrorInfoItem.cs" />
     <Compile Include="V20211206\Models\IsolateMigrateJobRequest.cs" />
@@ -133,6 +138,8 @@
     <Compile Include="V20211206\Models\ModifyMigrateNameResponse.cs" />
     <Compile Include="V20211206\Models\ModifyMigrationJobRequest.cs" />
     <Compile Include="V20211206\Models\ModifyMigrationJobResponse.cs" />
+    <Compile Include="V20211206\Models\ModifySyncJobConfigRequest.cs" />
+    <Compile Include="V20211206\Models\ModifySyncJobConfigResponse.cs" />
     <Compile Include="V20211206\Models\Objects.cs" />
     <Compile Include="V20211206\Models\OnlineDDL.cs" />
     <Compile Include="V20211206\Models\Options.cs" />
@@ -163,6 +170,8 @@
     <Compile Include="V20211206\Models\StartCompareResponse.cs" />
     <Compile Include="V20211206\Models\StartMigrateJobRequest.cs" />
     <Compile Include="V20211206\Models\StartMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\StartModifySyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\StartModifySyncJobResponse.cs" />
     <Compile Include="V20211206\Models\StartSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\StartSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\StepDetailInfo.cs" />

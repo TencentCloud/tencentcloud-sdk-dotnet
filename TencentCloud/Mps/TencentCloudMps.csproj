@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.768</VersionPrefix>
+    <VersionPrefix>3.0.769</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -316,6 +316,7 @@
     <Compile Include="V20190612\Models\DescribeWordSamplesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeWorkflowsRequest.cs" />
     <Compile Include="V20190612\Models\DescribeWorkflowsResponse.cs" />
+    <Compile Include="V20190612\Models\DiagnoseResult.cs" />
     <Compile Include="V20190612\Models\DisableScheduleRequest.cs" />
     <Compile Include="V20190612\Models\DisableScheduleResponse.cs" />
     <Compile Include="V20190612\Models\DisableWorkflowRequest.cs" />
@@ -366,6 +367,9 @@
     <Compile Include="V20190612\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkTemplate.cs" />
     <Compile Include="V20190612\Models\InputAddress.cs" />
+    <Compile Include="V20190612\Models\LiveStreamAiAnalysisResultInfo.cs" />
+    <Compile Include="V20190612\Models\LiveStreamAiAnalysisResultItem.cs" />
+    <Compile Include="V20190612\Models\LiveStreamAiQualityControlResultInfo.cs" />
     <Compile Include="V20190612\Models\LiveStreamAiRecognitionResultInfo.cs" />
     <Compile Include="V20190612\Models\LiveStreamAiRecognitionResultItem.cs" />
     <Compile Include="V20190612\Models\LiveStreamAiReviewImagePoliticalResult.cs" />
@@ -517,6 +521,7 @@
     <Compile Include="V20190612\Models\ScheduleTask.cs" />
     <Compile Include="V20190612\Models\SchedulesInfo.cs" />
     <Compile Include="V20190612\Models\ScratchRepairConfig.cs" />
+    <Compile Include="V20190612\Models\SegmentRecognitionItem.cs" />
     <Compile Include="V20190612\Models\SharpEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTaskInput.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTemplate.cs" />

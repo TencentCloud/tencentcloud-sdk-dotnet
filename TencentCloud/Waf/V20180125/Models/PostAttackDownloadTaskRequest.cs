@@ -60,6 +60,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
+        /// <summary>
+        /// 下载的日志条数
+        /// </summary>
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "QueryString", this.QueryString);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

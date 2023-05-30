@@ -66,11 +66,18 @@ namespace TencentCloud.Tione.V20211111.Models
         public HDFSConfig HDFSSource{ get; set; }
 
         /// <summary>
-        /// 配饰GooseFS的数据
+        /// 配置GooseFS的数据
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GooseFSSource")]
         public GooseFS GooseFSSource{ get; set; }
+
+        /// <summary>
+        /// 配置TurboFS的数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CFSTurboSource")]
+        public CFSTurbo CFSTurboSource{ get; set; }
 
 
         /// <summary>
@@ -85,6 +92,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "CFSSource.", this.CFSSource);
             this.SetParamObj(map, prefix + "HDFSSource.", this.HDFSSource);
             this.SetParamObj(map, prefix + "GooseFSSource.", this.GooseFSSource);
+            this.SetParamObj(map, prefix + "CFSTurboSource.", this.CFSTurboSource);
         }
     }
 }

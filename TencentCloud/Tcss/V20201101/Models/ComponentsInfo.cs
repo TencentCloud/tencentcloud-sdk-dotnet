@@ -29,6 +29,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Component")]
+        [System.Obsolete]
         public string Component{ get; set; }
 
         /// <summary>
@@ -38,6 +39,34 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
+        /// <summary>
+        /// 可修复版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FixedVersion")]
+        public string FixedVersion{ get; set; }
+
+        /// <summary>
+        /// 路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
+
+        /// <summary>
+        /// 类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 组件名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +75,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "Component", this.Component);
             this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "FixedVersion", this.FixedVersion);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

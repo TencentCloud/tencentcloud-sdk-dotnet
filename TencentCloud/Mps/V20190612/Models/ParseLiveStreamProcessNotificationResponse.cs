@@ -61,6 +61,20 @@ namespace TencentCloud.Mps.V20190612.Models
         public LiveStreamAiRecognitionResultInfo AiRecognitionResultInfo{ get; set; }
 
         /// <summary>
+        /// 内容分析结果，当 NotificationType 为 AiAnalysisResult 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AiAnalysisResultInfo")]
+        public LiveStreamAiAnalysisResultInfo AiAnalysisResultInfo{ get; set; }
+
+        /// <summary>
+        /// 媒体质检结果，当 NotificationType 为 AiQualityControlResult 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AiQualityControlResultInfo")]
+        public LiveStreamAiQualityControlResultInfo AiQualityControlResultInfo{ get; set; }
+
+        /// <summary>
         /// 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
         /// </summary>
         [JsonProperty("SessionId")]
@@ -89,6 +103,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "ProcessEofInfo.", this.ProcessEofInfo);
             this.SetParamObj(map, prefix + "AiReviewResultInfo.", this.AiReviewResultInfo);
             this.SetParamObj(map, prefix + "AiRecognitionResultInfo.", this.AiRecognitionResultInfo);
+            this.SetParamObj(map, prefix + "AiAnalysisResultInfo.", this.AiAnalysisResultInfo);
+            this.SetParamObj(map, prefix + "AiQualityControlResultInfo.", this.AiQualityControlResultInfo);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

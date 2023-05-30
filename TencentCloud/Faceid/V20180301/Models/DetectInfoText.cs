@@ -46,6 +46,16 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string IdCard{ get; set; }
 
         /// <summary>
+        /// 用户认证时使用的证件号码类型：
+        /// 0：二代身份证的证件号码
+        /// 1：港澳台居住证的证件号码
+        /// 2：其他（核验使用的证件号码非合法身份号码）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UseIDType")]
+        public ulong? UseIDType{ get; set; }
+
+        /// <summary>
         /// 本次验证使用的姓名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -239,6 +249,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
             this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
             this.SetParamSimple(map, prefix + "IdCard", this.IdCard);
+            this.SetParamSimple(map, prefix + "UseIDType", this.UseIDType);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "OcrNation", this.OcrNation);
             this.SetParamSimple(map, prefix + "OcrAddress", this.OcrAddress);
