@@ -321,6 +321,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Ability")]
         public Ability Ability{ get; set; }
 
+        /// <summary>
+        /// 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourcePackages")]
+        public ResourcePackage[] ResourcePackages{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -369,6 +376,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
             this.SetParamSimple(map, prefix + "OrderSource", this.OrderSource);
             this.SetParamObj(map, prefix + "Ability.", this.Ability);
+            this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
         }
     }
 }

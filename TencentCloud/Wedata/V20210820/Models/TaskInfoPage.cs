@@ -48,6 +48,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TotalPage")]
         public ulong? TotalPage{ get; set; }
 
+        /// <summary>
+        /// 页数
+        /// </summary>
+        [JsonProperty("PageCount")]
+        public ulong? PageCount{ get; set; }
+
+        /// <summary>
+        /// 总条数
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "TotalPage", this.TotalPage);
+            this.SetParamSimple(map, prefix + "PageCount", this.PageCount);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
         }
     }
 }

@@ -6779,6 +6779,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 下线
+        /// 
         /// 更新或者插入用户告警设置(该接口废弃,请调用 ModifyWarningSetting )
         /// </summary>
         /// <param name="req"><see cref="DescribeSaveOrUpdateWarningsRequest"/></param>
@@ -6799,6 +6801,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 下线
+        /// 
         /// 更新或者插入用户告警设置(该接口废弃,请调用 ModifyWarningSetting )
         /// </summary>
         /// <param name="req"><see cref="DescribeSaveOrUpdateWarningsRequest"/></param>

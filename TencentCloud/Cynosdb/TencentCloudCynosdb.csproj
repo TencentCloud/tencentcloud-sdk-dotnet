@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.769</VersionPrefix>
+    <VersionPrefix>3.0.770</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,9 @@
     <Compile Include="V20190107\Models\AuditRuleTemplateInfo.cs" />
     <Compile Include="V20190107\Models\BackupFileInfo.cs" />
     <Compile Include="V20190107\Models\BillingResourceInfo.cs" />
+    <Compile Include="V20190107\Models\BindClusterResourcePackagesRequest.cs" />
+    <Compile Include="V20190107\Models\BindClusterResourcePackagesResponse.cs" />
+    <Compile Include="V20190107\Models\BindInstanceInfo.cs" />
     <Compile Include="V20190107\Models\BinlogItem.cs" />
     <Compile Include="V20190107\Models\CloseAuditServiceRequest.cs" />
     <Compile Include="V20190107\Models\CloseAuditServiceResponse.cs" />
@@ -92,6 +95,8 @@
     <Compile Include="V20190107\Models\CreateClustersResponse.cs" />
     <Compile Include="V20190107\Models\CreateParamTemplateRequest.cs" />
     <Compile Include="V20190107\Models\CreateParamTemplateResponse.cs" />
+    <Compile Include="V20190107\Models\CreateResourcePackageRequest.cs" />
+    <Compile Include="V20190107\Models\CreateResourcePackageResponse.cs" />
     <Compile Include="V20190107\Models\CynosdbCluster.cs" />
     <Compile Include="V20190107\Models\CynosdbClusterDetail.cs" />
     <Compile Include="V20190107\Models\CynosdbErrorLogItem.cs" />
@@ -178,6 +183,12 @@
     <Compile Include="V20190107\Models\DescribeParamTemplatesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeResourcePackageDetailRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeResourcePackageDetailResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeResourcePackageListRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeResourcePackageListResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeResourcePackageSaleSpecRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeResourcePackageSaleSpecResponse.cs" />
     <Compile Include="V20190107\Models\DescribeResourcesByDealNameRequest.cs" />
     <Compile Include="V20190107\Models\DescribeResourcesByDealNameResponse.cs" />
     <Compile Include="V20190107\Models\DescribeRollbackTimeRangeRequest.cs" />
@@ -251,6 +262,10 @@
     <Compile Include="V20190107\Models\ModifyParamItem.cs" />
     <Compile Include="V20190107\Models\ModifyParamTemplateRequest.cs" />
     <Compile Include="V20190107\Models\ModifyParamTemplateResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyResourcePackageClustersRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyResourcePackageClustersResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyResourcePackageNameRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyResourcePackageNameResponse.cs" />
     <Compile Include="V20190107\Models\ModifyVipVportRequest.cs" />
     <Compile Include="V20190107\Models\ModifyVipVportResponse.cs" />
     <Compile Include="V20190107\Models\Module.cs" />
@@ -270,6 +285,8 @@
     <Compile Include="V20190107\Models\OpenReadOnlyInstanceExclusiveAccessResponse.cs" />
     <Compile Include="V20190107\Models\OpenWanRequest.cs" />
     <Compile Include="V20190107\Models\OpenWanResponse.cs" />
+    <Compile Include="V20190107\Models\Package.cs" />
+    <Compile Include="V20190107\Models\PackageDetail.cs" />
     <Compile Include="V20190107\Models\ParamDetail.cs" />
     <Compile Include="V20190107\Models\ParamInfo.cs" />
     <Compile Include="V20190107\Models\ParamItem.cs" />
@@ -279,10 +296,13 @@
     <Compile Include="V20190107\Models\PauseServerlessResponse.cs" />
     <Compile Include="V20190107\Models\PolicyRule.cs" />
     <Compile Include="V20190107\Models\QueryFilter.cs" />
+    <Compile Include="V20190107\Models\RefundResourcePackageRequest.cs" />
+    <Compile Include="V20190107\Models\RefundResourcePackageResponse.cs" />
     <Compile Include="V20190107\Models\RemoveClusterSlaveZoneRequest.cs" />
     <Compile Include="V20190107\Models\RemoveClusterSlaveZoneResponse.cs" />
     <Compile Include="V20190107\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="V20190107\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="V20190107\Models\ResourcePackage.cs" />
     <Compile Include="V20190107\Models\RestartInstanceRequest.cs" />
     <Compile Include="V20190107\Models\RestartInstanceResponse.cs" />
     <Compile Include="V20190107\Models\ResumeServerlessRequest.cs" />
@@ -296,6 +316,7 @@
     <Compile Include="V20190107\Models\RollbackTableInfo.cs" />
     <Compile Include="V20190107\Models\RollbackTimeRange.cs" />
     <Compile Include="V20190107\Models\RuleFilters.cs" />
+    <Compile Include="V20190107\Models\SalePackageSpec.cs" />
     <Compile Include="V20190107\Models\SaleRegion.cs" />
     <Compile Include="V20190107\Models\SaleZone.cs" />
     <Compile Include="V20190107\Models\SearchClusterDatabasesRequest.cs" />
@@ -316,6 +337,8 @@
     <Compile Include="V20190107\Models\Tag.cs" />
     <Compile Include="V20190107\Models\TemplateParamInfo.cs" />
     <Compile Include="V20190107\Models\TradePrice.cs" />
+    <Compile Include="V20190107\Models\UnbindClusterResourcePackagesRequest.cs" />
+    <Compile Include="V20190107\Models\UnbindClusterResourcePackagesResponse.cs" />
     <Compile Include="V20190107\Models\UpgradeClusterVersionRequest.cs" />
     <Compile Include="V20190107\Models\UpgradeClusterVersionResponse.cs" />
     <Compile Include="V20190107\Models\UpgradeInstanceRequest.cs" />

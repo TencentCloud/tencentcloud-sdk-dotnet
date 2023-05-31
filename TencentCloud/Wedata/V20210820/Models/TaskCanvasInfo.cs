@@ -228,6 +228,69 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DelayTime")]
         public ulong? DelayTime{ get; set; }
 
+        /// <summary>
+        /// 执行开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutionStartTime")]
+        public string ExecutionStartTime{ get; set; }
+
+        /// <summary>
+        /// 执行结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutionEndTime")]
+        public string ExecutionEndTime{ get; set; }
+
+        /// <summary>
+        /// 层级
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Layer")]
+        public string Layer{ get; set; }
+
+        /// <summary>
+        /// 来源数据源ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceServiceId")]
+        public string SourceServiceId{ get; set; }
+
+        /// <summary>
+        /// 来源数据源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceServiceType")]
+        public string SourceServiceType{ get; set; }
+
+        /// <summary>
+        /// 目标数据源ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetServiceId")]
+        public string TargetServiceId{ get; set; }
+
+        /// <summary>
+        /// 目标数据源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetServiceType")]
+        public string TargetServiceType{ get; set; }
+
+        /// <summary>
+        /// 任务告警类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmType")]
+        public string AlarmType{ get; set; }
+
+        /// <summary>
+        /// 任务创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -256,6 +319,15 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "VirtualFlag", this.VirtualFlag);
             this.SetParamSimple(map, prefix + "TaskAction", this.TaskAction);
             this.SetParamSimple(map, prefix + "DelayTime", this.DelayTime);
+            this.SetParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
+            this.SetParamSimple(map, prefix + "ExecutionEndTime", this.ExecutionEndTime);
+            this.SetParamSimple(map, prefix + "Layer", this.Layer);
+            this.SetParamSimple(map, prefix + "SourceServiceId", this.SourceServiceId);
+            this.SetParamSimple(map, prefix + "SourceServiceType", this.SourceServiceType);
+            this.SetParamSimple(map, prefix + "TargetServiceId", this.TargetServiceId);
+            this.SetParamSimple(map, prefix + "TargetServiceType", this.TargetServiceType);
+            this.SetParamSimple(map, prefix + "AlarmType", this.AlarmType);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

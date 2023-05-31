@@ -42,6 +42,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("PolicyVersion")]
         public string PolicyVersion{ get; set; }
 
+        /// <summary>
+        /// 网段或IP(互斥)
+        /// </summary>
+        [JsonProperty("CidrBlock")]
+        public string CidrBlock{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "PolicyIndex", this.PolicyIndex);
             this.SetParamSimple(map, prefix + "PolicyVersion", this.PolicyVersion);
+            this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
         }
     }
 }

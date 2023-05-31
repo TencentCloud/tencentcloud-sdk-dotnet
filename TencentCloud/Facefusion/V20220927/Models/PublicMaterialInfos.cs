@@ -60,6 +60,13 @@ namespace TencentCloud.Facefusion.V20220927.Models
         [JsonProperty("MaterialName")]
         public string MaterialName{ get; set; }
 
+        /// <summary>
+        /// 审核原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AuditResult")]
+        public string AuditResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Facefusion.V20220927.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArrayObj(map, prefix + "MaterialFaceList.", this.MaterialFaceList);
             this.SetParamSimple(map, prefix + "MaterialName", this.MaterialName);
+            this.SetParamSimple(map, prefix + "AuditResult", this.AuditResult);
         }
     }
 }

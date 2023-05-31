@@ -31,25 +31,25 @@ namespace TencentCloud.Ccc.V20200210.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 坐席账户
+        /// 座席账户
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// 坐席名称
+        /// 座席名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 坐席手机号（带0086前缀,示例：008618011111111）
+        /// 座席手机号（带0086前缀,示例：008618011111111）
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 坐席昵称
+        /// 座席昵称
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }

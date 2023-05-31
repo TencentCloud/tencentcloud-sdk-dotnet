@@ -31,19 +31,19 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 指定签署人手机号
+        /// 指定签署人手机号，11位数字
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 指定签署人证件类型
+        /// 指定签署人证件类型，ID_CARD-身份证
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
 
         /// <summary>
-        /// 指定签署人证件号码
+        /// 指定签署人证件号码，字母大写
         /// </summary>
         [JsonProperty("IdCardNumber")]
         public string IdCardNumber{ get; set; }

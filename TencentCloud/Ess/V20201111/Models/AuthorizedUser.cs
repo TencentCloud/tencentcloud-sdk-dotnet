@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 用户id
+        /// 电子签系统中的用户id
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

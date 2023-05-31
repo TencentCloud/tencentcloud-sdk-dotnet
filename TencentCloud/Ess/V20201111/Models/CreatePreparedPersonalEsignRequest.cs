@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 个人用户名称
+        /// 个人用户姓名
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
@@ -37,16 +37,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public string IdCardNumber{ get; set; }
 
         /// <summary>
-        /// 印章图片的base64
-        /// </summary>
-        [JsonProperty("SealImage")]
-        public string SealImage{ get; set; }
-
-        /// <summary>
         /// 印章名称
         /// </summary>
         [JsonProperty("SealName")]
         public string SealName{ get; set; }
+
+        /// <summary>
+        /// 印章图片的base64，最大不超过 8M
+        /// </summary>
+        [JsonProperty("SealImage")]
+        public string SealImage{ get; set; }
 
         /// <summary>
         /// 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
@@ -66,6 +66,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string IdCardType{ get; set; }
 
         /// <summary>
+        /// 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+        /// </summary>
+        [JsonProperty("SealImageCompress")]
+        public bool? SealImageCompress{ get; set; }
+
+        /// <summary>
         /// 手机号码；当需要开通自动签时，该参数必传
         /// </summary>
         [JsonProperty("Mobile")]
@@ -77,6 +83,26 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("EnableAutoSign")]
         public bool? EnableAutoSign{ get; set; }
 
+        /// <summary>
+        /// 印章颜色（参数ProcessSeal=true时生效）
+        /// 默认值：BLACK黑色
+        /// 取值: 
+        /// BLACK 黑色,
+        /// RED 红色,
+        /// BLUE 蓝色。
+        /// </summary>
+        [JsonProperty("SealColor")]
+        public string SealColor{ get; set; }
+
+        /// <summary>
+        /// 是否处理印章
+        /// 默认不做印章处理。
+        /// 取值：false：不做任何处理；
+        /// true：做透明化处理和颜色增强。
+        /// </summary>
+        [JsonProperty("ProcessSeal")]
+        public bool? ProcessSeal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,12 +111,15 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
-            this.SetParamSimple(map, prefix + "SealImage", this.SealImage);
             this.SetParamSimple(map, prefix + "SealName", this.SealName);
+            this.SetParamSimple(map, prefix + "SealImage", this.SealImage);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "IdCardType", this.IdCardType);
+            this.SetParamSimple(map, prefix + "SealImageCompress", this.SealImageCompress);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
+            this.SetParamSimple(map, prefix + "SealColor", this.SealColor);
+            this.SetParamSimple(map, prefix + "ProcessSeal", this.ProcessSeal);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 分布阶梯，延时和Ladder值的对应关系：
-        /// [0ms,1ms]: 1；
-        /// [1ms,5ms]: 5；
-        /// [5ms,10ms]: 10；
-        /// [10ms,50ms]: 50；
-        /// [50ms,200ms]: 200；
-        /// [200ms,∞]: -1。
+        /// 指延时分布阶梯，其与延时区间的对应关系如下所示。
+        /// - 1：[0ms,1ms]。
+        /// - 5： [1ms,5ms]。
+        /// - 10： [5ms,10ms]。
+        /// - 50： [10ms,50ms]。
+        /// - 200：[50ms,200ms]。
+        /// - -1： [200ms,∞]。
         /// </summary>
         [JsonProperty("Ladder")]
         public long? Ladder{ get; set; }
 
         /// <summary>
-        /// 延时处于当前分布阶梯的命令数量，个。
+        /// 延时处于当前分布阶梯的命令数量，单位：个。
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }

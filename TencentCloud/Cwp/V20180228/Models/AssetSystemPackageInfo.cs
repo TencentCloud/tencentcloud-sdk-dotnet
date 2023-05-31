@@ -91,6 +91,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("IsNew")]
         public long? IsNew{ get; set; }
 
+        /// <summary>
+        /// 附加信息
+        /// </summary>
+        [JsonProperty("MachineExtraInfo")]
+        public MachineExtraInfo MachineExtraInfo{ get; set; }
+
+        /// <summary>
+        /// 主机Id
+        /// </summary>
+        [JsonProperty("Quuid")]
+        public string Quuid{ get; set; }
+
+        /// <summary>
+        /// Agent Id
+        /// </summary>
+        [JsonProperty("Uuid")]
+        public string Uuid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +126,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "FirstTime", this.FirstTime);
             this.SetParamSimple(map, prefix + "IsNew", this.IsNew);
+            this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+            this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
+            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
         }
     }
 }

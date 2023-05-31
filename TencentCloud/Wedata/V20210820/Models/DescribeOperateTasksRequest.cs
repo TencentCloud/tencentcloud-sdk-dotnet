@@ -114,6 +114,36 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProductNameList")]
         public string ProductNameList{ get; set; }
 
+        /// <summary>
+        /// 数据源id或（仅针对离线同步任务）来源数据源id
+        /// </summary>
+        [JsonProperty("SourceServiceId")]
+        public string SourceServiceId{ get; set; }
+
+        /// <summary>
+        /// 数据源类型或（仅针对离线同步任务）来源数据源类型
+        /// </summary>
+        [JsonProperty("SourceServiceType")]
+        public string SourceServiceType{ get; set; }
+
+        /// <summary>
+        /// （仅针对离线同步任务）目标数据源id
+        /// </summary>
+        [JsonProperty("TargetServiceId")]
+        public string TargetServiceId{ get; set; }
+
+        /// <summary>
+        /// （仅针对离线同步任务）目标数据源类型
+        /// </summary>
+        [JsonProperty("TargetServiceType")]
+        public string TargetServiceType{ get; set; }
+
+        /// <summary>
+        /// 告警类型，多个类型以逗号分隔
+        /// </summary>
+        [JsonProperty("AlarmType")]
+        public string AlarmType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +165,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "StatusList", this.StatusList);
             this.SetParamSimple(map, prefix + "TaskCycleUnitList", this.TaskCycleUnitList);
             this.SetParamSimple(map, prefix + "ProductNameList", this.ProductNameList);
+            this.SetParamSimple(map, prefix + "SourceServiceId", this.SourceServiceId);
+            this.SetParamSimple(map, prefix + "SourceServiceType", this.SourceServiceType);
+            this.SetParamSimple(map, prefix + "TargetServiceId", this.TargetServiceId);
+            this.SetParamSimple(map, prefix + "TargetServiceType", this.TargetServiceType);
+            this.SetParamSimple(map, prefix + "AlarmType", this.AlarmType);
         }
     }
 }

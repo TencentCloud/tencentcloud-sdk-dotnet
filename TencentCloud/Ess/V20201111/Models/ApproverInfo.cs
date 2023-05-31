@@ -35,37 +35,37 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? ApproverType{ get; set; }
 
         /// <summary>
-        /// 本环节需要操作人的名字
+        /// 签署人的姓名
         /// </summary>
         [JsonProperty("ApproverName")]
         public string ApproverName{ get; set; }
 
         /// <summary>
-        /// 本环节需要操作人的手机号
+        /// 签署人的手机号，11位数字
         /// </summary>
         [JsonProperty("ApproverMobile")]
         public string ApproverMobile{ get; set; }
 
         /// <summary>
-        /// 本环节操作人签署控件配置
+        /// 签署人的签署控件列表
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }
 
         /// <summary>
-        /// 如果是企业,则为企业的名字
+        /// 如果签署方是企业签署方，则为企业名
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
         /// <summary>
-        /// 身份证号
+        /// 签署人的身份证号
         /// </summary>
         [JsonProperty("ApproverIdCardNumber")]
         public string ApproverIdCardNumber{ get; set; }
 
         /// <summary>
-        /// 证件类型 
+        /// 签署人的身份证件类型 
         /// ID_CARD 身份证
         /// HONGKONG_AND_MACAO 港澳居民来往内地通行证
         /// HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
@@ -74,19 +74,19 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverIdCardType{ get; set; }
 
         /// <summary>
-        /// sms--短信，none--不通知
+        /// 签署通知类型：sms--短信，none--不通知
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// 1--收款人、2--开具人、3--见证人
+        /// 签署人角色类型：1--收款人、2--开具人、3--见证人
         /// </summary>
         [JsonProperty("ApproverRole")]
         public long? ApproverRole{ get; set; }
 
         /// <summary>
-        /// 签署意愿确认渠道,WEIXINAPP:人脸识别
+        /// 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
         /// </summary>
         [JsonProperty("VerifyChannel")]
         public string[] VerifyChannel{ get; set; }
@@ -104,7 +104,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 签署人用户来源,企微侧用户请传入：WEWORKAPP
+        /// 签署人用户来源，企微侧用户请传入：WEWORKAPP
         /// </summary>
         [JsonProperty("ApproverSource")]
         public string ApproverSource{ get; set; }

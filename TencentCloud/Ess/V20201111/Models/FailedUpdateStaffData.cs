@@ -49,7 +49,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户OpenId
+        /// 员工在第三方平台的openId
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }

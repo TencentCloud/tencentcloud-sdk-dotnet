@@ -91,6 +91,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
+        /// 实例形态，是否为serverless实例
+        /// </summary>
+        [JsonProperty("DbMode")]
+        public string DbMode{ get; set; }
+
+        /// <summary>
         /// 数据库类型
         /// </summary>
         [JsonProperty("DbType")]
@@ -334,6 +340,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceNetInfo")]
         public InstanceNetInfo[] InstanceNetInfo{ get; set; }
 
+        /// <summary>
+        /// 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourcePackages")]
+        public ResourcePackage[] ResourcePackages{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -351,6 +364,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
@@ -390,6 +404,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
             this.SetParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
             this.SetParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
+            this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 如果是Component控件类型，则可选的字段为：
+        /// 如果是Component填写控件类型，则可选的字段为：
         /// TEXT - 普通文本控件，输入文本字符串；
         /// MULTI_LINE_TEXT - 多行文本控件，输入文本字符串；
         /// CHECK_BOX - 勾选框控件，若选中填写ComponentValue 填写 true或者 false 字符串；
@@ -36,7 +36,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// DATE - 日期控件；默认是格式化为xxxx年xx月xx日字符串；
         /// DISTRICT - 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；
         /// 
-        /// 如果是SignComponent控件类型，则可选的字段为
+        /// 如果是SignComponent签署控件类型，则可选的字段为
         /// SIGN_SEAL - 签署印章控件；
         /// SIGN_DATE - 签署日期控件；
         /// SIGN_SIGNATURE - 用户签名控件；
@@ -51,7 +51,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ComponentType{ get; set; }
 
         /// <summary>
-        /// 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
+        /// 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
         /// </summary>
         [JsonProperty("FileIndex")]
         public long? FileIndex{ get; set; }
@@ -87,13 +87,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public float? ComponentPosY{ get; set; }
 
         /// <summary>
-        /// GenerateMode==KEYWORD 指定关键字
+        /// 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
         /// </summary>
         [JsonProperty("ComponentId")]
         public string ComponentId{ get; set; }
 
         /// <summary>
-        /// GenerateMode==FIELD 指定表单域名称
+        /// 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
@@ -142,7 +142,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ComponentExtra{ get; set; }
 
         /// <summary>
-        /// 是否是表单域类型，默认不存在
+        /// 是否是表单域类型，默认不false-不是
         /// </summary>
         [JsonProperty("IsFormType")]
         public bool? IsFormType{ get; set; }
@@ -243,7 +243,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? ComponentDateFontSize{ get; set; }
 
         /// <summary>
-        /// 平台模板控件 id 标识
+        /// 第三方应用集成平台模板控件 id 标识
         /// </summary>
         [JsonProperty("ChannelComponentId")]
         public string ChannelComponentId{ get; set; }
@@ -261,7 +261,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public float? OffsetY{ get; set; }
 
         /// <summary>
-        /// //子客控件来源。0-平台指定；1-用户自定义
+        /// 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
         /// </summary>
         [JsonProperty("ChannelComponentSource")]
         public ulong? ChannelComponentSource{ get; set; }

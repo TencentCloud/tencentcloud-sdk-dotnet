@@ -31,25 +31,25 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserThreeFactor UserInfo{ get; set; }
 
         /// <summary>
-        /// 回调链接
+        /// 接受自动签开启的回调地址。需要保证post返回200
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 是否回调证书信息
+        /// 是否回调证书信息，默认false-不需要
         /// </summary>
         [JsonProperty("CertInfoCallback")]
         public bool? CertInfoCallback{ get; set; }
 
         /// <summary>
-        /// 是否支持用户自定义签名印章
+        /// 是否支持用户自定义签名印章，默认false-不需要
         /// </summary>
         [JsonProperty("UserDefineSeal")]
         public bool? UserDefineSeal{ get; set; }
 
         /// <summary>
-        /// 是否需要回调的时候返回印章(签名) 图片的 base64
+        /// 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
         /// </summary>
         [JsonProperty("SealImgCallback")]
         public bool? SealImgCallback{ get; set; }

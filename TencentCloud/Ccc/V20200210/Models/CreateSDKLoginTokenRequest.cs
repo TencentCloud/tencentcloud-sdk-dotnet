@@ -31,7 +31,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 坐席账号。
+        /// 座席账号。
         /// </summary>
         [JsonProperty("SeatUserId")]
         public string SeatUserId{ get; set; }

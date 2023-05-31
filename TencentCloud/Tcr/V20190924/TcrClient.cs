@@ -1782,6 +1782,8 @@ namespace TencentCloud.Tcr.V20190924
 
         /// <summary>
         /// 删除实例公网访问白名单策略
+        /// 
+        /// 注意：当PolicyIndex和CidrBlock同时存在时，CidrBlock优先级更高
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityPolicyRequest"/></param>
         /// <returns><see cref="DeleteSecurityPolicyResponse"/></returns>
@@ -1802,6 +1804,8 @@ namespace TencentCloud.Tcr.V20190924
 
         /// <summary>
         /// 删除实例公网访问白名单策略
+        /// 
+        /// 注意：当PolicyIndex和CidrBlock同时存在时，CidrBlock优先级更高
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityPolicyRequest"/></param>
         /// <returns><see cref="DeleteSecurityPolicyResponse"/></returns>

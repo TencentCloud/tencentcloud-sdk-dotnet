@@ -43,6 +43,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Region{ get; set; }
 
         /// <summary>
+        /// 可用区
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// 物理可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PhysicalZone")]
+        public string PhysicalZone{ get; set; }
+
+        /// <summary>
         /// 状态
         /// </summary>
         [JsonProperty("Status")]
@@ -53,6 +66,51 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
+
+        /// <summary>
+        /// 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+        /// resume
+        /// resuming
+        /// pause
+        /// pausing
+        /// </summary>
+        [JsonProperty("ServerlessStatus")]
+        public string ServerlessStatus{ get; set; }
+
+        /// <summary>
+        /// 存储Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StorageId")]
+        public string StorageId{ get; set; }
+
+        /// <summary>
+        /// 存储大小，单位为G
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Storage")]
+        public long? Storage{ get; set; }
+
+        /// <summary>
+        /// 最大存储规格，单位为G
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxStorageSize")]
+        public long? MaxStorageSize{ get; set; }
+
+        /// <summary>
+        /// 最小存储规格，单位为G
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MinStorageSize")]
+        public long? MinStorageSize{ get; set; }
+
+        /// <summary>
+        /// 存储付费类型，1为包年包月，0为按量计费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StoragePayMode")]
+        public long? StoragePayMode{ get; set; }
 
         /// <summary>
         /// VPC名称
@@ -97,40 +155,30 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
+        /// 数据库类型，normal，serverless
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DbMode")]
+        public string DbMode{ get; set; }
+
+        /// <summary>
         /// 数据库版本
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
         /// <summary>
+        /// 存储空间上限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StorageLimit")]
+        public long? StorageLimit{ get; set; }
+
+        /// <summary>
         /// 使用容量
         /// </summary>
         [JsonProperty("UsedStorage")]
         public long? UsedStorage{ get; set; }
-
-        /// <summary>
-        /// 读写分离Vport
-        /// </summary>
-        [JsonProperty("RoAddr")]
-        public Addr[] RoAddr{ get; set; }
-
-        /// <summary>
-        /// 实例信息
-        /// </summary>
-        [JsonProperty("InstanceSet")]
-        public ClusterInstanceDetail[] InstanceSet{ get; set; }
-
-        /// <summary>
-        /// 付费模式
-        /// </summary>
-        [JsonProperty("PayMode")]
-        public long? PayMode{ get; set; }
-
-        /// <summary>
-        /// 到期时间
-        /// </summary>
-        [JsonProperty("PeriodEndTime")]
-        public string PeriodEndTime{ get; set; }
 
         /// <summary>
         /// vip地址
@@ -145,102 +193,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// 读写分离Vport
         /// </summary>
-        [JsonProperty("ProjectID")]
-        public long? ProjectID{ get; set; }
-
-        /// <summary>
-        /// 可用区
-        /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
-
-        /// <summary>
-        /// 实例绑定的tag数组信息
-        /// </summary>
-        [JsonProperty("ResourceTags")]
-        public Tag[] ResourceTags{ get; set; }
-
-        /// <summary>
-        /// 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-        /// resume
-        /// resuming
-        /// pause
-        /// pausing
-        /// </summary>
-        [JsonProperty("ServerlessStatus")]
-        public string ServerlessStatus{ get; set; }
-
-        /// <summary>
-        /// binlog开关，可选值：ON, OFF
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("LogBin")]
-        public string LogBin{ get; set; }
-
-        /// <summary>
-        /// pitr类型，可选值：normal, redo_pitr
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PitrType")]
-        public string PitrType{ get; set; }
-
-        /// <summary>
-        /// 物理可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PhysicalZone")]
-        public string PhysicalZone{ get; set; }
-
-        /// <summary>
-        /// 存储Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("StorageId")]
-        public string StorageId{ get; set; }
-
-        /// <summary>
-        /// 存储大小，单位为G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Storage")]
-        public long? Storage{ get; set; }
-
-        /// <summary>
-        /// 最大存储规格，单位为G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MaxStorageSize")]
-        public long? MaxStorageSize{ get; set; }
-
-        /// <summary>
-        /// 最小存储规格，单位为G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MinStorageSize")]
-        public long? MinStorageSize{ get; set; }
-
-        /// <summary>
-        /// 存储付费类型，1为包年包月，0为按量计费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("StoragePayMode")]
-        public long? StoragePayMode{ get; set; }
-
-        /// <summary>
-        /// 数据库类型，normal，serverless
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("DbMode")]
-        public string DbMode{ get; set; }
-
-        /// <summary>
-        /// 存储空间上限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("StorageLimit")]
-        public long? StorageLimit{ get; set; }
+        [JsonProperty("RoAddr")]
+        public Addr[] RoAddr{ get; set; }
 
         /// <summary>
         /// 集群支持的功能
@@ -299,6 +255,36 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] SlaveZones{ get; set; }
 
         /// <summary>
+        /// 实例信息
+        /// </summary>
+        [JsonProperty("InstanceSet")]
+        public ClusterInstanceDetail[] InstanceSet{ get; set; }
+
+        /// <summary>
+        /// 付费模式
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
+        /// <summary>
+        /// 到期时间
+        /// </summary>
+        [JsonProperty("PeriodEndTime")]
+        public string PeriodEndTime{ get; set; }
+
+        /// <summary>
+        /// 项目id
+        /// </summary>
+        [JsonProperty("ProjectID")]
+        public long? ProjectID{ get; set; }
+
+        /// <summary>
+        /// 实例绑定的tag数组信息
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public Tag[] ResourceTags{ get; set; }
+
+        /// <summary>
         /// Proxy状态
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -306,11 +292,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ProxyStatus{ get; set; }
 
         /// <summary>
+        /// binlog开关，可选值：ON, OFF
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogBin")]
+        public string LogBin{ get; set; }
+
+        /// <summary>
         /// 是否跳过交易
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSkipTrade")]
         public string IsSkipTrade{ get; set; }
+
+        /// <summary>
+        /// pitr类型，可选值：normal, redo_pitr
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PitrType")]
+        public string PitrType{ get; set; }
 
         /// <summary>
         /// 是否打开密码复杂度
@@ -326,6 +326,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("NetworkStatus")]
         public string NetworkStatus{ get; set; }
 
+        /// <summary>
+        /// 集群绑定的资源包信息	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourcePackages")]
+        public ResourcePackage[] ResourcePackages{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -335,8 +342,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+            this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+            this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
+            this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
+            this.SetParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
@@ -344,28 +359,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Charset", this.Charset);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
+            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
             this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
+            this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
             this.SetParamSimple(map, prefix + "UsedStorage", this.UsedStorage);
-            this.SetParamArrayObj(map, prefix + "RoAddr.", this.RoAddr);
-            this.SetParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
-            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
-            this.SetParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
-            this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
-            this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
-            this.SetParamSimple(map, prefix + "LogBin", this.LogBin);
-            this.SetParamSimple(map, prefix + "PitrType", this.PitrType);
-            this.SetParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
-            this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
-            this.SetParamSimple(map, prefix + "Storage", this.Storage);
-            this.SetParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
-            this.SetParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
-            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
-            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
-            this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
+            this.SetParamArrayObj(map, prefix + "RoAddr.", this.RoAddr);
             this.SetParamObj(map, prefix + "Ability.", this.Ability);
             this.SetParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
             this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
@@ -374,10 +374,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
             this.SetParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+            this.SetParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
+            this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "ProxyStatus", this.ProxyStatus);
+            this.SetParamSimple(map, prefix + "LogBin", this.LogBin);
             this.SetParamSimple(map, prefix + "IsSkipTrade", this.IsSkipTrade);
+            this.SetParamSimple(map, prefix + "PitrType", this.PitrType);
             this.SetParamSimple(map, prefix + "IsOpenPasswordComplexity", this.IsOpenPasswordComplexity);
             this.SetParamSimple(map, prefix + "NetworkStatus", this.NetworkStatus);
+            this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
         }
     }
 }

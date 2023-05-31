@@ -28,12 +28,14 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 代理机构的应用编号,32位字符串，一般不用传
         /// </summary>
         [JsonProperty("AppId")]
+        [System.Obsolete]
         public string AppId{ get; set; }
 
         /// <summary>
         /// 被代理机构的应用号，一般不用传
         /// </summary>
         [JsonProperty("ProxyAppId")]
+        [System.Obsolete]
         public string ProxyAppId{ get; set; }
 
         /// <summary>
@@ -46,6 +48,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 被代理机构的经办人，一般不用传
         /// </summary>
         [JsonProperty("ProxyOperator")]
+        [System.Obsolete]
         public string ProxyOperator{ get; set; }
 
 
