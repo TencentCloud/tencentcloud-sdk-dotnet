@@ -25,28 +25,16 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 设备指纹ID
-        /// </summary>
-        [JsonProperty("DeviceId")]
-        public string DeviceId{ get; set; }
-
-        /// <summary>
-        /// IOS设备，Identifier For Advertising（广告标识符）
-        /// </summary>
-        [JsonProperty("IDFA")]
-        public string IDFA{ get; set; }
-
-        /// <summary>
         /// IOS设备，IDFV - Identifier For Vendor（应用开发商标识符）
         /// </summary>
         [JsonProperty("IDFV")]
         public string IDFV{ get; set; }
 
         /// <summary>
-        /// 设备序列号
+        /// 设备指纹Token
         /// </summary>
-        [JsonProperty("IMEI")]
-        public string IMEI{ get; set; }
+        [JsonProperty("TokenId")]
+        public string TokenId{ get; set; }
 
         /// <summary>
         /// 用户IP
@@ -61,10 +49,22 @@ namespace TencentCloud.Cms.V20190321.Models
         public string Mac{ get; set; }
 
         /// <summary>
-        /// 设备指纹Token
+        /// IOS设备，Identifier For Advertising（广告标识符）
         /// </summary>
-        [JsonProperty("TokenId")]
-        public string TokenId{ get; set; }
+        [JsonProperty("IDFA")]
+        public string IDFA{ get; set; }
+
+        /// <summary>
+        /// 设备指纹ID
+        /// </summary>
+        [JsonProperty("DeviceId")]
+        public string DeviceId{ get; set; }
+
+        /// <summary>
+        /// 设备序列号
+        /// </summary>
+        [JsonProperty("IMEI")]
+        public string IMEI{ get; set; }
 
 
         /// <summary>
@@ -72,13 +72,13 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
-            this.SetParamSimple(map, prefix + "IDFA", this.IDFA);
             this.SetParamSimple(map, prefix + "IDFV", this.IDFV);
-            this.SetParamSimple(map, prefix + "IMEI", this.IMEI);
+            this.SetParamSimple(map, prefix + "TokenId", this.TokenId);
             this.SetParamSimple(map, prefix + "IP", this.IP);
             this.SetParamSimple(map, prefix + "Mac", this.Mac);
-            this.SetParamSimple(map, prefix + "TokenId", this.TokenId);
+            this.SetParamSimple(map, prefix + "IDFA", this.IDFA);
+            this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "IMEI", this.IMEI);
         }
     }
 }

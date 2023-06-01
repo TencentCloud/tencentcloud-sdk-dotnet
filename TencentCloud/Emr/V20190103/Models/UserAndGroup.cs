@@ -15,26 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ManualReviewData : AbstractModel
+    public class UserAndGroup : AbstractModel
     {
         
         /// <summary>
-        /// 人审内容批次号
+        /// 用户名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("BatchId")]
-        public string BatchId{ get; set; }
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
 
         /// <summary>
-        /// 人审内容ID
+        /// 用户组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ContentId")]
-        public string ContentId{ get; set; }
+        [JsonProperty("UserGroup")]
+        public string UserGroup{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
-            this.SetParamSimple(map, prefix + "ContentId", this.ContentId);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "UserGroup", this.UserGroup);
         }
     }
 }

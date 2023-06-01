@@ -21,14 +21,29 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ManualReviewRequest : AbstractModel
+    public class InvalidSample : AbstractModel
     {
         
         /// <summary>
-        /// 人工审核信息
+        /// 关键词
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ReviewContent")]
-        public ManualReviewContent ReviewContent{ get; set; }
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
+
+        /// <summary>
+        /// 无效代码:1-标签不存在;2-词过长;3-词类型不匹配;4-备注超长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InvalidCode")]
+        public long? InvalidCode{ get; set; }
+
+        /// <summary>
+        /// 无效描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InvalidMessage")]
+        public string InvalidMessage{ get; set; }
 
 
         /// <summary>
@@ -36,7 +51,9 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ReviewContent.", this.ReviewContent);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "InvalidCode", this.InvalidCode);
+            this.SetParamSimple(map, prefix + "InvalidMessage", this.InvalidMessage);
         }
     }
 }

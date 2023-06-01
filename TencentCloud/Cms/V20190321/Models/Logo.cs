@@ -25,19 +25,22 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// logo图标坐标信息
-        /// </summary>
-        [JsonProperty("RrectF")]
-        public RrectF RrectF{ get; set; }
-
-        /// <summary>
         /// logo图标置信度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
+        /// logo图标坐标信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RrectF")]
+        public RrectF RrectF{ get; set; }
+
+        /// <summary>
         /// logo图标名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -48,8 +51,8 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "RrectF.", this.RrectF);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamObj(map, prefix + "RrectF.", this.RrectF);
             this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }

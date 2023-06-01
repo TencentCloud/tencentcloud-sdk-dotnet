@@ -31,16 +31,16 @@ namespace TencentCloud.Cms.V20190321.Models
         public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// 自定义库id
-        /// </summary>
-        [JsonProperty("LibId")]
-        public string LibId{ get; set; }
-
-        /// <summary>
         /// 自定义词库名称
         /// </summary>
         [JsonProperty("LibName")]
         public string LibName{ get; set; }
+
+        /// <summary>
+        /// 自定义库id
+        /// </summary>
+        [JsonProperty("LibId")]
+        public string LibId{ get; set; }
 
         /// <summary>
         /// 命中的自定义关键词的类型
@@ -55,8 +55,8 @@ namespace TencentCloud.Cms.V20190321.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-            this.SetParamSimple(map, prefix + "LibId", this.LibId);
             this.SetParamSimple(map, prefix + "LibName", this.LibName);
+            this.SetParamSimple(map, prefix + "LibId", this.LibId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }

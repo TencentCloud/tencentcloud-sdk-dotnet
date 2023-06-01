@@ -21,26 +21,38 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeFileSampleResponse : AbstractModel
+    public class DescribeLibSamplesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 符合要求的样本的信息
+        /// 单页条数，最大为100条
         /// </summary>
-        [JsonProperty("FileSampleSet")]
-        public FileSampleInfo[] FileSampleSet{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// 符合要求的样本的数量
+        /// 条数偏移量
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 词库ID
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("LibID")]
+        public string LibID{ get; set; }
+
+        /// <summary>
+        /// 词内容过滤
+        /// </summary>
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
+
+        /// <summary>
+        /// 违规类型列表过滤
+        /// </summary>
+        [JsonProperty("EvilTypeList")]
+        public long?[] EvilTypeList{ get; set; }
 
 
         /// <summary>
@@ -48,9 +60,11 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "FileSampleSet.", this.FileSampleSet);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "LibID", this.LibID);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamArraySimple(map, prefix + "EvilTypeList.", this.EvilTypeList);
         }
     }
 }

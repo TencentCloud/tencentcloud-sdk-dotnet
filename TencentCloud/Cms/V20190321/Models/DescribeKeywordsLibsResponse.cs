@@ -21,41 +21,26 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateFileSampleRequest : AbstractModel
+    public class DescribeKeywordsLibsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 文件类型结构数组
+        /// 词库记录数
         /// </summary>
-        [JsonProperty("Contents")]
-        public FileSample[] Contents{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 恶意类型
-        /// 100：正常
-        /// 20001：政治
-        /// 20002：色情 
-        /// 20006：涉毒违法
-        /// 20007：谩骂 
-        /// 24001：暴恐
-        /// 20105：广告引流
+        /// 词库详情
         /// </summary>
-        [JsonProperty("EvilType")]
-        public long? EvilType{ get; set; }
+        [JsonProperty("Infos")]
+        public KeywordsLibInfo[] Infos{ get; set; }
 
         /// <summary>
-        /// image：图片
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("FileType")]
-        public string FileType{ get; set; }
-
-        /// <summary>
-        /// 样本类型
-        /// 1：黑库
-        /// 2：白库
-        /// </summary>
-        [JsonProperty("Label")]
-        public ulong? Label{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -63,10 +48,9 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Contents.", this.Contents);
-            this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
-            this.SetParamSimple(map, prefix + "FileType", this.FileType);
-            this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Infos.", this.Infos);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

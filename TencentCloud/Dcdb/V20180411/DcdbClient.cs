@@ -2065,6 +2065,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 修改账号的一些配置，比如 max_user_connections
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountConfigRequest"/></param>
+        /// <returns><see cref="ModifyAccountConfigResponse"/></returns>
+        public async Task<ModifyAccountConfigResponse> ModifyAccountConfig(ModifyAccountConfigRequest req)
+        {
+             JsonResponseModel<ModifyAccountConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改账号的一些配置，比如 max_user_connections
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountConfigRequest"/></param>
+        /// <returns><see cref="ModifyAccountConfigResponse"/></returns>
+        public ModifyAccountConfigResponse ModifyAccountConfigSync(ModifyAccountConfigRequest req)
+        {
+             JsonResponseModel<ModifyAccountConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyAccountDescription）用于修改云数据库账号备注。
         /// 注意：相同用户名，不同Host是不同的账号。
         /// </summary>

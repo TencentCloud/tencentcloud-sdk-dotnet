@@ -31,16 +31,10 @@ namespace TencentCloud.Cms.V20190321.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 设备相关信息
+        /// 数据ID，英文字母、下划线、-组成，不超过64个字符
         /// </summary>
-        [JsonProperty("Device")]
-        public Device Device{ get; set; }
-
-        /// <summary>
-        /// 用户相关信息
-        /// </summary>
-        [JsonProperty("User")]
-        public User User{ get; set; }
+        [JsonProperty("DataId")]
+        public string DataId{ get; set; }
 
         /// <summary>
         /// 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
@@ -49,16 +43,22 @@ namespace TencentCloud.Cms.V20190321.Models
         public ulong? BizType{ get; set; }
 
         /// <summary>
-        /// 数据ID，英文字母、下划线、-组成，不超过64个字符
+        /// 用户相关信息
         /// </summary>
-        [JsonProperty("DataId")]
-        public string DataId{ get; set; }
+        [JsonProperty("User")]
+        public User User{ get; set; }
 
         /// <summary>
         /// 业务应用ID
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
+
+        /// <summary>
+        /// 设备相关信息
+        /// </summary>
+        [JsonProperty("Device")]
+        public Device Device{ get; set; }
 
 
         /// <summary>
@@ -67,11 +67,11 @@ namespace TencentCloud.Cms.V20190321.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Content", this.Content);
-            this.SetParamObj(map, prefix + "Device.", this.Device);
-            this.SetParamObj(map, prefix + "User.", this.User);
-            this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "DataId", this.DataId);
+            this.SetParamSimple(map, prefix + "BizType", this.BizType);
+            this.SetParamObj(map, prefix + "User.", this.User);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamObj(map, prefix + "Device.", this.Device);
         }
     }
 }

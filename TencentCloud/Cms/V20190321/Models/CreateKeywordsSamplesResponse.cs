@@ -21,16 +21,29 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateFileSampleResponse : AbstractModel
+    public class CreateKeywordsSamplesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 任务状态
-        /// 1：已完成
-        /// 2：处理中
+        /// 添加成功的关键词ID列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Progress")]
-        public ulong? Progress{ get; set; }
+        [JsonProperty("SampleIDs")]
+        public string[] SampleIDs{ get; set; }
+
+        /// <summary>
+        /// 重复关键词列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DupInfos")]
+        public UserKeywordInfo[] DupInfos{ get; set; }
+
+        /// <summary>
+        /// 无效关键词列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InvalidSamples")]
+        public InvalidSample[] InvalidSamples{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,7 +57,9 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamArraySimple(map, prefix + "SampleIDs.", this.SampleIDs);
+            this.SetParamArrayObj(map, prefix + "DupInfos.", this.DupInfos);
+            this.SetParamArrayObj(map, prefix + "InvalidSamples.", this.InvalidSamples);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

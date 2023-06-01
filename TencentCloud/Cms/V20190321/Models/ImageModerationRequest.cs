@@ -25,10 +25,10 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 文件内容 Base64,与FileUrl必须二填一
+        /// 文件地址
         /// </summary>
-        [JsonProperty("FileContent")]
-        public string FileContent{ get; set; }
+        [JsonProperty("FileUrl")]
+        public string FileUrl{ get; set; }
 
         /// <summary>
         /// 文件MD5值
@@ -37,10 +37,10 @@ namespace TencentCloud.Cms.V20190321.Models
         public string FileMD5{ get; set; }
 
         /// <summary>
-        /// 文件地址
+        /// 文件内容 Base64,与FileUrl必须二填一
         /// </summary>
-        [JsonProperty("FileUrl")]
-        public string FileUrl{ get; set; }
+        [JsonProperty("FileContent")]
+        public string FileContent{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileContent", this.FileContent);
-            this.SetParamSimple(map, prefix + "FileMD5", this.FileMD5);
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
+            this.SetParamSimple(map, prefix + "FileMD5", this.FileMD5);
+            this.SetParamSimple(map, prefix + "FileContent", this.FileContent);
         }
     }
 }

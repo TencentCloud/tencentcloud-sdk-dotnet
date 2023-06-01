@@ -53,19 +53,17 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
-        /// <br>
-        /// 通过该接口可以将图片新增到样本库。
+        /// 创建关键词接口
         /// </summary>
-        /// <param name="req"><see cref="CreateFileSampleRequest"/></param>
-        /// <returns><see cref="CreateFileSampleResponse"/></returns>
-        public async Task<CreateFileSampleResponse> CreateFileSample(CreateFileSampleRequest req)
+        /// <param name="req"><see cref="CreateKeywordsSamplesRequest"/></param>
+        /// <returns><see cref="CreateKeywordsSamplesResponse"/></returns>
+        public async Task<CreateKeywordsSamplesResponse> CreateKeywordsSamples(CreateKeywordsSamplesRequest req)
         {
-             JsonResponseModel<CreateFileSampleResponse> rsp = null;
+             JsonResponseModel<CreateKeywordsSamplesResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "CreateFileSample");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFileSampleResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateKeywordsSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKeywordsSamplesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -75,19 +73,17 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
-        /// <br>
-        /// 通过该接口可以将图片新增到样本库。
+        /// 创建关键词接口
         /// </summary>
-        /// <param name="req"><see cref="CreateFileSampleRequest"/></param>
-        /// <returns><see cref="CreateFileSampleResponse"/></returns>
-        public CreateFileSampleResponse CreateFileSampleSync(CreateFileSampleRequest req)
+        /// <param name="req"><see cref="CreateKeywordsSamplesRequest"/></param>
+        /// <returns><see cref="CreateKeywordsSamplesResponse"/></returns>
+        public CreateKeywordsSamplesResponse CreateKeywordsSamplesSync(CreateKeywordsSamplesRequest req)
         {
-             JsonResponseModel<CreateFileSampleResponse> rsp = null;
+             JsonResponseModel<CreateKeywordsSamplesResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "CreateFileSample");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFileSampleResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "CreateKeywordsSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKeywordsSamplesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -97,19 +93,17 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
-        /// <br>
-        /// 通过该接口可以将文本新增到样本库。
+        /// 删除关键词接口
         /// </summary>
-        /// <param name="req"><see cref="CreateTextSampleRequest"/></param>
-        /// <returns><see cref="CreateTextSampleResponse"/></returns>
-        public async Task<CreateTextSampleResponse> CreateTextSample(CreateTextSampleRequest req)
+        /// <param name="req"><see cref="DeleteLibSamplesRequest"/></param>
+        /// <returns><see cref="DeleteLibSamplesResponse"/></returns>
+        public async Task<DeleteLibSamplesResponse> DeleteLibSamples(DeleteLibSamplesRequest req)
         {
-             JsonResponseModel<CreateTextSampleResponse> rsp = null;
+             JsonResponseModel<DeleteLibSamplesResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "CreateTextSample");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTextSampleResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DeleteLibSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLibSamplesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -119,19 +113,17 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
-        /// <br>
-        /// 通过该接口可以将文本新增到样本库。
+        /// 删除关键词接口
         /// </summary>
-        /// <param name="req"><see cref="CreateTextSampleRequest"/></param>
-        /// <returns><see cref="CreateTextSampleResponse"/></returns>
-        public CreateTextSampleResponse CreateTextSampleSync(CreateTextSampleRequest req)
+        /// <param name="req"><see cref="DeleteLibSamplesRequest"/></param>
+        /// <returns><see cref="DeleteLibSamplesResponse"/></returns>
+        public DeleteLibSamplesResponse DeleteLibSamplesSync(DeleteLibSamplesRequest req)
         {
-             JsonResponseModel<CreateTextSampleResponse> rsp = null;
+             JsonResponseModel<DeleteLibSamplesResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "CreateTextSample");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTextSampleResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DeleteLibSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLibSamplesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -141,19 +133,17 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
-        /// <br>
-        /// 删除图片样本库，支持批量删除，一次提交不超过20个。
+        /// 获取用户词库列表
         /// </summary>
-        /// <param name="req"><see cref="DeleteFileSampleRequest"/></param>
-        /// <returns><see cref="DeleteFileSampleResponse"/></returns>
-        public async Task<DeleteFileSampleResponse> DeleteFileSample(DeleteFileSampleRequest req)
+        /// <param name="req"><see cref="DescribeKeywordsLibsRequest"/></param>
+        /// <returns><see cref="DescribeKeywordsLibsResponse"/></returns>
+        public async Task<DescribeKeywordsLibsResponse> DescribeKeywordsLibs(DescribeKeywordsLibsRequest req)
         {
-             JsonResponseModel<DeleteFileSampleResponse> rsp = null;
+             JsonResponseModel<DescribeKeywordsLibsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DeleteFileSample");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFileSampleResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeKeywordsLibs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeywordsLibsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -163,19 +153,17 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
-        /// <br>
-        /// 删除图片样本库，支持批量删除，一次提交不超过20个。
+        /// 获取用户词库列表
         /// </summary>
-        /// <param name="req"><see cref="DeleteFileSampleRequest"/></param>
-        /// <returns><see cref="DeleteFileSampleResponse"/></returns>
-        public DeleteFileSampleResponse DeleteFileSampleSync(DeleteFileSampleRequest req)
+        /// <param name="req"><see cref="DescribeKeywordsLibsRequest"/></param>
+        /// <returns><see cref="DescribeKeywordsLibsResponse"/></returns>
+        public DescribeKeywordsLibsResponse DescribeKeywordsLibsSync(DescribeKeywordsLibsRequest req)
         {
-             JsonResponseModel<DeleteFileSampleResponse> rsp = null;
+             JsonResponseModel<DescribeKeywordsLibsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DeleteFileSample");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFileSampleResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeKeywordsLibs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeywordsLibsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -185,19 +173,17 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
-        /// <br>
-        /// 删除文本样本库，暂时只支持单个删除。
+        /// 获取关键词接口
         /// </summary>
-        /// <param name="req"><see cref="DeleteTextSampleRequest"/></param>
-        /// <returns><see cref="DeleteTextSampleResponse"/></returns>
-        public async Task<DeleteTextSampleResponse> DeleteTextSample(DeleteTextSampleRequest req)
+        /// <param name="req"><see cref="DescribeLibSamplesRequest"/></param>
+        /// <returns><see cref="DescribeLibSamplesResponse"/></returns>
+        public async Task<DescribeLibSamplesResponse> DescribeLibSamples(DescribeLibSamplesRequest req)
         {
-             JsonResponseModel<DeleteTextSampleResponse> rsp = null;
+             JsonResponseModel<DescribeLibSamplesResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DeleteTextSample");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTextSampleResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeLibSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLibSamplesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -207,107 +193,17 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
-        /// <br>
-        /// 删除文本样本库，暂时只支持单个删除。
+        /// 获取关键词接口
         /// </summary>
-        /// <param name="req"><see cref="DeleteTextSampleRequest"/></param>
-        /// <returns><see cref="DeleteTextSampleResponse"/></returns>
-        public DeleteTextSampleResponse DeleteTextSampleSync(DeleteTextSampleRequest req)
+        /// <param name="req"><see cref="DescribeLibSamplesRequest"/></param>
+        /// <returns><see cref="DescribeLibSamplesResponse"/></returns>
+        public DescribeLibSamplesResponse DescribeLibSamplesSync(DescribeLibSamplesRequest req)
         {
-             JsonResponseModel<DeleteTextSampleResponse> rsp = null;
+             JsonResponseModel<DescribeLibSamplesResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DeleteTextSample");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTextSampleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
-        /// <br>
-        /// 查询图片样本库，支持批量查询。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFileSampleRequest"/></param>
-        /// <returns><see cref="DescribeFileSampleResponse"/></returns>
-        public async Task<DescribeFileSampleResponse> DescribeFileSample(DescribeFileSampleRequest req)
-        {
-             JsonResponseModel<DescribeFileSampleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFileSample");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileSampleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
-        /// <br>
-        /// 查询图片样本库，支持批量查询。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFileSampleRequest"/></param>
-        /// <returns><see cref="DescribeFileSampleResponse"/></returns>
-        public DescribeFileSampleResponse DescribeFileSampleSync(DescribeFileSampleRequest req)
-        {
-             JsonResponseModel<DescribeFileSampleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFileSample");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileSampleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
-        /// <br>
-        /// 支持批量查询文本样本库。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTextSampleRequest"/></param>
-        /// <returns><see cref="DescribeTextSampleResponse"/></returns>
-        public async Task<DescribeTextSampleResponse> DescribeTextSample(DescribeTextSampleRequest req)
-        {
-             JsonResponseModel<DescribeTextSampleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTextSample");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTextSampleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
-        /// <br>
-        /// 支持批量查询文本样本库。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTextSampleRequest"/></param>
-        /// <returns><see cref="DescribeTextSampleResponse"/></returns>
-        public DescribeTextSampleResponse DescribeTextSampleSync(DescribeTextSampleRequest req)
-        {
-             JsonResponseModel<DescribeTextSampleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTextSample");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTextSampleResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeLibSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLibSamplesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -348,46 +244,6 @@ namespace TencentCloud.Cms.V20190321
              {
                  var strResp = this.InternalRequestSync(req, "ImageModeration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageModerationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 人工审核对外接口
-        /// </summary>
-        /// <param name="req"><see cref="ManualReviewRequest"/></param>
-        /// <returns><see cref="ManualReviewResponse"/></returns>
-        public async Task<ManualReviewResponse> ManualReview(ManualReviewRequest req)
-        {
-             JsonResponseModel<ManualReviewResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ManualReview");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManualReviewResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 人工审核对外接口
-        /// </summary>
-        /// <param name="req"><see cref="ManualReviewRequest"/></param>
-        /// <returns><see cref="ManualReviewResponse"/></returns>
-        public ManualReviewResponse ManualReviewSync(ManualReviewRequest req)
-        {
-             JsonResponseModel<ManualReviewResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ManualReview");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManualReviewResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

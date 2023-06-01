@@ -26,12 +26,14 @@ namespace TencentCloud.Cms.V20190321.Models
         
         /// <summary>
         /// 二维码边界点X轴坐标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FloatX")]
         public float? FloatX{ get; set; }
 
         /// <summary>
         /// 二维码边界点Y轴坐标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FloatY")]
         public float? FloatY{ get; set; }

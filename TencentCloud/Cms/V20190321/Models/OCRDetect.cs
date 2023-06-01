@@ -26,12 +26,14 @@ namespace TencentCloud.Cms.V20190321.Models
         
         /// <summary>
         /// 识别到的详细信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Item")]
         public OCRItem[] Item{ get; set; }
 
         /// <summary>
         /// 识别到的文本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TextInfo")]
         public string TextInfo{ get; set; }

@@ -21,14 +21,26 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteTextSampleRequest : AbstractModel
+    public class DescribeLibSamplesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 唯一标识数组，目前暂时只支持单个删除
+        /// 词记录数
         /// </summary>
-        [JsonProperty("Ids")]
-        public string[] Ids{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 词详情
+        /// </summary>
+        [JsonProperty("Infos")]
+        public UserKeywordInfo[] Infos{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Infos.", this.Infos);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

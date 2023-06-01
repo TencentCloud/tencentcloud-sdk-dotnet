@@ -21,61 +21,46 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextSample : AbstractModel
+    public class UserKeywordInfo : AbstractModel
     {
         
         /// <summary>
-        /// 处理错误码
+        /// 关键词条ID
         /// </summary>
-        [JsonProperty("Code")]
-        public long? Code{ get; set; }
+        [JsonProperty("ID")]
+        public string ID{ get; set; }
 
         /// <summary>
-        /// 关键词
+        /// 关键词内容
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 创建时间戳
-        /// </summary>
-        [JsonProperty("CreatedAt")]
-        public ulong? CreatedAt{ get; set; }
-
-        /// <summary>
-        /// 恶意类型
-        /// 100：正常
-        /// 20001：政治
-        /// 20002：色情 
-        /// 20006：涉毒违法
-        /// 20007：谩骂 
-        /// 20105：广告引流 
-        /// 24001：暴恐
-        /// </summary>
-        [JsonProperty("EvilType")]
-        public ulong? EvilType{ get; set; }
-
-        /// <summary>
-        /// 唯一标识
-        /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
-
-        /// <summary>
-        /// 样本类型
-        /// 1：黑库
-        /// 2：白库
+        /// 关键词标签；取值范围为："Normal","Polity","Porn","Sexy","Ad","Illegal","Abuse","Terror","Spam","Moan"
         /// </summary>
         [JsonProperty("Label")]
-        public ulong? Label{ get; set; }
+        public string Label{ get; set; }
 
         /// <summary>
-        /// 任务状态
-        /// 1：已完成
-        /// 2：处理中
+        /// 创建时间
         /// </summary>
-        [JsonProperty("Status")]
-        public ulong? Status{ get; set; }
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 词类型：Default,Pinyin,English,CompoundWord,ExclusionWord,AffixWord
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WordType")]
+        public string WordType{ get; set; }
 
 
         /// <summary>
@@ -83,13 +68,12 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "Content", this.Content);
-            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
-            this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
-            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Label", this.Label);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "WordType", this.WordType);
         }
     }
 }

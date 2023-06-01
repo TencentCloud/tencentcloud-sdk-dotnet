@@ -3173,6 +3173,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 菲律宾UMID识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizePhilippinesUMIDOCRRequest"/></param>
+        /// <returns><see cref="RecognizePhilippinesUMIDOCRResponse"/></returns>
+        public async Task<RecognizePhilippinesUMIDOCRResponse> RecognizePhilippinesUMIDOCR(RecognizePhilippinesUMIDOCRRequest req)
+        {
+             JsonResponseModel<RecognizePhilippinesUMIDOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizePhilippinesUMIDOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesUMIDOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 菲律宾UMID识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizePhilippinesUMIDOCRRequest"/></param>
+        /// <returns><see cref="RecognizePhilippinesUMIDOCRResponse"/></returns>
+        public RecognizePhilippinesUMIDOCRResponse RecognizePhilippinesUMIDOCRSync(RecognizePhilippinesUMIDOCRRequest req)
+        {
+             JsonResponseModel<RecognizePhilippinesUMIDOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizePhilippinesUMIDOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesUMIDOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持菲律宾VoteID识别，识别字段包括姓名、姓氏、出生日期、婚姻状况、国籍、地址、地区、菲律宾VoteID的VIN等。
         /// 
         /// 默认接口请求频率限制：20次/秒。
@@ -3307,6 +3347,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <summary>
         /// 本接口支持泰国身份证识别，识别字段包括泰文姓名、英文姓名、地址、出生日期、身份证号码、首次领用日期、签发日期等字段。
         /// 本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
+        /// 
+        /// 默认接口请求频率限制：10次/秒
         /// </summary>
         /// <param name="req"><see cref="RecognizeThaiIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeThaiIDCardOCRResponse"/></returns>
@@ -3328,6 +3370,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <summary>
         /// 本接口支持泰国身份证识别，识别字段包括泰文姓名、英文姓名、地址、出生日期、身份证号码、首次领用日期、签发日期等字段。
         /// 本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
+        /// 
+        /// 默认接口请求频率限制：10次/秒
         /// </summary>
         /// <param name="req"><see cref="RecognizeThaiIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeThaiIDCardOCRResponse"/></returns>

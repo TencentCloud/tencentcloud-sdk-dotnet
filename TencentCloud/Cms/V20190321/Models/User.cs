@@ -25,16 +25,10 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 账号类别，"1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-其它string"
+        /// 用户等级，默认0 未知 1 低 2 中 3 高
         /// </summary>
-        [JsonProperty("AccountType")]
-        public long? AccountType{ get; set; }
-
-        /// <summary>
-        /// 年龄 默认0 未知
-        /// </summary>
-        [JsonProperty("Age")]
-        public long? Age{ get; set; }
+        [JsonProperty("Level")]
+        public long? Level{ get; set; }
 
         /// <summary>
         /// 性别 默认0 未知 1 男性 2 女性
@@ -43,16 +37,16 @@ namespace TencentCloud.Cms.V20190321.Models
         public long? Gender{ get; set; }
 
         /// <summary>
-        /// 用户等级，默认0 未知 1 低 2 中 3 高
+        /// 年龄 默认0 未知
         /// </summary>
-        [JsonProperty("Level")]
-        public long? Level{ get; set; }
+        [JsonProperty("Age")]
+        public long? Age{ get; set; }
 
         /// <summary>
-        /// 用户昵称
+        /// 用户账号ID，如填写，会根据账号历史恶意情况，判定消息有害结果，特别是有利于可疑恶意情况下的辅助判断。账号可以填写微信uin、QQ号、微信openid、QQopenid、字符串等。该字段和账号类别确定唯一账号。
         /// </summary>
-        [JsonProperty("Nickname")]
-        public string Nickname{ get; set; }
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
         /// <summary>
         /// 手机号
@@ -61,10 +55,16 @@ namespace TencentCloud.Cms.V20190321.Models
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 用户账号ID，如填写，会根据账号历史恶意情况，判定消息有害结果，特别是有利于可疑恶意情况下的辅助判断。账号可以填写微信uin、QQ号、微信openid、QQopenid、字符串等。该字段和账号类别确定唯一账号。
+        /// 账号类别，"1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-其它string"
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
+        [JsonProperty("AccountType")]
+        public long? AccountType{ get; set; }
+
+        /// <summary>
+        /// 用户昵称
+        /// </summary>
+        [JsonProperty("Nickname")]
+        public string Nickname{ get; set; }
 
 
         /// <summary>
@@ -72,13 +72,13 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
-            this.SetParamSimple(map, prefix + "Age", this.Age);
-            this.SetParamSimple(map, prefix + "Gender", this.Gender);
             this.SetParamSimple(map, prefix + "Level", this.Level);
-            this.SetParamSimple(map, prefix + "Nickname", this.Nickname);
-            this.SetParamSimple(map, prefix + "Phone", this.Phone);
+            this.SetParamSimple(map, prefix + "Gender", this.Gender);
+            this.SetParamSimple(map, prefix + "Age", this.Age);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "Phone", this.Phone);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
+            this.SetParamSimple(map, prefix + "Nickname", this.Nickname);
         }
     }
 }

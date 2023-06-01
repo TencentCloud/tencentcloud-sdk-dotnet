@@ -25,34 +25,39 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// logo横坐标
+        /// logo图标宽度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Cx")]
-        public float? Cx{ get; set; }
+        [JsonProperty("Width")]
+        public float? Width{ get; set; }
 
         /// <summary>
         /// logo纵坐标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cy")]
         public float? Cy{ get; set; }
 
         /// <summary>
-        /// logo图标高度
+        /// logo横坐标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Height")]
-        public float? Height{ get; set; }
+        [JsonProperty("Cx")]
+        public float? Cx{ get; set; }
 
         /// <summary>
         /// logo图标中心旋转度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rotate")]
         public float? Rotate{ get; set; }
 
         /// <summary>
-        /// logo图标宽度
+        /// logo图标高度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Width")]
-        public float? Width{ get; set; }
+        [JsonProperty("Height")]
+        public float? Height{ get; set; }
 
 
         /// <summary>
@@ -60,11 +65,11 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Cx", this.Cx);
-            this.SetParamSimple(map, prefix + "Cy", this.Cy);
-            this.SetParamSimple(map, prefix + "Height", this.Height);
-            this.SetParamSimple(map, prefix + "Rotate", this.Rotate);
             this.SetParamSimple(map, prefix + "Width", this.Width);
+            this.SetParamSimple(map, prefix + "Cy", this.Cy);
+            this.SetParamSimple(map, prefix + "Cx", this.Cx);
+            this.SetParamSimple(map, prefix + "Rotate", this.Rotate);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
         }
     }
 }

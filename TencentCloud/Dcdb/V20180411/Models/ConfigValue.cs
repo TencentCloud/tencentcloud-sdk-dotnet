@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FileSample : AbstractModel
+    public class ConfigValue : AbstractModel
     {
         
         /// <summary>
-        /// 文件md5
+        /// 配置项的名称，支持填写max_user_connections
         /// </summary>
-        [JsonProperty("FileMd5")]
-        public string FileMd5{ get; set; }
+        [JsonProperty("Config")]
+        public string Config{ get; set; }
 
         /// <summary>
-        /// 文件名称
+        /// 配置值
         /// </summary>
-        [JsonProperty("FileName")]
-        public string FileName{ get; set; }
-
-        /// <summary>
-        /// 文件url
-        /// </summary>
-        [JsonProperty("FileUrl")]
-        public string FileUrl{ get; set; }
-
-        /// <summary>
-        /// 文件压缩后云url
-        /// </summary>
-        [JsonProperty("CompressFileUrl")]
-        public string CompressFileUrl{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileMd5", this.FileMd5);
-            this.SetParamSimple(map, prefix + "FileName", this.FileName);
-            this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
-            this.SetParamSimple(map, prefix + "CompressFileUrl", this.CompressFileUrl);
+            this.SetParamSimple(map, prefix + "Config", this.Config);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

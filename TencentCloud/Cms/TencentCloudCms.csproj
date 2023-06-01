@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C035A0D8-1DB9-39E4-8D4A-14234D5DF2D0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.770</VersionPrefix>
+    <VersionPrefix>3.0.771</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,24 +52,19 @@
     <Compile Include="V20190321\Models\CodeDetect.cs" />
     <Compile Include="V20190321\Models\CodePosition.cs" />
     <Compile Include="V20190321\Models\Coordinate.cs" />
-    <Compile Include="V20190321\Models\CreateFileSampleRequest.cs" />
-    <Compile Include="V20190321\Models\CreateFileSampleResponse.cs" />
-    <Compile Include="V20190321\Models\CreateTextSampleRequest.cs" />
-    <Compile Include="V20190321\Models\CreateTextSampleResponse.cs" />
+    <Compile Include="V20190321\Models\CreateKeywordsSamplesRequest.cs" />
+    <Compile Include="V20190321\Models\CreateKeywordsSamplesResponse.cs" />
     <Compile Include="V20190321\Models\CustomResult.cs" />
-    <Compile Include="V20190321\Models\DeleteFileSampleRequest.cs" />
-    <Compile Include="V20190321\Models\DeleteFileSampleResponse.cs" />
-    <Compile Include="V20190321\Models\DeleteTextSampleRequest.cs" />
-    <Compile Include="V20190321\Models\DeleteTextSampleResponse.cs" />
-    <Compile Include="V20190321\Models\DescribeFileSampleRequest.cs" />
-    <Compile Include="V20190321\Models\DescribeFileSampleResponse.cs" />
-    <Compile Include="V20190321\Models\DescribeTextSampleRequest.cs" />
-    <Compile Include="V20190321\Models\DescribeTextSampleResponse.cs" />
+    <Compile Include="V20190321\Models\DeleteLibSamplesRequest.cs" />
+    <Compile Include="V20190321\Models\DeleteLibSamplesResponse.cs" />
+    <Compile Include="V20190321\Models\DeleteSampleDetails.cs" />
+    <Compile Include="V20190321\Models\DescribeKeywordsLibsRequest.cs" />
+    <Compile Include="V20190321\Models\DescribeKeywordsLibsResponse.cs" />
+    <Compile Include="V20190321\Models\DescribeLibSamplesRequest.cs" />
+    <Compile Include="V20190321\Models\DescribeLibSamplesResponse.cs" />
     <Compile Include="V20190321\Models\DetailResult.cs" />
     <Compile Include="V20190321\Models\Device.cs" />
-    <Compile Include="V20190321\Models\FileSample.cs" />
-    <Compile Include="V20190321\Models\FileSampleInfo.cs" />
-    <Compile Include="V20190321\Models\Filter.cs" />
+    <Compile Include="V20190321\Models\Filters.cs" />
     <Compile Include="V20190321\Models\ImageData.cs" />
     <Compile Include="V20190321\Models\ImageHotDetect.cs" />
     <Compile Include="V20190321\Models\ImageIllegalDetect.cs" />
@@ -78,12 +73,10 @@
     <Compile Include="V20190321\Models\ImagePolityDetect.cs" />
     <Compile Include="V20190321\Models\ImagePornDetect.cs" />
     <Compile Include="V20190321\Models\ImageTerrorDetect.cs" />
+    <Compile Include="V20190321\Models\InvalidSample.cs" />
+    <Compile Include="V20190321\Models\KeywordsLibInfo.cs" />
     <Compile Include="V20190321\Models\Logo.cs" />
     <Compile Include="V20190321\Models\LogoDetail.cs" />
-    <Compile Include="V20190321\Models\ManualReviewContent.cs" />
-    <Compile Include="V20190321\Models\ManualReviewData.cs" />
-    <Compile Include="V20190321\Models\ManualReviewRequest.cs" />
-    <Compile Include="V20190321\Models\ManualReviewResponse.cs" />
     <Compile Include="V20190321\Models\OCRDetect.cs" />
     <Compile Include="V20190321\Models\OCRItem.cs" />
     <Compile Include="V20190321\Models\PhoneDetect.cs" />
@@ -96,7 +89,8 @@
     <Compile Include="V20190321\Models\TextOutputComm.cs" />
     <Compile Include="V20190321\Models\TextOutputID.cs" />
     <Compile Include="V20190321\Models\TextOutputRes.cs" />
-    <Compile Include="V20190321\Models\TextSample.cs" />
     <Compile Include="V20190321\Models\User.cs" />
+    <Compile Include="V20190321\Models\UserKeyword.cs" />
+    <Compile Include="V20190321\Models\UserKeywordInfo.cs" />
   </ItemGroup>
 </Project>

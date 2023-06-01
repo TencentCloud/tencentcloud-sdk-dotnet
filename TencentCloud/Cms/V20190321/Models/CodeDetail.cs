@@ -25,25 +25,57 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 二维码在图片中的位置，由边界点的坐标表示
+        /// 二维码文本的编码格式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("CodePosition")]
-        public CodePosition[] CodePosition{ get; set; }
+        [JsonProperty("StrCharset")]
+        public string StrCharset{ get; set; }
 
         /// <summary>
-        /// 二维码文本的编码格式
+        /// 二维码在图片中的位置，由边界点的坐标表示
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QrCodePosition")]
+        public CodePosition[] QrCodePosition{ get; set; }
+
+        /// <summary>
+        /// 二维码的文本内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StrQrCodeText")]
+        public string StrQrCodeText{ get; set; }
+
+        /// <summary>
+        /// 二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Uint32QrCodeType")]
+        public long? Uint32QrCodeType{ get; set; }
+
+        /// <summary>
+        /// 二维码文本的编码格式（已废弃）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeCharset")]
         public string CodeCharset{ get; set; }
 
         /// <summary>
-        /// 二维码的文本内容
+        /// 二维码在图片中的位置，由边界点的坐标表示（已废弃）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CodePosition")]
+        public CodePosition[] CodePosition{ get; set; }
+
+        /// <summary>
+        /// 二维码的文本内容（已废弃）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeText")]
         public string CodeText{ get; set; }
 
         /// <summary>
-        /// 二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
+        /// 二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX（已废弃）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeType")]
         public long? CodeType{ get; set; }
@@ -54,8 +86,12 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "CodePosition.", this.CodePosition);
+            this.SetParamSimple(map, prefix + "StrCharset", this.StrCharset);
+            this.SetParamArrayObj(map, prefix + "QrCodePosition.", this.QrCodePosition);
+            this.SetParamSimple(map, prefix + "StrQrCodeText", this.StrQrCodeText);
+            this.SetParamSimple(map, prefix + "Uint32QrCodeType", this.Uint32QrCodeType);
             this.SetParamSimple(map, prefix + "CodeCharset", this.CodeCharset);
+            this.SetParamArrayObj(map, prefix + "CodePosition.", this.CodePosition);
             this.SetParamSimple(map, prefix + "CodeText", this.CodeText);
             this.SetParamSimple(map, prefix + "CodeType", this.CodeType);
         }

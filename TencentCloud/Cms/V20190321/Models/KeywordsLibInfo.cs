@@ -21,45 +21,53 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageTerrorDetect : AbstractModel
+    public class KeywordsLibInfo : AbstractModel
     {
         
         /// <summary>
-        /// 关键词明细
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 关键词库ID
         /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
+        [JsonProperty("ID")]
+        public string ID{ get; set; }
 
         /// <summary>
-        /// 恶意类型
-        /// 100：正常
-        /// 24001：暴恐
+        /// 关键词库名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EvilType")]
-        public long? EvilType{ get; set; }
+        [JsonProperty("LibName")]
+        public string LibName{ get; set; }
 
         /// <summary>
-        /// 暴恐标签：返回暴恐特征中文描述
+        /// 关键词库描述信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Labels")]
-        public string[] Labels{ get; set; }
+        [JsonProperty("Describe")]
+        public string Describe{ get; set; }
 
         /// <summary>
-        /// 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 关键词库创建时间
         /// </summary>
-        [JsonProperty("Score")]
-        public long? Score{ get; set; }
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 处置判定 0：正常 1：可疑
+        /// 审核建议(Review/Block)
+        /// </summary>
+        [JsonProperty("Suggestion")]
+        public string Suggestion{ get; set; }
+
+        /// <summary>
+        /// 匹配模式(ExactMatch/FuzzyMatch)
+        /// </summary>
+        [JsonProperty("MatchType")]
+        public string MatchType{ get; set; }
+
+        /// <summary>
+        /// 关联策略BizType列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("HitFlag")]
-        public long? HitFlag{ get; set; }
+        [JsonProperty("BizTypes")]
+        public string[] BizTypes{ get; set; }
 
 
         /// <summary>
@@ -67,11 +75,13 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-            this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
-            this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
-            this.SetParamSimple(map, prefix + "Score", this.Score);
-            this.SetParamSimple(map, prefix + "HitFlag", this.HitFlag);
+            this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "LibName", this.LibName);
+            this.SetParamSimple(map, prefix + "Describe", this.Describe);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
+            this.SetParamSimple(map, prefix + "MatchType", this.MatchType);
+            this.SetParamArraySimple(map, prefix + "BizTypes.", this.BizTypes);
         }
     }
 }

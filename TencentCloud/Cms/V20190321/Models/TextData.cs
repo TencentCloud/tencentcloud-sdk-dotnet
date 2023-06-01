@@ -25,12 +25,6 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 是否恶意 0：正常 1：可疑
-        /// </summary>
-        [JsonProperty("EvilFlag")]
-        public long? EvilFlag{ get; set; }
-
-        /// <summary>
         /// 恶意类型
         /// 100：正常
         /// 20001：政治
@@ -44,28 +38,28 @@ namespace TencentCloud.Cms.V20190321.Models
         public long? EvilType{ get; set; }
 
         /// <summary>
-        /// 消息类公共相关参数
+        /// 是否恶意 0：正常 1：可疑
         /// </summary>
-        [JsonProperty("Common")]
-        public TextOutputComm Common{ get; set; }
+        [JsonProperty("EvilFlag")]
+        public long? EvilFlag{ get; set; }
 
         /// <summary>
-        /// 返回的自定义词库结果
+        /// 和请求中的DataId一致，原样返回
         /// </summary>
-        [JsonProperty("CustomResult")]
-        public CustomResult[] CustomResult{ get; set; }
+        [JsonProperty("DataId")]
+        public string DataId{ get; set; }
 
         /// <summary>
-        /// 返回的详细结果
+        /// 输出的其他信息，不同客户内容不同
         /// </summary>
-        [JsonProperty("DetailResult")]
-        public DetailResult[] DetailResult{ get; set; }
+        [JsonProperty("Extra")]
+        public string Extra{ get; set; }
 
         /// <summary>
-        /// 消息类ID信息
+        /// 最终使用的BizType
         /// </summary>
-        [JsonProperty("ID")]
-        public TextOutputID ID{ get; set; }
+        [JsonProperty("BizType")]
+        public ulong? BizType{ get; set; }
 
         /// <summary>
         /// 消息类输出结果
@@ -80,34 +74,10 @@ namespace TencentCloud.Cms.V20190321.Models
         public RiskDetails[] RiskDetails{ get; set; }
 
         /// <summary>
-        /// 最终使用的BizType
+        /// 消息类ID信息
         /// </summary>
-        [JsonProperty("BizType")]
-        public ulong? BizType{ get; set; }
-
-        /// <summary>
-        /// 和请求中的DataId一致，原样返回
-        /// </summary>
-        [JsonProperty("DataId")]
-        public string DataId{ get; set; }
-
-        /// <summary>
-        /// 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
-        /// </summary>
-        [JsonProperty("EvilLabel")]
-        public string EvilLabel{ get; set; }
-
-        /// <summary>
-        /// 输出的其他信息，不同客户内容不同
-        /// </summary>
-        [JsonProperty("Extra")]
-        public string Extra{ get; set; }
-
-        /// <summary>
-        /// 命中的关键词
-        /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
+        [JsonProperty("ID")]
+        public TextOutputID ID{ get; set; }
 
         /// <summary>
         /// 命中的模型分值
@@ -116,10 +86,40 @@ namespace TencentCloud.Cms.V20190321.Models
         public ulong? Score{ get; set; }
 
         /// <summary>
+        /// 消息类公共相关参数
+        /// </summary>
+        [JsonProperty("Common")]
+        public TextOutputComm Common{ get; set; }
+
+        /// <summary>
         /// 建议值,Block：打击,Review：待复审,Normal：正常
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
+
+        /// <summary>
+        /// 命中的关键词
+        /// </summary>
+        [JsonProperty("Keywords")]
+        public string[] Keywords{ get; set; }
+
+        /// <summary>
+        /// 返回的详细结果
+        /// </summary>
+        [JsonProperty("DetailResult")]
+        public DetailResult[] DetailResult{ get; set; }
+
+        /// <summary>
+        /// 返回的自定义词库结果
+        /// </summary>
+        [JsonProperty("CustomResult")]
+        public CustomResult[] CustomResult{ get; set; }
+
+        /// <summary>
+        /// 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+        /// </summary>
+        [JsonProperty("EvilLabel")]
+        public string EvilLabel{ get; set; }
 
 
         /// <summary>
@@ -127,21 +127,21 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
             this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
-            this.SetParamObj(map, prefix + "Common.", this.Common);
-            this.SetParamArrayObj(map, prefix + "CustomResult.", this.CustomResult);
-            this.SetParamArrayObj(map, prefix + "DetailResult.", this.DetailResult);
-            this.SetParamObj(map, prefix + "ID.", this.ID);
+            this.SetParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
+            this.SetParamSimple(map, prefix + "DataId", this.DataId);
+            this.SetParamSimple(map, prefix + "Extra", this.Extra);
+            this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamObj(map, prefix + "Res.", this.Res);
             this.SetParamArrayObj(map, prefix + "RiskDetails.", this.RiskDetails);
-            this.SetParamSimple(map, prefix + "BizType", this.BizType);
-            this.SetParamSimple(map, prefix + "DataId", this.DataId);
-            this.SetParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
-            this.SetParamSimple(map, prefix + "Extra", this.Extra);
-            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+            this.SetParamObj(map, prefix + "ID.", this.ID);
             this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamObj(map, prefix + "Common.", this.Common);
             this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
+            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+            this.SetParamArrayObj(map, prefix + "DetailResult.", this.DetailResult);
+            this.SetParamArrayObj(map, prefix + "CustomResult.", this.CustomResult);
+            this.SetParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
         }
     }
 }

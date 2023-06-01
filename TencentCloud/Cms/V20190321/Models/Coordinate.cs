@@ -25,28 +25,32 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 左上角横坐标
+        /// 宽度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Cx")]
-        public long? Cx{ get; set; }
+        [JsonProperty("Width")]
+        public long? Width{ get; set; }
 
         /// <summary>
         /// 左上角纵坐标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cy")]
         public long? Cy{ get; set; }
 
         /// <summary>
+        /// 左上角横坐标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Cx")]
+        public long? Cx{ get; set; }
+
+        /// <summary>
         /// 高度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
-
-        /// <summary>
-        /// 宽度
-        /// </summary>
-        [JsonProperty("Width")]
-        public long? Width{ get; set; }
 
 
         /// <summary>
@@ -54,10 +58,10 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Cx", this.Cx);
-            this.SetParamSimple(map, prefix + "Cy", this.Cy);
-            this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "Width", this.Width);
+            this.SetParamSimple(map, prefix + "Cy", this.Cy);
+            this.SetParamSimple(map, prefix + "Cx", this.Cx);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
         }
     }
 }

@@ -31,6 +31,12 @@ namespace TencentCloud.Cms.V20190321.Models
         public string Operator{ get; set; }
 
         /// <summary>
+        /// 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
+        /// </summary>
+        [JsonProperty("ResultType")]
+        public long? ResultType{ get; set; }
+
+        /// <summary>
         /// 恶意操作码，
         /// 删除（1）， 通过（2）， 先审后发（100012）
         /// </summary>
@@ -43,12 +49,6 @@ namespace TencentCloud.Cms.V20190321.Models
         [JsonProperty("ResultMsg")]
         public string ResultMsg{ get; set; }
 
-        /// <summary>
-        /// 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
-        /// </summary>
-        [JsonProperty("ResultType")]
-        public long? ResultType{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -56,9 +56,9 @@ namespace TencentCloud.Cms.V20190321.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "ResultType", this.ResultType);
             this.SetParamSimple(map, prefix + "ResultCode", this.ResultCode);
             this.SetParamSimple(map, prefix + "ResultMsg", this.ResultMsg);
-            this.SetParamSimple(map, prefix + "ResultType", this.ResultType);
         }
     }
 }

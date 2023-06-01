@@ -21,14 +21,20 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteFileSampleRequest : AbstractModel
+    public class CreateKeywordsSamplesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 唯一标识数组
+        /// 关键词库信息：单次限制写入2000个，词库总容量不可超过10000个。
         /// </summary>
-        [JsonProperty("Ids")]
-        public string[] Ids{ get; set; }
+        [JsonProperty("UserKeywords")]
+        public UserKeyword[] UserKeywords{ get; set; }
+
+        /// <summary>
+        /// 词库ID
+        /// </summary>
+        [JsonProperty("LibID")]
+        public string LibID{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
+            this.SetParamArrayObj(map, prefix + "UserKeywords.", this.UserKeywords);
+            this.SetParamSimple(map, prefix + "LibID", this.LibID);
         }
     }
 }

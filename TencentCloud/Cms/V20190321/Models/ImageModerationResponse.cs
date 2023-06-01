@@ -25,16 +25,16 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 识别结果
-        /// </summary>
-        [JsonProperty("Data")]
-        public ImageData Data{ get; set; }
-
-        /// <summary>
         /// 业务返回码
         /// </summary>
         [JsonProperty("BusinessCode")]
         public long? BusinessCode{ get; set; }
+
+        /// <summary>
+        /// 识别结果
+        /// </summary>
+        [JsonProperty("Data")]
+        public ImageData Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +48,8 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

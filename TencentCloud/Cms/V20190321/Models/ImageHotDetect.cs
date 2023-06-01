@@ -25,24 +25,18 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
+        /// 关键词明细
+        /// </summary>
+        [JsonProperty("Keywords")]
+        public string[] Keywords{ get; set; }
+
+        /// <summary>
         /// 恶意类型
         /// 100：正常
         /// 20103：性感
         /// </summary>
         [JsonProperty("EvilType")]
         public long? EvilType{ get; set; }
-
-        /// <summary>
-        /// 处置判定 0：正常 1：可疑
-        /// </summary>
-        [JsonProperty("HitFlag")]
-        public long? HitFlag{ get; set; }
-
-        /// <summary>
-        /// 关键词明细
-        /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
 
         /// <summary>
         /// 性感标签：性感特征中文描述
@@ -56,17 +50,23 @@ namespace TencentCloud.Cms.V20190321.Models
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
+        /// <summary>
+        /// 处置判定 0：正常 1：可疑
+        /// </summary>
+        [JsonProperty("HitFlag")]
+        public long? HitFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
-            this.SetParamSimple(map, prefix + "HitFlag", this.HitFlag);
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+            this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
             this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
             this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "HitFlag", this.HitFlag);
         }
     }
 }

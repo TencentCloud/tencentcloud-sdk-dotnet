@@ -25,16 +25,18 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 从图片中检测到的二维码，可能为多个
-        /// </summary>
-        [JsonProperty("ModerationDetail")]
-        public CodeDetail[] ModerationDetail{ get; set; }
-
-        /// <summary>
         /// 检测是否成功，0：成功，-1：出错
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModerationCode")]
         public long? ModerationCode{ get; set; }
+
+        /// <summary>
+        /// 从图片中检测到的二维码，可能为多个
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModerationDetail")]
+        public CodeDetail[] ModerationDetail{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ModerationDetail.", this.ModerationDetail);
             this.SetParamSimple(map, prefix + "ModerationCode", this.ModerationCode);
+            this.SetParamArrayObj(map, prefix + "ModerationDetail.", this.ModerationDetail);
         }
     }
 }

@@ -36,6 +36,24 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("UserNameList")]
         public string[] UserNameList{ get; set; }
 
+        /// <summary>
+        /// tke/eks集群id，容器集群传
+        /// </summary>
+        [JsonProperty("TkeClusterId")]
+        public string TkeClusterId{ get; set; }
+
+        /// <summary>
+        /// 默认空，容器版传"native"
+        /// </summary>
+        [JsonProperty("DisplayStrategy")]
+        public string DisplayStrategy{ get; set; }
+
+        /// <summary>
+        /// 用户组
+        /// </summary>
+        [JsonProperty("UserGroupList")]
+        public UserAndGroup[] UserGroupList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +62,9 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "UserNameList.", this.UserNameList);
+            this.SetParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
+            this.SetParamSimple(map, prefix + "DisplayStrategy", this.DisplayStrategy);
+            this.SetParamArrayObj(map, prefix + "UserGroupList.", this.UserGroupList);
         }
     }
 }

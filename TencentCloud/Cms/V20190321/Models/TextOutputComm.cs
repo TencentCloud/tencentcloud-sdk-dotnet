@@ -25,12 +25,6 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 接入业务的唯一ID
-        /// </summary>
-        [JsonProperty("AppID")]
-        public long? AppID{ get; set; }
-
-        /// <summary>
         /// 接口唯一ID，旁路调用接口返回有该字段，标识唯一接口
         /// </summary>
         [JsonProperty("BUCtrlID")]
@@ -41,6 +35,12 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         [JsonProperty("SendTime")]
         public long? SendTime{ get; set; }
+
+        /// <summary>
+        /// 接入业务的唯一ID
+        /// </summary>
+        [JsonProperty("AppID")]
+        public long? AppID{ get; set; }
 
         /// <summary>
         /// 请求字段里的Common.Uin
@@ -54,9 +54,9 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AppID", this.AppID);
             this.SetParamSimple(map, prefix + "BUCtrlID", this.BUCtrlID);
             this.SetParamSimple(map, prefix + "SendTime", this.SendTime);
+            this.SetParamSimple(map, prefix + "AppID", this.AppID);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
         }
     }

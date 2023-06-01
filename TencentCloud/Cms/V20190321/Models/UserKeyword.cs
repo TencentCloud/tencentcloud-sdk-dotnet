@@ -21,26 +21,32 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTextSampleResponse : AbstractModel
+    public class UserKeyword : AbstractModel
     {
         
         /// <summary>
-        /// 符合要求的样本的信息
+        /// 关键词内容：最多40个字符，并且符合词类型的规则
         /// </summary>
-        [JsonProperty("TextSampleSet")]
-        public TextSample[] TextSampleSet{ get; set; }
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
 
         /// <summary>
-        /// 符合要求的样本的数量
+        /// 关键词类型，取值范围为："Normal","Polity","Porn","Ad","Illegal","Abuse","Terror","Spam"
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 关键词备注：最多100个字符。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 词类型：Default,Pinyin,English,CompoundWord,ExclusionWord,AffixWord
+        /// </summary>
+        [JsonProperty("WordType")]
+        public string WordType{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "TextSampleSet.", this.TextSampleSet);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "WordType", this.WordType);
         }
     }
 }

@@ -15,29 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateTextSampleResponse : AbstractModel
+    public class ModifyAccountConfigResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
-        /// </summary>
-        [JsonProperty("ErrMsg")]
-        public string ErrMsg{ get; set; }
-
-        /// <summary>
-        /// 任务状态
-        /// 1：已完成
-        /// 2：处理中
-        /// </summary>
-        [JsonProperty("Progress")]
-        public ulong? Progress{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -50,8 +36,6 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
-            this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

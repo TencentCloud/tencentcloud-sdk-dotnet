@@ -25,12 +25,6 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 是否恶意 0：正常 1：可疑
-        /// </summary>
-        [JsonProperty("EvilFlag")]
-        public long? EvilFlag{ get; set; }
-
-        /// <summary>
         /// 恶意类型
         /// 100：正常 
         /// 20001：政治
@@ -44,64 +38,80 @@ namespace TencentCloud.Cms.V20190321.Models
         public long? EvilType{ get; set; }
 
         /// <summary>
-        /// 图片二维码详情
-        /// </summary>
-        [JsonProperty("CodeDetect")]
-        public CodeDetect CodeDetect{ get; set; }
-
-        /// <summary>
         /// 图片性感详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HotDetect")]
         public ImageHotDetect HotDetect{ get; set; }
 
         /// <summary>
-        /// 图片违法详情
+        /// 是否恶意 0：正常 1：可疑
         /// </summary>
-        [JsonProperty("IllegalDetect")]
-        public ImageIllegalDetect IllegalDetect{ get; set; }
+        [JsonProperty("EvilFlag")]
+        public long? EvilFlag{ get; set; }
 
         /// <summary>
-        /// logo详情
+        /// 图片二维码详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("LogoDetect")]
-        public LogoDetail LogoDetect{ get; set; }
-
-        /// <summary>
-        /// 图片OCR详情
-        /// </summary>
-        [JsonProperty("OCRDetect")]
-        public OCRDetect OCRDetect{ get; set; }
-
-        /// <summary>
-        /// 手机检测详情
-        /// </summary>
-        [JsonProperty("PhoneDetect")]
-        public PhoneDetect PhoneDetect{ get; set; }
+        [JsonProperty("CodeDetect")]
+        public CodeDetect CodeDetect{ get; set; }
 
         /// <summary>
         /// 图片涉政详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolityDetect")]
         public ImagePolityDetect PolityDetect{ get; set; }
 
         /// <summary>
+        /// 图片违法详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IllegalDetect")]
+        public ImageIllegalDetect IllegalDetect{ get; set; }
+
+        /// <summary>
         /// 图片涉黄详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PornDetect")]
         public ImagePornDetect PornDetect{ get; set; }
 
         /// <summary>
+        /// 图片暴恐详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TerrorDetect")]
+        public ImageTerrorDetect TerrorDetect{ get; set; }
+
+        /// <summary>
+        /// 图片OCR详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OCRDetect")]
+        public OCRDetect OCRDetect{ get; set; }
+
+        /// <summary>
+        /// logo详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogoDetect")]
+        public LogoDetail LogoDetect{ get; set; }
+
+        /// <summary>
         /// 图片相似度详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Similar")]
         public Similar Similar{ get; set; }
 
         /// <summary>
-        /// 图片暴恐详情
+        /// 手机检测详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TerrorDetect")]
-        public ImageTerrorDetect TerrorDetect{ get; set; }
+        [JsonProperty("PhoneDetect")]
+        public PhoneDetect PhoneDetect{ get; set; }
 
 
         /// <summary>
@@ -109,18 +119,18 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
             this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
-            this.SetParamObj(map, prefix + "CodeDetect.", this.CodeDetect);
             this.SetParamObj(map, prefix + "HotDetect.", this.HotDetect);
-            this.SetParamObj(map, prefix + "IllegalDetect.", this.IllegalDetect);
-            this.SetParamObj(map, prefix + "LogoDetect.", this.LogoDetect);
-            this.SetParamObj(map, prefix + "OCRDetect.", this.OCRDetect);
-            this.SetParamObj(map, prefix + "PhoneDetect.", this.PhoneDetect);
+            this.SetParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
+            this.SetParamObj(map, prefix + "CodeDetect.", this.CodeDetect);
             this.SetParamObj(map, prefix + "PolityDetect.", this.PolityDetect);
+            this.SetParamObj(map, prefix + "IllegalDetect.", this.IllegalDetect);
             this.SetParamObj(map, prefix + "PornDetect.", this.PornDetect);
-            this.SetParamObj(map, prefix + "Similar.", this.Similar);
             this.SetParamObj(map, prefix + "TerrorDetect.", this.TerrorDetect);
+            this.SetParamObj(map, prefix + "OCRDetect.", this.OCRDetect);
+            this.SetParamObj(map, prefix + "LogoDetect.", this.LogoDetect);
+            this.SetParamObj(map, prefix + "Similar.", this.Similar);
+            this.SetParamObj(map, prefix + "PhoneDetect.", this.PhoneDetect);
         }
     }
 }

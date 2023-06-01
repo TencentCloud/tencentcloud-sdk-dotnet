@@ -25,10 +25,10 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+        /// 该标签下命中的关键词
         /// </summary>
-        [JsonProperty("EvilLabel")]
-        public string EvilLabel{ get; set; }
+        [JsonProperty("Keywords")]
+        public string[] Keywords{ get; set; }
 
         /// <summary>
         /// 恶意类型
@@ -44,16 +44,16 @@ namespace TencentCloud.Cms.V20190321.Models
         public ulong? EvilType{ get; set; }
 
         /// <summary>
-        /// 该标签下命中的关键词
-        /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
-
-        /// <summary>
         /// 该标签模型命中的分值
         /// </summary>
         [JsonProperty("Score")]
         public ulong? Score{ get; set; }
+
+        /// <summary>
+        /// 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+        /// </summary>
+        [JsonProperty("EvilLabel")]
+        public string EvilLabel{ get; set; }
 
 
         /// <summary>
@@ -61,10 +61,10 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
-            this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+            this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
             this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
         }
     }
 }

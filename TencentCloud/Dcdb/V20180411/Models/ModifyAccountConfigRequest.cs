@@ -15,47 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateTextSampleRequest : AbstractModel
+    public class ModifyAccountConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// 关键词数组
+        /// 实例 ID，格式如：tdsqlshard-kpkvq5oj，与云数据库控制台页面中显示的实例 ID 相同。
         /// </summary>
-        [JsonProperty("Contents")]
-        public string[] Contents{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 恶意类型
-        /// 100：正常
-        /// 20001：政治
-        /// 20002：色情 
-        /// 20006：涉毒违法
-        /// 20007：谩骂 
-        /// 24001：暴恐
-        /// 20105：广告引流
+        /// 账号的名称
         /// </summary>
-        [JsonProperty("EvilType")]
-        public long? EvilType{ get; set; }
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
 
         /// <summary>
-        /// 样本类型
-        /// 1：黑库
-        /// 2：白库
+        /// 账号的域名
         /// </summary>
-        [JsonProperty("Label")]
-        public ulong? Label{ get; set; }
+        [JsonProperty("Host")]
+        public string Host{ get; set; }
 
         /// <summary>
-        /// 测试修改参数
+        /// 配置列表，每一个元素是Config和Value的组合
         /// </summary>
-        [JsonProperty("Test")]
-        public string Test{ get; set; }
+        [JsonProperty("Configs")]
+        public ConfigValue[] Configs{ get; set; }
 
 
         /// <summary>
@@ -63,10 +54,10 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Contents.", this.Contents);
-            this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
-            this.SetParamSimple(map, prefix + "Label", this.Label);
-            this.SetParamSimple(map, prefix + "Test", this.Test);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "Host", this.Host);
+            this.SetParamArrayObj(map, prefix + "Configs.", this.Configs);
         }
     }
 }

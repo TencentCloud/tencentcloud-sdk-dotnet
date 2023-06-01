@@ -28,27 +28,31 @@ namespace TencentCloud.Cms.V20190321.Models
         /// 恶意类型
         /// 100：正常
         /// 21000：综合
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EvilType")]
         public long? EvilType{ get; set; }
 
         /// <summary>
-        /// 处置判定 0：正常 1：可疑
-        /// </summary>
-        [JsonProperty("HitFlag")]
-        public long? HitFlag{ get; set; }
-
-        /// <summary>
         /// 特征中文描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }
 
         /// <summary>
         /// 分值范围 0-100，分数越高倾向越明显
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
+
+        /// <summary>
+        /// 处置判定 0：正常 1：可疑
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HitFlag")]
+        public long? HitFlag{ get; set; }
 
 
         /// <summary>
@@ -57,9 +61,9 @@ namespace TencentCloud.Cms.V20190321.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
-            this.SetParamSimple(map, prefix + "HitFlag", this.HitFlag);
             this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
             this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "HitFlag", this.HitFlag);
         }
     }
 }

@@ -44,6 +44,7 @@ namespace TencentCloud.Cms.V20190321.Models
 
         /// <summary>
         /// 返回的种子url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SeedUrl")]
         public string SeedUrl{ get; set; }

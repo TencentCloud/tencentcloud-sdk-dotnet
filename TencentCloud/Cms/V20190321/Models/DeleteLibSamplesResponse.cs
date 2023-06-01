@@ -21,16 +21,20 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteFileSampleResponse : AbstractModel
+    public class DeleteLibSamplesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 任务状态
-        /// 1：已完成
-        /// 2：处理中
+        /// 删除成功的数量
         /// </summary>
-        [JsonProperty("Progress")]
-        public ulong? Progress{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
+        /// <summary>
+        /// 每个关键词删除的结果
+        /// </summary>
+        [JsonProperty("Details")]
+        public DeleteSampleDetails[] Details{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,7 +48,8 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamArrayObj(map, prefix + "Details.", this.Details);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

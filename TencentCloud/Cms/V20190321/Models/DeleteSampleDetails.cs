@@ -21,38 +21,32 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeFileSampleRequest : AbstractModel
+    public class DeleteSampleDetails : AbstractModel
     {
         
         /// <summary>
-        /// 支持通过标签值进行筛选
+        /// 关键词ID
         /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("SampleID")]
+        public string SampleID{ get; set; }
 
         /// <summary>
-        /// 数量限制，默认为20，最大值为100
+        /// 关键词内容
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// 是否删除成功
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("Deleted")]
+        public bool? Deleted{ get; set; }
 
         /// <summary>
-        /// 升序（asc）还是降序（desc），默认：desc
+        /// 错误信息
         /// </summary>
-        [JsonProperty("OrderDirection")]
-        public string OrderDirection{ get; set; }
-
-        /// <summary>
-        /// 按某个字段排序，目前仅支持CreatedAt排序
-        /// </summary>
-        [JsonProperty("OrderField")]
-        public string OrderField{ get; set; }
+        [JsonProperty("ErrorInfo")]
+        public string ErrorInfo{ get; set; }
 
 
         /// <summary>
@@ -60,11 +54,10 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
-            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "SampleID", this.SampleID);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "Deleted", this.Deleted);
+            this.SetParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
         }
     }
 }
