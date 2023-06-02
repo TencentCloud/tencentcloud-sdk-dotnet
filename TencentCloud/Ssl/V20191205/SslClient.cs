@@ -293,6 +293,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 使用权益点创建证书
+        /// </summary>
+        /// <param name="req"><see cref="CreateCertificateByPackageRequest"/></param>
+        /// <returns><see cref="CreateCertificateByPackageResponse"/></returns>
+        public async Task<CreateCertificateByPackageResponse> CreateCertificateByPackage(CreateCertificateByPackageRequest req)
+        {
+             JsonResponseModel<CreateCertificateByPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCertificateByPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateByPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用权益点创建证书
+        /// </summary>
+        /// <param name="req"><see cref="CreateCertificateByPackageRequest"/></param>
+        /// <returns><see cref="CreateCertificateByPackageResponse"/></returns>
+        public CreateCertificateByPackageResponse CreateCertificateByPackageSync(CreateCertificateByPackageRequest req)
+        {
+             JsonResponseModel<CreateCertificateByPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCertificateByPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateByPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteCertificate）用于删除证书。
         /// </summary>
         /// <param name="req"><see cref="DeleteCertificateRequest"/></param>

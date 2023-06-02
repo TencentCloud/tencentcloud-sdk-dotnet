@@ -25,42 +25,45 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 签署人信息
+        /// 签署时的相关信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveMessage")]
         public string ApproveMessage{ get; set; }
 
         /// <summary>
-        /// 签署人名字
+        /// 签署方姓名
         /// </summary>
         [JsonProperty("ApproveName")]
         public string ApproveName{ get; set; }
 
         /// <summary>
-        /// 签署人的状态
+        /// 签署方的签署状态
         /// 0：还没有发起
         /// 1：流程中 没有开始处理
-        /// 2：待处理
-        /// 3：签署态
-        /// 4：拒绝态
-        /// 5：过期没人处理
-        /// 6：取消态
+        /// 2：待签署
+        /// 3：已签署
+        /// 4：已拒绝
+        /// 5：已过期
+        /// 6：已撤销
         /// 7：还没有预发起
         /// 8：待填写
         /// 9：因为各种原因而终止
+        /// 10：填写完成
+        /// 15：已解除
+        /// 19：转他人处理
         /// </summary>
         [JsonProperty("ApproveStatus")]
         public long? ApproveStatus{ get; set; }
 
         /// <summary>
-        /// 模板配置时候的签署人id,与控件绑定
+        /// 模板配置中的参与方ID,与控件绑定
         /// </summary>
         [JsonProperty("ReceiptId")]
         public string ReceiptId{ get; set; }
 
         /// <summary>
-        /// 客户自定义userId
+        /// 客户自定义的用户ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomUserId")]
@@ -73,47 +76,47 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 签署顺序
+        /// 签署顺序，如果是有序签署，签署顺序从小到大
         /// </summary>
         [JsonProperty("SignOrder")]
         public long? SignOrder{ get; set; }
 
         /// <summary>
-        /// 签署人签署时间
+        /// 签署人签署时间，时间戳，单位秒
         /// </summary>
         [JsonProperty("ApproveTime")]
         public long? ApproveTime{ get; set; }
 
         /// <summary>
-        /// 参与者类型
+        /// 签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveType")]
         public string ApproveType{ get; set; }
 
         /// <summary>
-        /// 签署人侧用户来源
+        /// 签署方侧用户来源，如WEWORKAPP-企业微信等
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproverSource")]
         public string ApproverSource{ get; set; }
 
         /// <summary>
-        /// 客户自定义签署人标识
+        /// 客户自定义签署方标识
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomApproverTag")]
         public string CustomApproverTag{ get; set; }
 
         /// <summary>
-        /// 签署人企业Id
+        /// 签署方企业Id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationId")]
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// 签署人企业名称
+        /// 签署方企业名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationName")]

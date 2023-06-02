@@ -80,6 +80,20 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("SecurityGroupCount")]
         public ulong? SecurityGroupCount{ get; set; }
 
+        /// <summary>
+        /// 关联安全组规则数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityGroupRuleCount")]
+        public ulong? SecurityGroupRuleCount{ get; set; }
+
+        /// <summary>
+        /// 关联数据库代理Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CdbId")]
+        public string CdbId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +108,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "SecurityGroupCount", this.SecurityGroupCount);
+            this.SetParamSimple(map, prefix + "SecurityGroupRuleCount", this.SecurityGroupRuleCount);
+            this.SetParamSimple(map, prefix + "CdbId", this.CdbId);
         }
     }
 }

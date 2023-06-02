@@ -10779,6 +10779,46 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 查询漏洞影响的仓库镜像列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRegistryImageListRequest"/></param>
+        /// <returns><see cref="DescribeVulRegistryImageListResponse"/></returns>
+        public async Task<DescribeVulRegistryImageListResponse> DescribeVulRegistryImageList(DescribeVulRegistryImageListRequest req)
+        {
+             JsonResponseModel<DescribeVulRegistryImageListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVulRegistryImageList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulRegistryImageListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询漏洞影响的仓库镜像列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRegistryImageListRequest"/></param>
+        /// <returns><see cref="DescribeVulRegistryImageListResponse"/></returns>
+        public DescribeVulRegistryImageListResponse DescribeVulRegistryImageListSync(DescribeVulRegistryImageListRequest req)
+        {
+             JsonResponseModel<DescribeVulRegistryImageListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVulRegistryImageList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulRegistryImageListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 统计漏洞扫描页已授权和未扫描镜像数
         /// </summary>
         /// <param name="req"><see cref="DescribeVulScanAuthorizedImageSummaryRequest"/></param>

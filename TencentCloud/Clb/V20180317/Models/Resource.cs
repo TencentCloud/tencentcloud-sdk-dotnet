@@ -43,6 +43,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("AvailabilitySet")]
         public ResourceAvailability[] AvailabilitySet{ get; set; }
 
+        /// <summary>
+        /// 运营商类型信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TypeSet")]
+        public TypeInfo[] TypeSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "Type.", this.Type);
             this.SetParamSimple(map, prefix + "Isp", this.Isp);
             this.SetParamArrayObj(map, prefix + "AvailabilitySet.", this.AvailabilitySet);
+            this.SetParamArrayObj(map, prefix + "TypeSet.", this.TypeSet);
         }
     }
 }

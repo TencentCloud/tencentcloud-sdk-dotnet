@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 签署人签署Id
+        /// 对应模板中的参与方ID
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
@@ -38,7 +38,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverSource{ get; set; }
 
         /// <summary>
-        /// 企业自定义账号Id
+        /// 企业自定义账号ID
         /// WEWORKAPP场景下指企业自有应用获取企微明文的userid
         /// </summary>
         [JsonProperty("CustomUserId")]

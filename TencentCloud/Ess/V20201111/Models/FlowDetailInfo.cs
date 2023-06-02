@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 合同(流程)的Id
+        /// 合同(流程)的ID
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
@@ -46,16 +46,17 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 流程状态
         /// - 0 还没有发起
-        /// - 1 未签署
+        /// - 1 待签署
         /// - 2 部分签署
-        /// - 3 已退回
-        /// - 4 完成签署
+        /// - 3 已拒签
+        /// - 4 已签署
         /// - 5 已过期
-        /// - 6 已取消
+        /// - 6 已撤销
         /// - 7 还没有预发起
         /// - 8 等待填写
         /// - 9 部分填写
         /// - 10 拒填
+        /// - 21 已解除
         /// </summary>
         [JsonProperty("FlowStatus")]
         public long? FlowStatus{ get; set; }
@@ -75,13 +76,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowDescription{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的创建时间戳
+        /// 合同(流程)的创建时间戳，单位秒
         /// </summary>
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的签署人数组
+        /// 合同(流程)的签署方数组
         /// </summary>
         [JsonProperty("FlowApproverInfos")]
         public FlowApproverDetail[] FlowApproverInfos{ get; set; }

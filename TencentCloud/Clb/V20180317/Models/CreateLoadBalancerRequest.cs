@@ -88,7 +88,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 仅适用于公网负载均衡。负载均衡的网络计费模式。
+        /// 仅对内网属性的性能容量型实例和公网属性的所有实例生效。
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// 创建性能容量型实例。
         /// <ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-        /// <ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+        /// <ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
         /// <li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
         /// </summary>
         [JsonProperty("SlaType")]
@@ -176,6 +176,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LoadBalancerPassToTarget")]
         public bool? LoadBalancerPassToTarget{ get; set; }
 
+        /// <summary>
+        /// 创建域名化负载均衡。
+        /// </summary>
+        [JsonProperty("DynamicVip")]
+        public bool? DynamicVip{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +212,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SlaveZoneId", this.SlaveZoneId);
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+            this.SetParamSimple(map, prefix + "DynamicVip", this.DynamicVip);
         }
     }
 }

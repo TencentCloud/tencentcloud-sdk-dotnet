@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.771</VersionPrefix>
+    <VersionPrefix>3.0.772</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -637,6 +637,8 @@
     <Compile Include="V20201101\Models\DescribeVulLevelImageSummaryResponse.cs" />
     <Compile Include="V20201101\Models\DescribeVulLevelSummaryRequest.cs" />
     <Compile Include="V20201101\Models\DescribeVulLevelSummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeVulRegistryImageListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeVulRegistryImageListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeVulScanAuthorizedImageSummaryRequest.cs" />
     <Compile Include="V20201101\Models\DescribeVulScanAuthorizedImageSummaryResponse.cs" />
     <Compile Include="V20201101\Models\DescribeVulScanInfoRequest.cs" />
@@ -846,6 +848,7 @@
     <Compile Include="V20201101\Models\VulAffectedContainerInfo.cs" />
     <Compile Include="V20201101\Models\VulAffectedImageComponentInfo.cs" />
     <Compile Include="V20201101\Models\VulAffectedImageInfo.cs" />
+    <Compile Include="V20201101\Models\VulAffectedRegistryImageInfo.cs" />
     <Compile Include="V20201101\Models\VulDefenceEvent.cs" />
     <Compile Include="V20201101\Models\VulDefenceEventDetail.cs" />
     <Compile Include="V20201101\Models\VulDefenceEventTendency.cs" />

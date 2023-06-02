@@ -110,6 +110,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("ResourcePath")]
         public string[] ResourcePath{ get; set; }
 
+        /// <summary>
+        /// 扫描结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Server")]
+        public string[] Server{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +137,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "LeakNum", this.LeakNum);
             this.SetParamSimple(map, prefix + "InsSource", this.InsSource);
             this.SetParamArraySimple(map, prefix + "ResourcePath.", this.ResourcePath);
+            this.SetParamArraySimple(map, prefix + "Server.", this.Server);
         }
     }
 }

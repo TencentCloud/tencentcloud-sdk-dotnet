@@ -28,16 +28,18 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 应用号
         /// </summary>
         [JsonProperty("ApplicationId")]
+        [System.Obsolete]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 主机构ID
         /// </summary>
         [JsonProperty("OrganizationId")]
+        [System.Obsolete]
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// 经办人的用户ID
+        /// 经办人的用户ID，同UserId
         /// </summary>
         [JsonProperty("OperatorId")]
         public string OperatorId{ get; set; }
@@ -46,6 +48,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 下属机构ID
         /// </summary>
         [JsonProperty("SubOrganizationId")]
+        [System.Obsolete]
         public string SubOrganizationId{ get; set; }
 
 
