@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.772</VersionPrefix>
+    <VersionPrefix>3.0.773</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -450,8 +450,6 @@
     <Compile Include="V20180228\Models\DescribeRiskDnsEventListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRiskDnsListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeRiskDnsListResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeSaveOrUpdateWarningsRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeSaveOrUpdateWarningsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeScanMalwareScheduleRequest.cs" />
     <Compile Include="V20180228\Models\DescribeScanMalwareScheduleResponse.cs" />
     <Compile Include="V20180228\Models\DescribeScanScheduleRequest.cs" />
@@ -510,6 +508,8 @@
     <Compile Include="V20180228\Models\DescribeVulLevelCountResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVulListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeVulStoreListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeVulStoreListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulTopRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVulTopResponse.cs" />
     <Compile Include="V20180228\Models\DescribeWarningListRequest.cs" />
@@ -741,6 +741,7 @@
     <Compile Include="V20180228\Models\VulInfoList.cs" />
     <Compile Include="V20180228\Models\VulLevelCountInfo.cs" />
     <Compile Include="V20180228\Models\VulLevelInfo.cs" />
+    <Compile Include="V20180228\Models\VulStoreListInfo.cs" />
     <Compile Include="V20180228\Models\VulTopInfo.cs" />
     <Compile Include="V20180228\Models\WarningInfoObj.cs" />
     <Compile Include="V20180228\Models\WarningObject.cs" />

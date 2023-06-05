@@ -15,45 +15,50 @@
  * under the License.
  */
 
-namespace TencentCloud.Ess.V20201111.Models
+namespace TencentCloud.Cwp.V20180228.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIntegrationEmployeesRequest : AbstractModel
+    public class DescribeVulStoreListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 操作人信息，userId必填
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 返回最大数量，最大为20
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-        /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
-
-        /// <summary>
-        /// 查询过滤实名用户，Key为Status，Values为["IsVerified"]
-        /// 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
+        /// 
+        /// <li>VulName- string - 是否必填：否 - 漏洞名称</li>
+        /// <li>CveId- string - 是否必填：否 - cveid</li>
+        /// <li>VulCategory- string - 是否必填：否 - 漏洞分类  1 Web-CMS漏洞 ,2 应用漏洞 ,4 Linux软件漏洞,5 Windows系统漏洞</li>
+        /// <li>Method- string - 是否必填：否 - 检测方法 0版本对比,1 poc检测 </li>
+        /// <li>SupportDefense- string - 是否必填：否 - 是否支持防御 0不支持,1支持</li>
+        /// <li>FixSwitch- string - 是否必填：否 - 是否支持自动修复 0不支持,1支持</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0，最大为20000
+        /// 限制条数,默认10,最大100
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 偏移量,默认0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 排序方式: [ASC:升序|DESC:降序]
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 可选排序列: [PublishDate]
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
 
 
         /// <summary>
@@ -61,11 +66,11 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "By", this.By);
         }
     }
 }

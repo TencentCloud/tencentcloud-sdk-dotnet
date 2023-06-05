@@ -21,9 +21,34 @@ namespace TencentCloud.Cwp.V20180228.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSaveOrUpdateWarningsResponse : AbstractModel
+    public class DescribeVulStoreListResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 漏洞信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("List")]
+        public VulStoreListInfo[] List{ get; set; }
+
+        /// <summary>
+        /// 总数
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 今日剩余搜索此时
+        /// </summary>
+        [JsonProperty("Remaining")]
+        public ulong? Remaining{ get; set; }
+
+        /// <summary>
+        /// 免费搜索次数
+        /// </summary>
+        [JsonProperty("FreeSearchTimes")]
+        public ulong? FreeSearchTimes{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +61,10 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "Remaining", this.Remaining);
+            this.SetParamSimple(map, prefix + "FreeSearchTimes", this.FreeSearchTimes);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

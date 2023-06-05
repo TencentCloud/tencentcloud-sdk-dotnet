@@ -37,13 +37,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public string SealName{ get; set; }
 
         /// <summary>
-        /// 电子印章授权时间戳
+        /// 电子印章授权时间戳，单位秒
         /// </summary>
         [JsonProperty("CreateOn")]
         public long? CreateOn{ get; set; }
 
         /// <summary>
-        /// 电子印章授权人
+        /// 电子印章授权人的UserId
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
@@ -74,13 +74,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 印章类型
+        /// 印章类型,OFFICIAL-企业公章, CONTRACT-合同专用章,ORGANIZATIONSEAL-企业印章(本地上传印章类型),LEGAL_PERSON_SEAL-法人印章
         /// </summary>
         [JsonProperty("SealType")]
         public string SealType{ get; set; }
 
         /// <summary>
-        /// 用印申请是否为永久授权
+        /// 用印申请是否为永久授权，true-是，false-否
         /// </summary>
         [JsonProperty("IsAllTime")]
         public bool? IsAllTime{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 用户信息
+        /// 用户信息，其中UserId为必填参数
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
@@ -85,12 +85,14 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 应用信息
         /// </summary>
         [JsonProperty("Agent")]
+        [System.Obsolete]
         public Agent Agent{ get; set; }
 
         /// <summary>
         /// 限制二维码用户条件（已弃用）
         /// </summary>
         [JsonProperty("ApproverRestrictions")]
+        [System.Obsolete]
         public ApproverRestriction ApproverRestrictions{ get; set; }
 
 

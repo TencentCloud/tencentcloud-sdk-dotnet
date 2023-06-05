@@ -43,7 +43,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 模板关联的资源IDs
+        /// 模板关联的资源ID列表
         /// </summary>
         [JsonProperty("DocumentResourceIds")]
         public string[] DocumentResourceIds{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public FileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 附件关联的资源ID是
+        /// 附件关联的资源ID
         /// </summary>
         [JsonProperty("AttachmentResourceIds")]
         public string[] AttachmentResourceIds{ get; set; }
@@ -91,13 +91,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 模板的创建人
+        /// 模板的创建人UserId
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 模板创建的时间戳（精确到秒）
+        /// 模板创建的时间戳，单位秒
         /// </summary>
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
@@ -124,13 +124,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? Available{ get; set; }
 
         /// <summary>
-        /// 模板创建组织id
+        /// 创建模板的机构id
         /// </summary>
         [JsonProperty("OrganizationId")]
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// 模板预览链接
+        /// 模板预览链接，有效时间5分钟
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreviewUrl")]

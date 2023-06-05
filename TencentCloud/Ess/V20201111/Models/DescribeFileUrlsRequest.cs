@@ -81,18 +81,21 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 暂不开放
         /// </summary>
         [JsonProperty("CcToken")]
+        [System.Obsolete]
         public string CcToken{ get; set; }
 
         /// <summary>
         /// 暂不开放
         /// </summary>
         [JsonProperty("Scene")]
+        [System.Obsolete]
         public string Scene{ get; set; }
 
         /// <summary>
         /// 应用相关信息
         /// </summary>
         [JsonProperty("Agent")]
+        [System.Obsolete]
         public Agent Agent{ get; set; }
 
 

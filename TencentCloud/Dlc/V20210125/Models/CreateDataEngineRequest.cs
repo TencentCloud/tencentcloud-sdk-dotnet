@@ -198,6 +198,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ElasticLimit")]
         public long? ElasticLimit{ get; set; }
 
+        /// <summary>
+        /// spark作业集群session资源配置模板
+        /// </summary>
+        [JsonProperty("SessionResourceTemplate")]
+        public SessionResourceTemplate SessionResourceTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +239,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "MainClusterName", this.MainClusterName);
             this.SetParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
             this.SetParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
+            this.SetParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
         }
     }
 }

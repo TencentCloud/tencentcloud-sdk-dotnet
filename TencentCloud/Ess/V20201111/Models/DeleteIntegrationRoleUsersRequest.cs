@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 操作人
+        /// 操作人信息，userId必填
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo[] Users{ get; set; }
 
         /// <summary>
-        /// 代理信息
+        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

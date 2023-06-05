@@ -142,6 +142,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public PathBasedOriginRule[] PathBasedOrigin{ get; set; }
 
         /// <summary>
+        /// HTTPS回源SNI配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Sni")]
+        public OriginSni Sni{ get; set; }
+
+        /// <summary>
         /// HTTPS回源高级配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -177,6 +184,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "BasePath", this.BasePath);
             this.SetParamArrayObj(map, prefix + "PathRules.", this.PathRules);
             this.SetParamArrayObj(map, prefix + "PathBasedOrigin.", this.PathBasedOrigin);
+            this.SetParamObj(map, prefix + "Sni.", this.Sni);
             this.SetParamObj(map, prefix + "AdvanceHttps.", this.AdvanceHttps);
             this.SetParamSimple(map, prefix + "OriginCompany", this.OriginCompany);
         }

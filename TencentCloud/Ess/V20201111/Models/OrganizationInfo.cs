@@ -28,30 +28,35 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 机构在平台的编号，内部字段，暂未开放
         /// </summary>
         [JsonProperty("OrganizationId")]
+        [System.Obsolete]
         public string OrganizationId{ get; set; }
 
         /// <summary>
         /// 用户渠道，内部字段，暂未开放
         /// </summary>
         [JsonProperty("Channel")]
+        [System.Obsolete]
         public string Channel{ get; set; }
 
         /// <summary>
         /// 用户在渠道的机构编号，内部字段，暂未开放
         /// </summary>
         [JsonProperty("OrganizationOpenId")]
+        [System.Obsolete]
         public string OrganizationOpenId{ get; set; }
 
         /// <summary>
         /// 用户真实的IP，内部字段，暂未开放
         /// </summary>
         [JsonProperty("ClientIp")]
+        [System.Obsolete]
         public string ClientIp{ get; set; }
 
         /// <summary>
         /// 机构的代理IP，内部字段，暂未开放
         /// </summary>
         [JsonProperty("ProxyIp")]
+        [System.Obsolete]
         public string ProxyIp{ get; set; }
 
 

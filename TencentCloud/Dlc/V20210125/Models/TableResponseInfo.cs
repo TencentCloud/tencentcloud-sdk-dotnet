@@ -93,6 +93,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("RecordCount")]
         public long? RecordCount{ get; set; }
 
+        /// <summary>
+        /// xxxx
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MapMaterializedViewName")]
+        public string MapMaterializedViewName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "InputFormat", this.InputFormat);
             this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
             this.SetParamSimple(map, prefix + "RecordCount", this.RecordCount);
+            this.SetParamSimple(map, prefix + "MapMaterializedViewName", this.MapMaterializedViewName);
         }
     }
 }

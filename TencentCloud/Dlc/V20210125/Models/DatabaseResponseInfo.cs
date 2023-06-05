@@ -87,7 +87,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public DataGovernPolicy GovernPolicy{ get; set; }
 
         /// <summary>
-        /// 数据库ID
+        /// 数据库ID（无效字段）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseId")]

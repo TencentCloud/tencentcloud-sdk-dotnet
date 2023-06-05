@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 是否能够催办
+        /// 是否能够催办，true-是，false-否
         /// </summary>
         [JsonProperty("CanRemind")]
         public bool? CanRemind{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 催办详情
+        /// 催办详情信息
         /// </summary>
         [JsonProperty("RemindMessage")]
         public string RemindMessage{ get; set; }

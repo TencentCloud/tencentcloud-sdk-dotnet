@@ -77,13 +77,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? Verified{ get; set; }
 
         /// <summary>
-        /// 员工创建时间戳
+        /// 员工创建时间戳，单位秒
         /// </summary>
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
 
         /// <summary>
-        /// 员工实名时间戳
+        /// 员工实名时间戳，单位秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifiedOn")]

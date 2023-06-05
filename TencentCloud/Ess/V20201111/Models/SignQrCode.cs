@@ -37,7 +37,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string QrCodeUrl{ get; set; }
 
         /// <summary>
-        /// 二维码过期时间
+        /// 二维码过期时间戳，单位秒
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }

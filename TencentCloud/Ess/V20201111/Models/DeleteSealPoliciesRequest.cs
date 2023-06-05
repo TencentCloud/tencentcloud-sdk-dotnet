@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 操作撤销的用户信息
+        /// 调用方用户信息，userId 必填
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
@@ -35,12 +35,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("PolicyIds")]
         public string[] PolicyIds{ get; set; }
-
-        /// <summary>
-        /// 应用相关
-        /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
 
         /// <summary>
         /// 印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填
@@ -54,6 +48,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
 
+        /// <summary>
+        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,9 +62,9 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "SealId", this.SealId);
             this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

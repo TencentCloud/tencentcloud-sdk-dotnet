@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public TemplateInfo[] Templates{ get; set; }
 
         /// <summary>
-        /// 查询到的总个数
+        /// 查询到的总数
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

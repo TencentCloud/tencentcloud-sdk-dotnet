@@ -61,7 +61,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? RequireSign{ get; set; }
 
         /// <summary>
-        /// 添加序列
+        /// 添加序列，0～N
         /// </summary>
         [JsonProperty("RoutingOrder")]
         public long? RoutingOrder{ get; set; }

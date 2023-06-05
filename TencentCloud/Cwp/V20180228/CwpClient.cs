@@ -6779,50 +6779,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 下线
-        /// 
-        /// 更新或者插入用户告警设置(该接口废弃,请调用 ModifyWarningSetting )
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSaveOrUpdateWarningsRequest"/></param>
-        /// <returns><see cref="DescribeSaveOrUpdateWarningsResponse"/></returns>
-        public async Task<DescribeSaveOrUpdateWarningsResponse> DescribeSaveOrUpdateWarnings(DescribeSaveOrUpdateWarningsRequest req)
-        {
-             JsonResponseModel<DescribeSaveOrUpdateWarningsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSaveOrUpdateWarnings");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSaveOrUpdateWarningsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 下线
-        /// 
-        /// 更新或者插入用户告警设置(该接口废弃,请调用 ModifyWarningSetting )
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSaveOrUpdateWarningsRequest"/></param>
-        /// <returns><see cref="DescribeSaveOrUpdateWarningsResponse"/></returns>
-        public DescribeSaveOrUpdateWarningsResponse DescribeSaveOrUpdateWarningsSync(DescribeSaveOrUpdateWarningsRequest req)
-        {
-             JsonResponseModel<DescribeSaveOrUpdateWarningsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSaveOrUpdateWarnings");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSaveOrUpdateWarningsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询木马扫描进度
         /// </summary>
         /// <param name="req"><see cref="DescribeScanMalwareScheduleRequest"/></param>
@@ -7978,6 +7934,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "DescribeVulList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取漏洞库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulStoreListRequest"/></param>
+        /// <returns><see cref="DescribeVulStoreListResponse"/></returns>
+        public async Task<DescribeVulStoreListResponse> DescribeVulStoreList(DescribeVulStoreListRequest req)
+        {
+             JsonResponseModel<DescribeVulStoreListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVulStoreList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulStoreListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取漏洞库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulStoreListRequest"/></param>
+        /// <returns><see cref="DescribeVulStoreListResponse"/></returns>
+        public DescribeVulStoreListResponse DescribeVulStoreListSync(DescribeVulStoreListRequest req)
+        {
+             JsonResponseModel<DescribeVulStoreListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVulStoreList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulStoreListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -186,6 +186,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
+        /// <summary>
+        /// 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+        /// </summary>
+        [JsonProperty("IsInherit")]
+        public ulong? IsInherit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +225,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
             this.SetParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
         }
     }
 }

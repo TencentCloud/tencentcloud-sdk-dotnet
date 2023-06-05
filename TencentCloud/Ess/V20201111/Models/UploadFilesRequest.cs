@@ -70,6 +70,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 不再使用，上传文件链接数组，最多支持20个URL
         /// </summary>
         [JsonProperty("FileUrls")]
+        [System.Obsolete]
         public string FileUrls{ get; set; }
 
 

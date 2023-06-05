@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 授权发起人在平台信息，具体参考UserInfo结构体
+        /// 调用方用户信息，userId 必填
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
@@ -49,22 +49,22 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? Expired{ get; set; }
 
         /// <summary>
+        /// 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
+        /// </summary>
+        [JsonProperty("UserIds")]
+        public string[] UserIds{ get; set; }
+
+        /// <summary>
         /// 印章授权内容
         /// </summary>
         [JsonProperty("Policy")]
         public string Policy{ get; set; }
 
         /// <summary>
-        /// 应用相关
+        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
-
-        /// <summary>
-        /// 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
-        /// </summary>
-        [JsonProperty("UserIds")]
-        public string[] UserIds{ get; set; }
 
 
         /// <summary>
@@ -76,9 +76,9 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "Users.", this.Users);
             this.SetParamSimple(map, prefix + "SealId", this.SealId);
             this.SetParamSimple(map, prefix + "Expired", this.Expired);
+            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
             this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         }
     }
 }

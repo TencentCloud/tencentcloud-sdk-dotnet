@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 操作人
+        /// 操作人信息，userId必填
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }

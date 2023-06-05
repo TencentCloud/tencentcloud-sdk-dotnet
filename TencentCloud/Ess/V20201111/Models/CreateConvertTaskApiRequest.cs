@@ -52,12 +52,14 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 应用号信息
         /// </summary>
         [JsonProperty("Agent")]
+        [System.Obsolete]
         public Agent Agent{ get; set; }
 
         /// <summary>
         /// 暂未开放
         /// </summary>
         [JsonProperty("Organization")]
+        [System.Obsolete]
         public OrganizationInfo Organization{ get; set; }
 
 

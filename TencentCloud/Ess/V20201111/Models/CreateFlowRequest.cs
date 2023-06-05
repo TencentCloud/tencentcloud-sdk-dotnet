@@ -58,6 +58,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 暂未开放
         /// </summary>
         [JsonProperty("RelatedFlowId")]
+        [System.Obsolete]
         public string RelatedFlowId{ get; set; }
 
         /// <summary>
@@ -107,6 +108,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 暂未开放
         /// </summary>
         [JsonProperty("CallbackUrl")]
+        [System.Obsolete]
         public string CallbackUrl{ get; set; }
 
         /// <summary>

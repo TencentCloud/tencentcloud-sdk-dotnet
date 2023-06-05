@@ -81,6 +81,13 @@ namespace TencentCloud.Tbp.V20190627.Models
         public string ResultType{ get; set; }
 
         /// <summary>
+        /// 机器人对话的应答文本。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResponseText")]
+        public string ResponseText{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -100,6 +107,7 @@ namespace TencentCloud.Tbp.V20190627.Models
             this.SetParamObj(map, prefix + "ResponseMessage.", this.ResponseMessage);
             this.SetParamSimple(map, prefix + "SessionAttributes", this.SessionAttributes);
             this.SetParamSimple(map, prefix + "ResultType", this.ResultType);
+            this.SetParamSimple(map, prefix + "ResponseText", this.ResponseText);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

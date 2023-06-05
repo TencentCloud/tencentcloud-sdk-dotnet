@@ -37,6 +37,18 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
+        /// 查询内容：0-模板列表及详情（默认），1-仅模板列表
+        /// </summary>
+        [JsonProperty("ContentType")]
+        public long? ContentType{ get; set; }
+
+        /// <summary>
+        /// 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
         /// 查询偏移位置，默认0
         /// </summary>
         [JsonProperty("Offset")]
@@ -47,12 +59,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
 
         /// <summary>
         /// 这个参数跟下面的IsChannel参数配合使用。
@@ -71,21 +77,17 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? IsChannel{ get; set; }
 
         /// <summary>
-        /// 查询内容：0-模板列表及详情（默认），1-仅模板列表
-        /// </summary>
-        [JsonProperty("ContentType")]
-        public long? ContentType{ get; set; }
-
-        /// <summary>
         /// 暂未开放
         /// </summary>
         [JsonProperty("Organization")]
+        [System.Obsolete]
         public OrganizationInfo Organization{ get; set; }
 
         /// <summary>
         /// 暂未开放
         /// </summary>
         [JsonProperty("GenerateSource")]
+        [System.Obsolete]
         public ulong? GenerateSource{ get; set; }
 
 
@@ -96,12 +98,12 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "IsChannel", this.IsChannel);
-            this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
             this.SetParamObj(map, prefix + "Organization.", this.Organization);
             this.SetParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
         }

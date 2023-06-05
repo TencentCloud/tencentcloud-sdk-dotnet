@@ -15,49 +15,42 @@
  * under the License.
  */
 
-namespace TencentCloud.Ess.V20201111.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IntegrateRole : AbstractModel
+    public class SessionResourceTemplate : AbstractModel
     {
         
         /// <summary>
-        /// 角色id
+        /// driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RoleId")]
-        public string RoleId{ get; set; }
+        [JsonProperty("DriverSize")]
+        public string DriverSize{ get; set; }
 
         /// <summary>
-        /// 角色名
+        /// executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RoleName")]
-        public string RoleName{ get; set; }
+        [JsonProperty("ExecutorSize")]
+        public string ExecutorSize{ get; set; }
 
         /// <summary>
-        /// 角色状态，1-启用，2-禁用
+        /// 指定executor数量，最小值为1，最大值小于集群规格
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RoleStatus")]
-        public ulong? RoleStatus{ get; set; }
+        [JsonProperty("ExecutorNums")]
+        public ulong? ExecutorNums{ get; set; }
 
         /// <summary>
-        /// 是否是集团角色，true-是，false-否
+        /// 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("IsGroupRole")]
-        public bool? IsGroupRole{ get; set; }
-
-        /// <summary>
-        /// 管辖的子企业列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("SubOrgIdList")]
-        public string[] SubOrgIdList{ get; set; }
+        [JsonProperty("ExecutorMaxNumbers")]
+        public ulong? ExecutorMaxNumbers{ get; set; }
 
 
         /// <summary>
@@ -65,11 +58,10 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
-            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
-            this.SetParamSimple(map, prefix + "RoleStatus", this.RoleStatus);
-            this.SetParamSimple(map, prefix + "IsGroupRole", this.IsGroupRole);
-            this.SetParamArraySimple(map, prefix + "SubOrgIdList.", this.SubOrgIdList);
+            this.SetParamSimple(map, prefix + "DriverSize", this.DriverSize);
+            this.SetParamSimple(map, prefix + "ExecutorSize", this.ExecutorSize);
+            this.SetParamSimple(map, prefix + "ExecutorNums", this.ExecutorNums);
+            this.SetParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
         }
     }
 }

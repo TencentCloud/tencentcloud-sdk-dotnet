@@ -15,20 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSaveOrUpdateWarningsRequest : AbstractModel
+    public class OriginSni : AbstractModel
     {
         
         /// <summary>
-        /// 告警设置的修改内容
+        /// 是否开启HTTPS回源SNI。
+        /// 开启：on，
+        /// 关闭：off
         /// </summary>
-        [JsonProperty("WarningObjects")]
-        public WarningObject[] WarningObjects{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
+
+        /// <summary>
+        /// 回源域名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServerName")]
+        public string ServerName{ get; set; }
 
 
         /// <summary>
@@ -36,7 +45,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "WarningObjects.", this.WarningObjects);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "ServerName", this.ServerName);
         }
     }
 }

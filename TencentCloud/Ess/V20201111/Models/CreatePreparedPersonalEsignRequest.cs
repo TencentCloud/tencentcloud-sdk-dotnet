@@ -43,12 +43,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public string SealName{ get; set; }
 
         /// <summary>
-        /// 印章图片的base64，最大不超过 8M
-        /// </summary>
-        [JsonProperty("SealImage")]
-        public string SealImage{ get; set; }
-
-        /// <summary>
         /// 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
         /// </summary>
         [JsonProperty("Operator")]
@@ -64,6 +58,14 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
+
+        /// <summary>
+        /// 印章图片的base64
+        /// 注：已废弃
+        /// 请先通过UploadFiles接口上传文件，获取 FileId
+        /// </summary>
+        [JsonProperty("SealImage")]
+        public string SealImage{ get; set; }
 
         /// <summary>
         /// 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
@@ -103,6 +105,14 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ProcessSeal")]
         public bool? ProcessSeal{ get; set; }
 
+        /// <summary>
+        /// 印章图片文件 id
+        /// 取值：
+        /// 填写的FileId通过UploadFiles接口上传文件获取。
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,14 +122,15 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
             this.SetParamSimple(map, prefix + "SealName", this.SealName);
-            this.SetParamSimple(map, prefix + "SealImage", this.SealImage);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "IdCardType", this.IdCardType);
+            this.SetParamSimple(map, prefix + "SealImage", this.SealImage);
             this.SetParamSimple(map, prefix + "SealImageCompress", this.SealImageCompress);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
             this.SetParamSimple(map, prefix + "SealColor", this.SealColor);
             this.SetParamSimple(map, prefix + "ProcessSeal", this.ProcessSeal);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }
 }

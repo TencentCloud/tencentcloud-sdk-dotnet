@@ -43,7 +43,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string SignerName{ get; set; }
 
         /// <summary>
-        /// 签署时间
+        /// 签署时间戳，单位秒
         /// </summary>
         [JsonProperty("SignTime")]
         public long? SignTime{ get; set; }
@@ -61,43 +61,43 @@ namespace TencentCloud.Ess.V20201111.Models
         public string CertSn{ get; set; }
 
         /// <summary>
-        /// 证书起始时间
+        /// 证书起始时间戳，单位秒
         /// </summary>
         [JsonProperty("CertNotBefore")]
         public long? CertNotBefore{ get; set; }
 
         /// <summary>
-        /// 证书过期时间
+        /// 证书过期时间戳，单位秒
         /// </summary>
         [JsonProperty("CertNotAfter")]
         public long? CertNotAfter{ get; set; }
 
         /// <summary>
-        /// 签名域横坐标
+        /// 签名域横坐标，单位pt
         /// </summary>
         [JsonProperty("ComponentPosX")]
         public float? ComponentPosX{ get; set; }
 
         /// <summary>
-        /// 签名域纵坐标
+        /// 签名域纵坐标，单位pt
         /// </summary>
         [JsonProperty("ComponentPosY")]
         public float? ComponentPosY{ get; set; }
 
         /// <summary>
-        /// 签名域宽度
+        /// 签名域宽度，单位pt
         /// </summary>
         [JsonProperty("ComponentWidth")]
         public float? ComponentWidth{ get; set; }
 
         /// <summary>
-        /// 签名域高度
+        /// 签名域高度，单位pt
         /// </summary>
         [JsonProperty("ComponentHeight")]
         public float? ComponentHeight{ get; set; }
 
         /// <summary>
-        /// 签名域所在页码
+        /// 签名域所在页码，1～N
         /// </summary>
         [JsonProperty("ComponentPage")]
         public long? ComponentPage{ get; set; }

@@ -46,7 +46,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 更新时间，时间戳，单位秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
@@ -88,21 +88,21 @@ namespace TencentCloud.Ess.V20201111.Models
         public string License{ get; set; }
 
         /// <summary>
-        /// 企业许可证过期时间
+        /// 企业许可证过期时间，时间戳，单位秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseExpireTime")]
         public ulong? LicenseExpireTime{ get; set; }
 
         /// <summary>
-        /// 成员企业加入集团时间
+        /// 成员企业加入集团时间，时间戳，单位秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JoinTime")]
         public ulong? JoinTime{ get; set; }
 
         /// <summary>
-        /// 是否可以使用审批流引擎
+        /// 是否使用审批流引擎，true-是，false-否
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowEngineEnable")]

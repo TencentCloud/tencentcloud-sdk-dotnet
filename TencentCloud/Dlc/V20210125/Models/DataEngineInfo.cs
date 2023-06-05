@@ -284,6 +284,48 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ElasticLimit")]
         public long? ElasticLimit{ get; set; }
 
+        /// <summary>
+        /// 是否为默认引擎
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultHouse")]
+        public bool? DefaultHouse{ get; set; }
+
+        /// <summary>
+        /// 单个集群任务最大并发数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxConcurrency")]
+        public long? MaxConcurrency{ get; set; }
+
+        /// <summary>
+        /// 任务排队上限时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TolerableQueueTime")]
+        public long? TolerableQueueTime{ get; set; }
+
+        /// <summary>
+        /// 用户appid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserAppId")]
+        public long? UserAppId{ get; set; }
+
+        /// <summary>
+        /// 用户uin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserUin")]
+        public string UserUin{ get; set; }
+
+        /// <summary>
+        /// SessionResourceTemplate
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionResourceTemplate")]
+        public SessionResourceTemplate SessionResourceTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -329,6 +371,12 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "StartStandbyCluster", this.StartStandbyCluster);
             this.SetParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
             this.SetParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
+            this.SetParamSimple(map, prefix + "DefaultHouse", this.DefaultHouse);
+            this.SetParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
+            this.SetParamSimple(map, prefix + "TolerableQueueTime", this.TolerableQueueTime);
+            this.SetParamSimple(map, prefix + "UserAppId", this.UserAppId);
+            this.SetParamSimple(map, prefix + "UserUin", this.UserUin);
+            this.SetParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
         }
     }
 }

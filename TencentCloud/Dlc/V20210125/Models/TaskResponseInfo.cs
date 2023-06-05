@@ -233,6 +233,41 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("CmdArgs")]
         public string CmdArgs{ get; set; }
 
+        /// <summary>
+        /// 集群镜像大版本名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageVersion")]
+        public string ImageVersion{ get; set; }
+
+        /// <summary>
+        /// driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DriverSize")]
+        public string DriverSize{ get; set; }
+
+        /// <summary>
+        /// executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutorSize")]
+        public string ExecutorSize{ get; set; }
+
+        /// <summary>
+        /// 指定executor数量，最小值为1，最大值小于集群规格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutorNums")]
+        public ulong? ExecutorNums{ get; set; }
+
+        /// <summary>
+        /// 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutorMaxNumbers")]
+        public ulong? ExecutorMaxNumbers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -271,6 +306,11 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UiUrl", this.UiUrl);
             this.SetParamSimple(map, prefix + "TotalTime", this.TotalTime);
             this.SetParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
+            this.SetParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
+            this.SetParamSimple(map, prefix + "DriverSize", this.DriverSize);
+            this.SetParamSimple(map, prefix + "ExecutorSize", this.ExecutorSize);
+            this.SetParamSimple(map, prefix + "ExecutorNums", this.ExecutorNums);
+            this.SetParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
         }
     }
 }

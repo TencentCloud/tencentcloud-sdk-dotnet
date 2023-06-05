@@ -31,10 +31,23 @@ namespace TencentCloud.Ess.V20201111.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 回调加密token
+        /// 回调加密key，已废弃
         /// </summary>
         [JsonProperty("Token")]
+        [System.Obsolete]
         public string Token{ get; set; }
+
+        /// <summary>
+        /// 回调加密key
+        /// </summary>
+        [JsonProperty("CallbackKey")]
+        public string CallbackKey{ get; set; }
+
+        /// <summary>
+        /// 回调验签token
+        /// </summary>
+        [JsonProperty("CallbackToken")]
+        public string CallbackToken{ get; set; }
 
 
         /// <summary>
@@ -44,6 +57,8 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "Token", this.Token);
+            this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamSimple(map, prefix + "CallbackToken", this.CallbackToken);
         }
     }
 }
