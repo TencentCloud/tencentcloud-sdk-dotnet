@@ -51,6 +51,18 @@ namespace TencentCloud.Ses.V20201002.Models
         public string ReplyToAddresses{ get; set; }
 
         /// <summary>
+        /// 抄送人邮箱地址，最多支持抄送20人。
+        /// </summary>
+        [JsonProperty("Cc")]
+        public string[] Cc{ get; set; }
+
+        /// <summary>
+        /// 密送人邮箱地址，最多支持抄送20人。
+        /// </summary>
+        [JsonProperty("Bcc")]
+        public string[] Bcc{ get; set; }
+
+        /// <summary>
         /// 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
         /// </summary>
         [JsonProperty("Template")]
@@ -90,6 +102,8 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamArraySimple(map, prefix + "Destination.", this.Destination);
             this.SetParamSimple(map, prefix + "Subject", this.Subject);
             this.SetParamSimple(map, prefix + "ReplyToAddresses", this.ReplyToAddresses);
+            this.SetParamArraySimple(map, prefix + "Cc.", this.Cc);
+            this.SetParamArraySimple(map, prefix + "Bcc.", this.Bcc);
             this.SetParamObj(map, prefix + "Template.", this.Template);
             this.SetParamObj(map, prefix + "Simple.", this.Simple);
             this.SetParamArrayObj(map, prefix + "Attachments.", this.Attachments);

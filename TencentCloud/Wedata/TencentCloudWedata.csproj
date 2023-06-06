@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.773</VersionPrefix>
+    <VersionPrefix>3.0.774</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -401,11 +401,14 @@
     <Compile Include="V20210820\Models\InLongAgentTask.cs" />
     <Compile Include="V20210820\Models\InLongTkeDetail.cs" />
     <Compile Include="V20210820\Models\InstanceInfo.cs" />
+    <Compile Include="V20210820\Models\InstanceList.cs" />
     <Compile Include="V20210820\Models\InstanceLog.cs" />
+    <Compile Include="V20210820\Models\InstanceLogList.cs" />
     <Compile Include="V20210820\Models\InstanceNodeInfo.cs" />
     <Compile Include="V20210820\Models\InstanceReportReadNode.cs" />
     <Compile Include="V20210820\Models\InstanceReportSummary.cs" />
     <Compile Include="V20210820\Models\InstanceReportWriteNode.cs" />
+    <Compile Include="V20210820\Models\IntegrationInstanceLog.cs" />
     <Compile Include="V20210820\Models\IntegrationNodeDetail.cs" />
     <Compile Include="V20210820\Models\IntegrationNodeInfo.cs" />
     <Compile Include="V20210820\Models\IntegrationNodeMapping.cs" />

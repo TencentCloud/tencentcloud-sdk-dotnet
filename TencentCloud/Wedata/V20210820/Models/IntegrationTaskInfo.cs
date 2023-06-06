@@ -224,6 +224,111 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Submit")]
         public bool? Submit{ get; set; }
 
+        /// <summary>
+        /// MYSQL
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputDatasourceType")]
+        public string InputDatasourceType{ get; set; }
+
+        /// <summary>
+        /// DLC
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OutputDatasourceType")]
+        public string OutputDatasourceType{ get; set; }
+
+        /// <summary>
+        /// 读取条数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NumRecordsIn")]
+        public long? NumRecordsIn{ get; set; }
+
+        /// <summary>
+        /// 写入条数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NumRecordsOut")]
+        public long? NumRecordsOut{ get; set; }
+
+        /// <summary>
+        /// 读取延迟
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReaderDelay")]
+        public float? ReaderDelay{ get; set; }
+
+        /// <summary>
+        /// 重启次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NumRestarts")]
+        public long? NumRestarts{ get; set; }
+
+        /// <summary>
+        /// 任务创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 任务更新时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// 任务最后一次运行时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastRunTime")]
+        public string LastRunTime{ get; set; }
+
+        /// <summary>
+        /// 任务停止时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StopTime")]
+        public string StopTime{ get; set; }
+
+        /// <summary>
+        /// 作业是否已提交
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HasVersion")]
+        public bool? HasVersion{ get; set; }
+
+        /// <summary>
+        /// 任务是否被锁定
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Locked")]
+        public bool? Locked{ get; set; }
+
+        /// <summary>
+        /// 任务锁定人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Locker")]
+        public string Locker{ get; set; }
+
+        /// <summary>
+        /// 耗费资源量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunningCu")]
+        public float? RunningCu{ get; set; }
+
+        /// <summary>
+        /// 该任务关联的告警规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskAlarmRegularList")]
+        public string[] TaskAlarmRegularList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -259,6 +364,21 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InLongManagerVersion", this.InLongManagerVersion);
             this.SetParamArraySimple(map, prefix + "DataProxyUrl.", this.DataProxyUrl);
             this.SetParamSimple(map, prefix + "Submit", this.Submit);
+            this.SetParamSimple(map, prefix + "InputDatasourceType", this.InputDatasourceType);
+            this.SetParamSimple(map, prefix + "OutputDatasourceType", this.OutputDatasourceType);
+            this.SetParamSimple(map, prefix + "NumRecordsIn", this.NumRecordsIn);
+            this.SetParamSimple(map, prefix + "NumRecordsOut", this.NumRecordsOut);
+            this.SetParamSimple(map, prefix + "ReaderDelay", this.ReaderDelay);
+            this.SetParamSimple(map, prefix + "NumRestarts", this.NumRestarts);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "LastRunTime", this.LastRunTime);
+            this.SetParamSimple(map, prefix + "StopTime", this.StopTime);
+            this.SetParamSimple(map, prefix + "HasVersion", this.HasVersion);
+            this.SetParamSimple(map, prefix + "Locked", this.Locked);
+            this.SetParamSimple(map, prefix + "Locker", this.Locker);
+            this.SetParamSimple(map, prefix + "RunningCu", this.RunningCu);
+            this.SetParamArraySimple(map, prefix + "TaskAlarmRegularList.", this.TaskAlarmRegularList);
         }
     }
 }

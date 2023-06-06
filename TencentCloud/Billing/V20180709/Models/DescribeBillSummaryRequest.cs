@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ApisStatus : AbstractModel
+    public class DescribeBillSummaryRequest : AbstractModel
     {
         
         /// <summary>
-        /// 符合条件的 API 接口数量。
+        /// 账单月份，格式为2023-04
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("Month")]
+        public string Month{ get; set; }
 
         /// <summary>
-        /// API 接口列表。
+        /// 账单维度类型，枚举值如下：business、project、region、payMode、tag
         /// </summary>
-        [JsonProperty("ApiIdStatusSet")]
-        public DesApisStatus[] ApiIdStatusSet{ get; set; }
+        [JsonProperty("GroupType")]
+        public string GroupType{ get; set; }
+
+        /// <summary>
+        /// 标签键，GroupType=tag获取标签维度账单时传
+        /// </summary>
+        [JsonProperty("TagKey")]
+        public string[] TagKey{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "ApiIdStatusSet.", this.ApiIdStatusSet);
+            this.SetParamSimple(map, prefix + "Month", this.Month);
+            this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
+            this.SetParamArraySimple(map, prefix + "TagKey.", this.TagKey);
         }
     }
 }

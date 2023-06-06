@@ -28,7 +28,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// API 详情列表。
         /// </summary>
         [JsonProperty("Result")]
-        public ApisStatus Result{ get; set; }
+        public DescribeApisStatusResultInfo Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

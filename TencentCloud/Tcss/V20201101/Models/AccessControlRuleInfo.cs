@@ -31,7 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public bool? IsEnable{ get; set; }
 
         /// <summary>
-        /// 生效惊现id，空数组代表全部镜像
+        /// 生效镜像id，空数组代表全部镜像
         /// </summary>
         [JsonProperty("ImageIds")]
         public string[] ImageIds{ get; set; }

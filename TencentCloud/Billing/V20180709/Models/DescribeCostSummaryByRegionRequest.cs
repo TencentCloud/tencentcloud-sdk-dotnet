@@ -37,13 +37,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 每次获取数据量
+        /// 每次获取数据量，最大值为100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量,默认从0开始
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

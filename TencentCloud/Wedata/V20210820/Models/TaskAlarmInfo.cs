@@ -170,6 +170,62 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WeComHook")]
         public string WeComHook{ get; set; }
 
+        /// <summary>
+        /// 最近操作时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// 最近操作人Uin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperatorUin")]
+        public string OperatorUin{ get; set; }
+
+        /// <summary>
+        /// 关联任务数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskCount")]
+        public long? TaskCount{ get; set; }
+
+        /// <summary>
+        /// 监控对象类型,1:所有任务,2:指定任务,3:指定责任人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MonitorType")]
+        public long? MonitorType{ get; set; }
+
+        /// <summary>
+        /// 监控对象列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MonitorObjectIds")]
+        public string[] MonitorObjectIds{ get; set; }
+
+        /// <summary>
+        /// 最近一次告警的实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LatestAlarmInstanceId")]
+        public string LatestAlarmInstanceId{ get; set; }
+
+        /// <summary>
+        /// 最近一次告警时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LatestAlarmTime")]
+        public string LatestAlarmTime{ get; set; }
+
+        /// <summary>
+        /// 告警规则描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +254,14 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "AlarmIndicatorInfos.", this.AlarmIndicatorInfos);
             this.SetParamSimple(map, prefix + "AlarmRecipientType", this.AlarmRecipientType);
             this.SetParamSimple(map, prefix + "WeComHook", this.WeComHook);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "OperatorUin", this.OperatorUin);
+            this.SetParamSimple(map, prefix + "TaskCount", this.TaskCount);
+            this.SetParamSimple(map, prefix + "MonitorType", this.MonitorType);
+            this.SetParamArraySimple(map, prefix + "MonitorObjectIds.", this.MonitorObjectIds);
+            this.SetParamSimple(map, prefix + "LatestAlarmInstanceId", this.LatestAlarmInstanceId);
+            this.SetParamSimple(map, prefix + "LatestAlarmTime", this.LatestAlarmTime);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

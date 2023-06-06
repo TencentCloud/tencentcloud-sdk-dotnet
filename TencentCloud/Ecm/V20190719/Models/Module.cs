@@ -124,6 +124,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
 
+        /// <summary>
+        /// 是否禁止外网ip
+        /// </summary>
+        [JsonProperty("DisableWanIp")]
+        public long? DisableWanIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -146,6 +152,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+            this.SetParamSimple(map, prefix + "DisableWanIp", this.DisableWanIp);
         }
     }
 }

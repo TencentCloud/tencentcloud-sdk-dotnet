@@ -25,13 +25,6 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// 绑定操作是否成功。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Result")]
-        public bool? Result{ get; set; }
-
-        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,7 +36,6 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

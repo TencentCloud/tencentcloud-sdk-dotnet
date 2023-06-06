@@ -42,6 +42,19 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
+        /// <summary>
+        /// 是否随实例删除。
+        /// </summary>
+        [JsonProperty("DeleteWithInstance")]
+        public bool? DeleteWithInstance{ get; set; }
+
+        /// <summary>
+        /// 快照ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SnapshotId")]
+        public string SnapshotId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +64,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
+            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         }
     }
 }

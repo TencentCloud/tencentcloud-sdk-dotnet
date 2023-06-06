@@ -36,7 +36,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionList")]
-        public ServiceReleaseHistoryInfo[] VersionList{ get; set; }
+        public DescribeServiceReleaseVersionResultVersionListInfo[] VersionList{ get; set; }
 
 
         /// <summary>

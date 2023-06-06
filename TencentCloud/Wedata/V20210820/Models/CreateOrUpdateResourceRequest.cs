@@ -25,19 +25,19 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// 项目ID，必填项
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 文件名
+        /// 文件名，必填项
         /// </summary>
         [JsonProperty("Files")]
         public string[] Files{ get; set; }
 
         /// <summary>
-        /// 文件所属路径，资源管理根路径为 /datastudio/resouce
+        /// 必填项，文件所属路径，资源管理根路径为 /datastudio/resource/项目ID/文件夹名
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public bool? NewFile{ get; set; }
 
         /// <summary>
-        /// 文件大小
+        /// 必填项，文件大小，与 Files 字段对应
         /// </summary>
         [JsonProperty("FilesSize")]
         public string[] FilesSize{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 任务告警规则信息
+        /// 告警规则信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskAlarmInfos")]

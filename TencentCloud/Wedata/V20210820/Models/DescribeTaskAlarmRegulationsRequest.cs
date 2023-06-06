@@ -25,22 +25,10 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 任务ID
-        /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
-
-        /// <summary>
         /// 项目ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
-
-        /// <summary>
-        /// 任务类型(201代表实时任务，202代表离线任务)
-        /// </summary>
-        [JsonProperty("TaskType")]
-        public long? TaskType{ get; set; }
 
         /// <summary>
         /// 当前页
@@ -66,19 +54,31 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("OrderFields")]
         public OrderField[] OrderFields{ get; set; }
 
+        /// <summary>
+        /// 任务ID
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// 任务类型(201代表实时任务，202代表离线任务)
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public long? TaskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "OrderFields.", this.OrderFields);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }
 }

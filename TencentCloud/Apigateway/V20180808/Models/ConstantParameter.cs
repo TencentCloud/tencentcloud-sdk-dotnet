@@ -26,24 +26,28 @@ namespace TencentCloud.Apigateway.V20180808.Models
         
         /// <summary>
         /// 常量参数名称。只有 ServiceType 是 HTTP 才会用到此参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 常量参数描述。只有 ServiceType 是 HTTP 才会用到此参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// 常量参数位置。只有 ServiceType 是 HTTP 才会用到此参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Position")]
         public string Position{ get; set; }
 
         /// <summary>
         /// 常量参数默认值。只有 ServiceType 是 HTTP 才会用到此参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }

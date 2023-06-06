@@ -102,6 +102,69 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ConsumptionTypeName")]
         public string ConsumptionTypeName{ get; set; }
 
+        /// <summary>
+        /// 折前价
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RealCost")]
+        public string RealCost{ get; set; }
+
+        /// <summary>
+        /// 费用起始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FeeBeginTime")]
+        public string FeeBeginTime{ get; set; }
+
+        /// <summary>
+        /// 费用结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FeeEndTime")]
+        public string FeeEndTime{ get; set; }
+
+        /// <summary>
+        /// 天数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DayDiff")]
+        public string DayDiff{ get; set; }
+
+        /// <summary>
+        /// 每日消耗
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DailyTotalCost")]
+        public string DailyTotalCost{ get; set; }
+
+        /// <summary>
+        /// 订单号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OrderId")]
+        public string OrderId{ get; set; }
+
+        /// <summary>
+        /// 代金券
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VoucherPayAmount")]
+        public string VoucherPayAmount{ get; set; }
+
+        /// <summary>
+        /// 赠送金
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IncentivePayAmount")]
+        public string IncentivePayAmount{ get; set; }
+
+        /// <summary>
+        /// 分成金
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TransferPayAmount")]
+        public string TransferPayAmount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +184,15 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
             this.SetParamSimple(map, prefix + "BusinessCodeName", this.BusinessCodeName);
             this.SetParamSimple(map, prefix + "ConsumptionTypeName", this.ConsumptionTypeName);
+            this.SetParamSimple(map, prefix + "RealCost", this.RealCost);
+            this.SetParamSimple(map, prefix + "FeeBeginTime", this.FeeBeginTime);
+            this.SetParamSimple(map, prefix + "FeeEndTime", this.FeeEndTime);
+            this.SetParamSimple(map, prefix + "DayDiff", this.DayDiff);
+            this.SetParamSimple(map, prefix + "DailyTotalCost", this.DailyTotalCost);
+            this.SetParamSimple(map, prefix + "OrderId", this.OrderId);
+            this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+            this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+            this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
         }
     }
 }

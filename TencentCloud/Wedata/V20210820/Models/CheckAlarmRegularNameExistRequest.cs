@@ -31,22 +31,29 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 任务ID
-        /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
-
-        /// <summary>
         /// 规则名称
         /// </summary>
         [JsonProperty("AlarmRegularName")]
         public string AlarmRegularName{ get; set; }
 
         /// <summary>
+        /// 任务ID
+        /// </summary>
+        [JsonProperty("TaskId")]
+        [System.Obsolete]
+        public string TaskId{ get; set; }
+
+        /// <summary>
         /// 主键ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
+
+        /// <summary>
+        /// 任务类型:201.实时,202.离线
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public long? TaskType{ get; set; }
 
 
         /// <summary>
@@ -55,9 +62,10 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "AlarmRegularName", this.AlarmRegularName);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }
 }

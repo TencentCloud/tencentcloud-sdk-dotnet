@@ -219,6 +219,46 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 该接口支持通过传参，按照产品、项目、地域、计费模式和标签五个维度获取账单费用明细。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryResponse"/></returns>
+        public async Task<DescribeBillSummaryResponse> DescribeBillSummary(DescribeBillSummaryRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口支持通过传参，按照产品、项目、地域、计费模式和标签五个维度获取账单费用明细。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryResponse"/></returns>
+        public DescribeBillSummaryResponse DescribeBillSummarySync(DescribeBillSummaryRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取按计费模式汇总费用分布
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByPayModeRequest"/></param>

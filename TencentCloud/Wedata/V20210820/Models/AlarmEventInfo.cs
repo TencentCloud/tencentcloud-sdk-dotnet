@@ -134,6 +134,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Operator")]
         public long? Operator{ get; set; }
 
+        /// <summary>
+        /// 告警规则ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegularId")]
+        public string RegularId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +164,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "IsSendSuccess", this.IsSendSuccess);
             this.SetParamSimple(map, prefix + "MessageId", this.MessageId);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "RegularId", this.RegularId);
         }
     }
 }

@@ -60,6 +60,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// 过滤的 bundle
+        /// </summary>
+        [JsonProperty("Bundle")]
+        public string Bundle{ get; set; }
+
+        /// <summary>
+        /// bundle 所属的 broker ip 地址，支持模糊查询
+        /// </summary>
+        [JsonProperty("OwnerBroker")]
+        public string OwnerBroker{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "NeedMetrics", this.NeedMetrics);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Bundle", this.Bundle);
+            this.SetParamSimple(map, prefix + "OwnerBroker", this.OwnerBroker);
         }
     }
 }

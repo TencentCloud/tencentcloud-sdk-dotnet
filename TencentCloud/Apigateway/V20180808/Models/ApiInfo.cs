@@ -197,7 +197,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceParameters")]
-        public ServiceParameter[] ServiceParameters{ get; set; }
+        public DescribeApiResultServiceParametersInfo[] ServiceParameters{ get; set; }
 
         /// <summary>
         /// 常量参数。

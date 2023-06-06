@@ -623,7 +623,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 用于创建创建后端通道
+        /// 用于创建后端通道
         /// </summary>
         /// <param name="req"><see cref="CreateUpstreamRequest"/></param>
         /// <returns><see cref="CreateUpstreamResponse"/></returns>
@@ -643,7 +643,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 用于创建创建后端通道
+        /// 用于创建后端通道
         /// </summary>
         /// <param name="req"><see cref="CreateUpstreamRequest"/></param>
         /// <returns><see cref="CreateUpstreamResponse"/></returns>
@@ -1757,7 +1757,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（DescribeExclusiveInstances）用于查询独享实例列表信息。​
+        /// 本接口（DescribeExclusiveInstances）用于查询独享实例列表信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeExclusiveInstancesRequest"/></param>
         /// <returns><see cref="DescribeExclusiveInstancesResponse"/></returns>
@@ -1777,7 +1777,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（DescribeExclusiveInstances）用于查询独享实例列表信息。​
+        /// 本接口（DescribeExclusiveInstances）用于查询独享实例列表信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeExclusiveInstancesRequest"/></param>
         /// <returns><see cref="DescribeExclusiveInstancesResponse"/></returns>
@@ -3937,7 +3937,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（UpdateService）用于从服务发布的环境中运行版本切换到特定版本。用户在使用 API 网关创建服务并发布服务到某个环境后，多因为开发过程会产生多个版本，此时可调用本接口。
+        /// 本接口（UpdateService）用于从服务发布的环境中运行版本切换到特定版本。用户在使用 API 网关创建服务并发布服务到某个环境后，多因开发过程会产生多个版本，此时可调用本接口。
         /// </summary>
         /// <param name="req"><see cref="UpdateServiceRequest"/></param>
         /// <returns><see cref="UpdateServiceResponse"/></returns>
@@ -3957,7 +3957,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（UpdateService）用于从服务发布的环境中运行版本切换到特定版本。用户在使用 API 网关创建服务并发布服务到某个环境后，多因为开发过程会产生多个版本，此时可调用本接口。
+        /// 本接口（UpdateService）用于从服务发布的环境中运行版本切换到特定版本。用户在使用 API 网关创建服务并发布服务到某个环境后，多因开发过程会产生多个版本，此时可调用本接口。
         /// </summary>
         /// <param name="req"><see cref="UpdateServiceRequest"/></param>
         /// <returns><see cref="UpdateServiceResponse"/></returns>

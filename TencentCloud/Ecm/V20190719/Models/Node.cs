@@ -72,6 +72,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("ISPNum")]
         public long? ISPNum{ get; set; }
 
+        /// <summary>
+        /// 节点是否支持LB
+        /// </summary>
+        [JsonProperty("LBSupported")]
+        public bool? LBSupported{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
             this.SetParamArrayObj(map, prefix + "ISPSet.", this.ISPSet);
             this.SetParamSimple(map, prefix + "ISPNum", this.ISPNum);
+            this.SetParamSimple(map, prefix + "LBSupported", this.LBSupported);
         }
     }
 }

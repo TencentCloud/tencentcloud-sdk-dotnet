@@ -38,6 +38,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
 
         /// <summary>
         /// API描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiDesc")]
         public string ApiDesc{ get; set; }

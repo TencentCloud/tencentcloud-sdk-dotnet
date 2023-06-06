@@ -28,7 +28,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// 独享实例列表查询结果
         /// </summary>
         [JsonProperty("Result")]
-        public InstanceInfo Result{ get; set; }
+        public DescribeExclusiveInstancesResult Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

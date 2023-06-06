@@ -46,13 +46,6 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string UsagePlanDesc{ get; set; }
 
         /// <summary>
-        /// 初始化调用次数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("InitQuota")]
-        public long? InitQuota{ get; set; }
-
-        /// <summary>
         /// 每秒请求限制数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -65,13 +58,6 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         [JsonProperty("MaxRequestNum")]
         public long? MaxRequestNum{ get; set; }
-
-        /// <summary>
-        /// 是否隐藏。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("IsHide")]
-        public long? IsHide{ get; set; }
 
         /// <summary>
         /// 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
@@ -124,10 +110,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "UsagePlanId", this.UsagePlanId);
             this.SetParamSimple(map, prefix + "UsagePlanName", this.UsagePlanName);
             this.SetParamSimple(map, prefix + "UsagePlanDesc", this.UsagePlanDesc);
-            this.SetParamSimple(map, prefix + "InitQuota", this.InitQuota);
             this.SetParamSimple(map, prefix + "MaxRequestNumPreSec", this.MaxRequestNumPreSec);
             this.SetParamSimple(map, prefix + "MaxRequestNum", this.MaxRequestNum);
-            this.SetParamSimple(map, prefix + "IsHide", this.IsHide);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
             this.SetParamSimple(map, prefix + "BindSecretIdTotalCount", this.BindSecretIdTotalCount);
