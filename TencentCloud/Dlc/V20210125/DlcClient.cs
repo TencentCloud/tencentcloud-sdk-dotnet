@@ -3293,6 +3293,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（ModifySparkAppBatch）用于批量修改Spark作业参数配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifySparkAppBatchRequest"/></param>
+        /// <returns><see cref="ModifySparkAppBatchResponse"/></returns>
+        public async Task<ModifySparkAppBatchResponse> ModifySparkAppBatch(ModifySparkAppBatchRequest req)
+        {
+             JsonResponseModel<ModifySparkAppBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySparkAppBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySparkAppBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifySparkAppBatch）用于批量修改Spark作业参数配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifySparkAppBatchRequest"/></param>
+        /// <returns><see cref="ModifySparkAppBatchResponse"/></returns>
+        public ModifySparkAppBatchResponse ModifySparkAppBatchSync(ModifySparkAppBatchRequest req)
+        {
+             JsonResponseModel<ModifySparkAppBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySparkAppBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySparkAppBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改用户信息
         /// </summary>
         /// <param name="req"><see cref="ModifyUserRequest"/></param>

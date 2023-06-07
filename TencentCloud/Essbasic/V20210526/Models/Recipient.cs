@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 签署人唯一标识
+        /// 签署人唯一标识，在通过模板发起合同的时候对应签署方Id
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 签署方备注信息
+        /// 签署方备注角色名
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
         /// <summary>
-        /// 是否需要校验
+        /// 是否需要校验，true-是，false-否
         /// </summary>
         [JsonProperty("RequireValidation")]
         public bool? RequireValidation{ get; set; }
 
         /// <summary>
-        /// 是否必须填写
+        /// 是否必须填写，true-是，false-否
         /// </summary>
         [JsonProperty("RequireSign")]
         public bool? RequireSign{ get; set; }

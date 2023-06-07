@@ -64,13 +64,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowMessage{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的创建时间戳
+        /// 合同(流程)的创建时间戳，单位秒
         /// </summary>
         [JsonProperty("CreateOn")]
         public long? CreateOn{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的签署截止时间戳
+        /// 合同(流程)的签署截止时间戳，单位秒
         /// </summary>
         [JsonProperty("DeadLine")]
         public long? DeadLine{ get; set; }

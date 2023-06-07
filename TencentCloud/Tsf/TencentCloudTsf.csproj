@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.774</VersionPrefix>
+    <VersionPrefix>3.0.775</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -92,6 +92,7 @@
     <Compile Include="V20180326\Models\ContainerEvent.cs" />
     <Compile Include="V20180326\Models\ContainerGroupDeploy.cs" />
     <Compile Include="V20180326\Models\ContainerGroupDetail.cs" />
+    <Compile Include="V20180326\Models\ContainerGroupOther.cs" />
     <Compile Include="V20180326\Models\ContinueRunFailedTaskBatchRequest.cs" />
     <Compile Include="V20180326\Models\ContinueRunFailedTaskBatchResponse.cs" />
     <Compile Include="V20180326\Models\CosCredentials.cs" />
@@ -256,6 +257,8 @@
     <Compile Include="V20180326\Models\DescribeConfigsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeContainerEventsRequest.cs" />
     <Compile Include="V20180326\Models\DescribeContainerEventsResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeContainerGroupAttributeRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeContainerGroupAttributeResponse.cs" />
     <Compile Include="V20180326\Models\DescribeContainerGroupDeployInfoRequest.cs" />
     <Compile Include="V20180326\Models\DescribeContainerGroupDeployInfoResponse.cs" />
     <Compile Include="V20180326\Models\DescribeContainerGroupDetailRequest.cs" />

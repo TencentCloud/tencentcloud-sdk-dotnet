@@ -55,6 +55,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Dir{ get; set; }
 
         /// <summary>
+        /// 地址模块
+        /// </summary>
+        [JsonProperty("AddressModule")]
+        public string AddressModule{ get; set; }
+
+        /// <summary>
         /// 规则描述
         /// </summary>
         [JsonProperty("Desc")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "PortRange", this.PortRange);
             this.SetParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
             this.SetParamSimple(map, prefix + "Dir", this.Dir);
+            this.SetParamSimple(map, prefix + "AddressModule", this.AddressModule);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
         }
     }

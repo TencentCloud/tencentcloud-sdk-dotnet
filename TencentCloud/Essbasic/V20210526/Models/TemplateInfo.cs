@@ -43,7 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 模板控件信息结构
+        /// 模板的填充控件信息结构
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Recipient[] Recipients{ get; set; }
 
         /// <summary>
-        /// 签署区模板信息结构
+        /// 模板中的签署控件信息结构
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }
@@ -70,42 +70,43 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 是否是发起人 ,已弃用
         /// </summary>
         [JsonProperty("IsPromoter")]
+        [System.Obsolete]
         public bool? IsPromoter{ get; set; }
 
         /// <summary>
-        /// 模板的创建者信息
+        /// 模板的创建者信息，电子签系统用户ID
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 模板创建的时间戳（精确到秒）
+        /// 模板创建的时间戳，单位秒
         /// </summary>
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
 
         /// <summary>
-        /// 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+        /// 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。请求参数WithPreviewUrl=true时返回，有效期5分钟。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreviewUrl")]
         public string PreviewUrl{ get; set; }
 
         /// <summary>
-        /// 第三方应用集成-模板PDF文件链接
+        /// 第三方应用集成-模板PDF文件链接。请求参数WithPdfUrl=true时返回（此功能开放需要联系客户经理），有效期5分钟。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PdfUrl")]
         public string PdfUrl{ get; set; }
 
         /// <summary>
-        /// 关联的平台企业模板ID
+        /// 关联的第三方应用平台企业模板ID
         /// </summary>
         [JsonProperty("ChannelTemplateId")]
         public string ChannelTemplateId{ get; set; }
 
         /// <summary>
-        /// 关联的平台企业模板名称
+        /// 关联的三方应用平台平台企业模板名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelTemplateName")]

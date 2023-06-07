@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 员工在电子签平台的id
+        /// 员工在电子签平台的用户ID
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Email{ get; set; }
 
         /// <summary>
-        /// 员工在第三方平台id
+        /// 员工在第三方应用平台的用户ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenId")]
@@ -77,13 +77,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? Verified{ get; set; }
 
         /// <summary>
-        /// 员工创建时间戳
+        /// 员工创建时间戳，单位秒
         /// </summary>
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
 
         /// <summary>
-        /// 员工实名时间戳
+        /// 员工实名时间戳，单位秒
         /// </summary>
         [JsonProperty("VerifiedOn")]
         public long? VerifiedOn{ get; set; }

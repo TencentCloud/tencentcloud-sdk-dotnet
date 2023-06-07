@@ -92,19 +92,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string SpecificationsType{ get; set; }
 
         /// <summary>
-        /// 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
+        /// 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
+        /// 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
         /// </summary>
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
 
         /// <summary>
-        /// 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
+        /// 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }

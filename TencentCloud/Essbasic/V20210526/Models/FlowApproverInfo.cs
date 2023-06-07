@@ -94,7 +94,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string RecipientId{ get; set; }
 
         /// <summary>
-        /// 签署截止时间，默认一年
+        /// 签署截止时间戳，默认一年
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
@@ -103,6 +103,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 签署完回调url，最大长度1000个字符
         /// </summary>
         [JsonProperty("CallbackUrl")]
+        [System.Obsolete]
         public string CallbackUrl{ get; set; }
 
         /// <summary>
@@ -125,7 +126,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? PreReadTime{ get; set; }
 
         /// <summary>
-        /// 签署完前端跳转的url，暂未使用
+        /// 签署完前端跳转的url，此字段的用法场景请联系客户经理确认
         /// </summary>
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }

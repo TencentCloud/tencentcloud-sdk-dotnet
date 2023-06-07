@@ -30,6 +30,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 路由id
+        /// </summary>
+        [JsonProperty("RouteId")]
+        public long? RouteId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "RouteId", this.RouteId);
         }
     }
 }

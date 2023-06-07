@@ -49,7 +49,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? BuyTime{ get; set; }
 
         /// <summary>
-        /// 截至时间戳
+        /// 截止时间戳
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

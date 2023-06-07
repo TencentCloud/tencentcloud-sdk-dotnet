@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 如果成功则返回Success，失败则返回yunapi定义的错误码
+        /// 如果成功则返回Success，失败则返回云api定义的错误码
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }

@@ -67,6 +67,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
+        /// 视频内容质检类型任务参数。
+        /// </summary>
+        [JsonProperty("AiQualityControlTask")]
+        public AiQualityControlTaskInput AiQualityControlTask{ get; set; }
+
+        /// <summary>
         /// 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
         /// </summary>
         [JsonProperty("SessionId")]
@@ -91,6 +97,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
+            this.SetParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
         }

@@ -249,6 +249,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("VodLocalMode")]
         public long? VodLocalMode{ get; set; }
 
+        /// <summary>
+        /// 录制模板 ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordTemplateId")]
+        public string RecordTemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -282,6 +289,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
             this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
             this.SetParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
+            this.SetParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
         }
     }
 }

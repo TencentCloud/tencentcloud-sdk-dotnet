@@ -43,7 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowDescription{ get; set; }
 
         /// <summary>
-        /// 合同流程截止时间，unix时间戳
+        /// 合同流程截止时间，unix时间戳，单位秒
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? Unordered{ get; set; }
 
         /// <summary>
-        /// 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
+        /// 是否打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
         /// </summary>
         [JsonProperty("IntelligentStatus")]
         public string IntelligentStatus{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public FormField[] FormFields{ get; set; }
 
         /// <summary>
-        /// 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
+        /// 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批。使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
         /// </summary>
         [JsonProperty("NeedSignReview")]
         public bool? NeedSignReview{ get; set; }

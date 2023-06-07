@@ -34,24 +34,28 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 内部参数，暂未开放使用
         /// </summary>
         [JsonProperty("Channel")]
+        [System.Obsolete]
         public string Channel{ get; set; }
 
         /// <summary>
         /// 内部参数，暂未开放使用
         /// </summary>
         [JsonProperty("CustomUserId")]
+        [System.Obsolete]
         public string CustomUserId{ get; set; }
 
         /// <summary>
         /// 内部参数，暂未开放使用
         /// </summary>
         [JsonProperty("ClientIp")]
+        [System.Obsolete]
         public string ClientIp{ get; set; }
 
         /// <summary>
         /// 内部参数，暂未开放使用
         /// </summary>
         [JsonProperty("ProxyIp")]
+        [System.Obsolete]
         public string ProxyIp{ get; set; }
 
 

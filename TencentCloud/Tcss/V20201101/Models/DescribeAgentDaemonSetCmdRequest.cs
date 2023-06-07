@@ -54,6 +54,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ExpireDate")]
         public string ExpireDate{ get; set; }
 
+        /// <summary>
+        /// 集群自定义参数
+        /// </summary>
+        [JsonProperty("ClusterCustomParameters")]
+        public ClusterCustomParameters[] ClusterCustomParameters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RegionCode", this.RegionCode);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "ExpireDate", this.ExpireDate);
+            this.SetParamArrayObj(map, prefix + "ClusterCustomParameters.", this.ClusterCustomParameters);
         }
     }
 }

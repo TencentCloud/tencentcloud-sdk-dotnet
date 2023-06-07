@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Compare{ get; set; }
 
         /// <summary>
-        /// 审计规则过滤条件的匹配值。sqlType条件的Value需在一下选择"alter", "changeuser", "create", "delete", "drop", "execute", "insert", "login", "logout", "other", "replace", "select", "set", "update"。
+        /// 审计规则过滤条件的匹配值。sqlType条件的Value需在以下选择"alter", "changeuser", "create", "delete", "drop", "execute", "insert", "login", "logout", "other", "replace", "select", "set", "update"。
         /// </summary>
         [JsonProperty("Value")]
         public string[] Value{ get; set; }

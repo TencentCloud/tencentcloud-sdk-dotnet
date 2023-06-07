@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// CHECK_BOX - true/false
         /// FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
         /// SELECTOR - 选项值
-        /// DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+        /// DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo
         /// </summary>
         [JsonProperty("ComponentValue")]
         public string ComponentValue{ get; set; }

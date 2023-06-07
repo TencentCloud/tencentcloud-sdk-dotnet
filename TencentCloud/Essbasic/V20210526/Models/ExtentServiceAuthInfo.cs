@@ -30,7 +30,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         ///   OVERSEA_SIGN          企业与港澳台居民*签署合同
         ///   MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
         ///   PAGING_SEAL           骑缝章
-        ///   DOWNLOAD_FLOW         授权渠道下载合同 
+        ///   DOWNLOAD_FLOW         授权平台企业下载合同 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -50,14 +50,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 最近操作人openid（经办人openid）
+        /// 最近操作人第三方应用平台的用户openid
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperatorOpenId")]
         public string OperatorOpenId{ get; set; }
 
         /// <summary>
-        /// 最近操作时间
+        /// 最近操作时间戳，单位秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateOn")]

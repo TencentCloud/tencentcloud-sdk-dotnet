@@ -27,7 +27,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 拉流源的类型：
         /// PullLivePushLive -直播，
-        /// PullVodPushLive -点播。
+        /// PullVodPushLive -点播，
         /// PullPicPushLive -图片。
         /// </summary>
         [JsonProperty("SourceType")]

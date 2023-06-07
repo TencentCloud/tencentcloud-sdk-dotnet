@@ -31,18 +31,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string OrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 用户真实的IP
-        /// </summary>
-        [JsonProperty("ClientIp")]
-        public string ClientIp{ get; set; }
-
-        /// <summary>
-        /// 机构的代理IP
-        /// </summary>
-        [JsonProperty("ProxyIp")]
-        public string ProxyIp{ get; set; }
-
-        /// <summary>
         /// 机构在平台的编号
         /// </summary>
         [JsonProperty("OrganizationId")]
@@ -54,6 +42,20 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
 
+        /// <summary>
+        /// 用户真实的IP
+        /// </summary>
+        [JsonProperty("ClientIp")]
+        [System.Obsolete]
+        public string ClientIp{ get; set; }
+
+        /// <summary>
+        /// 机构的代理IP
+        /// </summary>
+        [JsonProperty("ProxyIp")]
+        [System.Obsolete]
+        public string ProxyIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,10 +63,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
-            this.SetParamSimple(map, prefix + "ClientIp", this.ClientIp);
-            this.SetParamSimple(map, prefix + "ProxyIp", this.ProxyIp);
             this.SetParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
+            this.SetParamSimple(map, prefix + "ClientIp", this.ClientIp);
+            this.SetParamSimple(map, prefix + "ProxyIp", this.ProxyIp);
         }
     }
 }

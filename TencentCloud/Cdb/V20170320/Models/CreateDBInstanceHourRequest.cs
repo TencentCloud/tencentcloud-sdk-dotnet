@@ -151,7 +151,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 实例名称。一次购买多个实例命名会用后缀数字区分，例instnaceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
+        /// 实例名称。一次购买多个实例命名会用后缀数字区分，例instanceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -187,7 +187,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
+        /// 告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。
         /// </summary>
         [JsonProperty("AlarmPolicyList")]
         public long?[] AlarmPolicyList{ get; set; }

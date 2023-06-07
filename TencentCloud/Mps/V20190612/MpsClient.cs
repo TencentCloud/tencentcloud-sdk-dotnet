@@ -515,6 +515,46 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 创建媒体传输的输入配置。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLinkInputRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkInputResponse"/></returns>
+        public async Task<CreateStreamLinkInputResponse> CreateStreamLinkInput(CreateStreamLinkInputRequest req)
+        {
+             JsonResponseModel<CreateStreamLinkInputResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStreamLinkInput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLinkInputResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建媒体传输的输入配置。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLinkInputRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkInputResponse"/></returns>
+        public CreateStreamLinkInputResponse CreateStreamLinkInputSync(CreateStreamLinkInputRequest req)
+        {
+             JsonResponseModel<CreateStreamLinkInputResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStreamLinkInput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLinkInputResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建媒体传输流的输出信息。
         /// </summary>
         /// <param name="req"><see cref="CreateStreamLinkOutputInfoRequest"/></param>

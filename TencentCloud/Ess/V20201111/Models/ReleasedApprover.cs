@@ -42,6 +42,14 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("RelievedApproverReceiptId")]
         public string RelievedApproverReceiptId{ get; set; }
 
+        /// <summary>
+        /// 指定签署人类型，目前仅支持
+        /// ORGANIZATION-企业
+        /// ENTERPRISESERVER-企业静默签
+        /// </summary>
+        [JsonProperty("ApproverType")]
+        public string ApproverType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +59,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "RelievedApproverReceiptId", this.RelievedApproverReceiptId);
+            this.SetParamSimple(map, prefix + "ApproverType", this.ApproverType);
         }
     }
 }

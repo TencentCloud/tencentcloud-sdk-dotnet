@@ -39,6 +39,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 签署人类型，目前仅支持
         /// ORGANIZATION-企业
+        /// ENTERPRISESERVER-企业静默签
         /// </summary>
         [JsonProperty("ApproverType")]
         public string ApproverType{ get; set; }

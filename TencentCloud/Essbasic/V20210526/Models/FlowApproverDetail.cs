@@ -97,7 +97,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ApproveMessage{ get; set; }
 
         /// <summary>
-        /// 签署人签署时间
+        /// 签署人签署时间戳，单位秒
         /// </summary>
         [JsonProperty("ApproveTime")]
         public long? ApproveTime{ get; set; }

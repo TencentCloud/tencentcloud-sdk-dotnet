@@ -32,7 +32,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string SignUrl{ get; set; }
 
         /// <summary>
-        /// 合同过期时间
+        /// 合同过期时间戳，单位秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Deadline")]
@@ -57,6 +57,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomUserId")]
+        [System.Obsolete]
         public string CustomUserId{ get; set; }
 
         /// <summary>

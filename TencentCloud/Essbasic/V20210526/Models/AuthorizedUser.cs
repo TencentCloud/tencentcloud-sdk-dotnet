@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 用户openid
+        /// 第三方应用平台的用户openid
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
