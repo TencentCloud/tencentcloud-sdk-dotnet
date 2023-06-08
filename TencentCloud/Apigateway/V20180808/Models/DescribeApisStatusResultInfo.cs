@@ -30,6 +30,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
+        /// <summary>
+        /// API 接口列表。
+        /// </summary>
+        [JsonProperty("ApiIdStatusSet")]
+        public DescribeApisStatusResultApiIdStatusSetInfo[] ApiIdStatusSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "ApiIdStatusSet.", this.ApiIdStatusSet);
         }
     }
 }

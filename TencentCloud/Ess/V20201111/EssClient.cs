@@ -669,6 +669,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 通过此接口，创建企业的部门，支持绑定客户系统部门ID。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrationDepartmentRequest"/></param>
+        /// <returns><see cref="CreateIntegrationDepartmentResponse"/></returns>
+        public async Task<CreateIntegrationDepartmentResponse> CreateIntegrationDepartment(CreateIntegrationDepartmentRequest req)
+        {
+             JsonResponseModel<CreateIntegrationDepartmentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateIntegrationDepartment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIntegrationDepartmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口，创建企业的部门，支持绑定客户系统部门ID。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrationDepartmentRequest"/></param>
+        /// <returns><see cref="CreateIntegrationDepartmentResponse"/></returns>
+        public CreateIntegrationDepartmentResponse CreateIntegrationDepartmentSync(CreateIntegrationDepartmentRequest req)
+        {
+             JsonResponseModel<CreateIntegrationDepartmentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateIntegrationDepartment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIntegrationDepartmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建员工,如需在此接口提醒员工实名，入参Employees的OpenId不传
         /// </summary>
         /// <param name="req"><see cref="CreateIntegrationEmployeesRequest"/></param>
@@ -1069,6 +1109,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 通过此接口，删除企业的部门。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIntegrationDepartmentRequest"/></param>
+        /// <returns><see cref="DeleteIntegrationDepartmentResponse"/></returns>
+        public async Task<DeleteIntegrationDepartmentResponse> DeleteIntegrationDepartment(DeleteIntegrationDepartmentRequest req)
+        {
+             JsonResponseModel<DeleteIntegrationDepartmentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteIntegrationDepartment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIntegrationDepartmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口，删除企业的部门。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIntegrationDepartmentRequest"/></param>
+        /// <returns><see cref="DeleteIntegrationDepartmentResponse"/></returns>
+        public DeleteIntegrationDepartmentResponse DeleteIntegrationDepartmentSync(DeleteIntegrationDepartmentRequest req)
+        {
+             JsonResponseModel<DeleteIntegrationDepartmentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteIntegrationDepartment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIntegrationDepartmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 移除员工
         /// </summary>
         /// <param name="req"><see cref="DeleteIntegrationEmployeesRequest"/></param>
@@ -1390,6 +1470,46 @@ namespace TencentCloud.Ess.V20201111
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFlowTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口，查询企业的部门，支持查询单个部门节点或单个部门节点及一级子节点部门列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationDepartmentsRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationDepartmentsResponse"/></returns>
+        public async Task<DescribeIntegrationDepartmentsResponse> DescribeIntegrationDepartments(DescribeIntegrationDepartmentsRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationDepartmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIntegrationDepartments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationDepartmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口，查询企业的部门，支持查询单个部门节点或单个部门节点及一级子节点部门列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrationDepartmentsRequest"/></param>
+        /// <returns><see cref="DescribeIntegrationDepartmentsResponse"/></returns>
+        public DescribeIntegrationDepartmentsResponse DescribeIntegrationDepartmentsSync(DescribeIntegrationDepartmentsRequest req)
+        {
+             JsonResponseModel<DescribeIntegrationDepartmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationDepartments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationDepartmentsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1798,6 +1918,46 @@ namespace TencentCloud.Ess.V20201111
              {
                  var strResp = this.InternalRequestSync(req, "ModifyApplicationCallbackInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApplicationCallbackInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口，更新企业的部门信息，支持更新部门名、客户系统部门ID、部门序列号。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIntegrationDepartmentRequest"/></param>
+        /// <returns><see cref="ModifyIntegrationDepartmentResponse"/></returns>
+        public async Task<ModifyIntegrationDepartmentResponse> ModifyIntegrationDepartment(ModifyIntegrationDepartmentRequest req)
+        {
+             JsonResponseModel<ModifyIntegrationDepartmentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyIntegrationDepartment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIntegrationDepartmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口，更新企业的部门信息，支持更新部门名、客户系统部门ID、部门序列号。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIntegrationDepartmentRequest"/></param>
+        /// <returns><see cref="ModifyIntegrationDepartmentResponse"/></returns>
+        public ModifyIntegrationDepartmentResponse ModifyIntegrationDepartmentSync(ModifyIntegrationDepartmentRequest req)
+        {
+             JsonResponseModel<ModifyIntegrationDepartmentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyIntegrationDepartment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIntegrationDepartmentResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -38,6 +38,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 指定用户ID数组，电子签系统用户ID
+        /// 可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权取消。
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }

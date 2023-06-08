@@ -25,7 +25,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
+        /// 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
+        /// 请求参数填写OpenId时，返回授权成功的 Openid。
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }

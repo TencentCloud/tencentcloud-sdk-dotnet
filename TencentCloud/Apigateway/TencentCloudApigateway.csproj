@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E0BB529-7C6E-3A1A-A84E-7231EAFCBAB2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.776</VersionPrefix>
+    <VersionPrefix>3.0.777</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,7 @@
     <Compile Include="V20180808\Models\ApiRequestConfig.cs" />
     <Compile Include="V20180808\Models\ApiUsagePlan.cs" />
     <Compile Include="V20180808\Models\ApiUsagePlanSet.cs" />
+    <Compile Include="V20180808\Models\ApigatewayTags.cs" />
     <Compile Include="V20180808\Models\AttachPluginRequest.cs" />
     <Compile Include="V20180808\Models\AttachPluginResponse.cs" />
     <Compile Include="V20180808\Models\AttachedApiInfo.cs" />
@@ -161,6 +162,7 @@
     <Compile Include="V20180808\Models\DescribeApiUsagePlanResponse.cs" />
     <Compile Include="V20180808\Models\DescribeApisStatusRequest.cs" />
     <Compile Include="V20180808\Models\DescribeApisStatusResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeApisStatusResultApiIdStatusSetInfo.cs" />
     <Compile Include="V20180808\Models\DescribeApisStatusResultInfo.cs" />
     <Compile Include="V20180808\Models\DescribeExclusiveInstanceDetailRequest.cs" />
     <Compile Include="V20180808\Models\DescribeExclusiveInstanceDetailResponse.cs" />
