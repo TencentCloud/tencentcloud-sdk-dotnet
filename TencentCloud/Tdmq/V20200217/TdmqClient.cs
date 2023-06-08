@@ -4492,6 +4492,7 @@ namespace TencentCloud.Tdmq.V20200217
 
         /// <summary>
         /// 发送单条消息
+        /// 不支持持久topic
         /// </summary>
         /// <param name="req"><see cref="SendMessagesRequest"/></param>
         /// <returns><see cref="SendMessagesResponse"/></returns>
@@ -4512,6 +4513,7 @@ namespace TencentCloud.Tdmq.V20200217
 
         /// <summary>
         /// 发送单条消息
+        /// 不支持持久topic
         /// </summary>
         /// <param name="req"><see cref="SendMessagesRequest"/></param>
         /// <returns><see cref="SendMessagesResponse"/></returns>

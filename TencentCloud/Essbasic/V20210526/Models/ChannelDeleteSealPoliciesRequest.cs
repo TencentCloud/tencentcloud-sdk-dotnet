@@ -37,7 +37,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string SealId{ get; set; }
 
         /// <summary>
-        /// 指定用户ID数组
+        /// 指定用户ID数组，电子签系统用户ID
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
@@ -46,12 +46,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 组织机构信息，不用传
         /// </summary>
         [JsonProperty("Organization")]
+        [System.Obsolete]
         public OrganizationInfo Organization{ get; set; }
 
         /// <summary>
         /// 操作人（用户）信息，不用传
         /// </summary>
         [JsonProperty("Operator")]
+        [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
 

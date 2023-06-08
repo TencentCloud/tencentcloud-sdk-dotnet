@@ -92,7 +92,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
         /// 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
         /// 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-        /// 下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+        /// 下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
         /// 下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
         /// </summary>
         [JsonProperty("NextHopDestination")]

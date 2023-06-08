@@ -80,6 +80,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("RetentionPolicy")]
         public RetentionPolicy RetentionPolicy{ get; set; }
 
+        /// <summary>
+        /// 是否自动创建订阅
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoSubscriptionCreation")]
+        public bool? AutoSubscriptionCreation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +102,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "TopicNum", this.TopicNum);
             this.SetParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
+            this.SetParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
         }
     }
 }

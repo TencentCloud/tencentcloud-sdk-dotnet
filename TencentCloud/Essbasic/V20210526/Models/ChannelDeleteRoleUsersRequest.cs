@@ -37,7 +37,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string RoleId{ get; set; }
 
         /// <summary>
-        /// 用户列表
+        /// 用户列表，电子签系统的UserId
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
@@ -46,6 +46,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 操作人信息
         /// </summary>
         [JsonProperty("Operator")]
+        [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
 

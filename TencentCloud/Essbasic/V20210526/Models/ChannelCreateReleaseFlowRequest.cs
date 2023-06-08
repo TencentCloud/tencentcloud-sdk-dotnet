@@ -58,12 +58,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 暂未开放
         /// </summary>
         [JsonProperty("Organization")]
+        [System.Obsolete]
         public OrganizationInfo Organization{ get; set; }
 
         /// <summary>
         /// 暂未开放
         /// </summary>
         [JsonProperty("Operator")]
+        [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
 

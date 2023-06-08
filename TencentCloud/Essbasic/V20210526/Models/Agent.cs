@@ -52,6 +52,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 内部参数，暂未开放使用
         /// </summary>
         [JsonProperty("ProxyOrganizationId")]
+        [System.Obsolete]
         public string ProxyOrganizationId{ get; set; }
 
 

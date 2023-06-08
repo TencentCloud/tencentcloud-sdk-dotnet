@@ -67,12 +67,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
         /// 是否获取模板预览链接
         /// </summary>
         [JsonProperty("WithPreviewUrl")]
@@ -85,10 +79,17 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? WithPdfUrl{ get; set; }
 
         /// <summary>
-        /// 模板ID
+        /// 对应第三方应用平台企业的模板ID
         /// </summary>
         [JsonProperty("ChannelTemplateId")]
         public string ChannelTemplateId{ get; set; }
+
+        /// <summary>
+        /// 操作者的信息
+        /// </summary>
+        [JsonProperty("Operator")]
+        [System.Obsolete]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -103,10 +104,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "QueryAllComponents", this.QueryAllComponents);
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
             this.SetParamSimple(map, prefix + "WithPdfUrl", this.WithPdfUrl);
             this.SetParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

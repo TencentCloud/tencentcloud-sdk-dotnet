@@ -93,6 +93,46 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建域名、ip相关信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainAndIpRequest"/></param>
+        /// <returns><see cref="CreateDomainAndIpResponse"/></returns>
+        public async Task<CreateDomainAndIpResponse> CreateDomainAndIp(CreateDomainAndIpRequest req)
+        {
+             JsonResponseModel<CreateDomainAndIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDomainAndIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainAndIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建域名、ip相关信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainAndIpRequest"/></param>
+        /// <returns><see cref="CreateDomainAndIpResponse"/></returns>
+        public CreateDomainAndIpResponse CreateDomainAndIpSync(CreateDomainAndIpRequest req)
+        {
+             JsonResponseModel<CreateDomainAndIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDomainAndIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainAndIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// cvm详情
         /// </summary>
         /// <param name="req"><see cref="DescribeCVMAssetInfoRequest"/></param>

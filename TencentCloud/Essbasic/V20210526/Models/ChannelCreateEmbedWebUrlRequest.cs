@@ -25,22 +25,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
-        /// </summary>
-        [JsonProperty("EmbedType")]
-        public string EmbedType{ get; set; }
-
-        /// <summary>
         /// 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 渠道操作者信息
+        /// WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
         /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
+        [JsonProperty("EmbedType")]
+        public string EmbedType{ get; set; }
 
         /// <summary>
         /// WEB嵌入的业务资源ID，EmbedType取值MODIFY_TEMPLATE或PREVIEW_TEMPLATE或 PREVIEW_FLOW时BusinessId必填
@@ -54,17 +48,24 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("HiddenComponents")]
         public bool? HiddenComponents{ get; set; }
 
+        /// <summary>
+        /// 渠道操作者信息
+        /// </summary>
+        [JsonProperty("Operator")]
+        [System.Obsolete]
+        public UserInfo Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EmbedType", this.EmbedType);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "EmbedType", this.EmbedType);
             this.SetParamSimple(map, prefix + "BusinessId", this.BusinessId);
             this.SetParamSimple(map, prefix + "HiddenComponents", this.HiddenComponents);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

@@ -85,7 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheckSettings")]
-        public HealthCheckSetting[] HealthCheckSettings{ get; set; }
+        public HealthCheckSettings HealthCheckSettings{ get; set; }
 
         /// <summary>
         /// 服务配置信息是否匹配
@@ -109,7 +109,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
             this.SetParamSimple(map, prefix + "NodePort", this.NodePort);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
-            this.SetParamArrayObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
+            this.SetParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
             this.SetParamSimple(map, prefix + "IsNotEqualServiceConfig", this.IsNotEqualServiceConfig);
         }
     }

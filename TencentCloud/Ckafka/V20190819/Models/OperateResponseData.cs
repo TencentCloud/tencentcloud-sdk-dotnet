@@ -31,6 +31,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
+        /// <summary>
+        /// RouteIdDto
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RouteDTO")]
+        public RouteDTO RouteDTO{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamObj(map, prefix + "RouteDTO.", this.RouteDTO);
         }
     }
 }

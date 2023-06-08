@@ -43,16 +43,17 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string SealId{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
         /// 更新印章状态原因说明
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
+
+        /// <summary>
+        /// 操作者的信息
+        /// </summary>
+        [JsonProperty("Operator")]
+        [System.Obsolete]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -63,8 +64,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SealId", this.SealId);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

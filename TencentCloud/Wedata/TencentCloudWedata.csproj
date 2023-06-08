@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.775</VersionPrefix>
+    <VersionPrefix>3.0.776</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -529,6 +529,8 @@
     <Compile Include="V20210820\Models\SaveCustomFunctionResponse.cs" />
     <Compile Include="V20210820\Models\SchedulerTaskInstanceInfo.cs" />
     <Compile Include="V20210820\Models\SchemaDetail.cs" />
+    <Compile Include="V20210820\Models\ScriptInfoResponse.cs" />
+    <Compile Include="V20210820\Models\ScriptRequestInfo.cs" />
     <Compile Include="V20210820\Models\SearchCondition.cs" />
     <Compile Include="V20210820\Models\SearchConditionInstance.cs" />
     <Compile Include="V20210820\Models\SearchConditionInstanceNew.cs" />
@@ -583,6 +585,8 @@
     <Compile Include="V20210820\Models\UnlockIntegrationTaskResponse.cs" />
     <Compile Include="V20210820\Models\UpdateInLongAgentRequest.cs" />
     <Compile Include="V20210820\Models\UpdateInLongAgentResponse.cs" />
+    <Compile Include="V20210820\Models\UploadContentRequest.cs" />
+    <Compile Include="V20210820\Models\UploadContentResponse.cs" />
     <Compile Include="V20210820\Models\UserFileDTO.cs" />
     <Compile Include="V20210820\Models\WeightInfo.cs" />
     <Compile Include="V20210820\Models\Workflow.cs" />

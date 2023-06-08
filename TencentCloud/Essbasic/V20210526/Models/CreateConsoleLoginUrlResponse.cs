@@ -36,7 +36,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ConsoleUrl{ get; set; }
 
         /// <summary>
-        /// 子客企业是否已开通腾讯电子签
+        /// 子客企业是否已开通腾讯电子签，true-是，false-否
         /// </summary>
         [JsonProperty("IsActivated")]
         public bool? IsActivated{ get; set; }

@@ -1639,6 +1639,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 此接口（GetDownloadFlowUrl）用于创建电子签批量下载地址，让合作企业进入控制台直接下载，支持客户合同（流程）按照自定义文件夹形式 分类下载。
         /// 当前接口限制最多合同（流程）50个.
+        /// 返回的链接只能使用一次
         /// </summary>
         /// <param name="req"><see cref="GetDownloadFlowUrlRequest"/></param>
         /// <returns><see cref="GetDownloadFlowUrlResponse"/></returns>
@@ -1660,6 +1661,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 此接口（GetDownloadFlowUrl）用于创建电子签批量下载地址，让合作企业进入控制台直接下载，支持客户合同（流程）按照自定义文件夹形式 分类下载。
         /// 当前接口限制最多合同（流程）50个.
+        /// 返回的链接只能使用一次
         /// </summary>
         /// <param name="req"><see cref="GetDownloadFlowUrlRequest"/></param>
         /// <returns><see cref="GetDownloadFlowUrlResponse"/></returns>
@@ -1851,7 +1853,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 此接口（SyncProxyOrganizationOperators）用于同步 第三方平台子客企业经办人列表，主要是同步经办人的离职状态。子客Web控制台的组织架构管理，是依赖于第三方应用平台的，无法针对员工做新增/更新/离职等操作。
+        /// 此接口（SyncProxyOrganizationOperators）用于同步 第三方平台子客企业经办人列表，主要是同步经办人的离职状态。子客Web控制台的组织架构管理，是依赖于第三方应用平台的，无法针对员工做新增/更新/离职等操作。 
         /// 若经办人信息有误，或者需要修改，也可以先将之前的经办人做离职操作，然后重新使用控制台链接CreateConsoleLoginUrl让经办人重新实名。
         /// </summary>
         /// <param name="req"><see cref="SyncProxyOrganizationOperatorsRequest"/></param>
@@ -1872,7 +1874,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 此接口（SyncProxyOrganizationOperators）用于同步 第三方平台子客企业经办人列表，主要是同步经办人的离职状态。子客Web控制台的组织架构管理，是依赖于第三方应用平台的，无法针对员工做新增/更新/离职等操作。
+        /// 此接口（SyncProxyOrganizationOperators）用于同步 第三方平台子客企业经办人列表，主要是同步经办人的离职状态。子客Web控制台的组织架构管理，是依赖于第三方应用平台的，无法针对员工做新增/更新/离职等操作。 
         /// 若经办人信息有误，或者需要修改，也可以先将之前的经办人做离职操作，然后重新使用控制台链接CreateConsoleLoginUrl让经办人重新实名。
         /// </summary>
         /// <param name="req"><see cref="SyncProxyOrganizationOperatorsRequest"/></param>

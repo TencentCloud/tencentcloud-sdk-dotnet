@@ -157,6 +157,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ApproverSignTypes")]
         public long?[] ApproverSignTypes{ get; set; }
 
+        /// <summary>
+        /// 签署ID
+        /// - 发起流程时系统自动补充
+        /// - 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+        /// </summary>
+        [JsonProperty("SignId")]
+        public string SignId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -183,6 +191,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
             this.SetParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
             this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
+            this.SetParamSimple(map, prefix + "SignId", this.SignId);
         }
     }
 }

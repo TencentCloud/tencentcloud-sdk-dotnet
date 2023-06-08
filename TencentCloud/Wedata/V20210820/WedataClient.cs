@@ -7984,5 +7984,45 @@ namespace TencentCloud.Wedata.V20210820
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 保存任务信息
+        /// </summary>
+        /// <param name="req"><see cref="UploadContentRequest"/></param>
+        /// <returns><see cref="UploadContentResponse"/></returns>
+        public async Task<UploadContentResponse> UploadContent(UploadContentRequest req)
+        {
+             JsonResponseModel<UploadContentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadContent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadContentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 保存任务信息
+        /// </summary>
+        /// <param name="req"><see cref="UploadContentRequest"/></param>
+        /// <returns><see cref="UploadContentResponse"/></returns>
+        public UploadContentResponse UploadContentSync(UploadContentRequest req)
+        {
+             JsonResponseModel<UploadContentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadContent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadContentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

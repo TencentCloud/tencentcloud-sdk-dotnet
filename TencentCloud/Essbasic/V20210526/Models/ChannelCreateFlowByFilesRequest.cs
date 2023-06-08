@@ -118,12 +118,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? SignBeanTag{ get; set; }
 
         /// <summary>
-        /// 操作者的信息，不用传
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
         /// 被抄送人信息列表
         /// </summary>
         [JsonProperty("CcInfos")]
@@ -140,6 +134,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("AutoSignScene")]
         public string AutoSignScene{ get; set; }
+
+        /// <summary>
+        /// 操作者的信息，不用传
+        /// </summary>
+        [JsonProperty("Operator")]
+        [System.Obsolete]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -162,10 +163,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
             this.SetParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
             this.SetParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
             this.SetParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

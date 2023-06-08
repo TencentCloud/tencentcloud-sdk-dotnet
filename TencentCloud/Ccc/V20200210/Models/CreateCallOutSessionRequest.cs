@@ -43,10 +43,16 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Callee{ get; set; }
 
         /// <summary>
-        /// 主叫号码，须带 0086 前缀
+        /// 主叫号码（废弃，使用Callers），须带 0086 前缀
         /// </summary>
         [JsonProperty("Caller")]
         public string Caller{ get; set; }
+
+        /// <summary>
+        /// 指定主叫号码列表，如果前面的号码失败了会自动换成下一个号码，须带 0086 前缀
+        /// </summary>
+        [JsonProperty("Callers")]
+        public string[] Callers{ get; set; }
 
         /// <summary>
         /// 是否强制使用手机外呼，当前只支持 true，若为 true 请确保已配置白名单
@@ -70,6 +76,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "Callee", this.Callee);
             this.SetParamSimple(map, prefix + "Caller", this.Caller);
+            this.SetParamArraySimple(map, prefix + "Callers.", this.Callers);
             this.SetParamSimple(map, prefix + "IsForceUseMobile", this.IsForceUseMobile);
             this.SetParamSimple(map, prefix + "Uui", this.Uui);
         }

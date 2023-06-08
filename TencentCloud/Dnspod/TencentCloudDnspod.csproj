@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.775</VersionPrefix>
+    <VersionPrefix>3.0.776</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -99,6 +99,8 @@
     <Compile Include="V20210323\Models\DescribeDomainAliasListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainAnalyticsRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainAnalyticsResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainFilterListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainFilterListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainGroupListRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainGroupListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainListRequest.cs" />

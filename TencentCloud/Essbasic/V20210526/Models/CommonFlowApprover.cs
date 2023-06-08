@@ -43,7 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
+        /// 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传
         /// </summary>
         [JsonProperty("OrganizationOpenId")]
         public string OrganizationOpenId{ get; set; }

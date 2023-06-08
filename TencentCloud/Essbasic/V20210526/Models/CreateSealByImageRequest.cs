@@ -46,6 +46,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 操作者的信息
         /// </summary>
         [JsonProperty("Operator")]
+        [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
 

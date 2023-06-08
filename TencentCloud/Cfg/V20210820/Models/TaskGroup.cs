@@ -85,6 +85,26 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TaskGroupMode")]
         public long? TaskGroupMode{ get; set; }
 
+        /// <summary>
+        /// 不参演的实例列表
+        /// </summary>
+        [JsonProperty("TaskGroupDiscardInstanceList")]
+        public string[] TaskGroupDiscardInstanceList{ get; set; }
+
+        /// <summary>
+        /// 参演实例列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskGroupSelectedInstanceList")]
+        public string[] TaskGroupSelectedInstanceList{ get; set; }
+
+        /// <summary>
+        /// 机器选取规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskGroupInstancesExecuteRule")]
+        public TaskGroupInstancesExecuteRules[] TaskGroupInstancesExecuteRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +121,9 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamArrayObj(map, prefix + "TaskGroupActions.", this.TaskGroupActions);
             this.SetParamArraySimple(map, prefix + "TaskGroupInstanceList.", this.TaskGroupInstanceList);
             this.SetParamSimple(map, prefix + "TaskGroupMode", this.TaskGroupMode);
+            this.SetParamArraySimple(map, prefix + "TaskGroupDiscardInstanceList.", this.TaskGroupDiscardInstanceList);
+            this.SetParamArraySimple(map, prefix + "TaskGroupSelectedInstanceList.", this.TaskGroupSelectedInstanceList);
+            this.SetParamArrayObj(map, prefix + "TaskGroupInstancesExecuteRule.", this.TaskGroupInstancesExecuteRule);
         }
     }
 }

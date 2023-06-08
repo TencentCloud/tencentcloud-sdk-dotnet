@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 绑定角色的员工id列表
+        /// 绑定角色的员工id列表，电子签的UserId
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
@@ -46,6 +46,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 操作者信息
         /// </summary>
         [JsonProperty("Operator")]
+        [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
 

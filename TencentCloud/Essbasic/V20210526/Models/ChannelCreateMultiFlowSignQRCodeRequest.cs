@@ -79,12 +79,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 限制二维码用户条件（已弃用）
         /// </summary>
         [JsonProperty("ApproverRestrictions")]
+        [System.Obsolete]
         public ApproverRestriction ApproverRestrictions{ get; set; }
 
         /// <summary>
         /// 暂未开放
         /// </summary>
         [JsonProperty("Operator")]
+        [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
 

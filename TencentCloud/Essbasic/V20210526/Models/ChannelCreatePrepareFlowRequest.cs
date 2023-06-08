@@ -76,12 +76,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 企业机构信息，不用传
         /// </summary>
         [JsonProperty("Organization")]
+        [System.Obsolete]
         public OrganizationInfo Organization{ get; set; }
 
         /// <summary>
         /// 操作人（用户）信息，不用传
         /// </summary>
         [JsonProperty("Operator")]
+        [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
 
