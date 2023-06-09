@@ -41,6 +41,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// db-instance-id：按照实例ID过滤，类型为string。
         /// db-instance-name：按照实例名过滤，类型为string。
         /// db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
+        /// base-backup-id：按照备份集ID过滤，类型为string。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

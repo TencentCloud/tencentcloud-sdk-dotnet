@@ -66,6 +66,18 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("BatchTag")]
         public PolicyTag[] BatchTag{ get; set; }
 
+        /// <summary>
+        /// 是否同步eb
+        /// </summary>
+        [JsonProperty("EbEventFlag")]
+        public long? EbEventFlag{ get; set; }
+
+        /// <summary>
+        /// 事件配置的告警
+        /// </summary>
+        [JsonProperty("EbSubject")]
+        public string EbSubject{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamObj(map, prefix + "Tag.", this.Tag);
             this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
             this.SetParamArrayObj(map, prefix + "BatchTag.", this.BatchTag);
+            this.SetParamSimple(map, prefix + "EbEventFlag", this.EbEventFlag);
+            this.SetParamSimple(map, prefix + "EbSubject", this.EbSubject);
         }
     }
 }

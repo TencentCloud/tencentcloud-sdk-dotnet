@@ -72,6 +72,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AsrWordsConfigure")]
         public AsrWordsConfigureInfoForUpdate AsrWordsConfigure{ get; set; }
 
+        /// <summary>
+        /// 语音翻译控制参数。
+        /// </summary>
+        [JsonProperty("TranslateConfigure")]
+        public TranslateConfigureInfoForUpdate TranslateConfigure{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
             this.SetParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
             this.SetParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+            this.SetParamObj(map, prefix + "TranslateConfigure.", this.TranslateConfigure);
         }
     }
 }

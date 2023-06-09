@@ -493,6 +493,46 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
+        /// 获取实例列表，供外部sdk使用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesNewRequest"/></param>
+        /// <returns><see cref="DescribeInstancesNewResponse"/></returns>
+        public async Task<DescribeInstancesNewResponse> DescribeInstancesNew(DescribeInstancesNewRequest req)
+        {
+             JsonResponseModel<DescribeInstancesNewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancesNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例列表，供外部sdk使用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesNewRequest"/></param>
+        /// <returns><see cref="DescribeInstancesNewResponse"/></returns>
+        public DescribeInstancesNewResponse DescribeInstancesNewSync(DescribeInstancesNewRequest req)
+        {
+             JsonResponseModel<DescribeInstancesNewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstancesNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 购买页拉取集群的数据节点和zookeeper节点的规格列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSpecRequest"/></param>

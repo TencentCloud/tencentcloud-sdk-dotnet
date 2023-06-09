@@ -31,16 +31,22 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 绑定角色的员工id列表，电子签的UserId
+        /// 绑定角色的角色id列表
+        /// </summary>
+        [JsonProperty("RoleIds")]
+        public string[] RoleIds{ get; set; }
+
+        /// <summary>
+        /// 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
 
         /// <summary>
-        /// 绑定角色的角色id列表
+        /// 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
         /// </summary>
-        [JsonProperty("RoleIds")]
-        public string[] RoleIds{ get; set; }
+        [JsonProperty("OpenIds")]
+        public string[] OpenIds{ get; set; }
 
         /// <summary>
         /// 操作者信息
@@ -56,8 +62,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
             this.SetParamArraySimple(map, prefix + "RoleIds.", this.RoleIds);
+            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
+            this.SetParamArraySimple(map, prefix + "OpenIds.", this.OpenIds);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }

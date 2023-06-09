@@ -775,7 +775,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 绑定员工角色
+        /// 通过此接口，绑定员工角色，支持以电子签userId、客户系统userId两种方式调用。
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateUserRolesRequest"/></param>
         /// <returns><see cref="ChannelCreateUserRolesResponse"/></returns>
@@ -795,7 +795,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 绑定员工角色
+        /// 通过此接口，绑定员工角色，支持以电子签userId、客户系统userId两种方式调用。
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateUserRolesRequest"/></param>
         /// <returns><see cref="ChannelCreateUserRolesResponse"/></returns>
@@ -815,7 +815,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 删除员工绑定角色
+        /// 通过此接口，删除员工绑定的角色，支持以电子签userId、客户系统userId两种方式调用。
         /// </summary>
         /// <param name="req"><see cref="ChannelDeleteRoleUsersRequest"/></param>
         /// <returns><see cref="ChannelDeleteRoleUsersResponse"/></returns>
@@ -835,7 +835,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 删除员工绑定角色
+        /// 通过此接口，删除员工绑定的角色，支持以电子签userId、客户系统userId两种方式调用。
         /// </summary>
         /// <param name="req"><see cref="ChannelDeleteRoleUsersRequest"/></param>
         /// <returns><see cref="ChannelDeleteRoleUsersResponse"/></returns>

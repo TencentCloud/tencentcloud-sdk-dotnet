@@ -34,6 +34,16 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Switch{ get; set; }
 
         /// <summary>
+        /// 鉴权算法，取值有：
+        /// md5：按MD5算法取hash值
+        /// sha256：按SHA-256算法取hash值
+        /// 默认为 md5
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AuthAlgorithm")]
+        public string AuthAlgorithm{ get; set; }
+
+        /// <summary>
         /// 时间戳防盗链模式 A 配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -68,6 +78,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "AuthAlgorithm", this.AuthAlgorithm);
             this.SetParamObj(map, prefix + "TypeA.", this.TypeA);
             this.SetParamObj(map, prefix + "TypeB.", this.TypeB);
             this.SetParamObj(map, prefix + "TypeC.", this.TypeC);

@@ -49,7 +49,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 一页条数，填0表示不分页
+        /// 一页条数，默认值100，最大值100，超过100最大返回100条
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

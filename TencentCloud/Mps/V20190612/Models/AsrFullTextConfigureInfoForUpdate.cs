@@ -39,6 +39,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SubtitleFormat")]
         public string SubtitleFormat{ get; set; }
 
+        /// <summary>
+        /// 视频源语言。
+        /// </summary>
+        [JsonProperty("SourceLanguage")]
+        public string SourceLanguage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +53,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
+            this.SetParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
         }
     }
 }

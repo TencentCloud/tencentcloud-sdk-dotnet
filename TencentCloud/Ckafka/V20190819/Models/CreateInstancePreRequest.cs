@@ -133,6 +133,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
+        /// <summary>
+        /// 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
+        /// </summary>
+        [JsonProperty("PublicNetworkMonthly")]
+        public long? PublicNetworkMonthly{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +163,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "MultiZoneFlag", this.MultiZoneFlag);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+            this.SetParamSimple(map, prefix + "PublicNetworkMonthly", this.PublicNetworkMonthly);
         }
     }
 }

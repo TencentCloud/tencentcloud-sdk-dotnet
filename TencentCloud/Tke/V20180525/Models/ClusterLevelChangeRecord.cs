@@ -67,6 +67,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public string TriggerType{ get; set; }
 
         /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreatedAt")]
+        public string CreatedAt{ get; set; }
+
+        /// <summary>
         /// 开始时间
         /// </summary>
         [JsonProperty("StartedAt")]
@@ -91,6 +97,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "OldLevel", this.OldLevel);
             this.SetParamSimple(map, prefix + "NewLevel", this.NewLevel);
             this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
+            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "StartedAt", this.StartedAt);
             this.SetParamSimple(map, prefix + "EndedAt", this.EndedAt);
         }

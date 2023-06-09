@@ -47,7 +47,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ContainerType{ get; set; }
 
         /// <summary>
-        /// 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+        /// （建议使用TranscodeType代替）极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
         /// <li>Common：普通转码模板；</li>
         /// <li>TEHD：极速高清模板。</li>
         /// </summary>
@@ -69,7 +69,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 模板类型（替换旧版本 TEHDType），可选值：
         /// <li>Common：普通转码模板；</li>
-        /// <li>TEHD：极速高清模板。</li>
+        /// <li>TEHD：视频极速高清，老的类型（建议使用 TEHD-100） 。</li>
+        /// <li>TEHD-100：视频极速高清</li>
+        /// <li>TEHD-200：音频极速高清</li>
         /// <li>Enhance：音视频增强模板。</li>
         /// 默认空，不限制类型。
         /// </summary>

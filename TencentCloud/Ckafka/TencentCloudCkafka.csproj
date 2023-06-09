@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.777</VersionPrefix>
+    <VersionPrefix>3.0.778</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -131,6 +131,7 @@
     <Compile Include="V20190819\Models\DatahubTopicDTO.cs" />
     <Compile Include="V20190819\Models\DatahubTopicResp.cs" />
     <Compile Include="V20190819\Models\DateParam.cs" />
+    <Compile Include="V20190819\Models\DealInstanceDTO.cs" />
     <Compile Include="V20190819\Models\DeleteAclRequest.cs" />
     <Compile Include="V20190819\Models\DeleteAclResponse.cs" />
     <Compile Include="V20190819\Models\DeleteAclRuleRequest.cs" />

@@ -39,11 +39,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// 实例Id
+        /// 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 订单和购买实例对应映射列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DealNameInstanceIdMapping")]
+        public DealInstanceDTO[] DealNameInstanceIdMapping{ get; set; }
 
 
         /// <summary>
@@ -54,6 +61,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "DealNameInstanceIdMapping.", this.DealNameInstanceIdMapping);
         }
     }
 }

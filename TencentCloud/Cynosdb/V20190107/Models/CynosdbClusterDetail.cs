@@ -333,6 +333,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
 
+        /// <summary>
+        /// 自动续费标识，1为自动续费，0为到期不续
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public long? RenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -386,6 +393,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "IsOpenPasswordComplexity", this.IsOpenPasswordComplexity);
             this.SetParamSimple(map, prefix + "NetworkStatus", this.NetworkStatus);
             this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         }
     }
 }

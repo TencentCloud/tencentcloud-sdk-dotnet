@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6227C841-08B9-39DD-91B5-C3CB4FE07CD6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.777</VersionPrefix>
+    <VersionPrefix>3.0.778</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -77,6 +77,8 @@
     <Compile Include="V20200915\Models\DescribeInstanceShardsResponse.cs" />
     <Compile Include="V20200915\Models\DescribeInstanceStateRequest.cs" />
     <Compile Include="V20200915\Models\DescribeInstanceStateResponse.cs" />
+    <Compile Include="V20200915\Models\DescribeInstancesNewRequest.cs" />
+    <Compile Include="V20200915\Models\DescribeInstancesNewResponse.cs" />
     <Compile Include="V20200915\Models\DescribeSpecRequest.cs" />
     <Compile Include="V20200915\Models\DescribeSpecResponse.cs" />
     <Compile Include="V20200915\Models\DestroyInstanceRequest.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="V20200915\Models\ScaleUpInstanceRequest.cs" />
     <Compile Include="V20200915\Models\ScaleUpInstanceResponse.cs" />
     <Compile Include="V20200915\Models\ScheduleStrategy.cs" />
+    <Compile Include="V20200915\Models\SearchTags.cs" />
     <Compile Include="V20200915\Models\ServiceInfo.cs" />
     <Compile Include="V20200915\Models\Tag.cs" />
   </ItemGroup>

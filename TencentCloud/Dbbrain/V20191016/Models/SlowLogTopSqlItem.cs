@@ -168,6 +168,12 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         [JsonProperty("RowsExaminedAvg")]
         public float? RowsExaminedAvg{ get; set; }
 
+        /// <summary>
+        /// SOL模板的MD5值
+        /// </summary>
+        [JsonProperty("Md5")]
+        public string Md5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
             this.SetParamSimple(map, prefix + "RowsSentAvg", this.RowsSentAvg);
             this.SetParamSimple(map, prefix + "LockTimeAvg", this.LockTimeAvg);
             this.SetParamSimple(map, prefix + "RowsExaminedAvg", this.RowsExaminedAvg);
+            this.SetParamSimple(map, prefix + "Md5", this.Md5);
         }
     }
 }

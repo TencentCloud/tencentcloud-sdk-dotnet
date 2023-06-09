@@ -177,6 +177,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 此接口（CancelUserAutoSignEnableUrl）用来撤销发送给个人用户的自动签开通链接，撤销后对应的个人用户开通链接失效。若个人用户已经完成开通，将无法撤销。（处方单场景专用，使用此接口请与客户经理确认）
+        /// </summary>
+        /// <param name="req"><see cref="CancelUserAutoSignEnableUrlRequest"/></param>
+        /// <returns><see cref="CancelUserAutoSignEnableUrlResponse"/></returns>
+        public async Task<CancelUserAutoSignEnableUrlResponse> CancelUserAutoSignEnableUrl(CancelUserAutoSignEnableUrlRequest req)
+        {
+             JsonResponseModel<CancelUserAutoSignEnableUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelUserAutoSignEnableUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelUserAutoSignEnableUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（CancelUserAutoSignEnableUrl）用来撤销发送给个人用户的自动签开通链接，撤销后对应的个人用户开通链接失效。若个人用户已经完成开通，将无法撤销。（处方单场景专用，使用此接口请与客户经理确认）
+        /// </summary>
+        /// <param name="req"><see cref="CancelUserAutoSignEnableUrlRequest"/></param>
+        /// <returns><see cref="CancelUserAutoSignEnableUrlResponse"/></returns>
+        public CancelUserAutoSignEnableUrlResponse CancelUserAutoSignEnableUrlSync(CancelUserAutoSignEnableUrlRequest req)
+        {
+             JsonResponseModel<CancelUserAutoSignEnableUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelUserAutoSignEnableUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelUserAutoSignEnableUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 注：此接口将会废弃，请使用撤销单个签署流程（CancelFlow）接口。
         /// 指定需要批量撤回的签署流程Id，获取批量撤销链接。
         /// 客户指定需要撤回的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤回合同的链接，通过链接跳转到电子签小程序完成批量撤回。
@@ -261,7 +301,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 上传了word、excel文件后，通过该接口发起文件转换任务，将word、excel文件转换为pdf文件。
+        /// 上传了word、excel、图片文件后，通过该接口发起文件转换任务，将word、excel、图片文件转换为pdf文件。
         /// </summary>
         /// <param name="req"><see cref="CreateConvertTaskApiRequest"/></param>
         /// <returns><see cref="CreateConvertTaskApiResponse"/></returns>
@@ -281,7 +321,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 上传了word、excel文件后，通过该接口发起文件转换任务，将word、excel文件转换为pdf文件。
+        /// 上传了word、excel、图片文件后，通过该接口发起文件转换任务，将word、excel、图片文件转换为pdf文件。
         /// </summary>
         /// <param name="req"><see cref="CreateConvertTaskApiRequest"/></param>
         /// <returns><see cref="CreateConvertTaskApiResponse"/></returns>

@@ -53,6 +53,46 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 添加组织成员邮箱
+        /// </summary>
+        /// <param name="req"><see cref="AddOrganizationMemberEmailRequest"/></param>
+        /// <returns><see cref="AddOrganizationMemberEmailResponse"/></returns>
+        public async Task<AddOrganizationMemberEmailResponse> AddOrganizationMemberEmail(AddOrganizationMemberEmailRequest req)
+        {
+             JsonResponseModel<AddOrganizationMemberEmailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddOrganizationMemberEmail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddOrganizationMemberEmailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加组织成员邮箱
+        /// </summary>
+        /// <param name="req"><see cref="AddOrganizationMemberEmailRequest"/></param>
+        /// <returns><see cref="AddOrganizationMemberEmailResponse"/></returns>
+        public AddOrganizationMemberEmailResponse AddOrganizationMemberEmailSync(AddOrganizationMemberEmailRequest req)
+        {
+             JsonResponseModel<AddOrganizationMemberEmailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddOrganizationMemberEmail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddOrganizationMemberEmailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加企业组织节点
         /// </summary>
         /// <param name="req"><see cref="AddOrganizationNodeRequest"/></param>
@@ -493,6 +533,46 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 查询成员邮箱绑定详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationMemberEmailBindRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationMemberEmailBindResponse"/></returns>
+        public async Task<DescribeOrganizationMemberEmailBindResponse> DescribeOrganizationMemberEmailBind(DescribeOrganizationMemberEmailBindRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationMemberEmailBindResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOrganizationMemberEmailBind");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationMemberEmailBindResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询成员邮箱绑定详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationMemberEmailBindRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationMemberEmailBindResponse"/></returns>
+        public DescribeOrganizationMemberEmailBindResponse DescribeOrganizationMemberEmailBindSync(DescribeOrganizationMemberEmailBindRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationMemberEmailBindResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOrganizationMemberEmailBind");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationMemberEmailBindResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取组织成员的授权策略列表
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMemberPoliciesRequest"/></param>
@@ -684,6 +764,46 @@ namespace TencentCloud.Organization.V20210331
              {
                  var strResp = this.InternalRequestSync(req, "MoveOrganizationNodeMembers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<MoveOrganizationNodeMembersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改绑定成员邮箱
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMemberEmailBindRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMemberEmailBindResponse"/></returns>
+        public async Task<UpdateOrganizationMemberEmailBindResponse> UpdateOrganizationMemberEmailBind(UpdateOrganizationMemberEmailBindRequest req)
+        {
+             JsonResponseModel<UpdateOrganizationMemberEmailBindResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateOrganizationMemberEmailBind");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOrganizationMemberEmailBindResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改绑定成员邮箱
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMemberEmailBindRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMemberEmailBindResponse"/></returns>
+        public UpdateOrganizationMemberEmailBindResponse UpdateOrganizationMemberEmailBindSync(UpdateOrganizationMemberEmailBindRequest req)
+        {
+             JsonResponseModel<UpdateOrganizationMemberEmailBindResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateOrganizationMemberEmailBind");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOrganizationMemberEmailBindResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

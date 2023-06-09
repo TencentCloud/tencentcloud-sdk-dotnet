@@ -165,6 +165,55 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("OwnerNick")]
         public string OwnerNick{ get; set; }
 
+        /// <summary>
+        /// 是否在付费套餐宽限期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsGracePeriod")]
+        public string IsGracePeriod{ get; set; }
+
+        /// <summary>
+        /// 是否在付费套餐缓冲期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VipBuffered")]
+        public string VipBuffered{ get; set; }
+
+        /// <summary>
+        /// VIP套餐有效期开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VipStartAt")]
+        public string VipStartAt{ get; set; }
+
+        /// <summary>
+        /// VIP套餐有效期结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VipEndAt")]
+        public string VipEndAt{ get; set; }
+
+        /// <summary>
+        /// VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VipAutoRenew")]
+        public string VipAutoRenew{ get; set; }
+
+        /// <summary>
+        /// VIP套餐资源ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VipResourceId")]
+        public string VipResourceId{ get; set; }
+
+        /// <summary>
+        /// 是否是子域名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSubDomain")]
+        public bool? IsSubDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -194,6 +243,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamArraySimple(map, prefix + "ActualNsList.", this.ActualNsList);
             this.SetParamSimple(map, prefix + "RecordCount", this.RecordCount);
             this.SetParamSimple(map, prefix + "OwnerNick", this.OwnerNick);
+            this.SetParamSimple(map, prefix + "IsGracePeriod", this.IsGracePeriod);
+            this.SetParamSimple(map, prefix + "VipBuffered", this.VipBuffered);
+            this.SetParamSimple(map, prefix + "VipStartAt", this.VipStartAt);
+            this.SetParamSimple(map, prefix + "VipEndAt", this.VipEndAt);
+            this.SetParamSimple(map, prefix + "VipAutoRenew", this.VipAutoRenew);
+            this.SetParamSimple(map, prefix + "VipResourceId", this.VipResourceId);
+            this.SetParamSimple(map, prefix + "IsSubDomain", this.IsSubDomain);
         }
     }
 }
