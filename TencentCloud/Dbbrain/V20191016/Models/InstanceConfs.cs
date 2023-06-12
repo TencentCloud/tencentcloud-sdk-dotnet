@@ -36,6 +36,13 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         [JsonProperty("OverviewDisplay")]
         public string OverviewDisplay{ get; set; }
 
+        /// <summary>
+        /// redis大key分析的自定义分割符，仅redis使用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KeyDelimiters")]
+        public string[] KeyDelimiters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         {
             this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
             this.SetParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
+            this.SetParamArraySimple(map, prefix + "KeyDelimiters.", this.KeyDelimiters);
         }
     }
 }

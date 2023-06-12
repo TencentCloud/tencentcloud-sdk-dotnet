@@ -66,6 +66,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 是否异步
+        /// </summary>
+        [JsonProperty("AsyncCache")]
+        public long? AsyncCache{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "AsyncCache", this.AsyncCache);
         }
     }
 }

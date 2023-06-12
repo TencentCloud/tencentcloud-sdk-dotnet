@@ -933,6 +933,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 查询新版安全组下发进度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnterpriseSGRuleProgressRequest"/></param>
+        /// <returns><see cref="DescribeEnterpriseSGRuleProgressResponse"/></returns>
+        public async Task<DescribeEnterpriseSGRuleProgressResponse> DescribeEnterpriseSGRuleProgress(DescribeEnterpriseSGRuleProgressRequest req)
+        {
+             JsonResponseModel<DescribeEnterpriseSGRuleProgressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnterpriseSGRuleProgress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnterpriseSGRuleProgressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询新版安全组下发进度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnterpriseSGRuleProgressRequest"/></param>
+        /// <returns><see cref="DescribeEnterpriseSGRuleProgressResponse"/></returns>
+        public DescribeEnterpriseSGRuleProgressResponse DescribeEnterpriseSGRuleProgressSync(DescribeEnterpriseSGRuleProgressRequest req)
+        {
+             JsonResponseModel<DescribeEnterpriseSGRuleProgressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnterpriseSGRuleProgress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnterpriseSGRuleProgressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询新企业安全组规则
         /// </summary>
         /// <param name="req"><see cref="DescribeEnterpriseSecurityGroupRuleRequest"/></param>

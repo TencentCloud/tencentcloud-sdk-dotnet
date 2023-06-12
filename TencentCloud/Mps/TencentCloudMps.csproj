@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.778</VersionPrefix>
+    <VersionPrefix>3.0.779</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -157,6 +157,12 @@
     <Compile Include="V20190612\Models\AudioTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\AwsS3FileUploadTrigger.cs" />
     <Compile Include="V20190612\Models\AwsSQS.cs" />
+    <Compile Include="V20190612\Models\BatchDeleteStreamLinkFlowRequest.cs" />
+    <Compile Include="V20190612\Models\BatchDeleteStreamLinkFlowResponse.cs" />
+    <Compile Include="V20190612\Models\BatchStartStreamLinkFlowRequest.cs" />
+    <Compile Include="V20190612\Models\BatchStartStreamLinkFlowResponse.cs" />
+    <Compile Include="V20190612\Models\BatchStopStreamLinkFlowRequest.cs" />
+    <Compile Include="V20190612\Models\BatchStopStreamLinkFlowResponse.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfo.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ColorEnhanceConfig.cs" />
@@ -199,6 +205,8 @@
     <Compile Include="V20190612\Models\CreateScheduleResponse.cs" />
     <Compile Include="V20190612\Models\CreateSnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateSnapshotByTimeOffsetTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\CreateStreamLinkEventRequest.cs" />
+    <Compile Include="V20190612\Models\CreateStreamLinkEventResponse.cs" />
     <Compile Include="V20190612\Models\CreateStreamLinkFlowRequest.cs" />
     <Compile Include="V20190612\Models\CreateStreamLinkFlowResponse.cs" />
     <Compile Include="V20190612\Models\CreateStreamLinkInputRequest.cs" />
@@ -233,6 +241,8 @@
     <Compile Include="V20190612\Models\DeleteScheduleResponse.cs" />
     <Compile Include="V20190612\Models\DeleteSnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteSnapshotByTimeOffsetTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamLinkEventRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamLinkEventResponse.cs" />
     <Compile Include="V20190612\Models\DeleteStreamLinkFlowRequest.cs" />
     <Compile Include="V20190612\Models\DeleteStreamLinkFlowResponse.cs" />
     <Compile Include="V20190612\Models\DeleteStreamLinkOutputRequest.cs" />
@@ -255,7 +265,9 @@
     <Compile Include="V20190612\Models\DescribeAnimatedGraphicsTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeContentReviewTemplatesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeEvent.cs" />
     <Compile Include="V20190612\Models\DescribeFlow.cs" />
+    <Compile Include="V20190612\Models\DescribeFlowId.cs" />
     <Compile Include="V20190612\Models\DescribeHLSPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeImageSpriteTemplatesResponse.cs" />
@@ -290,6 +302,12 @@
     <Compile Include="V20190612\Models\DescribeSnapshotByTimeOffsetTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkActivateStateRequest.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkActivateStateResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamLinkEventAttachedFlowsRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamLinkEventAttachedFlowsResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamLinkEventRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamLinkEventResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamLinkEventsRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamLinkEventsResponse.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkFlowLogsRequest.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkFlowLogsResponse.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkFlowMediaStatisticsRequest.cs" />
@@ -442,6 +460,8 @@
     <Compile Include="V20190612\Models\ModifyScheduleResponse.cs" />
     <Compile Include="V20190612\Models\ModifySnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifySnapshotByTimeOffsetTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamLinkEventRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamLinkEventResponse.cs" />
     <Compile Include="V20190612\Models\ModifyStreamLinkFlowRequest.cs" />
     <Compile Include="V20190612\Models\ModifyStreamLinkFlowResponse.cs" />
     <Compile Include="V20190612\Models\ModifyStreamLinkInputRequest.cs" />

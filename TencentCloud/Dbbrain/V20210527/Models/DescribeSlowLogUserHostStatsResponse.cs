@@ -37,6 +37,18 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public SlowLogHost[] Items{ get; set; }
 
         /// <summary>
+        /// 各来源用户名的慢日志占比详情列表。
+        /// </summary>
+        [JsonProperty("UserNameItems")]
+        public SlowLogUser[] UserNameItems{ get; set; }
+
+        /// <summary>
+        /// 来源用户数目。
+        /// </summary>
+        [JsonProperty("UserTotalCount")]
+        public long? UserTotalCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +62,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamArrayObj(map, prefix + "UserNameItems.", this.UserNameItems);
+            this.SetParamSimple(map, prefix + "UserTotalCount", this.UserTotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

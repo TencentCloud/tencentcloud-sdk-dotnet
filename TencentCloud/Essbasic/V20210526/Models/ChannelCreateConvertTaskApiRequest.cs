@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 资源类型 取值范围doc,docx,html,xls,xlsx之一
+        /// 资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

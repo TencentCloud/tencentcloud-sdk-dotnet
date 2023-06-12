@@ -92,7 +92,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         public ulong? RegisterType{ get; set; }
 
         /// <summary>
-        /// 动态注册产品秘钥
+        /// 动态注册产品密钥
         /// </summary>
         [JsonProperty("ProductSecret")]
         public string ProductSecret{ get; set; }
@@ -121,6 +121,18 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         [JsonProperty("OriginUserId")]
         public ulong? OriginUserId{ get; set; }
 
+        /// <summary>
+        /// 设备限制
+        /// </summary>
+        [JsonProperty("DeviceLimit")]
+        public ulong? DeviceLimit{ get; set; }
+
+        /// <summary>
+        /// 产品禁用状态
+        /// </summary>
+        [JsonProperty("ForbiddenStatus")]
+        public ulong? ForbiddenStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +155,8 @@ namespace TencentCloud.Iotcloud.V20210408.Models
             this.SetParamSimple(map, prefix + "OriginProductId", this.OriginProductId);
             this.SetParamSimple(map, prefix + "PrivateCAName", this.PrivateCAName);
             this.SetParamSimple(map, prefix + "OriginUserId", this.OriginUserId);
+            this.SetParamSimple(map, prefix + "DeviceLimit", this.DeviceLimit);
+            this.SetParamSimple(map, prefix + "ForbiddenStatus", this.ForbiddenStatus);
         }
     }
 }

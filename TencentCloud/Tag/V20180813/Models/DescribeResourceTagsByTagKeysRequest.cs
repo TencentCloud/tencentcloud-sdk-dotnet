@@ -43,13 +43,13 @@ namespace TencentCloud.Tag.V20180813.Models
         public string ResourceRegion{ get; set; }
 
         /// <summary>
-        /// 资源唯一标识
+        /// 资源唯一标识ID的列表，列表容量不超过20
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 资源标签键
+        /// 资源标签键列表，列表容量不超过20
         /// </summary>
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }

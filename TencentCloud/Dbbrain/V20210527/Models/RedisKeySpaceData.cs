@@ -66,6 +66,18 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("MaxElementSize")]
         public long? MaxElementSize{ get; set; }
 
+        /// <summary>
+        /// 平均元素长度。
+        /// </summary>
+        [JsonProperty("AveElementSize")]
+        public long? AveElementSize{ get; set; }
+
+        /// <summary>
+        /// 所属分片序号。
+        /// </summary>
+        [JsonProperty("ShardId")]
+        public string ShardId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "Length", this.Length);
             this.SetParamSimple(map, prefix + "ItemCount", this.ItemCount);
             this.SetParamSimple(map, prefix + "MaxElementSize", this.MaxElementSize);
+            this.SetParamSimple(map, prefix + "AveElementSize", this.AveElementSize);
+            this.SetParamSimple(map, prefix + "ShardId", this.ShardId);
         }
     }
 }

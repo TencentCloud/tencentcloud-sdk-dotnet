@@ -103,7 +103,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? TopicNum{ get; set; }
 
         /// <summary>
-        /// 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在的子网
+        /// 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }

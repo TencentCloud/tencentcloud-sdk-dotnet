@@ -36,6 +36,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <li>StopService：停止服务</li>
         /// <li>StartMonitor：退出维护</li>
         /// <li>StopMonitor：进入维护</li>
+        /// <li>RestartService：重启服务</li>
         /// </summary>
         [JsonProperty("OpType")]
         public string OpType{ get; set; }
@@ -46,6 +47,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("OpScope")]
         public OpScope OpScope{ get; set; }
 
+        /// <summary>
+        /// 操作策略
+        /// </summary>
+        [JsonProperty("StrategyConfig")]
+        public StrategyConfig StrategyConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +62,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "OpType", this.OpType);
             this.SetParamObj(map, prefix + "OpScope.", this.OpScope);
+            this.SetParamObj(map, prefix + "StrategyConfig.", this.StrategyConfig);
         }
     }
 }

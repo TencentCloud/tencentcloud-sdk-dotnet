@@ -30,6 +30,18 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         [JsonProperty("CreationDate")]
         public ulong? CreationDate{ get; set; }
 
+        /// <summary>
+        /// 创建者 Uin
+        /// </summary>
+        [JsonProperty("CreateUserId")]
+        public ulong? CreateUserId{ get; set; }
+
+        /// <summary>
+        /// 账号 Uin
+        /// </summary>
+        [JsonProperty("UserId")]
+        public ulong? UserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CreationDate", this.CreationDate);
+            this.SetParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

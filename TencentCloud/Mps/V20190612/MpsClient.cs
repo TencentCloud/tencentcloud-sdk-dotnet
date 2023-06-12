@@ -53,6 +53,126 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 批量删除媒体传输流。
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="BatchDeleteStreamLinkFlowResponse"/></returns>
+        public async Task<BatchDeleteStreamLinkFlowResponse> BatchDeleteStreamLinkFlow(BatchDeleteStreamLinkFlowRequest req)
+        {
+             JsonResponseModel<BatchDeleteStreamLinkFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchDeleteStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteStreamLinkFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除媒体传输流。
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="BatchDeleteStreamLinkFlowResponse"/></returns>
+        public BatchDeleteStreamLinkFlowResponse BatchDeleteStreamLinkFlowSync(BatchDeleteStreamLinkFlowRequest req)
+        {
+             JsonResponseModel<BatchDeleteStreamLinkFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDeleteStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteStreamLinkFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量启动媒体传输流。
+        /// </summary>
+        /// <param name="req"><see cref="BatchStartStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="BatchStartStreamLinkFlowResponse"/></returns>
+        public async Task<BatchStartStreamLinkFlowResponse> BatchStartStreamLinkFlow(BatchStartStreamLinkFlowRequest req)
+        {
+             JsonResponseModel<BatchStartStreamLinkFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchStartStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchStartStreamLinkFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量启动媒体传输流。
+        /// </summary>
+        /// <param name="req"><see cref="BatchStartStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="BatchStartStreamLinkFlowResponse"/></returns>
+        public BatchStartStreamLinkFlowResponse BatchStartStreamLinkFlowSync(BatchStartStreamLinkFlowRequest req)
+        {
+             JsonResponseModel<BatchStartStreamLinkFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchStartStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchStartStreamLinkFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量停止媒体传输流。
+        /// </summary>
+        /// <param name="req"><see cref="BatchStopStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="BatchStopStreamLinkFlowResponse"/></returns>
+        public async Task<BatchStopStreamLinkFlowResponse> BatchStopStreamLinkFlow(BatchStopStreamLinkFlowRequest req)
+        {
+             JsonResponseModel<BatchStopStreamLinkFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchStopStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchStopStreamLinkFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量停止媒体传输流。
+        /// </summary>
+        /// <param name="req"><see cref="BatchStopStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="BatchStopStreamLinkFlowResponse"/></returns>
+        public BatchStopStreamLinkFlowResponse BatchStopStreamLinkFlowSync(BatchStopStreamLinkFlowRequest req)
+        {
+             JsonResponseModel<BatchStopStreamLinkFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchStopStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchStopStreamLinkFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户自定义内容分析模板，数量上限：50。
         /// </summary>
         /// <param name="req"><see cref="CreateAIAnalysisTemplateRequest"/></param>
@@ -466,6 +586,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "CreateSnapshotByTimeOffsetTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSnapshotByTimeOffsetTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建媒体传输的事件Event。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLinkEventRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkEventResponse"/></returns>
+        public async Task<CreateStreamLinkEventResponse> CreateStreamLinkEvent(CreateStreamLinkEventRequest req)
+        {
+             JsonResponseModel<CreateStreamLinkEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStreamLinkEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLinkEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建媒体传输的事件Event。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLinkEventRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkEventResponse"/></returns>
+        public CreateStreamLinkEventResponse CreateStreamLinkEventSync(CreateStreamLinkEventRequest req)
+        {
+             JsonResponseModel<CreateStreamLinkEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStreamLinkEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLinkEventResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1172,6 +1332,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSnapshotByTimeOffsetTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除媒体传输的事件配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamLinkEventRequest"/></param>
+        /// <returns><see cref="DeleteStreamLinkEventResponse"/></returns>
+        public async Task<DeleteStreamLinkEventResponse> DeleteStreamLinkEvent(DeleteStreamLinkEventRequest req)
+        {
+             JsonResponseModel<DeleteStreamLinkEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteStreamLinkEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLinkEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除媒体传输的事件配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamLinkEventRequest"/></param>
+        /// <returns><see cref="DeleteStreamLinkEventResponse"/></returns>
+        public DeleteStreamLinkEventResponse DeleteStreamLinkEventSync(DeleteStreamLinkEventRequest req)
+        {
+             JsonResponseModel<DeleteStreamLinkEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteStreamLinkEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLinkEventResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1892,6 +2092,126 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStreamLinkActivateState");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkActivateStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询媒体传输事件的配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkEventRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkEventResponse"/></returns>
+        public async Task<DescribeStreamLinkEventResponse> DescribeStreamLinkEvent(DescribeStreamLinkEventRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLinkEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询媒体传输事件的配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkEventRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkEventResponse"/></returns>
+        public DescribeStreamLinkEventResponse DescribeStreamLinkEventSync(DescribeStreamLinkEventRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLinkEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询媒体传输事件关联的所有媒体输入流的配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkEventAttachedFlowsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkEventAttachedFlowsResponse"/></returns>
+        public async Task<DescribeStreamLinkEventAttachedFlowsResponse> DescribeStreamLinkEventAttachedFlows(DescribeStreamLinkEventAttachedFlowsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkEventAttachedFlowsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLinkEventAttachedFlows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkEventAttachedFlowsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询媒体传输事件关联的所有媒体输入流的配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkEventAttachedFlowsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkEventAttachedFlowsResponse"/></returns>
+        public DescribeStreamLinkEventAttachedFlowsResponse DescribeStreamLinkEventAttachedFlowsSync(DescribeStreamLinkEventAttachedFlowsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkEventAttachedFlowsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLinkEventAttachedFlows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkEventAttachedFlowsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量查询媒体传输事件的配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkEventsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkEventsResponse"/></returns>
+        public async Task<DescribeStreamLinkEventsResponse> DescribeStreamLinkEvents(DescribeStreamLinkEventsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLinkEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量查询媒体传输事件的配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkEventsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkEventsResponse"/></returns>
+        public DescribeStreamLinkEventsResponse DescribeStreamLinkEventsSync(DescribeStreamLinkEventsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLinkEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkEventsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3148,6 +3468,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "ModifySnapshotByTimeOffsetTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySnapshotByTimeOffsetTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改媒体传输的事件配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamLinkEventRequest"/></param>
+        /// <returns><see cref="ModifyStreamLinkEventResponse"/></returns>
+        public async Task<ModifyStreamLinkEventResponse> ModifyStreamLinkEvent(ModifyStreamLinkEventRequest req)
+        {
+             JsonResponseModel<ModifyStreamLinkEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyStreamLinkEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLinkEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改媒体传输的事件配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamLinkEventRequest"/></param>
+        /// <returns><see cref="ModifyStreamLinkEventResponse"/></returns>
+        public ModifyStreamLinkEventResponse ModifyStreamLinkEventSync(ModifyStreamLinkEventRequest req)
+        {
+             JsonResponseModel<ModifyStreamLinkEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyStreamLinkEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLinkEventResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

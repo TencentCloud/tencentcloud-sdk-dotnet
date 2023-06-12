@@ -193,24 +193,38 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string AuditRunningStatus{ get; set; }
 
         /// <summary>
-        /// 内网vip
+        /// 内网vip。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternalVip")]
         public string InternalVip{ get; set; }
 
         /// <summary>
-        /// 内网port
+        /// 内网port。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternalVport")]
         public long? InternalVport{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 所属集群ID（仅对集群数据库产品该字段非空，如TDSQL-C）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 所属集群名称（仅对集群数据库产品该字段非空，如TDSQL-C）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
 
 
         /// <summary>
@@ -249,6 +263,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "InternalVip", this.InternalVip);
             this.SetParamSimple(map, prefix + "InternalVport", this.InternalVport);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
         }
     }
 }

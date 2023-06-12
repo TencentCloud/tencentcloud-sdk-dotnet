@@ -84,6 +84,13 @@ namespace TencentCloud.Thpc.V20230321.Models
         [JsonProperty("ScaleOutNodeThreshold")]
         public long? ScaleOutNodeThreshold{ get; set; }
 
+        /// <summary>
+        /// 每轮扩容最大节点个数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxNodesPerCycle")]
+        public long? MaxNodesPerCycle{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -99,6 +106,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamSimple(map, prefix + "DesiredIdleNodeCapacity", this.DesiredIdleNodeCapacity);
             this.SetParamSimple(map, prefix + "ScaleOutRatio", this.ScaleOutRatio);
             this.SetParamSimple(map, prefix + "ScaleOutNodeThreshold", this.ScaleOutNodeThreshold);
+            this.SetParamSimple(map, prefix + "MaxNodesPerCycle", this.MaxNodesPerCycle);
         }
     }
 }

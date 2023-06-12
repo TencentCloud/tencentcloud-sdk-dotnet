@@ -31,16 +31,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 监听器ID
-        /// </summary>
-        [JsonProperty("ListenerId")]
-        public string ListenerId{ get; set; }
-
-        /// <summary>
         /// 目标组ID
         /// </summary>
         [JsonProperty("TargetGroupId")]
         public string TargetGroupId{ get; set; }
+
+        /// <summary>
+        /// 监听器ID
+        /// </summary>
+        [JsonProperty("ListenerId")]
+        public string ListenerId{ get; set; }
 
         /// <summary>
         /// 转发规则ID
@@ -55,8 +55,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
-            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
+            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
         }
     }

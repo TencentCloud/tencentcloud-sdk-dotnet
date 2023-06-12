@@ -39,6 +39,27 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
+        /// 异步刷新总数	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AsyncTotalNum")]
+        public long? AsyncTotalNum{ get; set; }
+
+        /// <summary>
+        /// 异步刷新当前执行数	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AsyncOffset")]
+        public long? AsyncOffset{ get; set; }
+
+        /// <summary>
+        /// 当前缓存读取时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AsyncCacheTime")]
+        public string AsyncCacheTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +73,9 @@ namespace TencentCloud.Ssl.V20191205.Models
         {
             this.SetParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "AsyncTotalNum", this.AsyncTotalNum);
+            this.SetParamSimple(map, prefix + "AsyncOffset", this.AsyncOffset);
+            this.SetParamSimple(map, prefix + "AsyncCacheTime", this.AsyncCacheTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
