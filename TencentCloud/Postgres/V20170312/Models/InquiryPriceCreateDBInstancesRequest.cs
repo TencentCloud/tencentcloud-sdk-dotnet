@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
+        /// 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }

@@ -25,43 +25,43 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID，形如postgres-5bq3wfjd
+        /// 实例ID。	
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
+        /// 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间，形如2018-01-01 00:00:00
+        /// 查询结束时间，形如2018-01-01 00:00:00。	
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 数据库名字
+        /// 数据库名字。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// 搜索关键字
+        /// 搜索关键字。
         /// </summary>
         [JsonProperty("SearchKeys")]
         public string[] SearchKeys{ get; set; }
 
         /// <summary>
-        /// 分页返回，每页返回的最大数量。取值为1-100
+        /// 每页显示数量，取值范围为1-100。默认值为50。	
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页返回，返回第几页的数据，从第0页开始计数
+        /// 数据偏移量，从0开始。默认值为0。	
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

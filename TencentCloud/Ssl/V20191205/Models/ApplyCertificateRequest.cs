@@ -67,13 +67,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ValidityPeriod{ get; set; }
 
         /// <summary>
-        /// 加密算法，仅支持 RSA。
+        /// 加密算法，支持 RSA及ECC。
         /// </summary>
         [JsonProperty("CsrEncryptAlgo")]
         public string CsrEncryptAlgo{ get; set; }
 
         /// <summary>
-        /// 密钥对参数，仅支持2048。
+        /// 密钥对参数，RSA仅支持2048。ECC仅支持prime256v1
         /// </summary>
         [JsonProperty("CsrKeyParameter")]
         public string CsrKeyParameter{ get; set; }

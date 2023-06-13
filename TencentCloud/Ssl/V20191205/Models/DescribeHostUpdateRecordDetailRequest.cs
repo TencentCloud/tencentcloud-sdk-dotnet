@@ -30,6 +30,18 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("DeployRecordId")]
         public string DeployRecordId{ get; set; }
 
+        /// <summary>
+        /// 每页数量，默认10。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public string Limit{ get; set; }
+
+        /// <summary>
+        /// 分页偏移量，从0开始。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public string Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Ssl.V20191205.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DeployRecordId", this.DeployRecordId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

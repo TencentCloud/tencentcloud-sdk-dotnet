@@ -253,7 +253,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 可对实例进行网络的添加操作。
+        /// 本接口（CreateDBInstanceNetworkAccess）用于创建实例网络。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceNetworkAccessRequest"/></param>
         /// <returns><see cref="CreateDBInstanceNetworkAccessResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 可对实例进行网络的添加操作。
+        /// 本接口（CreateDBInstanceNetworkAccess）用于创建实例网络。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceNetworkAccessRequest"/></param>
         /// <returns><see cref="CreateDBInstanceNetworkAccessResponse"/></returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。
+        /// 本接口（CreateDBInstances）用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
         /// <returns><see cref="CreateDBInstancesResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。
+        /// 本接口（CreateDBInstances）用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
         /// <returns><see cref="CreateDBInstancesResponse"/></returns>
@@ -493,7 +493,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 可对RO组进行网络的添加操作。
+        /// 本接口（CreateReadOnlyGroupNetworkAccess）用于创建RO组的网络。
         /// </summary>
         /// <param name="req"><see cref="CreateReadOnlyGroupNetworkAccessRequest"/></param>
         /// <returns><see cref="CreateReadOnlyGroupNetworkAccessResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 可对RO组进行网络的添加操作。
+        /// 本接口（CreateReadOnlyGroupNetworkAccess）用于创建RO组的网络。
         /// </summary>
         /// <param name="req"><see cref="CreateReadOnlyGroupNetworkAccessRequest"/></param>
         /// <returns><see cref="CreateReadOnlyGroupNetworkAccessResponse"/></returns>
@@ -1133,7 +1133,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DescribeBaseBackups) 用于查询基础备份列表。
+        /// 本接口（DescribeBaseBackups）用于查询基础备份列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeBaseBackupsRequest"/></param>
         /// <returns><see cref="DescribeBaseBackupsResponse"/></returns>
@@ -1153,7 +1153,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DescribeBaseBackups) 用于查询基础备份列表。
+        /// 本接口（DescribeBaseBackups）用于查询基础备份列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeBaseBackupsRequest"/></param>
         /// <returns><see cref="DescribeBaseBackupsResponse"/></returns>
@@ -1253,7 +1253,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBBackups）用于查询实例备份列表。
+        /// 本接口（DescribeDBBackups）用于查询实例备份列表。本接口已废弃，推荐使用接口[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)替代。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBBackupsRequest"/></param>
         /// <returns><see cref="DescribeDBBackupsResponse"/></returns>
@@ -1273,7 +1273,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBBackups）用于查询实例备份列表。
+        /// 本接口（DescribeDBBackups）用于查询实例备份列表。本接口已废弃，推荐使用接口[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)替代。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBBackupsRequest"/></param>
         /// <returns><see cref="DescribeDBBackupsResponse"/></returns>
@@ -1293,7 +1293,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBErrlogs）用于获取错误日志。
+        /// 本接口（DescribeDBErrlogs）用于查询错误日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBErrlogsRequest"/></param>
         /// <returns><see cref="DescribeDBErrlogsResponse"/></returns>
@@ -1313,7 +1313,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBErrlogs）用于获取错误日志。
+        /// 本接口（DescribeDBErrlogs）用于查询错误日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBErrlogsRequest"/></param>
         /// <returns><see cref="DescribeDBErrlogsResponse"/></returns>
@@ -1493,7 +1493,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。已于2021.09.01日正式废弃，后续此接口将不再返回任何数据，新接口为DescribeSlowQueryList，详细请查看：https://cloud.tencent.com/document/product/409/60540
+        /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。本接口已于2021.09.01日废弃，后续此接口将不再返回任何数据，推荐使用接口[DescribeSlowQueryList](https://cloud.tencent.com/document/api/409/60540)替代。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
         /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
@@ -1513,7 +1513,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。已于2021.09.01日正式废弃，后续此接口将不再返回任何数据，新接口为DescribeSlowQueryList，详细请查看：https://cloud.tencent.com/document/product/409/60540
+        /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。本接口已于2021.09.01日废弃，后续此接口将不再返回任何数据，推荐使用接口[DescribeSlowQueryList](https://cloud.tencent.com/document/api/409/60540)替代。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
         /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
@@ -1573,7 +1573,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBXlogs）用于获取实例Xlog列表。
+        /// 本接口（DescribeDBXlogs）用于获取实例Xlog列表。本接口已废弃，推荐使用接口[DescribeLogBackups](https://cloud.tencent.com/document/api/409/89021)替代。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBXlogsRequest"/></param>
         /// <returns><see cref="DescribeDBXlogsResponse"/></returns>
@@ -1593,7 +1593,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBXlogs）用于获取实例Xlog列表。
+        /// 本接口（DescribeDBXlogs）用于获取实例Xlog列表。本接口已废弃，推荐使用接口[DescribeLogBackups](https://cloud.tencent.com/document/api/409/89021)替代。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBXlogsRequest"/></param>
         /// <returns><see cref="DescribeDBXlogsResponse"/></returns>
@@ -1733,7 +1733,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DescribeLogBackups) 用于查询日志备份列表。
+        /// 本接口（DescribeLogBackups）用于查询日志备份列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLogBackupsRequest"/></param>
         /// <returns><see cref="DescribeLogBackupsResponse"/></returns>
@@ -1753,7 +1753,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DescribeLogBackups) 用于查询日志备份列表。
+        /// 本接口（DescribeLogBackups）用于查询日志备份列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLogBackupsRequest"/></param>
         /// <returns><see cref="DescribeLogBackupsResponse"/></returns>
@@ -1773,7 +1773,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeOrders）用于获取订单信息。
+        /// 本接口（DescribeOrders）用于查询订单信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
         /// <returns><see cref="DescribeOrdersResponse"/></returns>
@@ -1793,7 +1793,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeOrders）用于获取订单信息。
+        /// 本接口（DescribeOrders）用于查询订单信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
         /// <returns><see cref="DescribeOrdersResponse"/></returns>
@@ -1893,7 +1893,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 获取参数修改事件详情
+        /// 本接口 (DescribeParamsEvent) 用于查询参数修改事件详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamsEventRequest"/></param>
         /// <returns><see cref="DescribeParamsEventResponse"/></returns>
@@ -1913,7 +1913,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 获取参数修改事件详情
+        /// 本接口 (DescribeParamsEvent) 用于查询参数修改事件详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamsEventRequest"/></param>
         /// <returns><see cref="DescribeParamsEventResponse"/></returns>
@@ -1933,7 +1933,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DescribeProductConfig) 用于查询售卖规格配置。
+        /// 本接口（DescribeProductConfig）用于查询售卖规格配置。本接口已废弃，推荐使用新接口[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductConfigRequest"/></param>
         /// <returns><see cref="DescribeProductConfigResponse"/></returns>
@@ -1953,7 +1953,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DescribeProductConfig) 用于查询售卖规格配置。
+        /// 本接口（DescribeProductConfig）用于查询售卖规格配置。本接口已废弃，推荐使用新接口[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductConfigRequest"/></param>
         /// <returns><see cref="DescribeProductConfigResponse"/></returns>
@@ -2293,7 +2293,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (InitDBInstances) 用于初始化云数据库PostgreSQL实例。
+        /// 本接口（InitDBInstances）用于初始化云数据库PostgreSQL实例。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
         /// </summary>
         /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
         /// <returns><see cref="InitDBInstancesResponse"/></returns>
@@ -2313,7 +2313,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (InitDBInstances) 用于初始化云数据库PostgreSQL实例。
+        /// 本接口（InitDBInstances）用于初始化云数据库PostgreSQL实例。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
         /// </summary>
         /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
         /// <returns><see cref="InitDBInstancesResponse"/></returns>
@@ -2613,7 +2613,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteBaseBackup）用于修改实例指定全量备份的过期时间。
+        /// 本接口（ModifyBaseBackupExpireTime）用于修改实例指定全量备份的过期时间。
         /// </summary>
         /// <param name="req"><see cref="ModifyBaseBackupExpireTimeRequest"/></param>
         /// <returns><see cref="ModifyBaseBackupExpireTimeResponse"/></returns>
@@ -2633,7 +2633,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteBaseBackup）用于修改实例指定全量备份的过期时间。
+        /// 本接口（ModifyBaseBackupExpireTime）用于修改实例指定全量备份的过期时间。
         /// </summary>
         /// <param name="req"><see cref="ModifyBaseBackupExpireTimeRequest"/></param>
         /// <returns><see cref="ModifyBaseBackupExpireTimeResponse"/></returns>
@@ -3413,7 +3413,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（UpgradeDBInstance）用于升级实例配置。
+        /// 本接口（UpgradeDBInstance）用于升级实例配置。本接口已废弃，推荐使用接口[ModifyDBInstanceSpec](https://cloud.tencent.com/document/api/409/63689)替代。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
@@ -3433,7 +3433,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（UpgradeDBInstance）用于升级实例配置。
+        /// 本接口（UpgradeDBInstance）用于升级实例配置。本接口已废弃，推荐使用接口[ModifyDBInstanceSpec](https://cloud.tencent.com/document/api/409/63689)替代。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>

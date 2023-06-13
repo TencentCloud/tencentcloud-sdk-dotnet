@@ -348,6 +348,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public ReservedNetResource[] ReservedNetResources{ get; set; }
 
         /// <summary>
+        /// 是否支持物理复制
+        /// </summary>
+        [JsonProperty("IsPhysicalReplicationSupported")]
+        public bool? IsPhysicalReplicationSupported{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -410,6 +416,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
             this.SetParamSimple(map, prefix + "RsAccessStrategy", this.RsAccessStrategy);
             this.SetParamArrayObj(map, prefix + "ReservedNetResources.", this.ReservedNetResources);
+            this.SetParamSimple(map, prefix + "IsPhysicalReplicationSupported", this.IsPhysicalReplicationSupported);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

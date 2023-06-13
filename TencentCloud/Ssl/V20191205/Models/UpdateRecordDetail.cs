@@ -102,14 +102,14 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 部署监听器ID
+        /// 部署监听器ID（CLB专用）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 部署监听器名称
+        /// 部署监听器名称（CLB专用）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListenerName")]
@@ -123,18 +123,39 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 是否开启SNI
+        /// 是否开启SNI（CLB专用）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SniSwitch")]
         public ulong? SniSwitch{ get; set; }
 
         /// <summary>
-        /// bucket名称
+        /// bucket名称（COS专用）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
+
+        /// <summary>
+        /// 端口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Port")]
+        public long? Port{ get; set; }
+
+        /// <summary>
+        /// 命名空间（TKE专用）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// secret名称（TKE专用）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecretName")]
+        public string SecretName{ get; set; }
 
 
         /// <summary>
@@ -159,6 +180,9 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
             this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
         }
     }
 }

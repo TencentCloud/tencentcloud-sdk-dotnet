@@ -36,6 +36,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("List")]
         public UpdateRecordDetail[] List{ get; set; }
 
+        /// <summary>
+        /// 该部署资源总数
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         {
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
         }
     }
 }

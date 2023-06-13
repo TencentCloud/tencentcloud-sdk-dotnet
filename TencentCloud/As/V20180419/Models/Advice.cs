@@ -42,6 +42,14 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("Solution")]
         public string Solution{ get; set; }
 
+        /// <summary>
+        /// 伸缩建议警告级别。取值范围：<br>
+        /// <li>WARNING：警告级别<br>
+        /// <li>CRITICAL：严重级别<br>
+        /// </summary>
+        [JsonProperty("Level")]
+        public string Level{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +59,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "Problem", this.Problem);
             this.SetParamSimple(map, prefix + "Detail", this.Detail);
             this.SetParamSimple(map, prefix + "Solution", this.Solution);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
         }
     }
 }

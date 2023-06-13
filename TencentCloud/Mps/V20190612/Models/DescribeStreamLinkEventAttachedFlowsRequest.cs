@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? PageNum{ get; set; }
 
         /// <summary>
-        /// 每页大小，默认10。
+        /// 每页大小，默认1000。
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

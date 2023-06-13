@@ -258,6 +258,24 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Receiptor")]
         public string Receiptor{ get; set; }
 
+        /// <summary>
+        /// 是否有全电纸质票（0：没有，1：有）
+        /// </summary>
+        [JsonProperty("ElectronicFullMark")]
+        public long? ElectronicFullMark{ get; set; }
+
+        /// <summary>
+        /// 全电号码
+        /// </summary>
+        [JsonProperty("ElectronicFullNumber")]
+        public string ElectronicFullNumber{ get; set; }
+
+        /// <summary>
+        /// 发票联名
+        /// </summary>
+        [JsonProperty("FormName")]
+        public string FormName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -303,6 +321,9 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArrayObj(map, prefix + "VatInvoiceItemInfos.", this.VatInvoiceItemInfos);
             this.SetParamSimple(map, prefix + "CodeConfirm", this.CodeConfirm);
             this.SetParamSimple(map, prefix + "Receiptor", this.Receiptor);
+            this.SetParamSimple(map, prefix + "ElectronicFullMark", this.ElectronicFullMark);
+            this.SetParamSimple(map, prefix + "ElectronicFullNumber", this.ElectronicFullNumber);
+            this.SetParamSimple(map, prefix + "FormName", this.FormName);
         }
     }
 }

@@ -31,12 +31,6 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
-        /// </summary>
-        [JsonProperty("SessionToken")]
-        public string SessionToken{ get; set; }
-
-        /// <summary>
         /// SQL类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
         /// </summary>
         [JsonProperty("SqlType")]
@@ -61,6 +55,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? Duration{ get; set; }
 
         /// <summary>
+        /// 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+        /// </summary>
+        [JsonProperty("SessionToken")]
+        public string SessionToken{ get; set; }
+
+        /// <summary>
         /// 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
         /// </summary>
         [JsonProperty("Product")]
@@ -73,11 +73,11 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "SessionToken", this.SessionToken);
             this.SetParamSimple(map, prefix + "SqlType", this.SqlType);
             this.SetParamSimple(map, prefix + "FilterKey", this.FilterKey);
             this.SetParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "SessionToken", this.SessionToken);
             this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }

@@ -453,6 +453,46 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
+        /// 域名列表信息啊
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainListRequest"/></param>
+        /// <returns><see cref="DescribeDomainListResponse"/></returns>
+        public async Task<DescribeDomainListResponse> DescribeDomainList(DescribeDomainListRequest req)
+        {
+             JsonResponseModel<DescribeDomainListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 域名列表信息啊
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainListRequest"/></param>
+        /// <returns><see cref="DescribeDomainListResponse"/></returns>
+        public DescribeDomainListResponse DescribeDomainListSync(DescribeDomainListRequest req)
+        {
+             JsonResponseModel<DescribeDomainListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取安全事件详情
         /// </summary>
         /// <param name="req"><see cref="DescribeEventDetailRequest"/></param>

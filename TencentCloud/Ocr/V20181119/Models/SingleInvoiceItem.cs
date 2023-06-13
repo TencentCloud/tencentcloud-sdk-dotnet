@@ -178,6 +178,20 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("TrainTicket")]
         public TrainTicket TrainTicket{ get; set; }
 
+        /// <summary>
+        /// 医疗门诊收费票据（电子）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MedicalOutpatientInvoice")]
+        public MedicalInvoice MedicalOutpatientInvoice{ get; set; }
+
+        /// <summary>
+        /// 医疗住院收费票据（电子）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MedicalHospitalizedInvoice")]
+        public MedicalInvoice MedicalHospitalizedInvoice{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +220,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "NonTaxIncomeGeneralBill.", this.NonTaxIncomeGeneralBill);
             this.SetParamObj(map, prefix + "NonTaxIncomeElectronicBill.", this.NonTaxIncomeElectronicBill);
             this.SetParamObj(map, prefix + "TrainTicket.", this.TrainTicket);
+            this.SetParamObj(map, prefix + "MedicalOutpatientInvoice.", this.MedicalOutpatientInvoice);
+            this.SetParamObj(map, prefix + "MedicalHospitalizedInvoice.", this.MedicalHospitalizedInvoice);
         }
     }
 }

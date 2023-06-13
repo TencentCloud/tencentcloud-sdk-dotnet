@@ -66,6 +66,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("UserDefineRule")]
         public string UserDefineRule{ get; set; }
 
+        /// <summary>
+        /// 高级采集配置
+        /// </summary>
+        [JsonProperty("AdvancedConfig")]
+        public string AdvancedConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "ExtractRule.", this.ExtractRule);
             this.SetParamArrayObj(map, prefix + "ExcludePaths.", this.ExcludePaths);
             this.SetParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
+            this.SetParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
         }
     }
 }
