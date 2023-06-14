@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Partners.V20180321.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DealGoodsPriceElem : AbstractModel
+    public class RestartLivePullStreamTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实付金额（单位：分）
+        /// 任务 Id。
         /// </summary>
-        [JsonProperty("RealTotalCost")]
-        public ulong? RealTotalCost{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
-        /// 订单实际金额（不含折扣，单位：分）
+        /// 操作人备注名称。
         /// </summary>
-        [JsonProperty("OriginalTotalCost")]
-        public long? OriginalTotalCost{ get; set; }
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Partners.V20180321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
-            this.SetParamSimple(map, prefix + "OriginalTotalCost", this.OriginalTotalCost);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

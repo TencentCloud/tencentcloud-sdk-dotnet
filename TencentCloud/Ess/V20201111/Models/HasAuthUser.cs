@@ -15,32 +15,30 @@
  * under the License.
  */
 
-namespace TencentCloud.Partners.V20180321.Models
+namespace TencentCloud.Ess.V20201111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAgentSelfPayDealsResponse : AbstractModel
+    public class HasAuthUser : AbstractModel
     {
         
         /// <summary>
-        /// 订单数组
+        /// 用户id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AgentPayDealSet")]
-        public AgentDealElem[] AgentPayDealSet{ get; set; }
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
         /// <summary>
-        /// 符合条件的订单总数量
+        /// 用户归属
+        /// MainOrg：主企业
+        /// CurrentOrg：当前企业
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("BelongTo")]
+        public string BelongTo{ get; set; }
 
 
         /// <summary>
@@ -48,9 +46,8 @@ namespace TencentCloud.Partners.V20180321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "AgentPayDealSet.", this.AgentPayDealSet);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "BelongTo", this.BelongTo);
         }
     }
 }

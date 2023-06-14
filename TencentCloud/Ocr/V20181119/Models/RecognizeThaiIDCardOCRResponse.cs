@@ -55,13 +55,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// 首次领用日期
+        /// 签发日期
         /// </summary>
         [JsonProperty("IssueDate")]
         public string IssueDate{ get; set; }
 
         /// <summary>
-        /// 签发日期
+        /// 到期日期
         /// </summary>
         [JsonProperty("ExpirationDate")]
         public string ExpirationDate{ get; set; }

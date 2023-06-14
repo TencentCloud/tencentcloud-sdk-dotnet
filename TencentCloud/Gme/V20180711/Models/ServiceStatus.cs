@@ -59,6 +59,13 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("RealTimeAsr")]
         public StatusInfo RealTimeAsr{ get; set; }
 
+        /// <summary>
+        /// 文本翻译服务开关状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TextTranslate")]
+        public StatusInfo TextTranslate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamObj(map, prefix + "Porn.", this.Porn);
             this.SetParamObj(map, prefix + "Live.", this.Live);
             this.SetParamObj(map, prefix + "RealTimeAsr.", this.RealTimeAsr);
+            this.SetParamObj(map, prefix + "TextTranslate.", this.TextTranslate);
         }
     }
 }

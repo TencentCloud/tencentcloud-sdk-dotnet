@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Partners.V20180321.Models
+namespace TencentCloud.Organization.V20210331.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClientBalanceResponse : AbstractModel
+    public class DescribeOrganizationFinancialByMonthRequest : AbstractModel
     {
         
         /// <summary>
-        /// 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
+        /// 查询月数。取值范围：1~6，默认值：6
         /// </summary>
-        [JsonProperty("Balance")]
-        public ulong? Balance{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// 账户现金余额，单位分
+        /// 查询结束月份。格式：yyyy-mm，例如：2021-01
         /// </summary>
-        [JsonProperty("Cash")]
-        public long? Cash{ get; set; }
+        [JsonProperty("EndMonth")]
+        public string EndMonth{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 查询成员列表。 最大100个
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("MemberUins")]
+        public long?[] MemberUins{ get; set; }
+
+        /// <summary>
+        /// 查询产品列表。 最大100个
+        /// </summary>
+        [JsonProperty("ProductCodes")]
+        public string[] ProductCodes{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Partners.V20180321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Balance", this.Balance);
-            this.SetParamSimple(map, prefix + "Cash", this.Cash);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "EndMonth", this.EndMonth);
+            this.SetParamArraySimple(map, prefix + "MemberUins.", this.MemberUins);
+            this.SetParamArraySimple(map, prefix + "ProductCodes.", this.ProductCodes);
         }
     }
 }

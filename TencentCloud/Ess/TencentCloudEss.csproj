@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.780</VersionPrefix>
+    <VersionPrefix>3.0.781</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -120,6 +120,8 @@
     <Compile Include="V20201111\Models\DeleteSealPoliciesResponse.cs" />
     <Compile Include="V20201111\Models\DeleteStaffsResult.cs" />
     <Compile Include="V20201111\Models\Department.cs" />
+    <Compile Include="V20201111\Models\DescribeExtendedServiceAuthInfosRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeExtendedServiceAuthInfosResponse.cs" />
     <Compile Include="V20201111\Models\DescribeFileUrlsRequest.cs" />
     <Compile Include="V20201111\Models\DescribeFileUrlsResponse.cs" />
     <Compile Include="V20201111\Models\DescribeFlowBriefsRequest.cs" />
@@ -148,6 +150,7 @@
     <Compile Include="V20201111\Models\DescribeUserAutoSignStatusResponse.cs" />
     <Compile Include="V20201111\Models\DisableUserAutoSignRequest.cs" />
     <Compile Include="V20201111\Models\DisableUserAutoSignResponse.cs" />
+    <Compile Include="V20201111\Models\ExtendAuthInfo.cs" />
     <Compile Include="V20201111\Models\FailedCreateRoleData.cs" />
     <Compile Include="V20201111\Models\FailedCreateStaffData.cs" />
     <Compile Include="V20201111\Models\FailedDeleteStaffData.cs" />
@@ -165,6 +168,7 @@
     <Compile Include="V20201111\Models\GetTaskResultApiRequest.cs" />
     <Compile Include="V20201111\Models\GetTaskResultApiResponse.cs" />
     <Compile Include="V20201111\Models\GroupOrganization.cs" />
+    <Compile Include="V20201111\Models\HasAuthUser.cs" />
     <Compile Include="V20201111\Models\IntegrateRole.cs" />
     <Compile Include="V20201111\Models\IntegrationDepartment.cs" />
     <Compile Include="V20201111\Models\IntegrationMainOrganizationUser.cs" />
@@ -180,6 +184,7 @@
     <Compile Include="V20201111\Models\ReleasedApprover.cs" />
     <Compile Include="V20201111\Models\RelieveInfo.cs" />
     <Compile Include="V20201111\Models\RemindFlowRecords.cs" />
+    <Compile Include="V20201111\Models\SealInfo.cs" />
     <Compile Include="V20201111\Models\SignQrCode.cs" />
     <Compile Include="V20201111\Models\SignUrl.cs" />
     <Compile Include="V20201111\Models\Staff.cs" />

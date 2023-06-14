@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Interval{ get; set; }
 
         /// <summary>
-        /// 投递的文件的最大值，单位 MB，默认256，范围 100-256
+        /// 投递的文件的最大值，单位 MB，默认256，范围 5-256
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }

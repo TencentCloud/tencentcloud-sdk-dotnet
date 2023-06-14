@@ -133,7 +133,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（CloseDBExtranetAccess）用于关闭实例外网链接。
+        /// 本接口（CloseDBExtranetAccess）用于关闭实例公网地址。
         /// </summary>
         /// <param name="req"><see cref="CloseDBExtranetAccessRequest"/></param>
         /// <returns><see cref="CloseDBExtranetAccessResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（CloseDBExtranetAccess）用于关闭实例外网链接。
+        /// 本接口（CloseDBExtranetAccess）用于关闭实例公网地址。
         /// </summary>
         /// <param name="req"><see cref="CloseDBExtranetAccessRequest"/></param>
         /// <returns><see cref="CloseDBExtranetAccessResponse"/></returns>
@@ -173,7 +173,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 关闭serverlessDB实例外网
+        /// 本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
         /// </summary>
         /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
         /// <returns><see cref="CloseServerlessDBExtranetAccessResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 关闭serverlessDB实例外网
+        /// 本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
         /// </summary>
         /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
         /// <returns><see cref="CloseServerlessDBExtranetAccessResponse"/></returns>
@@ -853,7 +853,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeAccounts）用于获取实例用户列表。
+        /// 本接口（DescribeAccounts）用于查询实例的数据库账号列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
         /// <returns><see cref="DescribeAccountsResponse"/></returns>
@@ -873,7 +873,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeAccounts）用于获取实例用户列表。
+        /// 本接口（DescribeAccounts）用于查询实例的数据库账号列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
         /// <returns><see cref="DescribeAccountsResponse"/></returns>
@@ -973,7 +973,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DescribeBackupDownloadURL) 用于获取备份下载链接。
+        /// 本接口 (DescribeBackupDownloadURL) 用于查询指定备份集的下载地址，可包括全量备份集、增量日志备份集。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadURLRequest"/></param>
         /// <returns><see cref="DescribeBackupDownloadURLResponse"/></returns>
@@ -993,7 +993,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DescribeBackupDownloadURL) 用于获取备份下载链接。
+        /// 本接口 (DescribeBackupDownloadURL) 用于查询指定备份集的下载地址，可包括全量备份集、增量日志备份集。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadURLRequest"/></param>
         /// <returns><see cref="DescribeBackupDownloadURLResponse"/></returns>
@@ -1413,7 +1413,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBInstanceSecurityGroups）用于查询实例安全组信息。
+        /// 本接口（DescribeDBInstanceSecurityGroups）用于查询实例安全组。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceSecurityGroupsResponse"/></returns>
@@ -1433,7 +1433,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBInstanceSecurityGroups）用于查询实例安全组信息。
+        /// 本接口（DescribeDBInstanceSecurityGroups）用于查询实例安全组。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceSecurityGroupsResponse"/></returns>
@@ -1533,7 +1533,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBVersions）用于查询支持的数据库版本号列表。
+        /// 本接口（DescribeDBVersions）用于查询支持的数据库版本。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBVersionsRequest"/></param>
         /// <returns><see cref="DescribeDBVersionsResponse"/></returns>
@@ -1553,7 +1553,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBVersions）用于查询支持的数据库版本号列表。
+        /// 本接口（DescribeDBVersions）用于查询支持的数据库版本。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBVersionsRequest"/></param>
         /// <returns><see cref="DescribeDBVersionsResponse"/></returns>
@@ -1613,7 +1613,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 接口（DescribeDatabases）用来拉取数据库列表
+        /// 接口（DescribeDatabases）用来查询实例的数据库列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
         /// <returns><see cref="DescribeDatabasesResponse"/></returns>
@@ -1633,7 +1633,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 接口（DescribeDatabases）用来拉取数据库列表
+        /// 接口（DescribeDatabases）用来查询实例的数据库列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
         /// <returns><see cref="DescribeDatabasesResponse"/></returns>
@@ -1693,7 +1693,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 获取实例的密钥信息列表。
+        /// 本接口 （DescribeEncryptionKeys） 用于查询实例的密钥信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeEncryptionKeysRequest"/></param>
         /// <returns><see cref="DescribeEncryptionKeysResponse"/></returns>
@@ -1713,7 +1713,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 获取实例的密钥信息列表。
+        /// 本接口 （DescribeEncryptionKeys） 用于查询实例的密钥信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeEncryptionKeysRequest"/></param>
         /// <returns><see cref="DescribeEncryptionKeysResponse"/></returns>
@@ -1893,7 +1893,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DescribeParamsEvent) 用于查询参数修改事件详情。
+        /// 本接口（DescribeParamsEvent）用于查询参数修改事件。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamsEventRequest"/></param>
         /// <returns><see cref="DescribeParamsEventResponse"/></returns>
@@ -1913,7 +1913,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DescribeParamsEvent) 用于查询参数修改事件详情。
+        /// 本接口（DescribeParamsEvent）用于查询参数修改事件。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamsEventRequest"/></param>
         /// <returns><see cref="DescribeParamsEventResponse"/></returns>
@@ -1973,7 +1973,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口(DescribeReadOnlyGroups)用于查询用户输入指定实例的只读组
+        /// 本接口（DescribeReadOnlyGroups）用于查询只读组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeReadOnlyGroupsRequest"/></param>
         /// <returns><see cref="DescribeReadOnlyGroupsResponse"/></returns>
@@ -1993,7 +1993,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口(DescribeReadOnlyGroups)用于查询用户输入指定实例的只读组
+        /// 本接口（DescribeReadOnlyGroups）用于查询只读组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeReadOnlyGroupsRequest"/></param>
         /// <returns><see cref="DescribeReadOnlyGroupsResponse"/></returns>
@@ -2213,7 +2213,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DestroyDBInstance) 用于彻底销毁指定DBInstanceId对应的实例，销毁后实例数据将彻底删除，无法找回，只能销毁隔离中的实例。
+        /// 本接口 (DestroyDBInstance) 用于彻底销毁指定DBInstanceId对应的实例，销毁后实例数据将彻底删除，无法找回，调用前请仔细确认要操作的实例。只能销毁隔离中的实例。
         /// </summary>
         /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
@@ -2233,7 +2233,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DestroyDBInstance) 用于彻底销毁指定DBInstanceId对应的实例，销毁后实例数据将彻底删除，无法找回，只能销毁隔离中的实例。
+        /// 本接口 (DestroyDBInstance) 用于彻底销毁指定DBInstanceId对应的实例，销毁后实例数据将彻底删除，无法找回，调用前请仔细确认要操作的实例。只能销毁隔离中的实例。
         /// </summary>
         /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
@@ -2333,7 +2333,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (InquiryPriceCreateDBInstances) 用于查询购买一个或多个实例的价格信息。
+        /// 本接口 (InquiryPriceCreateDBInstances) 用于查询购买实例的价格信息。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateDBInstancesRequest"/></param>
         /// <returns><see cref="InquiryPriceCreateDBInstancesResponse"/></returns>
@@ -2353,7 +2353,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (InquiryPriceCreateDBInstances) 用于查询购买一个或多个实例的价格信息。
+        /// 本接口 (InquiryPriceCreateDBInstances) 用于查询购买实例的价格信息。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateDBInstancesRequest"/></param>
         /// <returns><see cref="InquiryPriceCreateDBInstancesResponse"/></returns>
@@ -2773,7 +2773,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 批量修改参数
+        /// 本接口 (ModifyDBInstanceParameters) 用于修改实例参数。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceParametersRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceParametersResponse"/></returns>
@@ -2793,7 +2793,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 批量修改参数
+        /// 本接口 (ModifyDBInstanceParameters) 用于修改实例参数。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceParametersRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceParametersResponse"/></returns>
@@ -2893,7 +2893,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyDBInstanceSpec）用于调整实例规格，包括内存、磁盘。
+        /// 本接口（ModifyDBInstanceSpec）用于修改实例规格，包括内存、磁盘。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -2913,7 +2913,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyDBInstanceSpec）用于调整实例规格，包括内存、磁盘。
+        /// 本接口（ModifyDBInstanceSpec）用于修改实例规格，包括内存、磁盘。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -2933,7 +2933,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyDBInstancesProject）用于将实例转至其他项目。
+        /// 本接口（ModifyDBInstancesProject）用于修改实例所属项目。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstancesProjectRequest"/></param>
         /// <returns><see cref="ModifyDBInstancesProjectResponse"/></returns>
@@ -2953,7 +2953,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyDBInstancesProject）用于将实例转至其他项目。
+        /// 本接口（ModifyDBInstancesProject）用于修改实例所属项目。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstancesProjectRequest"/></param>
         /// <returns><see cref="ModifyDBInstancesProjectResponse"/></returns>
@@ -2973,7 +2973,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyParameterTemplate）主要用于修改参数模板名称，描述，修改，添加和删除参数模板参数。
+        /// 本接口（ModifyParameterTemplate）主要用于修改参数模板名称，描述等配置，也可用于管理参数模板中的参数列表。
         /// </summary>
         /// <param name="req"><see cref="ModifyParameterTemplateRequest"/></param>
         /// <returns><see cref="ModifyParameterTemplateResponse"/></returns>
@@ -2993,7 +2993,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyParameterTemplate）主要用于修改参数模板名称，描述，修改，添加和删除参数模板参数。
+        /// 本接口（ModifyParameterTemplate）主要用于修改参数模板名称，描述等配置，也可用于管理参数模板中的参数列表。
         /// </summary>
         /// <param name="req"><see cref="ModifyParameterTemplateRequest"/></param>
         /// <returns><see cref="ModifyParameterTemplateResponse"/></returns>
@@ -3093,7 +3093,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（OpenDBExtranetAccess）用于开通外网。
+        /// 本接口（OpenDBExtranetAccess）用于开通实例公网地址。
         /// </summary>
         /// <param name="req"><see cref="OpenDBExtranetAccessRequest"/></param>
         /// <returns><see cref="OpenDBExtranetAccessResponse"/></returns>
@@ -3113,7 +3113,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（OpenDBExtranetAccess）用于开通外网。
+        /// 本接口（OpenDBExtranetAccess）用于开通实例公网地址。
         /// </summary>
         /// <param name="req"><see cref="OpenDBExtranetAccessRequest"/></param>
         /// <returns><see cref="OpenDBExtranetAccessResponse"/></returns>
@@ -3133,7 +3133,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 开通serverlessDB实例外网
+        /// 本接口（OpenServerlessDBExtranetAccess）用于开通serverlessDB实例公网地址。
         /// </summary>
         /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
         /// <returns><see cref="OpenServerlessDBExtranetAccessResponse"/></returns>
@@ -3153,7 +3153,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 开通serverlessDB实例外网
+        /// 本接口（OpenServerlessDBExtranetAccess）用于开通serverlessDB实例公网地址。
         /// </summary>
         /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
         /// <returns><see cref="OpenServerlessDBExtranetAccessResponse"/></returns>

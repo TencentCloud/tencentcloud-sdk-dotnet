@@ -15,15 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Ess.V20201111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAMQPVHostResponse : AbstractModel
+    public class DescribeExtendedServiceAuthInfosResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 授权服务信息列表
+        /// </summary>
+        [JsonProperty("AuthInfoList")]
+        public ExtendAuthInfo[] AuthInfoList{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +42,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "AuthInfoList.", this.AuthInfoList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

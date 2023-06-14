@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 操作人信息
+        /// 操作人信息，userId必填
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 员工信息
+        /// 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
         /// </summary>
         [JsonProperty("Employees")]
         public Staff[] Employees{ get; set; }

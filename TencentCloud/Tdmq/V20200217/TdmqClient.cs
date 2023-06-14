@@ -3765,50 +3765,6 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 产品下线了，对应的接口也要下线。
-        /// 
-        /// 更新Vhost
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAMQPVHostRequest"/></param>
-        /// <returns><see cref="ModifyAMQPVHostResponse"/></returns>
-        public async Task<ModifyAMQPVHostResponse> ModifyAMQPVHost(ModifyAMQPVHostRequest req)
-        {
-             JsonResponseModel<ModifyAMQPVHostResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyAMQPVHost");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAMQPVHostResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 产品下线了，对应的接口也要下线。
-        /// 
-        /// 更新Vhost
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAMQPVHostRequest"/></param>
-        /// <returns><see cref="ModifyAMQPVHostResponse"/></returns>
-        public ModifyAMQPVHostResponse ModifyAMQPVHostSync(ModifyAMQPVHostRequest req)
-        {
-             JsonResponseModel<ModifyAMQPVHostResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyAMQPVHost");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAMQPVHostResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 更新集群信息
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterRequest"/></param>

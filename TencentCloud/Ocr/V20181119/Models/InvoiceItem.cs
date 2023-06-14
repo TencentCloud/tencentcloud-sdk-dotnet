@@ -26,7 +26,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         
         /// <summary>
         /// 识别结果。
-        /// OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
+        /// OK：表示识别成功；FailedOperation.UnsupportedInvoice：表示不支持识别；
         /// FailedOperation.UnKnowError：表示识别失败；
         /// 其它错误码见各个票据接口的定义。
         /// </summary>
@@ -79,13 +79,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? Page{ get; set; }
 
         /// <summary>
-        /// 发票详细类型，详见下方 SubType 返回值说明
+        /// 发票详细类型，详见上方 SubType 返回值说明
         /// </summary>
         [JsonProperty("SubType")]
         public string SubType{ get; set; }
 
         /// <summary>
-        /// 发票类型描述，详见下方 TypeDescription  返回值说明
+        /// 发票类型描述，详见上方 TypeDescription  返回值说明
         /// </summary>
         [JsonProperty("TypeDescription")]
         public string TypeDescription{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string CutImage{ get; set; }
 
         /// <summary>
-        /// 发票详细类型描述，详见下方 SubType 返回值说明
+        /// 发票详细类型描述，详见上方 SubType 返回值说明
         /// </summary>
         [JsonProperty("SubTypeDescription")]
         public string SubTypeDescription{ get; set; }

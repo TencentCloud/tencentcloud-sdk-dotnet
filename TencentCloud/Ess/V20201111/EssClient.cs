@@ -1309,6 +1309,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 查询企业扩展服务授权信息，目前支持查询：企业静默签，企业与港澳台居民签署合同，使用手机号验证签署方身份，骑缝章，批量签署能力是否已经开通
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtendedServiceAuthInfosRequest"/></param>
+        /// <returns><see cref="DescribeExtendedServiceAuthInfosResponse"/></returns>
+        public async Task<DescribeExtendedServiceAuthInfosResponse> DescribeExtendedServiceAuthInfos(DescribeExtendedServiceAuthInfosRequest req)
+        {
+             JsonResponseModel<DescribeExtendedServiceAuthInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExtendedServiceAuthInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExtendedServiceAuthInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询企业扩展服务授权信息，目前支持查询：企业静默签，企业与港澳台居民签署合同，使用手机号验证签署方身份，骑缝章，批量签署能力是否已经开通
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtendedServiceAuthInfosRequest"/></param>
+        /// <returns><see cref="DescribeExtendedServiceAuthInfosResponse"/></returns>
+        public DescribeExtendedServiceAuthInfosResponse DescribeExtendedServiceAuthInfosSync(DescribeExtendedServiceAuthInfosRequest req)
+        {
+             JsonResponseModel<DescribeExtendedServiceAuthInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExtendedServiceAuthInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExtendedServiceAuthInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询文件下载URL。
         /// 适用场景：通过传参合同流程编号，下载对应的合同PDF文件流到本地。
         /// </summary>

@@ -459,94 +459,6 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 已提供新接口并推动切换，改切口目前白名单限制所有访问，申请下线
-        /// 
-        /// 【该接口已下线，请使用升级版本DescribeAgentDealsByCache】代理商拉取缓存的全量客户订单
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAgentDealsCacheRequest"/></param>
-        /// <returns><see cref="DescribeAgentDealsCacheResponse"/></returns>
-        public async Task<DescribeAgentDealsCacheResponse> DescribeAgentDealsCache(DescribeAgentDealsCacheRequest req)
-        {
-             JsonResponseModel<DescribeAgentDealsCacheResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAgentDealsCache");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentDealsCacheResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 已提供新接口并推动切换，改切口目前白名单限制所有访问，申请下线
-        /// 
-        /// 【该接口已下线，请使用升级版本DescribeAgentDealsByCache】代理商拉取缓存的全量客户订单
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAgentDealsCacheRequest"/></param>
-        /// <returns><see cref="DescribeAgentDealsCacheResponse"/></returns>
-        public DescribeAgentDealsCacheResponse DescribeAgentDealsCacheSync(DescribeAgentDealsCacheRequest req)
-        {
-             JsonResponseModel<DescribeAgentDealsCacheResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAgentDealsCache");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentDealsCacheResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 已提供新接口并推动切换，改切口目前白名单限制所有访问，申请下线
-        /// 
-        /// 【该接口已下线，请切换使用升级版本DescribeAgentPayDealsV2】可以查询代理商代付的所有订单
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAgentPayDealsRequest"/></param>
-        /// <returns><see cref="DescribeAgentPayDealsResponse"/></returns>
-        public async Task<DescribeAgentPayDealsResponse> DescribeAgentPayDeals(DescribeAgentPayDealsRequest req)
-        {
-             JsonResponseModel<DescribeAgentPayDealsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAgentPayDeals");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentPayDealsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 已提供新接口并推动切换，改切口目前白名单限制所有访问，申请下线
-        /// 
-        /// 【该接口已下线，请切换使用升级版本DescribeAgentPayDealsV2】可以查询代理商代付的所有订单
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAgentPayDealsRequest"/></param>
-        /// <returns><see cref="DescribeAgentPayDealsResponse"/></returns>
-        public DescribeAgentPayDealsResponse DescribeAgentPayDealsSync(DescribeAgentPayDealsRequest req)
-        {
-             JsonResponseModel<DescribeAgentPayDealsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAgentPayDeals");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentPayDealsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 可以查询代理商代付的预付费订单
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentPayDealsV2Request"/></param>
@@ -587,50 +499,6 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 已提供新接口并推动切换，改切口目前白名单限制所有访问，申请下线
-        /// 
-        /// 【该接口已下线，请切换使用升级版本DescribeAgentSelfPayDealsV2】可以查询代理商下指定客户的自付订单
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAgentSelfPayDealsRequest"/></param>
-        /// <returns><see cref="DescribeAgentSelfPayDealsResponse"/></returns>
-        public async Task<DescribeAgentSelfPayDealsResponse> DescribeAgentSelfPayDeals(DescribeAgentSelfPayDealsRequest req)
-        {
-             JsonResponseModel<DescribeAgentSelfPayDealsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAgentSelfPayDeals");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentSelfPayDealsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 已提供新接口并推动切换，改切口目前白名单限制所有访问，申请下线
-        /// 
-        /// 【该接口已下线，请切换使用升级版本DescribeAgentSelfPayDealsV2】可以查询代理商下指定客户的自付订单
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAgentSelfPayDealsRequest"/></param>
-        /// <returns><see cref="DescribeAgentSelfPayDealsResponse"/></returns>
-        public DescribeAgentSelfPayDealsResponse DescribeAgentSelfPayDealsSync(DescribeAgentSelfPayDealsRequest req)
-        {
-             JsonResponseModel<DescribeAgentSelfPayDealsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAgentSelfPayDeals");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentSelfPayDealsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询代理商名下指定代客的自付订单（预付费）
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentSelfPayDealsV2Request"/></param>
@@ -662,50 +530,6 @@ namespace TencentCloud.Partners.V20180321
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAgentSelfPayDealsV2");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentSelfPayDealsV2Response>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 已提供新接口并推进切换，白名单禁用控制访问观察后无反馈，可以下线
-        /// 
-        /// 【该接口将逐步下线，请切换使用升级版本DescribeClientBalanceNew】为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClientBalanceRequest"/></param>
-        /// <returns><see cref="DescribeClientBalanceResponse"/></returns>
-        public async Task<DescribeClientBalanceResponse> DescribeClientBalance(DescribeClientBalanceRequest req)
-        {
-             JsonResponseModel<DescribeClientBalanceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeClientBalance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClientBalanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 已提供新接口并推进切换，白名单禁用控制访问观察后无反馈，可以下线
-        /// 
-        /// 【该接口将逐步下线，请切换使用升级版本DescribeClientBalanceNew】为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClientBalanceRequest"/></param>
-        /// <returns><see cref="DescribeClientBalanceResponse"/></returns>
-        public DescribeClientBalanceResponse DescribeClientBalanceSync(DescribeClientBalanceRequest req)
-        {
-             JsonResponseModel<DescribeClientBalanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeClientBalance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClientBalanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

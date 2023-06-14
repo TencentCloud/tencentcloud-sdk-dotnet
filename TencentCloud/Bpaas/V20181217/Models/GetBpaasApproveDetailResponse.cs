@@ -98,6 +98,13 @@ namespace TencentCloud.Bpaas.V20181217.Models
         public string ApprovingNodeId{ get; set; }
 
         /// <summary>
+        /// 更新时间，时间格式：2021-12-12 10:12:10	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -120,6 +127,7 @@ namespace TencentCloud.Bpaas.V20181217.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Nodes.", this.Nodes);
             this.SetParamSimple(map, prefix + "ApprovingNodeId", this.ApprovingNodeId);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

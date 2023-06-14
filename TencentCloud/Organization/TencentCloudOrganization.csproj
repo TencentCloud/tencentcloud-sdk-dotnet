@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.780</VersionPrefix>
+    <VersionPrefix>3.0.781</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -111,6 +111,12 @@
     <Compile Include="V20210331\Models\DeleteOrganizationNodesResponse.cs" />
     <Compile Include="V20210331\Models\DescribeOrganizationAuthNodeRequest.cs" />
     <Compile Include="V20210331\Models\DescribeOrganizationAuthNodeResponse.cs" />
+    <Compile Include="V20210331\Models\DescribeOrganizationFinancialByMemberRequest.cs" />
+    <Compile Include="V20210331\Models\DescribeOrganizationFinancialByMemberResponse.cs" />
+    <Compile Include="V20210331\Models\DescribeOrganizationFinancialByMonthRequest.cs" />
+    <Compile Include="V20210331\Models\DescribeOrganizationFinancialByMonthResponse.cs" />
+    <Compile Include="V20210331\Models\DescribeOrganizationFinancialByProductRequest.cs" />
+    <Compile Include="V20210331\Models\DescribeOrganizationFinancialByProductResponse.cs" />
     <Compile Include="V20210331\Models\DescribeOrganizationMemberAuthAccountsRequest.cs" />
     <Compile Include="V20210331\Models\DescribeOrganizationMemberAuthAccountsResponse.cs" />
     <Compile Include="V20210331\Models\DescribeOrganizationMemberAuthIdentitiesRequest.cs" />
@@ -132,13 +138,16 @@
     <Compile Include="V20210331\Models\MemberMainInfo.cs" />
     <Compile Include="V20210331\Models\MoveOrganizationNodeMembersRequest.cs" />
     <Compile Include="V20210331\Models\MoveOrganizationNodeMembersResponse.cs" />
+    <Compile Include="V20210331\Models\OrgFinancialByMonth.cs" />
     <Compile Include="V20210331\Models\OrgIdentity.cs" />
     <Compile Include="V20210331\Models\OrgMember.cs" />
     <Compile Include="V20210331\Models\OrgMemberAuthAccount.cs" />
     <Compile Include="V20210331\Models\OrgMemberAuthIdentity.cs" />
+    <Compile Include="V20210331\Models\OrgMemberFinancial.cs" />
     <Compile Include="V20210331\Models\OrgMemberPolicy.cs" />
     <Compile Include="V20210331\Models\OrgNode.cs" />
     <Compile Include="V20210331\Models\OrgPermission.cs" />
+    <Compile Include="V20210331\Models\OrgProductFinancial.cs" />
     <Compile Include="V20210331\Models\UpdateOrganizationMemberEmailBindRequest.cs" />
     <Compile Include="V20210331\Models\UpdateOrganizationMemberEmailBindResponse.cs" />
     <Compile Include="V20210331\Models\UpdateOrganizationNodeRequest.cs" />

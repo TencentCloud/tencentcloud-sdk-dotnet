@@ -25,61 +25,61 @@ namespace TencentCloud.Ssa.V20180608.Models
     {
         
         /// <summary>
-        /// -
+        /// 起始，从0开始(只支持32位)
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// -
+        /// limit,最大值200(只支持32位)
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// -
+        /// 资产大类，根据此字段时返回不同的子结构,AssetBasicType(只支持32位)
         /// </summary>
         [JsonProperty("AssetBasicType")]
         public ulong? AssetBasicType{ get; set; }
 
         /// <summary>
-        /// -
+        /// 过滤条件
         /// </summary>
         [JsonProperty("Filter")]
         public QueryFilterV3[] Filter{ get; set; }
 
         /// <summary>
-        /// -
+        /// 排序
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// -
+        /// 排序字段
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
 
         /// <summary>
-        /// -
+        /// 导出字段
         /// </summary>
         [JsonProperty("Field")]
         public string[] Field{ get; set; }
 
         /// <summary>
-        /// -
+        /// 时间范围(只支持32位)
         /// </summary>
         [JsonProperty("TimeRange")]
         public ulong? TimeRange{ get; set; }
 
         /// <summary>
-        /// -
+        /// 逻辑字段(只支持32位)
         /// </summary>
         [JsonProperty("Logic")]
         public ulong? Logic{ get; set; }
 
         /// <summary>
-        /// -
+        /// 聚合字段  
         /// </summary>
         [JsonProperty("GroupByField")]
         public string GroupByField{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Ssa.V20180608.Models
         public string Task{ get; set; }
 
         /// <summary>
-        /// -
+        /// 0:cfw 1:vss 2.soc 3.waf 4.cwp
         /// </summary>
         [JsonProperty("RequestFrom")]
         public ulong? RequestFrom{ get; set; }

@@ -177,6 +177,13 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         [JsonProperty("FirmwareUpdateTime")]
         public ulong? FirmwareUpdateTime{ get; set; }
 
+        /// <summary>
+        /// 创建者 Uin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateUserId")]
+        public ulong? CreateUserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -207,6 +214,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamSimple(map, prefix + "ClientIP", this.ClientIP);
             this.SetParamSimple(map, prefix + "FirmwareUpdateTime", this.FirmwareUpdateTime);
+            this.SetParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
         }
     }
 }

@@ -453,6 +453,126 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 以成员维度获取组织财务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationFinancialByMemberRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationFinancialByMemberResponse"/></returns>
+        public async Task<DescribeOrganizationFinancialByMemberResponse> DescribeOrganizationFinancialByMember(DescribeOrganizationFinancialByMemberRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationFinancialByMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOrganizationFinancialByMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationFinancialByMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 以成员维度获取组织财务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationFinancialByMemberRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationFinancialByMemberResponse"/></returns>
+        public DescribeOrganizationFinancialByMemberResponse DescribeOrganizationFinancialByMemberSync(DescribeOrganizationFinancialByMemberRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationFinancialByMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOrganizationFinancialByMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationFinancialByMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 以月维度获取组织财务信息趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationFinancialByMonthRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationFinancialByMonthResponse"/></returns>
+        public async Task<DescribeOrganizationFinancialByMonthResponse> DescribeOrganizationFinancialByMonth(DescribeOrganizationFinancialByMonthRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationFinancialByMonthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOrganizationFinancialByMonth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationFinancialByMonthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 以月维度获取组织财务信息趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationFinancialByMonthRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationFinancialByMonthResponse"/></returns>
+        public DescribeOrganizationFinancialByMonthResponse DescribeOrganizationFinancialByMonthSync(DescribeOrganizationFinancialByMonthRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationFinancialByMonthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOrganizationFinancialByMonth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationFinancialByMonthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 以产品维度获取组织财务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationFinancialByProductRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationFinancialByProductResponse"/></returns>
+        public async Task<DescribeOrganizationFinancialByProductResponse> DescribeOrganizationFinancialByProduct(DescribeOrganizationFinancialByProductRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationFinancialByProductResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOrganizationFinancialByProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationFinancialByProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 以产品维度获取组织财务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationFinancialByProductRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationFinancialByProductResponse"/></returns>
+        public DescribeOrganizationFinancialByProductResponse DescribeOrganizationFinancialByProductSync(DescribeOrganizationFinancialByProductRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationFinancialByProductResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOrganizationFinancialByProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationFinancialByProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取组织成员被绑定授权关系的子账号列表
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMemberAuthAccountsRequest"/></param>

@@ -453,7 +453,7 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
-        /// 域名列表信息啊
+        /// 域名列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainListRequest"/></param>
         /// <returns><see cref="DescribeDomainListResponse"/></returns>
@@ -473,7 +473,7 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
-        /// 域名列表信息啊
+        /// 域名列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainListRequest"/></param>
         /// <returns><see cref="DescribeDomainListResponse"/></returns>

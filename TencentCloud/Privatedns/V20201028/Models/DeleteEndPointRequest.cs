@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Partners.V20180321.Models
+namespace TencentCloud.Privatedns.V20201028.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAgentPayDealsResponse : AbstractModel
+    public class DeleteEndPointRequest : AbstractModel
     {
         
         /// <summary>
-        /// 订单数组
+        /// 终端节点ID
         /// </summary>
-        [JsonProperty("AgentPayDealSet")]
-        public AgentDealElem[] AgentPayDealSet{ get; set; }
-
-        /// <summary>
-        /// 符合条件的订单总数量
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("EndPointId")]
+        public string EndPointId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Partners.V20180321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "AgentPayDealSet.", this.AgentPayDealSet);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "EndPointId", this.EndPointId);
         }
     }
 }

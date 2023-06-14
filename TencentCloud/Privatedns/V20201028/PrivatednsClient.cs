@@ -173,6 +173,46 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// 删除终端节点
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEndPointRequest"/></param>
+        /// <returns><see cref="DeleteEndPointResponse"/></returns>
+        public async Task<DeleteEndPointResponse> DeleteEndPoint(DeleteEndPointRequest req)
+        {
+             JsonResponseModel<DeleteEndPointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteEndPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEndPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除终端节点
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEndPointRequest"/></param>
+        /// <returns><see cref="DeleteEndPointResponse"/></returns>
+        public DeleteEndPointResponse DeleteEndPointSync(DeleteEndPointRequest req)
+        {
+             JsonResponseModel<DeleteEndPointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteEndPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEndPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除私有域解析账号
         /// </summary>
         /// <param name="req"><see cref="DeletePrivateDNSAccountRequest"/></param>

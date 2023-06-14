@@ -5221,6 +5221,52 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 将正在运行的拉流转推任务进行重启。
+        /// 注意：
+        /// 1. 重启任务会造成推流中断。
+        /// 2. 点播源任务的重启，会根据VodRefreshType决定是续播还是从头开始播。
+        /// </summary>
+        /// <param name="req"><see cref="RestartLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="RestartLivePullStreamTaskResponse"/></returns>
+        public async Task<RestartLivePullStreamTaskResponse> RestartLivePullStreamTask(RestartLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<RestartLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestartLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartLivePullStreamTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将正在运行的拉流转推任务进行重启。
+        /// 注意：
+        /// 1. 重启任务会造成推流中断。
+        /// 2. 点播源任务的重启，会根据VodRefreshType决定是续播还是从头开始播。
+        /// </summary>
+        /// <param name="req"><see cref="RestartLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="RestartLivePullStreamTaskResponse"/></returns>
+        public RestartLivePullStreamTaskResponse RestartLivePullStreamTaskSync(RestartLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<RestartLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestartLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartLivePullStreamTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 取消直播流设置的延时配置，恢复实时直播画面。
         /// </summary>
         /// <param name="req"><see cref="ResumeDelayLiveStreamRequest"/></param>

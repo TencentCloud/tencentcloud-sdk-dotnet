@@ -70,6 +70,20 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
+        /// <summary>
+        /// 固件类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FwType")]
+        public string FwType{ get; set; }
+
+        /// <summary>
+        /// 创建者 Uin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateUserId")]
+        public ulong? CreateUserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +97,8 @@ namespace TencentCloud.Iotcloud.V20210408.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "FwType", this.FwType);
+            this.SetParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
         }
     }
 }

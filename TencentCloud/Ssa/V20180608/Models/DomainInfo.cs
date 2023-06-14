@@ -110,11 +110,96 @@ namespace TencentCloud.Ssa.V20180608.Models
         public ulong? WeekPwdCount{ get; set; }
 
         /// <summary>
-        /// -
+        /// 资产归属
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetLocation")]
         public string AssetLocation{ get; set; }
+
+        /// <summary>
+        /// 网络风险
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetworkRisk")]
+        public ulong? NetworkRisk{ get; set; }
+
+        /// <summary>
+        /// 网络攻击
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetworkAttack")]
+        public ulong? NetworkAttack{ get; set; }
+
+        /// <summary>
+        /// bot访问
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BotVisit")]
+        public ulong? BotVisit{ get; set; }
+
+        /// <summary>
+        /// 网络访问
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetworkAccess")]
+        public ulong? NetworkAccess{ get; set; }
+
+        /// <summary>
+        /// 资产创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// waf状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WafStatus")]
+        public ulong? WafStatus{ get; set; }
+
+        /// <summary>
+        /// 最近扫描时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastScanTime")]
+        public string LastScanTime{ get; set; }
+
+        /// <summary>
+        /// 资产id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetId")]
+        public string[] AssetId{ get; set; }
+
+        /// <summary>
+        /// 资产名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssetName")]
+        public string[] AssetName{ get; set; }
+
+        /// <summary>
+        /// 类别
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
+        /// <summary>
+        /// 是否核心资产
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsNotCore")]
+        public ulong? IsNotCore{ get; set; }
+
+        /// <summary>
+        /// 是否云外资产
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsCloud")]
+        public ulong? IsCloud{ get; set; }
 
 
         /// <summary>
@@ -136,6 +221,18 @@ namespace TencentCloud.Ssa.V20180608.Models
             this.SetParamSimple(map, prefix + "PortRisk", this.PortRisk);
             this.SetParamSimple(map, prefix + "WeekPwdCount", this.WeekPwdCount);
             this.SetParamSimple(map, prefix + "AssetLocation", this.AssetLocation);
+            this.SetParamSimple(map, prefix + "NetworkRisk", this.NetworkRisk);
+            this.SetParamSimple(map, prefix + "NetworkAttack", this.NetworkAttack);
+            this.SetParamSimple(map, prefix + "BotVisit", this.BotVisit);
+            this.SetParamSimple(map, prefix + "NetworkAccess", this.NetworkAccess);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "WafStatus", this.WafStatus);
+            this.SetParamSimple(map, prefix + "LastScanTime", this.LastScanTime);
+            this.SetParamArraySimple(map, prefix + "AssetId.", this.AssetId);
+            this.SetParamArraySimple(map, prefix + "AssetName.", this.AssetName);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "IsNotCore", this.IsNotCore);
+            this.SetParamSimple(map, prefix + "IsCloud", this.IsCloud);
         }
     }
 }

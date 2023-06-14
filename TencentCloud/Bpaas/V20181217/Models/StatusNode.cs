@@ -167,6 +167,20 @@ namespace TencentCloud.Bpaas.V20181217.Models
         [JsonProperty("ParallelNodes")]
         public string ParallelNodes{ get; set; }
 
+        /// <summary>
+        /// scf拒绝时返回信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RejectedCloudFunctionMsg")]
+        public string RejectedCloudFunctionMsg{ get; set; }
+
+        /// <summary>
+        /// 上一个节点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrevNode")]
+        public string PrevNode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -194,6 +208,8 @@ namespace TencentCloud.Bpaas.V20181217.Models
             this.SetParamSimple(map, prefix + "CKafkaRegion", this.CKafkaRegion);
             this.SetParamSimple(map, prefix + "ExternalUrl", this.ExternalUrl);
             this.SetParamSimple(map, prefix + "ParallelNodes", this.ParallelNodes);
+            this.SetParamSimple(map, prefix + "RejectedCloudFunctionMsg", this.RejectedCloudFunctionMsg);
+            this.SetParamSimple(map, prefix + "PrevNode", this.PrevNode);
         }
     }
 }

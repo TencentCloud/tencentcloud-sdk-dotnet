@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{40746A19-2F78-3BFC-A968-CEFEA27426D6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.780</VersionPrefix>
+    <VersionPrefix>3.0.781</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,7 +51,6 @@
     <Compile Include="V20180321\Models\AgentAuditedClient.cs" />
     <Compile Include="V20180321\Models\AgentBillElem.cs" />
     <Compile Include="V20180321\Models\AgentClientElem.cs" />
-    <Compile Include="V20180321\Models\AgentDealElem.cs" />
     <Compile Include="V20180321\Models\AgentDealNewElem.cs" />
     <Compile Include="V20180321\Models\AgentPayDealsRequest.cs" />
     <Compile Include="V20180321\Models\AgentPayDealsResponse.cs" />
@@ -64,7 +63,6 @@
     <Compile Include="V20180321\Models\AuditApplyClientResponse.cs" />
     <Compile Include="V20180321\Models\CreatePayRelationForClientRequest.cs" />
     <Compile Include="V20180321\Models\CreatePayRelationForClientResponse.cs" />
-    <Compile Include="V20180321\Models\DealGoodsPriceElem.cs" />
     <Compile Include="V20180321\Models\DealGoodsPriceNewElem.cs" />
     <Compile Include="V20180321\Models\DescribeAgentAuditedClientsRequest.cs" />
     <Compile Include="V20180321\Models\DescribeAgentAuditedClientsResponse.cs" />
@@ -76,20 +74,12 @@
     <Compile Include="V20180321\Models\DescribeAgentClientsResponse.cs" />
     <Compile Include="V20180321\Models\DescribeAgentDealsByCacheRequest.cs" />
     <Compile Include="V20180321\Models\DescribeAgentDealsByCacheResponse.cs" />
-    <Compile Include="V20180321\Models\DescribeAgentDealsCacheRequest.cs" />
-    <Compile Include="V20180321\Models\DescribeAgentDealsCacheResponse.cs" />
-    <Compile Include="V20180321\Models\DescribeAgentPayDealsRequest.cs" />
-    <Compile Include="V20180321\Models\DescribeAgentPayDealsResponse.cs" />
     <Compile Include="V20180321\Models\DescribeAgentPayDealsV2Request.cs" />
     <Compile Include="V20180321\Models\DescribeAgentPayDealsV2Response.cs" />
-    <Compile Include="V20180321\Models\DescribeAgentSelfPayDealsRequest.cs" />
-    <Compile Include="V20180321\Models\DescribeAgentSelfPayDealsResponse.cs" />
     <Compile Include="V20180321\Models\DescribeAgentSelfPayDealsV2Request.cs" />
     <Compile Include="V20180321\Models\DescribeAgentSelfPayDealsV2Response.cs" />
     <Compile Include="V20180321\Models\DescribeClientBalanceNewRequest.cs" />
     <Compile Include="V20180321\Models\DescribeClientBalanceNewResponse.cs" />
-    <Compile Include="V20180321\Models\DescribeClientBalanceRequest.cs" />
-    <Compile Include="V20180321\Models\DescribeClientBalanceResponse.cs" />
     <Compile Include="V20180321\Models\DescribeRebateInfosNewRequest.cs" />
     <Compile Include="V20180321\Models\DescribeRebateInfosNewResponse.cs" />
     <Compile Include="V20180321\Models\DescribeRebateInfosRequest.cs" />

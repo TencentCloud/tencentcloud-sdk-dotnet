@@ -150,6 +150,21 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Published")]
         public bool? Published{ get; set; }
 
+        /// <summary>
+        /// 模板内部指定的印章列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TemplateSeals")]
+        public SealInfo[] TemplateSeals{ get; set; }
+
+        /// <summary>
+        /// 模板内部指定的印章列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Seals")]
+        [System.Obsolete]
+        public SealInfo[] Seals{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -176,6 +191,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
             this.SetParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
             this.SetParamSimple(map, prefix + "Published", this.Published);
+            this.SetParamArrayObj(map, prefix + "TemplateSeals.", this.TemplateSeals);
+            this.SetParamArrayObj(map, prefix + "Seals.", this.Seals);
         }
     }
 }

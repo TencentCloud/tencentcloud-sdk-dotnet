@@ -15,38 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Organization.V20210331.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAMQPVHostRequest : AbstractModel
+    public class DescribeOrganizationFinancialByMonthResponse : AbstractModel
     {
         
         /// <summary>
-        /// 集群ID
+        /// 产品消耗详情。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Items")]
+        public OrgFinancialByMonth[] Items{ get; set; }
 
         /// <summary>
-        /// vhost名称，3-64个字符，只能包含字母、数字、“-”及“_”
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("VHostId")]
-        public string VHostId{ get; set; }
-
-        /// <summary>
-        /// 未消费消息的保留时间，以毫秒为单位，60秒-15天
-        /// </summary>
-        [JsonProperty("MsgTtl")]
-        public ulong? MsgTtl{ get; set; }
-
-        /// <summary>
-        /// 说明，最大128个字符
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +43,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "VHostId", this.VHostId);
-            this.SetParamSimple(map, prefix + "MsgTtl", this.MsgTtl);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

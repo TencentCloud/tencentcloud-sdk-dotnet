@@ -169,7 +169,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public float? RowsExaminedAvg{ get; set; }
 
         /// <summary>
-        /// SOL模板的MD5值
+        /// SQL模板的MD5值
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }

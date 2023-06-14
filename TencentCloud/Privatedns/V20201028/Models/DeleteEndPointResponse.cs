@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Partners.V20180321.Models
+namespace TencentCloud.Privatedns.V20201028.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClientBalanceRequest : AbstractModel
+    public class DeleteEndPointResponse : AbstractModel
     {
         
         /// <summary>
-        /// 客户(代客)账号ID
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("ClientUin")]
-        public string ClientUin{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Partners.V20180321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClientUin", this.ClientUin);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -65,6 +65,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 请先通过UploadFiles接口上传文件，获取 FileId
         /// </summary>
         [JsonProperty("SealImage")]
+        [System.Obsolete]
         public string SealImage{ get; set; }
 
         /// <summary>

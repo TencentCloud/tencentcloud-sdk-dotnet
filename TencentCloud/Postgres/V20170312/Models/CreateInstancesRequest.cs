@@ -210,6 +210,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DBEngineConfig")]
         public string DBEngineConfig{ get; set; }
 
+        /// <summary>
+        /// 主从同步方式，取值： 1)Semi-sync：半同步 2)Async：异步 默认为Async
+        /// </summary>
+        [JsonProperty("SyncMode")]
+        public string SyncMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -245,6 +251,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "KMSRegion", this.KMSRegion);
             this.SetParamSimple(map, prefix + "DBEngine", this.DBEngine);
             this.SetParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
+            this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
         }
     }
 }

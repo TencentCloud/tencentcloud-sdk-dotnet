@@ -61,9 +61,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 这个参数跟下面的IsChannel参数配合使用。
-        /// IsChannel=false时，ApplicationId参数不起任何作用。
-        /// IsChannel=true时，ApplicationId为空，查询所有第三方应用集成平台企业模板列表；ApplicationId不为空，查询指定应用下的模板列表
+        /// ApplicationId不为空，查询指定应用下的模板列表
         /// ApplicationId为空，查询所有应用下的模板列表
         /// </summary>
         [JsonProperty("ApplicationId")]
@@ -74,6 +72,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 为true，查询第三方应用集成平台企业模板库管理列表
         /// </summary>
         [JsonProperty("IsChannel")]
+        [System.Obsolete]
         public bool? IsChannel{ get; set; }
 
         /// <summary>
