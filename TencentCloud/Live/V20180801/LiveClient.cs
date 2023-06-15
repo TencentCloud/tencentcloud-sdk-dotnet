@@ -387,6 +387,86 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 创建直播垫片规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLivePadRuleRequest"/></param>
+        /// <returns><see cref="CreateLivePadRuleResponse"/></returns>
+        public async Task<CreateLivePadRuleResponse> CreateLivePadRule(CreateLivePadRuleRequest req)
+        {
+             JsonResponseModel<CreateLivePadRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLivePadRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLivePadRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建直播垫片规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLivePadRuleRequest"/></param>
+        /// <returns><see cref="CreateLivePadRuleResponse"/></returns>
+        public CreateLivePadRuleResponse CreateLivePadRuleSync(CreateLivePadRuleRequest req)
+        {
+             JsonResponseModel<CreateLivePadRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLivePadRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLivePadRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建直播垫片模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLivePadTemplateRequest"/></param>
+        /// <returns><see cref="CreateLivePadTemplateResponse"/></returns>
+        public async Task<CreateLivePadTemplateResponse> CreateLivePadTemplate(CreateLivePadTemplateRequest req)
+        {
+             JsonResponseModel<CreateLivePadTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLivePadTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLivePadTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建直播垫片模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLivePadTemplateRequest"/></param>
+        /// <returns><see cref="CreateLivePadTemplateResponse"/></returns>
+        public CreateLivePadTemplateResponse CreateLivePadTemplateSync(CreateLivePadTemplateRequest req)
+        {
+             JsonResponseModel<CreateLivePadTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLivePadTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLivePadTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建直播拉流任务。支持将外部已有的点播文件，或者直播源拉取过来转推到指定的目标地址。
         /// 注意：
         /// 1. 默认支持任务数上限200个，如有特殊需求，可通过提单到售后进行评估增加上限。
@@ -672,6 +752,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "CreateLiveSnapshotTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来创建直播流监播任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveStreamMonitorRequest"/></param>
+        /// <returns><see cref="CreateLiveStreamMonitorResponse"/></returns>
+        public async Task<CreateLiveStreamMonitorResponse> CreateLiveStreamMonitor(CreateLiveStreamMonitorRequest req)
+        {
+             JsonResponseModel<CreateLiveStreamMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveStreamMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveStreamMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来创建直播流监播任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveStreamMonitorRequest"/></param>
+        /// <returns><see cref="CreateLiveStreamMonitorResponse"/></returns>
+        public CreateLiveStreamMonitorResponse CreateLiveStreamMonitorSync(CreateLiveStreamMonitorRequest req)
+        {
+             JsonResponseModel<CreateLiveStreamMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLiveStreamMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveStreamMonitorResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1167,6 +1287,86 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 删除直播垫片规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLivePadRuleRequest"/></param>
+        /// <returns><see cref="DeleteLivePadRuleResponse"/></returns>
+        public async Task<DeleteLivePadRuleResponse> DeleteLivePadRule(DeleteLivePadRuleRequest req)
+        {
+             JsonResponseModel<DeleteLivePadRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLivePadRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLivePadRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除直播垫片规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLivePadRuleRequest"/></param>
+        /// <returns><see cref="DeleteLivePadRuleResponse"/></returns>
+        public DeleteLivePadRuleResponse DeleteLivePadRuleSync(DeleteLivePadRuleRequest req)
+        {
+             JsonResponseModel<DeleteLivePadRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLivePadRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLivePadRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除直播垫片模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLivePadTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLivePadTemplateResponse"/></returns>
+        public async Task<DeleteLivePadTemplateResponse> DeleteLivePadTemplate(DeleteLivePadTemplateRequest req)
+        {
+             JsonResponseModel<DeleteLivePadTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLivePadTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLivePadTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除直播垫片模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLivePadTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLivePadTemplateResponse"/></returns>
+        public DeleteLivePadTemplateResponse DeleteLivePadTemplateSync(DeleteLivePadTemplateRequest req)
+        {
+             JsonResponseModel<DeleteLivePadTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLivePadTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLivePadTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除接口 CreateLivePullStreamTask 创建的拉流任务。
         /// 注意：
         /// 1. 入参中的 TaskId 为 CreateLivePullStreamTask 接口创建时返回的TaskId。
@@ -1404,6 +1604,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DeleteLiveSnapshotTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来删除直播流监播任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveStreamMonitorRequest"/></param>
+        /// <returns><see cref="DeleteLiveStreamMonitorResponse"/></returns>
+        public async Task<DeleteLiveStreamMonitorResponse> DeleteLiveStreamMonitor(DeleteLiveStreamMonitorRequest req)
+        {
+             JsonResponseModel<DeleteLiveStreamMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveStreamMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveStreamMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来删除直播流监播任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveStreamMonitorRequest"/></param>
+        /// <returns><see cref="DeleteLiveStreamMonitorResponse"/></returns>
+        public DeleteLiveStreamMonitorResponse DeleteLiveStreamMonitorSync(DeleteLiveStreamMonitorRequest req)
+        {
+             JsonResponseModel<DeleteLiveStreamMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLiveStreamMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveStreamMonitorResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2663,6 +2903,126 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 获取直播垫片规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePadRulesRequest"/></param>
+        /// <returns><see cref="DescribeLivePadRulesResponse"/></returns>
+        public async Task<DescribeLivePadRulesResponse> DescribeLivePadRules(DescribeLivePadRulesRequest req)
+        {
+             JsonResponseModel<DescribeLivePadRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLivePadRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePadRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播垫片规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePadRulesRequest"/></param>
+        /// <returns><see cref="DescribeLivePadRulesResponse"/></returns>
+        public DescribeLivePadRulesResponse DescribeLivePadRulesSync(DescribeLivePadRulesRequest req)
+        {
+             JsonResponseModel<DescribeLivePadRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLivePadRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePadRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取单个直播垫片模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePadTemplateRequest"/></param>
+        /// <returns><see cref="DescribeLivePadTemplateResponse"/></returns>
+        public async Task<DescribeLivePadTemplateResponse> DescribeLivePadTemplate(DescribeLivePadTemplateRequest req)
+        {
+             JsonResponseModel<DescribeLivePadTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLivePadTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePadTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取单个直播垫片模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePadTemplateRequest"/></param>
+        /// <returns><see cref="DescribeLivePadTemplateResponse"/></returns>
+        public DescribeLivePadTemplateResponse DescribeLivePadTemplateSync(DescribeLivePadTemplateRequest req)
+        {
+             JsonResponseModel<DescribeLivePadTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLivePadTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePadTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播垫片模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePadTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLivePadTemplatesResponse"/></returns>
+        public async Task<DescribeLivePadTemplatesResponse> DescribeLivePadTemplates(DescribeLivePadTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeLivePadTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLivePadTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePadTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播垫片模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePadTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLivePadTemplatesResponse"/></returns>
+        public DescribeLivePadTemplatesResponse DescribeLivePadTemplatesSync(DescribeLivePadTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeLivePadTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLivePadTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePadTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询播放鉴权key。
         /// </summary>
         /// <param name="req"><see cref="DescribeLivePlayAuthKeyRequest"/></param>
@@ -3064,6 +3424,86 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DescribeLiveStreamEventList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveStreamEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来查询某个特定监播任务的配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveStreamMonitorRequest"/></param>
+        /// <returns><see cref="DescribeLiveStreamMonitorResponse"/></returns>
+        public async Task<DescribeLiveStreamMonitorResponse> DescribeLiveStreamMonitor(DescribeLiveStreamMonitorRequest req)
+        {
+             JsonResponseModel<DescribeLiveStreamMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveStreamMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveStreamMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来查询某个特定监播任务的配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveStreamMonitorRequest"/></param>
+        /// <returns><see cref="DescribeLiveStreamMonitorResponse"/></returns>
+        public DescribeLiveStreamMonitorResponse DescribeLiveStreamMonitorSync(DescribeLiveStreamMonitorRequest req)
+        {
+             JsonResponseModel<DescribeLiveStreamMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveStreamMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveStreamMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来查询直播流监播任务配置的列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveStreamMonitorListRequest"/></param>
+        /// <returns><see cref="DescribeLiveStreamMonitorListResponse"/></returns>
+        public async Task<DescribeLiveStreamMonitorListResponse> DescribeLiveStreamMonitorList(DescribeLiveStreamMonitorListRequest req)
+        {
+             JsonResponseModel<DescribeLiveStreamMonitorListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveStreamMonitorList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveStreamMonitorListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来查询直播流监播任务配置的列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveStreamMonitorListRequest"/></param>
+        /// <returns><see cref="DescribeLiveStreamMonitorListResponse"/></returns>
+        public DescribeLiveStreamMonitorListResponse DescribeLiveStreamMonitorListSync(DescribeLiveStreamMonitorListRequest req)
+        {
+             JsonResponseModel<DescribeLiveStreamMonitorListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveStreamMonitorList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveStreamMonitorListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3778,6 +4218,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DescribeLogDownloadList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogDownloadListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用来查询监播场次7天内的智能识别、断流、低帧率等信息的汇总报告。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMonitorReportRequest"/></param>
+        /// <returns><see cref="DescribeMonitorReportResponse"/></returns>
+        public async Task<DescribeMonitorReportResponse> DescribeMonitorReport(DescribeMonitorReportRequest req)
+        {
+             JsonResponseModel<DescribeMonitorReportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMonitorReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMonitorReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用来查询监播场次7天内的智能识别、断流、低帧率等信息的汇总报告。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMonitorReportRequest"/></param>
+        /// <returns><see cref="DescribeMonitorReportResponse"/></returns>
+        public DescribeMonitorReportResponse DescribeMonitorReportSync(DescribeMonitorReportRequest req)
+        {
+             JsonResponseModel<DescribeMonitorReportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMonitorReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMonitorReportResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4817,6 +5297,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 修改直播垫片模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLivePadTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLivePadTemplateResponse"/></returns>
+        public async Task<ModifyLivePadTemplateResponse> ModifyLivePadTemplate(ModifyLivePadTemplateRequest req)
+        {
+             JsonResponseModel<ModifyLivePadTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLivePadTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePadTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改直播垫片模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLivePadTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLivePadTemplateResponse"/></returns>
+        public ModifyLivePadTemplateResponse ModifyLivePadTemplateSync(ModifyLivePadTemplateRequest req)
+        {
+             JsonResponseModel<ModifyLivePadTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLivePadTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePadTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改播放鉴权key
         /// </summary>
         /// <param name="req"><see cref="ModifyLivePlayAuthKeyRequest"/></param>
@@ -5052,6 +5572,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLiveSnapshotTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来修改直播流监播任务的配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveStreamMonitorRequest"/></param>
+        /// <returns><see cref="ModifyLiveStreamMonitorResponse"/></returns>
+        public async Task<ModifyLiveStreamMonitorResponse> ModifyLiveStreamMonitor(ModifyLiveStreamMonitorRequest req)
+        {
+             JsonResponseModel<ModifyLiveStreamMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveStreamMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveStreamMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来修改直播流监播任务的配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveStreamMonitorRequest"/></param>
+        /// <returns><see cref="ModifyLiveStreamMonitorResponse"/></returns>
+        public ModifyLiveStreamMonitorResponse ModifyLiveStreamMonitorSync(ModifyLiveStreamMonitorRequest req)
+        {
+             JsonResponseModel<ModifyLiveStreamMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLiveStreamMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveStreamMonitorResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5347,6 +5907,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 该接口用来启动直播流监播任务。
+        /// </summary>
+        /// <param name="req"><see cref="StartLiveStreamMonitorRequest"/></param>
+        /// <returns><see cref="StartLiveStreamMonitorResponse"/></returns>
+        public async Task<StartLiveStreamMonitorResponse> StartLiveStreamMonitor(StartLiveStreamMonitorRequest req)
+        {
+             JsonResponseModel<StartLiveStreamMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartLiveStreamMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartLiveStreamMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来启动直播流监播任务。
+        /// </summary>
+        /// <param name="req"><see cref="StartLiveStreamMonitorRequest"/></param>
+        /// <returns><see cref="StartLiveStreamMonitorResponse"/></returns>
+        public StartLiveStreamMonitorResponse StartLiveStreamMonitorSync(StartLiveStreamMonitorRequest req)
+        {
+             JsonResponseModel<StartLiveStreamMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartLiveStreamMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartLiveStreamMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 说明：录制后的文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播账号并确保账号可用。录制文件存放后，相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，请参考对应文档。
         /// </summary>
         /// <param name="req"><see cref="StopLiveRecordRequest"/></param>
@@ -5378,6 +5978,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "StopLiveRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopLiveRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来停止直播流监播任务。
+        /// </summary>
+        /// <param name="req"><see cref="StopLiveStreamMonitorRequest"/></param>
+        /// <returns><see cref="StopLiveStreamMonitorResponse"/></returns>
+        public async Task<StopLiveStreamMonitorResponse> StopLiveStreamMonitor(StopLiveStreamMonitorRequest req)
+        {
+             JsonResponseModel<StopLiveStreamMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopLiveStreamMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopLiveStreamMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来停止直播流监播任务。
+        /// </summary>
+        /// <param name="req"><see cref="StopLiveStreamMonitorRequest"/></param>
+        /// <returns><see cref="StopLiveStreamMonitorResponse"/></returns>
+        public StopLiveStreamMonitorResponse StopLiveStreamMonitorSync(StopLiveStreamMonitorRequest req)
+        {
+             JsonResponseModel<StopLiveStreamMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopLiveStreamMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopLiveStreamMonitorResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

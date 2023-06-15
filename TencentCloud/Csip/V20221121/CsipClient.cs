@@ -213,6 +213,46 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 集群pod列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPodAssetsRequest"/></param>
+        /// <returns><see cref="DescribeClusterPodAssetsResponse"/></returns>
+        public async Task<DescribeClusterPodAssetsResponse> DescribeClusterPodAssets(DescribeClusterPodAssetsRequest req)
+        {
+             JsonResponseModel<DescribeClusterPodAssetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterPodAssets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterPodAssetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 集群pod列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPodAssetsRequest"/></param>
+        /// <returns><see cref="DescribeClusterPodAssetsResponse"/></returns>
+        public DescribeClusterPodAssetsResponse DescribeClusterPodAssetsSync(DescribeClusterPodAssetsRequest req)
+        {
+             JsonResponseModel<DescribeClusterPodAssetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterPodAssets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterPodAssetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// db资产详情
         /// </summary>
         /// <param name="req"><see cref="DescribeDbAssetInfoRequest"/></param>
@@ -284,6 +324,166 @@ namespace TencentCloud.Csip.V20221121
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDbAssets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDbAssetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 域名列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainAssetsRequest"/></param>
+        /// <returns><see cref="DescribeDomainAssetsResponse"/></returns>
+        public async Task<DescribeDomainAssetsResponse> DescribeDomainAssets(DescribeDomainAssetsRequest req)
+        {
+             JsonResponseModel<DescribeDomainAssetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainAssets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainAssetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 域名列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainAssetsRequest"/></param>
+        /// <returns><see cref="DescribeDomainAssetsResponse"/></returns>
+        public DescribeDomainAssetsResponse DescribeDomainAssetsSync(DescribeDomainAssetsRequest req)
+        {
+             JsonResponseModel<DescribeDomainAssetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainAssets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainAssetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ip公网列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicIpAssetsRequest"/></param>
+        /// <returns><see cref="DescribePublicIpAssetsResponse"/></returns>
+        public async Task<DescribePublicIpAssetsResponse> DescribePublicIpAssets(DescribePublicIpAssetsRequest req)
+        {
+             JsonResponseModel<DescribePublicIpAssetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePublicIpAssets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublicIpAssetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ip公网列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicIpAssetsRequest"/></param>
+        /// <returns><see cref="DescribePublicIpAssetsResponse"/></returns>
+        public DescribePublicIpAssetsResponse DescribePublicIpAssetsSync(DescribePublicIpAssetsRequest req)
+        {
+             JsonResponseModel<DescribePublicIpAssetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePublicIpAssets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublicIpAssetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取资产视角的端口风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskCenterAssetViewPortRiskListRequest"/></param>
+        /// <returns><see cref="DescribeRiskCenterAssetViewPortRiskListResponse"/></returns>
+        public async Task<DescribeRiskCenterAssetViewPortRiskListResponse> DescribeRiskCenterAssetViewPortRiskList(DescribeRiskCenterAssetViewPortRiskListRequest req)
+        {
+             JsonResponseModel<DescribeRiskCenterAssetViewPortRiskListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRiskCenterAssetViewPortRiskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskCenterAssetViewPortRiskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取资产视角的端口风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskCenterAssetViewPortRiskListRequest"/></param>
+        /// <returns><see cref="DescribeRiskCenterAssetViewPortRiskListResponse"/></returns>
+        public DescribeRiskCenterAssetViewPortRiskListResponse DescribeRiskCenterAssetViewPortRiskListSync(DescribeRiskCenterAssetViewPortRiskListRequest req)
+        {
+             JsonResponseModel<DescribeRiskCenterAssetViewPortRiskListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRiskCenterAssetViewPortRiskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskCenterAssetViewPortRiskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取资产视角的漏洞风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskCenterAssetViewVULRiskListRequest"/></param>
+        /// <returns><see cref="DescribeRiskCenterAssetViewVULRiskListResponse"/></returns>
+        public async Task<DescribeRiskCenterAssetViewVULRiskListResponse> DescribeRiskCenterAssetViewVULRiskList(DescribeRiskCenterAssetViewVULRiskListRequest req)
+        {
+             JsonResponseModel<DescribeRiskCenterAssetViewVULRiskListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRiskCenterAssetViewVULRiskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskCenterAssetViewVULRiskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取资产视角的漏洞风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskCenterAssetViewVULRiskListRequest"/></param>
+        /// <returns><see cref="DescribeRiskCenterAssetViewVULRiskListResponse"/></returns>
+        public DescribeRiskCenterAssetViewVULRiskListResponse DescribeRiskCenterAssetViewVULRiskListSync(DescribeRiskCenterAssetViewVULRiskListRequest req)
+        {
+             JsonResponseModel<DescribeRiskCenterAssetViewVULRiskListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRiskCenterAssetViewVULRiskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskCenterAssetViewVULRiskListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

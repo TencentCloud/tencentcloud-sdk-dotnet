@@ -367,6 +367,13 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("RiskExposure")]
         public long? RiskExposure{ get; set; }
 
+        /// <summary>
+        /// 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BASAgentStatus")]
+        public long? BASAgentStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -422,6 +429,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "MemberId", this.MemberId);
             this.SetParamSimple(map, prefix + "Os", this.Os);
             this.SetParamSimple(map, prefix + "RiskExposure", this.RiskExposure);
+            this.SetParamSimple(map, prefix + "BASAgentStatus", this.BASAgentStatus);
         }
     }
 }

@@ -1373,7 +1373,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 获取实例可修改参数列表
+        /// 本接口（DescribeDBInstanceAttribute）用于查询实例的参数信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceParametersRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceParametersResponse"/></returns>
@@ -1393,7 +1393,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 获取实例可修改参数列表
+        /// 本接口（DescribeDBInstanceAttribute）用于查询实例的参数信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceParametersRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceParametersResponse"/></returns>

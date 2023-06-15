@@ -94,10 +94,17 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 数字水印类型。可选值：
         /// <li>Trace 表示经过溯源水印处理；</li>
+        /// <li>CopyRight 表示经过版权水印处理；</li>
         /// <li>None 表示没有经过数字水印处理。</li>
         /// </summary>
         [JsonProperty("DigitalWatermarkType")]
         public string DigitalWatermarkType{ get; set; }
+
+        /// <summary>
+        /// 版权信息。
+        /// </summary>
+        [JsonProperty("CopyRightWatermarkText")]
+        public string CopyRightWatermarkText{ get; set; }
 
 
         /// <summary>
@@ -117,6 +124,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
             this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
             this.SetParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
+            this.SetParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
         }
     }
 }

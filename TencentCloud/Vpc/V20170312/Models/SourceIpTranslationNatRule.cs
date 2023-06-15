@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 资源ID
+        /// 资源ID，如果ResourceType为USERDEFINED，可以为空
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源类型，目前包含SUBNET、NETWORKINTERFACE
+        /// 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]

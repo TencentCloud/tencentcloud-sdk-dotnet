@@ -51,6 +51,16 @@ namespace TencentCloud.Thpc.V20230321.Models
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
+        /// <summary>
+        /// 文件系统挂载挂载命令参数选项。
+        /// 
+        /// - NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
+        /// - NFS 4.0默认值：vers=4.0,noresvport
+        /// - TURBO默认值：user_xattr
+        /// </summary>
+        [JsonProperty("MountOption")]
+        public string MountOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +71,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamSimple(map, prefix + "RemotePath", this.RemotePath);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamSimple(map, prefix + "MountOption", this.MountOption);
         }
     }
 }

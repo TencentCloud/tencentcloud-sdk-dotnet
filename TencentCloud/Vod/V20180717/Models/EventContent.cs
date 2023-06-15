@@ -45,6 +45,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>RebuildMediaComplete：音画质重生完成事件。</li>
         /// <li>ReviewAudioVideoComplete：音视频审核完成；</li>
         /// <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
+        /// <li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
         /// <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
         /// <b>兼容 2017 版的事件类型：</b>
         /// <li>TranscodeComplete：视频转码完成；</li>
@@ -183,6 +184,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ExtractTraceWatermarkTask ExtractTraceWatermarkCompleteEvent{ get; set; }
 
         /// <summary>
+        /// 版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtractCopyRightWatermarkCompleteEvent")]
+        public ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkCompleteEvent{ get; set; }
+
+        /// <summary>
         /// 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -229,6 +237,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
             this.SetParamObj(map, prefix + "RebuildMediaCompleteEvent.", this.RebuildMediaCompleteEvent);
             this.SetParamObj(map, prefix + "ExtractTraceWatermarkCompleteEvent.", this.ExtractTraceWatermarkCompleteEvent);
+            this.SetParamObj(map, prefix + "ExtractCopyRightWatermarkCompleteEvent.", this.ExtractCopyRightWatermarkCompleteEvent);
             this.SetParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
             this.SetParamObj(map, prefix + "ReduceMediaBitrateCompleteEvent.", this.ReduceMediaBitrateCompleteEvent);
             this.SetParamObj(map, prefix + "DescribeFileAttributesCompleteEvent.", this.DescribeFileAttributesCompleteEvent);

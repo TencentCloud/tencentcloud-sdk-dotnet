@@ -127,6 +127,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
 
+        /// <summary>
+        /// 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+        /// </summary>
+        [JsonProperty("ConnectionPoolType")]
+        public string ConnectionPoolType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +156,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "VPort", this.VPort);
             this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
+            this.SetParamSimple(map, prefix + "ConnectionPoolType", this.ConnectionPoolType);
         }
     }
 }

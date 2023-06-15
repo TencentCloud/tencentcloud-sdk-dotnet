@@ -31,7 +31,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
+        /// 员工信息，不超过100个。
+        /// 根据UserId或OpenId更新员工，必填一个，优先UserId。
+        /// 可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持
         /// </summary>
         [JsonProperty("Employees")]
         public Staff[] Employees{ get; set; }

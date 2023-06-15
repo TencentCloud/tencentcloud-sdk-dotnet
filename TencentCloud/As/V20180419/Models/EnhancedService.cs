@@ -40,6 +40,7 @@ namespace TencentCloud.As.V20180419.Models
         /// 该参数已废弃，查询时会返回空值，请勿使用。
         /// </summary>
         [JsonProperty("AutomationService")]
+        [System.Obsolete]
         public RunAutomationServiceEnabled[] AutomationService{ get; set; }
 
         /// <summary>

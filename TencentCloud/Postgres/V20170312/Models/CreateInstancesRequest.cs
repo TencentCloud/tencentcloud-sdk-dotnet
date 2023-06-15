@@ -211,7 +211,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBEngineConfig{ get; set; }
 
         /// <summary>
-        /// 主从同步方式，取值： 1)Semi-sync：半同步 2)Async：异步 默认为Async
+        /// 主从同步方式，可取值： 
+        /// 1、Semi-sync：半同步
+        /// 2、Async：异步 
+        /// 当前只支持Semi-sync
         /// </summary>
         [JsonProperty("SyncMode")]
         public string SyncMode{ get; set; }

@@ -37,13 +37,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 预定的房间开始时间，unix时间戳。直播开始后不允许修改。
+        /// 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 预定的房间结束时间，unix时间戳。直播开始后不允许修改。
+        /// 预定的房间结束时间，unix时间戳（秒）。直播开始后不允许修改。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

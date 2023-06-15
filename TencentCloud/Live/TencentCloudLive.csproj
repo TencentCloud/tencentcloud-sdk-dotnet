@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.781</VersionPrefix>
+    <VersionPrefix>3.0.782</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,6 +81,10 @@
     <Compile Include="V20180801\Models\CreateLiveCallbackRuleResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveCallbackTemplateRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveCallbackTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLivePadRuleRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLivePadRuleResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLivePadTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLivePadTemplateResponse.cs" />
     <Compile Include="V20180801\Models\CreateLivePullStreamTaskRequest.cs" />
     <Compile Include="V20180801\Models\CreateLivePullStreamTaskResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveRecordRequest.cs" />
@@ -93,6 +97,8 @@
     <Compile Include="V20180801\Models\CreateLiveSnapshotRuleResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveSnapshotTemplateRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveSnapshotTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveStreamMonitorRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveStreamMonitorResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveTimeShiftRuleRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveTimeShiftRuleResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveTimeShiftTemplateRequest.cs" />
@@ -117,6 +123,10 @@
     <Compile Include="V20180801\Models\DeleteLiveCallbackTemplateResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveDomainRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveDomainResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLivePadRuleRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLivePadRuleResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLivePadTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLivePadTemplateResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLivePullStreamTaskRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLivePullStreamTaskResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveRecordRequest.cs" />
@@ -129,6 +139,8 @@
     <Compile Include="V20180801\Models\DeleteLiveSnapshotRuleResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveSnapshotTemplateRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveSnapshotTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveStreamMonitorRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveStreamMonitorResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveTimeShiftRuleRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveTimeShiftRuleResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveTimeShiftTemplateRequest.cs" />
@@ -191,6 +203,12 @@
     <Compile Include="V20180801\Models\DescribeLiveForbidStreamListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLivePackageInfoRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLivePackageInfoResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePadRulesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePadRulesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePadTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePadTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePadTemplatesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePadTemplatesResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLivePlayAuthKeyRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLivePlayAuthKeyResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLivePullStreamTasksRequest.cs" />
@@ -211,6 +229,10 @@
     <Compile Include="V20180801\Models\DescribeLiveSnapshotTemplatesResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveStreamEventListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveStreamEventListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamMonitorListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamMonitorListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamMonitorRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamMonitorResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveStreamOnlineListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveStreamOnlineListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveStreamPublishedListRequest.cs" />
@@ -245,6 +267,8 @@
     <Compile Include="V20180801\Models\DescribeLiveXP2PDetailInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLogDownloadListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLogDownloadListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeMonitorReportRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeMonitorReportResponse.cs" />
     <Compile Include="V20180801\Models\DescribePlayErrorCodeDetailInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribePlayErrorCodeDetailInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribePlayErrorCodeSumInfoListRequest.cs" />
@@ -281,6 +305,7 @@
     <Compile Include="V20180801\Models\DescribeUploadStreamNumsResponse.cs" />
     <Compile Include="V20180801\Models\DescribeVisitTopSumInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeVisitTopSumInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DiagnoseResult.cs" />
     <Compile Include="V20180801\Models\DomainCertInfo.cs" />
     <Compile Include="V20180801\Models\DomainDetailInfo.cs" />
     <Compile Include="V20180801\Models\DomainInfo.cs" />
@@ -304,13 +329,20 @@
     <Compile Include="V20180801\Models\LiveCertDomainInfo.cs" />
     <Compile Include="V20180801\Models\LiveDomainCertBindings.cs" />
     <Compile Include="V20180801\Models\LivePackageInfo.cs" />
+    <Compile Include="V20180801\Models\LiveStreamMonitorInfo.cs" />
+    <Compile Include="V20180801\Models\LiveStreamMonitorInputInfo.cs" />
+    <Compile Include="V20180801\Models\LiveStreamMonitorNotifyPolicy.cs" />
+    <Compile Include="V20180801\Models\LiveStreamMonitorOutputInfo.cs" />
     <Compile Include="V20180801\Models\LogInfo.cs" />
+    <Compile Include="V20180801\Models\MPSResult.cs" />
     <Compile Include="V20180801\Models\ModifyLiveCallbackTemplateRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveCallbackTemplateResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveDomainCertBindingsRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveDomainCertBindingsResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveDomainRefererRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveDomainRefererResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLivePadTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLivePadTemplateResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLivePlayAuthKeyRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLivePlayAuthKeyResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLivePlayDomainRequest.cs" />
@@ -323,6 +355,8 @@
     <Compile Include="V20180801\Models\ModifyLiveRecordTemplateResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveSnapshotTemplateRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveSnapshotTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveStreamMonitorRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveStreamMonitorResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveTimeShiftTemplateRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveTimeShiftTemplateResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveTranscodeTemplateRequest.cs" />
@@ -332,6 +366,7 @@
     <Compile Include="V20180801\Models\ModifyPullStreamStatusRequest.cs" />
     <Compile Include="V20180801\Models\ModifyPullStreamStatusResponse.cs" />
     <Compile Include="V20180801\Models\MonitorStreamPlayInfo.cs" />
+    <Compile Include="V20180801\Models\PadTemplate.cs" />
     <Compile Include="V20180801\Models\PlayAuthKeyInfo.cs" />
     <Compile Include="V20180801\Models\PlayCodeTotalInfo.cs" />
     <Compile Include="V20180801\Models\PlayDataInfoByStream.cs" />
@@ -360,8 +395,12 @@
     <Compile Include="V20180801\Models\RuleInfo.cs" />
     <Compile Include="V20180801\Models\ScreenshotTask.cs" />
     <Compile Include="V20180801\Models\SnapshotTemplateInfo.cs" />
+    <Compile Include="V20180801\Models\StartLiveStreamMonitorRequest.cs" />
+    <Compile Include="V20180801\Models\StartLiveStreamMonitorResponse.cs" />
     <Compile Include="V20180801\Models\StopLiveRecordRequest.cs" />
     <Compile Include="V20180801\Models\StopLiveRecordResponse.cs" />
+    <Compile Include="V20180801\Models\StopLiveStreamMonitorRequest.cs" />
+    <Compile Include="V20180801\Models\StopLiveStreamMonitorResponse.cs" />
     <Compile Include="V20180801\Models\StopRecordTaskRequest.cs" />
     <Compile Include="V20180801\Models\StopRecordTaskResponse.cs" />
     <Compile Include="V20180801\Models\StopScreenshotTaskRequest.cs" />

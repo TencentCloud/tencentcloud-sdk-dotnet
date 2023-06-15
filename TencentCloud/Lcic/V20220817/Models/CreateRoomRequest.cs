@@ -31,13 +31,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 预定的房间开始时间，unix时间戳。
+        /// 预定的房间开始时间，unix时间戳（秒）。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 预定的房间结束时间，unix时间戳。
+        /// 预定的房间结束时间，unix时间戳（秒）。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

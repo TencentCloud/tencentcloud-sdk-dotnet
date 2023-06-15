@@ -142,6 +142,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 是否是表单域类型，默认不false-不是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFormType")]
         public bool? IsFormType{ get; set; }
@@ -249,12 +250,14 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 指定关键字时横坐标偏移量，单位pt
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OffsetX")]
         public float? OffsetX{ get; set; }
 
         /// <summary>
         /// 指定关键字时纵坐标偏移量，单位pt
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OffsetY")]
         public float? OffsetY{ get; set; }

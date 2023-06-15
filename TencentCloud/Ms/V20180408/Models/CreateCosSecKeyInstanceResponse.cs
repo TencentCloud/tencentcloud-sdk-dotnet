@@ -64,6 +64,7 @@ namespace TencentCloud.Ms.V20180408.Models
         /// 密钥TOCKEN信息
         /// </summary>
         [JsonProperty("CosTocken")]
+        [System.Obsolete]
         public string CosTocken{ get; set; }
 
         /// <summary>
@@ -71,6 +72,12 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         [JsonProperty("CosPrefix")]
         public string CosPrefix{ get; set; }
+
+        /// <summary>
+        /// 密钥TOCKEN信息
+        /// </summary>
+        [JsonProperty("CosToken")]
+        public string CosToken{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -92,6 +99,7 @@ namespace TencentCloud.Ms.V20180408.Models
             this.SetParamSimple(map, prefix + "CosKey", this.CosKey);
             this.SetParamSimple(map, prefix + "CosTocken", this.CosTocken);
             this.SetParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
+            this.SetParamSimple(map, prefix + "CosToken", this.CosToken);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

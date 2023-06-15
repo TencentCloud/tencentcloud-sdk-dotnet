@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 待挂载的实例ID。指定的实例必须处于“运行中”状态。
+        /// 待挂载的实例ID。指定的实例必须与指定的数据盘处于同一可用区，实例状态必须处于“运行中”状态，且实例必须支持[自动化助手](https://cloud.tencent.com/document/product/1340/50752)。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
