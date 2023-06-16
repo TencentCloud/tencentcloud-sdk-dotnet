@@ -45,13 +45,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 合同(流程)的状态, 状态如下
         /// 
-        /// INIT 还没发起
-        /// PART 部分签署
-        /// REJECT 拒签
-        /// ALL 全部签署
-        /// DEADLINE 流签
-        /// CANCEL 取消
-        /// RELIEVED 解除
+        /// INIT 合同创建
+        /// PART 合同签署中
+        /// REJECT 合同拒签
+        /// ALL 合同签署完成
+        /// DEADLINE 合同流签(合同过期)
+        /// CANCEL 合同撤回
+        /// RELIEVED 解除协议（已解除）
         ///  
         /// </summary>
         [JsonProperty("FlowStatus")]

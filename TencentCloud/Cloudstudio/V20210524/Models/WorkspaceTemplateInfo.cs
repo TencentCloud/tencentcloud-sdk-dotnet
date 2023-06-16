@@ -155,13 +155,6 @@ namespace TencentCloud.Cloudstudio.V20210524.Models
         public string PluginFile{ get; set; }
 
         /// <summary>
-        /// xxx
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PrebuildFile")]
-        public string PrebuildFile{ get; set; }
-
-        /// <summary>
         /// 是否标记
         /// </summary>
         [JsonProperty("Marked")]
@@ -251,7 +244,6 @@ namespace TencentCloud.Cloudstudio.V20210524.Models
             this.SetParamSimple(map, prefix + "UserVersionControlRefType", this.UserVersionControlRefType);
             this.SetParamSimple(map, prefix + "DevFile", this.DevFile);
             this.SetParamSimple(map, prefix + "PluginFile", this.PluginFile);
-            this.SetParamSimple(map, prefix + "PrebuildFile", this.PrebuildFile);
             this.SetParamSimple(map, prefix + "Marked", this.Marked);
             this.SetParamSimple(map, prefix + "MarkAt", this.MarkAt);
             this.SetParamSimple(map, prefix + "CreateDate", this.CreateDate);

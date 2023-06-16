@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.782</VersionPrefix>
+    <VersionPrefix>3.0.783</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -291,6 +291,8 @@
     <Compile Include="V20180525\Models\DescribeEksContainerInstanceLogResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressRequest.cs" />
     <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEncryptionStatusRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEncryptionStatusResponse.cs" />
     <Compile Include="V20180525\Models\DescribeExistedInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeExistedInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeExternalClusterSpecRequest.cs" />
@@ -361,6 +363,8 @@
     <Compile Include="V20180525\Models\DisableClusterAuditResponse.cs" />
     <Compile Include="V20180525\Models\DisableClusterDeletionProtectionRequest.cs" />
     <Compile Include="V20180525\Models\DisableClusterDeletionProtectionResponse.cs" />
+    <Compile Include="V20180525\Models\DisableEncryptionProtectionRequest.cs" />
+    <Compile Include="V20180525\Models\DisableEncryptionProtectionResponse.cs" />
     <Compile Include="V20180525\Models\DisableEventPersistenceRequest.cs" />
     <Compile Include="V20180525\Models\DisableEventPersistenceResponse.cs" />
     <Compile Include="V20180525\Models\DisableVpcCniNetworkTypeRequest.cs" />
@@ -389,6 +393,8 @@
     <Compile Include="V20180525\Models\EnableClusterAuditResponse.cs" />
     <Compile Include="V20180525\Models\EnableClusterDeletionProtectionRequest.cs" />
     <Compile Include="V20180525\Models\EnableClusterDeletionProtectionResponse.cs" />
+    <Compile Include="V20180525\Models\EnableEncryptionProtectionRequest.cs" />
+    <Compile Include="V20180525\Models\EnableEncryptionProtectionResponse.cs" />
     <Compile Include="V20180525\Models\EnableEventPersistenceRequest.cs" />
     <Compile Include="V20180525\Models\EnableEventPersistenceResponse.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />

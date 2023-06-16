@@ -90,6 +90,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? Deadline{ get; set; }
 
         /// <summary>
+        /// 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+        /// </summary>
+        [JsonProperty("RemindedOn")]
+        public long? RemindedOn{ get; set; }
+
+        /// <summary>
         /// 发送类型：
         /// true：无序签
         /// false：有序签
@@ -174,6 +180,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
             this.SetParamSimple(map, prefix + "PreviewType", this.PreviewType);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
+            this.SetParamSimple(map, prefix + "RemindedOn", this.RemindedOn);
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);

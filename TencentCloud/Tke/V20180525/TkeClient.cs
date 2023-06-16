@@ -4253,6 +4253,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询etcd数据是否进行加密
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEncryptionStatusRequest"/></param>
+        /// <returns><see cref="DescribeEncryptionStatusResponse"/></returns>
+        public async Task<DescribeEncryptionStatusResponse> DescribeEncryptionStatus(DescribeEncryptionStatusRequest req)
+        {
+             JsonResponseModel<DescribeEncryptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEncryptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEncryptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询etcd数据是否进行加密
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEncryptionStatusRequest"/></param>
+        /// <returns><see cref="DescribeEncryptionStatusResponse"/></returns>
+        public DescribeEncryptionStatusResponse DescribeEncryptionStatusSync(DescribeEncryptionStatusRequest req)
+        {
+             JsonResponseModel<DescribeEncryptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEncryptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEncryptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询已经存在的节点，判断是否可以加入集群
         /// </summary>
         /// <param name="req"><see cref="DescribeExistedInstancesRequest"/></param>
@@ -5653,6 +5693,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 关闭加密信息保护
+        /// </summary>
+        /// <param name="req"><see cref="DisableEncryptionProtectionRequest"/></param>
+        /// <returns><see cref="DisableEncryptionProtectionResponse"/></returns>
+        public async Task<DisableEncryptionProtectionResponse> DisableEncryptionProtection(DisableEncryptionProtectionRequest req)
+        {
+             JsonResponseModel<DisableEncryptionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableEncryptionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableEncryptionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关闭加密信息保护
+        /// </summary>
+        /// <param name="req"><see cref="DisableEncryptionProtectionRequest"/></param>
+        /// <returns><see cref="DisableEncryptionProtectionResponse"/></returns>
+        public DisableEncryptionProtectionResponse DisableEncryptionProtectionSync(DisableEncryptionProtectionRequest req)
+        {
+             JsonResponseModel<DisableEncryptionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableEncryptionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableEncryptionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 关闭事件持久化功能
         /// </summary>
         /// <param name="req"><see cref="DisableEventPersistenceRequest"/></param>
@@ -5844,6 +5924,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "EnableClusterDeletionProtection");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableClusterDeletionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启加密数据保护
+        /// </summary>
+        /// <param name="req"><see cref="EnableEncryptionProtectionRequest"/></param>
+        /// <returns><see cref="EnableEncryptionProtectionResponse"/></returns>
+        public async Task<EnableEncryptionProtectionResponse> EnableEncryptionProtection(EnableEncryptionProtectionRequest req)
+        {
+             JsonResponseModel<EnableEncryptionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableEncryptionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableEncryptionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启加密数据保护
+        /// </summary>
+        /// <param name="req"><see cref="EnableEncryptionProtectionRequest"/></param>
+        /// <returns><see cref="EnableEncryptionProtectionResponse"/></returns>
+        public EnableEncryptionProtectionResponse EnableEncryptionProtectionSync(EnableEncryptionProtectionRequest req)
+        {
+             JsonResponseModel<EnableEncryptionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableEncryptionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableEncryptionProtectionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

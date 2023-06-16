@@ -55,18 +55,17 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 暂未开放
-        /// </summary>
-        [JsonProperty("RelatedFlowId")]
-        [System.Obsolete]
-        public string RelatedFlowId{ get; set; }
-
-        /// <summary>
         /// 签署流程的签署截止时间。
         /// 值为unix时间戳,精确到秒,不传默认为当前时间一年后
         /// </summary>
         [JsonProperty("DeadLine")]
         public long? DeadLine{ get; set; }
+
+        /// <summary>
+        /// 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+        /// </summary>
+        [JsonProperty("RemindedOn")]
+        public long? RemindedOn{ get; set; }
 
         /// <summary>
         /// 用户自定义字段，回调的时候会进行透传，长度需要小于20480
@@ -105,13 +104,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? NeedSignReview{ get; set; }
 
         /// <summary>
-        /// 暂未开放
-        /// </summary>
-        [JsonProperty("CallbackUrl")]
-        [System.Obsolete]
-        public string CallbackUrl{ get; set; }
-
-        /// <summary>
         /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
         /// </summary>
         [JsonProperty("Agent")]
@@ -130,6 +122,20 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("AutoSignScene")]
         public string AutoSignScene{ get; set; }
 
+        /// <summary>
+        /// 暂未开放
+        /// </summary>
+        [JsonProperty("RelatedFlowId")]
+        [System.Obsolete]
+        public string RelatedFlowId{ get; set; }
+
+        /// <summary>
+        /// 暂未开放
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        [System.Obsolete]
+        public string CallbackUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,17 +147,18 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
-            this.SetParamSimple(map, prefix + "RelatedFlowId", this.RelatedFlowId);
             this.SetParamSimple(map, prefix + "DeadLine", this.DeadLine);
+            this.SetParamSimple(map, prefix + "RemindedOn", this.RemindedOn);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
-            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
             this.SetParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
+            this.SetParamSimple(map, prefix + "RelatedFlowId", this.RelatedFlowId);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         }
     }
 }

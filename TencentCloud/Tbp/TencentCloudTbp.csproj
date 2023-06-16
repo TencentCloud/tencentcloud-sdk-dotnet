@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F58F200E-5788-3109-85BE-FCE7042B06CC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.782</VersionPrefix>
+    <VersionPrefix>3.0.783</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20190627\TbpClient.cs" />
+    <Compile Include="V20190627\Models\Group.cs" />
+    <Compile Include="V20190627\Models\ResponseMessage.cs" />
+    <Compile Include="V20190627\Models\SlotInfo.cs" />
+    <Compile Include="V20190627\Models\TextProcessRequest.cs" />
+    <Compile Include="V20190627\Models\TextProcessResponse.cs" />
+    <Compile Include="V20190627\Models\TextResetRequest.cs" />
+    <Compile Include="V20190627\Models\TextResetResponse.cs" />
     <Compile Include="V20190311\TbpClient.cs" />
     <Compile Include="V20190311\Models\CreateBotRequest.cs" />
     <Compile Include="V20190311\Models\CreateBotResponse.cs" />
@@ -59,13 +67,5 @@
     <Compile Include="V20190311\Models\TextProcessResponse.cs" />
     <Compile Include="V20190311\Models\TextResetRequest.cs" />
     <Compile Include="V20190311\Models\TextResetResponse.cs" />
-    <Compile Include="V20190627\TbpClient.cs" />
-    <Compile Include="V20190627\Models\Group.cs" />
-    <Compile Include="V20190627\Models\ResponseMessage.cs" />
-    <Compile Include="V20190627\Models\SlotInfo.cs" />
-    <Compile Include="V20190627\Models\TextProcessRequest.cs" />
-    <Compile Include="V20190627\Models\TextProcessResponse.cs" />
-    <Compile Include="V20190627\Models\TextResetRequest.cs" />
-    <Compile Include="V20190627\Models\TextResetResponse.cs" />
   </ItemGroup>
 </Project>

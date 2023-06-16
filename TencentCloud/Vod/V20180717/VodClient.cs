@@ -4383,6 +4383,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 提取版权水印信息。
+        /// </summary>
+        /// <param name="req"><see cref="ExtractCopyRightWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractCopyRightWatermarkResponse"/></returns>
+        public async Task<ExtractCopyRightWatermarkResponse> ExtractCopyRightWatermark(ExtractCopyRightWatermarkRequest req)
+        {
+             JsonResponseModel<ExtractCopyRightWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExtractCopyRightWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExtractCopyRightWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提取版权水印信息。
+        /// </summary>
+        /// <param name="req"><see cref="ExtractCopyRightWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractCopyRightWatermarkResponse"/></returns>
+        public ExtractCopyRightWatermarkResponse ExtractCopyRightWatermarkSync(ExtractCopyRightWatermarkRequest req)
+        {
+             JsonResponseModel<ExtractCopyRightWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExtractCopyRightWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExtractCopyRightWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于提取溯源水印。
         /// </summary>
         /// <param name="req"><see cref="ExtractTraceWatermarkRequest"/></param>
