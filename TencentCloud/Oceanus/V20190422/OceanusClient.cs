@@ -893,6 +893,46 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 授权工作空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkSpacesRequest"/></param>
+        /// <returns><see cref="DescribeWorkSpacesResponse"/></returns>
+        public async Task<DescribeWorkSpacesResponse> DescribeWorkSpaces(DescribeWorkSpacesRequest req)
+        {
+             JsonResponseModel<DescribeWorkSpacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWorkSpaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWorkSpacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 授权工作空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkSpacesRequest"/></param>
+        /// <returns><see cref="DescribeWorkSpacesResponse"/></returns>
+        public DescribeWorkSpacesResponse DescribeWorkSpacesSync(DescribeWorkSpacesRequest req)
+        {
+             JsonResponseModel<DescribeWorkSpacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWorkSpaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWorkSpacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新作业属性，仅允许以下3种操作，不支持组合操作：
         /// (1)	更新作业名称
         /// (2)	更新作业备注 

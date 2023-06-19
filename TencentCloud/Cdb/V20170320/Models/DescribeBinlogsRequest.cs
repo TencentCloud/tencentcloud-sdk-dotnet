@@ -43,13 +43,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
+        /// binlog最早开始时间，时间格式：2016-03-17 02:10:37
         /// </summary>
         [JsonProperty("MinStartTime")]
         public string MinStartTime{ get; set; }
 
         /// <summary>
-        /// binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
+        /// binlog最晚开始时间，时间格式：2016-03-17 02:10:37
         /// </summary>
         [JsonProperty("MaxStartTime")]
         public string MaxStartTime{ get; set; }

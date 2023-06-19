@@ -43,7 +43,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 提示，当创建已存在未实名用户时，改字段有值
+        /// 提示，当创建已存在未实名用户时，该字段有值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Note")]

@@ -3573,7 +3573,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 将原本实例升级到高版本实例，或者将主从版实例升级到集群版实例
+        /// 将当前实例升级到更高版本，或者将当前标准架构升级至集群架构。
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceVersionRequest"/></param>
         /// <returns><see cref="UpgradeInstanceVersionResponse"/></returns>
@@ -3593,7 +3593,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 将原本实例升级到高版本实例，或者将主从版实例升级到集群版实例
+        /// 将当前实例升级到更高版本，或者将当前标准架构升级至集群架构。
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceVersionRequest"/></param>
         /// <returns><see cref="UpgradeInstanceVersionResponse"/></returns>

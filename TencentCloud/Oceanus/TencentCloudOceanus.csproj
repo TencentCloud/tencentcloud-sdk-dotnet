@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.783</VersionPrefix>
+    <VersionPrefix>3.0.784</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,7 @@
     <Compile Include="V20190422\Models\CheckSavepointRequest.cs" />
     <Compile Include="V20190422\Models\CheckSavepointResponse.cs" />
     <Compile Include="V20190422\Models\Cluster.cs" />
+    <Compile Include="V20190422\Models\ClusterGroupSetItem.cs" />
     <Compile Include="V20190422\Models\ClusterSession.cs" />
     <Compile Include="V20190422\Models\ClusterVersion.cs" />
     <Compile Include="V20190422\Models\CopyJobItem.cs" />
@@ -97,6 +98,8 @@
     <Compile Include="V20190422\Models\DescribeTreeResourcesRequest.cs" />
     <Compile Include="V20190422\Models\DescribeTreeResourcesResponse.cs" />
     <Compile Include="V20190422\Models\DescribeTreeResourcesRsp.cs" />
+    <Compile Include="V20190422\Models\DescribeWorkSpacesRequest.cs" />
+    <Compile Include="V20190422\Models\DescribeWorkSpacesResponse.cs" />
     <Compile Include="V20190422\Models\Filter.cs" />
     <Compile Include="V20190422\Models\JobConfig.cs" />
     <Compile Include="V20190422\Models\JobV1.cs" />
@@ -111,6 +114,7 @@
     <Compile Include="V20190422\Models\ResourceRef.cs" />
     <Compile Include="V20190422\Models\ResourceRefDetail.cs" />
     <Compile Include="V20190422\Models\ResourceRefJobInfo.cs" />
+    <Compile Include="V20190422\Models\RoleAuth.cs" />
     <Compile Include="V20190422\Models\RunJobDescription.cs" />
     <Compile Include="V20190422\Models\RunJobsRequest.cs" />
     <Compile Include="V20190422\Models\RunJobsResponse.cs" />
@@ -124,5 +128,6 @@
     <Compile Include="V20190422\Models\TriggerJobSavepointRequest.cs" />
     <Compile Include="V20190422\Models\TriggerJobSavepointResponse.cs" />
     <Compile Include="V20190422\Models\WorkSpaceClusterItem.cs" />
+    <Compile Include="V20190422\Models\WorkSpaceSetItem.cs" />
   </ItemGroup>
 </Project>

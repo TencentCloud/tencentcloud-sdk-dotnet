@@ -4577,7 +4577,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 查询调用监控指标
+        /// 废弃
         /// </summary>
         /// <param name="req"><see cref="DescribeInovcationIndicatorsRequest"/></param>
         /// <returns><see cref="DescribeInovcationIndicatorsResponse"/></returns>
@@ -4597,7 +4597,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 查询调用监控指标
+        /// 废弃
         /// </summary>
         /// <param name="req"><see cref="DescribeInovcationIndicatorsRequest"/></param>
         /// <returns><see cref="DescribeInovcationIndicatorsResponse"/></returns>

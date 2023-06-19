@@ -1069,6 +1069,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 创建电子印章
+        /// </summary>
+        /// <param name="req"><see cref="CreateSealRequest"/></param>
+        /// <returns><see cref="CreateSealResponse"/></returns>
+        public async Task<CreateSealResponse> CreateSeal(CreateSealRequest req)
+        {
+             JsonResponseModel<CreateSealResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSeal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSealResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建电子印章
+        /// </summary>
+        /// <param name="req"><see cref="CreateSealRequest"/></param>
+        /// <returns><see cref="CreateSealResponse"/></returns>
+        public CreateSealResponse CreateSealSync(CreateSealRequest req)
+        {
+             JsonResponseModel<CreateSealResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSeal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSealResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对企业员工进行印章授权
         /// </summary>
         /// <param name="req"><see cref="CreateSealPolicyRequest"/></param>

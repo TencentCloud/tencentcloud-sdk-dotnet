@@ -37,7 +37,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string DeptId{ get; set; }
 
         /// <summary>
-        /// 交接部门ID。待删除部门中的合同、印章和模版数据，交接至该部门ID下，未填写交接至公司根部门。
+        /// 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
         /// </summary>
         [JsonProperty("ReceiveDeptId")]
         public string ReceiveDeptId{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.783</VersionPrefix>
+    <VersionPrefix>3.0.784</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -107,6 +107,8 @@
     <Compile Include="V20201111\Models\CreateSchemeUrlResponse.cs" />
     <Compile Include="V20201111\Models\CreateSealPolicyRequest.cs" />
     <Compile Include="V20201111\Models\CreateSealPolicyResponse.cs" />
+    <Compile Include="V20201111\Models\CreateSealRequest.cs" />
+    <Compile Include="V20201111\Models\CreateSealResponse.cs" />
     <Compile Include="V20201111\Models\CreateStaffResult.cs" />
     <Compile Include="V20201111\Models\CreateUserAutoSignEnableUrlRequest.cs" />
     <Compile Include="V20201111\Models\CreateUserAutoSignEnableUrlResponse.cs" />

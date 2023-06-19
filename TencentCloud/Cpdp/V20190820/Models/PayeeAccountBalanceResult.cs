@@ -89,6 +89,48 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("SumSettlementAmount")]
         public string SumSettlementAmount{ get; set; }
 
+        /// <summary>
+        /// 已缴个税
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PaidIncomeTax")]
+        public string PaidIncomeTax{ get; set; }
+
+        /// <summary>
+        /// 提现中个税
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InPayIncomeTax")]
+        public string InPayIncomeTax{ get; set; }
+
+        /// <summary>
+        /// 已缴增值税
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PaidValueAddedTax")]
+        public string PaidValueAddedTax{ get; set; }
+
+        /// <summary>
+        /// 提现中增值税
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InPayValueAddedTax")]
+        public string InPayValueAddedTax{ get; set; }
+
+        /// <summary>
+        /// 已缴附加税
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PaidAttachTax")]
+        public string PaidAttachTax{ get; set; }
+
+        /// <summary>
+        /// 提现中附加税
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InPayAttachTax")]
+        public string InPayAttachTax{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +146,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "PaidBalance", this.PaidBalance);
             this.SetParamSimple(map, prefix + "InPayBalance", this.InPayBalance);
             this.SetParamSimple(map, prefix + "SumSettlementAmount", this.SumSettlementAmount);
+            this.SetParamSimple(map, prefix + "PaidIncomeTax", this.PaidIncomeTax);
+            this.SetParamSimple(map, prefix + "InPayIncomeTax", this.InPayIncomeTax);
+            this.SetParamSimple(map, prefix + "PaidValueAddedTax", this.PaidValueAddedTax);
+            this.SetParamSimple(map, prefix + "InPayValueAddedTax", this.InPayValueAddedTax);
+            this.SetParamSimple(map, prefix + "PaidAttachTax", this.PaidAttachTax);
+            this.SetParamSimple(map, prefix + "InPayAttachTax", this.InPayAttachTax);
         }
     }
 }

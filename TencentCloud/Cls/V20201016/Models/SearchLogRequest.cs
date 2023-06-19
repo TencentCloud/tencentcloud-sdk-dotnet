@@ -45,7 +45,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// 要检索分析的日志主题ID
+        /// - 要检索分析的日志主题ID，仅能指定一个日志主题。
+        /// - 如需同时检索多个日志主题，请使用Topics参数。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -104,6 +105,14 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
 
+        /// <summary>
+        /// - 要检索分析的日志主题列表，最大支持20个日志主题。
+        /// - 检索单个日志主题时请使用TopicId。
+        /// - 不能同时使用TopicId和Topics。
+        /// </summary>
+        [JsonProperty("Topics")]
+        public MultiTopicSearchInformation[] Topics{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +129,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
             this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamArrayObj(map, prefix + "Topics.", this.Topics);
         }
     }
 }
