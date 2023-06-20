@@ -373,7 +373,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CancelNotebookSessionStatement）用于取消session statement
+        /// 本接口（CancelNotebookSessionStatement）用于取消session中执行的任务
         /// </summary>
         /// <param name="req"><see cref="CancelNotebookSessionStatementRequest"/></param>
         /// <returns><see cref="CancelNotebookSessionStatementResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CancelNotebookSessionStatement）用于取消session statement
+        /// 本接口（CancelNotebookSessionStatement）用于取消session中执行的任务
         /// </summary>
         /// <param name="req"><see cref="CancelNotebookSessionStatementRequest"/></param>
         /// <returns><see cref="CancelNotebookSessionStatementResponse"/></returns>
@@ -413,7 +413,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CancelNotebookSessionStatementBatch）用于按批取消Session statement。
+        /// 本接口（CancelNotebookSessionStatementBatch）用于批量取消Session 中执行的任务
         /// </summary>
         /// <param name="req"><see cref="CancelNotebookSessionStatementBatchRequest"/></param>
         /// <returns><see cref="CancelNotebookSessionStatementBatchResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CancelNotebookSessionStatementBatch）用于按批取消Session statement。
+        /// 本接口（CancelNotebookSessionStatementBatch）用于批量取消Session 中执行的任务
         /// </summary>
         /// <param name="req"><see cref="CancelNotebookSessionStatementBatchRequest"/></param>
         /// <returns><see cref="CancelNotebookSessionStatementBatchResponse"/></returns>
@@ -493,7 +493,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CancelTask），用于取消任务执行
+        /// 本接口（CancelTask），用于取消任务
         /// </summary>
         /// <param name="req"><see cref="CancelTaskRequest"/></param>
         /// <returns><see cref="CancelTaskResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CancelTask），用于取消任务执行
+        /// 本接口（CancelTask），用于取消任务
         /// </summary>
         /// <param name="req"><see cref="CancelTaskRequest"/></param>
         /// <returns><see cref="CancelTaskResponse"/></returns>
@@ -853,7 +853,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CreateNotebookSession）用于创建notebook livy session
+        /// 本接口（CreateNotebookSession）用于创建交互式session（notebook）
         /// </summary>
         /// <param name="req"><see cref="CreateNotebookSessionRequest"/></param>
         /// <returns><see cref="CreateNotebookSessionResponse"/></returns>
@@ -873,7 +873,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CreateNotebookSession）用于创建notebook livy session
+        /// 本接口（CreateNotebookSession）用于创建交互式session（notebook）
         /// </summary>
         /// <param name="req"><see cref="CreateNotebookSessionRequest"/></param>
         /// <returns><see cref="CreateNotebookSessionResponse"/></returns>
@@ -893,7 +893,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CreateNotebookSessionStatement）用于创建session statement
+        /// 本接口（CreateNotebookSessionStatement）用于在session中执行代码片段
         /// </summary>
         /// <param name="req"><see cref="CreateNotebookSessionStatementRequest"/></param>
         /// <returns><see cref="CreateNotebookSessionStatementResponse"/></returns>
@@ -913,7 +913,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CreateNotebookSessionStatement）用于创建session statement
+        /// 本接口（CreateNotebookSessionStatement）用于在session中执行代码片段
         /// </summary>
         /// <param name="req"><see cref="CreateNotebookSessionStatementRequest"/></param>
         /// <returns><see cref="CreateNotebookSessionStatementResponse"/></returns>
@@ -933,7 +933,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CreateNotebookSessionStatementSupportBatchSQL）用于创建Statement批量运行SQL任务。
+        /// 本接口（CreateNotebookSessionStatementSupportBatchSQL）用于创建交互式session并执行SQL任务
         /// </summary>
         /// <param name="req"><see cref="CreateNotebookSessionStatementSupportBatchSQLRequest"/></param>
         /// <returns><see cref="CreateNotebookSessionStatementSupportBatchSQLResponse"/></returns>
@@ -953,7 +953,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CreateNotebookSessionStatementSupportBatchSQL）用于创建Statement批量运行SQL任务。
+        /// 本接口（CreateNotebookSessionStatementSupportBatchSQL）用于创建交互式session并执行SQL任务
         /// </summary>
         /// <param name="req"><see cref="CreateNotebookSessionStatementSupportBatchSQLRequest"/></param>
         /// <returns><see cref="CreateNotebookSessionStatementSupportBatchSQLResponse"/></returns>
@@ -1053,7 +1053,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 创建spark应用
+        /// 创建spark作业
         /// </summary>
         /// <param name="req"><see cref="CreateSparkAppRequest"/></param>
         /// <returns><see cref="CreateSparkAppResponse"/></returns>
@@ -1073,7 +1073,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 创建spark应用
+        /// 创建spark作业
         /// </summary>
         /// <param name="req"><see cref="CreateSparkAppRequest"/></param>
         /// <returns><see cref="CreateSparkAppResponse"/></returns>
@@ -1093,7 +1093,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 创建spark任务
+        /// 启动Spark作业
         /// </summary>
         /// <param name="req"><see cref="CreateSparkAppTaskRequest"/></param>
         /// <returns><see cref="CreateSparkAppTaskResponse"/></returns>
@@ -1113,7 +1113,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 创建spark任务
+        /// 启动Spark作业
         /// </summary>
         /// <param name="req"><see cref="CreateSparkAppTaskRequest"/></param>
         /// <returns><see cref="CreateSparkAppTaskResponse"/></returns>
@@ -1253,7 +1253,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CreateTask）用于创建sql查询任务。（推荐使用CreateTasks接口）
+        /// 本接口（CreateTask）用于创建并执行SQL任务。（推荐使用CreateTasks接口）
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
         /// <returns><see cref="CreateTaskResponse"/></returns>
@@ -1273,7 +1273,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CreateTask）用于创建sql查询任务。（推荐使用CreateTasks接口）
+        /// 本接口（CreateTask）用于创建并执行SQL任务。（推荐使用CreateTasks接口）
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
         /// <returns><see cref="CreateTaskResponse"/></returns>
@@ -1293,7 +1293,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CreateTasks），用于批量创建任务
+        /// 本接口（CreateTasks），用于批量创建并执行SQL任务
         /// </summary>
         /// <param name="req"><see cref="CreateTasksRequest"/></param>
         /// <returns><see cref="CreateTasksResponse"/></returns>
@@ -1313,7 +1313,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CreateTasks），用于批量创建任务
+        /// 本接口（CreateTasks），用于批量创建并执行SQL任务
         /// </summary>
         /// <param name="req"><see cref="CreateTasksRequest"/></param>
         /// <returns><see cref="CreateTasksResponse"/></returns>
@@ -1533,7 +1533,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 删除spark应用
+        /// 删除spark作业
         /// </summary>
         /// <param name="req"><see cref="DeleteSparkAppRequest"/></param>
         /// <returns><see cref="DeleteSparkAppResponse"/></returns>
@@ -1553,7 +1553,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 删除spark应用
+        /// 删除spark作业
         /// </summary>
         /// <param name="req"><see cref="DeleteSparkAppRequest"/></param>
         /// <returns><see cref="DeleteSparkAppResponse"/></returns>
@@ -1853,7 +1853,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeDataEngines）用于获取DataEngines信息列表
+        /// 本接口（DescribeDataEngines）用于查询DataEngines信息列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDataEnginesRequest"/></param>
         /// <returns><see cref="DescribeDataEnginesResponse"/></returns>
@@ -1873,7 +1873,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeDataEngines）用于获取DataEngines信息列表
+        /// 本接口（DescribeDataEngines）用于查询DataEngines信息列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDataEnginesRequest"/></param>
         /// <returns><see cref="DescribeDataEnginesResponse"/></returns>
@@ -1933,7 +1933,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口根据引擎ID获取数据引擎资源使用情况
+        /// 本接口根据引擎ID查询数据引擎资源使用情况
         /// </summary>
         /// <param name="req"><see cref="DescribeEngineUsageInfoRequest"/></param>
         /// <returns><see cref="DescribeEngineUsageInfoResponse"/></returns>
@@ -1953,7 +1953,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口根据引擎ID获取数据引擎资源使用情况
+        /// 本接口根据引擎ID查询数据引擎资源使用情况
         /// </summary>
         /// <param name="req"><see cref="DescribeEngineUsageInfoRequest"/></param>
         /// <returns><see cref="DescribeEngineUsageInfoResponse"/></returns>
@@ -1973,7 +1973,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeForbiddenTablePro）用于获取被禁用的表属性列表
+        /// 本接口（DescribeForbiddenTablePro）用于查询被禁用的表属性列表（新）
         /// </summary>
         /// <param name="req"><see cref="DescribeForbiddenTableProRequest"/></param>
         /// <returns><see cref="DescribeForbiddenTableProResponse"/></returns>
@@ -1993,7 +1993,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeForbiddenTablePro）用于获取被禁用的表属性列表
+        /// 本接口（DescribeForbiddenTablePro）用于查询被禁用的表属性列表（新）
         /// </summary>
         /// <param name="req"><see cref="DescribeForbiddenTableProRequest"/></param>
         /// <returns><see cref="DescribeForbiddenTableProResponse"/></returns>
@@ -2093,7 +2093,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeNotebookSession）用于获取notebook livy session详情信息
+        /// 本接口（DescribeNotebookSession）用于查询交互式 session详情信息
         /// </summary>
         /// <param name="req"><see cref="DescribeNotebookSessionRequest"/></param>
         /// <returns><see cref="DescribeNotebookSessionResponse"/></returns>
@@ -2113,7 +2113,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeNotebookSession）用于获取notebook livy session详情信息
+        /// 本接口（DescribeNotebookSession）用于查询交互式 session详情信息
         /// </summary>
         /// <param name="req"><see cref="DescribeNotebookSessionRequest"/></param>
         /// <returns><see cref="DescribeNotebookSessionResponse"/></returns>
@@ -2133,7 +2133,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeNotebookSessionLog）用于获取notebook livy session日志
+        /// 本接口（DescribeNotebookSessionLog）用于查询交互式 session日志
         /// </summary>
         /// <param name="req"><see cref="DescribeNotebookSessionLogRequest"/></param>
         /// <returns><see cref="DescribeNotebookSessionLogResponse"/></returns>
@@ -2153,7 +2153,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeNotebookSessionLog）用于获取notebook livy session日志
+        /// 本接口（DescribeNotebookSessionLog）用于查询交互式 session日志
         /// </summary>
         /// <param name="req"><see cref="DescribeNotebookSessionLogRequest"/></param>
         /// <returns><see cref="DescribeNotebookSessionLogResponse"/></returns>
@@ -2173,7 +2173,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeNotebookSessionStatement）用于获取session statement信息
+        /// 本接口（DescribeNotebookSessionStatement）用于查询session 中执行任务的详情
         /// </summary>
         /// <param name="req"><see cref="DescribeNotebookSessionStatementRequest"/></param>
         /// <returns><see cref="DescribeNotebookSessionStatementResponse"/></returns>
@@ -2193,7 +2193,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeNotebookSessionStatement）用于获取session statement信息
+        /// 本接口（DescribeNotebookSessionStatement）用于查询session 中执行任务的详情
         /// </summary>
         /// <param name="req"><see cref="DescribeNotebookSessionStatementRequest"/></param>
         /// <returns><see cref="DescribeNotebookSessionStatementResponse"/></returns>
@@ -2253,7 +2253,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeNotebookSessionStatements）用于获取Session Statement列表。
+        /// 本接口（DescribeNotebookSessionStatements）用于查询Session中执行的任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNotebookSessionStatementsRequest"/></param>
         /// <returns><see cref="DescribeNotebookSessionStatementsResponse"/></returns>
@@ -2273,7 +2273,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeNotebookSessionStatements）用于获取Session Statement列表。
+        /// 本接口（DescribeNotebookSessionStatements）用于查询Session中执行的任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNotebookSessionStatementsRequest"/></param>
         /// <returns><see cref="DescribeNotebookSessionStatementsResponse"/></returns>
@@ -2293,7 +2293,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeNotebookSessions）用于获取notebook livy session列表
+        /// 本接口（DescribeNotebookSessions）用于查询交互式 session列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNotebookSessionsRequest"/></param>
         /// <returns><see cref="DescribeNotebookSessionsResponse"/></returns>
@@ -2313,7 +2313,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeNotebookSessions）用于获取notebook livy session列表
+        /// 本接口（DescribeNotebookSessions）用于查询交互式 session列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNotebookSessionsRequest"/></param>
         /// <returns><see cref="DescribeNotebookSessionsResponse"/></returns>
@@ -2373,7 +2373,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 该接口（DescribeScripts）用于获取所有SQL查询。
+        /// 该接口（DescribeScripts）用于查询SQL脚本列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScriptsRequest"/></param>
         /// <returns><see cref="DescribeScriptsResponse"/></returns>
@@ -2393,7 +2393,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 该接口（DescribeScripts）用于获取所有SQL查询。
+        /// 该接口（DescribeScripts）用于查询SQL脚本列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScriptsRequest"/></param>
         /// <returns><see cref="DescribeScriptsResponse"/></returns>
@@ -2413,7 +2413,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 查询具体的spark应用
+        /// 查询spark作业信息
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppJobRequest"/></param>
         /// <returns><see cref="DescribeSparkAppJobResponse"/></returns>
@@ -2433,7 +2433,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 查询具体的spark应用
+        /// 查询spark作业信息
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppJobRequest"/></param>
         /// <returns><see cref="DescribeSparkAppJobResponse"/></returns>
@@ -2453,7 +2453,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 获取spark应用列表。
+        /// 查询spark作业列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppJobsRequest"/></param>
         /// <returns><see cref="DescribeSparkAppJobsResponse"/></returns>
@@ -2473,7 +2473,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 获取spark应用列表。
+        /// 查询spark作业列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppJobsRequest"/></param>
         /// <returns><see cref="DescribeSparkAppJobsResponse"/></returns>
@@ -2493,7 +2493,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 查询spark应用的运行任务实例列表
+        /// 查询Spark作业的运行任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppTasksRequest"/></param>
         /// <returns><see cref="DescribeSparkAppTasksResponse"/></returns>
@@ -2513,7 +2513,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 查询spark应用的运行任务实例列表
+        /// 查询Spark作业的运行任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppTasksRequest"/></param>
         /// <returns><see cref="DescribeSparkAppTasksResponse"/></returns>
@@ -3133,7 +3133,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（ListTaskJobLogDetail）用于获取spark-jar日志列表
+        /// 本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
         /// </summary>
         /// <param name="req"><see cref="ListTaskJobLogDetailRequest"/></param>
         /// <returns><see cref="ListTaskJobLogDetailResponse"/></returns>
@@ -3153,7 +3153,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（ListTaskJobLogDetail）用于获取spark-jar日志列表
+        /// 本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
         /// </summary>
         /// <param name="req"><see cref="ListTaskJobLogDetailRequest"/></param>
         /// <returns><see cref="ListTaskJobLogDetailResponse"/></returns>
@@ -3253,7 +3253,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 更新spark应用
+        /// 更新spark作业
         /// </summary>
         /// <param name="req"><see cref="ModifySparkAppRequest"/></param>
         /// <returns><see cref="ModifySparkAppResponse"/></returns>
@@ -3273,7 +3273,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 更新spark应用
+        /// 更新spark作业
         /// </summary>
         /// <param name="req"><see cref="ModifySparkAppRequest"/></param>
         /// <returns><see cref="ModifySparkAppResponse"/></returns>
@@ -3453,7 +3453,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口用于控制暂停或恢复数据引擎
+        /// 本接口用于控制挂起或启动数据引擎
         /// </summary>
         /// <param name="req"><see cref="SuspendResumeDataEngineRequest"/></param>
         /// <returns><see cref="SuspendResumeDataEngineResponse"/></returns>
@@ -3473,7 +3473,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口用于控制暂停或恢复数据引擎
+        /// 本接口用于控制挂起或启动数据引擎
         /// </summary>
         /// <param name="req"><see cref="SuspendResumeDataEngineRequest"/></param>
         /// <returns><see cref="SuspendResumeDataEngineResponse"/></returns>

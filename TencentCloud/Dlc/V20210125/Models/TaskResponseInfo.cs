@@ -268,6 +268,27 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ExecutorMaxNumbers")]
         public ulong? ExecutorMaxNumbers{ get; set; }
 
+        /// <summary>
+        /// 任务公共指标数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CommonMetrics")]
+        public CommonMetrics CommonMetrics{ get; set; }
+
+        /// <summary>
+        /// spark任务指标数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SparkMonitorMetrics")]
+        public SparkMonitorMetrics SparkMonitorMetrics{ get; set; }
+
+        /// <summary>
+        /// presto任务指标数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrestoMonitorMetrics")]
+        public PrestoMonitorMetrics PrestoMonitorMetrics{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -311,6 +332,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ExecutorSize", this.ExecutorSize);
             this.SetParamSimple(map, prefix + "ExecutorNums", this.ExecutorNums);
             this.SetParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
+            this.SetParamObj(map, prefix + "CommonMetrics.", this.CommonMetrics);
+            this.SetParamObj(map, prefix + "SparkMonitorMetrics.", this.SparkMonitorMetrics);
+            this.SetParamObj(map, prefix + "PrestoMonitorMetrics.", this.PrestoMonitorMetrics);
         }
     }
 }

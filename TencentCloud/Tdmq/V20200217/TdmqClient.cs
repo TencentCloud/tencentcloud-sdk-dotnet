@@ -4809,6 +4809,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 发送RocketMQ消息
+        /// </summary>
+        /// <param name="req"><see cref="SendRocketMQMessageRequest"/></param>
+        /// <returns><see cref="SendRocketMQMessageResponse"/></returns>
+        public async Task<SendRocketMQMessageResponse> SendRocketMQMessage(SendRocketMQMessageRequest req)
+        {
+             JsonResponseModel<SendRocketMQMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SendRocketMQMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendRocketMQMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发送RocketMQ消息
+        /// </summary>
+        /// <param name="req"><see cref="SendRocketMQMessageRequest"/></param>
+        /// <returns><see cref="SendRocketMQMessageResponse"/></returns>
+        public SendRocketMQMessageResponse SendRocketMQMessageSync(SendRocketMQMessageRequest req)
+        {
+             JsonResponseModel<SendRocketMQMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendRocketMQMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendRocketMQMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 解绑cmq死信队列
         /// </summary>
         /// <param name="req"><see cref="UnbindCmqDeadLetterRequest"/></param>

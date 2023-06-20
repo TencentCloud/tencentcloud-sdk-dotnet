@@ -139,7 +139,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public CrontabResumeSuspendStrategy CrontabResumeSuspendStrategy{ get; set; }
 
         /// <summary>
-        /// 引擎执行任务类型，默认为SQL
+        /// 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
         /// </summary>
         [JsonProperty("EngineExecType")]
         public string EngineExecType{ get; set; }

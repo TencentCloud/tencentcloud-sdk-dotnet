@@ -1453,6 +1453,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 删除一个addon
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAddonRequest"/></param>
+        /// <returns><see cref="DeleteAddonResponse"/></returns>
+        public async Task<DeleteAddonResponse> DeleteAddon(DeleteAddonRequest req)
+        {
+             JsonResponseModel<DeleteAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAddonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除一个addon
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAddonRequest"/></param>
+        /// <returns><see cref="DeleteAddonResponse"/></returns>
+        public DeleteAddonResponse DeleteAddonSync(DeleteAddonRequest req)
+        {
+             JsonResponseModel<DeleteAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAddonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除备份仓库
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupStorageLocationRequest"/></param>
@@ -2524,6 +2564,86 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DeleteTKEEdgeCluster");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTKEEdgeClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取addon列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddonRequest"/></param>
+        /// <returns><see cref="DescribeAddonResponse"/></returns>
+        public async Task<DescribeAddonResponse> DescribeAddon(DescribeAddonRequest req)
+        {
+             JsonResponseModel<DescribeAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取addon列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddonRequest"/></param>
+        /// <returns><see cref="DescribeAddonResponse"/></returns>
+        public DescribeAddonResponse DescribeAddonSync(DescribeAddonRequest req)
+        {
+             JsonResponseModel<DescribeAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取一个addon的参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddonValuesRequest"/></param>
+        /// <returns><see cref="DescribeAddonValuesResponse"/></returns>
+        public async Task<DescribeAddonValuesResponse> DescribeAddonValues(DescribeAddonValuesRequest req)
+        {
+             JsonResponseModel<DescribeAddonValuesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAddonValues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddonValuesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取一个addon的参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddonValuesRequest"/></param>
+        /// <returns><see cref="DescribeAddonValuesResponse"/></returns>
+        public DescribeAddonValuesResponse DescribeAddonValuesSync(DescribeAddonValuesRequest req)
+        {
+             JsonResponseModel<DescribeAddonValuesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAddonValues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddonValuesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -6293,6 +6413,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 为目标集群安装一个addon
+        /// </summary>
+        /// <param name="req"><see cref="InstallAddonRequest"/></param>
+        /// <returns><see cref="InstallAddonResponse"/></returns>
+        public async Task<InstallAddonResponse> InstallAddon(InstallAddonRequest req)
+        {
+             JsonResponseModel<InstallAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InstallAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstallAddonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为目标集群安装一个addon
+        /// </summary>
+        /// <param name="req"><see cref="InstallAddonRequest"/></param>
+        /// <returns><see cref="InstallAddonResponse"/></returns>
+        public InstallAddonResponse InstallAddonSync(InstallAddonRequest req)
+        {
+             JsonResponseModel<InstallAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InstallAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstallAddonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在tke@edge集群的边缘节点上安装日志采集组件
         /// </summary>
         /// <param name="req"><see cref="InstallEdgeLogAgentRequest"/></param>
@@ -7604,6 +7764,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "UninstallLogAgent");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallLogAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新一个addon的参数和版本
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAddonRequest"/></param>
+        /// <returns><see cref="UpdateAddonResponse"/></returns>
+        public async Task<UpdateAddonResponse> UpdateAddon(UpdateAddonRequest req)
+        {
+             JsonResponseModel<UpdateAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAddonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新一个addon的参数和版本
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAddonRequest"/></param>
+        /// <returns><see cref="UpdateAddonResponse"/></returns>
+        public UpdateAddonResponse UpdateAddonSync(UpdateAddonRequest req)
+        {
+             JsonResponseModel<UpdateAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAddonResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

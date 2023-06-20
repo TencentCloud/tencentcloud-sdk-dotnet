@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.784</VersionPrefix>
+    <VersionPrefix>3.0.785</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,7 @@
     <Compile Include="V20180525\Models\AddNodeToNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\AddVpcCniSubnetsRequest.cs" />
     <Compile Include="V20180525\Models\AddVpcCniSubnetsResponse.cs" />
+    <Compile Include="V20180525\Models\Addon.cs" />
     <Compile Include="V20180525\Models\AppChart.cs" />
     <Compile Include="V20180525\Models\AutoScalingGroupRange.cs" />
     <Compile Include="V20180525\Models\AutoUpgradeClusterLevel.cs" />
@@ -151,6 +152,8 @@
     <Compile Include="V20180525\Models\DNSConfig.cs" />
     <Compile Include="V20180525\Models\DNSConfigOption.cs" />
     <Compile Include="V20180525\Models\DataDisk.cs" />
+    <Compile Include="V20180525\Models\DeleteAddonRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteAddonResponse.cs" />
     <Compile Include="V20180525\Models\DeleteBackupStorageLocationRequest.cs" />
     <Compile Include="V20180525\Models\DeleteBackupStorageLocationResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterAsGroupsRequest.cs" />
@@ -205,6 +208,10 @@
     <Compile Include="V20180525\Models\DeletePrometheusTemplateSyncResponse.cs" />
     <Compile Include="V20180525\Models\DeleteTKEEdgeClusterRequest.cs" />
     <Compile Include="V20180525\Models\DeleteTKEEdgeClusterResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeAddonRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeAddonResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeAddonValuesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeAddonValuesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeAvailableClusterVersionRequest.cs" />
     <Compile Include="V20180525\Models\DescribeAvailableClusterVersionResponse.cs" />
     <Compile Include="V20180525\Models\DescribeAvailableTKEEdgeVersionRequest.cs" />
@@ -427,6 +434,8 @@
     <Compile Include="V20180525\Models\ImageCacheEvent.cs" />
     <Compile Include="V20180525\Models\ImageInstance.cs" />
     <Compile Include="V20180525\Models\ImageRegistryCredential.cs" />
+    <Compile Include="V20180525\Models\InstallAddonRequest.cs" />
+    <Compile Include="V20180525\Models\InstallAddonResponse.cs" />
     <Compile Include="V20180525\Models\InstallEdgeLogAgentRequest.cs" />
     <Compile Include="V20180525\Models\InstallEdgeLogAgentResponse.cs" />
     <Compile Include="V20180525\Models\InstallLogAgentRequest.cs" />
@@ -572,6 +581,8 @@
     <Compile Include="V20180525\Models\UninstallEdgeLogAgentResponse.cs" />
     <Compile Include="V20180525\Models\UninstallLogAgentRequest.cs" />
     <Compile Include="V20180525\Models\UninstallLogAgentResponse.cs" />
+    <Compile Include="V20180525\Models\UpdateAddonRequest.cs" />
+    <Compile Include="V20180525\Models\UpdateAddonResponse.cs" />
     <Compile Include="V20180525\Models\UpdateClusterKubeconfigRequest.cs" />
     <Compile Include="V20180525\Models\UpdateClusterKubeconfigResponse.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionRequest.cs" />

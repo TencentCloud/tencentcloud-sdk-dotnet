@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// spark应用名
+        /// spark作业名
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

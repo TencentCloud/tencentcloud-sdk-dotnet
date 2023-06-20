@@ -49,7 +49,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string DatasourceConnectionName{ get; set; }
 
         /// <summary>
-        /// 排序字段，当前版本仅支持按库名排序
+        /// 排序字段，CreateTime：创建时间，Name：数据库名称
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }

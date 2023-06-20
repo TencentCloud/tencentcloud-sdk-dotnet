@@ -72,7 +72,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 支持计算资源名字筛选
+        /// 数据引擎名称，用于筛选
         /// </summary>
         [JsonProperty("DataEngineName")]
         public string DataEngineName{ get; set; }

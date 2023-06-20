@@ -133,6 +133,46 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 创建风险中心扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateRiskCenterScanTaskRequest"/></param>
+        /// <returns><see cref="CreateRiskCenterScanTaskResponse"/></returns>
+        public async Task<CreateRiskCenterScanTaskResponse> CreateRiskCenterScanTask(CreateRiskCenterScanTaskRequest req)
+        {
+             JsonResponseModel<CreateRiskCenterScanTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRiskCenterScanTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRiskCenterScanTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建风险中心扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateRiskCenterScanTaskRequest"/></param>
+        /// <returns><see cref="CreateRiskCenterScanTaskResponse"/></returns>
+        public CreateRiskCenterScanTaskResponse CreateRiskCenterScanTaskSync(CreateRiskCenterScanTaskRequest req)
+        {
+             JsonResponseModel<CreateRiskCenterScanTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRiskCenterScanTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRiskCenterScanTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// cvm详情
         /// </summary>
         /// <param name="req"><see cref="DescribeCVMAssetInfoRequest"/></param>

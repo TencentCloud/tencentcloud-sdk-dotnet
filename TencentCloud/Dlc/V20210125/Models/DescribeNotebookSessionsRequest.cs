@@ -49,13 +49,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public bool? Asc{ get; set; }
 
         /// <summary>
-        /// 分页字段
+        /// 分页参数，默认10
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页字段
+        /// 分页参数，默认0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

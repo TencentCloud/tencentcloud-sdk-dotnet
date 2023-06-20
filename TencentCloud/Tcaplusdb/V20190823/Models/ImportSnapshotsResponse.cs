@@ -32,6 +32,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string TaskId{ get; set; }
 
         /// <summary>
+        /// ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +51,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

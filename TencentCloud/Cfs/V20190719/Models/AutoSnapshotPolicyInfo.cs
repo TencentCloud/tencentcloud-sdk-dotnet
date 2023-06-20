@@ -116,6 +116,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("IntervalDays")]
         public ulong? IntervalDays{ get; set; }
 
+        /// <summary>
+        /// 跨地域复制的快照保留时间
+        /// </summary>
+        [JsonProperty("CrossRegionsAliveDays")]
+        public ulong? CrossRegionsAliveDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +143,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamArrayObj(map, prefix + "FileSystems.", this.FileSystems);
             this.SetParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
             this.SetParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
+            this.SetParamSimple(map, prefix + "CrossRegionsAliveDays", this.CrossRegionsAliveDays);
         }
     }
 }

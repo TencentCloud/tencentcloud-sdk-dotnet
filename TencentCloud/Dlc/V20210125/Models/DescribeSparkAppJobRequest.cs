@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// spark作业Id，与JobName同时存在时，JobName无效
+        /// spark作业Id，与JobName同时存在时，JobName无效，JobId与JobName至少存在一个
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

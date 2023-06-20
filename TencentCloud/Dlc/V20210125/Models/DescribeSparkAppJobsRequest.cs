@@ -37,7 +37,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Sorting{ get; set; }
 
         /// <summary>
-        /// 按照该参数过滤,支持spark-job-name
+        /// 过滤条件，如下支持的过滤类型，传参Name应为其一:spark-job-name（作业名称），spark-job-id（作业id），spark-app-type（作业类型，1：批任务，2：流任务，4：SQL作业），user-name（创建人），key-word（作业名称或ID关键词模糊搜索）
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

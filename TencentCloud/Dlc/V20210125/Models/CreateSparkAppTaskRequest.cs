@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string JobName{ get; set; }
 
         /// <summary>
-        /// spark作业的命令行参数，以空格分隔；一般用于周期性调用使用
+        /// spark作业程序入参，以空格分隔；一般用于周期性调用使用
         /// </summary>
         [JsonProperty("CmdArgs")]
         public string CmdArgs{ get; set; }

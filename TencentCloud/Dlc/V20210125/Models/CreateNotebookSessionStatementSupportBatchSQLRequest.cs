@@ -37,7 +37,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Code{ get; set; }
 
         /// <summary>
-        /// 类型，当前支持：spark、pyspark、sparkr、sql
+        /// 类型，当前支持：sql
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }

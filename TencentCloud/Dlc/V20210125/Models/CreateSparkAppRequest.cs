@@ -25,43 +25,43 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// spark应用名
+        /// spark作业名
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 1代表spark jar应用，2代表spark streaming应用
+        /// spark作业类型，1代表spark jar作业，2代表spark streaming作业
         /// </summary>
         [JsonProperty("AppType")]
         public long? AppType{ get; set; }
 
         /// <summary>
-        /// 执行spark作业的数据引擎
+        /// 执行spark作业的数据引擎名称
         /// </summary>
         [JsonProperty("DataEngine")]
         public string DataEngine{ get; set; }
 
         /// <summary>
-        /// spark应用的执行入口
+        /// spark作业程序包文件路径
         /// </summary>
         [JsonProperty("AppFile")]
         public string AppFile{ get; set; }
 
         /// <summary>
-        /// 执行spark作业的角色ID
+        /// 数据访问策略，CAM Role arn
         /// </summary>
         [JsonProperty("RoleArn")]
         public long? RoleArn{ get; set; }
 
         /// <summary>
-        /// spark作业driver资源规格大小, 可取small,medium,large,xlarge
+        /// 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
         /// </summary>
         [JsonProperty("AppDriverSize")]
         public string AppDriverSize{ get; set; }
 
         /// <summary>
-        /// spark作业executor资源规格大小, 可取small,medium,large,xlarge
+        /// 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
         /// </summary>
         [JsonProperty("AppExecutorSize")]
         public string AppExecutorSize{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Eni{ get; set; }
 
         /// <summary>
-        /// 是否本地上传，可去cos,lakefs
+        /// spark作业程序包是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
         /// </summary>
         [JsonProperty("IsLocal")]
         public string IsLocal{ get; set; }
 
         /// <summary>
-        /// spark jar作业时的主类
+        /// spark作业主类
         /// </summary>
         [JsonProperty("MainClass")]
         public string MainClass{ get; set; }
@@ -97,73 +97,73 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string AppConf{ get; set; }
 
         /// <summary>
-        /// 是否本地上传，包含cos,lakefs
+        /// spark 作业依赖jar包是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
         /// </summary>
         [JsonProperty("IsLocalJars")]
         public string IsLocalJars{ get; set; }
 
         /// <summary>
-        /// spark jar作业依赖jars，以逗号分隔
+        /// spark 作业依赖jar包（--jars），以逗号分隔
         /// </summary>
         [JsonProperty("AppJars")]
         public string AppJars{ get; set; }
 
         /// <summary>
-        /// 是否本地上传，包含cos,lakefs
+        /// spark作业依赖文件资源是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
         /// </summary>
         [JsonProperty("IsLocalFiles")]
         public string IsLocalFiles{ get; set; }
 
         /// <summary>
-        /// spark作业依赖资源，以逗号分隔
+        /// spark作业依赖文件资源（--files）（非jar、zip），以逗号分隔
         /// </summary>
         [JsonProperty("AppFiles")]
         public string AppFiles{ get; set; }
 
         /// <summary>
-        /// spark作业命令行参数
+        /// spark作业程序入参，空格分割
         /// </summary>
         [JsonProperty("CmdArgs")]
         public string CmdArgs{ get; set; }
 
         /// <summary>
-        /// 只对spark流任务生效
+        /// 最大重试次数，只对spark流任务生效
         /// </summary>
         [JsonProperty("MaxRetries")]
         public long? MaxRetries{ get; set; }
 
         /// <summary>
-        /// 数据源名
+        /// 数据源名称
         /// </summary>
         [JsonProperty("DataSource")]
         public string DataSource{ get; set; }
 
         /// <summary>
-        /// pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+        /// pyspark：依赖上传方式，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
         /// </summary>
         [JsonProperty("IsLocalPythonFiles")]
         public string IsLocalPythonFiles{ get; set; }
 
         /// <summary>
-        /// pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+        /// pyspark作业依赖python资源（--py-files），支持py/zip/egg等归档格式，多文件以逗号分隔
         /// </summary>
         [JsonProperty("AppPythonFiles")]
         public string AppPythonFiles{ get; set; }
 
         /// <summary>
-        /// archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+        /// spark作业依赖archives资源是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
         /// </summary>
         [JsonProperty("IsLocalArchives")]
         public string IsLocalArchives{ get; set; }
 
         /// <summary>
-        /// archives：依赖资源
+        /// spark作业依赖archives资源（--archives），支持tar.gz/tgz/tar等归档格式，以逗号分隔
         /// </summary>
         [JsonProperty("AppArchives")]
         public string AppArchives{ get; set; }
 
         /// <summary>
-        /// Spark Image 版本
+        /// Spark Image 版本号
         /// </summary>
         [JsonProperty("SparkImage")]
         public string SparkImage{ get; set; }

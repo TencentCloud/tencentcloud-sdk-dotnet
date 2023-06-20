@@ -49,13 +49,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 更新时间起始点
+        /// 更新时间起始点，支持格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 更新时间截止点
+        /// 更新时间截止点，支持格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

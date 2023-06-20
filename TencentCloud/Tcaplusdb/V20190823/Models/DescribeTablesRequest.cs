@@ -37,7 +37,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string[] TableGroupIds{ get; set; }
 
         /// <summary>
-        /// 待查询表格信息列表
+        /// 待查询表格信息列表，用户不用关注，过滤请使用filter
         /// </summary>
         [JsonProperty("SelectedTables")]
         public SelectedTableInfoNew[] SelectedTables{ get; set; }

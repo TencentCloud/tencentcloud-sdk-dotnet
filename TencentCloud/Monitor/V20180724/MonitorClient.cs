@@ -417,7 +417,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 创建 Grafana 实例
+        /// 本接口（CreateGrafanaInstance）用于创建 Grafana 包年包月实例，默认基础版、到期自动续费、不可使用代金券。
         /// </summary>
         /// <param name="req"><see cref="CreateGrafanaInstanceRequest"/></param>
         /// <returns><see cref="CreateGrafanaInstanceResponse"/></returns>
@@ -437,7 +437,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 创建 Grafana 实例
+        /// 本接口（CreateGrafanaInstance）用于创建 Grafana 包年包月实例，默认基础版、到期自动续费、不可使用代金券。
         /// </summary>
         /// <param name="req"><see cref="CreateGrafanaInstanceRequest"/></param>
         /// <returns><see cref="CreateGrafanaInstanceResponse"/></returns>
@@ -1221,7 +1221,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 删除 Grafana 实例
+        /// 本接口（DeleteGrafanaInstance）用于 Grafana 包年包月实例的退费，调用后实例处于停服状态，不可使用，7天后自动销毁。
         /// </summary>
         /// <param name="req"><see cref="DeleteGrafanaInstanceRequest"/></param>
         /// <returns><see cref="DeleteGrafanaInstanceResponse"/></returns>
@@ -1241,7 +1241,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 删除 Grafana 实例
+        /// 本接口（DeleteGrafanaInstance）用于 Grafana 包年包月实例的退费，调用后实例处于停服状态，不可使用，7天后自动销毁。
         /// </summary>
         /// <param name="req"><see cref="DeleteGrafanaInstanceRequest"/></param>
         /// <returns><see cref="DeleteGrafanaInstanceResponse"/></returns>
@@ -5029,7 +5029,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 恢复 Grafana 实例
+        /// 本接口（ResumeGrafanaInstance）用于 Grafana 包年包月实例的停服续费，调用后按原版本续费一个月。仍在运行中的实例无法使用该接口进行续费。
         /// </summary>
         /// <param name="req"><see cref="ResumeGrafanaInstanceRequest"/></param>
         /// <returns><see cref="ResumeGrafanaInstanceResponse"/></returns>
@@ -5049,7 +5049,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 恢复 Grafana 实例
+        /// 本接口（ResumeGrafanaInstance）用于 Grafana 包年包月实例的停服续费，调用后按原版本续费一个月。仍在运行中的实例无法使用该接口进行续费。
         /// </summary>
         /// <param name="req"><see cref="ResumeGrafanaInstanceRequest"/></param>
         /// <returns><see cref="ResumeGrafanaInstanceResponse"/></returns>

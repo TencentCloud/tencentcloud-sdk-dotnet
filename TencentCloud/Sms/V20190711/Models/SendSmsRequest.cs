@@ -62,7 +62,7 @@ namespace TencentCloud.Sms.V20190711.Models
         public string ExtendCode{ get; set; }
 
         /// <summary>
-        /// 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。
+        /// 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }

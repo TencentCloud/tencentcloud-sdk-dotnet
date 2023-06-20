@@ -57,19 +57,19 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string DatasourceConnectionName{ get; set; }
 
         /// <summary>
-        /// 起始时间：用于对更新时间的筛选
+        /// 起始时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 终止时间：用于对更新时间的筛选
+        /// 终止时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
+        /// 排序字段，支持：CreateTime（创建时间）、UpdateTime（更新时间）、StorageSize（存储空间）、RecordCount（行数）、Name（表名称）（不传则默认按name升序）
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
