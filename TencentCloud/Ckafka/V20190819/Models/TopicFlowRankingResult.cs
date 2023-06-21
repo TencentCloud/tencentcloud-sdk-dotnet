@@ -43,6 +43,20 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("TopicMessageHeap")]
         public TopicMessageHeapRanking[] TopicMessageHeap{ get; set; }
 
+        /// <summary>
+        /// Broker Ip 列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BrokerIp")]
+        public string[] BrokerIp{ get; set; }
+
+        /// <summary>
+        /// 单个broker 节点 Topic占用的数据大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BrokerTopicData")]
+        public BrokerTopicData[] BrokerTopicData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +66,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArrayObj(map, prefix + "TopicFlow.", this.TopicFlow);
             this.SetParamArrayObj(map, prefix + "ConsumeSpeed.", this.ConsumeSpeed);
             this.SetParamArrayObj(map, prefix + "TopicMessageHeap.", this.TopicMessageHeap);
+            this.SetParamArraySimple(map, prefix + "BrokerIp.", this.BrokerIp);
+            this.SetParamArrayObj(map, prefix + "BrokerTopicData.", this.BrokerTopicData);
         }
     }
 }

@@ -1019,6 +1019,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeDBTmpInstances）用于获取实例回档生成的临时实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBTmpInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBTmpInstancesResponse"/></returns>
+        public async Task<DescribeDBTmpInstancesResponse> DescribeDBTmpInstances(DescribeDBTmpInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDBTmpInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBTmpInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBTmpInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBTmpInstances）用于获取实例回档生成的临时实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBTmpInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBTmpInstancesResponse"/></returns>
+        public DescribeDBTmpInstancesResponse DescribeDBTmpInstancesSync(DescribeDBTmpInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDBTmpInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBTmpInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBTmpInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDatabaseObjects）用于查询云数据库实例的数据库中的对象列表，包含表、存储过程、视图和函数。
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabaseObjectsRequest"/></param>

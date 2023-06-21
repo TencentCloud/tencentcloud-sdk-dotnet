@@ -31,7 +31,7 @@ namespace TencentCloud.Sts.V20180813.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 授予该临时证书权限的CAM策略
+        /// 授予该临时访问凭证权限的CAM策略
         /// 注意：
         /// 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
         /// 2、策略中不能包含 principal 元素。

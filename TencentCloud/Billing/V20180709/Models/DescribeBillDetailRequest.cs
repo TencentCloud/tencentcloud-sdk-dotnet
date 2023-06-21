@@ -90,29 +90,31 @@ namespace TencentCloud.Billing.V20180709.Models
         /// 包年包月新购
         /// 包年包月续费
         /// 包年包月配置变更
-        /// 包年包月退款
-        /// 按量计费扣费
-        /// 按量计费小时结
-        /// 按量计费日结
-        /// 按量计费月结
-        /// 线下项目扣费
-        /// 线下产品扣费
-        /// 调账扣费
-        /// 调账补偿
-        /// 竞价实例小时结
-        /// 线下项目调账补偿
-        /// 线下产品调账补偿
-        /// 优惠扣费
-        /// 优惠补偿
-        /// 按量计费迁入资源
-        /// 按量计费迁出资源
-        /// 包年包月迁入资源
-        /// 包年包月迁出资源
-        /// 预付费用
-        /// 小时费用
-        /// 预留实例退款
-        /// 按量计费冲正
-        /// 包年包月转按量
+        /// 包年包月退款 
+        /// 按量计费扣费 
+        /// 线下项目扣费 
+        /// 线下产品扣费 
+        /// 调账扣费 
+        /// 调账补偿 
+        /// 按量计费小时结 
+        /// 按量计费日结 
+        /// 按量计费月结 
+        /// 竞价实例小时结 
+        /// 线下项目调账补偿 
+        /// 线下产品调账补偿 
+        /// 优惠扣费 
+        /// 优惠补偿 
+        /// 按量计费迁入资源 
+        /// 按量计费迁出资源 
+        /// 包年包月迁入资源 
+        /// 包年包月迁出资源 
+        /// 预付费用 
+        /// 小时费用 
+        /// 预留实例退款 
+        /// 按量计费冲正 
+        /// 包年包月转按量 
+        /// 保底扣款 
+        /// 节省计划小时费用
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
@@ -136,6 +138,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
+        /// <summary>
+        /// 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+        /// </summary>
+        [JsonProperty("PayerUin")]
+        public string PayerUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +164,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
             this.SetParamSimple(map, prefix + "Context", this.Context);
+            this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
         }
     }
 }

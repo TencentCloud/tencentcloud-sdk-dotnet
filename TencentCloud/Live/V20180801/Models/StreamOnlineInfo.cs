@@ -48,6 +48,15 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
+        /// <summary>
+        /// 流是否推送到延播。
+        /// 0 - 无延播，
+        /// 1 - 有延播。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PushToDelay")]
+        public long? PushToDelay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +67,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamArrayObj(map, prefix + "PublishTimeList.", this.PublishTimeList);
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "PushToDelay", this.PushToDelay);
         }
     }
 }

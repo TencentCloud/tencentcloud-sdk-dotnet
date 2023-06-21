@@ -42,7 +42,7 @@ namespace TencentCloud.Sts.V20180813.Models
         public string RoleSessionName{ get; set; }
 
         /// <summary>
-        /// 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+        /// 指定临时访问凭证的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
         /// </summary>
         [JsonProperty("DurationSeconds")]
         public ulong? DurationSeconds{ get; set; }

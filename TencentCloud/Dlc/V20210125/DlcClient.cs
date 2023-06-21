@@ -1453,7 +1453,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DeleteNotebookSession）用于删除notebook livy session
+        /// 本接口（DeleteNotebookSession）用于删除交互式session（notebook）
         /// </summary>
         /// <param name="req"><see cref="DeleteNotebookSessionRequest"/></param>
         /// <returns><see cref="DeleteNotebookSessionResponse"/></returns>
@@ -1473,7 +1473,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DeleteNotebookSession）用于删除notebook livy session
+        /// 本接口（DeleteNotebookSession）用于删除交互式session（notebook）
         /// </summary>
         /// <param name="req"><see cref="DeleteNotebookSessionRequest"/></param>
         /// <returns><see cref="DeleteNotebookSessionResponse"/></returns>

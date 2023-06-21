@@ -48,6 +48,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("DemoInstanceFlag")]
         public long? DemoInstanceFlag{ get; set; }
 
+        /// <summary>
+        /// 是否查询全地域实例
+        /// </summary>
+        [JsonProperty("AllRegionsFlag")]
+        public long? AllRegionsFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "DemoInstanceFlag", this.DemoInstanceFlag);
+            this.SetParamSimple(map, prefix + "AllRegionsFlag", this.AllRegionsFlag);
         }
     }
 }

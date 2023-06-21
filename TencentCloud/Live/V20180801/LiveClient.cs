@@ -3063,6 +3063,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询直播拉流任务状态信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePullStreamTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeLivePullStreamTaskStatusResponse"/></returns>
+        public async Task<DescribeLivePullStreamTaskStatusResponse> DescribeLivePullStreamTaskStatus(DescribeLivePullStreamTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeLivePullStreamTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLivePullStreamTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePullStreamTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询直播拉流任务状态信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePullStreamTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeLivePullStreamTaskStatusResponse"/></returns>
+        public DescribeLivePullStreamTaskStatusResponse DescribeLivePullStreamTaskStatusSync(DescribeLivePullStreamTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeLivePullStreamTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLivePullStreamTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePullStreamTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询使用 CreateLivePullStreamTask 接口创建的直播拉流任务。
         /// 排序方式：默认按更新时间 倒序排列。
         /// </summary>

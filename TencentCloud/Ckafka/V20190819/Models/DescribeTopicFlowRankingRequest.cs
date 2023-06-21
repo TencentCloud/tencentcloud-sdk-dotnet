@@ -48,6 +48,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
 
+        /// <summary>
+        /// Broker IP 地址
+        /// </summary>
+        [JsonProperty("BrokerIp")]
+        public string BrokerIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "RankingType", this.RankingType);
             this.SetParamSimple(map, prefix + "BeginDate", this.BeginDate);
             this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
+            this.SetParamSimple(map, prefix + "BrokerIp", this.BrokerIp);
         }
     }
 }

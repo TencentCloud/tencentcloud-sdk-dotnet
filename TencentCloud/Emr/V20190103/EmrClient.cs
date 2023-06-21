@@ -1017,7 +1017,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 用于启动或停止监控或服务
+        /// 用于启停服务 重启服务等功能
         /// </summary>
         /// <param name="req"><see cref="StartStopServiceOrMonitorRequest"/></param>
         /// <returns><see cref="StartStopServiceOrMonitorResponse"/></returns>
@@ -1037,7 +1037,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 用于启动或停止监控或服务
+        /// 用于启停服务 重启服务等功能
         /// </summary>
         /// <param name="req"><see cref="StartStopServiceOrMonitorRequest"/></param>
         /// <returns><see cref="StartStopServiceOrMonitorResponse"/></returns>

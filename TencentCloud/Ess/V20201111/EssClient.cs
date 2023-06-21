@@ -1475,6 +1475,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 查询流程填写控件内容，可以根据流程Id查询该流程相关联的填写控件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowComponentsRequest"/></param>
+        /// <returns><see cref="DescribeFlowComponentsResponse"/></returns>
+        public async Task<DescribeFlowComponentsResponse> DescribeFlowComponents(DescribeFlowComponentsRequest req)
+        {
+             JsonResponseModel<DescribeFlowComponentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFlowComponents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowComponentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询流程填写控件内容，可以根据流程Id查询该流程相关联的填写控件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowComponentsRequest"/></param>
+        /// <returns><see cref="DescribeFlowComponentsResponse"/></returns>
+        public DescribeFlowComponentsResponse DescribeFlowComponentsSync(DescribeFlowComponentsRequest req)
+        {
+             JsonResponseModel<DescribeFlowComponentsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFlowComponents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowComponentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询出证报告，返回报告 URL。
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowEvidenceReportRequest"/></param>

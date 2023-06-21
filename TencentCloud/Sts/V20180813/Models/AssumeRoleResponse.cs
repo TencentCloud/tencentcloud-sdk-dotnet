@@ -25,19 +25,19 @@ namespace TencentCloud.Sts.V20180813.Models
     {
         
         /// <summary>
-        /// 临时安全证书
+        /// 临时访问凭证
         /// </summary>
         [JsonProperty("Credentials")]
         public Credentials Credentials{ get; set; }
 
         /// <summary>
-        /// 证书无效的时间，返回 Unix 时间戳，精确到秒
+        /// 临时访问凭证的过期时间，返回 Unix 时间戳，精确到秒
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 证书无效的时间，以 iso8601 格式的 UTC 时间表示
+        /// 临时访问凭证的过期时间，以 iso8601 格式的 UTC 时间表示
         /// </summary>
         [JsonProperty("Expiration")]
         public string Expiration{ get; set; }

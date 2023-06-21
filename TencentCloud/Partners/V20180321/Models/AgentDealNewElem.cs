@@ -216,6 +216,13 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 资源id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceIds")]
+        public string[] ResourceIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -250,6 +257,7 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamArrayObj(map, prefix + "ProductInfo.", this.ProductInfo);
             this.SetParamSimple(map, prefix + "PaymentMethod", this.PaymentMethod);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
         }
     }
 }

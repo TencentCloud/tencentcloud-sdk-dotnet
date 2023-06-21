@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{700BCB15-E440-34BE-979B-260C57587D11}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.785</VersionPrefix>
+    <VersionPrefix>3.0.786</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -108,6 +108,8 @@
     <Compile Include="V20180411\Models\DescribeDBSlowLogsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDBSyncModeRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDBSyncModeResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeDBTmpInstancesRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeDBTmpInstancesResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDCDBInstanceDetailRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDCDBInstanceDetailResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDCDBInstanceNodeInfoRequest.cs" />
@@ -227,6 +229,7 @@
     <Compile Include="V20180411\Models\TablePrivilege.cs" />
     <Compile Include="V20180411\Models\TerminateDedicatedDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\TerminateDedicatedDBInstanceResponse.cs" />
+    <Compile Include="V20180411\Models\TmpInstance.cs" />
     <Compile Include="V20180411\Models\UpgradeDCDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\UpgradeDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\UpgradeDedicatedDCDBInstanceRequest.cs" />

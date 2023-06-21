@@ -935,6 +935,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 查询流程填写控件内容，可以根据流程Id查询该流程相关联的填写控件信息
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDescribeFlowComponentsRequest"/></param>
+        /// <returns><see cref="ChannelDescribeFlowComponentsResponse"/></returns>
+        public async Task<ChannelDescribeFlowComponentsResponse> ChannelDescribeFlowComponents(ChannelDescribeFlowComponentsRequest req)
+        {
+             JsonResponseModel<ChannelDescribeFlowComponentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelDescribeFlowComponents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDescribeFlowComponentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询流程填写控件内容，可以根据流程Id查询该流程相关联的填写控件信息
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDescribeFlowComponentsRequest"/></param>
+        /// <returns><see cref="ChannelDescribeFlowComponentsResponse"/></returns>
+        public ChannelDescribeFlowComponentsResponse ChannelDescribeFlowComponentsSync(ChannelDescribeFlowComponentsRequest req)
+        {
+             JsonResponseModel<ChannelDescribeFlowComponentsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelDescribeFlowComponents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDescribeFlowComponentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询子客企业电子印章，需要操作者具有管理印章权限
         /// 客户指定需要获取的印章数量和偏移量，数量最多100，超过100按100处理；入参InfoType控制印章是否携带授权人信息，为1则携带，为0则返回的授权人信息为空数组。接口调用成功返回印章的信息列表还有企业印章的总数。
         /// </summary>

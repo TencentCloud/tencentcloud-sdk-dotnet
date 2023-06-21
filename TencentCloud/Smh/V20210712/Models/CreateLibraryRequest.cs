@@ -31,13 +31,19 @@ namespace TencentCloud.Smh.V20210712.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 存储桶全名，新建后不可更改
+        /// 备注，最多 250 个字符
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// 存储桶所在地域，新建后不可更改
+        /// 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
@@ -48,12 +54,6 @@ namespace TencentCloud.Smh.V20210712.Models
         [JsonProperty("LibraryExtension")]
         public LibraryExtension LibraryExtension{ get; set; }
 
-        /// <summary>
-        /// 备注，最多 250 个字符
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,10 +61,10 @@ namespace TencentCloud.Smh.V20210712.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "BucketName", this.BucketName);
             this.SetParamSimple(map, prefix + "BucketRegion", this.BucketRegion);
             this.SetParamObj(map, prefix + "LibraryExtension.", this.LibraryExtension);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }
