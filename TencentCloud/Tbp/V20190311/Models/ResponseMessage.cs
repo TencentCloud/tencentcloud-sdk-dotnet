@@ -29,7 +29,7 @@ namespace TencentCloud.Tbp.V20190311.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupList")]
-        public Group GroupList{ get; set; }
+        public Group[] GroupList{ get; set; }
 
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace TencentCloud.Tbp.V20190311.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "GroupList.", this.GroupList);
+            this.SetParamArrayObj(map, prefix + "GroupList.", this.GroupList);
         }
     }
 }

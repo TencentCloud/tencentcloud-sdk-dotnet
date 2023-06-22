@@ -39,7 +39,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>RebuildMedia：音画质重生任务；</li>
         /// <li>ReviewAudioVideo：音视频审核任务；</li>
         /// <li>ExtractTraceWatermark：提取溯源水印任务；</li>
-        /// <li>ExtractCopyRightWatermark：提取版权水印任务。</li>
+        /// <li>ExtractCopyRightWatermark：提取版权水印任务；</li>
+        /// <li>QualityInspect：音画质检测任务。</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -205,6 +206,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public DescribeFileAttributesTask DescribeFileAttributesTask{ get; set; }
 
         /// <summary>
+        /// 音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QualityInspectTask")]
+        public QualityInspectTask QualityInspectTask{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -240,6 +248,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
             this.SetParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);
             this.SetParamObj(map, prefix + "DescribeFileAttributesTask.", this.DescribeFileAttributesTask);
+            this.SetParamObj(map, prefix + "QualityInspectTask.", this.QualityInspectTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

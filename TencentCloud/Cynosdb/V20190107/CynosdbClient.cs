@@ -2453,6 +2453,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 查询数据库代理规格
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxySpecsRequest"/></param>
+        /// <returns><see cref="DescribeProxySpecsResponse"/></returns>
+        public async Task<DescribeProxySpecsResponse> DescribeProxySpecs(DescribeProxySpecsRequest req)
+        {
+             JsonResponseModel<DescribeProxySpecsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProxySpecs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxySpecsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询数据库代理规格
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxySpecsRequest"/></param>
+        /// <returns><see cref="DescribeProxySpecsResponse"/></returns>
+        public DescribeProxySpecsResponse DescribeProxySpecsSync(DescribeProxySpecsRequest req)
+        {
+             JsonResponseModel<DescribeProxySpecsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProxySpecs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxySpecsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询资源包使用详情
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcePackageDetailRequest"/></param>

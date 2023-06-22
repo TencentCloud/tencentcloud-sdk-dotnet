@@ -891,6 +891,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(CreateDatabase)用于在云数据库实例中创建数据库。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatabaseRequest"/></param>
+        /// <returns><see cref="CreateDatabaseResponse"/></returns>
+        public async Task<CreateDatabaseResponse> CreateDatabase(CreateDatabaseRequest req)
+        {
+             JsonResponseModel<CreateDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateDatabase)用于在云数据库实例中创建数据库。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatabaseRequest"/></param>
+        /// <returns><see cref="CreateDatabaseResponse"/></returns>
+        public CreateDatabaseResponse CreateDatabaseSync(CreateDatabaseRequest req)
+        {
+             JsonResponseModel<CreateDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateDeployGroup)用于创建放置实例的置放群组
         /// </summary>
         /// <param name="req"><see cref="CreateDeployGroupRequest"/></param>

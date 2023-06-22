@@ -47,6 +47,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
         /// <li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
         /// <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
+        /// <li>QualityInspectComplete：音画质检测完成。</li>
         /// <b>兼容 2017 版的事件类型：</b>
         /// <li>TranscodeComplete：视频转码完成；</li>
         /// <li>ConcatComplete：视频拼接完成；</li>
@@ -211,6 +212,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("DescribeFileAttributesCompleteEvent")]
         public DescribeFileAttributesTask DescribeFileAttributesCompleteEvent{ get; set; }
 
+        /// <summary>
+        /// 音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QualityInspectCompleteEvent")]
+        public QualityInspectTask QualityInspectCompleteEvent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -241,6 +249,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
             this.SetParamObj(map, prefix + "ReduceMediaBitrateCompleteEvent.", this.ReduceMediaBitrateCompleteEvent);
             this.SetParamObj(map, prefix + "DescribeFileAttributesCompleteEvent.", this.DescribeFileAttributesCompleteEvent);
+            this.SetParamObj(map, prefix + "QualityInspectCompleteEvent.", this.QualityInspectCompleteEvent);
         }
     }
 }

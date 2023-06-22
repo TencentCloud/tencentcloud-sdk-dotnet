@@ -74,18 +74,18 @@ namespace TencentCloud.Tbp.V20190311.Models
         public string ResponseText{ get; set; }
 
         /// <summary>
-        /// 机器人应答。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ResponseMessage")]
-        public ResponseMessage ResponseMessage{ get; set; }
-
-        /// <summary>
         /// 结果类型 {中间逻辑出错:0; 任务型机器人:1; 问答型机器人:2; 闲聊型机器人:3; 未匹配上，返回预设兜底话术:5; 未匹配上，返回相似问题列表:6}。	
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultType")]
         public string ResultType{ get; set; }
+
+        /// <summary>
+        /// 机器人应答。	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResponseMessage")]
+        public ResponseMessage ResponseMessage{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -106,8 +106,8 @@ namespace TencentCloud.Tbp.V20190311.Models
             this.SetParamSimple(map, prefix + "InputText", this.InputText);
             this.SetParamSimple(map, prefix + "SessionAttributes", this.SessionAttributes);
             this.SetParamSimple(map, prefix + "ResponseText", this.ResponseText);
-            this.SetParamObj(map, prefix + "ResponseMessage.", this.ResponseMessage);
             this.SetParamSimple(map, prefix + "ResultType", this.ResultType);
+            this.SetParamObj(map, prefix + "ResponseMessage.", this.ResponseMessage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -771,6 +771,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建音画质检测模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateQualityInspectTemplateRequest"/></param>
+        /// <returns><see cref="CreateQualityInspectTemplateResponse"/></returns>
+        public async Task<CreateQualityInspectTemplateResponse> CreateQualityInspectTemplate(CreateQualityInspectTemplateRequest req)
+        {
+             JsonResponseModel<CreateQualityInspectTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateQualityInspectTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateQualityInspectTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建音画质检测模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateQualityInspectTemplateRequest"/></param>
+        /// <returns><see cref="CreateQualityInspectTemplateResponse"/></returns>
+        public CreateQualityInspectTemplateResponse CreateQualityInspectTemplateSync(CreateQualityInspectTemplateRequest req)
+        {
+             JsonResponseModel<CreateQualityInspectTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateQualityInspectTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateQualityInspectTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建音画质重生模板。
         /// </summary>
         /// <param name="req"><see cref="CreateRebuildMediaTemplateRequest"/></param>
@@ -1788,6 +1828,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteProcedureTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProcedureTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除音画质检测模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQualityInspectTemplateRequest"/></param>
+        /// <returns><see cref="DeleteQualityInspectTemplateResponse"/></returns>
+        public async Task<DeleteQualityInspectTemplateResponse> DeleteQualityInspectTemplate(DeleteQualityInspectTemplateRequest req)
+        {
+             JsonResponseModel<DeleteQualityInspectTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteQualityInspectTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteQualityInspectTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除音画质检测模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQualityInspectTemplateRequest"/></param>
+        /// <returns><see cref="DeleteQualityInspectTemplateResponse"/></returns>
+        public DeleteQualityInspectTemplateResponse DeleteQualityInspectTemplateSync(DeleteQualityInspectTemplateRequest req)
+        {
+             JsonResponseModel<DeleteQualityInspectTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteQualityInspectTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteQualityInspectTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3525,6 +3605,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 获取音画质检测模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQualityInspectTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeQualityInspectTemplatesResponse"/></returns>
+        public async Task<DescribeQualityInspectTemplatesResponse> DescribeQualityInspectTemplates(DescribeQualityInspectTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeQualityInspectTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeQualityInspectTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQualityInspectTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取音画质检测模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQualityInspectTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeQualityInspectTemplatesResponse"/></returns>
+        public DescribeQualityInspectTemplatesResponse DescribeQualityInspectTemplatesSync(DescribeQualityInspectTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeQualityInspectTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeQualityInspectTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQualityInspectTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取音画质重生模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRebuildMediaTemplatesRequest"/></param>
@@ -4505,6 +4625,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 对点播中的音视频媒体发起音画质检测任务。
+        /// </summary>
+        /// <param name="req"><see cref="InspectMediaQualityRequest"/></param>
+        /// <returns><see cref="InspectMediaQualityResponse"/></returns>
+        public async Task<InspectMediaQualityResponse> InspectMediaQuality(InspectMediaQualityRequest req)
+        {
+             JsonResponseModel<InspectMediaQualityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InspectMediaQuality");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InspectMediaQualityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对点播中的音视频媒体发起音画质检测任务。
+        /// </summary>
+        /// <param name="req"><see cref="InspectMediaQualityRequest"/></param>
+        /// <returns><see cref="InspectMediaQualityResponse"/></returns>
+        public InspectMediaQualityResponse InspectMediaQualitySync(InspectMediaQualityRequest req)
+        {
+             JsonResponseModel<InspectMediaQualityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InspectMediaQuality");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InspectMediaQualityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直播即时剪辑，是指在直播过程中（即直播尚未结束时），客户可以在过往直播内容中选择一段，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
         /// 
         /// 腾讯云点播支持两种即时剪辑模式：
@@ -5222,6 +5382,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ModifyPersonSample");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改音画质检测模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQualityInspectTemplateRequest"/></param>
+        /// <returns><see cref="ModifyQualityInspectTemplateResponse"/></returns>
+        public async Task<ModifyQualityInspectTemplateResponse> ModifyQualityInspectTemplate(ModifyQualityInspectTemplateRequest req)
+        {
+             JsonResponseModel<ModifyQualityInspectTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyQualityInspectTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyQualityInspectTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改音画质检测模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQualityInspectTemplateRequest"/></param>
+        /// <returns><see cref="ModifyQualityInspectTemplateResponse"/></returns>
+        public ModifyQualityInspectTemplateResponse ModifyQualityInspectTemplateSync(ModifyQualityInspectTemplateRequest req)
+        {
+             JsonResponseModel<ModifyQualityInspectTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyQualityInspectTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyQualityInspectTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

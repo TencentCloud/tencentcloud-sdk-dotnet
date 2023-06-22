@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.786</VersionPrefix>
+    <VersionPrefix>3.0.787</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,8 @@
     <Compile Include="V20180717\VodClient.cs" />
     <Compile Include="V20180717\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="V20180717\Models\AIRecognitionTemplateItem.cs" />
+    <Compile Include="V20180717\Models\AbnormalLightingConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\AbnormalLightingConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\AccelerateAreaInfo.cs" />
     <Compile Include="V20180717\Models\AdaptiveDynamicStreamingInfoItem.cs" />
     <Compile Include="V20180717\Models\AdaptiveDynamicStreamingTaskInput.cs" />
@@ -167,6 +169,10 @@
     <Compile Include="V20180717\Models\AudioTrackItem.cs" />
     <Compile Include="V20180717\Models\AudioTransform.cs" />
     <Compile Include="V20180717\Models\AudioVolumeParam.cs" />
+    <Compile Include="V20180717\Models\BlackWhiteEdgeConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\BlackWhiteEdgeConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\BlurConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\BlurConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\Canvas.cs" />
     <Compile Include="V20180717\Models\CdnLogInfo.cs" />
     <Compile Include="V20180717\Models\ClassificationConfigureInfo.cs" />
@@ -194,6 +200,8 @@
     <Compile Include="V20180717\Models\CoverBySnapshotTaskOutput.cs" />
     <Compile Include="V20180717\Models\CoverConfigureInfo.cs" />
     <Compile Include="V20180717\Models\CoverConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\CrashScreenConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\CrashScreenConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\CreateAIAnalysisTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateAIAnalysisTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateAIRecognitionTemplateRequest.cs" />
@@ -219,6 +227,8 @@
     <Compile Include="V20180717\Models\CreatePersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\CreateProcedureTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateProcedureTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateQualityInspectTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\CreateQualityInspectTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateRebuildMediaTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateRebuildMediaTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateReviewTemplateRequest.cs" />
@@ -270,6 +280,8 @@
     <Compile Include="V20180717\Models\DeletePersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\DeleteProcedureTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteProcedureTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteQualityInspectTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteQualityInspectTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteRebuildMediaTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteRebuildMediaTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteReviewTemplateRequest.cs" />
@@ -352,6 +364,8 @@
     <Compile Include="V20180717\Models\DescribePrepaidProductsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeProcedureTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeProcedureTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeQualityInspectTemplatesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeQualityInspectTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeRebuildMediaTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeRebuildMediaTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeReviewDetailsRequest.cs" />
@@ -450,6 +464,10 @@
     <Compile Include="V20180717\Models\ImageWatermarkInput.cs" />
     <Compile Include="V20180717\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="V20180717\Models\ImageWatermarkTemplate.cs" />
+    <Compile Include="V20180717\Models\InspectMediaQualityRequest.cs" />
+    <Compile Include="V20180717\Models\InspectMediaQualityResponse.cs" />
+    <Compile Include="V20180717\Models\JitterConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\JitterConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\LicenseUsageDataItem.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipMediaSegmentInfo.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipRequest.cs" />
@@ -539,6 +557,8 @@
     <Compile Include="V20180717\Models\ModifyMediaStorageClassResponse.cs" />
     <Compile Include="V20180717\Models\ModifyPersonSampleRequest.cs" />
     <Compile Include="V20180717\Models\ModifyPersonSampleResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyQualityInspectTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyQualityInspectTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyRebuildMediaTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyRebuildMediaTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyReviewTemplateRequest.cs" />
@@ -565,7 +585,11 @@
     <Compile Include="V20180717\Models\ModifyWatermarkTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyWordSampleRequest.cs" />
     <Compile Include="V20180717\Models\ModifyWordSampleResponse.cs" />
+    <Compile Include="V20180717\Models\MosaicConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\MosaicConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\MosaicInput.cs" />
+    <Compile Include="V20180717\Models\NoiseConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\NoiseConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\ObjectConfigureInfo.cs" />
     <Compile Include="V20180717\Models\ObjectConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\OcrFullTextConfigureInfo.cs" />
@@ -623,6 +647,16 @@
     <Compile Include="V20180717\Models\PullUploadTask.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheRequest.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheResponse.cs" />
+    <Compile Include="V20180717\Models\QRCodeConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\QRCodeConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\QualityEvaluationConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\QualityEvaluationConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\QualityInspectItem.cs" />
+    <Compile Include="V20180717\Models\QualityInspectResultItem.cs" />
+    <Compile Include="V20180717\Models\QualityInspectTask.cs" />
+    <Compile Include="V20180717\Models\QualityInspectTaskInput.cs" />
+    <Compile Include="V20180717\Models\QualityInspectTaskOutput.cs" />
+    <Compile Include="V20180717\Models\QualityInspectTemplateItem.cs" />
     <Compile Include="V20180717\Models\RebuildAudioInfo.cs" />
     <Compile Include="V20180717\Models\RebuildMediaByTemplateRequest.cs" />
     <Compile Include="V20180717\Models\RebuildMediaByTemplateResponse.cs" />
@@ -747,6 +781,8 @@
     <Compile Include="V20180717\Models\VideoTemplateInfo.cs" />
     <Compile Include="V20180717\Models\VideoTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\VideoTrackItem.cs" />
+    <Compile Include="V20180717\Models\VoiceConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\VoiceConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\WatermarkCycleConfigForUpdate.cs" />
     <Compile Include="V20180717\Models\WatermarkInput.cs" />
     <Compile Include="V20180717\Models\WatermarkTemplate.cs" />

@@ -213,6 +213,46 @@ namespace TencentCloud.Yinsuda.V20220527
         }
 
         /// <summary>
+        /// 获取歌曲伴奏片段链接，可用于抢唱
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVMusicAccompanySegmentUrlRequest"/></param>
+        /// <returns><see cref="DescribeKTVMusicAccompanySegmentUrlResponse"/></returns>
+        public async Task<DescribeKTVMusicAccompanySegmentUrlResponse> DescribeKTVMusicAccompanySegmentUrl(DescribeKTVMusicAccompanySegmentUrlRequest req)
+        {
+             JsonResponseModel<DescribeKTVMusicAccompanySegmentUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKTVMusicAccompanySegmentUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVMusicAccompanySegmentUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取歌曲伴奏片段链接，可用于抢唱
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVMusicAccompanySegmentUrlRequest"/></param>
+        /// <returns><see cref="DescribeKTVMusicAccompanySegmentUrlResponse"/></returns>
+        public DescribeKTVMusicAccompanySegmentUrlResponse DescribeKTVMusicAccompanySegmentUrlSync(DescribeKTVMusicAccompanySegmentUrlRequest req)
+        {
+             JsonResponseModel<DescribeKTVMusicAccompanySegmentUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKTVMusicAccompanySegmentUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVMusicAccompanySegmentUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过标签过滤歌曲列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeKTVMusicsByTagRequest"/></param>

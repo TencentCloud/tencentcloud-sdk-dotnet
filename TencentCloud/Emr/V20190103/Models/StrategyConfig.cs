@@ -33,14 +33,14 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? RollingRestartSwitch{ get; set; }
 
         /// <summary>
-        /// 滚动重启每批次的重启数量
+        /// 滚动重启每批次的重启数量，最大重启台数为 99999 台
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchSize")]
         public long? BatchSize{ get; set; }
 
         /// <summary>
-        /// 滚动重启每批停止等待时间 ,最大重启台数为 99999 台，最大间隔为 5 分钟 单位是秒
+        /// 滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeWait")]
