@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdid.V20210519.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RegisterClaimPolicyRequest : AbstractModel
+    public class ModifyDomainConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// Cpt索引
+        /// 域名
         /// </summary>
-        [JsonProperty("CptIndex")]
-        public ulong? CptIndex{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// 披露策略
+        /// 配置路径
         /// </summary>
-        [JsonProperty("Policy")]
-        public string Policy{ get; set; }
+        [JsonProperty("Route")]
+        public string Route{ get; set; }
+
+        /// <summary>
+        /// 配置路径值，使用 json 进行序列化，其中固定 update 作为 key
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Tdid.V20210519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CptIndex", this.CptIndex);
-            this.SetParamSimple(map, prefix + "Policy", this.Policy);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Route", this.Route);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

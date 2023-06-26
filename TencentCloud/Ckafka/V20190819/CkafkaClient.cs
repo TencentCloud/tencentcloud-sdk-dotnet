@@ -693,6 +693,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 当前接口用来替代 CreateInstancePost 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePostPaidInstanceRequest"/></param>
+        /// <returns><see cref="CreatePostPaidInstanceResponse"/></returns>
+        public async Task<CreatePostPaidInstanceResponse> CreatePostPaidInstance(CreatePostPaidInstanceRequest req)
+        {
+             JsonResponseModel<CreatePostPaidInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePostPaidInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePostPaidInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 当前接口用来替代 CreateInstancePost 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePostPaidInstanceRequest"/></param>
+        /// <returns><see cref="CreatePostPaidInstanceResponse"/></returns>
+        public CreatePostPaidInstanceResponse CreatePostPaidInstanceSync(CreatePostPaidInstanceRequest req)
+        {
+             JsonResponseModel<CreatePostPaidInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePostPaidInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePostPaidInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加实例路由
         /// </summary>
         /// <param name="req"><see cref="CreateRouteRequest"/></param>

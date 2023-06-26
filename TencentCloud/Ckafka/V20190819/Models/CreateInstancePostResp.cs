@@ -15,32 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdid.V20210519.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetCredentialIssueRankRequest : AbstractModel
+    public class CreateInstancePostResp : AbstractModel
     {
         
         /// <summary>
-        /// 开始时间（支持到天 2021-4-23）
+        /// 返回的code，0为正常，非0为错误
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("ReturnCode")]
+        public string ReturnCode{ get; set; }
 
         /// <summary>
-        /// 结束时间（支持到天 2021-4-23）
+        /// 接口返回消息，当接口报错时提示错误信息
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        [JsonProperty("ReturnMessage")]
+        public string ReturnMessage{ get; set; }
 
         /// <summary>
-        /// 网络ID
+        /// 返回的Data数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Data")]
+        public CreateInstancePostData Data{ get; set; }
 
 
         /// <summary>
@@ -48,9 +49,9 @@ namespace TencentCloud.Tdid.V20210519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+            this.SetParamSimple(map, prefix + "ReturnMessage", this.ReturnMessage);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
         }
     }
 }

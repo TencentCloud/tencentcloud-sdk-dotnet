@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.787</VersionPrefix>
+    <VersionPrefix>3.0.788</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -318,6 +318,7 @@
     <Compile Include="V20180328\Models\StepDetail.cs" />
     <Compile Include="V20180328\Models\StopMigrationRequest.cs" />
     <Compile Include="V20180328\Models\StopMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\TDEConfigAttribute.cs" />
     <Compile Include="V20180328\Models\TerminateDBInstanceRequest.cs" />
     <Compile Include="V20180328\Models\TerminateDBInstanceResponse.cs" />
     <Compile Include="V20180328\Models\UpgradeDBInstanceRequest.cs" />

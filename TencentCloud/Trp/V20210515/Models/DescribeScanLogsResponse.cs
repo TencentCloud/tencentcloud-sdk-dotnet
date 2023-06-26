@@ -26,9 +26,9 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 【弃用】
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Products")]
+        [System.Obsolete]
         public ScanLog[] Products{ get; set; }
 
         /// <summary>

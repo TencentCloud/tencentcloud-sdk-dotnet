@@ -2795,6 +2795,54 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// ModifyDomainConfig 用于修改内容分发网络加速域名配置信息
+        /// 注意：
+        /// Route 字段，使用点分隔，最后一段称为叶子节点，非叶子节点配置保持不变；
+        /// Value 字段，使用 json 进行序列化，其中固定 update 作为 key，配置路径值参考 https://cloud.tencent.com/document/product/228/41116 接口各配置项复杂类型，为配置路径对应复杂类型下的节点。
+        /// 云审计相关：接口的入参可能包含密钥等敏感信息，所以此接口的入参不会上报到云审计。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainConfigRequest"/></param>
+        /// <returns><see cref="ModifyDomainConfigResponse"/></returns>
+        public async Task<ModifyDomainConfigResponse> ModifyDomainConfig(ModifyDomainConfigRequest req)
+        {
+             JsonResponseModel<ModifyDomainConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDomainConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ModifyDomainConfig 用于修改内容分发网络加速域名配置信息
+        /// 注意：
+        /// Route 字段，使用点分隔，最后一段称为叶子节点，非叶子节点配置保持不变；
+        /// Value 字段，使用 json 进行序列化，其中固定 update 作为 key，配置路径值参考 https://cloud.tencent.com/document/product/228/41116 接口各配置项复杂类型，为配置路径对应复杂类型下的节点。
+        /// 云审计相关：接口的入参可能包含密钥等敏感信息，所以此接口的入参不会上报到云审计。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainConfigRequest"/></param>
+        /// <returns><see cref="ModifyDomainConfigResponse"/></returns>
+        public ModifyDomainConfigResponse ModifyDomainConfigSync(ModifyDomainConfigRequest req)
+        {
+             JsonResponseModel<ModifyDomainConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDomainConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// ModifyPurgeFetchTaskStatus 用于上报定时刷新预热任务执行状态
         /// </summary>
         /// <param name="req"><see cref="ModifyPurgeFetchTaskStatusRequest"/></param>

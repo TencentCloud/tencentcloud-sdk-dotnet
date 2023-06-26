@@ -15,21 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InvokeBcosTransResponse : AbstractModel
+    public class ModifyDomainConfigResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 交易结果json字符串
-        /// </summary>
-        [JsonProperty("TransactionRsp")]
-        public string TransactionRsp{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -42,7 +36,6 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TransactionRsp", this.TransactionRsp);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

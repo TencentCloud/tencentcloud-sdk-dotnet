@@ -73,6 +73,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? EventSaveDays{ get; set; }
 
         /// <summary>
+        /// TDE透明数据加密配置
+        /// </summary>
+        [JsonProperty("TDEConfig")]
+        public TDEConfigAttribute TDEConfig{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -92,6 +98,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "RegularBackupStartTime", this.RegularBackupStartTime);
             this.SetParamSimple(map, prefix + "BlockedThreshold", this.BlockedThreshold);
             this.SetParamSimple(map, prefix + "EventSaveDays", this.EventSaveDays);
+            this.SetParamObj(map, prefix + "TDEConfig.", this.TDEConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

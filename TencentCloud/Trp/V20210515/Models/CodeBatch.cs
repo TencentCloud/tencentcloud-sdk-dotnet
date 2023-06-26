@@ -143,6 +143,26 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("Job")]
         public Job Job{ get; set; }
 
+        /// <summary>
+        /// 生产日期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductionDate")]
+        public string ProductionDate{ get; set; }
+
+        /// <summary>
+        /// 有效期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ValidDate")]
+        public string ValidDate{ get; set; }
+
+        /// <summary>
+        /// 扩展属性
+        /// </summary>
+        [JsonProperty("Attrs")]
+        public AttrItem[] Attrs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +186,9 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamObj(map, prefix + "Ext.", this.Ext);
             this.SetParamSimple(map, prefix + "TplName", this.TplName);
             this.SetParamObj(map, prefix + "Job.", this.Job);
+            this.SetParamSimple(map, prefix + "ProductionDate", this.ProductionDate);
+            this.SetParamSimple(map, prefix + "ValidDate", this.ValidDate);
+            this.SetParamArrayObj(map, prefix + "Attrs.", this.Attrs);
         }
     }
 }

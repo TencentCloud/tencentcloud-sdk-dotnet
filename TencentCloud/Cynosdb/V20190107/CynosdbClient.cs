@@ -2733,6 +2733,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 查询支持的数据库代理版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportProxyVersionRequest"/></param>
+        /// <returns><see cref="DescribeSupportProxyVersionResponse"/></returns>
+        public async Task<DescribeSupportProxyVersionResponse> DescribeSupportProxyVersion(DescribeSupportProxyVersionRequest req)
+        {
+             JsonResponseModel<DescribeSupportProxyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSupportProxyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSupportProxyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询支持的数据库代理版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportProxyVersionRequest"/></param>
+        /// <returns><see cref="DescribeSupportProxyVersionResponse"/></returns>
+        public DescribeSupportProxyVersionResponse DescribeSupportProxyVersionSync(DescribeSupportProxyVersionRequest req)
+        {
+             JsonResponseModel<DescribeSupportProxyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSupportProxyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSupportProxyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeZones)用于查询可售卖地域可用区信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>

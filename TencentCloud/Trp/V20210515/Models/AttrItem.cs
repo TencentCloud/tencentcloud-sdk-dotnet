@@ -21,7 +21,7 @@ namespace TencentCloud.Trp.V20210515.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TraceItem : AbstractModel
+    public class AttrItem : AbstractModel
     {
         
         /// <summary>
@@ -47,12 +47,6 @@ namespace TencentCloud.Trp.V20210515.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 多个值
-        /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
-
-        /// <summary>
         /// 只读
         /// </summary>
         [JsonProperty("ReadOnly")]
@@ -63,6 +57,12 @@ namespace TencentCloud.Trp.V20210515.Models
         /// </summary>
         [JsonProperty("Hidden")]
         public bool? Hidden{ get; set; }
+
+        /// <summary>
+        /// 多个值
+        /// </summary>
+        [JsonProperty("Values")]
+        public string[] Values{ get; set; }
 
         /// <summary>
         /// 类型标识
@@ -76,18 +76,6 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("Ext")]
         public string Ext{ get; set; }
 
-        /// <summary>
-        /// 额外属性
-        /// </summary>
-        [JsonProperty("Attrs")]
-        public TraceItem[] Attrs{ get; set; }
-
-        /// <summary>
-        /// 子页面，只读
-        /// </summary>
-        [JsonProperty("List")]
-        public TraceData[] List{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,13 +85,11 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
             this.SetParamSimple(map, prefix + "Hidden", this.Hidden);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Ext", this.Ext);
-            this.SetParamArrayObj(map, prefix + "Attrs.", this.Attrs);
-            this.SetParamArrayObj(map, prefix + "List.", this.List);
         }
     }
 }

@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetBcosBlockByNumberRequest : AbstractModel
+    public class DescribeSupportProxyVersionRequest : AbstractModel
     {
         
         /// <summary>
-        /// 网络ID，可在区块链网络详情或列表中获取
+        /// 集群ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 群组编号，可在群组列表中获取
+        /// 数据库代理组ID
         /// </summary>
-        [JsonProperty("GroupId")]
-        public long? GroupId{ get; set; }
-
-        /// <summary>
-        /// 区块高度，可以从InvokeBcosTrans接口的返回值中解析获取
-        /// </summary>
-        [JsonProperty("BlockNumber")]
-        public long? BlockNumber{ get; set; }
+        [JsonProperty("ProxyGroupId")]
+        public string ProxyGroupId{ get; set; }
 
 
         /// <summary>
@@ -49,8 +43,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "BlockNumber", this.BlockNumber);
+            this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
         }
     }
 }

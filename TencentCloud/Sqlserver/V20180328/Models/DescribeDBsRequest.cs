@@ -54,6 +54,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
+        /// <summary>
+        /// 是否已开启TDE加密，enable-已加密，disable-未加密
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public string Encryption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
+            this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
         }
     }
 }

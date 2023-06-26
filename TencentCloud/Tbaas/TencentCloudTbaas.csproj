@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{84400F10-9E05-36FF-873D-21C952C381E6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.787</VersionPrefix>
+    <VersionPrefix>3.0.788</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,8 +52,6 @@
     <Compile Include="V20180416\Models\ApplyChainMakerBatchUserCertResponse.cs" />
     <Compile Include="V20180416\Models\ApplyUserCertRequest.cs" />
     <Compile Include="V20180416\Models\ApplyUserCertResponse.cs" />
-    <Compile Include="V20180416\Models\BcosBlockObj.cs" />
-    <Compile Include="V20180416\Models\BcosTransInfo.cs" />
     <Compile Include="V20180416\Models\Block.cs" />
     <Compile Include="V20180416\Models\ChainMakerContractResult.cs" />
     <Compile Include="V20180416\Models\ChainMakerTransactionResult.cs" />
@@ -61,19 +59,9 @@
     <Compile Include="V20180416\Models\ClusterDetailForUser.cs" />
     <Compile Include="V20180416\Models\CreateChaincodeAndInstallForUserRequest.cs" />
     <Compile Include="V20180416\Models\CreateChaincodeAndInstallForUserResponse.cs" />
-    <Compile Include="V20180416\Models\DeployDynamicBcosContractRequest.cs" />
-    <Compile Include="V20180416\Models\DeployDynamicBcosContractResponse.cs" />
     <Compile Include="V20180416\Models\DownloadUserCertRequest.cs" />
     <Compile Include="V20180416\Models\DownloadUserCertResponse.cs" />
     <Compile Include="V20180416\Models\EndorserGroup.cs" />
-    <Compile Include="V20180416\Models\GetBcosBlockByNumberRequest.cs" />
-    <Compile Include="V20180416\Models\GetBcosBlockByNumberResponse.cs" />
-    <Compile Include="V20180416\Models\GetBcosBlockListRequest.cs" />
-    <Compile Include="V20180416\Models\GetBcosBlockListResponse.cs" />
-    <Compile Include="V20180416\Models\GetBcosTransByHashRequest.cs" />
-    <Compile Include="V20180416\Models\GetBcosTransByHashResponse.cs" />
-    <Compile Include="V20180416\Models\GetBcosTransListRequest.cs" />
-    <Compile Include="V20180416\Models\GetBcosTransListResponse.cs" />
     <Compile Include="V20180416\Models\GetBlockListRequest.cs" />
     <Compile Include="V20180416\Models\GetBlockListResponse.cs" />
     <Compile Include="V20180416\Models\GetBlockTransactionListForUserRequest.cs" />
@@ -103,8 +91,6 @@
     <Compile Include="V20180416\Models\GroupDetailForUser.cs" />
     <Compile Include="V20180416\Models\InitializeChaincodeForUserRequest.cs" />
     <Compile Include="V20180416\Models\InitializeChaincodeForUserResponse.cs" />
-    <Compile Include="V20180416\Models\InvokeBcosTransRequest.cs" />
-    <Compile Include="V20180416\Models\InvokeBcosTransResponse.cs" />
     <Compile Include="V20180416\Models\InvokeChainMakerContractRequest.cs" />
     <Compile Include="V20180416\Models\InvokeChainMakerContractResponse.cs" />
     <Compile Include="V20180416\Models\InvokeChainMakerDemoContractRequest.cs" />

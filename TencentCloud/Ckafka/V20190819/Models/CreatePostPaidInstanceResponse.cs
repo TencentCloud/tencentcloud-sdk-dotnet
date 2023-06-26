@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdid.V20210519.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetDidRegisterTrendResponse : AbstractModel
+    public class CreatePostPaidInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// Trend集合
+        /// 返回结果
         /// </summary>
-        [JsonProperty("Trend")]
-        public Trend[] Trend{ get; set; }
+        [JsonProperty("Result")]
+        public CreateInstancePostResp Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ namespace TencentCloud.Tdid.V20210519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Trend.", this.Trend);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

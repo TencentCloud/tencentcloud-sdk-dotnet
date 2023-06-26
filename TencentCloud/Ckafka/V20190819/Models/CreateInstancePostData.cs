@@ -15,40 +15,42 @@
  * under the License.
  */
 
-namespace TencentCloud.Tione.V20211111.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CFSConfig : AbstractModel
+    public class CreateInstancePostData : AbstractModel
     {
         
         /// <summary>
-        /// cfs的实例的ID
-        /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
-
-        /// <summary>
-        /// 存储的路径
-        /// </summary>
-        [JsonProperty("Path")]
-        public string Path{ get; set; }
-
-        /// <summary>
-        /// cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+        /// CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("MountType")]
-        public string MountType{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
 
         /// <summary>
-        /// 协议 1: NFS, 2: TURBO
+        /// 订单号列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
+        [JsonProperty("DealNames")]
+        public string[] DealNames{ get; set; }
+
+        /// <summary>
+        /// 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 订单和购买实例对应映射列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DealNameInstanceIdMapping")]
+        public DealInstanceDTO[] DealNameInstanceIdMapping{ get; set; }
 
 
         /// <summary>
@@ -56,10 +58,10 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Path", this.Path);
-            this.SetParamSimple(map, prefix + "MountType", this.MountType);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "DealNameInstanceIdMapping.", this.DealNameInstanceIdMapping);
         }
     }
 }

@@ -25,6 +25,18 @@ namespace TencentCloud.Trp.V20210515.Models
     {
         
         /// <summary>
+        /// 商户标识码
+        /// </summary>
+        [JsonProperty("MerchantId")]
+        public string MerchantId{ get; set; }
+
+        /// <summary>
+        /// 商品名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
         /// 商品id
         /// </summary>
         [JsonProperty("ProductId")]
@@ -37,22 +49,10 @@ namespace TencentCloud.Trp.V20210515.Models
         public long? CorpId{ get; set; }
 
         /// <summary>
-        /// 商户标识码
-        /// </summary>
-        [JsonProperty("MerchantId")]
-        public string MerchantId{ get; set; }
-
-        /// <summary>
         /// 商品编号
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
-
-        /// <summary>
-        /// 商品名称
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
 
         /// <summary>
         /// 商品规格
@@ -106,11 +106,11 @@ namespace TencentCloud.Trp.V20210515.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "MerchantId", this.MerchantId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
-            this.SetParamSimple(map, prefix + "MerchantId", this.MerchantId);
             this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Specification", this.Specification);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamArraySimple(map, prefix + "Logo.", this.Logo);

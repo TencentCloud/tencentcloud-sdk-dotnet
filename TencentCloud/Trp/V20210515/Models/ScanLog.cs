@@ -26,7 +26,6 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 行ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogId")]
         public long? LogId{ get; set; }
@@ -136,6 +135,26 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }
 
+        /// <summary>
+        /// 扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
+
+        /// <summary>
+        /// 商户名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MerchantName")]
+        public string MerchantName{ get; set; }
+
+        /// <summary>
+        /// 产品名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +177,9 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "Unionid", this.Unionid);
             this.SetParamSimple(map, prefix + "First", this.First);
             this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "MerchantName", this.MerchantName);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
         }
     }
 }

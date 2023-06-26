@@ -15,26 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdid.V20210519.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetLabelListResponse : AbstractModel
+    public class DescribeSupportProxyVersionResponse : AbstractModel
     {
         
         /// <summary>
-        /// 数据集合
+        /// 支持的数据库代理版本集合
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Result")]
-        public Label[] Result{ get; set; }
+        [JsonProperty("SupportProxyVersions")]
+        public string[] SupportProxyVersions{ get; set; }
 
         /// <summary>
-        /// 总条数
+        /// 当前proxy版本号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("CurrentProxyVersion")]
+        public string CurrentProxyVersion{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +50,8 @@ namespace TencentCloud.Tdid.V20210519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Result.", this.Result);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArraySimple(map, prefix + "SupportProxyVersions.", this.SupportProxyVersions);
+            this.SetParamSimple(map, prefix + "CurrentProxyVersion", this.CurrentProxyVersion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

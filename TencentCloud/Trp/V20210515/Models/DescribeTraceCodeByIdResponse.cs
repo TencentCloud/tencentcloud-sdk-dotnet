@@ -31,6 +31,12 @@ namespace TencentCloud.Trp.V20210515.Models
         public TraceCode TraceCode{ get; set; }
 
         /// <summary>
+        /// 码路径，如level是2，则为 [1级, 2级]
+        /// </summary>
+        [JsonProperty("CodePath")]
+        public string[] CodePath{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "TraceCode.", this.TraceCode);
+            this.SetParamArraySimple(map, prefix + "CodePath.", this.CodePath);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

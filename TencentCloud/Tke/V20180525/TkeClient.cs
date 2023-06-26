@@ -493,7 +493,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 创建托管集群外网访问端口（老的方式，仅支持托管集群外网端口）
+        /// 创建托管集群外网访问端口（不再维护，准备下线）请使用新接口：CreateClusterEndpoint
         /// </summary>
         /// <param name="req"><see cref="CreateClusterEndpointVipRequest"/></param>
         /// <returns><see cref="CreateClusterEndpointVipResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 创建托管集群外网访问端口（老的方式，仅支持托管集群外网端口）
+        /// 创建托管集群外网访问端口（不再维护，准备下线）请使用新接口：CreateClusterEndpoint
         /// </summary>
         /// <param name="req"><see cref="CreateClusterEndpointVipRequest"/></param>
         /// <returns><see cref="CreateClusterEndpointVipResponse"/></returns>

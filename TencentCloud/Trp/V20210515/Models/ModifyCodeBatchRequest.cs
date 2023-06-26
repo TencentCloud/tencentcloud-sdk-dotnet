@@ -72,6 +72,18 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("BatchCode")]
         public string BatchCode{ get; set; }
 
+        /// <summary>
+        /// 有效期
+        /// </summary>
+        [JsonProperty("ValidDate")]
+        public string ValidDate{ get; set; }
+
+        /// <summary>
+        /// 生产日期
+        /// </summary>
+        [JsonProperty("ProductionDate")]
+        public string ProductionDate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "BatchCode", this.BatchCode);
+            this.SetParamSimple(map, prefix + "ValidDate", this.ValidDate);
+            this.SetParamSimple(map, prefix + "ProductionDate", this.ProductionDate);
         }
     }
 }

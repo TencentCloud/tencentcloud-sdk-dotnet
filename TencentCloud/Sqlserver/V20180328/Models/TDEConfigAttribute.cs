@@ -15,26 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdid.V20210519.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateDidServiceResponse : AbstractModel
+    public class TDEConfigAttribute : AbstractModel
     {
         
         /// <summary>
-        /// 服务信息
+        /// 是否已开通TDE加密，enable-已开通，disable-未开通
         /// </summary>
-        [JsonProperty("Task")]
-        public Task Task{ get; set; }
+        [JsonProperty("Encryption")]
+        public string Encryption{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，none-表示没有证书
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("CertificateAttribution")]
+        public string CertificateAttribution{ get; set; }
+
+        /// <summary>
+        /// 开通TDE加密时引用的其他主账号ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QuoteUin")]
+        public string QuoteUin{ get; set; }
 
 
         /// <summary>
@@ -42,8 +49,9 @@ namespace TencentCloud.Tdid.V20210519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Task.", this.Task);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
+            this.SetParamSimple(map, prefix + "CertificateAttribution", this.CertificateAttribution);
+            this.SetParamSimple(map, prefix + "QuoteUin", this.QuoteUin);
         }
     }
 }

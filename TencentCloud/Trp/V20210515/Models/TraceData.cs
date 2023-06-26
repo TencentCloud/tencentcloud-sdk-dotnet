@@ -75,12 +75,6 @@ namespace TencentCloud.Trp.V20210515.Models
         public string TraceTime{ get; set; }
 
         /// <summary>
-        /// 无
-        /// </summary>
-        [JsonProperty("TraceItems")]
-        public TraceItem[] TraceItems{ get; set; }
-
-        /// <summary>
         /// 创建时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -121,6 +115,12 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("TraceItems")]
+        public TraceItem[] TraceItems{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,13 +135,13 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "Phase", this.Phase);
             this.SetParamSimple(map, prefix + "PhaseName", this.PhaseName);
             this.SetParamSimple(map, prefix + "TraceTime", this.TraceTime);
-            this.SetParamArrayObj(map, prefix + "TraceItems.", this.TraceItems);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ChainStatus", this.ChainStatus);
             this.SetParamSimple(map, prefix + "ChainTime", this.ChainTime);
             this.SetParamObj(map, prefix + "ChainData.", this.ChainData);
             this.SetParamObj(map, prefix + "PhaseData.", this.PhaseData);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArrayObj(map, prefix + "TraceItems.", this.TraceItems);
         }
     }
 }
