@@ -133,6 +133,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 创建并安装合约
         /// </summary>
         /// <param name="req"><see cref="CreateChaincodeAndInstallForUserRequest"/></param>
@@ -153,6 +155,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 创建并安装合约
         /// </summary>
         /// <param name="req"><see cref="CreateChaincodeAndInstallForUserRequest"/></param>
@@ -293,6 +297,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 获取合约编译日志
         /// </summary>
         /// <param name="req"><see cref="GetChaincodeCompileLogForUserRequest"/></param>
@@ -313,6 +319,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 获取合约编译日志
         /// </summary>
         /// <param name="req"><see cref="GetChaincodeCompileLogForUserRequest"/></param>
@@ -333,6 +341,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 实例化结果查询
         /// </summary>
         /// <param name="req"><see cref="GetChaincodeInitializeResultForUserRequest"/></param>
@@ -353,6 +363,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 实例化结果查询
         /// </summary>
         /// <param name="req"><see cref="GetChaincodeInitializeResultForUserRequest"/></param>
@@ -373,6 +385,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 获取合约容器日志
         /// </summary>
         /// <param name="req"><see cref="GetChaincodeLogForUserRequest"/></param>
@@ -393,6 +407,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 获取合约容器日志
         /// </summary>
         /// <param name="req"><see cref="GetChaincodeLogForUserRequest"/></param>
@@ -413,6 +429,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 获取通道列表
         /// </summary>
         /// <param name="req"><see cref="GetChannelListForUserRequest"/></param>
@@ -433,6 +451,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 获取通道列表
         /// </summary>
         /// <param name="req"><see cref="GetChannelListForUserRequest"/></param>
@@ -453,6 +473,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 获取该用户的网络列表。网络信息中包含组织信息，但仅包含该用户所在组织的信息。
         /// </summary>
         /// <param name="req"><see cref="GetClusterListForUserRequest"/></param>
@@ -473,6 +495,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 获取该用户的网络列表。网络信息中包含组织信息，但仅包含该用户所在组织的信息。
         /// </summary>
         /// <param name="req"><see cref="GetClusterListForUserRequest"/></param>
@@ -653,6 +677,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 获取节点日志
         /// </summary>
         /// <param name="req"><see cref="GetPeerLogForUserRequest"/></param>
@@ -673,6 +699,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 获取节点日志
         /// </summary>
         /// <param name="req"><see cref="GetPeerLogForUserRequest"/></param>
@@ -733,6 +761,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 实例化合约
         /// </summary>
         /// <param name="req"><see cref="InitializeChaincodeForUserRequest"/></param>
@@ -753,6 +783,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 接口已废弃，请通过控制台查询或操作
+        /// 
         /// 实例化合约
         /// </summary>
         /// <param name="req"><see cref="InitializeChaincodeForUserRequest"/></param>

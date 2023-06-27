@@ -66,6 +66,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DatasourceId")]
         public string DatasourceId{ get; set; }
 
+        /// <summary>
+        /// 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+        /// </summary>
+        [JsonProperty("ScoreType")]
+        public string ScoreType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "OrderFields.", this.OrderFields);
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+            this.SetParamSimple(map, prefix + "ScoreType", this.ScoreType);
         }
     }
 }

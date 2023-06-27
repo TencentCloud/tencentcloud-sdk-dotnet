@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{46495F04-57A1-3328-BD3F-406E6BB2D037}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.788</VersionPrefix>
+    <VersionPrefix>3.0.789</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,13 +48,22 @@
 
   <ItemGroup>
     <Compile Include="V20190408\NlpClient.cs" />
+    <Compile Include="V20190408\Models\AnalyzeSentimentRequest.cs" />
+    <Compile Include="V20190408\Models\AnalyzeSentimentResponse.cs" />
     <Compile Include="V20190408\Models\AutoSummarizationRequest.cs" />
     <Compile Include="V20190408\Models\AutoSummarizationResponse.cs" />
     <Compile Include="V20190408\Models\BasicParticiple.cs" />
     <Compile Include="V20190408\Models\CCIToken.cs" />
+    <Compile Include="V20190408\Models\Category.cs" />
     <Compile Include="V20190408\Models\ChatBotRequest.cs" />
     <Compile Include="V20190408\Models\ChatBotResponse.cs" />
     <Compile Include="V20190408\Models\ClassificationResult.cs" />
+    <Compile Include="V20190408\Models\ClassifyContentRequest.cs" />
+    <Compile Include="V20190408\Models\ClassifyContentResponse.cs" />
+    <Compile Include="V20190408\Models\ComposeCoupletRequest.cs" />
+    <Compile Include="V20190408\Models\ComposeCoupletResponse.cs" />
+    <Compile Include="V20190408\Models\ComposePoetryRequest.cs" />
+    <Compile Include="V20190408\Models\ComposePoetryResponse.cs" />
     <Compile Include="V20190408\Models\CompoundParticiple.cs" />
     <Compile Include="V20190408\Models\CorrectionItem.cs" />
     <Compile Include="V20190408\Models\CreateDictRequest.cs" />

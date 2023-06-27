@@ -97,6 +97,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 检查区块链信息
         /// </summary>
         /// <param name="req"><see cref="CheckChainRequest"/></param>
@@ -117,6 +119,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 检查区块链信息
         /// </summary>
         /// <param name="req"><see cref="CheckChainRequest"/></param>
@@ -137,6 +141,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 创建凭证
         /// </summary>
         /// <param name="req"><see cref="CreateCredentialRequest"/></param>
@@ -157,6 +163,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 创建凭证
         /// </summary>
         /// <param name="req"><see cref="CreateCredentialRequest"/></param>
@@ -177,6 +185,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 创建选择性批露凭证
         /// </summary>
         /// <param name="req"><see cref="CreateSelectiveCredentialRequest"/></param>
@@ -197,6 +207,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 创建选择性批露凭证
         /// </summary>
         /// <param name="req"><see cref="CreateSelectiveCredentialRequest"/></param>
@@ -217,6 +229,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 创建机构DID
         /// </summary>
         /// <param name="req"><see cref="CreateTDidRequest"/></param>
@@ -237,6 +251,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 创建机构DID
         /// </summary>
         /// <param name="req"><see cref="CreateTDidRequest"/></param>
@@ -257,6 +273,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 新建DID根据私钥生成Tdid
         /// </summary>
         /// <param name="req"><see cref="CreateTDidByPrivateKeyRequest"/></param>
@@ -277,6 +295,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 新建DID根据私钥生成Tdid
         /// </summary>
         /// <param name="req"><see cref="CreateTDidByPrivateKeyRequest"/></param>
@@ -297,6 +317,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         ///  新建DID根据公钥生成Tdid
         /// </summary>
         /// <param name="req"><see cref="CreateTDidByPublicKeyRequest"/></param>
@@ -317,6 +339,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         ///  新建DID根据公钥生成Tdid
         /// </summary>
         /// <param name="req"><see cref="CreateTDidByPublicKeyRequest"/></param>
@@ -381,6 +405,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 获取权威机构信息
         /// </summary>
         /// <param name="req"><see cref="GetAuthorityIssuerRequest"/></param>
@@ -401,6 +427,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 获取权威机构信息
         /// </summary>
         /// <param name="req"><see cref="GetAuthorityIssuerRequest"/></param>
@@ -509,6 +537,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 凭证模版详情
         /// </summary>
         /// <param name="req"><see cref="GetCptInfoRequest"/></param>
@@ -529,6 +559,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 凭证模版详情
         /// </summary>
         /// <param name="req"><see cref="GetCptInfoRequest"/></param>
@@ -593,6 +625,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 获取凭证链上状态信息
         /// </summary>
         /// <param name="req"><see cref="GetCredentialStatusRequest"/></param>
@@ -613,6 +647,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 获取凭证链上状态信息
         /// </summary>
         /// <param name="req"><see cref="GetCredentialStatusRequest"/></param>
@@ -633,94 +669,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
-        /// 下线已有内测接口，待上线正式版本的接口
+        /// 该接口不再使用
         /// 
-        /// 获取DID区块链网络详情
-        /// </summary>
-        /// <param name="req"><see cref="GetDidClusterDetailRequest"/></param>
-        /// <returns><see cref="GetDidClusterDetailResponse"/></returns>
-        public async Task<GetDidClusterDetailResponse> GetDidClusterDetail(GetDidClusterDetailRequest req)
-        {
-             JsonResponseModel<GetDidClusterDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetDidClusterDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDidClusterDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 下线已有内测接口，待上线正式版本的接口
-        /// 
-        /// 获取DID区块链网络详情
-        /// </summary>
-        /// <param name="req"><see cref="GetDidClusterDetailRequest"/></param>
-        /// <returns><see cref="GetDidClusterDetailResponse"/></returns>
-        public GetDidClusterDetailResponse GetDidClusterDetailSync(GetDidClusterDetailRequest req)
-        {
-             JsonResponseModel<GetDidClusterDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetDidClusterDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDidClusterDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 下线已有内测接口，待上线正式版本的接口
-        /// 
-        /// 获取用户的DID网络列表
-        /// </summary>
-        /// <param name="req"><see cref="GetDidClusterListRequest"/></param>
-        /// <returns><see cref="GetDidClusterListResponse"/></returns>
-        public async Task<GetDidClusterListResponse> GetDidClusterList(GetDidClusterListRequest req)
-        {
-             JsonResponseModel<GetDidClusterListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetDidClusterList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDidClusterListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 下线已有内测接口，待上线正式版本的接口
-        /// 
-        /// 获取用户的DID网络列表
-        /// </summary>
-        /// <param name="req"><see cref="GetDidClusterListRequest"/></param>
-        /// <returns><see cref="GetDidClusterListResponse"/></returns>
-        public GetDidClusterListResponse GetDidClusterListSync(GetDidClusterListRequest req)
-        {
-             JsonResponseModel<GetDidClusterListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetDidClusterList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDidClusterListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查看DID文档
         /// </summary>
         /// <param name="req"><see cref="GetDidDocumentRequest"/></param>
@@ -741,6 +691,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 查看DID文档
         /// </summary>
         /// <param name="req"><see cref="GetDidDocumentRequest"/></param>
@@ -761,6 +713,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 凭证模版新建
         /// </summary>
         /// <param name="req"><see cref="RegisterCptRequest"/></param>
@@ -781,6 +735,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 凭证模版新建
         /// </summary>
         /// <param name="req"><see cref="RegisterCptRequest"/></param>
@@ -801,6 +757,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 设置凭证链上状态
         /// </summary>
         /// <param name="req"><see cref="SetCredentialStatusRequest"/></param>
@@ -821,6 +779,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 设置凭证链上状态
         /// </summary>
         /// <param name="req"><see cref="SetCredentialStatusRequest"/></param>
@@ -841,6 +801,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 验证凭证
         /// </summary>
         /// <param name="req"><see cref="VerifyCredentialRequest"/></param>
@@ -861,6 +823,8 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 该接口不再使用
+        /// 
         /// 验证凭证
         /// </summary>
         /// <param name="req"><see cref="VerifyCredentialRequest"/></param>

@@ -48,6 +48,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TableId")]
         public string TableId{ get; set; }
 
+        /// <summary>
+        /// 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+        /// </summary>
+        [JsonProperty("ScoreType")]
+        public string ScoreType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "StatisticsStartDate", this.StatisticsStartDate);
             this.SetParamSimple(map, prefix + "StatisticsEndDate", this.StatisticsEndDate);
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
+            this.SetParamSimple(map, prefix + "ScoreType", this.ScoreType);
         }
     }
 }

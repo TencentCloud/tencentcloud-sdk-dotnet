@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdid.V20210519.Models
+namespace TencentCloud.Nlp.V20190408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetDidClusterDetailRequest : AbstractModel
+    public class ComposePoetryResponse : AbstractModel
     {
         
         /// <summary>
-        /// DID网络ID
+        /// 诗题，即输入的生成诗词的关键词。
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Title")]
+        public string Title{ get; set; }
+
+        /// <summary>
+        /// 诗的内容。
+        /// </summary>
+        [JsonProperty("Content")]
+        public string[] Content{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Tdid.V20210519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamArraySimple(map, prefix + "Content.", this.Content);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

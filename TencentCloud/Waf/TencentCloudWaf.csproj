@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.788</VersionPrefix>
+    <VersionPrefix>3.0.789</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -164,6 +164,8 @@
     <Compile Include="V20180125\Models\ModifyCustomWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyDomainWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\ModifyDomainWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifySpartaProtectionRequest.cs" />
+    <Compile Include="V20180125\Models\ModifySpartaProtectionResponse.cs" />
     <Compile Include="V20180125\Models\ModifyWafAutoDenyRulesRequest.cs" />
     <Compile Include="V20180125\Models\ModifyWafAutoDenyRulesResponse.cs" />
     <Compile Include="V20180125\Models\ModifyWafAutoDenyStatusRequest.cs" />
@@ -182,6 +184,7 @@
     <Compile Include="V20180125\Models\SearchAccessLogResponse.cs" />
     <Compile Include="V20180125\Models\SearchAttackLogRequest.cs" />
     <Compile Include="V20180125\Models\SearchAttackLogResponse.cs" />
+    <Compile Include="V20180125\Models\SpartaProtectionPort.cs" />
     <Compile Include="V20180125\Models\Strategy.cs" />
     <Compile Include="V20180125\Models\SwitchDomainRulesRequest.cs" />
     <Compile Include="V20180125\Models\SwitchDomainRulesResponse.cs" />

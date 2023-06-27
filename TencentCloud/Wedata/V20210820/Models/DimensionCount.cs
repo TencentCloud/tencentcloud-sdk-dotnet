@@ -29,6 +29,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DimType")]
+        [System.Obsolete]
         public ulong? DimType{ get; set; }
 
         /// <summary>
@@ -38,6 +39,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
+        /// <summary>
+        /// 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QualityDim")]
+        public ulong? QualityDim{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +54,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "DimType", this.DimType);
             this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "QualityDim", this.QualityDim);
         }
     }
 }

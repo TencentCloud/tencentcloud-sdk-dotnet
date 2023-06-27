@@ -132,6 +132,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterAssetIpList")]
         public string[] FilterAssetIpList{ get; set; }
 
+        /// <summary>
+        /// 是否包含基础防护增强版 0: 不包含 1: 包含
+        /// </summary>
+        [JsonProperty("FilterBasicPlusFlag")]
+        public ulong? FilterBasicPlusFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
             this.SetParamSimple(map, prefix + "ExcludeAdvancedInfo", this.ExcludeAdvancedInfo);
             this.SetParamArraySimple(map, prefix + "FilterAssetIpList.", this.FilterAssetIpList);
+            this.SetParamSimple(map, prefix + "FilterBasicPlusFlag", this.FilterBasicPlusFlag);
         }
     }
 }

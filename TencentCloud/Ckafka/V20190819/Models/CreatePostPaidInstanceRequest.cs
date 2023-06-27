@@ -61,7 +61,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ClusterId{ get; set; }
 
         /// <summary>
-        /// 实例版本。目前支持 "0.10.2","1.1.1","2.4.2","2.8.1"
+        /// 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? InstanceNum{ get; set; }
 
         /// <summary>
-        /// 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1
+        /// 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍
         /// </summary>
         [JsonProperty("PublicNetworkMonthly")]
         public long? PublicNetworkMonthly{ get; set; }

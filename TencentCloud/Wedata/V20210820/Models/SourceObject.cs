@@ -29,6 +29,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceObjectDataTypeName")]
+        [System.Obsolete]
         public string SourceObjectDataTypeName{ get; set; }
 
         /// <summary>
@@ -36,7 +37,29 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceObjectValue")]
+        [System.Obsolete]
         public string SourceObjectValue{ get; set; }
+
+        /// <summary>
+        /// 源字段详细类型，int、string
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ObjectDataTypeName")]
+        public string ObjectDataTypeName{ get; set; }
+
+        /// <summary>
+        /// 源字段名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ObjectValue")]
+        public string ObjectValue{ get; set; }
+
+        /// <summary>
+        /// 对象类型 1.常量  2.离线表级   3.离线字段级
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ObjectType")]
+        public ulong? ObjectType{ get; set; }
 
 
         /// <summary>
@@ -46,6 +69,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "SourceObjectDataTypeName", this.SourceObjectDataTypeName);
             this.SetParamSimple(map, prefix + "SourceObjectValue", this.SourceObjectValue);
+            this.SetParamSimple(map, prefix + "ObjectDataTypeName", this.ObjectDataTypeName);
+            this.SetParamSimple(map, prefix + "ObjectValue", this.ObjectValue);
+            this.SetParamSimple(map, prefix + "ObjectType", this.ObjectType);
         }
     }
 }

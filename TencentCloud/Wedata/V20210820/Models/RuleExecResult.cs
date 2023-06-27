@@ -157,6 +157,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RelConditionExpr")]
         public string RelConditionExpr{ get; set; }
 
+        /// <summary>
+        /// 执行时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 1/2/3:低/中/高
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmLevel")]
+        public ulong? AlarmLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +196,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TargetObjectDataType", this.TargetObjectDataType);
             this.SetParamObj(map, prefix + "FieldConfig.", this.FieldConfig);
             this.SetParamSimple(map, prefix + "RelConditionExpr", this.RelConditionExpr);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
         }
     }
 }

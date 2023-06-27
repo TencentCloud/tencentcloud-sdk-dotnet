@@ -50,7 +50,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// vpcId，不填默认基础网络
+        /// vpcId必填
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -80,7 +80,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
+        /// CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
@@ -134,10 +134,16 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
+        /// 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。默认值为 0。需要保证传入参数为 3 的整数倍
         /// </summary>
         [JsonProperty("PublicNetworkMonthly")]
         public long? PublicNetworkMonthly{ get; set; }
+
+        /// <summary>
+        /// 购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例
+        /// </summary>
+        [JsonProperty("InstanceNum")]
+        public long? InstanceNum{ get; set; }
 
 
         /// <summary>
@@ -164,6 +170,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "MultiZoneFlag", this.MultiZoneFlag);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamSimple(map, prefix + "PublicNetworkMonthly", this.PublicNetworkMonthly);
+            this.SetParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
         }
     }
 }

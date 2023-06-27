@@ -143,6 +143,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TableOwnerUserId")]
         public ulong? TableOwnerUserId{ get; set; }
 
+        /// <summary>
+        /// 实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +173,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RuleCount", this.RuleCount);
             this.SetParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
             this.SetParamSimple(map, prefix + "TableOwnerUserId", this.TableOwnerUserId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

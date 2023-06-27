@@ -1093,7 +1093,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 删除投递规则
+        /// 删除投递COS任务
         /// </summary>
         /// <param name="req"><see cref="DeleteShipperRequest"/></param>
         /// <returns><see cref="DeleteShipperResponse"/></returns>
@@ -1113,7 +1113,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 删除投递规则
+        /// 删除投递COS任务
         /// </summary>
         /// <param name="req"><see cref="DeleteShipperRequest"/></param>
         /// <returns><see cref="DeleteShipperResponse"/></returns>

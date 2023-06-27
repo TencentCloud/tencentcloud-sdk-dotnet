@@ -39,11 +39,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
-        public string InstanceType{ get; set; }
+        public long? InstanceType{ get; set; }
 
         /// <summary>
         /// 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离

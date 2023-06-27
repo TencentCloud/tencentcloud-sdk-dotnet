@@ -87,6 +87,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TableOwnerUserId")]
         public ulong? TableOwnerUserId{ get; set; }
 
+        /// <summary>
+        /// 2.HIVE 3.DLC
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceType")]
+        public ulong? DatasourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
             this.SetParamObj(map, prefix + "RuleExecResult.", this.RuleExecResult);
             this.SetParamSimple(map, prefix + "TableOwnerUserId", this.TableOwnerUserId);
+            this.SetParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
         }
     }
 }

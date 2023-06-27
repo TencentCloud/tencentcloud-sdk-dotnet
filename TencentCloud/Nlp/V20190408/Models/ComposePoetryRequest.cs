@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdid.V20210519.Models
+namespace TencentCloud.Nlp.V20190408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetDidClusterListResponse : AbstractModel
+    public class ComposePoetryRequest : AbstractModel
     {
         
         /// <summary>
-        /// DID网络列表
+        /// 生成诗词的关键词。
         /// </summary>
-        [JsonProperty("DidClusterList")]
-        public DidCluster[] DidClusterList{ get; set; }
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 生成诗词的类型。0：藏头或藏身；1：藏头；2：藏身。默认为0。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("PoetryType")]
+        public long? PoetryType{ get; set; }
+
+        /// <summary>
+        /// 诗的体裁。0：五言律诗或七言律诗；5：五言律诗；7：七言律诗。默认为0。
+        /// </summary>
+        [JsonProperty("Genre")]
+        public long? Genre{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Tdid.V20210519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "DidClusterList.", this.DidClusterList);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
+            this.SetParamSimple(map, prefix + "PoetryType", this.PoetryType);
+            this.SetParamSimple(map, prefix + "Genre", this.Genre);
         }
     }
 }

@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdid.V20210519.Models
+namespace TencentCloud.Nlp.V20190408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetDidClusterDetailResponse : AbstractModel
+    public class ComposeCoupletResponse : AbstractModel
     {
         
         /// <summary>
-        /// 网络ID
+        /// 横批。
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("TopScroll")]
+        public string TopScroll{ get; set; }
 
         /// <summary>
-        /// 组织名称
+        /// 上联与下联。
         /// </summary>
-        [JsonProperty("ConsortiumName")]
-        public string ConsortiumName{ get; set; }
+        [JsonProperty("Content")]
+        public string[] Content{ get; set; }
 
         /// <summary>
-        /// 区块链组织名称
+        /// 当对联随机生成时，展示随机生成原因。
         /// </summary>
-        [JsonProperty("ChainAgency")]
-        public string ChainAgency{ get; set; }
+        [JsonProperty("RandomCause")]
+        public string RandomCause{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,9 +54,9 @@ namespace TencentCloud.Tdid.V20210519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ConsortiumName", this.ConsortiumName);
-            this.SetParamSimple(map, prefix + "ChainAgency", this.ChainAgency);
+            this.SetParamSimple(map, prefix + "TopScroll", this.TopScroll);
+            this.SetParamArraySimple(map, prefix + "Content.", this.Content);
+            this.SetParamSimple(map, prefix + "RandomCause", this.RandomCause);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

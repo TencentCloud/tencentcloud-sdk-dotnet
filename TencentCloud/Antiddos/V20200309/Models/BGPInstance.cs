@@ -158,6 +158,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
+        /// <summary>
+        /// 是否是基础防护加强版 0: 不是 1: 是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BasicPlusFlag")]
+        public ulong? BasicPlusFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +191,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "ElasticServiceBandwidth", this.ElasticServiceBandwidth);
             this.SetParamSimple(map, prefix + "GiftServiceBandWidth", this.GiftServiceBandWidth);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "BasicPlusFlag", this.BasicPlusFlag);
         }
     }
 }

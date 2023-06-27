@@ -70,6 +70,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// 修改时间
         /// </summary>
         [JsonProperty("ModifedTime")]
+        [System.Obsolete]
         public string ModifedTime{ get; set; }
 
         /// <summary>

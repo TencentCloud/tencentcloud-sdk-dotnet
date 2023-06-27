@@ -1733,6 +1733,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 修改域名配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifySpartaProtectionRequest"/></param>
+        /// <returns><see cref="ModifySpartaProtectionResponse"/></returns>
+        public async Task<ModifySpartaProtectionResponse> ModifySpartaProtection(ModifySpartaProtectionRequest req)
+        {
+             JsonResponseModel<ModifySpartaProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySpartaProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySpartaProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改域名配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifySpartaProtectionRequest"/></param>
+        /// <returns><see cref="ModifySpartaProtectionResponse"/></returns>
+        public ModifySpartaProtectionResponse ModifySpartaProtectionSync(ModifySpartaProtectionRequest req)
+        {
+             JsonResponseModel<ModifySpartaProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySpartaProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySpartaProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改ip惩罚规则
         /// </summary>
         /// <param name="req"><see cref="ModifyWafAutoDenyRulesRequest"/></param>

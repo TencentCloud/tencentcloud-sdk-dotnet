@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D6E217E7-C778-31C0-B3BE-9508ABB1A7BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.788</VersionPrefix>
+    <VersionPrefix>3.0.789</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -66,7 +66,6 @@
     <Compile Include="V20210519\Models\CreateTDidRequest.cs" />
     <Compile Include="V20210519\Models\CreateTDidResponse.cs" />
     <Compile Include="V20210519\Models\CredentialStatus.cs" />
-    <Compile Include="V20210519\Models\DidCluster.cs" />
     <Compile Include="V20210519\Models\FunctionArg.cs" />
     <Compile Include="V20210519\Models\GetAgencyTDidRequest.cs" />
     <Compile Include="V20210519\Models\GetAgencyTDidResponse.cs" />
@@ -82,10 +81,6 @@
     <Compile Include="V20210519\Models\GetCredentialCptRankResponse.cs" />
     <Compile Include="V20210519\Models\GetCredentialStatusRequest.cs" />
     <Compile Include="V20210519\Models\GetCredentialStatusResponse.cs" />
-    <Compile Include="V20210519\Models\GetDidClusterDetailRequest.cs" />
-    <Compile Include="V20210519\Models\GetDidClusterDetailResponse.cs" />
-    <Compile Include="V20210519\Models\GetDidClusterListRequest.cs" />
-    <Compile Include="V20210519\Models\GetDidClusterListResponse.cs" />
     <Compile Include="V20210519\Models\GetDidDocumentRequest.cs" />
     <Compile Include="V20210519\Models\GetDidDocumentResponse.cs" />
     <Compile Include="V20210519\Models\Identity.cs" />
