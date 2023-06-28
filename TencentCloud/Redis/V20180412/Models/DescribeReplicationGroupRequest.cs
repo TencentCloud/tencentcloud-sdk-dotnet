@@ -37,13 +37,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 复制组ID。
+        /// 指定复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
+        /// 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID及名称。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }

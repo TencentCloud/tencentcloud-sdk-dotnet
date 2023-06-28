@@ -253,6 +253,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 创建自定义账户
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomAccountRequest"/></param>
+        /// <returns><see cref="CreateCustomAccountResponse"/></returns>
+        public async Task<CreateCustomAccountResponse> CreateCustomAccount(CreateCustomAccountRequest req)
+        {
+             JsonResponseModel<CreateCustomAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建自定义账户
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomAccountRequest"/></param>
+        /// <returns><see cref="CreateCustomAccountResponse"/></returns>
+        public CreateCustomAccountResponse CreateCustomAccountSync(CreateCustomAccountRequest req)
+        {
+             JsonResponseModel<CreateCustomAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建镜像加速服务
         /// </summary>
         /// <param name="req"><see cref="CreateImageAccelerationServiceRequest"/></param>
@@ -1088,6 +1128,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DeleteApplicationTriggerPersonal");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationTriggerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除自定义账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomAccountRequest"/></param>
+        /// <returns><see cref="DeleteCustomAccountResponse"/></returns>
+        public async Task<DeleteCustomAccountResponse> DeleteCustomAccount(DeleteCustomAccountRequest req)
+        {
+             JsonResponseModel<DeleteCustomAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCustomAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除自定义账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomAccountRequest"/></param>
+        /// <returns><see cref="DeleteCustomAccountResponse"/></returns>
+        public DeleteCustomAccountResponse DeleteCustomAccountSync(DeleteCustomAccountRequest req)
+        {
+             JsonResponseModel<DeleteCustomAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCustomAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2056,6 +2136,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DescribeChartDownloadInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChartDownloadInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询自定义账号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomAccountsRequest"/></param>
+        /// <returns><see cref="DescribeCustomAccountsResponse"/></returns>
+        public async Task<DescribeCustomAccountsResponse> DescribeCustomAccounts(DescribeCustomAccountsRequest req)
+        {
+             JsonResponseModel<DescribeCustomAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询自定义账号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomAccountsRequest"/></param>
+        /// <returns><see cref="DescribeCustomAccountsResponse"/></returns>
+        public DescribeCustomAccountsResponse DescribeCustomAccountsSync(DescribeCustomAccountsRequest req)
+        {
+             JsonResponseModel<DescribeCustomAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomAccountsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3736,6 +3856,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "ModifyApplicationTriggerPersonal");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApplicationTriggerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新自定义账户
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomAccountRequest"/></param>
+        /// <returns><see cref="ModifyCustomAccountResponse"/></returns>
+        public async Task<ModifyCustomAccountResponse> ModifyCustomAccount(ModifyCustomAccountRequest req)
+        {
+             JsonResponseModel<ModifyCustomAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCustomAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新自定义账户
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomAccountRequest"/></param>
+        /// <returns><see cref="ModifyCustomAccountResponse"/></returns>
+        public ModifyCustomAccountResponse ModifyCustomAccountSync(ModifyCustomAccountRequest req)
+        {
+             JsonResponseModel<ModifyCustomAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCustomAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

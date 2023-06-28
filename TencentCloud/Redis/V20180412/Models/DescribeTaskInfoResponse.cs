@@ -25,31 +25,36 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
+        /// 任务状态。
+        /// - preparing：待执行。
+        /// - running：执行中。
+        /// - succeed：成功。
+        /// - failed：失败。
+        /// - error：执行出错。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 任务开始时间
+        /// 任务开始时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// 任务类型。常见的类型包含：新建类型、配置变更、关闭实例、清空实例、重置密码、版本升级、备份实例、改变网络类型、实例可用区迁移、手动提主等。
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 实例的ID
+        /// 实例的 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 任务信息，错误时显示错误信息。执行中与成功则为空
+        /// 任务执行返回的信息，执行错误时显示错误信息。执行中或执行成功则为空。
         /// </summary>
         [JsonProperty("TaskMessage")]
         public string TaskMessage{ get; set; }

@@ -96,6 +96,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
+        /// <summary>
+        /// Or过滤条件
+        /// </summary>
+        [JsonProperty("OrFilters")]
+        public Filter[] OrFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "BusinessName", this.BusinessName);
             this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
         }
     }
 }

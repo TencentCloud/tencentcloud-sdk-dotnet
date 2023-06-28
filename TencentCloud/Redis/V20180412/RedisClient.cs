@@ -253,7 +253,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 复制组实例切主
+        /// 该接口（ChangeMasterInstance）用于将复制组内只读实例设置为主实例。
         /// </summary>
         /// <param name="req"><see cref="ChangeMasterInstanceRequest"/></param>
         /// <returns><see cref="ChangeMasterInstanceResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 复制组实例切主
+        /// 该接口（ChangeMasterInstance）用于将复制组内只读实例设置为主实例。
         /// </summary>
         /// <param name="req"><see cref="ChangeMasterInstanceRequest"/></param>
         /// <returns><see cref="ChangeMasterInstanceResponse"/></returns>
@@ -613,7 +613,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 创建复制组
+        /// 该接口（CreateReplicationGroup）用于创建复制组。
         /// </summary>
         /// <param name="req"><see cref="CreateReplicationGroupRequest"/></param>
         /// <returns><see cref="CreateReplicationGroupResponse"/></returns>
@@ -633,7 +633,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 创建复制组
+        /// 该接口（CreateReplicationGroup）用于创建复制组。
         /// </summary>
         /// <param name="req"><see cref="CreateReplicationGroupRequest"/></param>
         /// <returns><see cref="CreateReplicationGroupResponse"/></returns>
@@ -2053,7 +2053,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口（DescribeReplicationGroup）查询复制组。
+        /// 本接口（DescribeReplicationGroup）用于查询复制组。
         /// </summary>
         /// <param name="req"><see cref="DescribeReplicationGroupRequest"/></param>
         /// <returns><see cref="DescribeReplicationGroupResponse"/></returns>
@@ -2073,7 +2073,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口（DescribeReplicationGroup）查询复制组。
+        /// 本接口（DescribeReplicationGroup）用于查询复制组。
         /// </summary>
         /// <param name="req"><see cref="DescribeReplicationGroupRequest"/></param>
         /// <returns><see cref="DescribeReplicationGroupResponse"/></returns>
@@ -2173,7 +2173,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 用于查询任务结果
+        /// 本接口（DescribeTaskInfo）用于获取指定任务的执行情况。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
         /// <returns><see cref="DescribeTaskInfoResponse"/></returns>
@@ -2193,7 +2193,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 用于查询任务结果
+        /// 本接口（DescribeTaskInfo）用于获取指定任务的执行情况。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
         /// <returns><see cref="DescribeTaskInfoResponse"/></returns>

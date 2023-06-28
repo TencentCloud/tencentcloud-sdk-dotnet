@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 复制组名称。
+        /// 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }

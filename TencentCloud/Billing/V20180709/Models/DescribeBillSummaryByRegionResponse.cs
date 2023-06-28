@@ -25,8 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 数据是否准备好，0未准备好，1准备好
-        /// Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
+        /// 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
         /// </summary>
         [JsonProperty("Ready")]
         public ulong? Ready{ get; set; }

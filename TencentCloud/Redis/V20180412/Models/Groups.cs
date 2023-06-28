@@ -48,7 +48,6 @@ namespace TencentCloud.Redis.V20180412.Models
         /// - 21：印度 
         /// - 22：美东（弗吉尼亚）
         /// - 23：泰国 
-        /// - 24：俄罗斯 
         /// - 25：日本
         /// </summary>
         [JsonProperty("RegionId")]

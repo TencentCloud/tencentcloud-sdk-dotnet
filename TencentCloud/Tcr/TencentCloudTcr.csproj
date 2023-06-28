@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.789</VersionPrefix>
+    <VersionPrefix>3.0.790</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,8 @@
     <Compile Include="V20190924\Models\CheckInstanceResponse.cs" />
     <Compile Include="V20190924\Models\CreateApplicationTriggerPersonalRequest.cs" />
     <Compile Include="V20190924\Models\CreateApplicationTriggerPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\CreateCustomAccountRequest.cs" />
+    <Compile Include="V20190924\Models\CreateCustomAccountResponse.cs" />
     <Compile Include="V20190924\Models\CreateImageAccelerationServiceRequest.cs" />
     <Compile Include="V20190924\Models\CreateImageAccelerationServiceResponse.cs" />
     <Compile Include="V20190924\Models\CreateImageLifecyclePersonalRequest.cs" />
@@ -102,9 +104,12 @@
     <Compile Include="V20190924\Models\CreateUserPersonalResponse.cs" />
     <Compile Include="V20190924\Models\CreateWebhookTriggerRequest.cs" />
     <Compile Include="V20190924\Models\CreateWebhookTriggerResponse.cs" />
+    <Compile Include="V20190924\Models\CustomAccount.cs" />
     <Compile Include="V20190924\Models\CustomizedDomainInfo.cs" />
     <Compile Include="V20190924\Models\DeleteApplicationTriggerPersonalRequest.cs" />
     <Compile Include="V20190924\Models\DeleteApplicationTriggerPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteCustomAccountRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteCustomAccountResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImageAccelerateServiceRequest.cs" />
     <Compile Include="V20190924\Models\DeleteImageAccelerateServiceResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImageLifecycleGlobalPersonalRequest.cs" />
@@ -155,6 +160,8 @@
     <Compile Include="V20190924\Models\DescribeApplicationTriggerPersonalResponse.cs" />
     <Compile Include="V20190924\Models\DescribeChartDownloadInfoRequest.cs" />
     <Compile Include="V20190924\Models\DescribeChartDownloadInfoResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeCustomAccountsRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeCustomAccountsResponse.cs" />
     <Compile Include="V20190924\Models\DescribeExternalEndpointStatusRequest.cs" />
     <Compile Include="V20190924\Models\DescribeExternalEndpointStatusResponse.cs" />
     <Compile Include="V20190924\Models\DescribeFavorRepositoryPersonalRequest.cs" />
@@ -248,6 +255,8 @@
     <Compile Include="V20190924\Models\ManageReplicationResponse.cs" />
     <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalRequest.cs" />
     <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyCustomAccountRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyCustomAccountResponse.cs" />
     <Compile Include="V20190924\Models\ModifyImmutableTagRulesRequest.cs" />
     <Compile Include="V20190924\Models\ModifyImmutableTagRulesResponse.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceRequest.cs" />
@@ -274,6 +283,7 @@
     <Compile Include="V20190924\Models\NamespaceInfoResp.cs" />
     <Compile Include="V20190924\Models\NamespaceIsExistsResp.cs" />
     <Compile Include="V20190924\Models\PeerReplicationOption.cs" />
+    <Compile Include="V20190924\Models\Permission.cs" />
     <Compile Include="V20190924\Models\Region.cs" />
     <Compile Include="V20190924\Models\Registry.cs" />
     <Compile Include="V20190924\Models\RegistryChargePrepaid.cs" />

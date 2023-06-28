@@ -3013,6 +3013,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（ModifyDBEncryptAttributes）用于开启、关闭数据库的TDE加密功能。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="ModifyDBEncryptAttributesResponse"/></returns>
+        public async Task<ModifyDBEncryptAttributesResponse> ModifyDBEncryptAttributes(ModifyDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBEncryptAttributes）用于开启、关闭数据库的TDE加密功能。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="ModifyDBEncryptAttributesResponse"/></returns>
+        public ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributesSync(ModifyDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstanceName）用于修改实例名字。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>
@@ -3444,6 +3484,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyIncrementalMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceEncryptAttributes）用于开通实例的TDE加密功能。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceEncryptAttributesRequest"/></param>
+        /// <returns><see cref="ModifyInstanceEncryptAttributesResponse"/></returns>
+        public async Task<ModifyInstanceEncryptAttributesResponse> ModifyInstanceEncryptAttributes(ModifyInstanceEncryptAttributesRequest req)
+        {
+             JsonResponseModel<ModifyInstanceEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceEncryptAttributes）用于开通实例的TDE加密功能。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceEncryptAttributesRequest"/></param>
+        /// <returns><see cref="ModifyInstanceEncryptAttributesResponse"/></returns>
+        public ModifyInstanceEncryptAttributesResponse ModifyInstanceEncryptAttributesSync(ModifyInstanceEncryptAttributesRequest req)
+        {
+             JsonResponseModel<ModifyInstanceEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceEncryptAttributesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -73,7 +73,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? RedisShardSize{ get; set; }
 
         /// <summary>
-        /// 实例的磁盘大小
+        /// 实例的磁盘大小。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]

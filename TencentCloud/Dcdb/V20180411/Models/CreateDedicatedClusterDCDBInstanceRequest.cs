@@ -127,6 +127,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
+        /// 安全组ID列表
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
         /// DCN源实例ID
         /// </summary>
         [JsonProperty("DcnInstanceId")]
@@ -215,6 +221,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "ShardNodeStorage", this.ShardNodeStorage);
             this.SetParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
             this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
             this.SetParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);

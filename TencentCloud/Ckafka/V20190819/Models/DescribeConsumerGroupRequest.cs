@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 本次返回个数限制
+        /// 本次返回个数限制，最大支持50
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
