@@ -117,6 +117,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("Tags")]
         public TagWithDescribe[] Tags{ get; set; }
 
+        /// <summary>
+        /// 经验来源 0-自建 1-专家推荐
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TemplateSource")]
+        public long? TemplateSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +145,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamArrayObj(map, prefix + "TemplateMonitors.", this.TemplateMonitors);
             this.SetParamObj(map, prefix + "TemplatePolicy.", this.TemplatePolicy);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "TemplateSource", this.TemplateSource);
         }
     }
 }

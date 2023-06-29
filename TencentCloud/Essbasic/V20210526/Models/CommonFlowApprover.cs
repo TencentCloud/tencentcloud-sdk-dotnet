@@ -101,6 +101,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
         /// </summary>
         [JsonProperty("NotifyType")]
+        [System.Obsolete]
         public string NotifyType{ get; set; }
 
         /// <summary>

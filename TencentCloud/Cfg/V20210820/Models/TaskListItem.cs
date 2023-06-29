@@ -81,6 +81,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TaskPreCheckSuccess")]
         public bool? TaskPreCheckSuccess{ get; set; }
 
+        /// <summary>
+        /// 演练是否符合预期 1-符合预期 2-不符合预期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskExpect")]
+        public long? TaskExpect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +103,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskUpdateTime", this.TaskUpdateTime);
             this.SetParamSimple(map, prefix + "TaskPreCheckStatus", this.TaskPreCheckStatus);
             this.SetParamSimple(map, prefix + "TaskPreCheckSuccess", this.TaskPreCheckSuccess);
+            this.SetParamSimple(map, prefix + "TaskExpect", this.TaskExpect);
         }
     }
 }

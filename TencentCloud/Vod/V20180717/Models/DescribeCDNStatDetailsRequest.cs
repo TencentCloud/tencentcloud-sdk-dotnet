@@ -30,6 +30,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Bandwidth：带宽，单位为 Bps。</li>
         /// <li>Requests：请求数。</li>
         /// <li>QUICRequests：QUIC 请求数。</li>
+        /// <li>IpVisit：IP 访问数。</li>
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }

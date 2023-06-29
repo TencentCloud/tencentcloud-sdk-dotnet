@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 异地备份子任务的ID
         /// </summary>
         [JsonProperty("SubBackupId")]
-        public long?[] SubBackupId{ get; set; }
+        public long? SubBackupId{ get; set; }
 
         /// <summary>
         /// 异地备份所在地域
@@ -66,7 +66,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "SubBackupId.", this.SubBackupId);
+            this.SetParamSimple(map, prefix + "SubBackupId", this.SubBackupId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);

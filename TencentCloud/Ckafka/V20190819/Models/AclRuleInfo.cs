@@ -37,7 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string PermissionType{ get; set; }
 
         /// <summary>
-        /// 默认为*，表示任何host都可以访问，当前ckafka不支持host为*和ip网段
+        /// 默认为：*，表示任何host都可以访问，当前ckafka不支持host为：* 和 ip网段
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

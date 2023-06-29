@@ -31,7 +31,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 点播转直播项目 Id 。
+        /// 媒体转推项目 Id 。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
@@ -78,7 +78,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public long? Position{ get; set; }
 
         /// <summary>
-        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有点播转直播项目。如果指定操作者，则操作者必须为项目所有者。
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有媒体转推项目。如果指定操作者，则操作者必须为项目所有者。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

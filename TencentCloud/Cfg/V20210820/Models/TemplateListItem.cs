@@ -73,6 +73,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TemplateUsedNum")]
         public long? TemplateUsedNum{ get; set; }
 
+        /// <summary>
+        /// 经验库来源 0-自建经验 1-专家推荐
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TemplateSource")]
+        public long? TemplateSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TemplateCreateTime", this.TemplateCreateTime);
             this.SetParamSimple(map, prefix + "TemplateUpdateTime", this.TemplateUpdateTime);
             this.SetParamSimple(map, prefix + "TemplateUsedNum", this.TemplateUsedNum);
+            this.SetParamSimple(map, prefix + "TemplateSource", this.TemplateSource);
         }
     }
 }

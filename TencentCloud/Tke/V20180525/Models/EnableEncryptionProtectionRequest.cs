@@ -24,12 +24,26 @@ namespace TencentCloud.Tke.V20180525.Models
     public class EnableEncryptionProtectionRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// kms加密配置
+        /// </summary>
+        [JsonProperty("KMSConfiguration")]
+        public KMSConfiguration KMSConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamObj(map, prefix + "KMSConfiguration.", this.KMSConfiguration);
         }
     }
 }

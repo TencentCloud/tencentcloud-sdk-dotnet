@@ -38,8 +38,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PackageRegion{ get; set; }
 
         /// <summary>
-        /// 资源包类型
-        /// 
         /// 资源包类型：CCU-计算资源包，DISK-存储资源包
         /// </summary>
         [JsonProperty("PackageType")]

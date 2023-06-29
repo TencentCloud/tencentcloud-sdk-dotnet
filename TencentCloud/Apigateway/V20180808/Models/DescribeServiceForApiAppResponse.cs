@@ -72,13 +72,6 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ModifiedTime{ get; set; }
 
         /// <summary>
-        /// 独立集群名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ExclusiveSetName")]
-        public string ExclusiveSetName{ get; set; }
-
-        /// <summary>
         /// 网络类型列表，INNER为内网访问，OUTER为外网访问。
         /// </summary>
         [JsonProperty("NetTypes")]
@@ -183,7 +176,6 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
-            this.SetParamSimple(map, prefix + "ExclusiveSetName", this.ExclusiveSetName);
             this.SetParamArraySimple(map, prefix + "NetTypes.", this.NetTypes);
             this.SetParamSimple(map, prefix + "InternalSubDomain", this.InternalSubDomain);
             this.SetParamSimple(map, prefix + "OuterSubDomain", this.OuterSubDomain);

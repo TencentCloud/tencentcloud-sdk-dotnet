@@ -35,6 +35,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// 输入源的媒体类型，取值有：
         /// <li>CME：多媒体创作引擎的媒体文件；</li>
         /// <li>VOD：云点播的媒资文件。</li>
+        /// <li>EXTERNAL：非多媒体创建引擎或者云点播的媒资文件。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -51,6 +52,24 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("MaterialId")]
         public string MaterialId{ get; set; }
 
+        /// <summary>
+        /// 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public float? Offset{ get; set; }
+
+        /// <summary>
+        /// 播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。
+        /// </summary>
+        [JsonProperty("Duration")]
+        public float? Duration{ get; set; }
+
+        /// <summary>
+        /// 外部文件的 Url， Type=EXTERNAL 时必填，可以是点播文件或者直播文件，支持的 Scheme 包括HTTP、HTTPS、RTMP。
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +80,9 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "MaterialId", this.MaterialId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

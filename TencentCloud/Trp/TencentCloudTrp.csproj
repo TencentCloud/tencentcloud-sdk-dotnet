@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7B36C41A-5976-3538-93E0-40A089B50522}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.790</VersionPrefix>
+    <VersionPrefix>3.0.791</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -88,6 +88,8 @@
     <Compile Include="V20210515\Models\DeleteProductResponse.cs" />
     <Compile Include="V20210515\Models\DeleteTraceDataRequest.cs" />
     <Compile Include="V20210515\Models\DeleteTraceDataResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeAgentCorpsRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeAgentCorpsResponse.cs" />
     <Compile Include="V20210515\Models\DescribeCodeBatchByIdRequest.cs" />
     <Compile Include="V20210515\Models\DescribeCodeBatchByIdResponse.cs" />
     <Compile Include="V20210515\Models\DescribeCodeBatchsRequest.cs" />

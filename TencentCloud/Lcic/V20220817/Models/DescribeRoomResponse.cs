@@ -137,6 +137,20 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? EnableDirectControl{ get; set; }
 
         /// <summary>
+        /// 开启专注模式。
+        /// 0 收看全部角色音视频(默认)
+        /// 1 只看老师和助教
+        /// </summary>
+        [JsonProperty("InteractionMode")]
+        public long? InteractionMode{ get; set; }
+
+        /// <summary>
+        /// 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+        /// </summary>
+        [JsonProperty("VideoOrientation")]
+        public ulong? VideoOrientation{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -164,6 +178,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
+            this.SetParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
+            this.SetParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

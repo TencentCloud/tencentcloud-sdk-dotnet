@@ -312,7 +312,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceWebsocketTransportFunctionQualifier{ get; set; }
 
         /// <summary>
-        /// API绑定微服务服务列表。
+        /// API绑定微服务列表。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MicroServices")]

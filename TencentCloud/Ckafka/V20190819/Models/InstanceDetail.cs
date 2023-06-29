@@ -109,7 +109,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string HealthyMessage{ get; set; }
 
         /// <summary>
-        /// 实例创建时间时间
+        /// 实例创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }

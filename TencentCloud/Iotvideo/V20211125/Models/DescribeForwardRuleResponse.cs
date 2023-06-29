@@ -79,13 +79,13 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         public ulong? QueueType{ get; set; }
 
         /// <summary>
-        /// 实例id， 目前只有Ckafaka会用到
+        /// 实例id， 目前只有Ckafka会用到
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称，目前只有Ckafaka会用到
+        /// 实例名称，目前只有Ckafka会用到
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

@@ -693,6 +693,46 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 查询渠道企业列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentCorpsRequest"/></param>
+        /// <returns><see cref="DescribeAgentCorpsResponse"/></returns>
+        public async Task<DescribeAgentCorpsResponse> DescribeAgentCorps(DescribeAgentCorpsRequest req)
+        {
+             JsonResponseModel<DescribeAgentCorpsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAgentCorps");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentCorpsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询渠道企业列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentCorpsRequest"/></param>
+        /// <returns><see cref="DescribeAgentCorpsResponse"/></returns>
+        public DescribeAgentCorpsResponse DescribeAgentCorpsSync(DescribeAgentCorpsRequest req)
+        {
+             JsonResponseModel<DescribeAgentCorpsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAgentCorps");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentCorpsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询批次信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCodeBatchByIdRequest"/></param>

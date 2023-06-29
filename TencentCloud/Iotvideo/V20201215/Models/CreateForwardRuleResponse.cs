@@ -73,19 +73,19 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string QueueRegion{ get; set; }
 
         /// <summary>
-        /// 消息队列的类型。 0：CMQ，1：CKafaka
+        /// 消息队列的类型。 0：CMQ，1：Ckafka
         /// </summary>
         [JsonProperty("QueueType")]
         public ulong? QueueType{ get; set; }
 
         /// <summary>
-        /// 实例id， 目前只有Ckafaka会用到
+        /// 实例id， 目前只有Ckafka会用到
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称，目前只有Ckafaka会用到
+        /// 实例名称，目前只有Ckafka会用到
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

@@ -109,7 +109,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceMockReturnMessage{ get; set; }
 
         /// <summary>
-        /// API绑定微服务服务列表。
+        /// API绑定微服务列表。
         /// </summary>
         [JsonProperty("MicroServices")]
         public MicroServiceReq[] MicroServices{ get; set; }

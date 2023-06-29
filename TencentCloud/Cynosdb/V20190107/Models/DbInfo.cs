@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 拍讯规则
+        /// 排序规则
         /// </summary>
         [JsonProperty("CollateRule")]
         public string CollateRule{ get; set; }

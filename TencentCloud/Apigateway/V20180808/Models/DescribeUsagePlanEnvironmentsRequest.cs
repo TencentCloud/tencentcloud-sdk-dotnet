@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string UsagePlanId{ get; set; }
 
         /// <summary>
-        /// 定类型，取值为 API、SERVICE，默认值为 SERVICE。
+        /// 定义类型，取值为 API、SERVICE，默认值为 SERVICE。
         /// </summary>
         [JsonProperty("BindType")]
         public string BindType{ get; set; }

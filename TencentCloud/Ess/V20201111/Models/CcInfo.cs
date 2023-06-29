@@ -52,6 +52,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CcPermission")]
         public long? CcPermission{ get; set; }
 
+        /// <summary>
+        /// 关注方通知类型：sms--短信，none--不通知
+        /// </summary>
+        [JsonProperty("NotifyType")]
+        public string NotifyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +68,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "CcType", this.CcType);
             this.SetParamSimple(map, prefix + "CcPermission", this.CcPermission);
+            this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
         }
     }
 }

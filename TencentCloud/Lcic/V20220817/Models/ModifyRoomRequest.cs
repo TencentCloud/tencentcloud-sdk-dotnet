@@ -99,7 +99,6 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// 房间子类型，可以有以下取值：
         /// videodoc 文档+视频
         /// video 纯视频
-        /// coteaching 双师
         /// 直播开始后不允许修改。
         /// </summary>
         [JsonProperty("SubType")]
@@ -121,16 +120,30 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string[] Assistants{ get; set; }
 
         /// <summary>
-        /// 房间绑定的群组ID
+        /// 房间绑定的群组ID。直播开始后不允许修改。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 打开学生麦克风/摄像头的授权开关
+        /// 打开学生麦克风/摄像头的授权开关。直播开始后不允许修改。
         /// </summary>
         [JsonProperty("EnableDirectControl")]
         public ulong? EnableDirectControl{ get; set; }
+
+        /// <summary>
+        /// 开启专注模式。
+        /// 0 收看全部角色音视频(默认)
+        /// 1 只看老师和助教
+        /// </summary>
+        [JsonProperty("InteractionMode")]
+        public ulong? InteractionMode{ get; set; }
+
+        /// <summary>
+        /// 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+        /// </summary>
+        [JsonProperty("VideoOrientation")]
+        public ulong? VideoOrientation{ get; set; }
 
 
         /// <summary>
@@ -153,6 +166,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamArraySimple(map, prefix + "Assistants.", this.Assistants);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
+            this.SetParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
+            this.SetParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
         }
     }
 }

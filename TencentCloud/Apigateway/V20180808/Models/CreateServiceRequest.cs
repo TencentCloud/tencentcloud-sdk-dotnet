@@ -43,12 +43,6 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceDesc{ get; set; }
 
         /// <summary>
-        /// 独立集群名称，用于指定创建服务所在的独立集群。
-        /// </summary>
-        [JsonProperty("ExclusiveSetName")]
-        public string ExclusiveSetName{ get; set; }
-
-        /// <summary>
         /// 网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
         /// </summary>
         [JsonProperty("NetTypes")]
@@ -61,7 +55,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string IpVersion{ get; set; }
 
         /// <summary>
-        /// 集群名称。保留字段，tsf serverlss类型使用。
+        /// 集群名称。保留字段，tsf serverless类型使用。
         /// </summary>
         [JsonProperty("SetServerName")]
         public string SetServerName{ get; set; }
@@ -99,7 +93,6 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "ServiceDesc", this.ServiceDesc);
-            this.SetParamSimple(map, prefix + "ExclusiveSetName", this.ExclusiveSetName);
             this.SetParamArraySimple(map, prefix + "NetTypes.", this.NetTypes);
             this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
             this.SetParamSimple(map, prefix + "SetServerName", this.SetServerName);

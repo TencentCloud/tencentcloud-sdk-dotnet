@@ -146,6 +146,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Stage")]
         public long? Stage{ get; set; }
 
+        /// <summary>
+        /// 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CurrentState")]
+        public ulong? CurrentState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +179,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamArraySimple(map, prefix + "SubGroupId.", this.SubGroupId);
             this.SetParamSimple(map, prefix + "Stage", this.Stage);
+            this.SetParamSimple(map, prefix + "CurrentState", this.CurrentState);
         }
     }
 }

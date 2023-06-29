@@ -110,7 +110,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zones")]
-        public string Zones{ get; set; }
+        public string[] Zones{ get; set; }
 
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamArrayObj(map, prefix + "Parameters.", this.Parameters);
             this.SetParamSimple(map, prefix + "IsolationStartedTime", this.IsolationStartedTime);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
-            this.SetParamSimple(map, prefix + "Zones", this.Zones);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
         }
     }
 }

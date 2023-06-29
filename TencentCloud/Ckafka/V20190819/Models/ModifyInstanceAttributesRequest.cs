@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public DynamicRetentionTime DynamicRetentionConfig{ get; set; }
 
         /// <summary>
-        /// 修改升配置rebalance时间
+        /// 升配Rebalance时间
         /// </summary>
         [JsonProperty("RebalanceTime")]
         public long? RebalanceTime{ get; set; }

@@ -4365,7 +4365,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(ModifyBackupEncryptionStatus)用于设置实例备份文件是否加密。 
+        /// 本接口(ModifyBackupEncryptionStatus)用于设置实例备份文件是否加密。
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupEncryptionStatusRequest"/></param>
         /// <returns><see cref="ModifyBackupEncryptionStatusResponse"/></returns>
@@ -4385,7 +4385,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(ModifyBackupEncryptionStatus)用于设置实例备份文件是否加密。 
+        /// 本接口(ModifyBackupEncryptionStatus)用于设置实例备份文件是否加密。
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupEncryptionStatusRequest"/></param>
         /// <returns><see cref="ModifyBackupEncryptionStatusResponse"/></returns>

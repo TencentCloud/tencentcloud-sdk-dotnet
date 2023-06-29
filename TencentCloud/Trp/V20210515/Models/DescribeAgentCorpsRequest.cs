@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Trp.V20210515.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyInstanceAttributesConfig : AbstractModel
+    public class DescribeAgentCorpsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 自动创建 true 表示开启，false 表示不开启
+        /// 每页数量
         /// </summary>
-        [JsonProperty("AutoCreateTopicEnable")]
-        public bool? AutoCreateTopicEnable{ get; set; }
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3
+        /// 页数
         /// </summary>
-        [JsonProperty("DefaultNumPartitions")]
-        public long? DefaultNumPartitions{ get; set; }
+        [JsonProperty("PageNumber")]
+        public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
+        /// 渠道ID
         /// </summary>
-        [JsonProperty("DefaultReplicationFactor")]
-        public long? DefaultReplicationFactor{ get; set; }
+        [JsonProperty("AgentId")]
+        public ulong? AgentId{ get; set; }
+
+        /// <summary>
+        /// 企业ID
+        /// </summary>
+        [JsonProperty("CorpId")]
+        public ulong? CorpId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AutoCreateTopicEnable", this.AutoCreateTopicEnable);
-            this.SetParamSimple(map, prefix + "DefaultNumPartitions", this.DefaultNumPartitions);
-            this.SetParamSimple(map, prefix + "DefaultReplicationFactor", this.DefaultReplicationFactor);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
+            this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
         }
     }
 }

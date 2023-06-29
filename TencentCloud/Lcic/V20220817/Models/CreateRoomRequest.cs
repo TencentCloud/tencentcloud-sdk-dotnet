@@ -123,7 +123,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? RTCAudienceNumber{ get; set; }
 
         /// <summary>
-        /// 观看类型，互动直播（默认）。
+        /// 观看类型。互动观看 （默认）
         /// </summary>
         [JsonProperty("AudienceType")]
         public ulong? AudienceType{ get; set; }
@@ -147,6 +147,20 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// </summary>
         [JsonProperty("EnableDirectControl")]
         public ulong? EnableDirectControl{ get; set; }
+
+        /// <summary>
+        /// 开启专注模式。
+        /// 0 收看全部角色音视频(默认)
+        /// 1 只看老师和助教
+        /// </summary>
+        [JsonProperty("InteractionMode")]
+        public long? InteractionMode{ get; set; }
+
+        /// <summary>
+        /// 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+        /// </summary>
+        [JsonProperty("VideoOrientation")]
+        public ulong? VideoOrientation{ get; set; }
 
 
         /// <summary>
@@ -172,6 +186,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
+            this.SetParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
+            this.SetParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
         }
     }
 }

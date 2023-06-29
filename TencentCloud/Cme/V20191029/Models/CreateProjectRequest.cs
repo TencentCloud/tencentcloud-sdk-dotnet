@@ -117,7 +117,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public RecordReplayProjectInput RecordReplayProjectInput{ get; set; }
 
         /// <summary>
-        /// 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+        /// 媒体转推项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
         /// </summary>
         [JsonProperty("MediaCastProjectInput")]
         public MediaCastProjectInput MediaCastProjectInput{ get; set; }

@@ -147,6 +147,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("SignId")]
         public string SignId{ get; set; }
 
+        /// <summary>
+        /// 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。
+        /// </summary>
+        [JsonProperty("ApproverNeedSignReview")]
+        public bool? ApproverNeedSignReview{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +178,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
             this.SetParamSimple(map, prefix + "SignId", this.SignId);
+            this.SetParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
         }
     }
 }
