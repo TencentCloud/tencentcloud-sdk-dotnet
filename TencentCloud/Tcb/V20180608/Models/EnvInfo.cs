@@ -182,6 +182,20 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
+        /// <summary>
+        /// 架构类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ArchitectureType")]
+        public string ArchitectureType{ get; set; }
+
+        /// <summary>
+        /// 回收标志，默认为空
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Recycle")]
+        public string Recycle{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -211,6 +225,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
             this.SetParamSimple(map, prefix + "IsDauPackage", this.IsDauPackage);
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
+            this.SetParamSimple(map, prefix + "ArchitectureType", this.ArchitectureType);
+            this.SetParamSimple(map, prefix + "Recycle", this.Recycle);
         }
     }
 }

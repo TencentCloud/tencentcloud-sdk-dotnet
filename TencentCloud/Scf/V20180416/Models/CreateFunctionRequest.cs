@@ -169,6 +169,18 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TraceEnable{ get; set; }
 
         /// <summary>
+        /// 是否自动创建cls索引，TRUE 为开启，FALSE为关闭
+        /// </summary>
+        [JsonProperty("AutoDeployClsTopicIndex")]
+        public string AutoDeployClsTopicIndex{ get; set; }
+
+        /// <summary>
+        /// 是否自动创建cls主题，TRUE 为开启，FALSE为关闭
+        /// </summary>
+        [JsonProperty("AutoCreateClsTopic")]
+        public string AutoCreateClsTopic{ get; set; }
+
+        /// <summary>
         /// HTTP函数支持的访问协议。当前支持WebSockets协议，值为WS
         /// </summary>
         [JsonProperty("ProtocolType")]
@@ -216,6 +228,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
             this.SetParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
+            this.SetParamSimple(map, prefix + "AutoDeployClsTopicIndex", this.AutoDeployClsTopicIndex);
+            this.SetParamSimple(map, prefix + "AutoCreateClsTopic", this.AutoCreateClsTopic);
             this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
             this.SetParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
             this.SetParamObj(map, prefix + "InstanceConcurrencyConfig.", this.InstanceConcurrencyConfig);

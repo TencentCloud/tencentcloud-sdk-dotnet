@@ -36,6 +36,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
 
+        /// <summary>
+        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

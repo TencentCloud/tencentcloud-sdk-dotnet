@@ -54,6 +54,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("SearchTags")]
         public SearchTags[] SearchTags{ get; set; }
 
+        /// <summary>
+        /// 信息详细与否
+        /// </summary>
+        [JsonProperty("IsSimple")]
+        public bool? IsSimple{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "SearchTags.", this.SearchTags);
+            this.SetParamSimple(map, prefix + "IsSimple", this.IsSimple);
         }
     }
 }

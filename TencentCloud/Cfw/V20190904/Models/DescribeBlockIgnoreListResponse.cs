@@ -49,6 +49,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string ReturnMsg{ get; set; }
 
         /// <summary>
+        /// 安全事件来源下拉框
+        /// </summary>
+        [JsonProperty("SourceList")]
+        public string[] SourceList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
             this.SetParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
+            this.SetParamArraySimple(map, prefix + "SourceList.", this.SourceList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

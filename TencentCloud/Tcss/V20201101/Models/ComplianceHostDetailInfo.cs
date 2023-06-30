@@ -38,6 +38,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("K8SVersion")]
         public string K8SVersion{ get; set; }
 
+        /// <summary>
+        /// 主机上Containerd版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerdVersion")]
+        public string ContainerdVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "DockerVersion", this.DockerVersion);
             this.SetParamSimple(map, prefix + "K8SVersion", this.K8SVersion);
+            this.SetParamSimple(map, prefix + "ContainerdVersion", this.ContainerdVersion);
         }
     }
 }

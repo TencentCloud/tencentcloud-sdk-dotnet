@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Organization.V20210331.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateImageLifecyclePersonalRequest : AbstractModel
+    public class UpdateOrganizationMemberResponse : AbstractModel
     {
         
         /// <summary>
-        /// 仓库名称
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("RepoName")]
-        public string RepoName{ get; set; }
-
-        /// <summary>
-        /// keep_last_days:保留最近几天的数据;keep_last_nums:保留最近多少个
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
-
-        /// <summary>
-        /// 策略值
-        /// </summary>
-        [JsonProperty("Val")]
-        public long? Val{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RepoName", this.RepoName);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "Val", this.Val);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

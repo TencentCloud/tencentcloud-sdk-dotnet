@@ -45,7 +45,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string Source{ get; set; }
 
         /// <summary>
-        /// 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+        /// 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，表示不享受免费额度。
         /// </summary>
         [JsonProperty("FreeQuota")]
         public string FreeQuota{ get; set; }

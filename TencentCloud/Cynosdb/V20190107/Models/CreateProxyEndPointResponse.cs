@@ -37,6 +37,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TaskId{ get; set; }
 
         /// <summary>
+        /// 数据库代理组ID
+        /// </summary>
+        [JsonProperty("ProxyGroupId")]
+        public string ProxyGroupId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

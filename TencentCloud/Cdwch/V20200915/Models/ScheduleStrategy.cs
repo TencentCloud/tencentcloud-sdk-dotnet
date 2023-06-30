@@ -55,6 +55,13 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("ScheduleId")]
         public long? ScheduleId{ get; set; }
 
+        /// <summary>
+        /// 下次备份时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NextBackupTime")]
+        public string NextBackupTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "WeekDays", this.WeekDays);
             this.SetParamSimple(map, prefix + "ExecuteHour", this.ExecuteHour);
             this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
+            this.SetParamSimple(map, prefix + "NextBackupTime", this.NextBackupTime);
         }
     }
 }

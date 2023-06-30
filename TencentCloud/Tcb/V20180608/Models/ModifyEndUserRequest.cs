@@ -37,7 +37,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string UUId{ get; set; }
 
         /// <summary>
-        /// 帐号的状态
+        /// 账号的状态
         /// <li>ENABLE</li>
         /// <li>DISABLE</li>
         /// </summary>

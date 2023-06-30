@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.791</VersionPrefix>
+    <VersionPrefix>3.0.792</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -66,8 +66,6 @@
     <Compile Include="V20190924\Models\CreateCustomAccountResponse.cs" />
     <Compile Include="V20190924\Models\CreateImageAccelerationServiceRequest.cs" />
     <Compile Include="V20190924\Models\CreateImageAccelerationServiceResponse.cs" />
-    <Compile Include="V20190924\Models\CreateImageLifecyclePersonalRequest.cs" />
-    <Compile Include="V20190924\Models\CreateImageLifecyclePersonalResponse.cs" />
     <Compile Include="V20190924\Models\CreateImmutableTagRulesRequest.cs" />
     <Compile Include="V20190924\Models\CreateImmutableTagRulesResponse.cs" />
     <Compile Include="V20190924\Models\CreateInstanceCustomizedDomainRequest.cs" />
@@ -114,8 +112,6 @@
     <Compile Include="V20190924\Models\DeleteImageAccelerateServiceResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImageLifecycleGlobalPersonalRequest.cs" />
     <Compile Include="V20190924\Models\DeleteImageLifecycleGlobalPersonalResponse.cs" />
-    <Compile Include="V20190924\Models\DeleteImageLifecyclePersonalRequest.cs" />
-    <Compile Include="V20190924\Models\DeleteImageLifecyclePersonalResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImagePersonalRequest.cs" />
     <Compile Include="V20190924\Models\DeleteImagePersonalResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImageRequest.cs" />

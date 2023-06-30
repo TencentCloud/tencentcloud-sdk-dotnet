@@ -893,6 +893,46 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 更新组织成员信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMemberRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMemberResponse"/></returns>
+        public async Task<UpdateOrganizationMemberResponse> UpdateOrganizationMember(UpdateOrganizationMemberRequest req)
+        {
+             JsonResponseModel<UpdateOrganizationMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateOrganizationMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOrganizationMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新组织成员信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMemberRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMemberResponse"/></returns>
+        public UpdateOrganizationMemberResponse UpdateOrganizationMemberSync(UpdateOrganizationMemberRequest req)
+        {
+             JsonResponseModel<UpdateOrganizationMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateOrganizationMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOrganizationMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改绑定成员邮箱
         /// </summary>
         /// <param name="req"><see cref="UpdateOrganizationMemberEmailBindRequest"/></param>

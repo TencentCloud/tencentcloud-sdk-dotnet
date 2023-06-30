@@ -333,50 +333,6 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// 前端与现有逻辑均不再使用，可下线
-        /// 
-        /// 用于在个人版中创建清理策略
-        /// </summary>
-        /// <param name="req"><see cref="CreateImageLifecyclePersonalRequest"/></param>
-        /// <returns><see cref="CreateImageLifecyclePersonalResponse"/></returns>
-        public async Task<CreateImageLifecyclePersonalResponse> CreateImageLifecyclePersonal(CreateImageLifecyclePersonalRequest req)
-        {
-             JsonResponseModel<CreateImageLifecyclePersonalResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateImageLifecyclePersonal");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageLifecyclePersonalResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 前端与现有逻辑均不再使用，可下线
-        /// 
-        /// 用于在个人版中创建清理策略
-        /// </summary>
-        /// <param name="req"><see cref="CreateImageLifecyclePersonalRequest"/></param>
-        /// <returns><see cref="CreateImageLifecyclePersonalResponse"/></returns>
-        public CreateImageLifecyclePersonalResponse CreateImageLifecyclePersonalSync(CreateImageLifecyclePersonalRequest req)
-        {
-             JsonResponseModel<CreateImageLifecyclePersonalResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateImageLifecyclePersonal");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageLifecyclePersonalResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 创建镜像不可变规则
         /// </summary>
         /// <param name="req"><see cref="CreateImmutableTagRulesRequest"/></param>
@@ -1288,50 +1244,6 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DeleteImageLifecycleGlobalPersonal");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageLifecycleGlobalPersonalResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 前端与后端目前现有逻辑均不再使用，可下线
-        /// 
-        /// 用于在个人版镜像仓库中删除仓库Tag自动清理策略
-        /// </summary>
-        /// <param name="req"><see cref="DeleteImageLifecyclePersonalRequest"/></param>
-        /// <returns><see cref="DeleteImageLifecyclePersonalResponse"/></returns>
-        public async Task<DeleteImageLifecyclePersonalResponse> DeleteImageLifecyclePersonal(DeleteImageLifecyclePersonalRequest req)
-        {
-             JsonResponseModel<DeleteImageLifecyclePersonalResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteImageLifecyclePersonal");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageLifecyclePersonalResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 前端与后端目前现有逻辑均不再使用，可下线
-        /// 
-        /// 用于在个人版镜像仓库中删除仓库Tag自动清理策略
-        /// </summary>
-        /// <param name="req"><see cref="DeleteImageLifecyclePersonalRequest"/></param>
-        /// <returns><see cref="DeleteImageLifecyclePersonalResponse"/></returns>
-        public DeleteImageLifecyclePersonalResponse DeleteImageLifecyclePersonalSync(DeleteImageLifecyclePersonalRequest req)
-        {
-             JsonResponseModel<DeleteImageLifecyclePersonalResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteImageLifecyclePersonal");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageLifecyclePersonalResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -117,6 +117,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Server")]
         public string[] Server{ get; set; }
 
+        /// <summary>
+        /// 地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionKey")]
+        public string RegionKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +145,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "InsSource", this.InsSource);
             this.SetParamArraySimple(map, prefix + "ResourcePath.", this.ResourcePath);
             this.SetParamArraySimple(map, prefix + "Server.", this.Server);
+            this.SetParamSimple(map, prefix + "RegionKey", this.RegionKey);
         }
     }
 }

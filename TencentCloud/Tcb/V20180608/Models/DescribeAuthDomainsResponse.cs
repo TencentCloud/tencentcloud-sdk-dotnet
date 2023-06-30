@@ -25,7 +25,7 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 安全域名列表列表
+        /// 安全域名列表
         /// </summary>
         [JsonProperty("Domains")]
         public AuthDomain[] Domains{ get; set; }

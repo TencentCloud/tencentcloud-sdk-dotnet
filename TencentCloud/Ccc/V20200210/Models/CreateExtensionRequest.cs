@@ -42,6 +42,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("ExtensionName")]
         public string ExtensionName{ get; set; }
 
+        /// <summary>
+        /// 绑定的技能组列表
+        /// </summary>
+        [JsonProperty("SkillGroupIds")]
+        public ulong?[] SkillGroupIds{ get; set; }
+
+        /// <summary>
+        /// 绑定的坐席邮箱
+        /// </summary>
+        [JsonProperty("Relation")]
+        public string Relation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
             this.SetParamSimple(map, prefix + "ExtensionName", this.ExtensionName);
+            this.SetParamArraySimple(map, prefix + "SkillGroupIds.", this.SkillGroupIds);
+            this.SetParamSimple(map, prefix + "Relation", this.Relation);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 批量状态状态
+        /// 批量状态
         /// 成功：succ
         /// 失败：fail
         /// 部分：partial（部分成功、部分失败）

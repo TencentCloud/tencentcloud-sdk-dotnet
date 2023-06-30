@@ -44,7 +44,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Principal{ get; set; }
 
         /// <summary>
-        /// 默认为：*，表示任何host都可以访问，当前ckafka不支持host为：*，但是后面开源kafka的产品化会直接支持
+        /// 默认\*,表示任何host都可以访问，当前ckafka不支持host为\*，但是后面开源kafka的产品化会直接支持
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Host")]

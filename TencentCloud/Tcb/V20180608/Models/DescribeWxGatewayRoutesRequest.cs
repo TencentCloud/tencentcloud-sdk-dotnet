@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteImageLifecyclePersonalRequest : AbstractModel
+    public class DescribeWxGatewayRoutesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 仓库名称
+        /// 环境ID
         /// </summary>
-        [JsonProperty("RepoName")]
-        public string RepoName{ get; set; }
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
+
+        /// <summary>
+        /// 网关名称
+        /// </summary>
+        [JsonProperty("GatewayId")]
+        public string GatewayId{ get; set; }
+
+        /// <summary>
+        /// 网关路由名称
+        /// </summary>
+        [JsonProperty("GatewayRouteName")]
+        public string GatewayRouteName{ get; set; }
+
+        /// <summary>
+        /// 网关版本名
+        /// </summary>
+        [JsonProperty("GatewayVersion")]
+        public string GatewayVersion{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RepoName", this.RepoName);
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
+            this.SetParamSimple(map, prefix + "GatewayRouteName", this.GatewayRouteName);
+            this.SetParamSimple(map, prefix + "GatewayVersion", this.GatewayVersion);
         }
     }
 }

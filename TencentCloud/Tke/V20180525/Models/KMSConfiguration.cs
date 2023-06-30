@@ -24,12 +24,26 @@ namespace TencentCloud.Tke.V20180525.Models
     public class KMSConfiguration : AbstractModel
     {
         
+        /// <summary>
+        /// kms id
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// kms 地域
+        /// </summary>
+        [JsonProperty("KmsRegion")]
+        public string KmsRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
         }
     }
 }

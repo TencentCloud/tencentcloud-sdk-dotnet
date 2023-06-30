@@ -26,33 +26,52 @@ namespace TencentCloud.Cdwch.V20200915.Models
         
         /// <summary>
         /// 数据库
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
         /// 表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
 
         /// <summary>
         /// 表总字节数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalBytes")]
         public long? TotalBytes{ get; set; }
 
         /// <summary>
         /// 虚拟cluster
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VCluster")]
         public string VCluster{ get; set; }
 
         /// <summary>
         /// 表ip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ips")]
         public string Ips{ get; set; }
+
+        /// <summary>
+        /// zk路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZooPath")]
+        public string ZooPath{ get; set; }
+
+        /// <summary>
+        /// cvm的ip地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Rip")]
+        public string Rip{ get; set; }
 
 
         /// <summary>
@@ -65,6 +84,8 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "TotalBytes", this.TotalBytes);
             this.SetParamSimple(map, prefix + "VCluster", this.VCluster);
             this.SetParamSimple(map, prefix + "Ips", this.Ips);
+            this.SetParamSimple(map, prefix + "ZooPath", this.ZooPath);
+            this.SetParamSimple(map, prefix + "Rip", this.Rip);
         }
     }
 }

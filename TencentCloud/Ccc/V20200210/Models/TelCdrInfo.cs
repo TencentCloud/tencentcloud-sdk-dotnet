@@ -327,6 +327,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("VoicemailRecordURL")]
         public string[] VoicemailRecordURL{ get; set; }
 
+        /// <summary>
+        /// 通话中语音留言ASR文本信息地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VoicemailAsrURL")]
+        public string[] VoicemailAsrURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -366,6 +373,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "QueuedSkillGroupName", this.QueuedSkillGroupName);
             this.SetParamArraySimple(map, prefix + "VoicemailRecordURL.", this.VoicemailRecordURL);
+            this.SetParamArraySimple(map, prefix + "VoicemailAsrURL.", this.VoicemailAsrURL);
         }
     }
 }

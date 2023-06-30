@@ -693,6 +693,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 删除网关某版本
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGatewayVersionRequest"/></param>
+        /// <returns><see cref="DeleteGatewayVersionResponse"/></returns>
+        public async Task<DeleteGatewayVersionResponse> DeleteGatewayVersion(DeleteGatewayVersionRequest req)
+        {
+             JsonResponseModel<DeleteGatewayVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGatewayVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGatewayVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除网关某版本
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGatewayVersionRequest"/></param>
+        /// <returns><see cref="DeleteGatewayVersionResponse"/></returns>
+        public DeleteGatewayVersionResponse DeleteGatewayVersionSync(DeleteGatewayVersionRequest req)
+        {
+             JsonResponseModel<DeleteGatewayVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGatewayVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGatewayVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除安全网关路由
         /// </summary>
         /// <param name="req"><see cref="DeleteWxGatewayRouteRequest"/></param>
@@ -884,6 +924,86 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBaasPackageList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBaasPackageListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取计费相关信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingInfoRequest"/></param>
+        /// <returns><see cref="DescribeBillingInfoResponse"/></returns>
+        public async Task<DescribeBillingInfoResponse> DescribeBillingInfo(DescribeBillingInfoRequest req)
+        {
+             JsonResponseModel<DescribeBillingInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillingInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取计费相关信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingInfoRequest"/></param>
+        /// <returns><see cref="DescribeBillingInfoResponse"/></returns>
+        public DescribeBillingInfoResponse DescribeBillingInfoSync(DescribeBillingInfoRequest req)
+        {
+             JsonResponseModel<DescribeBillingInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillingInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询服务版本的详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCbrServerVersionRequest"/></param>
+        /// <returns><see cref="DescribeCbrServerVersionResponse"/></returns>
+        public async Task<DescribeCbrServerVersionResponse> DescribeCbrServerVersion(DescribeCbrServerVersionRequest req)
+        {
+             JsonResponseModel<DescribeCbrServerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCbrServerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCbrServerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询服务版本的详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCbrServerVersionRequest"/></param>
+        /// <returns><see cref="DescribeCbrServerVersionResponse"/></returns>
+        public DescribeCbrServerVersionResponse DescribeCbrServerVersionSync(DescribeCbrServerVersionRequest req)
+        {
+             JsonResponseModel<DescribeCbrServerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCbrServerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCbrServerVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2093,6 +2213,88 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询网关版本信息
+        /// 暂不鉴权
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayVersionsRequest"/></param>
+        /// <returns><see cref="DescribeGatewayVersionsResponse"/></returns>
+        public async Task<DescribeGatewayVersionsResponse> DescribeGatewayVersions(DescribeGatewayVersionsRequest req)
+        {
+             JsonResponseModel<DescribeGatewayVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGatewayVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询网关版本信息
+        /// 暂不鉴权
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayVersionsRequest"/></param>
+        /// <returns><see cref="DescribeGatewayVersionsResponse"/></returns>
+        public DescribeGatewayVersionsResponse DescribeGatewayVersionsSync(DescribeGatewayVersionsRequest req)
+        {
+             JsonResponseModel<DescribeGatewayVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGatewayVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据用户传入的指标, 拉取一段时间内的监控数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGraphDataRequest"/></param>
+        /// <returns><see cref="DescribeGraphDataResponse"/></returns>
+        public async Task<DescribeGraphDataResponse> DescribeGraphData(DescribeGraphDataRequest req)
+        {
+             JsonResponseModel<DescribeGraphDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGraphData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGraphDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据用户传入的指标, 拉取一段时间内的监控数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGraphDataRequest"/></param>
+        /// <returns><see cref="DescribeGraphDataResponse"/></returns>
+        public DescribeGraphDataResponse DescribeGraphDataSync(DescribeGraphDataRequest req)
+        {
+             JsonResponseModel<DescribeGraphDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGraphData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGraphDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询静态托管域名任务状态
         /// </summary>
         /// <param name="req"><see cref="DescribeHostingDomainTaskRequest"/></param>
@@ -2530,6 +2732,86 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeWxCloudBaseRunSubNets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWxCloudBaseRunSubNetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看安全网关路由
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWxGatewayRoutesRequest"/></param>
+        /// <returns><see cref="DescribeWxGatewayRoutesResponse"/></returns>
+        public async Task<DescribeWxGatewayRoutesResponse> DescribeWxGatewayRoutes(DescribeWxGatewayRoutesRequest req)
+        {
+             JsonResponseModel<DescribeWxGatewayRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWxGatewayRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWxGatewayRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看安全网关路由
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWxGatewayRoutesRequest"/></param>
+        /// <returns><see cref="DescribeWxGatewayRoutesResponse"/></returns>
+        public DescribeWxGatewayRoutesResponse DescribeWxGatewayRoutesSync(DescribeWxGatewayRoutesRequest req)
+        {
+             JsonResponseModel<DescribeWxGatewayRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWxGatewayRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWxGatewayRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看安全网关
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWxGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeWxGatewaysResponse"/></returns>
+        public async Task<DescribeWxGatewaysResponse> DescribeWxGateways(DescribeWxGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeWxGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWxGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWxGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看安全网关
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWxGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeWxGatewaysResponse"/></returns>
+        public DescribeWxGatewaysResponse DescribeWxGatewaysSync(DescribeWxGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeWxGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWxGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWxGatewaysResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3019,6 +3301,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 设置网关版本的流量比例
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGatewayVersionTrafficRequest"/></param>
+        /// <returns><see cref="ModifyGatewayVersionTrafficResponse"/></returns>
+        public async Task<ModifyGatewayVersionTrafficResponse> ModifyGatewayVersionTraffic(ModifyGatewayVersionTrafficRequest req)
+        {
+             JsonResponseModel<ModifyGatewayVersionTrafficResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyGatewayVersionTraffic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGatewayVersionTrafficResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置网关版本的流量比例
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGatewayVersionTrafficRequest"/></param>
+        /// <returns><see cref="ModifyGatewayVersionTrafficResponse"/></returns>
+        public ModifyGatewayVersionTrafficResponse ModifyGatewayVersionTrafficSync(ModifyGatewayVersionTrafficRequest req)
+        {
+             JsonResponseModel<ModifyGatewayVersionTrafficResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyGatewayVersionTraffic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGatewayVersionTrafficResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 针对已隔离的免费环境，可以通过本接口将其恢复访问。
         /// </summary>
         /// <param name="req"><see cref="ReinstateEnvRequest"/></param>
@@ -3139,7 +3461,7 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 搜索CLS日志，TCB角色秘钥访问
+        /// 搜索CLS日志，TCB角色密钥访问
         /// </summary>
         /// <param name="req"><see cref="SearchClsLogRequest"/></param>
         /// <returns><see cref="SearchClsLogResponse"/></returns>
@@ -3159,7 +3481,7 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 搜索CLS日志，TCB角色秘钥访问
+        /// 搜索CLS日志，TCB角色密钥访问
         /// </summary>
         /// <param name="req"><see cref="SearchClsLogRequest"/></param>
         /// <returns><see cref="SearchClsLogResponse"/></returns>

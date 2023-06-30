@@ -58,6 +58,13 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public long? BackUpStatus{ get; set; }
 
         /// <summary>
+        /// 错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrorMsg")]
+        public string ErrorMsg{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -74,6 +81,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamObj(map, prefix + "DataStrategy.", this.DataStrategy);
             this.SetParamArrayObj(map, prefix + "BackUpContents.", this.BackUpContents);
             this.SetParamSimple(map, prefix + "BackUpStatus", this.BackUpStatus);
+            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
