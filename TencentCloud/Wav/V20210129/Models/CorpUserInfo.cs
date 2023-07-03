@@ -92,6 +92,13 @@ namespace TencentCloud.Wav.V20210129.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 工号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobNumber")]
+        public string JobNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +115,7 @@ namespace TencentCloud.Wav.V20210129.Models
             this.SetParamSimple(map, prefix + "MainDepartment", this.MainDepartment);
             this.SetParamSimple(map, prefix + "IsLeaderInDept", this.IsLeaderInDept);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "JobNumber", this.JobNumber);
         }
     }
 }

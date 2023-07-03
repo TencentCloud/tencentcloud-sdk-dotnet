@@ -53,7 +53,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string MaterialId{ get; set; }
 
         /// <summary>
-        /// 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+        /// 文件播放的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
         /// </summary>
         [JsonProperty("Offset")]
         public float? Offset{ get; set; }

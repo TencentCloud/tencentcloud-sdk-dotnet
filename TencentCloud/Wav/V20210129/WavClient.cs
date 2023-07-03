@@ -293,6 +293,46 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
+        /// 查询指定时间范围内发生过到店的潜客到店信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryArrivalListRequest"/></param>
+        /// <returns><see cref="QueryArrivalListResponse"/></returns>
+        public async Task<QueryArrivalListResponse> QueryArrivalList(QueryArrivalListRequest req)
+        {
+             JsonResponseModel<QueryArrivalListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryArrivalList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryArrivalListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定时间范围内发生过到店的潜客到店信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryArrivalListRequest"/></param>
+        /// <returns><see cref="QueryArrivalListResponse"/></returns>
+        public QueryArrivalListResponse QueryArrivalListSync(QueryArrivalListRequest req)
+        {
+             JsonResponseModel<QueryArrivalListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryArrivalList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryArrivalListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据游标拉取渠道活码列表信息
         /// </summary>
         /// <param name="req"><see cref="QueryChannelCodeListRequest"/></param>
@@ -764,6 +804,46 @@ namespace TencentCloud.Wav.V20210129
              {
                  var strResp = this.InternalRequestSync(req, "QueryExternalUserMappingInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalUserMappingInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定时间范围内发生过跟进的潜客信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryFollowListRequest"/></param>
+        /// <returns><see cref="QueryFollowListResponse"/></returns>
+        public async Task<QueryFollowListResponse> QueryFollowList(QueryFollowListRequest req)
+        {
+             JsonResponseModel<QueryFollowListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFollowList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFollowListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定时间范围内发生过跟进的潜客信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryFollowListRequest"/></param>
+        /// <returns><see cref="QueryFollowListResponse"/></returns>
+        public QueryFollowListResponse QueryFollowListSync(QueryFollowListRequest req)
+        {
+             JsonResponseModel<QueryFollowListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFollowList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFollowListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

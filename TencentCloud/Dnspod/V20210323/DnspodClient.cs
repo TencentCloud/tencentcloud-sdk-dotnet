@@ -653,6 +653,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 批量删除解析记录
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordBatchRequest"/></param>
+        /// <returns><see cref="DeleteRecordBatchResponse"/></returns>
+        public async Task<DeleteRecordBatchResponse> DeleteRecordBatch(DeleteRecordBatchRequest req)
+        {
+             JsonResponseModel<DeleteRecordBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRecordBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除解析记录
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordBatchRequest"/></param>
+        /// <returns><see cref="DeleteRecordBatchResponse"/></returns>
+        public DeleteRecordBatchResponse DeleteRecordBatchSync(DeleteRecordBatchRequest req)
+        {
+             JsonResponseModel<DeleteRecordBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRecordBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除记录分组
         /// </summary>
         /// <param name="req"><see cref="DeleteRecordGroupRequest"/></param>

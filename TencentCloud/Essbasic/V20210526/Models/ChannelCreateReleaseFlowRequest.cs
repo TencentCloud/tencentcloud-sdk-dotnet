@@ -68,6 +68,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public long? Deadline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamObj(map, prefix + "Organization.", this.Organization);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
         }
     }
 }

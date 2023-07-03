@@ -43,7 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string MaxBackupStartTime{ get; set; }
 
         /// <summary>
-        /// 实例备份保留时长，取值范围为3-7，单位是天
+        /// 实例备份保留时长，取值范围为7-1830，单位是天
         /// </summary>
         [JsonProperty("BaseBackupRetentionPeriod")]
         public ulong? BaseBackupRetentionPeriod{ get; set; }

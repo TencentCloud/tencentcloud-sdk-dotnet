@@ -50,6 +50,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ReleasedApprovers")]
         public ReleasedApprover[] ReleasedApprovers{ get; set; }
 
+        /// <summary>
+        /// 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public long? Deadline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "NeedRelievedFlowId", this.NeedRelievedFlowId);
             this.SetParamObj(map, prefix + "ReliveInfo.", this.ReliveInfo);
             this.SetParamArrayObj(map, prefix + "ReleasedApprovers.", this.ReleasedApprovers);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
         }
     }
 }

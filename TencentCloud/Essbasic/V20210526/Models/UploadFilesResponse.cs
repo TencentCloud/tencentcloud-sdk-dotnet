@@ -25,16 +25,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
-        /// </summary>
-        [JsonProperty("FileIds")]
-        public string[] FileIds{ get; set; }
-
-        /// <summary>
         /// 上传成功文件数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
+        /// </summary>
+        [JsonProperty("FileIds")]
+        public string[] FileIds{ get; set; }
 
         /// <summary>
         /// 文件Url
@@ -54,8 +54,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
             this.SetParamArraySimple(map, prefix + "FileUrls.", this.FileUrls);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

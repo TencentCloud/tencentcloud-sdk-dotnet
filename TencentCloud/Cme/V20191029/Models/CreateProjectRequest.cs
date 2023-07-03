@@ -51,7 +51,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <li>VIDEO_SEGMENTATION：视频拆条。</li>
         /// <li>STREAM_CONNECT：云转推。</li>
         /// <li>RECORD_REPLAY：录制回放。</li>
-        /// <li>MEDIA_CAST：点播转直播。</li>
+        /// <li>MEDIA_CAST：媒体转推。</li>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Wav.V20210129.Models
         public string ClueId{ get; set; }
 
         /// <summary>
-        /// 接待客户经销商顾问所属组织id,多个组织使用逗号分割
+        /// 接待客户经销商顾问所属经销商code
         /// </summary>
         [JsonProperty("DealerId")]
         public string DealerId{ get; set; }
@@ -190,6 +190,152 @@ namespace TencentCloud.Wav.V20210129.Models
         [JsonProperty("CreateAtTime")]
         public ulong? CreateAtTime{ get; set; }
 
+        /// <summary>
+        /// 客户微信id
+        /// </summary>
+        [JsonProperty("WxId")]
+        public string WxId{ get; set; }
+
+        /// <summary>
+        /// 意向车型对应品牌code
+        /// </summary>
+        [JsonProperty("BrandCode")]
+        public string BrandCode{ get; set; }
+
+        /// <summary>
+        /// 建档时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BuildTime")]
+        public ulong? BuildTime{ get; set; }
+
+        /// <summary>
+        /// 下订时间，单位：秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OrderTime")]
+        public ulong? OrderTime{ get; set; }
+
+        /// <summary>
+        /// 到店时间，单位：秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ArrivalTime")]
+        public ulong? ArrivalTime{ get; set; }
+
+        /// <summary>
+        /// 交车时间，单位：秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeliveryTime")]
+        public ulong? DeliveryTime{ get; set; }
+
+        /// <summary>
+        /// 上次跟进时间，单位：秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FollowTime")]
+        public ulong? FollowTime{ get; set; }
+
+        /// <summary>
+        /// 下次跟进时间，单位：秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NextFollowTime")]
+        public ulong? NextFollowTime{ get; set; }
+
+        /// <summary>
+        /// 线索所属组织id
+        /// </summary>
+        [JsonProperty("OrgId")]
+        public ulong? OrgId{ get; set; }
+
+        /// <summary>
+        /// 线索所属组织名称
+        /// </summary>
+        [JsonProperty("OrgName")]
+        public string OrgName{ get; set; }
+
+        /// <summary>
+        /// 介绍人姓名
+        /// </summary>
+        [JsonProperty("Introducer")]
+        public string Introducer{ get; set; }
+
+        /// <summary>
+        /// 介绍人电话
+        /// </summary>
+        [JsonProperty("IntroducerPhone")]
+        public string IntroducerPhone{ get; set; }
+
+        /// <summary>
+        /// 是否关联微信 1 是 0 否
+        /// </summary>
+        [JsonProperty("IsBindWx")]
+        public long? IsBindWx{ get; set; }
+
+        /// <summary>
+        /// 是否经过合并 1 是 0 否
+        /// </summary>
+        [JsonProperty("IsMerge")]
+        public long? IsMerge{ get; set; }
+
+        /// <summary>
+        /// 是否无效  1 是 0 否
+        /// </summary>
+        [JsonProperty("IsInvalid")]
+        public long? IsInvalid{ get; set; }
+
+        /// <summary>
+        /// 无效类型
+        /// </summary>
+        [JsonProperty("InvalidType")]
+        public string InvalidType{ get; set; }
+
+        /// <summary>
+        /// 无效类型枚举：
+        /// 无意向购买、空错号、未接听、其他
+        /// </summary>
+        [JsonProperty("InvalidTypeName")]
+        public string InvalidTypeName{ get; set; }
+
+        /// <summary>
+        /// 由顾问手动输入的无效原因文字
+        /// </summary>
+        [JsonProperty("InvalidRemark")]
+        public string InvalidRemark{ get; set; }
+
+        /// <summary>
+        /// 无效时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InvalidTime")]
+        public ulong? InvalidTime{ get; set; }
+
+        /// <summary>
+        /// 经销商名称
+        /// </summary>
+        [JsonProperty("DealerName")]
+        public string DealerName{ get; set; }
+
+        /// <summary>
+        /// 经销商下级门店ID
+        /// </summary>
+        [JsonProperty("ShopId")]
+        public ulong? ShopId{ get; set; }
+
+        /// <summary>
+        /// 经销商下级门店名称
+        /// </summary>
+        [JsonProperty("ShopName")]
+        public string ShopName{ get; set; }
+
+        /// <summary>
+        /// 职位
+        /// </summary>
+        [JsonProperty("Position")]
+        public string Position{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -223,6 +369,29 @@ namespace TencentCloud.Wav.V20210129.Models
             this.SetParamSimple(map, prefix + "ImportAtTime", this.ImportAtTime);
             this.SetParamSimple(map, prefix + "DistributeTime", this.DistributeTime);
             this.SetParamSimple(map, prefix + "CreateAtTime", this.CreateAtTime);
+            this.SetParamSimple(map, prefix + "WxId", this.WxId);
+            this.SetParamSimple(map, prefix + "BrandCode", this.BrandCode);
+            this.SetParamSimple(map, prefix + "BuildTime", this.BuildTime);
+            this.SetParamSimple(map, prefix + "OrderTime", this.OrderTime);
+            this.SetParamSimple(map, prefix + "ArrivalTime", this.ArrivalTime);
+            this.SetParamSimple(map, prefix + "DeliveryTime", this.DeliveryTime);
+            this.SetParamSimple(map, prefix + "FollowTime", this.FollowTime);
+            this.SetParamSimple(map, prefix + "NextFollowTime", this.NextFollowTime);
+            this.SetParamSimple(map, prefix + "OrgId", this.OrgId);
+            this.SetParamSimple(map, prefix + "OrgName", this.OrgName);
+            this.SetParamSimple(map, prefix + "Introducer", this.Introducer);
+            this.SetParamSimple(map, prefix + "IntroducerPhone", this.IntroducerPhone);
+            this.SetParamSimple(map, prefix + "IsBindWx", this.IsBindWx);
+            this.SetParamSimple(map, prefix + "IsMerge", this.IsMerge);
+            this.SetParamSimple(map, prefix + "IsInvalid", this.IsInvalid);
+            this.SetParamSimple(map, prefix + "InvalidType", this.InvalidType);
+            this.SetParamSimple(map, prefix + "InvalidTypeName", this.InvalidTypeName);
+            this.SetParamSimple(map, prefix + "InvalidRemark", this.InvalidRemark);
+            this.SetParamSimple(map, prefix + "InvalidTime", this.InvalidTime);
+            this.SetParamSimple(map, prefix + "DealerName", this.DealerName);
+            this.SetParamSimple(map, prefix + "ShopId", this.ShopId);
+            this.SetParamSimple(map, prefix + "ShopName", this.ShopName);
+            this.SetParamSimple(map, prefix + "Position", this.Position);
         }
     }
 }

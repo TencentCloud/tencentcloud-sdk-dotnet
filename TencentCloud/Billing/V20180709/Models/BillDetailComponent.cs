@@ -68,6 +68,20 @@ namespace TencentCloud.Billing.V20180709.Models
         public string UsedAmountUnit{ get; set; }
 
         /// <summary>
+        /// 原始用量/时长：组件被资源包抵扣前的原始用量/时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RealTotalMeasure")]
+        public string RealTotalMeasure{ get; set; }
+
+        /// <summary>
+        /// 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeductedMeasure")]
+        public string DeductedMeasure{ get; set; }
+
+        /// <summary>
         /// 使用时长：资源使用的时长
         /// </summary>
         [JsonProperty("TimeSpan")]
@@ -212,6 +226,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "PriceUnit", this.PriceUnit);
             this.SetParamSimple(map, prefix + "UsedAmount", this.UsedAmount);
             this.SetParamSimple(map, prefix + "UsedAmountUnit", this.UsedAmountUnit);
+            this.SetParamSimple(map, prefix + "RealTotalMeasure", this.RealTotalMeasure);
+            this.SetParamSimple(map, prefix + "DeductedMeasure", this.DeductedMeasure);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "TimeUnitName", this.TimeUnitName);
             this.SetParamSimple(map, prefix + "Cost", this.Cost);

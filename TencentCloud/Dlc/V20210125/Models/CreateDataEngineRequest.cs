@@ -67,9 +67,10 @@ namespace TencentCloud.Dlc.V20210125.Models
         public long? MaxClusters{ get; set; }
 
         /// <summary>
-        /// 是否为默虚拟集群
+        /// 是否为默认虚拟集群
         /// </summary>
         [JsonProperty("DefaultDataEngine")]
+        [System.Obsolete]
         public bool? DefaultDataEngine{ get; set; }
 
         /// <summary>
@@ -181,7 +182,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string ImageVersionName{ get; set; }
 
         /// <summary>
-        /// 主集群名称
+        /// 主集群名称，创建容灾集群时指定
         /// </summary>
         [JsonProperty("MainClusterName")]
         public string MainClusterName{ get; set; }

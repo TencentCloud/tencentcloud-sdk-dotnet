@@ -50,6 +50,20 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverType")]
         public string ApproverType{ get; set; }
 
+        /// <summary>
+        /// 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+        /// - SIGN_SEAL-默认为印章控件类型
+        /// - SIGN_SIGNATURE-手写签名控件类型
+        /// </summary>
+        [JsonProperty("ApproverSignComponentType")]
+        public string ApproverSignComponentType{ get; set; }
+
+        /// <summary>
+        /// 签署方自定义控件别名，最大长度20个字符
+        /// </summary>
+        [JsonProperty("ApproverSignRole")]
+        public string ApproverSignRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +74,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "RelievedApproverReceiptId", this.RelievedApproverReceiptId);
             this.SetParamSimple(map, prefix + "ApproverType", this.ApproverType);
+            this.SetParamSimple(map, prefix + "ApproverSignComponentType", this.ApproverSignComponentType);
+            this.SetParamSimple(map, prefix + "ApproverSignRole", this.ApproverSignRole);
         }
     }
 }

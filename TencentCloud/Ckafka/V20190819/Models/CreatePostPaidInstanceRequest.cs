@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例规格。当创建标准版实例时必填，创建专业版实例时不需要填写。1：入门型；2：标准型；3：进阶型；4：容量型；5：高阶型1；6：高阶性2；7：高阶型3；8：高阶型4；9 ：独占型
+        /// 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string SpecificationsType{ get; set; }
 
         /// <summary>
-        /// 实例硬盘类型，"CLOUD_BASIC"：云硬盘，"CLOUD_SSD"：高速云硬盘。不传默认为 "CLOUD_BASIC"
+        /// 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认值为 "CLOUD_BASIC"
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }

@@ -67,7 +67,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public Environment Environment{ get; set; }
 
         /// <summary>
-        /// 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， Php5， Php7，Go1，Java8 和 CustomRuntime，默认Python2.7
+        /// 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， Php5.2， Php7.4，Go1，Java8 和 CustomRuntime，默认Python2.7
         /// </summary>
         [JsonProperty("Runtime")]
         public string Runtime{ get; set; }
