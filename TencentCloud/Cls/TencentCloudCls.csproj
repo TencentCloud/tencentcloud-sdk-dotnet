@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.793</VersionPrefix>
+    <VersionPrefix>3.0.794</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,8 @@
     <Compile Include="V20201016\Models\ApplyConfigToMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\ApplyConfigToMachineGroupResponse.cs" />
     <Compile Include="V20201016\Models\CallBackInfo.cs" />
+    <Compile Include="V20201016\Models\CheckRechargeKafkaServerRequest.cs" />
+    <Compile Include="V20201016\Models\CheckRechargeKafkaServerResponse.cs" />
     <Compile Include="V20201016\Models\Ckafka.cs" />
     <Compile Include="V20201016\Models\CloseKafkaConsumerRequest.cs" />
     <Compile Include="V20201016\Models\CloseKafkaConsumerResponse.cs" />
@@ -90,6 +92,8 @@
     <Compile Include="V20201016\Models\CreateExportResponse.cs" />
     <Compile Include="V20201016\Models\CreateIndexRequest.cs" />
     <Compile Include="V20201016\Models\CreateIndexResponse.cs" />
+    <Compile Include="V20201016\Models\CreateKafkaRechargeRequest.cs" />
+    <Compile Include="V20201016\Models\CreateKafkaRechargeResponse.cs" />
     <Compile Include="V20201016\Models\CreateLogsetRequest.cs" />
     <Compile Include="V20201016\Models\CreateLogsetResponse.cs" />
     <Compile Include="V20201016\Models\CreateMachineGroupRequest.cs" />
@@ -115,6 +119,8 @@
     <Compile Include="V20201016\Models\DeleteExportResponse.cs" />
     <Compile Include="V20201016\Models\DeleteIndexRequest.cs" />
     <Compile Include="V20201016\Models\DeleteIndexResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteKafkaRechargeRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteKafkaRechargeResponse.cs" />
     <Compile Include="V20201016\Models\DeleteLogsetRequest.cs" />
     <Compile Include="V20201016\Models\DeleteLogsetResponse.cs" />
     <Compile Include="V20201016\Models\DeleteMachineGroupInfoRequest.cs" />
@@ -145,6 +151,8 @@
     <Compile Include="V20201016\Models\DescribeExportsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeIndexRequest.cs" />
     <Compile Include="V20201016\Models\DescribeIndexResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeKafkaRechargesRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeKafkaRechargesResponse.cs" />
     <Compile Include="V20201016\Models\DescribeLogContextRequest.cs" />
     <Compile Include="V20201016\Models\DescribeLogContextResponse.cs" />
     <Compile Include="V20201016\Models\DescribeLogHistogramRequest.cs" />
@@ -178,12 +186,16 @@
     <Compile Include="V20201016\Models\HistogramInfo.cs" />
     <Compile Include="V20201016\Models\HostFileInfo.cs" />
     <Compile Include="V20201016\Models\JsonInfo.cs" />
+    <Compile Include="V20201016\Models\KafkaConsumerContent.cs" />
+    <Compile Include="V20201016\Models\KafkaProtocolInfo.cs" />
+    <Compile Include="V20201016\Models\KafkaRechargeInfo.cs" />
     <Compile Include="V20201016\Models\KeyRegexInfo.cs" />
     <Compile Include="V20201016\Models\KeyValueInfo.cs" />
     <Compile Include="V20201016\Models\LogContextInfo.cs" />
     <Compile Include="V20201016\Models\LogInfo.cs" />
     <Compile Include="V20201016\Models\LogItem.cs" />
     <Compile Include="V20201016\Models\LogItems.cs" />
+    <Compile Include="V20201016\Models\LogRechargeRuleInfo.cs" />
     <Compile Include="V20201016\Models\LogsetInfo.cs" />
     <Compile Include="V20201016\Models\MachineGroupInfo.cs" />
     <Compile Include="V20201016\Models\MachineGroupTypeInfo.cs" />
@@ -205,6 +217,8 @@
     <Compile Include="V20201016\Models\ModifyCosRechargeResponse.cs" />
     <Compile Include="V20201016\Models\ModifyIndexRequest.cs" />
     <Compile Include="V20201016\Models\ModifyIndexResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyKafkaRechargeRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyKafkaRechargeResponse.cs" />
     <Compile Include="V20201016\Models\ModifyLogsetRequest.cs" />
     <Compile Include="V20201016\Models\ModifyLogsetResponse.cs" />
     <Compile Include="V20201016\Models\ModifyMachineGroupRequest.cs" />
@@ -221,6 +235,8 @@
     <Compile Include="V20201016\Models\ParquetInfo.cs" />
     <Compile Include="V20201016\Models\ParquetKeyInfo.cs" />
     <Compile Include="V20201016\Models\PartitionInfo.cs" />
+    <Compile Include="V20201016\Models\PreviewKafkaRechargeRequest.cs" />
+    <Compile Include="V20201016\Models\PreviewKafkaRechargeResponse.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskRequest.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskResponse.cs" />
     <Compile Include="V20201016\Models\RuleInfo.cs" />

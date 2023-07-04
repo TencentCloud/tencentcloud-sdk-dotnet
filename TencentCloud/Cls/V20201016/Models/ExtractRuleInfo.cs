@@ -60,7 +60,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string BeginRegex{ get; set; }
 
         /// <summary>
-        /// 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key
+        /// 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keys")]

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{18B8B6A9-26F9-3537-BC24-EEBEC5421791}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.793</VersionPrefix>
+    <VersionPrefix>3.0.794</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,12 +48,21 @@
 
   <ItemGroup>
     <Compile Include="V20220331\CiamClient.cs" />
+    <Compile Include="V20220331\Models\AppAssociatedUserGroupIds.cs" />
     <Compile Include="V20220331\Models\CreateApiImportUserJobRequest.cs" />
     <Compile Include="V20220331\Models\CreateApiImportUserJobResponse.cs" />
     <Compile Include="V20220331\Models\CreateFileExportUserJobRequest.cs" />
     <Compile Include="V20220331\Models\CreateFileExportUserJobResponse.cs" />
+    <Compile Include="V20220331\Models\CreateUserGroupRequest.cs" />
+    <Compile Include="V20220331\Models\CreateUserGroupResponse.cs" />
     <Compile Include="V20220331\Models\CreateUserRequest.cs" />
     <Compile Include="V20220331\Models\CreateUserResponse.cs" />
+    <Compile Include="V20220331\Models\CreateUserStoreRequest.cs" />
+    <Compile Include="V20220331\Models\CreateUserStoreResponse.cs" />
+    <Compile Include="V20220331\Models\DeleteUserGroupsRequest.cs" />
+    <Compile Include="V20220331\Models\DeleteUserGroupsResponse.cs" />
+    <Compile Include="V20220331\Models\DeleteUserStoreRequest.cs" />
+    <Compile Include="V20220331\Models\DeleteUserStoreResponse.cs" />
     <Compile Include="V20220331\Models\DeleteUsersRequest.cs" />
     <Compile Include="V20220331\Models\DeleteUsersResponse.cs" />
     <Compile Include="V20220331\Models\DescribeUserByIdRequest.cs" />
@@ -74,8 +83,12 @@
     <Compile Include="V20220331\Models\ListLogMessageByConditionResponse.cs" />
     <Compile Include="V20220331\Models\ListUserByPropertyRequest.cs" />
     <Compile Include="V20220331\Models\ListUserByPropertyResponse.cs" />
+    <Compile Include="V20220331\Models\ListUserGroupsRequest.cs" />
+    <Compile Include="V20220331\Models\ListUserGroupsResponse.cs" />
     <Compile Include="V20220331\Models\ListUserRequest.cs" />
     <Compile Include="V20220331\Models\ListUserResponse.cs" />
+    <Compile Include="V20220331\Models\ListUserStoreRequest.cs" />
+    <Compile Include="V20220331\Models\ListUserStoreResponse.cs" />
     <Compile Include="V20220331\Models\LogMessage.cs" />
     <Compile Include="V20220331\Models\MemberMap.cs" />
     <Compile Include="V20220331\Models\Pageable.cs" />
@@ -88,10 +101,17 @@
     <Compile Include="V20220331\Models\SetPasswordRequest.cs" />
     <Compile Include="V20220331\Models\SetPasswordResponse.cs" />
     <Compile Include="V20220331\Models\Sort.cs" />
+    <Compile Include="V20220331\Models\UpdateUserGroupRequest.cs" />
+    <Compile Include="V20220331\Models\UpdateUserGroupResponse.cs" />
     <Compile Include="V20220331\Models\UpdateUserRequest.cs" />
     <Compile Include="V20220331\Models\UpdateUserResponse.cs" />
     <Compile Include="V20220331\Models\UpdateUserStatusRequest.cs" />
     <Compile Include="V20220331\Models\UpdateUserStatusResponse.cs" />
+    <Compile Include="V20220331\Models\UpdateUserStoreRequest.cs" />
+    <Compile Include="V20220331\Models\UpdateUserStoreResponse.cs" />
     <Compile Include="V20220331\Models\User.cs" />
+    <Compile Include="V20220331\Models\UserGroup.cs" />
+    <Compile Include="V20220331\Models\UserGroupDeleteResp.cs" />
+    <Compile Include="V20220331\Models\UserStore.cs" />
   </ItemGroup>
 </Project>

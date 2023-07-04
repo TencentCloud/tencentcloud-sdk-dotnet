@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EBF09988-881F-3852-A591-FBE38A1DB706}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.793</VersionPrefix>
+    <VersionPrefix>3.0.794</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,31 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20210303\BtoeClient.cs" />
+    <Compile Include="V20210303\Models\CreateAudioDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateAudioDepositResponse.cs" />
+    <Compile Include="V20210303\Models\CreateDataDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateDataDepositResponse.cs" />
+    <Compile Include="V20210303\Models\CreateDocDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateDocDepositResponse.cs" />
+    <Compile Include="V20210303\Models\CreateHashDepositNoCertRequest.cs" />
+    <Compile Include="V20210303\Models\CreateHashDepositNoCertResponse.cs" />
+    <Compile Include="V20210303\Models\CreateHashDepositNoSealRequest.cs" />
+    <Compile Include="V20210303\Models\CreateHashDepositNoSealResponse.cs" />
+    <Compile Include="V20210303\Models\CreateHashDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateHashDepositResponse.cs" />
+    <Compile Include="V20210303\Models\CreateImageDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateImageDepositResponse.cs" />
+    <Compile Include="V20210303\Models\CreateVideoDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateVideoDepositResponse.cs" />
+    <Compile Include="V20210303\Models\CreateWebpageDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateWebpageDepositResponse.cs" />
+    <Compile Include="V20210303\Models\GetDepositCertRequest.cs" />
+    <Compile Include="V20210303\Models\GetDepositCertResponse.cs" />
+    <Compile Include="V20210303\Models\GetDepositFileRequest.cs" />
+    <Compile Include="V20210303\Models\GetDepositFileResponse.cs" />
+    <Compile Include="V20210303\Models\GetDepositInfoRequest.cs" />
+    <Compile Include="V20210303\Models\GetDepositInfoResponse.cs" />
     <Compile Include="V20210514\BtoeClient.cs" />
     <Compile Include="V20210514\Models\CreateAudioDepositRequest.cs" />
     <Compile Include="V20210514\Models\CreateAudioDepositResponse.cs" />
@@ -74,30 +99,5 @@
     <Compile Include="V20210514\Models\VerifyEvidenceBlockChainTxHashResponse.cs" />
     <Compile Include="V20210514\Models\VerifyEvidenceHashRequest.cs" />
     <Compile Include="V20210514\Models\VerifyEvidenceHashResponse.cs" />
-    <Compile Include="V20210303\BtoeClient.cs" />
-    <Compile Include="V20210303\Models\CreateAudioDepositRequest.cs" />
-    <Compile Include="V20210303\Models\CreateAudioDepositResponse.cs" />
-    <Compile Include="V20210303\Models\CreateDataDepositRequest.cs" />
-    <Compile Include="V20210303\Models\CreateDataDepositResponse.cs" />
-    <Compile Include="V20210303\Models\CreateDocDepositRequest.cs" />
-    <Compile Include="V20210303\Models\CreateDocDepositResponse.cs" />
-    <Compile Include="V20210303\Models\CreateHashDepositNoCertRequest.cs" />
-    <Compile Include="V20210303\Models\CreateHashDepositNoCertResponse.cs" />
-    <Compile Include="V20210303\Models\CreateHashDepositNoSealRequest.cs" />
-    <Compile Include="V20210303\Models\CreateHashDepositNoSealResponse.cs" />
-    <Compile Include="V20210303\Models\CreateHashDepositRequest.cs" />
-    <Compile Include="V20210303\Models\CreateHashDepositResponse.cs" />
-    <Compile Include="V20210303\Models\CreateImageDepositRequest.cs" />
-    <Compile Include="V20210303\Models\CreateImageDepositResponse.cs" />
-    <Compile Include="V20210303\Models\CreateVideoDepositRequest.cs" />
-    <Compile Include="V20210303\Models\CreateVideoDepositResponse.cs" />
-    <Compile Include="V20210303\Models\CreateWebpageDepositRequest.cs" />
-    <Compile Include="V20210303\Models\CreateWebpageDepositResponse.cs" />
-    <Compile Include="V20210303\Models\GetDepositCertRequest.cs" />
-    <Compile Include="V20210303\Models\GetDepositCertResponse.cs" />
-    <Compile Include="V20210303\Models\GetDepositFileRequest.cs" />
-    <Compile Include="V20210303\Models\GetDepositFileResponse.cs" />
-    <Compile Include="V20210303\Models\GetDepositInfoRequest.cs" />
-    <Compile Include="V20210303\Models\GetDepositInfoResponse.cs" />
   </ItemGroup>
 </Project>
