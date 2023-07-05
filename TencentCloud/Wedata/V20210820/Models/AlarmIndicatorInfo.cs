@@ -73,6 +73,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AlarmIndicatorUnit")]
         public string AlarmIndicatorUnit{ get; set; }
 
+        /// <summary>
+        /// 告警周期
+        /// </summary>
+        [JsonProperty("Duration")]
+        public long? Duration{ get; set; }
+
+        /// <summary>
+        /// 告警周期单位
+        /// </summary>
+        [JsonProperty("DurationUnit")]
+        public string DurationUnit{ get; set; }
+
+        /// <summary>
+        /// 周期内最多告警次数
+        /// </summary>
+        [JsonProperty("MaxTimes")]
+        public long? MaxTimes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +104,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "EstimatedTime", this.EstimatedTime);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "AlarmIndicatorUnit", this.AlarmIndicatorUnit);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "DurationUnit", this.DurationUnit);
+            this.SetParamSimple(map, prefix + "MaxTimes", this.MaxTimes);
         }
     }
 }

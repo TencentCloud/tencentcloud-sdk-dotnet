@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7B36C41A-5976-3538-93E0-40A089B50522}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.794</VersionPrefix>
+    <VersionPrefix>3.0.795</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -118,6 +118,8 @@
     <Compile Include="V20210515\Models\DescribeProductByIdResponse.cs" />
     <Compile Include="V20210515\Models\DescribeProductsRequest.cs" />
     <Compile Include="V20210515\Models\DescribeProductsResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeRawScanLogsRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeRawScanLogsResponse.cs" />
     <Compile Include="V20210515\Models\DescribeScanLogsRequest.cs" />
     <Compile Include="V20210515\Models\DescribeScanLogsResponse.cs" />
     <Compile Include="V20210515\Models\DescribeScanStatsRequest.cs" />
@@ -161,6 +163,7 @@
     <Compile Include="V20210515\Models\PhaseData.cs" />
     <Compile Include="V20210515\Models\Product.cs" />
     <Compile Include="V20210515\Models\Quota.cs" />
+    <Compile Include="V20210515\Models\RawScanLog.cs" />
     <Compile Include="V20210515\Models\ReportBatchCallbackStatusRequest.cs" />
     <Compile Include="V20210515\Models\ReportBatchCallbackStatusResponse.cs" />
     <Compile Include="V20210515\Models\ScanLog.cs" />

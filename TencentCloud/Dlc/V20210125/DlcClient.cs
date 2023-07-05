@@ -1133,7 +1133,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CreateSparkSessionBatchSQL）用于提交Spark SQL批任务。
+        /// 本接口（CreateSparkSessionBatchSQL）用于向Spark作业引擎提交Spark SQL批任务。
         /// </summary>
         /// <param name="req"><see cref="CreateSparkSessionBatchSQLRequest"/></param>
         /// <returns><see cref="CreateSparkSessionBatchSQLResponse"/></returns>
@@ -1153,7 +1153,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（CreateSparkSessionBatchSQL）用于提交Spark SQL批任务。
+        /// 本接口（CreateSparkSessionBatchSQL）用于向Spark作业引擎提交Spark SQL批任务。
         /// </summary>
         /// <param name="req"><see cref="CreateSparkSessionBatchSQLRequest"/></param>
         /// <returns><see cref="CreateSparkSessionBatchSQLResponse"/></returns>

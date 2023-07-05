@@ -37,6 +37,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Mobile{ get; set; }
 
         /// <summary>
+        /// 传入的企微账号id
+        /// </summary>
+        [JsonProperty("WeworkOpenId")]
+        public string WeworkOpenId{ get; set; }
+
+        /// <summary>
         /// 失败原因
         /// </summary>
         [JsonProperty("Reason")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
+            this.SetParamSimple(map, prefix + "WeworkOpenId", this.WeworkOpenId);
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }

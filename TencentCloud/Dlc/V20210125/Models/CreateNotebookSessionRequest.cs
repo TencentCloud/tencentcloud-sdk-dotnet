@@ -85,7 +85,10 @@ namespace TencentCloud.Dlc.V20210125.Models
         public ulong? ExecutorNumbers{ get; set; }
 
         /// <summary>
-        /// Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+        /// Session相关配置，当前支持：
+        /// 1. dlc.eni: 用户配置的eni网关信息，可以通过该字段设置；
+        /// 2. dlc.role.arn: 用户配置的roleArn鉴权策略配置信息，可以通过该字段设置；
+        /// 3. dlc.sql.set.config: 用户配置的集群配置信息，可以通过该字段设置；
         /// </summary>
         [JsonProperty("Arguments")]
         public KVPair[] Arguments{ get; set; }
@@ -108,6 +111,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ExecutorMaxNumbers")]
         public ulong? ExecutorMaxNumbers{ get; set; }
 
+        /// <summary>
+        /// 指定spark版本名称，当前任务使用该spark镜像运行
+        /// </summary>
+        [JsonProperty("SparkImage")]
+        public string SparkImage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +137,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ProxyUser", this.ProxyUser);
             this.SetParamSimple(map, prefix + "TimeoutInSecond", this.TimeoutInSecond);
             this.SetParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
+            this.SetParamSimple(map, prefix + "SparkImage", this.SparkImage);
         }
     }
 }

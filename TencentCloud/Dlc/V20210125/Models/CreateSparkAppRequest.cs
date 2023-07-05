@@ -192,6 +192,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("IsInherit")]
         public ulong? IsInherit{ get; set; }
 
+        /// <summary>
+        /// 是否使用session脚本的sql运行任务：false：否，true：是
+        /// </summary>
+        [JsonProperty("IsSessionStarted")]
+        public bool? IsSessionStarted{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +232,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
+            this.SetParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
         }
     }
 }

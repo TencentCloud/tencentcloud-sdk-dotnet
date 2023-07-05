@@ -25,25 +25,30 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+        /// 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
-        /// 包年包月实例解隔离时购买时常 以月为单位
+        /// 购买时长，单位：月。
+        /// <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+        /// <li>后付费：只支持1
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 是否使用代金券：true-使用,false-不使用，默认不使用
+        /// 是否使用代金券：
+        /// <li>true：使用
+        /// <li>false：不使用
+        /// 默认值：false
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public bool? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 代金券id列表
+        /// 代金券id列表。
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }

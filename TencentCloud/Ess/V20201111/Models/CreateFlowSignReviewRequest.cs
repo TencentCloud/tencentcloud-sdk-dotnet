@@ -57,6 +57,22 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
+        /// <summary>
+        /// 审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
+        /// </summary>
+        [JsonProperty("RecipientId")]
+        public string RecipientId{ get; set; }
+
+        /// <summary>
+        /// 操作类型：
+        /// 操作类型，默认：SignReview；SignReview:签署审核
+        /// 注：接口通过该字段区分操作类型
+        /// 该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
+        /// 若发起个人审核，则指定该字段为：SignReview（注意，给个人审核时，需联系客户经理开白使用）
+        /// </summary>
+        [JsonProperty("OperateType")]
+        public string OperateType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +84,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ReviewType", this.ReviewType);
             this.SetParamSimple(map, prefix + "ReviewMessage", this.ReviewMessage);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
+            this.SetParamSimple(map, prefix + "OperateType", this.OperateType);
         }
     }
 }

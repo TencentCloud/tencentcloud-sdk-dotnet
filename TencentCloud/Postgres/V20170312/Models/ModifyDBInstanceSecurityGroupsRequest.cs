@@ -25,7 +25,8 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例或只读组要绑定的安全组列表
+        /// 实例或只读组要绑定的安全组列表。
+        /// 安全组信息可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来查询。
         /// </summary>
         [JsonProperty("SecurityGroupIdSet")]
         public string[] SecurityGroupIdSet{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.794</VersionPrefix>
+    <VersionPrefix>3.0.795</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -373,6 +373,11 @@
     <Compile Include="V20210820\Models\DimensionCount.cs" />
     <Compile Include="V20210820\Models\DimensionScore.cs" />
     <Compile Include="V20210820\Models\DimensionScoreInfo.cs" />
+    <Compile Include="V20210820\Models\DlcDataGovernPolicy.cs" />
+    <Compile Include="V20210820\Models\DlcExpiredSnapshotsInfo.cs" />
+    <Compile Include="V20210820\Models\DlcMergeManifestsInfo.cs" />
+    <Compile Include="V20210820\Models\DlcRemoveOrphanFilesInfo.cs" />
+    <Compile Include="V20210820\Models\DlcRewriteDataInfo.cs" />
     <Compile Include="V20210820\Models\DryRunDIOfflineTaskRequest.cs" />
     <Compile Include="V20210820\Models\DryRunDIOfflineTaskResponse.cs" />
     <Compile Include="V20210820\Models\ExportTaskInfo.cs" />
@@ -556,6 +561,7 @@
     <Compile Include="V20210820\Models\SubscribeWebHook.cs" />
     <Compile Include="V20210820\Models\SuspendIntegrationTaskRequest.cs" />
     <Compile Include="V20210820\Models\SuspendIntegrationTaskResponse.cs" />
+    <Compile Include="V20210820\Models\TableBaseInfo.cs" />
     <Compile Include="V20210820\Models\TableConfig.cs" />
     <Compile Include="V20210820\Models\TableInfo.cs" />
     <Compile Include="V20210820\Models\TableQualityDetail.cs" />

@@ -42,6 +42,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
+        /// <summary>
+        /// 字段描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "FieldName", this.FieldName);
             this.SetParamSimple(map, prefix + "FieldType", this.FieldType);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
         }
     }
 }

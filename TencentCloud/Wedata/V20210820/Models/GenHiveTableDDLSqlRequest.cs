@@ -150,6 +150,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TargetDatasourceId")]
         public string TargetDatasourceId{ get; set; }
 
+        /// <summary>
+        /// dlc upsert主键
+        /// </summary>
+        [JsonProperty("UpsertKeys")]
+        public string[] UpsertKeys{ get; set; }
+
+        /// <summary>
+        /// dlc表治理信息
+        /// </summary>
+        [JsonProperty("TableBaseInfo")]
+        public TableBaseInfo TableBaseInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +189,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "AddPositionDeletes", this.AddPositionDeletes);
             this.SetParamSimple(map, prefix + "AddDeleteFiles", this.AddDeleteFiles);
             this.SetParamSimple(map, prefix + "TargetDatasourceId", this.TargetDatasourceId);
+            this.SetParamArraySimple(map, prefix + "UpsertKeys.", this.UpsertKeys);
+            this.SetParamObj(map, prefix + "TableBaseInfo.", this.TableBaseInfo);
         }
     }
 }

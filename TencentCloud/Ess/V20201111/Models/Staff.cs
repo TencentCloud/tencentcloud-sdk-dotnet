@@ -26,6 +26,7 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 用户在电子签平台的id
+        /// 注：创建和更新场景无需填写
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
@@ -58,6 +59,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 员工角色
+        /// 注：创建和更新场景无需填写
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Roles")]
@@ -72,18 +74,21 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 员工是否实名
+        /// 注：创建和更新场景无需填写
         /// </summary>
         [JsonProperty("Verified")]
         public bool? Verified{ get; set; }
 
         /// <summary>
         /// 员工创建时间戳，单位秒
+        /// 注：创建和更新场景无需填写
         /// </summary>
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
 
         /// <summary>
         /// 员工实名时间戳，单位秒
+        /// 注：创建和更新场景无需填写
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifiedOn")]
@@ -91,6 +96,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 员工是否离职：0-未离职，1-离职
+        /// 注：创建和更新场景无需填写
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuiteJob")]
@@ -98,15 +104,25 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 员工离职交接人用户id
+        /// 注：创建和更新场景无需填写
         /// </summary>
         [JsonProperty("ReceiveUserId")]
         public string ReceiveUserId{ get; set; }
 
         /// <summary>
         /// 员工离职交接人用户OpenId
+        /// 注：创建和更新场景无需填写
         /// </summary>
         [JsonProperty("ReceiveOpenId")]
         public string ReceiveOpenId{ get; set; }
+
+        /// <summary>
+        /// 企业微信用户账号ID
+        /// 注：仅企微类型的企业创建员工接口支持该字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WeworkOpenId")]
+        public string WeworkOpenId{ get; set; }
 
 
         /// <summary>
@@ -127,6 +143,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "QuiteJob", this.QuiteJob);
             this.SetParamSimple(map, prefix + "ReceiveUserId", this.ReceiveUserId);
             this.SetParamSimple(map, prefix + "ReceiveOpenId", this.ReceiveOpenId);
+            this.SetParamSimple(map, prefix + "WeworkOpenId", this.WeworkOpenId);
         }
     }
 }

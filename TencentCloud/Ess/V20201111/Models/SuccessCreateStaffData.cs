@@ -49,6 +49,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
+        /// <summary>
+        /// 传入的企微账号id
+        /// </summary>
+        [JsonProperty("WeworkOpenId")]
+        public string WeworkOpenId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "Note", this.Note);
+            this.SetParamSimple(map, prefix + "WeworkOpenId", this.WeworkOpenId);
         }
     }
 }

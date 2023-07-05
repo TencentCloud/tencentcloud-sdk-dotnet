@@ -48,6 +48,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskType")]
         public ulong? TaskType{ get; set; }
 
+        /// <summary>
+        /// 额外参数
+        /// </summary>
+        [JsonProperty("ExtConfig")]
+        public RecordField[] ExtConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "CommitType", this.CommitType);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamArrayObj(map, prefix + "ExtConfig.", this.ExtConfig);
         }
     }
 }

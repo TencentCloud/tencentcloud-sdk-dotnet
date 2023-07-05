@@ -31,13 +31,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 实例节点信息。
+        /// 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+        /// 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
         /// </summary>
         [JsonProperty("DBNodeSet")]
         public DBNode[] DBNodeSet{ get; set; }
 
         /// <summary>
-        /// 切换时间。默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换
+        /// 指定实例配置完成变更后的切换时间。
+        /// <li>0：立即切换 
+        /// <li>1：指定时间切换
+        /// <li>2：维护时间窗口内切换
+        /// 默认值：0 
         /// </summary>
         [JsonProperty("SwitchTag")]
         public long? SwitchTag{ get; set; }

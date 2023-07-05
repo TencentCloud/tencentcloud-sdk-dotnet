@@ -53,7 +53,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ReviewMessage{ get; set; }
 
         /// <summary>
-        /// 签署节点审核时需要指定
+        /// 签署节点审核时需要指定，给个人审核时必填。
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
@@ -63,6 +63,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 注：接口通过该字段区分操作类型
         /// 该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
         /// 若想使用发起审核，请指定该字段为：CreateReview
+        /// 若发起个人审核，则指定该字段为：SignReview（注意，给个人审核时，需联系客户经理开白使用）
         /// </summary>
         [JsonProperty("OperateType")]
         public string OperateType{ get; set; }

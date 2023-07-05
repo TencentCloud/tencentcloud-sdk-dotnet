@@ -38,6 +38,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("LowFrameRateResults")]
         public string[] LowFrameRateResults{ get; set; }
 
+        /// <summary>
+        /// 流格式诊断信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StreamFormatResults")]
+        public string[] StreamFormatResults{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamArraySimple(map, prefix + "StreamBrokenResults.", this.StreamBrokenResults);
             this.SetParamArraySimple(map, prefix + "LowFrameRateResults.", this.LowFrameRateResults);
+            this.SetParamArraySimple(map, prefix + "StreamFormatResults.", this.StreamFormatResults);
         }
     }
 }

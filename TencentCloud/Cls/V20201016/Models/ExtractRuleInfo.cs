@@ -141,7 +141,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? MetadataType{ get; set; }
 
         /// <summary>
-        /// 采集配置路径正则表达式，MetadataType为1时必填
+        /// 采集配置路径正则表达式，MetadataType为3时必填
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PathRegex")]

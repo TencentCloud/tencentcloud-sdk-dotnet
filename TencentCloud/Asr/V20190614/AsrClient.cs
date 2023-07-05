@@ -904,5 +904,177 @@ namespace TencentCloud.Asr.V20190614
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 本接口用于以删除已经注册的说话人信息（删除之后，原有的说话人ID和说话人音频数据都会失效）
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintDeleteRequest"/></param>
+        /// <returns><see cref="VoicePrintDeleteResponse"/></returns>
+        public async Task<VoicePrintDeleteResponse> VoicePrintDelete(VoicePrintDeleteRequest req)
+        {
+             JsonResponseModel<VoicePrintDeleteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VoicePrintDelete");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VoicePrintDeleteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于以删除已经注册的说话人信息（删除之后，原有的说话人ID和说话人音频数据都会失效）
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintDeleteRequest"/></param>
+        /// <returns><see cref="VoicePrintDeleteResponse"/></returns>
+        public VoicePrintDeleteResponse VoicePrintDeleteSync(VoicePrintDeleteRequest req)
+        {
+             JsonResponseModel<VoicePrintDeleteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VoicePrintDelete");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VoicePrintDeleteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 说话人注册接口用于注册一个指定音频，生成一个唯一的说话人id，后续可通过说话人验证接口验证其它音频和已有的说话人ID匹配度，注册时可指定说话人昵称，方便标识说话人ID，  说话人昵称可重复配置。 
+        /// （注: 一个appid最多可以注册1000个说话人ID，一个说话人ID仅支持一条音频注册，后续可通过更新接口进行更新）
+        /// 
+        /// 使用须知
+        /// 支持的输入格式：编码文件(PCM, WAV)、16 bit采样位数、单声道（mono）。
+        /// 
+        /// 支持的音频采样率：16000 Hz。
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintEnrollRequest"/></param>
+        /// <returns><see cref="VoicePrintEnrollResponse"/></returns>
+        public async Task<VoicePrintEnrollResponse> VoicePrintEnroll(VoicePrintEnrollRequest req)
+        {
+             JsonResponseModel<VoicePrintEnrollResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VoicePrintEnroll");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VoicePrintEnrollResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 说话人注册接口用于注册一个指定音频，生成一个唯一的说话人id，后续可通过说话人验证接口验证其它音频和已有的说话人ID匹配度，注册时可指定说话人昵称，方便标识说话人ID，  说话人昵称可重复配置。 
+        /// （注: 一个appid最多可以注册1000个说话人ID，一个说话人ID仅支持一条音频注册，后续可通过更新接口进行更新）
+        /// 
+        /// 使用须知
+        /// 支持的输入格式：编码文件(PCM, WAV)、16 bit采样位数、单声道（mono）。
+        /// 
+        /// 支持的音频采样率：16000 Hz。
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintEnrollRequest"/></param>
+        /// <returns><see cref="VoicePrintEnrollResponse"/></returns>
+        public VoicePrintEnrollResponse VoicePrintEnrollSync(VoicePrintEnrollRequest req)
+        {
+             JsonResponseModel<VoicePrintEnrollResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VoicePrintEnroll");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VoicePrintEnrollResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于更新和覆盖已注册的音频数据和说话人昵称，更新后原有的音频数据将失效。
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintUpdateRequest"/></param>
+        /// <returns><see cref="VoicePrintUpdateResponse"/></returns>
+        public async Task<VoicePrintUpdateResponse> VoicePrintUpdate(VoicePrintUpdateRequest req)
+        {
+             JsonResponseModel<VoicePrintUpdateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VoicePrintUpdate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VoicePrintUpdateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于更新和覆盖已注册的音频数据和说话人昵称，更新后原有的音频数据将失效。
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintUpdateRequest"/></param>
+        /// <returns><see cref="VoicePrintUpdateResponse"/></returns>
+        public VoicePrintUpdateResponse VoicePrintUpdateSync(VoicePrintUpdateRequest req)
+        {
+             JsonResponseModel<VoicePrintUpdateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VoicePrintUpdate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VoicePrintUpdateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验传入音频与已注册音频的匹配程度，通过指定说话人ID（VoicePrintId）和一段音频进行音频和说话人的匹配度判断
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintVerifyRequest"/></param>
+        /// <returns><see cref="VoicePrintVerifyResponse"/></returns>
+        public async Task<VoicePrintVerifyResponse> VoicePrintVerify(VoicePrintVerifyRequest req)
+        {
+             JsonResponseModel<VoicePrintVerifyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VoicePrintVerify");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VoicePrintVerifyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验传入音频与已注册音频的匹配程度，通过指定说话人ID（VoicePrintId）和一段音频进行音频和说话人的匹配度判断
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintVerifyRequest"/></param>
+        /// <returns><see cref="VoicePrintVerifyResponse"/></returns>
+        public VoicePrintVerifyResponse VoicePrintVerifySync(VoicePrintVerifyRequest req)
+        {
+             JsonResponseModel<VoicePrintVerifyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VoicePrintVerify");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VoicePrintVerifyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

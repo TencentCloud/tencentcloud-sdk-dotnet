@@ -2453,7 +2453,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（IsolateDBInstances）用于隔离实例
+        /// 本接口（IsolateDBInstances）用于隔离实例。
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstancesRequest"/></param>
         /// <returns><see cref="IsolateDBInstancesResponse"/></returns>
@@ -2473,7 +2473,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（IsolateDBInstances）用于隔离实例
+        /// 本接口（IsolateDBInstances）用于隔离实例。
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstancesRequest"/></param>
         /// <returns><see cref="IsolateDBInstancesResponse"/></returns>

@@ -1293,6 +1293,46 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 支持增量查询扫码日志，通常提供给数据同步使用，调用时需要指定从哪一行开始查询数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRawScanLogsRequest"/></param>
+        /// <returns><see cref="DescribeRawScanLogsResponse"/></returns>
+        public async Task<DescribeRawScanLogsResponse> DescribeRawScanLogs(DescribeRawScanLogsRequest req)
+        {
+             JsonResponseModel<DescribeRawScanLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRawScanLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRawScanLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 支持增量查询扫码日志，通常提供给数据同步使用，调用时需要指定从哪一行开始查询数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRawScanLogsRequest"/></param>
+        /// <returns><see cref="DescribeRawScanLogsResponse"/></returns>
+        public DescribeRawScanLogsResponse DescribeRawScanLogsSync(DescribeRawScanLogsRequest req)
+        {
+             JsonResponseModel<DescribeRawScanLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRawScanLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRawScanLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询扫码日志明细
         /// </summary>
         /// <param name="req"><see cref="DescribeScanLogsRequest"/></param>

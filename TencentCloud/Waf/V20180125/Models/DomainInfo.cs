@@ -49,7 +49,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Cname{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
@@ -73,25 +73,25 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? ClsStatus{ get; set; }
 
         /// <summary>
-        /// clb模式
+        /// clbwaf使用模式,0镜像模式 1清洗模式
         /// </summary>
         [JsonProperty("FlowMode")]
         public ulong? FlowMode{ get; set; }
 
         /// <summary>
-        /// waf开关
+        /// waf开关,0关闭 1开启
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 防御模式
+        /// 规则防御模式,0观察模式 1拦截模式
         /// </summary>
         [JsonProperty("Mode")]
         public ulong? Mode{ get; set; }
 
         /// <summary>
-        /// AI防御模式
+        /// AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
         /// </summary>
         [JsonProperty("Engine")]
         public ulong? Engine{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// clb状态
+        /// clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }
@@ -139,13 +139,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 0关闭 1开启
+        /// Ipv6开关状态,0关闭 1开启
         /// </summary>
         [JsonProperty("Ipv6Status")]
         public long? Ipv6Status{ get; set; }
 
         /// <summary>
-        /// 0关闭 1开启
+        /// BOT开关状态,0关闭 1开启
         /// </summary>
         [JsonProperty("BotStatus")]
         public long? BotStatus{ get; set; }
@@ -157,23 +157,51 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? Level{ get; set; }
 
         /// <summary>
-        /// 是否开启投递CLS功能
+        /// 是否开启投递CLS功能,0关闭 1开启
         /// </summary>
         [JsonProperty("PostCLSStatus")]
         public long? PostCLSStatus{ get; set; }
 
         /// <summary>
-        /// 是否开启投递CKafka功能
+        /// 是否开启投递CKafka功能,0关闭 1开启
         /// </summary>
         [JsonProperty("PostCKafkaStatus")]
         public long? PostCKafkaStatus{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡类型: clb或者apisix，默认clb
+        /// cdc实例域名接入的集群信息,非cdc实例忽略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CdcClusters")]
+        public string CdcClusters{ get; set; }
+
+        /// <summary>
+        /// api安全开关状态,0关闭 1开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApiStatus")]
+        public long? ApiStatus{ get; set; }
+
+        /// <summary>
+        /// 应用型负载均衡类型,clb或者apisix，默认clb
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlbType")]
         public string AlbType{ get; set; }
+
+        /// <summary>
+        /// 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SgState")]
+        public long? SgState{ get; set; }
+
+        /// <summary>
+        /// 安全组状态的详细解释
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SgDetail")]
+        public string SgDetail{ get; set; }
 
 
         /// <summary>
@@ -205,7 +233,11 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "PostCLSStatus", this.PostCLSStatus);
             this.SetParamSimple(map, prefix + "PostCKafkaStatus", this.PostCKafkaStatus);
+            this.SetParamSimple(map, prefix + "CdcClusters", this.CdcClusters);
+            this.SetParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
             this.SetParamSimple(map, prefix + "AlbType", this.AlbType);
+            this.SetParamSimple(map, prefix + "SgState", this.SgState);
+            this.SetParamSimple(map, prefix + "SgDetail", this.SgDetail);
         }
     }
 }

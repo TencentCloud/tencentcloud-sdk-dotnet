@@ -117,6 +117,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
 
+        /// <summary>
+        /// 高防包ID， 申请高防IP时，该字段必传。
+        /// </summary>
+        [JsonProperty("AntiDDoSPackageId")]
+        public string AntiDDoSPackageId{ get; set; }
+
+        /// <summary>
+        /// 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "AddressName", this.AddressName);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
+            this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
         }
     }
 }

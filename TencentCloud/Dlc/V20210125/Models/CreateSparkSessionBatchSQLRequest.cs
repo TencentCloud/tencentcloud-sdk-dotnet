@@ -79,7 +79,9 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string SessionName{ get; set; }
 
         /// <summary>
-        /// Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+        /// Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
+        /// 2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
+        /// 3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
         /// </summary>
         [JsonProperty("Arguments")]
         public KVPair[] Arguments{ get; set; }

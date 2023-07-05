@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 新的数据库实例名字
+        /// 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

@@ -29,7 +29,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 
         /// 1：关闭立即下发开关；
         /// 
-        /// 2：关闭立即下发开关下，触发开始下发
+        /// 2：关闭立即下发开关情况下，触发开始下发
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

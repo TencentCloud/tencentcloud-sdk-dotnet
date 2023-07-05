@@ -32,7 +32,8 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 待创建员工的信息，不超过20个。
-        /// Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+        /// 所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+        /// 企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
         /// </summary>
         [JsonProperty("Employees")]
         public Staff[] Employees{ get; set; }

@@ -98,6 +98,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("AllowMonitorReport")]
         public ulong? AllowMonitorReport{ get; set; }
 
+        /// <summary>
+        /// 是否开启格式诊断。
+        /// </summary>
+        [JsonProperty("AiFormatDiagnose")]
+        public ulong? AiFormatDiagnose{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +122,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "CheckStreamBroken", this.CheckStreamBroken);
             this.SetParamSimple(map, prefix + "CheckStreamLowFrameRate", this.CheckStreamLowFrameRate);
             this.SetParamSimple(map, prefix + "AllowMonitorReport", this.AllowMonitorReport);
+            this.SetParamSimple(map, prefix + "AiFormatDiagnose", this.AiFormatDiagnose);
         }
     }
 }

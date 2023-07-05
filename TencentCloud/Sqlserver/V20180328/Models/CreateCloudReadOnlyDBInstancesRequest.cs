@@ -109,7 +109,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 本次购买几个只读实例，默认值为1。
+        /// 本次购买几个只读实例，默认值为2。
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }

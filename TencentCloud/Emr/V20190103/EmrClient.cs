@@ -335,6 +335,86 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 获取hive查询信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHiveQueriesRequest"/></param>
+        /// <returns><see cref="DescribeHiveQueriesResponse"/></returns>
+        public async Task<DescribeHiveQueriesResponse> DescribeHiveQueries(DescribeHiveQueriesRequest req)
+        {
+             JsonResponseModel<DescribeHiveQueriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHiveQueries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHiveQueriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取hive查询信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHiveQueriesRequest"/></param>
+        /// <returns><see cref="DescribeHiveQueriesResponse"/></returns>
+        public DescribeHiveQueriesResponse DescribeHiveQueriesSync(DescribeHiveQueriesRequest req)
+        {
+             JsonResponseModel<DescribeHiveQueriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHiveQueries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHiveQueriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeImpalaQueries
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImpalaQueriesRequest"/></param>
+        /// <returns><see cref="DescribeImpalaQueriesResponse"/></returns>
+        public async Task<DescribeImpalaQueriesResponse> DescribeImpalaQueries(DescribeImpalaQueriesRequest req)
+        {
+             JsonResponseModel<DescribeImpalaQueriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImpalaQueries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImpalaQueriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeImpalaQueries
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImpalaQueriesRequest"/></param>
+        /// <returns><see cref="DescribeImpalaQueriesResponse"/></returns>
+        public DescribeImpalaQueriesResponse DescribeImpalaQueriesSync(DescribeImpalaQueriesRequest req)
+        {
+             JsonResponseModel<DescribeImpalaQueriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImpalaQueries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImpalaQueriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询待续费节点信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRenewNodesRequest"/></param>
@@ -568,6 +648,46 @@ namespace TencentCloud.Emr.V20190103
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUsersForUserManager");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsersForUserManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeYarnApplications
+        /// </summary>
+        /// <param name="req"><see cref="DescribeYarnApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeYarnApplicationsResponse"/></returns>
+        public async Task<DescribeYarnApplicationsResponse> DescribeYarnApplications(DescribeYarnApplicationsRequest req)
+        {
+             JsonResponseModel<DescribeYarnApplicationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeYarnApplications");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeYarnApplicationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeYarnApplications
+        /// </summary>
+        /// <param name="req"><see cref="DescribeYarnApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeYarnApplicationsResponse"/></returns>
+        public DescribeYarnApplicationsResponse DescribeYarnApplicationsSync(DescribeYarnApplicationsRequest req)
+        {
+             JsonResponseModel<DescribeYarnApplicationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeYarnApplications");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeYarnApplicationsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

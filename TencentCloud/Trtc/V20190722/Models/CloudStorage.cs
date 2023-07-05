@@ -45,14 +45,14 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 第三方存储的access_key账号信息。
-        /// 若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
+        /// 若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
 
         /// <summary>
         /// 第三方存储的secret_key账号信息。
-        /// 若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
+        /// 若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
