@@ -21,26 +21,30 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateReplayTaskResponse : AbstractModel
+    public class CnameStatus : AbstractModel
     {
         
         /// <summary>
-        /// 此次任务ID。
+        /// 记录名称。
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("RecordName")]
+        public string RecordName{ get; set; }
 
         /// <summary>
-        /// 失败的任务列表及原因。
+        /// CNAME 地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FailedList")]
-        public FailReason[] FailedList{ get; set; }
+        [JsonProperty("Cname")]
+        public string Cname{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// Cname状态信息，取值有：
+        /// <li>active：生效；</li>
+        /// <li>moved：不生效。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -48,9 +52,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
-            this.SetParamArrayObj(map, prefix + "FailedList.", this.FailedList);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "RecordName", this.RecordName);
+            this.SetParamSimple(map, prefix + "Cname", this.Cname);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

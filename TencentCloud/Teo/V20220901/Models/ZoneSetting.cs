@@ -178,6 +178,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("AccelerateMainland")]
         public AccelerateMainland AccelerateMainland{ get; set; }
 
+        /// <summary>
+        /// 标准 Debug 配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StandardDebug")]
+        public StandardDebug StandardDebug{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +213,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "Grpc.", this.Grpc);
             this.SetParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
             this.SetParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
+            this.SetParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
         }
     }
 }

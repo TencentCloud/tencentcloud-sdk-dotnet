@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public long? WorkGroupId{ get; set; }
 
         /// <summary>
-        /// 工作组描述
+        /// 工作组描述，最大字符数限制50
         /// </summary>
         [JsonProperty("WorkGroupDescription")]
         public string WorkGroupDescription{ get; set; }

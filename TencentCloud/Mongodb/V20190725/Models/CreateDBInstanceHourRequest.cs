@@ -166,25 +166,21 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string[] AvailabilityZoneList{ get; set; }
 
         /// <summary>
-        /// Mongos CPU 核数。
-        /// - 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-        /// - 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+        /// Mongos CPU 核数。购买分片集群时，必须填写。
         /// </summary>
         [JsonProperty("MongosCpu")]
         public ulong? MongosCpu{ get; set; }
 
         /// <summary>
-        /// Mongos 内存大小。
-        /// - 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-        /// - 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+        /// Mongos 内存大小。购买分片集群时，必须填写。
+        /// 
         /// </summary>
         [JsonProperty("MongosMemory")]
         public ulong? MongosMemory{ get; set; }
 
         /// <summary>
-        /// Mongos 数量。
-        /// - 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-        /// - 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+        /// Mongos 数量。购买分片集群时，必须填写。
+        /// 
         /// </summary>
         [JsonProperty("MongosNodeNum")]
         public ulong? MongosNodeNum{ get; set; }

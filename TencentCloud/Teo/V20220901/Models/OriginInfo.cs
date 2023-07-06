@@ -30,6 +30,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>COS：COS源。</li>
         /// <li>ORIGIN_GROUP：源站组类型源站。</li>
         /// <li>AWS_S3：AWS S3对象存储源站。</li>
+        /// <li>SPACE：Edgeone源站Space存储，Space存储不允许配置该类型源站。</li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }

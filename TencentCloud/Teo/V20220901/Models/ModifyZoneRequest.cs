@@ -33,13 +33,13 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 站点接入方式，取值有：
         /// <li> full：NS 接入；</li>
-        /// <li> partial：CNAME 接入。</li>不填写保持原有配置。
+        /// <li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。
+        /// 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
         /// </summary>
         [JsonProperty("VanityNameServers")]
         public VanityNameServers VanityNameServers{ get; set; }
@@ -49,6 +49,21 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("AliasZoneName")]
         public string AliasZoneName{ get; set; }
+
+        /// <summary>
+        /// 站点接入地域，取值有：
+        /// <li> global：全球；</li>
+        /// <li> mainland：中国大陆；</li>
+        /// <li> overseas：境外区域。</li>当站点是无域名接入方式时，不允许传此参数。
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
+        /// <summary>
+        /// 站点名称。仅当站点由无域名接入方式切换到CNAME接入方式的场景下有效。
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
 
 
         /// <summary>
@@ -60,6 +75,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
             this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
         }
     }
 }

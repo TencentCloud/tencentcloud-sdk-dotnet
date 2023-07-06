@@ -95,6 +95,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public bool? SessionPersist{ get; set; }
 
         /// <summary>
+        /// 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
+        /// </summary>
+        [JsonProperty("SessionPersistTime")]
+        public ulong? SessionPersistTime{ get; set; }
+
+        /// <summary>
         /// 源站端口，支持格式：
         /// <li>单端口：80；</li>
         /// <li>端口段：81-90，81至90端口。</li>
@@ -117,6 +123,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "OriginValue.", this.OriginValue);
             this.SetParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
             this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+            this.SetParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
             this.SetParamSimple(map, prefix + "OriginPort", this.OriginPort);
         }
     }

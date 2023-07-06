@@ -66,6 +66,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("EnableCosMAZ")]
         public bool? EnableCosMAZ{ get; set; }
 
+        /// <summary>
+        /// 是否开启实例删除保护
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamObj(map, prefix + "RegistryChargePrepaid.", this.RegistryChargePrepaid);
             this.SetParamSimple(map, prefix + "SyncTag", this.SyncTag);
             this.SetParamSimple(map, prefix + "EnableCosMAZ", this.EnableCosMAZ);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

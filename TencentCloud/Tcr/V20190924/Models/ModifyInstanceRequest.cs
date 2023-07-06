@@ -31,10 +31,19 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// 实例的规格
+        /// 实例的规格,
+        /// 基础版：basic
+        /// 标准版：standard
+        /// 高级版：premium
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
+
+        /// <summary>
+        /// 实例删除保护，false为关闭
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
 
 
         /// <summary>
@@ -44,6 +53,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         {
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "RegistryType", this.RegistryType);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

@@ -38,7 +38,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// 折扣加
+        /// 折扣价
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }

@@ -94,6 +94,23 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// 资源类型，取值有：
+        /// <li>plan：套餐类型；</li>
+        /// <li>pay-as-you-go：后付费类型。</li>
+        /// <li>value-added：增值服务类型。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Group")]
+        public string Group{ get; set; }
+
+        /// <summary>
+        /// 当前资源绑定的站点数量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneNumber")]
+        public long? ZoneNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +127,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "Group", this.Group);
+            this.SetParamSimple(map, prefix + "ZoneNumber", this.ZoneNumber);
         }
     }
 }

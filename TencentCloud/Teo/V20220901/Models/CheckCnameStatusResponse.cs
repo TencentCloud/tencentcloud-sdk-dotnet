@@ -21,15 +21,29 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCredentialRequest : AbstractModel
+    public class CheckCnameStatusResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 域名Cname状态信息列表。
+        /// </summary>
+        [JsonProperty("CnameStatus")]
+        public CnameStatus[] CnameStatus{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "CnameStatus.", this.CnameStatus);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

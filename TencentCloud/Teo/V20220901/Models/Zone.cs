@@ -61,7 +61,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 站点接入方式，取值有
         /// <li> full：NS 接入； </li>
-        /// <li> partial：CNAME 接入。</li>
+        /// <li> partial：CNAME 接入；</li>
+        /// <li> noDomainAccess：无域名接入。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

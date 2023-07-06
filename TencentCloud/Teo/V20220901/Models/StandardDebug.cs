@@ -21,14 +21,28 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyDefaultCertificateResponse : AbstractModel
+    public class StandardDebug : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// Debug 功能开关，取值有：
+        /// <li>on：开启；</li>
+        /// <li>off：关闭。</li>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
+
+        /// <summary>
+        /// 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段，不填则表示允许任意客户端 IP。
+        /// </summary>
+        [JsonProperty("AllowClientIPList")]
+        public string[] AllowClientIPList{ get; set; }
+
+        /// <summary>
+        /// Debug 功能到期时间。超出设置的时间，则功能失效。
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
 
 
         /// <summary>
@@ -36,7 +50,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamArraySimple(map, prefix + "AllowClientIPList.", this.AllowClientIPList);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 任务ID。
+        /// 任务 ID。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

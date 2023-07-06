@@ -21,14 +21,20 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateReplayTaskRequest : AbstractModel
+    public class CheckCnameStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 重放任务的 ID 列表。
+        /// 站点ID。
         /// </summary>
-        [JsonProperty("Ids")]
-        public string[] Ids{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// 记录名称列表。
+        /// </summary>
+        [JsonProperty("RecordNames")]
+        public string[] RecordNames{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamArraySimple(map, prefix + "RecordNames.", this.RecordNames);
         }
     }
 }

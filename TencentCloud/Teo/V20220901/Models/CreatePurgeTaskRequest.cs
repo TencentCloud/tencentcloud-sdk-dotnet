@@ -25,34 +25,30 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点ID。
+        /// 站点 ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 清除缓存类型，取值有：
-        /// <li>purge_url：URL；</li>
-        /// <li>purge_prefix：前缀；</li>
-        /// <li>purge_host：Hostname；</li>
-        /// <li>purge_all：全部缓存；</li>
-        /// <li>purge_cache_tag：cache-tag刷新。</li>
+        /// 节点缓存清除类型，取值有：
+        /// <li>purge_url：URL刷新；</li>
+        /// <li>purge_prefix：目录刷新；</li>
+        /// <li>purge_host：Hostname 刷新；</li>
+        /// <li>purge_all：站点下全部缓存刷新；</li>
+        /// <li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 要清除缓存的资源列表，每个元素格式依据Type而定：
-        /// 1) Type = purge_host 时：
-        /// 形如：www.example.com 或 foo.bar.example.com。
-        /// 2) Type = purge_prefix 时：
-        /// 形如：http://www.example.com/example。
-        /// 3) Type = purge_url 时：
-        /// 形如：https://www.example.com/example.jpg。
-        /// 4）Type = purge_all 时：
-        /// Targets可为空，不需要填写。
-        /// 5）Type = purge_cache_tag 时：
-        /// 形如：tag1。
+        /// 节点缓存清除方法，仅对目录刷新类型有效，取值有：<li> invalidate：仅刷新目录下产生了更新的资源；</li><li> delete：无论目录下资源是否更新都刷新节点资源。</li>注意：使用目录刷新时，默认值： invalidate。
+        /// </summary>
+        [JsonProperty("Method")]
+        public string Method{ get; set; }
+
+        /// <summary>
+        /// 要清除缓存的资源列表。每个元素格式依据清除缓存类型而定，可参考接口示例。<li>EO 默认针对内容含有非 ASCII 字符集的字符进行转义，编码规则遵循 RFC3986；</li><li>单次提交的任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。</li>
         /// </summary>
         [JsonProperty("Targets")]
         public string[] Targets{ get; set; }
@@ -62,6 +58,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 若内容含有非 ASCII 字符集的字符，请开启此开关进行编码转换（编码规则遵循 RFC3986）。
         /// </summary>
         [JsonProperty("EncodeUrl")]
+        [System.Obsolete]
         public bool? EncodeUrl{ get; set; }
 
 
@@ -72,6 +69,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamArraySimple(map, prefix + "Targets.", this.Targets);
             this.SetParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
         }
