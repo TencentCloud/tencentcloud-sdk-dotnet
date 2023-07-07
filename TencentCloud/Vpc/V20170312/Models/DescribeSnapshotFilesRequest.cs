@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// 实例Id。
+        /// 业务实例Id，和BusinessType对应。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

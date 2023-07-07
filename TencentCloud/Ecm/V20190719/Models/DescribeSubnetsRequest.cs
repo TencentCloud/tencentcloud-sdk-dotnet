@@ -40,7 +40,8 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// region - String - ECM地域
         /// zone - String - 可用区。
         /// tag-key - String -是否必填：否- 按照标签键进行过滤。
-        /// tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
+        /// ipv6-cidr-block- String - 是否必填：否 - 按照IPv6 CIDR进行过滤。
+        /// isp-type - String - 是否必填：否 - 按照运营商类型( 如CMCC，CUCC， CTCC)进行过滤。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+        /// 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string GroupDescription{ get; set; }
 
         /// <summary>
-        /// 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+        /// 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

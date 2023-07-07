@@ -135,6 +135,20 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
 
+        /// <summary>
+        /// ipv6运营商
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ipv6ISP")]
+        public string Ipv6ISP{ get; set; }
+
+        /// <summary>
+        /// 多运营商IPv6 Cidr Block。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ipv6CidrBlockSet")]
+        public ISPIPv6CidrBlock[] Ipv6CidrBlockSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +173,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
             this.SetParamSimple(map, prefix + "SubnetCount", this.SubnetCount);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+            this.SetParamSimple(map, prefix + "Ipv6ISP", this.Ipv6ISP);
+            this.SetParamArrayObj(map, prefix + "Ipv6CidrBlockSet.", this.Ipv6CidrBlockSet);
         }
     }
 }

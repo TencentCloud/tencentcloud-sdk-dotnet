@@ -37,19 +37,19 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 查询是否占用的ip列表
+        /// 查询是否占用的ip列表，ip需要在vpc或子网内。最多允许一次查询100个IP。
         /// </summary>
         [JsonProperty("IpAddresses")]
         public string[] IpAddresses{ get; set; }
 
         /// <summary>
-        /// 偏移量。
+        /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 请求对象个数。
+        /// 返回数量，默认为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

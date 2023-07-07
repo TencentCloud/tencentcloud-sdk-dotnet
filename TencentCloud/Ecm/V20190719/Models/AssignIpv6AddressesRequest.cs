@@ -54,6 +54,24 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// CUCC：中国联通
         /// CMCC：中国移动
         /// </summary>
+        [JsonProperty("ISPType")]
+        public string ISPType{ get; set; }
+
+        /// <summary>
+        /// 是否跳过校验一个网卡只能分配一个IPv6 CIDR。该字段通常为true（用于兼容存量子机只有一个地址的情形）。
+        /// </summary>
+        [JsonProperty("SkipCheckIPv6Address")]
+        public bool? SkipCheckIPv6Address{ get; set; }
+
+        /// <summary>
+        /// 是否跳过自动开通公网带宽。通常为true(根据运营系统的用户配置来决定是否自动开通，以支持当前子机购买时的行为）。
+        /// </summary>
+        [JsonProperty("SkipAllocateBandwidth")]
+        public bool? SkipAllocateBandwidth{ get; set; }
+
+        /// <summary>
+        /// 该字段没有使用（已过期）。
+        /// </summary>
         [JsonProperty("Ipv6ISP")]
         public string Ipv6ISP{ get; set; }
 
@@ -67,6 +85,9 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
             this.SetParamArrayObj(map, prefix + "Ipv6Addresses.", this.Ipv6Addresses);
             this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+            this.SetParamSimple(map, prefix + "ISPType", this.ISPType);
+            this.SetParamSimple(map, prefix + "SkipCheckIPv6Address", this.SkipCheckIPv6Address);
+            this.SetParamSimple(map, prefix + "SkipAllocateBandwidth", this.SkipAllocateBandwidth);
             this.SetParamSimple(map, prefix + "Ipv6ISP", this.Ipv6ISP);
         }
     }

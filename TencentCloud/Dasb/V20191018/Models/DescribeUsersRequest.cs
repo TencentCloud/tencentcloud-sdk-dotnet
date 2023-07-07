@@ -62,6 +62,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string Phone{ get; set; }
 
         /// <summary>
+        /// 邮箱，精确查询
+        /// </summary>
+        [JsonProperty("Email")]
+        public string Email{ get; set; }
+
+        /// <summary>
         /// 查询具有指定资产ID访问权限的用户
         /// </summary>
         [JsonProperty("AuthorizedDeviceIdSet")]
@@ -91,6 +97,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
+            this.SetParamSimple(map, prefix + "Email", this.Email);
             this.SetParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
             this.SetParamArraySimple(map, prefix + "AuthTypeSet.", this.AuthTypeSet);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);

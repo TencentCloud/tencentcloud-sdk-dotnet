@@ -37,6 +37,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public ulong? PodUsage{ get; set; }
 
         /// <summary>
+        /// ReplicaSet使用量
+        /// </summary>
+        [JsonProperty("RSUsage")]
+        public ulong? RSUsage{ get; set; }
+
+        /// <summary>
         /// ConfigMap使用量
         /// </summary>
         [JsonProperty("ConfigMapUsage")]
@@ -62,6 +68,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamObj(map, prefix + "CRDUsage.", this.CRDUsage);
             this.SetParamSimple(map, prefix + "PodUsage", this.PodUsage);
+            this.SetParamSimple(map, prefix + "RSUsage", this.RSUsage);
             this.SetParamSimple(map, prefix + "ConfigMapUsage", this.ConfigMapUsage);
             this.SetParamObj(map, prefix + "OtherUsage.", this.OtherUsage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

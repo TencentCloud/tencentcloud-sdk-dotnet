@@ -55,6 +55,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public ulong? ConfigMapCount{ get; set; }
 
         /// <summary>
+        /// ReplicaSets数量
+        /// </summary>
+        [JsonProperty("RSCount")]
+        public ulong? RSCount{ get; set; }
+
+        /// <summary>
         /// CRD数量
         /// </summary>
         [JsonProperty("CRDCount")]
@@ -84,6 +90,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
             this.SetParamSimple(map, prefix + "PodCount", this.PodCount);
             this.SetParamSimple(map, prefix + "ConfigMapCount", this.ConfigMapCount);
+            this.SetParamSimple(map, prefix + "RSCount", this.RSCount);
             this.SetParamSimple(map, prefix + "CRDCount", this.CRDCount);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "OtherCount", this.OtherCount);

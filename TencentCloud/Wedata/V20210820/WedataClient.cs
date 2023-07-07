@@ -2233,6 +2233,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 批量操作任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchOperateTaskRequest"/></param>
+        /// <returns><see cref="DescribeBatchOperateTaskResponse"/></returns>
+        public async Task<DescribeBatchOperateTaskResponse> DescribeBatchOperateTask(DescribeBatchOperateTaskRequest req)
+        {
+             JsonResponseModel<DescribeBatchOperateTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBatchOperateTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBatchOperateTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量操作任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchOperateTaskRequest"/></param>
+        /// <returns><see cref="DescribeBatchOperateTaskResponse"/></returns>
+        public DescribeBatchOperateTaskResponse DescribeBatchOperateTaskSync(DescribeBatchOperateTaskRequest req)
+        {
+             JsonResponseModel<DescribeBatchOperateTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBatchOperateTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBatchOperateTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取集群命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNamespaceListRequest"/></param>

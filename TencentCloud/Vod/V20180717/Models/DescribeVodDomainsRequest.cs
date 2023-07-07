@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 域名列表。当该字段不填时，则默认列出所有域名信息。本字段字段限制如下：
+        /// 域名列表。当该字段不填时，则默认列出所有域名信息。本字段限制如下：
         /// <li>域名个数度最大为 20。</li>
         /// </summary>
         [JsonProperty("Domains")]

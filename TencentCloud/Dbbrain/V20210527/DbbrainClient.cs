@@ -373,6 +373,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 即时创建redis实例大key分析任务，限制正在运行的即时分析任务数量默认为5。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRedisBigKeyAnalysisTaskRequest"/></param>
+        /// <returns><see cref="CreateRedisBigKeyAnalysisTaskResponse"/></returns>
+        public async Task<CreateRedisBigKeyAnalysisTaskResponse> CreateRedisBigKeyAnalysisTask(CreateRedisBigKeyAnalysisTaskRequest req)
+        {
+             JsonResponseModel<CreateRedisBigKeyAnalysisTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRedisBigKeyAnalysisTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRedisBigKeyAnalysisTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 即时创建redis实例大key分析任务，限制正在运行的即时分析任务数量默认为5。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRedisBigKeyAnalysisTaskRequest"/></param>
+        /// <returns><see cref="CreateRedisBigKeyAnalysisTaskResponse"/></returns>
+        public CreateRedisBigKeyAnalysisTaskResponse CreateRedisBigKeyAnalysisTaskSync(CreateRedisBigKeyAnalysisTaskRequest req)
+        {
+             JsonResponseModel<CreateRedisBigKeyAnalysisTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRedisBigKeyAnalysisTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRedisBigKeyAnalysisTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于创建定期生成健康报告并邮件发送的配置，将健康报告的定期生成时间作为参数传入（周一至周日），用于设置健康报告的定期生成时间，同时保存相应的定期邮件发送的配置。
         /// </summary>
         /// <param name="req"><see cref="CreateSchedulerMailProfileRequest"/></param>

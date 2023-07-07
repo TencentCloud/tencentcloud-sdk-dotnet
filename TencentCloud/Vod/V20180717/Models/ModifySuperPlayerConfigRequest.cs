@@ -78,7 +78,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? ImageSpriteDefinition{ get; set; }
 
         /// <summary>
-        /// 播放器对不于不同分辨率的子流展示名字。
+        /// 播放器对于不同分辨率的子流展示名字。
         /// </summary>
         [JsonProperty("ResolutionNames")]
         public ResolutionNameInfo[] ResolutionNames{ get; set; }

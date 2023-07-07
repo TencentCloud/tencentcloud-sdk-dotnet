@@ -37,16 +37,16 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
-        /// </summary>
-        [JsonProperty("Phone")]
-        public string Phone{ get; set; }
-
-        /// <summary>
         /// 用户ID
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
+
+        /// <summary>
+        /// 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+        /// </summary>
+        [JsonProperty("Phone")]
+        public string Phone{ get; set; }
 
         /// <summary>
         /// 电子邮件
@@ -108,8 +108,8 @@ namespace TencentCloud.Dasb.V20191018.Models
         {
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "RealName", this.RealName);
-            this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Email", this.Email);
             this.SetParamSimple(map, prefix + "ValidateFrom", this.ValidateFrom);
             this.SetParamSimple(map, prefix + "ValidateTo", this.ValidateTo);
