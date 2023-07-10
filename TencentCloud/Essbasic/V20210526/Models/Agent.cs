@@ -43,7 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public UserInfo ProxyOperator{ get; set; }
 
         /// <summary>
-        /// 在第三方平台子客企业开通电子签后，会生成唯一的子客应用Id（ProxyAppId）用于代理调用时的鉴权，在子客开通的回调中获取。
+        /// 非必需参数，在第三方平台子客企业开通电子签后，会生成唯一的子客应用Id（ProxyAppId）用于代理调用时的鉴权，在子客开通的回调中获取。
         /// </summary>
         [JsonProperty("ProxyAppId")]
         public string ProxyAppId{ get; set; }

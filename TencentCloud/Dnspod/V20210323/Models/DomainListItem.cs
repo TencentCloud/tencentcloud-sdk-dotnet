@@ -156,6 +156,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
+        /// <summary>
+        /// 域名关联的标签列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagItem[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +191,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "UpdatedOn", this.UpdatedOn);
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

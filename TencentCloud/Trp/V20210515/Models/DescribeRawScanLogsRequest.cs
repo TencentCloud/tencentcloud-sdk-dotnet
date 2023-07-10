@@ -32,7 +32,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public ulong? CorpId{ get; set; }
 
         /// <summary>
-        /// 分页数量，默认为 100，最大为 1000
+        /// 分页数量，默认为 20，最大为 1000
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
@@ -50,6 +50,18 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("AfterLogId")]
         public ulong? AfterLogId{ get; set; }
 
+        /// <summary>
+        /// 开始时间 >= StartTime
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间 < EndTime
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +72,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "AfterLogId", this.AfterLogId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

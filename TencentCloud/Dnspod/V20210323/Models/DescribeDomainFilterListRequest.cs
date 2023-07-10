@@ -127,6 +127,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 标签过滤
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagItemFilter[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +154,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "RecordCountBegin", this.RecordCountBegin);
             this.SetParamSimple(map, prefix + "RecordCountEnd", this.RecordCountEnd);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -214,6 +214,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("IsSubDomain")]
         public bool? IsSubDomain{ get; set; }
 
+        /// <summary>
+        /// 域名关联的标签列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagItem[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -250,6 +257,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "VipAutoRenew", this.VipAutoRenew);
             this.SetParamSimple(map, prefix + "VipResourceId", this.VipResourceId);
             this.SetParamSimple(map, prefix + "IsSubDomain", this.IsSubDomain);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

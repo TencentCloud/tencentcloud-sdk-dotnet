@@ -79,6 +79,13 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("KeywordTag")]
         public long? KeywordTag{ get; set; }
 
+        /// <summary>
+        /// 声调检测结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tone")]
+        public Tone Tone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamArrayObj(map, prefix + "PhoneInfos.", this.PhoneInfos);
             this.SetParamSimple(map, prefix + "ReferenceWord", this.ReferenceWord);
             this.SetParamSimple(map, prefix + "KeywordTag", this.KeywordTag);
+            this.SetParamObj(map, prefix + "Tone.", this.Tone);
         }
     }
 }

@@ -1533,6 +1533,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 删除RabbitMQ专享版实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQVipInstanceResponse"/></returns>
+        public async Task<DeleteRabbitMQVipInstanceResponse> DeleteRabbitMQVipInstance(DeleteRabbitMQVipInstanceRequest req)
+        {
+             JsonResponseModel<DeleteRabbitMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRabbitMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除RabbitMQ专享版实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQVipInstanceResponse"/></returns>
+        public DeleteRabbitMQVipInstanceResponse DeleteRabbitMQVipInstanceSync(DeleteRabbitMQVipInstanceRequest req)
+        {
+             JsonResponseModel<DeleteRabbitMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRabbitMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除RabbitMQ的vhost
         /// </summary>
         /// <param name="req"><see cref="DeleteRabbitMQVirtualHostRequest"/></param>

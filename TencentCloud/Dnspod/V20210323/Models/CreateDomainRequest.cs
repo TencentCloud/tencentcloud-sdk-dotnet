@@ -42,6 +42,18 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("IsMark")]
         public string IsMark{ get; set; }
 
+        /// <summary>
+        /// 添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true
+        /// </summary>
+        [JsonProperty("TransferSubDomain")]
+        public bool? TransferSubDomain{ get; set; }
+
+        /// <summary>
+        /// 域名绑定的标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagItem[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "IsMark", this.IsMark);
+            this.SetParamSimple(map, prefix + "TransferSubDomain", this.TransferSubDomain);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

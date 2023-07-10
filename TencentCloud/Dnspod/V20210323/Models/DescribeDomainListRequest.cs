@@ -54,6 +54,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
+        /// <summary>
+        /// 标签过滤
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagItemFilter[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

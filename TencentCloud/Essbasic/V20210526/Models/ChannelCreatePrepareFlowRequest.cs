@@ -49,13 +49,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public CommonFlowApprover[] FlowApproverList{ get; set; }
 
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 合同流程配置信息
+        /// 合同流程配置信息，用于配置发起合同时定制化
         /// </summary>
         [JsonProperty("FlowOption")]
         public CreateFlowOption FlowOption{ get; set; }
@@ -70,6 +70,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
         /// </summary>
         [JsonProperty("NeedPreview")]
+        [System.Obsolete]
         public bool? NeedPreview{ get; set; }
 
         /// <summary>

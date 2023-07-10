@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.797</VersionPrefix>
+    <VersionPrefix>3.0.798</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,19 +50,56 @@
     <Compile Include="V20201207\TseClient.cs" />
     <Compile Include="V20201207\Models\ApolloEnvParam.cs" />
     <Compile Include="V20201207\Models\BoundK8SInfo.cs" />
+    <Compile Include="V20201207\Models\CloudAPIGatewayCanaryRuleList.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayBalancedService.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayCanaryRule.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayCanaryRuleCondition.cs" />
     <Compile Include="V20201207\Models\CloudNativeAPIGatewayNode.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayRateLimitDetail.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCanaryRuleRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCanaryRuleResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRouteRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRouteRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRouteResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayServiceRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayServiceResponse.cs" />
     <Compile Include="V20201207\Models\CreateEngineRequest.cs" />
     <Compile Include="V20201207\Models\CreateEngineResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCanaryRuleRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCanaryRuleResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRouteRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRouteRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRouteResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayServiceRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayServiceResponse.cs" />
     <Compile Include="V20201207\Models\DeleteEngineRequest.cs" />
     <Compile Include="V20201207\Models\DeleteEngineResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCanaryRulesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCanaryRulesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesResult.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRouteRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRoutesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRoutesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeInstanceRegionInfo.cs" />
     <Compile Include="V20201207\Models\DescribeNacosReplicasRequest.cs" />
     <Compile Include="V20201207\Models\DescribeNacosReplicasResponse.cs" />
     <Compile Include="V20201207\Models\DescribeNacosServerInterfacesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeNacosServerInterfacesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeOneCloudNativeAPIGatewayServiceRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeOneCloudNativeAPIGatewayServiceResponse.cs" />
     <Compile Include="V20201207\Models\DescribeSREInstanceAccessAddressRequest.cs" />
     <Compile Include="V20201207\Models\DescribeSREInstanceAccessAddressResponse.cs" />
     <Compile Include="V20201207\Models\DescribeSREInstancesRequest.cs" />
@@ -75,12 +112,34 @@
     <Compile Include="V20201207\Models\EngineRegionInfo.cs" />
     <Compile Include="V20201207\Models\EnvAddressInfo.cs" />
     <Compile Include="V20201207\Models\EnvInfo.cs" />
+    <Compile Include="V20201207\Models\ExternalRedis.cs" />
     <Compile Include="V20201207\Models\Filter.cs" />
     <Compile Include="V20201207\Models\InstanceTagInfo.cs" />
+    <Compile Include="V20201207\Models\KVMapping.cs" />
     <Compile Include="V20201207\Models\KVPair.cs" />
+    <Compile Include="V20201207\Models\KongRoutePreview.cs" />
+    <Compile Include="V20201207\Models\KongServiceDetail.cs" />
+    <Compile Include="V20201207\Models\KongServicePreview.cs" />
+    <Compile Include="V20201207\Models\KongServiceRouteList.cs" />
+    <Compile Include="V20201207\Models\KongServices.cs" />
+    <Compile Include="V20201207\Models\KongTarget.cs" />
+    <Compile Include="V20201207\Models\KongUpstreamInfo.cs" />
+    <Compile Include="V20201207\Models\ListFilter.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayCanaryRuleRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayCanaryRuleResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRouteRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRouteRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRouteResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayServiceRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayServiceResponse.cs" />
     <Compile Include="V20201207\Models\NacosReplica.cs" />
     <Compile Include="V20201207\Models\NacosServerInterface.cs" />
     <Compile Include="V20201207\Models\PolarisLimiterAddress.cs" />
+    <Compile Include="V20201207\Models\QpsThreshold.cs" />
+    <Compile Include="V20201207\Models\RateLimitResponse.cs" />
     <Compile Include="V20201207\Models\SREInstance.cs" />
     <Compile Include="V20201207\Models\ServiceGovernanceInfo.cs" />
     <Compile Include="V20201207\Models\UpdateEngineInternetAccessRequest.cs" />

@@ -2931,6 +2931,8 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// 本接口（GenerateApiDocument）用于自动生成 API 文档和 SDK，一个服务的一个环境生成一份文档和 SDK。
         /// </summary>
         /// <param name="req"><see cref="GenerateApiDocumentRequest"/></param>
@@ -2951,6 +2953,8 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// 本接口（GenerateApiDocument）用于自动生成 API 文档和 SDK，一个服务的一个环境生成一份文档和 SDK。
         /// </summary>
         /// <param name="req"><see cref="GenerateApiDocumentRequest"/></param>
