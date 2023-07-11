@@ -15,33 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeExternalTrtcMeasureResponse : AbstractModel
+    public class UnassignIpv6SubnetCidrBlockResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 每个SdkAppId的时长使用信息
-        /// </summary>
-        [JsonProperty("SdkAppIdTrtrTimeUsages")]
-        public SdkAppIdNewTrtcTimeUsage[] SdkAppIdTrtrTimeUsages{ get; set; }
-
-        /// <summary>
-        /// 主播的用量统计方式。取值"InRoomTime":房间时长,"SubscribeTime":"订阅时长","Bandwidth":带宽
-        /// </summary>
-        [JsonProperty("AnchorUsageMode")]
-        public string AnchorUsageMode{ get; set; }
-
-        /// <summary>
-        /// 观众的用量统计方式。取值"InRoomTime":在房间时长,"SubscribeTime":"订阅时长","Bandwidth":带宽,"MergeWithAnchor":"不区分麦上麦下"
-        /// </summary>
-        [JsonProperty("AudienceUsageMode")]
-        public string AudienceUsageMode{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -54,9 +36,6 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "SdkAppIdTrtrTimeUsages.", this.SdkAppIdTrtrTimeUsages);
-            this.SetParamSimple(map, prefix + "AnchorUsageMode", this.AnchorUsageMode);
-            this.SetParamSimple(map, prefix + "AudienceUsageMode", this.AudienceUsageMode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

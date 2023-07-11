@@ -31,6 +31,18 @@ namespace TencentCloud.Ess.V20201111.Models
         public FlowDetailInfo[] FlowDetailInfos{ get; set; }
 
         /// <summary>
+        /// 合同组ID
+        /// </summary>
+        [JsonProperty("FlowGroupId")]
+        public string FlowGroupId{ get; set; }
+
+        /// <summary>
+        /// 合同组名称
+        /// </summary>
+        [JsonProperty("FlowGroupName")]
+        public string FlowGroupName{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +55,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "FlowDetailInfos.", this.FlowDetailInfos);
+            this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
+            this.SetParamSimple(map, prefix + "FlowGroupName", this.FlowGroupName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

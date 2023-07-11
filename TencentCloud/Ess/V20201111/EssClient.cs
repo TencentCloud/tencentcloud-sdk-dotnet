@@ -567,6 +567,92 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 此接口（CreateFlowGroupByFiles）通过多文件创建合同组签署流程。<br/>
+        /// PDF资源Id 通过上传文件接口获取
+        /// 此接口合同组中的子合同必须都是文件发起的合同
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowGroupByFilesRequest"/></param>
+        /// <returns><see cref="CreateFlowGroupByFilesResponse"/></returns>
+        public async Task<CreateFlowGroupByFilesResponse> CreateFlowGroupByFiles(CreateFlowGroupByFilesRequest req)
+        {
+             JsonResponseModel<CreateFlowGroupByFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFlowGroupByFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowGroupByFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（CreateFlowGroupByFiles）通过多文件创建合同组签署流程。<br/>
+        /// PDF资源Id 通过上传文件接口获取
+        /// 此接口合同组中的子合同必须都是文件发起的合同
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowGroupByFilesRequest"/></param>
+        /// <returns><see cref="CreateFlowGroupByFilesResponse"/></returns>
+        public CreateFlowGroupByFilesResponse CreateFlowGroupByFilesSync(CreateFlowGroupByFilesRequest req)
+        {
+             JsonResponseModel<CreateFlowGroupByFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFlowGroupByFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowGroupByFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（CreateFlowGroupByTemplates）通过多模板创建合同组签署流程。<br/>
+        /// 此接口合同组中的子合同必须都是模板发起的合同。 <br/>目前最大仅支持50个子合同
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowGroupByTemplatesRequest"/></param>
+        /// <returns><see cref="CreateFlowGroupByTemplatesResponse"/></returns>
+        public async Task<CreateFlowGroupByTemplatesResponse> CreateFlowGroupByTemplates(CreateFlowGroupByTemplatesRequest req)
+        {
+             JsonResponseModel<CreateFlowGroupByTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFlowGroupByTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowGroupByTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（CreateFlowGroupByTemplates）通过多模板创建合同组签署流程。<br/>
+        /// 此接口合同组中的子合同必须都是模板发起的合同。 <br/>目前最大仅支持50个子合同
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowGroupByTemplatesRequest"/></param>
+        /// <returns><see cref="CreateFlowGroupByTemplatesResponse"/></returns>
+        public CreateFlowGroupByTemplatesResponse CreateFlowGroupByTemplatesSync(CreateFlowGroupByTemplatesRequest req)
+        {
+             JsonResponseModel<CreateFlowGroupByTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFlowGroupByTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowGroupByTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 指定需要批量催办的签署流程Id，批量催办合同，最多100个; 接口失败后返回错误信息
         /// 注意:
         /// 该接口不可直接调用，请联系客户经理申请使用

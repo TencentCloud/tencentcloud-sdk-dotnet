@@ -25,13 +25,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 未打折前价格，其值除以100表示多少钱。例如10010表示100.10元
+        /// 未打折前价格，其值除以100表示最终的价格。
+        /// InstanceChargeType=PREPAID时，单位是"每月"。
+        /// InstanceChargeType=POSTPAID时，单位是"每小时"。
+        /// 例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public long? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// 实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元
+        /// 实际需要支付的价格，其值除以100表示最终的价格。
+        /// InstanceChargeType=PREPAID时，单位是"每月"。
+        /// InstanceChargeType=POSTPAID时，单位是"每小时"。
+        /// 例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
         /// </summary>
         [JsonProperty("Price")]
         public long? Price{ get; set; }

@@ -79,7 +79,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? RowsSent{ get; set; }
 
         /// <summary>
-        /// sql模版
+        /// sql模板
         /// </summary>
         [JsonProperty("SqlTemplate")]
         public string SqlTemplate{ get; set; }

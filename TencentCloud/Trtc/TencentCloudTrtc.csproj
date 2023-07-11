@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.798</VersionPrefix>
+    <VersionPrefix>3.0.799</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,8 +67,6 @@
     <Compile Include="V20190722\Models\DescribeCallDetailInfoResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCloudRecordingRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCloudRecordingResponse.cs" />
-    <Compile Include="V20190722\Models\DescribeExternalTrtcMeasureRequest.cs" />
-    <Compile Include="V20190722\Models\DescribeExternalTrtcMeasureResponse.cs" />
     <Compile Include="V20190722\Models\DescribeMixTranscodingUsageRequest.cs" />
     <Compile Include="V20190722\Models\DescribeMixTranscodingUsageResponse.cs" />
     <Compile Include="V20190722\Models\DescribePictureRequest.cs" />
@@ -148,7 +146,6 @@
     <Compile Include="V20190722\Models\RemoveUserResponse.cs" />
     <Compile Include="V20190722\Models\RoomState.cs" />
     <Compile Include="V20190722\Models\ScaleInfomation.cs" />
-    <Compile Include="V20190722\Models\SdkAppIdNewTrtcTimeUsage.cs" />
     <Compile Include="V20190722\Models\SdkAppIdRecordUsage.cs" />
     <Compile Include="V20190722\Models\SdkAppIdTrtcMcuTranscodeTimeUsage.cs" />
     <Compile Include="V20190722\Models\SeriesInfo.cs" />
@@ -172,7 +169,6 @@
     <Compile Include="V20190722\Models\TRTCDataResp.cs" />
     <Compile Include="V20190722\Models\TencentVod.cs" />
     <Compile Include="V20190722\Models\TimeValue.cs" />
-    <Compile Include="V20190722\Models\TrtcTimeNewUsage.cs" />
     <Compile Include="V20190722\Models\TrtcUsage.cs" />
     <Compile Include="V20190722\Models\UpdatePublishCdnStreamRequest.cs" />
     <Compile Include="V20190722\Models\UpdatePublishCdnStreamResponse.cs" />

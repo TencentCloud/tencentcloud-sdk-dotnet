@@ -64,6 +64,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowId{ get; set; }
 
         /// <summary>
+        /// 合同组ID
+        /// </summary>
+        [JsonProperty("FlowGroupId")]
+        public string FlowGroupId{ get; set; }
+
+        /// <summary>
         /// 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
         /// </summary>
         [JsonProperty("PathType")]
@@ -93,6 +99,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "EndPoint", this.EndPoint);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
             this.SetParamSimple(map, prefix + "PathType", this.PathType);
             this.SetParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);

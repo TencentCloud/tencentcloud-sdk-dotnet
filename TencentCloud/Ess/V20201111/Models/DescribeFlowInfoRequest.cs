@@ -25,16 +25,16 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 需要查询的流程ID列表，限制最大100个
-        /// </summary>
-        [JsonProperty("FlowIds")]
-        public string[] FlowIds{ get; set; }
-
-        /// <summary>
         /// 调用方用户信息，userId 必填
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
+
+        /// <summary>
+        /// 需要查询的流程ID列表，限制最大100个
+        /// </summary>
+        [JsonProperty("FlowIds")]
+        public string[] FlowIds{ get; set; }
 
         /// <summary>
         /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
@@ -42,15 +42,22 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
+        /// <summary>
+        /// 合同组ID
+        /// </summary>
+        [JsonProperty("FlowGroupId")]
+        public string FlowGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         }
     }
 }

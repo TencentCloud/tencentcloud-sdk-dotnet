@@ -54,6 +54,12 @@ namespace TencentCloud.Cms.V20190321.Models
         [JsonProperty("EvilTypeList")]
         public long?[] EvilTypeList{ get; set; }
 
+        /// <summary>
+        /// 样本词ID列表过滤
+        /// </summary>
+        [JsonProperty("SampleIDs")]
+        public string[] SampleIDs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cms.V20190321.Models
             this.SetParamSimple(map, prefix + "LibID", this.LibID);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamArraySimple(map, prefix + "EvilTypeList.", this.EvilTypeList);
+            this.SetParamArraySimple(map, prefix + "SampleIDs.", this.SampleIDs);
         }
     }
 }

@@ -73,7 +73,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// 连接池阀值：单位（秒）
+        /// 连接池阈值：单位（秒）
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }

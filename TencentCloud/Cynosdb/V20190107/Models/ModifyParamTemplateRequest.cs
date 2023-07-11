@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 模版ID
+        /// 模板ID
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// 模版名
+        /// 模板名
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 模版描述
+        /// 模板描述
         /// </summary>
         [JsonProperty("TemplateDescription")]
         public string TemplateDescription{ get; set; }

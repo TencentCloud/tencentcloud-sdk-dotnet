@@ -31,7 +31,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 在当前可用区欲创建的实例数目。
+        /// 在当前可用区创建的实例数目。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }

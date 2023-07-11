@@ -116,6 +116,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("GatewayRoutePort")]
         public long? GatewayRoutePort{ get; set; }
 
+        /// <summary>
+        /// 路由环境ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GatewayRouteEnvId")]
+        public string GatewayRouteEnvId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +143,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "GatewayRoutePath", this.GatewayRoutePath);
             this.SetParamSimple(map, prefix + "GatewayRouteMethod", this.GatewayRouteMethod);
             this.SetParamSimple(map, prefix + "GatewayRoutePort", this.GatewayRoutePort);
+            this.SetParamSimple(map, prefix + "GatewayRouteEnvId", this.GatewayRouteEnvId);
         }
     }
 }

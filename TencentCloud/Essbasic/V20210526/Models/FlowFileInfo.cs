@@ -79,6 +79,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? Unordered{ get; set; }
 
         /// <summary>
+        /// 签署文件中的发起方的填写控件，需要在发起的时候进行填充
+        /// </summary>
+        [JsonProperty("Components")]
+        public Component[] Components{ get; set; }
+
+        /// <summary>
         /// 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
         /// </summary>
         [JsonProperty("CustomShowMap")]
@@ -105,6 +111,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "CustomerData", this.CustomerData);
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
+            this.SetParamArrayObj(map, prefix + "Components.", this.Components);
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         }

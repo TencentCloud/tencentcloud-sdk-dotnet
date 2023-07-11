@@ -47,16 +47,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverMobile{ get; set; }
 
         /// <summary>
-        /// 签署人的签署控件列表
-        /// </summary>
-        [JsonProperty("SignComponents")]
-        public Component[] SignComponents{ get; set; }
-
-        /// <summary>
         /// 如果签署方是企业签署方，则为企业名
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
+
+        /// <summary>
+        /// 签署人的签署控件列表
+        /// </summary>
+        [JsonProperty("SignComponents")]
+        public Component[] SignComponents{ get; set; }
 
         /// <summary>
         /// 签署人的身份证号
@@ -152,8 +152,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ApproverType", this.ApproverType);
             this.SetParamSimple(map, prefix + "ApproverName", this.ApproverName);
             this.SetParamSimple(map, prefix + "ApproverMobile", this.ApproverMobile);
-            this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+            this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
             this.SetParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
             this.SetParamSimple(map, prefix + "ApproverIdCardType", this.ApproverIdCardType);
             this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);

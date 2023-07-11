@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 每个子合同的发起所需的信息，数量限制2-100
+        /// 每个子合同的发起所需的信息，数量限制2-50
         /// </summary>
         [JsonProperty("FlowFileInfos")]
         public FlowFileInfo[] FlowFileInfos{ get; set; }

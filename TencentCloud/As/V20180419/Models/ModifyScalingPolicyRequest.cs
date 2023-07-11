@@ -85,8 +85,8 @@ namespace TencentCloud.As.V20180419.Models
         public bool? DisableScaleIn{ get; set; }
 
         /// <summary>
-        /// 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-        /// 如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
+        /// 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+        /// 通知组ID，即为用户组ID集合。
         /// </summary>
         [JsonProperty("NotificationUserGroupIds")]
         public string[] NotificationUserGroupIds{ get; set; }

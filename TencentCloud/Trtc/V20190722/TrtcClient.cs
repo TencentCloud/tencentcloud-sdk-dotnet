@@ -323,52 +323,6 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 接口内部调用计量接口，计量接口迁通用集群后不可用。目前已有新的对外接口可以供用户使用。
-        /// 
-        /// 获取Trtc的用量统计数据。走计费渠道二期 只允许查两天的数据。
-        /// 当前接口已不再更新维护，请使用新版音视频用量接口：DescribeTrtcUsage （https://cloud.tencent.com/document/product/647/81425）
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExternalTrtcMeasureRequest"/></param>
-        /// <returns><see cref="DescribeExternalTrtcMeasureResponse"/></returns>
-        public async Task<DescribeExternalTrtcMeasureResponse> DescribeExternalTrtcMeasure(DescribeExternalTrtcMeasureRequest req)
-        {
-             JsonResponseModel<DescribeExternalTrtcMeasureResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeExternalTrtcMeasure");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExternalTrtcMeasureResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 接口内部调用计量接口，计量接口迁通用集群后不可用。目前已有新的对外接口可以供用户使用。
-        /// 
-        /// 获取Trtc的用量统计数据。走计费渠道二期 只允许查两天的数据。
-        /// 当前接口已不再更新维护，请使用新版音视频用量接口：DescribeTrtcUsage （https://cloud.tencent.com/document/product/647/81425）
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExternalTrtcMeasureRequest"/></param>
-        /// <returns><see cref="DescribeExternalTrtcMeasureResponse"/></returns>
-        public DescribeExternalTrtcMeasureResponse DescribeExternalTrtcMeasureSync(DescribeExternalTrtcMeasureRequest req)
-        {
-             JsonResponseModel<DescribeExternalTrtcMeasureResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeExternalTrtcMeasure");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExternalTrtcMeasureResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 获取TRTC混流转码的用量明细。
         /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
         /// - 单次查询统计区间最多不能超过31天。

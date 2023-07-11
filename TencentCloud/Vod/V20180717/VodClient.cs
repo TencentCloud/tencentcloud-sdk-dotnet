@@ -811,7 +811,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建音画质重生模板。
+        /// 创建视频重生模板。
         /// </summary>
         /// <param name="req"><see cref="CreateRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="CreateRebuildMediaTemplateResponse"/></returns>
@@ -831,7 +831,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建音画质重生模板。
+        /// 创建视频重生模板。
         /// </summary>
         /// <param name="req"><see cref="CreateRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="CreateRebuildMediaTemplateResponse"/></returns>
@@ -1877,7 +1877,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除音画质重生模板。
+        /// 删除视频重生模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="DeleteRebuildMediaTemplateResponse"/></returns>
@@ -1897,7 +1897,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除音画质重生模板。
+        /// 删除视频重生模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="DeleteRebuildMediaTemplateResponse"/></returns>

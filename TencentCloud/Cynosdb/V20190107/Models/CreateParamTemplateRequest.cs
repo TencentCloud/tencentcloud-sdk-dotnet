@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 模版名称
+        /// 模板名称
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// 模版描述
+        /// 模板描述
         /// </summary>
         [JsonProperty("TemplateDescription")]
         public string TemplateDescription{ get; set; }
 
         /// <summary>
-        /// 可选参数，需要复制的模版ID
+        /// 可选参数，需要复制的模板ID
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

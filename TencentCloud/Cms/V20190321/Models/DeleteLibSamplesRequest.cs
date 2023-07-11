@@ -25,7 +25,7 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 关键词ID
+        /// 关键词ID列表
         /// </summary>
         [JsonProperty("SampleIDs")]
         public string[] SampleIDs{ get; set; }
@@ -36,6 +36,12 @@ namespace TencentCloud.Cms.V20190321.Models
         [JsonProperty("LibID")]
         public string LibID{ get; set; }
 
+        /// <summary>
+        /// 关键词内容列表
+        /// </summary>
+        [JsonProperty("SampleContents")]
+        public string[] SampleContents{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cms.V20190321.Models
         {
             this.SetParamArraySimple(map, prefix + "SampleIDs.", this.SampleIDs);
             this.SetParamSimple(map, prefix + "LibID", this.LibID);
+            this.SetParamArraySimple(map, prefix + "SampleContents.", this.SampleContents);
         }
     }
 }

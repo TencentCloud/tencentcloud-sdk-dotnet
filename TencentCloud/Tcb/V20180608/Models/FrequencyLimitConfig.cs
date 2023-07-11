@@ -26,12 +26,14 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 限额对象 "ConnectionsLimit" 或 "QPSLimit"
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LimitObject")]
         public string LimitObject{ get; set; }
 
         /// <summary>
         /// 限额配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LimitConfig")]
         public string LimitConfig{ get; set; }

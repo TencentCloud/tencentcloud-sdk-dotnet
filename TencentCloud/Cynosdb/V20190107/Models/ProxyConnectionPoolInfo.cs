@@ -39,7 +39,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// 连接池类型：SessionConnectionPool（会话级别连接池
+        /// 连接池类型：SessionConnectionPool（会话级别连接池）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectionPoolType")]

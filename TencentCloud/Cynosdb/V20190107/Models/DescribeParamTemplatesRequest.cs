@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] EngineVersions{ get; set; }
 
         /// <summary>
-        /// 模版名称
+        /// 模板名称
         /// </summary>
         [JsonProperty("TemplateNames")]
         public string[] TemplateNames{ get; set; }
 
         /// <summary>
-        /// 模版ID
+        /// 模板ID
         /// </summary>
         [JsonProperty("TemplateIds")]
         public long?[] TemplateIds{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] Products{ get; set; }
 
         /// <summary>
-        /// 模版类型
+        /// 模板类型
         /// </summary>
         [JsonProperty("TemplateTypes")]
         public string[] TemplateTypes{ get; set; }

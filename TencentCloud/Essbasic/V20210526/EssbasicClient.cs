@@ -447,6 +447,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 接口（ChannelCreateFlowGroupByTemplates）用于通过多模板创建合同组签署流程。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateFlowGroupByTemplatesRequest"/></param>
+        /// <returns><see cref="ChannelCreateFlowGroupByTemplatesResponse"/></returns>
+        public async Task<ChannelCreateFlowGroupByTemplatesResponse> ChannelCreateFlowGroupByTemplates(ChannelCreateFlowGroupByTemplatesRequest req)
+        {
+             JsonResponseModel<ChannelCreateFlowGroupByTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateFlowGroupByTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateFlowGroupByTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口（ChannelCreateFlowGroupByTemplates）用于通过多模板创建合同组签署流程。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateFlowGroupByTemplatesRequest"/></param>
+        /// <returns><see cref="ChannelCreateFlowGroupByTemplatesResponse"/></returns>
+        public ChannelCreateFlowGroupByTemplatesResponse ChannelCreateFlowGroupByTemplatesSync(ChannelCreateFlowGroupByTemplatesRequest req)
+        {
+             JsonResponseModel<ChannelCreateFlowGroupByTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateFlowGroupByTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateFlowGroupByTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 指定需要批量催办的签署流程Id，批量催办合同，最多100个；接口失败后返回错误信息
         /// 注意:
         /// 该接口不可直接调用，请联系客户经理申请使用
@@ -1017,7 +1057,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 查询用户角色
+        /// 查询角色列表，支持根据类型和状态过滤角色列表
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeRolesRequest"/></param>
         /// <returns><see cref="ChannelDescribeRolesResponse"/></returns>
@@ -1037,7 +1077,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 查询用户角色
+        /// 查询角色列表，支持根据类型和状态过滤角色列表
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeRolesRequest"/></param>
         /// <returns><see cref="ChannelDescribeRolesResponse"/></returns>

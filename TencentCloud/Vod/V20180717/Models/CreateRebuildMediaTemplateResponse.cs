@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 音画质重生模板 ID。
+        /// 视频重生模板 ID。
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SdkAppIdNewTrtcTimeUsage : AbstractModel
+    public class ChannelCreateFlowGroupByTemplatesRequest : AbstractModel
     {
         
         /// <summary>
-        /// SdkAppId的值。
+        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public string SdkAppId{ get; set; }
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 统计的时间点数据。
+        /// 每个子合同的发起所需的信息，数量限制2-50（合同组暂不支持抄送功能）
         /// </summary>
-        [JsonProperty("TrtcTimeUsages")]
-        public TrtcTimeNewUsage[] TrtcTimeUsages{ get; set; }
+        [JsonProperty("FlowInfos")]
+        public FlowInfo[] FlowInfos{ get; set; }
 
         /// <summary>
-        /// 统计的麦下用量的时间点数据。
+        /// 合同组名称，长度不超过200个字符
         /// </summary>
-        [JsonProperty("AudienceTrtcTimeUsages")]
-        public TrtcTimeNewUsage[] AudienceTrtcTimeUsages{ get; set; }
+        [JsonProperty("FlowGroupName")]
+        public string FlowGroupName{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamArrayObj(map, prefix + "TrtcTimeUsages.", this.TrtcTimeUsages);
-            this.SetParamArrayObj(map, prefix + "AudienceTrtcTimeUsages.", this.AudienceTrtcTimeUsages);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamArrayObj(map, prefix + "FlowInfos.", this.FlowInfos);
+            this.SetParamSimple(map, prefix + "FlowGroupName", this.FlowGroupName);
         }
     }
 }

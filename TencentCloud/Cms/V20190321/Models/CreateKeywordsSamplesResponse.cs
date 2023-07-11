@@ -32,6 +32,12 @@ namespace TencentCloud.Cms.V20190321.Models
         public string[] SampleIDs{ get; set; }
 
         /// <summary>
+        /// 成功入库关键词列表
+        /// </summary>
+        [JsonProperty("SuccessInfos")]
+        public UserKeywordInfo[] SuccessInfos{ get; set; }
+
+        /// <summary>
         /// 重复关键词列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Cms.V20190321.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "SampleIDs.", this.SampleIDs);
+            this.SetParamArrayObj(map, prefix + "SuccessInfos.", this.SuccessInfos);
             this.SetParamArrayObj(map, prefix + "DupInfos.", this.DupInfos);
             this.SetParamArrayObj(map, prefix + "InvalidSamples.", this.InvalidSamples);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

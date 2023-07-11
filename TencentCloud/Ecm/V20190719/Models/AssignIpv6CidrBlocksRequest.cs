@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeExternalTrtcMeasureRequest : AbstractModel
+    public class AssignIpv6CidrBlocksRequest : AbstractModel
     {
         
         /// <summary>
-        /// 查询开始日期。
+        /// `VPC`实例`ID`，形如：`vpc-f49l6u0z`。	
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
         /// <summary>
-        /// 查询结束日期。
+        /// 网络运营商类型 取值范围:'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        [JsonProperty("ISPTypes")]
+        public ISPTypeItem[] ISPTypes{ get; set; }
 
         /// <summary>
-        /// 对应的应用。如果没有这个参数，表示获取用户名下全部实时音视频应用的汇总。
+        /// ECM地域。
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("EcmRegion")]
+        public string EcmRegion{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamArrayObj(map, prefix + "ISPTypes.", this.ISPTypes);
+            this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
         }
     }
 }

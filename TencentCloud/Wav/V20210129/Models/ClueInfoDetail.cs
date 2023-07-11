@@ -336,6 +336,12 @@ namespace TencentCloud.Wav.V20210129.Models
         [JsonProperty("Position")]
         public string Position{ get; set; }
 
+        /// <summary>
+        /// 自定义的门店id
+        /// </summary>
+        [JsonProperty("CorpShopId")]
+        public string CorpShopId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -392,6 +398,7 @@ namespace TencentCloud.Wav.V20210129.Models
             this.SetParamSimple(map, prefix + "ShopId", this.ShopId);
             this.SetParamSimple(map, prefix + "ShopName", this.ShopName);
             this.SetParamSimple(map, prefix + "Position", this.Position);
+            this.SetParamSimple(map, prefix + "CorpShopId", this.CorpShopId);
         }
     }
 }

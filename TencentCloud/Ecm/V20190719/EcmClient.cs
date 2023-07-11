@@ -93,6 +93,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 本接口用于给IPv6地址分配公网带宽
+        /// </summary>
+        /// <param name="req"><see cref="AllocateIpv6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="AllocateIpv6AddressesBandwidthResponse"/></returns>
+        public async Task<AllocateIpv6AddressesBandwidthResponse> AllocateIpv6AddressesBandwidth(AllocateIpv6AddressesBandwidthRequest req)
+        {
+             JsonResponseModel<AllocateIpv6AddressesBandwidthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AllocateIpv6AddressesBandwidth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AllocateIpv6AddressesBandwidthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于给IPv6地址分配公网带宽
+        /// </summary>
+        /// <param name="req"><see cref="AllocateIpv6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="AllocateIpv6AddressesBandwidthResponse"/></returns>
+        public AllocateIpv6AddressesBandwidthResponse AllocateIpv6AddressesBandwidthSync(AllocateIpv6AddressesBandwidthRequest req)
+        {
+             JsonResponseModel<AllocateIpv6AddressesBandwidthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AllocateIpv6AddressesBandwidth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AllocateIpv6AddressesBandwidthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（AssignIpv6Addresses）用于弹性网卡申请IPv6地址。
         /// </summary>
         /// <param name="req"><see cref="AssignIpv6AddressesRequest"/></param>
@@ -124,6 +164,142 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "AssignIpv6Addresses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignIpv6AddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AssignIpv6CidrBlock）用于分配IPv6网段。
+        /// 
+        /// 使用本接口前，您需要已有VPC实例，如果没有可通过接口CreateVpc创建。
+        /// </summary>
+        /// <param name="req"><see cref="AssignIpv6CidrBlockRequest"/></param>
+        /// <returns><see cref="AssignIpv6CidrBlockResponse"/></returns>
+        public async Task<AssignIpv6CidrBlockResponse> AssignIpv6CidrBlock(AssignIpv6CidrBlockRequest req)
+        {
+             JsonResponseModel<AssignIpv6CidrBlockResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssignIpv6CidrBlock");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignIpv6CidrBlockResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AssignIpv6CidrBlock）用于分配IPv6网段。
+        /// 
+        /// 使用本接口前，您需要已有VPC实例，如果没有可通过接口CreateVpc创建。
+        /// </summary>
+        /// <param name="req"><see cref="AssignIpv6CidrBlockRequest"/></param>
+        /// <returns><see cref="AssignIpv6CidrBlockResponse"/></returns>
+        public AssignIpv6CidrBlockResponse AssignIpv6CidrBlockSync(AssignIpv6CidrBlockRequest req)
+        {
+             JsonResponseModel<AssignIpv6CidrBlockResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssignIpv6CidrBlock");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignIpv6CidrBlockResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AssignIpv6CidrBlocks）用于分配IPv6网段。
+        /// 
+        /// 使用本接口前，您需要已有VPC实例，如果没有可通过接口CreateVpc创建。
+        /// 每个VPC 可以同时支持运营商网络('CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调)。本接口可以同时申请不同类型的IPv6网段
+        /// </summary>
+        /// <param name="req"><see cref="AssignIpv6CidrBlocksRequest"/></param>
+        /// <returns><see cref="AssignIpv6CidrBlocksResponse"/></returns>
+        public async Task<AssignIpv6CidrBlocksResponse> AssignIpv6CidrBlocks(AssignIpv6CidrBlocksRequest req)
+        {
+             JsonResponseModel<AssignIpv6CidrBlocksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssignIpv6CidrBlocks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignIpv6CidrBlocksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AssignIpv6CidrBlocks）用于分配IPv6网段。
+        /// 
+        /// 使用本接口前，您需要已有VPC实例，如果没有可通过接口CreateVpc创建。
+        /// 每个VPC 可以同时支持运营商网络('CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调)。本接口可以同时申请不同类型的IPv6网段
+        /// </summary>
+        /// <param name="req"><see cref="AssignIpv6CidrBlocksRequest"/></param>
+        /// <returns><see cref="AssignIpv6CidrBlocksResponse"/></returns>
+        public AssignIpv6CidrBlocksResponse AssignIpv6CidrBlocksSync(AssignIpv6CidrBlocksRequest req)
+        {
+             JsonResponseModel<AssignIpv6CidrBlocksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssignIpv6CidrBlocks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignIpv6CidrBlocksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AssignIpv6SubnetCidrBlock）用于分配IPv6子网段。
+        /// 
+        /// 给子网分配 IPv6 网段，要求子网所属 VPC 已获得 IPv6 网段。如果尚未分配，请先通过接口 AssignIpv6CidrBlock 给子网所属 VPC 分配一个 IPv6 网段。否则无法分配 IPv6 子网段。
+        /// 每个子网只能分配一个IPv6网段。
+        /// </summary>
+        /// <param name="req"><see cref="AssignIpv6SubnetCidrBlockRequest"/></param>
+        /// <returns><see cref="AssignIpv6SubnetCidrBlockResponse"/></returns>
+        public async Task<AssignIpv6SubnetCidrBlockResponse> AssignIpv6SubnetCidrBlock(AssignIpv6SubnetCidrBlockRequest req)
+        {
+             JsonResponseModel<AssignIpv6SubnetCidrBlockResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssignIpv6SubnetCidrBlock");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignIpv6SubnetCidrBlockResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AssignIpv6SubnetCidrBlock）用于分配IPv6子网段。
+        /// 
+        /// 给子网分配 IPv6 网段，要求子网所属 VPC 已获得 IPv6 网段。如果尚未分配，请先通过接口 AssignIpv6CidrBlock 给子网所属 VPC 分配一个 IPv6 网段。否则无法分配 IPv6 子网段。
+        /// 每个子网只能分配一个IPv6网段。
+        /// </summary>
+        /// <param name="req"><see cref="AssignIpv6SubnetCidrBlockRequest"/></param>
+        /// <returns><see cref="AssignIpv6SubnetCidrBlockResponse"/></returns>
+        public AssignIpv6SubnetCidrBlockResponse AssignIpv6SubnetCidrBlockSync(AssignIpv6SubnetCidrBlockRequest req)
+        {
+             JsonResponseModel<AssignIpv6SubnetCidrBlockResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssignIpv6SubnetCidrBlock");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignIpv6SubnetCidrBlockResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2675,6 +2851,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 该接口（DescribeRegionIpv6Addresses）用于查询ECM地域之下的IPV6地址信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionIpv6AddressesRequest"/></param>
+        /// <returns><see cref="DescribeRegionIpv6AddressesResponse"/></returns>
+        public async Task<DescribeRegionIpv6AddressesResponse> DescribeRegionIpv6Addresses(DescribeRegionIpv6AddressesRequest req)
+        {
+             JsonResponseModel<DescribeRegionIpv6AddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRegionIpv6Addresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionIpv6AddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（DescribeRegionIpv6Addresses）用于查询ECM地域之下的IPV6地址信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionIpv6AddressesRequest"/></param>
+        /// <returns><see cref="DescribeRegionIpv6AddressesResponse"/></returns>
+        public DescribeRegionIpv6AddressesResponse DescribeRegionIpv6AddressesSync(DescribeRegionIpv6AddressesRequest req)
+        {
+             JsonResponseModel<DescribeRegionIpv6AddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRegionIpv6Addresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionIpv6AddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询自定义路由策略与云联网路由策略冲突列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRouteConflictsRequest"/></param>
@@ -3937,6 +4153,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 该接口(ModifyIpv6AddressesBandwidth)用于修改IPV6地址访问internet的带宽
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIpv6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyIpv6AddressesBandwidthResponse"/></returns>
+        public async Task<ModifyIpv6AddressesBandwidthResponse> ModifyIpv6AddressesBandwidth(ModifyIpv6AddressesBandwidthRequest req)
+        {
+             JsonResponseModel<ModifyIpv6AddressesBandwidthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyIpv6AddressesBandwidth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIpv6AddressesBandwidthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口(ModifyIpv6AddressesBandwidth)用于修改IPV6地址访问internet的带宽
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIpv6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyIpv6AddressesBandwidthResponse"/></returns>
+        public ModifyIpv6AddressesBandwidthResponse ModifyIpv6AddressesBandwidthSync(ModifyIpv6AddressesBandwidthRequest req)
+        {
+             JsonResponseModel<ModifyIpv6AddressesBandwidthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyIpv6AddressesBandwidth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIpv6AddressesBandwidthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改负载均衡监听器属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyListenerRequest"/></param>
@@ -4617,6 +4873,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 查询私有网络下Vpc、子网、havip等异步任务请求结果
+        /// </summary>
+        /// <param name="req"><see cref="QueryVpcTaskResultRequest"/></param>
+        /// <returns><see cref="QueryVpcTaskResultResponse"/></returns>
+        public async Task<QueryVpcTaskResultResponse> QueryVpcTaskResult(QueryVpcTaskResultRequest req)
+        {
+             JsonResponseModel<QueryVpcTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryVpcTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryVpcTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询私有网络下Vpc、子网、havip等异步任务请求结果
+        /// </summary>
+        /// <param name="req"><see cref="QueryVpcTaskResultRequest"/></param>
+        /// <returns><see cref="QueryVpcTaskResultResponse"/></returns>
+        public QueryVpcTaskResultResponse QueryVpcTaskResultSync(QueryVpcTaskResultRequest req)
+        {
+             JsonResponseModel<QueryVpcTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryVpcTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryVpcTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 只有状态为RUNNING的实例才可以进行此操作；接口调用成功时，实例会进入REBOOTING状态；重启实例成功时，实例会进入RUNNING状态；支持强制重启，强制重启的效果等同于关闭物理计算机的电源开关再重新启动。强制重启可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常重启时使用。
         /// </summary>
         /// <param name="req"><see cref="RebootInstancesRequest"/></param>
@@ -4732,6 +5028,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "ReleaseIpv6Addresses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseIpv6AddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于给弹性公网IPv6地址释放带宽。
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseIpv6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ReleaseIpv6AddressesBandwidthResponse"/></returns>
+        public async Task<ReleaseIpv6AddressesBandwidthResponse> ReleaseIpv6AddressesBandwidth(ReleaseIpv6AddressesBandwidthRequest req)
+        {
+             JsonResponseModel<ReleaseIpv6AddressesBandwidthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReleaseIpv6AddressesBandwidth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseIpv6AddressesBandwidthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于给弹性公网IPv6地址释放带宽。
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseIpv6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ReleaseIpv6AddressesBandwidthResponse"/></returns>
+        public ReleaseIpv6AddressesBandwidthResponse ReleaseIpv6AddressesBandwidthSync(ReleaseIpv6AddressesBandwidthRequest req)
+        {
+             JsonResponseModel<ReleaseIpv6AddressesBandwidthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReleaseIpv6AddressesBandwidth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseIpv6AddressesBandwidthResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5346,6 +5682,48 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "TerminateInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UnassignIpv6SubnetCidrBlock）用于释放IPv6子网段。
+        /// 子网段如果还有IP占用且未回收，则子网段无法释放。
+        /// </summary>
+        /// <param name="req"><see cref="UnassignIpv6SubnetCidrBlockRequest"/></param>
+        /// <returns><see cref="UnassignIpv6SubnetCidrBlockResponse"/></returns>
+        public async Task<UnassignIpv6SubnetCidrBlockResponse> UnassignIpv6SubnetCidrBlock(UnassignIpv6SubnetCidrBlockRequest req)
+        {
+             JsonResponseModel<UnassignIpv6SubnetCidrBlockResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnassignIpv6SubnetCidrBlock");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnassignIpv6SubnetCidrBlockResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UnassignIpv6SubnetCidrBlock）用于释放IPv6子网段。
+        /// 子网段如果还有IP占用且未回收，则子网段无法释放。
+        /// </summary>
+        /// <param name="req"><see cref="UnassignIpv6SubnetCidrBlockRequest"/></param>
+        /// <returns><see cref="UnassignIpv6SubnetCidrBlockResponse"/></returns>
+        public UnassignIpv6SubnetCidrBlockResponse UnassignIpv6SubnetCidrBlockSync(UnassignIpv6SubnetCidrBlockRequest req)
+        {
+             JsonResponseModel<UnassignIpv6SubnetCidrBlockResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnassignIpv6SubnetCidrBlock");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnassignIpv6SubnetCidrBlockResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
