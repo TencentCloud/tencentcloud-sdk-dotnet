@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 音画质重生模板号。
+        /// 视频重生模板号。
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -37,25 +37,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SubAppId{ get; set; }
 
         /// <summary>
-        /// 音画质重生模板名称。
+        /// 视频重生模板名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 音画质重生模板描述。
+        /// 视频重生模板描述。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 音画质重生视频控制信息。
+        /// 视频重生视频控制信息。
         /// </summary>
         [JsonProperty("RebuildVideoInfo")]
         public RebuildVideoInfo RebuildVideoInfo{ get; set; }
 
         /// <summary>
-        /// 音画质重生音频控制信息。
+        /// 视频重生音频控制信息。
         /// </summary>
         [JsonProperty("RebuildAudioInfo")]
         public RebuildAudioInfo RebuildAudioInfo{ get; set; }

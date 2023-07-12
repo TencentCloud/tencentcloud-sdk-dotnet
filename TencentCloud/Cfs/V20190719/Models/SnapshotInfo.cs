@@ -109,6 +109,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("SnapshotType")]
         public string SnapshotType{ get; set; }
 
+        /// <summary>
+        /// 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SnapshotTime")]
+        public string SnapshotTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +136,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "FsName", this.FsName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
+            this.SetParamSimple(map, prefix + "SnapshotTime", this.SnapshotTime);
         }
     }
 }

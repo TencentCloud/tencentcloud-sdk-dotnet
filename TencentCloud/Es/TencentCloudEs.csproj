@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BAB1D217-C279-3DCE-8001-02A83445B39E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.799</VersionPrefix>
+    <VersionPrefix>3.0.800</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -111,6 +111,8 @@
     <Compile Include="V20180416\Models\LogstashPipeline.cs" />
     <Compile Include="V20180416\Models\LogstashPipelineInfo.cs" />
     <Compile Include="V20180416\Models\MasterNodeInfo.cs" />
+    <Compile Include="V20180416\Models\ModifyEsVipSecurityGroupRequest.cs" />
+    <Compile Include="V20180416\Models\ModifyEsVipSecurityGroupResponse.cs" />
     <Compile Include="V20180416\Models\NodeInfo.cs" />
     <Compile Include="V20180416\Models\NodeView.cs" />
     <Compile Include="V20180416\Models\Operation.cs" />

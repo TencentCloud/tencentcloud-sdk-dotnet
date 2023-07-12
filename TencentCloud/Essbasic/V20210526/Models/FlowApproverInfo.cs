@@ -165,6 +165,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("SignId")]
         public string SignId{ get; set; }
 
+        /// <summary>
+        /// SMS: 短信; NONE: 不发信息
+        /// 默认为SMS(该字段对子客无效)
+        /// </summary>
+        [JsonProperty("NotifyType")]
+        public string NotifyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,6 +199,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
             this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
             this.SetParamSimple(map, prefix + "SignId", this.SignId);
+            this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
         }
     }
 }

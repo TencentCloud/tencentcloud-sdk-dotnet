@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 音画质重生模板详情列表。
+        /// 视频重生模板详情列表。
         /// </summary>
         [JsonProperty("RebuildMediaTemplateSet")]
         public RebuildMediaTemplate[] RebuildMediaTemplateSet{ get; set; }

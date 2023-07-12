@@ -3645,7 +3645,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 获取音画质重生模板列表。
+        /// 获取视频重生模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRebuildMediaTemplatesRequest"/></param>
         /// <returns><see cref="DescribeRebuildMediaTemplatesResponse"/></returns>
@@ -3665,7 +3665,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 获取音画质重生模板列表。
+        /// 获取视频重生模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRebuildMediaTemplatesRequest"/></param>
         /// <returns><see cref="DescribeRebuildMediaTemplatesResponse"/></returns>
@@ -5431,7 +5431,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 修改音画质重生模板。
+        /// 修改视频重生模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="ModifyRebuildMediaTemplateResponse"/></returns>
@@ -5451,7 +5451,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 修改音画质重生模板。
+        /// 修改视频重生模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="ModifyRebuildMediaTemplateResponse"/></returns>
@@ -6347,7 +6347,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 发起音画质重生
+        /// 发起视频重生
         /// </summary>
         /// <param name="req"><see cref="RebuildMediaRequest"/></param>
         /// <returns><see cref="RebuildMediaResponse"/></returns>
@@ -6367,7 +6367,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 发起音画质重生
+        /// 发起视频重生
         /// </summary>
         /// <param name="req"><see cref="RebuildMediaRequest"/></param>
         /// <returns><see cref="RebuildMediaResponse"/></returns>
@@ -6387,7 +6387,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 使用模板发起音画质重生。
+        /// 使用模板发起视频重生。
         /// </summary>
         /// <param name="req"><see cref="RebuildMediaByTemplateRequest"/></param>
         /// <returns><see cref="RebuildMediaByTemplateResponse"/></returns>
@@ -6407,7 +6407,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 使用模板发起音画质重生。
+        /// 使用模板发起视频重生。
         /// </summary>
         /// <param name="req"><see cref="RebuildMediaByTemplateRequest"/></param>
         /// <returns><see cref="RebuildMediaByTemplateResponse"/></returns>

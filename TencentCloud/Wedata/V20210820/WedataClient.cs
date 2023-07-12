@@ -2313,6 +2313,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 列出字段血缘信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeColumnLineageRequest"/></param>
+        /// <returns><see cref="DescribeColumnLineageResponse"/></returns>
+        public async Task<DescribeColumnLineageResponse> DescribeColumnLineage(DescribeColumnLineageRequest req)
+        {
+             JsonResponseModel<DescribeColumnLineageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeColumnLineage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeColumnLineageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出字段血缘信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeColumnLineageRequest"/></param>
+        /// <returns><see cref="DescribeColumnLineageResponse"/></returns>
+        public DescribeColumnLineageResponse DescribeColumnLineageSync(DescribeColumnLineageRequest req)
+        {
+             JsonResponseModel<DescribeColumnLineageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeColumnLineage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeColumnLineageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询数据来源列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDataBasesRequest"/></param>
@@ -5364,6 +5404,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTableInfoList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出表血缘信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableLineageRequest"/></param>
+        /// <returns><see cref="DescribeTableLineageResponse"/></returns>
+        public async Task<DescribeTableLineageResponse> DescribeTableLineage(DescribeTableLineageRequest req)
+        {
+             JsonResponseModel<DescribeTableLineageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTableLineage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableLineageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出表血缘信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableLineageRequest"/></param>
+        /// <returns><see cref="DescribeTableLineageResponse"/></returns>
+        public DescribeTableLineageResponse DescribeTableLineageSync(DescribeTableLineageRequest req)
+        {
+             JsonResponseModel<DescribeTableLineageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTableLineage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableLineageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

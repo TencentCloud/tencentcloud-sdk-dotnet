@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2C846449-46BB-3252-994D-FCBB2457686F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.799</VersionPrefix>
+    <VersionPrefix>3.0.800</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20180504\YunsouClient.cs" />
+    <Compile Include="V20180504\Models\DataManipulationRequest.cs" />
+    <Compile Include="V20180504\Models\DataManipulationResponse.cs" />
+    <Compile Include="V20180504\Models\DataSearchRequest.cs" />
+    <Compile Include="V20180504\Models\DataSearchResponse.cs" />
     <Compile Include="V20191115\YunsouClient.cs" />
     <Compile Include="V20191115\Models\DataManipulationRequest.cs" />
     <Compile Include="V20191115\Models\DataManipulationResponse.cs" />
@@ -57,10 +62,5 @@
     <Compile Include="V20191115\Models\SearchResult.cs" />
     <Compile Include="V20191115\Models\SearchResultItem.cs" />
     <Compile Include="V20191115\Models\SearchResultSeg.cs" />
-    <Compile Include="V20180504\YunsouClient.cs" />
-    <Compile Include="V20180504\Models\DataManipulationRequest.cs" />
-    <Compile Include="V20180504\Models\DataManipulationResponse.cs" />
-    <Compile Include="V20180504\Models\DataSearchRequest.cs" />
-    <Compile Include="V20180504\Models\DataSearchResponse.cs" />
   </ItemGroup>
 </Project>

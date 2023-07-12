@@ -170,6 +170,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// 完整目标 URL 地址。
         /// 用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
         /// 
+        /// 使用该方式传入目标地址支持的协议有：
+        /// rtmp、rtmps、rtsp、rtp、srt。
+        /// 
         /// 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
         /// </summary>
         [JsonProperty("ToUrl")]

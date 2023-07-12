@@ -43,7 +43,7 @@ namespace TencentCloud.Tse.V20201207.Models
         public string SourceID{ get; set; }
 
         /// <summary>
-        /// 名字空间
+        /// 命名空间
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

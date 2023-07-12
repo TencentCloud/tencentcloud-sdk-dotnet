@@ -813,6 +813,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 修改绑定VIP的安全组，传安全组id列表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEsVipSecurityGroupRequest"/></param>
+        /// <returns><see cref="ModifyEsVipSecurityGroupResponse"/></returns>
+        public async Task<ModifyEsVipSecurityGroupResponse> ModifyEsVipSecurityGroup(ModifyEsVipSecurityGroupRequest req)
+        {
+             JsonResponseModel<ModifyEsVipSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyEsVipSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEsVipSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改绑定VIP的安全组，传安全组id列表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEsVipSecurityGroupRequest"/></param>
+        /// <returns><see cref="ModifyEsVipSecurityGroupResponse"/></returns>
+        public ModifyEsVipSecurityGroupResponse ModifyEsVipSecurityGroupSync(ModifyEsVipSecurityGroupRequest req)
+        {
+             JsonResponseModel<ModifyEsVipSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEsVipSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEsVipSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 重启ES集群实例(用于系统版本更新等操作) 
         /// </summary>
         /// <param name="req"><see cref="RestartInstanceRequest"/></param>

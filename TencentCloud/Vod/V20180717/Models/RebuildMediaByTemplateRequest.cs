@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 音画质重生模板 ID。
+        /// 视频重生模板 ID。
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 音画质重生后的文件配置。
+        /// 视频重生后的文件配置。
         /// </summary>
         [JsonProperty("OutputConfig")]
         public RebuildMediaOutputConfig OutputConfig{ get; set; }

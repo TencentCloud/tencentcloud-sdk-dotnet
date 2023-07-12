@@ -108,6 +108,24 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("Capacity")]
         public ulong? Capacity{ get; set; }
 
+        /// <summary>
+        /// 文件系统快照ID
+        /// </summary>
+        [JsonProperty("SnapshotId")]
+        public string SnapshotId{ get; set; }
+
+        /// <summary>
+        /// 定期快照策略ID
+        /// </summary>
+        [JsonProperty("AutoSnapshotPolicyId")]
+        public string AutoSnapshotPolicyId{ get; set; }
+
+        /// <summary>
+        /// 是否开启默认扩容，仅Turbo类型文件存储支持
+        /// </summary>
+        [JsonProperty("EnableAutoScaleUp")]
+        public bool? EnableAutoScaleUp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +146,9 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
             this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
             this.SetParamSimple(map, prefix + "Capacity", this.Capacity);
+            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+            this.SetParamSimple(map, prefix + "EnableAutoScaleUp", this.EnableAutoScaleUp);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 权限组描述信息，1-255个字符
+        /// 权限组描述信息，1-255个字符。 Name和Descinfo不能同时为空
         /// </summary>
         [JsonProperty("DescInfo")]
         public string DescInfo{ get; set; }
