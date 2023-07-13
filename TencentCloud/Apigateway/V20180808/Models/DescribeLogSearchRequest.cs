@@ -86,6 +86,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// “:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明
         /// </summary>
         [JsonProperty("LogQuerys")]
+        [System.Obsolete]
         public LogQuery[] LogQuerys{ get; set; }
 
 

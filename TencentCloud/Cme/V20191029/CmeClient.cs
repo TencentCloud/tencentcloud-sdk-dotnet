@@ -173,7 +173,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 创建媒体链接或分类路径链接，将源资源信息链接到目标。
+        /// 创建媒体链接或分类路径链接，将资源信息链接到目标。
         /// </summary>
         /// <param name="req"><see cref="CreateLinkRequest"/></param>
         /// <returns><see cref="CreateLinkResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 创建媒体链接或分类路径链接，将源资源信息链接到目标。
+        /// 创建媒体链接或分类路径链接，将资源信息链接到目标。
         /// </summary>
         /// <param name="req"><see cref="CreateLinkRequest"/></param>
         /// <returns><see cref="CreateLinkResponse"/></returns>

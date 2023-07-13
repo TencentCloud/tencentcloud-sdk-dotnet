@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+        /// 实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间，格式为："2017-07-12 10:29:20"。
+        /// 开始时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，格式为："2017-07-12 10:29:20"。
+        /// 结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -58,10 +58,16 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 过滤条件。可按设置的过滤条件过滤日志。
+        /// 已废弃。
         /// </summary>
         [JsonProperty("Filter")]
         public AuditLogFilter Filter{ get; set; }
+
+        /// <summary>
+        /// 过滤条件。可按设置的过滤条件过滤日志。
+        /// </summary>
+        [JsonProperty("LogFilter")]
+        public InstanceAuditLogFilters[] LogFilter{ get; set; }
 
 
         /// <summary>
@@ -75,6 +81,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamArrayObj(map, prefix + "LogFilter.", this.LogFilter);
         }
     }
 }

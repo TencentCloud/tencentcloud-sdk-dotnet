@@ -63,7 +63,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，改字段为空。
+        /// 项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，该字段为空。
         /// </summary>
         [JsonProperty("StopTime")]
         public string StopTime{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string MaterialId{ get; set; }
 
         /// <summary>
-        /// 媒体文预处理任务 ID，如果未指定发起预处理任务则为空。
+        /// 媒体文件预处理任务 ID，如果未指定发起预处理任务则为空。
         /// </summary>
         [JsonProperty("PreProcessTaskId")]
         public string PreProcessTaskId{ get; set; }

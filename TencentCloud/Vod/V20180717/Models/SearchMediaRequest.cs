@@ -115,44 +115,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public TimeRange ExpireTime{ get; set; }
 
         /// <summary>
-        /// 排序方式。
-        /// <li>Sort.Field 可选 CreateTime 。</li>
-        /// <li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
-        /// </summary>
-        [JsonProperty("Sort")]
-        public SortBy Sort{ get; set; }
-
-        /// <summary>
-        /// <div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-        /// <li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// <div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
-        /// <li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
-        /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
-        /// <li>basicInfo（视频基础信息）。</li>
-        /// <li>metaData（视频元信息）。</li>
-        /// <li>transcodeInfo（视频转码结果信息）。</li>
-        /// <li>animatedGraphicsInfo（视频转动图结果信息）。</li>
-        /// <li>imageSpriteInfo（视频雪碧图信息）。</li>
-        /// <li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
-        /// <li>sampleSnapshotInfo（采样截图信息）。</li>
-        /// <li>keyFrameDescInfo（打点信息）。</li>
-        /// <li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
-        /// <li>miniProgramReviewInfo（小程序审核信息）。</li>
-        /// </summary>
-        [JsonProperty("Filters")]
-        public string[] Filters{ get; set; }
-
-        /// <summary>
         /// 媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
         /// <li>单个存储地区长度限制：20个字符。</li>
         /// <li>数组长度限制：20。</li>
@@ -210,6 +172,44 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("TrtcRoomIds")]
         public string[] TrtcRoomIds{ get; set; }
+
+        /// <summary>
+        /// 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
+        /// <li>basicInfo（视频基础信息）。</li>
+        /// <li>metaData（视频元信息）。</li>
+        /// <li>transcodeInfo（视频转码结果信息）。</li>
+        /// <li>animatedGraphicsInfo（视频转动图结果信息）。</li>
+        /// <li>imageSpriteInfo（视频雪碧图信息）。</li>
+        /// <li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
+        /// <li>sampleSnapshotInfo（采样截图信息）。</li>
+        /// <li>keyFrameDescInfo（打点信息）。</li>
+        /// <li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
+        /// <li>miniProgramReviewInfo（小程序审核信息）。</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public string[] Filters{ get; set; }
+
+        /// <summary>
+        /// 排序方式。
+        /// <li>Sort.Field 可选 CreateTime 。</li>
+        /// <li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+        /// </summary>
+        [JsonProperty("Sort")]
+        public SortBy Sort{ get; set; }
+
+        /// <summary>
+        /// <div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+        /// <li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// <div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
+        /// <li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
         /// （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
@@ -282,10 +282,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
             this.SetParamObj(map, prefix + "CreateTime.", this.CreateTime);
             this.SetParamObj(map, prefix + "ExpireTime.", this.ExpireTime);
-            this.SetParamObj(map, prefix + "Sort.", this.Sort);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
             this.SetParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
             this.SetParamArraySimple(map, prefix + "MediaTypes.", this.MediaTypes);
@@ -293,6 +289,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "ReviewResults.", this.ReviewResults);
             this.SetParamArraySimple(map, prefix + "TrtcSdkAppIds.", this.TrtcSdkAppIds);
             this.SetParamArraySimple(map, prefix + "TrtcRoomIds.", this.TrtcRoomIds);
+            this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
+            this.SetParamObj(map, prefix + "Sort.", this.Sort);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);

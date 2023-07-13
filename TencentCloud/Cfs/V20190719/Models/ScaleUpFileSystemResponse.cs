@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 扩容的目标容量
+        /// 扩容的目标容量（单位GiB）
         /// </summary>
         [JsonProperty("TargetCapacity")]
         public ulong? TargetCapacity{ get; set; }

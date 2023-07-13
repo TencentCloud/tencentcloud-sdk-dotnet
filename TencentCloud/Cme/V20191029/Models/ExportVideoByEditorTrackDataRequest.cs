@@ -80,7 +80,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public VODExportInfo VODExportInfo{ get; set; }
 
         /// <summary>
-        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使的媒资该操作者需要拥有使用权限。
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使用的媒资该操作者需要拥有使用权限。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

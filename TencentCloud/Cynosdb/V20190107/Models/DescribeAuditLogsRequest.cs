@@ -58,7 +58,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 过滤条件。可按设置的过滤条件过滤日志。
+        /// 已废弃。
         /// </summary>
         [JsonProperty("Filter")]
         public AuditLogFilter Filter{ get; set; }
@@ -75,6 +75,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// 审计日志过滤条件。
+        /// </summary>
+        [JsonProperty("LogFilter")]
+        public InstanceAuditLogFilter[] LogFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +95,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArrayObj(map, prefix + "LogFilter.", this.LogFilter);
         }
     }
 }

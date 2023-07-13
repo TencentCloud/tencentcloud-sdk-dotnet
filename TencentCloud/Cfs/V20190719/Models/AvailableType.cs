@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public AvailableProtoStatus[] Protocols{ get; set; }
 
         /// <summary>
-        /// 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
+        /// 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

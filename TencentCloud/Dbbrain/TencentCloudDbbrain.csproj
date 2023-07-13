@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.800</VersionPrefix>
+    <VersionPrefix>3.0.801</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -135,10 +135,15 @@
     <Compile Include="V20210527\DbbrainClient.cs" />
     <Compile Include="V20210527\Models\AddUserContactRequest.cs" />
     <Compile Include="V20210527\Models\AddUserContactResponse.cs" />
+    <Compile Include="V20210527\Models\AuditInstance.cs" />
+    <Compile Include="V20210527\Models\AuditInstanceFilter.cs" />
+    <Compile Include="V20210527\Models\AuditInstanceInfo.cs" />
     <Compile Include="V20210527\Models\AuditLogFile.cs" />
     <Compile Include="V20210527\Models\AuditLogFilter.cs" />
     <Compile Include="V20210527\Models\CancelKillTaskRequest.cs" />
     <Compile Include="V20210527\Models\CancelKillTaskResponse.cs" />
+    <Compile Include="V20210527\Models\CloseAuditServiceRequest.cs" />
+    <Compile Include="V20210527\Models\CloseAuditServiceResponse.cs" />
     <Compile Include="V20210527\Models\ContactItem.cs" />
     <Compile Include="V20210527\Models\CreateAuditLogFileRequest.cs" />
     <Compile Include="V20210527\Models\CreateAuditLogFileResponse.cs" />
@@ -172,6 +177,8 @@
     <Compile Include="V20210527\Models\DescribeAllUserContactResponse.cs" />
     <Compile Include="V20210527\Models\DescribeAllUserGroupRequest.cs" />
     <Compile Include="V20210527\Models\DescribeAllUserGroupResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeAuditInstanceListRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeAuditInstanceListResponse.cs" />
     <Compile Include="V20210527\Models\DescribeAuditLogFilesRequest.cs" />
     <Compile Include="V20210527\Models\DescribeAuditLogFilesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBDiagEventRequest.cs" />
@@ -241,6 +248,8 @@
     <Compile Include="V20210527\Models\KillMySqlThreadsRequest.cs" />
     <Compile Include="V20210527\Models\KillMySqlThreadsResponse.cs" />
     <Compile Include="V20210527\Models\MailConfiguration.cs" />
+    <Compile Include="V20210527\Models\ModifyAuditServiceRequest.cs" />
+    <Compile Include="V20210527\Models\ModifyAuditServiceResponse.cs" />
     <Compile Include="V20210527\Models\ModifyDiagDBInstanceConfRequest.cs" />
     <Compile Include="V20210527\Models\ModifyDiagDBInstanceConfResponse.cs" />
     <Compile Include="V20210527\Models\ModifySqlFiltersRequest.cs" />
@@ -250,6 +259,8 @@
     <Compile Include="V20210527\Models\MonitorMetric.cs" />
     <Compile Include="V20210527\Models\MonitorMetricSeriesData.cs" />
     <Compile Include="V20210527\Models\MySqlProcess.cs" />
+    <Compile Include="V20210527\Models\OpenAuditServiceRequest.cs" />
+    <Compile Include="V20210527\Models\OpenAuditServiceResponse.cs" />
     <Compile Include="V20210527\Models\ProcessStatistic.cs" />
     <Compile Include="V20210527\Models\ProfileInfo.cs" />
     <Compile Include="V20210527\Models\RedisKeySpaceData.cs" />

@@ -51,6 +51,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
 
+        /// <summary>
+        /// 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LockComponentValue")]
+        public bool? LockComponentValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +67,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ComponentValue", this.ComponentValue);
             this.SetParamSimple(map, prefix + "ComponentId", this.ComponentId);
             this.SetParamSimple(map, prefix + "ComponentName", this.ComponentName);
+            this.SetParamSimple(map, prefix + "LockComponentValue", this.LockComponentValue);
         }
     }
 }

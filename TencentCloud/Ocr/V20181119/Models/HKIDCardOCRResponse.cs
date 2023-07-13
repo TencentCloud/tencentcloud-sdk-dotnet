@@ -105,10 +105,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string HeadImage{ get; set; }
 
         /// <summary>
-        /// 多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
+        /// 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
         /// -9102：证照复印件告警
         /// -9103：证照翻拍告警
-        /// -9104：证照PS告警
         /// </summary>
         [JsonProperty("WarningCode")]
         public long?[] WarningCode{ get; set; }

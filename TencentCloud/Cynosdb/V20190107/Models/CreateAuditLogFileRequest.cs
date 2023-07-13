@@ -58,10 +58,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 过滤条件。可按设置的过滤条件过滤日志。
+        /// 已废弃。
         /// </summary>
         [JsonProperty("Filter")]
         public AuditLogFilter Filter{ get; set; }
+
+        /// <summary>
+        /// 审计日志过滤条件
+        /// </summary>
+        [JsonProperty("LogFilter")]
+        public InstanceAuditLogFilter[] LogFilter{ get; set; }
 
 
         /// <summary>
@@ -75,6 +81,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamArrayObj(map, prefix + "LogFilter.", this.LogFilter);
         }
     }
 }

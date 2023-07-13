@@ -85,19 +85,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string User{ get; set; }
 
         /// <summary>
-        /// 执行时间。
+        /// 执行时间，微秒。
         /// </summary>
         [JsonProperty("ExecTime")]
         public long? ExecTime{ get; set; }
 
         /// <summary>
-        /// 时间戳。
+        /// 时间。
         /// </summary>
         [JsonProperty("Timestamp")]
         public string Timestamp{ get; set; }
 
         /// <summary>
-        /// 发送行数。
+        /// 返回行数。
         /// </summary>
         [JsonProperty("SentRows")]
         public long? SentRows{ get; set; }
@@ -107,6 +107,48 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("ThreadId")]
         public long? ThreadId{ get; set; }
+
+        /// <summary>
+        /// 扫描行数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckRows")]
+        public long? CheckRows{ get; set; }
+
+        /// <summary>
+        /// cpu执行时间，微秒。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CpuTime")]
+        public float? CpuTime{ get; set; }
+
+        /// <summary>
+        /// IO等待时间，微秒。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IoWaitTime")]
+        public long? IoWaitTime{ get; set; }
+
+        /// <summary>
+        /// 锁等待时间，微秒。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LockWaitTime")]
+        public long? LockWaitTime{ get; set; }
+
+        /// <summary>
+        /// 事物持续等待时间，微秒。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrxLivingTime")]
+        public long? TrxLivingTime{ get; set; }
+
+        /// <summary>
+        /// 开始时间，与timestamp构成一个精确到纳秒的时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NsTime")]
+        public long? NsTime{ get; set; }
 
 
         /// <summary>
@@ -128,6 +170,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
             this.SetParamSimple(map, prefix + "SentRows", this.SentRows);
             this.SetParamSimple(map, prefix + "ThreadId", this.ThreadId);
+            this.SetParamSimple(map, prefix + "CheckRows", this.CheckRows);
+            this.SetParamSimple(map, prefix + "CpuTime", this.CpuTime);
+            this.SetParamSimple(map, prefix + "IoWaitTime", this.IoWaitTime);
+            this.SetParamSimple(map, prefix + "LockWaitTime", this.LockWaitTime);
+            this.SetParamSimple(map, prefix + "TrxLivingTime", this.TrxLivingTime);
+            this.SetParamSimple(map, prefix + "NsTime", this.NsTime);
         }
     }
 }

@@ -49,10 +49,16 @@ namespace TencentCloud.Cdb.V20170320.Models
         public AggregationCondition[] AggregationConditions{ get; set; }
 
         /// <summary>
-        /// 该过滤条件下的审计日志结果集作为分析日志。
+        /// 已废弃。该过滤条件下的审计日志结果集作为分析日志。
         /// </summary>
         [JsonProperty("AuditLogFilter")]
         public AuditLogFilter AuditLogFilter{ get; set; }
+
+        /// <summary>
+        /// 该过滤条件下的审计日志结果集作为分析日志。
+        /// </summary>
+        [JsonProperty("LogFilter")]
+        public InstanceAuditLogFilters[] LogFilter{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArrayObj(map, prefix + "AggregationConditions.", this.AggregationConditions);
             this.SetParamObj(map, prefix + "AuditLogFilter.", this.AuditLogFilter);
+            this.SetParamArrayObj(map, prefix + "LogFilter.", this.LogFilter);
         }
     }
 }

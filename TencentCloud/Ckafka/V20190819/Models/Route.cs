@@ -73,6 +73,27 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DeleteTimestamp")]
         public string DeleteTimestamp{ get; set; }
 
+        /// <summary>
+        /// 子网信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Subnet")]
+        public string Subnet{ get; set; }
+
+        /// <summary>
+        /// 虚拟IP列表(1对1 broker节点)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BrokerVipList")]
+        public VipEntity[] BrokerVipList{ get; set; }
+
+        /// <summary>
+        /// vpc信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +107,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "DomainPort", this.DomainPort);
             this.SetParamSimple(map, prefix + "DeleteTimestamp", this.DeleteTimestamp);
+            this.SetParamSimple(map, prefix + "Subnet", this.Subnet);
+            this.SetParamArrayObj(map, prefix + "BrokerVipList.", this.BrokerVipList);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
         }
     }
 }

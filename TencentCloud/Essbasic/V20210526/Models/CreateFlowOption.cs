@@ -30,6 +30,36 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("CanEditFlow")]
         public bool? CanEditFlow{ get; set; }
 
+        /// <summary>
+        /// 是否允许发起合同弹窗隐藏合同名称
+        /// </summary>
+        [JsonProperty("HideShowFlowName")]
+        public bool? HideShowFlowName{ get; set; }
+
+        /// <summary>
+        /// 是否允许发起合同弹窗隐藏合同类型
+        /// </summary>
+        [JsonProperty("HideShowFlowType")]
+        public bool? HideShowFlowType{ get; set; }
+
+        /// <summary>
+        /// 是否允许发起合同弹窗隐藏合同到期时间
+        /// </summary>
+        [JsonProperty("HideShowDeadline")]
+        public bool? HideShowDeadline{ get; set; }
+
+        /// <summary>
+        /// 是否允许发起合同步骤跳过指定签署方步骤
+        /// </summary>
+        [JsonProperty("CanSkipAddApprover")]
+        public bool? CanSkipAddApprover{ get; set; }
+
+        /// <summary>
+        /// 定制化发起合同页合同描述信息
+        /// </summary>
+        [JsonProperty("CustomCreateFlowDescription")]
+        public string CustomCreateFlowDescription{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +67,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CanEditFlow", this.CanEditFlow);
+            this.SetParamSimple(map, prefix + "HideShowFlowName", this.HideShowFlowName);
+            this.SetParamSimple(map, prefix + "HideShowFlowType", this.HideShowFlowType);
+            this.SetParamSimple(map, prefix + "HideShowDeadline", this.HideShowDeadline);
+            this.SetParamSimple(map, prefix + "CanSkipAddApprover", this.CanSkipAddApprover);
+            this.SetParamSimple(map, prefix + "CustomCreateFlowDescription", this.CustomCreateFlowDescription);
         }
     }
 }

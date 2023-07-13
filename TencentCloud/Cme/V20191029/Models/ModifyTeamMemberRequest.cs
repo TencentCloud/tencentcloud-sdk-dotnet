@@ -57,7 +57,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Role{ get; set; }
 
         /// <summary>
-        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以个改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

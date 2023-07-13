@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.800</VersionPrefix>
+    <VersionPrefix>3.0.801</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -281,6 +281,7 @@
     <Compile Include="V20170320\Models\InitDBInstancesResponse.cs" />
     <Compile Include="V20170320\Models\InquiryPriceUpgradeInstancesRequest.cs" />
     <Compile Include="V20170320\Models\InquiryPriceUpgradeInstancesResponse.cs" />
+    <Compile Include="V20170320\Models\InstanceAuditLogFilters.cs" />
     <Compile Include="V20170320\Models\InstanceInfo.cs" />
     <Compile Include="V20170320\Models\InstanceRebootTime.cs" />
     <Compile Include="V20170320\Models\InstanceRollbackRangeTime.cs" />
