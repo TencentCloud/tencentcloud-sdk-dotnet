@@ -25,19 +25,19 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
-        /// 一级分类。分类详情见附录-三级分类体系表。
+        /// 一级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
         /// </summary>
         [JsonProperty("FirstClassification")]
         public Category FirstClassification{ get; set; }
 
         /// <summary>
-        /// 二级分类。分类详情见附录-三级分类体系表。
+        /// 二级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
         /// </summary>
         [JsonProperty("SecondClassification")]
         public Category SecondClassification{ get; set; }
 
         /// <summary>
-        /// 三级分类。分类详情见附录-三级分类体系表。
+        /// 三级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ThirdClassification")]

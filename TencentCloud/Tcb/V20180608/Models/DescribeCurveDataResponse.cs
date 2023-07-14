@@ -64,7 +64,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
         /// </summary>
         [JsonProperty("NewValues")]
-        public float? NewValues{ get; set; }
+        public float?[] NewValues{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -84,7 +84,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
             this.SetParamArraySimple(map, prefix + "Time.", this.Time);
-            this.SetParamSimple(map, prefix + "NewValues", this.NewValues);
+            this.SetParamArraySimple(map, prefix + "NewValues.", this.NewValues);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

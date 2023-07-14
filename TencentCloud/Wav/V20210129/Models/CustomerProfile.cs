@@ -271,6 +271,85 @@ namespace TencentCloud.Wav.V20210129.Models
         [JsonProperty("ChannelTags")]
         public ChannelTag[] ChannelTags{ get; set; }
 
+        /// <summary>
+        /// 关联线索id
+        /// </summary>
+        [JsonProperty("LeadId")]
+        public ulong? LeadId{ get; set; }
+
+        /// <summary>
+        /// 客户微信id
+        /// </summary>
+        [JsonProperty("WxId")]
+        public string WxId{ get; set; }
+
+        /// <summary>
+        /// 顾问职位
+        /// </summary>
+        [JsonProperty("Position")]
+        public string Position{ get; set; }
+
+        /// <summary>
+        /// 是否关联微信 1 是 0 否
+        /// </summary>
+        [JsonProperty("IsBindWx")]
+        public long? IsBindWx{ get; set; }
+
+        /// <summary>
+        /// 是否无效
+        /// </summary>
+        [JsonProperty("IsInvalid")]
+        public long? IsInvalid{ get; set; }
+
+        /// <summary>
+        /// 无效类型
+        /// </summary>
+        [JsonProperty("InvalidType")]
+        public string InvalidType{ get; set; }
+
+        /// <summary>
+        /// 无效类型名称
+        /// </summary>
+        [JsonProperty("InvalidTypeName")]
+        public string InvalidTypeName{ get; set; }
+
+        /// <summary>
+        /// 无效时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InvalidTime")]
+        public ulong? InvalidTime{ get; set; }
+
+        /// <summary>
+        /// 由顾问手动输入的无效原因文字
+        /// </summary>
+        [JsonProperty("InvalidRemark")]
+        public string InvalidRemark{ get; set; }
+
+        /// <summary>
+        /// 线索是否战败
+        /// </summary>
+        [JsonProperty("IsLose")]
+        public long? IsLose{ get; set; }
+
+        /// <summary>
+        /// 战败类型
+        /// </summary>
+        [JsonProperty("LoseType")]
+        public string LoseType{ get; set; }
+
+        /// <summary>
+        /// 战败类型名称
+        /// </summary>
+        [JsonProperty("LoseTypeName")]
+        public string LoseTypeName{ get; set; }
+
+        /// <summary>
+        /// 战败申请原因
+        /// </summary>
+        [JsonProperty("LoseRemark")]
+        public string LoseRemark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -316,6 +395,19 @@ namespace TencentCloud.Wav.V20210129.Models
             this.SetParamSimple(map, prefix + "NextFollowTime", this.NextFollowTime);
             this.SetParamArrayObj(map, prefix + "EnterpriseTags.", this.EnterpriseTags);
             this.SetParamArrayObj(map, prefix + "ChannelTags.", this.ChannelTags);
+            this.SetParamSimple(map, prefix + "LeadId", this.LeadId);
+            this.SetParamSimple(map, prefix + "WxId", this.WxId);
+            this.SetParamSimple(map, prefix + "Position", this.Position);
+            this.SetParamSimple(map, prefix + "IsBindWx", this.IsBindWx);
+            this.SetParamSimple(map, prefix + "IsInvalid", this.IsInvalid);
+            this.SetParamSimple(map, prefix + "InvalidType", this.InvalidType);
+            this.SetParamSimple(map, prefix + "InvalidTypeName", this.InvalidTypeName);
+            this.SetParamSimple(map, prefix + "InvalidTime", this.InvalidTime);
+            this.SetParamSimple(map, prefix + "InvalidRemark", this.InvalidRemark);
+            this.SetParamSimple(map, prefix + "IsLose", this.IsLose);
+            this.SetParamSimple(map, prefix + "LoseType", this.LoseType);
+            this.SetParamSimple(map, prefix + "LoseTypeName", this.LoseTypeName);
+            this.SetParamSimple(map, prefix + "LoseRemark", this.LoseRemark);
         }
     }
 }

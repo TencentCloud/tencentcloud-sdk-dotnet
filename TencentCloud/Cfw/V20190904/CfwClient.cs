@@ -213,6 +213,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 创建地址模板规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateAddressTemplateRequest"/></param>
+        /// <returns><see cref="CreateAddressTemplateResponse"/></returns>
+        public async Task<CreateAddressTemplateResponse> CreateAddressTemplate(CreateAddressTemplateRequest req)
+        {
+             JsonResponseModel<CreateAddressTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAddressTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAddressTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建地址模板规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateAddressTemplateRequest"/></param>
+        /// <returns><see cref="CreateAddressTemplateResponse"/></returns>
+        public CreateAddressTemplateResponse CreateAddressTemplateSync(CreateAddressTemplateRequest req)
+        {
+             JsonResponseModel<CreateAddressTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAddressTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAddressTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建、选择vpc
         /// </summary>
         /// <param name="req"><see cref="CreateChooseVpcsRequest"/></param>
@@ -444,6 +484,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "DeleteAcRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除地址模板规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAddressTemplateRequest"/></param>
+        /// <returns><see cref="DeleteAddressTemplateResponse"/></returns>
+        public async Task<DeleteAddressTemplateResponse> DeleteAddressTemplate(DeleteAddressTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAddressTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAddressTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAddressTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除地址模板规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAddressTemplateRequest"/></param>
+        /// <returns><see cref="DeleteAddressTemplateResponse"/></returns>
+        public DeleteAddressTemplateResponse DeleteAddressTemplateSync(DeleteAddressTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAddressTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAddressTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAddressTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

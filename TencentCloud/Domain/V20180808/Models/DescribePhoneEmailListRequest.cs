@@ -43,7 +43,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 手机或者邮箱精确搜索
+        /// 手机或者邮箱，用于精确搜索
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }

@@ -61,7 +61,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Hour{ get; set; }
 
         /// <summary>
-        /// 是否激活定期快照功能
+        /// 是否激活定期快照功能,1代表已激活，0代表未激活
         /// </summary>
         [JsonProperty("IsActivated")]
         public ulong? IsActivated{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string NextActiveTime{ get; set; }
 
         /// <summary>
-        /// 快照策略状态
+        /// 快照策略状态，1代表快照策略状态正常。这里只有一种状态
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -117,7 +117,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? IntervalDays{ get; set; }
 
         /// <summary>
-        /// 跨地域复制的快照保留时间
+        /// 跨地域复制的快照保留时间，单位天
         /// </summary>
         [JsonProperty("CrossRegionsAliveDays")]
         public ulong? CrossRegionsAliveDays{ get; set; }

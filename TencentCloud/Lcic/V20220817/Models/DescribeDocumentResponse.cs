@@ -115,6 +115,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Pages{ get; set; }
 
         /// <summary>
+        /// 课件预览地址
+        /// </summary>
+        [JsonProperty("Preview")]
+        public string Preview{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -141,6 +147,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Pages", this.Pages);
+            this.SetParamSimple(map, prefix + "Preview", this.Preview);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -31,19 +31,19 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string NormalText{ get; set; }
 
         /// <summary>
-        /// 基础粒度分词和词性标注的结果。（词性表请参见附录）
+        /// 基础粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
         /// </summary>
         [JsonProperty("BasicParticiples")]
         public BasicParticiple[] BasicParticiples{ get; set; }
 
         /// <summary>
-        /// 复合粒度分词和词性标注的结果。（词性表请参见附录）
+        /// 复合粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
         /// </summary>
         [JsonProperty("CompoundParticiples")]
         public CompoundParticiple[] CompoundParticiples{ get; set; }
 
         /// <summary>
-        /// 实体识别结果。（实体类型数据请参见附录）
+        /// 实体识别结果。（请参见附录[实体类型数据](https://cloud.tencent.com/document/product/271/90592)）
         /// </summary>
         [JsonProperty("Entities")]
         public Entity[] Entities{ get; set; }

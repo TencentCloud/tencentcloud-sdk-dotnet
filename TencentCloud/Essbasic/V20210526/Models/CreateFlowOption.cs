@@ -31,31 +31,31 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? CanEditFlow{ get; set; }
 
         /// <summary>
-        /// 是否允许发起合同弹窗隐藏合同名称
+        /// 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
         /// </summary>
         [JsonProperty("HideShowFlowName")]
         public bool? HideShowFlowName{ get; set; }
 
         /// <summary>
-        /// 是否允许发起合同弹窗隐藏合同类型
+        /// 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
         /// </summary>
         [JsonProperty("HideShowFlowType")]
         public bool? HideShowFlowType{ get; set; }
 
         /// <summary>
-        /// 是否允许发起合同弹窗隐藏合同到期时间
+        /// 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
         /// </summary>
         [JsonProperty("HideShowDeadline")]
         public bool? HideShowDeadline{ get; set; }
 
         /// <summary>
-        /// 是否允许发起合同步骤跳过指定签署方步骤
+        /// 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
         /// </summary>
         [JsonProperty("CanSkipAddApprover")]
         public bool? CanSkipAddApprover{ get; set; }
 
         /// <summary>
-        /// 定制化发起合同页合同描述信息
+        /// 定制化发起合同弹窗的描述信息，描述信息最长500
         /// </summary>
         [JsonProperty("CustomCreateFlowDescription")]
         public string CustomCreateFlowDescription{ get; set; }

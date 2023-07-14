@@ -37,7 +37,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 快照定期备份在一星期哪一天
+        /// 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
         /// </summary>
         [JsonProperty("DayOfWeek")]
         public string DayOfWeek{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? AliveDays{ get; set; }
 
         /// <summary>
-        /// 是否激活定期快照功能
+        /// 是否激活定期快照功能；1代表激活，0代表未激活
         /// </summary>
         [JsonProperty("IsActivated")]
         public ulong? IsActivated{ get; set; }

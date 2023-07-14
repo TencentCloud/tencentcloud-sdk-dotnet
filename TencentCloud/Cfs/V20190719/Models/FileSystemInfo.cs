@@ -55,13 +55,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string LifeCycleState{ get; set; }
 
         /// <summary>
-        /// 文件系统已使用容量
+        /// 文件系统已使用容量,单位Byte
         /// </summary>
         [JsonProperty("SizeByte")]
         public ulong? SizeByte{ get; set; }
 
         /// <summary>
-        /// 文件系统最大空间限制
+        /// 文件系统最大空间限制,GiB
         /// </summary>
         [JsonProperty("SizeLimit")]
         public ulong? SizeLimit{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 文件系统协议类型
+        /// 文件系统协议类型, 支持 NFS,CIFS,TURBO
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 文件系统存储类型
+        /// 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FsName{ get; set; }
 
         /// <summary>
-        /// 文件系统是否加密
+        /// 文件系统是否加密,true：代表加密，false：非加密
         /// </summary>
         [JsonProperty("Encrypted")]
         public bool? Encrypted{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
+        /// 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
         /// </summary>
         [JsonProperty("BandwidthLimit")]
         public float? BandwidthLimit{ get; set; }
@@ -152,6 +152,8 @@ namespace TencentCloud.Cfs.V20190719.Models
 
         /// <summary>
         /// 文件系统生命周期管理状态
+        /// NotAvailable：不可用
+        /// Available:可用
         /// </summary>
         [JsonProperty("TieringState")]
         public string TieringState{ get; set; }

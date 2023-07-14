@@ -1181,7 +1181,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 查询文件系统配额
+        /// 查询文件系统配额（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
         /// </summary>
         /// <param name="req"><see cref="DescribeUserQuotaRequest"/></param>
         /// <returns><see cref="DescribeUserQuotaResponse"/></returns>
@@ -1201,7 +1201,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 查询文件系统配额
+        /// 查询文件系统配额（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
         /// </summary>
         /// <param name="req"><see cref="DescribeUserQuotaRequest"/></param>
         /// <returns><see cref="DescribeUserQuotaResponse"/></returns>

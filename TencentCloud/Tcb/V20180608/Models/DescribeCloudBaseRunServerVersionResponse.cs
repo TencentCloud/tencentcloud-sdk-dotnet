@@ -55,13 +55,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// 请使用CPUSize
         /// </summary>
         [JsonProperty("Cpu")]
-        public long? Cpu{ get; set; }
+        public float? Cpu{ get; set; }
 
         /// <summary>
         /// 请使用MemSize
         /// </summary>
         [JsonProperty("Mem")]
-        public long? Mem{ get; set; }
+        public float? Mem{ get; set; }
 
         /// <summary>
         /// 副本最小值

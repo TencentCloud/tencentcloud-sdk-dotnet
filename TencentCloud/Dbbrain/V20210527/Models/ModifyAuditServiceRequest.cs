@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+        /// 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 日志保存总时长，只能是7,30,90,180,365,1095,1825
+        /// 日志保存总时长，只能是7,30,90,180,365,1095,1825。
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public long? LogExpireDay{ get; set; }
 
         /// <summary>
-        /// 高频日志保存时长，只能是7,30,90,180,365,1095,1825
+        /// 高频日志保存时长，只能是7,30,90,180,365,1095,1825。
         /// </summary>
         [JsonProperty("HotLogExpireDay")]
         public long? HotLogExpireDay{ get; set; }

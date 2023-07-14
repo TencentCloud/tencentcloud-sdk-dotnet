@@ -26,6 +26,10 @@ namespace TencentCloud.Cfs.V20190719.Models
         
         /// <summary>
         /// 操作类型
+        /// CreateCfsSnapshot：创建快照
+        /// DeleteCfsSnapshot：删除快照
+        /// CreateCfsFileSystem：创建文件系统
+        /// UpdateCfsSnapshotAttribute：更新快照
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -38,18 +42,22 @@ namespace TencentCloud.Cfs.V20190719.Models
 
         /// <summary>
         /// 操作名称
+        /// CreateCfsSnapshot
+        /// DeleteCfsSnapshot
+        /// CreateCfsFileSystem
+        /// UpdateCfsSnapshotAttribute
         /// </summary>
         [JsonProperty("ActionName")]
         public string ActionName{ get; set; }
 
         /// <summary>
-        /// 操作者
+        /// 操作者uin
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 结果
+        /// 1-任务进行中；2-任务成功；3-任务失败
         /// </summary>
         [JsonProperty("Result")]
         public ulong? Result{ get; set; }

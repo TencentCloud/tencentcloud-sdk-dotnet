@@ -37,19 +37,19 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 文件系统大小
+        /// 文件系统大小，单位Byte
         /// </summary>
         [JsonProperty("SizeByte")]
         public ulong? SizeByte{ get; set; }
 
         /// <summary>
-        /// 存储类型
+        /// 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// 快照总大小
+        /// 快照总大小，单位GiB
         /// </summary>
         [JsonProperty("TotalSnapshotSize")]
         public ulong? TotalSnapshotSize{ get; set; }

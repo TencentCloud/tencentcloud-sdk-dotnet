@@ -49,7 +49,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 域名所有者筛选
+        /// 关键字，用于域名所有者筛选
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }

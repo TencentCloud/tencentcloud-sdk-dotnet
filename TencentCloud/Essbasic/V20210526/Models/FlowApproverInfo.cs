@@ -166,8 +166,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string SignId{ get; set; }
 
         /// <summary>
-        /// SMS: 短信; NONE: 不发信息
-        /// 默认为SMS(该字段对子客无效)
+        /// SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
+        /// 默认为SMS(签署方为子客时该字段不生效)
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }

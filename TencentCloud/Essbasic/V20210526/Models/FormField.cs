@@ -52,7 +52,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ComponentName{ get; set; }
 
         /// <summary>
-        /// 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同）
+        /// 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LockComponentValue")]

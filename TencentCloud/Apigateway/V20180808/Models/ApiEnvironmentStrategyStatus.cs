@@ -21,22 +21,22 @@ namespace TencentCloud.Apigateway.V20180808.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IPStrategysStatus : AbstractModel
+    public class ApiEnvironmentStrategyStatus : AbstractModel
     {
         
         /// <summary>
-        /// 策略数量。
+        /// API绑定的限流策略数量。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 策略列表。
+        /// API绑定的限流策略列表。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("StrategySet")]
-        public IPStrategy[] StrategySet{ get; set; }
+        [JsonProperty("ApiEnvironmentStrategySet")]
+        public ApiEnvironmentStrategy[] ApiEnvironmentStrategySet{ get; set; }
 
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "StrategySet.", this.StrategySet);
+            this.SetParamArrayObj(map, prefix + "ApiEnvironmentStrategySet.", this.ApiEnvironmentStrategySet);
         }
     }
 }

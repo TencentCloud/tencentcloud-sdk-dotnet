@@ -45,7 +45,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Limit 页面大小
+        /// Limit 页面大小，可填范围为大于0的整数
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

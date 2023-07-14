@@ -25,16 +25,16 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群容器网络配置信息
-        /// </summary>
-        [JsonProperty("ClusterCIDRSettings")]
-        public ClusterCIDRSettings ClusterCIDRSettings{ get; set; }
-
-        /// <summary>
         /// 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// 集群容器网络配置信息
+        /// </summary>
+        [JsonProperty("ClusterCIDRSettings")]
+        public ClusterCIDRSettings ClusterCIDRSettings{ get; set; }
 
         /// <summary>
         /// CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
@@ -84,8 +84,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ClusterCIDRSettings.", this.ClusterCIDRSettings);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamObj(map, prefix + "ClusterCIDRSettings.", this.ClusterCIDRSettings);
             this.SetParamArrayObj(map, prefix + "RunInstancesForNode.", this.RunInstancesForNode);
             this.SetParamObj(map, prefix + "ClusterBasicSettings.", this.ClusterBasicSettings);
             this.SetParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
