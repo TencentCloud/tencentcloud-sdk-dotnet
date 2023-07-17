@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Mall.V20230518.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AMQPClusterRecentStats : AbstractModel
+    public class DescribeDrawResourceListResponse : AbstractModel
     {
         
         /// <summary>
-        /// Queue数量
+        /// 返回数据条数
         /// </summary>
-        [JsonProperty("QueueNum")]
-        public ulong? QueueNum{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 消息生产数
+        /// 返回数据内容
         /// </summary>
-        [JsonProperty("ProducedMsgNum")]
-        public ulong? ProducedMsgNum{ get; set; }
+        [JsonProperty("ResourceDrawList")]
+        public ResourceDrawListType[] ResourceDrawList{ get; set; }
 
         /// <summary>
-        /// 消息堆积数
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("AccumulativeMsgNum")]
-        public ulong? AccumulativeMsgNum{ get; set; }
-
-        /// <summary>
-        /// Exchange数量
-        /// </summary>
-        [JsonProperty("ExchangeNum")]
-        public ulong? ExchangeNum{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "QueueNum", this.QueueNum);
-            this.SetParamSimple(map, prefix + "ProducedMsgNum", this.ProducedMsgNum);
-            this.SetParamSimple(map, prefix + "AccumulativeMsgNum", this.AccumulativeMsgNum);
-            this.SetParamSimple(map, prefix + "ExchangeNum", this.ExchangeNum);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "ResourceDrawList.", this.ResourceDrawList);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

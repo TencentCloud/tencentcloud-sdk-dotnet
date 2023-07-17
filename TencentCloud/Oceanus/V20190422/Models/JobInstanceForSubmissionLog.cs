@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Oceanus.V20190422.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAMQPVHostResponse : AbstractModel
+    public class JobInstanceForSubmissionLog : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 实例的Id, 按照启动的时间顺序，从1开始
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("RunningOrderId")]
+        public long? RunningOrderId{ get; set; }
+
+        /// <summary>
+        /// 作业实例的启动时间
+        /// </summary>
+        [JsonProperty("JobInstanceStartTime")]
+        public string JobInstanceStartTime{ get; set; }
+
+        /// <summary>
+        /// 作业实例启动的时间（毫秒）
+        /// </summary>
+        [JsonProperty("StartingMillis")]
+        public long? StartingMillis{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "RunningOrderId", this.RunningOrderId);
+            this.SetParamSimple(map, prefix + "JobInstanceStartTime", this.JobInstanceStartTime);
+            this.SetParamSimple(map, prefix + "StartingMillis", this.StartingMillis);
         }
     }
 }

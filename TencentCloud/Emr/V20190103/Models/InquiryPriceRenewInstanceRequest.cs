@@ -31,7 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
+        /// 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
@@ -57,7 +57,7 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 货币种类。取值范围：
-        /// <li>CNY：表示人民币。</li>
+        /// <li>CNY：表示人民币。</li>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }

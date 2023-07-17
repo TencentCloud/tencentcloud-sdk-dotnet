@@ -40,7 +40,7 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 实例续费的时间单位。取值范围：
-        /// <li>m：表示月份。</li>
+        /// <li>m：表示月份。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeUnit")]

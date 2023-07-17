@@ -209,6 +209,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
+        /// <summary>
+        /// 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+        /// </summary>
+        [JsonProperty("ModelTurboEnable")]
+        public bool? ModelTurboEnable{ get; set; }
+
+        /// <summary>
+        /// 服务分类
+        /// </summary>
+        [JsonProperty("ServiceCategory")]
+        public string ServiceCategory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -242,6 +254,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
             this.SetParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
+            this.SetParamSimple(map, prefix + "ServiceCategory", this.ServiceCategory);
         }
     }
 }

@@ -261,6 +261,12 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 根据产品要求，调整接口目录
+        /// 
+        /// 新接口：ChannelCreateOrganizationModifyQrCode 
+        /// 
+        /// 老接口目前无线上流量，测试用例已下线处理
+        /// 
         /// 生成子客编辑企业信息二维码
         /// </summary>
         /// <param name="req"><see cref="CreateChannelSubOrganizationModifyQrCodeRequest"/></param>
@@ -281,6 +287,12 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 根据产品要求，调整接口目录
+        /// 
+        /// 新接口：ChannelCreateOrganizationModifyQrCode 
+        /// 
+        /// 老接口目前无线上流量，测试用例已下线处理
+        /// 
         /// 生成子客编辑企业信息二维码
         /// </summary>
         /// <param name="req"><see cref="CreateChannelSubOrganizationModifyQrCodeRequest"/></param>

@@ -93,7 +93,7 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
-        /// 视频美颜
+        /// 视频美颜(此接口目前已下线)
         /// </summary>
         /// <param name="req"><see cref="BeautifyVideoRequest"/></param>
         /// <returns><see cref="BeautifyVideoResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
-        /// 视频美颜
+        /// 视频美颜(此接口目前已下线)
         /// </summary>
         /// <param name="req"><see cref="BeautifyVideoRequest"/></param>
         /// <returns><see cref="BeautifyVideoResponse"/></returns>

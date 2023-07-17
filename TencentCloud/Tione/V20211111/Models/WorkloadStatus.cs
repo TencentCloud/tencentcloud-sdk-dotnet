@@ -77,6 +77,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Conditions")]
         public StatefulSetCondition[] Conditions{ get; set; }
 
+        /// <summary>
+        /// 状态异常时，展示原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +98,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "StatefulSetCondition.", this.StatefulSetCondition);
             this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

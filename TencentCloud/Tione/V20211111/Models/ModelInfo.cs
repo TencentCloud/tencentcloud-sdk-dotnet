@@ -75,6 +75,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ModelType")]
         public string ModelType{ get; set; }
 
+        /// <summary>
+        /// 模型格式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModelFormat")]
+        public string ModelFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +96,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "CosPathInfo.", this.CosPathInfo);
             this.SetParamSimple(map, prefix + "AlgorithmFramework", this.AlgorithmFramework);
             this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
+            this.SetParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
         }
     }
 }

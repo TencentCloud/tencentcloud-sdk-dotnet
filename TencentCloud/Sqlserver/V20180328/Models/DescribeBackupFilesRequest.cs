@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 聚合ID, 可通过接口DescribeBackups获取
+        /// 单库备份的聚合ID, 可通过接口DescribeBackups获取（不支持查询打包备份记录）
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

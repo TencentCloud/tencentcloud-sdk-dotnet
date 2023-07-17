@@ -38,6 +38,12 @@ namespace TencentCloud.Fmu.V20191213.Models
         public BeautifyVideoOutput BeautifyVideoOutput{ get; set; }
 
         /// <summary>
+        /// 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+        /// </summary>
+        [JsonProperty("JobStatusCode")]
+        public long? JobStatusCode{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -51,6 +57,7 @@ namespace TencentCloud.Fmu.V20191213.Models
         {
             this.SetParamSimple(map, prefix + "JobStatus", this.JobStatus);
             this.SetParamObj(map, prefix + "BeautifyVideoOutput.", this.BeautifyVideoOutput);
+            this.SetParamSimple(map, prefix + "JobStatusCode", this.JobStatusCode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

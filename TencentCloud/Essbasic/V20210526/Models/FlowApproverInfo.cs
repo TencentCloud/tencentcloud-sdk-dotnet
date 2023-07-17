@@ -113,8 +113,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Component[] SignComponents{ get; set; }
 
         /// <summary>
-        /// 个人签署方指定签署控件类型，目前支持：OCR_ESIGN -AI智慧手写签名
-        /// HANDWRITE -手写签名
+        /// 	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+        /// 	HANDWRITE – 手写签名
+        /// 	OCR_ESIGN -- AI智能识别手写签名
+        /// 	ESIGN -- 个人印章类型
+        /// 	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
         /// </summary>
         [JsonProperty("ComponentLimitType")]
         public string[] ComponentLimitType{ get; set; }

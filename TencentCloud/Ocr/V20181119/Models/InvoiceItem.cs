@@ -55,7 +55,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 旋转后的图片四点坐标。
+        /// 该发票在原图片中的四点坐标。
         /// </summary>
         [JsonProperty("Polygon")]
         public Polygon Polygon{ get; set; }

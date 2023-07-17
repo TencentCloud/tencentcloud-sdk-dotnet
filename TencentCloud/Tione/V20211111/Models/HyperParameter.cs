@@ -80,6 +80,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("PipelineArgs")]
         public string PipelineArgs{ get; set; }
 
+        /// <summary>
+        /// Stable Diffusion 模型优化参数，控制Lora模型的影响效果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoraScale")]
+        public string LoraScale{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "MinBlockSizePt", this.MinBlockSizePt);
             this.SetParamSimple(map, prefix + "MinBlockSizeTf", this.MinBlockSizeTf);
             this.SetParamSimple(map, prefix + "PipelineArgs", this.PipelineArgs);
+            this.SetParamSimple(map, prefix + "LoraScale", this.LoraScale);
         }
     }
 }

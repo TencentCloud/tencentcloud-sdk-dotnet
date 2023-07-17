@@ -613,6 +613,46 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 查询作业实例启动日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobSubmissionLogRequest"/></param>
+        /// <returns><see cref="DescribeJobSubmissionLogResponse"/></returns>
+        public async Task<DescribeJobSubmissionLogResponse> DescribeJobSubmissionLog(DescribeJobSubmissionLogRequest req)
+        {
+             JsonResponseModel<DescribeJobSubmissionLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeJobSubmissionLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobSubmissionLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询作业实例启动日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobSubmissionLogRequest"/></param>
+        /// <returns><see cref="DescribeJobSubmissionLogResponse"/></returns>
+        public DescribeJobSubmissionLogResponse DescribeJobSubmissionLogSync(DescribeJobSubmissionLogRequest req)
+        {
+             JsonResponseModel<DescribeJobSubmissionLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeJobSubmissionLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobSubmissionLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询作业
         /// </summary>
         /// <param name="req"><see cref="DescribeJobsRequest"/></param>

@@ -685,6 +685,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 生成渠道子客编辑企业信息二维码
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateOrganizationModifyQrCodeRequest"/></param>
+        /// <returns><see cref="ChannelCreateOrganizationModifyQrCodeResponse"/></returns>
+        public async Task<ChannelCreateOrganizationModifyQrCodeResponse> ChannelCreateOrganizationModifyQrCode(ChannelCreateOrganizationModifyQrCodeRequest req)
+        {
+             JsonResponseModel<ChannelCreateOrganizationModifyQrCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateOrganizationModifyQrCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateOrganizationModifyQrCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成渠道子客编辑企业信息二维码
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateOrganizationModifyQrCodeRequest"/></param>
+        /// <returns><see cref="ChannelCreateOrganizationModifyQrCodeResponse"/></returns>
+        public ChannelCreateOrganizationModifyQrCodeResponse ChannelCreateOrganizationModifyQrCodeSync(ChannelCreateOrganizationModifyQrCodeRequest req)
+        {
+             JsonResponseModel<ChannelCreateOrganizationModifyQrCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateOrganizationModifyQrCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateOrganizationModifyQrCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建预发起合同
         /// 通过此接口指定：合同，签署人，填写控件信息，生成预创建合同链接，点击后跳转到web页面完成合同创建并发起
         /// 可指定合同信息不可更改，签署人信息不可更改

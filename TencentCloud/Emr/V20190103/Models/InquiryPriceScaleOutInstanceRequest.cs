@@ -74,7 +74,7 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 货币种类。取值范围：
-        /// <li>CNY：表示人民币。</li>
+        /// <li>CNY：表示人民币。</li>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }

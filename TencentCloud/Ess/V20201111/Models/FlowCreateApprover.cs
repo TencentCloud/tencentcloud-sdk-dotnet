@@ -153,6 +153,28 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverNeedSignReview")]
         public bool? ApproverNeedSignReview{ get; set; }
 
+        /// <summary>
+        /// 签署人签署控件
+        /// </summary>
+        [JsonProperty("SignComponents")]
+        public Component[] SignComponents{ get; set; }
+
+        /// <summary>
+        /// 签署人填写控件
+        /// </summary>
+        [JsonProperty("Components")]
+        public Component[] Components{ get; set; }
+
+        /// <summary>
+        /// 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+        /// 	HANDWRITE – 手写签名
+        /// 	OCR_ESIGN -- AI智能识别手写签名
+        /// 	ESIGN -- 个人印章类型
+        /// 	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+        /// </summary>
+        [JsonProperty("ComponentLimitType")]
+        public string[] ComponentLimitType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +201,9 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
             this.SetParamSimple(map, prefix + "SignId", this.SignId);
             this.SetParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
+            this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
+            this.SetParamArrayObj(map, prefix + "Components.", this.Components);
+            this.SetParamArraySimple(map, prefix + "ComponentLimitType.", this.ComponentLimitType);
         }
     }
 }

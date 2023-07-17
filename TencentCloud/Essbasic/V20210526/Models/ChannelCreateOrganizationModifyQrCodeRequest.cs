@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAMQPExchangesResponse : AbstractModel
+    public class ChannelCreateOrganizationModifyQrCodeRequest : AbstractModel
     {
         
         /// <summary>
-        /// 总记录数
+        /// 应用相关信息。 此接口Agent.AppId 必填。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
-        /// <summary>
-        /// 主题信息列表
-        /// </summary>
-        [JsonProperty("Exchanges")]
-        public AMQPExchange[] Exchanges{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Exchanges.", this.Exchanges);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

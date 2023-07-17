@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAMQPExchangeRequest : AbstractModel
+    public class ChannelCreateOrganizationModifyQrCodeResponse : AbstractModel
     {
         
         /// <summary>
-        /// 集群ID
+        /// 二维码下载链接
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("QrCodeUrl")]
+        public string QrCodeUrl{ get; set; }
 
         /// <summary>
-        /// Vhost间名称
+        /// 二维码失效时间 UNIX 时间戳 精确到秒
         /// </summary>
-        [JsonProperty("VHostId")]
-        public string VHostId{ get; set; }
+        [JsonProperty("ExpiredTime")]
+        public long? ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 交换机名称
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Exchange")]
-        public string Exchange{ get; set; }
-
-        /// <summary>
-        /// 说明信息，最大128个字符
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "VHostId", this.VHostId);
-            this.SetParamSimple(map, prefix + "Exchange", this.Exchange);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "QrCodeUrl", this.QrCodeUrl);
+            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

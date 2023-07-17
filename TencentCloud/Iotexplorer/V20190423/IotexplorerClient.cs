@@ -2653,7 +2653,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 本接口（ListFirmwares）用于获取固件列表 
+        /// 本接口（ListFirmwares）用于获取固件列表
         /// </summary>
         /// <param name="req"><see cref="ListFirmwaresRequest"/></param>
         /// <returns><see cref="ListFirmwaresResponse"/></returns>
@@ -2673,7 +2673,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 本接口（ListFirmwares）用于获取固件列表 
+        /// 本接口（ListFirmwares）用于获取固件列表
         /// </summary>
         /// <param name="req"><see cref="ListFirmwaresRequest"/></param>
         /// <returns><see cref="ListFirmwaresResponse"/></returns>

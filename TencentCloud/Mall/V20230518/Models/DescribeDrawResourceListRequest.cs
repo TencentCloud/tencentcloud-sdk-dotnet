@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Mall.V20230518.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAMQPRouteRelationRequest : AbstractModel
+    public class DescribeDrawResourceListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 集群ID
+        /// PageNumber
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("PageNumber")]
+        public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// Vhost名称
+        /// PageSize
         /// </summary>
-        [JsonProperty("VHostId")]
-        public string VHostId{ get; set; }
-
-        /// <summary>
-        /// 路由关系ID
-        /// </summary>
-        [JsonProperty("RouteRelationId")]
-        public string RouteRelationId{ get; set; }
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "VHostId", this.VHostId);
-            this.SetParamSimple(map, prefix + "RouteRelationId", this.RouteRelationId);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

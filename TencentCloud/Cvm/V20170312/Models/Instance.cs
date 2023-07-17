@@ -234,6 +234,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] RdmaIpAddresses{ get; set; }
 
         /// <summary>
+        /// 实例所在的专用集群`ID`。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
+
+        /// <summary>
         /// 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -317,6 +324,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
             this.SetParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
             this.SetParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);

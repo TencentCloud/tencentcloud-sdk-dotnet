@@ -1733,6 +1733,8 @@ namespace TencentCloud.Iot.V20180123
         }
 
         /// <summary>
+        /// 业务无客户使用，下线接口。
+        /// 
         /// 取消子设备产品与网关设备产品的关联
         /// </summary>
         /// <param name="req"><see cref="UnassociateSubDeviceFromGatewayProductRequest"/></param>
@@ -1753,6 +1755,8 @@ namespace TencentCloud.Iot.V20180123
         }
 
         /// <summary>
+        /// 业务无客户使用，下线接口。
+        /// 
         /// 取消子设备产品与网关设备产品的关联
         /// </summary>
         /// <param name="req"><see cref="UnassociateSubDeviceFromGatewayProductRequest"/></param>

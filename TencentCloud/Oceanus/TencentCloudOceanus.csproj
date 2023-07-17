@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.802</VersionPrefix>
+    <VersionPrefix>3.0.803</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -83,6 +83,8 @@
     <Compile Include="V20190422\Models\DescribeJobConfigsResponse.cs" />
     <Compile Include="V20190422\Models\DescribeJobSavepointRequest.cs" />
     <Compile Include="V20190422\Models\DescribeJobSavepointResponse.cs" />
+    <Compile Include="V20190422\Models\DescribeJobSubmissionLogRequest.cs" />
+    <Compile Include="V20190422\Models\DescribeJobSubmissionLogResponse.cs" />
     <Compile Include="V20190422\Models\DescribeJobsRequest.cs" />
     <Compile Include="V20190422\Models\DescribeJobsResponse.cs" />
     <Compile Include="V20190422\Models\DescribeResourceConfigsRequest.cs" />
@@ -102,7 +104,9 @@
     <Compile Include="V20190422\Models\DescribeWorkSpacesResponse.cs" />
     <Compile Include="V20190422\Models\Filter.cs" />
     <Compile Include="V20190422\Models\JobConfig.cs" />
+    <Compile Include="V20190422\Models\JobInstanceForSubmissionLog.cs" />
     <Compile Include="V20190422\Models\JobV1.cs" />
+    <Compile Include="V20190422\Models\LogContent.cs" />
     <Compile Include="V20190422\Models\ModifyJobRequest.cs" />
     <Compile Include="V20190422\Models\ModifyJobResponse.cs" />
     <Compile Include="V20190422\Models\Property.cs" />

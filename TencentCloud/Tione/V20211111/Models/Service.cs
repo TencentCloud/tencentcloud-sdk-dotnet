@@ -50,6 +50,13 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ServiceDescription{ get; set; }
 
         /// <summary>
+        /// 服务的详细信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceInfo")]
+        public ServiceInfo ServiceInfo{ get; set; }
+
+        /// <summary>
         /// 集群id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -83,6 +90,27 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
+
+        /// <summary>
+        /// 包年包月服务对应的资源组名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceGroupName")]
+        public string ResourceGroupName{ get; set; }
+
+        /// <summary>
+        /// 服务的标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 服务所在的 ingress 的 name
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IngressName")]
+        public string IngressName{ get; set; }
 
         /// <summary>
         /// 创建者
@@ -127,27 +155,6 @@ namespace TencentCloud.Tione.V20211111.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 版本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Version")]
-        public string Version{ get; set; }
-
-        /// <summary>
-        /// 服务组下服务的最高版本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("LatestVersion")]
-        public string LatestVersion{ get; set; }
-
-        /// <summary>
-        /// 服务的详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ServiceInfo")]
-        public ServiceInfo ServiceInfo{ get; set; }
-
-        /// <summary>
         /// 服务的业务状态
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -155,20 +162,25 @@ namespace TencentCloud.Tione.V20211111.Models
         public string BusinessStatus{ get; set; }
 
         /// <summary>
-        /// 服务的创建来源
-        /// AUTO_ML: 来自自动学习的一键发布
-        /// DEFAULT: 其他来源
+        /// 已废弃
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("CreateSource")]
-        public string CreateSource{ get; set; }
+        [JsonProperty("ServiceLimit")]
+        public ServiceLimit ServiceLimit{ get; set; }
 
         /// <summary>
-        /// 费用信息
+        /// 已废弃
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("BillingInfo")]
-        public string BillingInfo{ get; set; }
+        [JsonProperty("ScheduledAction")]
+        public ScheduledAction ScheduledAction{ get; set; }
+
+        /// <summary>
+        /// 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateFailedReason")]
+        public string CreateFailedReason{ get; set; }
 
         /// <summary>
         /// 服务状态
@@ -186,6 +198,13 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Status{ get; set; }
 
         /// <summary>
+        /// 费用信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillingInfo")]
+        public string BillingInfo{ get; set; }
+
+        /// <summary>
         /// 模型权重
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -193,46 +212,27 @@ namespace TencentCloud.Tione.V20211111.Models
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// 服务所在的 ingress 的 name
+        /// 服务的创建来源
+        /// AUTO_ML: 来自自动学习的一键发布
+        /// DEFAULT: 其他来源
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("IngressName")]
-        public string IngressName{ get; set; }
+        [JsonProperty("CreateSource")]
+        public string CreateSource{ get; set; }
 
         /// <summary>
-        /// 服务限速限流相关配置
+        /// 版本号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ServiceLimit")]
-        public ServiceLimit ServiceLimit{ get; set; }
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
 
         /// <summary>
-        /// 定时停止的配置
+        /// 服务组下服务的最高版本号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ScheduledAction")]
-        public ScheduledAction ScheduledAction{ get; set; }
-
-        /// <summary>
-        /// 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CreateFailedReason")]
-        public string CreateFailedReason{ get; set; }
-
-        /// <summary>
-        /// 包年包月服务对应的资源组名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ResourceGroupName")]
-        public string ResourceGroupName{ get; set; }
-
-        /// <summary>
-        /// 服务的标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("LatestVersion")]
+        public string LatestVersion{ get; set; }
 
 
         /// <summary>
@@ -244,31 +244,31 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "ServiceGroupName", this.ServiceGroupName);
             this.SetParamSimple(map, prefix + "ServiceDescription", this.ServiceDescription);
+            this.SetParamObj(map, prefix + "ServiceInfo.", this.ServiceInfo);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+            this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "IngressName", this.IngressName);
             this.SetParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "SubUin", this.SubUin);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
-            this.SetParamSimple(map, prefix + "Version", this.Version);
-            this.SetParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
-            this.SetParamObj(map, prefix + "ServiceInfo.", this.ServiceInfo);
             this.SetParamSimple(map, prefix + "BusinessStatus", this.BusinessStatus);
-            this.SetParamSimple(map, prefix + "CreateSource", this.CreateSource);
-            this.SetParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "Weight", this.Weight);
-            this.SetParamSimple(map, prefix + "IngressName", this.IngressName);
             this.SetParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
             this.SetParamObj(map, prefix + "ScheduledAction.", this.ScheduledAction);
             this.SetParamSimple(map, prefix + "CreateFailedReason", this.CreateFailedReason);
-            this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "CreateSource", this.CreateSource);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
         }
     }
 }

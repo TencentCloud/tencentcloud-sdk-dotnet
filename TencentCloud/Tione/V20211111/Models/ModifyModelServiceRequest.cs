@@ -167,6 +167,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("VolumeMount")]
         public VolumeMount VolumeMount{ get; set; }
 
+        /// <summary>
+        /// 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
+        /// </summary>
+        [JsonProperty("ModelTurboEnable")]
+        public bool? ModelTurboEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -193,6 +199,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "ScheduledAction.", this.ScheduledAction);
             this.SetParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
             this.SetParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
+            this.SetParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
         }
     }
 }

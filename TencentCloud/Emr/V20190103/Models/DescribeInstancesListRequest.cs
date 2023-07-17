@@ -49,7 +49,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
+        /// 按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
         /// </summary>
         [JsonProperty("Asc")]
         public long? Asc{ get; set; }

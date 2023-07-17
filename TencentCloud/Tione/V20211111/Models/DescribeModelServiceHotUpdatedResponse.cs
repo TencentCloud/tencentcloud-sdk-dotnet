@@ -25,6 +25,12 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
+        /// 模型加速标志位.Allowed 允许模型加速. Forbidden 禁止模型加速
+        /// </summary>
+        [JsonProperty("ModelTurboFlag")]
+        public string ModelTurboFlag{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ModelTurboFlag", this.ModelTurboFlag);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

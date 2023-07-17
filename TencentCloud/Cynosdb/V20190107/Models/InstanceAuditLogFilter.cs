@@ -27,9 +27,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// 过滤项。支持以下搜索条件:
         /// 
-        /// 分词搜索：
-        /// sql - SQL语句；
-        /// 
         /// 等于、不等于、包含、不包含：
         /// host - 客户端地址；
         /// user - 用户名；

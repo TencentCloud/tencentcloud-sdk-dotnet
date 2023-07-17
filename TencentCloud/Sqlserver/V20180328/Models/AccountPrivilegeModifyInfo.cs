@@ -37,7 +37,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public DBPrivilegeModifyInfo[] DBPrivileges{ get; set; }
 
         /// <summary>
-        /// 是否为管理员账户,当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false时，表示删除管理员权限，默认false
+        /// 表示是否为管理员账户，当值为true，表示是 管理员。若实例 是 单节点，则管理员所在的 账号类型为超级权限账号 ，即AccountType=L0；若实例 是 双节点，则管理员所在的 账号类型为高级权限账号，即AccountType=L1；当值为false，表示 不是管理员，则账号类型为普通账号，即AccountType=L3
         /// </summary>
         [JsonProperty("IsAdmin")]
         public bool? IsAdmin{ get; set; }
