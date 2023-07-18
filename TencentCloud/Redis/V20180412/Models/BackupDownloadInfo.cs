@@ -25,25 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 备份文件名称
+        /// 备份文件名称。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 备份文件大小，单位B，如果为0，表示无效
+        /// 备份文件大小，单位B，如果为0，表示无效。
         /// </summary>
         [JsonProperty("FileSize")]
-        public ulong? FileSize{ get; set; }
+        public long? FileSize{ get; set; }
 
         /// <summary>
-        /// 备份文件外网下载地址（6小时）
+        /// 备份文件外网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }
 
         /// <summary>
-        /// 备份文件内网下载地址（6小时）
+        /// 备份文件内网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
         /// </summary>
         [JsonProperty("InnerDownloadUrl")]
         public string InnerDownloadUrl{ get; set; }

@@ -108,6 +108,90 @@ namespace TencentCloud.Trro.V20220325.Models
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
+        /// <summary>
+        /// sdk版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ver")]
+        public string Ver{ get; set; }
+
+        /// <summary>
+        /// 模式(p2p/server)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SdkMode")]
+        public string SdkMode{ get; set; }
+
+        /// <summary>
+        /// 解码耗时，单位：ms
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DecodeCost")]
+        public long?[] DecodeCost{ get; set; }
+
+        /// <summary>
+        /// 渲染耗时，单位：ms
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RenderConst")]
+        public long?[] RenderConst{ get; set; }
+
+        /// <summary>
+        /// 卡顿k100
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("K100")]
+        public float?[] K100{ get; set; }
+
+        /// <summary>
+        /// 卡顿k150
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("K150")]
+        public float?[] K150{ get; set; }
+
+        /// <summary>
+        /// nack请求数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NACK")]
+        public long?[] NACK{ get; set; }
+
+        /// <summary>
+        /// 服务端调控码率,单位：kbps
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BitRateEstimate")]
+        public long?[] BitRateEstimate{ get; set; }
+
+        /// <summary>
+        /// 宽度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Width")]
+        public long? Width{ get; set; }
+
+        /// <summary>
+        /// 高度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Height")]
+        public long? Height{ get; set; }
+
+        /// <summary>
+        /// 编码耗时，单位：ms
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EncodeCost")]
+        public long?[] EncodeCost{ get; set; }
+
+        /// <summary>
+        /// 采集耗时，单位：ms
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CaptureCost")]
+        public long?[] CaptureCost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +212,18 @@ namespace TencentCloud.Trro.V20220325.Models
             this.SetParamArraySimple(map, prefix + "TimeOffset.", this.TimeOffset);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "Ver", this.Ver);
+            this.SetParamSimple(map, prefix + "SdkMode", this.SdkMode);
+            this.SetParamArraySimple(map, prefix + "DecodeCost.", this.DecodeCost);
+            this.SetParamArraySimple(map, prefix + "RenderConst.", this.RenderConst);
+            this.SetParamArraySimple(map, prefix + "K100.", this.K100);
+            this.SetParamArraySimple(map, prefix + "K150.", this.K150);
+            this.SetParamArraySimple(map, prefix + "NACK.", this.NACK);
+            this.SetParamArraySimple(map, prefix + "BitRateEstimate.", this.BitRateEstimate);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamArraySimple(map, prefix + "EncodeCost.", this.EncodeCost);
+            this.SetParamArraySimple(map, prefix + "CaptureCost.", this.CaptureCost);
         }
     }
 }

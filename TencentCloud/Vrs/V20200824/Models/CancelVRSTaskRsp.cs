@@ -15,42 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Vrs.V20200824.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSearchExportListResponse : AbstractModel
+    public class CancelVRSTaskRsp : AbstractModel
     {
         
-        /// <summary>
-        /// 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
-        /// </summary>
-        [JsonProperty("TaskId")]
-        public ulong? TaskId{ get; set; }
-
-        /// <summary>
-        /// 该参数作废
-        /// </summary>
-        [JsonProperty("DownloadUrl")]
-        public string DownloadUrl{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -7019,50 +7019,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 旧版日志下载接口下线
-        /// 
-        /// 导出ES查询文档列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSearchExportListRequest"/></param>
-        /// <returns><see cref="DescribeSearchExportListResponse"/></returns>
-        public async Task<DescribeSearchExportListResponse> DescribeSearchExportList(DescribeSearchExportListRequest req)
-        {
-             JsonResponseModel<DescribeSearchExportListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSearchExportList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSearchExportListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 旧版日志下载接口下线
-        /// 
-        /// 导出ES查询文档列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSearchExportListRequest"/></param>
-        /// <returns><see cref="DescribeSearchExportListResponse"/></returns>
-        public DescribeSearchExportListResponse DescribeSearchExportListSync(DescribeSearchExportListRequest req)
-        {
-             JsonResponseModel<DescribeSearchExportListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSearchExportList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSearchExportListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 获取历史搜索记录
         /// </summary>
         /// <param name="req"><see cref="DescribeSearchLogsRequest"/></param>

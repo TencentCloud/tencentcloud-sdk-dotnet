@@ -47,7 +47,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// forbid：已封禁
         /// release：已解封
         /// delay ： 延迟处理
-        /// reject ：申诉驳回，状态仍为封禁态
+        /// reject ：申诉驳回，状态仍为封禁状态
         /// complain：申诉进行中
         /// </summary>
         [JsonProperty("UrlStatus")]

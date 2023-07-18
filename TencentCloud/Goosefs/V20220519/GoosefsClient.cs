@@ -93,6 +93,126 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 查询GooseFS集群客户端凭证
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterClientTokenRequest"/></param>
+        /// <returns><see cref="DescribeClusterClientTokenResponse"/></returns>
+        public async Task<DescribeClusterClientTokenResponse> DescribeClusterClientToken(DescribeClusterClientTokenRequest req)
+        {
+             JsonResponseModel<DescribeClusterClientTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterClientToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterClientTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询GooseFS集群客户端凭证
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterClientTokenRequest"/></param>
+        /// <returns><see cref="DescribeClusterClientTokenResponse"/></returns>
+        public DescribeClusterClientTokenResponse DescribeClusterClientTokenSync(DescribeClusterClientTokenRequest req)
+        {
+             JsonResponseModel<DescribeClusterClientTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterClientToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterClientTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询GooseFS集群角色凭证
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterRoleTokenRequest"/></param>
+        /// <returns><see cref="DescribeClusterRoleTokenResponse"/></returns>
+        public async Task<DescribeClusterRoleTokenResponse> DescribeClusterRoleToken(DescribeClusterRoleTokenRequest req)
+        {
+             JsonResponseModel<DescribeClusterRoleTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterRoleToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterRoleTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询GooseFS集群角色凭证
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterRoleTokenRequest"/></param>
+        /// <returns><see cref="DescribeClusterRoleTokenResponse"/></returns>
+        public DescribeClusterRoleTokenResponse DescribeClusterRoleTokenSync(DescribeClusterRoleTokenRequest req)
+        {
+             JsonResponseModel<DescribeClusterRoleTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterRoleToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterRoleTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询GooseFS集群角色
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterRolesRequest"/></param>
+        /// <returns><see cref="DescribeClusterRolesResponse"/></returns>
+        public async Task<DescribeClusterRolesResponse> DescribeClusterRoles(DescribeClusterRolesRequest req)
+        {
+             JsonResponseModel<DescribeClusterRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询GooseFS集群角色
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterRolesRequest"/></param>
+        /// <returns><see cref="DescribeClusterRolesResponse"/></returns>
+        public DescribeClusterRolesResponse DescribeClusterRolesSync(DescribeClusterRolesRequest req)
+        {
+             JsonResponseModel<DescribeClusterRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取数据流通任务实时状态，用作客户端控制
         /// </summary>
         /// <param name="req"><see cref="DescribeDataRepositoryTaskStatusRequest"/></param>

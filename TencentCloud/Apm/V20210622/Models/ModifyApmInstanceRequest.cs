@@ -120,6 +120,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("LogSource")]
         public string LogSource{ get; set; }
 
+        /// <summary>
+        /// 用户自定义展示标签列表
+        /// </summary>
+        [JsonProperty("CustomShowTags")]
+        public string[] CustomShowTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "LogTopicID", this.LogTopicID);
             this.SetParamSimple(map, prefix + "LogSet", this.LogSet);
             this.SetParamSimple(map, prefix + "LogSource", this.LogSource);
+            this.SetParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
         }
     }
 }

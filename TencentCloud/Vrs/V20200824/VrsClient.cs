@@ -53,6 +53,46 @@ namespace TencentCloud.Vrs.V20200824
         }
 
         /// <summary>
+        /// 声音复刻取消任务接口
+        /// </summary>
+        /// <param name="req"><see cref="CancelVRSTaskRequest"/></param>
+        /// <returns><see cref="CancelVRSTaskResponse"/></returns>
+        public async Task<CancelVRSTaskResponse> CancelVRSTask(CancelVRSTaskRequest req)
+        {
+             JsonResponseModel<CancelVRSTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelVRSTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelVRSTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 声音复刻取消任务接口
+        /// </summary>
+        /// <param name="req"><see cref="CancelVRSTaskRequest"/></param>
+        /// <returns><see cref="CancelVRSTaskResponse"/></returns>
+        public CancelVRSTaskResponse CancelVRSTaskSync(CancelVRSTaskRequest req)
+        {
+             JsonResponseModel<CancelVRSTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelVRSTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelVRSTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口服务对提交音频进行声音复刻任务创建接口，异步返回复刻结果。
         /// • 请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
         /// • 签名方法参考 公共参数 中签名方法v3。
@@ -180,6 +220,46 @@ namespace TencentCloud.Vrs.V20200824
              {
                  var strResp = this.InternalRequestSync(req, "DetectEnvAndSoundQuality");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectEnvAndSoundQualityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下载声音复刻离线模型
+        /// </summary>
+        /// <param name="req"><see cref="DownloadVRSModelRequest"/></param>
+        /// <returns><see cref="DownloadVRSModelResponse"/></returns>
+        public async Task<DownloadVRSModelResponse> DownloadVRSModel(DownloadVRSModelRequest req)
+        {
+             JsonResponseModel<DownloadVRSModelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DownloadVRSModel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadVRSModelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下载声音复刻离线模型
+        /// </summary>
+        /// <param name="req"><see cref="DownloadVRSModelRequest"/></param>
+        /// <returns><see cref="DownloadVRSModelResponse"/></returns>
+        public DownloadVRSModelResponse DownloadVRSModelSync(DownloadVRSModelRequest req)
+        {
+             JsonResponseModel<DownloadVRSModelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DownloadVRSModel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadVRSModelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

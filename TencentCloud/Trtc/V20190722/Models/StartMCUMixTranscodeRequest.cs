@@ -55,7 +55,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public LayoutParams LayoutParams{ get; set; }
 
         /// <summary>
-        /// 第三方CDN转推参数。
+        /// 第三方CDN转推参数。如需转推至腾讯云云直播，此参数无需填写，会默认转推
         /// </summary>
         [JsonProperty("PublishCdnParams")]
         public PublishCdnParams PublishCdnParams{ get; set; }

@@ -255,6 +255,13 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("WebAttack")]
         public long? WebAttack{ get; set; }
 
+        /// <summary>
+        /// 风险服务暴露数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceRisk")]
+        public ulong? ServiceRisk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +301,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "MemberId", this.MemberId);
             this.SetParamSimple(map, prefix + "CCAttack", this.CCAttack);
             this.SetParamSimple(map, prefix + "WebAttack", this.WebAttack);
+            this.SetParamSimple(map, prefix + "ServiceRisk", this.ServiceRisk);
         }
     }
 }

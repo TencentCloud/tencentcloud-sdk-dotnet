@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Goosefs.V20220519.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSearchExportListRequest : AbstractModel
+    public class DescribeClusterClientTokenResponse : AbstractModel
     {
         
         /// <summary>
-        /// ES查询条件JSON
+        /// 客户端凭证
         /// </summary>
-        [JsonProperty("Query")]
-        public string Query{ get; set; }
+        [JsonProperty("ClientTokens")]
+        public ClientToken[] ClientTokens{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamArrayObj(map, prefix + "ClientTokens.", this.ClientTokens);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

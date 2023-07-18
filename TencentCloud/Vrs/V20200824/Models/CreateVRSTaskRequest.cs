@@ -81,6 +81,12 @@ namespace TencentCloud.Vrs.V20200824.Models
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
+        /// <summary>
+        /// 任务类型 1:在线 2:离线  默认为1
+        /// </summary>
+        [JsonProperty("ModelType")]
+        public long? ModelType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +101,7 @@ namespace TencentCloud.Vrs.V20200824.Models
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamArraySimple(map, prefix + "AudioIdList.", this.AudioIdList);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
         }
     }
 }

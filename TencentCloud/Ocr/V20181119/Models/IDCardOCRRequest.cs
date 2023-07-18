@@ -53,7 +53,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// CopyWarn，复印件告警
         /// BorderCheckWarn，边框和框内遮挡告警
         /// ReshootWarn，翻拍告警
-        /// DetectPsWarn，PS检测告警
+        /// DetectPsWarn，疑似存在PS痕迹告警
         /// TempIdWarn，临时身份证告警
         /// InvalidDateWarn，身份证有效日期不合法告警
         /// Quality，图片质量分数（评价图片的模糊程度）

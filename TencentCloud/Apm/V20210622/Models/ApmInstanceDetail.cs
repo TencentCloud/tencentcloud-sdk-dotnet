@@ -204,6 +204,13 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("MetricDuration")]
         public long? MetricDuration{ get; set; }
 
+        /// <summary>
+        /// 用户自定义展示标签列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomShowTags")]
+        public string[] CustomShowTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -236,6 +243,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "LogSet", this.LogSet);
             this.SetParamSimple(map, prefix + "MetricDuration", this.MetricDuration);
+            this.SetParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.803</VersionPrefix>
+    <VersionPrefix>3.0.804</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -462,8 +462,6 @@
     <Compile Include="V20180228\Models\DescribeScanTaskStatusResponse.cs" />
     <Compile Include="V20180228\Models\DescribeScanVulSettingRequest.cs" />
     <Compile Include="V20180228\Models\DescribeScanVulSettingResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeSearchExportListRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeSearchExportListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeSearchLogsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeSearchLogsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeSearchTemplatesRequest.cs" />

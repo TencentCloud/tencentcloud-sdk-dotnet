@@ -159,6 +159,12 @@ namespace TencentCloud.Wav.V20210129.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
+        /// 线索创建时间戳，单位：秒
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
+        /// <summary>
         /// 线索所处状态，101-待分配 201-待建档 301-已建档 401-已邀约 501-跟进中 601-已下订单 701-已成交 801-战败申请中 901-已战败 1001-未知状态 1101-转移申请中 1201-已完成
         /// </summary>
         [JsonProperty("LeadStatus")]
@@ -370,6 +376,7 @@ namespace TencentCloud.Wav.V20210129.Models
             this.SetParamSimple(map, prefix + "SourceChannelName", this.SourceChannelName);
             this.SetParamSimple(map, prefix + "Gender", this.Gender);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "LeadStatus", this.LeadStatus);
             this.SetParamSimple(map, prefix + "LevelCode", this.LevelCode);
             this.SetParamSimple(map, prefix + "ImportAtTime", this.ImportAtTime);

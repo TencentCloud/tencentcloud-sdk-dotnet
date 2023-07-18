@@ -87,7 +87,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// -9103	身份证翻拍告警，
         /// -9105	身份证框内遮挡告警，
         /// -9104	临时身份证告警，
-        /// -9106	身份证 PS 告警，
+        /// -9106	身份证疑似存在PS痕迹告警，
         /// -9107       身份证反光告警。
         /// </summary>
         [JsonProperty("AdvancedInfo")]

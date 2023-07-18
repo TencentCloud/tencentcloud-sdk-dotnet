@@ -56,6 +56,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public OrganizationInfo Organization{ get; set; }
 
+        /// <summary>
+        /// 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+        /// </summary>
+        [JsonProperty("JumpUrl")]
+        public string JumpUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamObj(map, prefix + "Organization.", this.Organization);
+            this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         }
     }
 }

@@ -126,6 +126,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DropDlq")]
         public FailureParam DropDlq{ get; set; }
 
+        /// <summary>
+        /// 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+        /// </summary>
+        [JsonProperty("RecordMappingList")]
+        public EsRecordMapping[] RecordMappingList{ get; set; }
+
+        /// <summary>
+        /// 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+        /// </summary>
+        [JsonProperty("DateField")]
+        public string DateField{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +161,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "DropCls.", this.DropCls);
             this.SetParamSimple(map, prefix + "DatabasePrimaryKey", this.DatabasePrimaryKey);
             this.SetParamObj(map, prefix + "DropDlq.", this.DropDlq);
+            this.SetParamArrayObj(map, prefix + "RecordMappingList.", this.RecordMappingList);
+            this.SetParamSimple(map, prefix + "DateField", this.DateField);
         }
     }
 }

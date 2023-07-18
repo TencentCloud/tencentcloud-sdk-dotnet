@@ -926,7 +926,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// 查询指定域名的区域、运营商明细数据
-        /// 注意事项：接口尚未全量开放，未在内测名单中的账号不支持调用
+        /// 注意事项：接口尚未全面开放，未在内测名单中的账号不支持调用
         /// </summary>
         /// <param name="req"><see cref="DescribeDistrictIspDataRequest"/></param>
         /// <returns><see cref="DescribeDistrictIspDataResponse"/></returns>
@@ -947,7 +947,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// 查询指定域名的区域、运营商明细数据
-        /// 注意事项：接口尚未全量开放，未在内测名单中的账号不支持调用
+        /// 注意事项：接口尚未全面开放，未在内测名单中的账号不支持调用
         /// </summary>
         /// <param name="req"><see cref="DescribeDistrictIspDataRequest"/></param>
         /// <returns><see cref="DescribeDistrictIspDataResponse"/></returns>

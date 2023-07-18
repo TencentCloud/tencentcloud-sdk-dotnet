@@ -53,7 +53,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string RefererType{ get; set; }
 
         /// <summary>
-        /// referer 内容列表列表
+        /// referer 内容列表
         /// </summary>
         [JsonProperty("Referers")]
         public string[] Referers{ get; set; }
