@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.804</VersionPrefix>
+    <VersionPrefix>3.0.805</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -333,7 +333,6 @@
     <Compile Include="V20180724\Models\MetricConfig.cs" />
     <Compile Include="V20180724\Models\MetricData.cs" />
     <Compile Include="V20180724\Models\MetricDataPoint.cs" />
-    <Compile Include="V20180724\Models\MetricDatum.cs" />
     <Compile Include="V20180724\Models\MetricObjectMeaning.cs" />
     <Compile Include="V20180724\Models\MetricSet.cs" />
     <Compile Include="V20180724\Models\MidQueryCondition.cs" />
@@ -405,8 +404,6 @@
     <Compile Include="V20180724\Models\PrometheusTempModify.cs" />
     <Compile Include="V20180724\Models\PrometheusTemplateSyncTarget.cs" />
     <Compile Include="V20180724\Models\PrometheusZoneItem.cs" />
-    <Compile Include="V20180724\Models\PutMonitorDataRequest.cs" />
-    <Compile Include="V20180724\Models\PutMonitorDataResponse.cs" />
     <Compile Include="V20180724\Models\ReceiverInfo.cs" />
     <Compile Include="V20180724\Models\RecordingRuleSet.cs" />
     <Compile Include="V20180724\Models\ResumeGrafanaInstanceRequest.cs" />

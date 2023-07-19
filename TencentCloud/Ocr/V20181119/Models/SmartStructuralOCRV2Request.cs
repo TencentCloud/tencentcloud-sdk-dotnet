@@ -28,6 +28,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 图片的 Url 地址。
         /// 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
         /// 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
+        /// 支持的图片像素：需介于20-10000px之间。
         /// 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
         /// 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
         /// </summary>
@@ -38,6 +39,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 图片的 Base64 值。
         /// 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
         /// 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
+        /// 支持的图片像素：需介于20-10000px之间。
         /// 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
         /// </summary>
         [JsonProperty("ImageBase64")]
@@ -69,6 +71,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ReturnFullText")]
         public bool? ReturnFullText{ get; set; }
 
+        /// <summary>
+        /// 配置id支持：
+        /// General -- 通用场景
+        /// OnlineTaxiItinerary -- 网约车行程单
+        /// RideHailingDriverLicense -- 网约车驾驶证
+        /// RideHailingTransportLicense -- 网约车运输证
+        /// WayBill -- 快递运单
+        /// AccountOpeningPermit -- 银行开户许可证
+        /// </summary>
+        [JsonProperty("ConfigId")]
+        public string ConfigId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +95,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
             this.SetParamArraySimple(map, prefix + "ItemNames.", this.ItemNames);
             this.SetParamSimple(map, prefix + "ReturnFullText", this.ReturnFullText);
+            this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
         }
     }
 }

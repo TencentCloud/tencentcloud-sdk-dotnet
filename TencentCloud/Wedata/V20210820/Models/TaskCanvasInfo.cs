@@ -291,6 +291,28 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// UserId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
+        /// <summary>
+        /// OwnerId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnerId")]
+        public string OwnerId{ get; set; }
+
+        /// <summary>
+        /// TenantId
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TenantId")]
+        public string TenantId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -328,6 +350,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TargetServiceType", this.TargetServiceType);
             this.SetParamSimple(map, prefix + "AlarmType", this.AlarmType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "OwnerId", this.OwnerId);
+            this.SetParamSimple(map, prefix + "TenantId", this.TenantId);
         }
     }
 }

@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MetricDatum : AbstractModel
+    public class DeleteResourceFilesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 指标名称
+        /// 项目id
         /// </summary>
-        [JsonProperty("MetricName")]
-        public string MetricName{ get; set; }
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 指标的值
+        /// 使用状态
         /// </summary>
-        [JsonProperty("Value")]
-        public ulong? Value{ get; set; }
+        [JsonProperty("UseStatus")]
+        public bool? UseStatus{ get; set; }
+
+        /// <summary>
+        /// 资源id列表
+        /// </summary>
+        [JsonProperty("ResourceIds")]
+        public string[] ResourceIds{ get; set; }
+
+        /// <summary>
+        /// 资源路径列表
+        /// </summary>
+        [JsonProperty("FilePaths")]
+        public string[] FilePaths{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "UseStatus", this.UseStatus);
+            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+            this.SetParamArraySimple(map, prefix + "FilePaths.", this.FilePaths);
         }
     }
 }

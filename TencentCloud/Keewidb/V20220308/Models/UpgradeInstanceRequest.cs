@@ -38,7 +38,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// CPU 核数。
+        /// CPU 核数，可忽略不传
         /// </summary>
         [JsonProperty("MachineCpu")]
         public long? MachineCpu{ get; set; }

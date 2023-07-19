@@ -1615,7 +1615,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 查询账户摘要 
+        /// 查询账户摘要
         /// </summary>
         /// <param name="req"><see cref="GetAccountSummaryRequest"/></param>
         /// <returns><see cref="GetAccountSummaryResponse"/></returns>
@@ -1635,7 +1635,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 查询账户摘要 
+        /// 查询账户摘要
         /// </summary>
         /// <param name="req"><see cref="GetAccountSummaryRequest"/></param>
         /// <returns><see cref="GetAccountSummaryResponse"/></returns>

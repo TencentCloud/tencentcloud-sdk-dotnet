@@ -613,6 +613,46 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 获取云原生API网关实例端口信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayPortsRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayPortsResponse"/></returns>
+        public async Task<DescribeCloudNativeAPIGatewayPortsResponse> DescribeCloudNativeAPIGatewayPorts(DescribeCloudNativeAPIGatewayPortsRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayPortsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayPorts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayPortsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云原生API网关实例端口信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayPortsRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayPortsResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayPortsResponse DescribeCloudNativeAPIGatewayPortsSync(DescribeCloudNativeAPIGatewayPortsRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayPortsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayPorts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayPortsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询云原生网关的限流插件(路由)
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayRouteRateLimitRequest"/></param>

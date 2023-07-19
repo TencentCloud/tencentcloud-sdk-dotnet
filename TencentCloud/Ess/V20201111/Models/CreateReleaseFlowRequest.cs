@@ -56,6 +56,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
 
+        /// <summary>
+        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "ReliveInfo.", this.ReliveInfo);
             this.SetParamArrayObj(map, prefix + "ReleasedApprovers.", this.ReleasedApprovers);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

@@ -25,11 +25,32 @@ namespace TencentCloud.Goosefs.V20220519.Models
     {
         
         /// <summary>
+        /// 节点 IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeIp")]
+        public string NodeIp{ get; set; }
+
+        /// <summary>
         /// 挂载点
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalDirectory")]
         public string LocalDirectory{ get; set; }
+
+        /// <summary>
+        /// 可以访问的 GooseFS 目录
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GooseFSDirectory")]
+        public string GooseFSDirectory{ get; set; }
+
+        /// <summary>
+        /// token
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Token")]
+        public string Token{ get; set; }
 
 
         /// <summary>
@@ -37,7 +58,10 @@ namespace TencentCloud.Goosefs.V20220519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "NodeIp", this.NodeIp);
             this.SetParamSimple(map, prefix + "LocalDirectory", this.LocalDirectory);
+            this.SetParamSimple(map, prefix + "GooseFSDirectory", this.GooseFSDirectory);
+            this.SetParamSimple(map, prefix + "Token", this.Token);
         }
     }
 }

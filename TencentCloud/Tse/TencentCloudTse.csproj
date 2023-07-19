@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.804</VersionPrefix>
+    <VersionPrefix>3.0.805</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -85,6 +85,8 @@
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesResult.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayPortsRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayPortsResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRouteRateLimitRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRoutesRequest.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeGatewayInstancePortResult.cs" />
     <Compile Include="V20201207\Models\DescribeInstanceRegionInfo.cs" />
     <Compile Include="V20201207\Models\DescribeNacosReplicasRequest.cs" />
     <Compile Include="V20201207\Models\DescribeNacosReplicasResponse.cs" />
@@ -114,6 +117,7 @@
     <Compile Include="V20201207\Models\EnvInfo.cs" />
     <Compile Include="V20201207\Models\ExternalRedis.cs" />
     <Compile Include="V20201207\Models\Filter.cs" />
+    <Compile Include="V20201207\Models\GatewayInstanceSchemeAndPorts.cs" />
     <Compile Include="V20201207\Models\InstanceTagInfo.cs" />
     <Compile Include="V20201207\Models\KVMapping.cs" />
     <Compile Include="V20201207\Models\KVPair.cs" />

@@ -60,6 +60,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
+        /// <summary>
+        /// 容器重启策略
+        /// </summary>
+        [JsonProperty("RestartPolicy")]
+        public string RestartPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamArrayObj(map, prefix + "PublishPorts.", this.PublishPorts);
             this.SetParamArrayObj(map, prefix + "Volumes.", this.Volumes);
             this.SetParamSimple(map, prefix + "Command", this.Command);
+            this.SetParamSimple(map, prefix + "RestartPolicy", this.RestartPolicy);
         }
     }
 }

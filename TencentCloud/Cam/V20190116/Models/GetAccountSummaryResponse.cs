@@ -40,6 +40,7 @@ namespace TencentCloud.Cam.V20190116.Models
         /// 身份提供商数
         /// </summary>
         [JsonProperty("Idps")]
+        [System.Obsolete]
         public ulong? Idps{ get; set; }
 
         /// <summary>
@@ -61,6 +62,12 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? Member{ get; set; }
 
         /// <summary>
+        /// 身份提供商数。
+        /// </summary>
+        [JsonProperty("IdentityProviders")]
+        public ulong? IdentityProviders{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +85,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "User", this.User);
             this.SetParamSimple(map, prefix + "Group", this.Group);
             this.SetParamSimple(map, prefix + "Member", this.Member);
+            this.SetParamSimple(map, prefix + "IdentityProviders", this.IdentityProviders);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

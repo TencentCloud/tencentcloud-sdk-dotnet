@@ -76,12 +76,6 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public long? ReplicasNum{ get; set; }
 
         /// <summary>
-        /// 计算cpu核心数。
-        /// </summary>
-        [JsonProperty("MachineCpu")]
-        public long? MachineCpu{ get; set; }
-
-        /// <summary>
         /// 实例内存容量，单位：GB。
         /// KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
         /// </summary>
@@ -159,10 +153,22 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
+        /// 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+        /// </summary>
+        [JsonProperty("MachineCpu")]
+        public long? MachineCpu{ get; set; }
+
+        /// <summary>
         /// 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
+
+        /// <summary>
+        /// 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
+        /// </summary>
+        [JsonProperty("Compression")]
+        public string Compression{ get; set; }
 
 
         /// <summary>
@@ -178,7 +184,6 @@ namespace TencentCloud.Keewidb.V20220308.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "ShardNum", this.ShardNum);
             this.SetParamSimple(map, prefix + "ReplicasNum", this.ReplicasNum);
-            this.SetParamSimple(map, prefix + "MachineCpu", this.MachineCpu);
             this.SetParamSimple(map, prefix + "MachineMemory", this.MachineMemory);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
@@ -191,7 +196,9 @@ namespace TencentCloud.Keewidb.V20220308.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "MachineCpu", this.MachineCpu);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Compression", this.Compression);
         }
     }
 }

@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PutMonitorDataRequest : AbstractModel
+    public class SubmitSqlTaskResponse : AbstractModel
     {
         
         /// <summary>
-        /// 一组指标和数据
+        /// 任务提交记录
         /// </summary>
-        [JsonProperty("Metrics")]
-        public MetricDatum[] Metrics{ get; set; }
+        [JsonProperty("Record")]
+        public AdhocRecord Record{ get; set; }
 
         /// <summary>
-        /// 上报时自行指定的 IP
+        /// 子任务记录列表
         /// </summary>
-        [JsonProperty("AnnounceIp")]
-        public string AnnounceIp{ get; set; }
+        [JsonProperty("Details")]
+        public AdhocDetail[] Details{ get; set; }
 
         /// <summary>
-        /// 上报时自行指定的时间戳
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("AnnounceTimestamp")]
-        public ulong? AnnounceTimestamp{ get; set; }
-
-        /// <summary>
-        /// 上报时自行指定的 IP 或 产品实例ID
-        /// </summary>
-        [JsonProperty("AnnounceInstance")]
-        public string AnnounceInstance{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Metrics.", this.Metrics);
-            this.SetParamSimple(map, prefix + "AnnounceIp", this.AnnounceIp);
-            this.SetParamSimple(map, prefix + "AnnounceTimestamp", this.AnnounceTimestamp);
-            this.SetParamSimple(map, prefix + "AnnounceInstance", this.AnnounceInstance);
+            this.SetParamObj(map, prefix + "Record.", this.Record);
+            this.SetParamArrayObj(map, prefix + "Details.", this.Details);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

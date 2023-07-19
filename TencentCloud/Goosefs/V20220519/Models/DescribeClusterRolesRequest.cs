@@ -30,6 +30,12 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 角色名
+        /// </summary>
+        [JsonProperty("RoleName")]
+        public string RoleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
         }
     }
 }

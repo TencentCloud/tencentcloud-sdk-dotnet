@@ -693,6 +693,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于创建ScheduledSql任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateScheduledSqlRequest"/></param>
+        /// <returns><see cref="CreateScheduledSqlResponse"/></returns>
+        public async Task<CreateScheduledSqlResponse> CreateScheduledSql(CreateScheduledSqlRequest req)
+        {
+             JsonResponseModel<CreateScheduledSqlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateScheduledSql");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScheduledSqlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于创建ScheduledSql任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateScheduledSqlRequest"/></param>
+        /// <returns><see cref="CreateScheduledSqlResponse"/></returns>
+        public CreateScheduledSqlResponse CreateScheduledSqlSync(CreateScheduledSqlRequest req)
+        {
+             JsonResponseModel<CreateScheduledSqlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateScheduledSql");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScheduledSqlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 新建投递到COS的任务，【！！！注意】使用此接口，需要检查是否配置了投递COS的角色和权限。如果没有配置，请参考文档投递权限查看和配置https://cloud.tencent.com/document/product/614/71623。
         /// </summary>
         /// <param name="req"><see cref="CreateShipperRequest"/></param>

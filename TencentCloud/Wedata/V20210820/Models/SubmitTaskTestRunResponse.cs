@@ -15,15 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PutMonitorDataResponse : AbstractModel
+    public class SubmitTaskTestRunResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("JobId")]
+        public long? JobId{ get; set; }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("RecordId")]
+        public long?[] RecordId{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +48,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamArraySimple(map, prefix + "RecordId.", this.RecordId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

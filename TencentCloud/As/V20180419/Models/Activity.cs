@@ -95,9 +95,10 @@ namespace TencentCloud.As.V20180419.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 伸缩活动相关实例信息集合。
+        /// 该参数已废弃，请勿使用。
         /// </summary>
         [JsonProperty("ActivityRelatedInstanceSet")]
+        [System.Obsolete]
         public ActivtyRelatedInstance[] ActivityRelatedInstanceSet{ get; set; }
 
         /// <summary>
@@ -124,6 +125,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InvocationResultSet")]
         public InvocationResult[] InvocationResultSet{ get; set; }
 
+        /// <summary>
+        /// 伸缩活动相关实例信息集合。
+        /// </summary>
+        [JsonProperty("RelatedInstanceSet")]
+        public RelatedInstance[] RelatedInstanceSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +152,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArrayObj(map, prefix + "LifecycleActionResultSet.", this.LifecycleActionResultSet);
             this.SetParamArrayObj(map, prefix + "DetailedStatusMessageSet.", this.DetailedStatusMessageSet);
             this.SetParamArrayObj(map, prefix + "InvocationResultSet.", this.InvocationResultSet);
+            this.SetParamArrayObj(map, prefix + "RelatedInstanceSet.", this.RelatedInstanceSet);
         }
     }
 }

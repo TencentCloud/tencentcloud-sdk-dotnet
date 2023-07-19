@@ -133,6 +133,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// Ds批量删除任务，仅对任务状态为”已停止“有效；
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteTasksDsRequest"/></param>
+        /// <returns><see cref="BatchDeleteTasksDsResponse"/></returns>
+        public async Task<BatchDeleteTasksDsResponse> BatchDeleteTasksDs(BatchDeleteTasksDsRequest req)
+        {
+             JsonResponseModel<BatchDeleteTasksDsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchDeleteTasksDs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteTasksDsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Ds批量删除任务，仅对任务状态为”已停止“有效；
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteTasksDsRequest"/></param>
+        /// <returns><see cref="BatchDeleteTasksDsResponse"/></returns>
+        public BatchDeleteTasksDsResponse BatchDeleteTasksDsSync(BatchDeleteTasksDsRequest req)
+        {
+             JsonResponseModel<BatchDeleteTasksDsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDeleteTasksDs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteTasksDsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 批量删除任务，仅对任务状态为”已停止“有效；
         /// </summary>
@@ -1749,6 +1789,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 开发空间-批量删除目录和文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFilePathRequest"/></param>
+        /// <returns><see cref="DeleteFilePathResponse"/></returns>
+        public async Task<DeleteFilePathResponse> DeleteFilePath(DeleteFilePathRequest req)
+        {
+             JsonResponseModel<DeleteFilePathResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteFilePath");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFilePathResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开发空间-批量删除目录和文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFilePathRequest"/></param>
+        /// <returns><see cref="DeleteFilePathResponse"/></returns>
+        public DeleteFilePathResponse DeleteFilePathSync(DeleteFilePathRequest req)
+        {
+             JsonResponseModel<DeleteFilePathResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteFilePath");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFilePathResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 删除文件夹
         /// </summary>
@@ -1951,6 +2031,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 删除项目参数
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectParamDsRequest"/></param>
+        /// <returns><see cref="DeleteProjectParamDsResponse"/></returns>
+        public async Task<DeleteProjectParamDsResponse> DeleteProjectParamDs(DeleteProjectParamDsRequest req)
+        {
+             JsonResponseModel<DeleteProjectParamDsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteProjectParamDs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProjectParamDsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除项目参数
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectParamDsRequest"/></param>
+        /// <returns><see cref="DeleteProjectParamDsResponse"/></returns>
+        public DeleteProjectParamDsResponse DeleteProjectParamDsSync(DeleteProjectParamDsRequest req)
+        {
+             JsonResponseModel<DeleteProjectParamDsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteProjectParamDs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProjectParamDsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 资源管理删除资源
         /// </summary>
         /// <param name="req"><see cref="DeleteResourceRequest"/></param>
@@ -1982,6 +2102,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DeleteResource");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 资源管理-批量删除资源文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceFilesRequest"/></param>
+        /// <returns><see cref="DeleteResourceFilesResponse"/></returns>
+        public async Task<DeleteResourceFilesResponse> DeleteResourceFiles(DeleteResourceFilesRequest req)
+        {
+             JsonResponseModel<DeleteResourceFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteResourceFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteResourceFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 资源管理-批量删除资源文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceFilesRequest"/></param>
+        /// <returns><see cref="DeleteResourceFilesResponse"/></returns>
+        public DeleteResourceFilesResponse DeleteResourceFilesSync(DeleteResourceFilesRequest req)
+        {
+             JsonResponseModel<DeleteResourceFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteResourceFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteResourceFilesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2102,6 +2262,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DeleteTaskAlarmRegular");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTaskAlarmRegularResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除任务Ds
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskDsRequest"/></param>
+        /// <returns><see cref="DeleteTaskDsResponse"/></returns>
+        public async Task<DeleteTaskDsResponse> DeleteTaskDs(DeleteTaskDsRequest req)
+        {
+             JsonResponseModel<DeleteTaskDsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTaskDs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTaskDsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除任务Ds
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskDsRequest"/></param>
+        /// <returns><see cref="DeleteTaskDsResponse"/></returns>
+        public DeleteTaskDsResponse DeleteTaskDsSync(DeleteTaskDsRequest req)
+        {
+             JsonResponseModel<DeleteTaskDsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTaskDs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTaskDsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -7413,6 +7613,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 删除编排空间工作流
+        /// </summary>
+        /// <param name="req"><see cref="RemoveWorkflowDsRequest"/></param>
+        /// <returns><see cref="RemoveWorkflowDsResponse"/></returns>
+        public async Task<RemoveWorkflowDsResponse> RemoveWorkflowDs(RemoveWorkflowDsRequest req)
+        {
+             JsonResponseModel<RemoveWorkflowDsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveWorkflowDs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveWorkflowDsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除编排空间工作流
+        /// </summary>
+        /// <param name="req"><see cref="RemoveWorkflowDsRequest"/></param>
+        /// <returns><see cref="RemoveWorkflowDsResponse"/></returns>
+        public RemoveWorkflowDsResponse RemoveWorkflowDsSync(RemoveWorkflowDsRequest req)
+        {
+             JsonResponseModel<RemoveWorkflowDsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveWorkflowDs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveWorkflowDsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 实例批量重跑
         /// </summary>
@@ -7819,6 +8059,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 即席分析提交SQL任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitSqlTaskRequest"/></param>
+        /// <returns><see cref="SubmitSqlTaskResponse"/></returns>
+        public async Task<SubmitSqlTaskResponse> SubmitSqlTask(SubmitSqlTaskRequest req)
+        {
+             JsonResponseModel<SubmitSqlTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SubmitSqlTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitSqlTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 即席分析提交SQL任务
+        /// </summary>
+        /// <param name="req"><see cref="SubmitSqlTaskRequest"/></param>
+        /// <returns><see cref="SubmitSqlTaskResponse"/></returns>
+        public SubmitSqlTaskResponse SubmitSqlTaskSync(SubmitSqlTaskRequest req)
+        {
+             JsonResponseModel<SubmitSqlTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SubmitSqlTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitSqlTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 提交任务
         /// </summary>
@@ -7852,6 +8132,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "SubmitTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTaskTestRunRequest"/></param>
+        /// <returns><see cref="SubmitTaskTestRunResponse"/></returns>
+        public async Task<SubmitTaskTestRunResponse> SubmitTaskTestRun(SubmitTaskTestRunRequest req)
+        {
+             JsonResponseModel<SubmitTaskTestRunResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SubmitTaskTestRun");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitTaskTestRunResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTaskTestRunRequest"/></param>
+        /// <returns><see cref="SubmitTaskTestRunResponse"/></returns>
+        public SubmitTaskTestRunResponse SubmitTaskTestRunSync(SubmitTaskTestRunRequest req)
+        {
+             JsonResponseModel<SubmitTaskTestRunResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SubmitTaskTestRun");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitTaskTestRunResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
