@@ -60,12 +60,14 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 极速高清转码参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfigForUpdate TEHDConfig{ get; set; }
 
         /// <summary>
         /// 字幕流配置参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }

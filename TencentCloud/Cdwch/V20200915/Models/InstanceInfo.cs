@@ -321,6 +321,34 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("UpgradeVersions")]
         public string UpgradeVersions{ get; set; }
 
+        /// <summary>
+        /// ex-index
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EsIndexId")]
+        public string EsIndexId{ get; set; }
+
+        /// <summary>
+        /// username
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EsIndexUsername")]
+        public string EsIndexUsername{ get; set; }
+
+        /// <summary>
+        /// password
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EsIndexPassword")]
+        public string EsIndexPassword{ get; set; }
+
+        /// <summary>
+        /// true
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HasEsIndex")]
+        public bool? HasEsIndex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -369,6 +397,10 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "CanAttachCos", this.CanAttachCos);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
             this.SetParamSimple(map, prefix + "UpgradeVersions", this.UpgradeVersions);
+            this.SetParamSimple(map, prefix + "EsIndexId", this.EsIndexId);
+            this.SetParamSimple(map, prefix + "EsIndexUsername", this.EsIndexUsername);
+            this.SetParamSimple(map, prefix + "EsIndexPassword", this.EsIndexPassword);
+            this.SetParamSimple(map, prefix + "HasEsIndex", this.HasEsIndex);
         }
     }
 }

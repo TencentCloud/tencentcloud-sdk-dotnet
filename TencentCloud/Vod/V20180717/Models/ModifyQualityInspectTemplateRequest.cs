@@ -103,16 +103,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public QRCodeConfigureInfoForUpdate QRCodeConfigure{ get; set; }
 
         /// <summary>
-        /// 视频画面质量评价的控制参数。
-        /// </summary>
-        [JsonProperty("QualityEvaluationConfigure")]
-        public QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure{ get; set; }
-
-        /// <summary>
         /// 音频（静音、低音、爆音）检测的控制参数。
         /// </summary>
         [JsonProperty("VoiceConfigure")]
         public VoiceConfigureInfoForUpdate VoiceConfigure{ get; set; }
+
+        /// <summary>
+        /// 视频画面质量评价的控制参数。
+        /// </summary>
+        [JsonProperty("QualityEvaluationConfigure")]
+        public QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure{ get; set; }
 
 
         /// <summary>
@@ -133,8 +133,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "NoiseConfigure.", this.NoiseConfigure);
             this.SetParamObj(map, prefix + "MosaicConfigure.", this.MosaicConfigure);
             this.SetParamObj(map, prefix + "QRCodeConfigure.", this.QRCodeConfigure);
-            this.SetParamObj(map, prefix + "QualityEvaluationConfigure.", this.QualityEvaluationConfigure);
             this.SetParamObj(map, prefix + "VoiceConfigure.", this.VoiceConfigure);
+            this.SetParamObj(map, prefix + "QualityEvaluationConfigure.", this.QualityEvaluationConfigure);
         }
     }
 }

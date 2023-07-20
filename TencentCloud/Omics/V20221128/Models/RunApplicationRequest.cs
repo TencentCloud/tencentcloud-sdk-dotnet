@@ -84,6 +84,12 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("TableRowUuids")]
         public string[] TableRowUuids{ get; set; }
 
+        /// <summary>
+        /// 应用版本ID。不填表示使用当前最新版本。
+        /// </summary>
+        [JsonProperty("ApplicationVersionId")]
+        public string ApplicationVersionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
             this.SetParamArraySimple(map, prefix + "TableRowUuids.", this.TableRowUuids);
+            this.SetParamSimple(map, prefix + "ApplicationVersionId", this.ApplicationVersionId);
         }
     }
 }

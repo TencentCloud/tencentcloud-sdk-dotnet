@@ -80,6 +80,13 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
+        /// <summary>
+        /// 流程的二级名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProcessSubName")]
+        public string ProcessSubName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "FlowMsg", this.FlowMsg);
             this.SetParamSimple(map, prefix + "ProcessName", this.ProcessName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ProcessSubName", this.ProcessSubName);
         }
     }
 }

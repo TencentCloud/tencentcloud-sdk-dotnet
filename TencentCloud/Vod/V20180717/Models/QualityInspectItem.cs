@@ -25,17 +25,6 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 置信度，取值范围：[0, 100]。
-        /// <font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
-        /// <li>Mosaic：马赛克；</li>
-        /// <li>QRCode：二维码；</li>
-        /// <li>AppletCode：小程序码；</li>
-        /// <li>BarCode：条形码。</li>
-        /// </summary>
-        [JsonProperty("Confidence")]
-        public ulong? Confidence{ get; set; }
-
-        /// <summary>
         /// 异常片段起始的偏移时间，单位：秒。
         /// </summary>
         [JsonProperty("StartTimeOffset")]
@@ -59,16 +48,27 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }
 
+        /// <summary>
+        /// 置信度，取值范围：[0, 100]。
+        /// <font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
+        /// <li>Mosaic：马赛克；</li>
+        /// <li>QRCode：二维码；</li>
+        /// <li>AppletCode：小程序码；</li>
+        /// <li>BarCode：条形码。</li>
+        /// </summary>
+        [JsonProperty("Confidence")]
+        public ulong? Confidence{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
+            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
         }
     }
 }

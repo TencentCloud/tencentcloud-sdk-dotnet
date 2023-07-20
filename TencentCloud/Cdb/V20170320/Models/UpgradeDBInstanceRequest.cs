@@ -91,7 +91,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
+        /// 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充最小允许规格的cpu值。
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }

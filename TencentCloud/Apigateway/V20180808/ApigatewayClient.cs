@@ -1311,7 +1311,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（DescribeApiApp）用于根据应用ID搜索应用。
+        /// 本接口（DescribeApiApp）用于根据应用ID搜索应用。此接口已下线，如需使用功能请使用DescribeApiAppsStatus接口。
         /// </summary>
         /// <param name="req"><see cref="DescribeApiAppRequest"/></param>
         /// <returns><see cref="DescribeApiAppResponse"/></returns>
@@ -1331,7 +1331,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（DescribeApiApp）用于根据应用ID搜索应用。
+        /// 本接口（DescribeApiApp）用于根据应用ID搜索应用。此接口已下线，如需使用功能请使用DescribeApiAppsStatus接口。
         /// </summary>
         /// <param name="req"><see cref="DescribeApiAppRequest"/></param>
         /// <returns><see cref="DescribeApiAppResponse"/></returns>

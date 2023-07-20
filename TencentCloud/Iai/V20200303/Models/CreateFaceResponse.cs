@@ -47,7 +47,7 @@ namespace TencentCloud.Iai.V20200303.Models
 
         /// <summary>
         /// 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
-        /// 例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
+        /// 例如， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
         /// </summary>
         [JsonProperty("SucIndexes")]
         public ulong?[] SucIndexes{ get; set; }

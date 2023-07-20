@@ -36,6 +36,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 资源池配置
+        /// </summary>
+        [JsonProperty("ResourceEnv")]
+        public NamespaceResourceEnv ResourceEnv{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Scf.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamObj(map, prefix + "ResourceEnv.", this.ResourceEnv);
         }
     }
 }

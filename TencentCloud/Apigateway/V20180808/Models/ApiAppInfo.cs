@@ -39,6 +39,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
 
         /// <summary>
         /// 应用SECRET
+        /// 注意:此字段可能返回null，表示取不到有效值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiAppSecret")]
@@ -67,6 +68,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
 
         /// <summary>
         /// 应用KEY
+        /// 注意:此字段可能返回null，表示取不到有效值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiAppKey")]
