@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 偏移
+        /// 偏移量
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

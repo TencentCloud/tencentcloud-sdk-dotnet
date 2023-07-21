@@ -62,7 +62,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 指定地区查询预热纪录
+        /// 指定地区查询预热记录
         /// mainland：境内
         /// overseas：境外
         /// global：全球

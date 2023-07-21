@@ -68,6 +68,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("StopTime")]
         public string StopTime{ get; set; }
 
+        /// <summary>
+        /// 推流时长，单位：秒。项目结束后，返回上次项目运行时的推流时长。如果项目是 Working 状态，返回的时长是0。
+        /// </summary>
+        [JsonProperty("Duration")]
+        public float? Duration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "PlaySetting.", this.PlaySetting);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "StopTime", this.StopTime);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
         }
     }
 }

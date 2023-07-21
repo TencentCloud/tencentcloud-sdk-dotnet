@@ -32,7 +32,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 过滤条件:
-        /// 参数不支持同时指定NatGatewayIds和Filters。
+        /// 参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5
         /// <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
         /// <li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
         /// <li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>

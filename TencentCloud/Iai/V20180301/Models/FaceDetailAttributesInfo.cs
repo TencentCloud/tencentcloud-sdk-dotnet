@@ -26,7 +26,7 @@ namespace TencentCloud.Iai.V20180301.Models
         
         /// <summary>
         /// 年龄 [0,65]，其中65代表“65岁及以上”。 
-        /// FaceAttributesType 不为含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        /// FaceAttributesType 不含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
         /// </summary>
         [JsonProperty("Age")]
         public long? Age{ get; set; }

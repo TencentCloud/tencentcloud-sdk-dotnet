@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+        /// 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
@@ -43,43 +43,51 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
+        /// 购买时长，单位：月。
+        /// <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+        /// <li>后付费：只支持1
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 续费标记：0-正常续费（默认）；1-自动续费。
+        /// 续费标记：
+        /// <li>0：手动续费
+        /// <li>1：自动续费
+        /// 默认值：0
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 私有网络ID。
+        /// 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 已配置的私有网络中的子网ID。
+        /// 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 新购实例的实例名称。
+        /// 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
+        /// 实例计费类型，目前支持：
+        /// <li>PREPAID：预付费，即包年包月
+        /// <li>POSTPAID_BY_HOUR：后付费，即按量计费
+        /// 默认值：PREPAID
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 安全组ID。
+        /// 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
@@ -91,19 +99,23 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 实例需要绑定的Tag信息，默认为空。
+        /// 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
         /// </summary>
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
 
         /// <summary>
-        /// 购买多可用区实例时填写。
+        /// 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+        /// 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
         /// </summary>
         [JsonProperty("DBNodeSet")]
         public DBNode[] DBNodeSet{ get; set; }
 
         /// <summary>
-        /// 是否自动使用代金券。1（是），0（否），默认不使用。
+        /// 是否自动使用代金券：
+        /// <li>0：否
+        /// <li>1：是
+        /// 默认值：0
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
@@ -132,6 +144,16 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("RecoveryTargetTime")]
         public string RecoveryTargetTime{ get; set; }
 
+        /// <summary>
+        /// 主从同步方式，支持： 
+        /// <li>Semi-sync：半同步
+        /// <li>Async：异步
+        /// 主实例默认值：Semi-sync
+        /// 只读实例默认值：Async
+        /// </summary>
+        [JsonProperty("SyncMode")]
+        public string SyncMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +178,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
             this.SetParamSimple(map, prefix + "BackupSetId", this.BackupSetId);
             this.SetParamSimple(map, prefix + "RecoveryTargetTime", this.RecoveryTargetTime);
+            this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
         }
     }
 }

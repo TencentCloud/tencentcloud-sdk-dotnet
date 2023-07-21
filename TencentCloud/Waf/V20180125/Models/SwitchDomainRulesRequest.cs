@@ -37,13 +37,14 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong?[] Ids{ get; set; }
 
         /// <summary>
-        /// 开关状态
+        /// 开关状态，0表示关闭，1表示开启，2表示只观察
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 设置为观察模式原因
+        /// 设置为观察模式原因，
+        /// 1表示业务自身原因观察，2表示系统规则误报上报，3表示核心业务灰度观察，4表示其他
         /// </summary>
         [JsonProperty("Reason")]
         public ulong? Reason{ get; set; }

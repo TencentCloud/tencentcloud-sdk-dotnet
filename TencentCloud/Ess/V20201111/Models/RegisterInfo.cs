@@ -34,7 +34,14 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 社会统一信用代码
         /// </summary>
         [JsonProperty("Uscc")]
+        [System.Obsolete]
         public string Uscc{ get; set; }
+
+        /// <summary>
+        /// 社会统一信用代码
+        /// </summary>
+        [JsonProperty("UnifiedSocialCreditCode")]
+        public string UnifiedSocialCreditCode{ get; set; }
 
 
         /// <summary>
@@ -44,6 +51,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "LegalName", this.LegalName);
             this.SetParamSimple(map, prefix + "Uscc", this.Uscc);
+            this.SetParamSimple(map, prefix + "UnifiedSocialCreditCode", this.UnifiedSocialCreditCode);
         }
     }
 }

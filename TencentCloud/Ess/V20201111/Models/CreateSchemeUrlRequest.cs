@@ -87,6 +87,17 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
+        /// <summary>
+        /// 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+        /// 
+        /// 0:合同签署页面更多操作按钮
+        /// 1:合同签署页面更多操作的拒绝签署按钮
+        /// 2:合同签署页面更多操作的转他人处理按钮
+        /// 3:签署成功页的查看详情按钮
+        /// </summary>
+        [JsonProperty("Hides")]
+        public long?[] Hides{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +114,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "PathType", this.PathType);
             this.SetParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamArraySimple(map, prefix + "Hides.", this.Hides);
         }
     }
 }

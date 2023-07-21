@@ -151,6 +151,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? VideoOrientation{ get; set; }
 
         /// <summary>
+        /// 开启课后评分。 0：不开启(默认)  1：开启
+        /// </summary>
+        [JsonProperty("IsGradingRequiredPostClass")]
+        public long? IsGradingRequiredPostClass{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -180,6 +186,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
             this.SetParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
             this.SetParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
+            this.SetParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

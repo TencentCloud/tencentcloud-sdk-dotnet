@@ -49,7 +49,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Function{ get; set; }
 
         /// <summary>
-        /// 规则的开关
+        /// 规则的开关，0表示规则关闭，1表示规则打开
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? DenyTimeThreshold{ get; set; }
 
         /// <summary>
-        /// 自动封禁状态
+        /// 自动封禁状态，0表示关闭，1表示打开
         /// </summary>
         [JsonProperty("DefenseStatus")]
         public long? DefenseStatus{ get; set; }

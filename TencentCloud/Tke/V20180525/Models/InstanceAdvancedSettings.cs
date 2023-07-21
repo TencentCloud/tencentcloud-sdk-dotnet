@@ -32,7 +32,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? DesiredPodNumber{ get; set; }
 
         /// <summary>
-        /// GPU驱动相关参数
+        /// GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GPUArgs")]

@@ -15,20 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdid.V20210519.Models
+namespace TencentCloud.Partners.V20180321.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetConsortiumClusterListRequest : AbstractModel
+    public class RefundMap : AbstractModel
     {
         
         /// <summary>
-        /// 联盟id
+        /// 退款单关联的原始子订单号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ConsortiumId")]
-        public ulong? ConsortiumId{ get; set; }
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
+
+        /// <summary>
+        /// 退款金额，单位分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RefundAmount")]
+        public long? RefundAmount{ get; set; }
 
 
         /// <summary>
@@ -36,7 +44,8 @@ namespace TencentCloud.Tdid.V20210519.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConsortiumId", this.ConsortiumId);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
+            this.SetParamSimple(map, prefix + "RefundAmount", this.RefundAmount);
         }
     }
 }

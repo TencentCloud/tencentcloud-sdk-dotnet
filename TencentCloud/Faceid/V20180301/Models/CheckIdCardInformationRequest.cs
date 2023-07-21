@@ -49,7 +49,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// CopyWarn，复印件告警
         /// BorderCheckWarn，边框和框内遮挡告警
         /// ReshootWarn，翻拍告警
-        /// DetectPsWarn，PS检测告警
+        /// DetectPsWarn，PS检测告警（疑似存在PS痕迹）
         /// TempIdWarn，临时身份证告警
         /// Quality，图片质量告警（评价图片模糊程度）
         /// 

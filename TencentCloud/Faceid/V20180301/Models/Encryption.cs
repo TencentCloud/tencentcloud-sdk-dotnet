@@ -26,30 +26,35 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptList")]
         public string[] EncryptList{ get; set; }
 
         /// <summary>
         /// 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CiphertextBlob")]
         public string CiphertextBlob{ get; set; }
 
         /// <summary>
         /// 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Iv")]
         public string Iv{ get; set; }
 
         /// <summary>
         /// 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Algorithm")]
         public string Algorithm{ get; set; }
 
         /// <summary>
         /// SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagList")]
         public string[] TagList{ get; set; }

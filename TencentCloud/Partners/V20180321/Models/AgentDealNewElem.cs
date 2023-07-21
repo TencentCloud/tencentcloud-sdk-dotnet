@@ -223,6 +223,13 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
+        /// <summary>
+        /// 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RefundMap")]
+        public RefundMap[] RefundMap{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -258,6 +265,7 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "PaymentMethod", this.PaymentMethod);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+            this.SetParamArrayObj(map, prefix + "RefundMap.", this.RefundMap);
         }
     }
 }
