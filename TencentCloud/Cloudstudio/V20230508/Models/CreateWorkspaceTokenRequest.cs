@@ -36,6 +36,12 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
         [JsonProperty("TokenExpiredLimitSec")]
         public ulong? TokenExpiredLimitSec{ get; set; }
 
+        /// <summary>
+        /// token 授权策略，可选值为 workspace-run-only, all。默认为 all
+        /// </summary>
+        [JsonProperty("Policies")]
+        public string[] Policies{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
         {
             this.SetParamSimple(map, prefix + "SpaceKey", this.SpaceKey);
             this.SetParamSimple(map, prefix + "TokenExpiredLimitSec", this.TokenExpiredLimitSec);
+            this.SetParamArraySimple(map, prefix + "Policies.", this.Policies);
         }
     }
 }

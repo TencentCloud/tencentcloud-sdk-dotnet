@@ -44,6 +44,18 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CustomUserId")]
         public string CustomUserId{ get; set; }
 
+        /// <summary>
+        /// 补充签署人姓名
+        /// </summary>
+        [JsonProperty("ApproverName")]
+        public string ApproverName{ get; set; }
+
+        /// <summary>
+        /// 补充签署人手机号
+        /// </summary>
+        [JsonProperty("ApproverMobile")]
+        public string ApproverMobile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +65,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
             this.SetParamSimple(map, prefix + "ApproverSource", this.ApproverSource);
             this.SetParamSimple(map, prefix + "CustomUserId", this.CustomUserId);
+            this.SetParamSimple(map, prefix + "ApproverName", this.ApproverName);
+            this.SetParamSimple(map, prefix + "ApproverMobile", this.ApproverMobile);
         }
     }
 }

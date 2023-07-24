@@ -53,50 +53,6 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
-        /// 下线已有内测接口，待上线正式版本的接口
-        /// 
-        /// DID添加标签
-        /// </summary>
-        /// <param name="req"><see cref="AddLabelRequest"/></param>
-        /// <returns><see cref="AddLabelResponse"/></returns>
-        public async Task<AddLabelResponse> AddLabel(AddLabelRequest req)
-        {
-             JsonResponseModel<AddLabelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AddLabel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddLabelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 下线已有内测接口，待上线正式版本的接口
-        /// 
-        /// DID添加标签
-        /// </summary>
-        /// <param name="req"><see cref="AddLabelRequest"/></param>
-        /// <returns><see cref="AddLabelResponse"/></returns>
-        public AddLabelResponse AddLabelSync(AddLabelRequest req)
-        {
-             JsonResponseModel<AddLabelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AddLabel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddLabelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 该接口不再使用
         /// 
         /// 检查区块链信息
@@ -352,50 +308,6 @@ namespace TencentCloud.Tdid.V20210519
              {
                  var strResp = this.InternalRequestSync(req, "CreateTDidByPublicKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTDidByPublicKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 该接口已废弃
-        /// 
-        /// 本机构DID详情
-        /// </summary>
-        /// <param name="req"><see cref="GetAgencyTDidRequest"/></param>
-        /// <returns><see cref="GetAgencyTDidResponse"/></returns>
-        public async Task<GetAgencyTDidResponse> GetAgencyTDid(GetAgencyTDidRequest req)
-        {
-             JsonResponseModel<GetAgencyTDidResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetAgencyTDid");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAgencyTDidResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 该接口已废弃
-        /// 
-        /// 本机构DID详情
-        /// </summary>
-        /// <param name="req"><see cref="GetAgencyTDidRequest"/></param>
-        /// <returns><see cref="GetAgencyTDidResponse"/></returns>
-        public GetAgencyTDidResponse GetAgencyTDidSync(GetAgencyTDidRequest req)
-        {
-             JsonResponseModel<GetAgencyTDidResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetAgencyTDid");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAgencyTDidResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

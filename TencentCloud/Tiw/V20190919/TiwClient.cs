@@ -1141,6 +1141,46 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 通过文档URL查询转码任务，返回最近的一次转码结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTranscodeByUrlRequest"/></param>
+        /// <returns><see cref="DescribeTranscodeByUrlResponse"/></returns>
+        public async Task<DescribeTranscodeByUrlResponse> DescribeTranscodeByUrl(DescribeTranscodeByUrlRequest req)
+        {
+             JsonResponseModel<DescribeTranscodeByUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTranscodeByUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeByUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过文档URL查询转码任务，返回最近的一次转码结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTranscodeByUrlRequest"/></param>
+        /// <returns><see cref="DescribeTranscodeByUrlResponse"/></returns>
+        public DescribeTranscodeByUrlResponse DescribeTranscodeByUrlSync(DescribeTranscodeByUrlRequest req)
+        {
+             JsonResponseModel<DescribeTranscodeByUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTranscodeByUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeByUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询文档转码回调地址
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeCallbackRequest"/></param>

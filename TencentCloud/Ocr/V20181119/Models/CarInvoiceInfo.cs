@@ -44,7 +44,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public Rect Rect{ get; set; }
 
         /// <summary>
-        /// 字段在原图中的中的四点坐标。
+        /// 字段在原图中的四点坐标。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

@@ -67,6 +67,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }
 
+        /// <summary>
+        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamSimple(map, prefix + "NotifyAddress", this.NotifyAddress);
             this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

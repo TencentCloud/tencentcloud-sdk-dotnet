@@ -45,7 +45,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 托管类型，取值有：
         /// <li>apply：托管EO；</li>
-        /// <li>none：不托管EO；</li>不填，默认取值为apply。
+        /// <li>none：不托管EO；</li>不填，默认取值为none。
         /// </summary>
         [JsonProperty("ApplyType")]
         public string ApplyType{ get; set; }

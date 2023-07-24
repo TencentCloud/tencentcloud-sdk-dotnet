@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A6E782C7-FC94-3EC6-A8AC-DB20F13405F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.807</VersionPrefix>
+    <VersionPrefix>3.0.808</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -86,16 +86,12 @@
     <Compile Include="V20170312\Models\DescribeDiskBackupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDiskConfigQuotaRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDiskConfigQuotaResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeDiskOperationLogsRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeDiskOperationLogsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDiskStoragePoolRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDiskStoragePoolResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDisksRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDisksResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesDiskNumRequest.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesDiskNumResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeSnapshotOperationLogsRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeSnapshotOperationLogsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSnapshotSharePermissionRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSnapshotSharePermissionResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSnapshotsRequest.cs" />
@@ -107,7 +103,6 @@
     <Compile Include="V20170312\Models\DiskBackup.cs" />
     <Compile Include="V20170312\Models\DiskChargePrepaid.cs" />
     <Compile Include="V20170312\Models\DiskConfig.cs" />
-    <Compile Include="V20170312\Models\DiskOperationLog.cs" />
     <Compile Include="V20170312\Models\Filter.cs" />
     <Compile Include="V20170312\Models\GetSnapOverviewRequest.cs" />
     <Compile Include="V20170312\Models\GetSnapOverviewResponse.cs" />
@@ -151,7 +146,6 @@
     <Compile Include="V20170312\Models\SharePermission.cs" />
     <Compile Include="V20170312\Models\Snapshot.cs" />
     <Compile Include="V20170312\Models\SnapshotCopyResult.cs" />
-    <Compile Include="V20170312\Models\SnapshotOperationLog.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />
     <Compile Include="V20170312\Models\TerminateDisksRequest.cs" />
     <Compile Include="V20170312\Models\TerminateDisksResponse.cs" />

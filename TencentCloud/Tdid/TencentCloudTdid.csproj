@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D6E217E7-C778-31C0-B3BE-9508ABB1A7BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.807</VersionPrefix>
+    <VersionPrefix>3.0.808</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,8 +48,6 @@
 
   <ItemGroup>
     <Compile Include="V20210519\TdidClient.cs" />
-    <Compile Include="V20210519\Models\AddLabelRequest.cs" />
-    <Compile Include="V20210519\Models\AddLabelResponse.cs" />
     <Compile Include="V20210519\Models\CheckChainRequest.cs" />
     <Compile Include="V20210519\Models\CheckChainResponse.cs" />
     <Compile Include="V20210519\Models\CreateCredentialRequest.cs" />
@@ -64,8 +62,6 @@
     <Compile Include="V20210519\Models\CreateTDidResponse.cs" />
     <Compile Include="V20210519\Models\CredentialStatus.cs" />
     <Compile Include="V20210519\Models\FunctionArg.cs" />
-    <Compile Include="V20210519\Models\GetAgencyTDidRequest.cs" />
-    <Compile Include="V20210519\Models\GetAgencyTDidResponse.cs" />
     <Compile Include="V20210519\Models\GetAuthorityIssuerRequest.cs" />
     <Compile Include="V20210519\Models\GetAuthorityIssuerResponse.cs" />
     <Compile Include="V20210519\Models\GetCptInfoRequest.cs" />
@@ -74,7 +70,6 @@
     <Compile Include="V20210519\Models\GetCredentialStatusResponse.cs" />
     <Compile Include="V20210519\Models\GetDidDocumentRequest.cs" />
     <Compile Include="V20210519\Models\GetDidDocumentResponse.cs" />
-    <Compile Include="V20210519\Models\Identity.cs" />
     <Compile Include="V20210519\Models\Proof.cs" />
     <Compile Include="V20210519\Models\RegisterCptRequest.cs" />
     <Compile Include="V20210519\Models\RegisterCptResponse.cs" />

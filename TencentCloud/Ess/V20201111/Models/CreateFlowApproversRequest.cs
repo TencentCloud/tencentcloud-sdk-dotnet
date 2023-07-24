@@ -48,6 +48,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Initiator")]
         public string Initiator{ get; set; }
 
+        /// <summary>
+        /// 代理相关应用信息，如集团主企业代子企业操作
+        /// 
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamSimple(map, prefix + "Initiator", this.Initiator);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

@@ -771,50 +771,6 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// 接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
-        /// 
-        /// 查询云盘操作日志功能已迁移至LookUpEvents接口（https://cloud.tencent.com/document/product/629/12359），本接口（DescribeDiskOperationLogs）即将下线，后续不再提供调用，请知悉。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDiskOperationLogsRequest"/></param>
-        /// <returns><see cref="DescribeDiskOperationLogsResponse"/></returns>
-        public async Task<DescribeDiskOperationLogsResponse> DescribeDiskOperationLogs(DescribeDiskOperationLogsRequest req)
-        {
-             JsonResponseModel<DescribeDiskOperationLogsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDiskOperationLogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskOperationLogsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
-        /// 
-        /// 查询云盘操作日志功能已迁移至LookUpEvents接口（https://cloud.tencent.com/document/product/629/12359），本接口（DescribeDiskOperationLogs）即将下线，后续不再提供调用，请知悉。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDiskOperationLogsRequest"/></param>
-        /// <returns><see cref="DescribeDiskOperationLogsResponse"/></returns>
-        public DescribeDiskOperationLogsResponse DescribeDiskOperationLogsSync(DescribeDiskOperationLogsRequest req)
-        {
-             JsonResponseModel<DescribeDiskOperationLogsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDiskOperationLogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskOperationLogsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（DescribeDiskStoragePool）查询用户的云硬盘独享集群列表。
         /// 
         /// * 可以根据独享集群ID(CdcId)、可用区(zone)等信息来查询和过滤云硬盘独享集群详细信息，不同的过滤条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
@@ -942,50 +898,6 @@ namespace TencentCloud.Cbs.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstancesDiskNum");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesDiskNumResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
-        /// 
-        /// 查询快照操作日志功能已迁移至LookUpEvents接口（https://cloud.tencent.com/document/product/629/12359），本接口（DescribeSnapshotOperationLogs）即将下线，后续不再提供调用，请知悉。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSnapshotOperationLogsRequest"/></param>
-        /// <returns><see cref="DescribeSnapshotOperationLogsResponse"/></returns>
-        public async Task<DescribeSnapshotOperationLogsResponse> DescribeSnapshotOperationLogs(DescribeSnapshotOperationLogsRequest req)
-        {
-             JsonResponseModel<DescribeSnapshotOperationLogsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSnapshotOperationLogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotOperationLogsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
-        /// 
-        /// 查询快照操作日志功能已迁移至LookUpEvents接口（https://cloud.tencent.com/document/product/629/12359），本接口（DescribeSnapshotOperationLogs）即将下线，后续不再提供调用，请知悉。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSnapshotOperationLogsRequest"/></param>
-        /// <returns><see cref="DescribeSnapshotOperationLogsResponse"/></returns>
-        public DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogsSync(DescribeSnapshotOperationLogsRequest req)
-        {
-             JsonResponseModel<DescribeSnapshotOperationLogsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSnapshotOperationLogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotOperationLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

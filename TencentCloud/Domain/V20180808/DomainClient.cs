@@ -213,6 +213,46 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 创建赎回订单。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainRedemptionRequest"/></param>
+        /// <returns><see cref="CreateDomainRedemptionResponse"/></returns>
+        public async Task<CreateDomainRedemptionResponse> CreateDomainRedemption(CreateDomainRedemptionRequest req)
+        {
+             JsonResponseModel<CreateDomainRedemptionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDomainRedemption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainRedemptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建赎回订单。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainRedemptionRequest"/></param>
+        /// <returns><see cref="CreateDomainRedemptionResponse"/></returns>
+        public CreateDomainRedemptionResponse CreateDomainRedemptionSync(CreateDomainRedemptionRequest req)
+        {
+             JsonResponseModel<CreateDomainRedemptionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDomainRedemption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainRedemptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口用于创建有效的手机、邮箱
         /// </summary>
         /// <param name="req"><see cref="CreatePhoneEmailRequest"/></param>

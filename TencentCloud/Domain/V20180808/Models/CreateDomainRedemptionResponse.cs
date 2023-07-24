@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Domain.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCDBProxyRequest : AbstractModel
+    public class CreateDomainRedemptionResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// 代理组ID
-        /// </summary>
-        [JsonProperty("ProxyGroupId")]
-        public string ProxyGroupId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
