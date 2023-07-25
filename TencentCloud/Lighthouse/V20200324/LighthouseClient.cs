@@ -1325,6 +1325,166 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 查询实例内的Docker活动列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDockerActivitiesRequest"/></param>
+        /// <returns><see cref="DescribeDockerActivitiesResponse"/></returns>
+        public async Task<DescribeDockerActivitiesResponse> DescribeDockerActivities(DescribeDockerActivitiesRequest req)
+        {
+             JsonResponseModel<DescribeDockerActivitiesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDockerActivities");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDockerActivitiesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例内的Docker活动列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDockerActivitiesRequest"/></param>
+        /// <returns><see cref="DescribeDockerActivitiesResponse"/></returns>
+        public DescribeDockerActivitiesResponse DescribeDockerActivitiesSync(DescribeDockerActivitiesRequest req)
+        {
+             JsonResponseModel<DescribeDockerActivitiesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDockerActivities");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDockerActivitiesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例内的Docker容器配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDockerContainerConfigurationRequest"/></param>
+        /// <returns><see cref="DescribeDockerContainerConfigurationResponse"/></returns>
+        public async Task<DescribeDockerContainerConfigurationResponse> DescribeDockerContainerConfiguration(DescribeDockerContainerConfigurationRequest req)
+        {
+             JsonResponseModel<DescribeDockerContainerConfigurationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDockerContainerConfiguration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDockerContainerConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例内的Docker容器配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDockerContainerConfigurationRequest"/></param>
+        /// <returns><see cref="DescribeDockerContainerConfigurationResponse"/></returns>
+        public DescribeDockerContainerConfigurationResponse DescribeDockerContainerConfigurationSync(DescribeDockerContainerConfigurationRequest req)
+        {
+             JsonResponseModel<DescribeDockerContainerConfigurationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDockerContainerConfiguration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDockerContainerConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例内的Docker容器详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDockerContainerDetailRequest"/></param>
+        /// <returns><see cref="DescribeDockerContainerDetailResponse"/></returns>
+        public async Task<DescribeDockerContainerDetailResponse> DescribeDockerContainerDetail(DescribeDockerContainerDetailRequest req)
+        {
+             JsonResponseModel<DescribeDockerContainerDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDockerContainerDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDockerContainerDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例内的Docker容器详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDockerContainerDetailRequest"/></param>
+        /// <returns><see cref="DescribeDockerContainerDetailResponse"/></returns>
+        public DescribeDockerContainerDetailResponse DescribeDockerContainerDetailSync(DescribeDockerContainerDetailRequest req)
+        {
+             JsonResponseModel<DescribeDockerContainerDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDockerContainerDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDockerContainerDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例内的容器列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDockerContainersRequest"/></param>
+        /// <returns><see cref="DescribeDockerContainersResponse"/></returns>
+        public async Task<DescribeDockerContainersResponse> DescribeDockerContainers(DescribeDockerContainersRequest req)
+        {
+             JsonResponseModel<DescribeDockerContainersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDockerContainers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDockerContainersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例内的容器列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDockerContainersRequest"/></param>
+        /// <returns><see cref="DescribeDockerContainersResponse"/></returns>
+        public DescribeDockerContainersResponse DescribeDockerContainersSync(DescribeDockerContainersRequest req)
+        {
+             JsonResponseModel<DescribeDockerContainersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDockerContainers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDockerContainersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeFirewallRules）用于查询实例的防火墙规则。
         /// </summary>
         /// <param name="req"><see cref="DescribeFirewallRulesRequest"/></param>
@@ -2709,6 +2869,48 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 修改实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重建情况。
+        /// 请注意：本接口会重新创建并运行实例内的Docker容器。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDockerContainerRequest"/></param>
+        /// <returns><see cref="ModifyDockerContainerResponse"/></returns>
+        public async Task<ModifyDockerContainerResponse> ModifyDockerContainer(ModifyDockerContainerRequest req)
+        {
+             JsonResponseModel<ModifyDockerContainerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDockerContainer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDockerContainerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重建情况。
+        /// 请注意：本接口会重新创建并运行实例内的Docker容器。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDockerContainerRequest"/></param>
+        /// <returns><see cref="ModifyDockerContainerResponse"/></returns>
+        public ModifyDockerContainerResponse ModifyDockerContainerSync(ModifyDockerContainerRequest req)
+        {
+             JsonResponseModel<ModifyDockerContainerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDockerContainer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDockerContainerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyFirewallRuleDescription）用于修改单条防火墙规则描述。
         /// 
         /// * FirewallVersion 用于指定要操作的防火墙的版本。传入 FirewallVersion 版本号若不等于当前防火墙的最新版本，将返回失败；若不传 FirewallVersion 则直接修改防火墙规则备注。
@@ -3099,6 +3301,86 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 删除实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询删除情况。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveDockerContainersRequest"/></param>
+        /// <returns><see cref="RemoveDockerContainersResponse"/></returns>
+        public async Task<RemoveDockerContainersResponse> RemoveDockerContainers(RemoveDockerContainersRequest req)
+        {
+             JsonResponseModel<RemoveDockerContainersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveDockerContainers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveDockerContainersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询删除情况。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveDockerContainersRequest"/></param>
+        /// <returns><see cref="RemoveDockerContainersResponse"/></returns>
+        public RemoveDockerContainersResponse RemoveDockerContainersSync(RemoveDockerContainersRequest req)
+        {
+             JsonResponseModel<RemoveDockerContainersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveDockerContainers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveDockerContainersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重命名实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重命名情况。
+        /// </summary>
+        /// <param name="req"><see cref="RenameDockerContainerRequest"/></param>
+        /// <returns><see cref="RenameDockerContainerResponse"/></returns>
+        public async Task<RenameDockerContainerResponse> RenameDockerContainer(RenameDockerContainerRequest req)
+        {
+             JsonResponseModel<RenameDockerContainerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenameDockerContainer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenameDockerContainerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重命名实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重命名情况。
+        /// </summary>
+        /// <param name="req"><see cref="RenameDockerContainerRequest"/></param>
+        /// <returns><see cref="RenameDockerContainerResponse"/></returns>
+        public RenameDockerContainerResponse RenameDockerContainerSync(RenameDockerContainerRequest req)
+        {
+             JsonResponseModel<RenameDockerContainerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RenameDockerContainer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenameDockerContainerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(RenewDisks)用于续费一个或多个轻量应用服务器云硬盘。
         /// 
         /// 只有状态为 ATTACHED，UNATTACHED 或 SHUTDOWN 的数据盘才可以进行此操作。
@@ -3184,6 +3466,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "RenewInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新创建并运行实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重建情况。
+        /// </summary>
+        /// <param name="req"><see cref="RerunDockerContainerRequest"/></param>
+        /// <returns><see cref="RerunDockerContainerResponse"/></returns>
+        public async Task<RerunDockerContainerResponse> RerunDockerContainer(RerunDockerContainerRequest req)
+        {
+             JsonResponseModel<RerunDockerContainerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RerunDockerContainer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RerunDockerContainerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新创建并运行实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重建情况。
+        /// </summary>
+        /// <param name="req"><see cref="RerunDockerContainerRequest"/></param>
+        /// <returns><see cref="RerunDockerContainerResponse"/></returns>
+        public RerunDockerContainerResponse RerunDockerContainerSync(RerunDockerContainerRequest req)
+        {
+             JsonResponseModel<RerunDockerContainerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RerunDockerContainer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RerunDockerContainerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3333,6 +3655,126 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 重启实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重启情况。
+        /// </summary>
+        /// <param name="req"><see cref="RestartDockerContainersRequest"/></param>
+        /// <returns><see cref="RestartDockerContainersResponse"/></returns>
+        public async Task<RestartDockerContainersResponse> RestartDockerContainers(RestartDockerContainersRequest req)
+        {
+             JsonResponseModel<RestartDockerContainersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestartDockerContainers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartDockerContainersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重启实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重启情况。
+        /// </summary>
+        /// <param name="req"><see cref="RestartDockerContainersRequest"/></param>
+        /// <returns><see cref="RestartDockerContainersResponse"/></returns>
+        public RestartDockerContainersResponse RestartDockerContainersSync(RestartDockerContainersRequest req)
+        {
+             JsonResponseModel<RestartDockerContainersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestartDockerContainers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartDockerContainersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建并运行多个Docker容器，之后可以通过返回的ActivityIds调用DescribeDockerActivities接口查询创建情况。
+        /// </summary>
+        /// <param name="req"><see cref="RunDockerContainersRequest"/></param>
+        /// <returns><see cref="RunDockerContainersResponse"/></returns>
+        public async Task<RunDockerContainersResponse> RunDockerContainers(RunDockerContainersRequest req)
+        {
+             JsonResponseModel<RunDockerContainersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RunDockerContainers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunDockerContainersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建并运行多个Docker容器，之后可以通过返回的ActivityIds调用DescribeDockerActivities接口查询创建情况。
+        /// </summary>
+        /// <param name="req"><see cref="RunDockerContainersRequest"/></param>
+        /// <returns><see cref="RunDockerContainersResponse"/></returns>
+        public RunDockerContainersResponse RunDockerContainersSync(RunDockerContainersRequest req)
+        {
+             JsonResponseModel<RunDockerContainersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RunDockerContainers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunDockerContainersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启动实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询启动情况。
+        /// </summary>
+        /// <param name="req"><see cref="StartDockerContainersRequest"/></param>
+        /// <returns><see cref="StartDockerContainersResponse"/></returns>
+        public async Task<StartDockerContainersResponse> StartDockerContainers(StartDockerContainersRequest req)
+        {
+             JsonResponseModel<StartDockerContainersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartDockerContainers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartDockerContainersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启动实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询启动情况。
+        /// </summary>
+        /// <param name="req"><see cref="StartDockerContainersRequest"/></param>
+        /// <returns><see cref="StartDockerContainersResponse"/></returns>
+        public StartDockerContainersResponse StartDockerContainersSync(StartDockerContainersRequest req)
+        {
+             JsonResponseModel<StartDockerContainersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartDockerContainers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartDockerContainersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（StartInstances）用于启动一个或多个实例。
         /// 
         /// * 只有状态为 STOPPED 的实例才可以进行此操作。
@@ -3374,6 +3816,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "StartInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询停止情况。
+        /// </summary>
+        /// <param name="req"><see cref="StopDockerContainersRequest"/></param>
+        /// <returns><see cref="StopDockerContainersResponse"/></returns>
+        public async Task<StopDockerContainersResponse> StopDockerContainers(StopDockerContainersRequest req)
+        {
+             JsonResponseModel<StopDockerContainersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopDockerContainers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDockerContainersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询停止情况。
+        /// </summary>
+        /// <param name="req"><see cref="StopDockerContainersRequest"/></param>
+        /// <returns><see cref="StopDockerContainersResponse"/></returns>
+        public StopDockerContainersResponse StopDockerContainersSync(StopDockerContainersRequest req)
+        {
+             JsonResponseModel<StopDockerContainersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopDockerContainers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDockerContainersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

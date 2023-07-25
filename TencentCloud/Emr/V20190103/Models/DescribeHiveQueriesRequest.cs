@@ -37,7 +37,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间秒，EndTime-StartTime不得超过31天秒数31*24*3600
+        /// 结束时间秒，EndTime-StartTime不得超过1天秒数86400
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

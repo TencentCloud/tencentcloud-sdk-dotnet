@@ -72,6 +72,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TemplateIdList")]
         public long?[] TemplateIdList{ get; set; }
 
+        /// <summary>
+        /// 过滤参数
+        /// </summary>
+        [JsonProperty("Filters")]
+        public ActionFilter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "TemplateSource", this.TemplateSource);
             this.SetParamArraySimple(map, prefix + "TemplateIdList.", this.TemplateIdList);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

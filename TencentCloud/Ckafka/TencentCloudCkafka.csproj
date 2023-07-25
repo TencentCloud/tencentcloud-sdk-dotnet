@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.808</VersionPrefix>
+    <VersionPrefix>3.0.809</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -277,6 +277,8 @@
     <Compile Include="V20190819\Models\InstanceDetailResponse.cs" />
     <Compile Include="V20190819\Models\InstanceQuotaConfigResp.cs" />
     <Compile Include="V20190819\Models\InstanceResponse.cs" />
+    <Compile Include="V20190819\Models\InstanceScalingDownRequest.cs" />
+    <Compile Include="V20190819\Models\InstanceScalingDownResponse.cs" />
     <Compile Include="V20190819\Models\JgwOperateResponse.cs" />
     <Compile Include="V20190819\Models\JsonPathReplaceParam.cs" />
     <Compile Include="V20190819\Models\KVParam.cs" />
@@ -336,6 +338,7 @@
     <Compile Include="V20190819\Models\SQLServerModifyConnectParam.cs" />
     <Compile Include="V20190819\Models\SQLServerParam.cs" />
     <Compile Include="V20190819\Models\SaleInfo.cs" />
+    <Compile Include="V20190819\Models\ScalingDownResp.cs" />
     <Compile Include="V20190819\Models\ScfParam.cs" />
     <Compile Include="V20190819\Models\SecondaryAnalyseParam.cs" />
     <Compile Include="V20190819\Models\SendMessageRequest.cs" />

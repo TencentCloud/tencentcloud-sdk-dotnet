@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 加载后续内容的Context
+        /// 新接口此字段失效，默认返回空字符串
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

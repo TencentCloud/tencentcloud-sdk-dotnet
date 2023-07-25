@@ -37,7 +37,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间秒，EndTime-StartTime不得超过31天秒数31243600
+        /// 结束时间秒，EndTime-StartTime不得超过1天秒数86400
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

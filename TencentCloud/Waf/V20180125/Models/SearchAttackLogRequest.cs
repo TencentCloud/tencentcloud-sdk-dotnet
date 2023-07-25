@@ -43,7 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 查询的游标。第一次请求使用空字符串即可，后续请求使用上一次请求返回的最后一条记录的context的值即可。
+        /// 接口升级，这个字段传空字符串,翻页使用Page字段
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

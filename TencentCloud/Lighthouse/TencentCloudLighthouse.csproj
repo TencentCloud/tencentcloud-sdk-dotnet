@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.808</VersionPrefix>
+    <VersionPrefix>3.0.809</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -118,6 +118,14 @@
     <Compile Include="V20200324\Models\DescribeDisksResponse.cs" />
     <Compile Include="V20200324\Models\DescribeDisksReturnableRequest.cs" />
     <Compile Include="V20200324\Models\DescribeDisksReturnableResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeDockerActivitiesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeDockerActivitiesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeDockerContainerConfigurationRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeDockerContainerConfigurationResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeDockerContainerDetailRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeDockerContainerDetailResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeDockerContainersRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeDockerContainersResponse.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesTemplateRequest.cs" />
@@ -170,6 +178,8 @@
     <Compile Include="V20200324\Models\DiskDeniedActions.cs" />
     <Compile Include="V20200324\Models\DiskPrice.cs" />
     <Compile Include="V20200324\Models\DiskReturnable.cs" />
+    <Compile Include="V20200324\Models\DockerActivity.cs" />
+    <Compile Include="V20200324\Models\DockerContainer.cs" />
     <Compile Include="V20200324\Models\DockerContainerConfiguration.cs" />
     <Compile Include="V20200324\Models\DockerContainerPublishPort.cs" />
     <Compile Include="V20200324\Models\DockerContainerVolume.cs" />
@@ -213,6 +223,8 @@
     <Compile Include="V20200324\Models\ModifyDisksAttributeResponse.cs" />
     <Compile Include="V20200324\Models\ModifyDisksRenewFlagRequest.cs" />
     <Compile Include="V20200324\Models\ModifyDisksRenewFlagResponse.cs" />
+    <Compile Include="V20200324\Models\ModifyDockerContainerRequest.cs" />
+    <Compile Include="V20200324\Models\ModifyDockerContainerResponse.cs" />
     <Compile Include="V20200324\Models\ModifyFirewallRuleDescriptionRequest.cs" />
     <Compile Include="V20200324\Models\ModifyFirewallRuleDescriptionResponse.cs" />
     <Compile Include="V20200324\Models\ModifyFirewallRulesRequest.cs" />
@@ -232,11 +244,17 @@
     <Compile Include="V20200324\Models\RebootInstancesRequest.cs" />
     <Compile Include="V20200324\Models\RebootInstancesResponse.cs" />
     <Compile Include="V20200324\Models\RegionInfo.cs" />
+    <Compile Include="V20200324\Models\RemoveDockerContainersRequest.cs" />
+    <Compile Include="V20200324\Models\RemoveDockerContainersResponse.cs" />
+    <Compile Include="V20200324\Models\RenameDockerContainerRequest.cs" />
+    <Compile Include="V20200324\Models\RenameDockerContainerResponse.cs" />
     <Compile Include="V20200324\Models\RenewDiskChargePrepaid.cs" />
     <Compile Include="V20200324\Models\RenewDisksRequest.cs" />
     <Compile Include="V20200324\Models\RenewDisksResponse.cs" />
     <Compile Include="V20200324\Models\RenewInstancesRequest.cs" />
     <Compile Include="V20200324\Models\RenewInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\RerunDockerContainerRequest.cs" />
+    <Compile Include="V20200324\Models\RerunDockerContainerResponse.cs" />
     <Compile Include="V20200324\Models\ResetAttachCcnRequest.cs" />
     <Compile Include="V20200324\Models\ResetAttachCcnResponse.cs" />
     <Compile Include="V20200324\Models\ResetInstanceBlueprint.cs" />
@@ -244,14 +262,22 @@
     <Compile Include="V20200324\Models\ResetInstanceResponse.cs" />
     <Compile Include="V20200324\Models\ResetInstancesPasswordRequest.cs" />
     <Compile Include="V20200324\Models\ResetInstancesPasswordResponse.cs" />
+    <Compile Include="V20200324\Models\RestartDockerContainersRequest.cs" />
+    <Compile Include="V20200324\Models\RestartDockerContainersResponse.cs" />
+    <Compile Include="V20200324\Models\RunDockerContainersRequest.cs" />
+    <Compile Include="V20200324\Models\RunDockerContainersResponse.cs" />
     <Compile Include="V20200324\Models\Scene.cs" />
     <Compile Include="V20200324\Models\SceneInfo.cs" />
     <Compile Include="V20200324\Models\Snapshot.cs" />
     <Compile Include="V20200324\Models\SnapshotDeniedActions.cs" />
     <Compile Include="V20200324\Models\Software.cs" />
     <Compile Include="V20200324\Models\SoftwareDetail.cs" />
+    <Compile Include="V20200324\Models\StartDockerContainersRequest.cs" />
+    <Compile Include="V20200324\Models\StartDockerContainersResponse.cs" />
     <Compile Include="V20200324\Models\StartInstancesRequest.cs" />
     <Compile Include="V20200324\Models\StartInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\StopDockerContainersRequest.cs" />
+    <Compile Include="V20200324\Models\StopDockerContainersResponse.cs" />
     <Compile Include="V20200324\Models\StopInstancesRequest.cs" />
     <Compile Include="V20200324\Models\StopInstancesResponse.cs" />
     <Compile Include="V20200324\Models\SystemDisk.cs" />

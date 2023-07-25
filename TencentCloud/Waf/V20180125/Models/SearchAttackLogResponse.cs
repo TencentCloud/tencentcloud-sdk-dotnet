@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 翻页游标，如果没有下一页了，这个参数为空""
+        /// 接口升级，此字段无效，默认返回空字符串
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

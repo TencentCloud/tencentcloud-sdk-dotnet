@@ -55,8 +55,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
-        /// 新版本此字段填空填
+        /// 新版本此字段失效，填空字符串，翻页使用Page
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

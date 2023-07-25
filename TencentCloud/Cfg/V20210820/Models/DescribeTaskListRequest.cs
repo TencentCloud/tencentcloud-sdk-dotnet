@@ -72,6 +72,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("Tags")]
         public TagWithDescribe[] Tags{ get; set; }
 
+        /// <summary>
+        /// 筛选条件
+        /// </summary>
+        [JsonProperty("Filters")]
+        public ActionFilter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskStartTime", this.TaskStartTime);
             this.SetParamSimple(map, prefix + "TaskEndTime", this.TaskEndTime);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

@@ -2775,6 +2775,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 按量实例缩容
+        /// </summary>
+        /// <param name="req"><see cref="InstanceScalingDownRequest"/></param>
+        /// <returns><see cref="InstanceScalingDownResponse"/></returns>
+        public async Task<InstanceScalingDownResponse> InstanceScalingDown(InstanceScalingDownRequest req)
+        {
+             JsonResponseModel<InstanceScalingDownResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InstanceScalingDown");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstanceScalingDownResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 按量实例缩容
+        /// </summary>
+        /// <param name="req"><see cref="InstanceScalingDownRequest"/></param>
+        /// <returns><see cref="InstanceScalingDownResponse"/></returns>
+        public InstanceScalingDownResponse InstanceScalingDownSync(InstanceScalingDownRequest req)
+        {
+             JsonResponseModel<InstanceScalingDownResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InstanceScalingDown");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstanceScalingDownResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改AC策略，目前只支持预设规则的是否应用到新增topic这一项的修改
         /// </summary>
         /// <param name="req"><see cref="ModifyAclRuleRequest"/></param>

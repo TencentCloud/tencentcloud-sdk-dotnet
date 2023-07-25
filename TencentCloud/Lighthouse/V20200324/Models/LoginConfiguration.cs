@@ -39,6 +39,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
+        /// <summary>
+        /// 密钥ID列表，最多同时指定5个密钥。关联密钥后，就可以通过对应的私钥来访问实例。密钥与密码不能同时指定，同时WINDOWS操作系统不支持指定密钥。密钥ID列表可以通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口获取。
+        /// </summary>
+        [JsonProperty("KeyIds")]
+        public string[] KeyIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +53,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamSimple(map, prefix + "AutoGeneratePassword", this.AutoGeneratePassword);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         }
     }
 }
