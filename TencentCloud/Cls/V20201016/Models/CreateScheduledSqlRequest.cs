@@ -43,13 +43,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? EnableFlag{ get; set; }
 
         /// <summary>
-        /// 加工任务目的topic_id以及别名
+        /// 定时SQL分析目标日志主题
         /// </summary>
         [JsonProperty("DstResource")]
         public ScheduledSqlResouceInfo DstResource{ get; set; }
 
         /// <summary>
-        /// ScheduledSQL语句
+        /// 查询语句
         /// </summary>
         [JsonProperty("ScheduledSqlContent")]
         public string ScheduledSqlContent{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? ProcessPeriod{ get; set; }
 
         /// <summary>
-        /// 调度时间窗口
+        /// 单次查询的时间窗口
         /// </summary>
         [JsonProperty("ProcessTimeWindow")]
         public string ProcessTimeWindow{ get; set; }

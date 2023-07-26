@@ -151,6 +151,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("IsGradingRequiredPostClass")]
         public ulong? IsGradingRequiredPostClass{ get; set; }
 
+        /// <summary>
+        /// 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+        /// </summary>
+        [JsonProperty("RoomType")]
+        public ulong? RoomType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -175,6 +181,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
             this.SetParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
             this.SetParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
+            this.SetParamSimple(map, prefix + "RoomType", this.RoomType);
         }
     }
 }

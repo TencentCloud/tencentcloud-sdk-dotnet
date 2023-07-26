@@ -276,6 +276,30 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("FormName")]
         public string FormName{ get; set; }
 
+        /// <summary>
+        /// 是否有区块链标记（0：没有，1：有）	
+        /// </summary>
+        [JsonProperty("BlockChainMark")]
+        public long? BlockChainMark{ get; set; }
+
+        /// <summary>
+        /// 是否有收购标记（0：没有，1：有）	
+        /// </summary>
+        [JsonProperty("AcquisitionMark")]
+        public long? AcquisitionMark{ get; set; }
+
+        /// <summary>
+        /// 小计金额
+        /// </summary>
+        [JsonProperty("SubTotal")]
+        public string SubTotal{ get; set; }
+
+        /// <summary>
+        /// 小计税额
+        /// </summary>
+        [JsonProperty("SubTax")]
+        public string SubTax{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -324,6 +348,10 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ElectronicFullMark", this.ElectronicFullMark);
             this.SetParamSimple(map, prefix + "ElectronicFullNumber", this.ElectronicFullNumber);
             this.SetParamSimple(map, prefix + "FormName", this.FormName);
+            this.SetParamSimple(map, prefix + "BlockChainMark", this.BlockChainMark);
+            this.SetParamSimple(map, prefix + "AcquisitionMark", this.AcquisitionMark);
+            this.SetParamSimple(map, prefix + "SubTotal", this.SubTotal);
+            this.SetParamSimple(map, prefix + "SubTax", this.SubTax);
         }
     }
 }

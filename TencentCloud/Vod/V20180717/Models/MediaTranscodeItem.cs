@@ -32,6 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
+        /// <font color=red>注意：取值 0 表示原始文件。</font> 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

@@ -53,6 +53,46 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
+        /// 该接口供渠道合作应用加固使用，接口调用有白名单用户限制，取消渠道合作加固中的任务。
+        /// </summary>
+        /// <param name="req"><see cref="CancelEncryptTaskRequest"/></param>
+        /// <returns><see cref="CancelEncryptTaskResponse"/></returns>
+        public async Task<CancelEncryptTaskResponse> CancelEncryptTask(CancelEncryptTaskRequest req)
+        {
+             JsonResponseModel<CancelEncryptTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelEncryptTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelEncryptTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口供渠道合作应用加固使用，接口调用有白名单用户限制，取消渠道合作加固中的任务。
+        /// </summary>
+        /// <param name="req"><see cref="CancelEncryptTaskRequest"/></param>
+        /// <returns><see cref="CancelEncryptTaskResponse"/></returns>
+        public CancelEncryptTaskResponse CancelEncryptTaskSync(CancelEncryptTaskRequest req)
+        {
+             JsonResponseModel<CancelEncryptTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelEncryptTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelEncryptTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 将应用和资源进行绑定。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
         /// </summary>
         /// <param name="req"><see cref="CreateBindInstanceRequest"/></param>
@@ -124,6 +164,90 @@ namespace TencentCloud.Ms.V20180408
              {
                  var strResp = this.InternalRequestSync(req, "CreateCosSecKeyInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCosSecKeyInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口供渠道合作应用加固使用，接口调用有白名单用户限制，用于创建加固任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateEncryptInstanceRequest"/></param>
+        /// <returns><see cref="CreateEncryptInstanceResponse"/></returns>
+        public async Task<CreateEncryptInstanceResponse> CreateEncryptInstance(CreateEncryptInstanceRequest req)
+        {
+             JsonResponseModel<CreateEncryptInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateEncryptInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEncryptInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口供渠道合作应用加固使用，接口调用有白名单用户限制，用于创建加固任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateEncryptInstanceRequest"/></param>
+        /// <returns><see cref="CreateEncryptInstanceResponse"/></returns>
+        public CreateEncryptInstanceResponse CreateEncryptInstanceSync(CreateEncryptInstanceRequest req)
+        {
+             JsonResponseModel<CreateEncryptInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEncryptInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEncryptInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口供渠道合作应用加固使用，接口调用有白名单用户限制。
+        /// 订单类型有：免费试用、按年收费、按次收费。
+        /// 应用加固支持的平台类型有：android安卓加固 、ios源码混淆 、sdk加固、applet小程序加固。
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrderInstanceRequest"/></param>
+        /// <returns><see cref="CreateOrderInstanceResponse"/></returns>
+        public async Task<CreateOrderInstanceResponse> CreateOrderInstance(CreateOrderInstanceRequest req)
+        {
+             JsonResponseModel<CreateOrderInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOrderInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrderInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口供渠道合作应用加固使用，接口调用有白名单用户限制。
+        /// 订单类型有：免费试用、按年收费、按次收费。
+        /// 应用加固支持的平台类型有：android安卓加固 、ios源码混淆 、sdk加固、applet小程序加固。
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrderInstanceRequest"/></param>
+        /// <returns><see cref="CreateOrderInstanceResponse"/></returns>
+        public CreateOrderInstanceResponse CreateOrderInstanceSync(CreateOrderInstanceRequest req)
+        {
+             JsonResponseModel<CreateOrderInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOrderInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrderInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -324,6 +448,134 @@ namespace TencentCloud.Ms.V20180408
              {
                  var strResp = this.InternalRequestSync(req, "DescribeApkDetectionResult");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApkDetectionResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口供渠道合作应用加固使用，接口调用有白名单用户限制，用于查询加固任务，入参中的条件过滤字段均为精准匹配。支持功能点：1. 多任务分页查询  2.根据任务Id唯一值查询单记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEncryptInstancesRequest"/></param>
+        /// <returns><see cref="DescribeEncryptInstancesResponse"/></returns>
+        public async Task<DescribeEncryptInstancesResponse> DescribeEncryptInstances(DescribeEncryptInstancesRequest req)
+        {
+             JsonResponseModel<DescribeEncryptInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEncryptInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEncryptInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口供渠道合作应用加固使用，接口调用有白名单用户限制，用于查询加固任务，入参中的条件过滤字段均为精准匹配。支持功能点：1. 多任务分页查询  2.根据任务Id唯一值查询单记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEncryptInstancesRequest"/></param>
+        /// <returns><see cref="DescribeEncryptInstancesResponse"/></returns>
+        public DescribeEncryptInstancesResponse DescribeEncryptInstancesSync(DescribeEncryptInstancesRequest req)
+        {
+             JsonResponseModel<DescribeEncryptInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEncryptInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEncryptInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口供渠道合作应用加固使用，接口调用有白名单用户限制。入参中的条件过滤字段均为精准匹配。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEncryptPlanRequest"/></param>
+        /// <returns><see cref="DescribeEncryptPlanResponse"/></returns>
+        public async Task<DescribeEncryptPlanResponse> DescribeEncryptPlan(DescribeEncryptPlanRequest req)
+        {
+             JsonResponseModel<DescribeEncryptPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEncryptPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEncryptPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口供渠道合作应用加固使用，接口调用有白名单用户限制。入参中的条件过滤字段均为精准匹配。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEncryptPlanRequest"/></param>
+        /// <returns><see cref="DescribeEncryptPlanResponse"/></returns>
+        public DescribeEncryptPlanResponse DescribeEncryptPlanSync(DescribeEncryptPlanRequest req)
+        {
+             JsonResponseModel<DescribeEncryptPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEncryptPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEncryptPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口供渠道合作应用加固使用，接口调用有白名单用户限制。 接口返回的结果为：创建订单后，订单审批状态信息，以及与订单关联的资源状态等信息，入参中的条件过滤字段均为精准匹配。
+        /// 接口功能点：
+        /// 1.支持多订单分页查询；
+        /// 2.支持唯一订单号精准匹配查询；
+        /// 3.支持唯一资源号精准匹配查询；
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrderInstancesRequest"/></param>
+        /// <returns><see cref="DescribeOrderInstancesResponse"/></returns>
+        public async Task<DescribeOrderInstancesResponse> DescribeOrderInstances(DescribeOrderInstancesRequest req)
+        {
+             JsonResponseModel<DescribeOrderInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOrderInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrderInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口供渠道合作应用加固使用，接口调用有白名单用户限制。 接口返回的结果为：创建订单后，订单审批状态信息，以及与订单关联的资源状态等信息，入参中的条件过滤字段均为精准匹配。
+        /// 接口功能点：
+        /// 1.支持多订单分页查询；
+        /// 2.支持唯一订单号精准匹配查询；
+        /// 3.支持唯一资源号精准匹配查询；
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrderInstancesRequest"/></param>
+        /// <returns><see cref="DescribeOrderInstancesResponse"/></returns>
+        public DescribeOrderInstancesResponse DescribeOrderInstancesSync(DescribeOrderInstancesRequest req)
+        {
+             JsonResponseModel<DescribeOrderInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOrderInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrderInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

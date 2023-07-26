@@ -26,12 +26,14 @@ namespace TencentCloud.Asr.V20190614.Models
         
         /// <summary>
         /// 热词
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Word")]
         public string Word{ get; set; }
 
         /// <summary>
         /// 权重
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

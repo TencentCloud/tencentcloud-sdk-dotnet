@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 媒体文件唯一标识列表。
+        /// 媒体文件唯一标识列表，最大长度：100。
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// 解冻出的临时媒体文件的可访问持续时长，单位为“天”。
+        /// 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
         /// </summary>
         [JsonProperty("RestoreDay")]
         public ulong? RestoreDay{ get; set; }

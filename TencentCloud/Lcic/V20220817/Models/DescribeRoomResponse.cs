@@ -157,6 +157,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? IsGradingRequiredPostClass{ get; set; }
 
         /// <summary>
+        /// 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+        /// </summary>
+        [JsonProperty("RoomType")]
+        public long? RoomType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -187,6 +193,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
             this.SetParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
             this.SetParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
+            this.SetParamSimple(map, prefix + "RoomType", this.RoomType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

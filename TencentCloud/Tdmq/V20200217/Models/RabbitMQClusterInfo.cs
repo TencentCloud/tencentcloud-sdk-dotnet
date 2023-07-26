@@ -62,6 +62,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public VpcEndpointInfo[] Vpcs{ get; set; }
 
         /// <summary>
+        /// 可用区信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneIds")]
+        public long?[] ZoneIds{ get; set; }
+
+        /// <summary>
         /// 虚拟主机数量
         /// </summary>
         [JsonProperty("VirtualHostNumber")]
@@ -124,7 +131,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }
@@ -141,6 +147,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamSimple(map, prefix + "VirtualHostNumber", this.VirtualHostNumber);
             this.SetParamSimple(map, prefix + "QueueNumber", this.QueueNumber);
             this.SetParamSimple(map, prefix + "MessagePublishRate", this.MessagePublishRate);

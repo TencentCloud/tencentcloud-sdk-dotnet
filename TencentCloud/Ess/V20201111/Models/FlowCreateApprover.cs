@@ -115,7 +115,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverSource{ get; set; }
 
         /// <summary>
-        /// 客户自定义签署人标识，64位长度，保证唯一。用于发起含有或签签署人的合同。或签参与人必须有此字段。不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
+        /// 企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
         /// </summary>
         [JsonProperty("CustomApproverTag")]
         public string CustomApproverTag{ get; set; }

@@ -192,6 +192,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("MedicalHospitalizedInvoice")]
         public MedicalInvoice MedicalHospitalizedInvoice{ get; set; }
 
+        /// <summary>
+        /// 增值税销货清单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VatSalesList")]
+        public VatInvoiceInfo VatSalesList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +229,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "TrainTicket.", this.TrainTicket);
             this.SetParamObj(map, prefix + "MedicalOutpatientInvoice.", this.MedicalOutpatientInvoice);
             this.SetParamObj(map, prefix + "MedicalHospitalizedInvoice.", this.MedicalHospitalizedInvoice);
+            this.SetParamObj(map, prefix + "VatSalesList.", this.VatSalesList);
         }
     }
 }

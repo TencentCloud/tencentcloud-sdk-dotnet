@@ -1653,6 +1653,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 获取高防IP业务监控流量曲线
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizMonitorTrendRequest"/></param>
+        /// <returns><see cref="DescribeBizMonitorTrendResponse"/></returns>
+        public async Task<DescribeBizMonitorTrendResponse> DescribeBizMonitorTrend(DescribeBizMonitorTrendRequest req)
+        {
+             JsonResponseModel<DescribeBizMonitorTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBizMonitorTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizMonitorTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取高防IP业务监控流量曲线
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizMonitorTrendRequest"/></param>
+        /// <returns><see cref="DescribeBizMonitorTrendResponse"/></returns>
+        public DescribeBizMonitorTrendResponse DescribeBizMonitorTrendSync(DescribeBizMonitorTrendRequest req)
+        {
+             JsonResponseModel<DescribeBizMonitorTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBizMonitorTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizMonitorTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取业务流量曲线
         /// </summary>
         /// <param name="req"><see cref="DescribeBizTrendRequest"/></param>

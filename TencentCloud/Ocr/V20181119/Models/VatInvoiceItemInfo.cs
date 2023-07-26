@@ -96,6 +96,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("VehicleType")]
         public string VehicleType{ get; set; }
 
+        /// <summary>
+        /// 序号
+        /// </summary>
+        [JsonProperty("SerialNumber")]
+        public string SerialNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "DateEnd", this.DateEnd);
             this.SetParamSimple(map, prefix + "LicensePlate", this.LicensePlate);
             this.SetParamSimple(map, prefix + "VehicleType", this.VehicleType);
+            this.SetParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
         }
     }
 }

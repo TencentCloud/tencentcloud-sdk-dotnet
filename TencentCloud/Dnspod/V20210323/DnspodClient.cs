@@ -1413,6 +1413,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 获取某个域名下的解析记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordFilterListRequest"/></param>
+        /// <returns><see cref="DescribeRecordFilterListResponse"/></returns>
+        public async Task<DescribeRecordFilterListResponse> DescribeRecordFilterList(DescribeRecordFilterListRequest req)
+        {
+             JsonResponseModel<DescribeRecordFilterListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordFilterList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordFilterListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取某个域名下的解析记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordFilterListRequest"/></param>
+        /// <returns><see cref="DescribeRecordFilterListResponse"/></returns>
+        public DescribeRecordFilterListResponse DescribeRecordFilterListSync(DescribeRecordFilterListRequest req)
+        {
+             JsonResponseModel<DescribeRecordFilterListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordFilterList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordFilterListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询解析记录分组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordGroupListRequest"/></param>

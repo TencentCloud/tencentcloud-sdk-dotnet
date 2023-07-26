@@ -30,9 +30,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
         /// 
         /// 注：
-        /// 当GenerateMode=3时，通过"^"来决定是否使用关键字整词匹配能力。
+        /// 当GenerateMode=KEYWORD时，通过"^"来决定是否使用关键字整词匹配能力。
         /// 例：
-        /// 当GenerateMode=3时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
+        /// 当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
         /// 如传入的关键字为"甲方签署"，则PDF文件中每个出现关键字的位置都会执行相应操作。
         /// 
         /// 创建控件时，此值为空

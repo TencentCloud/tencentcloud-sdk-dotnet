@@ -43,7 +43,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 电子印章类型，PERSONAL-个人私章,OFFICIAL-公章,SPECIAL_FINANCIAL-财务专用章,CONTRACT-合同专用章,LEGAL_REPRESENTATIVE-法定代表人章,SPECIAL_NATIONWIDE_INVOICE-发票专用章
+        /// 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+        /// </summary>
+        [JsonProperty("GenerateSource")]
+        public string GenerateSource{ get; set; }
+
+        /// <summary>
+        /// 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
         /// </summary>
         [JsonProperty("SealType")]
         public string SealType{ get; set; }
@@ -84,19 +90,18 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Color{ get; set; }
 
         /// <summary>
-        /// 电子印章生成时的横向文字。
+        /// 暂时不支持横向文字设置
         /// </summary>
         [JsonProperty("SealHorizontalText")]
         public string SealHorizontalText{ get; set; }
 
         /// <summary>
-        /// 电子印章下弦文字
+        /// 暂时不支持下弦文字设置
         /// </summary>
         [JsonProperty("SealChordText")]
         public string SealChordText{ get; set; }
 
         /// <summary>
-        /// 电子印章中心图案类型,STAR-圆形有五角星,NONE-圆形无五角星
         /// 系统生成的印章只支持STAR
         /// </summary>
         [JsonProperty("SealCentralType")]
@@ -108,14 +113,6 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("FileToken")]
         public string FileToken{ get; set; }
 
-        /// <summary>
-        /// 印章生成来源方式
-        /// 取值：
-        /// SealGenerateSourceSystem 表示系统生成企业印章
-        /// </summary>
-        [JsonProperty("GenerateSource")]
-        public string GenerateSource{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +122,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "SealName", this.SealName);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
             this.SetParamSimple(map, prefix + "SealType", this.SealType);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "Image", this.Image);
@@ -135,7 +133,6 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "SealChordText", this.SealChordText);
             this.SetParamSimple(map, prefix + "SealCentralType", this.SealCentralType);
             this.SetParamSimple(map, prefix + "FileToken", this.FileToken);
-            this.SetParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
         }
     }
 }

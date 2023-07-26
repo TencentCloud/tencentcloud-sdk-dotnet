@@ -31,6 +31,12 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         public string ThumbnailURL{ get; set; }
 
         /// <summary>
+        /// 缩略图访问地址的过期时间
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public long? ExpireTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ThumbnailURL", this.ThumbnailURL);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

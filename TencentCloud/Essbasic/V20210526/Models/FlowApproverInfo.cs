@@ -107,13 +107,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 使用PDF文件直接发起合同时，签署人指定的签署控件
+        /// 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }
 
         /// <summary>
-        /// 	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+        /// 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
         /// 	HANDWRITE – 手写签名
         /// 	OCR_ESIGN -- AI智能识别手写签名
         /// 	ESIGN -- 个人印章类型

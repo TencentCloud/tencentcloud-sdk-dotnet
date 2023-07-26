@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.809</VersionPrefix>
+    <VersionPrefix>3.0.810</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -135,6 +135,8 @@
     <Compile Include="V20201016\Models\DeleteMachineGroupInfoResponse.cs" />
     <Compile Include="V20201016\Models\DeleteMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\DeleteMachineGroupResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteScheduledSqlRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\DeleteShipperRequest.cs" />
     <Compile Include="V20201016\Models\DeleteShipperResponse.cs" />
     <Compile Include="V20201016\Models\DeleteTopicRequest.cs" />
@@ -177,6 +179,8 @@
     <Compile Include="V20201016\Models\DescribeMachinesResponse.cs" />
     <Compile Include="V20201016\Models\DescribePartitionsRequest.cs" />
     <Compile Include="V20201016\Models\DescribePartitionsResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeScheduledSqlInfoRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeScheduledSqlInfoResponse.cs" />
     <Compile Include="V20201016\Models\DescribeShipperTasksRequest.cs" />
     <Compile Include="V20201016\Models\DescribeShipperTasksResponse.cs" />
     <Compile Include="V20201016\Models\DescribeShippersRequest.cs" />
@@ -235,6 +239,8 @@
     <Compile Include="V20201016\Models\ModifyLogsetResponse.cs" />
     <Compile Include="V20201016\Models\ModifyMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\ModifyMachineGroupResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyScheduledSqlRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\ModifyShipperRequest.cs" />
     <Compile Include="V20201016\Models\ModifyShipperResponse.cs" />
     <Compile Include="V20201016\Models\ModifyTopicRequest.cs" />
@@ -256,6 +262,7 @@
     <Compile Include="V20201016\Models\RuleKeyValueInfo.cs" />
     <Compile Include="V20201016\Models\RuleTagInfo.cs" />
     <Compile Include="V20201016\Models\ScheduledSqlResouceInfo.cs" />
+    <Compile Include="V20201016\Models\ScheduledSqlTaskInfo.cs" />
     <Compile Include="V20201016\Models\SearchLogRequest.cs" />
     <Compile Include="V20201016\Models\SearchLogResponse.cs" />
     <Compile Include="V20201016\Models\ShipperInfo.cs" />

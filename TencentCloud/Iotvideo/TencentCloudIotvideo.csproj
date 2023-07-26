@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.809</VersionPrefix>
+    <VersionPrefix>3.0.810</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -279,6 +279,8 @@
     <Compile Include="V20211125\Models\CreateTaskFileUrlRequest.cs" />
     <Compile Include="V20211125\Models\CreateTaskFileUrlResponse.cs" />
     <Compile Include="V20211125\Models\DataForward.cs" />
+    <Compile Include="V20211125\Models\DeleteCloudStorageEventRequest.cs" />
+    <Compile Include="V20211125\Models\DeleteCloudStorageEventResponse.cs" />
     <Compile Include="V20211125\Models\DeleteDeviceRequest.cs" />
     <Compile Include="V20211125\Models\DeleteDeviceResponse.cs" />
     <Compile Include="V20211125\Models\DeleteFirmwareRequest.cs" />
@@ -341,6 +343,8 @@
     <Compile Include="V20211125\Models\DescribeDeviceDataStatsResponse.cs" />
     <Compile Include="V20211125\Models\DescribeDeviceEventHistoryRequest.cs" />
     <Compile Include="V20211125\Models\DescribeDeviceEventHistoryResponse.cs" />
+    <Compile Include="V20211125\Models\DescribeDevicePackagesRequest.cs" />
+    <Compile Include="V20211125\Models\DescribeDevicePackagesResponse.cs" />
     <Compile Include="V20211125\Models\DescribeDeviceRequest.cs" />
     <Compile Include="V20211125\Models\DescribeDeviceResponse.cs" />
     <Compile Include="V20211125\Models\DescribeDeviceStatusLogRequest.cs" />
@@ -428,6 +432,7 @@
     <Compile Include="V20211125\Models\ModifyPushChannelResponse.cs" />
     <Compile Include="V20211125\Models\PackageConsumeStat.cs" />
     <Compile Include="V20211125\Models\PackageConsumeTask.cs" />
+    <Compile Include="V20211125\Models\PackageInfo.cs" />
     <Compile Include="V20211125\Models\ProductModelDefinition.cs" />
     <Compile Include="V20211125\Models\ProductTemplate.cs" />
     <Compile Include="V20211125\Models\PublishMessageRequest.cs" />

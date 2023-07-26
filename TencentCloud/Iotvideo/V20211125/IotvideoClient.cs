@@ -773,6 +773,46 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
+        /// 删除云存事件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudStorageEventRequest"/></param>
+        /// <returns><see cref="DeleteCloudStorageEventResponse"/></returns>
+        public async Task<DeleteCloudStorageEventResponse> DeleteCloudStorageEvent(DeleteCloudStorageEventRequest req)
+        {
+             JsonResponseModel<DeleteCloudStorageEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCloudStorageEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudStorageEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除云存事件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudStorageEventRequest"/></param>
+        /// <returns><see cref="DeleteCloudStorageEventResponse"/></returns>
+        public DeleteCloudStorageEventResponse DeleteCloudStorageEventSync(DeleteCloudStorageEventRequest req)
+        {
+             JsonResponseModel<DeleteCloudStorageEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCloudStorageEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudStorageEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除设备
         /// </summary>
         /// <param name="req"><see cref="DeleteDeviceRequest"/></param>
@@ -2044,6 +2084,46 @@ namespace TencentCloud.Iotvideo.V20211125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDeviceEventHistory");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceEventHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据设备信息拉取有效套餐列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDevicePackagesRequest"/></param>
+        /// <returns><see cref="DescribeDevicePackagesResponse"/></returns>
+        public async Task<DescribeDevicePackagesResponse> DescribeDevicePackages(DescribeDevicePackagesRequest req)
+        {
+             JsonResponseModel<DescribeDevicePackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDevicePackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDevicePackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据设备信息拉取有效套餐列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDevicePackagesRequest"/></param>
+        /// <returns><see cref="DescribeDevicePackagesResponse"/></returns>
+        public DescribeDevicePackagesResponse DescribeDevicePackagesSync(DescribeDevicePackagesRequest req)
+        {
+             JsonResponseModel<DescribeDevicePackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDevicePackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDevicePackagesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

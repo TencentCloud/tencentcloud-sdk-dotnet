@@ -1333,6 +1333,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于删除ScheduledSql任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScheduledSqlRequest"/></param>
+        /// <returns><see cref="DeleteScheduledSqlResponse"/></returns>
+        public async Task<DeleteScheduledSqlResponse> DeleteScheduledSql(DeleteScheduledSqlRequest req)
+        {
+             JsonResponseModel<DeleteScheduledSqlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteScheduledSql");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScheduledSqlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于删除ScheduledSql任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScheduledSqlRequest"/></param>
+        /// <returns><see cref="DeleteScheduledSqlResponse"/></returns>
+        public DeleteScheduledSqlResponse DeleteScheduledSqlSync(DeleteScheduledSqlRequest req)
+        {
+             JsonResponseModel<DeleteScheduledSqlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteScheduledSql");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScheduledSqlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除投递COS任务
         /// </summary>
         /// <param name="req"><see cref="DeleteShipperRequest"/></param>
@@ -2173,6 +2213,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于获取ScheduledSql任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledSqlInfoRequest"/></param>
+        /// <returns><see cref="DescribeScheduledSqlInfoResponse"/></returns>
+        public async Task<DescribeScheduledSqlInfoResponse> DescribeScheduledSqlInfo(DescribeScheduledSqlInfoRequest req)
+        {
+             JsonResponseModel<DescribeScheduledSqlInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScheduledSqlInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScheduledSqlInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取ScheduledSql任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledSqlInfoRequest"/></param>
+        /// <returns><see cref="DescribeScheduledSqlInfoResponse"/></returns>
+        public DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfoSync(DescribeScheduledSqlInfoRequest req)
+        {
+             JsonResponseModel<DescribeScheduledSqlInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScheduledSqlInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScheduledSqlInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取投递任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeShipperTasksRequest"/></param>
@@ -2804,6 +2884,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMachineGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMachineGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于修改ScheduledSql任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyScheduledSqlRequest"/></param>
+        /// <returns><see cref="ModifyScheduledSqlResponse"/></returns>
+        public async Task<ModifyScheduledSqlResponse> ModifyScheduledSql(ModifyScheduledSqlRequest req)
+        {
+             JsonResponseModel<ModifyScheduledSqlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyScheduledSql");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyScheduledSqlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于修改ScheduledSql任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyScheduledSqlRequest"/></param>
+        /// <returns><see cref="ModifyScheduledSqlResponse"/></returns>
+        public ModifyScheduledSqlResponse ModifyScheduledSqlSync(ModifyScheduledSqlRequest req)
+        {
+             JsonResponseModel<ModifyScheduledSqlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyScheduledSql");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyScheduledSqlResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
