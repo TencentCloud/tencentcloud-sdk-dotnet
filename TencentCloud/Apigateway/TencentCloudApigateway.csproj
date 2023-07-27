@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E0BB529-7C6E-3A1A-A84E-7231EAFCBAB2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.810</VersionPrefix>
+    <VersionPrefix>3.0.811</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -226,7 +226,6 @@
     <Compile Include="V20180808\Models\DetachPluginResponse.cs" />
     <Compile Include="V20180808\Models\DisableApiKeyRequest.cs" />
     <Compile Include="V20180808\Models\DisableApiKeyResponse.cs" />
-    <Compile Include="V20180808\Models\DocumentSDK.cs" />
     <Compile Include="V20180808\Models\DomainSetList.cs" />
     <Compile Include="V20180808\Models\DomainSets.cs" />
     <Compile Include="V20180808\Models\EnableApiKeyRequest.cs" />
@@ -235,8 +234,6 @@
     <Compile Include="V20180808\Models\EnvironmentStrategy.cs" />
     <Compile Include="V20180808\Models\ErrorCodes.cs" />
     <Compile Include="V20180808\Models\Filter.cs" />
-    <Compile Include="V20180808\Models\GenerateApiDocumentRequest.cs" />
-    <Compile Include="V20180808\Models\GenerateApiDocumentResponse.cs" />
     <Compile Include="V20180808\Models\HealthCheckConf.cs" />
     <Compile Include="V20180808\Models\IPStrategiesStatus.cs" />
     <Compile Include="V20180808\Models\IPStrategy.cs" />

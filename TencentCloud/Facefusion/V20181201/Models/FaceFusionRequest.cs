@@ -67,6 +67,12 @@ namespace TencentCloud.Facefusion.V20181201.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 融合参数
+        /// </summary>
+        [JsonProperty("FuseParam")]
+        public FuseParam FuseParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
             this.SetParamSimple(map, prefix + "PornDetect", this.PornDetect);
             this.SetParamSimple(map, prefix + "CelebrityIdentify", this.CelebrityIdentify);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamObj(map, prefix + "FuseParam.", this.FuseParam);
         }
     }
 }

@@ -397,6 +397,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 本接口（CreateEmbedWebUrl）用于创建嵌入web的链接 本接口支持创建：创建印章，创建模板，修改模板，预览模板，预览合同流程的web链接 进入web连接后与当前控制台操作保持一致
+        /// </summary>
+        /// <param name="req"><see cref="CreateEmbedWebUrlRequest"/></param>
+        /// <returns><see cref="CreateEmbedWebUrlResponse"/></returns>
+        public async Task<CreateEmbedWebUrlResponse> CreateEmbedWebUrl(CreateEmbedWebUrlRequest req)
+        {
+             JsonResponseModel<CreateEmbedWebUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateEmbedWebUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEmbedWebUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateEmbedWebUrl）用于创建嵌入web的链接 本接口支持创建：创建印章，创建模板，修改模板，预览模板，预览合同流程的web链接 进入web连接后与当前控制台操作保持一致
+        /// </summary>
+        /// <param name="req"><see cref="CreateEmbedWebUrlRequest"/></param>
+        /// <returns><see cref="CreateEmbedWebUrlResponse"/></returns>
+        public CreateEmbedWebUrlResponse CreateEmbedWebUrlSync(CreateEmbedWebUrlRequest req)
+        {
+             JsonResponseModel<CreateEmbedWebUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEmbedWebUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEmbedWebUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过模板创建签署流程<br/>
         /// 适用场景：在标准制式的合同场景中，可通过提前预制好模板文件，每次调用模板文件的id，补充合同内容信息及签署信息生成电子合同。<br/>
         /// 注：该接口是通过模板生成合同流程的前置接口，先创建一个不包含签署文件的流程。<br/>
@@ -985,6 +1025,48 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 通过此接口，创建企业批量签署链接，企业员工点击链接即可跳转控制台进行批量签署。
+        /// 如果没有UserId，Name和Mobile必填，对应的员工必须在企业下已经实名，且该员工为批量签署合同中的签署方。
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationBatchSignUrlRequest"/></param>
+        /// <returns><see cref="CreateOrganizationBatchSignUrlResponse"/></returns>
+        public async Task<CreateOrganizationBatchSignUrlResponse> CreateOrganizationBatchSignUrl(CreateOrganizationBatchSignUrlRequest req)
+        {
+             JsonResponseModel<CreateOrganizationBatchSignUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOrganizationBatchSignUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationBatchSignUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口，创建企业批量签署链接，企业员工点击链接即可跳转控制台进行批量签署。
+        /// 如果没有UserId，Name和Mobile必填，对应的员工必须在企业下已经实名，且该员工为批量签署合同中的签署方。
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationBatchSignUrlRequest"/></param>
+        /// <returns><see cref="CreateOrganizationBatchSignUrlResponse"/></returns>
+        public CreateOrganizationBatchSignUrlResponse CreateOrganizationBatchSignUrlSync(CreateOrganizationBatchSignUrlRequest req)
+        {
+             JsonResponseModel<CreateOrganizationBatchSignUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOrganizationBatchSignUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationBatchSignUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建快速发起流程
         /// 适用场景：用户通过API 合同文件及签署信息，并可通过我们返回的URL在页面完成签署控件等信息的编辑与确认，快速发起合同.
         /// 注：该接口文件的resourceId 是通过上传文件之后获取的。
@@ -1280,6 +1362,46 @@ namespace TencentCloud.Ess.V20201111
              {
                  var strResp = this.InternalRequestSync(req, "CreateUserAutoSignEnableUrl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserAutoSignEnableUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用来创建页面主题配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateWebThemeConfigRequest"/></param>
+        /// <returns><see cref="CreateWebThemeConfigResponse"/></returns>
+        public async Task<CreateWebThemeConfigResponse> CreateWebThemeConfig(CreateWebThemeConfigRequest req)
+        {
+             JsonResponseModel<CreateWebThemeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWebThemeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWebThemeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用来创建页面主题配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateWebThemeConfigRequest"/></param>
+        /// <returns><see cref="CreateWebThemeConfigResponse"/></returns>
+        public CreateWebThemeConfigResponse CreateWebThemeConfigSync(CreateWebThemeConfigRequest req)
+        {
+             JsonResponseModel<CreateWebThemeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateWebThemeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWebThemeConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

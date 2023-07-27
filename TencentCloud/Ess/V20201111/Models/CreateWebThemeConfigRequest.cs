@@ -15,26 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Ess.V20201111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DocumentSDK : AbstractModel
+    public class CreateWebThemeConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// 生成的 document 会存放到 COS 中，此出参返回产生文件的下载链接。
+        /// 操作人信息
         /// </summary>
-        [JsonProperty("DocumentURL")]
-        public string DocumentURL{ get; set; }
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 生成的 SDK 会存放到 COS 中，此出参返回产生 SDK 文件的下载链接。
+        /// 主题类型
+        /// <br/>EMBED_WEB_THEME：嵌入式主题
+        /// <br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
         /// </summary>
-        [JsonProperty("SdkURL")]
-        public string SdkURL{ get; set; }
+        [JsonProperty("ThemeType")]
+        public string ThemeType{ get; set; }
+
+        /// <summary>
+        /// 主题配置
+        /// </summary>
+        [JsonProperty("WebThemeConfig")]
+        public WebThemeConfig WebThemeConfig{ get; set; }
 
 
         /// <summary>
@@ -42,8 +50,9 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DocumentURL", this.DocumentURL);
-            this.SetParamSimple(map, prefix + "SdkURL", this.SdkURL);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "ThemeType", this.ThemeType);
+            this.SetParamObj(map, prefix + "WebThemeConfig.", this.WebThemeConfig);
         }
     }
 }

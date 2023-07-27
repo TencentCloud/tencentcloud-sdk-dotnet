@@ -68,6 +68,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
+        /// <summary>
+        /// 默认值为true，打开识别结果纠正开关。开关开启后，身份证号、出生日期、性别，三个字段会进行矫正补齐，统一结果输出；若关闭此开关，以上三个字段不会进行矫正补齐，保持原始识别结果输出，若原图出现篡改情况，这三个字段的识别结果可能会不统一。
+        /// </summary>
+        [JsonProperty("EnableRecognitionRectify")]
+        public bool? EnableRecognitionRectify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +84,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "CardSide", this.CardSide);
             this.SetParamSimple(map, prefix + "Config", this.Config);
+            this.SetParamSimple(map, prefix + "EnableRecognitionRectify", this.EnableRecognitionRectify);
         }
     }
 }

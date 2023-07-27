@@ -2931,50 +2931,6 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 接口已废弃
-        /// 
-        /// 本接口（GenerateApiDocument）用于自动生成 API 文档和 SDK，一个服务的一个环境生成一份文档和 SDK。
-        /// </summary>
-        /// <param name="req"><see cref="GenerateApiDocumentRequest"/></param>
-        /// <returns><see cref="GenerateApiDocumentResponse"/></returns>
-        public async Task<GenerateApiDocumentResponse> GenerateApiDocument(GenerateApiDocumentRequest req)
-        {
-             JsonResponseModel<GenerateApiDocumentResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GenerateApiDocument");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateApiDocumentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// 本接口（GenerateApiDocument）用于自动生成 API 文档和 SDK，一个服务的一个环境生成一份文档和 SDK。
-        /// </summary>
-        /// <param name="req"><see cref="GenerateApiDocumentRequest"/></param>
-        /// <returns><see cref="GenerateApiDocumentResponse"/></returns>
-        public GenerateApiDocumentResponse GenerateApiDocumentSync(GenerateApiDocumentRequest req)
-        {
-             JsonResponseModel<GenerateApiDocumentResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GenerateApiDocument");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateApiDocumentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（ImportOpenApi）用于将OpenAPI规范定义的API导入到API网关。 
         /// </summary>
         /// <param name="req"><see cref="ImportOpenApiRequest"/></param>

@@ -79,6 +79,12 @@ namespace TencentCloud.Facefusion.V20220927.Models
         [JsonProperty("LogoParam")]
         public LogoParam LogoParam{ get; set; }
 
+        /// <summary>
+        /// 融合参数。
+        /// </summary>
+        [JsonProperty("FuseParam")]
+        public FuseParam FuseParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Facefusion.V20220927.Models
             this.SetParamSimple(map, prefix + "FuseFaceDegree", this.FuseFaceDegree);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
             this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);
+            this.SetParamObj(map, prefix + "FuseParam.", this.FuseParam);
         }
     }
 }

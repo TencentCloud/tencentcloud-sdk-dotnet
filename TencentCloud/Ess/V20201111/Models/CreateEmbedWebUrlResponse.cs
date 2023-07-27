@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Ess.V20201111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GenerateApiDocumentRequest : AbstractModel
+    public class CreateEmbedWebUrlResponse : AbstractModel
     {
         
         /// <summary>
-        /// 待创建文档的服务唯一 ID。
+        /// 嵌入的web链接，有效期：5分钟
+        /// EmbedType=PREVIEW_CC_FLOW，该url为h5链接
         /// </summary>
-        [JsonProperty("ServiceId")]
-        public string ServiceId{ get; set; }
+        [JsonProperty("WebUrl")]
+        public string WebUrl{ get; set; }
 
         /// <summary>
-        /// 待创建 SDK 的服务所在环境。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("GenEnvironment")]
-        public string GenEnvironment{ get; set; }
-
-        /// <summary>
-        /// 待创建 SDK 的语言。当前只支持 Python 和 JavaScript。
-        /// </summary>
-        [JsonProperty("GenLanguage")]
-        public string GenLanguage{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
-            this.SetParamSimple(map, prefix + "GenEnvironment", this.GenEnvironment);
-            this.SetParamSimple(map, prefix + "GenLanguage", this.GenLanguage);
+            this.SetParamSimple(map, prefix + "WebUrl", this.WebUrl);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

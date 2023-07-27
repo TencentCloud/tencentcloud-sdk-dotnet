@@ -895,6 +895,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 生成页面主题配置
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateWebThemeConfigRequest"/></param>
+        /// <returns><see cref="ChannelCreateWebThemeConfigResponse"/></returns>
+        public async Task<ChannelCreateWebThemeConfigResponse> ChannelCreateWebThemeConfig(ChannelCreateWebThemeConfigRequest req)
+        {
+             JsonResponseModel<ChannelCreateWebThemeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateWebThemeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateWebThemeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成页面主题配置
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateWebThemeConfigRequest"/></param>
+        /// <returns><see cref="ChannelCreateWebThemeConfigResponse"/></returns>
+        public ChannelCreateWebThemeConfigResponse ChannelCreateWebThemeConfigSync(ChannelCreateWebThemeConfigRequest req)
+        {
+             JsonResponseModel<ChannelCreateWebThemeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateWebThemeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateWebThemeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过此接口，删除员工绑定的角色，支持以电子签userId、客户系统userId两种方式调用。
         /// </summary>
         /// <param name="req"><see cref="ChannelDeleteRoleUsersRequest"/></param>

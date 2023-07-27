@@ -175,6 +175,18 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ComponentLimitType")]
         public string[] ComponentLimitType{ get; set; }
 
+        /// <summary>
+        /// 合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+        /// </summary>
+        [JsonProperty("ApproverVerifyTypes")]
+        public long?[] ApproverVerifyTypes{ get; set; }
+
+        /// <summary>
+        /// 合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
+        /// </summary>
+        [JsonProperty("ApproverSignTypes")]
+        public ulong?[] ApproverSignTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -204,6 +216,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
             this.SetParamArraySimple(map, prefix + "ComponentLimitType.", this.ComponentLimitType);
+            this.SetParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
+            this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
         }
     }
 }

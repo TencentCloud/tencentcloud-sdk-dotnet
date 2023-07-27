@@ -49,6 +49,20 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         [JsonProperty("CSExpiredTime")]
         public long? CSExpiredTime{ get; set; }
 
+        /// <summary>
+        /// 云存套餐创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatedAt")]
+        public long? CreatedAt{ get; set; }
+
+        /// <summary>
+        /// 云存套餐更新时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdatedAt")]
+        public long? UpdatedAt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +73,8 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "CSType", this.CSType);
             this.SetParamSimple(map, prefix + "CSShiftDuration", this.CSShiftDuration);
             this.SetParamSimple(map, prefix + "CSExpiredTime", this.CSExpiredTime);
+            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+            this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         }
     }
 }
