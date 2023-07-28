@@ -60,6 +60,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("OnlyScanLatest")]
         public bool? OnlyScanLatest{ get; set; }
 
+        /// <summary>
+        /// 停止的任务ID
+        /// </summary>
+        [JsonProperty("TaskID")]
+        public ulong? TaskID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "ExcludeImageList.", this.ExcludeImageList);
             this.SetParamSimple(map, prefix + "OnlyScanLatest", this.OnlyScanLatest);
+            this.SetParamSimple(map, prefix + "TaskID", this.TaskID);
         }
     }
 }

@@ -61,7 +61,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? ZOrder{ get; set; }
 
         /// <summary>
-        /// 子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
+        /// 子画面在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底。不填默认为0。
         /// </summary>
         [JsonProperty("RenderMode")]
         public ulong? RenderMode{ get; set; }
@@ -91,6 +91,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("CustomCrop")]
         public McuCustomCrop CustomCrop{ get; set; }
 
+        /// <summary>
+        /// 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
+        /// </summary>
+        [JsonProperty("BackgroundRenderMode")]
+        public ulong? BackgroundRenderMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
             this.SetParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
             this.SetParamObj(map, prefix + "CustomCrop.", this.CustomCrop);
+            this.SetParamSimple(map, prefix + "BackgroundRenderMode", this.BackgroundRenderMode);
         }
     }
 }

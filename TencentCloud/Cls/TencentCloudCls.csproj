@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.811</VersionPrefix>
+    <VersionPrefix>3.0.812</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -107,6 +107,8 @@
     <Compile Include="V20201016\Models\CreateTopicRequest.cs" />
     <Compile Include="V20201016\Models\CreateTopicResponse.cs" />
     <Compile Include="V20201016\Models\CsvInfo.cs" />
+    <Compile Include="V20201016\Models\DashboardInfo.cs" />
+    <Compile Include="V20201016\Models\DashboardTopicInfo.cs" />
     <Compile Include="V20201016\Models\DataTransformResouceInfo.cs" />
     <Compile Include="V20201016\Models\DataTransformTaskInfo.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmNoticeRequest.cs" />
@@ -157,6 +159,8 @@
     <Compile Include="V20201016\Models\DescribeConsumerResponse.cs" />
     <Compile Include="V20201016\Models\DescribeCosRechargesRequest.cs" />
     <Compile Include="V20201016\Models\DescribeCosRechargesResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeDashboardsRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeDashboardsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeDataTransformInfoRequest.cs" />
     <Compile Include="V20201016\Models\DescribeDataTransformInfoResponse.cs" />
     <Compile Include="V20201016\Models\DescribeExportsRequest.cs" />
@@ -270,6 +274,7 @@
     <Compile Include="V20201016\Models\SplitPartitionRequest.cs" />
     <Compile Include="V20201016\Models\SplitPartitionResponse.cs" />
     <Compile Include="V20201016\Models\Tag.cs" />
+    <Compile Include="V20201016\Models\TopicIdAndRegion.cs" />
     <Compile Include="V20201016\Models\TopicInfo.cs" />
     <Compile Include="V20201016\Models\UploadLogRequest.cs" />
     <Compile Include="V20201016\Models\UploadLogResponse.cs" />

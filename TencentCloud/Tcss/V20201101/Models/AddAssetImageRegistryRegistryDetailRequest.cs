@@ -84,6 +84,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Insecure")]
         public ulong? Insecure{ get; set; }
 
+        /// <summary>
+        /// 联通性检测的记录ID
+        /// </summary>
+        [JsonProperty("ConnDetectConfig")]
+        public ConnDetectConfig[] ConnDetectConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
             this.SetParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
             this.SetParamSimple(map, prefix + "Insecure", this.Insecure);
+            this.SetParamArrayObj(map, prefix + "ConnDetectConfig.", this.ConnDetectConfig);
         }
     }
 }

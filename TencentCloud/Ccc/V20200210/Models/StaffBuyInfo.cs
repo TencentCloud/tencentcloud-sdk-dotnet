@@ -42,6 +42,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
+        /// <summary>
+        /// 购买办公电话数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SipNum")]
+        public long? SipNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Num", this.Num);
             this.SetParamSimple(map, prefix + "BuyTime", this.BuyTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "SipNum", this.SipNum);
         }
     }
 }

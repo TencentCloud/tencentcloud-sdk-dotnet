@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.811</VersionPrefix>
+    <VersionPrefix>3.0.812</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -417,6 +417,8 @@
     <Compile Include="V20170312\Models\DescribeSnapshotFilesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSnapshotPoliciesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSnapshotPoliciesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSpecificTrafficPackageUsedDetailsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSpecificTrafficPackageUsedDetailsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSubnetResourceDashboardRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSubnetResourceDashboardResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSubnetsRequest.cs" />
@@ -756,6 +758,7 @@
     <Compile Include="V20170312\Models\SubnetInput.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />
     <Compile Include="V20170312\Models\TemplateLimit.cs" />
+    <Compile Include="V20170312\Models\TrafficFlow.cs" />
     <Compile Include="V20170312\Models\TrafficPackage.cs" />
     <Compile Include="V20170312\Models\TransformAddressRequest.cs" />
     <Compile Include="V20170312\Models\TransformAddressResponse.cs" />
@@ -771,6 +774,7 @@
     <Compile Include="V20170312\Models\UnlockCcnBandwidthsResponse.cs" />
     <Compile Include="V20170312\Models\UnlockCcnsRequest.cs" />
     <Compile Include="V20170312\Models\UnlockCcnsResponse.cs" />
+    <Compile Include="V20170312\Models\UsedDetail.cs" />
     <Compile Include="V20170312\Models\Vpc.cs" />
     <Compile Include="V20170312\Models\VpcEndPointServiceUser.cs" />
     <Compile Include="V20170312\Models\VpcIpv6Address.cs" />

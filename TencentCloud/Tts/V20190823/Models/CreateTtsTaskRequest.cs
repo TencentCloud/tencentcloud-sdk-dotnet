@@ -85,7 +85,7 @@ namespace TencentCloud.Tts.V20190823.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色），默认 false
+        /// 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
         /// </summary>
         [JsonProperty("VoiceoverDialogueSplit")]
         public bool? VoiceoverDialogueSplit{ get; set; }

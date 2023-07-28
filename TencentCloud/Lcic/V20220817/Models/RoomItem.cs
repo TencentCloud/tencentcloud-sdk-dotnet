@@ -131,6 +131,20 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("VideoOrientation")]
         public long? VideoOrientation{ get; set; }
 
+        /// <summary>
+        /// 开启课后评分。 0：不开启(默认)  1：开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsGradingRequiredPostClass")]
+        public long? IsGradingRequiredPostClass{ get; set; }
+
+        /// <summary>
+        /// 房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RoomType")]
+        public long? RoomType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -152,6 +166,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
             this.SetParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
             this.SetParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
+            this.SetParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
+            this.SetParamSimple(map, prefix + "RoomType", this.RoomType);
         }
     }
 }

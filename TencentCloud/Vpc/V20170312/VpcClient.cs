@@ -7045,6 +7045,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口 (DescribeSpecificTrafficPackageUsedDetails) 用于查询指定 共享流量包 的用量明细。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpecificTrafficPackageUsedDetailsRequest"/></param>
+        /// <returns><see cref="DescribeSpecificTrafficPackageUsedDetailsResponse"/></returns>
+        public async Task<DescribeSpecificTrafficPackageUsedDetailsResponse> DescribeSpecificTrafficPackageUsedDetails(DescribeSpecificTrafficPackageUsedDetailsRequest req)
+        {
+             JsonResponseModel<DescribeSpecificTrafficPackageUsedDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSpecificTrafficPackageUsedDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpecificTrafficPackageUsedDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeSpecificTrafficPackageUsedDetails) 用于查询指定 共享流量包 的用量明细。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpecificTrafficPackageUsedDetailsRequest"/></param>
+        /// <returns><see cref="DescribeSpecificTrafficPackageUsedDetailsResponse"/></returns>
+        public DescribeSpecificTrafficPackageUsedDetailsResponse DescribeSpecificTrafficPackageUsedDetailsSync(DescribeSpecificTrafficPackageUsedDetailsRequest req)
+        {
+             JsonResponseModel<DescribeSpecificTrafficPackageUsedDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSpecificTrafficPackageUsedDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpecificTrafficPackageUsedDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeSubnetResourceDashboard)用于查看Subnet资源信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeSubnetResourceDashboardRequest"/></param>

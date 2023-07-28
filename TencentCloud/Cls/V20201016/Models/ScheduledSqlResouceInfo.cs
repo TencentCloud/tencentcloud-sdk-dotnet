@@ -31,10 +31,22 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// topic的地域信息
+        /// 主题的的地域信息
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
+
+        /// <summary>
+        /// 主题类型：0为日志主题，1为指标主题
+        /// </summary>
+        [JsonProperty("BizType")]
+        public long? BizType{ get; set; }
+
+        /// <summary>
+        /// 指标名称
+        /// </summary>
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
 
 
         /// <summary>
@@ -44,6 +56,8 @@ namespace TencentCloud.Cls.V20201016.Models
         {
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "BizType", this.BizType);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
         }
     }
 }

@@ -52,6 +52,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("EndPointServiceIds")]
         public string[] EndPointServiceIds{ get; set; }
 
+        /// <summary>
+        /// <li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
+        /// </summary>
+        [JsonProperty("IsListAuthorizedEndPointService")]
+        public bool? IsListAuthorizedEndPointService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +68,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "EndPointServiceIds.", this.EndPointServiceIds);
+            this.SetParamSimple(map, prefix + "IsListAuthorizedEndPointService", this.IsListAuthorizedEndPointService);
         }
     }
 }

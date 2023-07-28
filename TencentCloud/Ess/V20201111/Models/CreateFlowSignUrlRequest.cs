@@ -31,7 +31,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 流程签署人，其中ApproverName，ApproverMobile和ApproverType必传，其他可不传，ApproverType目前只支持个人类型的签署人。还需注意签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
+        /// 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，ApproverType目前只支持个人类型的签署人。
+        /// 
+        /// 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
         /// </summary>
         [JsonProperty("FlowApproverInfos")]
         public FlowCreateApprover[] FlowApproverInfos{ get; set; }

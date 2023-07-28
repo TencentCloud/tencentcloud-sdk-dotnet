@@ -42,6 +42,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Id")]
         public ulong?[] Id{ get; set; }
 
+        /// <summary>
+        /// 获取进度的任务ID
+        /// </summary>
+        [JsonProperty("TaskID")]
+        public ulong? TaskID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamSimple(map, prefix + "All", this.All);
             this.SetParamArraySimple(map, prefix + "Id.", this.Id);
+            this.SetParamSimple(map, prefix + "TaskID", this.TaskID);
         }
     }
 }

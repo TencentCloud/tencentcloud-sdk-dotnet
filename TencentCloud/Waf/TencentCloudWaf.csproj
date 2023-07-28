@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.811</VersionPrefix>
+    <VersionPrefix>3.0.812</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="V20180125\WafClient.cs" />
     <Compile Include="V20180125\Models\AccessFullTextInfo.cs" />
+    <Compile Include="V20180125\Models\AccessHistogramItem.cs" />
     <Compile Include="V20180125\Models\AccessKeyValueInfo.cs" />
     <Compile Include="V20180125\Models\AccessLogInfo.cs" />
     <Compile Include="V20180125\Models\AccessLogItem.cs" />
@@ -94,6 +95,8 @@
     <Compile Include="V20180125\Models\DescribeAccessExportsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAccessFastAnalysisRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAccessFastAnalysisResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeAccessHistogramRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeAccessHistogramResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAccessIndexRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAccessIndexResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAttackOverviewRequest.cs" />

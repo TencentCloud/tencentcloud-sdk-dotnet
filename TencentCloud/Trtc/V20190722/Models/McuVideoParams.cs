@@ -61,6 +61,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("WaterMarkList")]
         public McuWaterMarkParams[] WaterMarkList{ get; set; }
 
+        /// <summary>
+        /// 背景图在输出时的显示模式：0为裁剪，1为缩放并显示黑底，2为变比例伸缩。后台默认为变比例伸缩。
+        /// </summary>
+        [JsonProperty("BackgroundRenderMode")]
+        public ulong? BackgroundRenderMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
             this.SetParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
             this.SetParamArrayObj(map, prefix + "WaterMarkList.", this.WaterMarkList);
+            this.SetParamSimple(map, prefix + "BackgroundRenderMode", this.BackgroundRenderMode);
         }
     }
 }

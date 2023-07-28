@@ -653,6 +653,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 本接口用于访问日志柱状趋势图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessHistogramRequest"/></param>
+        /// <returns><see cref="DescribeAccessHistogramResponse"/></returns>
+        public async Task<DescribeAccessHistogramResponse> DescribeAccessHistogram(DescribeAccessHistogramRequest req)
+        {
+             JsonResponseModel<DescribeAccessHistogramResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccessHistogram");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessHistogramResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于访问日志柱状趋势图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessHistogramRequest"/></param>
+        /// <returns><see cref="DescribeAccessHistogramResponse"/></returns>
+        public DescribeAccessHistogramResponse DescribeAccessHistogramSync(DescribeAccessHistogramRequest req)
+        {
+             JsonResponseModel<DescribeAccessHistogramResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccessHistogram");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessHistogramResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于获取访问日志索引配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessIndexRequest"/></param>

@@ -116,6 +116,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }
 
+        /// <summary>
+        /// 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FreezeNum")]
+        public long? FreezeNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +144,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "FreezeNum", this.FreezeNum);
         }
     }
 }

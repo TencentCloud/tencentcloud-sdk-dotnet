@@ -54,6 +54,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("PhoneNumBuyList")]
         public PhoneNumBuyInfo[] PhoneNumBuyList{ get; set; }
 
+        /// <summary>
+        /// 办公电话购买数（还在有效期内）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SipBuyNum")]
+        public long? SipBuyNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "StaffBuyNum", this.StaffBuyNum);
             this.SetParamArrayObj(map, prefix + "StaffBuyList.", this.StaffBuyList);
             this.SetParamArrayObj(map, prefix + "PhoneNumBuyList.", this.PhoneNumBuyList);
+            this.SetParamSimple(map, prefix + "SipBuyNum", this.SipBuyNum);
         }
     }
 }

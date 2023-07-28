@@ -26,55 +26,55 @@ namespace TencentCloud.Cam.V20190116.Models
         
         /// <summary>
         /// 身份提供商URL。OpenID Connect身份提供商标识。
-        /// 对应企业IdP提供的Openid-configuration中"issuer"字段的值。
+        /// 对应企业IdP提供的Openid-configuration中"issuer"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。
         /// </summary>
         [JsonProperty("IdentityUrl")]
         public string IdentityUrl{ get; set; }
 
         /// <summary>
-        /// 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
+        /// RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
         /// </summary>
         [JsonProperty("IdentityKey")]
         public string IdentityKey{ get; set; }
 
         /// <summary>
-        /// 客户端ID，在OpenID Connect身份提供商注册的客户端ID。
+        /// 客户端ID，在OpenID Connect身份提供商注册的客户端ID，允许英文字母、数字、特殊字符.-_:/，不能以特殊字符.-_:/开头，单个客户端ID最大64个字符。
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
 
         /// <summary>
-        /// 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值。
+        /// 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。
         /// </summary>
         [JsonProperty("AuthorizationEndpoint")]
         public string AuthorizationEndpoint{ get; set; }
 
         /// <summary>
-        /// 授权请求Response type，固定值id_token。
+        /// 授权请求Response type，有code，id_token，固定值id_token。
         /// </summary>
         [JsonProperty("ResponseType")]
         public string ResponseType{ get; set; }
 
         /// <summary>
-        /// 授权请求Response mode。授权请求返回模式，form_post和fragment两种可选模式，推荐选择form_post模式。
+        /// 授权请求Response mode。授权请求返回模式，有form_post和fragment两种可选模式，推荐选择form_post模式。
         /// </summary>
         [JsonProperty("ResponseMode")]
         public string ResponseMode{ get; set; }
 
         /// <summary>
-        /// 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段
+        /// 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
         /// </summary>
         [JsonProperty("MappingFiled")]
         public string MappingFiled{ get; set; }
 
         /// <summary>
-        /// 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
+        /// 授权请求Scope。有openid; email;profile三种。代表授权请求信息范围openid表示请求访问用户的身份信息，email表示请求访问用户的电子邮件地址，profile表示请求访问用户的基本信息。默认必选openid。
         /// </summary>
         [JsonProperty("Scope")]
         public string[] Scope{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// 描述，长度为1~255个英文或中文字符，默认值为空。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

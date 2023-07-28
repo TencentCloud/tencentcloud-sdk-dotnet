@@ -1773,6 +1773,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于获取仪表盘
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDashboardsRequest"/></param>
+        /// <returns><see cref="DescribeDashboardsResponse"/></returns>
+        public async Task<DescribeDashboardsResponse> DescribeDashboards(DescribeDashboardsRequest req)
+        {
+             JsonResponseModel<DescribeDashboardsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDashboards");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDashboardsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取仪表盘
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDashboardsRequest"/></param>
+        /// <returns><see cref="DescribeDashboardsResponse"/></returns>
+        public DescribeDashboardsResponse DescribeDashboardsSync(DescribeDashboardsRequest req)
+        {
+             JsonResponseModel<DescribeDashboardsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDashboards");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDashboardsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于获取数据加工任务列表基本信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDataTransformInfoRequest"/></param>

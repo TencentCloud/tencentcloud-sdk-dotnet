@@ -62,7 +62,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string RegistryVersion{ get; set; }
 
         /// <summary>
-        /// 网络类型，列表：public（公网）
+        /// 网络类型，列表：public（公网）,private（私网）
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
@@ -89,6 +89,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Insecure{ get; set; }
 
         /// <summary>
+        /// 联通性检测结果详情
+        /// </summary>
+        [JsonProperty("ConnDetectDetail")]
+        public RegistryConnDetectResult[] ConnDetectDetail{ get; set; }
+
+        /// <summary>
+        /// tcr情况下instance_id
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -110,6 +122,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
             this.SetParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
             this.SetParamSimple(map, prefix + "Insecure", this.Insecure);
+            this.SetParamArrayObj(map, prefix + "ConnDetectDetail.", this.ConnDetectDetail);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
