@@ -15,28 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class VerifyEnterpriseFourFactorsResponse : AbstractModel
+    public class DescribeNotebookImageKernelsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 核验一致性（1:一致，2:不一致，3:查询无记录）
+        /// 镜像kernel数组
         /// </summary>
-        [JsonProperty("State")]
-        public long? State{ get; set; }
-
-        /// <summary>
-        /// 核验结果明细，7：企业法人/负责人，6：企业股东，5：企
-        /// 业管理人员，-21：企业名称与企业标识不符，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Detail")]
-        public Detail Detail{ get; set; }
+        [JsonProperty("Kernels")]
+        public string[] Kernels{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,8 +42,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "State", this.State);
-            this.SetParamObj(map, prefix + "Detail.", this.Detail);
+            this.SetParamArraySimple(map, prefix + "Kernels.", this.Kernels);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

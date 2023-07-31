@@ -76,7 +76,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? CreatedOn{ get; set; }
 
         /// <summary>
-        /// 拒签或者取消的原因描述
+        /// 当合同被拒签或者取消后(当FlowStatus=3或者FlowStatus=6的时候)
+        /// 此字段展示拒签或者取消的原因描述
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowMessage")]

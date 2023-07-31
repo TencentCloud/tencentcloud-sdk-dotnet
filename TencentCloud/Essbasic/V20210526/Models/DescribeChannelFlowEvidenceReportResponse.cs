@@ -25,16 +25,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 出证报告 URL
+        /// 出证报告下载 URL
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportUrl")]
         public string ReportUrl{ get; set; }
 
         /// <summary>
-        /// 执行中：EvidenceStatusExecuting
-        /// 成功：EvidenceStatusSuccess
-        /// 失败：EvidenceStatusFailed
+        /// 出征任务的执行状态,状态列表如下
+        /// 
+        /// - EvidenceStatusExecuting : 出征任务正在执行中
+        /// - EvidenceStatusSuccess : 出征任务执行成功
+        /// - EvidenceStatusFailed : 出征任务执行失败
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

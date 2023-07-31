@@ -32,6 +32,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 合同流程类型
+        /// <br/>客户自定义，用于合同分类展示
         /// </summary>
         [JsonProperty("FlowType")]
         public string FlowType{ get; set; }
@@ -50,6 +51,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 是否顺序签署(true:无序签,false:顺序签)
+        /// <br/>默认false，有序签署合同
         /// </summary>
         [JsonProperty("Unordered")]
         public bool? Unordered{ get; set; }
@@ -67,7 +69,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public FormField[] FormFields{ get; set; }
 
         /// <summary>
-        /// 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批。使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
+        /// 本企业(发起方企业)是否需要签署审批
+        /// <br/>true：开启发起方签署审批
+        /// <br/>false：不开启发起方签署审批
+        /// <br/>开启后，使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
         /// </summary>
         [JsonProperty("NeedSignReview")]
         public bool? NeedSignReview{ get; set; }
@@ -85,7 +90,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public CcInfo[] CcInfos{ get; set; }
 
         /// <summary>
-        /// 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+        /// 是否需要开启发起方发起前审核
+        /// <br/>true：开启发起方发起前审核
+        /// <br/>false：不开启发起方发起前审核
+        /// <br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
         /// </summary>
         [JsonProperty("NeedCreateReview")]
         public bool? NeedCreateReview{ get; set; }

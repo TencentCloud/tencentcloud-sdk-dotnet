@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 任务Id，通过CreateConvertTaskApi得到
+        /// 任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

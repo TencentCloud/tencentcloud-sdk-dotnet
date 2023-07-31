@@ -213,6 +213,86 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 创建Notebook
+        /// </summary>
+        /// <param name="req"><see cref="CreateNotebookRequest"/></param>
+        /// <returns><see cref="CreateNotebookResponse"/></returns>
+        public async Task<CreateNotebookResponse> CreateNotebook(CreateNotebookRequest req)
+        {
+             JsonResponseModel<CreateNotebookResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNotebook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotebookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建Notebook
+        /// </summary>
+        /// <param name="req"><see cref="CreateNotebookRequest"/></param>
+        /// <returns><see cref="CreateNotebookResponse"/></returns>
+        public CreateNotebookResponse CreateNotebookSync(CreateNotebookRequest req)
+        {
+             JsonResponseModel<CreateNotebookResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNotebook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotebookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 保存镜像
+        /// </summary>
+        /// <param name="req"><see cref="CreateNotebookImageRequest"/></param>
+        /// <returns><see cref="CreateNotebookImageResponse"/></returns>
+        public async Task<CreateNotebookImageResponse> CreateNotebookImage(CreateNotebookImageRequest req)
+        {
+             JsonResponseModel<CreateNotebookImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNotebookImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotebookImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 保存镜像
+        /// </summary>
+        /// <param name="req"><see cref="CreateNotebookImageRequest"/></param>
+        /// <returns><see cref="CreateNotebookImageResponse"/></returns>
+        public CreateNotebookImageResponse CreateNotebookImageSync(CreateNotebookImageRequest req)
+        {
+             JsonResponseModel<CreateNotebookImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNotebookImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotebookImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 保存优化模型
         /// </summary>
         /// <param name="req"><see cref="CreateOptimizedModelRequest"/></param>
@@ -524,6 +604,86 @@ namespace TencentCloud.Tione.V20211111
              {
                  var strResp = this.InternalRequestSync(req, "DeleteModelServiceGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteModelServiceGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除Notebook
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNotebookRequest"/></param>
+        /// <returns><see cref="DeleteNotebookResponse"/></returns>
+        public async Task<DeleteNotebookResponse> DeleteNotebook(DeleteNotebookRequest req)
+        {
+             JsonResponseModel<DeleteNotebookResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNotebook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNotebookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除Notebook
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNotebookRequest"/></param>
+        /// <returns><see cref="DeleteNotebookResponse"/></returns>
+        public DeleteNotebookResponse DeleteNotebookSync(DeleteNotebookRequest req)
+        {
+             JsonResponseModel<DeleteNotebookResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNotebook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNotebookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除notebook镜像保存记录
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNotebookImageRecordRequest"/></param>
+        /// <returns><see cref="DeleteNotebookImageRecordResponse"/></returns>
+        public async Task<DeleteNotebookImageRecordResponse> DeleteNotebookImageRecord(DeleteNotebookImageRecordRequest req)
+        {
+             JsonResponseModel<DeleteNotebookImageRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNotebookImageRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNotebookImageRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除notebook镜像保存记录
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNotebookImageRecordRequest"/></param>
+        /// <returns><see cref="DeleteNotebookImageRecordResponse"/></returns>
+        public DeleteNotebookImageRecordResponse DeleteNotebookImageRecordSync(DeleteNotebookImageRecordRequest req)
+        {
+             JsonResponseModel<DeleteNotebookImageRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNotebookImageRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNotebookImageRecordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1573,6 +1733,166 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// Notebook详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookRequest"/></param>
+        /// <returns><see cref="DescribeNotebookResponse"/></returns>
+        public async Task<DescribeNotebookResponse> DescribeNotebook(DescribeNotebookRequest req)
+        {
+             JsonResponseModel<DescribeNotebookResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNotebook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Notebook详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookRequest"/></param>
+        /// <returns><see cref="DescribeNotebookResponse"/></returns>
+        public DescribeNotebookResponse DescribeNotebookSync(DescribeNotebookRequest req)
+        {
+             JsonResponseModel<DescribeNotebookResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNotebook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询镜像kernel
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookImageKernelsRequest"/></param>
+        /// <returns><see cref="DescribeNotebookImageKernelsResponse"/></returns>
+        public async Task<DescribeNotebookImageKernelsResponse> DescribeNotebookImageKernels(DescribeNotebookImageKernelsRequest req)
+        {
+             JsonResponseModel<DescribeNotebookImageKernelsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNotebookImageKernels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookImageKernelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询镜像kernel
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookImageKernelsRequest"/></param>
+        /// <returns><see cref="DescribeNotebookImageKernelsResponse"/></returns>
+        public DescribeNotebookImageKernelsResponse DescribeNotebookImageKernelsSync(DescribeNotebookImageKernelsRequest req)
+        {
+             JsonResponseModel<DescribeNotebookImageKernelsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNotebookImageKernels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookImageKernelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看notebook镜像保存记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookImageRecordsRequest"/></param>
+        /// <returns><see cref="DescribeNotebookImageRecordsResponse"/></returns>
+        public async Task<DescribeNotebookImageRecordsResponse> DescribeNotebookImageRecords(DescribeNotebookImageRecordsRequest req)
+        {
+             JsonResponseModel<DescribeNotebookImageRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNotebookImageRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookImageRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看notebook镜像保存记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebookImageRecordsRequest"/></param>
+        /// <returns><see cref="DescribeNotebookImageRecordsResponse"/></returns>
+        public DescribeNotebookImageRecordsResponse DescribeNotebookImageRecordsSync(DescribeNotebookImageRecordsRequest req)
+        {
+             JsonResponseModel<DescribeNotebookImageRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNotebookImageRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebookImageRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Notebook列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebooksRequest"/></param>
+        /// <returns><see cref="DescribeNotebooksResponse"/></returns>
+        public async Task<DescribeNotebooksResponse> DescribeNotebooks(DescribeNotebooksRequest req)
+        {
+             JsonResponseModel<DescribeNotebooksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNotebooks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebooksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Notebook列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNotebooksRequest"/></param>
+        /// <returns><see cref="DescribeNotebooksResponse"/></returns>
+        public DescribeNotebooksResponse DescribeNotebooksSync(DescribeNotebooksRequest req)
+        {
+             JsonResponseModel<DescribeNotebooksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNotebooks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotebooksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 训练框架列表
         /// </summary>
         /// <param name="req"><see cref="DescribeTrainingFrameworksRequest"/></param>
@@ -1973,6 +2293,86 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 修改Notebook
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotebookRequest"/></param>
+        /// <returns><see cref="ModifyNotebookResponse"/></returns>
+        public async Task<ModifyNotebookResponse> ModifyNotebook(ModifyNotebookRequest req)
+        {
+             JsonResponseModel<ModifyNotebookResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNotebook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNotebookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改Notebook
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotebookRequest"/></param>
+        /// <returns><see cref="ModifyNotebookResponse"/></returns>
+        public ModifyNotebookResponse ModifyNotebookSync(ModifyNotebookRequest req)
+        {
+             JsonResponseModel<ModifyNotebookResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNotebook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNotebookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改Notebook标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotebookTagsRequest"/></param>
+        /// <returns><see cref="ModifyNotebookTagsResponse"/></returns>
+        public async Task<ModifyNotebookTagsResponse> ModifyNotebookTags(ModifyNotebookTagsRequest req)
+        {
+             JsonResponseModel<ModifyNotebookTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNotebookTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNotebookTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改Notebook标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNotebookTagsRequest"/></param>
+        /// <returns><see cref="ModifyNotebookTagsResponse"/></returns>
+        public ModifyNotebookTagsResponse ModifyNotebookTagsSync(ModifyNotebookTagsRequest req)
+        {
+             JsonResponseModel<ModifyNotebookTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNotebookTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNotebookTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新推理服务组流量分配
         /// </summary>
         /// <param name="req"><see cref="ModifyServiceGroupWeightsRequest"/></param>
@@ -2093,6 +2493,46 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 启动Notebook
+        /// </summary>
+        /// <param name="req"><see cref="StartNotebookRequest"/></param>
+        /// <returns><see cref="StartNotebookResponse"/></returns>
+        public async Task<StartNotebookResponse> StartNotebook(StartNotebookRequest req)
+        {
+             JsonResponseModel<StartNotebookResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartNotebook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartNotebookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启动Notebook
+        /// </summary>
+        /// <param name="req"><see cref="StartNotebookRequest"/></param>
+        /// <returns><see cref="StartNotebookResponse"/></returns>
+        public StartNotebookResponse StartNotebookSync(StartNotebookRequest req)
+        {
+             JsonResponseModel<StartNotebookResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartNotebook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartNotebookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 启动模型训练任务
         /// </summary>
         /// <param name="req"><see cref="StartTrainingTaskRequest"/></param>
@@ -2173,6 +2613,46 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 停止保存镜像
+        /// </summary>
+        /// <param name="req"><see cref="StopCreatingImageRequest"/></param>
+        /// <returns><see cref="StopCreatingImageResponse"/></returns>
+        public async Task<StopCreatingImageResponse> StopCreatingImage(StopCreatingImageRequest req)
+        {
+             JsonResponseModel<StopCreatingImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopCreatingImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopCreatingImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止保存镜像
+        /// </summary>
+        /// <param name="req"><see cref="StopCreatingImageRequest"/></param>
+        /// <returns><see cref="StopCreatingImageResponse"/></returns>
+        public StopCreatingImageResponse StopCreatingImageSync(StopCreatingImageRequest req)
+        {
+             JsonResponseModel<StopCreatingImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopCreatingImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopCreatingImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 停止模型加速任务
         /// </summary>
         /// <param name="req"><see cref="StopModelAccelerateTaskRequest"/></param>
@@ -2204,6 +2684,46 @@ namespace TencentCloud.Tione.V20211111
              {
                  var strResp = this.InternalRequestSync(req, "StopModelAccelerateTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopModelAccelerateTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止Notebook
+        /// </summary>
+        /// <param name="req"><see cref="StopNotebookRequest"/></param>
+        /// <returns><see cref="StopNotebookResponse"/></returns>
+        public async Task<StopNotebookResponse> StopNotebook(StopNotebookRequest req)
+        {
+             JsonResponseModel<StopNotebookResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopNotebook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopNotebookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止Notebook
+        /// </summary>
+        /// <param name="req"><see cref="StopNotebookRequest"/></param>
+        /// <returns><see cref="StopNotebookResponse"/></returns>
+        public StopNotebookResponse StopNotebookSync(StopNotebookRequest req)
+        {
+             JsonResponseModel<StopNotebookResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopNotebook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopNotebookResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

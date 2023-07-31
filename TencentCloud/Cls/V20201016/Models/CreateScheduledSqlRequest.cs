@@ -37,7 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 任务启动状态.  1正常开启,  2关闭
+        /// 任务启动状态.  1开启,  2关闭
         /// </summary>
         [JsonProperty("EnableFlag")]
         public long? EnableFlag{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? ProcessStartTime{ get; set; }
 
         /// <summary>
-        /// 调度类型，1:持续运行 2:指定调度结束时间
+        /// 调度类型，1:持续运行 2:指定时间范围
         /// </summary>
         [JsonProperty("ProcessType")]
         public long? ProcessType{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? ProcessEndTime{ get; set; }
 
         /// <summary>
-        /// 语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+        /// 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }

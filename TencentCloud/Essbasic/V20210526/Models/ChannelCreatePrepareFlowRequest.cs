@@ -43,12 +43,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public BaseFlowInfo FlowInfo{ get; set; }
 
         /// <summary>
-        /// 合同签署人信息
-        /// </summary>
-        [JsonProperty("FlowApproverList")]
-        public CommonFlowApprover[] FlowApproverList{ get; set; }
-
-        /// <summary>
         /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
         /// </summary>
         [JsonProperty("Agent")]
@@ -59,6 +53,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("FlowOption")]
         public CreateFlowOption FlowOption{ get; set; }
+
+        /// <summary>
+        /// 合同签署人信息
+        /// </summary>
+        [JsonProperty("FlowApproverList")]
+        public CommonFlowApprover[] FlowApproverList{ get; set; }
 
         /// <summary>
         /// 通过flowid快速获得之前成功通过页面发起的合同生成链接
@@ -96,9 +96,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamObj(map, prefix + "FlowInfo.", this.FlowInfo);
-            this.SetParamArrayObj(map, prefix + "FlowApproverList.", this.FlowApproverList);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamObj(map, prefix + "FlowOption.", this.FlowOption);
+            this.SetParamArrayObj(map, prefix + "FlowApproverList.", this.FlowApproverList);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
             this.SetParamObj(map, prefix + "Organization.", this.Organization);

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.812</VersionPrefix>
+    <VersionPrefix>3.0.813</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -80,7 +80,6 @@
     <Compile Include="V20181119\Models\Coord.cs" />
     <Compile Include="V20181119\Models\CreateAIFormTaskRequest.cs" />
     <Compile Include="V20181119\Models\CreateAIFormTaskResponse.cs" />
-    <Compile Include="V20181119\Models\Detail.cs" />
     <Compile Include="V20181119\Models\DetectedWordCoordPoint.cs" />
     <Compile Include="V20181119\Models\DetectedWords.cs" />
     <Compile Include="V20181119\Models\DriverLicenseOCRRequest.cs" />
@@ -178,7 +177,6 @@
     <Compile Include="V20181119\Models\PermitOCRRequest.cs" />
     <Compile Include="V20181119\Models\PermitOCRResponse.cs" />
     <Compile Include="V20181119\Models\Polygon.cs" />
-    <Compile Include="V20181119\Models\ProductDataRecord.cs" />
     <Compile Include="V20181119\Models\PropOwnerCertOCRRequest.cs" />
     <Compile Include="V20181119\Models\PropOwnerCertOCRResponse.cs" />
     <Compile Include="V20181119\Models\QrcodeImgSize.cs" />
@@ -186,8 +184,6 @@
     <Compile Include="V20181119\Models\QrcodeOCRResponse.cs" />
     <Compile Include="V20181119\Models\QrcodePositionObj.cs" />
     <Compile Include="V20181119\Models\QrcodeResultsInfo.cs" />
-    <Compile Include="V20181119\Models\QueryBarCodeRequest.cs" />
-    <Compile Include="V20181119\Models\QueryBarCodeResponse.cs" />
     <Compile Include="V20181119\Models\QuestionBlockObj.cs" />
     <Compile Include="V20181119\Models\QuestionObj.cs" />
     <Compile Include="V20181119\Models\QuotaInvoice.cs" />
@@ -308,8 +304,6 @@
     <Compile Include="V20181119\Models\VerifyBasicBizLicenseResponse.cs" />
     <Compile Include="V20181119\Models\VerifyBizLicenseRequest.cs" />
     <Compile Include="V20181119\Models\VerifyBizLicenseResponse.cs" />
-    <Compile Include="V20181119\Models\VerifyEnterpriseFourFactorsRequest.cs" />
-    <Compile Include="V20181119\Models\VerifyEnterpriseFourFactorsResponse.cs" />
     <Compile Include="V20181119\Models\VerifyOfdVatInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\VerifyOfdVatInvoiceOCRResponse.cs" />
     <Compile Include="V20181119\Models\VinOCRRequest.cs" />

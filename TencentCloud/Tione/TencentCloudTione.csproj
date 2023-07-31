@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.812</VersionPrefix>
+    <VersionPrefix>3.0.813</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -134,6 +134,10 @@
     <Compile Include="V20211111\Models\CreateDatasetResponse.cs" />
     <Compile Include="V20211111\Models\CreateModelServiceRequest.cs" />
     <Compile Include="V20211111\Models\CreateModelServiceResponse.cs" />
+    <Compile Include="V20211111\Models\CreateNotebookImageRequest.cs" />
+    <Compile Include="V20211111\Models\CreateNotebookImageResponse.cs" />
+    <Compile Include="V20211111\Models\CreateNotebookRequest.cs" />
+    <Compile Include="V20211111\Models\CreateNotebookResponse.cs" />
     <Compile Include="V20211111\Models\CreateOptimizedModelRequest.cs" />
     <Compile Include="V20211111\Models\CreateOptimizedModelResponse.cs" />
     <Compile Include="V20211111\Models\CreateTrainingModelRequest.cs" />
@@ -161,6 +165,10 @@
     <Compile Include="V20211111\Models\DeleteModelServiceGroupResponse.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceRequest.cs" />
     <Compile Include="V20211111\Models\DeleteModelServiceResponse.cs" />
+    <Compile Include="V20211111\Models\DeleteNotebookImageRecordRequest.cs" />
+    <Compile Include="V20211111\Models\DeleteNotebookImageRecordResponse.cs" />
+    <Compile Include="V20211111\Models\DeleteNotebookRequest.cs" />
+    <Compile Include="V20211111\Models\DeleteNotebookResponse.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingModelRequest.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingModelResponse.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingModelVersionRequest.cs" />
@@ -213,6 +221,14 @@
     <Compile Include="V20211111\Models\DescribeModelServiceResponse.cs" />
     <Compile Include="V20211111\Models\DescribeModelServicesRequest.cs" />
     <Compile Include="V20211111\Models\DescribeModelServicesResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeNotebookImageKernelsRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeNotebookImageKernelsResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeNotebookImageRecordsRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeNotebookImageRecordsResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeNotebookRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeNotebookResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeNotebooksRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeNotebooksResponse.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingFrameworksRequest.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingFrameworksResponse.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingMetricsRequest.cs" />
@@ -258,8 +274,15 @@
     <Compile Include="V20211111\Models\ModifyModelServicePartialConfigResponse.cs" />
     <Compile Include="V20211111\Models\ModifyModelServiceRequest.cs" />
     <Compile Include="V20211111\Models\ModifyModelServiceResponse.cs" />
+    <Compile Include="V20211111\Models\ModifyNotebookRequest.cs" />
+    <Compile Include="V20211111\Models\ModifyNotebookResponse.cs" />
+    <Compile Include="V20211111\Models\ModifyNotebookTagsRequest.cs" />
+    <Compile Include="V20211111\Models\ModifyNotebookTagsResponse.cs" />
     <Compile Include="V20211111\Models\ModifyServiceGroupWeightsRequest.cs" />
     <Compile Include="V20211111\Models\ModifyServiceGroupWeightsResponse.cs" />
+    <Compile Include="V20211111\Models\NotebookDetail.cs" />
+    <Compile Include="V20211111\Models\NotebookImageRecord.cs" />
+    <Compile Include="V20211111\Models\NotebookSetItem.cs" />
     <Compile Include="V20211111\Models\OcrLabelInfo.cs" />
     <Compile Include="V20211111\Models\Option.cs" />
     <Compile Include="V20211111\Models\Pod.cs" />
@@ -268,6 +291,7 @@
     <Compile Include="V20211111\Models\PushTrainingMetricsRequest.cs" />
     <Compile Include="V20211111\Models\PushTrainingMetricsResponse.cs" />
     <Compile Include="V20211111\Models\RDMAConfig.cs" />
+    <Compile Include="V20211111\Models\ResourceConf.cs" />
     <Compile Include="V20211111\Models\ResourceConfigInfo.cs" />
     <Compile Include="V20211111\Models\ResourceGroup.cs" />
     <Compile Include="V20211111\Models\ResourceInfo.cs" />
@@ -288,13 +312,19 @@
     <Compile Include="V20211111\Models\SpecPrice.cs" />
     <Compile Include="V20211111\Models\SpecUnit.cs" />
     <Compile Include="V20211111\Models\StartCmdInfo.cs" />
+    <Compile Include="V20211111\Models\StartNotebookRequest.cs" />
+    <Compile Include="V20211111\Models\StartNotebookResponse.cs" />
     <Compile Include="V20211111\Models\StartTrainingTaskRequest.cs" />
     <Compile Include="V20211111\Models\StartTrainingTaskResponse.cs" />
     <Compile Include="V20211111\Models\StatefulSetCondition.cs" />
     <Compile Include="V20211111\Models\StopBatchTaskRequest.cs" />
     <Compile Include="V20211111\Models\StopBatchTaskResponse.cs" />
+    <Compile Include="V20211111\Models\StopCreatingImageRequest.cs" />
+    <Compile Include="V20211111\Models\StopCreatingImageResponse.cs" />
     <Compile Include="V20211111\Models\StopModelAccelerateTaskRequest.cs" />
     <Compile Include="V20211111\Models\StopModelAccelerateTaskResponse.cs" />
+    <Compile Include="V20211111\Models\StopNotebookRequest.cs" />
+    <Compile Include="V20211111\Models\StopNotebookResponse.cs" />
     <Compile Include="V20211111\Models\StopTrainingTaskRequest.cs" />
     <Compile Include="V20211111\Models\StopTrainingTaskResponse.cs" />
     <Compile Include="V20211111\Models\Tag.cs" />

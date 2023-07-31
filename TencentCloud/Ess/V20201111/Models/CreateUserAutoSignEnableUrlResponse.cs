@@ -49,7 +49,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Path{ get; set; }
 
         /// <summary>
-        /// base64格式跳转二维码
+        /// base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
         /// </summary>
         [JsonProperty("QrCode")]
         public string QrCode{ get; set; }

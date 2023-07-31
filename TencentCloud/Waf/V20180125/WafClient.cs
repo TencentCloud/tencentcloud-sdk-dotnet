@@ -1577,6 +1577,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 生成攻击日志的产生时间柱状图
+        /// </summary>
+        /// <param name="req"><see cref="GetAttackHistogramRequest"/></param>
+        /// <returns><see cref="GetAttackHistogramResponse"/></returns>
+        public async Task<GetAttackHistogramResponse> GetAttackHistogram(GetAttackHistogramRequest req)
+        {
+             JsonResponseModel<GetAttackHistogramResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAttackHistogram");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAttackHistogramResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成攻击日志的产生时间柱状图
+        /// </summary>
+        /// <param name="req"><see cref="GetAttackHistogramRequest"/></param>
+        /// <returns><see cref="GetAttackHistogramResponse"/></returns>
+        public GetAttackHistogramResponse GetAttackHistogramSync(GetAttackHistogramRequest req)
+        {
+             JsonResponseModel<GetAttackHistogramResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAttackHistogram");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAttackHistogramResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于修改访问日志保存期限及大字段是否存储
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessPeriodRequest"/></param>

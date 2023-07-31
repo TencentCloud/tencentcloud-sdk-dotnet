@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryBarCodeResponse : AbstractModel
+    public class LogHistogramInfo : AbstractModel
     {
         
         /// <summary>
-        /// 条码
+        /// 日志条数
         /// </summary>
-        [JsonProperty("BarCode")]
-        public string BarCode{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
 
         /// <summary>
-        /// 条码信息数组
+        /// 时间戳
         /// </summary>
-        [JsonProperty("ProductDataRecords")]
-        public ProductDataRecord[] ProductDataRecords{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TimeStamp")]
+        public long? TimeStamp{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BarCode", this.BarCode);
-            this.SetParamArrayObj(map, prefix + "ProductDataRecords.", this.ProductDataRecords);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "TimeStamp", this.TimeStamp);
         }
     }
 }

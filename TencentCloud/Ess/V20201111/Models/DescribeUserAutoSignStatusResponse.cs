@@ -25,19 +25,22 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 是否已开通自动签
+        /// 查询用户是否已开通自动签
         /// </summary>
         [JsonProperty("IsOpen")]
         public bool? IsOpen{ get; set; }
 
         /// <summary>
         /// 自动签许可生效时间。当且仅当已开通自动签时有值。
+        /// 
+        /// 值为unix时间戳,单位为秒。
         /// </summary>
         [JsonProperty("LicenseFrom")]
         public long? LicenseFrom{ get; set; }
 
         /// <summary>
         /// 自动签许可到期时间。当且仅当已开通自动签时有值。
+        /// 值为unix时间戳,单位为秒。
         /// </summary>
         [JsonProperty("LicenseTo")]
         public long? LicenseTo{ get; set; }

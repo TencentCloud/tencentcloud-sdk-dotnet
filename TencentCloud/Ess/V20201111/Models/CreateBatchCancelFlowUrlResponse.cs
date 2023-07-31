@@ -32,12 +32,15 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 签署流程撤回失败信息
+        /// 数组里边的错误原因与传进来的FlowIds一一对应,如果是空字符串则标识没有出错
         /// </summary>
         [JsonProperty("FailMessages")]
         public string[] FailMessages{ get; set; }
 
         /// <summary>
         /// 签署连接过期时间字符串：年月日-时分秒
+        /// 
+        /// 例如:2023-07-28 17:25:59
         /// </summary>
         [JsonProperty("UrlExpireOn")]
         public string UrlExpireOn{ get; set; }

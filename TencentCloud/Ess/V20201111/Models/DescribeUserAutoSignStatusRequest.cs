@@ -38,7 +38,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string SceneKey{ get; set; }
 
         /// <summary>
-        /// 查询开启状态的用户信息
+        /// 要查询开启状态的用户信息
         /// </summary>
         [JsonProperty("UserInfo")]
         public UserThreeFactor UserInfo{ get; set; }

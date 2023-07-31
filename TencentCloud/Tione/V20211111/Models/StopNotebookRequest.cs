@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Detail : AbstractModel
+    public class StopNotebookRequest : AbstractModel
     {
         
         /// <summary>
-        /// 企业四要素核验结果状态码
+        /// notebook id
         /// </summary>
-        [JsonProperty("Result")]
-        public long? Result{ get; set; }
-
-        /// <summary>
-        /// 企业四要素核验结果描述
-        /// </summary>
-        [JsonProperty("Desc")]
-        public string Desc{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
-            this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

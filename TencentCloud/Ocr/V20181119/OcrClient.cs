@@ -2451,54 +2451,6 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 库源服务调整，该接口在2023年6月1日将正式下线。
-        /// 
-        /// 本接口支持条形码备案信息查询，返回条形码查询结果的相关信息，包括产品名称、产品英文名称、品牌名称、规格型号、宽度、高度、深度、关键字、产品描述、厂家名称、厂家地址、企业社会信用代码13个字段信息。
-        /// 
-        /// 产品优势：直联中国物品编码中心，查询结果更加准确、可靠。
-        /// </summary>
-        /// <param name="req"><see cref="QueryBarCodeRequest"/></param>
-        /// <returns><see cref="QueryBarCodeResponse"/></returns>
-        public async Task<QueryBarCodeResponse> QueryBarCode(QueryBarCodeRequest req)
-        {
-             JsonResponseModel<QueryBarCodeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryBarCode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryBarCodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 库源服务调整，该接口在2023年6月1日将正式下线。
-        /// 
-        /// 本接口支持条形码备案信息查询，返回条形码查询结果的相关信息，包括产品名称、产品英文名称、品牌名称、规格型号、宽度、高度、深度、关键字、产品描述、厂家名称、厂家地址、企业社会信用代码13个字段信息。
-        /// 
-        /// 产品优势：直联中国物品编码中心，查询结果更加准确、可靠。
-        /// </summary>
-        /// <param name="req"><see cref="QueryBarCodeRequest"/></param>
-        /// <returns><see cref="QueryBarCodeResponse"/></returns>
-        public QueryBarCodeResponse QueryBarCodeSync(QueryBarCodeRequest req)
-        {
-             JsonResponseModel<QueryBarCodeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryBarCode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryBarCodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
         /// 
         /// 默认接口请求频率限制：5次/秒。
@@ -4360,50 +4312,6 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = this.InternalRequestSync(req, "VerifyBizLicense");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyBizLicenseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 库源服务调整，该接口在2023年6月1日将正式下线。
-        /// 
-        /// 此接口基于企业四要素授权“姓名、证件号码、企业标识、企业全称”，验证企业信息是否一致。
-        /// </summary>
-        /// <param name="req"><see cref="VerifyEnterpriseFourFactorsRequest"/></param>
-        /// <returns><see cref="VerifyEnterpriseFourFactorsResponse"/></returns>
-        public async Task<VerifyEnterpriseFourFactorsResponse> VerifyEnterpriseFourFactors(VerifyEnterpriseFourFactorsRequest req)
-        {
-             JsonResponseModel<VerifyEnterpriseFourFactorsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "VerifyEnterpriseFourFactors");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyEnterpriseFourFactorsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 库源服务调整，该接口在2023年6月1日将正式下线。
-        /// 
-        /// 此接口基于企业四要素授权“姓名、证件号码、企业标识、企业全称”，验证企业信息是否一致。
-        /// </summary>
-        /// <param name="req"><see cref="VerifyEnterpriseFourFactorsRequest"/></param>
-        /// <returns><see cref="VerifyEnterpriseFourFactorsResponse"/></returns>
-        public VerifyEnterpriseFourFactorsResponse VerifyEnterpriseFourFactorsSync(VerifyEnterpriseFourFactorsRequest req)
-        {
-             JsonResponseModel<VerifyEnterpriseFourFactorsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "VerifyEnterpriseFourFactors");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyEnterpriseFourFactorsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

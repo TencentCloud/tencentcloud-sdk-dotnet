@@ -55,6 +55,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
+        /// 观看类型。互动观看 （默认）	
+        /// </summary>
+        [JsonProperty("AudienceType")]
+        public ulong? AudienceType{ get; set; }
+
+        /// <summary>
         /// 分辨率。可以有如下取值：
         /// 1 标清
         /// 2 高清
@@ -179,6 +185,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "TeacherId", this.TeacherId);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "AudienceType", this.AudienceType);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "MaxMicNumber", this.MaxMicNumber);
             this.SetParamSimple(map, prefix + "AutoMic", this.AutoMic);

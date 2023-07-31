@@ -32,6 +32,8 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 需要查询的流程ID列表，限制最大100个
+        /// 
+        /// 如果查询合同组的信息,不要传此参数
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
@@ -43,7 +45,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 合同组ID
+        /// 合同组ID, 如果传此参数会忽略FlowIds入参
+        ///  所以如传此参数不要传FlowIds参数
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }

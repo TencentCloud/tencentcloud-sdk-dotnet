@@ -44,19 +44,24 @@ namespace TencentCloud.Ess.V20201111.Models
         public AutoSignConfig AutoSignConfig{ get; set; }
 
         /// <summary>
-        /// 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
+        /// 链接类型，
+        /// 空-默认小程序端链接
+        /// H5SIGN-h5端链接
         /// </summary>
         [JsonProperty("UrlType")]
         public string UrlType{ get; set; }
 
         /// <summary>
-        /// 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
+        /// 通知类型
+        /// 
+        /// 默认不设置为不通知开通方，
+        /// SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// 若上方填写为 SMS，则此处为手机号
+        /// 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
         /// </summary>
         [JsonProperty("NotifyAddress")]
         public string NotifyAddress{ get; set; }

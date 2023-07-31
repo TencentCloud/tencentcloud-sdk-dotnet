@@ -37,7 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string SrcTopicId{ get; set; }
 
         /// <summary>
-        /// 任务启动状态.   1正常开启,  2关闭
+        /// 任务启动状态.   1开启,  2关闭
         /// </summary>
         [JsonProperty("EnableFlag")]
         public long? EnableFlag{ get; set; }

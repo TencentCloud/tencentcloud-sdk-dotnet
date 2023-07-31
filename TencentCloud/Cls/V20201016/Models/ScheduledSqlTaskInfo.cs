@@ -93,7 +93,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ProcessStartTime{ get; set; }
 
         /// <summary>
-        /// 调度类型，1:持续运行 2:指定调度结束时间
+        /// 调度类型，1:持续运行 2:指定时间范围
         /// </summary>
         [JsonProperty("ProcessType")]
         public long? ProcessType{ get; set; }

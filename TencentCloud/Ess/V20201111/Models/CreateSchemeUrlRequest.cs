@@ -64,7 +64,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 合同组ID
+        /// 合同组ID 
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
@@ -76,7 +76,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong? PathType{ get; set; }
 
         /// <summary>
-        /// 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
+        /// 是否自动回跳
+        /// true：是，
+        /// false：否。
+        /// 该参数只针对"APP" 类型的签署链接有效
         /// </summary>
         [JsonProperty("AutoJumpBack")]
         public bool? AutoJumpBack{ get; set; }

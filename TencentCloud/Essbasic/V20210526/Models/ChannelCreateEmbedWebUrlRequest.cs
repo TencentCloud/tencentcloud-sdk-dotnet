@@ -31,25 +31,27 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// WEB嵌入资源类型。
-        /// CREATE_SEAL: 创建印章
-        /// CREATE_TEMPLATE：创建模板
-        /// MODIFY_TEMPLATE：修改模板
-        /// PREVIEW_TEMPLATE：预览模板
-        /// PREVIEW_FLOW：预览合同文档
-        /// PREVIEW_FLOW_DETAIL：预览合同详情
-        /// PREVIEW_SEAL_LIST：预览印章列表
-        /// PREVIEW_SEAL_DETAIL：预览印章详情
-        /// EXTEND_SERVICE：扩展服务
+        /// 要生成WEB嵌入界面的类型, 可以选择的值如下: 
+        /// 
+        /// - CREATE_SEAL: 生成创建印章的嵌入页面
+        /// - CREATE_TEMPLATE：生成创建模板的嵌入页面
+        /// - MODIFY_TEMPLATE：生成修改模板的嵌入页面
+        /// - PREVIEW_TEMPLATE：生成预览模板的嵌入页面
+        /// - PREVIEW_FLOW：生成预览合同文档的嵌入页面
+        /// - PREVIEW_FLOW_DETAIL：生成预览合同详情的嵌入页面
+        /// - PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面
+        /// - PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面
+        /// - EXTEND_SERVICE：生成扩展服务的嵌入页面
         /// </summary>
         [JsonProperty("EmbedType")]
         public string EmbedType{ get; set; }
 
         /// <summary>
         /// WEB嵌入的业务资源ID
-        /// EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模板id
-        /// PREVIEW_FLOW，PREVIEW_FLOW_DETAIL时必填，取值为合同id
-        /// PREVIEW_SEAL_DETAIL，必填，取值为印章id
+        /// 
+        /// - 当EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时需要填写模板id作为BusinessId
+        /// - 当EmbedType取值PREVIEW_FLOW，PREVIEW_FLOW_DETAIL时需要填写合同id作为BusinessId
+        /// - 当EmbedType取值PREVIEW_SEAL_DETAIL需要填写印章id作为BusinessId
         /// </summary>
         [JsonProperty("BusinessId")]
         public string BusinessId{ get; set; }

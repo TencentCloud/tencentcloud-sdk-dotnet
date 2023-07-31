@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class VerifyEnterpriseFourFactorsRequest : AbstractModel
+    public class ModifyNotebookTagsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 姓名
+        /// Notebook Id
         /// </summary>
-        [JsonProperty("RealName")]
-        public string RealName{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// 证件号码（公司注册证件号）
+        /// Notebook修改标签集合
         /// </summary>
-        [JsonProperty("IdCard")]
-        public string IdCard{ get; set; }
-
-        /// <summary>
-        /// 企业全称
-        /// </summary>
-        [JsonProperty("EnterpriseName")]
-        public string EnterpriseName{ get; set; }
-
-        /// <summary>
-        /// 企业标识（注册号，统一社会信用代码）
-        /// </summary>
-        [JsonProperty("EnterpriseMark")]
-        public string EnterpriseMark{ get; set; }
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RealName", this.RealName);
-            this.SetParamSimple(map, prefix + "IdCard", this.IdCard);
-            this.SetParamSimple(map, prefix + "EnterpriseName", this.EnterpriseName);
-            this.SetParamSimple(map, prefix + "EnterpriseMark", this.EnterpriseMark);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }
