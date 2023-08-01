@@ -44,6 +44,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("CropParams")]
         public CommonMixCropParams CropParams{ get; set; }
 
+        /// <summary>
+        /// 抠图参数。
+        /// </summary>
+        [JsonProperty("PortraitSegmentParams")]
+        public MixPortraitSegmentParams PortraitSegmentParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "InputStreamName", this.InputStreamName);
             this.SetParamObj(map, prefix + "LayoutParams.", this.LayoutParams);
             this.SetParamObj(map, prefix + "CropParams.", this.CropParams);
+            this.SetParamObj(map, prefix + "PortraitSegmentParams.", this.PortraitSegmentParams);
         }
     }
 }

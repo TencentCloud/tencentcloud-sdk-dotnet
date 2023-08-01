@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ListenerIds{ get; set; }
 
         /// <summary>
-        /// 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
+        /// 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

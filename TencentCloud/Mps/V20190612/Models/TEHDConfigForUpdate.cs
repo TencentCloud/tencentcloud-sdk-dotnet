@@ -29,12 +29,14 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>TEHD-100：极速高清-100（视频极速高清）。</li>
         /// <li>TEHD-200：极速高清-200（音频极速高清）。</li>
         /// 不填代表不修改。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 视频码率上限，不填代表不修改。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxVideoBitrate")]
         public ulong? MaxVideoBitrate{ get; set; }

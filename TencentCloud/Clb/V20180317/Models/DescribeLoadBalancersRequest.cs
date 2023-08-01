@@ -50,7 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
+        /// 腾讯云为负载均衡实例分配的域名。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

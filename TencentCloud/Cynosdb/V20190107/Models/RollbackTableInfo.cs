@@ -26,12 +26,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// 旧表名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldTable")]
         public string OldTable{ get; set; }
 
         /// <summary>
         /// 新表名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewTable")]
         public string NewTable{ get; set; }

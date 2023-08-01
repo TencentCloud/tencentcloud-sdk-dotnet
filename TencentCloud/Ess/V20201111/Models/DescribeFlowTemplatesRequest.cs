@@ -27,7 +27,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 调用方员工/经办人信息
         /// UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-        /// 注：请保证对应
+        /// 注：请保证员工有相关的角色权限
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }

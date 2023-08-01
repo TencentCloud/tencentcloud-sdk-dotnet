@@ -25,13 +25,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 模板ID
+        /// 模板ID，模板的唯一标识
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 模板名字
+        /// 模板名
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 模板的填充控件信息结构
+        /// 模板的填充控件列表
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }
 
         /// <summary>
-        /// 模板中的流程参与人信息
+        /// 模板中的签署参与方列表
         /// </summary>
         [JsonProperty("Recipients")]
         public Recipient[] Recipients{ get; set; }
 
         /// <summary>
-        /// 模板中的签署控件信息结构
+        /// 模板中的签署控件列表
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }
@@ -80,54 +80,62 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 模板创建的时间戳，单位秒
+        /// 模板创建的时间戳，格式为Unix标准时间戳（秒）
         /// </summary>
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
 
         /// <summary>
-        /// 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。请求参数WithPreviewUrl=true时返回，有效期5分钟。
+        /// 模板的H5预览链接,有效期5分钟。
+        /// 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+        /// （此功能开放需要联系客户经理）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreviewUrl")]
         public string PreviewUrl{ get; set; }
 
         /// <summary>
-        /// 第三方应用集成-模板PDF文件链接。请求参数WithPdfUrl=true时返回（此功能开放需要联系客户经理），有效期5分钟。
+        /// 第三方应用集成-模板PDF文件链接，有效期5分钟。
+        /// 请求参数WithPdfUrl=true时返回
+        /// （此功能开放需要联系客户经理）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PdfUrl")]
         public string PdfUrl{ get; set; }
 
         /// <summary>
-        /// 关联的第三方应用平台企业模板ID
+        /// 本模板关联的第三方应用平台企业模板ID
         /// </summary>
         [JsonProperty("ChannelTemplateId")]
         public string ChannelTemplateId{ get; set; }
 
         /// <summary>
-        /// 关联的三方应用平台平台企业模板名称
+        /// 本模板关联的三方应用平台平台企业模板名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelTemplateName")]
         public string ChannelTemplateName{ get; set; }
 
         /// <summary>
-        /// 0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
+        /// 0-需要子客企业手动领取平台企业的模板(默认); 
+        /// 1-平台自动设置子客模板
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelAutoSave")]
         public long? ChannelAutoSave{ get; set; }
 
         /// <summary>
-        /// 模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
+        /// 模板版本，全数字字符。
+        /// 默认为空，初始版本为yyyyMMdd001。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateVersion")]
         public string TemplateVersion{ get; set; }
 
         /// <summary>
-        /// 模板可用状态，取值：1启用（默认），2停用
+        /// 模板可用状态：
+        /// 1启用（默认）
+        /// 2停用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Available")]

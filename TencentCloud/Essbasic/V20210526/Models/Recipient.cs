@@ -25,43 +25,50 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 签署人唯一标识，在通过模板发起合同的时候对应签署方Id
+        /// 签署人唯一标识，在通过模板发起合同的时候对应签署方ID
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
 
         /// <summary>
-        /// 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
+        /// 参与者类型，默认为空。
+        /// ENTERPRISE-企业；
+        /// INDIVIDUAL-个人；
+        /// PROMOTER-发起方
         /// </summary>
         [JsonProperty("RecipientType")]
         public string RecipientType{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// 描述信息	
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 签署方备注角色名
+        /// 角色名称	
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
         /// <summary>
-        /// 是否需要校验，true-是，false-否
+        /// 是否需要校验，
+        /// true-是，
+        /// false-否
         /// </summary>
         [JsonProperty("RequireValidation")]
         public bool? RequireValidation{ get; set; }
 
         /// <summary>
-        /// 是否必须填写，true-是，false-否
+        /// 是否必须填写，
+        /// true-是，
+        /// false-否
         /// </summary>
         [JsonProperty("RequireSign")]
         public bool? RequireSign{ get; set; }
 
         /// <summary>
-        /// 签署类型
+        /// 内部字段，签署类型
         /// </summary>
         [JsonProperty("SignType")]
         public long? SignType{ get; set; }
@@ -73,7 +80,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? RoutingOrder{ get; set; }
 
         /// <summary>
-        /// 是否是发起方
+        /// 是否是发起方，
+        /// true-是 
+        /// false-否
         /// </summary>
         [JsonProperty("IsPromoter")]
         public bool? IsPromoter{ get; set; }

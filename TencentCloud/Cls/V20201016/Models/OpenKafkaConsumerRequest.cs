@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// CLS控制台创建的TopicId
+        /// 日志主题ID
         /// </summary>
         [JsonProperty("FromTopicId")]
         public string FromTopicId{ get; set; }

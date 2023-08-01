@@ -25,7 +25,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
+        /// 应用相关信息。 
+        /// 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -37,25 +38,29 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 查询内容：0-模板列表及详情（默认），1-仅模板列表
+        /// 查询内容：
+        /// 0-模板列表及详情（默认），
+        /// 1-仅模板列表
         /// </summary>
         [JsonProperty("ContentType")]
         public long? ContentType{ get; set; }
 
         /// <summary>
-        /// 查询个数，默认20，最大100；在查询列表的时候有效
+        /// 指定每页多少条数据，如果不传默认为20，单页最大100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 查询偏移位置，默认0；在查询列表的时候有效
+        /// 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
+        /// 是否返回所有组件信息。
+        /// 默认false，只返回发起方控件；
+        /// true，返回所有签署方控件
         /// </summary>
         [JsonProperty("QueryAllComponents")]
         public bool? QueryAllComponents{ get; set; }
@@ -67,13 +72,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 是否获取模板预览链接
+        /// 是否获取模板预览链接，
+        /// 默认false-不获取
+        /// true-获取
         /// </summary>
         [JsonProperty("WithPreviewUrl")]
         public bool? WithPreviewUrl{ get; set; }
 
         /// <summary>
-        /// 是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
+        /// 是否获取模板的PDF文件链接。
+        /// 默认false-不获取
+        /// true-获取
+        /// 请联系客户经理开白后使用。
         /// </summary>
         [JsonProperty("WithPdfUrl")]
         public bool? WithPdfUrl{ get; set; }

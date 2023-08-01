@@ -25,25 +25,25 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 模板详情
+        /// 模板列表
         /// </summary>
         [JsonProperty("Templates")]
         public TemplateInfo[] Templates{ get; set; }
 
         /// <summary>
-        /// 查询总数
+        /// 查询到的总数
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 查询数量
+        /// 每页多少条数据
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 查询起始偏移
+        /// 查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

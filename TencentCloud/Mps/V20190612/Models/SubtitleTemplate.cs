@@ -26,12 +26,14 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 要压制到视频中的字幕文件地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
         /// 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamIndex")]
         public long? StreamIndex{ get; set; }
@@ -43,18 +45,21 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>simkai.ttf：楷体</li>
         /// <li>arial.ttf：仅支持英文</li>
         /// 默认hei.ttf
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FontType")]
         public string FontType{ get; set; }
 
         /// <summary>
         /// 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FontSize")]
         public string FontSize{ get; set; }
 
         /// <summary>
         /// 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FontColor")]
         public string FontColor{ get; set; }
@@ -64,6 +69,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>0：完全透明</li>
         /// <li>1：完全不透明</li>
         /// 默认值：1。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FontAlpha")]
         public float? FontAlpha{ get; set; }

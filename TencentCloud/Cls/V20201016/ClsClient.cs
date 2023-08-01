@@ -1933,6 +1933,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 获取Kafka协议消费信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerResponse"/></returns>
+        public async Task<DescribeKafkaConsumerResponse> DescribeKafkaConsumer(DescribeKafkaConsumerRequest req)
+        {
+             JsonResponseModel<DescribeKafkaConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKafkaConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKafkaConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Kafka协议消费信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerResponse"/></returns>
+        public DescribeKafkaConsumerResponse DescribeKafkaConsumerSync(DescribeKafkaConsumerRequest req)
+        {
+             JsonResponseModel<DescribeKafkaConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKafkaConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKafkaConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于获取Kafka数据订阅任务
         /// </summary>
         /// <param name="req"><see cref="DescribeKafkaRechargesRequest"/></param>
@@ -2804,6 +2844,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "ModifyIndex");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改Kafka协议消费信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKafkaConsumerRequest"/></param>
+        /// <returns><see cref="ModifyKafkaConsumerResponse"/></returns>
+        public async Task<ModifyKafkaConsumerResponse> ModifyKafkaConsumer(ModifyKafkaConsumerRequest req)
+        {
+             JsonResponseModel<ModifyKafkaConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyKafkaConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyKafkaConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改Kafka协议消费信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKafkaConsumerRequest"/></param>
+        /// <returns><see cref="ModifyKafkaConsumerResponse"/></returns>
+        public ModifyKafkaConsumerResponse ModifyKafkaConsumerSync(ModifyKafkaConsumerRequest req)
+        {
+             JsonResponseModel<ModifyKafkaConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyKafkaConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyKafkaConsumerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

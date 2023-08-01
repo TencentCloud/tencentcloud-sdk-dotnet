@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.813</VersionPrefix>
+    <VersionPrefix>3.0.814</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -167,6 +167,8 @@
     <Compile Include="V20201016\Models\DescribeExportsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeIndexRequest.cs" />
     <Compile Include="V20201016\Models\DescribeIndexResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeKafkaConsumerRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeKafkaConsumerResponse.cs" />
     <Compile Include="V20201016\Models\DescribeKafkaRechargesRequest.cs" />
     <Compile Include="V20201016\Models\DescribeKafkaRechargesResponse.cs" />
     <Compile Include="V20201016\Models\DescribeLogContextRequest.cs" />
@@ -237,6 +239,8 @@
     <Compile Include="V20201016\Models\ModifyDataTransformResponse.cs" />
     <Compile Include="V20201016\Models\ModifyIndexRequest.cs" />
     <Compile Include="V20201016\Models\ModifyIndexResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyKafkaConsumerRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyKafkaConsumerResponse.cs" />
     <Compile Include="V20201016\Models\ModifyKafkaRechargeRequest.cs" />
     <Compile Include="V20201016\Models\ModifyKafkaRechargeResponse.cs" />
     <Compile Include="V20201016\Models\ModifyLogsetRequest.cs" />

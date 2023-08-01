@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpnGatewayName{ get; set; }
 
         /// <summary>
-        /// 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
+        /// 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
@@ -61,25 +61,25 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
+        /// VPN网关类型，默认为IPSEC。值“IPSEC”为VPC型IPSEC VPN网关，值“SSL”为VPC型SSL VPN网关，值“CCN”为云联网型IPSEC VPN网关，值“SSL_CCN”为云联网型SSL VPN网关。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// CDC实例ID
+        /// CDC实例ID。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
-        /// SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
+        /// SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。仅 SSL / SSL_CCN 类型需要选这个参数。
         /// </summary>
         [JsonProperty("MaxConnection")]
         public ulong? MaxConnection{ get; set; }

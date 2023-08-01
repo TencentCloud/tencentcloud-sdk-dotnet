@@ -42,6 +42,15 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
+        /// <summary>
+        /// DeviceType
+        /// 不传：返回所有设备；
+        /// 1:自有设备；
+        /// 2:三方设备
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public long? DeviceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +60,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
         }
     }
 }

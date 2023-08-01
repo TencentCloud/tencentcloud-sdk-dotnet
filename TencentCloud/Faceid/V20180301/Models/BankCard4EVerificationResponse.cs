@@ -47,6 +47,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// '-4': '银行卡号码有误'
         /// '-5': '手机号码不合法'
         /// '-18': '验证中心服务繁忙'
+        /// '-19': '验证次数超限，请次日重试'
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

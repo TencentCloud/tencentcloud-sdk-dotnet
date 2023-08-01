@@ -53,7 +53,7 @@ namespace TencentCloud.Ms.V20180408.Models
 
         /// <summary>
         /// app的包名，本次操作的包名。
-        /// 当安卓是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
+        /// 当Android是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
         /// </summary>
         [JsonProperty("AppPkgName")]
         public string AppPkgName{ get; set; }
@@ -71,8 +71,8 @@ namespace TencentCloud.Ms.V20180408.Models
         public string AppVersion{ get; set; }
 
         /// <summary>
-        /// 安卓app的文件类型，本次加固操作的应用类型 。
-        /// 安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+        /// Android app的文件类型，本次加固操作的应用类型 。
+        /// Android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
         /// </summary>
         [JsonProperty("AppType")]
         public string AppType{ get; set; }

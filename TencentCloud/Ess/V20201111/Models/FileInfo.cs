@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 文件Id
+        /// 文件ID
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? FileSize{ get; set; }
 
         /// <summary>
-        /// 文件上传时间，10位时间戳（精确到秒）
+        /// 文件上传时间，格式为Unix标准时间戳（秒）
         /// </summary>
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }

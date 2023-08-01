@@ -25,13 +25,17 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 签署参与者ID
+        /// 签署参与者ID，唯一标识
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
 
         /// <summary>
-        /// 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
+        /// 参与者类型。
+        /// 默认为空。
+        /// ENTERPRISE-企业；
+        /// INDIVIDUAL-个人；
+        /// PROMOTER-发起方
         /// </summary>
         [JsonProperty("RecipientType")]
         public string RecipientType{ get; set; }
@@ -49,25 +53,28 @@ namespace TencentCloud.Ess.V20201111.Models
         public string RoleName{ get; set; }
 
         /// <summary>
-        /// 是否需要验证，默认为false
+        /// 是否需要验证，
+        /// 默认为false-不需要验证
         /// </summary>
         [JsonProperty("RequireValidation")]
         public bool? RequireValidation{ get; set; }
 
         /// <summary>
-        /// 是否需要签署，默认为true
+        /// 是否需要签署，
+        /// 默认为true-需要签署
         /// </summary>
         [JsonProperty("RequireSign")]
         public bool? RequireSign{ get; set; }
 
         /// <summary>
-        /// 添加序列，0～N
+        /// 此参与方添加的顺序，从0～N
         /// </summary>
         [JsonProperty("RoutingOrder")]
         public long? RoutingOrder{ get; set; }
 
         /// <summary>
-        /// 是否需要发送，默认为true
+        /// 是否需要发送，
+        /// 默认为true-需要发送
         /// </summary>
         [JsonProperty("RequireDelivery")]
         public bool? RequireDelivery{ get; set; }
@@ -85,19 +92,22 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 关联的用户ID
+        /// 关联的用户ID，电子签系统的用户ID
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
+        /// 发送方式，默认为EMAIL。
+        /// EMAIL-邮件；
+        /// MOBILE-手机短信；
+        /// WECHAT-微信通知
         /// </summary>
         [JsonProperty("DeliveryMethod")]
         public string DeliveryMethod{ get; set; }
 
         /// <summary>
-        /// 附属信息
+        /// 参与方的一些附属信息，json格式
         /// </summary>
         [JsonProperty("RecipientExtra")]
         public string RecipientExtra{ get; set; }

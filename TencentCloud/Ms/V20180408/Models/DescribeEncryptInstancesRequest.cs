@@ -49,7 +49,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public string OrderDirection{ get; set; }
 
         /// <summary>
-        /// (条件过滤字段) 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+        /// (条件过滤字段) 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
         /// </summary>
         [JsonProperty("PlatformType")]
         public long? PlatformType{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Ms.V20180408.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// (条件过滤字段) 安卓应用类型：安卓-apk; 安卓-aab;
+        /// (条件过滤字段) 应用类型：android-apk; android-aab;
         /// </summary>
         [JsonProperty("AppType")]
         public string AppType{ get; set; }
 
         /// <summary>
-        /// （条件过滤字段）安卓应用的包名
+        /// （条件过滤字段）应用的包名
         /// </summary>
         [JsonProperty("AppPkgName")]
         public string AppPkgName{ get; set; }

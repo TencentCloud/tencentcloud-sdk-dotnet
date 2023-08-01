@@ -31,7 +31,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public long? PlatformType{ get; set; }
 
         /// <summary>
-        /// 平台类型描述 1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+        /// 平台类型描述 1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
         /// </summary>
         [JsonProperty("PlatformTypeDesc")]
         public string PlatformTypeDesc{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 上次安卓加固策略
+        /// 上次加固策略
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidPlan")]

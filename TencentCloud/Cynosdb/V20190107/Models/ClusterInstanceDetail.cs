@@ -78,6 +78,27 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
 
+        /// <summary>
+        /// 执行开始时间(距离0点的秒数)	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaintainStartTime")]
+        public long? MaintainStartTime{ get; set; }
+
+        /// <summary>
+        /// 持续的时间(单位：秒)	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaintainDuration")]
+        public long? MaintainDuration{ get; set; }
+
+        /// <summary>
+        /// 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaintainWeekDays")]
+        public string[] MaintainWeekDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +114,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "InstanceMemory", this.InstanceMemory);
             this.SetParamSimple(map, prefix + "InstanceStorage", this.InstanceStorage);
             this.SetParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
+            this.SetParamSimple(map, prefix + "MaintainStartTime", this.MaintainStartTime);
+            this.SetParamSimple(map, prefix + "MaintainDuration", this.MaintainDuration);
+            this.SetParamArraySimple(map, prefix + "MaintainWeekDays.", this.MaintainWeekDays);
         }
     }
 }

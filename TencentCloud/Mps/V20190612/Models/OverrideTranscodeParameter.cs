@@ -79,6 +79,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AddonAudioStream")]
         public MediaInputInfo[] AddonAudioStream{ get; set; }
 
+        /// <summary>
+        /// 转码扩展字段。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StdExtInfo")]
+        public string StdExtInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +100,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
             this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
             this.SetParamArrayObj(map, prefix + "AddonAudioStream.", this.AddonAudioStream);
+            this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         }
     }
 }

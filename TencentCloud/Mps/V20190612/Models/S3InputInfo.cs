@@ -26,6 +26,7 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// S3 bucket。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3Bucket")]
         public string S3Bucket{ get; set; }
@@ -34,24 +35,29 @@ namespace TencentCloud.Mps.V20190612.Models
         /// S3 bucket 对应的区域，目前支持：  
         /// us-east-1  
         /// eu-west-3
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3Region")]
         public string S3Region{ get; set; }
 
         /// <summary>
         /// S3 bucket 中的媒体资源路径。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3Object")]
         public string S3Object{ get; set; }
 
         /// <summary>
         /// AWS 内网访问 媒体资源的秘钥id。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3SecretId")]
         public string S3SecretId{ get; set; }
 
         /// <summary>
         /// AWS 内网访问 媒体资源的秘钥key。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3SecretKey")]
         public string S3SecretKey{ get; set; }

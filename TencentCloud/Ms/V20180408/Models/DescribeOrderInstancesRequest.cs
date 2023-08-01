@@ -49,7 +49,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public string OrderDirection{ get; set; }
 
         /// <summary>
-        /// （条件过滤字段）平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+        /// （条件过滤字段）平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
         /// </summary>
         [JsonProperty("PlatformType")]
         public long? PlatformType{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// （条件过滤字段）安卓包名，查询android安卓加固订单时使用
+        /// （条件过滤字段）包名，查询android加固订单时使用
         /// </summary>
         [JsonProperty("AppPkgName")]
         public string AppPkgName{ get; set; }

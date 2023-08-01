@@ -375,6 +375,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("TradeVersion")]
         public long? TradeVersion{ get; set; }
 
+        /// <summary>
+        /// 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServicesStatus")]
+        public string ServicesStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -431,6 +438,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ServiceClient", this.ServiceClient);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
             this.SetParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
+            this.SetParamSimple(map, prefix + "ServicesStatus", this.ServicesStatus);
         }
     }
 }

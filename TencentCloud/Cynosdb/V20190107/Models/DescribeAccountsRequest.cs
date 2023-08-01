@@ -62,6 +62,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// 模糊匹配关键字(同时匹配AccountName和AccountHost，返回并集结果，支持正则)
+        /// </summary>
+        [JsonProperty("AccountRegular")]
+        public string AccountRegular{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "Hosts.", this.Hosts);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "AccountRegular", this.AccountRegular);
         }
     }
 }

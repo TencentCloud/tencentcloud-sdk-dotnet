@@ -31,8 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 
         /// 注：
         /// 当GenerateMode=KEYWORD时，通过"^"来决定是否使用关键字整词匹配能力。
-        /// 例：
-        /// 当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
+        /// 例：当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
         /// 如传入的关键字为"甲方签署"，则PDF文件中每个出现关键字的位置都会执行相应操作。
         /// 
         /// 创建控件时，此值为空
@@ -68,19 +67,20 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ComponentType{ get; set; }
 
         /// <summary>
-        /// 控件简称，不能超过30个字符
+        /// 控件简称，不超过30个字符
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
 
         /// <summary>
-        /// 定义控件是否为必填项，默认为false
+        /// 控件是否为必填项，
+        /// 默认为false-非必填
         /// </summary>
         [JsonProperty("ComponentRequired")]
         public bool? ComponentRequired{ get; set; }
 
         /// <summary>
-        /// 控件关联的签署方id
+        /// 控件关联的参与方ID，对应Recipient结构体中的RecipientId	
         /// </summary>
         [JsonProperty("ComponentRecipientId")]
         public string ComponentRecipientId{ get; set; }
@@ -263,13 +263,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? ComponentDateFontSize{ get; set; }
 
         /// <summary>
-        /// 控件所属文档的Id, 模块相关接口为空值
+        /// 控件所属文档的Id, 模板相关接口为空值
         /// </summary>
         [JsonProperty("DocumentId")]
         public string DocumentId{ get; set; }
 
         /// <summary>
-        /// 控件描述，不能超过30个字符
+        /// 控件描述，不超过30个字符
         /// </summary>
         [JsonProperty("ComponentDescription")]
         public string ComponentDescription{ get; set; }
@@ -294,26 +294,37 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ChannelComponentId{ get; set; }
 
         /// <summary>
-        /// 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+        /// 指定关键字排序规则，
+        /// Positive-正序，
+        /// Reverse-倒序。
+        /// 传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
         /// 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
         /// </summary>
         [JsonProperty("KeywordOrder")]
         public string KeywordOrder{ get; set; }
 
         /// <summary>
-        /// 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+        /// 指定关键字页码。
+        /// 指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
         /// </summary>
         [JsonProperty("KeywordPage")]
         public long? KeywordPage{ get; set; }
 
         /// <summary>
-        /// 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+        /// 关键字位置模式，
+        /// Middle-居中，
+        /// Below-正下方，
+        /// Right-正右方，
+        /// LowerRight-右上角，
+        /// UpperRight-右下角。
+        /// 示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
         /// </summary>
         [JsonProperty("RelativeLocation")]
         public string RelativeLocation{ get; set; }
 
         /// <summary>
-        /// 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+        /// 关键字索引，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+        /// 示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
         /// </summary>
         [JsonProperty("KeywordIndexes")]
         public long?[] KeywordIndexes{ get; set; }

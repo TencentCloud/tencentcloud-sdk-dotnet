@@ -36,6 +36,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <br/>PREVIEW_SEAL_LIST：预览印章列表
         /// <br/>PREVIEW_SEAL_DETAIL：预览印章详情
         /// <br/>EXTEND_SERVICE：拓展服务
+        /// <br/>PREVIEW_FLOW：预览合同
+        /// <br/>PREVIEW_FLOW_DETAIL：查看合同详情
         /// </summary>
         [JsonProperty("EmbedType")]
         public string EmbedType{ get; set; }
@@ -59,6 +61,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Reviewer")]
         public ReviewerInfo Reviewer{ get; set; }
 
+        /// <summary>
+        /// 个性化参数
+        /// </summary>
+        [JsonProperty("Option")]
+        public EmbedUrlOption Option{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +78,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "BusinessId", this.BusinessId);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamObj(map, prefix + "Reviewer.", this.Reviewer);
+            this.SetParamObj(map, prefix + "Option.", this.Option);
         }
     }
 }

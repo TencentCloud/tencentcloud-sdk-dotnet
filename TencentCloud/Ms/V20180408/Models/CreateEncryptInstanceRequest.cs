@@ -25,7 +25,7 @@ namespace TencentCloud.Ms.V20180408.Models
     {
         
         /// <summary>
-        /// 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+        /// 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
         /// </summary>
         [JsonProperty("PlatformType")]
         public long? PlatformType{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Ms.V20180408.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 渠道合作安卓加固App信息 
+        /// 渠道合作android加固App信息 
         /// </summary>
         [JsonProperty("AndroidAppInfo")]
         public AndroidAppInfo AndroidAppInfo{ get; set; }
 
         /// <summary>
-        /// 渠道合作安卓加固策略信息
+        /// 渠道合作android加固策略信息
         /// </summary>
         [JsonProperty("AndroidPlan")]
         public AndroidPlan AndroidPlan{ get; set; }

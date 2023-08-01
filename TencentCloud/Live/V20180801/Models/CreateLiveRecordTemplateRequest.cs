@@ -82,6 +82,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 是否去除水印，类型为慢直播时此参数无效。
+        /// 如果为false，则录制水印流或转码流；如果为true，则录制原始流。
         /// </summary>
         [JsonProperty("RemoveWatermark")]
         public bool? RemoveWatermark{ get; set; }

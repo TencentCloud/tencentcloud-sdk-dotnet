@@ -693,6 +693,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 创建RocketMQ专享实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQVipInstanceRequest"/></param>
+        /// <returns><see cref="CreateRocketMQVipInstanceResponse"/></returns>
+        public async Task<CreateRocketMQVipInstanceResponse> CreateRocketMQVipInstance(CreateRocketMQVipInstanceRequest req)
+        {
+             JsonResponseModel<CreateRocketMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRocketMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRocketMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建RocketMQ专享实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQVipInstanceRequest"/></param>
+        /// <returns><see cref="CreateRocketMQVipInstanceResponse"/></returns>
+        public CreateRocketMQVipInstanceResponse CreateRocketMQVipInstanceSync(CreateRocketMQVipInstanceRequest req)
+        {
+             JsonResponseModel<CreateRocketMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRocketMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRocketMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建角色
         /// </summary>
         /// <param name="req"><see cref="CreateRoleRequest"/></param>

@@ -43,20 +43,24 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 是否顺序签署(true:无序签,false:顺序签)
+        /// 是否顺序签署
+        /// true:无序签
+        /// false:顺序签
         /// </summary>
         [JsonProperty("Unordered")]
         public bool? Unordered{ get; set; }
 
         /// <summary>
         /// 签署流程的签署截止时间。
-        /// 值为unix时间戳,精确到秒,不传默认为当前时间一年后
+        /// 值为unix时间戳,精确到秒
+        /// 不传默认为当前时间一年后
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
 
         /// <summary>
-        /// 用户自定义合同类型
+        /// 用户自定义合同类型Id
+        /// 该id为电子签企业内的合同类型id
         /// </summary>
         [JsonProperty("UserFlowTypeId")]
         public string UserFlowTypeId{ get; set; }
@@ -68,10 +72,75 @@ namespace TencentCloud.Ess.V20201111.Models
         public FlowCreateApprover[] Approvers{ get; set; }
 
         /// <summary>
-        /// 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
+        /// 打开智能添加填写区
+        /// (默认开启，打开:"OPEN"
+        ///  关闭："CLOSE"
         /// </summary>
         [JsonProperty("IntelligentStatus")]
         public string IntelligentStatus{ get; set; }
+
+        /// <summary>
+        /// 资源类型，
+        /// 1：文件，
+        /// 2：模板
+        /// 不传默认为1：文件
+        /// 目前仅支持文件
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public long? ResourceType{ get; set; }
+
+        /// <summary>
+        /// 发起方填写控件
+        /// 该类型控件由发起方完成填写
+        /// </summary>
+        [JsonProperty("Components")]
+        public Component Components{ get; set; }
+
+        /// <summary>
+        /// 发起合同个性化参数
+        /// 用于满足创建及页面操作过程中的个性化要求
+        /// 具体定制化内容详见数据接口说明
+        /// </summary>
+        [JsonProperty("FlowOption")]
+        public CreateFlowOption FlowOption{ get; set; }
+
+        /// <summary>
+        /// 是否开启发起方签署审核
+        /// true:开启发起方签署审核
+        /// false:不开启发起方签署审核
+        /// 默认false:不开启发起方签署审核
+        /// </summary>
+        [JsonProperty("NeedSignReview")]
+        public bool? NeedSignReview{ get; set; }
+
+        /// <summary>
+        /// 开启发起方发起合同审核
+        /// true:开启发起方发起合同审核
+        /// false:不开启发起方发起合同审核
+        /// 默认false:不开启发起方发起合同审核
+        /// </summary>
+        [JsonProperty("NeedCreateReview")]
+        public bool? NeedCreateReview{ get; set; }
+
+        /// <summary>
+        /// 用户自定义参数
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
+        /// <summary>
+        /// 合同id,用于通过已web页面发起的合同id快速生成一个web发起合同链接
+        /// </summary>
+        [JsonProperty("FlowId")]
+        public string FlowId{ get; set; }
+
+        /// <summary>
+        /// 合同类型名称
+        /// 该字段用于客户自定义合同类型
+        /// 建议使用时指定合同类型，便于之后合同分类以及查看
+        /// </summary>
+        [JsonProperty("FlowType")]
+        public string FlowType{ get; set; }
 
         /// <summary>
         /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
@@ -93,6 +162,14 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "UserFlowTypeId", this.UserFlowTypeId);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamSimple(map, prefix + "IntelligentStatus", this.IntelligentStatus);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamObj(map, prefix + "Components.", this.Components);
+            this.SetParamObj(map, prefix + "FlowOption.", this.FlowOption);
+            this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
+            this.SetParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }

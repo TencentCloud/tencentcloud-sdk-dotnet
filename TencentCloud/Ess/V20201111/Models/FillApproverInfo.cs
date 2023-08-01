@@ -33,13 +33,14 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 签署人来源
         /// WEWORKAPP: 企业微信
+        /// <br/>仅【企微或签】时指定WEWORKAPP
         /// </summary>
         [JsonProperty("ApproverSource")]
         public string ApproverSource{ get; set; }
 
         /// <summary>
         /// 企业自定义账号ID
-        /// WEWORKAPP场景下指企业自有应用获取企微明文的userid
+        /// <br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企微明文的userid
         /// </summary>
         [JsonProperty("CustomUserId")]
         public string CustomUserId{ get; set; }

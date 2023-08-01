@@ -168,6 +168,27 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("LogLevel")]
         public string LogLevel{ get; set; }
 
+        /// <summary>
+        /// 类日志级别
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClazzLevels")]
+        public ClazzLevel[] ClazzLevels{ get; set; }
+
+        /// <summary>
+        /// 是否开启专家模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpertModeOn")]
+        public bool? ExpertModeOn{ get; set; }
+
+        /// <summary>
+        /// 专家模式的配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpertModeConfiguration")]
+        public ExpertModeConfiguration ExpertModeConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -195,6 +216,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "PythonVersion", this.PythonVersion);
             this.SetParamSimple(map, prefix + "AutoRecover", this.AutoRecover);
             this.SetParamSimple(map, prefix + "LogLevel", this.LogLevel);
+            this.SetParamArrayObj(map, prefix + "ClazzLevels.", this.ClazzLevels);
+            this.SetParamSimple(map, prefix + "ExpertModeOn", this.ExpertModeOn);
+            this.SetParamObj(map, prefix + "ExpertModeConfiguration.", this.ExpertModeConfiguration);
         }
     }
 }

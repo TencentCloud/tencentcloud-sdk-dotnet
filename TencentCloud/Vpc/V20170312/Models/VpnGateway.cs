@@ -43,13 +43,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpnGatewayName{ get; set; }
 
         /// <summary>
-        /// 网关实例类型：'IPSEC', 'SSL','CCN'。
+        /// 网关实例类型：'IPSEC', 'SSL','CCN','SSL_CCN'。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+        /// 网关实例状态， 'PENDING'：生产中，'PENDING_ERROR'：生产失败，'DELETING'：删除中，'DELETING_ERROR'：删除失败，'AVAILABLE'：运行中。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+        /// 网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -103,37 +103,37 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NewPurchasePlan{ get; set; }
 
         /// <summary>
-        /// 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+        /// 网关计费状态，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
         /// </summary>
         [JsonProperty("RestrictState")]
         public string RestrictState{ get; set; }
 
         /// <summary>
-        /// 可用区，如：ap-guangzhou-2
+        /// 可用区，如：ap-guangzhou-2。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 网关带宽配额信息
+        /// 网关带宽配额信息。
         /// </summary>
         [JsonProperty("VpnGatewayQuotaSet")]
         public VpnGatewayQuota[] VpnGatewayQuotaSet{ get; set; }
 
         /// <summary>
-        /// 网关实例版本信息
+        /// 网关实例版本信息。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Type值为CCN时，该值表示云联网实例ID
+        /// Type值为CCN时，该值表示云联网实例ID。
         /// </summary>
         [JsonProperty("NetworkInstanceId")]
         public string NetworkInstanceId{ get; set; }
 
         /// <summary>
-        /// CDC 实例ID
+        /// CDC 实例ID。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }

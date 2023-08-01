@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ListenerNames{ get; set; }
 
         /// <summary>
-        /// 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
+        /// 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }
@@ -68,7 +68,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 监听器转发的方式。可选值：WRR、LEAST_CONN
-        /// 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
+        /// 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }

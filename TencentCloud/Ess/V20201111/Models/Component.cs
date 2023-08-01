@@ -51,7 +51,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ComponentType{ get; set; }
 
         /// <summary>
-        /// 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
+        /// 控件所属文件的序号（取值为：0-N）。
+        /// 目前单文件的情况下，值是0
         /// </summary>
         [JsonProperty("FileIndex")]
         public long? FileIndex{ get; set; }
@@ -87,25 +88,27 @@ namespace TencentCloud.Ess.V20201111.Models
         public float? ComponentPosY{ get; set; }
 
         /// <summary>
-        /// 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
+        /// 控件唯一ID。
+        /// 或使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
         /// </summary>
         [JsonProperty("ComponentId")]
         public string ComponentId{ get; set; }
 
         /// <summary>
-        /// 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
+        /// 控件名。
+        /// 或使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
 
         /// <summary>
-        /// 是否必选，默认为false
+        /// 是否必选，默认为false-非必选
         /// </summary>
         [JsonProperty("ComponentRequired")]
         public bool? ComponentRequired{ get; set; }
 
         /// <summary>
-        /// 控件关联的签署人ID
+        /// 控件关联的参与方ID，对应Recipient结构体中的RecipientId
         /// </summary>
         [JsonProperty("ComponentRecipientId")]
         public string ComponentRecipientId{ get; set; }
@@ -145,7 +148,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ComponentExtra{ get; set; }
 
         /// <summary>
-        /// 是否是表单域类型，默认不false-不是
+        /// 是否是表单域类型，默认false-不是
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFormType")]
@@ -247,7 +250,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? ComponentDateFontSize{ get; set; }
 
         /// <summary>
-        /// 第三方应用集成平台模板控件 id 标识
+        /// 第三方应用集成平台模板控件 ID 标识
         /// </summary>
         [JsonProperty("ChannelComponentId")]
         public string ChannelComponentId{ get; set; }
@@ -267,35 +270,63 @@ namespace TencentCloud.Ess.V20201111.Models
         public float? OffsetY{ get; set; }
 
         /// <summary>
-        /// 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
+        /// 第三方应用集成中子客企业控件来源。
+        /// 0-平台指定；
+        /// 1-用户自定义
         /// </summary>
         [JsonProperty("ChannelComponentSource")]
         public ulong? ChannelComponentSource{ get; set; }
 
         /// <summary>
-        /// 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+        /// 指定关键字排序规则，Positive-正序，Reverse-倒序。
+        /// 传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
         /// 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
         /// </summary>
         [JsonProperty("KeywordOrder")]
         public string KeywordOrder{ get; set; }
 
         /// <summary>
-        /// 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+        /// 指定关键字页码。
+        /// 指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
         /// </summary>
         [JsonProperty("KeywordPage")]
         public long? KeywordPage{ get; set; }
 
         /// <summary>
-        /// 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+        /// 关键字位置模式，
+        /// Middle-居中，
+        /// Below-正下方，
+        /// Right-正右方，
+        /// LowerRight-右上角，
+        /// UpperRight-右下角。
+        /// 示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
         /// </summary>
         [JsonProperty("RelativeLocation")]
         public string RelativeLocation{ get; set; }
 
         /// <summary>
-        /// 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+        /// 关键字索引。
+        /// 如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+        /// 示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
         /// </summary>
         [JsonProperty("KeywordIndexes")]
         public long?[] KeywordIndexes{ get; set; }
+
+        /// <summary>
+        /// 是否锁定控件值不允许编辑（嵌入式发起使用）
+        /// <br/>默认false：不锁定控件值，允许在页面编辑控件值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LockComponentValue")]
+        public bool? LockComponentValue{ get; set; }
+
+        /// <summary>
+        /// 是否禁止移动和删除控件
+        /// <br/>默认false，不禁止移动和删除控件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ForbidMoveAndDelete")]
+        public bool? ForbidMoveAndDelete{ get; set; }
 
 
         /// <summary>
@@ -327,6 +358,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
             this.SetParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
             this.SetParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);
+            this.SetParamSimple(map, prefix + "LockComponentValue", this.LockComponentValue);
+            this.SetParamSimple(map, prefix + "ForbidMoveAndDelete", this.ForbidMoveAndDelete);
         }
     }
 }

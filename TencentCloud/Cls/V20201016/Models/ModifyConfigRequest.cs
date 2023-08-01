@@ -72,6 +72,16 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("UserDefineRule")]
         public string UserDefineRule{ get; set; }
 
+        /// <summary>
+        /// 高级采集配置。 Json字符串， Key/Value定义为如下：
+        /// - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+        /// - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+        /// - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+        /// 样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+        /// </summary>
+        [JsonProperty("AdvancedConfig")]
+        public string AdvancedConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +96,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "ExcludePaths.", this.ExcludePaths);
             this.SetParamSimple(map, prefix + "Output", this.Output);
             this.SetParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
+            this.SetParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
         }
     }
 }

@@ -61,13 +61,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public string CertSn{ get; set; }
 
         /// <summary>
-        /// 证书起始时间戳，单位秒
+        /// 证书起始时间戳，单位毫秒
         /// </summary>
         [JsonProperty("CertNotBefore")]
         public long? CertNotBefore{ get; set; }
 
         /// <summary>
-        /// 证书过期时间戳，单位秒
+        /// 证书过期时间戳，单位毫秒
         /// </summary>
         [JsonProperty("CertNotAfter")]
         public long? CertNotAfter{ get; set; }

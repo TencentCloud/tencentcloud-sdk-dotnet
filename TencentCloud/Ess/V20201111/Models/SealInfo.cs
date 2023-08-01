@@ -24,12 +24,39 @@ namespace TencentCloud.Ess.V20201111.Models
     public class SealInfo : AbstractModel
     {
         
+        /// <summary>
+        /// 印章ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SealId")]
+        public string SealId{ get; set; }
+
+        /// <summary>
+        /// 印章类型。LEGAL_PERSON_SEAL: 法定代表人章；
+        /// ORGANIZATIONSEAL：企业印章；
+        /// OFFICIAL：企业公章；
+        /// CONTRACT：合同专用章
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SealType")]
+        public string SealType{ get; set; }
+
+        /// <summary>
+        /// 印章名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SealName")]
+        public string SealName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SealId", this.SealId);
+            this.SetParamSimple(map, prefix + "SealType", this.SealType);
+            this.SetParamSimple(map, prefix + "SealName", this.SealName);
         }
     }
 }

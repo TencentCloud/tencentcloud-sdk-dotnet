@@ -150,6 +150,17 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
+        /// <summary>
+        /// 高级采集配置。 Json字符串， Key/Value定义为如下：
+        /// - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+        /// - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+        /// - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+        /// 样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdvancedConfig")]
+        public string AdvancedConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -175,6 +186,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
         }
     }
 }

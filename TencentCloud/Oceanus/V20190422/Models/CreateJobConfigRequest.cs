@@ -138,6 +138,24 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("AutoRecover")]
         public long? AutoRecover{ get; set; }
 
+        /// <summary>
+        /// 类日志级别
+        /// </summary>
+        [JsonProperty("ClazzLevels")]
+        public ClazzLevel[] ClazzLevels{ get; set; }
+
+        /// <summary>
+        /// 是否打开专家模式
+        /// </summary>
+        [JsonProperty("ExpertModeOn")]
+        public bool? ExpertModeOn{ get; set; }
+
+        /// <summary>
+        /// 专家模式的配置
+        /// </summary>
+        [JsonProperty("ExpertModeConfiguration")]
+        public ExpertModeConfiguration ExpertModeConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +181,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
             this.SetParamSimple(map, prefix + "LogLevel", this.LogLevel);
             this.SetParamSimple(map, prefix + "AutoRecover", this.AutoRecover);
+            this.SetParamArrayObj(map, prefix + "ClazzLevels.", this.ClazzLevels);
+            this.SetParamSimple(map, prefix + "ExpertModeOn", this.ExpertModeOn);
+            this.SetParamObj(map, prefix + "ExpertModeConfiguration.", this.ExpertModeConfiguration);
         }
     }
 }

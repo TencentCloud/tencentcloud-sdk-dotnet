@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 模板ID
+        /// 模板ID，模板的唯一标识
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 模板名字
+        /// 模板名
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string[] DocumentResourceIds{ get; set; }
 
         /// <summary>
-        /// 返回的文件信息结构
+        /// 生成模板的文件基础信息
         /// </summary>
         [JsonProperty("FileInfos")]
         public FileInfo[] FileInfos{ get; set; }
@@ -62,55 +62,59 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 签署顺序
+        /// 无序 -1
+        /// 有序为序列数字 0,1,2
         /// </summary>
         [JsonProperty("SignOrder")]
         public long?[] SignOrder{ get; set; }
 
         /// <summary>
-        /// 签署参与者的信息
+        /// 模板中的签署参与方列表
         /// </summary>
         [JsonProperty("Recipients")]
         public Recipient[] Recipients{ get; set; }
 
         /// <summary>
-        /// 模板信息结构
+        /// 模板的填充控件列表
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }
 
         /// <summary>
-        /// 签署区模板信息结构
+        /// 模板中的签署控件列表
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }
 
         /// <summary>
-        /// 模板状态(-1:不可用；0:草稿态；1:正式态)
+        /// 模板状态
+        /// -1:不可用
+        /// 0:草稿态
+        /// 1:正式态，可以正常使用
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 模板的创建人UserId
+        /// 模板的创建者信息，电子签系统用户ID
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 模板创建的时间戳，单位秒
+        /// 模板创建的时间戳，格式为Unix标准时间戳（秒）
         /// </summary>
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
 
         /// <summary>
-        /// 发起人角色信息
+        /// 发起方参与信息Promoter
         /// </summary>
         [JsonProperty("Promoter")]
         public Recipient Promoter{ get; set; }
 
         /// <summary>
-        /// 模板类型
-        /// 取值：
+        /// 模板类型：
         /// 1  静默签,
         /// 3  普通模板
         /// </summary>
@@ -118,13 +122,15 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? TemplateType{ get; set; }
 
         /// <summary>
-        /// 模板可用状态，取值：1启用（默认），2停用
+        /// 模板可用状态：
+        /// 1 启用（默认）
+        /// 2 停用
         /// </summary>
         [JsonProperty("Available")]
         public long? Available{ get; set; }
 
         /// <summary>
-        /// 创建模板的机构id
+        /// 创建模板的企业ID，电子签的机构ID
         /// </summary>
         [JsonProperty("OrganizationId")]
         public string OrganizationId{ get; set; }
@@ -144,7 +150,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public string TemplateVersion{ get; set; }
 
         /// <summary>
-        /// 模板是否已发布。true-已发布；false-未发布
+        /// 模板是否已发布：
+        /// true-已发布
+        /// false-未发布
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Published")]

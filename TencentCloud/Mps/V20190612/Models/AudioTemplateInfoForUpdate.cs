@@ -41,12 +41,14 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 当外层参数 Container 为 hls 时，可选值为：
         /// <li>libfdk_aac；</li>
         /// <li>libmp3lame。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
         /// 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示音频码率和原始音频保持一致。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bitrate")]
         public ulong? Bitrate{ get; set; }
@@ -57,6 +59,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>44100</li>
         /// <li>48000</li>
         /// 单位：Hz。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleRate")]
         public ulong? SampleRate{ get; set; }
@@ -67,12 +70,14 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>2：双通道</li>
         /// <li>6：立体声</li>
         /// 当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }
 
         /// <summary>
         /// 指定输出要保留的音频轨道。默认是全部保留源的。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamSelects")]
         public long?[] StreamSelects{ get; set; }
