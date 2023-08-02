@@ -44,7 +44,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
+        /// 最大可发起签署流程份数
+        /// <br/>默认5份
+        /// <br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
         /// </summary>
         [JsonProperty("MaxFlowNum")]
         public long? MaxFlowNum{ get; set; }
@@ -62,7 +64,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? QrEffectiveDay{ get; set; }
 
         /// <summary>
-        /// 限制二维码用户条件
+        /// 指定的签署二维码签署人
+        /// <br/>指定后，只允许知道的人操作和签署
         /// </summary>
         [JsonProperty("Restrictions")]
         public ApproverRestriction[] Restrictions{ get; set; }

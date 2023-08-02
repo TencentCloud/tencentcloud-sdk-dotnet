@@ -48,6 +48,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("SubscriptionName")]
         public string SubscriptionName{ get; set; }
 
+        /// <summary>
+        /// 队列名称，订阅绑定的endpoint
+        /// </summary>
+        [JsonProperty("QueueName")]
+        public string QueueName{ get; set; }
+
+        /// <summary>
+        /// 查询类型。取值：（1）topic；（2）queue。
+        /// 默认值是topic。如果 queryType 是 topic，则查询主题下的订阅列表；如果 queryType 是 queue，则查询队列绑定的订阅列表。
+        /// </summary>
+        [JsonProperty("QueryType")]
+        public string QueryType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +71,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
+            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
+            this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
         }
     }
 }

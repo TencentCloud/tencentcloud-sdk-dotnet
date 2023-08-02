@@ -54,6 +54,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("DepartmentId")]
         public string DepartmentId{ get; set; }
 
+        /// <summary>
+        /// 资产多节点：字段ip和端口
+        /// </summary>
+        [JsonProperty("IpPortSet")]
+        public string[] IpPortSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+            this.SetParamArraySimple(map, prefix + "IpPortSet.", this.IpPortSet);
         }
     }
 }

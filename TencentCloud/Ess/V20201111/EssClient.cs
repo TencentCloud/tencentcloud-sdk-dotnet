@@ -1071,6 +1071,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 本接口（CreatePersonAuthCertificateImage）用于创建个人用户证书证明图片
+        /// </summary>
+        /// <param name="req"><see cref="CreatePersonAuthCertificateImageRequest"/></param>
+        /// <returns><see cref="CreatePersonAuthCertificateImageResponse"/></returns>
+        public async Task<CreatePersonAuthCertificateImageResponse> CreatePersonAuthCertificateImage(CreatePersonAuthCertificateImageRequest req)
+        {
+             JsonResponseModel<CreatePersonAuthCertificateImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePersonAuthCertificateImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePersonAuthCertificateImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreatePersonAuthCertificateImage）用于创建个人用户证书证明图片
+        /// </summary>
+        /// <param name="req"><see cref="CreatePersonAuthCertificateImageRequest"/></param>
+        /// <returns><see cref="CreatePersonAuthCertificateImageResponse"/></returns>
+        public CreatePersonAuthCertificateImageResponse CreatePersonAuthCertificateImageSync(CreatePersonAuthCertificateImageRequest req)
+        {
+             JsonResponseModel<CreatePersonAuthCertificateImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePersonAuthCertificateImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePersonAuthCertificateImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建快速发起流程
         /// <br/>适用场景：用户通过API 合同文件及签署信息，并可通过我们返回的URL在页面完成签署控件等信息的编辑与确认，快速发起合同.
         /// <br/>注：该接口文件的resourceId 是通过上传文件之后获取的。

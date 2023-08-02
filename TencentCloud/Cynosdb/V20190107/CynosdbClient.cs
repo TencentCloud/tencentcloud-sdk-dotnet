@@ -4293,6 +4293,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 开启只读实例组接入
+        /// </summary>
+        /// <param name="req"><see cref="OpenClusterReadOnlyInstanceGroupAccessRequest"/></param>
+        /// <returns><see cref="OpenClusterReadOnlyInstanceGroupAccessResponse"/></returns>
+        public async Task<OpenClusterReadOnlyInstanceGroupAccessResponse> OpenClusterReadOnlyInstanceGroupAccess(OpenClusterReadOnlyInstanceGroupAccessRequest req)
+        {
+             JsonResponseModel<OpenClusterReadOnlyInstanceGroupAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenClusterReadOnlyInstanceGroupAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenClusterReadOnlyInstanceGroupAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启只读实例组接入
+        /// </summary>
+        /// <param name="req"><see cref="OpenClusterReadOnlyInstanceGroupAccessRequest"/></param>
+        /// <returns><see cref="OpenClusterReadOnlyInstanceGroupAccessResponse"/></returns>
+        public OpenClusterReadOnlyInstanceGroupAccessResponse OpenClusterReadOnlyInstanceGroupAccessSync(OpenClusterReadOnlyInstanceGroupAccessRequest req)
+        {
+             JsonResponseModel<OpenClusterReadOnlyInstanceGroupAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenClusterReadOnlyInstanceGroupAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenClusterReadOnlyInstanceGroupAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 开通只读实例独有访问接入组
         /// </summary>
         /// <param name="req"><see cref="OpenReadOnlyInstanceExclusiveAccessRequest"/></param>

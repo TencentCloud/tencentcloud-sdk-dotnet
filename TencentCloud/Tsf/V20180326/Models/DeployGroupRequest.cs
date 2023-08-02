@@ -138,6 +138,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("WarmupSetting")]
         public WarmupSetting WarmupSetting{ get; set; }
 
+        /// <summary>
+        /// 开启分批健康检查
+        /// </summary>
+        [JsonProperty("EnableBatchHealthCheck")]
+        public bool? EnableBatchHealthCheck{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
             this.SetParamArrayObj(map, prefix + "AgentProfileList.", this.AgentProfileList);
             this.SetParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
+            this.SetParamSimple(map, prefix + "EnableBatchHealthCheck", this.EnableBatchHealthCheck);
         }
     }
 }

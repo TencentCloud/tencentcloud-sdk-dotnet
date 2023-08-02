@@ -44,13 +44,15 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 最大可发起签署流程份数，默认5份 
-        /// 发起流程数量超过此上限后二维码自动失效
+        /// <br/>发起流程数量超过此上限后二维码自动失效
         /// </summary>
         [JsonProperty("MaxFlowNum")]
         public long? MaxFlowNum{ get; set; }
 
         /// <summary>
-        /// 签署流程有效天数 默认7天 最高设置不超过30天
+        /// 签署流程有效天数 
+        /// <br/>默认7天 
+        /// <br/>最高设置不超过30天
         /// </summary>
         [JsonProperty("FlowEffectiveDay")]
         public long? FlowEffectiveDay{ get; set; }
@@ -62,21 +64,22 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? QrEffectiveDay{ get; set; }
 
         /// <summary>
-        /// 限制二维码用户条件
+        /// 指定的签署人信息
+        /// <br/>指定后，则只允许指定的签署人扫码签署
         /// </summary>
         [JsonProperty("Restrictions")]
         public ApproverRestriction[] Restrictions{ get; set; }
 
         /// <summary>
-        /// 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+        /// 用户自定义字段
+        /// <br/>回调的时候会进行透传，长度需要小于20480
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
         /// <summary>
         /// 回调地址,最大长度1000字符串
-        /// 回调时机：
-        /// 用户通过签署二维码发起签署流程时，企业额度不足导致失败
+        /// <br/>回调时机：用户通过签署二维码发起签署流程时，企业额度不足导致失败
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }

@@ -1373,6 +1373,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 删除RocketMQ专享实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQVipInstanceRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQVipInstanceResponse"/></returns>
+        public async Task<DeleteRocketMQVipInstanceResponse> DeleteRocketMQVipInstance(DeleteRocketMQVipInstanceRequest req)
+        {
+             JsonResponseModel<DeleteRocketMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRocketMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRocketMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除RocketMQ专享实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQVipInstanceRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQVipInstanceResponse"/></returns>
+        public DeleteRocketMQVipInstanceResponse DeleteRocketMQVipInstanceSync(DeleteRocketMQVipInstanceRequest req)
+        {
+             JsonResponseModel<DeleteRocketMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRocketMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRocketMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除角色，支持批量。
         /// </summary>
         /// <param name="req"><see cref="DeleteRolesRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C8FAE73A-C1CE-3D50-805A-4FB5B32F597E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.814</VersionPrefix>
+    <VersionPrefix>3.0.815</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,10 +48,28 @@
 
   <ItemGroup>
     <Compile Include="V20220519\GoosefsClient.cs" />
+    <Compile Include="V20220519\Models\AddCrossVpcSubnetSupportForClientNodeRequest.cs" />
+    <Compile Include="V20220519\Models\AddCrossVpcSubnetSupportForClientNodeResponse.cs" />
+    <Compile Include="V20220519\Models\AttachFileSystemBucketRequest.cs" />
+    <Compile Include="V20220519\Models\AttachFileSystemBucketResponse.cs" />
+    <Compile Include="V20220519\Models\BatchAddClientNodesRequest.cs" />
+    <Compile Include="V20220519\Models\BatchAddClientNodesResponse.cs" />
+    <Compile Include="V20220519\Models\BatchDeleteClientNodesRequest.cs" />
+    <Compile Include="V20220519\Models\BatchDeleteClientNodesResponse.cs" />
+    <Compile Include="V20220519\Models\ClientClusterManagerNodeInfo.cs" />
+    <Compile Include="V20220519\Models\ClientNodeAttribute.cs" />
     <Compile Include="V20220519\Models\ClientToken.cs" />
     <Compile Include="V20220519\Models\ClusterRole.cs" />
     <Compile Include="V20220519\Models\CreateDataRepositoryTaskRequest.cs" />
     <Compile Include="V20220519\Models\CreateDataRepositoryTaskResponse.cs" />
+    <Compile Include="V20220519\Models\CreateFileSystemRequest.cs" />
+    <Compile Include="V20220519\Models\CreateFileSystemResponse.cs" />
+    <Compile Include="V20220519\Models\DeleteCrossVpcSubnetSupportForClientNodeRequest.cs" />
+    <Compile Include="V20220519\Models\DeleteCrossVpcSubnetSupportForClientNodeResponse.cs" />
+    <Compile Include="V20220519\Models\DeleteFileSystemRequest.cs" />
+    <Compile Include="V20220519\Models\DeleteFileSystemResponse.cs" />
+    <Compile Include="V20220519\Models\DescribeClientNodesRequest.cs" />
+    <Compile Include="V20220519\Models\DescribeClientNodesResponse.cs" />
     <Compile Include="V20220519\Models\DescribeClusterClientTokenRequest.cs" />
     <Compile Include="V20220519\Models\DescribeClusterClientTokenResponse.cs" />
     <Compile Include="V20220519\Models\DescribeClusterRoleTokenRequest.cs" />
@@ -60,6 +78,27 @@
     <Compile Include="V20220519\Models\DescribeClusterRolesResponse.cs" />
     <Compile Include="V20220519\Models\DescribeDataRepositoryTaskStatusRequest.cs" />
     <Compile Include="V20220519\Models\DescribeDataRepositoryTaskStatusResponse.cs" />
+    <Compile Include="V20220519\Models\DescribeFileSystemBucketsRequest.cs" />
+    <Compile Include="V20220519\Models\DescribeFileSystemBucketsResponse.cs" />
+    <Compile Include="V20220519\Models\DescribeFileSystemsRequest.cs" />
+    <Compile Include="V20220519\Models\DescribeFileSystemsResponse.cs" />
+    <Compile Include="V20220519\Models\DetachFileSystemBucketRequest.cs" />
+    <Compile Include="V20220519\Models\DetachFileSystemBucketResponse.cs" />
+    <Compile Include="V20220519\Models\ExpandCapacityRequest.cs" />
+    <Compile Include="V20220519\Models\ExpandCapacityResponse.cs" />
+    <Compile Include="V20220519\Models\FSAttribute.cs" />
+    <Compile Include="V20220519\Models\GooseFSxAttribute.cs" />
+    <Compile Include="V20220519\Models\GooseFSxBuildElement.cs" />
+    <Compile Include="V20220519\Models\LinuxNodeAttribute.cs" />
+    <Compile Include="V20220519\Models\MappedBucket.cs" />
+    <Compile Include="V20220519\Models\ModifyDataRepositoryBandwidthRequest.cs" />
+    <Compile Include="V20220519\Models\ModifyDataRepositoryBandwidthResponse.cs" />
+    <Compile Include="V20220519\Models\QueryCrossVpcSubnetSupportForClientNodeRequest.cs" />
+    <Compile Include="V20220519\Models\QueryCrossVpcSubnetSupportForClientNodeResponse.cs" />
+    <Compile Include="V20220519\Models\QueryDataRepositoryBandwidthRequest.cs" />
+    <Compile Include="V20220519\Models\QueryDataRepositoryBandwidthResponse.cs" />
     <Compile Include="V20220519\Models\RoleToken.cs" />
+    <Compile Include="V20220519\Models\SubnetInfo.cs" />
+    <Compile Include="V20220519\Models\Tag.cs" />
   </ItemGroup>
 </Project>

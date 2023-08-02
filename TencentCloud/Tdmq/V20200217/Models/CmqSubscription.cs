@@ -112,6 +112,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("NotifyContentFormat")]
         public string NotifyContentFormat{ get; set; }
 
+        /// <summary>
+        /// 订阅所属的主题名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +137,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "NotifyStrategy", this.NotifyStrategy);
             this.SetParamSimple(map, prefix + "NotifyContentFormat", this.NotifyContentFormat);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
         }
     }
 }

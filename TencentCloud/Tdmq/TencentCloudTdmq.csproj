@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1732CBF0-BE93-36A0-A593-39E6D6FF17BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.814</VersionPrefix>
+    <VersionPrefix>3.0.815</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -128,6 +128,8 @@
     <Compile Include="V20200217\Models\DeleteRocketMQNamespaceResponse.cs" />
     <Compile Include="V20200217\Models\DeleteRocketMQTopicRequest.cs" />
     <Compile Include="V20200217\Models\DeleteRocketMQTopicResponse.cs" />
+    <Compile Include="V20200217\Models\DeleteRocketMQVipInstanceRequest.cs" />
+    <Compile Include="V20200217\Models\DeleteRocketMQVipInstanceResponse.cs" />
     <Compile Include="V20200217\Models\DeleteRolesRequest.cs" />
     <Compile Include="V20200217\Models\DeleteRolesResponse.cs" />
     <Compile Include="V20200217\Models\DeleteSubscriptionsRequest.cs" />

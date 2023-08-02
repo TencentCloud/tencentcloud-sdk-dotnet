@@ -32,13 +32,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 合同(流程)编号数组，最多支持100个。
-        /// （备注：该参数和合同组编号必须二选一, 如果填写FlowGroupId则忽略此FlowIds的入参）
+        /// <br/>备注：该参数和合同组编号必须二选一, 如果填写FlowGroupId则忽略此FlowIds的入参
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 合同组编号（备注：该参数和合同(流程)编号数组必须二选一）
+        /// 合同组编号
+        /// <br/>备注：该参数和合同(流程)编号数组必须二选一
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }

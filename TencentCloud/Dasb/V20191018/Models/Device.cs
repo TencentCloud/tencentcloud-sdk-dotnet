@@ -116,6 +116,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("Department")]
         public Department Department{ get; set; }
 
+        /// <summary>
+        /// 数据库资产的多节点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IpPortSet")]
+        public string[] IpPortSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +144,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamObj(map, prefix + "Resource.", this.Resource);
             this.SetParamObj(map, prefix + "Department.", this.Department);
+            this.SetParamArraySimple(map, prefix + "IpPortSet.", this.IpPortSet);
         }
     }
 }

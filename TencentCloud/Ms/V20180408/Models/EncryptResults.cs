@@ -25,13 +25,13 @@ namespace TencentCloud.Ms.V20180408.Models
     {
         
         /// <summary>
-        /// 平台类型枚举值  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+        /// 平台类型枚举值  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
         /// </summary>
         [JsonProperty("PlatformType")]
         public long? PlatformType{ get; set; }
 
         /// <summary>
-        /// 平台类型描述  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+        /// 平台类型描述  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
         /// </summary>
         [JsonProperty("PlatformDesc")]
         public string PlatformDesc{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// 对应PlatformType平台类型值   1-android安卓加固结果
+        /// 对应PlatformType平台类型值   1-android加固结果
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidResult")]

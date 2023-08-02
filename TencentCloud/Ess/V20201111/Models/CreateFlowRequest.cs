@@ -38,6 +38,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 签署流程参与者信息，最大限制50方
+        /// 注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
         /// </summary>
         [JsonProperty("Approvers")]
         public FlowCreateApprover[] Approvers{ get; set; }

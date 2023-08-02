@@ -31,7 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string PayTime{ get; set; }
 
         /// <summary>
-        /// 计费核数
+        /// 计费核数(已废弃)
         /// </summary>
         [JsonProperty("CoresCnt")]
         public ulong? CoresCnt{ get; set; }

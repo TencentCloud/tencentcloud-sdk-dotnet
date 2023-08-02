@@ -37,7 +37,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public long? PlatformType{ get; set; }
 
         /// <summary>
-        /// 平台类型描述：  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+        /// 平台类型描述：  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
         /// </summary>
         [JsonProperty("PlatformTypeDesc")]
         public string PlatformTypeDesc{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public string OrderTypeDesc{ get; set; }
 
         /// <summary>
-        /// 安卓包年收费加固的包名
+        /// android包年收费加固的包名
         /// </summary>
         [JsonProperty("AppPkgName")]
         public string AppPkgName{ get; set; }

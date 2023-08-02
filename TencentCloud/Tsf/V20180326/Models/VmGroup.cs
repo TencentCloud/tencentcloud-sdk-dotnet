@@ -290,6 +290,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("GatewayConfig")]
         public GatewayConfig GatewayConfig{ get; set; }
 
+        /// <summary>
+        /// 批次是否开启健康检查
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableBatchHealthCheck")]
+        public bool? EnableBatchHealthCheck{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -334,6 +341,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "AgentProfileList.", this.AgentProfileList);
             this.SetParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
             this.SetParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
+            this.SetParamSimple(map, prefix + "EnableBatchHealthCheck", this.EnableBatchHealthCheck);
         }
     }
 }

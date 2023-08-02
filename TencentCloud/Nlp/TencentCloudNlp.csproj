@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{46495F04-57A1-3328-BD3F-406E6BB2D037}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.814</VersionPrefix>
+    <VersionPrefix>3.0.815</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,14 +50,8 @@
     <Compile Include="V20190408\NlpClient.cs" />
     <Compile Include="V20190408\Models\AnalyzeSentimentRequest.cs" />
     <Compile Include="V20190408\Models\AnalyzeSentimentResponse.cs" />
-    <Compile Include="V20190408\Models\AutoSummarizationRequest.cs" />
-    <Compile Include="V20190408\Models\AutoSummarizationResponse.cs" />
     <Compile Include="V20190408\Models\BasicParticiple.cs" />
-    <Compile Include="V20190408\Models\CCIToken.cs" />
     <Compile Include="V20190408\Models\Category.cs" />
-    <Compile Include="V20190408\Models\ChatBotRequest.cs" />
-    <Compile Include="V20190408\Models\ChatBotResponse.cs" />
-    <Compile Include="V20190408\Models\ClassificationResult.cs" />
     <Compile Include="V20190408\Models\ClassifyContentRequest.cs" />
     <Compile Include="V20190408\Models\ClassifyContentResponse.cs" />
     <Compile Include="V20190408\Models\ComposeCoupletRequest.cs" />
@@ -66,82 +60,26 @@
     <Compile Include="V20190408\Models\ComposePoetryResponse.cs" />
     <Compile Include="V20190408\Models\CompoundParticiple.cs" />
     <Compile Include="V20190408\Models\CorrectionItem.cs" />
-    <Compile Include="V20190408\Models\CreateDictRequest.cs" />
-    <Compile Include="V20190408\Models\CreateDictResponse.cs" />
-    <Compile Include="V20190408\Models\CreateWordItemsRequest.cs" />
-    <Compile Include="V20190408\Models\CreateWordItemsResponse.cs" />
-    <Compile Include="V20190408\Models\DeleteDictRequest.cs" />
-    <Compile Include="V20190408\Models\DeleteDictResponse.cs" />
-    <Compile Include="V20190408\Models\DeleteWordItemsRequest.cs" />
-    <Compile Include="V20190408\Models\DeleteWordItemsResponse.cs" />
-    <Compile Include="V20190408\Models\DependencyParsingRequest.cs" />
-    <Compile Include="V20190408\Models\DependencyParsingResponse.cs" />
-    <Compile Include="V20190408\Models\DescribeDictRequest.cs" />
-    <Compile Include="V20190408\Models\DescribeDictResponse.cs" />
-    <Compile Include="V20190408\Models\DescribeDictsRequest.cs" />
-    <Compile Include="V20190408\Models\DescribeDictsResponse.cs" />
-    <Compile Include="V20190408\Models\DescribeWordItemsRequest.cs" />
-    <Compile Include="V20190408\Models\DescribeWordItemsResponse.cs" />
-    <Compile Include="V20190408\Models\DictInfo.cs" />
-    <Compile Include="V20190408\Models\DpToken.cs" />
     <Compile Include="V20190408\Models\Embellish.cs" />
     <Compile Include="V20190408\Models\Entity.cs" />
     <Compile Include="V20190408\Models\EvaluateSentenceSimilarityRequest.cs" />
     <Compile Include="V20190408\Models\EvaluateSentenceSimilarityResponse.cs" />
     <Compile Include="V20190408\Models\EvaluateWordSimilarityRequest.cs" />
     <Compile Include="V20190408\Models\EvaluateWordSimilarityResponse.cs" />
-    <Compile Include="V20190408\Models\GenerateCoupletRequest.cs" />
-    <Compile Include="V20190408\Models\GenerateCoupletResponse.cs" />
     <Compile Include="V20190408\Models\GenerateKeywordSentenceRequest.cs" />
     <Compile Include="V20190408\Models\GenerateKeywordSentenceResponse.cs" />
-    <Compile Include="V20190408\Models\GeneratePoetryRequest.cs" />
-    <Compile Include="V20190408\Models\GeneratePoetryResponse.cs" />
-    <Compile Include="V20190408\Models\Keyword.cs" />
     <Compile Include="V20190408\Models\KeywordSentence.cs" />
-    <Compile Include="V20190408\Models\KeywordsExtractionRequest.cs" />
-    <Compile Include="V20190408\Models\KeywordsExtractionResponse.cs" />
-    <Compile Include="V20190408\Models\LexicalAnalysisRequest.cs" />
-    <Compile Include="V20190408\Models\LexicalAnalysisResponse.cs" />
-    <Compile Include="V20190408\Models\NerToken.cs" />
     <Compile Include="V20190408\Models\ParseWordsRequest.cs" />
     <Compile Include="V20190408\Models\ParseWordsResponse.cs" />
-    <Compile Include="V20190408\Models\PosToken.cs" />
     <Compile Include="V20190408\Models\RetrieveSimilarWordsRequest.cs" />
     <Compile Include="V20190408\Models\RetrieveSimilarWordsResponse.cs" />
-    <Compile Include="V20190408\Models\SearchResult.cs" />
-    <Compile Include="V20190408\Models\SearchWordItemsRequest.cs" />
-    <Compile Include="V20190408\Models\SearchWordItemsResponse.cs" />
     <Compile Include="V20190408\Models\SentenceCorrectionRequest.cs" />
     <Compile Include="V20190408\Models\SentenceCorrectionResponse.cs" />
-    <Compile Include="V20190408\Models\SentenceEmbeddingRequest.cs" />
-    <Compile Include="V20190408\Models\SentenceEmbeddingResponse.cs" />
     <Compile Include="V20190408\Models\SentencePair.cs" />
-    <Compile Include="V20190408\Models\SentimentAnalysisRequest.cs" />
-    <Compile Include="V20190408\Models\SentimentAnalysisResponse.cs" />
-    <Compile Include="V20190408\Models\SimilarWordsRequest.cs" />
-    <Compile Include="V20190408\Models\SimilarWordsResponse.cs" />
-    <Compile Include="V20190408\Models\Similarity.cs" />
-    <Compile Include="V20190408\Models\TextClassificationRequest.cs" />
-    <Compile Include="V20190408\Models\TextClassificationResponse.cs" />
-    <Compile Include="V20190408\Models\TextCorrectionProRequest.cs" />
-    <Compile Include="V20190408\Models\TextCorrectionProResponse.cs" />
-    <Compile Include="V20190408\Models\TextCorrectionRequest.cs" />
-    <Compile Include="V20190408\Models\TextCorrectionResponse.cs" />
     <Compile Include="V20190408\Models\TextEmbellishRequest.cs" />
     <Compile Include="V20190408\Models\TextEmbellishResponse.cs" />
-    <Compile Include="V20190408\Models\TextSimilarityProRequest.cs" />
-    <Compile Include="V20190408\Models\TextSimilarityProResponse.cs" />
-    <Compile Include="V20190408\Models\TextSimilarityRequest.cs" />
-    <Compile Include="V20190408\Models\TextSimilarityResponse.cs" />
     <Compile Include="V20190408\Models\TextWritingRequest.cs" />
     <Compile Include="V20190408\Models\TextWritingResponse.cs" />
-    <Compile Include="V20190408\Models\UpdateDictRequest.cs" />
-    <Compile Include="V20190408\Models\UpdateDictResponse.cs" />
-    <Compile Include="V20190408\Models\WordEmbeddingRequest.cs" />
-    <Compile Include="V20190408\Models\WordEmbeddingResponse.cs" />
-    <Compile Include="V20190408\Models\WordItem.cs" />
-    <Compile Include="V20190408\Models\WordSimilarityRequest.cs" />
-    <Compile Include="V20190408\Models\WordSimilarityResponse.cs" />
     <Compile Include="V20190408\Models\Writing.cs" />
   </ItemGroup>
 </Project>

@@ -2013,6 +2013,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于获取kafka用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaUserRequest"/></param>
+        /// <returns><see cref="DescribeKafkaUserResponse"/></returns>
+        public async Task<DescribeKafkaUserResponse> DescribeKafkaUser(DescribeKafkaUserRequest req)
+        {
+             JsonResponseModel<DescribeKafkaUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKafkaUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKafkaUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取kafka用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaUserRequest"/></param>
+        /// <returns><see cref="DescribeKafkaUserResponse"/></returns>
+        public DescribeKafkaUserResponse DescribeKafkaUserSync(DescribeKafkaUserRequest req)
+        {
+             JsonResponseModel<DescribeKafkaUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKafkaUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKafkaUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于搜索日志上下文附近的内容
         /// </summary>
         /// <param name="req"><see cref="DescribeLogContextRequest"/></param>

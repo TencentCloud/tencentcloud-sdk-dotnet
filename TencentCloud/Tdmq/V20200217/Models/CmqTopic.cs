@@ -138,6 +138,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("BrokerType")]
         public long? BrokerType{ get; set; }
 
+        /// <summary>
+        /// 订阅数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubscriptionCount")]
+        public long? SubscriptionCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +167,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "BrokerType", this.BrokerType);
+            this.SetParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
         }
     }
 }

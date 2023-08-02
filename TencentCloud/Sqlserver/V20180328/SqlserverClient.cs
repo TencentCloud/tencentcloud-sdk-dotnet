@@ -1853,6 +1853,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（DescribeInstanceByOrders）用于根据订单号查询资源ID
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceByOrdersRequest"/></param>
+        /// <returns><see cref="DescribeInstanceByOrdersResponse"/></returns>
+        public async Task<DescribeInstanceByOrdersResponse> DescribeInstanceByOrders(DescribeInstanceByOrdersRequest req)
+        {
+             JsonResponseModel<DescribeInstanceByOrdersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceByOrders");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceByOrdersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceByOrders）用于根据订单号查询资源ID
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceByOrdersRequest"/></param>
+        /// <returns><see cref="DescribeInstanceByOrdersResponse"/></returns>
+        public DescribeInstanceByOrdersResponse DescribeInstanceByOrdersSync(DescribeInstanceByOrdersRequest req)
+        {
+             JsonResponseModel<DescribeInstanceByOrdersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceByOrders");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceByOrdersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>

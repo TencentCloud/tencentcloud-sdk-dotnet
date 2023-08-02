@@ -70,19 +70,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 当前签署人的状态, 状态如下
-        /// 
-        /// PENDING 待签署	
-        /// FILLPENDING 待填写
-        /// FILLACCEPT 填写完成	
-        /// FILLREJECT 拒绝填写	
-        /// WAITPICKUP 待领取	
-        /// ACCEPT 已签署	
-        /// REJECT 拒签 
-        /// DEADLINE 过期没人处理 
-        /// CANCEL 流程已撤回	
-        /// FORWARD 已经转他人处理
-        /// STOP 流程已终止	
-        /// RELIEVED 解除协议（已解除）
+        /// <br/>PENDING 待签署	
+        /// <br/>FILLPENDING 待填写
+        /// <br/>FILLACCEPT 填写完成	
+        /// <br/>FILLREJECT 拒绝填写	
+        /// <br/>WAITPICKUP 待领取	
+        /// <br/>ACCEPT 已签署	
+        /// <br/>REJECT 拒签 
+        /// <br/>DEADLINE 过期没人处理 
+        /// <br/>CANCEL 流程已撤回	
+        /// <br/>FORWARD 已经转他人处理
+        /// <br/>STOP 流程已终止	
+        /// <br/>RELIEVED 解除协议（已解除）
         /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -90,7 +89,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ApproveStatus{ get; set; }
 
         /// <summary>
-        /// 签署人信息
+        /// 签署人自定义信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveMessage")]
@@ -103,7 +102,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? ApproveTime{ get; set; }
 
         /// <summary>
-        /// 参与者类型 (ORGANIZATION企业/PERSON个人)
+        /// 参与者类型 
+        /// <br/>ORGANIZATION：企业签署人
+        /// <br/>PERSON：个人签署人
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveType")]

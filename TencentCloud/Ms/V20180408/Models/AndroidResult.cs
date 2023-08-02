@@ -49,7 +49,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public long? OpUin{ get; set; }
 
         /// <summary>
-        /// 应用类型：安卓-apk; 安卓-aab;
+        /// 应用类型：android-apk; android-aab;
         /// </summary>
         [JsonProperty("AppType")]
         public string AppType{ get; set; }
@@ -121,91 +121,91 @@ namespace TencentCloud.Ms.V20180408.Models
         public long? CostTime{ get; set; }
 
         /// <summary>
-        /// 在线加固-安卓应用原包下载链接
+        /// 在线加固-android应用原包下载链接
         /// </summary>
         [JsonProperty("AppUrl")]
         public string AppUrl{ get; set; }
 
         /// <summary>
-        /// 在线加固-安卓应用文件MD5算法值
+        /// 在线加固-android应用文件MD5算法值
         /// </summary>
         [JsonProperty("AppMd5")]
         public string AppMd5{ get; set; }
 
         /// <summary>
-        /// 在线加固-安卓应用应用名称
+        /// 在线加固-android应用应用名称
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 在线加固-安卓应用版本；
+        /// 在线加固-android应用版本；
         /// </summary>
         [JsonProperty("AppVersion")]
         public string AppVersion{ get; set; }
 
         /// <summary>
-        /// 在线加固-安卓应用大小
+        /// 在线加固-android应用大小
         /// </summary>
         [JsonProperty("AppSize")]
         public long? AppSize{ get; set; }
 
         /// <summary>
-        /// 在线加固-安卓加固-腾讯云应用加固工具版本
+        /// 在线加固-android加固-腾讯云应用加固工具版本
         /// </summary>
         [JsonProperty("OnlineToolVersion")]
         public string OnlineToolVersion{ get; set; }
 
         /// <summary>
-        /// 在线加固-安卓加固，加固成功后文件md5算法值
+        /// 在线加固-android加固，加固成功后文件md5算法值
         /// </summary>
         [JsonProperty("EncryptAppMd5")]
         public string EncryptAppMd5{ get; set; }
 
         /// <summary>
-        /// 在线加固-安卓加固，加固成功后应用大小
+        /// 在线加固-android加固，加固成功后应用大小
         /// </summary>
         [JsonProperty("EncryptAppSize")]
         public long? EncryptAppSize{ get; set; }
 
         /// <summary>
-        /// 在线加固-安卓加固，加固包下载链接。
+        /// 在线加固-android加固，加固包下载链接。
         /// </summary>
         [JsonProperty("EncryptPkgUrl")]
         public string EncryptPkgUrl{ get; set; }
 
         /// <summary>
-        /// 输出工具-安卓加固-腾讯云输出工具版本
+        /// 输出工具-android加固-腾讯云输出工具版本
         /// </summary>
         [JsonProperty("OutputToolVersion")]
         public string OutputToolVersion{ get; set; }
 
         /// <summary>
-        /// 输出工具-安卓加固-工具大小
+        /// 输出工具-android加固-工具大小
         /// </summary>
         [JsonProperty("OutputToolSize")]
         public long? OutputToolSize{ get; set; }
 
         /// <summary>
-        /// 输出工具-安卓加固-工具输出时间
+        /// 输出工具-android加固-工具输出时间
         /// </summary>
         [JsonProperty("ToolOutputTime")]
         public string ToolOutputTime{ get; set; }
 
         /// <summary>
-        /// 输出工具-安卓加固-工具到期时间
+        /// 输出工具-android加固-工具到期时间
         /// </summary>
         [JsonProperty("ToolExpireTime")]
         public string ToolExpireTime{ get; set; }
 
         /// <summary>
-        /// 输出工具-安卓加固-输出工具下载链接
+        /// 输出工具-android加固-输出工具下载链接
         /// </summary>
         [JsonProperty("OutputToolUrl")]
         public string OutputToolUrl{ get; set; }
 
         /// <summary>
-        /// 本次安卓加固策略信息
+        /// 本次android加固策略信息
         /// </summary>
         [JsonProperty("AndroidPlan")]
         public AndroidPlan AndroidPlan{ get; set; }

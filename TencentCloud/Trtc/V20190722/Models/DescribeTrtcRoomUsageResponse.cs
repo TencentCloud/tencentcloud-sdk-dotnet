@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 房间维度用量数据，csv文件格式。
+        /// 房间维度用量数据，csv文件格式，单位：秒。
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }
