@@ -1141,7 +1141,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 通过文档URL查询转码任务，返回最近的一次转码结果
+        /// 通过文档URL查询转码任务，返回最近一次的转码任务状态
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeByUrlRequest"/></param>
         /// <returns><see cref="DescribeTranscodeByUrlResponse"/></returns>
@@ -1161,7 +1161,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 通过文档URL查询转码任务，返回最近的一次转码结果
+        /// 通过文档URL查询转码任务，返回最近一次的转码任务状态
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeByUrlRequest"/></param>
         /// <returns><see cref="DescribeTranscodeByUrlResponse"/></returns>

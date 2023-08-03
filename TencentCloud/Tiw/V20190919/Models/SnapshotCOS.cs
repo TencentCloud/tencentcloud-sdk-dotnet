@@ -25,7 +25,7 @@ namespace TencentCloud.Tiw.V20190919.Models
     {
         
         /// <summary>
-        /// cos所在腾讯云帐号uin
+        /// cos所在腾讯云账号uin
         /// </summary>
         [JsonProperty("Uin")]
         public ulong? Uin{ get; set; }

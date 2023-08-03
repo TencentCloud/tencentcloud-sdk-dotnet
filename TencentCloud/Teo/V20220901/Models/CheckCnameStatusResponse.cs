@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 域名Cname状态信息列表。
+        /// 加速域名 CNAME 状态信息列表。
         /// </summary>
         [JsonProperty("CnameStatus")]
         public CnameStatus[] CnameStatus{ get; set; }

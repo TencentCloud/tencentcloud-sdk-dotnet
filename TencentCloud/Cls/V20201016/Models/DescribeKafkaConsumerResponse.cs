@@ -43,6 +43,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Compression{ get; set; }
 
         /// <summary>
+        /// kafka协议消费数据格式
+        /// </summary>
+        [JsonProperty("ConsumerContent")]
+        public KafkaConsumerContent ConsumerContent{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "TopicID", this.TopicID);
             this.SetParamSimple(map, prefix + "Compression", this.Compression);
+            this.SetParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

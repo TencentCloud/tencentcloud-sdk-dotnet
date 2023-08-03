@@ -39,10 +39,11 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong? JoinedTotal{ get; set; }
 
         /// <summary>
-        /// 已加入的企业数量
+        /// 已加入的企业数量(废弃,请使用ActivatedTotal)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivedTotal")]
+        [System.Obsolete]
         public ulong? ActivedTotal{ get; set; }
 
         /// <summary>
@@ -58,6 +59,13 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("List")]
         public GroupOrganization[] List{ get; set; }
+
+        /// <summary>
+        /// 已加入的企业数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ActivatedTotal")]
+        public ulong? ActivatedTotal{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -76,6 +84,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ActivedTotal", this.ActivedTotal);
             this.SetParamSimple(map, prefix + "ExportUrl", this.ExportUrl);
             this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamSimple(map, prefix + "ActivatedTotal", this.ActivatedTotal);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

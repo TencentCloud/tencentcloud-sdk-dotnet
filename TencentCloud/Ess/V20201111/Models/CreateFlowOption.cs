@@ -32,10 +32,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? CanEditFlow{ get; set; }
 
         /// <summary>
-        /// 是否允许编辑模版控件
-        /// <br/>true:允许编辑模版控件信息
-        /// <br/>false:不允许编辑模版控件信息
-        /// <br/>默认false:不允许编辑模版控件信息
+        /// 是否允许编辑模板控件
+        /// <br/>true:允许编辑模板控件信息
+        /// <br/>false:不允许编辑模板控件信息
+        /// <br/>默认false:不允许编辑模板控件信息
         /// </summary>
         [JsonProperty("CanEditFormField")]
         public bool? CanEditFormField{ get; set; }

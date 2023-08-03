@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 来源IP
+        /// 来源 IP 地址。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 连接数
+        /// 客户端连接数量。
         /// </summary>
         [JsonProperty("Conn")]
         public long? Conn{ get; set; }

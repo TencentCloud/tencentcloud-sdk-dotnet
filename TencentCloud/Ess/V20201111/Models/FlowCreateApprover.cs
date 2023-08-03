@@ -75,7 +75,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 签署方经办人在模板中的参与方ID
-        /// <br/>模版发起合同时，该参数为必填项
+        /// <br/>模板发起合同时，该参数为必填项
         /// <br/>文件发起合同是，该参数无序传值
         /// </summary>
         [JsonProperty("RecipientId")]

@@ -25,7 +25,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// 大禹子产品代号（bgp-multip表示高防包）
+        /// DDoS防护子产品代号（bgp-multip表示高防包）
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }

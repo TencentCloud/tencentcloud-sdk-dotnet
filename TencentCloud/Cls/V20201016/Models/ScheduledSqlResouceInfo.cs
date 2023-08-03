@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 主题的的地域信息
+        /// 主题的地域信息
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

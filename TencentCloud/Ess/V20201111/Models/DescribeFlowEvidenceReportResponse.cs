@@ -36,7 +36,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 
         /// EvidenceStatusExecuting  出证任务在执行中
         /// EvidenceStatusSuccess  出证任务执行成功
-        /// EvidenceStatusFailed  出征任务执行失败
+        /// EvidenceStatusFailed  出证任务执行失败
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

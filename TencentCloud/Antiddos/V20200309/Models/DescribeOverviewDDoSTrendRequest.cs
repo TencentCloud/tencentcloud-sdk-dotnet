@@ -49,7 +49,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// 大禹子产品代号（bgpip表示高防IP；bgp-multip表示高防包；basic表示DDoS基础防护）
+        /// DDoS防护子产品代号（bgpip表示高防IP；bgp-multip表示高防包；basic表示DDoS基础防护）
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }

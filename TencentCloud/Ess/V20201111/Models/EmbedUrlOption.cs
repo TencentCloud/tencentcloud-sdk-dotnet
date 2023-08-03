@@ -34,10 +34,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? ShowFlowDetailComponent{ get; set; }
 
         /// <summary>
-        /// 模版预览，允许展示模版控件信息
-        /// <br/>true：允许在模版预览页展示控件
-        /// <br/>false：不允许在模版预览页展示控件
-        /// <br/>默认false，模版预览页不展示控件
+        /// 模板预览，允许展示模板控件信息
+        /// <br/>true：允许在模板预览页展示控件
+        /// <br/>false：不允许在模板预览页展示控件
+        /// <br/>默认false，模板预览页不展示控件
         /// </summary>
         [JsonProperty("ShowTemplateComponent")]
         public bool? ShowTemplateComponent{ get; set; }

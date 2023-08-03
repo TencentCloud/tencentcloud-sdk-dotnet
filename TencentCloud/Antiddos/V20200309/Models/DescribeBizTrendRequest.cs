@@ -31,7 +31,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Statistics{ get; set; }
 
         /// <summary>
-        /// 大禹子产品代号（bgpip表示高防IP）
+        /// DDoS防护子产品代号（bgpip表示高防IP）
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }

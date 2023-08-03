@@ -33,7 +33,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 接受回调URL地址。支持http://或者https://协议
         /// 
-        /// Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+        /// Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
@@ -58,7 +58,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 是否需要回调的时候返回印章(签名) 图片的 base64
         /// 
         /// false-不需要(默认)
-        /// true-需要(
+        /// true-需要
         /// </summary>
         [JsonProperty("SealImgCallback")]
         public bool? SealImgCallback{ get; set; }
