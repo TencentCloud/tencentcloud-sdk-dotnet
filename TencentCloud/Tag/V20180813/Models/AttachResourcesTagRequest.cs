@@ -25,7 +25,7 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// 资源所属业务名称（资源六段式中的第三段）
+        /// 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Tag.V20180813.Models
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 标签键
+        /// 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 标签值
+        /// 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }
 
         /// <summary>
-        /// 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
+        /// 资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }

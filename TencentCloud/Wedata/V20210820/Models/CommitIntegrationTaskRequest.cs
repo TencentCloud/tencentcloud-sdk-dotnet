@@ -54,6 +54,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExtConfig")]
         public RecordField[] ExtConfig{ get; set; }
 
+        /// <summary>
+        /// 提交版本描述
+        /// </summary>
+        [JsonProperty("VersionDesc")]
+        public string VersionDesc{ get; set; }
+
+        /// <summary>
+        /// 提交版本号
+        /// </summary>
+        [JsonProperty("InstanceVersion")]
+        public long? InstanceVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CommitType", this.CommitType);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamArrayObj(map, prefix + "ExtConfig.", this.ExtConfig);
+            this.SetParamSimple(map, prefix + "VersionDesc", this.VersionDesc);
+            this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
         }
     }
 }

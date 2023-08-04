@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认self。
+        /// 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
         /// </summary>
         [JsonProperty("CertificateAttribution")]
         public string CertificateAttribution{ get; set; }

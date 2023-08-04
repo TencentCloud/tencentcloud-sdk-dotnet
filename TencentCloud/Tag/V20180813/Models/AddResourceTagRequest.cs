@@ -25,19 +25,19 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// 标签键
+        /// 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 标签值
+        /// 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }
 
         /// <summary>
-        /// [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
+        /// 待关联的资源，用标准的资源六段式表示。正确的资源六段式请参考：https://cloud.tencent.com/document/product/651/89122
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }

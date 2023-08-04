@@ -42,6 +42,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
+        /// <summary>
+        /// 是否删除开发态任务。默认不删除开发态，为 0 不删除 , 为 1 删除
+        /// </summary>
+        [JsonProperty("DeleteKFFlag")]
+        public long? DeleteKFFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "DeleteKFFlag", this.DeleteKFFlag);
         }
     }
 }

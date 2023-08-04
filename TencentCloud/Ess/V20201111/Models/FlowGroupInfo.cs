@@ -85,7 +85,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? Unordered{ get; set; }
 
         /// <summary>
-        /// 合同（流程）发起方的填写控件，用户
+        /// 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }

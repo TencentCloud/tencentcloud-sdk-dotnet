@@ -43,10 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 处置动作，取值有：
-        /// <li>monitor：观察；</li>
-        /// <li>drop：拦截；</li>
-        /// <li>alg：JavaScript挑战。</li>
+        /// 处置动作，取值有： <li>monitor：观察；</li> <li>drop：拦截；</li> <li>alg：JavaScript挑战。</li>	
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -87,7 +84,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? RulePriority{ get; set; }
 
         /// <summary>
-        /// 规则id。仅出参使用。
+        /// 规则 Id。仅出参使用。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleID")]
@@ -109,7 +106,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 统计范围，字段为null时，代表source_to_eo。取值有：
+        /// 统计范围，字段为 null 时，代表 source_to_eo。取值有：
         /// <li>source_to_eo：（响应）源站到EdgeOne。</li>
         /// <li>client_to_eo：（请求）客户端到EdgeOne；</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。

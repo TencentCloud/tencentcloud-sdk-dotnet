@@ -37,7 +37,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 是否自动使用代金券，0-不使用；1-使用；默认不实用
+        /// 是否自动使用代金券，0-不使用；1-使用；默认不使用
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }

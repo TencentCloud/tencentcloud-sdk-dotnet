@@ -37,13 +37,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string EventType{ get; set; }
 
         /// <summary>
-        /// 扩展文件生成开始时间
+        /// 扩展文件生成开始时间(yyyy-MM-dd HH:mm:ss)
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 扩展文件生成结束时间
+        /// 扩展文件生成结束时间(yyyy-MM-dd HH:mm:ss)
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

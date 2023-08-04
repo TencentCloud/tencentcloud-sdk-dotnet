@@ -42,6 +42,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskType")]
         public ulong? TaskType{ get; set; }
 
+        /// <summary>
+        /// 提交版本号
+        /// </summary>
+        [JsonProperty("InstanceVersion")]
+        public long? InstanceVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
         }
     }
 }

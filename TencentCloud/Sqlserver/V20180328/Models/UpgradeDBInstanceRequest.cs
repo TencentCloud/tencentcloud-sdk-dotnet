@@ -73,7 +73,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string HAType{ get; set; }
 
         /// <summary>
-        /// 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
+        /// 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
         /// </summary>
         [JsonProperty("MultiZones")]
         public string MultiZones{ get; set; }

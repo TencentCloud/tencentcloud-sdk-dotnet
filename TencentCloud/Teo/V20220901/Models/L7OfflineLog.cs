@@ -25,42 +25,54 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 日志打包开始时间。
-        /// </summary>
-        [JsonProperty("LogTime")]
-        public long? LogTime{ get; set; }
-
-        /// <summary>
-        /// 子域名。
+        /// 离线日志域名。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 原始大小，单位byte。
-        /// </summary>
-        [JsonProperty("Size")]
-        public long? Size{ get; set; }
-
-        /// <summary>
-        /// 下载地址。
-        /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
-
-        /// <summary>
-        /// 日志数据包名。
-        /// </summary>
-        [JsonProperty("LogPacketName")]
-        public string LogPacketName{ get; set; }
-
-        /// <summary>
-        /// 加速区域，取值有：
+        /// 日志所属区域，取值有：
         /// <li>mainland：中国大陆境内; </li>
         /// <li>overseas：全球（不含中国大陆）。</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
+
+        /// <summary>
+        /// 离线日志数据包名。	
+        /// </summary>
+        [JsonProperty("LogPacketName")]
+        public string LogPacketName{ get; set; }
+
+        /// <summary>
+        /// 离线日志下载地址。	
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
+        /// 日志打包时间，此参数已经废弃。
+        /// </summary>
+        [JsonProperty("LogTime")]
+        public long? LogTime{ get; set; }
+
+        /// <summary>
+        /// 日志打包开始时间。
+        /// </summary>
+        [JsonProperty("LogStartTime")]
+        public string LogStartTime{ get; set; }
+
+        /// <summary>
+        /// 日志打包结束时间。
+        /// </summary>
+        [JsonProperty("LogEndTime")]
+        public string LogEndTime{ get; set; }
+
+        /// <summary>
+        /// 日志原始大小，单位 Byte。
+        /// </summary>
+        [JsonProperty("Size")]
+        public long? Size{ get; set; }
 
 
         /// <summary>
@@ -68,12 +80,14 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LogTime", this.LogTime);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "Size", this.Size);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamSimple(map, prefix + "LogPacketName", this.LogPacketName);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "LogPacketName", this.LogPacketName);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "LogTime", this.LogTime);
+            this.SetParamSimple(map, prefix + "LogStartTime", this.LogStartTime);
+            this.SetParamSimple(map, prefix + "LogEndTime", this.LogEndTime);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
         }
     }
 }

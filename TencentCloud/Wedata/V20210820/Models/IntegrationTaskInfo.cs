@@ -329,6 +329,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskAlarmRegularList")]
         public string[] TaskAlarmRegularList{ get; set; }
 
+        /// <summary>
+        /// 资源分层情况： 0：进行中,1：成功 ,2：失败
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SwitchResource")]
+        public long? SwitchResource{ get; set; }
+
+        /// <summary>
+        /// 读取阶段：0：全部全量,1：部分全量,2：全部增量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReadPhase")]
+        public long? ReadPhase{ get; set; }
+
+        /// <summary>
+        /// 版本号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceVersion")]
+        public long? InstanceVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -379,6 +400,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Locker", this.Locker);
             this.SetParamSimple(map, prefix + "RunningCu", this.RunningCu);
             this.SetParamArraySimple(map, prefix + "TaskAlarmRegularList.", this.TaskAlarmRegularList);
+            this.SetParamSimple(map, prefix + "SwitchResource", this.SwitchResource);
+            this.SetParamSimple(map, prefix + "ReadPhase", this.ReadPhase);
+            this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
         }
     }
 }

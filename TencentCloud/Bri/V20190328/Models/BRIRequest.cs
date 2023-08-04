@@ -74,7 +74,6 @@ namespace TencentCloud.Bri.V20190328.Models
 
         /// <summary>
         /// 电话号码 (业务名为bri_num时必填)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
@@ -109,6 +108,12 @@ namespace TencentCloud.Bri.V20190328.Models
         [JsonProperty("WechatTag")]
         public string WechatTag{ get; set; }
 
+        /// <summary>
+        /// 子客户ID
+        /// </summary>
+        [JsonProperty("SubAppid")]
+        public string SubAppid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +134,7 @@ namespace TencentCloud.Bri.V20190328.Models
             this.SetParamSimple(map, prefix + "Imei", this.Imei);
             this.SetParamSimple(map, prefix + "Wechat", this.Wechat);
             this.SetParamSimple(map, prefix + "WechatTag", this.WechatTag);
+            this.SetParamSimple(map, prefix + "SubAppid", this.SubAppid);
         }
     }
 }

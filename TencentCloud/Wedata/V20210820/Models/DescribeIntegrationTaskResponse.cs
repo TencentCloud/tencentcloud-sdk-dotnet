@@ -32,6 +32,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         public IntegrationTaskInfo TaskInfo{ get; set; }
 
         /// <summary>
+        /// 采集器统计信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentStatus")]
+        public AgentStatus AgentStatus{ get; set; }
+
+        /// <summary>
+        /// 任务版本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskVersion")]
+        public TaskVersionInstance TaskVersion{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +58,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
+            this.SetParamObj(map, prefix + "AgentStatus.", this.AgentStatus);
+            this.SetParamObj(map, prefix + "TaskVersion.", this.TaskVersion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -70,6 +70,16 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
+        /// <summary>
+        /// yaml格式的pod patch内容，例如
+        /// metadata:
+        ///   labels:
+        ///     key: value
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PodTemplatePatch")]
+        public string PodTemplatePatch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +93,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArrayObj(map, prefix + "NodeSelector.", this.NodeSelector);
             this.SetParamArrayObj(map, prefix + "Tolerations.", this.Tolerations);
             this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "PodTemplatePatch", this.PodTemplatePatch);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.816</VersionPrefix>
+    <VersionPrefix>3.0.817</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20210820\WedataClient.cs" />
     <Compile Include="V20210820\Models\AdhocDetail.cs" />
     <Compile Include="V20210820\Models\AdhocRecord.cs" />
+    <Compile Include="V20210820\Models\AgentStatus.cs" />
     <Compile Include="V20210820\Models\AlarmEventInfo.cs" />
     <Compile Include="V20210820\Models\AlarmIndicatorInfo.cs" />
     <Compile Include="V20210820\Models\AlarmInfo.cs" />
@@ -856,6 +857,7 @@
     <Compile Include="V20210820\Models\TaskTypeCnt.cs" />
     <Compile Include="V20210820\Models\TaskTypeMap.cs" />
     <Compile Include="V20210820\Models\TaskTypeOpsDto.cs" />
+    <Compile Include="V20210820\Models\TaskVersionInstance.cs" />
     <Compile Include="V20210820\Models\ThresholdValue.cs" />
     <Compile Include="V20210820\Models\TopTableStat.cs" />
     <Compile Include="V20210820\Models\TopTableStatItem.cs" />

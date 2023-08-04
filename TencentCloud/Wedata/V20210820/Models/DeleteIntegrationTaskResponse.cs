@@ -31,6 +31,23 @@ namespace TencentCloud.Wedata.V20210820.Models
         public bool? Data{ get; set; }
 
         /// <summary>
+        /// 任务删除成功与否标识
+        /// 0表示删除成功
+        /// 1 表示失败，失败原因见 DeleteErrInfo
+        /// 100 表示running or suspend task can't be deleted失败，失败原因也会写到DeleteErrInfo里面
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeleteFlag")]
+        public long? DeleteFlag{ get; set; }
+
+        /// <summary>
+        /// 删除失败原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeleteErrInfo")]
+        public string DeleteErrInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +60,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Data", this.Data);
+            this.SetParamSimple(map, prefix + "DeleteFlag", this.DeleteFlag);
+            this.SetParamSimple(map, prefix + "DeleteErrInfo", this.DeleteErrInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -42,7 +42,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>idcid：IDC 规则，仅bot自定义规则可用；</li>
         /// <li>sipbot：搜索引擎规则，仅bot自定义规则可用；</li>
         /// <li>portrait：画像分析，仅bot自定义规则可用；</li>
-        /// <li>header_seq：请求头顺序，仅bot自定义规则可用。</li>
+        /// <li>header_seq：请求头顺序，仅bot自定义规则可用；</li>
+        /// <li>hdr：请求正文，仅Web防护自定义规则可用。</li>
         /// </summary>
         [JsonProperty("MatchFrom")]
         public string MatchFrom{ get; set; }

@@ -37,25 +37,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 站点集合，不填默认选择全部站点。
+        /// 站点集合，此参数必填，不填默认查询为空。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 四层实例ID集合。
+        /// 四层实例 ID 集合。
         /// </summary>
         [JsonProperty("ProxyIds")]
         public string[] ProxyIds{ get; set; }
 
         /// <summary>
-        /// 分页查询的限制数目，默认值为20，最大查询条目为1000。
+        /// 分页查询的限制数目，默认值为 20，最大查询条目为 1000。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页的偏移量，默认值为0。
+        /// 分页的偏移量，默认值为 0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

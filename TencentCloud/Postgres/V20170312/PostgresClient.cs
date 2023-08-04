@@ -1377,6 +1377,50 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeDBInstanceHAConfig）用于查询实例HA配置信息。其中HA配置信息包括：
+        /// <li>允许备节点切换为主节点的条件配置
+        /// <li>半同步实例使用同步复制或异步复制的条件配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceHAConfigRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceHAConfigResponse"/></returns>
+        public async Task<DescribeDBInstanceHAConfigResponse> DescribeDBInstanceHAConfig(DescribeDBInstanceHAConfigRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceHAConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceHAConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceHAConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstanceHAConfig）用于查询实例HA配置信息。其中HA配置信息包括：
+        /// <li>允许备节点切换为主节点的条件配置
+        /// <li>半同步实例使用同步复制或异步复制的条件配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceHAConfigRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceHAConfigResponse"/></returns>
+        public DescribeDBInstanceHAConfigResponse DescribeDBInstanceHAConfigSync(DescribeDBInstanceHAConfigRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceHAConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceHAConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceHAConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDBInstanceAttribute）用于查询实例的参数信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceParametersRequest"/></param>
@@ -2737,6 +2781,50 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyDBInstanceHAConfig）用于修改实例HA配置信息。其中HA配置信息包括：
+        /// <li>允许备节点切换为主节点的条件配置
+        /// <li>半同步实例使用同步复制或异步复制的条件配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceHAConfigRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceHAConfigResponse"/></returns>
+        public async Task<ModifyDBInstanceHAConfigResponse> ModifyDBInstanceHAConfig(ModifyDBInstanceHAConfigRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceHAConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceHAConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceHAConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBInstanceHAConfig）用于修改实例HA配置信息。其中HA配置信息包括：
+        /// <li>允许备节点切换为主节点的条件配置
+        /// <li>半同步实例使用同步复制或异步复制的条件配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceHAConfigRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceHAConfigResponse"/></returns>
+        public ModifyDBInstanceHAConfigResponse ModifyDBInstanceHAConfigSync(ModifyDBInstanceHAConfigRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceHAConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceHAConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceHAConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstanceName）用于修改postgresql实例名字。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>
@@ -3408,6 +3496,52 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "SetAutoRenewFlag");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAutoRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（SwitchDBInstancePrimary）用于切换实例主备关系。
+        /// <li>通过主动发起切换，可以验证业务能否正确处理实例主备切换的场景
+        /// <li>通过使用强制切换，可以在备节点延迟不满足切换条件时，强制发起主从切换
+        /// <li>只有主实例可以执行该操作
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstancePrimaryRequest"/></param>
+        /// <returns><see cref="SwitchDBInstancePrimaryResponse"/></returns>
+        public async Task<SwitchDBInstancePrimaryResponse> SwitchDBInstancePrimary(SwitchDBInstancePrimaryRequest req)
+        {
+             JsonResponseModel<SwitchDBInstancePrimaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchDBInstancePrimary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstancePrimaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（SwitchDBInstancePrimary）用于切换实例主备关系。
+        /// <li>通过主动发起切换，可以验证业务能否正确处理实例主备切换的场景
+        /// <li>通过使用强制切换，可以在备节点延迟不满足切换条件时，强制发起主从切换
+        /// <li>只有主实例可以执行该操作
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstancePrimaryRequest"/></param>
+        /// <returns><see cref="SwitchDBInstancePrimaryResponse"/></returns>
+        public SwitchDBInstancePrimaryResponse SwitchDBInstancePrimarySync(SwitchDBInstancePrimaryRequest req)
+        {
+             JsonResponseModel<SwitchDBInstancePrimaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchDBInstancePrimary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstancePrimaryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

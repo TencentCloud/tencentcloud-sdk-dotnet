@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SourceLocationId{ get; set; }
 
         /// <summary>
-        /// 重定向至的目标转发规则ID
+        /// 重定向目标转发规则的ID
         /// </summary>
         [JsonProperty("TargetLocationId")]
         public string TargetLocationId{ get; set; }
