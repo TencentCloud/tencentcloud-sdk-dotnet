@@ -25,18 +25,16 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 网关列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回数据
         /// </summary>
-        [JsonProperty("List")]
-        public GatewaysData[] List{ get; set; }
+        [JsonProperty("Data")]
+        public ListGatewaysData Data{ get; set; }
 
         /// <summary>
-        /// 网关数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +42,8 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "List.", this.List);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

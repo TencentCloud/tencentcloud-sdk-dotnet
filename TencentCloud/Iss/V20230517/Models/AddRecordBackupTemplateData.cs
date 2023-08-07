@@ -21,64 +21,57 @@ namespace TencentCloud.Iss.V20230517.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AddOrgResponse : AbstractModel
+    public class AddRecordBackupTemplateData : AbstractModel
     {
         
         /// <summary>
-        /// 组织 ID
+        /// 模板ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("OrganizationId")]
-        public string OrganizationId{ get; set; }
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 组织名称
+        /// 模板名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("TemplateName")]
+        public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 组织父节点 ID
+        /// 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ParentId")]
-        public string ParentId{ get; set; }
+        [JsonProperty("TimeSections")]
+        public RecordTemplateTimeSections[] TimeSections{ get; set; }
 
         /// <summary>
-        /// 组织层级
+        /// 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Level")]
-        public long? Level{ get; set; }
+        [JsonProperty("DevTimeSections")]
+        public RecordTemplateTimeSections[] DevTimeSections{ get; set; }
 
         /// <summary>
-        /// 用户ID
+        /// 上云倍速（支持1，2，4倍速）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AppId")]
-        public long? AppId{ get; set; }
+        [JsonProperty("Scale")]
+        public long? Scale{ get; set; }
 
         /// <summary>
-        /// 组织结构
+        /// 创建时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ParentIds")]
-        public string ParentIds{ get; set; }
+        [JsonProperty("CreateAt")]
+        public string CreateAt{ get; set; }
 
         /// <summary>
-        /// 设备总数
+        /// 更新时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Total")]
-        public long? Total{ get; set; }
-
-        /// <summary>
-        /// 设备在线数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Online")]
-        public long? Online{ get; set; }
+        [JsonProperty("UpdateAt")]
+        public string UpdateAt{ get; set; }
 
 
         /// <summary>
@@ -86,14 +79,13 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "ParentId", this.ParentId);
-            this.SetParamSimple(map, prefix + "Level", this.Level);
-            this.SetParamSimple(map, prefix + "AppId", this.AppId);
-            this.SetParamSimple(map, prefix + "ParentIds", this.ParentIds);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamSimple(map, prefix + "Online", this.Online);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
+            this.SetParamArrayObj(map, prefix + "TimeSections.", this.TimeSections);
+            this.SetParamArrayObj(map, prefix + "DevTimeSections.", this.DevTimeSections);
+            this.SetParamSimple(map, prefix + "Scale", this.Scale);
+            this.SetParamSimple(map, prefix + "CreateAt", this.CreateAt);
+            this.SetParamSimple(map, prefix + "UpdateAt", this.UpdateAt);
         }
     }
 }

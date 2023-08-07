@@ -25,11 +25,16 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 用户所有计划下通道id，存在通道是为数组格式，不存在时，字段数据为空 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回结果
         /// </summary>
-        [JsonProperty("List")]
-        public string[] List{ get; set; }
+        [JsonProperty("Data")]
+        public ListRecordPlanChannelsData Data{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -37,7 +42,8 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "List.", this.List);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

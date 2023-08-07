@@ -25,16 +25,16 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 组织下通道总数
+        /// 返回结果
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("Data")]
+        public ListOrganizationChannelNumbersData Data{ get; set; }
 
         /// <summary>
-        /// 组织下未添加到计划的通道总数
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("NotInPlanCount")]
-        public long? NotInPlanCount{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "NotInPlanCount", this.NotInPlanCount);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

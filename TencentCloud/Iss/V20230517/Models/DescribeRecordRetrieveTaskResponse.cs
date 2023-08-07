@@ -25,71 +25,16 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 取回任务ID
+        /// 返回结果
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("Data")]
+        public DescribeRecordRetrieveTaskData Data{ get; set; }
 
         /// <summary>
-        /// 取回任务名称
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("TaskName")]
-        public string TaskName{ get; set; }
-
-        /// <summary>
-        /// 取回录像的开始时间
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
-
-        /// <summary>
-        /// 取回录像的结束时间
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public ulong? EndTime{ get; set; }
-
-        /// <summary>
-        /// 取回模式，1:极速模式，其他暂不支持
-        /// </summary>
-        [JsonProperty("Mode")]
-        public long? Mode{ get; set; }
-
-        /// <summary>
-        /// 副本有效期
-        /// </summary>
-        [JsonProperty("Expiration")]
-        public long? Expiration{ get; set; }
-
-        /// <summary>
-        /// 任务状态，0:已取回，1:取回中，2:待取回
-        /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
-
-        /// <summary>
-        /// 取回容量，单位MB
-        /// </summary>
-        [JsonProperty("Capacity")]
-        public float? Capacity{ get; set; }
-
-        /// <summary>
-        /// 任务的设备通道id
-        /// </summary>
-        [JsonProperty("Channels")]
-        public RecordRetrieveTaskChannelInfo[] Channels{ get; set; }
-
-        /// <summary>
-        /// 任务描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Describe")]
-        public string Describe{ get; set; }
-
-        /// <summary>
-        /// 任务通道数量
-        /// </summary>
-        [JsonProperty("ChannelCount")]
-        public long? ChannelCount{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -97,17 +42,8 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "Mode", this.Mode);
-            this.SetParamSimple(map, prefix + "Expiration", this.Expiration);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "Capacity", this.Capacity);
-            this.SetParamArrayObj(map, prefix + "Channels.", this.Channels);
-            this.SetParamSimple(map, prefix + "Describe", this.Describe);
-            this.SetParamSimple(map, prefix + "ChannelCount", this.ChannelCount);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

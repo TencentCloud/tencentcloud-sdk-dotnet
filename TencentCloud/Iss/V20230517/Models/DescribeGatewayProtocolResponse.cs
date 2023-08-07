@@ -25,25 +25,16 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 接入协议的字典码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回数据
         /// </summary>
-        [JsonProperty("TypeCode")]
-        public string TypeCode{ get; set; }
+        [JsonProperty("Data")]
+        public DescribeGatewayProtocolData[] Data{ get; set; }
 
         /// <summary>
-        /// 接入协议类型值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Value")]
-        public long? Value{ get; set; }
-
-        /// <summary>
-        /// 接入协议的类型描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Label")]
-        public string Label{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +42,8 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TypeCode", this.TypeCode);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
-            this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

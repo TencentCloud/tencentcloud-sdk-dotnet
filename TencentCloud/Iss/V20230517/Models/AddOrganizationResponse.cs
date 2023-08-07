@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517.Models
         /// 增加组织接口返回数据
         /// </summary>
         [JsonProperty("Data")]
-        public AddOrgResponse Data{ get; set; }
+        public AddOrgData Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

@@ -29,7 +29,7 @@ namespace TencentCloud.Iss.V20230517.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
-        public AITaskResultResponse Data{ get; set; }
+        public AITaskResultData Data{ get; set; }
 
         /// <summary>
         /// AI识别结果数量

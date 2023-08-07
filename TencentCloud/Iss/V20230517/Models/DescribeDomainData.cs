@@ -21,36 +21,50 @@ namespace TencentCloud.Iss.V20230517.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateOrgResponse : AbstractModel
+    public class DescribeDomainData : AbstractModel
     {
         
         /// <summary>
-        /// 组织 ID
+        /// 域名ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("OrganizationId")]
-        public string OrganizationId{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// 组织名称
+        /// 播放域名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("PlayDomain")]
+        public string PlayDomain{ get; set; }
 
         /// <summary>
-        /// 组织父节点 ID
+        /// CNAME 记录值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ParentId")]
-        public string ParentId{ get; set; }
+        [JsonProperty("InternalDomain")]
+        public string InternalDomain{ get; set; }
 
         /// <summary>
-        /// 组织层级
+        /// 是否上传证书（0：否，1：是）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Level")]
-        public long? Level{ get; set; }
+        [JsonProperty("HaveCert")]
+        public long? HaveCert{ get; set; }
+
+        /// <summary>
+        /// 服务节点 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 服务节点名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
 
         /// <summary>
         /// 用户ID
@@ -59,41 +73,19 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
-        /// <summary>
-        /// 组织结构
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ParentIds")]
-        public string ParentIds{ get; set; }
-
-        /// <summary>
-        /// 设备总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Total")]
-        public long? Total{ get; set; }
-
-        /// <summary>
-        /// 设备在线数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Online")]
-        public long? Online{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "ParentId", this.ParentId);
-            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "PlayDomain", this.PlayDomain);
+            this.SetParamSimple(map, prefix + "InternalDomain", this.InternalDomain);
+            this.SetParamSimple(map, prefix + "HaveCert", this.HaveCert);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
-            this.SetParamSimple(map, prefix + "ParentIds", this.ParentIds);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamSimple(map, prefix + "Online", this.Online);
         }
     }
 }

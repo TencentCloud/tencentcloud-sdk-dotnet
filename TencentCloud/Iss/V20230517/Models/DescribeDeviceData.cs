@@ -21,7 +21,7 @@ namespace TencentCloud.Iss.V20230517.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDeviceResponse : AbstractModel
+    public class DescribeDeviceData : AbstractModel
     {
         
         /// <summary>

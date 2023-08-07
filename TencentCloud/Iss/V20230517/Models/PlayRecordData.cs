@@ -21,27 +21,15 @@ namespace TencentCloud.Iss.V20230517.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AITaskResultResponse : AbstractModel
+    public class PlayRecordData : AbstractModel
     {
         
         /// <summary>
-        /// AI 任务 ID
-        /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
-
-        /// <summary>
-        /// 在 BeginTime 和 EndTime 时间之内，有识别结果的 AI 调用次数（分页依据此数值）
-        /// </summary>
-        [JsonProperty("AIResultCount")]
-        public ulong? AIResultCount{ get; set; }
-
-        /// <summary>
-        /// AI 任务执行结果详情
+        /// 录像播放地址
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AIResults")]
-        public AITaskResultInfo AIResults{ get; set; }
+        [JsonProperty("Flv")]
+        public string Flv{ get; set; }
 
 
         /// <summary>
@@ -49,9 +37,7 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "AIResultCount", this.AIResultCount);
-            this.SetParamObj(map, prefix + "AIResults.", this.AIResults);
+            this.SetParamSimple(map, prefix + "Flv", this.Flv);
         }
     }
 }

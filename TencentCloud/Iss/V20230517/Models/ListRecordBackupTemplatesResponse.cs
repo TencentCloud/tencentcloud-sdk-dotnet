@@ -25,53 +25,16 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 模板ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回数据
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public string TemplateId{ get; set; }
+        [JsonProperty("Data")]
+        public ListRecordBackupTemplatesData[] Data{ get; set; }
 
         /// <summary>
-        /// 模板名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("TemplateName")]
-        public string TemplateName{ get; set; }
-
-        /// <summary>
-        /// 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("TimeSections")]
-        public RecordTemplateTimeSections[] TimeSections{ get; set; }
-
-        /// <summary>
-        /// 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("DevTimeSections")]
-        public RecordTemplateTimeSections[] DevTimeSections{ get; set; }
-
-        /// <summary>
-        /// 上云倍速（支持1，2，4倍速）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Scale")]
-        public long? Scale{ get; set; }
-
-        /// <summary>
-        /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CreateAt")]
-        public string CreateAt{ get; set; }
-
-        /// <summary>
-        /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("UpdateAt")]
-        public string UpdateAt{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -79,13 +42,8 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
-            this.SetParamArrayObj(map, prefix + "TimeSections.", this.TimeSections);
-            this.SetParamArrayObj(map, prefix + "DevTimeSections.", this.DevTimeSections);
-            this.SetParamSimple(map, prefix + "Scale", this.Scale);
-            this.SetParamSimple(map, prefix + "CreateAt", this.CreateAt);
-            this.SetParamSimple(map, prefix + "UpdateAt", this.UpdateAt);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

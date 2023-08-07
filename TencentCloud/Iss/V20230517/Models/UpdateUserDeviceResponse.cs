@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517.Models
         /// 返回数据
         /// </summary>
         [JsonProperty("Data")]
-        public UpdateDeviceResponse Data{ get; set; }
+        public UpdateDeviceData Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

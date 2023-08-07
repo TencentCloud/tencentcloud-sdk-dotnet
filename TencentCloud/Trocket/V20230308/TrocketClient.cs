@@ -1,0 +1,154 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Trocket.V20230308
+{
+
+   using Newtonsoft.Json;
+   using System.Threading.Tasks;
+   using TencentCloud.Common;
+   using TencentCloud.Common.Profile;
+   using TencentCloud.Trocket.V20230308.Models;
+
+   public class TrocketClient : AbstractClient{
+
+       private const string endpoint = "trocket.tencentcloudapi.com";
+       private const string version = "2023-03-08";
+
+        /// <summary>
+        /// Client constructor.
+        /// </summary>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        public TrocketClient(Credential credential, string region)
+            : this(credential, region, new ClientProfile())
+        {
+
+        }
+
+        /// <summary>
+        /// Client Constructor.
+        /// </summary>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
+        public TrocketClient(Credential credential, string region, ClientProfile profile)
+            : base(endpoint, version, credential, region, profile)
+        {
+
+        }
+
+        /// <summary>
+        /// 获取实例列表，Filters参数使用说明如下：
+        /// 1. InstanceName, 名称模糊查询
+        /// 2. InstanceId，实例ID查询
+        /// 3. InstanceType, 实例类型查询，支持多选
+        /// 3. InstanceStatus，实例状态查询，支持多选
+        /// 
+        /// 当使用TagFilters查询时，Filters参数失效。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeInstanceListResponse"/></returns>
+        public async Task<DescribeInstanceListResponse> DescribeInstanceList(DescribeInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例列表，Filters参数使用说明如下：
+        /// 1. InstanceName, 名称模糊查询
+        /// 2. InstanceId，实例ID查询
+        /// 3. InstanceType, 实例类型查询，支持多选
+        /// 3. InstanceStatus，实例状态查询，支持多选
+        /// 
+        /// 当使用TagFilters查询时，Filters参数失效。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeInstanceListResponse"/></returns>
+        public DescribeInstanceListResponse DescribeInstanceListSync(DescribeInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取主题列表，Filter参数使用说明如下：
+        /// 
+        /// 1. TopicName，主题名称模糊搜索
+        /// 2. TopicType，主题类型查询，支持多选，可选值：Normal,Order,Transaction,DelayScheduled
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicListRequest"/></param>
+        /// <returns><see cref="DescribeTopicListResponse"/></returns>
+        public async Task<DescribeTopicListResponse> DescribeTopicList(DescribeTopicListRequest req)
+        {
+             JsonResponseModel<DescribeTopicListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopicList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取主题列表，Filter参数使用说明如下：
+        /// 
+        /// 1. TopicName，主题名称模糊搜索
+        /// 2. TopicType，主题类型查询，支持多选，可选值：Normal,Order,Transaction,DelayScheduled
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicListRequest"/></param>
+        /// <returns><see cref="DescribeTopicListResponse"/></returns>
+        public DescribeTopicListResponse DescribeTopicListSync(DescribeTopicListRequest req)
+        {
+             JsonResponseModel<DescribeTopicListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopicList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+    }
+}

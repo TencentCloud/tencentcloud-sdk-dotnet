@@ -25,25 +25,16 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// flv 流地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回数据
         /// </summary>
-        [JsonProperty("Flv")]
-        public string Flv{ get; set; }
+        [JsonProperty("Data")]
+        public ControlDeviceStreamData Data{ get; set; }
 
         /// <summary>
-        /// hls 流地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Hls")]
-        public string Hls{ get; set; }
-
-        /// <summary>
-        /// rtmp 流地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Rtmp")]
-        public string Rtmp{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +42,8 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Flv", this.Flv);
-            this.SetParamSimple(map, prefix + "Hls", this.Hls);
-            this.SetParamSimple(map, prefix + "Rtmp", this.Rtmp);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -25,58 +25,16 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 录像上云计划ID
+        /// 返回数据
         /// </summary>
-        [JsonProperty("PlanId")]
-        public string PlanId{ get; set; }
+        [JsonProperty("Data")]
+        public AddRecordBackupPlanData Data{ get; set; }
 
         /// <summary>
-        /// 录像上云计划名称
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("PlanName")]
-        public string PlanName{ get; set; }
-
-        /// <summary>
-        /// 录像上云模板ID
-        /// </summary>
-        [JsonProperty("TemplateId")]
-        public string TemplateId{ get; set; }
-
-        /// <summary>
-        /// 录像上云计划描述
-        /// </summary>
-        [JsonProperty("Describe")]
-        public string Describe{ get; set; }
-
-        /// <summary>
-        /// 云文件生命周期
-        /// </summary>
-        [JsonProperty("LifeCycle")]
-        public LifeCycleData LifeCycle{ get; set; }
-
-        /// <summary>
-        /// 录像上云计划状态，1:正常使用中，0:删除中，无法使用
-        /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
-
-        /// <summary>
-        /// 通道数量
-        /// </summary>
-        [JsonProperty("ChannelCount")]
-        public long? ChannelCount{ get; set; }
-
-        /// <summary>
-        /// 创建时间
-        /// </summary>
-        [JsonProperty("CreateAt")]
-        public string CreateAt{ get; set; }
-
-        /// <summary>
-        /// 修改时间
-        /// </summary>
-        [JsonProperty("UpdateAt")]
-        public string UpdateAt{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -84,15 +42,8 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
-            this.SetParamSimple(map, prefix + "PlanName", this.PlanName);
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamSimple(map, prefix + "Describe", this.Describe);
-            this.SetParamObj(map, prefix + "LifeCycle.", this.LifeCycle);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "ChannelCount", this.ChannelCount);
-            this.SetParamSimple(map, prefix + "CreateAt", this.CreateAt);
-            this.SetParamSimple(map, prefix + "UpdateAt", this.UpdateAt);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

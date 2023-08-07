@@ -25,60 +25,16 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 鉴权配置ID（uuid）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回结果
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("Data")]
+        public DescribeStreamAuthData Data{ get; set; }
 
         /// <summary>
-        /// 是否开播放鉴权（1:开启,0:关闭）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("PullState")]
-        public long? PullState{ get; set; }
-
-        /// <summary>
-        /// 播放密钥（仅支持字母数字，长度0-10位）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PullSecret")]
-        public string PullSecret{ get; set; }
-
-        /// <summary>
-        /// 播放过期时间（单位：分钟）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PullExpired")]
-        public long? PullExpired{ get; set; }
-
-        /// <summary>
-        /// 是否开启推流鉴权（1:开启,0:关闭）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PushState")]
-        public long? PushState{ get; set; }
-
-        /// <summary>
-        /// 推流密钥（仅支持字母数字，长度0-10位）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PushSecret")]
-        public string PushSecret{ get; set; }
-
-        /// <summary>
-        /// 推流过期时间（单位：分钟）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PushExpired")]
-        public long? PushExpired{ get; set; }
-
-        /// <summary>
-        /// 用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("AppId")]
-        public long? AppId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -86,14 +42,8 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "PullState", this.PullState);
-            this.SetParamSimple(map, prefix + "PullSecret", this.PullSecret);
-            this.SetParamSimple(map, prefix + "PullExpired", this.PullExpired);
-            this.SetParamSimple(map, prefix + "PushState", this.PushState);
-            this.SetParamSimple(map, prefix + "PushSecret", this.PushSecret);
-            this.SetParamSimple(map, prefix + "PushExpired", this.PushExpired);
-            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

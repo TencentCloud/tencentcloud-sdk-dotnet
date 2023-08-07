@@ -21,30 +21,29 @@ namespace TencentCloud.Iss.V20230517.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RecordPlanOptResponse : AbstractModel
+    public class UpdateRecordBackupPlanData : AbstractModel
     {
         
         /// <summary>
-        /// 上云计划ID
+        /// 录像上云计划ID
         /// </summary>
         [JsonProperty("PlanId")]
         public string PlanId{ get; set; }
 
         /// <summary>
-        /// 上云计划名称
+        /// 录像上云计划名称
         /// </summary>
         [JsonProperty("PlanName")]
         public string PlanName{ get; set; }
 
         /// <summary>
-        /// 上云模板ID
+        /// 录像上云模板ID
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 上云计划描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 录像上云计划描述
         /// </summary>
         [JsonProperty("Describe")]
         public string Describe{ get; set; }
@@ -56,11 +55,28 @@ namespace TencentCloud.Iss.V20230517.Models
         public LifeCycleData LifeCycle{ get; set; }
 
         /// <summary>
-        /// 码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 录像上云计划状态，1:正常使用中，0:删除中，无法使用
         /// </summary>
-        [JsonProperty("StreamType")]
-        public string StreamType{ get; set; }
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 通道数量
+        /// </summary>
+        [JsonProperty("ChannelCount")]
+        public long? ChannelCount{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreateAt")]
+        public string CreateAt{ get; set; }
+
+        /// <summary>
+        /// 修改时间
+        /// </summary>
+        [JsonProperty("UpdateAt")]
+        public string UpdateAt{ get; set; }
 
 
         /// <summary>
@@ -73,7 +89,10 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "Describe", this.Describe);
             this.SetParamObj(map, prefix + "LifeCycle.", this.LifeCycle);
-            this.SetParamSimple(map, prefix + "StreamType", this.StreamType);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ChannelCount", this.ChannelCount);
+            this.SetParamSimple(map, prefix + "CreateAt", this.CreateAt);
+            this.SetParamSimple(map, prefix + "UpdateAt", this.UpdateAt);
         }
     }
 }

@@ -25,53 +25,16 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 域名ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回数据
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("Data")]
+        public DescribeDomainData[] Data{ get; set; }
 
         /// <summary>
-        /// 播放域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("PlayDomain")]
-        public string PlayDomain{ get; set; }
-
-        /// <summary>
-        /// CNAME 记录值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("InternalDomain")]
-        public string InternalDomain{ get; set; }
-
-        /// <summary>
-        /// 是否上传证书（0：否，1：是）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("HaveCert")]
-        public long? HaveCert{ get; set; }
-
-        /// <summary>
-        /// 服务节点 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
-        /// 服务节点名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ClusterName")]
-        public string ClusterName{ get; set; }
-
-        /// <summary>
-        /// 用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("AppId")]
-        public long? AppId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -79,13 +42,8 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "PlayDomain", this.PlayDomain);
-            this.SetParamSimple(map, prefix + "InternalDomain", this.InternalDomain);
-            this.SetParamSimple(map, prefix + "HaveCert", this.HaveCert);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
-            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
