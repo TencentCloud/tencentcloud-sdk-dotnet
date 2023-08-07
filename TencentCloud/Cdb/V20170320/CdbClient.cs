@@ -2219,6 +2219,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 通过该 API 可以查询实例的 CPU 弹性扩容策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCpuExpandStrategyRequest"/></param>
+        /// <returns><see cref="DescribeCpuExpandStrategyResponse"/></returns>
+        public async Task<DescribeCpuExpandStrategyResponse> DescribeCpuExpandStrategy(DescribeCpuExpandStrategyRequest req)
+        {
+             JsonResponseModel<DescribeCpuExpandStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCpuExpandStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCpuExpandStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过该 API 可以查询实例的 CPU 弹性扩容策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCpuExpandStrategyRequest"/></param>
+        /// <returns><see cref="DescribeCpuExpandStrategyResponse"/></returns>
+        public DescribeCpuExpandStrategyResponse DescribeCpuExpandStrategySync(DescribeCpuExpandStrategyRequest req)
+        {
+             JsonResponseModel<DescribeCpuExpandStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCpuExpandStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCpuExpandStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBFeatures)用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBFeaturesRequest"/></param>
@@ -5477,6 +5517,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 通过该API，可以开启CPU弹性扩容，包括一次性的手动扩容以及自动弹性扩容。
+        /// </summary>
+        /// <param name="req"><see cref="StartCpuExpandRequest"/></param>
+        /// <returns><see cref="StartCpuExpandResponse"/></returns>
+        public async Task<StartCpuExpandResponse> StartCpuExpand(StartCpuExpandRequest req)
+        {
+             JsonResponseModel<StartCpuExpandResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartCpuExpand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartCpuExpandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过该API，可以开启CPU弹性扩容，包括一次性的手动扩容以及自动弹性扩容。
+        /// </summary>
+        /// <param name="req"><see cref="StartCpuExpandRequest"/></param>
+        /// <returns><see cref="StartCpuExpandResponse"/></returns>
+        public StartCpuExpandResponse StartCpuExpandSync(StartCpuExpandRequest req)
+        {
+             JsonResponseModel<StartCpuExpandResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartCpuExpand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartCpuExpandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 开启 RO 复制，从主实例同步数据。
         /// </summary>
         /// <param name="req"><see cref="StartReplicationRequest"/></param>
@@ -5508,6 +5588,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "StartReplication");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过该API，可以关闭 CPU 弹性扩容。
+        /// </summary>
+        /// <param name="req"><see cref="StopCpuExpandRequest"/></param>
+        /// <returns><see cref="StopCpuExpandResponse"/></returns>
+        public async Task<StopCpuExpandResponse> StopCpuExpand(StopCpuExpandRequest req)
+        {
+             JsonResponseModel<StopCpuExpandResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopCpuExpand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopCpuExpandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过该API，可以关闭 CPU 弹性扩容。
+        /// </summary>
+        /// <param name="req"><see cref="StopCpuExpandRequest"/></param>
+        /// <returns><see cref="StopCpuExpandResponse"/></returns>
+        public StopCpuExpandResponse StopCpuExpandSync(StopCpuExpandRequest req)
+        {
+             JsonResponseModel<StopCpuExpandResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopCpuExpand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopCpuExpandResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

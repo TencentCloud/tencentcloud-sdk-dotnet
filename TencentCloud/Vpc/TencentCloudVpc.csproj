@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.817</VersionPrefix>
+    <VersionPrefix>3.0.818</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,8 @@
     <Compile Include="V20170312\VpcClient.cs" />
     <Compile Include="V20170312\Models\AcceptAttachCcnInstancesRequest.cs" />
     <Compile Include="V20170312\Models\AcceptAttachCcnInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\AcceptVpcPeeringConnectionRequest.cs" />
+    <Compile Include="V20170312\Models\AcceptVpcPeeringConnectionResponse.cs" />
     <Compile Include="V20170312\Models\AccessPolicy.cs" />
     <Compile Include="V20170312\Models\AccountAttribute.cs" />
     <Compile Include="V20170312\Models\AddBandwidthPackageResourcesRequest.cs" />
@@ -203,6 +205,8 @@
     <Compile Include="V20170312\Models\CreateVpcEndPointServiceResponse.cs" />
     <Compile Include="V20170312\Models\CreateVpcEndPointServiceWhiteListRequest.cs" />
     <Compile Include="V20170312\Models\CreateVpcEndPointServiceWhiteListResponse.cs" />
+    <Compile Include="V20170312\Models\CreateVpcPeeringConnectionRequest.cs" />
+    <Compile Include="V20170312\Models\CreateVpcPeeringConnectionResponse.cs" />
     <Compile Include="V20170312\Models\CreateVpcRequest.cs" />
     <Compile Include="V20170312\Models\CreateVpcResponse.cs" />
     <Compile Include="V20170312\Models\CreateVpnConnectionRequest.cs" />
@@ -287,6 +291,8 @@
     <Compile Include="V20170312\Models\DeleteVpcEndPointServiceResponse.cs" />
     <Compile Include="V20170312\Models\DeleteVpcEndPointServiceWhiteListRequest.cs" />
     <Compile Include="V20170312\Models\DeleteVpcEndPointServiceWhiteListResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteVpcPeeringConnectionRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteVpcPeeringConnectionResponse.cs" />
     <Compile Include="V20170312\Models\DeleteVpcRequest.cs" />
     <Compile Include="V20170312\Models\DeleteVpcResponse.cs" />
     <Compile Include="V20170312\Models\DeleteVpnConnectionRequest.cs" />
@@ -445,6 +451,8 @@
     <Compile Include="V20170312\Models\DescribeVpcIpv6AddressesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcLimitsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpcLimitsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeVpcPeeringConnectionsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeVpcPeeringConnectionsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcPrivateIpAddressesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpcPrivateIpAddressesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcResourceDashboardRequest.cs" />
@@ -656,6 +664,8 @@
     <Compile Include="V20170312\Models\ModifyVpcEndPointServiceAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpcEndPointServiceWhiteListRequest.cs" />
     <Compile Include="V20170312\Models\ModifyVpcEndPointServiceWhiteListResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyVpcPeeringConnectionRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyVpcPeeringConnectionResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpnConnectionAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyVpnConnectionAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpnGatewayAttributeRequest.cs" />
@@ -689,6 +699,8 @@
     <Compile Include="V20170312\Models\RefreshDirectConnectGatewayRouteToNatGatewayResponse.cs" />
     <Compile Include="V20170312\Models\RejectAttachCcnInstancesRequest.cs" />
     <Compile Include="V20170312\Models\RejectAttachCcnInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\RejectVpcPeeringConnectionRequest.cs" />
+    <Compile Include="V20170312\Models\RejectVpcPeeringConnectionResponse.cs" />
     <Compile Include="V20170312\Models\ReleaseAddressesRequest.cs" />
     <Compile Include="V20170312\Models\ReleaseAddressesResponse.cs" />
     <Compile Include="V20170312\Models\ReleaseIp6AddressesBandwidthRequest.cs" />

@@ -2773,6 +2773,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 列举用户角色信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserRolesRequest"/></param>
+        /// <returns><see cref="DescribeUserRolesResponse"/></returns>
+        public async Task<DescribeUserRolesResponse> DescribeUserRoles(DescribeUserRolesRequest req)
+        {
+             JsonResponseModel<DescribeUserRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列举用户角色信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserRolesRequest"/></param>
+        /// <returns><see cref="DescribeUserRolesResponse"/></returns>
+        public DescribeUserRolesResponse DescribeUserRolesSync(DescribeUserRolesRequest req)
+        {
+             JsonResponseModel<DescribeUserRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取用户列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeUsersRequest"/></param>

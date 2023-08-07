@@ -93,6 +93,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（AcceptVpcPeeringConnection）用于接受对等连接请求。
+        /// </summary>
+        /// <param name="req"><see cref="AcceptVpcPeeringConnectionRequest"/></param>
+        /// <returns><see cref="AcceptVpcPeeringConnectionResponse"/></returns>
+        public async Task<AcceptVpcPeeringConnectionResponse> AcceptVpcPeeringConnection(AcceptVpcPeeringConnectionRequest req)
+        {
+             JsonResponseModel<AcceptVpcPeeringConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AcceptVpcPeeringConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AcceptVpcPeeringConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AcceptVpcPeeringConnection）用于接受对等连接请求。
+        /// </summary>
+        /// <param name="req"><see cref="AcceptVpcPeeringConnectionRequest"/></param>
+        /// <returns><see cref="AcceptVpcPeeringConnectionResponse"/></returns>
+        public AcceptVpcPeeringConnectionResponse AcceptVpcPeeringConnectionSync(AcceptVpcPeeringConnectionRequest req)
+        {
+             JsonResponseModel<AcceptVpcPeeringConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AcceptVpcPeeringConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AcceptVpcPeeringConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口用于添加带宽包资源，包括[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)和[负载均衡](https://cloud.tencent.com/document/product/214/517)等
         /// </summary>
         /// <param name="req"><see cref="AddBandwidthPackageResourcesRequest"/></param>
@@ -2861,6 +2901,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（CreateVpcPeeringConnection）用于创建私有网络对等连接。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpcPeeringConnectionRequest"/></param>
+        /// <returns><see cref="CreateVpcPeeringConnectionResponse"/></returns>
+        public async Task<CreateVpcPeeringConnectionResponse> CreateVpcPeeringConnection(CreateVpcPeeringConnectionRequest req)
+        {
+             JsonResponseModel<CreateVpcPeeringConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVpcPeeringConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpcPeeringConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateVpcPeeringConnection）用于创建私有网络对等连接。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpcPeeringConnectionRequest"/></param>
+        /// <returns><see cref="CreateVpcPeeringConnectionResponse"/></returns>
+        public CreateVpcPeeringConnectionResponse CreateVpcPeeringConnectionSync(CreateVpcPeeringConnectionRequest req)
+        {
+             JsonResponseModel<CreateVpcPeeringConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVpcPeeringConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpcPeeringConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateVpnConnection）用于创建VPN通道。
         /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
         /// >
@@ -4458,6 +4538,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteVpcEndPointServiceWhiteList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpcEndPointServiceWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteVpcPeeringConnection）用于删除私有网络对等连接。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpcPeeringConnectionRequest"/></param>
+        /// <returns><see cref="DeleteVpcPeeringConnectionResponse"/></returns>
+        public async Task<DeleteVpcPeeringConnectionResponse> DeleteVpcPeeringConnection(DeleteVpcPeeringConnectionRequest req)
+        {
+             JsonResponseModel<DeleteVpcPeeringConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteVpcPeeringConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpcPeeringConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteVpcPeeringConnection）用于删除私有网络对等连接。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpcPeeringConnectionRequest"/></param>
+        /// <returns><see cref="DeleteVpcPeeringConnectionResponse"/></returns>
+        public DeleteVpcPeeringConnectionResponse DeleteVpcPeeringConnectionSync(DeleteVpcPeeringConnectionRequest req)
+        {
+             JsonResponseModel<DeleteVpcPeeringConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteVpcPeeringConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpcPeeringConnectionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -7666,6 +7786,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeVpcLimits");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询私有网络对等连接。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcPeeringConnectionsRequest"/></param>
+        /// <returns><see cref="DescribeVpcPeeringConnectionsResponse"/></returns>
+        public async Task<DescribeVpcPeeringConnectionsResponse> DescribeVpcPeeringConnections(DescribeVpcPeeringConnectionsRequest req)
+        {
+             JsonResponseModel<DescribeVpcPeeringConnectionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcPeeringConnections");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcPeeringConnectionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询私有网络对等连接。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcPeeringConnectionsRequest"/></param>
+        /// <returns><see cref="DescribeVpcPeeringConnectionsResponse"/></returns>
+        public DescribeVpcPeeringConnectionsResponse DescribeVpcPeeringConnectionsSync(DescribeVpcPeeringConnectionsRequest req)
+        {
+             JsonResponseModel<DescribeVpcPeeringConnectionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpcPeeringConnections");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcPeeringConnectionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -11409,6 +11569,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyVpcPeeringConnection）用于修改私有网络对等连接属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpcPeeringConnectionRequest"/></param>
+        /// <returns><see cref="ModifyVpcPeeringConnectionResponse"/></returns>
+        public async Task<ModifyVpcPeeringConnectionResponse> ModifyVpcPeeringConnection(ModifyVpcPeeringConnectionRequest req)
+        {
+             JsonResponseModel<ModifyVpcPeeringConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVpcPeeringConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpcPeeringConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyVpcPeeringConnection）用于修改私有网络对等连接属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpcPeeringConnectionRequest"/></param>
+        /// <returns><see cref="ModifyVpcPeeringConnectionResponse"/></returns>
+        public ModifyVpcPeeringConnectionResponse ModifyVpcPeeringConnectionSync(ModifyVpcPeeringConnectionRequest req)
+        {
+             JsonResponseModel<ModifyVpcPeeringConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVpcPeeringConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpcPeeringConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyVpnConnectionAttribute）用于修改VPN通道。
         /// </summary>
         /// <param name="req"><see cref="ModifyVpnConnectionAttributeRequest"/></param>
@@ -11680,6 +11880,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "RejectAttachCcnInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RejectAttachCcnInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（RejectVpcPeeringConnection）用于驳回对等连接请求。
+        /// </summary>
+        /// <param name="req"><see cref="RejectVpcPeeringConnectionRequest"/></param>
+        /// <returns><see cref="RejectVpcPeeringConnectionResponse"/></returns>
+        public async Task<RejectVpcPeeringConnectionResponse> RejectVpcPeeringConnection(RejectVpcPeeringConnectionRequest req)
+        {
+             JsonResponseModel<RejectVpcPeeringConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RejectVpcPeeringConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RejectVpcPeeringConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（RejectVpcPeeringConnection）用于驳回对等连接请求。
+        /// </summary>
+        /// <param name="req"><see cref="RejectVpcPeeringConnectionRequest"/></param>
+        /// <returns><see cref="RejectVpcPeeringConnectionResponse"/></returns>
+        public RejectVpcPeeringConnectionResponse RejectVpcPeeringConnectionSync(RejectVpcPeeringConnectionRequest req)
+        {
+             JsonResponseModel<RejectVpcPeeringConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RejectVpcPeeringConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RejectVpcPeeringConnectionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

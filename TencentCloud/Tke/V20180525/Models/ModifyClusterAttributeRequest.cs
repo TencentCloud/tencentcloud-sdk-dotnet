@@ -66,6 +66,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("QGPUShareEnable")]
         public bool? QGPUShareEnable{ get; set; }
 
+        /// <summary>
+        /// 集群属性
+        /// </summary>
+        [JsonProperty("ClusterProperty")]
+        public ClusterProperty ClusterProperty{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
             this.SetParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
             this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
+            this.SetParamObj(map, prefix + "ClusterProperty.", this.ClusterProperty);
         }
     }
 }
