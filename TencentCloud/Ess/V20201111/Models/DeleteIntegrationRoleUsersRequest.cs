@@ -37,7 +37,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string RoleId{ get; set; }
 
         /// <summary>
-        /// 用户信息
+        /// 用户信息,最多 200 个用户，并且 UserId 和 OpenId 二选一，其他字段不需要传
         /// </summary>
         [JsonProperty("Users")]
         public UserInfo[] Users{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 电子签中的部门id
+        /// 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
         /// </summary>
         [JsonProperty("DeptId")]
         public string DeptId{ get; set; }

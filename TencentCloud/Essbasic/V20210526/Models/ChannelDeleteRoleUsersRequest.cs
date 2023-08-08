@@ -37,7 +37,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string RoleId{ get; set; }
 
         /// <summary>
-        /// 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+        /// 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多两百
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+        /// 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多两百
         /// </summary>
         [JsonProperty("OpenIds")]
         public string[] OpenIds{ get; set; }

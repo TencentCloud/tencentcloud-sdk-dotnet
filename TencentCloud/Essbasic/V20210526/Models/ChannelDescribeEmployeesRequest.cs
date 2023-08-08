@@ -25,16 +25,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 返回最大数量，最大为20
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
         /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
+
+        /// <summary>
+        /// 指定每页多少条数据，单页最大20
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
         /// <summary>
         /// 查询过滤实名用户，Key为Status，Values为["IsVerified"]
@@ -45,7 +45,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0，最大为20000
+        /// 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0,最大为20000
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -63,8 +63,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);

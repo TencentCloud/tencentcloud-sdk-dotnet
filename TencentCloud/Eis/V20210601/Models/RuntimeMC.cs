@@ -157,7 +157,7 @@ namespace TencentCloud.Eis.V20210601.Models
         public long? RuntimeType{ get; set; }
 
         /// <summary>
-        /// 环境运行类型：0:运行时类型、1:api类型
+        /// 环境运行类型：0:运行时类型、1:api类型、2:etl环境
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuntimeClass")]

@@ -152,6 +152,13 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("IsCore")]
         public long? IsCore{ get; set; }
 
+        /// <summary>
+        /// 是否新资产 1新
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsNewAsset")]
+        public ulong? IsNewAsset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +184,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
             this.SetParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
             this.SetParamSimple(map, prefix + "IsCore", this.IsCore);
+            this.SetParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
         }
     }
 }

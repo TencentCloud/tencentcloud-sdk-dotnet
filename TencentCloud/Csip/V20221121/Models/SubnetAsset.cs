@@ -134,6 +134,13 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("IsCore")]
         public ulong? IsCore{ get; set; }
 
+        /// <summary>
+        /// 是否新资产 1新
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsNewAsset")]
+        public ulong? IsNewAsset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ScanTask", this.ScanTask);
             this.SetParamSimple(map, prefix + "LastScanTime", this.LastScanTime);
             this.SetParamSimple(map, prefix + "IsCore", this.IsCore);
+            this.SetParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
         }
     }
 }

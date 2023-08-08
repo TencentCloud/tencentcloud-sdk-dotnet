@@ -85,6 +85,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         public ulong?[] KindSet{ get; set; }
 
         /// <summary>
+        /// 资产是否包含托管账号。1，包含；0，不包含
+        /// </summary>
+        [JsonProperty("ManagedAccount")]
+        public string ManagedAccount{ get; set; }
+
+        /// <summary>
         /// 过滤条件，可按照部门ID进行过滤
         /// </summary>
         [JsonProperty("DepartmentId")]
@@ -119,6 +125,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamArraySimple(map, prefix + "AuthorizedUserIdSet.", this.AuthorizedUserIdSet);
             this.SetParamArraySimple(map, prefix + "ResourceIdSet.", this.ResourceIdSet);
             this.SetParamArraySimple(map, prefix + "KindSet.", this.KindSet);
+            this.SetParamSimple(map, prefix + "ManagedAccount", this.ManagedAccount);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);

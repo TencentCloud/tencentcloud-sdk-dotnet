@@ -32,14 +32,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Staff[] Employees{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0，最大为20000
+        /// 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回最大数量，最大为20
+        /// 指定每页多少条数据，单页最大20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

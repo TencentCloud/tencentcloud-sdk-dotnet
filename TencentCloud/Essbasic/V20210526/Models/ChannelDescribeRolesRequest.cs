@@ -31,13 +31,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 查询起始偏移，最大2000
+        /// 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 查询数量，最大200
+        /// 指定每页多少条数据，单页最大200
         /// </summary>
         [JsonProperty("Limit")]
         public string Limit{ get; set; }

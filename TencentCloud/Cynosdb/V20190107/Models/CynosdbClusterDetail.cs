@@ -193,7 +193,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 读写分离Vport
+        /// 集群只读实例的vip地址和vport端口
         /// </summary>
         [JsonProperty("RoAddr")]
         public Addr[] RoAddr{ get; set; }

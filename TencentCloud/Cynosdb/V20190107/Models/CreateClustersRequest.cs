@@ -71,14 +71,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 当DbMode为NORMAL或不填时必选
-        /// 普通实例内存,单位G
+        /// 普通实例内存,单位GB
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
         /// 该参数无实际意义，已废弃。
-        /// 存储大小，单位G。
+        /// 存储大小，单位GB。
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }

@@ -137,6 +137,30 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TenantId")]
         public string TenantId{ get; set; }
 
+        /// <summary>
+        /// 数据源ID列表
+        /// </summary>
+        [JsonProperty("DatasourceIdList")]
+        public string[] DatasourceIdList{ get; set; }
+
+        /// <summary>
+        /// 数据源类型列表
+        /// </summary>
+        [JsonProperty("DatasourceTypeList")]
+        public string[] DatasourceTypeList{ get; set; }
+
+        /// <summary>
+        /// 调度单位类型列表
+        /// </summary>
+        [JsonProperty("CycleUnitList")]
+        public string[] CycleUnitList{ get; set; }
+
+        /// <summary>
+        /// 是否筛选出可提交的任务
+        /// </summary>
+        [JsonProperty("CanSubmit")]
+        public bool? CanSubmit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +184,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "OwnerId", this.OwnerId);
             this.SetParamSimple(map, prefix + "TenantId", this.TenantId);
+            this.SetParamArraySimple(map, prefix + "DatasourceIdList.", this.DatasourceIdList);
+            this.SetParamArraySimple(map, prefix + "DatasourceTypeList.", this.DatasourceTypeList);
+            this.SetParamArraySimple(map, prefix + "CycleUnitList.", this.CycleUnitList);
+            this.SetParamSimple(map, prefix + "CanSubmit", this.CanSubmit);
         }
     }
 }

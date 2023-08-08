@@ -85,6 +85,13 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("Deployed")]
         public bool? Deployed{ get; set; }
 
+        /// <summary>
+        /// 环境扩展组件是否满足应用要求：0=true, 1=false 表示该应用需要扩展组件0(cdc)以及1(java)，但是独立环境有cdc无java，不满足发布要求
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MatchExtensions")]
+        public string MatchExtensions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +108,7 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
             this.SetParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
             this.SetParamSimple(map, prefix + "Deployed", this.Deployed);
+            this.SetParamSimple(map, prefix + "MatchExtensions", this.MatchExtensions);
         }
     }
 }

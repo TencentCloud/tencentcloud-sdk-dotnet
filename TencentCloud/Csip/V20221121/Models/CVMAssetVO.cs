@@ -374,6 +374,13 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("BASAgentStatus")]
         public long? BASAgentStatus{ get; set; }
 
+        /// <summary>
+        /// 1新资产；0 非新资产
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsNewAsset")]
+        public ulong? IsNewAsset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -430,6 +437,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Os", this.Os);
             this.SetParamSimple(map, prefix + "RiskExposure", this.RiskExposure);
             this.SetParamSimple(map, prefix + "BASAgentStatus", this.BASAgentStatus);
+            this.SetParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
         }
     }
 }

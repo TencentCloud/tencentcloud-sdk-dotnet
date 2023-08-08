@@ -262,6 +262,34 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("ServiceRisk")]
         public ulong? ServiceRisk{ get; set; }
 
+        /// <summary>
+        /// 是否新资产 1新
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsNewAsset")]
+        public ulong? IsNewAsset{ get; set; }
+
+        /// <summary>
+        /// 待确认资产的随机三级域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VerifyDomain")]
+        public string VerifyDomain{ get; set; }
+
+        /// <summary>
+        /// 待确认资产的TXT记录内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VerifyTXTRecord")]
+        public string VerifyTXTRecord{ get; set; }
+
+        /// <summary>
+        /// 待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VerifyStatus")]
+        public long? VerifyStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +330,10 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "CCAttack", this.CCAttack);
             this.SetParamSimple(map, prefix + "WebAttack", this.WebAttack);
             this.SetParamSimple(map, prefix + "ServiceRisk", this.ServiceRisk);
+            this.SetParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
+            this.SetParamSimple(map, prefix + "VerifyDomain", this.VerifyDomain);
+            this.SetParamSimple(map, prefix + "VerifyTXTRecord", this.VerifyTXTRecord);
+            this.SetParamSimple(map, prefix + "VerifyStatus", this.VerifyStatus);
         }
     }
 }

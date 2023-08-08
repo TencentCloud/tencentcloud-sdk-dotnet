@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// IP
+        /// IP地址
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }

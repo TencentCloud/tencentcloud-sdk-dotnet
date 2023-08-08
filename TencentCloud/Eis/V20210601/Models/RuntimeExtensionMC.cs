@@ -25,7 +25,7 @@ namespace TencentCloud.Eis.V20210601.Models
     {
         
         /// <summary>
-        /// 扩展组件类型：0:cdc
+        /// 扩展组件类型：0:cdc 1:dataway-java
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

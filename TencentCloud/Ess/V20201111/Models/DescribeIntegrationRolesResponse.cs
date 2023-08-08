@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 偏移量，默认为0，最大为2000
+        /// 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回最大数量，最大为200
+        /// 指定每页多少条数据，单页最大200
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

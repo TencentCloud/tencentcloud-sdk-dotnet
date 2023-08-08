@@ -905,6 +905,46 @@ namespace TencentCloud.Asr.V20190614
         }
 
         /// <summary>
+        /// 统计并返回注册的说话人id总数
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintCountRequest"/></param>
+        /// <returns><see cref="VoicePrintCountResponse"/></returns>
+        public async Task<VoicePrintCountResponse> VoicePrintCount(VoicePrintCountRequest req)
+        {
+             JsonResponseModel<VoicePrintCountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VoicePrintCount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VoicePrintCountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 统计并返回注册的说话人id总数
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintCountRequest"/></param>
+        /// <returns><see cref="VoicePrintCountResponse"/></returns>
+        public VoicePrintCountResponse VoicePrintCountSync(VoicePrintCountRequest req)
+        {
+             JsonResponseModel<VoicePrintCountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VoicePrintCount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VoicePrintCountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于以删除已经注册的说话人信息（删除之后，原有的说话人ID和说话人音频数据都会失效）
         /// </summary>
         /// <param name="req"><see cref="VoicePrintDeleteRequest"/></param>

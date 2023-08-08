@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 待移除员工的信息，userId和openId二选一，必填一个
+        /// 待移除员工的信息，userId和openId二选一，必填一个，如果需要指定交接人的话，ReceiveUserId或者ReceiveOpenId字段二选一
         /// </summary>
         [JsonProperty("Employees")]
         public Staff[] Employees{ get; set; }

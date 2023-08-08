@@ -123,6 +123,34 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 周期类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CycleUnit")]
+        public string CycleUnit{ get; set; }
+
+        /// <summary>
+        /// 调度计划
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduleDesc")]
+        public string ScheduleDesc{ get; set; }
+
+        /// <summary>
+        /// 数据源ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceId")]
+        public string DatasourceId{ get; set; }
+
+        /// <summary>
+        /// 数据源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceType")]
+        public string DatasourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +171,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DataEngine", this.DataEngine);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "CycleUnit", this.CycleUnit);
+            this.SetParamSimple(map, prefix + "ScheduleDesc", this.ScheduleDesc);
+            this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+            this.SetParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
         }
     }
 }

@@ -31,13 +31,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 绑定角色的用户id列表
+        /// 绑定角色的用户id列表，不能重复，不能大于 100 个
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
 
         /// <summary>
-        /// 绑定角色的角色id列表
+        /// 绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取
         /// </summary>
         [JsonProperty("RoleIds")]
         public string[] RoleIds{ get; set; }

@@ -35,6 +35,11 @@ namespace TencentCloud.Cls.V20201016.Models
         /// - 类型：String
         /// - 必选：否
         /// 
+        /// osType
+        /// - 按照【操作系统类型】进行过滤。
+        /// - 类型：Int
+        /// - 必选：否
+        /// 
         /// tagKey
         /// - 按照【标签键】进行过滤。
         /// - 类型：String

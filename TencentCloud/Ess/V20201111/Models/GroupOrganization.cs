@@ -102,7 +102,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong? JoinTime{ get; set; }
 
         /// <summary>
-        /// 是否使用审批流引擎，true-是，false-否
+        /// 是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowEngineEnable")]

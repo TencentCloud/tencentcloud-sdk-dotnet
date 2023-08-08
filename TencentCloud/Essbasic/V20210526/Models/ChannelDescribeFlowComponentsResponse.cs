@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 流程关联的填写控件信息
+        /// 流程关联的填写控件信息，控件会按照参与方进行分类。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecipientComponentInfos")]

@@ -31,13 +31,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 电子签部门ID
+        /// 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
         /// </summary>
         [JsonProperty("DeptId")]
         public string DeptId{ get; set; }
 
         /// <summary>
-        /// 电子签父部门ID
+        /// 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
         /// </summary>
         [JsonProperty("ParentDeptId")]
         public string ParentDeptId{ get; set; }

@@ -33,20 +33,22 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 参与方填写状态
+        /// 0-未填写
+        /// 1-已填写
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecipientFillStatus")]
         public string RecipientFillStatus{ get; set; }
 
         /// <summary>
-        /// 是否发起方
+        /// 是否为发起方
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPromoter")]
         public bool? IsPromoter{ get; set; }
 
         /// <summary>
-        /// 填写控件内容
+        /// 填写控件列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Components")]

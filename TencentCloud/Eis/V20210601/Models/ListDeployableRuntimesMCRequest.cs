@@ -42,6 +42,12 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("PlanType")]
         public long? PlanType{ get; set; }
 
+        /// <summary>
+        /// 0：应用集成，1：API，2：ETL
+        /// </summary>
+        [JsonProperty("RuntimeClass")]
+        public long? RuntimeClass{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "PlanType", this.PlanType);
+            this.SetParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
         }
     }
 }

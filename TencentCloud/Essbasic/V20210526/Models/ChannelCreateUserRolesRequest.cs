@@ -31,19 +31,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 绑定角色的角色id列表
+        /// 绑定角色的角色id列表，最多 100 个
         /// </summary>
         [JsonProperty("RoleIds")]
         public string[] RoleIds{ get; set; }
 
         /// <summary>
-        /// 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+        /// 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多 100 个
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
 
         /// <summary>
-        /// 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+        /// 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多 100 个
         /// </summary>
         [JsonProperty("OpenIds")]
         public string[] OpenIds{ get; set; }

@@ -133,6 +133,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 创建管理端访问链接
+        /// </summary>
+        /// <param name="req"><see cref="CreateAdminURLRequest"/></param>
+        /// <returns><see cref="CreateAdminURLResponse"/></returns>
+        public async Task<CreateAdminURLResponse> CreateAdminURL(CreateAdminURLRequest req)
+        {
+             JsonResponseModel<CreateAdminURLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAdminURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAdminURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建管理端访问链接
+        /// </summary>
+        /// <param name="req"><see cref="CreateAdminURLRequest"/></param>
+        /// <returns><see cref="CreateAdminURLResponse"/></returns>
+        public CreateAdminURLResponse CreateAdminURLSync(CreateAdminURLRequest req)
+        {
+             JsonResponseModel<CreateAdminURLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAdminURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAdminURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建自动外呼任务
         /// </summary>
         /// <param name="req"><see cref="CreateAutoCalloutTaskRequest"/></param>

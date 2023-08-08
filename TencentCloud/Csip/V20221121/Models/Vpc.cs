@@ -104,6 +104,20 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
+        /// <summary>
+        /// 是否新资产 1新
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsNewAsset")]
+        public ulong? IsNewAsset{ get; set; }
+
+        /// <summary>
+        /// 是否核心资产1是 2不是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsCore")]
+        public ulong? IsCore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +137,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
+            this.SetParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
+            this.SetParamSimple(map, prefix + "IsCore", this.IsCore);
         }
     }
 }

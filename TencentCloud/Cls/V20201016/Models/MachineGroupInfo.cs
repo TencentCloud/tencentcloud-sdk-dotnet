@@ -89,6 +89,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MetaTags")]
         public MetaTagInfo[] MetaTags{ get; set; }
 
+        /// <summary>
+        /// 操作系统类型，0: Linux，1: windows
+        /// </summary>
+        [JsonProperty("OSType")]
+        public ulong? OSType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +111,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
             this.SetParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
             this.SetParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
+            this.SetParamSimple(map, prefix + "OSType", this.OSType);
         }
     }
 }

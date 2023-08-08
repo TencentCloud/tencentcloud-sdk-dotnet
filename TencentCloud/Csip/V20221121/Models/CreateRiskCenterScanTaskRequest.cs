@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? ScanAssetType{ get; set; }
 
         /// <summary>
-        /// 扫描项目；port/poc/weakpass/webcontent/configrisk
+        /// 扫描项目；port/poc/weakpass/webcontent/configrisk/exposedserver
         /// </summary>
         [JsonProperty("ScanItem")]
         public string[] ScanItem{ get; set; }

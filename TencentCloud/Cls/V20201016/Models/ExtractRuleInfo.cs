@@ -153,6 +153,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MetaTags")]
         public MetaTagInfo[] MetaTags{ get; set; }
 
+        /// <summary>
+        /// windows事件日志采集
+        /// </summary>
+        [JsonProperty("EventLogRules")]
+        public EventLog[] EventLogRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "MetadataType", this.MetadataType);
             this.SetParamSimple(map, prefix + "PathRegex", this.PathRegex);
             this.SetParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
+            this.SetParamArrayObj(map, prefix + "EventLogRules.", this.EventLogRules);
         }
     }
 }

@@ -31,13 +31,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 单次查询成员企业最大返回数量
+        /// 指定每页多少条数据，单页最大1000
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 页面偏移量
+        /// 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? Export{ get; set; }
 
         /// <summary>
-        /// 成员企业id
+        /// 成员企业机构 ID，在PC控制台 集团管理可获取
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

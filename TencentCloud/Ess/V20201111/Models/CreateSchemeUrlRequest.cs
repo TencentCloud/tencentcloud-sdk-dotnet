@@ -49,10 +49,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 链接类型
-        /// HTTP：跳转电子签小程序的http_url，
-        /// APP：第三方APP或小程序跳转电子签小程序的path。
-        /// 默认为HTTP类型
+        /// 要跳转的链接类型
+        /// 
+        /// - HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)
+        /// - APP： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型
         /// </summary>
         [JsonProperty("EndPoint")]
         public string EndPoint{ get; set; }
@@ -70,7 +70,11 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowGroupId{ get; set; }
 
         /// <summary>
-        /// 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
+        /// 要跳转到的页面类型 
+        /// 
+        /// - 0: 不传, 主页 (默认)
+        /// - 1: 小程序合同详情 
+        /// - 2: 小程序合同列表页 
         /// </summary>
         [JsonProperty("PathType")]
         public ulong? PathType{ get; set; }
@@ -93,10 +97,10 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
         /// 
-        /// 0:合同签署页面更多操作按钮
-        /// 1:合同签署页面更多操作的拒绝签署按钮
-        /// 2:合同签署页面更多操作的转他人处理按钮
-        /// 3:签署成功页的查看详情按钮
+        /// - 0:合同签署页面更多操作按钮
+        /// - 1:合同签署页面更多操作的拒绝签署按钮
+        /// - 2:合同签署页面更多操作的转他人处理按钮
+        /// - 3:签署成功页的查看详情按钮
         /// </summary>
         [JsonProperty("Hides")]
         public long?[] Hides{ get; set; }

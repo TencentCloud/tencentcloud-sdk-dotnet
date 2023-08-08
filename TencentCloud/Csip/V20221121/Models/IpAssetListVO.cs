@@ -255,6 +255,20 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("RiskExposure")]
         public long? RiskExposure{ get; set; }
 
+        /// <summary>
+        /// 是否新资产 1新
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsNewAsset")]
+        public ulong? IsNewAsset{ get; set; }
+
+        /// <summary>
+        /// 资产认证状态，0-待认证，1-认证成功，2-认证中，3+-认证失败
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VerifyStatus")]
+        public long? VerifyStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +308,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AddressId", this.AddressId);
             this.SetParamSimple(map, prefix + "MemberId", this.MemberId);
             this.SetParamSimple(map, prefix + "RiskExposure", this.RiskExposure);
+            this.SetParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
+            this.SetParamSimple(map, prefix + "VerifyStatus", this.VerifyStatus);
         }
     }
 }

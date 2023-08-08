@@ -31,6 +31,18 @@ namespace TencentCloud.Csip.V20221121.Models
         public string TaskId{ get; set; }
 
         /// <summary>
+        /// 0,任务创建成功；小于0失败；-1为存在资产未认证
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 未认证资产列表
+        /// </summary>
+        [JsonProperty("UnAuthAsset")]
+        public string[] UnAuthAsset{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +55,8 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "UnAuthAsset.", this.UnAuthAsset);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
