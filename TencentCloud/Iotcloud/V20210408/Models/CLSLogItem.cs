@@ -70,7 +70,14 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         /// 腾讯云账号
         /// </summary>
         [JsonProperty("Userid")]
+        [System.Obsolete]
         public string Userid{ get; set; }
+
+        /// <summary>
+        /// 腾讯云账号
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
 
         /// <summary>
@@ -86,6 +93,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
             this.SetParamSimple(map, prefix + "Scene", this.Scene);
             this.SetParamSimple(map, prefix + "Time", this.Time);
             this.SetParamSimple(map, prefix + "Userid", this.Userid);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

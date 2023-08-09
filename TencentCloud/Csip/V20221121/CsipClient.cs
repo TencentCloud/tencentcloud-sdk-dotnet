@@ -413,6 +413,46 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询clb监听器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeListenerListRequest"/></param>
+        /// <returns><see cref="DescribeListenerListResponse"/></returns>
+        public async Task<DescribeListenerListResponse> DescribeListenerList(DescribeListenerListRequest req)
+        {
+             JsonResponseModel<DescribeListenerListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeListenerList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListenerListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询clb监听器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeListenerListRequest"/></param>
+        /// <returns><see cref="DescribeListenerListResponse"/></returns>
+        public DescribeListenerListResponse DescribeListenerListSync(DescribeListenerListRequest req)
+        {
+             JsonResponseModel<DescribeListenerListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeListenerList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListenerListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// ip公网列表
         /// </summary>
         /// <param name="req"><see cref="DescribePublicIpAssetsRequest"/></param>

@@ -53,6 +53,46 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 与大模型聊天
+        /// </summary>
+        /// <param name="req"><see cref="ChatCompletionRequest"/></param>
+        /// <returns><see cref="ChatCompletionResponse"/></returns>
+        public async Task<ChatCompletionResponse> ChatCompletion(ChatCompletionRequest req)
+        {
+             JsonResponseModel<ChatCompletionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChatCompletion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChatCompletionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 与大模型聊天
+        /// </summary>
+        /// <param name="req"><see cref="ChatCompletionRequest"/></param>
+        /// <returns><see cref="ChatCompletionResponse"/></returns>
+        public ChatCompletionResponse ChatCompletionSync(ChatCompletionRequest req)
+        {
+             JsonResponseModel<ChatCompletionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChatCompletion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChatCompletionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量创建模型加速任务
         /// </summary>
         /// <param name="req"><see cref="CreateBatchModelAccTasksRequest"/></param>

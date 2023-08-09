@@ -253,6 +253,46 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 添加组织成员访问授权
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationMemberAuthIdentityRequest"/></param>
+        /// <returns><see cref="CreateOrganizationMemberAuthIdentityResponse"/></returns>
+        public async Task<CreateOrganizationMemberAuthIdentityResponse> CreateOrganizationMemberAuthIdentity(CreateOrganizationMemberAuthIdentityRequest req)
+        {
+             JsonResponseModel<CreateOrganizationMemberAuthIdentityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOrganizationMemberAuthIdentity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationMemberAuthIdentityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加组织成员访问授权
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationMemberAuthIdentityRequest"/></param>
+        /// <returns><see cref="CreateOrganizationMemberAuthIdentityResponse"/></returns>
+        public CreateOrganizationMemberAuthIdentityResponse CreateOrganizationMemberAuthIdentitySync(CreateOrganizationMemberAuthIdentityRequest req)
+        {
+             JsonResponseModel<CreateOrganizationMemberAuthIdentityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOrganizationMemberAuthIdentity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationMemberAuthIdentityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建组织成员访问授权策略
         /// </summary>
         /// <param name="req"><see cref="CreateOrganizationMemberPolicyRequest"/></param>
@@ -324,6 +364,46 @@ namespace TencentCloud.Organization.V20210331
              {
                  var strResp = this.InternalRequestSync(req, "DeleteOrganizationMembers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationMembersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除组织成员访问策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationMembersPolicyRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationMembersPolicyResponse"/></returns>
+        public async Task<DeleteOrganizationMembersPolicyResponse> DeleteOrganizationMembersPolicy(DeleteOrganizationMembersPolicyRequest req)
+        {
+             JsonResponseModel<DeleteOrganizationMembersPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteOrganizationMembersPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationMembersPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除组织成员访问策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationMembersPolicyRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationMembersPolicyResponse"/></returns>
+        public DeleteOrganizationMembersPolicyResponse DeleteOrganizationMembersPolicySync(DeleteOrganizationMembersPolicyRequest req)
+        {
+             JsonResponseModel<DeleteOrganizationMembersPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteOrganizationMembersPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationMembersPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -46,7 +46,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// 当前步骤进度
+        /// 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentStepProgress")]
@@ -87,6 +87,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("CauseOfCompareDisable")]
         public string CauseOfCompareDisable{ get; set; }
 
+        /// <summary>
+        /// 任务的错误和解决方案信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrInfo")]
+        public ErrInfo ErrInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamArrayObj(map, prefix + "StepInfos.", this.StepInfos);
             this.SetParamSimple(map, prefix + "CauseOfCompareDisable", this.CauseOfCompareDisable);
+            this.SetParamObj(map, prefix + "ErrInfo.", this.ErrInfo);
         }
     }
 }

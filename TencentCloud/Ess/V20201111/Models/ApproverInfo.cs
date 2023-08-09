@@ -59,19 +59,20 @@ namespace TencentCloud.Ess.V20201111.Models
         public Component[] SignComponents{ get; set; }
 
         /// <summary>
-        /// 签署人的身份证号
-        /// </summary>
-        [JsonProperty("ApproverIdCardNumber")]
-        public string ApproverIdCardNumber{ get; set; }
-
-        /// <summary>
-        /// 签署人的身份证件类型 
+        /// 签署人的证件类型
         /// ID_CARD 身份证
         /// HONGKONG_AND_MACAO 港澳居民来往内地通行证
         /// HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+        /// OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
         /// </summary>
         [JsonProperty("ApproverIdCardType")]
         public string ApproverIdCardType{ get; set; }
+
+        /// <summary>
+        /// 签署人证件号（长度不超过18位）	
+        /// </summary>
+        [JsonProperty("ApproverIdCardNumber")]
+        public string ApproverIdCardNumber{ get; set; }
 
         /// <summary>
         /// 签署通知类型：sms--短信，none--不通知
@@ -156,8 +157,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ApproverMobile", this.ApproverMobile);
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
             this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
-            this.SetParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
             this.SetParamSimple(map, prefix + "ApproverIdCardType", this.ApproverIdCardType);
+            this.SetParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
             this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamSimple(map, prefix + "ApproverRole", this.ApproverRole);
             this.SetParamArraySimple(map, prefix + "VerifyChannel.", this.VerifyChannel);

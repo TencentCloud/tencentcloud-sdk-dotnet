@@ -48,6 +48,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecutionGroupName")]
         public string ExecutionGroupName{ get; set; }
 
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 责任人
+        /// </summary>
+        [JsonProperty("InCharge")]
+        public string InCharge{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskTypeId", this.TaskTypeId);
             this.SetParamSimple(map, prefix + "ExecutionGroupId", this.ExecutionGroupId);
             this.SetParamSimple(map, prefix + "ExecutionGroupName", this.ExecutionGroupName);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "InCharge", this.InCharge);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 设备是否在线，0不在线，1在线
+        /// 设备是否在线，0不在线，1在线，3未激活
         /// </summary>
         [JsonProperty("Online")]
         public ulong? Online{ get; set; }
@@ -100,6 +100,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         /// NB IoT运营商处的DeviceID
         /// </summary>
         [JsonProperty("NbiotDeviceID")]
+        [System.Obsolete]
         public string NbiotDeviceID{ get; set; }
 
         /// <summary>
@@ -185,6 +186,12 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         public ulong? CreateUserId{ get; set; }
 
         /// <summary>
+        /// NB IoT运营商处的DeviceID
+        /// </summary>
+        [JsonProperty("NBIoTDeviceID")]
+        public string NBIoTDeviceID{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -221,6 +228,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
             this.SetParamSimple(map, prefix + "ClientIP", this.ClientIP);
             this.SetParamSimple(map, prefix + "FirmwareUpdateTime", this.FirmwareUpdateTime);
             this.SetParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
+            this.SetParamSimple(map, prefix + "NBIoTDeviceID", this.NBIoTDeviceID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

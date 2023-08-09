@@ -65,6 +65,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         /// LoRa产品运营侧APPEUI，只有LoRa产品需要填写
         /// </summary>
         [JsonProperty("Appeui")]
+        [System.Obsolete]
         public string Appeui{ get; set; }
 
         /// <summary>
@@ -133,6 +134,12 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         [JsonProperty("ForbiddenStatus")]
         public ulong? ForbiddenStatus{ get; set; }
 
+        /// <summary>
+        /// LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+        /// </summary>
+        [JsonProperty("AppEUI")]
+        public string AppEUI{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +164,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
             this.SetParamSimple(map, prefix + "OriginUserId", this.OriginUserId);
             this.SetParamSimple(map, prefix + "DeviceLimit", this.DeviceLimit);
             this.SetParamSimple(map, prefix + "ForbiddenStatus", this.ForbiddenStatus);
+            this.SetParamSimple(map, prefix + "AppEUI", this.AppEUI);
         }
     }
 }

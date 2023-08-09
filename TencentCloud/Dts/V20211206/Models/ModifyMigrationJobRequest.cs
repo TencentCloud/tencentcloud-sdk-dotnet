@@ -37,7 +37,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string RunMode{ get; set; }
 
         /// <summary>
-        /// 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息
+        /// 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
         /// </summary>
         [JsonProperty("MigrateOption")]
         public MigrateOption MigrateOption{ get; set; }

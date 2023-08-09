@@ -57,6 +57,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ShowTime")]
         public string ShowTime{ get; set; }
 
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReportTime")]
+        public string ReportTime{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +82,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "ShowTime", this.ShowTime);
+            this.SetParamSimple(map, prefix + "ReportTime", this.ReportTime);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

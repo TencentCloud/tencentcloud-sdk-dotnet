@@ -30,6 +30,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("VideoSetting")]
         public MediaCastVideoSetting VideoSetting{ get; set; }
 
+        /// <summary>
+        /// 视频配置是否和第一个输入源的视频配置相同，默认值：false。如果 FollowSourceInfo 的值为 true，忽略 VideoSetting 参数。
+        /// </summary>
+        [JsonProperty("FollowSourceInfo")]
+        public bool? FollowSourceInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "VideoSetting.", this.VideoSetting);
+            this.SetParamSimple(map, prefix + "FollowSourceInfo", this.FollowSourceInfo);
         }
     }
 }

@@ -3693,6 +3693,46 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
+        /// 重置云存事件
+        /// </summary>
+        /// <param name="req"><see cref="ResetCloudStorageEventRequest"/></param>
+        /// <returns><see cref="ResetCloudStorageEventResponse"/></returns>
+        public async Task<ResetCloudStorageEventResponse> ResetCloudStorageEvent(ResetCloudStorageEventRequest req)
+        {
+             JsonResponseModel<ResetCloudStorageEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetCloudStorageEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetCloudStorageEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置云存事件
+        /// </summary>
+        /// <param name="req"><see cref="ResetCloudStorageEventRequest"/></param>
+        /// <returns><see cref="ResetCloudStorageEventResponse"/></returns>
+        public ResetCloudStorageEventResponse ResetCloudStorageEventSync(ResetCloudStorageEventRequest req)
+        {
+             JsonResponseModel<ResetCloudStorageEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetCloudStorageEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetCloudStorageEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于重试设备升级任务
         /// </summary>
         /// <param name="req"><see cref="RetryDeviceFirmwareTaskRequest"/></param>

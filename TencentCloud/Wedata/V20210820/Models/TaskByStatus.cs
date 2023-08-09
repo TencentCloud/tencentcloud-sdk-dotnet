@@ -52,6 +52,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CycleUnit")]
         public string CycleUnit{ get; set; }
 
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("ReportTime")]
+        public string ReportTime{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("Count")]
+        public ulong? Count{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +74,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ShowTimeGroup", this.ShowTimeGroup);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CycleUnit", this.CycleUnit);
+            this.SetParamSimple(map, prefix + "ReportTime", this.ReportTime);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

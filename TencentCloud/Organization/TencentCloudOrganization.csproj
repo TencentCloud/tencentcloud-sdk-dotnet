@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.820</VersionPrefix>
+    <VersionPrefix>3.0.821</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,10 +57,14 @@
     <Compile Include="V20210331\Models\BindOrganizationMemberAuthAccountResponse.cs" />
     <Compile Include="V20210331\Models\CancelOrganizationMemberAuthAccountRequest.cs" />
     <Compile Include="V20210331\Models\CancelOrganizationMemberAuthAccountResponse.cs" />
+    <Compile Include="V20210331\Models\CreateOrganizationMemberAuthIdentityRequest.cs" />
+    <Compile Include="V20210331\Models\CreateOrganizationMemberAuthIdentityResponse.cs" />
     <Compile Include="V20210331\Models\CreateOrganizationMemberPolicyRequest.cs" />
     <Compile Include="V20210331\Models\CreateOrganizationMemberPolicyResponse.cs" />
     <Compile Include="V20210331\Models\CreateOrganizationMemberRequest.cs" />
     <Compile Include="V20210331\Models\CreateOrganizationMemberResponse.cs" />
+    <Compile Include="V20210331\Models\DeleteOrganizationMembersPolicyRequest.cs" />
+    <Compile Include="V20210331\Models\DeleteOrganizationMembersPolicyResponse.cs" />
     <Compile Include="V20210331\Models\DeleteOrganizationMembersRequest.cs" />
     <Compile Include="V20210331\Models\DeleteOrganizationMembersResponse.cs" />
     <Compile Include="V20210331\Models\DeleteOrganizationNodesRequest.cs" />

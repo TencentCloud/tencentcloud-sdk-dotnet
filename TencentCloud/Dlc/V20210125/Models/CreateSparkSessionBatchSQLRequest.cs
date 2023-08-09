@@ -86,6 +86,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Arguments")]
         public KVPair[] Arguments{ get; set; }
 
+        /// <summary>
+        /// 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+        /// </summary>
+        [JsonProperty("IsInherit")]
+        public long? IsInherit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionName", this.SessionName);
             this.SetParamArrayObj(map, prefix + "Arguments.", this.Arguments);
+            this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
         }
     }
 }

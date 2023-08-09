@@ -167,6 +167,19 @@ namespace TencentCloud.Dts.V20211206.Models
         public ErrorInfoItem[] ErrorInfo{ get; set; }
 
         /// <summary>
+        /// 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+        /// </summary>
+        [JsonProperty("DumperResumeCtrl")]
+        public string DumperResumeCtrl{ get; set; }
+
+        /// <summary>
+        /// 任务的限速信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RateLimitOption")]
+        public RateLimitOption RateLimitOption{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -198,6 +211,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamObj(map, prefix + "CheckStepInfo.", this.CheckStepInfo);
             this.SetParamObj(map, prefix + "TradeInfo.", this.TradeInfo);
             this.SetParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
+            this.SetParamSimple(map, prefix + "DumperResumeCtrl", this.DumperResumeCtrl);
+            this.SetParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.820</VersionPrefix>
+    <VersionPrefix>3.0.821</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -116,6 +116,7 @@
     <Compile Include="V20211206\Models\DifferenceItem.cs" />
     <Compile Include="V20211206\Models\DynamicOptions.cs" />
     <Compile Include="V20211206\Models\Endpoint.cs" />
+    <Compile Include="V20211206\Models\ErrInfo.cs" />
     <Compile Include="V20211206\Models\ErrorInfoItem.cs" />
     <Compile Include="V20211206\Models\IsolateMigrateJobRequest.cs" />
     <Compile Include="V20211206\Models\IsolateMigrateJobResponse.cs" />
@@ -149,6 +150,7 @@
     <Compile Include="V20211206\Models\PauseSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\ProcessProgress.cs" />
     <Compile Include="V20211206\Models\ProcessStepTip.cs" />
+    <Compile Include="V20211206\Models\RateLimitOption.cs" />
     <Compile Include="V20211206\Models\RecoverMigrateJobRequest.cs" />
     <Compile Include="V20211206\Models\RecoverMigrateJobResponse.cs" />
     <Compile Include="V20211206\Models\RecoverSyncJobRequest.cs" />

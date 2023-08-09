@@ -109,7 +109,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DstNodeType{ get; set; }
 
         /// <summary>
-        /// 同步任务选项
+        /// 同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
         /// </summary>
         [JsonProperty("Options")]
         public Options Options{ get; set; }

@@ -206,6 +206,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("DatabaseNetEnv")]
         public string DatabaseNetEnv{ get; set; }
 
+        /// <summary>
+        /// 数据库为跨账号云联网下的实例时、表示云联网所属主账号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CcnOwnerUin")]
+        public string CcnOwnerUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +245,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TmpToken", this.TmpToken);
             this.SetParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
             this.SetParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
+            this.SetParamSimple(map, prefix + "CcnOwnerUin", this.CcnOwnerUin);
         }
     }
 }

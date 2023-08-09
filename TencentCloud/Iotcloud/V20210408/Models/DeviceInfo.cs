@@ -88,6 +88,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         /// NB IOT运营商处的DeviceID
         /// </summary>
         [JsonProperty("NbiotDeviceID")]
+        [System.Obsolete]
         public string NbiotDeviceID{ get; set; }
 
         /// <summary>
@@ -184,6 +185,12 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         [JsonProperty("CreateUserId")]
         public ulong? CreateUserId{ get; set; }
 
+        /// <summary>
+        /// NB IOT运营商处的DeviceID
+        /// </summary>
+        [JsonProperty("NBIoTDeviceID")]
+        public string NBIoTDeviceID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -215,6 +222,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
             this.SetParamSimple(map, prefix + "ClientIP", this.ClientIP);
             this.SetParamSimple(map, prefix + "FirmwareUpdateTime", this.FirmwareUpdateTime);
             this.SetParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
+            this.SetParamSimple(map, prefix + "NBIoTDeviceID", this.NBIoTDeviceID);
         }
     }
 }

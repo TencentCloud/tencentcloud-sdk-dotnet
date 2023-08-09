@@ -15,37 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Organization.V20210331.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BizLicenseVerifyResult : AbstractModel
+    public class CreateOrganizationMemberAuthIdentityRequest : AbstractModel
     {
         
         /// <summary>
-        /// “0“：一致
-        /// “-1”：不一致
+        /// 成员uin列表。最多10个
         /// </summary>
-        [JsonProperty("RegNum")]
-        public string RegNum{ get; set; }
+        [JsonProperty("MemberUins")]
+        public ulong?[] MemberUins{ get; set; }
 
         /// <summary>
-        /// “0“：一致
-        /// “-1”：不一致
-        /// “”：不验真
+        /// 身份Id列表。最多5个
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// “0“：一致
-        /// “-1”：不一致
-        /// “”：不验真
-        /// </summary>
-        [JsonProperty("Address")]
-        public string Address{ get; set; }
+        [JsonProperty("IdentityIds")]
+        public ulong?[] IdentityIds{ get; set; }
 
 
         /// <summary>
@@ -53,9 +42,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegNum", this.RegNum);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Address", this.Address);
+            this.SetParamArraySimple(map, prefix + "MemberUins.", this.MemberUins);
+            this.SetParamArraySimple(map, prefix + "IdentityIds.", this.IdentityIds);
         }
     }
 }

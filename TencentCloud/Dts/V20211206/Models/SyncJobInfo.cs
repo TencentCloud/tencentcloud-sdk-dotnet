@@ -130,6 +130,20 @@ namespace TencentCloud.Dts.V20211206.Models
         public Endpoint SrcInfo{ get; set; }
 
         /// <summary>
+        /// 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SrcNodeType")]
+        public string SrcNodeType{ get; set; }
+
+        /// <summary>
+        /// 源端信息，多节点数据库使用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SrcInfos")]
+        public SyncDBEndpointInfos SrcInfos{ get; set; }
+
+        /// <summary>
         /// 目标端地域，如：ap-guangzhou等
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -156,6 +170,20 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         [JsonProperty("DstInfo")]
         public Endpoint DstInfo{ get; set; }
+
+        /// <summary>
+        /// 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DstNodeType")]
+        public string DstNodeType{ get; set; }
+
+        /// <summary>
+        /// 目标端信息，多节点数据库使用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DstInfos")]
+        public SyncDBEndpointInfos DstInfos{ get; set; }
 
         /// <summary>
         /// 创建时间，格式为 yyyy-mm-dd hh:mm:ss
@@ -234,6 +262,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("AutoRetryTimeRangeMinutes")]
         public long? AutoRetryTimeRangeMinutes{ get; set; }
 
+        /// <summary>
+        /// 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DumperResumeCtrl")]
+        public string DumperResumeCtrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -255,10 +290,14 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "SrcDatabaseType", this.SrcDatabaseType);
             this.SetParamSimple(map, prefix + "SrcAccessType", this.SrcAccessType);
             this.SetParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
+            this.SetParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);
+            this.SetParamObj(map, prefix + "SrcInfos.", this.SrcInfos);
             this.SetParamSimple(map, prefix + "DstRegion", this.DstRegion);
             this.SetParamSimple(map, prefix + "DstDatabaseType", this.DstDatabaseType);
             this.SetParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
             this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
+            this.SetParamSimple(map, prefix + "DstNodeType", this.DstNodeType);
+            this.SetParamObj(map, prefix + "DstInfos.", this.DstInfos);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
@@ -270,6 +309,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
             this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+            this.SetParamSimple(map, prefix + "DumperResumeCtrl", this.DumperResumeCtrl);
         }
     }
 }

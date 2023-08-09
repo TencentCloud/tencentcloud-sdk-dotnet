@@ -60,15 +60,17 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverMobile{ get; set; }
 
         /// <summary>
-        /// 签署方经办人证件类型ID_CARD 身份证
+        /// 签署人的证件类型
+        /// ID_CARD 身份证
         /// HONGKONG_AND_MACAO 港澳居民来往内地通行证
         /// HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+        /// OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
         /// </summary>
         [JsonProperty("ApproverIdCardType")]
         public string ApproverIdCardType{ get; set; }
 
         /// <summary>
-        /// 签署方经办人证件号码
+        /// 签署人证件号（长度不超过18位）	
         /// </summary>
         [JsonProperty("ApproverIdCardNumber")]
         public string ApproverIdCardNumber{ get; set; }

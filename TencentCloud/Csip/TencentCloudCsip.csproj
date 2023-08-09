@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.820</VersionPrefix>
+    <VersionPrefix>3.0.821</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,6 +55,7 @@
     <Compile Include="V20221121\Models\AssetViewPortRisk.cs" />
     <Compile Include="V20221121\Models\AssetViewVULRisk.cs" />
     <Compile Include="V20221121\Models\CVMAssetVO.cs" />
+    <Compile Include="V20221121\Models\ClbListenerListInfo.cs" />
     <Compile Include="V20221121\Models\CreateDomainAndIpRequest.cs" />
     <Compile Include="V20221121\Models\CreateDomainAndIpResponse.cs" />
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskRequest.cs" />
@@ -73,6 +74,8 @@
     <Compile Include="V20221121\Models\DescribeDbAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDomainAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeDomainAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeListenerListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeListenerListResponse.cs" />
     <Compile Include="V20221121\Models\DescribePublicIpAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribePublicIpAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewPortRiskListRequest.cs" />

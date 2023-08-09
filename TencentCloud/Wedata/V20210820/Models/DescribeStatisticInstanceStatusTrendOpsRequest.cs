@@ -72,6 +72,36 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecutionGroupName")]
         public string ExecutionGroupName{ get; set; }
 
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("InCharge")]
+        public string InCharge{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public long? TaskType{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("StateList")]
+        public long?[] StateList{ get; set; }
+
+        /// <summary>
+        /// D代表天，H代表小时
+        /// </summary>
+        [JsonProperty("AggregationUnit")]
+        public string AggregationUnit{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("AverageWindowSize")]
+        public long? AverageWindowSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +116,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "ExecutionGroupId", this.ExecutionGroupId);
             this.SetParamSimple(map, prefix + "ExecutionGroupName", this.ExecutionGroupName);
+            this.SetParamSimple(map, prefix + "InCharge", this.InCharge);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamArraySimple(map, prefix + "StateList.", this.StateList);
+            this.SetParamSimple(map, prefix + "AggregationUnit", this.AggregationUnit);
+            this.SetParamSimple(map, prefix + "AverageWindowSize", this.AverageWindowSize);
         }
     }
 }

@@ -71,6 +71,34 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("VirtualHostStatistics")]
         public RabbitMQVirtualHostStatistics VirtualHostStatistics{ get; set; }
 
+        /// <summary>
+        /// vhost状态，与原生控制台对应，有running、partial、stopped、unknown
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 消息堆积数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MessageHeapCount")]
+        public long? MessageHeapCount{ get; set; }
+
+        /// <summary>
+        /// 输入消息速率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MessageRateIn")]
+        public float? MessageRateIn{ get; set; }
+
+        /// <summary>
+        /// 输出消息速率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MessageRateOut")]
+        public float? MessageRateOut{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +112,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamObj(map, prefix + "VirtualHostStatistics.", this.VirtualHostStatistics);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "MessageHeapCount", this.MessageHeapCount);
+            this.SetParamSimple(map, prefix + "MessageRateIn", this.MessageRateIn);
+            this.SetParamSimple(map, prefix + "MessageRateOut", this.MessageRateOut);
         }
     }
 }

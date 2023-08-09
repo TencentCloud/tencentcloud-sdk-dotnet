@@ -102,6 +102,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("FilterExpiring")]
         public ulong? FilterExpiring{ get; set; }
 
+        /// <summary>
+        /// 是否可托管，可选值：1 = 可托管，0 =  不可托管。
+        /// </summary>
+        [JsonProperty("Hostable")]
+        public ulong? Hostable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "FilterSource", this.FilterSource);
             this.SetParamSimple(map, prefix + "IsSM", this.IsSM);
             this.SetParamSimple(map, prefix + "FilterExpiring", this.FilterExpiring);
+            this.SetParamSimple(map, prefix + "Hostable", this.Hostable);
         }
     }
 }

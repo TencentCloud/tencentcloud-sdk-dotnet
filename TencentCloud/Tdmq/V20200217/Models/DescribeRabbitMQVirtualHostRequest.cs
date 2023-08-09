@@ -54,6 +54,22 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Filters")]
         public Filter Filters{ get; set; }
 
+        /// <summary>
+        /// 排序依据的字段：
+        /// MessageHeapCount - 消息堆积数；
+        /// MessageRateInOut - 生产消费速率之和；
+        /// MessageRateIn - 生产速率；
+        /// MessageRateOut - 消费速率；
+        /// </summary>
+        [JsonProperty("SortElement")]
+        public string SortElement{ get; set; }
+
+        /// <summary>
+        /// 排序顺序，ascend 或 descend
+        /// </summary>
+        [JsonProperty("SortOrder")]
+        public string SortOrder{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +81,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "SortElement", this.SortElement);
+            this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
         }
     }
 }

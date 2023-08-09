@@ -37,7 +37,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string OldCertificateId{ get; set; }
 
         /// <summary>
-        /// 需要部署的资源类型
+        /// 需要部署的资源类型，参数值可选：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb
         /// </summary>
         [JsonProperty("ResourceTypes")]
         public string[] ResourceTypes{ get; set; }
@@ -46,6 +46,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// 需要部署的地域列表（废弃）
         /// </summary>
         [JsonProperty("Regions")]
+        [System.Obsolete]
         public string[] Regions{ get; set; }
 
         /// <summary>

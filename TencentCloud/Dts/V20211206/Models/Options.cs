@@ -80,6 +80,20 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("KafkaOption")]
         public KafkaOption KafkaOption{ get; set; }
 
+        /// <summary>
+        /// 任务限速信息、该字段仅用作出参、入参该字段无效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RateLimitOption")]
+        public RateLimitOption RateLimitOption{ get; set; }
+
+        /// <summary>
+        /// 自动重试的时间窗口设置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoRetryTimeRangeMinutes")]
+        public long? AutoRetryTimeRangeMinutes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +108,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamObj(map, prefix + "ConflictHandleOption.", this.ConflictHandleOption);
             this.SetParamArrayObj(map, prefix + "DdlOptions.", this.DdlOptions);
             this.SetParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
+            this.SetParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
+            this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
         }
     }
 }
