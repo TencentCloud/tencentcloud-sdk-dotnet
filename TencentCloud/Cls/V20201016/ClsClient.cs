@@ -693,7 +693,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建ScheduledSql任务
+        /// 本接口用于创建定时SQL分析任务
         /// </summary>
         /// <param name="req"><see cref="CreateScheduledSqlRequest"/></param>
         /// <returns><see cref="CreateScheduledSqlResponse"/></returns>
@@ -713,7 +713,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建ScheduledSql任务
+        /// 本接口用于创建定时SQL分析任务
         /// </summary>
         /// <param name="req"><see cref="CreateScheduledSqlRequest"/></param>
         /// <returns><see cref="CreateScheduledSqlResponse"/></returns>
@@ -1333,7 +1333,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除ScheduledSql任务
+        /// 本接口用于删除定时SQL分析任务
         /// </summary>
         /// <param name="req"><see cref="DeleteScheduledSqlRequest"/></param>
         /// <returns><see cref="DeleteScheduledSqlResponse"/></returns>
@@ -1353,7 +1353,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除ScheduledSql任务
+        /// 本接口用于删除定时SQL分析任务
         /// </summary>
         /// <param name="req"><see cref="DeleteScheduledSqlRequest"/></param>
         /// <returns><see cref="DeleteScheduledSqlResponse"/></returns>
@@ -2333,7 +2333,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取ScheduledSql任务列表
+        /// 本接口用于获取定时SQL分析任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScheduledSqlInfoRequest"/></param>
         /// <returns><see cref="DescribeScheduledSqlInfoResponse"/></returns>
@@ -2353,7 +2353,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取ScheduledSql任务列表
+        /// 本接口用于获取定时SQL分析任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScheduledSqlInfoRequest"/></param>
         /// <returns><see cref="DescribeScheduledSqlInfoResponse"/></returns>
@@ -3053,7 +3053,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于修改ScheduledSql任务
+        /// 本接口用于修改定时SQL分析任务
         /// </summary>
         /// <param name="req"><see cref="ModifyScheduledSqlRequest"/></param>
         /// <returns><see cref="ModifyScheduledSqlResponse"/></returns>
@@ -3073,7 +3073,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于修改ScheduledSql任务
+        /// 本接口用于修改定时SQL分析任务
         /// </summary>
         /// <param name="req"><see cref="ModifyScheduledSqlRequest"/></param>
         /// <returns><see cref="ModifyScheduledSqlResponse"/></returns>

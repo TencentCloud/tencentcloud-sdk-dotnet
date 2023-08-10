@@ -76,7 +76,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 审计日志过滤条件。
+        /// 过滤条件。多个值之前是且的关系。
         /// </summary>
         [JsonProperty("LogFilter")]
         public InstanceAuditLogFilter[] LogFilter{ get; set; }

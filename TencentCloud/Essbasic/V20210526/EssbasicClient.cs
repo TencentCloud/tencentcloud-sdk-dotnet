@@ -199,6 +199,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 此接口（ChannelCancelUserAutoSignEnableUrl）用来撤销发送给个人用户的自动签开通链接，撤销后对应的个人用户开通链接失效。若个人用户已经完成开通，将无法撤销。（处方单场景专用，使用此接口请与客户经理确认）
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCancelUserAutoSignEnableUrlRequest"/></param>
+        /// <returns><see cref="ChannelCancelUserAutoSignEnableUrlResponse"/></returns>
+        public async Task<ChannelCancelUserAutoSignEnableUrlResponse> ChannelCancelUserAutoSignEnableUrl(ChannelCancelUserAutoSignEnableUrlRequest req)
+        {
+             JsonResponseModel<ChannelCancelUserAutoSignEnableUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCancelUserAutoSignEnableUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCancelUserAutoSignEnableUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ChannelCancelUserAutoSignEnableUrl）用来撤销发送给个人用户的自动签开通链接，撤销后对应的个人用户开通链接失效。若个人用户已经完成开通，将无法撤销。（处方单场景专用，使用此接口请与客户经理确认）
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCancelUserAutoSignEnableUrlRequest"/></param>
+        /// <returns><see cref="ChannelCancelUserAutoSignEnableUrlResponse"/></returns>
+        public ChannelCancelUserAutoSignEnableUrlResponse ChannelCancelUserAutoSignEnableUrlSync(ChannelCancelUserAutoSignEnableUrlRequest req)
+        {
+             JsonResponseModel<ChannelCancelUserAutoSignEnableUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCancelUserAutoSignEnableUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCancelUserAutoSignEnableUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 指定需要批量撤销的签署流程Id，获取批量撤销链接 - 不建议使用此接口，可使用ChannelBatchCancelFlows
         /// 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；
         /// 接口调用成功返回批量撤销合同的链接，通过链接跳转到电子签小程序完成批量撤销;
@@ -867,6 +907,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 企业方可以通过此接口获取个人用户开启自动签的跳转链接
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateUserAutoSignEnableUrlRequest"/></param>
+        /// <returns><see cref="ChannelCreateUserAutoSignEnableUrlResponse"/></returns>
+        public async Task<ChannelCreateUserAutoSignEnableUrlResponse> ChannelCreateUserAutoSignEnableUrl(ChannelCreateUserAutoSignEnableUrlRequest req)
+        {
+             JsonResponseModel<ChannelCreateUserAutoSignEnableUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateUserAutoSignEnableUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateUserAutoSignEnableUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业方可以通过此接口获取个人用户开启自动签的跳转链接
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateUserAutoSignEnableUrlRequest"/></param>
+        /// <returns><see cref="ChannelCreateUserAutoSignEnableUrlResponse"/></returns>
+        public ChannelCreateUserAutoSignEnableUrlResponse ChannelCreateUserAutoSignEnableUrlSync(ChannelCreateUserAutoSignEnableUrlRequest req)
+        {
+             JsonResponseModel<ChannelCreateUserAutoSignEnableUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateUserAutoSignEnableUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateUserAutoSignEnableUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过此接口，绑定员工角色，支持以电子签userId、客户系统userId两种方式调用。
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateUserRolesRequest"/></param>
@@ -1180,6 +1260,86 @@ namespace TencentCloud.Essbasic.V20210526
              {
                  var strResp = this.InternalRequestSync(req, "ChannelDescribeRoles");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDescribeRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业方可以通过此接口查询个人用户自动签开启状态
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDescribeUserAutoSignStatusRequest"/></param>
+        /// <returns><see cref="ChannelDescribeUserAutoSignStatusResponse"/></returns>
+        public async Task<ChannelDescribeUserAutoSignStatusResponse> ChannelDescribeUserAutoSignStatus(ChannelDescribeUserAutoSignStatusRequest req)
+        {
+             JsonResponseModel<ChannelDescribeUserAutoSignStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelDescribeUserAutoSignStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDescribeUserAutoSignStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业方可以通过此接口查询个人用户自动签开启状态
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDescribeUserAutoSignStatusRequest"/></param>
+        /// <returns><see cref="ChannelDescribeUserAutoSignStatusResponse"/></returns>
+        public ChannelDescribeUserAutoSignStatusResponse ChannelDescribeUserAutoSignStatusSync(ChannelDescribeUserAutoSignStatusRequest req)
+        {
+             JsonResponseModel<ChannelDescribeUserAutoSignStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelDescribeUserAutoSignStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDescribeUserAutoSignStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业方可以通过此接口关闭个人的自动签功能
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDisableUserAutoSignRequest"/></param>
+        /// <returns><see cref="ChannelDisableUserAutoSignResponse"/></returns>
+        public async Task<ChannelDisableUserAutoSignResponse> ChannelDisableUserAutoSign(ChannelDisableUserAutoSignRequest req)
+        {
+             JsonResponseModel<ChannelDisableUserAutoSignResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelDisableUserAutoSign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDisableUserAutoSignResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业方可以通过此接口关闭个人的自动签功能
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDisableUserAutoSignRequest"/></param>
+        /// <returns><see cref="ChannelDisableUserAutoSignResponse"/></returns>
+        public ChannelDisableUserAutoSignResponse ChannelDisableUserAutoSignSync(ChannelDisableUserAutoSignRequest req)
+        {
+             JsonResponseModel<ChannelDisableUserAutoSignResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelDisableUserAutoSign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDisableUserAutoSignResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

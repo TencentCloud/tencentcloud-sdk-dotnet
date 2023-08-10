@@ -25,7 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 返回描述，START-发起成功， REVIEW-提交审核成功，EXECUTING-已提交发起任务
+        /// 发起成功之后返回状态，
+        /// 
+        /// START-发起成功， 
+        /// 
+        /// REVIEW-提交审核成功，
+        /// 
+        /// EXECUTING-已提交发起任务
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

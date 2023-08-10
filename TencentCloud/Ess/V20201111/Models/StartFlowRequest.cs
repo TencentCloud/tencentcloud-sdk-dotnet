@@ -49,7 +49,11 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+        /// 给关注人发送短信通知的类型，
+        /// 
+        /// 0-合同发起时通知 
+        /// 
+        /// 1-签署完成后通知
         /// </summary>
         [JsonProperty("CcNotifyType")]
         public long? CcNotifyType{ get; set; }

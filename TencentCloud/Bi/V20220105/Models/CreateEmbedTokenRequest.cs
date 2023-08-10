@@ -25,7 +25,7 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// 分享项目id，必选
+        /// 分享项目id
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

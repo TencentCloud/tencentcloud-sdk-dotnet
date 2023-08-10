@@ -70,7 +70,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 过滤条件。可按设置的过滤条件过滤日志。
+        /// 过滤条件。多个值之前是且的关系。
         /// </summary>
         [JsonProperty("LogFilter")]
         public InstanceAuditLogFilters[] LogFilter{ get; set; }

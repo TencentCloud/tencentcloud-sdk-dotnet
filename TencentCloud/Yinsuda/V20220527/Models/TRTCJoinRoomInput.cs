@@ -48,6 +48,17 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// TRTC房间号的类型：
+        /// 
+        /// Integer：数字类型
+        /// String：字符串类型
+        /// 默认为：Integer 。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RoomIdType")]
+        public string RoomIdType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +69,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
         }
     }
 }

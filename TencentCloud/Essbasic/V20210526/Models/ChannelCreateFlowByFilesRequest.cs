@@ -37,6 +37,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowName{ get; set; }
 
         /// <summary>
+        /// 签署流程的描述，长度不超过1000个字符
+        /// </summary>
+        [JsonProperty("FlowDescription")]
+        public string FlowDescription{ get; set; }
+
+        /// <summary>
         /// 签署流程签约方列表，最多不超过50个参与方
         /// </summary>
         [JsonProperty("FlowApprovers")]
@@ -55,19 +61,26 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Component[] Components{ get; set; }
 
         /// <summary>
-        /// 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
+        /// 签署流程的签署截止时间。
+        /// 值为unix时间戳,精确到秒,不传默认为当前时间一年后
+        /// 不能早于当前时间
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
 
         /// <summary>
         /// 签署流程回调地址，长度不超过255个字符
+        /// 如果不传递回调地址， 则默认是配置应用号时候使用的回调地址
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
+        /// 合同签署顺序类型
+        /// true - 无序签,
+        /// false - 顺序签，
+        /// 默认为false，即有序签署。
+        /// 有序签署时以传入FlowApprovers数组的顺序作为签署顺序
         /// </summary>
         [JsonProperty("Unordered")]
         public bool? Unordered{ get; set; }
@@ -77,12 +90,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("FlowType")]
         public string FlowType{ get; set; }
-
-        /// <summary>
-        /// 签署流程的描述，长度不超过1000个字符
-        /// </summary>
-        [JsonProperty("FlowDescription")]
-        public string FlowDescription{ get; set; }
 
         /// <summary>
         /// 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
@@ -112,7 +119,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ApproverVerifyType{ get; set; }
 
         /// <summary>
-        /// 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+        /// 标识是否允许发起后添加控件。
+        /// 0为不允许
+        /// 1为允许。
+        /// 如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
         /// </summary>
         [JsonProperty("SignBeanTag")]
         public long? SignBeanTag{ get; set; }
@@ -124,7 +134,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public CcInfo[] CcInfos{ get; set; }
 
         /// <summary>
-        /// 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+        /// 给关注人发送短信通知的类型，
+        /// 0-合同发起时通知 
+        /// 1-签署完成后通知
         /// </summary>
         [JsonProperty("CcNotifyType")]
         public long? CcNotifyType{ get; set; }
@@ -150,6 +162,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
+            this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamArrayObj(map, prefix + "FlowApprovers.", this.FlowApprovers);
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
@@ -157,7 +170,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
             this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
-            this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
             this.SetParamSimple(map, prefix + "CustomerData", this.CustomerData);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);

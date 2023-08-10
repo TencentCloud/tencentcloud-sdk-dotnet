@@ -37,7 +37,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Database{ get; set; }
 
         /// <summary>
-        /// 建hive表ddl
+        /// base64转码之后的建表语句
         /// </summary>
         [JsonProperty("DDLSql")]
         public string DDLSql{ get; set; }

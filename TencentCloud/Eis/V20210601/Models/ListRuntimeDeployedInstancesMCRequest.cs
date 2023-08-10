@@ -81,6 +81,14 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 0: 应用集成
+        /// 1: API管理
+        /// 2: ETL
+        /// </summary>
+        [JsonProperty("RuntimeClass")]
+        public long? RuntimeClass{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +104,7 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "ApiVersion", this.ApiVersion);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
         }
     }
 }

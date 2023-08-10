@@ -66,6 +66,12 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("RuntimeClass")]
         public long? RuntimeClass{ get; set; }
 
+        /// <summary>
+        /// 资源指标聚合类型：0: 环境维度 1:执行引擎维度 2:datatwaypy维度 3.datawayjava维度
+        /// </summary>
+        [JsonProperty("AggregationType")]
+        public long? AggregationType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "RateType", this.RateType);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
             this.SetParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
+            this.SetParamSimple(map, prefix + "AggregationType", this.AggregationType);
         }
     }
 }

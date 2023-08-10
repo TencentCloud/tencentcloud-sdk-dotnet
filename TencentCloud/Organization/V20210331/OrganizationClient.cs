@@ -333,6 +333,46 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 删除组织成员访问授权
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationMemberAuthIdentityRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationMemberAuthIdentityResponse"/></returns>
+        public async Task<DeleteOrganizationMemberAuthIdentityResponse> DeleteOrganizationMemberAuthIdentity(DeleteOrganizationMemberAuthIdentityRequest req)
+        {
+             JsonResponseModel<DeleteOrganizationMemberAuthIdentityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteOrganizationMemberAuthIdentity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationMemberAuthIdentityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除组织成员访问授权
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationMemberAuthIdentityRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationMemberAuthIdentityResponse"/></returns>
+        public DeleteOrganizationMemberAuthIdentityResponse DeleteOrganizationMemberAuthIdentitySync(DeleteOrganizationMemberAuthIdentityRequest req)
+        {
+             JsonResponseModel<DeleteOrganizationMemberAuthIdentityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteOrganizationMemberAuthIdentity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationMemberAuthIdentityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量删除企业组织成员
         /// </summary>
         /// <param name="req"><see cref="DeleteOrganizationMembersRequest"/></param>

@@ -37,7 +37,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public long? PageIndex{ get; set; }
 
         /// <summary>
-        /// 页大小
+        /// 一页展示的条数
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
@@ -73,7 +73,11 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string SortCol{ get; set; }
 
         /// <summary>
-        /// 类型列表（如35 shell任务），可选
+        /// 类型列表（如python任务类型：30
+        /// pyspark任务类型：31
+        /// hivesql任务类型：34
+        /// shell任务类型：35
+        /// sparksql任务类型：36 jdbcsql任务类型：21 dlc任务类型：32），可选
         /// </summary>
         [JsonProperty("TaskTypeList")]
         public long?[] TaskTypeList{ get; set; }
