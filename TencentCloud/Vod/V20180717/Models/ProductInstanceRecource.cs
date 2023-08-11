@@ -31,6 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Transcode：普通转码资源包。</li>
         /// <li>TESHD：极速高清转码资源包。</li>
         /// <li>Review：音视频审核转码资源包。</li>
+        /// <li>MediaProcess：媒体处理时长资源包。</li>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -42,6 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>音视频审核资源包，单位为秒。</li>
         /// <li>音视频极速高清资源包，单位为秒。</li>
         /// <li>音视频加速资源包，单位为字节。</li>
+        /// <li>媒体处理时长资源包，单位为秒。</li>
         /// </summary>
         [JsonProperty("Amount")]
         public long? Amount{ get; set; }
@@ -53,6 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>音视频审核资源包，单位为秒。</li>
         /// <li>音视频极速高清资源包，单位为秒。</li>
         /// <li>音视频加速资源包，单位为字节。</li>
+        /// <li>媒体处理时长资源包，单位为秒。</li>
         /// </summary>
         [JsonProperty("Left")]
         public long? Left{ get; set; }

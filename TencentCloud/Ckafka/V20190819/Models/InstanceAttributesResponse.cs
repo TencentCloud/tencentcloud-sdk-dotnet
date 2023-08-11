@@ -249,6 +249,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DynamicDiskConfig")]
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
 
+        /// <summary>
+        /// 实例计费类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceChargeType")]
+        public string InstanceChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -290,6 +297,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "RemainingPartitions", this.RemainingPartitions);
             this.SetParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
             this.SetParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
+            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         }
     }
 }

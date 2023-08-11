@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.822</VersionPrefix>
+    <VersionPrefix>3.0.823</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -327,6 +327,7 @@
     <Compile Include="V20190819\Models\RegexReplaceParam.cs" />
     <Compile Include="V20190819\Models\Region.cs" />
     <Compile Include="V20190819\Models\RenewCkafkaInstanceRequest.cs" />
+    <Compile Include="V20190819\Models\RenewCkafkaInstanceResp.cs" />
     <Compile Include="V20190819\Models\RenewCkafkaInstanceResponse.cs" />
     <Compile Include="V20190819\Models\ReplaceParam.cs" />
     <Compile Include="V20190819\Models\Route.cs" />

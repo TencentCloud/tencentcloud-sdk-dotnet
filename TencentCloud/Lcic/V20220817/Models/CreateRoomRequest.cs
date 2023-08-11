@@ -129,7 +129,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? AudienceType{ get; set; }
 
         /// <summary>
-        /// 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+        /// 录制模板。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
         /// </summary>
         [JsonProperty("RecordLayout")]
         public ulong? RecordLayout{ get; set; }

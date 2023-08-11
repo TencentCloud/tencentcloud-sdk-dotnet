@@ -43,7 +43,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 是否开启云监控和云镜服务，未指定时默认开启。
+        /// 是否开启腾讯云可观测平台和主机安全服务，未指定时默认开启。
         /// </summary>
         [JsonProperty("EnhancedService")]
         public EnhancedService EnhancedService{ get; set; }

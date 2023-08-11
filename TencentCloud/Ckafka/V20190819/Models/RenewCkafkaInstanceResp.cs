@@ -21,20 +21,22 @@ namespace TencentCloud.Ckafka.V20190819.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RenewCkafkaInstanceResponse : AbstractModel
+    public class RenewCkafkaInstanceResp : AbstractModel
     {
         
         /// <summary>
-        /// 返回值
+        /// 订单号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Result")]
-        public RenewCkafkaInstanceResp Result{ get; set; }
+        [JsonProperty("BigDealId")]
+        public string BigDealId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 子订单号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "BigDealId", this.BigDealId);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
         }
     }
 }

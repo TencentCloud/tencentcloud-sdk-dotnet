@@ -33,6 +33,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 自动签署仅进行盖章操作，不能是手写签名。
         /// 本方企业自动签署的签署人会默认是当前的发起人
         /// 他方企业自动签署的签署人是自动签模板的他方企业授权人
+        /// 7: 个人自动签署，适用于个人自动签场景。
+        /// 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
         /// </summary>
         [JsonProperty("ApproverType")]
         public long? ApproverType{ get; set; }
@@ -112,8 +114,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong? PreReadTime{ get; set; }
 
         /// <summary>
-        /// 签署方经办人的电子签用户ID
-        /// <br/>当未指定签署人姓名+手机号的情况下，该字段毕传
+        /// 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
+        /// 
+        /// 若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
@@ -125,8 +128,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? Required{ get; set; }
 
         /// <summary>
-        /// 签署人用户来源
-        /// <br/>企微侧用户请传入：WEWORKAPP
+        /// 签署人用户来源，此参数仅针对企微用户开放
+        /// 
+        /// 企微侧用户请传入：WEWORKAPP
         /// </summary>
         [JsonProperty("ApproverSource")]
         public string ApproverSource{ get; set; }
@@ -177,14 +181,14 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? ApproverNeedSignReview{ get; set; }
 
         /// <summary>
-        /// 签署人签署控件
+        /// 签署人签署控件， 此参数仅针对文件发起（CreateFlowByFiles）生效
         /// <br/>文件发起时，可通过该参数为签署人指定签署控件类型以及位置
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }
 
         /// <summary>
-        /// 签署人填写控件
+        /// 签署人填写控件 此参数仅针对文件发起（CreateFlowByFiles）生效
         /// <br/>文件发起时，可通过该参数为签署人指定填写控件类型以及位置
         /// </summary>
         [JsonProperty("Components")]

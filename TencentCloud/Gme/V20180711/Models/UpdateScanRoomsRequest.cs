@@ -37,7 +37,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public string RoomIdString{ get; set; }
 
         /// <summary>
-        /// 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
+        /// 符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
         /// </summary>
         [JsonProperty("RoomIdRegex")]
         public string[] RoomIdRegex{ get; set; }

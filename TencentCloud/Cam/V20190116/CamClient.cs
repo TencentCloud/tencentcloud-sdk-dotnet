@@ -373,6 +373,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 创建消息接收人接口：仅允许已完成实名认证的用户访问消息接收人接口，并对每个用户限制每天最多请求10次。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMessageReceiverRequest"/></param>
+        /// <returns><see cref="CreateMessageReceiverResponse"/></returns>
+        public async Task<CreateMessageReceiverResponse> CreateMessageReceiver(CreateMessageReceiverRequest req)
+        {
+             JsonResponseModel<CreateMessageReceiverResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateMessageReceiver");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMessageReceiverResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建消息接收人接口：仅允许已完成实名认证的用户访问消息接收人接口，并对每个用户限制每天最多请求10次。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMessageReceiverRequest"/></param>
+        /// <returns><see cref="CreateMessageReceiverResponse"/></returns>
+        public CreateMessageReceiverResponse CreateMessageReceiverSync(CreateMessageReceiverRequest req)
+        {
+             JsonResponseModel<CreateMessageReceiverResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateMessageReceiver");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMessageReceiverResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建角色OIDC配置
         /// </summary>
         /// <param name="req"><see cref="CreateOIDCConfigRequest"/></param>

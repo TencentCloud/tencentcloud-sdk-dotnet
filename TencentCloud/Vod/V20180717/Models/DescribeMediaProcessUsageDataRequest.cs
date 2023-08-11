@@ -55,6 +55,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li> ExtractTraceWatermark: 提取水印</li>
         /// <li> AddTraceWatermark: 添加水印</li>
         /// <li> RebuildMedia: 音画质重生</li>
+        /// <li> QualityInspect: 音画质检测</li>
+        /// <li> VideoHighlight: 视频智能集锦</li>
+        /// <li> VideoTag: 视频智能标签</li>
+        /// <li> VideoClassification:  视频智能分类</li>
+        /// <li> VideoCover: 视频智能封面</li>
+        /// <li> VideoSegment: 视频智能拆条</li>
         /// <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
         /// </summary>
         [JsonProperty("Type")]

@@ -128,7 +128,7 @@ namespace TencentCloud.Tse.V20201207.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Headers")]
-        public KVMapping Headers{ get; set; }
+        public KVMapping[] Headers{ get; set; }
 
 
         /// <summary>
@@ -150,7 +150,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
             this.SetParamSimple(map, prefix + "ServiceID", this.ServiceID);
             this.SetParamArraySimple(map, prefix + "DestinationPorts.", this.DestinationPorts);
-            this.SetParamObj(map, prefix + "Headers.", this.Headers);
+            this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
         }
     }
 }

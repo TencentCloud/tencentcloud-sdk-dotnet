@@ -138,6 +138,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DateField")]
         public string DateField{ get; set; }
 
+        /// <summary>
+        /// 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
+        /// </summary>
+        [JsonProperty("RecordMappingMode")]
+        public string RecordMappingMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "DropDlq.", this.DropDlq);
             this.SetParamArrayObj(map, prefix + "RecordMappingList.", this.RecordMappingList);
             this.SetParamSimple(map, prefix + "DateField", this.DateField);
+            this.SetParamSimple(map, prefix + "RecordMappingMode", this.RecordMappingMode);
         }
     }
 }

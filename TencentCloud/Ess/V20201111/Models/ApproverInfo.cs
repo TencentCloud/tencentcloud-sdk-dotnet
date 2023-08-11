@@ -30,6 +30,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 1：个人
         /// 3：企业静默签署
         /// 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+        /// 7: 个人自动签署，适用于个人自动签场景。
+        /// 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
         /// </summary>
         [JsonProperty("ApproverType")]
         public long? ApproverType{ get; set; }
@@ -47,7 +49,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverMobile{ get; set; }
 
         /// <summary>
-        /// 如果签署方是企业签署方，则为企业名
+        /// 如果签署方是企业签署方(approverType = 1 或者 approverType = 3)，
+        /// 
+        /// 则企业名称必填
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
@@ -99,13 +103,17 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? PreReadTime{ get; set; }
 
         /// <summary>
-        /// 签署人userId，传此字段则不用传姓名、手机号
+        /// 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
+        /// 
+        /// 若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 签署人用户来源，企微侧用户请传入：WEWORKAPP
+        /// 签署人用户来源，此参数仅针对企微用户开放
+        /// 
+        /// 企微侧用户请传入：WEWORKAPP
         /// </summary>
         [JsonProperty("ApproverSource")]
         public string ApproverSource{ get; set; }

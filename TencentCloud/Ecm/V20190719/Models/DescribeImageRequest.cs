@@ -28,7 +28,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// 过滤条件，每次请求的Filters的上限为10，详细的过滤条件如下：
         /// image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤
         /// image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
-        /// PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
+        /// PRIVATE_IMAGE: 私有镜像 (本账户创建的镜像) 
         /// PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
         /// instance-type -String - 是否必填: 否 - (过滤条件) 按机型过滤支持的镜像
         /// image-name - String - 是否必填：否 - (过滤条件) 按镜像的名称模糊匹配，只能提供一个值
