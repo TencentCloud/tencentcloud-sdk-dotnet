@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.823</VersionPrefix>
+    <VersionPrefix>3.0.824</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -274,8 +274,11 @@
     <Compile Include="V20201016\Models\RuleTagInfo.cs" />
     <Compile Include="V20201016\Models\ScheduledSqlResouceInfo.cs" />
     <Compile Include="V20201016\Models\ScheduledSqlTaskInfo.cs" />
+    <Compile Include="V20201016\Models\SearchLogErrors.cs" />
+    <Compile Include="V20201016\Models\SearchLogInfos.cs" />
     <Compile Include="V20201016\Models\SearchLogRequest.cs" />
     <Compile Include="V20201016\Models\SearchLogResponse.cs" />
+    <Compile Include="V20201016\Models\SearchLogTopics.cs" />
     <Compile Include="V20201016\Models\ShipperInfo.cs" />
     <Compile Include="V20201016\Models\ShipperTaskInfo.cs" />
     <Compile Include="V20201016\Models\SplitPartitionRequest.cs" />

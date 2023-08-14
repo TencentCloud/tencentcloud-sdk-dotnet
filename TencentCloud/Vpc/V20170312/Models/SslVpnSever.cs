@@ -116,7 +116,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 2 更新中
         /// 3 更新出错
         /// 4 销毁中
-        /// 5 销毁出粗
+        /// 5 销毁出错
         /// 6 已连通
         /// 7 未知
         /// </summary>

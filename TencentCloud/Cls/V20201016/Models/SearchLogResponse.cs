@@ -25,7 +25,9 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+        /// 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
+        /// 注意：
+        /// * 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
@@ -90,6 +92,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public float? SamplingRate{ get; set; }
 
         /// <summary>
+        /// 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Topics")]
+        public SearchLogTopics Topics{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -110,6 +119,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
             this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
             this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
+            this.SetParamObj(map, prefix + "Topics.", this.Topics);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

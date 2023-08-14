@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.823</VersionPrefix>
+    <VersionPrefix>3.0.824</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -521,6 +521,10 @@
     <Compile Include="V20201101\Models\DescribeReverseShellWhiteListDetailResponse.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellWhiteListsRequest.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellWhiteListsResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskDnsEventDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskDnsEventDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskDnsListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskDnsListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeRiskListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeRiskListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeRiskSyscallDetailRequest.cs" />
@@ -791,6 +795,7 @@
     <Compile Include="V20201101\Models\ReverseShellEventInfo.cs" />
     <Compile Include="V20201101\Models\ReverseShellWhiteListBaseInfo.cs" />
     <Compile Include="V20201101\Models\ReverseShellWhiteListInfo.cs" />
+    <Compile Include="V20201101\Models\RiskDnsEventInfo.cs" />
     <Compile Include="V20201101\Models\RiskSyscallEventDescription.cs" />
     <Compile Include="V20201101\Models\RiskSyscallEventInfo.cs" />
     <Compile Include="V20201101\Models\RiskSyscallWhiteListBaseInfo.cs" />

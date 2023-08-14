@@ -61,11 +61,11 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时
+        /// 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
         /// 注意：
         /// * 透传该参数时，请勿修改除该参数外的其它参数
-        /// * 仅当检索分析语句(Query)不包含SQL时有效
-        /// * SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+        /// * 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
+        /// * 仅当检索分析语句(Query)不包含SQL时有效，SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

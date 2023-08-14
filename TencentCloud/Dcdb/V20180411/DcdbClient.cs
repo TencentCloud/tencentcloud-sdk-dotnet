@@ -1499,6 +1499,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口(DescribeLogFileRetentionPeriod)用于查看数据库备份日志的备份天数的设置情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogFileRetentionPeriodRequest"/></param>
+        /// <returns><see cref="DescribeLogFileRetentionPeriodResponse"/></returns>
+        public async Task<DescribeLogFileRetentionPeriodResponse> DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req)
+        {
+             JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogFileRetentionPeriod");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeLogFileRetentionPeriod)用于查看数据库备份日志的备份天数的设置情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogFileRetentionPeriodRequest"/></param>
+        /// <returns><see cref="DescribeLogFileRetentionPeriodResponse"/></returns>
+        public DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriodSync(DescribeLogFileRetentionPeriodRequest req)
+        {
+             JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogFileRetentionPeriod");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeOrders）用于查询分布式数据库订单信息。传入订单ID来查询订单关联的分布式数据库实例，和对应的任务流程ID。
         /// </summary>
         /// <param name="req"><see cref="DescribeOrdersRequest"/></param>

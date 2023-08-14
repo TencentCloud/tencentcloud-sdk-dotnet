@@ -825,6 +825,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 本接口（ChannelCreatePreparedPersonalEsign）用于创建导入个人印章
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreatePreparedPersonalEsignRequest"/></param>
+        /// <returns><see cref="ChannelCreatePreparedPersonalEsignResponse"/></returns>
+        public async Task<ChannelCreatePreparedPersonalEsignResponse> ChannelCreatePreparedPersonalEsign(ChannelCreatePreparedPersonalEsignRequest req)
+        {
+             JsonResponseModel<ChannelCreatePreparedPersonalEsignResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreatePreparedPersonalEsign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreatePreparedPersonalEsignResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ChannelCreatePreparedPersonalEsign）用于创建导入个人印章
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreatePreparedPersonalEsignRequest"/></param>
+        /// <returns><see cref="ChannelCreatePreparedPersonalEsignResponse"/></returns>
+        public ChannelCreatePreparedPersonalEsignResponse ChannelCreatePreparedPersonalEsignSync(ChannelCreatePreparedPersonalEsignRequest req)
+        {
+             JsonResponseModel<ChannelCreatePreparedPersonalEsignResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreatePreparedPersonalEsign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreatePreparedPersonalEsignResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
         /// 合同发起人必须在电子签已经进行实名。
         /// </summary>
