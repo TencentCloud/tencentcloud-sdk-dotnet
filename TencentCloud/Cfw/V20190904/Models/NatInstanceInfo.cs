@@ -135,6 +135,20 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("RuleMax")]
         public ulong? RuleMax{ get; set; }
 
+        /// <summary>
+        /// 实例引擎版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineVersion")]
+        public string EngineVersion{ get; set; }
+
+        /// <summary>
+        /// 引擎是否可升级：0，不可升级；1，可升级
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateEnable")]
+        public long? UpdateEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +172,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "ZoneZhBak", this.ZoneZhBak);
             this.SetParamSimple(map, prefix + "RuleUsed", this.RuleUsed);
             this.SetParamSimple(map, prefix + "RuleMax", this.RuleMax);
+            this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+            this.SetParamSimple(map, prefix + "UpdateEnable", this.UpdateEnable);
         }
     }
 }

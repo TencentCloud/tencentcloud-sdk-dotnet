@@ -54,6 +54,18 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("SerialType")]
         public ulong? SerialType{ get; set; }
 
+        /// <summary>
+        /// 资源类型 batch:批次, order_in 入库, order_out: 出入
+        /// </summary>
+        [JsonProperty("ResType")]
+        public string ResType{ get; set; }
+
+        /// <summary>
+        /// 资源ID ResType是 batch 时对应是批次ID, 是 order_in, order_out时，则是订单ID
+        /// </summary>
+        [JsonProperty("ResId")]
+        public string ResId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
             this.SetParamSimple(map, prefix + "SerialType", this.SerialType);
+            this.SetParamSimple(map, prefix + "ResType", this.ResType);
+            this.SetParamSimple(map, prefix + "ResId", this.ResId);
         }
     }
 }

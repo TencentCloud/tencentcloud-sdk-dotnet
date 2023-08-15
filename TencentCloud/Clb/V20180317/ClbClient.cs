@@ -2733,6 +2733,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 修改一个或多个负载均衡实例所属项目。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancersProjectRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancersProjectResponse"/></returns>
+        public async Task<ModifyLoadBalancersProjectResponse> ModifyLoadBalancersProject(ModifyLoadBalancersProjectRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancersProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLoadBalancersProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancersProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改一个或多个负载均衡实例所属项目。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancersProjectRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancersProjectResponse"/></returns>
+        public ModifyLoadBalancersProjectResponse ModifyLoadBalancersProjectSync(ModifyLoadBalancersProjectRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancersProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLoadBalancersProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancersProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// ModifyRule 接口用来修改负载均衡七层监听器下的转发规则的各项属性，包括转发路径、健康检查属性、转发策略等。
         /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
         /// </summary>

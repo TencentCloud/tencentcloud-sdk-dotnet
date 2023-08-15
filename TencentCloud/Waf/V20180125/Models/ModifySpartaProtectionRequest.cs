@@ -181,7 +181,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long?[] Ciphers{ get; set; }
 
         /// <summary>
-        /// 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+        /// 0:不支持选择：默认模板  1:通用型模板 2:安全型模板 3:自定义模板
         /// </summary>
         [JsonProperty("CipherTemplate")]
         public long? CipherTemplate{ get; set; }
@@ -215,6 +215,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("IpHeaders")]
         public string[] IpHeaders{ get; set; }
+
+        /// <summary>
+        /// 0:关闭xff重置；1:开启xff重置
+        /// </summary>
+        [JsonProperty("XFFReset")]
+        public long? XFFReset{ get; set; }
 
 
         /// <summary>
@@ -254,6 +260,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "SniType", this.SniType);
             this.SetParamSimple(map, prefix + "SniHost", this.SniHost);
             this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
+            this.SetParamSimple(map, prefix + "XFFReset", this.XFFReset);
         }
     }
 }

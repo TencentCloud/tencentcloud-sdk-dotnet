@@ -30,6 +30,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
+        /// <summary>
+        /// 新任务ID
+        /// </summary>
+        [JsonProperty("NewTaskID")]
+        public string NewTaskID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "NewTaskID", this.NewTaskID);
         }
     }
 }

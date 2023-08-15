@@ -97,6 +97,27 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? ServerlessClusterCount{ get; set; }
 
         /// <summary>
+        /// TKE集群数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TkeClusterCount")]
+        public ulong? TkeClusterCount{ get; set; }
+
+        /// <summary>
+        /// 用户自建腾讯云集群数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserCreateTencentClusterCount")]
+        public ulong? UserCreateTencentClusterCount{ get; set; }
+
+        /// <summary>
+        /// 用户自建集群混合云数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserCreateHybridClusterCount")]
+        public ulong? UserCreateHybridClusterCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -120,6 +141,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "FailedClusterCount", this.FailedClusterCount);
             this.SetParamSimple(map, prefix + "NotImportedClusterCount", this.NotImportedClusterCount);
             this.SetParamSimple(map, prefix + "ServerlessClusterCount", this.ServerlessClusterCount);
+            this.SetParamSimple(map, prefix + "TkeClusterCount", this.TkeClusterCount);
+            this.SetParamSimple(map, prefix + "UserCreateTencentClusterCount", this.UserCreateTencentClusterCount);
+            this.SetParamSimple(map, prefix + "UserCreateHybridClusterCount", this.UserCreateHybridClusterCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

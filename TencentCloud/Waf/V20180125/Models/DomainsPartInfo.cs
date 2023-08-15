@@ -208,6 +208,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("IpHeaders")]
         public string[] IpHeaders{ get; set; }
 
+        /// <summary>
+        /// 0:关闭xff重置；1:开启xff重置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("XFFReset")]
+        public long? XFFReset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -243,6 +250,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "SniHost", this.SniHost);
             this.SetParamArraySimple(map, prefix + "Weights.", this.Weights);
             this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
+            this.SetParamSimple(map, prefix + "XFFReset", this.XFFReset);
         }
     }
 }

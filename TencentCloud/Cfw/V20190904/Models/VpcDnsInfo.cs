@@ -74,6 +74,20 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("SwitchStatus")]
         public long? SwitchStatus{ get; set; }
 
+        /// <summary>
+        /// 0：未防护， 1: 已防护，2：忽略此字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProtectedStatus")]
+        public ulong? ProtectedStatus{ get; set; }
+
+        /// <summary>
+        /// 是否支持DNS FW，0-不支持、1-支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SupportDNSFW")]
+        public ulong? SupportDNSFW{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +102,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "NatInsId", this.NatInsId);
             this.SetParamSimple(map, prefix + "NatInsName", this.NatInsName);
             this.SetParamSimple(map, prefix + "SwitchStatus", this.SwitchStatus);
+            this.SetParamSimple(map, prefix + "ProtectedStatus", this.ProtectedStatus);
+            this.SetParamSimple(map, prefix + "SupportDNSFW", this.SupportDNSFW);
         }
     }
 }

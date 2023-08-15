@@ -3657,6 +3657,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 用于在企业版镜像仓库中复制镜像版本
+        /// </summary>
+        /// <param name="req"><see cref="DuplicateImageRequest"/></param>
+        /// <returns><see cref="DuplicateImageResponse"/></returns>
+        public async Task<DuplicateImageResponse> DuplicateImage(DuplicateImageRequest req)
+        {
+             JsonResponseModel<DuplicateImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DuplicateImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DuplicateImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在企业版镜像仓库中复制镜像版本
+        /// </summary>
+        /// <param name="req"><see cref="DuplicateImageRequest"/></param>
+        /// <returns><see cref="DuplicateImageResponse"/></returns>
+        public DuplicateImageResponse DuplicateImageSync(DuplicateImageRequest req)
+        {
+             JsonResponseModel<DuplicateImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DuplicateImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DuplicateImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于在个人版镜像仓库中复制镜像版本
         /// </summary>
         /// <param name="req"><see cref="DuplicateImagePersonalRequest"/></param>

@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? EnableFlag{ get; set; }
 
         /// <summary>
-        /// 加工任务目的topic_id以及别名
+        /// 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
         /// </summary>
         [JsonProperty("DstResources")]
         public DataTransformResouceInfo[] DstResources{ get; set; }

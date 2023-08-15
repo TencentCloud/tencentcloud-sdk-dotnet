@@ -144,6 +144,41 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("TaskCreateTime")]
         public string TaskCreateTime{ get; set; }
 
+        /// <summary>
+        /// 接入状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessedStatus")]
+        public string AccessedStatus{ get; set; }
+
+        /// <summary>
+        /// 接入失败原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessedSubStatus")]
+        public string AccessedSubStatus{ get; set; }
+
+        /// <summary>
+        /// 节点总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeCount")]
+        public ulong? NodeCount{ get; set; }
+
+        /// <summary>
+        /// 离线节点数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OffLineNodeCount")]
+        public ulong? OffLineNodeCount{ get; set; }
+
+        /// <summary>
+        /// 未安装agent节点数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UnInstallAgentNodeCount")]
+        public ulong? UnInstallAgentNodeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +205,11 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "CheckFailReason", this.CheckFailReason);
             this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
             this.SetParamSimple(map, prefix + "TaskCreateTime", this.TaskCreateTime);
+            this.SetParamSimple(map, prefix + "AccessedStatus", this.AccessedStatus);
+            this.SetParamSimple(map, prefix + "AccessedSubStatus", this.AccessedSubStatus);
+            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
+            this.SetParamSimple(map, prefix + "OffLineNodeCount", this.OffLineNodeCount);
+            this.SetParamSimple(map, prefix + "UnInstallAgentNodeCount", this.UnInstallAgentNodeCount);
         }
     }
 }

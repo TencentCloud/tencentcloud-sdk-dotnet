@@ -26,36 +26,42 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 资源ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string ResourceIds{ get; set; }
 
         /// <summary>
         /// 过期时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidTime")]
         public string ValidTime{ get; set; }
 
         /// <summary>
         /// 是否自动续费，1：自动续费，0：不自动续费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
         /// 套餐购买个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
         /// 套餐购买地域，clb-waf暂时没有用到
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 计费项
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingItem")]
         public string BillingItem{ get; set; }

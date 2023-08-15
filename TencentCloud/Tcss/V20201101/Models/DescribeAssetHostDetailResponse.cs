@@ -181,6 +181,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// 集群名称
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// 集群接入状态
+        /// </summary>
+        [JsonProperty("ClusterAccessedStatus")]
+        public string ClusterAccessedStatus{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -218,6 +236,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RegionID", this.RegionID);
             this.SetParamObj(map, prefix + "Project.", this.Project);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

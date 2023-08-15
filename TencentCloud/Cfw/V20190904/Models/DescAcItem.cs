@@ -197,6 +197,20 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("BetaList")]
         public BetaInfoByACL[] BetaList{ get; set; }
 
+        /// <summary>
+        /// 生效范围：serial，串行；side，旁路；all，全局
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Scope")]
+        public string Scope{ get; set; }
+
+        /// <summary>
+        /// 互联网边界防火墙使用的内部规则id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InternetBorderUuid")]
+        public string InternetBorderUuid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +242,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "InternalUuid", this.InternalUuid);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "BetaList.", this.BetaList);
+            this.SetParamSimple(map, prefix + "Scope", this.Scope);
+            this.SetParamSimple(map, prefix + "InternetBorderUuid", this.InternetBorderUuid);
         }
     }
 }

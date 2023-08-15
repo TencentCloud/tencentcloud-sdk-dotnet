@@ -174,7 +174,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? AttackLogPost{ get; set; }
 
         /// <summary>
-        /// 带宽峰值
+        /// 带宽峰值，单位为B/s(字节每秒)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxBandwidth")]
@@ -214,6 +214,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("SandboxQps")]
         public ulong? SandboxQps{ get; set; }
 
+        /// <summary>
+        /// 是否api 安全试用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsAPISecurityTrial")]
+        public ulong? IsAPISecurityTrial{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -250,6 +257,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "BandwidthStandard", this.BandwidthStandard);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SandboxQps", this.SandboxQps);
+            this.SetParamSimple(map, prefix + "IsAPISecurityTrial", this.IsAPISecurityTrial);
         }
     }
 }

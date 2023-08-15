@@ -37,6 +37,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string TaskStatus{ get; set; }
 
         /// <summary>
+        /// 新任务ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NewTaskID")]
+        public string NewTaskID{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+            this.SetParamSimple(map, prefix + "NewTaskID", this.NewTaskID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

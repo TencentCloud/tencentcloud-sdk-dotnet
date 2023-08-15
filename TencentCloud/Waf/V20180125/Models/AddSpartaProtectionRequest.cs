@@ -55,13 +55,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? IsWebsocket{ get; set; }
 
         /// <summary>
-        /// 负载均衡策略，0表示轮徇，1表示IP hash
+        /// 负载均衡策略，0表示轮询，1表示IP hash
         /// </summary>
         [JsonProperty("LoadBalance")]
         public string LoadBalance{ get; set; }
 
         /// <summary>
-        /// CertType=1时，需要填次参数，表示证书内容
+        /// 值为1时，需要填次参数，表示证书内容
         /// </summary>
         [JsonProperty("Cert")]
         public string Cert{ get; set; }
@@ -222,6 +222,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("IpHeaders")]
         public string[] IpHeaders{ get; set; }
 
+        /// <summary>
+        /// 0:关闭xff重置；1:开启xff重置
+        /// </summary>
+        [JsonProperty("XFFReset")]
+        public long? XFFReset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -261,6 +267,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "SniType", this.SniType);
             this.SetParamSimple(map, prefix + "SniHost", this.SniHost);
             this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
+            this.SetParamSimple(map, prefix + "XFFReset", this.XFFReset);
         }
     }
 }

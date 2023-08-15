@@ -2533,6 +2533,46 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// LLM模型的对话请求发送接口
+        /// </summary>
+        /// <param name="req"><see cref="SendChatMessageRequest"/></param>
+        /// <returns><see cref="SendChatMessageResponse"/></returns>
+        public async Task<SendChatMessageResponse> SendChatMessage(SendChatMessageRequest req)
+        {
+             JsonResponseModel<SendChatMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SendChatMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendChatMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// LLM模型的对话请求发送接口
+        /// </summary>
+        /// <param name="req"><see cref="SendChatMessageRequest"/></param>
+        /// <returns><see cref="SendChatMessageResponse"/></returns>
+        public SendChatMessageResponse SendChatMessageSync(SendChatMessageRequest req)
+        {
+             JsonResponseModel<SendChatMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendChatMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendChatMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 启动Notebook
         /// </summary>
         /// <param name="req"><see cref="StartNotebookRequest"/></param>

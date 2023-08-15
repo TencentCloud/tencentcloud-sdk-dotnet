@@ -134,6 +134,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
+        /// <summary>
+        /// 集群名称
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// 集群接入状态
+        /// </summary>
+        [JsonProperty("ClusterAccessedStatus")]
+        public string ClusterAccessedStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +170,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamObj(map, prefix + "Project.", this.Project);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
         }
     }
 }
