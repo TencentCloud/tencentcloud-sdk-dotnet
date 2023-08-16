@@ -60,6 +60,19 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
+        /// <summary>
+        /// CSR加密方式，可选：RSA、ECC、SM2
+        /// （CsrType为Online才可选）， 默认为RSA
+        /// </summary>
+        [JsonProperty("CertCSREncryptAlgo")]
+        public string CertCSREncryptAlgo{ get; set; }
+
+        /// <summary>
+        /// CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
+        /// </summary>
+        [JsonProperty("CertCSRKeyParameter")]
+        public string CertCSRKeyParameter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +85,8 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CsrContent", this.CsrContent);
             this.SetParamSimple(map, prefix + "CsrkeyPassword", this.CsrkeyPassword);
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "CertCSREncryptAlgo", this.CertCSREncryptAlgo);
+            this.SetParamSimple(map, prefix + "CertCSRKeyParameter", this.CertCSRKeyParameter);
         }
     }
 }

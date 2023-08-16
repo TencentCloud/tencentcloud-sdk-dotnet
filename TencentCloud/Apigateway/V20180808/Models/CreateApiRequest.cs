@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
+        /// API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、EB、TARGET、VPC、UPSTREAM、GRPC、COS、WEBSOCKET。
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }

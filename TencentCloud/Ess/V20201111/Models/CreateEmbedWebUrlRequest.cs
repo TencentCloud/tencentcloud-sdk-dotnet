@@ -48,7 +48,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// WEB嵌入的业务资源ID
         /// <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-        /// <br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模版id
+        /// <br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
         /// <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
         /// </summary>
         [JsonProperty("BusinessId")]

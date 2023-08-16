@@ -25,141 +25,200 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
+        /// 执行本接口操作的员工信息。
+        /// 使用此接口时，必须填写userId。
+        /// 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+        /// 支持填入集团子公司经办人 userId 代发合同。
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 签署流程名称,最大长度200个字符
+        /// 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+        /// 该名称还将用于合同签署完成后的下载文件名。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 签署参与者信息，最大限制50方
+        /// 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+        /// 如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
         /// </summary>
         [JsonProperty("Approvers")]
         public ApproverInfo[] Approvers{ get; set; }
 
         /// <summary>
-        /// 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
+        /// 本合同流程需包含的PDF文件资源编号列表，通过UploadFiles接口获取PDF文件资源编号。目前，此接口仅支持单个文件发起。
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-        /// </summary>
-        [JsonProperty("FlowType")]
-        public string FlowType{ get; set; }
-
-        /// <summary>
-        /// 经办人内容控件配置
-        /// </summary>
-        [JsonProperty("Components")]
-        public Component[] Components{ get; set; }
-
-        /// <summary>
-        /// 被抄送人的信息列表。
-        /// 注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
-        /// </summary>
-        [JsonProperty("CcInfos")]
-        public CcInfo[] CcInfos{ get; set; }
-
-        /// <summary>
-        /// 是否需要预览，true：预览模式，false：非预览（默认）；
-        /// 预览链接有效期300秒；
-        /// 
-        /// 注：如果使用“预览模式”，出参会返回合同预览链接 PreviewUrl，不会正式发起合同，且出参不会返回签署流程编号 FlowId；如果使用“非预览”，则会正常返回签署流程编号 FlowId，不会生成合同预览链接 PreviewUrl。
-        /// </summary>
-        [JsonProperty("NeedPreview")]
-        public bool? NeedPreview{ get; set; }
-
-        /// <summary>
-        /// 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
-        /// </summary>
-        [JsonProperty("PreviewType")]
-        public long? PreviewType{ get; set; }
-
-        /// <summary>
-        /// 签署流程的签署截止时间。
-        /// 值为unix时间戳,精确到秒,不传默认为当前时间一年后
-        /// </summary>
-        [JsonProperty("Deadline")]
-        public long? Deadline{ get; set; }
-
-        /// <summary>
-        /// 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
-        /// </summary>
-        [JsonProperty("RemindedOn")]
-        public long? RemindedOn{ get; set; }
-
-        /// <summary>
-        /// 发送类型：
-        /// true：无序签
-        /// false：有序签
-        /// 注：默认为false（有序签）
-        /// </summary>
-        [JsonProperty("Unordered")]
-        public bool? Unordered{ get; set; }
-
-        /// <summary>
-        /// 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
-        /// </summary>
-        [JsonProperty("CustomShowMap")]
-        public string CustomShowMap{ get; set; }
-
-        /// <summary>
-        /// 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
-        /// 若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
-        /// 
-        /// 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
-        /// </summary>
-        [JsonProperty("NeedSignReview")]
-        public bool? NeedSignReview{ get; set; }
-
-        /// <summary>
-        /// 用户自定义字段，回调的时候会进行透传，长度需要小于20480
-        /// </summary>
-        [JsonProperty("UserData")]
-        public string UserData{ get; set; }
-
-        /// <summary>
-        /// 签署人校验方式
-        /// VerifyCheck: 人脸识别（默认）
-        /// MobileCheck：手机号验证
-        /// 参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
-        /// </summary>
-        [JsonProperty("ApproverVerifyType")]
-        public string ApproverVerifyType{ get; set; }
-
-        /// <summary>
-        /// 签署流程描述,最大长度1000个字符
+        /// 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
         /// </summary>
         [JsonProperty("FlowDescription")]
         public string FlowDescription{ get; set; }
 
         /// <summary>
-        /// 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+        /// 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
         /// </summary>
-        [JsonProperty("SignBeanTag")]
-        public long? SignBeanTag{ get; set; }
+        [JsonProperty("FlowType")]
+        public string FlowType{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+        /// - 单行文本控件
+        /// - 多行文本控件
+        /// - 勾选框控件
+        /// - 数字控件
+        /// - 图片控件
+        /// - 动态表格等填写控件
         /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
+        [JsonProperty("Components")]
+        public Component[] Components{ get; set; }
 
         /// <summary>
-        /// 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+        /// 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+        /// 注:此功能为白名单功能，使用前请联系对接的客户经理沟通。
+        /// </summary>
+        [JsonProperty("CcInfos")]
+        public CcInfo[] CcInfos{ get; set; }
+
+        /// <summary>
+        /// 可以设置以下时间节点来给抄送人发送短信通知来查看合同内容：
+        /// 
+        /// - 0：合同发起时通知（默认值）
+        /// - 1：签署完成后通知
         /// </summary>
         [JsonProperty("CcNotifyType")]
         public long? CcNotifyType{ get; set; }
 
         /// <summary>
-        /// 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+        /// 是否为预览模式，取值如下：
+        /// 
+        /// false：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。
+        /// 
+        /// true：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。
+        /// </summary>
+        [JsonProperty("NeedPreview")]
+        public bool? NeedPreview{ get; set; }
+
+        /// <summary>
+        /// 
+        /// 预览模式下产生的预览链接类型 
+        /// 
+        /// - 0 :(默认) 文件流 ,点开后后下载预览的合同PDF文件 
+        /// 
+        /// - 1 :H5链接 ,点开后在浏览器中展示合同的样子
+        /// 
+        /// 注意: 此参数在NeedPreview 为true时有效
+        /// </summary>
+        [JsonProperty("PreviewType")]
+        public long? PreviewType{ get; set; }
+
+        /// <summary>
+        /// 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+        /// 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public long? Deadline{ get; set; }
+
+        /// <summary>
+        /// 合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。
+        /// 到达提醒时间后，腾讯电子签会短信通知发起方企业合同提醒，可用于处理合同到期事务，如合同续签等事宜。
+        /// </summary>
+        [JsonProperty("RemindedOn")]
+        public long? RemindedOn{ get; set; }
+
+        /// <summary>
+        /// 
+        /// 合同流程的签署顺序类型：
+        /// - false：(默认)有序签署, 本合同多个参与人需要依次签署
+        /// - true：无序签署, 本合同多个参与人没有先后签署限制
+        /// </summary>
+        [JsonProperty("Unordered")]
+        public bool? Unordered{ get; set; }
+
+        /// <summary>
+        /// 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
+        /// 
+        /// - {合同名称}
+        /// - {发起方企业}
+        /// - {发起方姓名}
+        /// - {签署方N企业}
+        /// - {签署方N姓名}
+        /// 
+        /// 其中，N表示签署方的编号，从1开始，不能超过签署人的数量。
+        /// 
+        /// 例如，如果是腾讯公司张三发给李四名称为“租房合同”的合同，您可以将此字段设置为：
+        /// 合同名称:`合同名称:{合同名称};发起方: {发起方企业}({发起方姓名});签署方:{签署方1姓名}`
+        /// 
+        /// 则小程序中列表页展示此合同为以下样子
+        /// ```
+        /// 合同名称：租房合同 
+        /// 发起方：腾讯公司(张三) 
+        /// 签署方：李四
+        /// ```
+        /// </summary>
+        [JsonProperty("CustomShowMap")]
+        public string CustomShowMap{ get; set; }
+
+        /// <summary>
+        /// 
+        /// 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+        /// 
+        /// - false：（默认）不需要审批，直接签署。
+        /// - true：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。
+        /// 
+        /// 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+        /// 
+        /// - 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。
+        /// - 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。
+        /// 
+        /// 注：此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同
+        /// </summary>
+        [JsonProperty("NeedSignReview")]
+        public bool? NeedSignReview{ get; set; }
+
+        /// <summary>
+        /// 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+        /// 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+        /// 回调的相关说明可参考开发者中心的"回调通知"模块。
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
+        /// <summary>
+        /// 指定个人签署方查看合同的校验方式
+        /// 
+        /// - VerifyCheck :（默认）人脸识别,人脸识别后才能合同内容
+        /// - MobileCheck:  手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容
+        /// </summary>
+        [JsonProperty("ApproverVerifyType")]
+        public string ApproverVerifyType{ get; set; }
+
+        /// <summary>
+        /// 签署方签署控件（印章/签名等）的生成方式：
+        /// 
+        /// - 0：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。
+        /// - 1：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。
+        /// </summary>
+        [JsonProperty("SignBeanTag")]
+        public long? SignBeanTag{ get; set; }
+
+        /// <summary>
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
+        /// <summary>
+        /// 个人自动签名的使用场景包括以下, 个人自动签署(即ApproverType设置成个人自动签署时)业务此值必传：
+        /// 
+        /// - E_PRESCRIPTION_AUTO_SIGN：处方单（医疗自动签） 
+        /// 
+        /// 注: 个人自动签名场景是白名单功能，使用前请与对接的客户经理联系沟通。
         /// </summary>
         [JsonProperty("AutoSignScene")]
         public string AutoSignScene{ get; set; }
@@ -174,9 +233,11 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+            this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+            this.SetParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
             this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
             this.SetParamSimple(map, prefix + "PreviewType", this.PreviewType);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
@@ -186,10 +247,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
-            this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
             this.SetParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
         }
     }

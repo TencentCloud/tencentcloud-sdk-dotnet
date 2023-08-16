@@ -99,6 +99,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("MaintainWeekDays")]
         public string[] MaintainWeekDays{ get; set; }
 
+        /// <summary>
+        /// serverless实例子状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServerlessStatus")]
+        public string ServerlessStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +124,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MaintainStartTime", this.MaintainStartTime);
             this.SetParamSimple(map, prefix + "MaintainDuration", this.MaintainDuration);
             this.SetParamArraySimple(map, prefix + "MaintainWeekDays.", this.MaintainWeekDays);
+            this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
         }
     }
 }

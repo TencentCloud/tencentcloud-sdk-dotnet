@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 克隆实例与源实例是否在同一可用区，是:"false"，否:"true"
+        /// 克隆实例与源实例是否在异地可用区，是:"true"，否:"false"
         /// </summary>
         [JsonProperty("IsRemoteZone")]
         public string IsRemoteZone{ get; set; }

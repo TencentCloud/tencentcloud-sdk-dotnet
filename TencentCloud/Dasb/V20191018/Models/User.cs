@@ -100,6 +100,27 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("DepartmentId")]
         public string DepartmentId{ get; set; }
 
+        /// <summary>
+        /// 激活状态 0 - 未激活 1 - 激活
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ActiveStatus")]
+        public ulong? ActiveStatus{ get; set; }
+
+        /// <summary>
+        /// 锁定状态 0 - 未锁定 1 - 锁定
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LockStatus")]
+        public ulong? LockStatus{ get; set; }
+
+        /// <summary>
+        /// 状态 与Filter中一致
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +139,9 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "ValidateTime", this.ValidateTime);
             this.SetParamObj(map, prefix + "Department.", this.Department);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+            this.SetParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
+            this.SetParamSimple(map, prefix + "LockStatus", this.LockStatus);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

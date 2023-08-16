@@ -48,6 +48,30 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
+        /// <summary>
+        /// Serverless实例个数最小值，范围[1,15]
+        /// </summary>
+        [JsonProperty("MinRoCount")]
+        public long? MinRoCount{ get; set; }
+
+        /// <summary>
+        /// Serverless实例个数最大值，范围[1,15]
+        /// </summary>
+        [JsonProperty("MaxRoCount")]
+        public long? MaxRoCount{ get; set; }
+
+        /// <summary>
+        /// Serverless实例最小规格
+        /// </summary>
+        [JsonProperty("MinRoCpu")]
+        public float? MinRoCpu{ get; set; }
+
+        /// <summary>
+        /// Serverless实例最大规格
+        /// </summary>
+        [JsonProperty("MaxRoCpu")]
+        public float? MaxRoCpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +82,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+            this.SetParamSimple(map, prefix + "MinRoCount", this.MinRoCount);
+            this.SetParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
+            this.SetParamSimple(map, prefix + "MinRoCpu", this.MinRoCpu);
+            this.SetParamSimple(map, prefix + "MaxRoCpu", this.MaxRoCpu);
         }
     }
 }

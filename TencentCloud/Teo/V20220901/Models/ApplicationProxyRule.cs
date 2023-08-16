@@ -107,6 +107,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("OriginPort")]
         public string OriginPort{ get; set; }
 
+        /// <summary>
+        /// 规则标签。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleTag")]
+        public string RuleTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +130,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
             this.SetParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
             this.SetParamSimple(map, prefix + "OriginPort", this.OriginPort);
+            this.SetParamSimple(map, prefix + "RuleTag", this.RuleTag);
         }
     }
 }

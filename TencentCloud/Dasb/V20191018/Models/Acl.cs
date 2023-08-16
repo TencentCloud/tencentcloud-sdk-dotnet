@@ -189,6 +189,20 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("Department")]
         public Department Department{ get; set; }
 
+        /// <summary>
+        /// 是否允许使用访问串，默认允许
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AllowAccessCredential")]
+        public bool? AllowAccessCredential{ get; set; }
+
+        /// <summary>
+        /// 关联的数据库高危命令列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ACTemplateSet")]
+        public ACTemplate[] ACTemplateSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +236,8 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "ValidateTo", this.ValidateTo);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Department.", this.Department);
+            this.SetParamSimple(map, prefix + "AllowAccessCredential", this.AllowAccessCredential);
+            this.SetParamArrayObj(map, prefix + "ACTemplateSet.", this.ACTemplateSet);
         }
     }
 }

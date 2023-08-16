@@ -43,6 +43,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("Managers")]
         public string[] Managers{ get; set; }
 
+        /// <summary>
+        /// 管理员用户
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ManagerUsers")]
+        public DepartmentManagerUser[] ManagerUsers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArraySimple(map, prefix + "Managers.", this.Managers);
+            this.SetParamArrayObj(map, prefix + "ManagerUsers.", this.ManagerUsers);
         }
     }
 }

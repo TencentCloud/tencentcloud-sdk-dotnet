@@ -1017,6 +1017,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 强制修改标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcesTagsRequest"/></param>
+        /// <returns><see cref="ModifyResourcesTagsResponse"/></returns>
+        public async Task<ModifyResourcesTagsResponse> ModifyResourcesTags(ModifyResourcesTagsRequest req)
+        {
+             JsonResponseModel<ModifyResourcesTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyResourcesTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourcesTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 强制修改标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcesTagsRequest"/></param>
+        /// <returns><see cref="ModifyResourcesTagsResponse"/></returns>
+        public ModifyResourcesTagsResponse ModifyResourcesTagsSync(ModifyResourcesTagsRequest req)
+        {
+             JsonResponseModel<ModifyResourcesTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyResourcesTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourcesTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建流程作业
         /// </summary>
         /// <param name="req"><see cref="RunJobFlowRequest"/></param>
