@@ -826,5 +826,125 @@ namespace TencentCloud.Ms.V20180408
              return rsp.Response;
         }
 
+        /// <summary>
+        /// client任务请求地址
+        /// </summary>
+        /// <param name="req"><see cref="RequestLocalTaskRequest"/></param>
+        /// <returns><see cref="RequestLocalTaskResponse"/></returns>
+        public async Task<RequestLocalTaskResponse> RequestLocalTask(RequestLocalTaskRequest req)
+        {
+             JsonResponseModel<RequestLocalTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RequestLocalTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RequestLocalTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// client任务请求地址
+        /// </summary>
+        /// <param name="req"><see cref="RequestLocalTaskRequest"/></param>
+        /// <returns><see cref="RequestLocalTaskResponse"/></returns>
+        public RequestLocalTaskResponse RequestLocalTaskSync(RequestLocalTaskRequest req)
+        {
+             JsonResponseModel<RequestLocalTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RequestLocalTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RequestLocalTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新client状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClientStateRequest"/></param>
+        /// <returns><see cref="UpdateClientStateResponse"/></returns>
+        public async Task<UpdateClientStateResponse> UpdateClientState(UpdateClientStateRequest req)
+        {
+             JsonResponseModel<UpdateClientStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateClientState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateClientStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新client状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClientStateRequest"/></param>
+        /// <returns><see cref="UpdateClientStateResponse"/></returns>
+        public UpdateClientStateResponse UpdateClientStateSync(UpdateClientStateRequest req)
+        {
+             JsonResponseModel<UpdateClientStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateClientState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateClientStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新本地任务结果
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLocalTaskResultRequest"/></param>
+        /// <returns><see cref="UpdateLocalTaskResultResponse"/></returns>
+        public async Task<UpdateLocalTaskResultResponse> UpdateLocalTaskResult(UpdateLocalTaskResultRequest req)
+        {
+             JsonResponseModel<UpdateLocalTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateLocalTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateLocalTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新本地任务结果
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLocalTaskResultRequest"/></param>
+        /// <returns><see cref="UpdateLocalTaskResultResponse"/></returns>
+        public UpdateLocalTaskResultResponse UpdateLocalTaskResultSync(UpdateLocalTaskResultRequest req)
+        {
+             JsonResponseModel<UpdateLocalTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateLocalTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateLocalTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

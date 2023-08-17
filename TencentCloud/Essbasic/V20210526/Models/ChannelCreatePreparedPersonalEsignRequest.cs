@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 个人用户名称
+        /// 个人用户姓名
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
@@ -43,16 +43,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string IdCardNumber{ get; set; }
 
         /// <summary>
-        /// 印章图片的base64
-        /// </summary>
-        [JsonProperty("SealImage")]
-        public string SealImage{ get; set; }
-
-        /// <summary>
         /// 印章名称
         /// </summary>
         [JsonProperty("SealName")]
         public string SealName{ get; set; }
+
+        /// <summary>
+        /// 印章图片的base64，最大不超过 8M
+        /// </summary>
+        [JsonProperty("SealImage")]
+        public string SealImage{ get; set; }
 
         /// <summary>
         /// 操作者信息
@@ -65,6 +65,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
+
+        /// <summary>
+        /// 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+        /// </summary>
+        [JsonProperty("SealImageCompress")]
+        public bool? SealImageCompress{ get; set; }
 
         /// <summary>
         /// 手机号码；当需要开通自动签时，该参数必传
@@ -87,10 +93,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
-            this.SetParamSimple(map, prefix + "SealImage", this.SealImage);
             this.SetParamSimple(map, prefix + "SealName", this.SealName);
+            this.SetParamSimple(map, prefix + "SealImage", this.SealImage);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "IdCardType", this.IdCardType);
+            this.SetParamSimple(map, prefix + "SealImageCompress", this.SealImageCompress);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
         }

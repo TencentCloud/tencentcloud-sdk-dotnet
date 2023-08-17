@@ -60,6 +60,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("IgnoreTemp")]
         public bool? IgnoreTemp{ get; set; }
 
+        /// <summary>
+        /// 是否递归查询二级节点数目，默认为true
+        /// </summary>
+        [JsonProperty("RecursiveSecond")]
+        public bool? RecursiveSecond{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "OutputDepth", this.OutputDepth);
             this.SetParamArrayObj(map, prefix + "ExtParams.", this.ExtParams);
             this.SetParamSimple(map, prefix + "IgnoreTemp", this.IgnoreTemp);
+            this.SetParamSimple(map, prefix + "RecursiveSecond", this.RecursiveSecond);
         }
     }
 }

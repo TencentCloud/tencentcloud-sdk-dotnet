@@ -1093,7 +1093,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 本接口(DescribeBillingSpecsPrice)用于查询计费项价格。
+        /// 本接口(DescribeBillingSpecsPrice)用于查询按量计费计费项价格。
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingSpecsPriceRequest"/></param>
         /// <returns><see cref="DescribeBillingSpecsPriceResponse"/></returns>
@@ -1113,7 +1113,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 本接口(DescribeBillingSpecsPrice)用于查询计费项价格。
+        /// 本接口(DescribeBillingSpecsPrice)用于查询按量计费计费项价格。
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingSpecsPriceRequest"/></param>
         /// <returns><see cref="DescribeBillingSpecsPriceResponse"/></returns>

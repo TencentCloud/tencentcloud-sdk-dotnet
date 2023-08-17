@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 小程序链接地址，有效期5分钟
+        /// 小程序链接地址，有效期30天
         /// </summary>
         [JsonProperty("SchemeUrl")]
         public string SchemeUrl{ get; set; }

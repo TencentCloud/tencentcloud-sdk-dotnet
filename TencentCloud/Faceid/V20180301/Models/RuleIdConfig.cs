@@ -30,6 +30,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("IntentionRecognition")]
         public bool? IntentionRecognition{ get; set; }
 
+        /// <summary>
+        /// 意愿核身类型，默认为0：
+        /// 0：问答模式，DetectAuth接口需要传入IntentionQuestions字段；
+        /// 1：点头模式，DetectAuth接口需要传入IntentionActions字段；
+        /// </summary>
+        [JsonProperty("IntentionType")]
+        public long? IntentionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +45,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
+            this.SetParamSimple(map, prefix + "IntentionType", this.IntentionType);
         }
     }
 }

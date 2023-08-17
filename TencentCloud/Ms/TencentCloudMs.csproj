@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{688DC818-0211-3401-8C6A-72CF4B76DD80}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.826</VersionPrefix>
+    <VersionPrefix>3.0.827</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -105,6 +105,8 @@
     <Compile Include="V20180408\Models\PlanDetailInfo.cs" />
     <Compile Include="V20180408\Models\PlanInfo.cs" />
     <Compile Include="V20180408\Models\PluginListItem.cs" />
+    <Compile Include="V20180408\Models\RequestLocalTaskRequest.cs" />
+    <Compile Include="V20180408\Models\RequestLocalTaskResponse.cs" />
     <Compile Include="V20180408\Models\ResourceInfo.cs" />
     <Compile Include="V20180408\Models\ResourceServiceInfo.cs" />
     <Compile Include="V20180408\Models\ResultListItem.cs" />
@@ -114,5 +116,9 @@
     <Compile Include="V20180408\Models\ShieldInfo.cs" />
     <Compile Include="V20180408\Models\ShieldPlanInfo.cs" />
     <Compile Include="V20180408\Models\SoInfo.cs" />
+    <Compile Include="V20180408\Models\UpdateClientStateRequest.cs" />
+    <Compile Include="V20180408\Models\UpdateClientStateResponse.cs" />
+    <Compile Include="V20180408\Models\UpdateLocalTaskResultRequest.cs" />
+    <Compile Include="V20180408\Models\UpdateLocalTaskResultResponse.cs" />
   </ItemGroup>
 </Project>

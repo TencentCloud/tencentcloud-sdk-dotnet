@@ -63,6 +63,20 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         [JsonProperty("UpdatedAt")]
         public long? UpdatedAt{ get; set; }
 
+        /// <summary>
+        /// 套餐id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PackageId")]
+        public string PackageId{ get; set; }
+
+        /// <summary>
+        /// 订单id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OrderId")]
+        public string OrderId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +89,8 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "CSExpiredTime", this.CSExpiredTime);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+            this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
+            this.SetParamSimple(map, prefix + "OrderId", this.OrderId);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Ssa.V20180608.Models
         public QuerySort[] Sorter{ get; set; }
 
         /// <summary>
-        /// 是否导出
+        /// 是否导出；默认为否，如量级超过1000，则使用单独的导出接口
         /// </summary>
         [JsonProperty("ExportFlag")]
         public bool? ExportFlag{ get; set; }

@@ -81,7 +81,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string IntentionVerifyText{ get; set; }
 
         /// <summary>
-        /// 意愿核身（问答模式）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持一个播报文本+回答文本。
+        /// 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
         /// </summary>
         [JsonProperty("IntentionQuestions")]
         public IntentionQuestion[] IntentionQuestions{ get; set; }
@@ -91,6 +91,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         [JsonProperty("Config")]
         public RuleIdConfig Config{ get; set; }
+
+        /// <summary>
+        /// 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
+        /// </summary>
+        [JsonProperty("IntentionActions")]
+        public IntentionActionConfig[] IntentionActions{ get; set; }
 
 
         /// <summary>
@@ -109,6 +115,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
             this.SetParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
             this.SetParamObj(map, prefix + "Config.", this.Config);
+            this.SetParamArrayObj(map, prefix + "IntentionActions.", this.IntentionActions);
         }
     }
 }

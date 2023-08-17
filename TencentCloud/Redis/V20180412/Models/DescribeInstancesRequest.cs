@@ -44,13 +44,20 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例列表排序依据，枚举值如下所示：<ul><li>projectId：依据项目ID排序。</li><li>createtime：依据实例创建时间排序。</li><li>instancename：依据实例名称排序。</li><li>type：依据实例类型排序。</li><li>curDeadline：依据实例到期时间排序。</li></ul>
+        /// 实例列表排序依据，枚举值如下所示：
+        /// - projectId：依据项目ID排序。
+        /// - createtime：依据实例创建时间排序。
+        /// - instancename：依据实例名称排序。
+        /// - type：依据实例类型排序。
+        /// - curDeadline：依据实例到期时间排序。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 实例排序方式，默认为倒序排序。<ul><li>1：倒序。</li><li>0：顺序。</li></ul>
+        /// 实例排序方式，默认为倒序排序。
+        /// - 1：倒序。
+        /// - 0：顺序。
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
@@ -68,7 +75,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 设置模糊查询关键字，支持根据实例名称或实例ID模糊查询实例。
+        /// 设置模糊查询关键字段，仅实例名称支持模糊查询。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
@@ -104,13 +111,21 @@ namespace TencentCloud.Redis.V20180412.Models
         public long?[] RegionIds{ get; set; }
 
         /// <summary>
-        /// 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+        /// 实例状态。
+        /// - 0：待初始化。
+        /// - 1：流程中。
+        /// - 2：运行中。
+        /// - -2：已隔离。
+        /// - -3：待删除。
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// 实例架构版本。<ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
+        /// 实例架构版本。
+        /// - 1：单机版。
+        /// - 2：主从版。
+        /// - 3：集群版。
         /// </summary>
         [JsonProperty("TypeVersion")]
         public long? TypeVersion{ get; set; }
@@ -122,13 +137,18 @@ namespace TencentCloud.Redis.V20180412.Models
         public string EngineName{ get; set; }
 
         /// <summary>
-        /// 续费模式。<ul><li>0：手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+        /// 续费模式。
+        /// - 0：手动续费。
+        /// - 1：自动续费。
+        /// - 2：到期不再续费。
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long?[] AutoRenew{ get; set; }
 
         /// <summary>
-        /// 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+        /// 计费模式。
+        /// - postpaid：按量计费。
+        /// - prepaid：包年包月。
         /// </summary>
         [JsonProperty("BillingMode")]
         public string BillingMode{ get; set; }
@@ -150,7 +170,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址查询实例。
+        /// 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址搜索实例。
         /// </summary>
         [JsonProperty("SearchKeys")]
         public string[] SearchKeys{ get; set; }
@@ -180,7 +200,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] TagKeys{ get; set; }
 
         /// <summary>
-        /// 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。<ul><li>local：本地盘版。</li><li>cdc：独享集群版。</li></ul>
+        /// 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。
+        /// - local：本地盘版。
+        /// - cdc：独享集群版。
         /// </summary>
         [JsonProperty("ProductVersions")]
         public string[] ProductVersions{ get; set; }
@@ -192,7 +214,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 可用区模式。<ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
+        /// 可用区模式。
+        /// - singleaz：单可用区。
+        /// - multiaz：多可用区。
         /// </summary>
         [JsonProperty("AzMode")]
         public string AzMode{ get; set; }

@@ -825,7 +825,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 本接口（ChannelCreatePreparedPersonalEsign）用于创建导入个人印章
+        /// 本接口（ChannelCreatePreparedPersonalEsign）用于创建导入个人印章（处方单场景专用，使用此接口请与客户经理确认）。
         /// </summary>
         /// <param name="req"><see cref="ChannelCreatePreparedPersonalEsignRequest"/></param>
         /// <returns><see cref="ChannelCreatePreparedPersonalEsignResponse"/></returns>
@@ -845,7 +845,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 本接口（ChannelCreatePreparedPersonalEsign）用于创建导入个人印章
+        /// 本接口（ChannelCreatePreparedPersonalEsign）用于创建导入个人印章（处方单场景专用，使用此接口请与客户经理确认）。
         /// </summary>
         /// <param name="req"><see cref="ChannelCreatePreparedPersonalEsignRequest"/></param>
         /// <returns><see cref="ChannelCreatePreparedPersonalEsignResponse"/></returns>
