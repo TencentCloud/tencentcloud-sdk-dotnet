@@ -72,6 +72,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 网络运营商类型 取值范围:'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+        /// </summary>
+        [JsonProperty("ISPTypes")]
+        public ISPTypeItem[] ISPTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArrayObj(map, prefix + "ISPTypes.", this.ISPTypes);
         }
     }
 }

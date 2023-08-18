@@ -25,13 +25,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 预发起的合同链接
+        /// 预发起的合同链接， 可以直接点击进入进行合同发起
         /// </summary>
         [JsonProperty("PrepareFlowUrl")]
         public string PrepareFlowUrl{ get; set; }
 
         /// <summary>
-        /// 合同发起后预览链接
+        /// 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果
         /// </summary>
         [JsonProperty("PreviewFlowUrl")]
         public string PreviewFlowUrl{ get; set; }

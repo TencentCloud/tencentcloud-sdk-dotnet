@@ -61,6 +61,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SegmentObjectName")]
         public string SegmentObjectName{ get; set; }
 
+        /// <summary>
+        /// 要插入的字幕文件。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AddOnSubtitles")]
+        public AddOnSubtitle[] AddOnSubtitles{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +80,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
             this.SetParamSimple(map, prefix + "SubStreamObjectName", this.SubStreamObjectName);
             this.SetParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
+            this.SetParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
         }
     }
 }

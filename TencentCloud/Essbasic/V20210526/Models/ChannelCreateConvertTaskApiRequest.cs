@@ -43,7 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 资源Id，通过UploadFiles获取
+        /// 文件Id，通过UploadFiles获取
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

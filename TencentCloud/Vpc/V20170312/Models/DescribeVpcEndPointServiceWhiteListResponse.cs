@@ -25,10 +25,16 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 白名单对象数组。
+        /// 白名单对象数组。已废弃
         /// </summary>
         [JsonProperty("VpcEndpointServiceUserSet")]
         public VpcEndPointServiceUser[] VpcEndpointServiceUserSet{ get; set; }
+
+        /// <summary>
+        /// 白名单对象数组。
+        /// </summary>
+        [JsonProperty("VpcEndPointServiceUserSet")]
+        public VpcEndPointServiceUser[] VpcEndPointServiceUserSet{ get; set; }
 
         /// <summary>
         /// 符合条件的白名单个数。
@@ -49,6 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "VpcEndpointServiceUserSet.", this.VpcEndpointServiceUserSet);
+            this.SetParamArrayObj(map, prefix + "VpcEndPointServiceUserSet.", this.VpcEndPointServiceUserSet);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

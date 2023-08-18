@@ -43,7 +43,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// <li>Keywords 机器别名/公私IP 模糊查询</li>
+        /// <li>InstanceID、IP、
+        /// 
+        /// MachineName 模糊查询</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

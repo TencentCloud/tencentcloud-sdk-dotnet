@@ -893,6 +893,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 删除已注册用户。注：如果该成员已被添加到群组，请先在群组中删除该成员。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public async Task<DeleteUserResponse> DeleteUser(DeleteUserRequest req)
+        {
+             JsonResponseModel<DeleteUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除已注册用户。注：如果该成员已被添加到群组，请先在群组中删除该成员。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public DeleteUserResponse DeleteUserSync(DeleteUserRequest req)
+        {
+             JsonResponseModel<DeleteUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取房间答题详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAnswerListRequest"/></param>

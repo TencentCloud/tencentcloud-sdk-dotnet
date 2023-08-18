@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.827</VersionPrefix>
+    <VersionPrefix>3.0.828</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -124,7 +124,6 @@
     <Compile Include="V20170320\Models\CreateRoInstanceIpResponse.cs" />
     <Compile Include="V20170320\Models\CustomConfig.cs" />
     <Compile Include="V20170320\Models\DBSwitchInfo.cs" />
-    <Compile Include="V20170320\Models\DatabaseNameInfo.cs" />
     <Compile Include="V20170320\Models\DatabasePrivilege.cs" />
     <Compile Include="V20170320\Models\DatabasesWithCharacterLists.cs" />
     <Compile Include="V20170320\Models\DeleteAccountsRequest.cs" />
@@ -162,8 +161,6 @@
     <Compile Include="V20170320\Models\DescribeAuditRulesResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupConfigRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupConfigResponse.cs" />
-    <Compile Include="V20170320\Models\DescribeBackupDatabasesRequest.cs" />
-    <Compile Include="V20170320\Models\DescribeBackupDatabasesResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupDecryptionKeyRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupDecryptionKeyResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupDownloadRestrictionRequest.cs" />

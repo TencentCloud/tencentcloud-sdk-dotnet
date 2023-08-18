@@ -26,24 +26,28 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// S3 bucket。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3Bucket")]
         public string S3Bucket{ get; set; }
 
         /// <summary>
         /// S3 bucket 对应的区域。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3Region")]
         public string S3Region{ get; set; }
 
         /// <summary>
         /// AWS 内网上传 媒体资源的秘钥id。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3SecretId")]
         public string S3SecretId{ get; set; }
 
         /// <summary>
         /// AWS 内网上传 媒体资源的秘钥key。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3SecretKey")]
         public string S3SecretKey{ get; set; }

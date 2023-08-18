@@ -27,8 +27,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 签署方是否可以拒签
         /// 
-        /// - false: ( 默认)可以拒签 
-        /// - true:不可以拒签
+        /// <ul><li> **false** : ( 默认)可以拒签</li>
+        /// <li> **true** :不可以拒签</li></ul>
         /// </summary>
         [JsonProperty("NoRefuse")]
         public bool? NoRefuse{ get; set; }
@@ -36,8 +36,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 签署方是否可以转他人处理
         /// 
-        /// - false: ( 默认)可以转他人处理
-        /// - true:不可以转他人处理
+        /// <ul><li> **false** : ( 默认)可以转他人处理</li>
+        /// <li> **true** :不可以转他人处理</li></ul>
         /// </summary>
         [JsonProperty("NoTransfer")]
         public bool? NoTransfer{ get; set; }

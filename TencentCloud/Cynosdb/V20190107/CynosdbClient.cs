@@ -2413,7 +2413,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（DescribeProxyNodes）用于查询代理接口列表。
+        /// 本接口（DescribeProxyNodes）用于查询代理节点列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeProxyNodesRequest"/></param>
         /// <returns><see cref="DescribeProxyNodesResponse"/></returns>
@@ -2433,7 +2433,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（DescribeProxyNodes）用于查询代理接口列表。
+        /// 本接口（DescribeProxyNodes）用于查询代理节点列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeProxyNodesRequest"/></param>
         /// <returns><see cref="DescribeProxyNodesResponse"/></returns>

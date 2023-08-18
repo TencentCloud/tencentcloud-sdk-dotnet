@@ -26,12 +26,12 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
-        /// 0：企业
-        /// 1：个人
-        /// 3：企业静默签署
-        /// 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
-        /// 7: 个人自动签署，适用于个人自动签场景。
-        /// 注: 个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。
+        /// **0**：企业
+        /// **1**：个人
+        /// **3**：企业静默签署
+        /// 注：`类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。`
+        /// **7**: 个人自动签署，适用于个人自动签场景。
+        /// 注: `个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。`
         /// </summary>
         [JsonProperty("ApproverType")]
         public long? ApproverType{ get; set; }
@@ -45,10 +45,9 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 本企业的签署方经办人的员工UserId
-        /// 
         /// 可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
         /// 
-        /// 注: 若传该字段，则签署方经办人的其他信息（如签署方经办人的姓名、证件号码、手机号码等）将被忽略。
+        /// 注: `若传该字段，则签署方经办人的其他信息（如签署方经办人的姓名、证件号码、手机号码等）将被忽略。`
         /// </summary>
         [JsonProperty("ApproverMobile")]
         public string ApproverMobile{ get; set; }
@@ -57,57 +56,55 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 组织机构名称。
         /// 如果签署方是企业签署方(approverType = 1 或者 approverType = 3)， 则企业名称必填。
         /// 
-        /// 注: 请确认该名称与企业营业执照中注册的名称一致 ; 如果名称中包含英文括号()，请使用中文括号（）代替。
+        /// 注: `请确认该名称与企业营业执照中注册的名称一致 ; 如果名称中包含英文括号()，请使用中文括号（）代替。`
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
         /// <summary>
         /// 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
-        /// - 个人签名/印章
-        /// - 企业印章
-        /// - 骑缝章等签署控件
+        /// <ul><li> 个人签名/印章</li>
+        /// <li> 企业印章</li>
+        /// <li> 骑缝章等签署控件</li><ul>
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }
 
         /// <summary>
         /// 签署方经办人的证件类型，支持以下类型
-        /// - ID_CARD 居民身份证  (默认值)
-        /// - HONGKONG_AND_MACAO 港澳居民来往内地通行证
-        /// - HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-        /// - OTHER_CARD_TYPE 其他证件
+        /// <ul><li>ID_CARD 居民身份证  (默认值)</li>
+        /// <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
+        /// <li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
+        /// <li>OTHER_CARD_TYPE 其他证件</li></ul>
         /// 
-        /// 注: 其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。
+        /// 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
         /// </summary>
         [JsonProperty("ApproverIdCardType")]
         public string ApproverIdCardType{ get; set; }
 
         /// <summary>
         /// 签署方经办人的证件号码，应符合以下规则
-        /// - 居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。
-        /// - 港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。
-        /// - 港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。
+        /// <ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+        /// <li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+        /// <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
         /// </summary>
         [JsonProperty("ApproverIdCardNumber")]
         public string ApproverIdCardNumber{ get; set; }
 
         /// <summary>
         /// 通知签署方经办人的方式,  有以下途径:
-        /// 
-        /// - sms:  (默认)短信 
-        /// - none: 不通知
+        /// <ul><li>  **sms**  :  (默认)短信</li>
+        /// <li>   **none**   : 不通知</li></ul>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// 收据场景设置签署人角色类型, 可以设置如下类型:
-        /// - 1:收款人
-        /// - 2:开具人
-        /// - 3:见证人
-        /// 
-        /// 注: 收据场景为白名单功能，使用前请联系对接的客户经理沟通。
+        /// 收据场景设置签署人角色类型, 可以设置如下****类型****:
+        /// <ul><li> **1**  :收款人</li>
+        /// <li>   **2**   :开具人</li>
+        /// <li>   **3** :见证人</li></ul>
+        /// 注: `收据场景为白名单功能，使用前请联系对接的客户经理沟通。`
         /// </summary>
         [JsonProperty("ApproverRole")]
         public long? ApproverRole{ get; set; }
@@ -124,10 +121,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
         /// 
         /// 若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：
-        /// 
-        /// - 合同页数少于等于2页，阅读时间为3秒；
-        /// - 合同页数为3到5页，阅读时间为5秒；
-        /// - 合同页数大于等于6页，阅读时间为10秒。
+        /// <ul><li>合同页数少于等于2页，阅读时间为3秒；</li>
+        /// <li>合同页数为3到5页，阅读时间为5秒；</li>
+        /// <li>合同页数大于等于6页，阅读时间为10秒。</li></ul>
         /// </summary>
         [JsonProperty("PreReadTime")]
         public long? PreReadTime{ get; set; }
@@ -135,13 +131,13 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
         /// 
-        /// 若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
+        /// 注: `若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息`
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 在企微场景下使用，需设置参数为WEWORKAPP，以表明合同来源于企微。
+        /// 在企微场景下使用，需设置参数为**WEWORKAPP**，以表明合同来源于企微。
         /// </summary>
         [JsonProperty("ApproverSource")]
         public string ApproverSource{ get; set; }
@@ -164,46 +160,36 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 指定个人签署方查看合同的校验方式,可以传值如下:
-        /// 
-        /// - 1 : （默认）人脸识别,人脸识别后才能合同内容
-        /// - 2 : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容
-        /// 
+        /// <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
+        /// <li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容</li></ul>
         /// 注: 
-        /// 
-        /// - 如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式
-        /// - 此字段不可传多个校验方式
+        /// <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
+        /// <li>此字段不可传多个校验方式</li></ul>
         /// </summary>
         [JsonProperty("ApproverVerifyTypes")]
         public long?[] ApproverVerifyTypes{ get; set; }
 
         /// <summary>
         /// 您可以指定签署方签署合同的认证校验方式，可传递以下值：
-        /// 
-        /// - 1：人脸认证，需进行人脸识别成功后才能签署合同；
-        /// - 2：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；
-        /// - 3：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。
-        /// 
+        /// <ul><li>**1**：人脸认证，需进行人脸识别成功后才能签署合同；</li>
+        /// <li>**2**：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；</li>
+        /// <li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。</li></ul>
         /// 注：
-        /// 
-        /// - 默认情况下，认证校验方式为人脸认证和签署密码两种形式；
-        /// - 您可以传递多种值，表示可用多种认证校验方式。
+        /// <ul><li>默认情况下，认证校验方式为人脸认证和签署密码两种形式；</li>
+        /// <li>您可以传递多种值，表示可用多种认证校验方式。</li></ul>
         /// </summary>
         [JsonProperty("ApproverSignTypes")]
         public long?[] ApproverSignTypes{ get; set; }
 
         /// <summary>
-        /// 
         /// 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
-        /// 
-        /// - false：（默认）不需要审批，直接签署。
-        /// - true：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。
-        /// 
+        /// <ul><li>**false**：（默认）不需要审批，直接签署。</li>
+        /// <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
         /// 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+        /// <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+        /// <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
         /// 
-        /// - 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。
-        /// - 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。
-        /// 
-        /// 注：此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同
+        /// 注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
         /// </summary>
         [JsonProperty("ApproverNeedSignReview")]
         public bool? ApproverNeedSignReview{ get; set; }

@@ -86,6 +86,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }
 
+        /// <summary>
+        /// 要插入的字幕文件。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AddOnSubtitles")]
+        public AddOnSubtitle[] AddOnSubtitles{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +108,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
             this.SetParamArrayObj(map, prefix + "AddonAudioStream.", this.AddonAudioStream);
             this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
+            this.SetParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
         }
     }
 }

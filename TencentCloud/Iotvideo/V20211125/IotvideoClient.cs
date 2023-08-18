@@ -1533,6 +1533,46 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
+        /// 查询云存服务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageOrderRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageOrderResponse"/></returns>
+        public async Task<DescribeCloudStorageOrderResponse> DescribeCloudStorageOrder(DescribeCloudStorageOrderRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudStorageOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询云存服务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageOrderRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageOrderResponse"/></returns>
+        public DescribeCloudStorageOrderResponse DescribeCloudStorageOrderSync(DescribeCloudStorageOrderRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudStorageOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取云存套餐包消耗详细记录
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudStoragePackageConsumeDetailsRequest"/></param>

@@ -52,6 +52,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ApproverVerifyType{ get; set; }
 
         /// <summary>
+        /// 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
+        /// </summary>
+        [JsonProperty("FlowGroupOptions")]
+        public FlowGroupOptions FlowGroupOptions{ get; set; }
+
+        /// <summary>
         /// 操作者的信息，此参数不用传
         /// </summary>
         [JsonProperty("Operator")]
@@ -68,6 +74,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "FlowGroupName", this.FlowGroupName);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
+            this.SetParamObj(map, prefix + "FlowGroupOptions.", this.FlowGroupOptions);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }

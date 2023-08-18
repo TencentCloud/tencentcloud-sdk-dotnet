@@ -40,27 +40,24 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 被抄送方类型, 可设置以下类型:
-        /// 
-        /// - 0:个人抄送方
-        /// - 1:企业员工抄送方
+        /// <ul><li> **0** :个人抄送方</li>
+        /// <li> **1** :企业员工抄送方</li></ul>
         /// </summary>
         [JsonProperty("CcType")]
         public long? CcType{ get; set; }
 
         /// <summary>
         /// 被抄送方权限, 可设置如下权限:
-        /// 
-        /// - 0:可查看合同内容
-        /// - 1:可查看合同内容也可下载原文
+        /// <ul><li> **0** :可查看合同内容</li>
+        /// <li> **1** :可查看合同内容也可下载原文</li></ul>
         /// </summary>
         [JsonProperty("CcPermission")]
         public long? CcPermission{ get; set; }
 
         /// <summary>
         /// 通知签署方经办人的方式,  有以下途径:
-        /// 
-        /// - sms:  (默认)短信 
-        /// - none: 不通知
+        /// <ul><li> **sms** :  (默认)短信</li>
+        /// <li> **none** : 不通知</li></ul>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }

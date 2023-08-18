@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Nlp.V20190408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBackupDatabasesResponse : AbstractModel
+    public class TextGenerationUsage : AbstractModel
     {
         
         /// <summary>
-        /// 返回的数据个数。
+        /// 输入tokens数量
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("PromptTokens")]
+        public long? PromptTokens{ get; set; }
 
         /// <summary>
-        /// 符合查询条件的数据库数组。
+        /// 输出tokens数量
         /// </summary>
-        [JsonProperty("Items")]
-        public DatabaseNameInfo[] Items{ get; set; }
+        [JsonProperty("CompletionTokens")]
+        public long? CompletionTokens{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 总token数量
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TotalTokens")]
+        public long? TotalTokens{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "PromptTokens", this.PromptTokens);
+            this.SetParamSimple(map, prefix + "CompletionTokens", this.CompletionTokens);
+            this.SetParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
         }
     }
 }

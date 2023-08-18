@@ -1731,54 +1731,6 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 接口已废弃，需要下线
-        /// 
-        /// 本接口(DescribeBackupDatabases)用于查询备份文件包含的库 (已废弃)。
-        /// 旧版本支持全量备份后，用户如果分库表下载逻辑备份文件，需要用到此接口。
-        /// 新版本支持(CreateBackup)创建逻辑备份的时候，直接发起指定库表备份，用户直接下载该备份文件即可。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBackupDatabasesRequest"/></param>
-        /// <returns><see cref="DescribeBackupDatabasesResponse"/></returns>
-        public async Task<DescribeBackupDatabasesResponse> DescribeBackupDatabases(DescribeBackupDatabasesRequest req)
-        {
-             JsonResponseModel<DescribeBackupDatabasesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBackupDatabases");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDatabasesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 接口已废弃，需要下线
-        /// 
-        /// 本接口(DescribeBackupDatabases)用于查询备份文件包含的库 (已废弃)。
-        /// 旧版本支持全量备份后，用户如果分库表下载逻辑备份文件，需要用到此接口。
-        /// 新版本支持(CreateBackup)创建逻辑备份的时候，直接发起指定库表备份，用户直接下载该备份文件即可。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBackupDatabasesRequest"/></param>
-        /// <returns><see cref="DescribeBackupDatabasesResponse"/></returns>
-        public DescribeBackupDatabasesResponse DescribeBackupDatabasesSync(DescribeBackupDatabasesRequest req)
-        {
-             JsonResponseModel<DescribeBackupDatabasesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBackupDatabases");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDatabasesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口(DescribeBackupDecryptionKey)用于查询备份文件解密密钥。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDecryptionKeyRequest"/></param>
