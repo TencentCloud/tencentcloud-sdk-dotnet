@@ -1185,6 +1185,46 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 用户在发现迁移任务对用户的数据库的负载影响较大时、可通过该接口限制任务的传输速率
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMigrateRateLimitRequest"/></param>
+        /// <returns><see cref="ModifyMigrateRateLimitResponse"/></returns>
+        public async Task<ModifyMigrateRateLimitResponse> ModifyMigrateRateLimit(ModifyMigrateRateLimitRequest req)
+        {
+             JsonResponseModel<ModifyMigrateRateLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMigrateRateLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMigrateRateLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户在发现迁移任务对用户的数据库的负载影响较大时、可通过该接口限制任务的传输速率
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMigrateRateLimitRequest"/></param>
+        /// <returns><see cref="ModifyMigrateRateLimitResponse"/></returns>
+        public ModifyMigrateRateLimitResponse ModifyMigrateRateLimitSync(ModifyMigrateRateLimitRequest req)
+        {
+             JsonResponseModel<ModifyMigrateRateLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMigrateRateLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMigrateRateLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 配置迁移服务，配置成功后可通过`CreateMigrationCheckJob` 创建迁移校验任务接口发起校验任务，只有校验通过才能启动迁移任务。
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrationJobRequest"/></param>
@@ -1258,6 +1298,46 @@ namespace TencentCloud.Dts.V20211206
              {
                  var strResp = this.InternalRequestSync(req, "ModifySyncJobConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncJobConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户在发现同步任务对用户的数据库的负载影响较大时、可通过该接口限制任务的传输速率
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncRateLimitRequest"/></param>
+        /// <returns><see cref="ModifySyncRateLimitResponse"/></returns>
+        public async Task<ModifySyncRateLimitResponse> ModifySyncRateLimit(ModifySyncRateLimitRequest req)
+        {
+             JsonResponseModel<ModifySyncRateLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySyncRateLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncRateLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户在发现同步任务对用户的数据库的负载影响较大时、可通过该接口限制任务的传输速率
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncRateLimitRequest"/></param>
+        /// <returns><see cref="ModifySyncRateLimitResponse"/></returns>
+        public ModifySyncRateLimitResponse ModifySyncRateLimitSync(ModifySyncRateLimitRequest req)
+        {
+             JsonResponseModel<ModifySyncRateLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySyncRateLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncRateLimitResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

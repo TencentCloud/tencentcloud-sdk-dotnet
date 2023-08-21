@@ -84,6 +84,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// 数据库代理节点名字
+        /// </summary>
+        [JsonProperty("OssProxyNodeName")]
+        public string OssProxyNodeName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "OssProxyNodeName", this.OssProxyNodeName);
         }
     }
 }

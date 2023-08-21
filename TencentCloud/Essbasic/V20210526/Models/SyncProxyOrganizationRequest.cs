@@ -62,6 +62,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+        /// </summary>
+        [JsonProperty("ProxyLegalIdCardType")]
+        public string ProxyLegalIdCardType{ get; set; }
+
+        /// <summary>
+        /// 第三方平台子客企业法人/负责人证件号
+        /// </summary>
+        [JsonProperty("ProxyLegalIdCardNumber")]
+        public string ProxyLegalIdCardNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +86,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
             this.SetParamSimple(map, prefix + "ProxyLegalName", this.ProxyLegalName);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "ProxyLegalIdCardType", this.ProxyLegalIdCardType);
+            this.SetParamSimple(map, prefix + "ProxyLegalIdCardNumber", this.ProxyLegalIdCardNumber);
         }
     }
 }

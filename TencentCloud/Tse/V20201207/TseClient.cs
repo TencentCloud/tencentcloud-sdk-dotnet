@@ -53,6 +53,46 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 创建云原生API网关实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayResponse"/></returns>
+        public async Task<CreateCloudNativeAPIGatewayResponse> CreateCloudNativeAPIGateway(CreateCloudNativeAPIGatewayRequest req)
+        {
+             JsonResponseModel<CreateCloudNativeAPIGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCloudNativeAPIGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建云原生API网关实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayResponse"/></returns>
+        public CreateCloudNativeAPIGatewayResponse CreateCloudNativeAPIGatewaySync(CreateCloudNativeAPIGatewayRequest req)
+        {
+             JsonResponseModel<CreateCloudNativeAPIGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCloudNativeAPIGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建云原生网关的灰度规则
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayCanaryRuleRequest"/></param>
@@ -293,6 +333,86 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 创建云原生网关引擎分组
+        /// </summary>
+        /// <param name="req"><see cref="CreateNativeGatewayServerGroupRequest"/></param>
+        /// <returns><see cref="CreateNativeGatewayServerGroupResponse"/></returns>
+        public async Task<CreateNativeGatewayServerGroupResponse> CreateNativeGatewayServerGroup(CreateNativeGatewayServerGroupRequest req)
+        {
+             JsonResponseModel<CreateNativeGatewayServerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNativeGatewayServerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNativeGatewayServerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建云原生网关引擎分组
+        /// </summary>
+        /// <param name="req"><see cref="CreateNativeGatewayServerGroupRequest"/></param>
+        /// <returns><see cref="CreateNativeGatewayServerGroupResponse"/></returns>
+        public CreateNativeGatewayServerGroupResponse CreateNativeGatewayServerGroupSync(CreateNativeGatewayServerGroupRequest req)
+        {
+             JsonResponseModel<CreateNativeGatewayServerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNativeGatewayServerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNativeGatewayServerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除云原生API网关实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayResponse"/></returns>
+        public async Task<DeleteCloudNativeAPIGatewayResponse> DeleteCloudNativeAPIGateway(DeleteCloudNativeAPIGatewayRequest req)
+        {
+             JsonResponseModel<DeleteCloudNativeAPIGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCloudNativeAPIGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除云原生API网关实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayResponse"/></returns>
+        public DeleteCloudNativeAPIGatewayResponse DeleteCloudNativeAPIGatewaySync(DeleteCloudNativeAPIGatewayRequest req)
+        {
+             JsonResponseModel<DeleteCloudNativeAPIGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCloudNativeAPIGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除云原生网关的灰度规则
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayCanaryRuleRequest"/></param>
@@ -524,6 +644,86 @@ namespace TencentCloud.Tse.V20201207
              {
                  var strResp = this.InternalRequestSync(req, "DeleteEngine");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除网关实例分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNativeGatewayServerGroupRequest"/></param>
+        /// <returns><see cref="DeleteNativeGatewayServerGroupResponse"/></returns>
+        public async Task<DeleteNativeGatewayServerGroupResponse> DeleteNativeGatewayServerGroup(DeleteNativeGatewayServerGroupRequest req)
+        {
+             JsonResponseModel<DeleteNativeGatewayServerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNativeGatewayServerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNativeGatewayServerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除网关实例分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNativeGatewayServerGroupRequest"/></param>
+        /// <returns><see cref="DeleteNativeGatewayServerGroupResponse"/></returns>
+        public DeleteNativeGatewayServerGroupResponse DeleteNativeGatewayServerGroupSync(DeleteNativeGatewayServerGroupRequest req)
+        {
+             JsonResponseModel<DeleteNativeGatewayServerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNativeGatewayServerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNativeGatewayServerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云原生API网关实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayResponse"/></returns>
+        public async Task<DescribeCloudNativeAPIGatewayResponse> DescribeCloudNativeAPIGateway(DescribeCloudNativeAPIGatewayRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云原生API网关实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayResponse DescribeCloudNativeAPIGatewaySync(DescribeCloudNativeAPIGatewayRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -813,6 +1013,46 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 获取云原生API网关实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewaysResponse"/></returns>
+        public async Task<DescribeCloudNativeAPIGatewaysResponse> DescribeCloudNativeAPIGateways(DescribeCloudNativeAPIGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云原生API网关实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewaysResponse"/></returns>
+        public DescribeCloudNativeAPIGatewaysResponse DescribeCloudNativeAPIGatewaysSync(DescribeCloudNativeAPIGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询Nacos类型引擎实例副本信息
         /// </summary>
         /// <param name="req"><see cref="DescribeNacosReplicasRequest"/></param>
@@ -1093,6 +1333,46 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 修改云原生API网关实例基础信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayResponse"/></returns>
+        public async Task<ModifyCloudNativeAPIGatewayResponse> ModifyCloudNativeAPIGateway(ModifyCloudNativeAPIGatewayRequest req)
+        {
+             JsonResponseModel<ModifyCloudNativeAPIGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCloudNativeAPIGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改云原生API网关实例基础信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayResponse"/></returns>
+        public ModifyCloudNativeAPIGatewayResponse ModifyCloudNativeAPIGatewaySync(ModifyCloudNativeAPIGatewayRequest req)
+        {
+             JsonResponseModel<ModifyCloudNativeAPIGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCloudNativeAPIGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改云原生网关的灰度规则
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayCanaryRuleRequest"/></param>
@@ -1284,6 +1564,86 @@ namespace TencentCloud.Tse.V20201207
              {
                  var strResp = this.InternalRequestSync(req, "ModifyCloudNativeAPIGatewayServiceRateLimit");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayServiceRateLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改云原生API网关实例分组基础信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNativeGatewayServerGroupRequest"/></param>
+        /// <returns><see cref="ModifyNativeGatewayServerGroupResponse"/></returns>
+        public async Task<ModifyNativeGatewayServerGroupResponse> ModifyNativeGatewayServerGroup(ModifyNativeGatewayServerGroupRequest req)
+        {
+             JsonResponseModel<ModifyNativeGatewayServerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNativeGatewayServerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNativeGatewayServerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改云原生API网关实例分组基础信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNativeGatewayServerGroupRequest"/></param>
+        /// <returns><see cref="ModifyNativeGatewayServerGroupResponse"/></returns>
+        public ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroupSync(ModifyNativeGatewayServerGroupRequest req)
+        {
+             JsonResponseModel<ModifyNativeGatewayServerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNativeGatewayServerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNativeGatewayServerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改云原生API网关实例的节点规格信息，比如节点扩缩容或者升降配
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCloudNativeAPIGatewaySpecRequest"/></param>
+        /// <returns><see cref="UpdateCloudNativeAPIGatewaySpecResponse"/></returns>
+        public async Task<UpdateCloudNativeAPIGatewaySpecResponse> UpdateCloudNativeAPIGatewaySpec(UpdateCloudNativeAPIGatewaySpecRequest req)
+        {
+             JsonResponseModel<UpdateCloudNativeAPIGatewaySpecResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateCloudNativeAPIGatewaySpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCloudNativeAPIGatewaySpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改云原生API网关实例的节点规格信息，比如节点扩缩容或者升降配
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCloudNativeAPIGatewaySpecRequest"/></param>
+        /// <returns><see cref="UpdateCloudNativeAPIGatewaySpecResponse"/></returns>
+        public UpdateCloudNativeAPIGatewaySpecResponse UpdateCloudNativeAPIGatewaySpecSync(UpdateCloudNativeAPIGatewaySpecRequest req)
+        {
+             JsonResponseModel<UpdateCloudNativeAPIGatewaySpecResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateCloudNativeAPIGatewaySpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCloudNativeAPIGatewaySpecResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

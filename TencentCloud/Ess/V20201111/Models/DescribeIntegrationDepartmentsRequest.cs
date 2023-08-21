@@ -25,7 +25,8 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 操作人信息，UserId必填且需拥有组织架构管理权限
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
@@ -35,6 +36,13 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("QueryType")]
         public ulong? QueryType{ get; set; }
+
+        /// <summary>
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
 
         /// <summary>
         /// 部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
@@ -56,6 +64,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "DeptId", this.DeptId);
             this.SetParamSimple(map, prefix + "DeptOpenId", this.DeptOpenId);
         }

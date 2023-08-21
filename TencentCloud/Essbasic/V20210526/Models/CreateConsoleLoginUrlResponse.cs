@@ -27,9 +27,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 子客企业Web控制台url注意事项：
         /// 1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
-        /// 2. 若企业认证完成且员工认证完成后，重新获取pc端的链接5分钟之内有效，且只能访问一次
-        /// 3. 若企业认证完成且员工认证完成后，重新获取H5/APP的链接只要在有效期内（一年）都可以访问
-        /// 4. 此链接仅单次有效，使用后需要再次创建新的链接（部分聊天软件，如企业微信默认会对链接进行解析，此时需要使用类似“代码片段”的方式或者放到txt文件里发送链接）
+        /// 2. 若企业认证完成且员工认证完成后，重新获取pc端的链接在5分钟之内有效，且只能访问一次
+        /// 3. 若企业认证完成且员工认证完成后，重新获取CHANNEL/APP的链接只要在有效期内（一年）都可以访问
+        /// 4. 此链接仅单次有效，每次登录需要需要重新创建新的链接，尽量不要做链接存储，多次使用。
         /// 5. 创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义
         /// </summary>
         [JsonProperty("ConsoleUrl")]
@@ -37,12 +37,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 子客企业是否已开通腾讯电子签，true-是，false-否
+        /// 注意：
+        /// 1、企业是否实名根据传参Agent.ProxyOrganizationOpenId进行判断，非企业名称或者社会信用代码
         /// </summary>
         [JsonProperty("IsActivated")]
         public bool? IsActivated{ get; set; }
 
         /// <summary>
-        /// 当前经办人是否已认证（false:未认证 true:已认证）
+        /// 当前经办人是否已认证，true-是，false-否
+        /// 注意：
+        /// 1、经办人是否实名是根据Agent.ProxyOperator.OpenId判断，非经办人姓名
         /// </summary>
         [JsonProperty("ProxyOperatorIsVerified")]
         public bool? ProxyOperatorIsVerified{ get; set; }
