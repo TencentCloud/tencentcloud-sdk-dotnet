@@ -72,6 +72,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("ExcludeLabels")]
         public string[] ExcludeLabels{ get; set; }
 
+        /// <summary>
+        /// metadata信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomLabels")]
+        public string[] CustomLabels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +92,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "WorkLoads.", this.WorkLoads);
             this.SetParamSimple(map, prefix + "ExcludeNamespace", this.ExcludeNamespace);
             this.SetParamArraySimple(map, prefix + "ExcludeLabels.", this.ExcludeLabels);
+            this.SetParamArraySimple(map, prefix + "CustomLabels.", this.CustomLabels);
         }
     }
 }

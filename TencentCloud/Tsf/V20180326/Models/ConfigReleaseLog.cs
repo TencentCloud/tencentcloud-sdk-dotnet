@@ -143,6 +143,16 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("RollbackFlag")]
         public bool? RollbackFlag{ get; set; }
 
+        /// <summary>
+        /// 发布成功的配置中心
+        ///  ALL/EXCLUSIVE/SHARE/NONE
+        /// 
+        /// 全部发布成功，独占发布成功，共享发布成功，全部发布失败
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReleasedConfigCenter")]
+        public string ReleasedConfigCenter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +176,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "LastConfigName", this.LastConfigName);
             this.SetParamSimple(map, prefix + "LastConfigVersion", this.LastConfigVersion);
             this.SetParamSimple(map, prefix + "RollbackFlag", this.RollbackFlag);
+            this.SetParamSimple(map, prefix + "ReleasedConfigCenter", this.ReleasedConfigCenter);
         }
     }
 }

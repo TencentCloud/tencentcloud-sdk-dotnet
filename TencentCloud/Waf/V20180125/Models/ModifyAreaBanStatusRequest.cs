@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 修要修改的域名
+        /// 需要修改的域名
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

@@ -49,13 +49,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string Month{ get; set; }
 
         /// <summary>
-        /// 周期开始时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取18个月内的数据。(不支持跨月查询)
+        /// 周期开始时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。不能早于开通账单2.0的月份，最多可拉取18个月内的数据。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 周期结束时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取18个月内的数据。（不支持跨月查询）
+        /// 周期结束时间，格式为yyyy-mm-dd hh:ii:ss，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据。不能早于开通账单2.0的月份，最多可拉取18个月内的数据。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// 付费模式 prePay/postPay
+        /// 付费模式 prePay(表示包年包月)/postPay(表示按时按量)
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }

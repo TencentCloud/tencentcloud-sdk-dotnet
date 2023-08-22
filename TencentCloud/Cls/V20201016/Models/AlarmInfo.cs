@@ -111,6 +111,14 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Analysis")]
         public AnalysisDimensional[] Analysis{ get; set; }
 
+        /// <summary>
+        /// 多触发条件。
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MultiConditions")]
+        public MultiCondition[] MultiConditions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +139,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
             this.SetParamObj(map, prefix + "CallBack.", this.CallBack);
             this.SetParamArrayObj(map, prefix + "Analysis.", this.Analysis);
+            this.SetParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
         }
     }
 }

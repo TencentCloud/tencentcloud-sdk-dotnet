@@ -74,6 +74,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 通知规则。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NoticeRules")]
+        public NoticeRule[] NoticeRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "AlarmNoticeId", this.AlarmNoticeId);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
         }
     }
 }

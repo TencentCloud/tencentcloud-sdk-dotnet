@@ -25,7 +25,7 @@ namespace TencentCloud.Ssa.V20180608.Models
     {
         
         /// <summary>
-        /// 查询过滤参数
+        /// 查询过滤参数:(json序列化的结果）
         /// </summary>
         [JsonProperty("Params")]
         public string Params{ get; set; }

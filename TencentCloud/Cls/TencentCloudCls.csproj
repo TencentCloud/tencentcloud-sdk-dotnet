@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.829</VersionPrefix>
+    <VersionPrefix>3.0.830</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -200,6 +200,7 @@
     <Compile Include="V20201016\Models\ExcludePathInfo.cs" />
     <Compile Include="V20201016\Models\ExportInfo.cs" />
     <Compile Include="V20201016\Models\ExtractRuleInfo.cs" />
+    <Compile Include="V20201016\Models\FilePathInfo.cs" />
     <Compile Include="V20201016\Models\Filter.cs" />
     <Compile Include="V20201016\Models\FilterRuleInfo.cs" />
     <Compile Include="V20201016\Models\FullTextInfo.cs" />
@@ -257,8 +258,10 @@
     <Compile Include="V20201016\Models\ModifyTopicRequest.cs" />
     <Compile Include="V20201016\Models\ModifyTopicResponse.cs" />
     <Compile Include="V20201016\Models\MonitorTime.cs" />
+    <Compile Include="V20201016\Models\MultiCondition.cs" />
     <Compile Include="V20201016\Models\MultiTopicSearchInformation.cs" />
     <Compile Include="V20201016\Models\NoticeReceiver.cs" />
+    <Compile Include="V20201016\Models\NoticeRule.cs" />
     <Compile Include="V20201016\Models\OpenKafkaConsumerRequest.cs" />
     <Compile Include="V20201016\Models\OpenKafkaConsumerResponse.cs" />
     <Compile Include="V20201016\Models\ParquetInfo.cs" />

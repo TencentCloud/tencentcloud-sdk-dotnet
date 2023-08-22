@@ -1693,6 +1693,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 公共实例过期时间 0001-01-01T00:00:00Z，公共实例是永久有效
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
+        /// <returns><see cref="DescribeInstanceResponse"/></returns>
+        public async Task<DescribeInstanceResponse> DescribeInstance(DescribeInstanceRequest req)
+        {
+             JsonResponseModel<DescribeInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 公共实例过期时间 0001-01-01T00:00:00Z，公共实例是永久有效
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
+        /// <returns><see cref="DescribeInstanceResponse"/></returns>
+        public DescribeInstanceResponse DescribeInstanceSync(DescribeInstanceRequest req)
+        {
+             JsonResponseModel<DescribeInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提供查询LoRa自定义频点详情的能力
         /// </summary>
         /// <param name="req"><see cref="DescribeLoRaFrequencyRequest"/></param>

@@ -38,6 +38,34 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Device")]
+        public ulong? Device{ get; set; }
+
+        /// <summary>
+        /// 录制时长。单位：秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Duration")]
+        public ulong? Duration{ get; set; }
+
+        /// <summary>
+        /// 录制文件大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordSize")]
+        public ulong? RecordSize{ get; set; }
+
+        /// <summary>
+        /// 录制url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordUrl")]
+        public string RecordUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +74,10 @@ namespace TencentCloud.Lcic.V20220817.Models
         {
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "Device", this.Device);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "RecordSize", this.RecordSize);
+            this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
         }
     }
 }

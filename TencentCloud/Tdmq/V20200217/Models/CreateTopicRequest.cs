@@ -75,6 +75,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("PulsarTopicType")]
         public long? PulsarTopicType{ get; set; }
 
+        /// <summary>
+        /// 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
+        /// </summary>
+        [JsonProperty("MsgTTL")]
+        public ulong? MsgTTL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
+            this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         }
     }
 }

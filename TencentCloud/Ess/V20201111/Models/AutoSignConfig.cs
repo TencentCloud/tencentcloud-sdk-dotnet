@@ -77,6 +77,14 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("VerifyChannels")]
         public string[] VerifyChannels{ get; set; }
 
+        /// <summary>
+        /// 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
+        /// 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+        /// 1-不绑定，发起合同时将按标准合同套餐进行扣减
+        /// </summary>
+        [JsonProperty("LicenseType")]
+        public long? LicenseType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +97,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "UserDefineSeal", this.UserDefineSeal);
             this.SetParamSimple(map, prefix + "SealImgCallback", this.SealImgCallback);
             this.SetParamArraySimple(map, prefix + "VerifyChannels.", this.VerifyChannels);
+            this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
         }
     }
 }

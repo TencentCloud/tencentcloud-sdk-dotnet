@@ -24,12 +24,26 @@ namespace TencentCloud.Eb.V20210416.Models
     public class CheckRuleRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Event信息
+        /// </summary>
+        [JsonProperty("Event")]
+        public string Event{ get; set; }
+
+        /// <summary>
+        /// EventPattern信息
+        /// </summary>
+        [JsonProperty("EventPattern")]
+        public string EventPattern{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Event", this.Event);
+            this.SetParamSimple(map, prefix + "EventPattern", this.EventPattern);
         }
     }
 }

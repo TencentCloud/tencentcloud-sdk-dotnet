@@ -44,6 +44,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("WebThemeConfig")]
         public WebThemeConfig WebThemeConfig{ get; set; }
 
+        /// <summary>
+        /// 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "ThemeType", this.ThemeType);
             this.SetParamObj(map, prefix + "WebThemeConfig.", this.WebThemeConfig);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

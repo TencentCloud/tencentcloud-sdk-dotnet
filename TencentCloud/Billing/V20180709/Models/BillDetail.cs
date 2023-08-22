@@ -174,11 +174,32 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 价格属性
+        /// 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PriceInfo")]
         public string[] PriceInfo{ get; set; }
+
+        /// <summary>
+        /// 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssociatedOrder")]
+        public BillDetailAssociatedOrder AssociatedOrder{ get; set; }
+
+        /// <summary>
+        /// 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Formula")]
+        public string Formula{ get; set; }
+
+        /// <summary>
+        /// 计费规则：各产品详细的计费规则官网说明链接
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FormulaUrl")]
+        public string FormulaUrl{ get; set; }
 
 
         /// <summary>
@@ -211,6 +232,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArraySimple(map, prefix + "PriceInfo.", this.PriceInfo);
+            this.SetParamObj(map, prefix + "AssociatedOrder.", this.AssociatedOrder);
+            this.SetParamSimple(map, prefix + "Formula", this.Formula);
+            this.SetParamSimple(map, prefix + "FormulaUrl", this.FormulaUrl);
         }
     }
 }

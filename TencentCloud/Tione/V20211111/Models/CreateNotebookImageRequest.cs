@@ -25,12 +25,6 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 要保存的kernel数组
-        /// </summary>
-        [JsonProperty("Kernels")]
-        public string[] Kernels{ get; set; }
-
-        /// <summary>
         /// 镜像信息
         /// </summary>
         [JsonProperty("ImageInfo")]
@@ -42,15 +36,21 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("NotebookId")]
         public string NotebookId{ get; set; }
 
+        /// <summary>
+        /// 要保存的kernel数组
+        /// </summary>
+        [JsonProperty("Kernels")]
+        public string[] Kernels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Kernels.", this.Kernels);
             this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
             this.SetParamSimple(map, prefix + "NotebookId", this.NotebookId);
+            this.SetParamArraySimple(map, prefix + "Kernels.", this.Kernels);
         }
     }
 }

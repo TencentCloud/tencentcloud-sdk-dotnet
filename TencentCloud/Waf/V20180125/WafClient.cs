@@ -1617,6 +1617,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 按照条件查询展示攻击总次数
+        /// </summary>
+        /// <param name="req"><see cref="GetAttackTotalCountRequest"/></param>
+        /// <returns><see cref="GetAttackTotalCountResponse"/></returns>
+        public async Task<GetAttackTotalCountResponse> GetAttackTotalCount(GetAttackTotalCountRequest req)
+        {
+             JsonResponseModel<GetAttackTotalCountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAttackTotalCount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAttackTotalCountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 按照条件查询展示攻击总次数
+        /// </summary>
+        /// <param name="req"><see cref="GetAttackTotalCountRequest"/></param>
+        /// <returns><see cref="GetAttackTotalCountResponse"/></returns>
+        public GetAttackTotalCountResponse GetAttackTotalCountSync(GetAttackTotalCountRequest req)
+        {
+             JsonResponseModel<GetAttackTotalCountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAttackTotalCount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAttackTotalCountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于修改访问日志保存期限及大字段是否存储
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessPeriodRequest"/></param>

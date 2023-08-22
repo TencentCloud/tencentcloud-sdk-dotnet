@@ -43,7 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public RelieveInfo ReliveInfo{ get; set; }
 
         /// <summary>
-        /// 非必须，解除协议的本企业签署人列表，默认使用原流程的签署人列表；当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业的其他签署人来替换原流程中的原签署人，注意需要指明ApproverNumber来代表需要替换哪一个签署人，解除协议的签署人数量不能多于原流程的签署人数量
+        /// 非必须，解除协议的本企业签署人列表，默认使用原流程的签署人列表；当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业的其他签署人来替换原流程中的原签署人，注意需要指明ApproverNumber来代表需要替换哪一个签署人，已转发的签署人不包含在内，解除协议的签署人数量不能多于原流程的签署人数量
         /// </summary>
         [JsonProperty("ReleasedApprovers")]
         public ReleasedApprover[] ReleasedApprovers{ get; set; }

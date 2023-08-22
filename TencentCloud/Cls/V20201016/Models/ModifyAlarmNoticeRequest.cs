@@ -57,6 +57,17 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("WebCallbacks")]
         public WebCallback[] WebCallbacks{ get; set; }
 
+        /// <summary>
+        /// 通知规则。
+        /// 
+        /// 注意: 
+        /// 
+        /// - Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+        /// - 传其中一组数据，则另一组数据置空。
+        /// </summary>
+        [JsonProperty("NoticeRules")]
+        public NoticeRule[] NoticeRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +79,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "NoticeReceivers.", this.NoticeReceivers);
             this.SetParamArrayObj(map, prefix + "WebCallbacks.", this.WebCallbacks);
+            this.SetParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
         }
     }
 }

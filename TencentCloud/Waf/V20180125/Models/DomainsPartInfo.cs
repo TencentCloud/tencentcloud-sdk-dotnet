@@ -160,7 +160,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long?[] Ciphers{ get; set; }
 
         /// <summary>
-        /// 模版
+        /// 模板
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CipherTemplate")]

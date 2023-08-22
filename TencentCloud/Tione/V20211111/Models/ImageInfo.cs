@@ -50,6 +50,20 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }
 
+        /// <summary>
+        /// 是否允许导出全部内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AllowSaveAllContent")]
+        public bool? AllowSaveAllContent{ get; set; }
+
+        /// <summary>
+        /// 镜像名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageName")]
+        public string ImageName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +74,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "AllowSaveAllContent", this.AllowSaveAllContent);
+            this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
         }
     }
 }

@@ -49,6 +49,12 @@ namespace TencentCloud.Tts.V20190823.Models
         public string ResultUrl{ get; set; }
 
         /// <summary>
+        /// 时间戳信息，若未开启时间戳，则返回空数组。
+        /// </summary>
+        [JsonProperty("Subtitles")]
+        public Subtitle[] Subtitles{ get; set; }
+
+        /// <summary>
         /// 失败原因说明。
         /// </summary>
         [JsonProperty("ErrorMsg")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StatusStr", this.StatusStr);
             this.SetParamSimple(map, prefix + "ResultUrl", this.ResultUrl);
+            this.SetParamArrayObj(map, prefix + "Subtitles.", this.Subtitles);
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         }
     }

@@ -57,7 +57,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string SQLType{ get; set; }
 
         /// <summary>
-        /// 任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功 -1：任务执行失败 -3：用户手动终止。只有任务执行成功的情况下，才会返回任务执行的结果
+        /// 任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功  3：数据写入中 4：排队中 -1：任务执行失败 -3：用户手动终止 。只有任务执行成功的情况下，才会返回任务执行的结果
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }

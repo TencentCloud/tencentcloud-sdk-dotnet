@@ -104,7 +104,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string RecordUrl{ get; set; }
 
         /// <summary>
-        /// 最高房间内人数（包括老师），0表示不限制，默认为0
+        /// 最高房间内人数（不包括老师），0表示不限制，默认为0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMicNumber")]

@@ -54,6 +54,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
+        /// </summary>
+        [JsonProperty("MsgTTL")]
+        public ulong? MsgTTL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Partitions", this.Partitions);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         }
     }
 }
