@@ -44,30 +44,6 @@ namespace TencentCloud.Tione.V20211111.Models
         public ResourceConfigInfo[] ResourceConfigInfos{ get; set; }
 
         /// <summary>
-        /// COS代码包路径
-        /// </summary>
-        [JsonProperty("CodePackagePath")]
-        public CosPathInfo CodePackagePath{ get; set; }
-
-        /// <summary>
-        /// 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-        /// </summary>
-        [JsonProperty("TrainingMode")]
-        public string TrainingMode{ get; set; }
-
-        /// <summary>
-        /// COS训练输出路径
-        /// </summary>
-        [JsonProperty("Output")]
-        public CosPathInfo Output{ get; set; }
-
-        /// <summary>
-        /// 是否上报日志
-        /// </summary>
-        [JsonProperty("LogEnable")]
-        public bool? LogEnable{ get; set; }
-
-        /// <summary>
         /// 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
         /// </summary>
         [JsonProperty("FrameworkName")]
@@ -104,10 +80,22 @@ namespace TencentCloud.Tione.V20211111.Models
         public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
+        /// COS代码包路径
+        /// </summary>
+        [JsonProperty("CodePackagePath")]
+        public CosPathInfo CodePackagePath{ get; set; }
+
+        /// <summary>
         /// 启动命令信息，默认为sh start.sh
         /// </summary>
         [JsonProperty("StartCmdInfo")]
         public StartCmdInfo StartCmdInfo{ get; set; }
+
+        /// <summary>
+        /// 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+        /// </summary>
+        [JsonProperty("TrainingMode")]
+        public string TrainingMode{ get; set; }
 
         /// <summary>
         /// 数据配置，依赖DataSource字段
@@ -128,6 +116,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
+        /// COS训练输出路径
+        /// </summary>
+        [JsonProperty("Output")]
+        public CosPathInfo Output{ get; set; }
+
+        /// <summary>
         /// CLS日志配置
         /// </summary>
         [JsonProperty("LogConfig")]
@@ -138,6 +132,12 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         [JsonProperty("TuningParameters")]
         public string TuningParameters{ get; set; }
+
+        /// <summary>
+        /// 是否上报日志
+        /// </summary>
+        [JsonProperty("LogEnable")]
+        public bool? LogEnable{ get; set; }
 
         /// <summary>
         /// 备注，最多500个字
@@ -166,22 +166,22 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamArrayObj(map, prefix + "ResourceConfigInfos.", this.ResourceConfigInfos);
-            this.SetParamObj(map, prefix + "CodePackagePath.", this.CodePackagePath);
-            this.SetParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
-            this.SetParamObj(map, prefix + "Output.", this.Output);
-            this.SetParamSimple(map, prefix + "LogEnable", this.LogEnable);
             this.SetParamSimple(map, prefix + "FrameworkName", this.FrameworkName);
             this.SetParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
             this.SetParamSimple(map, prefix + "FrameworkEnvironment", this.FrameworkEnvironment);
             this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
+            this.SetParamObj(map, prefix + "CodePackagePath.", this.CodePackagePath);
             this.SetParamObj(map, prefix + "StartCmdInfo.", this.StartCmdInfo);
+            this.SetParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
             this.SetParamArrayObj(map, prefix + "DataConfigs.", this.DataConfigs);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamObj(map, prefix + "LogConfig.", this.LogConfig);
             this.SetParamSimple(map, prefix + "TuningParameters", this.TuningParameters);
+            this.SetParamSimple(map, prefix + "LogEnable", this.LogEnable);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);

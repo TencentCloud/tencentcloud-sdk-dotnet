@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dcdb.V20180411.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSqlLogsRequest : AbstractModel
+    public class DescribeFirewallTemplateApplyRecordsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+        /// 防火墙模板应用记录列表。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("ApplyRecordSet")]
+        public FirewallTemplateApplyRecord[] ApplyRecordSet{ get; set; }
 
         /// <summary>
-        /// SQL日志偏移。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// 拉取数量（0-10000，为0时拉取总数信息）。
-        /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "ApplyRecordSet.", this.ApplyRecordSet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

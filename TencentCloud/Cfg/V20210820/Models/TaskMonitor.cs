@@ -25,10 +25,17 @@ namespace TencentCloud.Cfg.V20210820.Models
     {
         
         /// <summary>
-        /// 监控指标ID
+        /// 演练监控指标ID
         /// </summary>
         [JsonProperty("TaskMonitorId")]
         public long? TaskMonitorId{ get; set; }
+
+        /// <summary>
+        /// 监控指标ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetricId")]
+        public ulong? MetricId{ get; set; }
 
         /// <summary>
         /// 监控指标对象类型ID
@@ -69,6 +76,7 @@ namespace TencentCloud.Cfg.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskMonitorId", this.TaskMonitorId);
+            this.SetParamSimple(map, prefix + "MetricId", this.MetricId);
             this.SetParamSimple(map, prefix + "TaskMonitorObjectTypeId", this.TaskMonitorObjectTypeId);
             this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
             this.SetParamArraySimple(map, prefix + "InstancesIds.", this.InstancesIds);

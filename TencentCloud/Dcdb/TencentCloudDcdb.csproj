@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{700BCB15-E440-34BE-979B-260C57587D11}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.830</VersionPrefix>
+    <VersionPrefix>3.0.831</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -148,8 +148,6 @@
     <Compile Include="V20180411\Models\DescribeProjectsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeShardSpecRequest.cs" />
     <Compile Include="V20180411\Models\DescribeShardSpecResponse.cs" />
-    <Compile Include="V20180411\Models\DescribeSqlLogsRequest.cs" />
-    <Compile Include="V20180411\Models\DescribeSqlLogsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeUserTasksRequest.cs" />
     <Compile Include="V20180411\Models\DescribeUserTasksResponse.cs" />
     <Compile Include="V20180411\Models\DestroyDCDBInstanceRequest.cs" />
@@ -224,7 +222,6 @@
     <Compile Include="V20180411\Models\SpecConfig.cs" />
     <Compile Include="V20180411\Models\SpecConfigInfo.cs" />
     <Compile Include="V20180411\Models\SplitShardConfig.cs" />
-    <Compile Include="V20180411\Models\SqlLogItem.cs" />
     <Compile Include="V20180411\Models\SwitchDBInstanceHARequest.cs" />
     <Compile Include="V20180411\Models\SwitchDBInstanceHAResponse.cs" />
     <Compile Include="V20180411\Models\TableColumn.cs" />

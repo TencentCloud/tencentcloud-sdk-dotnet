@@ -53,7 +53,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// 申请并发
+        /// 本接口用于申请并发。接口超时时间：20秒。
         /// </summary>
         /// <param name="req"><see cref="ApplyConcurrentRequest"/></param>
         /// <returns><see cref="ApplyConcurrentResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// 申请并发
+        /// 本接口用于申请并发。接口超时时间：20秒。
         /// </summary>
         /// <param name="req"><see cref="ApplyConcurrentRequest"/></param>
         /// <returns><see cref="ApplyConcurrentResponse"/></returns>
@@ -93,7 +93,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// 创建会话
+        /// 本接口用于创建会话。接口超时时间：5秒。
         /// </summary>
         /// <param name="req"><see cref="CreateSessionRequest"/></param>
         /// <returns><see cref="CreateSessionResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// 创建会话
+        /// 本接口用于创建会话。接口超时时间：5秒。
         /// </summary>
         /// <param name="req"><see cref="CreateSessionRequest"/></param>
         /// <returns><see cref="CreateSessionResponse"/></returns>

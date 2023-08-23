@@ -60,18 +60,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Md5Value{ get; set; }
 
         /// <summary>
-        /// 创建时间，秒级别的时间戳
+        /// 创建时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
-        public ulong? CreateTime{ get; set; }
+        public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间，秒级别的时间戳
+        /// 更新时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
-        public ulong? UpdateTime{ get; set; }
+        public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 文件大小，单位为字节

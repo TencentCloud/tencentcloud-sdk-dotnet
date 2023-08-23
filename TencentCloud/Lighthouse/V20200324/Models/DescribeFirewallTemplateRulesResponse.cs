@@ -15,50 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dcdb.V20180411.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSqlLogsResponse : AbstractModel
+    public class DescribeFirewallTemplateRulesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 当前消息队列中的sql日志条目数。
+        /// 防火墙模板规则总数量。
         /// </summary>
         [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 消息队列中的sql日志起始偏移。
+        /// 防火墙模板规则信息列表。
         /// </summary>
-        [JsonProperty("StartOffset")]
-        public ulong? StartOffset{ get; set; }
-
-        /// <summary>
-        /// 消息队列中的sql日志结束偏移。
-        /// </summary>
-        [JsonProperty("EndOffset")]
-        public ulong? EndOffset{ get; set; }
-
-        /// <summary>
-        /// 返回的第一条sql日志的偏移。
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// 返回的sql日志数量。
-        /// </summary>
-        [JsonProperty("Count")]
-        public ulong? Count{ get; set; }
-
-        /// <summary>
-        /// Sql日志列表。
-        /// </summary>
-        [JsonProperty("SqlItems")]
-        public SqlLogItem[] SqlItems{ get; set; }
+        [JsonProperty("TemplateRuleSet")]
+        public FirewallTemplateRuleInfo[] TemplateRuleSet{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -73,11 +49,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "StartOffset", this.StartOffset);
-            this.SetParamSimple(map, prefix + "EndOffset", this.EndOffset);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Count", this.Count);
-            this.SetParamArrayObj(map, prefix + "SqlItems.", this.SqlItems);
+            this.SetParamArrayObj(map, prefix + "TemplateRuleSet.", this.TemplateRuleSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -157,6 +157,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("RoomType")]
         public ulong? RoomType{ get; set; }
 
+        /// <summary>
+        /// 录制模板。仅可修改还未开始的房间。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+        /// </summary>
+        [JsonProperty("RecordLayout")]
+        public ulong? RecordLayout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +188,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
             this.SetParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
             this.SetParamSimple(map, prefix + "RoomType", this.RoomType);
+            this.SetParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
         }
     }
 }

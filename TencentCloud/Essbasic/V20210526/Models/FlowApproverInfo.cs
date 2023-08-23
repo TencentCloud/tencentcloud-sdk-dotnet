@@ -151,6 +151,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
         /// 查看合同的认证方式 Flow层级的优先于approver层级的
+        /// （当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
         /// </summary>
         [JsonProperty("ApproverVerifyTypes")]
         public long?[] ApproverVerifyTypes{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.830</VersionPrefix>
+    <VersionPrefix>3.0.831</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -303,6 +303,7 @@
     <Compile Include="V20211111\Models\RestartModelAccelerateTaskResponse.cs" />
     <Compile Include="V20211111\Models\RowItem.cs" />
     <Compile Include="V20211111\Models\RowValue.cs" />
+    <Compile Include="V20211111\Models\SSHConfig.cs" />
     <Compile Include="V20211111\Models\ScheduledAction.cs" />
     <Compile Include="V20211111\Models\SchemaInfo.cs" />
     <Compile Include="V20211111\Models\SegmentationInfo.cs" />

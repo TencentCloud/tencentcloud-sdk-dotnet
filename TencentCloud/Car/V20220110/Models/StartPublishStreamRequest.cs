@@ -30,6 +30,12 @@ namespace TencentCloud.Car.V20220110.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 推流参数，推流时携带自定义参数。
+        /// </summary>
+        [JsonProperty("PublishStreamArgs")]
+        public string PublishStreamArgs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Car.V20220110.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "PublishStreamArgs", this.PublishStreamArgs);
         }
     }
 }

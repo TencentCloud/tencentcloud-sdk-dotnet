@@ -105,6 +105,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口 (ApplyFirewallTemplate) 用于应用防火墙模板到多个实例。
+        /// </summary>
+        /// <param name="req"><see cref="ApplyFirewallTemplateRequest"/></param>
+        /// <returns><see cref="ApplyFirewallTemplateResponse"/></returns>
+        public async Task<ApplyFirewallTemplateResponse> ApplyFirewallTemplate(ApplyFirewallTemplateRequest req)
+        {
+             JsonResponseModel<ApplyFirewallTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyFirewallTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyFirewallTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ApplyFirewallTemplate) 用于应用防火墙模板到多个实例。
+        /// </summary>
+        /// <param name="req"><see cref="ApplyFirewallTemplateRequest"/></param>
+        /// <returns><see cref="ApplyFirewallTemplateResponse"/></returns>
+        public ApplyFirewallTemplateResponse ApplyFirewallTemplateSync(ApplyFirewallTemplateRequest req)
+        {
+             JsonResponseModel<ApplyFirewallTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyFirewallTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyFirewallTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ApplyInstanceSnapshot）用于回滚指定实例的系统盘快照。
         /// <li>仅支持回滚到原系统盘。</li>
         /// <li>用于回滚的快照必须处于 NORMAL 状态。快照状态可以通过 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。</li>
@@ -463,6 +503,86 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口 (CreateFirewallTemplate) 用于创建防火墙模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFirewallTemplateRequest"/></param>
+        /// <returns><see cref="CreateFirewallTemplateResponse"/></returns>
+        public async Task<CreateFirewallTemplateResponse> CreateFirewallTemplate(CreateFirewallTemplateRequest req)
+        {
+             JsonResponseModel<CreateFirewallTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFirewallTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFirewallTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (CreateFirewallTemplate) 用于创建防火墙模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFirewallTemplateRequest"/></param>
+        /// <returns><see cref="CreateFirewallTemplateResponse"/></returns>
+        public CreateFirewallTemplateResponse CreateFirewallTemplateSync(CreateFirewallTemplateRequest req)
+        {
+             JsonResponseModel<CreateFirewallTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFirewallTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFirewallTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (CreateFirewallTemplateRules) 用于创建防火墙模板规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFirewallTemplateRulesRequest"/></param>
+        /// <returns><see cref="CreateFirewallTemplateRulesResponse"/></returns>
+        public async Task<CreateFirewallTemplateRulesResponse> CreateFirewallTemplateRules(CreateFirewallTemplateRulesRequest req)
+        {
+             JsonResponseModel<CreateFirewallTemplateRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFirewallTemplateRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFirewallTemplateRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (CreateFirewallTemplateRules) 用于创建防火墙模板规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFirewallTemplateRulesRequest"/></param>
+        /// <returns><see cref="CreateFirewallTemplateRulesResponse"/></returns>
+        public CreateFirewallTemplateRulesResponse CreateFirewallTemplateRulesSync(CreateFirewallTemplateRulesRequest req)
+        {
+             JsonResponseModel<CreateFirewallTemplateRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFirewallTemplateRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFirewallTemplateRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateInstanceSnapshot）用于创建指定实例的系统盘快照。
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceSnapshotRequest"/></param>
@@ -714,6 +834,86 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DeleteFirewallRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFirewallRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteFirewallTemplate) 用于删除防火墙模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFirewallTemplateRequest"/></param>
+        /// <returns><see cref="DeleteFirewallTemplateResponse"/></returns>
+        public async Task<DeleteFirewallTemplateResponse> DeleteFirewallTemplate(DeleteFirewallTemplateRequest req)
+        {
+             JsonResponseModel<DeleteFirewallTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteFirewallTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFirewallTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteFirewallTemplate) 用于删除防火墙模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFirewallTemplateRequest"/></param>
+        /// <returns><see cref="DeleteFirewallTemplateResponse"/></returns>
+        public DeleteFirewallTemplateResponse DeleteFirewallTemplateSync(DeleteFirewallTemplateRequest req)
+        {
+             JsonResponseModel<DeleteFirewallTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteFirewallTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFirewallTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteFirewallTemplateRules) 用于删除防火墙模板规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFirewallTemplateRulesRequest"/></param>
+        /// <returns><see cref="DeleteFirewallTemplateRulesResponse"/></returns>
+        public async Task<DeleteFirewallTemplateRulesResponse> DeleteFirewallTemplateRules(DeleteFirewallTemplateRulesRequest req)
+        {
+             JsonResponseModel<DeleteFirewallTemplateRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteFirewallTemplateRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFirewallTemplateRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteFirewallTemplateRules) 用于删除防火墙模板规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFirewallTemplateRulesRequest"/></param>
+        /// <returns><see cref="DeleteFirewallTemplateRulesResponse"/></returns>
+        public DeleteFirewallTemplateRulesResponse DeleteFirewallTemplateRulesSync(DeleteFirewallTemplateRulesRequest req)
+        {
+             JsonResponseModel<DeleteFirewallTemplateRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteFirewallTemplateRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFirewallTemplateRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1556,6 +1756,206 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFirewallRulesTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallRulesTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeFirewallTemplateApplyRecords) 用于查询防火墙模板应用记录列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallTemplateApplyRecordsRequest"/></param>
+        /// <returns><see cref="DescribeFirewallTemplateApplyRecordsResponse"/></returns>
+        public async Task<DescribeFirewallTemplateApplyRecordsResponse> DescribeFirewallTemplateApplyRecords(DescribeFirewallTemplateApplyRecordsRequest req)
+        {
+             JsonResponseModel<DescribeFirewallTemplateApplyRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFirewallTemplateApplyRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallTemplateApplyRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeFirewallTemplateApplyRecords) 用于查询防火墙模板应用记录列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallTemplateApplyRecordsRequest"/></param>
+        /// <returns><see cref="DescribeFirewallTemplateApplyRecordsResponse"/></returns>
+        public DescribeFirewallTemplateApplyRecordsResponse DescribeFirewallTemplateApplyRecordsSync(DescribeFirewallTemplateApplyRecordsRequest req)
+        {
+             JsonResponseModel<DescribeFirewallTemplateApplyRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFirewallTemplateApplyRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallTemplateApplyRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeFirewallTemplateQuota) 用于查询防火墙模板配额。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallTemplateQuotaRequest"/></param>
+        /// <returns><see cref="DescribeFirewallTemplateQuotaResponse"/></returns>
+        public async Task<DescribeFirewallTemplateQuotaResponse> DescribeFirewallTemplateQuota(DescribeFirewallTemplateQuotaRequest req)
+        {
+             JsonResponseModel<DescribeFirewallTemplateQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFirewallTemplateQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallTemplateQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeFirewallTemplateQuota) 用于查询防火墙模板配额。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallTemplateQuotaRequest"/></param>
+        /// <returns><see cref="DescribeFirewallTemplateQuotaResponse"/></returns>
+        public DescribeFirewallTemplateQuotaResponse DescribeFirewallTemplateQuotaSync(DescribeFirewallTemplateQuotaRequest req)
+        {
+             JsonResponseModel<DescribeFirewallTemplateQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFirewallTemplateQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallTemplateQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeFirewallTemplateRuleQuota) 用于查询防火墙模板规则配额。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallTemplateRuleQuotaRequest"/></param>
+        /// <returns><see cref="DescribeFirewallTemplateRuleQuotaResponse"/></returns>
+        public async Task<DescribeFirewallTemplateRuleQuotaResponse> DescribeFirewallTemplateRuleQuota(DescribeFirewallTemplateRuleQuotaRequest req)
+        {
+             JsonResponseModel<DescribeFirewallTemplateRuleQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFirewallTemplateRuleQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallTemplateRuleQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeFirewallTemplateRuleQuota) 用于查询防火墙模板规则配额。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallTemplateRuleQuotaRequest"/></param>
+        /// <returns><see cref="DescribeFirewallTemplateRuleQuotaResponse"/></returns>
+        public DescribeFirewallTemplateRuleQuotaResponse DescribeFirewallTemplateRuleQuotaSync(DescribeFirewallTemplateRuleQuotaRequest req)
+        {
+             JsonResponseModel<DescribeFirewallTemplateRuleQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFirewallTemplateRuleQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallTemplateRuleQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeFirewallTemplateRules) 用于查询防火墙模板规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallTemplateRulesRequest"/></param>
+        /// <returns><see cref="DescribeFirewallTemplateRulesResponse"/></returns>
+        public async Task<DescribeFirewallTemplateRulesResponse> DescribeFirewallTemplateRules(DescribeFirewallTemplateRulesRequest req)
+        {
+             JsonResponseModel<DescribeFirewallTemplateRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFirewallTemplateRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallTemplateRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeFirewallTemplateRules) 用于查询防火墙模板规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallTemplateRulesRequest"/></param>
+        /// <returns><see cref="DescribeFirewallTemplateRulesResponse"/></returns>
+        public DescribeFirewallTemplateRulesResponse DescribeFirewallTemplateRulesSync(DescribeFirewallTemplateRulesRequest req)
+        {
+             JsonResponseModel<DescribeFirewallTemplateRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFirewallTemplateRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallTemplateRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeFirewallTemplates) 用于查询防火墙模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeFirewallTemplatesResponse"/></returns>
+        public async Task<DescribeFirewallTemplatesResponse> DescribeFirewallTemplates(DescribeFirewallTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeFirewallTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFirewallTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeFirewallTemplates) 用于查询防火墙模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeFirewallTemplatesResponse"/></returns>
+        public DescribeFirewallTemplatesResponse DescribeFirewallTemplatesSync(DescribeFirewallTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeFirewallTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFirewallTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3031,6 +3431,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口 (ModifyFirewallTemplate) 用于修改防火墙模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFirewallTemplateRequest"/></param>
+        /// <returns><see cref="ModifyFirewallTemplateResponse"/></returns>
+        public async Task<ModifyFirewallTemplateResponse> ModifyFirewallTemplate(ModifyFirewallTemplateRequest req)
+        {
+             JsonResponseModel<ModifyFirewallTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyFirewallTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFirewallTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyFirewallTemplate) 用于修改防火墙模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFirewallTemplateRequest"/></param>
+        /// <returns><see cref="ModifyFirewallTemplateResponse"/></returns>
+        public ModifyFirewallTemplateResponse ModifyFirewallTemplateSync(ModifyFirewallTemplateRequest req)
+        {
+             JsonResponseModel<ModifyFirewallTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyFirewallTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFirewallTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyInstancesAttribute）用于修改实例的属性。
         /// * “实例名称”仅为方便用户自己管理之用。
         /// * 支持批量操作。每次请求批量实例的上限为 100。
@@ -3475,6 +3915,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口 (ReplaceFirewallTemplateRules) 用于替换防火墙模板规则。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceFirewallTemplateRuleRequest"/></param>
+        /// <returns><see cref="ReplaceFirewallTemplateRuleResponse"/></returns>
+        public async Task<ReplaceFirewallTemplateRuleResponse> ReplaceFirewallTemplateRule(ReplaceFirewallTemplateRuleRequest req)
+        {
+             JsonResponseModel<ReplaceFirewallTemplateRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReplaceFirewallTemplateRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceFirewallTemplateRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ReplaceFirewallTemplateRules) 用于替换防火墙模板规则。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceFirewallTemplateRuleRequest"/></param>
+        /// <returns><see cref="ReplaceFirewallTemplateRuleResponse"/></returns>
+        public ReplaceFirewallTemplateRuleResponse ReplaceFirewallTemplateRuleSync(ReplaceFirewallTemplateRuleRequest req)
+        {
+             JsonResponseModel<ReplaceFirewallTemplateRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReplaceFirewallTemplateRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceFirewallTemplateRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 重新创建并运行实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重建情况。
         /// </summary>
         /// <param name="req"><see cref="RerunDockerContainerRequest"/></param>
@@ -3546,6 +4026,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "ResetAttachCcn");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAttachCcnResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ResetFirewallTemplateRules) 用于重置防火墙模板下所有规则。
+        /// </summary>
+        /// <param name="req"><see cref="ResetFirewallTemplateRulesRequest"/></param>
+        /// <returns><see cref="ResetFirewallTemplateRulesResponse"/></returns>
+        public async Task<ResetFirewallTemplateRulesResponse> ResetFirewallTemplateRules(ResetFirewallTemplateRulesRequest req)
+        {
+             JsonResponseModel<ResetFirewallTemplateRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetFirewallTemplateRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetFirewallTemplateRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ResetFirewallTemplateRules) 用于重置防火墙模板下所有规则。
+        /// </summary>
+        /// <param name="req"><see cref="ResetFirewallTemplateRulesRequest"/></param>
+        /// <returns><see cref="ResetFirewallTemplateRulesResponse"/></returns>
+        public ResetFirewallTemplateRulesResponse ResetFirewallTemplateRulesSync(ResetFirewallTemplateRulesRequest req)
+        {
+             JsonResponseModel<ResetFirewallTemplateRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetFirewallTemplateRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetFirewallTemplateRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

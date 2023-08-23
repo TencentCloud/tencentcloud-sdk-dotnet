@@ -150,6 +150,12 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
+        /// <summary>
+        /// 环境ID
+        /// </summary>
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
             this.SetParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
         }
     }
 }

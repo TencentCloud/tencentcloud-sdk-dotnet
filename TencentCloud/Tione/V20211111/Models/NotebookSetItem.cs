@@ -195,6 +195,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("UserTypes")]
         public string[] UserTypes{ get; set; }
 
+        /// <summary>
+        /// SSH配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SSHConfig")]
+        public SSHConfig SSHConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +233,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "VolumeSourceCFS.", this.VolumeSourceCFS);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamArraySimple(map, prefix + "UserTypes.", this.UserTypes);
+            this.SetParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
         }
     }
 }

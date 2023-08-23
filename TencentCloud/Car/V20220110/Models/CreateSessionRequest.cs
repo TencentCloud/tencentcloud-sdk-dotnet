@@ -55,6 +55,9 @@ namespace TencentCloud.Car.V20220110.Models
         /// 如果请求的是多应用共享项目，此参数生效；
         /// 如果请求的是关闭预启动的单应用独享项目，此参数生效；
         /// 如果请求的是开启预启动的单应用独享项目，此参数失效。
+        /// 
+        /// 注意：在此参数生效的情况下，将会被追加到控制台应用或项目配置的启动参数的后面。
+        /// 例如，对于某关闭预启动的单应用独享项目，若在控制台中项目配置的启动参数为bar=0，而ApplicationParameters参数为foo=1，则实际应用启动参数为bar=0 foo=1。
         /// </summary>
         [JsonProperty("ApplicationParameters")]
         public string ApplicationParameters{ get; set; }

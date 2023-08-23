@@ -179,7 +179,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 指定个人签署方查看合同的校验方式
         /// <ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-        /// <li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容</li></ul>
+        /// <li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
         /// </summary>
         [JsonProperty("ApproverVerifyType")]
         public string ApproverVerifyType{ get; set; }

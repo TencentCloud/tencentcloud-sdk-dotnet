@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.830</VersionPrefix>
+    <VersionPrefix>3.0.831</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,8 @@
     <Compile Include="V20200324\LighthouseClient.cs" />
     <Compile Include="V20200324\Models\ApplyDiskBackupRequest.cs" />
     <Compile Include="V20200324\Models\ApplyDiskBackupResponse.cs" />
+    <Compile Include="V20200324\Models\ApplyFirewallTemplateRequest.cs" />
+    <Compile Include="V20200324\Models\ApplyFirewallTemplateResponse.cs" />
     <Compile Include="V20200324\Models\ApplyInstanceSnapshotRequest.cs" />
     <Compile Include="V20200324\Models\ApplyInstanceSnapshotResponse.cs" />
     <Compile Include="V20200324\Models\AssociateInstancesKeyPairsRequest.cs" />
@@ -74,6 +76,10 @@
     <Compile Include="V20200324\Models\CreateDisksResponse.cs" />
     <Compile Include="V20200324\Models\CreateFirewallRulesRequest.cs" />
     <Compile Include="V20200324\Models\CreateFirewallRulesResponse.cs" />
+    <Compile Include="V20200324\Models\CreateFirewallTemplateRequest.cs" />
+    <Compile Include="V20200324\Models\CreateFirewallTemplateResponse.cs" />
+    <Compile Include="V20200324\Models\CreateFirewallTemplateRulesRequest.cs" />
+    <Compile Include="V20200324\Models\CreateFirewallTemplateRulesResponse.cs" />
     <Compile Include="V20200324\Models\CreateInstanceSnapshotRequest.cs" />
     <Compile Include="V20200324\Models\CreateInstanceSnapshotResponse.cs" />
     <Compile Include="V20200324\Models\CreateInstancesRequest.cs" />
@@ -87,6 +93,10 @@
     <Compile Include="V20200324\Models\DeleteDiskBackupsResponse.cs" />
     <Compile Include="V20200324\Models\DeleteFirewallRulesRequest.cs" />
     <Compile Include="V20200324\Models\DeleteFirewallRulesResponse.cs" />
+    <Compile Include="V20200324\Models\DeleteFirewallTemplateRequest.cs" />
+    <Compile Include="V20200324\Models\DeleteFirewallTemplateResponse.cs" />
+    <Compile Include="V20200324\Models\DeleteFirewallTemplateRulesRequest.cs" />
+    <Compile Include="V20200324\Models\DeleteFirewallTemplateRulesResponse.cs" />
     <Compile Include="V20200324\Models\DeleteKeyPairsRequest.cs" />
     <Compile Include="V20200324\Models\DeleteKeyPairsResponse.cs" />
     <Compile Include="V20200324\Models\DeleteSnapshotsRequest.cs" />
@@ -130,6 +140,16 @@
     <Compile Include="V20200324\Models\DescribeFirewallRulesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesTemplateRequest.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesTemplateResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallTemplateApplyRecordsRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallTemplateApplyRecordsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallTemplateQuotaRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallTemplateQuotaResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallTemplateRuleQuotaRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallTemplateRuleQuotaResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallTemplateRulesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallTemplateRulesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallTemplatesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallTemplatesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeGeneralResourceQuotasRequest.cs" />
     <Compile Include="V20200324\Models\DescribeGeneralResourceQuotasResponse.cs" />
     <Compile Include="V20200324\Models\DescribeInstanceLoginKeyPairAttributeRequest.cs" />
@@ -186,6 +206,11 @@
     <Compile Include="V20200324\Models\Filter.cs" />
     <Compile Include="V20200324\Models\FirewallRule.cs" />
     <Compile Include="V20200324\Models\FirewallRuleInfo.cs" />
+    <Compile Include="V20200324\Models\FirewallTemplate.cs" />
+    <Compile Include="V20200324\Models\FirewallTemplateApplyRecord.cs" />
+    <Compile Include="V20200324\Models\FirewallTemplateApplyRecordDetail.cs" />
+    <Compile Include="V20200324\Models\FirewallTemplateRule.cs" />
+    <Compile Include="V20200324\Models\FirewallTemplateRuleInfo.cs" />
     <Compile Include="V20200324\Models\GeneralResourceQuota.cs" />
     <Compile Include="V20200324\Models\ImportKeyPairRequest.cs" />
     <Compile Include="V20200324\Models\ImportKeyPairResponse.cs" />
@@ -202,6 +227,7 @@
     <Compile Include="V20200324\Models\Instance.cs" />
     <Compile Include="V20200324\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20200324\Models\InstanceDeniedActions.cs" />
+    <Compile Include="V20200324\Models\InstanceIdentifier.cs" />
     <Compile Include="V20200324\Models\InstancePrice.cs" />
     <Compile Include="V20200324\Models\InstancePriceDetail.cs" />
     <Compile Include="V20200324\Models\InstanceReturnable.cs" />
@@ -229,6 +255,8 @@
     <Compile Include="V20200324\Models\ModifyFirewallRuleDescriptionResponse.cs" />
     <Compile Include="V20200324\Models\ModifyFirewallRulesRequest.cs" />
     <Compile Include="V20200324\Models\ModifyFirewallRulesResponse.cs" />
+    <Compile Include="V20200324\Models\ModifyFirewallTemplateRequest.cs" />
+    <Compile Include="V20200324\Models\ModifyFirewallTemplateResponse.cs" />
     <Compile Include="V20200324\Models\ModifyInstancesAttributeRequest.cs" />
     <Compile Include="V20200324\Models\ModifyInstancesAttributeResponse.cs" />
     <Compile Include="V20200324\Models\ModifyInstancesBundleRequest.cs" />
@@ -253,10 +281,14 @@
     <Compile Include="V20200324\Models\RenewDisksResponse.cs" />
     <Compile Include="V20200324\Models\RenewInstancesRequest.cs" />
     <Compile Include="V20200324\Models\RenewInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\ReplaceFirewallTemplateRuleRequest.cs" />
+    <Compile Include="V20200324\Models\ReplaceFirewallTemplateRuleResponse.cs" />
     <Compile Include="V20200324\Models\RerunDockerContainerRequest.cs" />
     <Compile Include="V20200324\Models\RerunDockerContainerResponse.cs" />
     <Compile Include="V20200324\Models\ResetAttachCcnRequest.cs" />
     <Compile Include="V20200324\Models\ResetAttachCcnResponse.cs" />
+    <Compile Include="V20200324\Models\ResetFirewallTemplateRulesRequest.cs" />
+    <Compile Include="V20200324\Models\ResetFirewallTemplateRulesResponse.cs" />
     <Compile Include="V20200324\Models\ResetInstanceBlueprint.cs" />
     <Compile Include="V20200324\Models\ResetInstanceRequest.cs" />
     <Compile Include="V20200324\Models\ResetInstanceResponse.cs" />

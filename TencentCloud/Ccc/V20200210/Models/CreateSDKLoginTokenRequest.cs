@@ -36,6 +36,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("SeatUserId")]
         public string SeatUserId{ get; set; }
 
+        /// <summary>
+        /// 生成的token是否一次性校验
+        /// </summary>
+        [JsonProperty("OnlyOnce")]
+        public bool? OnlyOnce{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "SeatUserId", this.SeatUserId);
+            this.SetParamSimple(map, prefix + "OnlyOnce", this.OnlyOnce);
         }
     }
 }

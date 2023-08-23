@@ -94,6 +94,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("AutoVoucher")]
         public bool? AutoVoucher{ get; set; }
 
+        /// <summary>
+        /// 防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
+        /// </summary>
+        [JsonProperty("FirewallTemplateId")]
+        public string FirewallTemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +117,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamObj(map, prefix + "LoginConfiguration.", this.LoginConfiguration);
             this.SetParamArrayObj(map, prefix + "Containers.", this.Containers);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+            this.SetParamSimple(map, prefix + "FirewallTemplateId", this.FirewallTemplateId);
         }
     }
 }

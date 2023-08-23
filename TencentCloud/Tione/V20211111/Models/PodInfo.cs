@@ -38,6 +38,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
+        /// <summary>
+        /// pod状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "IP", this.IP);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

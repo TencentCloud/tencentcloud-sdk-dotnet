@@ -168,6 +168,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ImageType")]
         public string ImageType{ get; set; }
 
+        /// <summary>
+        /// SSH配置
+        /// </summary>
+        [JsonProperty("SSHConfig")]
+        public SSHConfig SSHConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -197,6 +203,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "DataConfigs.", this.DataConfigs);
             this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
             this.SetParamSimple(map, prefix + "ImageType", this.ImageType);
+            this.SetParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
         }
     }
 }

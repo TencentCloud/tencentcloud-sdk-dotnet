@@ -112,7 +112,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 签署人校验方式
         /// VerifyCheck: 人脸识别（默认）
-        /// MobileCheck：手机号验证
+        /// MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
         /// 参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
         /// </summary>
         [JsonProperty("ApproverVerifyType")]

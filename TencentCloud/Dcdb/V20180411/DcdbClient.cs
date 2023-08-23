@@ -1699,50 +1699,6 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 已废弃接口
-        /// 
-        /// 本接口（DescribeSqlLogs）用于获取实例SQL日志。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSqlLogsRequest"/></param>
-        /// <returns><see cref="DescribeSqlLogsResponse"/></returns>
-        public async Task<DescribeSqlLogsResponse> DescribeSqlLogs(DescribeSqlLogsRequest req)
-        {
-             JsonResponseModel<DescribeSqlLogsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSqlLogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSqlLogsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 已废弃接口
-        /// 
-        /// 本接口（DescribeSqlLogs）用于获取实例SQL日志。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSqlLogsRequest"/></param>
-        /// <returns><see cref="DescribeSqlLogsResponse"/></returns>
-        public DescribeSqlLogsResponse DescribeSqlLogsSync(DescribeSqlLogsRequest req)
-        {
-             JsonResponseModel<DescribeSqlLogsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSqlLogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSqlLogsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（DescribeUserTasks）用于拉取用户任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUserTasksRequest"/></param>
