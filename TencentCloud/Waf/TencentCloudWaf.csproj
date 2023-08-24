@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.831</VersionPrefix>
+    <VersionPrefix>3.0.832</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,8 +64,12 @@
     <Compile Include="V20180125\Models\AddCustomWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\AddDomainWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\AddDomainWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\AddSpartaProtectionAutoRequest.cs" />
+    <Compile Include="V20180125\Models\AddSpartaProtectionAutoResponse.cs" />
     <Compile Include="V20180125\Models\AddSpartaProtectionRequest.cs" />
     <Compile Include="V20180125\Models\AddSpartaProtectionResponse.cs" />
+    <Compile Include="V20180125\Models\AddSpartaProtectionsAutoRequest.cs" />
+    <Compile Include="V20180125\Models\AddSpartaProtectionsAutoResponse.cs" />
     <Compile Include="V20180125\Models\AttackLogInfo.cs" />
     <Compile Include="V20180125\Models\AutoDenyDetail.cs" />
     <Compile Include="V20180125\Models\BotPkg.cs" />
@@ -73,6 +77,9 @@
     <Compile Include="V20180125\Models\BotStatPointItem.cs" />
     <Compile Include="V20180125\Models\CdcCluster.cs" />
     <Compile Include="V20180125\Models\CdcRegion.cs" />
+    <Compile Include="V20180125\Models\ClbDomainsInfo.cs" />
+    <Compile Include="V20180125\Models\ClbHostResult.cs" />
+    <Compile Include="V20180125\Models\ClbHostsParams.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportRequest.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\CreateHostRequest.cs" />
@@ -87,10 +94,14 @@
     <Compile Include="V20180125\Models\DeleteDomainWhiteRulesResponse.cs" />
     <Compile Include="V20180125\Models\DeleteDownloadRecordRequest.cs" />
     <Compile Include="V20180125\Models\DeleteDownloadRecordResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteHostRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteHostResponse.cs" />
     <Compile Include="V20180125\Models\DeleteIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\DeleteIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DeleteSessionRequest.cs" />
     <Compile Include="V20180125\Models\DeleteSessionResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteSpartaProtectionRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteSpartaProtectionResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAccessExportsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAccessExportsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAccessFastAnalysisRequest.cs" />
@@ -103,17 +114,31 @@
     <Compile Include="V20180125\Models\DescribeAttackOverviewResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAutoDenyIPRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAutoDenyIPResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeCiphersDetailRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeCiphersDetailResponse.cs" />
     <Compile Include="V20180125\Models\DescribeCustomRulesRspRuleListItem.cs" />
     <Compile Include="V20180125\Models\DescribeCustomWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\DescribeCustomWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainCountInfoRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainCountInfoResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainDetailsClbRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainDetailsClbResponse.cs" />
     <Compile Include="V20180125\Models\DescribeDomainDetailsSaasRequest.cs" />
     <Compile Include="V20180125\Models\DescribeDomainDetailsSaasResponse.cs" />
     <Compile Include="V20180125\Models\DescribeDomainWhiteRulesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeDomainWhiteRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeDomainsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeDomainsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeFindDomainListRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeFindDomainListResponse.cs" />
     <Compile Include="V20180125\Models\DescribeFlowTrendRequest.cs" />
     <Compile Include="V20180125\Models\DescribeFlowTrendResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeHostLimitRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeHostLimitResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeHostRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeHostResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeHostsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeHostsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeIpAccessControlRequest.cs" />
@@ -128,24 +153,33 @@
     <Compile Include="V20180125\Models\DescribePolicyStatusResponse.cs" />
     <Compile Include="V20180125\Models\DescribeRuleLimitRequest.cs" />
     <Compile Include="V20180125\Models\DescribeRuleLimitResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeTlsVersionRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeTlsVersionResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserCdcClbWafRegionsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeUserCdcClbWafRegionsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserClbWafRegionsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeUserClbWafRegionsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeUserDomainInfoRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeUserDomainInfoResponse.cs" />
     <Compile Include="V20180125\Models\DescribeVipInfoRequest.cs" />
     <Compile Include="V20180125\Models\DescribeVipInfoResponse.cs" />
     <Compile Include="V20180125\Models\DescribeWafAutoDenyRulesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeWafAutoDenyRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeWafAutoDenyStatusRequest.cs" />
     <Compile Include="V20180125\Models\DescribeWafAutoDenyStatusResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeWafInfoRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeWafInfoResponse.cs" />
     <Compile Include="V20180125\Models\DescribeWafThreatenIntelligenceRequest.cs" />
     <Compile Include="V20180125\Models\DescribeWafThreatenIntelligenceResponse.cs" />
     <Compile Include="V20180125\Models\DomainInfo.cs" />
     <Compile Include="V20180125\Models\DomainPackageNew.cs" />
+    <Compile Include="V20180125\Models\DomainURI.cs" />
     <Compile Include="V20180125\Models\DomainsPartInfo.cs" />
     <Compile Include="V20180125\Models\DownloadAttackRecordInfo.cs" />
     <Compile Include="V20180125\Models\ExportAccessInfo.cs" />
+    <Compile Include="V20180125\Models\FailedInfo.cs" />
     <Compile Include="V20180125\Models\FiltersItemNew.cs" />
+    <Compile Include="V20180125\Models\FindAllDomainDetail.cs" />
     <Compile Include="V20180125\Models\FraudPkg.cs" />
     <Compile Include="V20180125\Models\GetAttackDownloadRecordsRequest.cs" />
     <Compile Include="V20180125\Models\GetAttackDownloadRecordsResponse.cs" />
@@ -153,7 +187,9 @@
     <Compile Include="V20180125\Models\GetAttackHistogramResponse.cs" />
     <Compile Include="V20180125\Models\GetAttackTotalCountRequest.cs" />
     <Compile Include="V20180125\Models\GetAttackTotalCountResponse.cs" />
+    <Compile Include="V20180125\Models\HostDel.cs" />
     <Compile Include="V20180125\Models\HostRecord.cs" />
+    <Compile Include="V20180125\Models\HostStatus.cs" />
     <Compile Include="V20180125\Models\InstanceInfo.cs" />
     <Compile Include="V20180125\Models\IpAccessControlData.cs" />
     <Compile Include="V20180125\Models\IpAccessControlItem.cs" />
@@ -170,8 +206,24 @@
     <Compile Include="V20180125\Models\ModifyCustomRuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyCustomWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\ModifyCustomWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyDomainIpv6StatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyDomainIpv6StatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyDomainWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\ModifyDomainWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyDomainsCLSStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyDomainsCLSStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyHostFlowModeRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyHostFlowModeResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyHostModeRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyHostModeResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyHostRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyHostResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyHostStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyHostStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyProtectionStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyProtectionStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifySpartaProtectionModeRequest.cs" />
+    <Compile Include="V20180125\Models\ModifySpartaProtectionModeResponse.cs" />
     <Compile Include="V20180125\Models\ModifySpartaProtectionRequest.cs" />
     <Compile Include="V20180125\Models\ModifySpartaProtectionResponse.cs" />
     <Compile Include="V20180125\Models\ModifyWafAutoDenyRulesRequest.cs" />
@@ -186,18 +238,24 @@
     <Compile Include="V20180125\Models\PostAttackDownloadTaskRequest.cs" />
     <Compile Include="V20180125\Models\PostAttackDownloadTaskResponse.cs" />
     <Compile Include="V20180125\Models\QPSPackageNew.cs" />
+    <Compile Include="V20180125\Models\RefreshAccessCheckResultRequest.cs" />
+    <Compile Include="V20180125\Models\RefreshAccessCheckResultResponse.cs" />
     <Compile Include="V20180125\Models\ResponseCode.cs" />
     <Compile Include="V20180125\Models\RuleList.cs" />
     <Compile Include="V20180125\Models\SearchAccessLogRequest.cs" />
     <Compile Include="V20180125\Models\SearchAccessLogResponse.cs" />
     <Compile Include="V20180125\Models\SearchAttackLogRequest.cs" />
     <Compile Include="V20180125\Models\SearchAttackLogResponse.cs" />
+    <Compile Include="V20180125\Models\SearchItem.cs" />
     <Compile Include="V20180125\Models\SpartaProtectionPort.cs" />
     <Compile Include="V20180125\Models\Strategy.cs" />
     <Compile Include="V20180125\Models\SwitchDomainRulesRequest.cs" />
     <Compile Include="V20180125\Models\SwitchDomainRulesResponse.cs" />
+    <Compile Include="V20180125\Models\TLSCiphers.cs" />
+    <Compile Include="V20180125\Models\TLSVersion.cs" />
     <Compile Include="V20180125\Models\UpsertIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\UpsertIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\UserDomainInfo.cs" />
     <Compile Include="V20180125\Models\VipInfo.cs" />
     <Compile Include="V20180125\Models\WafRuleLimit.cs" />
     <Compile Include="V20180125\Models\WafThreatenIntelligenceDetails.cs" />

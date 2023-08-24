@@ -1299,7 +1299,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 创建电子印章
+        /// 本接口（CreateSeal）用于创建企业电子印章，支持创建企业公章，合同章，财务专用章和人事专用章创建。
         /// </summary>
         /// <param name="req"><see cref="CreateSealRequest"/></param>
         /// <returns><see cref="CreateSealResponse"/></returns>
@@ -1319,7 +1319,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 创建电子印章
+        /// 本接口（CreateSeal）用于创建企业电子印章，支持创建企业公章，合同章，财务专用章和人事专用章创建。
         /// </summary>
         /// <param name="req"><see cref="CreateSealRequest"/></param>
         /// <returns><see cref="CreateSealResponse"/></returns>

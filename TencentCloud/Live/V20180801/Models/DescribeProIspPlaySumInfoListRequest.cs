@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 起始时间，
         /// 使用UTC格式时间，
         /// 例如：2019-01-08T10:00:00Z。
-        /// 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 结束时间，
         /// 使用UTC格式时间，
         /// 例如：2019-01-08T10:00:00Z。
-        /// 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)。
         /// 注：EndTime 和 StartTime 只支持最近1天的数据查询。
         /// </summary>
         [JsonProperty("EndTime")]

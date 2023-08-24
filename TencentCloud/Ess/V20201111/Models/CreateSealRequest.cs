@@ -25,37 +25,45 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 操作人信息
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 电子印章名字
+        /// 电子印章名字，1-50个中文字符。
         /// </summary>
         [JsonProperty("SealName")]
         public string SealName{ get; set; }
 
         /// <summary>
-        /// 应用相关信息
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+        /// 本接口支持上传图片印章及系统直接生成印章；
+        /// 如果要使用系统生成印章，此值传：SealGenerateSourceSystem；
+        /// 如果要使用图片上传请传字段 Image
         /// </summary>
         [JsonProperty("GenerateSource")]
         public string GenerateSource{ get; set; }
 
         /// <summary>
-        /// 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
+        /// 电子印章类型：
+        /// OFFICIAL-公章；
+        /// CONTRACT-合同专用章;
+        /// FINANCE-合财务专用章;
+        /// PERSONNEL-人事专用章.
         /// </summary>
         [JsonProperty("SealType")]
         public string SealType{ get; set; }
 
         /// <summary>
-        /// 电子印章图片文件名称
+        /// 电子印章图片文件名称，1-50个中文字符。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
@@ -90,7 +98,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Color{ get; set; }
 
         /// <summary>
-        /// 暂时不支持横向文字设置
+        /// 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号）
         /// </summary>
         [JsonProperty("SealHorizontalText")]
         public string SealHorizontalText{ get; set; }
@@ -113,6 +121,25 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("FileToken")]
         public string FileToken{ get; set; }
 
+        /// <summary>
+        /// 印章样式:
+        /// 
+        /// cycle:圆形印章;
+        /// ellipse:椭圆印章;
+        /// 注：默认圆形印章
+        /// </summary>
+        [JsonProperty("SealStyle")]
+        public string SealStyle{ get; set; }
+
+        /// <summary>
+        /// 印章尺寸取值描述：
+        /// 42_42 圆形企业公章直径42mm；
+        /// 40_40 圆形企业印章直径40mm；
+        /// 45_30 椭圆形印章45mm x 30mm;
+        /// </summary>
+        [JsonProperty("SealSize")]
+        public string SealSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +160,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "SealChordText", this.SealChordText);
             this.SetParamSimple(map, prefix + "SealCentralType", this.SealCentralType);
             this.SetParamSimple(map, prefix + "FileToken", this.FileToken);
+            this.SetParamSimple(map, prefix + "SealStyle", this.SealStyle);
+            this.SetParamSimple(map, prefix + "SealSize", this.SealSize);
         }
     }
 }

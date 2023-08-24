@@ -32,9 +32,17 @@ namespace TencentCloud.Gme.V20180711.Models
 
         /// <summary>
         /// 需要删除送检的用户号。示例：1234
+        /// (若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
         /// </summary>
         [JsonProperty("UserId")]
         public ulong? UserId{ get; set; }
+
+        /// <summary>
+        /// 需要删除送检的用户号。示例："1234"
+        /// (若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+        /// </summary>
+        [JsonProperty("UserIdString")]
+        public string UserIdString{ get; set; }
 
 
         /// <summary>
@@ -44,6 +52,7 @@ namespace TencentCloud.Gme.V20180711.Models
         {
             this.SetParamSimple(map, prefix + "BizId", this.BizId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "UserIdString", this.UserIdString);
         }
     }
 }

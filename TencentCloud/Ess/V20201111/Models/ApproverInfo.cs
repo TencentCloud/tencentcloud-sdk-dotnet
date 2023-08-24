@@ -54,9 +54,9 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 组织机构名称。
-        /// 如果签署方是企业签署方(approverType = 1 或者 approverType = 3)， 则企业名称必填。
-        /// 
-        /// 注: `请确认该名称与企业营业执照中注册的名称一致 ; 如果名称中包含英文括号()，请使用中文括号（）代替。`
+        /// 请确认该名称与企业营业执照中注册的名称一致。
+        /// 如果名称中包含英文括号()，请使用中文括号（）代替。
+        /// 如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }

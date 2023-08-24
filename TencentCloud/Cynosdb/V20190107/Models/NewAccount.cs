@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
+        /// 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// 主机
+        /// 主机(%或ipv4地址)
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

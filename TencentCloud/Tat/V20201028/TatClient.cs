@@ -179,6 +179,46 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
+        /// 接口用于创建注册码。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRegisterCodeRequest"/></param>
+        /// <returns><see cref="CreateRegisterCodeResponse"/></returns>
+        public async Task<CreateRegisterCodeResponse> CreateRegisterCode(CreateRegisterCodeRequest req)
+        {
+             JsonResponseModel<CreateRegisterCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRegisterCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRegisterCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口用于创建注册码。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRegisterCodeRequest"/></param>
+        /// <returns><see cref="CreateRegisterCodeResponse"/></returns>
+        public CreateRegisterCodeResponse CreateRegisterCodeSync(CreateRegisterCodeRequest req)
+        {
+             JsonResponseModel<CreateRegisterCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRegisterCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRegisterCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口用于删除命令。
         /// 如果命令与执行器关联，则无法被删除。
         /// </summary>
@@ -252,6 +292,86 @@ namespace TencentCloud.Tat.V20201028
              {
                  var strResp = this.InternalRequestSync(req, "DeleteInvoker");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInvokerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于批量删除注册码。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRegisterCodesRequest"/></param>
+        /// <returns><see cref="DeleteRegisterCodesResponse"/></returns>
+        public async Task<DeleteRegisterCodesResponse> DeleteRegisterCodes(DeleteRegisterCodesRequest req)
+        {
+             JsonResponseModel<DeleteRegisterCodesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRegisterCodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRegisterCodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于批量删除注册码。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRegisterCodesRequest"/></param>
+        /// <returns><see cref="DeleteRegisterCodesResponse"/></returns>
+        public DeleteRegisterCodesResponse DeleteRegisterCodesSync(DeleteRegisterCodesRequest req)
+        {
+             JsonResponseModel<DeleteRegisterCodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRegisterCodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRegisterCodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口用于删除托管实例。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRegisterInstanceRequest"/></param>
+        /// <returns><see cref="DeleteRegisterInstanceResponse"/></returns>
+        public async Task<DeleteRegisterInstanceResponse> DeleteRegisterInstance(DeleteRegisterInstanceRequest req)
+        {
+             JsonResponseModel<DeleteRegisterInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRegisterInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRegisterInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口用于删除托管实例。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRegisterInstanceRequest"/></param>
+        /// <returns><see cref="DeleteRegisterInstanceResponse"/></returns>
+        public DeleteRegisterInstanceResponse DeleteRegisterInstanceSync(DeleteRegisterInstanceRequest req)
+        {
+             JsonResponseModel<DeleteRegisterInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRegisterInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRegisterInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -543,6 +663,86 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
+        /// 接口用于查询注册码信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegisterCodesRequest"/></param>
+        /// <returns><see cref="DescribeRegisterCodesResponse"/></returns>
+        public async Task<DescribeRegisterCodesResponse> DescribeRegisterCodes(DescribeRegisterCodesRequest req)
+        {
+             JsonResponseModel<DescribeRegisterCodesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRegisterCodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegisterCodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口用于查询注册码信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegisterCodesRequest"/></param>
+        /// <returns><see cref="DescribeRegisterCodesResponse"/></returns>
+        public DescribeRegisterCodesResponse DescribeRegisterCodesSync(DescribeRegisterCodesRequest req)
+        {
+             JsonResponseModel<DescribeRegisterCodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRegisterCodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegisterCodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口用于查询被托管的实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegisterInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRegisterInstancesResponse"/></returns>
+        public async Task<DescribeRegisterInstancesResponse> DescribeRegisterInstances(DescribeRegisterInstancesRequest req)
+        {
+             JsonResponseModel<DescribeRegisterInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRegisterInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegisterInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口用于查询被托管的实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegisterInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRegisterInstancesResponse"/></returns>
+        public DescribeRegisterInstancesResponse DescribeRegisterInstancesSync(DescribeRegisterInstancesRequest req)
+        {
+             JsonResponseModel<DescribeRegisterInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRegisterInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegisterInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口用于停止执行器。
         /// </summary>
         /// <param name="req"><see cref="DisableInvokerRequest"/></param>
@@ -574,6 +774,46 @@ namespace TencentCloud.Tat.V20201028
              {
                  var strResp = this.InternalRequestSync(req, "DisableInvoker");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableInvokerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于批量禁用注册码。
+        /// </summary>
+        /// <param name="req"><see cref="DisableRegisterCodesRequest"/></param>
+        /// <returns><see cref="DisableRegisterCodesResponse"/></returns>
+        public async Task<DisableRegisterCodesResponse> DisableRegisterCodes(DisableRegisterCodesRequest req)
+        {
+             JsonResponseModel<DisableRegisterCodesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableRegisterCodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableRegisterCodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于批量禁用注册码。
+        /// </summary>
+        /// <param name="req"><see cref="DisableRegisterCodesRequest"/></param>
+        /// <returns><see cref="DisableRegisterCodesResponse"/></returns>
+        public DisableRegisterCodesResponse DisableRegisterCodesSync(DisableRegisterCodesRequest req)
+        {
+             JsonResponseModel<DisableRegisterCodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableRegisterCodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableRegisterCodesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -746,6 +986,46 @@ namespace TencentCloud.Tat.V20201028
              {
                  var strResp = this.InternalRequestSync(req, "ModifyInvoker");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInvokerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口用于修改托管实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRegisterInstanceRequest"/></param>
+        /// <returns><see cref="ModifyRegisterInstanceResponse"/></returns>
+        public async Task<ModifyRegisterInstanceResponse> ModifyRegisterInstance(ModifyRegisterInstanceRequest req)
+        {
+             JsonResponseModel<ModifyRegisterInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRegisterInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRegisterInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口用于修改托管实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRegisterInstanceRequest"/></param>
+        /// <returns><see cref="ModifyRegisterInstanceResponse"/></returns>
+        public ModifyRegisterInstanceResponse ModifyRegisterInstanceSync(ModifyRegisterInstanceRequest req)
+        {
+             JsonResponseModel<ModifyRegisterInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRegisterInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRegisterInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

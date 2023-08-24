@@ -213,6 +213,86 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 一键接入
+        /// </summary>
+        /// <param name="req"><see cref="AddSpartaProtectionAutoRequest"/></param>
+        /// <returns><see cref="AddSpartaProtectionAutoResponse"/></returns>
+        public async Task<AddSpartaProtectionAutoResponse> AddSpartaProtectionAuto(AddSpartaProtectionAutoRequest req)
+        {
+             JsonResponseModel<AddSpartaProtectionAutoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddSpartaProtectionAuto");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSpartaProtectionAutoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 一键接入
+        /// </summary>
+        /// <param name="req"><see cref="AddSpartaProtectionAutoRequest"/></param>
+        /// <returns><see cref="AddSpartaProtectionAutoResponse"/></returns>
+        public AddSpartaProtectionAutoResponse AddSpartaProtectionAutoSync(AddSpartaProtectionAutoRequest req)
+        {
+             JsonResponseModel<AddSpartaProtectionAutoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddSpartaProtectionAuto");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSpartaProtectionAutoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量添加域名
+        /// </summary>
+        /// <param name="req"><see cref="AddSpartaProtectionsAutoRequest"/></param>
+        /// <returns><see cref="AddSpartaProtectionsAutoResponse"/></returns>
+        public async Task<AddSpartaProtectionsAutoResponse> AddSpartaProtectionsAuto(AddSpartaProtectionsAutoRequest req)
+        {
+             JsonResponseModel<AddSpartaProtectionsAutoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddSpartaProtectionsAuto");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSpartaProtectionsAutoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量添加域名
+        /// </summary>
+        /// <param name="req"><see cref="AddSpartaProtectionsAutoRequest"/></param>
+        /// <returns><see cref="AddSpartaProtectionsAutoResponse"/></returns>
+        public AddSpartaProtectionsAutoResponse AddSpartaProtectionsAutoSync(AddSpartaProtectionsAutoRequest req)
+        {
+             JsonResponseModel<AddSpartaProtectionsAutoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddSpartaProtectionsAuto");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSpartaProtectionsAutoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于创建访问日志导出
         /// </summary>
         /// <param name="req"><see cref="CreateAccessExportRequest"/></param>
@@ -493,6 +573,48 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 删除CLB-WAF防护域名
+        /// 支持批量操作
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHostRequest"/></param>
+        /// <returns><see cref="DeleteHostResponse"/></returns>
+        public async Task<DeleteHostResponse> DeleteHost(DeleteHostRequest req)
+        {
+             JsonResponseModel<DeleteHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除CLB-WAF防护域名
+        /// 支持批量操作
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHostRequest"/></param>
+        /// <returns><see cref="DeleteHostResponse"/></returns>
+        public DeleteHostResponse DeleteHostSync(DeleteHostRequest req)
+        {
+             JsonResponseModel<DeleteHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Waf IP黑白名单Delete接口
         /// </summary>
         /// <param name="req"><see cref="DeleteIpAccessControlRequest"/></param>
@@ -564,6 +686,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSession");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// waf斯巴达-删除防护域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSpartaProtectionRequest"/></param>
+        /// <returns><see cref="DeleteSpartaProtectionResponse"/></returns>
+        public async Task<DeleteSpartaProtectionResponse> DeleteSpartaProtection(DeleteSpartaProtectionRequest req)
+        {
+             JsonResponseModel<DeleteSpartaProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSpartaProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSpartaProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// waf斯巴达-删除防护域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSpartaProtectionRequest"/></param>
+        /// <returns><see cref="DeleteSpartaProtectionResponse"/></returns>
+        public DeleteSpartaProtectionResponse DeleteSpartaProtectionSync(DeleteSpartaProtectionRequest req)
+        {
+             JsonResponseModel<DeleteSpartaProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSpartaProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSpartaProtectionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -817,6 +979,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 查询加密套件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCiphersDetailRequest"/></param>
+        /// <returns><see cref="DescribeCiphersDetailResponse"/></returns>
+        public async Task<DescribeCiphersDetailResponse> DescribeCiphersDetail(DescribeCiphersDetailRequest req)
+        {
+             JsonResponseModel<DescribeCiphersDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCiphersDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCiphersDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询加密套件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCiphersDetailRequest"/></param>
+        /// <returns><see cref="DescribeCiphersDetailResponse"/></returns>
+        public DescribeCiphersDetailResponse DescribeCiphersDetailSync(DescribeCiphersDetailRequest req)
+        {
+             JsonResponseModel<DescribeCiphersDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCiphersDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCiphersDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取防护配置中的精准白名单策略列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomWhiteRuleRequest"/></param>
@@ -848,6 +1050,86 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCustomWhiteRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名概况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainCountInfoRequest"/></param>
+        /// <returns><see cref="DescribeDomainCountInfoResponse"/></returns>
+        public async Task<DescribeDomainCountInfoResponse> DescribeDomainCountInfo(DescribeDomainCountInfoRequest req)
+        {
+             JsonResponseModel<DescribeDomainCountInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainCountInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainCountInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名概况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainCountInfoRequest"/></param>
+        /// <returns><see cref="DescribeDomainCountInfoResponse"/></returns>
+        public DescribeDomainCountInfoResponse DescribeDomainCountInfoSync(DescribeDomainCountInfoRequest req)
+        {
+             JsonResponseModel<DescribeDomainCountInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainCountInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainCountInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取一个clb域名详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainDetailsClbRequest"/></param>
+        /// <returns><see cref="DescribeDomainDetailsClbResponse"/></returns>
+        public async Task<DescribeDomainDetailsClbResponse> DescribeDomainDetailsClb(DescribeDomainDetailsClbRequest req)
+        {
+             JsonResponseModel<DescribeDomainDetailsClbResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainDetailsClb");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainDetailsClbResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取一个clb域名详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainDetailsClbRequest"/></param>
+        /// <returns><see cref="DescribeDomainDetailsClbResponse"/></returns>
+        public DescribeDomainDetailsClbResponse DescribeDomainDetailsClbSync(DescribeDomainDetailsClbRequest req)
+        {
+             JsonResponseModel<DescribeDomainDetailsClbResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainDetailsClb");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainDetailsClbResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -977,6 +1259,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 获取发现域名列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFindDomainListRequest"/></param>
+        /// <returns><see cref="DescribeFindDomainListResponse"/></returns>
+        public async Task<DescribeFindDomainListResponse> DescribeFindDomainList(DescribeFindDomainListRequest req)
+        {
+             JsonResponseModel<DescribeFindDomainListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFindDomainList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFindDomainListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取发现域名列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFindDomainListRequest"/></param>
+        /// <returns><see cref="DescribeFindDomainListResponse"/></returns>
+        public DescribeFindDomainListResponse DescribeFindDomainListSync(DescribeFindDomainListRequest req)
+        {
+             JsonResponseModel<DescribeFindDomainListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFindDomainList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFindDomainListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取waf流量访问趋势
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowTrendRequest"/></param>
@@ -1008,6 +1330,126 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFlowTrend");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf获取防护域名详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostRequest"/></param>
+        /// <returns><see cref="DescribeHostResponse"/></returns>
+        public async Task<DescribeHostResponse> DescribeHost(DescribeHostRequest req)
+        {
+             JsonResponseModel<DescribeHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf获取防护域名详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostRequest"/></param>
+        /// <returns><see cref="DescribeHostResponse"/></returns>
+        public DescribeHostResponse DescribeHostSync(DescribeHostRequest req)
+        {
+             JsonResponseModel<DescribeHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加域名的首先验证是否购买了套餐，是否没有达到购买套餐的限制，域名是否已经添加
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostLimitRequest"/></param>
+        /// <returns><see cref="DescribeHostLimitResponse"/></returns>
+        public async Task<DescribeHostLimitResponse> DescribeHostLimit(DescribeHostLimitRequest req)
+        {
+             JsonResponseModel<DescribeHostLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加域名的首先验证是否购买了套餐，是否没有达到购买套餐的限制，域名是否已经添加
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostLimitRequest"/></param>
+        /// <returns><see cref="DescribeHostLimitResponse"/></returns>
+        public DescribeHostLimitResponse DescribeHostLimitSync(DescribeHostLimitRequest req)
+        {
+             JsonResponseModel<DescribeHostLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf中获取防护域名列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostsRequest"/></param>
+        /// <returns><see cref="DescribeHostsResponse"/></returns>
+        public async Task<DescribeHostsResponse> DescribeHosts(DescribeHostsRequest req)
+        {
+             JsonResponseModel<DescribeHostsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHosts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf中获取防护域名列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostsRequest"/></param>
+        /// <returns><see cref="DescribeHostsResponse"/></returns>
+        public DescribeHostsResponse DescribeHostsSync(DescribeHostsRequest req)
+        {
+             JsonResponseModel<DescribeHostsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHosts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1297,6 +1739,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 查询用户TLS版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTlsVersionRequest"/></param>
+        /// <returns><see cref="DescribeTlsVersionResponse"/></returns>
+        public async Task<DescribeTlsVersionResponse> DescribeTlsVersion(DescribeTlsVersionRequest req)
+        {
+             JsonResponseModel<DescribeTlsVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTlsVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTlsVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户TLS版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTlsVersionRequest"/></param>
+        /// <returns><see cref="DescribeTlsVersionResponse"/></returns>
+        public DescribeTlsVersionResponse DescribeTlsVersionSync(DescribeTlsVersionRequest req)
+        {
+             JsonResponseModel<DescribeTlsVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTlsVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTlsVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在CDC场景下，负载均衡型WAF的添加、编辑域名配置的时候，需要展示CDC负载均衡型WAF（cdc-clb-waf)支持的地域列表，通过DescribeUserCdcClbWafRegions既可以获得当前对客户已经开放的地域列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUserCdcClbWafRegionsRequest"/></param>
@@ -1368,6 +1850,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUserClbWafRegions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserClbWafRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询saas和clb的域名信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserDomainInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserDomainInfoResponse"/></returns>
+        public async Task<DescribeUserDomainInfoResponse> DescribeUserDomainInfo(DescribeUserDomainInfoRequest req)
+        {
+             JsonResponseModel<DescribeUserDomainInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserDomainInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserDomainInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询saas和clb的域名信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserDomainInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserDomainInfoResponse"/></returns>
+        public DescribeUserDomainInfoResponse DescribeUserDomainInfoSync(DescribeUserDomainInfoRequest req)
+        {
+             JsonResponseModel<DescribeUserDomainInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserDomainInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserDomainInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1488,6 +2010,50 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeWafAutoDenyStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafAutoDenyStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取负载均衡绑定的WAF信息，可以根据租户负载均衡实例ID、负载均衡监听器ID、负载均衡的域名信息来查询对应绑定的 Waf的状态信息。
+        /// 查询的范围：负载均衡实例ID、负载均衡实例ID+监听器ID、负载均衡实例ID+监听器ID+域名。
+        /// 可能的错误码：ResourceNotFound（没有找到对应的资源）、UnsupportedRegion（目前clb-waf只支持北京、广州、上海、成都、重庆、香港地域）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWafInfoRequest"/></param>
+        /// <returns><see cref="DescribeWafInfoResponse"/></returns>
+        public async Task<DescribeWafInfoResponse> DescribeWafInfo(DescribeWafInfoRequest req)
+        {
+             JsonResponseModel<DescribeWafInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWafInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取负载均衡绑定的WAF信息，可以根据租户负载均衡实例ID、负载均衡监听器ID、负载均衡的域名信息来查询对应绑定的 Waf的状态信息。
+        /// 查询的范围：负载均衡实例ID、负载均衡实例ID+监听器ID、负载均衡实例ID+监听器ID+域名。
+        /// 可能的错误码：ResourceNotFound（没有找到对应的资源）、UnsupportedRegion（目前clb-waf只支持北京、广州、上海、成都、重庆、香港地域）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWafInfoRequest"/></param>
+        /// <returns><see cref="DescribeWafInfoResponse"/></returns>
+        public DescribeWafInfoResponse DescribeWafInfoSync(DescribeWafInfoRequest req)
+        {
+             JsonResponseModel<DescribeWafInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWafInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1817,6 +2383,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 修改ipv6开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainIpv6StatusRequest"/></param>
+        /// <returns><see cref="ModifyDomainIpv6StatusResponse"/></returns>
+        public async Task<ModifyDomainIpv6StatusResponse> ModifyDomainIpv6Status(ModifyDomainIpv6StatusRequest req)
+        {
+             JsonResponseModel<ModifyDomainIpv6StatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDomainIpv6Status");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainIpv6StatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改ipv6开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainIpv6StatusRequest"/></param>
+        /// <returns><see cref="ModifyDomainIpv6StatusResponse"/></returns>
+        public ModifyDomainIpv6StatusResponse ModifyDomainIpv6StatusSync(ModifyDomainIpv6StatusRequest req)
+        {
+             JsonResponseModel<ModifyDomainIpv6StatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDomainIpv6Status");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainIpv6StatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更改某一条规则
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainWhiteRuleRequest"/></param>
@@ -1857,6 +2463,248 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 修改域名列表的访问日志开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainsCLSStatusRequest"/></param>
+        /// <returns><see cref="ModifyDomainsCLSStatusResponse"/></returns>
+        public async Task<ModifyDomainsCLSStatusResponse> ModifyDomainsCLSStatus(ModifyDomainsCLSStatusRequest req)
+        {
+             JsonResponseModel<ModifyDomainsCLSStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDomainsCLSStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainsCLSStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改域名列表的访问日志开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainsCLSStatusRequest"/></param>
+        /// <returns><see cref="ModifyDomainsCLSStatusResponse"/></returns>
+        public ModifyDomainsCLSStatusResponse ModifyDomainsCLSStatusSync(ModifyDomainsCLSStatusRequest req)
+        {
+             JsonResponseModel<ModifyDomainsCLSStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDomainsCLSStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainsCLSStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf编辑防护域名配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHostRequest"/></param>
+        /// <returns><see cref="ModifyHostResponse"/></returns>
+        public async Task<ModifyHostResponse> ModifyHost(ModifyHostRequest req)
+        {
+             JsonResponseModel<ModifyHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf编辑防护域名配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHostRequest"/></param>
+        /// <returns><see cref="ModifyHostResponse"/></returns>
+        public ModifyHostResponse ModifyHostSync(ModifyHostRequest req)
+        {
+             JsonResponseModel<ModifyHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf 设置防护域名的流量模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHostFlowModeRequest"/></param>
+        /// <returns><see cref="ModifyHostFlowModeResponse"/></returns>
+        public async Task<ModifyHostFlowModeResponse> ModifyHostFlowMode(ModifyHostFlowModeRequest req)
+        {
+             JsonResponseModel<ModifyHostFlowModeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyHostFlowMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostFlowModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf 设置防护域名的流量模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHostFlowModeRequest"/></param>
+        /// <returns><see cref="ModifyHostFlowModeResponse"/></returns>
+        public ModifyHostFlowModeResponse ModifyHostFlowModeSync(ModifyHostFlowModeRequest req)
+        {
+             JsonResponseModel<ModifyHostFlowModeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyHostFlowMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostFlowModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf设置防护域名防护状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHostModeRequest"/></param>
+        /// <returns><see cref="ModifyHostModeResponse"/></returns>
+        public async Task<ModifyHostModeResponse> ModifyHostMode(ModifyHostModeRequest req)
+        {
+             JsonResponseModel<ModifyHostModeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyHostMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf设置防护域名防护状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHostModeRequest"/></param>
+        /// <returns><see cref="ModifyHostModeResponse"/></returns>
+        public ModifyHostModeResponse ModifyHostModeSync(ModifyHostModeRequest req)
+        {
+             JsonResponseModel<ModifyHostModeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyHostMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf 设置防护域名WAF开关
+        /// 支持批量操作。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHostStatusRequest"/></param>
+        /// <returns><see cref="ModifyHostStatusResponse"/></returns>
+        public async Task<ModifyHostStatusResponse> ModifyHostStatus(ModifyHostStatusRequest req)
+        {
+             JsonResponseModel<ModifyHostStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyHostStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// clb-waf 设置防护域名WAF开关
+        /// 支持批量操作。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHostStatusRequest"/></param>
+        /// <returns><see cref="ModifyHostStatusResponse"/></returns>
+        public ModifyHostStatusResponse ModifyHostStatusSync(ModifyHostStatusRequest req)
+        {
+             JsonResponseModel<ModifyHostStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyHostStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// waf斯巴达-waf开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProtectionStatusRequest"/></param>
+        /// <returns><see cref="ModifyProtectionStatusResponse"/></returns>
+        public async Task<ModifyProtectionStatusResponse> ModifyProtectionStatus(ModifyProtectionStatusRequest req)
+        {
+             JsonResponseModel<ModifyProtectionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyProtectionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProtectionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// waf斯巴达-waf开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProtectionStatusRequest"/></param>
+        /// <returns><see cref="ModifyProtectionStatusResponse"/></returns>
+        public ModifyProtectionStatusResponse ModifyProtectionStatusSync(ModifyProtectionStatusRequest req)
+        {
+             JsonResponseModel<ModifyProtectionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyProtectionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProtectionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改域名配置
         /// </summary>
         /// <param name="req"><see cref="ModifySpartaProtectionRequest"/></param>
@@ -1888,6 +2736,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "ModifySpartaProtection");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySpartaProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置waf防护状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifySpartaProtectionModeRequest"/></param>
+        /// <returns><see cref="ModifySpartaProtectionModeResponse"/></returns>
+        public async Task<ModifySpartaProtectionModeResponse> ModifySpartaProtectionMode(ModifySpartaProtectionModeRequest req)
+        {
+             JsonResponseModel<ModifySpartaProtectionModeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySpartaProtectionMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySpartaProtectionModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置waf防护状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifySpartaProtectionModeRequest"/></param>
+        /// <returns><see cref="ModifySpartaProtectionModeResponse"/></returns>
+        public ModifySpartaProtectionModeResponse ModifySpartaProtectionModeSync(ModifySpartaProtectionModeRequest req)
+        {
+             JsonResponseModel<ModifySpartaProtectionModeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySpartaProtectionMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySpartaProtectionModeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2048,6 +2936,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "PostAttackDownloadTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostAttackDownloadTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 刷新接入检查的结果，后台会生成接入检查任务
+        /// </summary>
+        /// <param name="req"><see cref="RefreshAccessCheckResultRequest"/></param>
+        /// <returns><see cref="RefreshAccessCheckResultResponse"/></returns>
+        public async Task<RefreshAccessCheckResultResponse> RefreshAccessCheckResult(RefreshAccessCheckResultRequest req)
+        {
+             JsonResponseModel<RefreshAccessCheckResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RefreshAccessCheckResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefreshAccessCheckResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 刷新接入检查的结果，后台会生成接入检查任务
+        /// </summary>
+        /// <param name="req"><see cref="RefreshAccessCheckResultRequest"/></param>
+        /// <returns><see cref="RefreshAccessCheckResultResponse"/></returns>
+        public RefreshAccessCheckResultResponse RefreshAccessCheckResultSync(RefreshAccessCheckResultRequest req)
+        {
+             JsonResponseModel<RefreshAccessCheckResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RefreshAccessCheckResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefreshAccessCheckResultResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

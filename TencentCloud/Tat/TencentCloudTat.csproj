@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32AE5F27-E09B-3F3D-99D7-A434CD61B16D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.831</VersionPrefix>
+    <VersionPrefix>3.0.832</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,10 +57,17 @@
     <Compile Include="V20201028\Models\CreateCommandResponse.cs" />
     <Compile Include="V20201028\Models\CreateInvokerRequest.cs" />
     <Compile Include="V20201028\Models\CreateInvokerResponse.cs" />
+    <Compile Include="V20201028\Models\CreateRegisterCodeRequest.cs" />
+    <Compile Include="V20201028\Models\CreateRegisterCodeResponse.cs" />
+    <Compile Include="V20201028\Models\DefaultParameterConf.cs" />
     <Compile Include="V20201028\Models\DeleteCommandRequest.cs" />
     <Compile Include="V20201028\Models\DeleteCommandResponse.cs" />
     <Compile Include="V20201028\Models\DeleteInvokerRequest.cs" />
     <Compile Include="V20201028\Models\DeleteInvokerResponse.cs" />
+    <Compile Include="V20201028\Models\DeleteRegisterCodesRequest.cs" />
+    <Compile Include="V20201028\Models\DeleteRegisterCodesResponse.cs" />
+    <Compile Include="V20201028\Models\DeleteRegisterInstanceRequest.cs" />
+    <Compile Include="V20201028\Models\DeleteRegisterInstanceResponse.cs" />
     <Compile Include="V20201028\Models\DescribeAutomationAgentStatusRequest.cs" />
     <Compile Include="V20201028\Models\DescribeAutomationAgentStatusResponse.cs" />
     <Compile Include="V20201028\Models\DescribeCommandsRequest.cs" />
@@ -75,8 +82,14 @@
     <Compile Include="V20201028\Models\DescribeInvokersResponse.cs" />
     <Compile Include="V20201028\Models\DescribeRegionsRequest.cs" />
     <Compile Include="V20201028\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeRegisterCodesRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeRegisterCodesResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeRegisterInstancesRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeRegisterInstancesResponse.cs" />
     <Compile Include="V20201028\Models\DisableInvokerRequest.cs" />
     <Compile Include="V20201028\Models\DisableInvokerResponse.cs" />
+    <Compile Include="V20201028\Models\DisableRegisterCodesRequest.cs" />
+    <Compile Include="V20201028\Models\DisableRegisterCodesResponse.cs" />
     <Compile Include="V20201028\Models\EnableInvokerRequest.cs" />
     <Compile Include="V20201028\Models\EnableInvokerResponse.cs" />
     <Compile Include="V20201028\Models\Filter.cs" />
@@ -91,9 +104,13 @@
     <Compile Include="V20201028\Models\ModifyCommandResponse.cs" />
     <Compile Include="V20201028\Models\ModifyInvokerRequest.cs" />
     <Compile Include="V20201028\Models\ModifyInvokerResponse.cs" />
+    <Compile Include="V20201028\Models\ModifyRegisterInstanceRequest.cs" />
+    <Compile Include="V20201028\Models\ModifyRegisterInstanceResponse.cs" />
     <Compile Include="V20201028\Models\PreviewReplacedCommandContentRequest.cs" />
     <Compile Include="V20201028\Models\PreviewReplacedCommandContentResponse.cs" />
     <Compile Include="V20201028\Models\RegionInfo.cs" />
+    <Compile Include="V20201028\Models\RegisterCodeInfo.cs" />
+    <Compile Include="V20201028\Models\RegisterInstanceInfo.cs" />
     <Compile Include="V20201028\Models\RunCommandRequest.cs" />
     <Compile Include="V20201028\Models\RunCommandResponse.cs" />
     <Compile Include="V20201028\Models\ScheduleSettings.cs" />

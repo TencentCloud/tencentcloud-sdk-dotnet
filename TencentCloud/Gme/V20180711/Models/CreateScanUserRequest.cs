@@ -32,9 +32,25 @@ namespace TencentCloud.Gme.V20180711.Models
 
         /// <summary>
         /// 需要新增送检的用户号。示例：1234
+        /// (若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
         /// </summary>
         [JsonProperty("UserId")]
         public ulong? UserId{ get; set; }
+
+        /// <summary>
+        /// 需要新增送检的用户号。示例："1234"
+        /// (若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+        /// </summary>
+        [JsonProperty("UserIdString")]
+        public string UserIdString{ get; set; }
+
+        /// <summary>
+        /// 当前用户送检过期时间，单位：秒。
+        /// 若参数不为0，则在过期时间之后，用户不会被送检。
+        /// 若参数为0，则送检配置不会自动失效。 
+        /// </summary>
+        [JsonProperty("ExpirationTime")]
+        public ulong? ExpirationTime{ get; set; }
 
 
         /// <summary>
@@ -44,6 +60,8 @@ namespace TencentCloud.Gme.V20180711.Models
         {
             this.SetParamSimple(map, prefix + "BizId", this.BizId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "UserIdString", this.UserIdString);
+            this.SetParamSimple(map, prefix + "ExpirationTime", this.ExpirationTime);
         }
     }
 }
