@@ -2225,6 +2225,8 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 已有替代接口ModifyLaunchConfiguration。该接口存在覆盖参数风险，目前官网已隐藏
+        /// 
         /// 本接口（UpgradeLaunchConfiguration）用于升级启动配置。
         /// 
         /// * 本接口用于升级启动配置，采用“完全覆盖”风格，无论之前参数如何，统一按照接口参数设置为新的配置。对于非必填字段，不填写则按照默认值赋值。
@@ -2248,6 +2250,8 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 已有替代接口ModifyLaunchConfiguration。该接口存在覆盖参数风险，目前官网已隐藏
+        /// 
         /// 本接口（UpgradeLaunchConfiguration）用于升级启动配置。
         /// 
         /// * 本接口用于升级启动配置，采用“完全覆盖”风格，无论之前参数如何，统一按照接口参数设置为新的配置。对于非必填字段，不填写则按照默认值赋值。

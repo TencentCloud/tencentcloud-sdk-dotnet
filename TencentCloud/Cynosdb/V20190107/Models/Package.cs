@@ -89,7 +89,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public float? PackageUsedSpec{ get; set; }
 
         /// <summary>
-        /// 资源包已使用量
+        /// 是否还有库存余量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasQuota")]

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.832</VersionPrefix>
+    <VersionPrefix>3.0.833</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -473,6 +473,7 @@
     <Compile Include="V20180717\Models\LiveRealTimeClipRequest.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipResponse.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipStreamInfo.cs" />
+    <Compile Include="V20180717\Models\LiveRecordInfo.cs" />
     <Compile Include="V20180717\Models\LowLightEnhanceInfo.cs" />
     <Compile Include="V20180717\Models\ManageTaskRequest.cs" />
     <Compile Include="V20180717\Models\ManageTaskResponse.cs" />
@@ -788,6 +789,7 @@
     <Compile Include="V20180717\Models\WatermarkTemplate.cs" />
     <Compile Include="V20180717\Models\WeChatMiniProgramPublishRequest.cs" />
     <Compile Include="V20180717\Models\WeChatMiniProgramPublishResponse.cs" />
+    <Compile Include="V20180717\Models\WebPageRecordInfo.cs" />
     <Compile Include="V20180717\Models\WechatMiniProgramPublishTask.cs" />
     <Compile Include="V20180717\Models\WechatMiniProgramPublishTaskInput.cs" />
     <Compile Include="V20180717\Models\WechatPublishTask.cs" />

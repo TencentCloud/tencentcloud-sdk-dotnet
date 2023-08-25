@@ -1133,6 +1133,46 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 查询云原生网关分组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNativeGatewayServerGroupsRequest"/></param>
+        /// <returns><see cref="DescribeNativeGatewayServerGroupsResponse"/></returns>
+        public async Task<DescribeNativeGatewayServerGroupsResponse> DescribeNativeGatewayServerGroups(DescribeNativeGatewayServerGroupsRequest req)
+        {
+             JsonResponseModel<DescribeNativeGatewayServerGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNativeGatewayServerGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNativeGatewayServerGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询云原生网关分组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNativeGatewayServerGroupsRequest"/></param>
+        /// <returns><see cref="DescribeNativeGatewayServerGroupsResponse"/></returns>
+        public DescribeNativeGatewayServerGroupsResponse DescribeNativeGatewayServerGroupsSync(DescribeNativeGatewayServerGroupsRequest req)
+        {
+             JsonResponseModel<DescribeNativeGatewayServerGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNativeGatewayServerGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNativeGatewayServerGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取云原生网关服务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeOneCloudNativeAPIGatewayServiceRequest"/></param>

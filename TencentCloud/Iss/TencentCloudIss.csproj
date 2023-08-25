@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{57641715-DA21-3068-8276-85056D8B441F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.832</VersionPrefix>
+    <VersionPrefix>3.0.833</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -181,6 +181,7 @@
     <Compile Include="V20230517\Models\DescribeVideoDownloadUrlRequest.cs" />
     <Compile Include="V20230517\Models\DescribeVideoDownloadUrlResponse.cs" />
     <Compile Include="V20230517\Models\FaceMaskAIResultInfo.cs" />
+    <Compile Include="V20230517\Models\GatewayDevice.cs" />
     <Compile Include="V20230517\Models\GatewayVersion.cs" />
     <Compile Include="V20230517\Models\GatewaysData.cs" />
     <Compile Include="V20230517\Models\LifeCycleData.cs" />
@@ -190,6 +191,9 @@
     <Compile Include="V20230517\Models\ListDeviceInfo.cs" />
     <Compile Include="V20230517\Models\ListDevicesRequest.cs" />
     <Compile Include="V20230517\Models\ListDevicesResponse.cs" />
+    <Compile Include="V20230517\Models\ListGatewayDevicesData.cs" />
+    <Compile Include="V20230517\Models\ListGatewayDevicesRequest.cs" />
+    <Compile Include="V20230517\Models\ListGatewayDevicesResponse.cs" />
     <Compile Include="V20230517\Models\ListGatewaysData.cs" />
     <Compile Include="V20230517\Models\ListGatewaysRequest.cs" />
     <Compile Include="V20230517\Models\ListGatewaysResponse.cs" />

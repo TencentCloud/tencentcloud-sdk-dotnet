@@ -2263,6 +2263,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// api分析页面开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiAnalyzeStatusRequest"/></param>
+        /// <returns><see cref="ModifyApiAnalyzeStatusResponse"/></returns>
+        public async Task<ModifyApiAnalyzeStatusResponse> ModifyApiAnalyzeStatus(ModifyApiAnalyzeStatusRequest req)
+        {
+             JsonResponseModel<ModifyApiAnalyzeStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyApiAnalyzeStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApiAnalyzeStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// api分析页面开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiAnalyzeStatusRequest"/></param>
+        /// <returns><see cref="ModifyApiAnalyzeStatusResponse"/></returns>
+        public ModifyApiAnalyzeStatusResponse ModifyApiAnalyzeStatusSync(ModifyApiAnalyzeStatusRequest req)
+        {
+             JsonResponseModel<ModifyApiAnalyzeStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyApiAnalyzeStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApiAnalyzeStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改防护域名的地域封禁状态
         /// </summary>
         /// <param name="req"><see cref="ModifyAreaBanStatusRequest"/></param>
@@ -2294,6 +2334,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAreaBanStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAreaBanStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Bot_V2 bot总开关更新
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBotStatusRequest"/></param>
+        /// <returns><see cref="ModifyBotStatusResponse"/></returns>
+        public async Task<ModifyBotStatusResponse> ModifyBotStatus(ModifyBotStatusRequest req)
+        {
+             JsonResponseModel<ModifyBotStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBotStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBotStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Bot_V2 bot总开关更新
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBotStatusRequest"/></param>
+        /// <returns><see cref="ModifyBotStatusResponse"/></returns>
+        public ModifyBotStatusResponse ModifyBotStatusSync(ModifyBotStatusRequest req)
+        {
+             JsonResponseModel<ModifyBotStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBotStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBotStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

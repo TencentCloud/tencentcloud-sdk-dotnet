@@ -37,16 +37,16 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? MsgTTL{ get; set; }
 
         /// <summary>
-        /// 备注，字符串最长不超过128。
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
-
-        /// <summary>
         /// 集群ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 备注，字符串最长不超过128。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
 
         /// <summary>
         /// 消息保留策略
@@ -68,8 +68,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         {
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
             this.SetParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
         }

@@ -653,7 +653,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 创建集群
+        /// 购买新集群
         /// </summary>
         /// <param name="req"><see cref="CreateClustersRequest"/></param>
         /// <returns><see cref="CreateClustersResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 创建集群
+        /// 购买新集群
         /// </summary>
         /// <param name="req"><see cref="CreateClustersRequest"/></param>
         /// <returns><see cref="CreateClustersResponse"/></returns>
@@ -3693,7 +3693,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 升级预付费存储
+        /// 调整包年包月存储容量
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterStorageRequest"/></param>
         /// <returns><see cref="ModifyClusterStorageResponse"/></returns>
@@ -3713,7 +3713,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 升级预付费存储
+        /// 调整包年包月存储容量
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterStorageRequest"/></param>
         /// <returns><see cref="ModifyClusterStorageResponse"/></returns>
@@ -4133,7 +4133,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 下线集群
+        /// 销毁集群
         /// </summary>
         /// <param name="req"><see cref="OfflineClusterRequest"/></param>
         /// <returns><see cref="OfflineClusterResponse"/></returns>
@@ -4153,7 +4153,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 下线集群
+        /// 销毁集群
         /// </summary>
         /// <param name="req"><see cref="OfflineClusterRequest"/></param>
         /// <returns><see cref="OfflineClusterResponse"/></returns>
@@ -4173,7 +4173,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 下线实例
+        /// 销毁实例
         /// </summary>
         /// <param name="req"><see cref="OfflineInstanceRequest"/></param>
         /// <returns><see cref="OfflineInstanceResponse"/></returns>
@@ -4193,7 +4193,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 下线实例
+        /// 销毁实例
         /// </summary>
         /// <param name="req"><see cref="OfflineInstanceRequest"/></param>
         /// <returns><see cref="OfflineInstanceResponse"/></returns>
@@ -4253,7 +4253,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（OpenClusterPasswordComplexity）用于开启集群密码复杂度
+        /// 本接口（OpenClusterPasswordComplexity）用于开启自定义密码复杂度功能
         /// </summary>
         /// <param name="req"><see cref="OpenClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="OpenClusterPasswordComplexityResponse"/></returns>
@@ -4273,7 +4273,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（OpenClusterPasswordComplexity）用于开启集群密码复杂度
+        /// 本接口（OpenClusterPasswordComplexity）用于开启自定义密码复杂度功能
         /// </summary>
         /// <param name="req"><see cref="OpenClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="OpenClusterPasswordComplexityResponse"/></returns>
@@ -5053,7 +5053,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 更新集群Cynos内核版本
+        /// 更新内核小版本
         /// </summary>
         /// <param name="req"><see cref="UpgradeClusterVersionRequest"/></param>
         /// <returns><see cref="UpgradeClusterVersionResponse"/></returns>
@@ -5073,7 +5073,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 更新集群Cynos内核版本
+        /// 更新内核小版本
         /// </summary>
         /// <param name="req"><see cref="UpgradeClusterVersionRequest"/></param>
         /// <returns><see cref="UpgradeClusterVersionResponse"/></returns>
@@ -5093,7 +5093,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 升级实例
+        /// 实例变配
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
         /// <returns><see cref="UpgradeInstanceResponse"/></returns>
@@ -5113,7 +5113,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 升级实例
+        /// 实例变配
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
         /// <returns><see cref="UpgradeInstanceResponse"/></returns>

@@ -43,6 +43,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? Partitions{ get; set; }
 
         /// <summary>
+        /// Pulsar 集群的ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
         /// 备注，128字符以内。
         /// </summary>
         [JsonProperty("Remark")]
@@ -58,12 +64,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         [JsonProperty("TopicType")]
         public ulong? TopicType{ get; set; }
-
-        /// <summary>
-        /// Pulsar 集群的ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
 
         /// <summary>
         /// Pulsar 主题类型
@@ -90,9 +90,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "Partitions", this.Partitions);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
             this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         }

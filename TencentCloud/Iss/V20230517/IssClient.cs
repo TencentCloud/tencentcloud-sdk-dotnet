@@ -2059,6 +2059,46 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
+        /// 用于查询网关下挂载的设备列表。
+        /// </summary>
+        /// <param name="req"><see cref="ListGatewayDevicesRequest"/></param>
+        /// <returns><see cref="ListGatewayDevicesResponse"/></returns>
+        public async Task<ListGatewayDevicesResponse> ListGatewayDevices(ListGatewayDevicesRequest req)
+        {
+             JsonResponseModel<ListGatewayDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListGatewayDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListGatewayDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询网关下挂载的设备列表。
+        /// </summary>
+        /// <param name="req"><see cref="ListGatewayDevicesRequest"/></param>
+        /// <returns><see cref="ListGatewayDevicesResponse"/></returns>
+        public ListGatewayDevicesResponse ListGatewayDevicesSync(ListGatewayDevicesRequest req)
+        {
+             JsonResponseModel<ListGatewayDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListGatewayDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListGatewayDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于获取网关列表。
         /// </summary>
         /// <param name="req"><see cref="ListGatewaysRequest"/></param>

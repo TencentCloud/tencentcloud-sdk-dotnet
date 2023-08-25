@@ -25,6 +25,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
+        /// Pulsar 集群的ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
         /// 命名空间名称，模糊搜索。
         /// </summary>
         [JsonProperty("EnvironmentId")]
@@ -43,12 +49,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Pulsar 集群的ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
         /// * EnvironmentId
         /// 按照名称空间进行过滤，精确查询。
         /// 类型：String
@@ -63,10 +63,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }

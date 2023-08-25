@@ -37,6 +37,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
+        /// Pulsar 集群的ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
         /// 起始下标，不填默认为0。
         /// </summary>
         [JsonProperty("Offset")]
@@ -60,12 +66,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Filters")]
         public FilterSubscription[] Filters{ get; set; }
 
-        /// <summary>
-        /// Pulsar 集群的ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,11 +74,11 @@ namespace TencentCloud.Tdmq.V20200217.Models
         {
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

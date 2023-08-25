@@ -31,16 +31,28 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string RoleName{ get; set; }
 
         /// <summary>
+        /// 必填字段，集群Id
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
         /// 备注说明，长度必须大等于0且小等于128。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 必填字段，集群Id
+        /// 批量绑定名字空间信息
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("EnvironmentRoleSets")]
+        public EnvironmentRoleSet[] EnvironmentRoleSets{ get; set; }
+
+        /// <summary>
+        /// 全部解绑名字空间，设置为 true
+        /// </summary>
+        [JsonProperty("UnbindAllEnvironment")]
+        public bool? UnbindAllEnvironment{ get; set; }
 
 
         /// <summary>
@@ -49,8 +61,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArrayObj(map, prefix + "EnvironmentRoleSets.", this.EnvironmentRoleSets);
+            this.SetParamSimple(map, prefix + "UnbindAllEnvironment", this.UnbindAllEnvironment);
         }
     }
 }

@@ -52,6 +52,13 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("Docker")]
         public Docker Docker{ get; set; }
 
+        /// <summary>
+        /// 任务执行命令信息。与Command不能同时指定。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Commands")]
+        public CommandLine[] Commands{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "PackagePath", this.PackagePath);
             this.SetParamObj(map, prefix + "Docker.", this.Docker);
+            this.SetParamArrayObj(map, prefix + "Commands.", this.Commands);
         }
     }
 }

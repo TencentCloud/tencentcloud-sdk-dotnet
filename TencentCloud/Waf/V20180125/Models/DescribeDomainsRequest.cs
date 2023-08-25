@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 数据偏移量，从1开始。
+        /// 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

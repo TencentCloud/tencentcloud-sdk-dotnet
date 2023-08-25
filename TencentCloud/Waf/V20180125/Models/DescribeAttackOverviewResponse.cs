@@ -61,6 +61,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? ApiAssetsCount{ get; set; }
 
         /// <summary>
+        /// api风险事件数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApiRiskEventCount")]
+        public ulong? ApiRiskEventCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +85,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "CCCount", this.CCCount);
             this.SetParamSimple(map, prefix + "BotCount", this.BotCount);
             this.SetParamSimple(map, prefix + "ApiAssetsCount", this.ApiAssetsCount);
+            this.SetParamSimple(map, prefix + "ApiRiskEventCount", this.ApiRiskEventCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

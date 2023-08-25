@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.832</VersionPrefix>
+    <VersionPrefix>3.0.833</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -200,8 +200,12 @@
     <Compile Include="V20180125\Models\LogHistogramInfo.cs" />
     <Compile Include="V20180125\Models\ModifyAccessPeriodRequest.cs" />
     <Compile Include="V20180125\Models\ModifyAccessPeriodResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyApiAnalyzeStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyApiAnalyzeStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyAreaBanStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyAreaBanStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyBotStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyBotStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyCustomRuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyCustomRuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyCustomWhiteRuleRequest.cs" />
@@ -253,6 +257,7 @@
     <Compile Include="V20180125\Models\SwitchDomainRulesResponse.cs" />
     <Compile Include="V20180125\Models\TLSCiphers.cs" />
     <Compile Include="V20180125\Models\TLSVersion.cs" />
+    <Compile Include="V20180125\Models\TargetEntity.cs" />
     <Compile Include="V20180125\Models\UpsertIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\UpsertIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\UserDomainInfo.cs" />

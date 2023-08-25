@@ -29,6 +29,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Record：来自录制。如直播录制、直播时移录制等。</li>
         /// <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
         /// <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
+        /// <li>TrtcRecord：来自TRTC 伴生录制。</li>
         /// <li>WebPageRecord：来自全景录制。</li>
         /// <li>Unknown：未知来源。</li>
         /// </summary>
@@ -36,17 +37,31 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 用户创建文件时透传的字段
+        /// 用户创建文件时透传的字段。
         /// </summary>
         [JsonProperty("SourceContext")]
         public string SourceContext{ get; set; }
 
         /// <summary>
-        /// TRTC 伴生录制信息。
+        /// 直播录制信息，当文件来源为 Record 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LiveRecordInfo")]
+        public LiveRecordInfo LiveRecordInfo{ get; set; }
+
+        /// <summary>
+        /// TRTC 伴生录制信息，当文件来源为 TrtcRecord 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrtcRecordInfo")]
         public TrtcRecordInfo TrtcRecordInfo{ get; set; }
+
+        /// <summary>
+        /// 全景录制信息，当文件来源为 WebPageRecord 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WebPageRecordInfo")]
+        public WebPageRecordInfo WebPageRecordInfo{ get; set; }
 
 
         /// <summary>
@@ -56,7 +71,9 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
+            this.SetParamObj(map, prefix + "LiveRecordInfo.", this.LiveRecordInfo);
             this.SetParamObj(map, prefix + "TrtcRecordInfo.", this.TrtcRecordInfo);
+            this.SetParamObj(map, prefix + "WebPageRecordInfo.", this.WebPageRecordInfo);
         }
     }
 }
