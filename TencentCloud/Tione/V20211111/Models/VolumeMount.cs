@@ -31,7 +31,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public CFSConfig CFSConfig{ get; set; }
 
         /// <summary>
-        /// 挂载源类型
+        /// 挂载源类型，CFS、COS，默认为CFS
         /// </summary>
         [JsonProperty("VolumeSourceType")]
         public string VolumeSourceType{ get; set; }

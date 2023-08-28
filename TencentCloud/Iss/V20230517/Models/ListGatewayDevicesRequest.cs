@@ -30,6 +30,18 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
+        /// <summary>
+        /// 分页页数
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public long? PageNumber{ get; set; }
+
+        /// <summary>
+        /// 分页大小
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Iss.V20230517.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

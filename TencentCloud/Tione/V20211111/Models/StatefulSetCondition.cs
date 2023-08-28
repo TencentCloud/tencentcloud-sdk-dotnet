@@ -59,6 +59,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("LastTransitionTime")]
         public string LastTransitionTime{ get; set; }
 
+        /// <summary>
+        /// 上次更新的时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastUpdateTime")]
+        public string LastUpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "LastTransitionTime", this.LastTransitionTime);
+            this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
         }
     }
 }

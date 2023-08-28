@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.833</VersionPrefix>
+    <VersionPrefix>3.0.834</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -88,6 +88,8 @@
     <Compile Include="V20180125\Models\DeleteAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\DeleteAttackDownloadRecordRequest.cs" />
     <Compile Include="V20180125\Models\DeleteAttackDownloadRecordResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteCustomRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteCustomRuleResponse.cs" />
     <Compile Include="V20180125\Models\DeleteCustomWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\DeleteCustomWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\DeleteDomainWhiteRulesRequest.cs" />
@@ -116,6 +118,8 @@
     <Compile Include="V20180125\Models\DescribeAutoDenyIPResponse.cs" />
     <Compile Include="V20180125\Models\DescribeCiphersDetailRequest.cs" />
     <Compile Include="V20180125\Models\DescribeCiphersDetailResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeCustomRuleListRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeCustomRuleListResponse.cs" />
     <Compile Include="V20180125\Models\DescribeCustomRulesRspRuleListItem.cs" />
     <Compile Include="V20180125\Models\DescribeCustomWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\DescribeCustomWhiteRuleResponse.cs" />
@@ -206,6 +210,8 @@
     <Compile Include="V20180125\Models\ModifyAreaBanStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyBotStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyBotStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyCustomRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyCustomRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyCustomRuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyCustomRuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyCustomWhiteRuleRequest.cs" />

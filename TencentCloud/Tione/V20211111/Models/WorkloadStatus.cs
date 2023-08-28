@@ -69,6 +69,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// 工作负载的状况信息
         /// </summary>
         [JsonProperty("StatefulSetCondition")]
+        [System.Obsolete]
         public StatefulSetCondition[] StatefulSetCondition{ get; set; }
 
         /// <summary>

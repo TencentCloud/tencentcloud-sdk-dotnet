@@ -173,6 +173,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ModelTurboEnable")]
         public bool? ModelTurboEnable{ get; set; }
 
+        /// <summary>
+        /// 服务的启动命令
+        /// </summary>
+        [JsonProperty("Command")]
+        public string Command{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -200,6 +206,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
             this.SetParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
             this.SetParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
+            this.SetParamSimple(map, prefix + "Command", this.Command);
         }
     }
 }

@@ -221,6 +221,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ServiceCategory")]
         public string ServiceCategory{ get; set; }
 
+        /// <summary>
+        /// 服务的启动命令
+        /// </summary>
+        [JsonProperty("Command")]
+        public string Command{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -256,6 +262,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
             this.SetParamSimple(map, prefix + "ServiceCategory", this.ServiceCategory);
+            this.SetParamSimple(map, prefix + "Command", this.Command);
         }
     }
 }

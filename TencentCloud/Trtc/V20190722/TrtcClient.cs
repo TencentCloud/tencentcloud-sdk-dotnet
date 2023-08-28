@@ -659,6 +659,62 @@ namespace TencentCloud.Trtc.V20190722
         /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
         /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
         /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCMarketQualityDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCMarketQualityDataResponse"/></returns>
+        public async Task<DescribeTRTCMarketQualityDataResponse> DescribeTRTCMarketQualityData(DescribeTRTCMarketQualityDataRequest req)
+        {
+             JsonResponseModel<DescribeTRTCMarketQualityDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTRTCMarketQualityData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTRTCMarketQualityDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询TRTC监控仪表盘-数据大盘质量指标（包括下列指标）
+        /// joinSuccessRate：加入频道成功率。
+        /// joinSuccessIn5sRate：5s内加入频道成功率。
+        /// audioFreezeRate：音频卡顿率。
+        /// videoFreezeRate：视频卡顿率。
+        /// networkDelay ：网络延迟率。
+        /// 注意：
+        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCMarketQualityDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCMarketQualityDataResponse"/></returns>
+        public DescribeTRTCMarketQualityDataResponse DescribeTRTCMarketQualityDataSync(DescribeTRTCMarketQualityDataRequest req)
+        {
+             JsonResponseModel<DescribeTRTCMarketQualityDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTRTCMarketQualityData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTRTCMarketQualityDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询TRTC监控仪表盘-数据大盘质量指标（包括下列指标）
+        /// joinSuccessRate：加入频道成功率。
+        /// joinSuccessIn5sRate：5s内加入频道成功率。
+        /// audioFreezeRate：音频卡顿率。
+        /// videoFreezeRate：视频卡顿率。
+        /// networkDelay ：网络延迟率。
+        /// 注意：
+        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
+        /// </summary>
         /// <param name="req"><see cref="DescribeTRTCMarketQualityMetricDataRequest"/></param>
         /// <returns><see cref="DescribeTRTCMarketQualityMetricDataResponse"/></returns>
         public async Task<DescribeTRTCMarketQualityMetricDataResponse> DescribeTRTCMarketQualityMetricData(DescribeTRTCMarketQualityMetricDataRequest req)
@@ -696,6 +752,60 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTRTCMarketQualityMetricData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTRTCMarketQualityMetricDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询TRTC监控仪表盘-数据大盘规模指标（会返回通话人数，通话房间数，峰值同时在线人数，峰值同时在线频道数）
+        /// userCount：通话人数，
+        /// roomCount：通话房间数，从有用户加入频道到所有用户离开频道计为一个通话频道。
+        /// peakCurrentChannels：峰值同时在线频道数。
+        /// peakCurrentUsers：峰值同时在线人数。
+        /// 注意：
+        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCMarketScaleDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCMarketScaleDataResponse"/></returns>
+        public async Task<DescribeTRTCMarketScaleDataResponse> DescribeTRTCMarketScaleData(DescribeTRTCMarketScaleDataRequest req)
+        {
+             JsonResponseModel<DescribeTRTCMarketScaleDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTRTCMarketScaleData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTRTCMarketScaleDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询TRTC监控仪表盘-数据大盘规模指标（会返回通话人数，通话房间数，峰值同时在线人数，峰值同时在线频道数）
+        /// userCount：通话人数，
+        /// roomCount：通话房间数，从有用户加入频道到所有用户离开频道计为一个通话频道。
+        /// peakCurrentChannels：峰值同时在线频道数。
+        /// peakCurrentUsers：峰值同时在线人数。
+        /// 注意：
+        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCMarketScaleDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCMarketScaleDataResponse"/></returns>
+        public DescribeTRTCMarketScaleDataResponse DescribeTRTCMarketScaleDataSync(DescribeTRTCMarketScaleDataRequest req)
+        {
+             JsonResponseModel<DescribeTRTCMarketScaleDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTRTCMarketScaleData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTRTCMarketScaleDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -766,6 +876,56 @@ namespace TencentCloud.Trtc.V20190722
         /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
         /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
         /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCRealTimeQualityDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCRealTimeQualityDataResponse"/></returns>
+        public async Task<DescribeTRTCRealTimeQualityDataResponse> DescribeTRTCRealTimeQualityData(DescribeTRTCRealTimeQualityDataRequest req)
+        {
+             JsonResponseModel<DescribeTRTCRealTimeQualityDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTRTCRealTimeQualityData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTRTCRealTimeQualityDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询TRTC监控仪表盘-实时监控质量指标（会返回下列指标）
+        /// -视频卡顿率
+        /// -音频卡顿率
+        /// 注意：
+        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCRealTimeQualityDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCRealTimeQualityDataResponse"/></returns>
+        public DescribeTRTCRealTimeQualityDataResponse DescribeTRTCRealTimeQualityDataSync(DescribeTRTCRealTimeQualityDataRequest req)
+        {
+             JsonResponseModel<DescribeTRTCRealTimeQualityDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTRTCRealTimeQualityData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTRTCRealTimeQualityDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询TRTC监控仪表盘-实时监控质量指标（会返回下列指标）
+        /// -视频卡顿率
+        /// -音频卡顿率
+        /// 注意：
+        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
+        /// </summary>
         /// <param name="req"><see cref="DescribeTRTCRealTimeQualityMetricDataRequest"/></param>
         /// <returns><see cref="DescribeTRTCRealTimeQualityMetricDataResponse"/></returns>
         public async Task<DescribeTRTCRealTimeQualityMetricDataResponse> DescribeTRTCRealTimeQualityMetricData(DescribeTRTCRealTimeQualityMetricDataRequest req)
@@ -800,6 +960,60 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTRTCRealTimeQualityMetricData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTRTCRealTimeQualityMetricDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询TRTC监控仪表盘-实时监控规模指标（会返回下列指标）
+        /// -userCount（在线用户数）
+        /// -roomCount（在线房间数）
+        /// 注意：
+        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
+        /// xa0
+        /// 3.除此之外您也可以通过订阅TRTC包月套餐(https://buy.cloud.tencent.com/trtc)尊享版或旗舰版解锁此接口的调用能力，请在开通包月套餐后，请提交工单联系售后解锁调用能力https://console.cloud.tencent.com/workorder/category
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCRealTimeScaleDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCRealTimeScaleDataResponse"/></returns>
+        public async Task<DescribeTRTCRealTimeScaleDataResponse> DescribeTRTCRealTimeScaleData(DescribeTRTCRealTimeScaleDataRequest req)
+        {
+             JsonResponseModel<DescribeTRTCRealTimeScaleDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTRTCRealTimeScaleData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTRTCRealTimeScaleDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询TRTC监控仪表盘-实时监控规模指标（会返回下列指标）
+        /// -userCount（在线用户数）
+        /// -roomCount（在线房间数）
+        /// 注意：
+        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
+        /// 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
+        /// xa0
+        /// 3.除此之外您也可以通过订阅TRTC包月套餐(https://buy.cloud.tencent.com/trtc)尊享版或旗舰版解锁此接口的调用能力，请在开通包月套餐后，请提交工单联系售后解锁调用能力https://console.cloud.tencent.com/workorder/category
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCRealTimeScaleDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCRealTimeScaleDataResponse"/></returns>
+        public DescribeTRTCRealTimeScaleDataResponse DescribeTRTCRealTimeScaleDataSync(DescribeTRTCRealTimeScaleDataRequest req)
+        {
+             JsonResponseModel<DescribeTRTCRealTimeScaleDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTRTCRealTimeScaleData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTRTCRealTimeScaleDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

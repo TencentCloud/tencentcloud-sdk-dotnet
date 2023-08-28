@@ -214,6 +214,27 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ModelTurboEnable")]
         public bool? ModelTurboEnable{ get; set; }
 
+        /// <summary>
+        /// 挂载
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VolumeMount")]
+        public VolumeMount VolumeMount{ get; set; }
+
+        /// <summary>
+        /// 推理代码信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InferCodeInfo")]
+        public InferCodeInfo InferCodeInfo{ get; set; }
+
+        /// <summary>
+        /// 服务的启动命令
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Command")]
+        public string Command{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +267,9 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "PodInfos.", this.PodInfos);
             this.SetParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
             this.SetParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
+            this.SetParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
+            this.SetParamObj(map, prefix + "InferCodeInfo.", this.InferCodeInfo);
+            this.SetParamSimple(map, prefix + "Command", this.Command);
         }
     }
 }
