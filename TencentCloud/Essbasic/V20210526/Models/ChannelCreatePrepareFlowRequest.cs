@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源类型，1：模板，目前仅支持模板，与ResourceId对应
+        /// 资源类型，与ResourceId对应1：模板   2: 文件
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }

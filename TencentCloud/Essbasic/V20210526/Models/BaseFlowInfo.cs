@@ -98,6 +98,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("NeedCreateReview")]
         public bool? NeedCreateReview{ get; set; }
 
+        /// <summary>
+        /// 填写控件：文件发起使用
+        /// </summary>
+        [JsonProperty("Components")]
+        public Component[] Components{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +121,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
             this.SetParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
+            this.SetParamArrayObj(map, prefix + "Components.", this.Components);
         }
     }
 }

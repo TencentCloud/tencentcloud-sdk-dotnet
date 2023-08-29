@@ -59,6 +59,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("SubOrgIdList")]
         public string[] SubOrgIdList{ get; set; }
 
+        /// <summary>
+        /// 权限树
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PermissionGroups")]
+        public PermissionGroup[] PermissionGroups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "RoleStatus", this.RoleStatus);
             this.SetParamSimple(map, prefix + "IsGroupRole", this.IsGroupRole);
             this.SetParamArraySimple(map, prefix + "SubOrgIdList.", this.SubOrgIdList);
+            this.SetParamArrayObj(map, prefix + "PermissionGroups.", this.PermissionGroups);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 公网地址版本，可选："IPV4" | "IPV6-NAT64" 。不填默认 IPV4 。
+        /// 公网地址版本，可选："IPV4" | "IPV6" 。不填默认 IPV4 。
         /// </summary>
         [JsonProperty("InternetAddressVersion")]
         public string InternetAddressVersion{ get; set; }

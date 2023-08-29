@@ -560,6 +560,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("KibanaAlteringPublicAccess")]
         public string KibanaAlteringPublicAccess{ get; set; }
 
+        /// <summary>
+        /// 本月是否有内核可以更新：false-无，true-有
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HasKernelUpgrade")]
+        public bool? HasKernelUpgrade{ get; set; }
+
+        /// <summary>
+        /// cdcId，使用cdc子网时传递
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -647,6 +661,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
             this.SetParamSimple(map, prefix + "ProcessPercent", this.ProcessPercent);
             this.SetParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
+            this.SetParamSimple(map, prefix + "HasKernelUpgrade", this.HasKernelUpgrade);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

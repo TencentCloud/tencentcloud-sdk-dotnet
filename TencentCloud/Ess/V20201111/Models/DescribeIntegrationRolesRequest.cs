@@ -46,7 +46,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 查询的关键字段:
         /// Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
         /// Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-        /// Key:"IsGroupRole"，Values:["0"],查询非集团角色，Values:["1"]表示查询集团角色
+        /// Key:"IsGroupRole"，Values:["0"]:查询非集团角色，Values:["1"]表示查询集团角色
+        /// Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -72,6 +72,21 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
+        /// <summary>
+        /// 查询的印章状态列表。
+        /// 取值为空，只查询启用状态的印章；
+        /// 取值ALL，查询所有状态的印章；
+        /// 取值CHECKING，查询待审核的印章；
+        /// 取值SUCCESS，查询启用状态的印章；
+        /// 取值FAIL，查询印章审核拒绝的印章；
+        /// 取值DISABLE，查询已停用的印章；
+        /// 取值STOPPED，查询已终止的印章；
+        /// 取值VOID，查询已作废的印章；
+        /// 取值INVALID，查询以失效的印章；
+        /// </summary>
+        [JsonProperty("SealStatuses")]
+        public string[] SealStatuses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +100,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "SealId", this.SealId);
             this.SetParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamArraySimple(map, prefix + "SealStatuses.", this.SealStatuses);
         }
     }
 }

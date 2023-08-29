@@ -64,6 +64,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrResultSimilarity")]
+        [System.Obsolete]
         public string AsrResultSimilarity{ get; set; }
 
 

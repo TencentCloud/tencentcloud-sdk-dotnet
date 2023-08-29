@@ -49,6 +49,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string Avatar{ get; set; }
 
         /// <summary>
+        /// 用户在客户系统的Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginId")]
+        public string OriginId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +71,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Avatar", this.Avatar);
+            this.SetParamSimple(map, prefix + "OriginId", this.OriginId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

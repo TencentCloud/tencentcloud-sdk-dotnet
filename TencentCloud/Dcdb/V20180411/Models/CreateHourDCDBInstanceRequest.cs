@@ -89,7 +89,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string DbVersionId{ get; set; }
 
         /// <summary>
-        /// 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+        /// 分片节点可用区分布，可填写多个可用区。
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
@@ -154,6 +154,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// DCN同步模式，0：普通DCN同步，1：一致性同步
+        /// </summary>
+        [JsonProperty("DcnSyncMode")]
+        public long? DcnSyncMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -181,6 +187,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "RollbackInstanceId", this.RollbackInstanceId);
             this.SetParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
         }
     }
 }

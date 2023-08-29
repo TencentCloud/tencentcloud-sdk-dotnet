@@ -110,6 +110,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ApproverOption")]
         public CommonApproverOption ApproverOption{ get; set; }
 
+        /// <summary>
+        /// 签署控件：文件发起使用
+        /// </summary>
+        [JsonProperty("SignComponents")]
+        public Component[] SignComponents{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +136,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "IsFullText", this.IsFullText);
             this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
+            this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
         }
     }
 }

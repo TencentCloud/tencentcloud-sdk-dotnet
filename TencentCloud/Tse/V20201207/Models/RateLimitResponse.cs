@@ -32,7 +32,7 @@ namespace TencentCloud.Tse.V20201207.Models
         public string Body{ get; set; }
 
         /// <summary>
-        /// headrs
+        /// Headers
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Headers")]

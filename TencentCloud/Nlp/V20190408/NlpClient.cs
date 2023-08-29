@@ -293,7 +293,7 @@ namespace TencentCloud.Nlp.V20190408
         }
 
         /// <summary>
-        /// 提取文本中的关键信息，生成简洁明了的关键句子，便于用户快速获取核心观点。
+        /// 根据提供的关键词，生成简洁明了的关键句子，便于用户快速获取核心观点。
         /// </summary>
         /// <param name="req"><see cref="GenerateKeywordSentenceRequest"/></param>
         /// <returns><see cref="GenerateKeywordSentenceResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Nlp.V20190408
         }
 
         /// <summary>
-        /// 提取文本中的关键信息，生成简洁明了的关键句子，便于用户快速获取核心观点。
+        /// 根据提供的关键词，生成简洁明了的关键句子，便于用户快速获取核心观点。
         /// </summary>
         /// <param name="req"><see cref="GenerateKeywordSentenceRequest"/></param>
         /// <returns><see cref="GenerateKeywordSentenceResponse"/></returns>

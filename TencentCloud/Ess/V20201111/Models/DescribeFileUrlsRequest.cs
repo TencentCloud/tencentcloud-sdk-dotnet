@@ -92,10 +92,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Scene{ get; set; }
 
         /// <summary>
-        /// 应用相关信息
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
-        [System.Obsolete]
         public Agent Agent{ get; set; }
 
 

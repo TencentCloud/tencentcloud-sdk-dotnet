@@ -94,7 +94,7 @@ namespace TencentCloud.Es.V20180416.Models
 
         /// <summary>
         /// 已废弃请使用NodeInfoList
-        /// 节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+        /// 节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -236,6 +236,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EnableDiagnose")]
         public bool? EnableDiagnose{ get; set; }
 
+        /// <summary>
+        /// cdcId，使用cdc子网时传递
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -276,6 +282,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
             this.SetParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
             this.SetParamSimple(map, prefix + "EnableDiagnose", this.EnableDiagnose);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

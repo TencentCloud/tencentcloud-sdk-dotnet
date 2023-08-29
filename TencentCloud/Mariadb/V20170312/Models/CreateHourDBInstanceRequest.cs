@@ -25,7 +25,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
     {
         
         /// <summary>
-        /// 节点可用区分布，最多可填两个可用区。
+        /// 节点可用区分布，可填写多个可用区。
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
@@ -134,6 +134,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("RollbackTime")]
         public string RollbackTime{ get; set; }
 
+        /// <summary>
+        /// DCN同步模式，0：普通DCN同步，1：一致性同步
+        /// </summary>
+        [JsonProperty("DcnSyncMode")]
+        public long? DcnSyncMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +164,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamArrayObj(map, prefix + "InitParams.", this.InitParams);
             this.SetParamSimple(map, prefix + "RollbackInstanceId", this.RollbackInstanceId);
             this.SetParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
+            this.SetParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
         }
     }
 }

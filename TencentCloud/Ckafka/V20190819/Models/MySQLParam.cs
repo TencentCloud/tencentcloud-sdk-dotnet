@@ -174,6 +174,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("IsTableRegular")]
         public bool? IsTableRegular{ get; set; }
 
+        /// <summary>
+        /// 信号表
+        /// </summary>
+        [JsonProperty("SignalTable")]
+        public string SignalTable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "RecordWithSchema", this.RecordWithSchema);
             this.SetParamSimple(map, prefix + "SignalDatabase", this.SignalDatabase);
             this.SetParamSimple(map, prefix + "IsTableRegular", this.IsTableRegular);
+            this.SetParamSimple(map, prefix + "SignalTable", this.SignalTable);
         }
     }
 }

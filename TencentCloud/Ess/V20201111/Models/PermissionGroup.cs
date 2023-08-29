@@ -21,33 +21,36 @@ namespace TencentCloud.Ess.V20201111.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetTaskResultApiRequest : AbstractModel
+    public class PermissionGroup : AbstractModel
     {
         
         /// <summary>
-        /// 任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
+        /// 权限组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
 
         /// <summary>
-        /// 操作人信息,UserId必填
+        /// 权限组key
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
+        [JsonProperty("GroupKey")]
+        public string GroupKey{ get; set; }
 
         /// <summary>
-        /// 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// 是否隐藏分组，0否1是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
+        [JsonProperty("Hide")]
+        public long? Hide{ get; set; }
 
         /// <summary>
-        /// 暂未开放
+        /// 权限集合
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Organization")]
-        [System.Obsolete]
-        public OrganizationInfo Organization{ get; set; }
+        [JsonProperty("Permissions")]
+        public Permission[] Permissions{ get; set; }
 
 
         /// <summary>
@@ -55,10 +58,10 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamObj(map, prefix + "Organization.", this.Organization);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamSimple(map, prefix + "GroupKey", this.GroupKey);
+            this.SetParamSimple(map, prefix + "Hide", this.Hide);
+            this.SetParamArrayObj(map, prefix + "Permissions.", this.Permissions);
         }
     }
 }
