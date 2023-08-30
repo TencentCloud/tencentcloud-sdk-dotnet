@@ -46,7 +46,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// 分页页码
         /// </summary>
         [JsonProperty("PageNumber")]
-        public string PageNumber{ get; set; }
+        public ulong? PageNumber{ get; set; }
 
 
         /// <summary>

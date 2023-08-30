@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 资源Id，通过多文件上传（UploadFiles）接口获得
+        /// 资源id，与ResourceType对应
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
@@ -60,10 +60,20 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 用户自定义合同类型Id
-        /// 该id为电子签企业内的合同类型id
+        /// 
+        /// 该id为电子签企业内的合同类型id， 可以在自定义合同类型处获取
         /// </summary>
         [JsonProperty("UserFlowTypeId")]
         public string UserFlowTypeId{ get; set; }
+
+        /// <summary>
+        /// 合同类型名称
+        /// 该字段用于客户自定义合同类型
+        /// 建议使用时指定合同类型，便于之后合同分类以及查看
+        /// 如果合同类型与自定义的合同类型描述一致，会自动归类到自定义的合同类型处，如果不一致，则会创建一个新的自定义合同类型
+        /// </summary>
+        [JsonProperty("FlowType")]
+        public string FlowType{ get; set; }
 
         /// <summary>
         /// 签署流程参与者信息，最大限制50方
@@ -73,7 +83,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 打开智能添加填写区
-        /// (默认开启，打开:"OPEN"
+        /// 默认开启，打开:"OPEN"
         ///  关闭："CLOSE"
         /// </summary>
         [JsonProperty("IntelligentStatus")]
@@ -81,10 +91,9 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 资源类型，
-        /// 1：文件，
-        /// 2：模板
-        /// 不传默认为1：文件
-        /// 目前仅支持文件
+        /// 1：模板
+        /// 2：文件，
+        /// 不传默认为2：文件
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }
@@ -135,14 +144,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 合同类型名称
-        /// 该字段用于客户自定义合同类型
-        /// 建议使用时指定合同类型，便于之后合同分类以及查看
-        /// </summary>
-        [JsonProperty("FlowType")]
-        public string FlowType{ get; set; }
-
-        /// <summary>
         /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
         /// </summary>
         [JsonProperty("Agent")]
@@ -160,6 +161,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamSimple(map, prefix + "UserFlowTypeId", this.UserFlowTypeId);
+            this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamSimple(map, prefix + "IntelligentStatus", this.IntelligentStatus);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
@@ -169,7 +171,6 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
-            this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }

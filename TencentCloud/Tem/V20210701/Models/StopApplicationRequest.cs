@@ -37,7 +37,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public long? SourceChannel{ get; set; }
 
         /// <summary>
-        /// 环境ID
+        /// 环境ID/命名空间ID
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }

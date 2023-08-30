@@ -31,6 +31,34 @@ namespace TencentCloud.Ess.V20201111.Models
         public string AuthCertUrl{ get; set; }
 
         /// <summary>
+        /// 证书图片上的证书编号，20位数字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageCertId")]
+        public string ImageCertId{ get; set; }
+
+        /// <summary>
+        /// 图片证明对应的CA证书序列号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SerialNumber")]
+        public string SerialNumber{ get; set; }
+
+        /// <summary>
+        /// CA证书颁发时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ValidFrom")]
+        public ulong? ValidFrom{ get; set; }
+
+        /// <summary>
+        /// CA证书有效截止时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ValidTo")]
+        public ulong? ValidTo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +71,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AuthCertUrl", this.AuthCertUrl);
+            this.SetParamSimple(map, prefix + "ImageCertId", this.ImageCertId);
+            this.SetParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
+            this.SetParamSimple(map, prefix + "ValidFrom", this.ValidFrom);
+            this.SetParamSimple(map, prefix + "ValidTo", this.ValidTo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

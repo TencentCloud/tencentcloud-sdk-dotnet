@@ -25,6 +25,30 @@ namespace TencentCloud.Cdwch.V20200915.Models
     {
         
         /// <summary>
+        /// 集群id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 策略类型 meta(元数据)  data (表数据)
+        /// </summary>
+        [JsonProperty("ScheduleType")]
+        public string ScheduleType{ get; set; }
+
+        /// <summary>
+        /// 操作类型 create(创建) update(编辑修改)
+        /// </summary>
+        [JsonProperty("OperationType")]
+        public string OperationType{ get; set; }
+
+        /// <summary>
+        /// 保留天数 例如7
+        /// </summary>
+        [JsonProperty("RetainDays")]
+        public long? RetainDays{ get; set; }
+
+        /// <summary>
         /// 编辑时需要传
         /// </summary>
         [JsonProperty("ScheduleId")]
@@ -54,6 +78,10 @@ namespace TencentCloud.Cdwch.V20200915.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ScheduleType", this.ScheduleType);
+            this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
+            this.SetParamSimple(map, prefix + "RetainDays", this.RetainDays);
             this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
             this.SetParamSimple(map, prefix + "WeekDays", this.WeekDays);
             this.SetParamSimple(map, prefix + "ExecuteHour", this.ExecuteHour);

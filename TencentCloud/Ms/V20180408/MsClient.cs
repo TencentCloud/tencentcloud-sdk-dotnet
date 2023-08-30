@@ -827,7 +827,7 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
-        /// client任务请求地址
+        /// client任务请求
         /// </summary>
         /// <param name="req"><see cref="RequestLocalTaskRequest"/></param>
         /// <returns><see cref="RequestLocalTaskResponse"/></returns>
@@ -847,7 +847,7 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
-        /// client任务请求地址
+        /// client任务请求
         /// </summary>
         /// <param name="req"><see cref="RequestLocalTaskRequest"/></param>
         /// <returns><see cref="RequestLocalTaskResponse"/></returns>
@@ -867,7 +867,7 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
-        /// 更新client状态
+        /// 更新client状态，需要白名单
         /// </summary>
         /// <param name="req"><see cref="UpdateClientStateRequest"/></param>
         /// <returns><see cref="UpdateClientStateResponse"/></returns>
@@ -887,7 +887,7 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
-        /// 更新client状态
+        /// 更新client状态，需要白名单
         /// </summary>
         /// <param name="req"><see cref="UpdateClientStateRequest"/></param>
         /// <returns><see cref="UpdateClientStateResponse"/></returns>
@@ -907,7 +907,7 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
-        /// 更新本地任务结果
+        /// 更新本地任务执行结果
         /// </summary>
         /// <param name="req"><see cref="UpdateLocalTaskResultRequest"/></param>
         /// <returns><see cref="UpdateLocalTaskResultResponse"/></returns>
@@ -927,7 +927,7 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
-        /// 更新本地任务结果
+        /// 更新本地任务执行结果
         /// </summary>
         /// <param name="req"><see cref="UpdateLocalTaskResultRequest"/></param>
         /// <returns><see cref="UpdateLocalTaskResultResponse"/></returns>

@@ -53,6 +53,86 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 批量设置分账标签
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllocationTagRequest"/></param>
+        /// <returns><see cref="CreateAllocationTagResponse"/></returns>
+        public async Task<CreateAllocationTagResponse> CreateAllocationTag(CreateAllocationTagRequest req)
+        {
+             JsonResponseModel<CreateAllocationTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAllocationTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAllocationTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量设置分账标签
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllocationTagRequest"/></param>
+        /// <returns><see cref="CreateAllocationTagResponse"/></returns>
+        public CreateAllocationTagResponse CreateAllocationTagSync(CreateAllocationTagRequest req)
+        {
+             JsonResponseModel<CreateAllocationTagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAllocationTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAllocationTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量取消设置分账标签
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAllocationTagRequest"/></param>
+        /// <returns><see cref="DeleteAllocationTagResponse"/></returns>
+        public async Task<DeleteAllocationTagResponse> DeleteAllocationTag(DeleteAllocationTagRequest req)
+        {
+             JsonResponseModel<DeleteAllocationTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAllocationTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAllocationTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量取消设置分账标签
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAllocationTagRequest"/></param>
+        /// <returns><see cref="DeleteAllocationTagResponse"/></returns>
+        public DeleteAllocationTagResponse DeleteAllocationTagSync(DeleteAllocationTagRequest req)
+        {
+             JsonResponseModel<DeleteAllocationTagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAllocationTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAllocationTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取云账户余额信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountBalanceRequest"/></param>
@@ -770,6 +850,46 @@ namespace TencentCloud.Billing.V20180709
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDosageDetailByDate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDosageDetailByDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取分账标签
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagListRequest"/></param>
+        /// <returns><see cref="DescribeTagListResponse"/></returns>
+        public async Task<DescribeTagListResponse> DescribeTagList(DescribeTagListRequest req)
+        {
+             JsonResponseModel<DescribeTagListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTagList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取分账标签
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagListRequest"/></param>
+        /// <returns><see cref="DescribeTagListResponse"/></returns>
+        public DescribeTagListResponse DescribeTagListSync(DescribeTagListRequest req)
+        {
+             JsonResponseModel<DescribeTagListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTagList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

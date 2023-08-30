@@ -42,6 +42,18 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("NamespaceList")]
         public TkeNameSpaceDetail[] NamespaceList{ get; set; }
 
+        /// <summary>
+        /// 集群类型
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// 集群版本
+        /// </summary>
+        [JsonProperty("ClusterVersion")]
+        public string ClusterVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamArrayObj(map, prefix + "NamespaceList.", this.NamespaceList);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
         }
     }
 }

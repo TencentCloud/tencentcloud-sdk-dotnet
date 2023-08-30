@@ -50,7 +50,7 @@ namespace TencentCloud.Iss.V20230517.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("List")]
-        public RecordPlanChannelInfo List{ get; set; }
+        public RecordPlanChannelInfo[] List{ get; set; }
 
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamObj(map, prefix + "List.", this.List);
+            this.SetParamArrayObj(map, prefix + "List.", this.List);
         }
     }
 }

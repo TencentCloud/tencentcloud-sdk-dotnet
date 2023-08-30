@@ -114,6 +114,19 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
+        /// <summary>
+        /// 分账标签键，用户自定义（支持2021-01以后账单查询）
+        /// </summary>
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
+
+        /// <summary>
+        /// 分账标签值，该参数为空表示该标签键下未设置标签值的记录
+        /// （支持2021-01以后账单查询）
+        /// </summary>
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +143,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
             this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

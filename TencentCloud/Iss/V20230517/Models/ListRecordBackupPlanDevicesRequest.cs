@@ -52,13 +52,13 @@ namespace TencentCloud.Iss.V20230517.Models
         /// 每页最大数量
         /// </summary>
         [JsonProperty("PageSize")]
-        public string PageSize{ get; set; }
+        public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 第几页
+        /// 分页页数
         /// </summary>
         [JsonProperty("PageNumber")]
-        public string PageNumber{ get; set; }
+        public long? PageNumber{ get; set; }
 
 
         /// <summary>

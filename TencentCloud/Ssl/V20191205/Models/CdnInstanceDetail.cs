@@ -42,6 +42,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 域名计费状态
+        /// </summary>
+        [JsonProperty("HttpsBillingSwitch")]
+        public string HttpsBillingSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "CertId", this.CertId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "HttpsBillingSwitch", this.HttpsBillingSwitch);
         }
     }
 }

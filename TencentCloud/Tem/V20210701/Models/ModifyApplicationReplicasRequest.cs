@@ -25,7 +25,7 @@ namespace TencentCloud.Tem.V20210701.Models
     {
         
         /// <summary>
-        /// 服务id
+        /// 应用id
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }

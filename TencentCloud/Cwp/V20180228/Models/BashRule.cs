@@ -58,6 +58,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 规则描述
         /// </summary>
         [JsonProperty("Decription")]
+        [System.Obsolete]
         public string Decription{ get; set; }
 
         /// <summary>
@@ -117,6 +118,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("DealOldEvents")]
         public ulong? DealOldEvents{ get; set; }
 
+        /// <summary>
+        /// 规则描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +146,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArraySimple(map, prefix + "Uuids.", this.Uuids);
             this.SetParamSimple(map, prefix + "White", this.White);
             this.SetParamSimple(map, prefix + "DealOldEvents", this.DealOldEvents);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

@@ -25,6 +25,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
     {
         
         /// <summary>
+        /// 错误描述
+        /// </summary>
+        [JsonProperty("ErrorMsg")]
+        public string ErrorMsg{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
