@@ -2109,6 +2109,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（CreateNetworkAclEntries）用于增量添加网络ACL三元组的入站规则和出站规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkAclEntriesRequest"/></param>
+        /// <returns><see cref="CreateNetworkAclEntriesResponse"/></returns>
+        public async Task<CreateNetworkAclEntriesResponse> CreateNetworkAclEntries(CreateNetworkAclEntriesRequest req)
+        {
+             JsonResponseModel<CreateNetworkAclEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNetworkAclEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetworkAclEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateNetworkAclEntries）用于增量添加网络ACL三元组的入站规则和出站规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkAclEntriesRequest"/></param>
+        /// <returns><see cref="CreateNetworkAclEntriesResponse"/></returns>
+        public CreateNetworkAclEntriesResponse CreateNetworkAclEntriesSync(CreateNetworkAclEntriesRequest req)
+        {
+             JsonResponseModel<CreateNetworkAclEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNetworkAclEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetworkAclEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateNetworkAclQuintupleEntries）用于增量网络ACL五元组的入站规则和出站规则。
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkAclQuintupleEntriesRequest"/></param>
@@ -3876,6 +3916,50 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteNetworkAcl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteNetworkAclEntries）用于删除三元组网络ACL的入站规则和出站规则。在NetworkAclEntrySet参数中：
+        /// * 删除IPv4规则，需要传入NetworkAclIpv4EntryId。
+        /// * 删除IPv6规则，需要传入NetworkAclIpv6EntryId。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkAclEntriesRequest"/></param>
+        /// <returns><see cref="DeleteNetworkAclEntriesResponse"/></returns>
+        public async Task<DeleteNetworkAclEntriesResponse> DeleteNetworkAclEntries(DeleteNetworkAclEntriesRequest req)
+        {
+             JsonResponseModel<DeleteNetworkAclEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNetworkAclEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteNetworkAclEntries）用于删除三元组网络ACL的入站规则和出站规则。在NetworkAclEntrySet参数中：
+        /// * 删除IPv4规则，需要传入NetworkAclIpv4EntryId。
+        /// * 删除IPv6规则，需要传入NetworkAclIpv6EntryId。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkAclEntriesRequest"/></param>
+        /// <returns><see cref="DeleteNetworkAclEntriesResponse"/></returns>
+        public DeleteNetworkAclEntriesResponse DeleteNetworkAclEntriesSync(DeleteNetworkAclEntriesRequest req)
+        {
+             JsonResponseModel<DeleteNetworkAclEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNetworkAclEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclEntriesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

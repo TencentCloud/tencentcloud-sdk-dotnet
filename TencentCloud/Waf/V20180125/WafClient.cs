@@ -53,6 +53,86 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 添加防篡改url
+        /// </summary>
+        /// <param name="req"><see cref="AddAntiFakeUrlRequest"/></param>
+        /// <returns><see cref="AddAntiFakeUrlResponse"/></returns>
+        public async Task<AddAntiFakeUrlResponse> AddAntiFakeUrl(AddAntiFakeUrlRequest req)
+        {
+             JsonResponseModel<AddAntiFakeUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddAntiFakeUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddAntiFakeUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加防篡改url
+        /// </summary>
+        /// <param name="req"><see cref="AddAntiFakeUrlRequest"/></param>
+        /// <returns><see cref="AddAntiFakeUrlResponse"/></returns>
+        public AddAntiFakeUrlResponse AddAntiFakeUrlSync(AddAntiFakeUrlRequest req)
+        {
+             JsonResponseModel<AddAntiFakeUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddAntiFakeUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddAntiFakeUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加信息防泄漏规则
+        /// </summary>
+        /// <param name="req"><see cref="AddAntiInfoLeakRulesRequest"/></param>
+        /// <returns><see cref="AddAntiInfoLeakRulesResponse"/></returns>
+        public async Task<AddAntiInfoLeakRulesResponse> AddAntiInfoLeakRules(AddAntiInfoLeakRulesRequest req)
+        {
+             JsonResponseModel<AddAntiInfoLeakRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddAntiInfoLeakRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddAntiInfoLeakRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加信息防泄漏规则
+        /// </summary>
+        /// <param name="req"><see cref="AddAntiInfoLeakRulesRequest"/></param>
+        /// <returns><see cref="AddAntiInfoLeakRulesResponse"/></returns>
+        public AddAntiInfoLeakRulesResponse AddAntiInfoLeakRulesSync(AddAntiInfoLeakRulesRequest req)
+        {
+             JsonResponseModel<AddAntiInfoLeakRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddAntiInfoLeakRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddAntiInfoLeakRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 增加访问控制（自定义策略）
         /// </summary>
         /// <param name="req"><see cref="AddCustomRuleRequest"/></param>
@@ -413,6 +493,86 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 删除防篡改url
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAntiFakeUrlRequest"/></param>
+        /// <returns><see cref="DeleteAntiFakeUrlResponse"/></returns>
+        public async Task<DeleteAntiFakeUrlResponse> DeleteAntiFakeUrl(DeleteAntiFakeUrlRequest req)
+        {
+             JsonResponseModel<DeleteAntiFakeUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAntiFakeUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAntiFakeUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除防篡改url
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAntiFakeUrlRequest"/></param>
+        /// <returns><see cref="DeleteAntiFakeUrlResponse"/></returns>
+        public DeleteAntiFakeUrlResponse DeleteAntiFakeUrlSync(DeleteAntiFakeUrlRequest req)
+        {
+             JsonResponseModel<DeleteAntiFakeUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAntiFakeUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAntiFakeUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 信息防泄漏删除规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAntiInfoLeakRuleRequest"/></param>
+        /// <returns><see cref="DeleteAntiInfoLeakRuleResponse"/></returns>
+        public async Task<DeleteAntiInfoLeakRuleResponse> DeleteAntiInfoLeakRule(DeleteAntiInfoLeakRuleRequest req)
+        {
+             JsonResponseModel<DeleteAntiInfoLeakRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAntiInfoLeakRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAntiInfoLeakRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 信息防泄漏删除规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAntiInfoLeakRuleRequest"/></param>
+        /// <returns><see cref="DeleteAntiInfoLeakRuleResponse"/></returns>
+        public DeleteAntiInfoLeakRuleResponse DeleteAntiInfoLeakRuleSync(DeleteAntiInfoLeakRuleRequest req)
+        {
+             JsonResponseModel<DeleteAntiInfoLeakRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAntiInfoLeakRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAntiInfoLeakRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除攻击日志下载任务记录
         /// </summary>
         /// <param name="req"><see cref="DeleteAttackDownloadRecordRequest"/></param>
@@ -444,6 +604,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DeleteAttackDownloadRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAttackDownloadRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf  CC V2 Delete接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCRuleRequest"/></param>
+        /// <returns><see cref="DeleteCCRuleResponse"/></returns>
+        public async Task<DeleteCCRuleResponse> DeleteCCRule(DeleteCCRuleRequest req)
+        {
+             JsonResponseModel<DeleteCCRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCCRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCCRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf  CC V2 Delete接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCRuleRequest"/></param>
+        /// <returns><see cref="DeleteCCRuleResponse"/></returns>
+        public DeleteCCRuleResponse DeleteCCRuleSync(DeleteCCRuleRequest req)
+        {
+             JsonResponseModel<DeleteCCRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCCRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCCRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -935,6 +1135,170 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 获取防篡改url
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAntiFakeRulesRequest"/></param>
+        /// <returns><see cref="DescribeAntiFakeRulesResponse"/></returns>
+        public async Task<DescribeAntiFakeRulesResponse> DescribeAntiFakeRules(DescribeAntiFakeRulesRequest req)
+        {
+             JsonResponseModel<DescribeAntiFakeRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAntiFakeRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAntiFakeRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取防篡改url
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAntiFakeRulesRequest"/></param>
+        /// <returns><see cref="DescribeAntiFakeRulesResponse"/></returns>
+        public DescribeAntiFakeRulesResponse DescribeAntiFakeRulesSync(DescribeAntiFakeRulesRequest req)
+        {
+             JsonResponseModel<DescribeAntiFakeRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAntiFakeRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAntiFakeRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取防篡改url
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAntiFakeUrlRequest"/></param>
+        /// <returns><see cref="DescribeAntiFakeUrlResponse"/></returns>
+        public async Task<DescribeAntiFakeUrlResponse> DescribeAntiFakeUrl(DescribeAntiFakeUrlRequest req)
+        {
+             JsonResponseModel<DescribeAntiFakeUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAntiFakeUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAntiFakeUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取防篡改url
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAntiFakeUrlRequest"/></param>
+        /// <returns><see cref="DescribeAntiFakeUrlResponse"/></returns>
+        public DescribeAntiFakeUrlResponse DescribeAntiFakeUrlSync(DescribeAntiFakeUrlRequest req)
+        {
+             JsonResponseModel<DescribeAntiFakeUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAntiFakeUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAntiFakeUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 老接口已经不再使用。
+        /// 
+        /// 获取信息防泄漏规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAntiInfoLeakRulesRequest"/></param>
+        /// <returns><see cref="DescribeAntiInfoLeakRulesResponse"/></returns>
+        public async Task<DescribeAntiInfoLeakRulesResponse> DescribeAntiInfoLeakRules(DescribeAntiInfoLeakRulesRequest req)
+        {
+             JsonResponseModel<DescribeAntiInfoLeakRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAntiInfoLeakRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAntiInfoLeakRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 老接口已经不再使用。
+        /// 
+        /// 获取信息防泄漏规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAntiInfoLeakRulesRequest"/></param>
+        /// <returns><see cref="DescribeAntiInfoLeakRulesResponse"/></returns>
+        public DescribeAntiInfoLeakRulesResponse DescribeAntiInfoLeakRulesSync(DescribeAntiInfoLeakRulesRequest req)
+        {
+             JsonResponseModel<DescribeAntiInfoLeakRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAntiInfoLeakRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAntiInfoLeakRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取得信息防泄漏规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAntiInfoLeakageRulesRequest"/></param>
+        /// <returns><see cref="DescribeAntiInfoLeakageRulesResponse"/></returns>
+        public async Task<DescribeAntiInfoLeakageRulesResponse> DescribeAntiInfoLeakageRules(DescribeAntiInfoLeakageRulesRequest req)
+        {
+             JsonResponseModel<DescribeAntiInfoLeakageRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAntiInfoLeakageRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAntiInfoLeakageRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取得信息防泄漏规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAntiInfoLeakageRulesRequest"/></param>
+        /// <returns><see cref="DescribeAntiInfoLeakageRulesResponse"/></returns>
+        public DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRulesSync(DescribeAntiInfoLeakageRulesRequest req)
+        {
+             JsonResponseModel<DescribeAntiInfoLeakageRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAntiInfoLeakageRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAntiInfoLeakageRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 攻击总览
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackOverviewRequest"/></param>
@@ -1010,6 +1374,126 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAutoDenyIP");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoDenyIPResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf 多域名ip黑白名单查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchIpAccessControlRequest"/></param>
+        /// <returns><see cref="DescribeBatchIpAccessControlResponse"/></returns>
+        public async Task<DescribeBatchIpAccessControlResponse> DescribeBatchIpAccessControl(DescribeBatchIpAccessControlRequest req)
+        {
+             JsonResponseModel<DescribeBatchIpAccessControlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBatchIpAccessControl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBatchIpAccessControlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf 多域名ip黑白名单查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchIpAccessControlRequest"/></param>
+        /// <returns><see cref="DescribeBatchIpAccessControlResponse"/></returns>
+        public DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControlSync(DescribeBatchIpAccessControlRequest req)
+        {
+             JsonResponseModel<DescribeBatchIpAccessControlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBatchIpAccessControl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBatchIpAccessControlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf  CC V2 Query接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCRuleRequest"/></param>
+        /// <returns><see cref="DescribeCCRuleResponse"/></returns>
+        public async Task<DescribeCCRuleResponse> DescribeCCRule(DescribeCCRuleRequest req)
+        {
+             JsonResponseModel<DescribeCCRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf  CC V2 Query接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCRuleRequest"/></param>
+        /// <returns><see cref="DescribeCCRuleResponse"/></returns>
+        public DescribeCCRuleResponse DescribeCCRuleSync(DescribeCCRuleRequest req)
+        {
+             JsonResponseModel<DescribeCCRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCCRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据多条件查询CC规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCRuleListRequest"/></param>
+        /// <returns><see cref="DescribeCCRuleListResponse"/></returns>
+        public async Task<DescribeCCRuleListResponse> DescribeCCRuleList(DescribeCCRuleListRequest req)
+        {
+             JsonResponseModel<DescribeCCRuleListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCRuleList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCRuleListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据多条件查询CC规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCRuleListRequest"/></param>
+        /// <returns><see cref="DescribeCCRuleListResponse"/></returns>
+        public DescribeCCRuleListResponse DescribeCCRuleListSync(DescribeCCRuleListRequest req)
+        {
+             JsonResponseModel<DescribeCCRuleListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCCRuleList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCRuleListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1819,6 +2303,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// Waf 会话定义查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionRequest"/></param>
+        /// <returns><see cref="DescribeSessionResponse"/></returns>
+        public async Task<DescribeSessionResponse> DescribeSession(DescribeSessionRequest req)
+        {
+             JsonResponseModel<DescribeSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf 会话定义查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionRequest"/></param>
+        /// <returns><see cref="DescribeSessionResponse"/></returns>
+        public DescribeSessionResponse DescribeSessionSync(DescribeSessionRequest req)
+        {
+             JsonResponseModel<DescribeSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询用户TLS版本
         /// </summary>
         /// <param name="req"><see cref="DescribeTlsVersionRequest"/></param>
@@ -2343,6 +2867,166 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 编辑防篡改url
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAntiFakeUrlRequest"/></param>
+        /// <returns><see cref="ModifyAntiFakeUrlResponse"/></returns>
+        public async Task<ModifyAntiFakeUrlResponse> ModifyAntiFakeUrl(ModifyAntiFakeUrlRequest req)
+        {
+             JsonResponseModel<ModifyAntiFakeUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAntiFakeUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAntiFakeUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑防篡改url
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAntiFakeUrlRequest"/></param>
+        /// <returns><see cref="ModifyAntiFakeUrlResponse"/></returns>
+        public ModifyAntiFakeUrlResponse ModifyAntiFakeUrlSync(ModifyAntiFakeUrlRequest req)
+        {
+             JsonResponseModel<ModifyAntiFakeUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAntiFakeUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAntiFakeUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 切换防篡改开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAntiFakeUrlStatusRequest"/></param>
+        /// <returns><see cref="ModifyAntiFakeUrlStatusResponse"/></returns>
+        public async Task<ModifyAntiFakeUrlStatusResponse> ModifyAntiFakeUrlStatus(ModifyAntiFakeUrlStatusRequest req)
+        {
+             JsonResponseModel<ModifyAntiFakeUrlStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAntiFakeUrlStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAntiFakeUrlStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 切换防篡改开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAntiFakeUrlStatusRequest"/></param>
+        /// <returns><see cref="ModifyAntiFakeUrlStatusResponse"/></returns>
+        public ModifyAntiFakeUrlStatusResponse ModifyAntiFakeUrlStatusSync(ModifyAntiFakeUrlStatusRequest req)
+        {
+             JsonResponseModel<ModifyAntiFakeUrlStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAntiFakeUrlStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAntiFakeUrlStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 信息防泄漏切换规则开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAntiInfoLeakRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyAntiInfoLeakRuleStatusResponse"/></returns>
+        public async Task<ModifyAntiInfoLeakRuleStatusResponse> ModifyAntiInfoLeakRuleStatus(ModifyAntiInfoLeakRuleStatusRequest req)
+        {
+             JsonResponseModel<ModifyAntiInfoLeakRuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAntiInfoLeakRuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAntiInfoLeakRuleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 信息防泄漏切换规则开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAntiInfoLeakRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyAntiInfoLeakRuleStatusResponse"/></returns>
+        public ModifyAntiInfoLeakRuleStatusResponse ModifyAntiInfoLeakRuleStatusSync(ModifyAntiInfoLeakRuleStatusRequest req)
+        {
+             JsonResponseModel<ModifyAntiInfoLeakRuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAntiInfoLeakRuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAntiInfoLeakRuleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑信息防泄漏规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAntiInfoLeakRulesRequest"/></param>
+        /// <returns><see cref="ModifyAntiInfoLeakRulesResponse"/></returns>
+        public async Task<ModifyAntiInfoLeakRulesResponse> ModifyAntiInfoLeakRules(ModifyAntiInfoLeakRulesRequest req)
+        {
+             JsonResponseModel<ModifyAntiInfoLeakRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAntiInfoLeakRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAntiInfoLeakRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑信息防泄漏规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAntiInfoLeakRulesRequest"/></param>
+        /// <returns><see cref="ModifyAntiInfoLeakRulesResponse"/></returns>
+        public ModifyAntiInfoLeakRulesResponse ModifyAntiInfoLeakRulesSync(ModifyAntiInfoLeakRulesRequest req)
+        {
+             JsonResponseModel<ModifyAntiInfoLeakRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAntiInfoLeakRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAntiInfoLeakRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// api分析页面开关
         /// </summary>
         /// <param name="req"><see cref="ModifyApiAnalyzeStatusRequest"/></param>
@@ -2574,6 +3258,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "ModifyCustomWhiteRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启或禁用精准白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomWhiteRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyCustomWhiteRuleStatusResponse"/></returns>
+        public async Task<ModifyCustomWhiteRuleStatusResponse> ModifyCustomWhiteRuleStatus(ModifyCustomWhiteRuleStatusRequest req)
+        {
+             JsonResponseModel<ModifyCustomWhiteRuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCustomWhiteRuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomWhiteRuleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启或禁用精准白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomWhiteRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyCustomWhiteRuleStatusResponse"/></returns>
+        public ModifyCustomWhiteRuleStatusResponse ModifyCustomWhiteRuleStatusSync(ModifyCustomWhiteRuleStatusRequest req)
+        {
+             JsonResponseModel<ModifyCustomWhiteRuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCustomWhiteRuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomWhiteRuleStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3305,6 +4029,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// Waf  CC V2 Upsert接口
+        /// </summary>
+        /// <param name="req"><see cref="UpsertCCRuleRequest"/></param>
+        /// <returns><see cref="UpsertCCRuleResponse"/></returns>
+        public async Task<UpsertCCRuleResponse> UpsertCCRule(UpsertCCRuleRequest req)
+        {
+             JsonResponseModel<UpsertCCRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpsertCCRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpsertCCRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf  CC V2 Upsert接口
+        /// </summary>
+        /// <param name="req"><see cref="UpsertCCRuleRequest"/></param>
+        /// <returns><see cref="UpsertCCRuleResponse"/></returns>
+        public UpsertCCRuleResponse UpsertCCRuleSync(UpsertCCRuleRequest req)
+        {
+             JsonResponseModel<UpsertCCRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpsertCCRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpsertCCRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Waf IP黑白名单Upsert接口
         /// </summary>
         /// <param name="req"><see cref="UpsertIpAccessControlRequest"/></param>
@@ -3336,6 +4100,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "UpsertIpAccessControl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpsertIpAccessControlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf  会话定义 Upsert接口
+        /// </summary>
+        /// <param name="req"><see cref="UpsertSessionRequest"/></param>
+        /// <returns><see cref="UpsertSessionResponse"/></returns>
+        public async Task<UpsertSessionResponse> UpsertSession(UpsertSessionRequest req)
+        {
+             JsonResponseModel<UpsertSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpsertSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpsertSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf  会话定义 Upsert接口
+        /// </summary>
+        /// <param name="req"><see cref="UpsertSessionRequest"/></param>
+        /// <returns><see cref="UpsertSessionResponse"/></returns>
+        public UpsertSessionResponse UpsertSessionSync(UpsertSessionRequest req)
+        {
+             JsonResponseModel<UpsertSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpsertSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpsertSessionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

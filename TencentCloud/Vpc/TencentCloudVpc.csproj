@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.838</VersionPrefix>
+    <VersionPrefix>3.0.839</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -171,6 +171,8 @@
     <Compile Include="V20170312\Models\CreateNatGatewaySourceIpTranslationNatRuleResponse.cs" />
     <Compile Include="V20170312\Models\CreateNetDetectRequest.cs" />
     <Compile Include="V20170312\Models\CreateNetDetectResponse.cs" />
+    <Compile Include="V20170312\Models\CreateNetworkAclEntriesRequest.cs" />
+    <Compile Include="V20170312\Models\CreateNetworkAclEntriesResponse.cs" />
     <Compile Include="V20170312\Models\CreateNetworkAclQuintupleEntriesRequest.cs" />
     <Compile Include="V20170312\Models\CreateNetworkAclQuintupleEntriesResponse.cs" />
     <Compile Include="V20170312\Models\CreateNetworkAclRequest.cs" />
@@ -259,6 +261,8 @@
     <Compile Include="V20170312\Models\DeleteNatGatewaySourceIpTranslationNatRuleResponse.cs" />
     <Compile Include="V20170312\Models\DeleteNetDetectRequest.cs" />
     <Compile Include="V20170312\Models\DeleteNetDetectResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteNetworkAclEntriesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteNetworkAclEntriesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteNetworkAclQuintupleEntriesRequest.cs" />
     <Compile Include="V20170312\Models\DeleteNetworkAclQuintupleEntriesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteNetworkAclRequest.cs" />
