@@ -36,6 +36,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
+        /// <summary>
+        /// 过滤条件， rdb（数据库）cos（对象存储）
+        /// 不传就是全部
+        /// </summary>
+        [JsonProperty("Filter")]
+        public string Filter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         {
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "Filter", this.Filter);
         }
     }
 }

@@ -57,6 +57,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("BrokerTopicData")]
         public BrokerTopicData[] BrokerTopicData{ get; set; }
 
+        /// <summary>
+        /// 单个Broker 节点Topic 流量的大小(单位MB)
+        /// </summary>
+        [JsonProperty("BrokerTopicFlowData")]
+        public BrokerTopicFlowData[] BrokerTopicFlowData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArrayObj(map, prefix + "TopicMessageHeap.", this.TopicMessageHeap);
             this.SetParamArraySimple(map, prefix + "BrokerIp.", this.BrokerIp);
             this.SetParamArrayObj(map, prefix + "BrokerTopicData.", this.BrokerTopicData);
+            this.SetParamArrayObj(map, prefix + "BrokerTopicFlowData.", this.BrokerTopicFlowData);
         }
     }
 }

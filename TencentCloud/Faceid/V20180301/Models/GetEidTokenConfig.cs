@@ -43,7 +43,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? UseIntentionVerify{ get; set; }
 
         /// <summary>
-        /// 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+        /// 意愿核身模式。枚举值：1( 语音朗读模式)，2（语音问答模式） ，3（点头确认模式）。默认值为1。
         /// </summary>
         [JsonProperty("IntentionMode")]
         public string IntentionMode{ get; set; }
@@ -59,6 +59,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         [JsonProperty("IntentionQuestions")]
         public IntentionQuestion[] IntentionQuestions{ get; set; }
+
+        /// <summary>
+        /// 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。
+        /// </summary>
+        [JsonProperty("IntentionActions")]
+        public IntentionActionConfig[] IntentionActions{ get; set; }
 
         /// <summary>
         /// 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
@@ -83,6 +89,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IntentionMode", this.IntentionMode);
             this.SetParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
             this.SetParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
+            this.SetParamArrayObj(map, prefix + "IntentionActions.", this.IntentionActions);
             this.SetParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
             this.SetParamSimple(map, prefix + "IsSupportHMTResidentPermitOCR", this.IsSupportHMTResidentPermitOCR);
         }

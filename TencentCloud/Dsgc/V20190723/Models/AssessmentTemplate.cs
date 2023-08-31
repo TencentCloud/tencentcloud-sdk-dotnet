@@ -93,6 +93,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("SupportDataSource")]
         public string[] SupportDataSource{ get; set; }
 
+        /// <summary>
+        /// 是否包含攻击面风险
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsASMTemplate")]
+        public bool? IsASMTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "AppliedItemCount", this.AppliedItemCount);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "SupportDataSource.", this.SupportDataSource);
+            this.SetParamSimple(map, prefix + "IsASMTemplate", this.IsASMTemplate);
         }
     }
 }

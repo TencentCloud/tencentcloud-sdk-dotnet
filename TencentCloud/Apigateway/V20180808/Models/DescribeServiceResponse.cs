@@ -187,6 +187,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string SpecialUse{ get; set; }
 
         /// <summary>
+        /// vpc属性，存量可能为空字符串
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -223,6 +230,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "SetType", this.SetType);
             this.SetParamSimple(map, prefix + "DeploymentType", this.DeploymentType);
             this.SetParamSimple(map, prefix + "SpecialUse", this.SpecialUse);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

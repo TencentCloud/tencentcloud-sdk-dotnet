@@ -84,7 +84,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public UnitRuleTag[] UnitRuleTagList{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// 规则项索引
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemIndex")]

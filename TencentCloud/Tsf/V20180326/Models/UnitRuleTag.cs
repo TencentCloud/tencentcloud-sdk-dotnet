@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 标签类型 : U(用户标签)
+        /// 标签类型 : U(用户标签)/S(系统标签)
         /// </summary>
         [JsonProperty("TagType")]
         public string TagType{ get; set; }

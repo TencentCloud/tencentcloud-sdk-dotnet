@@ -59,6 +59,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
+        /// <summary>
+        /// 账户的类型
+        /// </summary>
+        [JsonProperty("UserType")]
+        public string UserType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +75,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "ApiType", this.ApiType);
             this.SetParamSimple(map, prefix + "Cluster", this.Cluster);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "UserType", this.UserType);
         }
     }
 }

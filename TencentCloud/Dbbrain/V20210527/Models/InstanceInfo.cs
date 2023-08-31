@@ -226,6 +226,18 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
+        /// <summary>
+        /// 自建MySQL的Agent状态，"not_deployed" - 未部署，"deploying" - 部署中，"connected" - 连接正常，"deploy_failed" - 连接失败，"monitoring" - 连接正常，"stopped" - 暂停连接，"connect_failed" - 连接失败，unknown - 未知。
+        /// </summary>
+        [JsonProperty("AgentStatus")]
+        public string AgentStatus{ get; set; }
+
+        /// <summary>
+        /// 自建MySQL的实例状态，"not_attached" - 未连接，"attached" - 连接正常，"failed" - 连接失败，"stopped" - 停止监控，unknown- 未知。
+        /// </summary>
+        [JsonProperty("InstanceStatus")]
+        public string InstanceStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -265,6 +277,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
+            this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         }
     }
 }

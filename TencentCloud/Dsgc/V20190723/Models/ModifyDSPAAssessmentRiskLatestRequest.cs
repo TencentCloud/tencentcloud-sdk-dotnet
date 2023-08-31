@@ -34,6 +34,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// 最新风险项Id
         /// </summary>
         [JsonProperty("RiskLatestTableId")]
+        [System.Obsolete]
         public ulong? RiskLatestTableId{ get; set; }
 
         /// <summary>
@@ -54,6 +55,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("ProcessPeople")]
         public string ProcessPeople{ get; set; }
 
+        /// <summary>
+        /// 批量处理的列表
+        /// </summary>
+        [JsonProperty("BathRiskIdList")]
+        public long?[] BathRiskIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Note", this.Note);
             this.SetParamSimple(map, prefix + "ProcessPeople", this.ProcessPeople);
+            this.SetParamArraySimple(map, prefix + "BathRiskIdList.", this.BathRiskIdList);
         }
     }
 }

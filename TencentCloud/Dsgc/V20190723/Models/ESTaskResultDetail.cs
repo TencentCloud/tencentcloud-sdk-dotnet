@@ -94,6 +94,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("LevelName")]
         public string LevelName{ get; set; }
 
+        /// <summary>
+        /// 分级分数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LevelRiskScore")]
+        public long? LevelRiskScore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamArraySimple(map, prefix + "CategoryArr.", this.CategoryArr);
             this.SetParamSimple(map, prefix + "LevelId", this.LevelId);
             this.SetParamSimple(map, prefix + "LevelName", this.LevelName);
+            this.SetParamSimple(map, prefix + "LevelRiskScore", this.LevelRiskScore);
         }
     }
 }

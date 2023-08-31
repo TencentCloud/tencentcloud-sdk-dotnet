@@ -108,6 +108,13 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
+        /// <summary>
+        /// 负载均衡域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerDomain")]
+        public string LoadBalancerDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +133,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
             this.SetParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
         }
     }
 }

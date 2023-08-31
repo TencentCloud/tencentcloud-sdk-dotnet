@@ -79,7 +79,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// vpc属性
+        /// vpc属性，选择VPC后不可修改，为服务选择VPC后，可对接该VPC下的后端资源
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }

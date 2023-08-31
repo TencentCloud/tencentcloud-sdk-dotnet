@@ -32,6 +32,20 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
+        /// 数据源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataSourceType")]
+        public string DataSourceType{ get; set; }
+
+        /// <summary>
+        /// 数据源名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataSourceName")]
+        public string DataSourceName{ get; set; }
+
+        /// <summary>
         /// 资产对象名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -59,6 +73,20 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("TotalRiskCount")]
         public long? TotalRiskCount{ get; set; }
 
+        /// <summary>
+        /// 风险面
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RiskSide")]
+        public string RiskSide{ get; set; }
+
+        /// <summary>
+        /// 地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceRegion")]
+        public string ResourceRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,10 +94,14 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
+            this.SetParamSimple(map, prefix + "DataSourceName", this.DataSourceName);
             this.SetParamSimple(map, prefix + "AssetsName", this.AssetsName);
             this.SetParamSimple(map, prefix + "HighRiskCount", this.HighRiskCount);
             this.SetParamSimple(map, prefix + "RiskType", this.RiskType);
             this.SetParamSimple(map, prefix + "TotalRiskCount", this.TotalRiskCount);
+            this.SetParamSimple(map, prefix + "RiskSide", this.RiskSide);
+            this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BF658D51-2E9C-3208-A6EE-584C1058E034}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.837</VersionPrefix>
+    <VersionPrefix>3.0.838</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -196,6 +196,10 @@
     <Compile Include="V20190723\Models\DescribeDSPAAssessmentRiskOverviewResponse.cs" />
     <Compile Include="V20190723\Models\DescribeDSPAAssessmentRiskProcessHistoryRequest.cs" />
     <Compile Include="V20190723\Models\DescribeDSPAAssessmentRiskProcessHistoryResponse.cs" />
+    <Compile Include="V20190723\Models\DescribeDSPAAssessmentRiskSideDistributedRequest.cs" />
+    <Compile Include="V20190723\Models\DescribeDSPAAssessmentRiskSideDistributedResponse.cs" />
+    <Compile Include="V20190723\Models\DescribeDSPAAssessmentRiskSideListRequest.cs" />
+    <Compile Include="V20190723\Models\DescribeDSPAAssessmentRiskSideListResponse.cs" />
     <Compile Include="V20190723\Models\DescribeDSPAAssessmentRiskTemplateDetailRequest.cs" />
     <Compile Include="V20190723\Models\DescribeDSPAAssessmentRiskTemplateDetailResponse.cs" />
     <Compile Include="V20190723\Models\DescribeDSPAAssessmentRiskTemplateVulnerableListRequest.cs" />
@@ -431,6 +435,7 @@
     <Compile Include="V20190723\Models\RiskLevelRisk.cs" />
     <Compile Include="V20190723\Models\RiskLevelTrendItem.cs" />
     <Compile Include="V20190723\Models\RiskMatrixLevel.cs" />
+    <Compile Include="V20190723\Models\RiskSideDistributed.cs" />
     <Compile Include="V20190723\Models\RuleDistribution.cs" />
     <Compile Include="V20190723\Models\ScanTaskCOSRules.cs" />
     <Compile Include="V20190723\Models\ScanTaskComplianceInfo.cs" />
@@ -444,6 +449,7 @@
     <Compile Include="V20190723\Models\StopDSPADiscoveryTaskResponse.cs" />
     <Compile Include="V20190723\Models\SuggestRiskLevelMatrix.cs" />
     <Compile Include="V20190723\Models\SuggestRiskLevelMatrixItem.cs" />
+    <Compile Include="V20190723\Models\TemplateInfo.cs" />
     <Compile Include="V20190723\Models\TopAsset.cs" />
     <Compile Include="V20190723\Models\TopAssetStat.cs" />
     <Compile Include="V20190723\Models\UpdateDSPASelfBuildResourceRequest.cs" />

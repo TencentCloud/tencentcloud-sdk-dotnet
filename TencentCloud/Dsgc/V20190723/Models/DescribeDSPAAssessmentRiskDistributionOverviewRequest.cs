@@ -36,6 +36,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
+        /// <summary>
+        /// 风险资产分布的过滤条件
+        /// （rdb，cos，不传就筛选全部）
+        /// </summary>
+        [JsonProperty("Filter")]
+        public string Filter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         {
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "Filter", this.Filter);
         }
     }
 }

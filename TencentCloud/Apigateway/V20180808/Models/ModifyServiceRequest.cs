@@ -54,6 +54,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("NetTypes")]
         public string[] NetTypes{ get; set; }
 
+        /// <summary>
+        /// vpc属性，选择VPC后不可修改。为服务选择VPC后，可对接该VPC下的后端资源
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "ServiceDesc", this.ServiceDesc);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamArraySimple(map, prefix + "NetTypes.", this.NetTypes);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         }
     }
 }

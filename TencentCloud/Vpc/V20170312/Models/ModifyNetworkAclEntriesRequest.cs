@@ -42,6 +42,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NetworkAclQuintupleSet")]
         public NetworkAclQuintupleEntries NetworkAclQuintupleSet{ get; set; }
 
+        /// <summary>
+        /// 三元组的增量更新。该接口的默认语义为全量覆盖。当需要实现增量更新语义时，设置该参数为True。
+        /// </summary>
+        [JsonProperty("EnableUpdateAclEntries")]
+        public bool? EnableUpdateAclEntries{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
             this.SetParamObj(map, prefix + "NetworkAclEntrySet.", this.NetworkAclEntrySet);
             this.SetParamObj(map, prefix + "NetworkAclQuintupleSet.", this.NetworkAclQuintupleSet);
+            this.SetParamSimple(map, prefix + "EnableUpdateAclEntries", this.EnableUpdateAclEntries);
         }
     }
 }

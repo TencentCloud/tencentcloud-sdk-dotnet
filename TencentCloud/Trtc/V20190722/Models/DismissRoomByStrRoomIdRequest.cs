@@ -31,7 +31,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 房间号。
+        /// 字符串类型房间号。
+        /// 本接口仅支持解散字符串类型房间号，如需解散数字类型房间号，请使用：DismissRoom
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }

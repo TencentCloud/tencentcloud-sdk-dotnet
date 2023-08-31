@@ -173,6 +173,126 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
+        /// 删除备份数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackUpDataRequest"/></param>
+        /// <returns><see cref="DeleteBackUpDataResponse"/></returns>
+        public async Task<DeleteBackUpDataResponse> DeleteBackUpData(DeleteBackUpDataRequest req)
+        {
+             JsonResponseModel<DeleteBackUpDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBackUpData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackUpDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除备份数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackUpDataRequest"/></param>
+        /// <returns><see cref="DeleteBackUpDataResponse"/></returns>
+        public DeleteBackUpDataResponse DeleteBackUpDataSync(DeleteBackUpDataRequest req)
+        {
+             JsonResponseModel<DeleteBackUpDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBackUpData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackUpDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询备份任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackUpJobRequest"/></param>
+        /// <returns><see cref="DescribeBackUpJobResponse"/></returns>
+        public async Task<DescribeBackUpJobResponse> DescribeBackUpJob(DescribeBackUpJobRequest req)
+        {
+             JsonResponseModel<DescribeBackUpJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackUpJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackUpJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询备份任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackUpJobRequest"/></param>
+        /// <returns><see cref="DescribeBackUpJobResponse"/></returns>
+        public DescribeBackUpJobResponse DescribeBackUpJobSync(DescribeBackUpJobRequest req)
+        {
+             JsonResponseModel<DescribeBackUpJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackUpJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackUpJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询备份任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackUpJobDetailRequest"/></param>
+        /// <returns><see cref="DescribeBackUpJobDetailResponse"/></returns>
+        public async Task<DescribeBackUpJobDetailResponse> DescribeBackUpJobDetail(DescribeBackUpJobDetailRequest req)
+        {
+             JsonResponseModel<DescribeBackUpJobDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackUpJobDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackUpJobDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询备份任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackUpJobDetailRequest"/></param>
+        /// <returns><see cref="DescribeBackUpJobDetailResponse"/></returns>
+        public DescribeBackUpJobDetailResponse DescribeBackUpJobDetailSync(DescribeBackUpJobDetailRequest req)
+        {
+             JsonResponseModel<DescribeBackUpJobDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackUpJobDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackUpJobDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询备份策略信息
         /// </summary>
         /// <param name="req"><see cref="DescribeBackUpScheduleRequest"/></param>
@@ -764,6 +884,46 @@ namespace TencentCloud.Cdwch.V20200915
              {
                  var strResp = this.InternalRequestSync(req, "OpenBackUp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenBackUpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 备份恢复
+        /// </summary>
+        /// <param name="req"><see cref="RecoverBackUpJobRequest"/></param>
+        /// <returns><see cref="RecoverBackUpJobResponse"/></returns>
+        public async Task<RecoverBackUpJobResponse> RecoverBackUpJob(RecoverBackUpJobRequest req)
+        {
+             JsonResponseModel<RecoverBackUpJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecoverBackUpJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecoverBackUpJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 备份恢复
+        /// </summary>
+        /// <param name="req"><see cref="RecoverBackUpJobRequest"/></param>
+        /// <returns><see cref="RecoverBackUpJobResponse"/></returns>
+        public RecoverBackUpJobResponse RecoverBackUpJobSync(RecoverBackUpJobRequest req)
+        {
+             JsonResponseModel<RecoverBackUpJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecoverBackUpJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecoverBackUpJobResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

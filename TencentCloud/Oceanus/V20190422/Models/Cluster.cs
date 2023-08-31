@@ -259,6 +259,27 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ClusterSessions")]
         public ClusterSession[] ClusterSessions{ get; set; }
 
+        /// <summary>
+        /// V3版本 = 2
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ArchGeneration")]
+        public ulong? ArchGeneration{ get; set; }
+
+        /// <summary>
+        /// 0:TKE, 1:EKS
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public ulong? ClusterType{ get; set; }
+
+        /// <summary>
+        /// 订单信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Orders")]
+        public Order[] Orders{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -301,6 +322,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "IsNeedManageNode", this.IsNeedManageNode);
             this.SetParamArrayObj(map, prefix + "ClusterSessions.", this.ClusterSessions);
+            this.SetParamSimple(map, prefix + "ArchGeneration", this.ArchGeneration);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamArrayObj(map, prefix + "Orders.", this.Orders);
         }
     }
 }

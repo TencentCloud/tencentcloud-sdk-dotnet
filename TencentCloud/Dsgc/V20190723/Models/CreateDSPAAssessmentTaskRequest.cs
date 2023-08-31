@@ -43,12 +43,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 敏感数据扫描数据源条件。
-        /// </summary>
-        [JsonProperty("DiscoveryCondition")]
-        public DiscoveryCondition DiscoveryCondition{ get; set; }
-
-        /// <summary>
         /// 评估业务名称。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
         /// </summary>
         [JsonProperty("BusinessName")]
@@ -76,6 +70,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long? ComplianceId{ get; set; }
 
         /// <summary>
+        /// 敏感数据扫描数据源条件。
+        /// </summary>
+        [JsonProperty("DiscoveryCondition")]
+        public DiscoveryCondition DiscoveryCondition{ get; set; }
+
+        /// <summary>
         /// 说明
         /// </summary>
         [JsonProperty("Description")]
@@ -90,11 +90,11 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamObj(map, prefix + "DiscoveryCondition.", this.DiscoveryCondition);
             this.SetParamSimple(map, prefix + "BusinessName", this.BusinessName);
             this.SetParamSimple(map, prefix + "BusinessDept", this.BusinessDept);
             this.SetParamSimple(map, prefix + "BusinessOwner", this.BusinessOwner);
             this.SetParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
+            this.SetParamObj(map, prefix + "DiscoveryCondition.", this.DiscoveryCondition);
             this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }

@@ -234,6 +234,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ModifiedTime")]
         public long? ModifiedTime{ get; set; }
 
+        /// <summary>
+        /// 数据源页面展示类型，与Type对应
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShowType")]
+        public string ShowType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +277,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ParamsString", this.ParamsString);
             this.SetParamSimple(map, prefix + "BizParamsString", this.BizParamsString);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+            this.SetParamSimple(map, prefix + "ShowType", this.ShowType);
         }
     }
 }

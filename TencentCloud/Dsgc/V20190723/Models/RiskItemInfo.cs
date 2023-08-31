@@ -52,6 +52,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string DataSourceType{ get; set; }
 
         /// <summary>
+        /// 资源地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceRegion")]
+        public string ResourceRegion{ get; set; }
+
+        /// <summary>
         /// 资产名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -135,6 +142,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("ItemSubType")]
         public string ItemSubType{ get; set; }
 
+        /// <summary>
+        /// 风险面
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RiskSide")]
+        public string RiskSide{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +159,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
             this.SetParamSimple(map, prefix + "DataSourceName", this.DataSourceName);
             this.SetParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
+            this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "AssetName", this.AssetName);
             this.SetParamSimple(map, prefix + "RiskType", this.RiskType);
             this.SetParamSimple(map, prefix + "RiskName", this.RiskName);
@@ -157,6 +172,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "LastProcessTime", this.LastProcessTime);
             this.SetParamSimple(map, prefix + "IdentifyComplianceId", this.IdentifyComplianceId);
             this.SetParamSimple(map, prefix + "ItemSubType", this.ItemSubType);
+            this.SetParamSimple(map, prefix + "RiskSide", this.RiskSide);
         }
     }
 }

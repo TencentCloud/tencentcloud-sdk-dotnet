@@ -66,6 +66,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("LevelId")]
         public long? LevelId{ get; set; }
 
+        /// <summary>
+        /// 索引名称
+        /// </summary>
+        [JsonProperty("DbName")]
+        public string DbName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "CategoryIdList.", this.CategoryIdList);
             this.SetParamSimple(map, prefix + "LevelId", this.LevelId);
+            this.SetParamSimple(map, prefix + "DbName", this.DbName);
         }
     }
 }

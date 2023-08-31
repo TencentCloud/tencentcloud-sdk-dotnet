@@ -60,6 +60,13 @@ namespace TencentCloud.Bma.V20221115.Models
         public string WhiteList{ get; set; }
 
         /// <summary>
+        /// 白名单备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
         /// 新增时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -77,6 +84,7 @@ namespace TencentCloud.Bma.V20221115.Models
             this.SetParamSimple(map, prefix + "BrandName", this.BrandName);
             this.SetParamSimple(map, prefix + "AssetsType", this.AssetsType);
             this.SetParamSimple(map, prefix + "WhiteList", this.WhiteList);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "InsertTime", this.InsertTime);
         }
     }

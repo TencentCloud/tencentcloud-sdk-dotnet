@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// 后端协议，取值范围：HTTP, HTTPS
+        /// 后端协议，取值范围：HTTP, HTTPS,gRPC，gRPCs
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }

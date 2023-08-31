@@ -25,12 +25,6 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 修改时间。
-        /// </summary>
-        [JsonProperty("ModifyTime")]
-        public string ModifyTime{ get; set; }
-
-        /// <summary>
         /// 协议, 取值: TCP,UDP, ICMP, ALL。
         /// </summary>
         [JsonProperty("Protocol")]
@@ -43,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Port{ get; set; }
 
         /// <summary>
-        /// 网段或IP(互斥)。
+        /// 网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
@@ -66,19 +60,48 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 修改时间。
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
+
+        /// <summary>
+        /// 优先级，从1开始。	
+        /// </summary>
+        [JsonProperty("Priority")]
+        public long? Priority{ get; set; }
+
+        /// <summary>
+        /// IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetworkAclIpv4EntryId")]
+        public string NetworkAclIpv4EntryId{ get; set; }
+
+        /// <summary>
+        /// IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetworkAclIpv6EntryId")]
+        public string NetworkAclIpv6EntryId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
             this.SetParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
+            this.SetParamSimple(map, prefix + "NetworkAclIpv4EntryId", this.NetworkAclIpv4EntryId);
+            this.SetParamSimple(map, prefix + "NetworkAclIpv6EntryId", this.NetworkAclIpv6EntryId);
         }
     }
 }

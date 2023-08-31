@@ -144,6 +144,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("InstanceNum")]
         public long? InstanceNum{ get; set; }
 
+        /// <summary>
+        /// 是否自动选择代金券:1-是;0否。默认为0
+        /// </summary>
+        [JsonProperty("AutoVoucher")]
+        public long? AutoVoucher{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamSimple(map, prefix + "PublicNetworkMonthly", this.PublicNetworkMonthly);
             this.SetParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
+            this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         }
     }
 }

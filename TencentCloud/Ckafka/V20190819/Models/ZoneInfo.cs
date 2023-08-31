@@ -64,6 +64,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// 额外标识
         /// </summary>
         [JsonProperty("Exflag")]
+        [System.Obsolete]
         public string Exflag{ get; set; }
 
         /// <summary>
@@ -78,6 +79,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("SalesInfo")]
         public SaleInfo[] SalesInfo{ get; set; }
+
+        /// <summary>
+        /// 额外标识
+        /// </summary>
+        [JsonProperty("ExtraFlag")]
+        public string ExtraFlag{ get; set; }
 
 
         /// <summary>
@@ -94,6 +101,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Exflag", this.Exflag);
             this.SetParamSimple(map, prefix + "SoldOut", this.SoldOut);
             this.SetParamArrayObj(map, prefix + "SalesInfo.", this.SalesInfo);
+            this.SetParamSimple(map, prefix + "ExtraFlag", this.ExtraFlag);
         }
     }
 }

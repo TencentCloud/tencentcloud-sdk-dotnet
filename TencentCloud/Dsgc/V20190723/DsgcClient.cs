@@ -2309,6 +2309,86 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
+        /// 风险评估概览页，查询风险面的分布
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDSPAAssessmentRiskSideDistributedRequest"/></param>
+        /// <returns><see cref="DescribeDSPAAssessmentRiskSideDistributedResponse"/></returns>
+        public async Task<DescribeDSPAAssessmentRiskSideDistributedResponse> DescribeDSPAAssessmentRiskSideDistributed(DescribeDSPAAssessmentRiskSideDistributedRequest req)
+        {
+             JsonResponseModel<DescribeDSPAAssessmentRiskSideDistributedResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDSPAAssessmentRiskSideDistributed");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDSPAAssessmentRiskSideDistributedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 风险评估概览页，查询风险面的分布
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDSPAAssessmentRiskSideDistributedRequest"/></param>
+        /// <returns><see cref="DescribeDSPAAssessmentRiskSideDistributedResponse"/></returns>
+        public DescribeDSPAAssessmentRiskSideDistributedResponse DescribeDSPAAssessmentRiskSideDistributedSync(DescribeDSPAAssessmentRiskSideDistributedRequest req)
+        {
+             JsonResponseModel<DescribeDSPAAssessmentRiskSideDistributedResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDSPAAssessmentRiskSideDistributed");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDSPAAssessmentRiskSideDistributedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 风险评估概览页，查询风险面的分布
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDSPAAssessmentRiskSideListRequest"/></param>
+        /// <returns><see cref="DescribeDSPAAssessmentRiskSideListResponse"/></returns>
+        public async Task<DescribeDSPAAssessmentRiskSideListResponse> DescribeDSPAAssessmentRiskSideList(DescribeDSPAAssessmentRiskSideListRequest req)
+        {
+             JsonResponseModel<DescribeDSPAAssessmentRiskSideListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDSPAAssessmentRiskSideList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDSPAAssessmentRiskSideListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 风险评估概览页，查询风险面的分布
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDSPAAssessmentRiskSideListRequest"/></param>
+        /// <returns><see cref="DescribeDSPAAssessmentRiskSideListResponse"/></returns>
+        public DescribeDSPAAssessmentRiskSideListResponse DescribeDSPAAssessmentRiskSideListSync(DescribeDSPAAssessmentRiskSideListRequest req)
+        {
+             JsonResponseModel<DescribeDSPAAssessmentRiskSideListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDSPAAssessmentRiskSideList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDSPAAssessmentRiskSideListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 风险项页面--查看评估模版详情
         /// </summary>
         /// <param name="req"><see cref="DescribeDSPAAssessmentRiskTemplateDetailRequest"/></param>

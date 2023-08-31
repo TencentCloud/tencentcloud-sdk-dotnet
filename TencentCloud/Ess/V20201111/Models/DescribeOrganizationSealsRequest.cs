@@ -82,7 +82,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 取值DISABLE，查询已停用的印章；
         /// 取值STOPPED，查询已终止的印章；
         /// 取值VOID，查询已作废的印章；
-        /// 取值INVALID，查询以失效的印章；
+        /// 取值INVALID，查询已失效的印章；
         /// </summary>
         [JsonProperty("SealStatuses")]
         public string[] SealStatuses{ get; set; }

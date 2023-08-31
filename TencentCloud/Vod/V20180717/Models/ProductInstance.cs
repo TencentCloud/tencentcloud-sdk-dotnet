@@ -69,7 +69,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 预付费资源包实例中包含的资源包列表。
         /// </summary>
         [JsonProperty("ProductInstanceResourceSet")]
+        [System.Obsolete]
         public ProductInstanceRecource[] ProductInstanceResourceSet{ get; set; }
+
+        /// <summary>
+        /// 预付费资源包实例中包含的资源包列表。
+        /// </summary>
+        [JsonProperty("ResourceSet")]
+        public ProductInstanceResource[] ResourceSet{ get; set; }
 
         /// <summary>
         /// 资源包实例的状态，取值有：
@@ -110,6 +117,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "LastConsumeDate", this.LastConsumeDate);
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamArrayObj(map, prefix + "ProductInstanceResourceSet.", this.ProductInstanceResourceSet);
+            this.SetParamArrayObj(map, prefix + "ResourceSet.", this.ResourceSet);
             this.SetParamSimple(map, prefix + "ProductInstanceStatus", this.ProductInstanceStatus);
             this.SetParamSimple(map, prefix + "RefundStatus", this.RefundStatus);
             this.SetParamSimple(map, prefix + "RenewStatus", this.RenewStatus);

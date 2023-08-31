@@ -54,6 +54,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("RiskName")]
         public string RiskName{ get; set; }
 
+        /// <summary>
+        /// 风险面
+        /// </summary>
+        [JsonProperty("RiskSide")]
+        public string RiskSide{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "RiskType", this.RiskType);
             this.SetParamSimple(map, prefix + "RiskName", this.RiskName);
+            this.SetParamSimple(map, prefix + "RiskSide", this.RiskSide);
         }
     }
 }

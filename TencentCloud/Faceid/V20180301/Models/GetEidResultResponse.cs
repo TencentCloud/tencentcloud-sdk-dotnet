@@ -67,6 +67,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         public IntentionQuestionResult IntentionQuestionResult{ get; set; }
 
         /// <summary>
+        /// 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IntentionActionResult")]
+        public IntentionActionResult IntentionActionResult{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -84,6 +91,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamObj(map, prefix + "EidInfo.", this.EidInfo);
             this.SetParamObj(map, prefix + "IntentionVerifyData.", this.IntentionVerifyData);
             this.SetParamObj(map, prefix + "IntentionQuestionResult.", this.IntentionQuestionResult);
+            this.SetParamObj(map, prefix + "IntentionActionResult.", this.IntentionActionResult);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

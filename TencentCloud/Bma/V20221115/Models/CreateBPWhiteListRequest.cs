@@ -42,6 +42,12 @@ namespace TencentCloud.Bma.V20221115.Models
         [JsonProperty("WhiteLists")]
         public string[] WhiteLists{ get; set; }
 
+        /// <summary>
+        /// 白名单备注
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Bma.V20221115.Models
             this.SetParamSimple(map, prefix + "CompanyId", this.CompanyId);
             this.SetParamSimple(map, prefix + "WhiteListType", this.WhiteListType);
             this.SetParamArraySimple(map, prefix + "WhiteLists.", this.WhiteLists);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

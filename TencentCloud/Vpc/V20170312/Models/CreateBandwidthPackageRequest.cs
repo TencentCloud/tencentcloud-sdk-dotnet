@@ -37,6 +37,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
         /// <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
         /// <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
+        /// <li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
+        /// <li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
