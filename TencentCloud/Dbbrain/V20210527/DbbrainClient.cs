@@ -2173,6 +2173,86 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 更新agent状态（停止或重连Agent）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAgentSwitchRequest"/></param>
+        /// <returns><see cref="UpdateAgentSwitchResponse"/></returns>
+        public async Task<UpdateAgentSwitchResponse> UpdateAgentSwitch(UpdateAgentSwitchRequest req)
+        {
+             JsonResponseModel<UpdateAgentSwitchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateAgentSwitch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAgentSwitchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新agent状态（停止或重连Agent）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAgentSwitchRequest"/></param>
+        /// <returns><see cref="UpdateAgentSwitchResponse"/></returns>
+        public UpdateAgentSwitchResponse UpdateAgentSwitchSync(UpdateAgentSwitchRequest req)
+        {
+             JsonResponseModel<UpdateAgentSwitchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateAgentSwitch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAgentSwitchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新Agent实例状态（停止或重连实例）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateMonitorSwitchRequest"/></param>
+        /// <returns><see cref="UpdateMonitorSwitchResponse"/></returns>
+        public async Task<UpdateMonitorSwitchResponse> UpdateMonitorSwitch(UpdateMonitorSwitchRequest req)
+        {
+             JsonResponseModel<UpdateMonitorSwitchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateMonitorSwitch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateMonitorSwitchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新Agent实例状态（停止或重连实例）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateMonitorSwitchRequest"/></param>
+        /// <returns><see cref="UpdateMonitorSwitchResponse"/></returns>
+        public UpdateMonitorSwitchResponse UpdateMonitorSwitchSync(UpdateMonitorSwitchRequest req)
+        {
+             JsonResponseModel<UpdateMonitorSwitchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateMonitorSwitch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateMonitorSwitchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 验证用户数据库账号权限，获取会话token。
         /// </summary>
         /// <param name="req"><see cref="VerifyUserAccountRequest"/></param>

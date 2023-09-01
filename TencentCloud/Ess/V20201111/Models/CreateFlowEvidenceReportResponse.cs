@@ -25,25 +25,29 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 出证报告 ID，用于查询出证报告DescribeFlowEvidenceReport接口时用到
+        /// 出证报告 ID，可用于DescribeFlowEvidenceReport接口查询出证PDF的下载地址
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }
 
         /// <summary>
-        /// 执行中：EvidenceStatusExecuting
-        /// 成功：EvidenceStatusSuccess
-        /// 失败：EvidenceStatusFailed
+        /// 出证任务执行的状态, 可能会有以下状态：
+        /// 
+        /// <ul><li>EvidenceStatusExecuting：  出证任务在执行中</li>
+        /// <li>EvidenceStatusSuccess：  出证任务执行成功</li>
+        /// <li>EvidenceStatusFailed ： 出征任务执行失败</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 废除，字段无效
+        /// 此字段已经废除,不再使用.
+        /// 出证的PDF下载地址请调用DescribeChannelFlowEvidenceReport接口获取
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportUrl")]
+        [System.Obsolete]
         public string ReportUrl{ get; set; }
 
         /// <summary>

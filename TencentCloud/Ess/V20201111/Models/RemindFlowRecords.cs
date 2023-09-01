@@ -25,19 +25,21 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 是否能够催办，true-是，false-否
+        /// 合同流程是否可以催办：
+        /// true - 可以，false - 不可以。
+        /// 若无法催办，将返回RemindMessage以解释原因。
         /// </summary>
         [JsonProperty("CanRemind")]
         public bool? CanRemind{ get; set; }
 
         /// <summary>
-        /// 合同id
+        /// 合同流程ID，为32位字符串。
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 催办详情信息
+        /// 在合同流程无法催办的情况下，系统将返回RemindMessage以阐述原因。
         /// </summary>
         [JsonProperty("RemindMessage")]
         public string RemindMessage{ get; set; }

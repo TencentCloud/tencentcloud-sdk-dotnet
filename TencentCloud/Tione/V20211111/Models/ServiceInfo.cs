@@ -235,6 +235,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
+        /// <summary>
+        /// 开启TIONE内网访问外部设置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceEIP")]
+        public ServiceEIP ServiceEIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +277,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
             this.SetParamObj(map, prefix + "InferCodeInfo.", this.InferCodeInfo);
             this.SetParamSimple(map, prefix + "Command", this.Command);
+            this.SetParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
         }
     }
 }

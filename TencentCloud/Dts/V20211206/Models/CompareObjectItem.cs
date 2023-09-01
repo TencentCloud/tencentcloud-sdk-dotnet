@@ -60,14 +60,14 @@ namespace TencentCloud.Dts.V20211206.Models
         public CompareTableItem[] Tables{ get; set; }
 
         /// <summary>
-        /// 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+        /// 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ViewMode")]
         public string ViewMode{ get; set; }
 
         /// <summary>
-        /// 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写
+        /// 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Views")]

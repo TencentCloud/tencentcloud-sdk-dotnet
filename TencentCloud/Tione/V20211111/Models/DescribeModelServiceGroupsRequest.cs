@@ -61,6 +61,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
+        /// <summary>
+        /// 服务分类
+        /// </summary>
+        [JsonProperty("ServiceCategory")]
+        public string ServiceCategory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+            this.SetParamSimple(map, prefix + "ServiceCategory", this.ServiceCategory);
         }
     }
 }

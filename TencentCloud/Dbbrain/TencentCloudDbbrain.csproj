@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.839</VersionPrefix>
+    <VersionPrefix>3.0.840</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -282,6 +282,10 @@
     <Compile Include="V20210527\Models\TableSpaceTimeSeries.cs" />
     <Compile Include="V20210527\Models\TaskInfo.cs" />
     <Compile Include="V20210527\Models\TimeSlice.cs" />
+    <Compile Include="V20210527\Models\UpdateAgentSwitchRequest.cs" />
+    <Compile Include="V20210527\Models\UpdateAgentSwitchResponse.cs" />
+    <Compile Include="V20210527\Models\UpdateMonitorSwitchRequest.cs" />
+    <Compile Include="V20210527\Models\UpdateMonitorSwitchResponse.cs" />
     <Compile Include="V20210527\Models\UserProfile.cs" />
     <Compile Include="V20210527\Models\VerifyUserAccountRequest.cs" />
     <Compile Include="V20210527\Models\VerifyUserAccountResponse.cs" />

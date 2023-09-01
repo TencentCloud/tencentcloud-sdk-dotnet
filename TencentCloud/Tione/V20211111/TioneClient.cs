@@ -53,7 +53,9 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 与大模型聊天
+        /// 该接口支持与两种类型大模型的聊天。
+        /// 1. 与多行业多场景大模型的在线体验聊天
+        /// 2. 与自行部署的开源大模型的聊天
         /// </summary>
         /// <param name="req"><see cref="ChatCompletionRequest"/></param>
         /// <returns><see cref="ChatCompletionResponse"/></returns>
@@ -73,7 +75,9 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 与大模型聊天
+        /// 该接口支持与两种类型大模型的聊天。
+        /// 1. 与多行业多场景大模型的在线体验聊天
+        /// 2. 与自行部署的开源大模型的聊天
         /// </summary>
         /// <param name="req"><see cref="ChatCompletionRequest"/></param>
         /// <returns><see cref="ChatCompletionResponse"/></returns>
@@ -1333,7 +1337,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 获取训练、推理、Notebook服务的日志
+        /// 获取训练、推理、Notebook服务的日志 API
         /// </summary>
         /// <param name="req"><see cref="DescribeLogsRequest"/></param>
         /// <returns><see cref="DescribeLogsResponse"/></returns>
@@ -1353,7 +1357,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 获取训练、推理、Notebook服务的日志
+        /// 获取训练、推理、Notebook服务的日志 API
         /// </summary>
         /// <param name="req"><see cref="DescribeLogsRequest"/></param>
         /// <returns><see cref="DescribeLogsResponse"/></returns>
@@ -2533,7 +2537,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// LLM模型的对话请求发送接口
+        /// 这是一个供您体验大模型聊天的接口。
         /// </summary>
         /// <param name="req"><see cref="SendChatMessageRequest"/></param>
         /// <returns><see cref="SendChatMessageResponse"/></returns>
@@ -2553,7 +2557,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// LLM模型的对话请求发送接口
+        /// 这是一个供您体验大模型聊天的接口。
         /// </summary>
         /// <param name="req"><see cref="SendChatMessageRequest"/></param>
         /// <returns><see cref="SendChatMessageResponse"/></returns>

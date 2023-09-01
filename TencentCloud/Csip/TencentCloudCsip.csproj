@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.839</VersionPrefix>
+    <VersionPrefix>3.0.840</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,8 +52,10 @@
     <Compile Include="V20221121\Models\AddNewBindRoleUserResponse.cs" />
     <Compile Include="V20221121\Models\AssetBaseInfoResponse.cs" />
     <Compile Include="V20221121\Models\AssetClusterPod.cs" />
+    <Compile Include="V20221121\Models\AssetInfoDetail.cs" />
     <Compile Include="V20221121\Models\AssetViewPortRisk.cs" />
     <Compile Include="V20221121\Models\AssetViewVULRisk.cs" />
+    <Compile Include="V20221121\Models\BugInfoDetail.cs" />
     <Compile Include="V20221121\Models\CVMAssetVO.cs" />
     <Compile Include="V20221121\Models\ClbListenerListInfo.cs" />
     <Compile Include="V20221121\Models\CreateDomainAndIpRequest.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\DBAssetVO.cs" />
+    <Compile Include="V20221121\Models\DataSearchBug.cs" />
     <Compile Include="V20221121\Models\DbAssetInfo.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoResponse.cs" />
@@ -84,15 +87,25 @@
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewVULRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeScanReportListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeScanReportListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeScanTaskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeScanTaskListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSearchBugInfoRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSearchBugInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSubnetAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSubnetAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeTaskLogListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeTaskLogListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeTaskLogURLRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeTaskLogURLResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVpcAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVpcAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DomainAssetVO.cs" />
     <Compile Include="V20221121\Models\Filter.cs" />
     <Compile Include="V20221121\Models\FilterDataObject.cs" />
     <Compile Include="V20221121\Models\IpAssetListVO.cs" />
+    <Compile Include="V20221121\Models\ReportItemKey.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfo.cs" />
+    <Compile Include="V20221121\Models\ScanTaskInfoList.cs" />
     <Compile Include="V20221121\Models\SubnetAsset.cs" />
     <Compile Include="V20221121\Models\Tag.cs" />
     <Compile Include="V20221121\Models\TaskAdvanceCFG.cs" />
@@ -100,6 +113,8 @@
     <Compile Include="V20221121\Models\TaskCenterCFGRiskInputParam.cs" />
     <Compile Include="V20221121\Models\TaskCenterVulRiskInputParam.cs" />
     <Compile Include="V20221121\Models\TaskCenterWeakPwdRiskInputParam.cs" />
+    <Compile Include="V20221121\Models\TaskLogInfo.cs" />
+    <Compile Include="V20221121\Models\TaskLogURL.cs" />
     <Compile Include="V20221121\Models\Vpc.cs" />
     <Compile Include="V20221121\Models\WhereFilter.cs" />
   </ItemGroup>

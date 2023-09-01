@@ -813,7 +813,7 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
-        /// 针对ck账号的权限做管控（新版）
+        /// 针对集群账号的权限做管控（新版）
         /// </summary>
         /// <param name="req"><see cref="ModifyUserNewPrivilegeRequest"/></param>
         /// <returns><see cref="ModifyUserNewPrivilegeResponse"/></returns>
@@ -833,7 +833,7 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
-        /// 针对ck账号的权限做管控（新版）
+        /// 针对集群账号的权限做管控（新版）
         /// </summary>
         /// <param name="req"><see cref="ModifyUserNewPrivilegeRequest"/></param>
         /// <returns><see cref="ModifyUserNewPrivilegeResponse"/></returns>

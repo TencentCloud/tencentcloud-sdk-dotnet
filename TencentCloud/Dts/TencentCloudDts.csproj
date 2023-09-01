@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.839</VersionPrefix>
+    <VersionPrefix>3.0.840</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -111,7 +111,9 @@
     <Compile Include="V20211206\DtsClient.cs" />
     <Compile Include="V20211206\Models\CheckStep.cs" />
     <Compile Include="V20211206\Models\CheckStepInfo.cs" />
+    <Compile Include="V20211206\Models\Column.cs" />
     <Compile Include="V20211206\Models\CompareAbstractInfo.cs" />
+    <Compile Include="V20211206\Models\CompareColumnItem.cs" />
     <Compile Include="V20211206\Models\CompareDetailInfo.cs" />
     <Compile Include="V20211206\Models\CompareObject.cs" />
     <Compile Include="V20211206\Models\CompareObjectItem.cs" />

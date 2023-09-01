@@ -37,20 +37,26 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Question{ get; set; }
 
         /// <summary>
-        /// 会话模型版本，不同的会话模型调用到不同的模型后台。
-        /// 注: 多行业多场景大模型填写 tj_llm_clm-v1
+        /// 会话模型版本。
+        /// 多行业多场景大模型：填写 tj_llm_clm-v1。
+        /// 多行业客服大模型：填写demo_big_model_version_id。
+        /// 默认为demo_big_model_version_id，即多行业客服大模型。
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// 使用模式(仅部分模型支持)。General 通用问答；WithSearchPlugin 搜索增强问答
+        /// 使用模式(仅多场景客服大模型支持)。
+        /// 通用问答：填写General。
+        /// 搜索增强问答：填写WithSearchPlugin。
+        /// 默认为General，即通用问答。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 搜索来源。仅当Mode未WithSearchPlugin时生效。Preset 预置文稿库；Custom 自定义。
+        /// 搜索来源。仅当Mode为WithSearchPlugin时生效。
+        /// 预置文稿库：填写Preset。自定义：填写Custom。
         /// </summary>
         [JsonProperty("SearchSource")]
         public string SearchSource{ get; set; }

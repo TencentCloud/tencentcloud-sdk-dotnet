@@ -30,6 +30,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ServiceGroupId")]
         public string ServiceGroupId{ get; set; }
 
+        /// <summary>
+        /// 服务分类
+        /// </summary>
+        [JsonProperty("ServiceCategory")]
+        public string ServiceCategory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ServiceGroupId", this.ServiceGroupId);
+            this.SetParamSimple(map, prefix + "ServiceCategory", this.ServiceCategory);
         }
     }
 }

@@ -613,6 +613,86 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取扫描任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScanTaskListRequest"/></param>
+        /// <returns><see cref="DescribeScanTaskListResponse"/></returns>
+        public async Task<DescribeScanTaskListResponse> DescribeScanTaskList(DescribeScanTaskListRequest req)
+        {
+             JsonResponseModel<DescribeScanTaskListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScanTaskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanTaskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取扫描任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScanTaskListRequest"/></param>
+        /// <returns><see cref="DescribeScanTaskListResponse"/></returns>
+        public DescribeScanTaskListResponse DescribeScanTaskListSync(DescribeScanTaskListRequest req)
+        {
+             JsonResponseModel<DescribeScanTaskListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScanTaskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanTaskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 立体防护中心查询漏洞信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSearchBugInfoRequest"/></param>
+        /// <returns><see cref="DescribeSearchBugInfoResponse"/></returns>
+        public async Task<DescribeSearchBugInfoResponse> DescribeSearchBugInfo(DescribeSearchBugInfoRequest req)
+        {
+             JsonResponseModel<DescribeSearchBugInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSearchBugInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSearchBugInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 立体防护中心查询漏洞信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSearchBugInfoRequest"/></param>
+        /// <returns><see cref="DescribeSearchBugInfoResponse"/></returns>
+        public DescribeSearchBugInfoResponse DescribeSearchBugInfoSync(DescribeSearchBugInfoRequest req)
+        {
+             JsonResponseModel<DescribeSearchBugInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSearchBugInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSearchBugInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取子网列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSubnetAssetsRequest"/></param>
@@ -644,6 +724,86 @@ namespace TencentCloud.Csip.V20221121
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSubnetAssets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubnetAssetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取任务扫描报告列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLogListRequest"/></param>
+        /// <returns><see cref="DescribeTaskLogListResponse"/></returns>
+        public async Task<DescribeTaskLogListResponse> DescribeTaskLogList(DescribeTaskLogListRequest req)
+        {
+             JsonResponseModel<DescribeTaskLogListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskLogList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskLogListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取任务扫描报告列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLogListRequest"/></param>
+        /// <returns><see cref="DescribeTaskLogListResponse"/></returns>
+        public DescribeTaskLogListResponse DescribeTaskLogListSync(DescribeTaskLogListRequest req)
+        {
+             JsonResponseModel<DescribeTaskLogListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskLogList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskLogListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取报告下载的临时链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLogURLRequest"/></param>
+        /// <returns><see cref="DescribeTaskLogURLResponse"/></returns>
+        public async Task<DescribeTaskLogURLResponse> DescribeTaskLogURL(DescribeTaskLogURLRequest req)
+        {
+             JsonResponseModel<DescribeTaskLogURLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskLogURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskLogURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取报告下载的临时链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLogURLRequest"/></param>
+        /// <returns><see cref="DescribeTaskLogURLResponse"/></returns>
+        public DescribeTaskLogURLResponse DescribeTaskLogURLSync(DescribeTaskLogURLRequest req)
+        {
+             JsonResponseModel<DescribeTaskLogURLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskLogURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskLogURLResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

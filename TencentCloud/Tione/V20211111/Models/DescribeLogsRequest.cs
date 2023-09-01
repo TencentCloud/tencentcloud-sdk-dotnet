@@ -31,12 +31,6 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Service{ get; set; }
 
         /// <summary>
-        /// 查询哪个Pod的日志（支持结尾通配符*)
-        /// </summary>
-        [JsonProperty("PodName")]
-        public string PodName{ get; set; }
-
-        /// <summary>
         /// 日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
         /// </summary>
         [JsonProperty("StartTime")]
@@ -53,6 +47,12 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 查询哪个Pod的日志（支持结尾通配符*)
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
 
         /// <summary>
         /// 排序方向（可选值为ASC, DESC ），默认为DESC
@@ -89,10 +89,10 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Service", this.Service);
-            this.SetParamSimple(map, prefix + "PodName", this.PodName);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
             this.SetParamSimple(map, prefix + "Context", this.Context);

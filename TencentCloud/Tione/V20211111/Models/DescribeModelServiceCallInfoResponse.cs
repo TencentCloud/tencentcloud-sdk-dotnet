@@ -46,6 +46,20 @@ namespace TencentCloud.Tione.V20211111.Models
         public DefaultNginxGatewayCallInfo DefaultNginxGatewayCallInfo{ get; set; }
 
         /// <summary>
+        /// 太极服务的调用信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TJCallInfo")]
+        public TJCallInfo TJCallInfo{ get; set; }
+
+        /// <summary>
+        /// 内网调用信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IntranetCallInfo")]
+        public IntranetCallInfo IntranetCallInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -60,6 +74,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "ServiceCallInfo.", this.ServiceCallInfo);
             this.SetParamObj(map, prefix + "InferGatewayCallInfo.", this.InferGatewayCallInfo);
             this.SetParamObj(map, prefix + "DefaultNginxGatewayCallInfo.", this.DefaultNginxGatewayCallInfo);
+            this.SetParamObj(map, prefix + "TJCallInfo.", this.TJCallInfo);
+            this.SetParamObj(map, prefix + "IntranetCallInfo.", this.IntranetCallInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

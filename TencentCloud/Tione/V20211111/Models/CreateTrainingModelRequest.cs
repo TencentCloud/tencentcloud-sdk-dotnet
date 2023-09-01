@@ -34,12 +34,6 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ImportMethod{ get; set; }
 
         /// <summary>
-        /// 模型来源cos目录，以/结尾
-        /// </summary>
-        [JsonProperty("TrainingModelCosPath")]
-        public CosPathInfo TrainingModelCosPath{ get; set; }
-
-        /// <summary>
         /// 推理环境来源（SYSTEM/CUSTOM）
         /// </summary>
         [JsonProperty("ReasoningEnvironmentSource")]
@@ -62,6 +56,12 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         [JsonProperty("TrainingJobName")]
         public string TrainingJobName{ get; set; }
+
+        /// <summary>
+        /// 模型来源cos目录，以/结尾
+        /// </summary>
+        [JsonProperty("TrainingModelCosPath")]
+        public CosPathInfo TrainingModelCosPath{ get; set; }
 
         /// <summary>
         /// 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
@@ -192,11 +192,11 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ImportMethod", this.ImportMethod);
-            this.SetParamObj(map, prefix + "TrainingModelCosPath.", this.TrainingModelCosPath);
             this.SetParamSimple(map, prefix + "ReasoningEnvironmentSource", this.ReasoningEnvironmentSource);
             this.SetParamSimple(map, prefix + "TrainingModelName", this.TrainingModelName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "TrainingJobName", this.TrainingJobName);
+            this.SetParamObj(map, prefix + "TrainingModelCosPath.", this.TrainingModelCosPath);
             this.SetParamSimple(map, prefix + "AlgorithmFramework", this.AlgorithmFramework);
             this.SetParamSimple(map, prefix + "ReasoningEnvironment", this.ReasoningEnvironment);
             this.SetParamSimple(map, prefix + "TrainingModelIndex", this.TrainingModelIndex);

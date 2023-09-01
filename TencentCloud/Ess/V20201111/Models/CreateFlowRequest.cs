@@ -44,6 +44,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public FlowCreateApprover[] Approvers{ get; set; }
 
         /// <summary>
+        /// 签署流程描述,最大长度1000个字符
+        /// </summary>
+        [JsonProperty("FlowDescription")]
+        public string FlowDescription{ get; set; }
+
+        /// <summary>
         /// 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
         /// </summary>
         [JsonProperty("FlowType")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 签署流程的签署截止时间。
+        /// 
         /// 值为unix时间戳,精确到秒,不传默认为当前时间一年后
         /// </summary>
         [JsonProperty("DeadLine")]
@@ -73,12 +80,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
-
-        /// <summary>
-        /// 签署流程描述,最大长度1000个字符
-        /// </summary>
-        [JsonProperty("FlowDescription")]
-        public string FlowDescription{ get; set; }
 
         /// <summary>
         /// 发送类型：
@@ -146,12 +147,12 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
+            this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "DeadLine", this.DeadLine);
             this.SetParamSimple(map, prefix + "RemindedOn", this.RemindedOn);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
-            this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);

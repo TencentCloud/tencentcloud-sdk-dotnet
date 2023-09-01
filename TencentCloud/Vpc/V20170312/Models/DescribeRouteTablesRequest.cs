@@ -63,7 +63,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Offset{ get; set; }
 
         /// <summary>
-        /// 请求对象个数。
+        /// 返回数量，默认为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public string Limit{ get; set; }

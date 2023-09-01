@@ -50,6 +50,7 @@ namespace TencentCloud.Tse.V20201207.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
+        [System.Obsolete]
         public string CreateTime{ get; set; }
 
         /// <summary>
@@ -57,6 +58,7 @@ namespace TencentCloud.Tse.V20201207.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
+        [System.Obsolete]
         public string ModifyTime{ get; set; }
 
         /// <summary>
@@ -64,6 +66,7 @@ namespace TencentCloud.Tse.V20201207.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyId")]
+        [System.Obsolete]
         public string StrategyId{ get; set; }
 
         /// <summary>
@@ -71,7 +74,15 @@ namespace TencentCloud.Tse.V20201207.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoScalerId")]
+        [System.Obsolete]
         public string AutoScalerId{ get; set; }
+
+        /// <summary>
+        /// 指标伸缩行为配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Behavior")]
+        public AutoScalerBehavior Behavior{ get; set; }
 
 
         /// <summary>
@@ -86,6 +97,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "StrategyId", this.StrategyId);
             this.SetParamSimple(map, prefix + "AutoScalerId", this.AutoScalerId);
+            this.SetParamObj(map, prefix + "Behavior.", this.Behavior);
         }
     }
 }

@@ -133,6 +133,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// 创建课后录制任务
         /// </summary>
         /// <param name="req"><see cref="CreateOfflineRecordRequest"/></param>
@@ -153,6 +155,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// 创建课后录制任务
         /// </summary>
         /// <param name="req"><see cref="CreateOfflineRecordRequest"/></param>
@@ -533,6 +537,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// 查询课后录制任务的进度与录制结果等相关信息
         /// </summary>
         /// <param name="req"><see cref="DescribeOfflineRecordRequest"/></param>
@@ -553,6 +559,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// 查询课后录制任务的进度与录制结果等相关信息
         /// </summary>
         /// <param name="req"><see cref="DescribeOfflineRecordRequest"/></param>
@@ -573,6 +581,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// 查询课后录制回调地址
         /// </summary>
         /// <param name="req"><see cref="DescribeOfflineRecordCallbackRequest"/></param>
@@ -593,6 +603,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// 查询课后录制回调地址
         /// </summary>
         /// <param name="req"><see cref="DescribeOfflineRecordCallbackRequest"/></param>
@@ -1981,6 +1993,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// 设置课后录制回调地址
         /// </summary>
         /// <param name="req"><see cref="SetOfflineRecordCallbackRequest"/></param>
@@ -2001,6 +2015,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// 设置课后录制回调地址
         /// </summary>
         /// <param name="req"><see cref="SetOfflineRecordCallbackRequest"/></param>

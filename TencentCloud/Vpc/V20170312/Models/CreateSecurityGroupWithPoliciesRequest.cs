@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string GroupDescription{ get; set; }
 
         /// <summary>
-        /// 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
+        /// 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

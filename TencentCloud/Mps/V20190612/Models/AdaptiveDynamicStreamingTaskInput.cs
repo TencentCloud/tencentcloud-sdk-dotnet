@@ -68,6 +68,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AddOnSubtitles")]
         public AddOnSubtitle[] AddOnSubtitles{ get; set; }
 
+        /// <summary>
+        /// Drm信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DrmInfo")]
+        public DrmInfo DrmInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +88,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SubStreamObjectName", this.SubStreamObjectName);
             this.SetParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
             this.SetParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
+            this.SetParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
         }
     }
 }
