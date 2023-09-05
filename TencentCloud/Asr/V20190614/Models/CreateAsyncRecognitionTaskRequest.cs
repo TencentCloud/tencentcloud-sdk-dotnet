@@ -36,6 +36,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// • 16k_tr：土耳其语；
         /// • 16k_ar：阿拉伯语；
         /// • 16k_es：西班牙语；
+        /// • 16k_hi：印地语；
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }

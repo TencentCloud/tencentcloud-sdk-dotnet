@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.840</VersionPrefix>
+    <VersionPrefix>3.0.841</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -135,6 +135,8 @@
     <Compile Include="V20210527\DbbrainClient.cs" />
     <Compile Include="V20210527\Models\AddUserContactRequest.cs" />
     <Compile Include="V20210527\Models\AddUserContactResponse.cs" />
+    <Compile Include="V20210527\Models\AlarmProfileList.cs" />
+    <Compile Include="V20210527\Models\AlarmsRules.cs" />
     <Compile Include="V20210527\Models\AuditInstance.cs" />
     <Compile Include="V20210527\Models\AuditInstanceFilter.cs" />
     <Compile Include="V20210527\Models\AuditInstanceInfo.cs" />
@@ -173,6 +175,8 @@
     <Compile Include="V20210527\Models\DeleteSecurityAuditLogExportTasksResponse.cs" />
     <Compile Include="V20210527\Models\DeleteSqlFiltersRequest.cs" />
     <Compile Include="V20210527\Models\DeleteSqlFiltersResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeAlarmTemplateRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeAlarmTemplateResponse.cs" />
     <Compile Include="V20210527\Models\DescribeAllUserContactRequest.cs" />
     <Compile Include="V20210527\Models\DescribeAllUserContactResponse.cs" />
     <Compile Include="V20210527\Models\DescribeAllUserGroupRequest.cs" />
@@ -243,11 +247,14 @@
     <Compile Include="V20210527\Models\HealthStatus.cs" />
     <Compile Include="V20210527\Models\InstanceBasicInfo.cs" />
     <Compile Include="V20210527\Models\InstanceConfs.cs" />
+    <Compile Include="V20210527\Models\InstanceID.cs" />
     <Compile Include="V20210527\Models\InstanceInfo.cs" />
     <Compile Include="V20210527\Models\IssueTypeInfo.cs" />
     <Compile Include="V20210527\Models\KillMySqlThreadsRequest.cs" />
     <Compile Include="V20210527\Models\KillMySqlThreadsResponse.cs" />
     <Compile Include="V20210527\Models\MailConfiguration.cs" />
+    <Compile Include="V20210527\Models\ModifyAlarmPolicyRequest.cs" />
+    <Compile Include="V20210527\Models\ModifyAlarmPolicyResponse.cs" />
     <Compile Include="V20210527\Models\ModifyAuditServiceRequest.cs" />
     <Compile Include="V20210527\Models\ModifyAuditServiceResponse.cs" />
     <Compile Include="V20210527\Models\ModifyDiagDBInstanceConfRequest.cs" />
@@ -263,6 +270,8 @@
     <Compile Include="V20210527\Models\OpenAuditServiceResponse.cs" />
     <Compile Include="V20210527\Models\ProcessStatistic.cs" />
     <Compile Include="V20210527\Models\ProfileInfo.cs" />
+    <Compile Include="V20210527\Models\ReceiveInfo.cs" />
+    <Compile Include="V20210527\Models\ReceiveUin.cs" />
     <Compile Include="V20210527\Models\RedisKeySpaceData.cs" />
     <Compile Include="V20210527\Models\RedisPreKeySpaceData.cs" />
     <Compile Include="V20210527\Models\SQLFilter.cs" />
@@ -281,6 +290,7 @@
     <Compile Include="V20210527\Models\TableSpaceData.cs" />
     <Compile Include="V20210527\Models\TableSpaceTimeSeries.cs" />
     <Compile Include="V20210527\Models\TaskInfo.cs" />
+    <Compile Include="V20210527\Models\TemplateInfo.cs" />
     <Compile Include="V20210527\Models\TimeSlice.cs" />
     <Compile Include="V20210527\Models\UpdateAgentSwitchRequest.cs" />
     <Compile Include="V20210527\Models\UpdateAgentSwitchResponse.cs" />

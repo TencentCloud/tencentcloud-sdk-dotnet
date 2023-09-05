@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 任务 ID。
+        /// 任务 ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

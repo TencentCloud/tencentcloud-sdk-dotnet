@@ -27,10 +27,10 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// <summary>
         /// 访问源示例：
         /// net：IP/CIDR(192.168.0.2)
-        /// template：参数模板(ipm-dyodhpby)
-        /// instance：资产实例(ins-123456)
-        /// resourcegroup：资产分组(/全部分组/分组1/子分组1)
-        /// tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+        /// template：参数模板id(ipm-dyodhpby)
+        /// instance：资产实例id(ins-123456)
+        /// resourcegroup：资产分组id(cfwrg-xxxx)
+        /// tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
         /// region：地域(ap-gaungzhou)
         /// </summary>
         [JsonProperty("SourceContent")]
@@ -45,10 +45,10 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// <summary>
         /// 访问目的示例：
         /// net：IP/CIDR(192.168.0.2)
-        /// template：参数模板(ipm-dyodhpby)
-        /// instance：资产实例(ins-123456)
-        /// resourcegroup：资产分组(/全部分组/分组1/子分组1)
-        /// tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+        /// template：参数模板id(ipm-dyodhpby)
+        /// instance：资产实例id(ins-123456)
+        /// resourcegroup：资产分组id(cfwrg-xxxx)
+        /// tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
         /// region：地域(ap-gaungzhou)
         /// </summary>
         [JsonProperty("DestContent")]
@@ -75,7 +75,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 规则顺序，-1表示最低，1表示最高
+        /// 规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
         /// </summary>
         [JsonProperty("OrderIndex")]
         public string OrderIndex{ get; set; }
@@ -104,12 +104,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string ServiceTemplateId{ get; set; }
 
         /// <summary>
-        /// 规则对应的唯一id
+        /// （入参时无需填写，自动生成）规则对应的唯一id
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
+        /// （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
         /// 规则状态，true表示启用，false表示禁用
         /// </summary>
         [JsonProperty("Enable")]

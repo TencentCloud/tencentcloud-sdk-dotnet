@@ -6739,7 +6739,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 手动执行一次任务。
+        /// 手动执行一次任务
         /// </summary>
         /// <param name="req"><see cref="ExecuteTaskRequest"/></param>
         /// <returns><see cref="ExecuteTaskResponse"/></returns>
@@ -6759,7 +6759,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 手动执行一次任务。
+        /// 手动执行一次任务
         /// </summary>
         /// <param name="req"><see cref="ExecuteTaskRequest"/></param>
         /// <returns><see cref="ExecuteTaskResponse"/></returns>

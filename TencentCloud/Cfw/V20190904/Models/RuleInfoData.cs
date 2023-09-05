@@ -132,6 +132,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("CountryName")]
         public string CountryName{ get; set; }
 
+        /// <summary>
+        /// 国家二位iso代码或者省份缩写代码
+        /// </summary>
+        [JsonProperty("RegionIso")]
+        public string RegionIso{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "IsRegion", this.IsRegion);
             this.SetParamSimple(map, prefix + "CityName", this.CityName);
             this.SetParamSimple(map, prefix + "CountryName", this.CountryName);
+            this.SetParamSimple(map, prefix + "RegionIso", this.RegionIso);
         }
     }
 }

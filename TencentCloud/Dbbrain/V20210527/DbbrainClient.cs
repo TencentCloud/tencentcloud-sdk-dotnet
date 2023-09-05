@@ -733,6 +733,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 通知模板查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmTemplateRequest"/></param>
+        /// <returns><see cref="DescribeAlarmTemplateResponse"/></returns>
+        public async Task<DescribeAlarmTemplateResponse> DescribeAlarmTemplate(DescribeAlarmTemplateRequest req)
+        {
+             JsonResponseModel<DescribeAlarmTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通知模板查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmTemplateRequest"/></param>
+        /// <returns><see cref="DescribeAlarmTemplateResponse"/></returns>
+        public DescribeAlarmTemplateResponse DescribeAlarmTemplateSync(DescribeAlarmTemplateRequest req)
+        {
+             JsonResponseModel<DescribeAlarmTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取邮件发送中联系人的相关信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeAllUserContactRequest"/></param>
@@ -2004,6 +2044,46 @@ namespace TencentCloud.Dbbrain.V20210527
              {
                  var strResp = this.InternalRequestSync(req, "KillMySqlThreads");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillMySqlThreadsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改告警策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmPolicyRequest"/></param>
+        /// <returns><see cref="ModifyAlarmPolicyResponse"/></returns>
+        public async Task<ModifyAlarmPolicyResponse> ModifyAlarmPolicy(ModifyAlarmPolicyRequest req)
+        {
+             JsonResponseModel<ModifyAlarmPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAlarmPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改告警策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmPolicyRequest"/></param>
+        /// <returns><see cref="ModifyAlarmPolicyResponse"/></returns>
+        public ModifyAlarmPolicyResponse ModifyAlarmPolicySync(ModifyAlarmPolicyRequest req)
+        {
+             JsonResponseModel<ModifyAlarmPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAlarmPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 媒体文件唯一标识列表。
+        /// 媒体文件唯一标识列表，最大长度：100。
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }

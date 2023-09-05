@@ -221,6 +221,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("TagList")]
         public TagItem[] TagList{ get; set; }
 
+        /// <summary>
+        /// 是否启用搜索引擎推送
+        /// </summary>
+        [JsonProperty("SearchEnginePush")]
+        public string SearchEnginePush{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -258,6 +264,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "VipResourceId", this.VipResourceId);
             this.SetParamSimple(map, prefix + "IsSubDomain", this.IsSubDomain);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "SearchEnginePush", this.SearchEnginePush);
         }
     }
 }

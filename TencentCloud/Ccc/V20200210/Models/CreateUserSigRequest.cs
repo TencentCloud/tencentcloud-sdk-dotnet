@@ -31,7 +31,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 用户 ID
+        /// 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
         /// </summary>
         [JsonProperty("Uid")]
         public string Uid{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 用户签名数据
+        /// 用户签名数据，必填字段，为标准 JSON 格式
         /// </summary>
         [JsonProperty("ClientData")]
         public string ClientData{ get; set; }

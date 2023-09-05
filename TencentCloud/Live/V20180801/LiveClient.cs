@@ -2259,6 +2259,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 批量获取转推日志的URL。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliverLogDownListRequest"/></param>
+        /// <returns><see cref="DescribeDeliverLogDownListResponse"/></returns>
+        public async Task<DescribeDeliverLogDownListResponse> DescribeDeliverLogDownList(DescribeDeliverLogDownListRequest req)
+        {
+             JsonResponseModel<DescribeDeliverLogDownListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeliverLogDownList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeliverLogDownListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量获取转推日志的URL。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliverLogDownListRequest"/></param>
+        /// <returns><see cref="DescribeDeliverLogDownListResponse"/></returns>
+        public DescribeDeliverLogDownListResponse DescribeDeliverLogDownListSync(DescribeDeliverLogDownListRequest req)
+        {
+             JsonResponseModel<DescribeDeliverLogDownListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeliverLogDownList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeliverLogDownListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
         /// 查询按省份和运营商分组的下行播放数据。
         /// </summary>

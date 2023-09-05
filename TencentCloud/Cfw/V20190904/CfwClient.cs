@@ -253,6 +253,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 批量添加入侵防御封禁列表、放通列表规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlockIgnoreRuleListRequest"/></param>
+        /// <returns><see cref="CreateBlockIgnoreRuleListResponse"/></returns>
+        public async Task<CreateBlockIgnoreRuleListResponse> CreateBlockIgnoreRuleList(CreateBlockIgnoreRuleListRequest req)
+        {
+             JsonResponseModel<CreateBlockIgnoreRuleListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBlockIgnoreRuleList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBlockIgnoreRuleListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量添加入侵防御封禁列表、放通列表规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlockIgnoreRuleListRequest"/></param>
+        /// <returns><see cref="CreateBlockIgnoreRuleListResponse"/></returns>
+        public CreateBlockIgnoreRuleListResponse CreateBlockIgnoreRuleListSync(CreateBlockIgnoreRuleListRequest req)
+        {
+             JsonResponseModel<CreateBlockIgnoreRuleListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBlockIgnoreRuleList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBlockIgnoreRuleListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建、选择vpc
         /// </summary>
         /// <param name="req"><see cref="CreateChooseVpcsRequest"/></param>
@@ -2170,6 +2210,48 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBlockTop");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBlockTopResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用停用VPC间规则或Nat边界规则
+        /// VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEWRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyEWRuleStatusResponse"/></returns>
+        public async Task<ModifyEWRuleStatusResponse> ModifyEWRuleStatus(ModifyEWRuleStatusRequest req)
+        {
+             JsonResponseModel<ModifyEWRuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyEWRuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEWRuleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用停用VPC间规则或Nat边界规则
+        /// VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEWRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyEWRuleStatusResponse"/></returns>
+        public ModifyEWRuleStatusResponse ModifyEWRuleStatusSync(ModifyEWRuleStatusRequest req)
+        {
+             JsonResponseModel<ModifyEWRuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEWRuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEWRuleStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
