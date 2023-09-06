@@ -25,25 +25,29 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方用户信息，userId 必填
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 操作类型：1-新增，2-删除
+        /// 操作类型：
+        /// 1-新增
+        /// 2-删除
         /// </summary>
         [JsonProperty("OperateType")]
         public long? OperateType{ get; set; }
 
         /// <summary>
-        /// 回调信息
+        /// 企业应用回调信息
         /// </summary>
         [JsonProperty("CallbackInfo")]
         public CallbackInfo CallbackInfo{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

@@ -37,13 +37,15 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public long? RunType{ get; set; }
 
         /// <summary>
-        /// 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
+        /// 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（建议传值）
+        /// 保证参数为 LATEST、EARLIEST、T+Timestamp （例:T1557394288000）
         /// </summary>
         [JsonProperty("StartMode")]
         public string StartMode{ get; set; }
 
         /// <summary>
         /// 当前作业的某个版本
+        /// （不传默认为非草稿的作业版本）
         /// </summary>
         [JsonProperty("JobConfigVersion")]
         public ulong? JobConfigVersion{ get; set; }
@@ -66,6 +68,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("UseOldSystemConnector")]
         public bool? UseOldSystemConnector{ get; set; }
 
+        /// <summary>
+        /// 自定义时间戳
+        /// </summary>
+        [JsonProperty("CustomTimestamp")]
+        public long? CustomTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +87,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "SavepointPath", this.SavepointPath);
             this.SetParamSimple(map, prefix + "SavepointId", this.SavepointId);
             this.SetParamSimple(map, prefix + "UseOldSystemConnector", this.UseOldSystemConnector);
+            this.SetParamSimple(map, prefix + "CustomTimestamp", this.CustomTimestamp);
         }
     }
 }

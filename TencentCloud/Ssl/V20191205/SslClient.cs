@@ -293,6 +293,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 创建证书绑定关联云资源异步任务， 该接口用于查询证书关联云资源。 若证书ID已存在查询云资源任务，则结果返回该任务ID。关联云资源类型，支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）。查询关联云资源结果使用DescribeCertificateBindResourceTaskResult接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCertificateBindResourceSyncTaskRequest"/></param>
+        /// <returns><see cref="CreateCertificateBindResourceSyncTaskResponse"/></returns>
+        public async Task<CreateCertificateBindResourceSyncTaskResponse> CreateCertificateBindResourceSyncTask(CreateCertificateBindResourceSyncTaskRequest req)
+        {
+             JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCertificateBindResourceSyncTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建证书绑定关联云资源异步任务， 该接口用于查询证书关联云资源。 若证书ID已存在查询云资源任务，则结果返回该任务ID。关联云资源类型，支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）。查询关联云资源结果使用DescribeCertificateBindResourceTaskResult接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCertificateBindResourceSyncTaskRequest"/></param>
+        /// <returns><see cref="CreateCertificateBindResourceSyncTaskResponse"/></returns>
+        public CreateCertificateBindResourceSyncTaskResponse CreateCertificateBindResourceSyncTaskSync(CreateCertificateBindResourceSyncTaskRequest req)
+        {
+             JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCertificateBindResourceSyncTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 使用权益点创建证书
         /// </summary>
         /// <param name="req"><see cref="CreateCertificateByPackageRequest"/></param>
@@ -564,6 +604,86 @@ namespace TencentCloud.Ssl.V20191205
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCertificate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertificateBindResourceTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeCertificateBindResourceTaskDetailResponse"/></returns>
+        public async Task<DescribeCertificateBindResourceTaskDetailResponse> DescribeCertificateBindResourceTaskDetail(DescribeCertificateBindResourceTaskDetailRequest req)
+        {
+             JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCertificateBindResourceTaskDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertificateBindResourceTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeCertificateBindResourceTaskDetailResponse"/></returns>
+        public DescribeCertificateBindResourceTaskDetailResponse DescribeCertificateBindResourceTaskDetailSync(DescribeCertificateBindResourceTaskDetailRequest req)
+        {
+             JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCertificateBindResourceTaskDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertificateBindResourceTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeCertificateBindResourceTaskResultResponse"/></returns>
+        public async Task<DescribeCertificateBindResourceTaskResultResponse> DescribeCertificateBindResourceTaskResult(DescribeCertificateBindResourceTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCertificateBindResourceTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertificateBindResourceTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeCertificateBindResourceTaskResultResponse"/></returns>
+        public DescribeCertificateBindResourceTaskResultResponse DescribeCertificateBindResourceTaskResultSync(DescribeCertificateBindResourceTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCertificateBindResourceTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

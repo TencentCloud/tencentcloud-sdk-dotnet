@@ -25,19 +25,20 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 二维码id
+        /// 二维码ID，为32位字符串。
         /// </summary>
         [JsonProperty("QrCodeId")]
         public string QrCodeId{ get; set; }
 
         /// <summary>
-        /// 二维码url
+        /// 二维码URL，可通过转换二维码的工具或代码组件将此URL转化为二维码，以便用户扫描进行流程签署。
         /// </summary>
         [JsonProperty("QrCodeUrl")]
         public string QrCodeUrl{ get; set; }
 
         /// <summary>
-        /// 二维码过期时间戳，单位秒
+        /// 二维码的有截止时间，格式为Unix标准时间戳（秒）。
+        /// 一旦超过二维码的有效期限，该二维码将自动失效。
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }

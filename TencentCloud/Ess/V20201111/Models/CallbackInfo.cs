@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 回调url
+        /// 回调url,。请确保回调地址能够接收并处理 HTTP POST 请求，并返回状态码 200 以表示处理正常。
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
@@ -38,13 +38,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Token{ get; set; }
 
         /// <summary>
-        /// 回调加密key
+        /// 回调加密key，用于回调消息加解密。
         /// </summary>
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }
 
         /// <summary>
-        /// 回调验签token
+        /// 回调验签token，用于回调通知校验。
         /// </summary>
         [JsonProperty("CallbackToken")]
         public string CallbackToken{ get; set; }

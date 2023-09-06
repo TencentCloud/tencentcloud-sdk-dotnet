@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 签署二维码对象
+        /// 签署二维码的基本信息，用于创建二维码，用户可扫描该二维码进行签署操作。
         /// </summary>
         [JsonProperty("QrCode")]
         public SignQrCode QrCode{ get; set; }
 
         /// <summary>
-        /// 签署链接对象
+        /// 流程签署二维码的签署信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。
         /// </summary>
         [JsonProperty("SignUrls")]
         public SignUrl SignUrls{ get; set; }

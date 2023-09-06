@@ -102,6 +102,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 语法规则。 默认值为0。
+        /// 0：Lucene语法，1：CQL语法。
+        /// </summary>
+        [JsonProperty("SyntaxRule")]
+        public ulong? SyntaxRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +128,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "To", this.To);
             this.SetParamSimple(map, prefix + "CosPath", this.CosPath);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         }
     }
 }

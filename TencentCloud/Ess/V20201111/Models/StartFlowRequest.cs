@@ -25,13 +25,15 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 签署流程编号，由CreateFlow接口返回
+        /// 合同流程ID，为32位字符串。
+        /// 此处需要传入[创建签署流程接口](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)得到的FlowId。
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
@@ -40,20 +42,20 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 客户端Token，保持接口幂等性,最大长度64个字符
         /// </summary>
         [JsonProperty("ClientToken")]
+        [System.Obsolete]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 给关注人发送短信通知的类型，
-        /// 
-        /// 0-合同发起时通知 
-        /// 
-        /// 1-签署完成后通知
+        /// 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
+        /// 0 - 合同发起时通知（默认）
+        /// 1 - 签署完成后通知
         /// </summary>
         [JsonProperty("CcNotifyType")]
         public long? CcNotifyType{ get; set; }

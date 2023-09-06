@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.841</VersionPrefix>
+    <VersionPrefix>3.0.842</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,18 +49,24 @@
   <ItemGroup>
     <Compile Include="V20191205\SslClient.cs" />
     <Compile Include="V20191205\Models\ApiGatewayInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\ApiGatewayInstanceList.cs" />
     <Compile Include="V20191205\Models\ApplyCertificateRequest.cs" />
     <Compile Include="V20191205\Models\ApplyCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\BindResourceRegionResult.cs" />
+    <Compile Include="V20191205\Models\BindResourceResult.cs" />
     <Compile Include="V20191205\Models\CancelCertificateOrderRequest.cs" />
     <Compile Include="V20191205\Models\CancelCertificateOrderResponse.cs" />
     <Compile Include="V20191205\Models\CdnInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\CdnInstanceList.cs" />
     <Compile Include="V20191205\Models\CertHostingInfo.cs" />
+    <Compile Include="V20191205\Models\CertTaskId.cs" />
     <Compile Include="V20191205\Models\Certificate.cs" />
     <Compile Include="V20191205\Models\CertificateExtra.cs" />
     <Compile Include="V20191205\Models\Certificates.cs" />
     <Compile Include="V20191205\Models\CheckCertificateChainRequest.cs" />
     <Compile Include="V20191205\Models\CheckCertificateChainResponse.cs" />
     <Compile Include="V20191205\Models\ClbInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\ClbInstanceList.cs" />
     <Compile Include="V20191205\Models\ClbListener.cs" />
     <Compile Include="V20191205\Models\ClbListenerRule.cs" />
     <Compile Include="V20191205\Models\CommitCertificateInformationRequest.cs" />
@@ -69,11 +75,14 @@
     <Compile Include="V20191205\Models\CompleteCertificateRequest.cs" />
     <Compile Include="V20191205\Models\CompleteCertificateResponse.cs" />
     <Compile Include="V20191205\Models\CosInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\CreateCertificateBindResourceSyncTaskRequest.cs" />
+    <Compile Include="V20191205\Models\CreateCertificateBindResourceSyncTaskResponse.cs" />
     <Compile Include="V20191205\Models\CreateCertificateByPackageRequest.cs" />
     <Compile Include="V20191205\Models\CreateCertificateByPackageResponse.cs" />
     <Compile Include="V20191205\Models\CreateCertificateRequest.cs" />
     <Compile Include="V20191205\Models\CreateCertificateResponse.cs" />
     <Compile Include="V20191205\Models\DdosInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\DdosInstanceList.cs" />
     <Compile Include="V20191205\Models\DeleteCertificateRequest.cs" />
     <Compile Include="V20191205\Models\DeleteCertificateResponse.cs" />
     <Compile Include="V20191205\Models\DeleteManagerRequest.cs" />
@@ -87,6 +96,10 @@
     <Compile Include="V20191205\Models\DeployRecordDetail.cs" />
     <Compile Include="V20191205\Models\DeployRecordInfo.cs" />
     <Compile Include="V20191205\Models\DeployedResources.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateBindResourceTaskDetailRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateBindResourceTaskDetailResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateBindResourceTaskResultRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateBindResourceTaskResultResponse.cs" />
     <Compile Include="V20191205\Models\DescribeCertificateDetailRequest.cs" />
     <Compile Include="V20191205\Models\DescribeCertificateDetailResponse.cs" />
     <Compile Include="V20191205\Models\DescribeCertificateOperateLogsRequest.cs" />
@@ -139,11 +152,13 @@
     <Compile Include="V20191205\Models\DownloadCertificateResponse.cs" />
     <Compile Include="V20191205\Models\DvAuthDetail.cs" />
     <Compile Include="V20191205\Models\DvAuths.cs" />
+    <Compile Include="V20191205\Models\Error.cs" />
     <Compile Include="V20191205\Models\Filter.cs" />
     <Compile Include="V20191205\Models\HostCertificateRequest.cs" />
     <Compile Include="V20191205\Models\HostCertificateResponse.cs" />
     <Compile Include="V20191205\Models\LighthouseInstanceDetail.cs" />
     <Compile Include="V20191205\Models\LiveInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\LiveInstanceList.cs" />
     <Compile Include="V20191205\Models\ManagerInfo.cs" />
     <Compile Include="V20191205\Models\ManagerStatusInfo.cs" />
     <Compile Include="V20191205\Models\ModifyCertificateAliasRequest.cs" />
@@ -169,10 +184,20 @@
     <Compile Include="V20191205\Models\SubmitCertificateInformationRequest.cs" />
     <Compile Include="V20191205\Models\SubmitCertificateInformationResponse.cs" />
     <Compile Include="V20191205\Models\SubmittedData.cs" />
+    <Compile Include="V20191205\Models\SyncTaskBindResourceResult.cs" />
+    <Compile Include="V20191205\Models\TCBAccessInstance.cs" />
+    <Compile Include="V20191205\Models\TCBAccessService.cs" />
+    <Compile Include="V20191205\Models\TCBEnvironment.cs" />
+    <Compile Include="V20191205\Models\TCBEnvironments.cs" />
+    <Compile Include="V20191205\Models\TCBHostInstance.cs" />
+    <Compile Include="V20191205\Models\TCBHostService.cs" />
+    <Compile Include="V20191205\Models\TCBInstanceList.cs" />
     <Compile Include="V20191205\Models\Tags.cs" />
     <Compile Include="V20191205\Models\TeoInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\TeoInstanceList.cs" />
     <Compile Include="V20191205\Models\TkeIngressDetail.cs" />
     <Compile Include="V20191205\Models\TkeInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\TkeInstanceList.cs" />
     <Compile Include="V20191205\Models\TkeNameSpaceDetail.cs" />
     <Compile Include="V20191205\Models\TkeSecretDetail.cs" />
     <Compile Include="V20191205\Models\UpdateCertificateInstanceRequest.cs" />
@@ -190,8 +215,11 @@
     <Compile Include="V20191205\Models\UploadConfirmLetterResponse.cs" />
     <Compile Include="V20191205\Models\UploadRevokeLetterRequest.cs" />
     <Compile Include="V20191205\Models\UploadRevokeLetterResponse.cs" />
+    <Compile Include="V20191205\Models\VODInstanceList.cs" />
     <Compile Include="V20191205\Models\VerifyManagerRequest.cs" />
     <Compile Include="V20191205\Models\VerifyManagerResponse.cs" />
     <Compile Include="V20191205\Models\VodInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\WafInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\WafInstanceList.cs" />
   </ItemGroup>
 </Project>

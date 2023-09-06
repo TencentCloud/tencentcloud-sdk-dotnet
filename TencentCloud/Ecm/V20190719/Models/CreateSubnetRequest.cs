@@ -60,6 +60,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// IPv6 CIDR
+        /// </summary>
+        [JsonProperty("IPv6CidrBlock")]
+        public string IPv6CidrBlock{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "IPv6CidrBlock", this.IPv6CidrBlock);
         }
     }
 }

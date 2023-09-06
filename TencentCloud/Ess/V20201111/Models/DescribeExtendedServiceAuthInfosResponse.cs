@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 授权服务信息列表
+        /// 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
         /// </summary>
         [JsonProperty("AuthInfoList")]
         public ExtendAuthInfo[] AuthInfoList{ get; set; }

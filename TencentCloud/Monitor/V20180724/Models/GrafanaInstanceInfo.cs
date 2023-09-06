@@ -55,13 +55,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// Grafana 内网地址
+        /// Grafana 公网地址
         /// </summary>
         [JsonProperty("InternetUrl")]
         public string InternetUrl{ get; set; }
 
         /// <summary>
-        /// Grafana 公网地址
+        /// Grafana 内网地址
         /// </summary>
         [JsonProperty("InternalUrl")]
         public string InternalUrl{ get; set; }

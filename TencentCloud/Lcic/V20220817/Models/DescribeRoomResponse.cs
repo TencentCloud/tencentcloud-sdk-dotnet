@@ -175,6 +175,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? VideoDuration{ get; set; }
 
         /// <summary>
+        /// 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+        /// </summary>
+        [JsonProperty("EndDelayTime")]
+        public long? EndDelayTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -208,6 +214,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
             this.SetParamSimple(map, prefix + "RoomType", this.RoomType);
             this.SetParamSimple(map, prefix + "VideoDuration", this.VideoDuration);
+            this.SetParamSimple(map, prefix + "EndDelayTime", this.EndDelayTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

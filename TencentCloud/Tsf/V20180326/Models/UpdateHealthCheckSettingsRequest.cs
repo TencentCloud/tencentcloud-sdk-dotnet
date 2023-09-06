@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 是否能使健康检查
+        /// 是否开启健康检查
         /// </summary>
         [JsonProperty("EnableHealthCheck")]
         public bool? EnableHealthCheck{ get; set; }

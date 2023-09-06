@@ -173,7 +173,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 包年包月购买是否自动续费，默认为0
+        /// 包年包月购买是否自动续费，默认为0。
+        /// 0标识默认续费方式，1表示自动续费，2表示手不自动续费。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

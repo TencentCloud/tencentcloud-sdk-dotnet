@@ -2773,6 +2773,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 查询消息轨迹
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQMsgTraceRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQMsgTraceResponse"/></returns>
+        public async Task<DescribeRocketMQMsgTraceResponse> DescribeRocketMQMsgTrace(DescribeRocketMQMsgTraceRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQMsgTraceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQMsgTrace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQMsgTraceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询消息轨迹
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQMsgTraceRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQMsgTraceResponse"/></returns>
+        public DescribeRocketMQMsgTraceResponse DescribeRocketMQMsgTraceSync(DescribeRocketMQMsgTraceRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQMsgTraceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQMsgTrace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQMsgTraceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取RocketMQ命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQNamespacesRequest"/></param>
@@ -2804,6 +2844,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRocketMQNamespaces");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// rocketmq 消息查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicMsgsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicMsgsResponse"/></returns>
+        public async Task<DescribeRocketMQTopicMsgsResponse> DescribeRocketMQTopicMsgs(DescribeRocketMQTopicMsgsRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQTopicMsgsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQTopicMsgs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQTopicMsgsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// rocketmq 消息查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicMsgsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicMsgsResponse"/></returns>
+        public DescribeRocketMQTopicMsgsResponse DescribeRocketMQTopicMsgsSync(DescribeRocketMQTopicMsgsRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQTopicMsgsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQTopicMsgs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQTopicMsgsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

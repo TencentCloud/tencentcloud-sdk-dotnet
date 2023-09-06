@@ -150,6 +150,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Cover")]
         public string Cover{ get; set; }
 
+        /// <summary>
+        /// 课件预览地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Preview")]
+        public string Preview{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +181,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "Cover", this.Cover);
+            this.SetParamSimple(map, prefix + "Preview", this.Preview);
         }
     }
 }

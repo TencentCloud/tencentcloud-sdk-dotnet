@@ -68,7 +68,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string SourceContext{ get; set; }
 
         /// <summary>
-        /// 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效)。
+        /// 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效),
+        /// 3: hls+mp4, 4: hls+aac(StreamType=1纯音频录制时有效)。
         /// </summary>
         [JsonProperty("MediaType")]
         public ulong? MediaType{ get; set; }

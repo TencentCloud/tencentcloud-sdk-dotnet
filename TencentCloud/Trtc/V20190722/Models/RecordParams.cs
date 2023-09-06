@@ -54,7 +54,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         public SubscribeStreamUserIds SubscribeStreamUserIds{ get; set; }
 
         /// <summary>
-        /// 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4。2：输出文件格式为hls+aac 。3：输出文件格式为mp4。4：输出文件格式为aac。
+        /// 输出文件的格式（存储至COS等第三方存储时有效）。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4。2：输出文件格式为hls+aac 。3：输出文件格式为mp4。4：输出文件格式为aac。
+        /// 
+        /// 存储到云点播VOD时此参数无效，存储到VOD时请通过TencentVod（https://cloud.tencent.com/document/api/647/44055#TencentVod）内的MediaType设置。
         /// </summary>
         [JsonProperty("OutputFormat")]
         public ulong? OutputFormat{ get; set; }

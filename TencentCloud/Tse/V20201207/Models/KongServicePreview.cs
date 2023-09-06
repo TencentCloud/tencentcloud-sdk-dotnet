@@ -73,6 +73,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Editable")]
         public bool? Editable{ get; set; }
 
+        /// <summary>
+        /// 请求路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "UpstreamType", this.UpstreamType);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "Editable", this.Editable);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
         }
     }
 }

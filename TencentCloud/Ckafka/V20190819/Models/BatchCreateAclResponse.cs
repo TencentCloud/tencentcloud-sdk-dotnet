@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 状态码
+        /// 状态码：0-修改成功，否则修改失败
         /// </summary>
         [JsonProperty("Result")]
         public long? Result{ get; set; }

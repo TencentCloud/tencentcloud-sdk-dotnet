@@ -73,7 +73,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-新版高可用,cvmRO-新版只读
+        /// 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-虚拟机双机高可用,cvmRO-虚拟机只读
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

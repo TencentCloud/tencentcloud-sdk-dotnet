@@ -25,54 +25,59 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 用户信息，其中UserId为必填参数
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 模板ID
+        /// 合同模板ID，为32位字符串。
+        /// 可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 签署流程名称，最大长度不超过200字符
+        /// 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+        /// 该名称还将用于合同签署完成后的下载文件名。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 最大可发起签署流程份数，默认5份 
-        /// <br/>发起流程数量超过此上限后二维码自动失效
+        /// 通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。
+        /// 一旦发起流程数超越该限制，该二维码将自动失效。
         /// </summary>
         [JsonProperty("MaxFlowNum")]
         public long? MaxFlowNum{ get; set; }
 
         /// <summary>
-        /// 签署流程有效天数 
-        /// <br/>默认7天 
-        /// <br/>最高设置不超过30天
-        /// </summary>
-        [JsonProperty("FlowEffectiveDay")]
-        public long? FlowEffectiveDay{ get; set; }
-
-        /// <summary>
-        /// 二维码有效天数 默认7天 最高设置不超过90天
+        /// 二维码的有效期限，默认为7天，最高设定不得超过90天。
+        /// 一旦超过二维码的有效期限，该二维码将自动失效。
         /// </summary>
         [JsonProperty("QrEffectiveDay")]
         public long? QrEffectiveDay{ get; set; }
 
         /// <summary>
-        /// 指定的签署人信息
-        /// <br/>指定后，则只允许指定的签署人扫码签署
+        /// 合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。
+        /// 若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。
+        /// 最长设定期限不得超过30天。
+        /// </summary>
+        [JsonProperty("FlowEffectiveDay")]
+        public long? FlowEffectiveDay{ get; set; }
+
+        /// <summary>
+        /// 指定签署人信息。
+        /// 在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。
         /// </summary>
         [JsonProperty("Restrictions")]
         public ApproverRestriction[] Restrictions{ get; set; }
 
         /// <summary>
-        /// 用户自定义字段
-        /// <br/>回调的时候会进行透传，长度需要小于20480
+        /// 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+        /// 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+        /// 回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
@@ -87,7 +92,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -109,8 +115,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
             this.SetParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
-            this.SetParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
             this.SetParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
+            this.SetParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
             this.SetParamArrayObj(map, prefix + "Restrictions.", this.Restrictions);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);

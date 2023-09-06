@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 新增只读实例数，取值范围为[0,4]
+        /// 新增只读实例数，取值范围为(0,15]
         /// </summary>
         [JsonProperty("ReadOnlyCount")]
         public long? ReadOnlyCount{ get; set; }

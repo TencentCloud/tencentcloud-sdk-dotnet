@@ -39,7 +39,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// 一比一时使用的、脱敏后的身份证号。
         /// </summary>
+        [JsonProperty("IdCard")]
+        public string IdCard{ get; set; }
+
+        /// <summary>
+        /// 已废弃。请使用“IdCard”字段
+        /// </summary>
         [JsonProperty("Idcard")]
+        [System.Obsolete]
         public string Idcard{ get; set; }
 
         /// <summary>
@@ -86,6 +93,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         {
             this.SetParamSimple(map, prefix + "ReqTime", this.ReqTime);
             this.SetParamSimple(map, prefix + "Seq", this.Seq);
+            this.SetParamSimple(map, prefix + "IdCard", this.IdCard);
             this.SetParamSimple(map, prefix + "Idcard", this.Idcard);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Sim", this.Sim);

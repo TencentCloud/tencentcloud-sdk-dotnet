@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+        /// 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
         /// </summary>
         [JsonProperty("ClusterParamList")]
         public ModifyParamItem[] ClusterParamList{ get; set; }

@@ -53,7 +53,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public bool? IsQcloud{ get; set; }
 
         /// <summary>
-        /// 是否当前操作帐号注册的域名
+        /// 是否当前操作账号注册的域名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsQcloudOwner")]

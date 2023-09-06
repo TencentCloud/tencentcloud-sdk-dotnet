@@ -3677,6 +3677,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 列出 Prometheus 服务所有可用的地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusRegionsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusRegionsResponse"/></returns>
+        public async Task<DescribePrometheusRegionsResponse> DescribePrometheusRegions(DescribePrometheusRegionsRequest req)
+        {
+             JsonResponseModel<DescribePrometheusRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Prometheus 服务所有可用的地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusRegionsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusRegionsResponse"/></returns>
+        public DescribePrometheusRegionsResponse DescribePrometheusRegionsSync(DescribePrometheusRegionsRequest req)
+        {
+             JsonResponseModel<DescribePrometheusRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 列出 Prometheus 抓取任务
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusScrapeJobsRequest"/></param>

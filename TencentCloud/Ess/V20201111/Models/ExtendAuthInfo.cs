@@ -25,45 +25,46 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 授权服务类型
-        /// OPEN_SERVER_SIGN：开通企业静默签署
-        /// OVERSEA_SIGN：企业与港澳台居民签署合同
-        /// MOBILE_CHECK_APPROVER：使用手机号验证签署方身份
-        /// PAGING_SEAL：骑缝章
-        /// BATCH_SIGN：批量签署
+        /// 扩展服务的类型，可能是以下值：
+        /// <ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+        /// <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
+        /// <li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+        /// <li>PAGING_SEAL：骑缝章</li>
+        /// <li>BATCH_SIGN：批量签署</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 授权服务名称
+        /// 扩展服务的名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 授权服务状态，ENABLE：开通
+        /// 扩展服务的开通状态：
+        /// ENABLE：开通
         /// DISABLE：未开通
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 授权人用户id
+        /// 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperatorUserId")]
         public string OperatorUserId{ get; set; }
 
         /// <summary>
-        /// 授权时间戳，单位秒
+        /// 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateOn")]
         public long? OperateOn{ get; set; }
 
         /// <summary>
-        /// 被授权用户列表
+        /// 该扩展服务若可以授权，此参数对应授权人员的列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasAuthUserList")]

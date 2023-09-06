@@ -122,6 +122,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
+        /// <summary>
+        /// 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SignId")]
+        public string SignId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,6 +148,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
             this.SetParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+            this.SetParamSimple(map, prefix + "SignId", this.SignId);
         }
     }
 }

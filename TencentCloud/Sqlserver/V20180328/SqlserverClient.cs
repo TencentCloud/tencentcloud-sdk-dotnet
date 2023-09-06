@@ -2814,7 +2814,6 @@ namespace TencentCloud.Sqlserver.V20180328
 
         /// <summary>
         /// 本接口（InquiryPriceUpgradeDBInstance）用于查询包年包月实例升级变配的价格。
-        /// 按量计费实例变配后的价格参考InquiryPriceCreateDBInstances接口。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceUpgradeDBInstanceResponse"/></returns>
@@ -2835,7 +2834,6 @@ namespace TencentCloud.Sqlserver.V20180328
 
         /// <summary>
         /// 本接口（InquiryPriceUpgradeDBInstance）用于查询包年包月实例升级变配的价格。
-        /// 按量计费实例变配后的价格参考InquiryPriceCreateDBInstances接口。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceUpgradeDBInstanceResponse"/></returns>

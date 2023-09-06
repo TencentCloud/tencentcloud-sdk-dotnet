@@ -25,13 +25,15 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 计费订单ID（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
+        /// 计费订单ID（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）。
+        /// DealName与DealNames至少应输入一项，两者都传时以DealName为准。
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
 
         /// <summary>
-        /// 计费订单ID列表，可以一次查询若干条订单ID对应资源信息（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
+        /// 计费订单ID列表，可以一次查询若干条订单ID对应资源信息（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）。
+        /// DealName与DealNames至少应输入一项，两者都传时以DealName为准。
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }

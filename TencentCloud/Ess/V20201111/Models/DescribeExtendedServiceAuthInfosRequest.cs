@@ -25,27 +25,31 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 操作人信息
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作
-        /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
-
-        /// <summary>
-        /// 扩展服务类型，默认为空，查询目前支持的所有扩展服务信息，单个指定则查询单个扩展服务开通信息，取值：
-        /// OPEN_SERVER_SIGN：开通企业静默签署
-        /// OVERSEA_SIGN：企业与港澳台居民签署合同
-        /// MOBILE_CHECK_APPROVER：使用手机号验证签署方身份
-        /// PAGING_SEAL：骑缝章
-        /// BATCH_SIGN：批量签署
+        /// 要查询的扩展服务类型。
+        /// 默认为空，即查询当前支持的所有扩展服务信息。
+        /// 若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
+        /// <ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+        /// <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
+        /// <li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+        /// <li>PAGING_SEAL：骑缝章</li>
+        /// <li>BATCH_SIGN：批量签署</li></ul>
         /// </summary>
         [JsonProperty("ExtendServiceType")]
         public string ExtendServiceType{ get; set; }
+
+        /// <summary>
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
 
 
         /// <summary>
@@ -54,8 +58,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "ExtendServiceType", this.ExtendServiceType);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

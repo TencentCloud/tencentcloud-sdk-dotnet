@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string DBName{ get; set; }
 
         /// <summary>
-        /// enable-开启加密，disable-关闭加密
+        /// enable-开启数据库TDE加密，disable-关闭数据库TDE加密
         /// </summary>
         [JsonProperty("Encryption")]
         public string Encryption{ get; set; }

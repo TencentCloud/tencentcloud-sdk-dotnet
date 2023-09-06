@@ -31,6 +31,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Ip{ get; set; }
 
         /// <summary>
+        /// 机器实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
+        /// <summary>
         /// 机器状态，0:异常，1:正常
         /// </summary>
         [JsonProperty("Status")]
@@ -79,6 +86,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
             this.SetParamSimple(map, prefix + "AutoUpdate", this.AutoUpdate);

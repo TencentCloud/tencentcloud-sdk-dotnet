@@ -25,19 +25,21 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 小程序签署链接
+        /// 跳转至电子签名小程序签署的链接地址。
+        /// 适用于客户端APP及小程序直接唤起电子签名小程序。
         /// </summary>
         [JsonProperty("AppSignUrl")]
         public string AppSignUrl{ get; set; }
 
         /// <summary>
-        /// 签署链接有效时间
+        /// 签署链接有效时间，格式类似"2022-08-05 15:55:01"
         /// </summary>
         [JsonProperty("EffectiveTime")]
         public string EffectiveTime{ get; set; }
 
         /// <summary>
-        /// 移动端签署链接
+        /// 跳转至电子签名小程序签署的链接地址，格式类似于https://essurl.cn/xxx。
+        /// 打开此链接将会展示H5中间页面，随后唤起电子签名小程序以进行合同签署。
         /// </summary>
         [JsonProperty("HttpSignUrl")]
         public string HttpSignUrl{ get; set; }

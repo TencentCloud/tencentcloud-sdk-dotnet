@@ -54,6 +54,34 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("AvailableRegion")]
         public string[] AvailableRegion{ get; set; }
 
+        /// <summary>
+        /// 当前计费项支持的特性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpecFeatures")]
+        public string[] SpecFeatures{ get; set; }
+
+        /// <summary>
+        /// 计费项类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpecType")]
+        public string SpecType{ get; set; }
+
+        /// <summary>
+        /// GPU类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GpuType")]
+        public string GpuType{ get; set; }
+
+        /// <summary>
+        /// 计费项CategoryId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CategoryId")]
+        public string CategoryId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +93,10 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SpecAlias", this.SpecAlias);
             this.SetParamSimple(map, prefix + "Available", this.Available);
             this.SetParamArraySimple(map, prefix + "AvailableRegion.", this.AvailableRegion);
+            this.SetParamArraySimple(map, prefix + "SpecFeatures.", this.SpecFeatures);
+            this.SetParamSimple(map, prefix + "SpecType", this.SpecType);
+            this.SetParamSimple(map, prefix + "GpuType", this.GpuType);
+            this.SetParamSimple(map, prefix + "CategoryId", this.CategoryId);
         }
     }
 }

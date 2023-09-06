@@ -537,6 +537,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 创建共享 CNAME
+        /// </summary>
+        /// <param name="req"><see cref="CreateSharedCNAMERequest"/></param>
+        /// <returns><see cref="CreateSharedCNAMEResponse"/></returns>
+        public async Task<CreateSharedCNAMEResponse> CreateSharedCNAME(CreateSharedCNAMERequest req)
+        {
+             JsonResponseModel<CreateSharedCNAMEResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSharedCNAME");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSharedCNAMEResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建共享 CNAME
+        /// </summary>
+        /// <param name="req"><see cref="CreateSharedCNAMERequest"/></param>
+        /// <returns><see cref="CreateSharedCNAMEResponse"/></returns>
+        public CreateSharedCNAMEResponse CreateSharedCNAMESync(CreateSharedCNAMERequest req)
+        {
+             JsonResponseModel<CreateSharedCNAMEResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSharedCNAME");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSharedCNAMEResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于用户接入新的站点。
         /// </summary>
         /// <param name="req"><see cref="CreateZoneRequest"/></param>

@@ -49,7 +49,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 访问类型
+        /// 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }

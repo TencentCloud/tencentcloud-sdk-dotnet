@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
+        /// 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }

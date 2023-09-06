@@ -85,7 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public float?[] DeployBatch{ get; set; }
 
         /// <summary>
-        /// 滚动发布的执行方式
+        /// 滚动发布的执行方式，auto表示自动， manual表示手动
         /// </summary>
         [JsonProperty("DeployExeMode")]
         public string DeployExeMode{ get; set; }
@@ -121,7 +121,8 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string JdkName{ get; set; }
 
         /// <summary>
-        /// JDK版本: 8或11 (openJDK只支持8)
+        /// konaJDK版本：8、11和17
+        /// openJDK版本：8、17
         /// </summary>
         [JsonProperty("JdkVersion")]
         public string JdkVersion{ get; set; }

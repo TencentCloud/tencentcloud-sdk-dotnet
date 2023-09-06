@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
+        /// 流程(合同)的编号列表，最多支持100个。(备注：该参数和合同组编号必须二选一)
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
@@ -43,18 +43,24 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowGroupId{ get; set; }
 
         /// <summary>
-        /// 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
+        /// 签署链接类型,可以设置的参数如下
+        /// 
+        /// - WEIXINAPP:短链直接跳小程序 (默认类型)
+        /// - CHANNEL:跳转H5页面
+        /// - APP:第三方APP或小程序跳转电子签小程序
+        /// - LONGURL2WEIXINAPP:长链接跳转小程序
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }
 
         /// <summary>
-        /// 签署链接生成类型，默认是 "ALL"；
-        /// "ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-        /// "CHANNEL"：第三方平台子客企业企业；
-        /// "NOT_CHANNEL"：非第三方平台子客企业企业；
-        /// "PERSON"：个人；
-        /// "FOLLOWER"：关注方，目前是合同抄送方；
+        /// 签署链接生成类型，可以选择的类型如下
+        /// 
+        /// - ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
+        /// - CHANNEL：第三方平台子客企业企业
+        /// - NOT_CHANNEL：非第三方平台子客企业企业
+        /// - PERSON：个人
+        /// - FOLLOWER：关注方，目前是合同抄送方
         /// </summary>
         [JsonProperty("GenerateType")]
         public string GenerateType{ get; set; }
@@ -66,13 +72,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string OrganizationName{ get; set; }
 
         /// <summary>
-        /// 参与人姓名，GenerateType为"PERSON"时必填
+        /// 参与人姓名
+        /// GenerateType为"PERSON"(即个人签署方)时必填
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 参与人手机号；
+        /// 参与人手机号
         /// GenerateType为"PERSON"或"FOLLOWER"时必填
         /// </summary>
         [JsonProperty("Mobile")]
@@ -112,10 +119,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
         /// 
-        /// 0:合同签署页面更多操作按钮
-        /// 1:合同签署页面更多操作的拒绝签署按钮
-        /// 2:合同签署页面更多操作的转他人处理按钮
-        /// 3:签署成功页的查看详情按钮
+        /// - 0:合同签署页面更多操作按钮
+        /// - 1:合同签署页面更多操作的拒绝签署按钮
+        /// - 2:合同签署页面更多操作的转他人处理按钮
+        /// - 3:签署成功页的查看详情按钮
         /// </summary>
         [JsonProperty("Hides")]
         public long?[] Hides{ get; set; }
