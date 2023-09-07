@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Ccc.V20200210.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AttributeItem : AbstractModel
+    public class StaffSkillGroupList : AbstractModel
     {
         
         /// <summary>
-        /// 属性值
+        /// 技能组ID
         /// </summary>
-        [JsonProperty("Type")]
-        public long? Type{ get; set; }
+        [JsonProperty("SkillGroupId")]
+        public long? SkillGroupId{ get; set; }
 
         /// <summary>
-        /// Type识别概率值,[0,1],代表判断正确的概率。
+        /// 座席在技能组中的优先级（1为最高，5最低，默认3）
         /// </summary>
-        [JsonProperty("Probability")]
-        public float? Probability{ get; set; }
+        [JsonProperty("Priority")]
+        public long? Priority{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "Probability", this.Probability);
+            this.SetParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
         }
     }
 }

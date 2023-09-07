@@ -93,7 +93,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 绑定坐席所属技能组
+        /// 绑定座席所属技能组
         /// </summary>
         /// <param name="req"><see cref="BindStaffSkillGroupListRequest"/></param>
         /// <returns><see cref="BindStaffSkillGroupListResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 绑定坐席所属技能组
+        /// 绑定座席所属技能组
         /// </summary>
         /// <param name="req"><see cref="BindStaffSkillGroupListRequest"/></param>
         /// <returns><see cref="BindStaffSkillGroupListResponse"/></returns>

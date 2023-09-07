@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F5D5EEC8-AE19-3226-9D01-52472441AFA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.842</VersionPrefix>
+    <VersionPrefix>3.0.843</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,36 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20201229\VmClient.cs" />
+    <Compile Include="V20201229\Models\AudioResult.cs" />
+    <Compile Include="V20201229\Models\AudioResultDetailLanguageResult.cs" />
+    <Compile Include="V20201229\Models\AudioResultDetailMoanResult.cs" />
+    <Compile Include="V20201229\Models\AudioResultDetailTextResult.cs" />
+    <Compile Include="V20201229\Models\AudioSegments.cs" />
+    <Compile Include="V20201229\Models\BucketInfo.cs" />
+    <Compile Include="V20201229\Models\CancelTaskRequest.cs" />
+    <Compile Include="V20201229\Models\CancelTaskResponse.cs" />
+    <Compile Include="V20201229\Models\CreateVideoModerationTaskRequest.cs" />
+    <Compile Include="V20201229\Models\CreateVideoModerationTaskResponse.cs" />
+    <Compile Include="V20201229\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="V20201229\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="V20201229\Models\DescribeTasksRequest.cs" />
+    <Compile Include="V20201229\Models\DescribeTasksResponse.cs" />
+    <Compile Include="V20201229\Models\ImageResult.cs" />
+    <Compile Include="V20201229\Models\ImageResultResult.cs" />
+    <Compile Include="V20201229\Models\ImageResultsResultDetail.cs" />
+    <Compile Include="V20201229\Models\ImageResultsResultDetailLocation.cs" />
+    <Compile Include="V20201229\Models\ImageSegments.cs" />
+    <Compile Include="V20201229\Models\InputInfo.cs" />
+    <Compile Include="V20201229\Models\MediaInfo.cs" />
+    <Compile Include="V20201229\Models\RecognitionResult.cs" />
+    <Compile Include="V20201229\Models\StorageInfo.cs" />
+    <Compile Include="V20201229\Models\Tag.cs" />
+    <Compile Include="V20201229\Models\TaskData.cs" />
+    <Compile Include="V20201229\Models\TaskFilter.cs" />
+    <Compile Include="V20201229\Models\TaskInput.cs" />
+    <Compile Include="V20201229\Models\TaskLabel.cs" />
+    <Compile Include="V20201229\Models\TaskResult.cs" />
     <Compile Include="V20210922\VmClient.cs" />
     <Compile Include="V20210922\Models\AudioResult.cs" />
     <Compile Include="V20210922\Models\AudioResultDetailLanguageResult.cs" />
@@ -112,35 +142,5 @@
     <Compile Include="V20200709\Models\TaskLabel.cs" />
     <Compile Include="V20200709\Models\TaskResult.cs" />
     <Compile Include="V20200709\Models\TrendCount.cs" />
-    <Compile Include="V20201229\VmClient.cs" />
-    <Compile Include="V20201229\Models\AudioResult.cs" />
-    <Compile Include="V20201229\Models\AudioResultDetailLanguageResult.cs" />
-    <Compile Include="V20201229\Models\AudioResultDetailMoanResult.cs" />
-    <Compile Include="V20201229\Models\AudioResultDetailTextResult.cs" />
-    <Compile Include="V20201229\Models\AudioSegments.cs" />
-    <Compile Include="V20201229\Models\BucketInfo.cs" />
-    <Compile Include="V20201229\Models\CancelTaskRequest.cs" />
-    <Compile Include="V20201229\Models\CancelTaskResponse.cs" />
-    <Compile Include="V20201229\Models\CreateVideoModerationTaskRequest.cs" />
-    <Compile Include="V20201229\Models\CreateVideoModerationTaskResponse.cs" />
-    <Compile Include="V20201229\Models\DescribeTaskDetailRequest.cs" />
-    <Compile Include="V20201229\Models\DescribeTaskDetailResponse.cs" />
-    <Compile Include="V20201229\Models\DescribeTasksRequest.cs" />
-    <Compile Include="V20201229\Models\DescribeTasksResponse.cs" />
-    <Compile Include="V20201229\Models\ImageResult.cs" />
-    <Compile Include="V20201229\Models\ImageResultResult.cs" />
-    <Compile Include="V20201229\Models\ImageResultsResultDetail.cs" />
-    <Compile Include="V20201229\Models\ImageResultsResultDetailLocation.cs" />
-    <Compile Include="V20201229\Models\ImageSegments.cs" />
-    <Compile Include="V20201229\Models\InputInfo.cs" />
-    <Compile Include="V20201229\Models\MediaInfo.cs" />
-    <Compile Include="V20201229\Models\RecognitionResult.cs" />
-    <Compile Include="V20201229\Models\StorageInfo.cs" />
-    <Compile Include="V20201229\Models\Tag.cs" />
-    <Compile Include="V20201229\Models\TaskData.cs" />
-    <Compile Include="V20201229\Models\TaskFilter.cs" />
-    <Compile Include="V20201229\Models\TaskInput.cs" />
-    <Compile Include="V20201229\Models\TaskLabel.cs" />
-    <Compile Include="V20201229\Models\TaskResult.cs" />
   </ItemGroup>
 </Project>

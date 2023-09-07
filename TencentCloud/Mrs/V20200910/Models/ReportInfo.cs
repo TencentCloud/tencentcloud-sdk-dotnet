@@ -199,6 +199,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Times")]
         public Time[] Times{ get; set; }
 
+        /// <summary>
+        /// 床号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BedNo")]
+        public string BedNo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +237,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "OtherTime", this.OtherTime);
             this.SetParamSimple(map, prefix + "PrintTime", this.PrintTime);
             this.SetParamArrayObj(map, prefix + "Times.", this.Times);
+            this.SetParamSimple(map, prefix + "BedNo", this.BedNo);
         }
     }
 }

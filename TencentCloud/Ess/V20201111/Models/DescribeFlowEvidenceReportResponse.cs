@@ -32,11 +32,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ReportUrl{ get; set; }
 
         /// <summary>
-        /// 出证任务执行的状态, 分布表示下面的含义
-        /// 
-        /// EvidenceStatusExecuting  出证任务在执行中
-        /// EvidenceStatusSuccess  出证任务执行成功
-        /// EvidenceStatusFailed  出证任务执行失败
+        /// 签署报告出证任务的状态
+        /// <ul>
+        /// <li>EvidenceStatusExecuting : 出证任务在执行中</li>
+        /// <li>EvidenceStatusSuccess : 出证任务执行成功</li>
+        /// <li>EvidenceStatusFailed : 出证任务执行失败</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -26,6 +26,7 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 解除协议流程编号
+        /// `注意：这里的流程编号对应的合同是本次发起的解除协议。`
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

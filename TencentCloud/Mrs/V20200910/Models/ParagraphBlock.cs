@@ -156,6 +156,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MenstruallHistoryText")]
+        [System.Obsolete]
         public string MenstruallHistoryText{ get; set; }
 
         /// <summary>
@@ -214,6 +215,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("TreatmentResultText")]
         public string TreatmentResultText{ get; set; }
 
+        /// <summary>
+        /// 月经史
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MenstrualHistoryText")]
+        public string MenstrualHistoryText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +255,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "BodyExaminationText", this.BodyExaminationText);
             this.SetParamSimple(map, prefix + "SpecialistExaminationText", this.SpecialistExaminationText);
             this.SetParamSimple(map, prefix + "TreatmentResultText", this.TreatmentResultText);
+            this.SetParamSimple(map, prefix + "MenstrualHistoryText", this.MenstrualHistoryText);
         }
     }
 }

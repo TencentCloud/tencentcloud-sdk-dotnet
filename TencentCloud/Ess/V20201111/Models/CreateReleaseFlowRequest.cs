@@ -25,42 +25,55 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方用户信息，userId 必填
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 待解除的签署流程编号（即原签署流程的编号）
+        /// 待解除的签署流程编号（即原签署流程的编号）。
         /// </summary>
         [JsonProperty("NeedRelievedFlowId")]
         public string NeedRelievedFlowId{ get; set; }
 
         /// <summary>
-        /// 解除协议内容
+        /// 解除协议内容。
         /// </summary>
         [JsonProperty("ReliveInfo")]
         public RelieveInfo ReliveInfo{ get; set; }
 
         /// <summary>
-        /// 非必须，解除协议的本企业签署人列表，
-        /// 默认使用原流程的签署人列表,当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业其他已实名员工来替换原流程中的原签署人，注意需要指明原签署人的编号(ReceiptId,通过DescribeFlowInfo接口获取)来代表需要替换哪一个签署人
-        /// 解除协议的签署人数量不能多于原流程的签署人数量
+        /// 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
+        /// <summary>
+        /// 解除协议的签署人列表(如不指定该参数，默认使用原流程的签署人列表)。 <br/>
+        /// 如需更换原合同中的签署人，可通过指定该签署人的RecipientId编号更换此签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+        /// 解除协议的签署人数量不能多于原流程的签署人数量。<br/>
+        /// 
+        /// `注意：只能更换同企业的签署人。`<br/>
+        /// `注意：不支持更换个人类型的签署人。`<br/>
         /// </summary>
         [JsonProperty("ReleasedApprovers")]
         public ReleasedApprover[] ReleasedApprovers{ get; set; }
 
         /// <summary>
-        /// 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+        /// 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+        /// 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+        /// 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+        /// 回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
         /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
 
 
         /// <summary>
@@ -71,9 +84,10 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "NeedRelievedFlowId", this.NeedRelievedFlowId);
             this.SetParamObj(map, prefix + "ReliveInfo.", this.ReliveInfo);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArrayObj(map, prefix + "ReleasedApprovers.", this.ReleasedApprovers);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
         }
     }
 }

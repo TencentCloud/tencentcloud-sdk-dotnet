@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.842</VersionPrefix>
+    <VersionPrefix>3.0.843</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -220,6 +220,8 @@
     <Compile Include="V20180125\Models\FiltersItemNew.cs" />
     <Compile Include="V20180125\Models\FindAllDomainDetail.cs" />
     <Compile Include="V20180125\Models\FraudPkg.cs" />
+    <Compile Include="V20180125\Models\FreshAntiFakeUrlRequest.cs" />
+    <Compile Include="V20180125\Models\FreshAntiFakeUrlResponse.cs" />
     <Compile Include="V20180125\Models\GetAttackDownloadRecordsRequest.cs" />
     <Compile Include="V20180125\Models\GetAttackDownloadRecordsResponse.cs" />
     <Compile Include="V20180125\Models\GetAttackHistogramRequest.cs" />

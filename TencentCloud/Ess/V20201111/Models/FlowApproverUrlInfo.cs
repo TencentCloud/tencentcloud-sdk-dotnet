@@ -25,14 +25,18 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+        /// 签署链接(短链形式呈现)。请注意保密，不要将其外泄给无关用户。
+        /// 注: `注意该链接有效期为30分钟`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignUrl")]
         public string SignUrl{ get; set; }
 
         /// <summary>
-        /// 签署人类型 1-个人
+        /// 签署参与人类型 
+        /// <ul><li> **1** :个人参与方</li></ul>
+        /// 
+        /// 注: `现在仅支持个人参与方`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproverType")]
@@ -53,7 +57,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverMobile{ get; set; }
 
         /// <summary>
-        /// 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+        /// 签署链接(长链形式呈现)。请注意保密，不要将其外泄给无关用户。
+        /// 注: `注意该链接有效期为30分钟`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LongUrl")]

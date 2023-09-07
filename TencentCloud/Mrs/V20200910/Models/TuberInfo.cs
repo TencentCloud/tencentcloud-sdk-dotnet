@@ -246,6 +246,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsthmusThicknese")]
+        [System.Obsolete]
         public Size IsthmusThicknese{ get; set; }
 
         /// <summary>
@@ -339,6 +340,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Coords")]
         public Coord[] Coords{ get; set; }
 
+        /// <summary>
+        /// 峡部厚度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsthmusThickness")]
+        public Size IsthmusThickness{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -390,6 +398,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamObj(map, prefix + "SymDesc.", this.SymDesc);
             this.SetParamObj(map, prefix + "ImageFeature.", this.ImageFeature);
             this.SetParamArrayObj(map, prefix + "Coords.", this.Coords);
+            this.SetParamObj(map, prefix + "IsthmusThickness.", this.IsthmusThickness);
         }
     }
 }

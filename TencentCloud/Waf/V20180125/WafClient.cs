@@ -2707,6 +2707,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 刷新防篡改url
+        /// </summary>
+        /// <param name="req"><see cref="FreshAntiFakeUrlRequest"/></param>
+        /// <returns><see cref="FreshAntiFakeUrlResponse"/></returns>
+        public async Task<FreshAntiFakeUrlResponse> FreshAntiFakeUrl(FreshAntiFakeUrlRequest req)
+        {
+             JsonResponseModel<FreshAntiFakeUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FreshAntiFakeUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FreshAntiFakeUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 刷新防篡改url
+        /// </summary>
+        /// <param name="req"><see cref="FreshAntiFakeUrlRequest"/></param>
+        /// <returns><see cref="FreshAntiFakeUrlResponse"/></returns>
+        public FreshAntiFakeUrlResponse FreshAntiFakeUrlSync(FreshAntiFakeUrlRequest req)
+        {
+             JsonResponseModel<FreshAntiFakeUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FreshAntiFakeUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FreshAntiFakeUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询下载攻击日志任务记录列表
         /// </summary>
         /// <param name="req"><see cref="GetAttackDownloadRecordsRequest"/></param>

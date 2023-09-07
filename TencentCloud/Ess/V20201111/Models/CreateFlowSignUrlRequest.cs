@@ -25,27 +25,33 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 流程编号
+        /// 合同流程ID，为32位字符串。
+        /// 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+        /// 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，ApproverType目前只支持个人类型的签署人。
+        /// 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，
         /// 
-        /// 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
+        /// 注:
+        /// `1. ApproverType目前只支持个人类型的签署人。`
+        /// `2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
         /// </summary>
         [JsonProperty("FlowApproverInfos")]
         public FlowCreateApprover[] FlowApproverInfos{ get; set; }
 
         /// <summary>
-        /// 用户信息，此结构体UserId必填
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -58,7 +64,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public OrganizationInfo Organization{ get; set; }
 
         /// <summary>
-        /// 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+        /// 签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
         /// </summary>
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }

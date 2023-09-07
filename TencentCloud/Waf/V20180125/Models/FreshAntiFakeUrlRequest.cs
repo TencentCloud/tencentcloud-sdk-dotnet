@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AttributeItem : AbstractModel
+    public class FreshAntiFakeUrlRequest : AbstractModel
     {
         
         /// <summary>
-        /// 属性值
+        /// 域名
         /// </summary>
-        [JsonProperty("Type")]
-        public long? Type{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// Type识别概率值,[0,1],代表判断正确的概率。
+        /// Id
         /// </summary>
-        [JsonProperty("Probability")]
-        public float? Probability{ get; set; }
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "Probability", this.Probability);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }
