@@ -32,16 +32,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 企业开通用户自动签场景，例如电子处方。
-        /// <ul>
-        /// <li>E_PRESCRIPTION_AUTO_SIGN : 电子处方</li>
-        /// </ul>
+        /// 自动签使用的场景值, 可以选择的场景值如下:
+        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+        /// 
+        /// 注: `现在仅支持电子处方场景`
         /// </summary>
         [JsonProperty("SceneKey")]
         public string SceneKey{ get; set; }
 
         /// <summary>
-        /// 指定撤销链接的用户指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+        /// 预撤销链接的用户信息，包含姓名、证件类型、证件号码等信息。
         /// </summary>
         [JsonProperty("UserInfo")]
         public UserThreeFactor UserInfo{ get; set; }

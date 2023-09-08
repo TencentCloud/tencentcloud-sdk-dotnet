@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AddSpartaProtectionsAutoResponse : AbstractModel
+    public class ModifyAclRuleResponse : AbstractModel
     {
         
         /// <summary>
-        /// 失败原因
+        /// 编辑成功后返回新策略ID列表
         /// </summary>
-        [JsonProperty("FailedInfos")]
-        public FailedInfo[] FailedInfos{ get; set; }
+        [JsonProperty("RuleUuid")]
+        public long?[] RuleUuid{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "FailedInfos.", this.FailedInfos);
+            this.SetParamArraySimple(map, prefix + "RuleUuid.", this.RuleUuid);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

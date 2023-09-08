@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? IsOpen{ get; set; }
 
         /// <summary>
-        /// 自动签许可生效时间。当且仅当已开通自动签时有值。
+        /// 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
         /// 
         /// 值为unix时间戳,单位为秒。
         /// </summary>
@@ -39,16 +39,18 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? LicenseFrom{ get; set; }
 
         /// <summary>
-        /// 自动签许可到期时间。当且仅当已开通自动签时有值。
+        /// 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+        /// 
         /// 值为unix时间戳,单位为秒。
         /// </summary>
         [JsonProperty("LicenseTo")]
         public long? LicenseTo{ get; set; }
 
         /// <summary>
-        /// 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
-        /// 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
-        /// 1-不绑定，发起合同时将按标准合同套餐进行扣减
+        /// 设置用户开通自动签时是否绑定个人自动签账号许可。
+        /// 
+        /// <ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
+        /// <li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
         /// </summary>
         [JsonProperty("LicenseType")]
         public long? LicenseType{ get; set; }

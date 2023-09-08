@@ -25,62 +25,61 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 自动签开通个人用户的三要素
+        /// 自动签开通个人用户信息, 包括名字,身份证等
         /// </summary>
         [JsonProperty("UserInfo")]
         public UserThreeFactor UserInfo{ get; set; }
 
         /// <summary>
-        /// 接受回调URL地址。支持http://或者https://协议
-        /// 
-        /// Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
-        /// </summary>
-        [JsonProperty("CallbackUrl")]
-        public string CallbackUrl{ get; set; }
-
-        /// <summary>
-        /// 是否回调证书信息
-        /// false-不需要 (默认值)
-        /// true-需要
+        /// 是否回调证书信息:
+        /// <ul><li>**false**: 不需要(默认)</li>
+        /// <li>**true**:需要</li></ul>
         /// </summary>
         [JsonProperty("CertInfoCallback")]
         public bool? CertInfoCallback{ get; set; }
 
         /// <summary>
-        /// 是否支持用户自定义签名印章
-        /// false-不需要(默认)
-        /// true-需要
+        /// 是否支持用户自定义签名印章:
+        /// <ul><li>**false**: 不能自己定义(默认)</li>
+        /// <li>**true**: 可以自己定义</li></ul>
         /// </summary>
         [JsonProperty("UserDefineSeal")]
         public bool? UserDefineSeal{ get; set; }
 
         /// <summary>
-        /// 是否需要回调的时候返回印章(签名) 图片的 base64
-        /// 
-        /// false-不需要(默认)
-        /// true-需要
+        /// 回调中是否需要自动签将要使用的印章(签名) 图片的 base64:
+        /// <ul><li>**false**: 不需要(默认)</li>
+        /// <li>**true**: 需要</li></ul>
         /// </summary>
         [JsonProperty("SealImgCallback")]
         public bool? SealImgCallback{ get; set; }
 
         /// <summary>
-        /// 开通时候的验证方式, 分布为
-        /// 
-        /// WEIXINAPP : 微信人脸识别
-        /// INSIGHT : 慧眼人脸认别
-        /// TELECOM : 运营商三要素验证
-        /// 
-        /// 如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
-        /// 
-        /// 如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+        /// 执行结果的回调URL，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
+        /// 腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
+        /// 回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        [System.Obsolete]
+        public string CallbackUrl{ get; set; }
+
+        /// <summary>
+        /// 开通时候的身份验证方式, 取值为：
+        /// <ul><li>**WEIXINAPP** : 微信人脸识别</li>
+        /// <li>**INSIGHT** : 慧眼人脸认别</li>
+        /// <li>**TELECOM** : 运营商三要素验证</li></ul>
+        /// 注：
+        /// <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
+        /// <li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li>
         /// </summary>
         [JsonProperty("VerifyChannels")]
         public string[] VerifyChannels{ get; set; }
 
         /// <summary>
-        /// 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
-        /// 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
-        /// 1-不绑定，发起合同时将按标准合同套餐进行扣减
+        /// 设置用户开通自动签时是否绑定个人自动签账号许可。
+        /// 
+        /// <ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
+        /// <li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
         /// </summary>
         [JsonProperty("LicenseType")]
         public long? LicenseType{ get; set; }
@@ -92,10 +91,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "UserInfo.", this.UserInfo);
-            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "CertInfoCallback", this.CertInfoCallback);
             this.SetParamSimple(map, prefix + "UserDefineSeal", this.UserDefineSeal);
             this.SetParamSimple(map, prefix + "SealImgCallback", this.SealImgCallback);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamArraySimple(map, prefix + "VerifyChannels.", this.VerifyChannels);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
         }

@@ -25,101 +25,130 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+        /// 执行本接口操作的员工信息。使用此接口时，必须填写userId。
+        /// 支持填入集团子公司经办人 userId 代发合同。
+        /// 
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 签署流程名称,最大长度200个字符
+        /// 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+        /// 
+        /// 该名称还将用于合同签署完成后的下载文件名。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 签署流程参与者信息，最大限制50方
-        /// 注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
+        /// 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+        /// 
+        /// 注:  `approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效`
         /// </summary>
         [JsonProperty("Approvers")]
         public FlowCreateApprover[] Approvers{ get; set; }
 
         /// <summary>
-        /// 签署流程描述,最大长度1000个字符
+        /// 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
         /// </summary>
         [JsonProperty("FlowDescription")]
         public string FlowDescription{ get; set; }
 
         /// <summary>
-        /// 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+        /// 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
         /// </summary>
         [JsonProperty("FlowType")]
         public string FlowType{ get; set; }
 
         /// <summary>
-        /// 客户端Token，保持接口幂等性,最大长度64个字符
+        /// 已经废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 签署流程的签署截止时间。
-        /// 
-        /// 值为unix时间戳,精确到秒,不传默认为当前时间一年后
+        /// 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+        /// 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
         /// </summary>
         [JsonProperty("DeadLine")]
         public long? DeadLine{ get; set; }
 
         /// <summary>
-        /// 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+        /// 合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。
+        /// 
+        /// 到达提醒时间后，腾讯电子签会短信通知发起方企业合同提醒，可用于处理合同到期事务，如合同续签等事宜。
         /// </summary>
         [JsonProperty("RemindedOn")]
         public long? RemindedOn{ get; set; }
 
         /// <summary>
-        /// 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+        /// 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+        /// 
+        /// 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
         /// <summary>
-        /// 发送类型：
-        /// true：无序签
-        /// false：有序签
-        /// 注：默认为false（有序签），请和模板中的配置保持一致
+        /// 合同流程的签署顺序类型：
+        /// <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
+        /// <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
+        /// 注：`请和模板中的配置保持一致`
         /// </summary>
         [JsonProperty("Unordered")]
         public bool? Unordered{ get; set; }
 
         /// <summary>
-        /// 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+        /// 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
+        /// <ul><li>{合同名称}   </li>
+        /// <li>{发起方企业} </li>
+        /// <li>{发起方姓名} </li>
+        /// <li>{签署方N企业}</li>
+        /// <li>{签署方N姓名}</li></ul>
+        /// 其中，N表示签署方的编号，从1开始，不能超过签署人的数量。
+        /// 
+        /// 例如，如果是腾讯公司张三发给李四名称为“租房合同”的合同，您可以将此字段设置为：`合同名称:{合同名称};发起方: {发起方企业}({发起方姓名});签署方:{签署方1姓名}`，则小程序中列表页展示此合同为以下样子
+        /// 
+        /// 合同名称：租房合同 
+        /// 发起方：腾讯公司(张三) 
+        /// 签署方：李四
+        /// 
         /// </summary>
         [JsonProperty("CustomShowMap")]
         public string CustomShowMap{ get; set; }
 
         /// <summary>
-        /// 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
-        /// 若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
-        /// 
-        /// 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+        /// 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+        /// <ul><li> **false**：（默认）不需要审批，直接签署。</li>
+        /// <li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+        /// 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+        /// <ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+        /// <li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+        /// 注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
         /// </summary>
         [JsonProperty("NeedSignReview")]
         public bool? NeedSignReview{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 被抄送人的信息列表。
-        /// 注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
+        /// 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+        /// 
+        /// 注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
         /// </summary>
         [JsonProperty("CcInfos")]
         public CcInfo[] CcInfos{ get; set; }
 
         /// <summary>
-        /// 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+        /// 个人自动签名的使用场景包括以下, 个人自动签署(即ApproverType设置成个人自动签署时)业务此值必传：
+        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN**：处方单（医疗自动签）  </li></ul>
+        /// 注: `个人自动签名场景是白名单功能，使用前请与对接的客户经理联系沟通。`
         /// </summary>
         [JsonProperty("AutoSignScene")]
         public string AutoSignScene{ get; set; }

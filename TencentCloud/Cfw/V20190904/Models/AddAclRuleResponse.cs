@@ -15,28 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FailedInfo : AbstractModel
+    public class AddAclRuleResponse : AbstractModel
     {
         
         /// <summary>
-        /// 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 创建成功后返回新策略ID列表
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("RuleUuid")]
+        public long?[] RuleUuid{ get; set; }
 
         /// <summary>
-        /// 失败信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +42,8 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamArraySimple(map, prefix + "RuleUuid.", this.RuleUuid);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -333,6 +333,46 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
+        /// 获取可备份表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackUpTablesRequest"/></param>
+        /// <returns><see cref="DescribeBackUpTablesResponse"/></returns>
+        public async Task<DescribeBackUpTablesResponse> DescribeBackUpTables(DescribeBackUpTablesRequest req)
+        {
+             JsonResponseModel<DescribeBackUpTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackUpTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackUpTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取可备份表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackUpTablesRequest"/></param>
+        /// <returns><see cref="DescribeBackUpTablesResponse"/></returns>
+        public DescribeBackUpTablesResponse DescribeBackUpTablesSync(DescribeBackUpTablesRequest req)
+        {
+             JsonResponseModel<DescribeBackUpTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackUpTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackUpTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群用户、集群表，数据库等相关信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCkSqlApisRequest"/></param>

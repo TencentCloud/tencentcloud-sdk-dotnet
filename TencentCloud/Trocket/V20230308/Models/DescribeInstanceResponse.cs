@@ -1,0 +1,211 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Trocket.V20230308.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeInstanceResponse : AbstractModel
+    {
+        
+        /// <summary>
+        /// 实例类型，
+        /// EXPERIMENT 体验版
+        /// BASIC 基础版
+        /// PRO  专业版
+        /// PLATINUM 铂金版
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 实例名称
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// 主题数量
+        /// </summary>
+        [JsonProperty("TopicNum")]
+        public long? TopicNum{ get; set; }
+
+        /// <summary>
+        /// 实例最大主题数量
+        /// </summary>
+        [JsonProperty("TopicNumLimit")]
+        public long? TopicNumLimit{ get; set; }
+
+        /// <summary>
+        /// 消费组数量
+        /// </summary>
+        [JsonProperty("GroupNum")]
+        public long? GroupNum{ get; set; }
+
+        /// <summary>
+        /// 实例最大消费组数量
+        /// </summary>
+        [JsonProperty("GroupNumLimit")]
+        public long? GroupNumLimit{ get; set; }
+
+        /// <summary>
+        /// 消息保留时间，小时为单位
+        /// </summary>
+        [JsonProperty("MessageRetention")]
+        public long? MessageRetention{ get; set; }
+
+        /// <summary>
+        /// 最大可调整消息保留时间，小时为单位
+        /// </summary>
+        [JsonProperty("RetentionUpperLimit")]
+        public long? RetentionUpperLimit{ get; set; }
+
+        /// <summary>
+        /// 最小可调整消息保留时间，小时为单位
+        /// </summary>
+        [JsonProperty("RetentionLowerLimit")]
+        public long? RetentionLowerLimit{ get; set; }
+
+        /// <summary>
+        /// TPS限流值
+        /// </summary>
+        [JsonProperty("TpsLimit")]
+        public long? TpsLimit{ get; set; }
+
+        /// <summary>
+        /// 弹性TPS限流值
+        /// </summary>
+        [JsonProperty("ScaledTpsLimit")]
+        public long? ScaledTpsLimit{ get; set; }
+
+        /// <summary>
+        /// 延迟消息最长时间，小时为单位
+        /// </summary>
+        [JsonProperty("MaxMessageDelay")]
+        public long? MaxMessageDelay{ get; set; }
+
+        /// <summary>
+        /// 创建时间，秒为单位
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public long? CreatedTime{ get; set; }
+
+        /// <summary>
+        /// 消息发送接收比例
+        /// </summary>
+        [JsonProperty("SendReceiveRatio")]
+        public float? SendReceiveRatio{ get; set; }
+
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
+        /// <summary>
+        /// 接入点列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndpointList")]
+        public Endpoint[] EndpointList{ get; set; }
+
+        /// <summary>
+        /// 主题队列数上限
+        /// </summary>
+        [JsonProperty("TopicQueueNumUpperLimit")]
+        public long? TopicQueueNumUpperLimit{ get; set; }
+
+        /// <summary>
+        /// 主题队列数下限
+        /// </summary>
+        [JsonProperty("TopicQueueNumLowerLimit")]
+        public long? TopicQueueNumLowerLimit{ get; set; }
+
+        /// <summary>
+        /// 备注信息
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 实例状态
+        /// </summary>
+        [JsonProperty("InstanceStatus")]
+        public string InstanceStatus{ get; set; }
+
+        /// <summary>
+        /// 实例规格
+        /// </summary>
+        [JsonProperty("SkuCode")]
+        public string SkuCode{ get; set; }
+
+        /// <summary>
+        /// 计费模式
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "TopicNum", this.TopicNum);
+            this.SetParamSimple(map, prefix + "TopicNumLimit", this.TopicNumLimit);
+            this.SetParamSimple(map, prefix + "GroupNum", this.GroupNum);
+            this.SetParamSimple(map, prefix + "GroupNumLimit", this.GroupNumLimit);
+            this.SetParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
+            this.SetParamSimple(map, prefix + "RetentionUpperLimit", this.RetentionUpperLimit);
+            this.SetParamSimple(map, prefix + "RetentionLowerLimit", this.RetentionLowerLimit);
+            this.SetParamSimple(map, prefix + "TpsLimit", this.TpsLimit);
+            this.SetParamSimple(map, prefix + "ScaledTpsLimit", this.ScaledTpsLimit);
+            this.SetParamSimple(map, prefix + "MaxMessageDelay", this.MaxMessageDelay);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamArrayObj(map, prefix + "EndpointList.", this.EndpointList);
+            this.SetParamSimple(map, prefix + "TopicQueueNumUpperLimit", this.TopicQueueNumUpperLimit);
+            this.SetParamSimple(map, prefix + "TopicQueueNumLowerLimit", this.TopicQueueNumLowerLimit);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+            this.SetParamSimple(map, prefix + "SkuCode", this.SkuCode);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+        }
+    }
+}
+

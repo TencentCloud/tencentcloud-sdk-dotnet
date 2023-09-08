@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Eb.V20210416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AddSpartaProtectionsAutoRequest : AbstractModel
+    public class ListPlatformEventNamesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 多域名
+        /// 平台产品列表
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("EventNames")]
+        public PlatformEventDetail[] EventNames{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamArrayObj(map, prefix + "EventNames.", this.EventNames);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

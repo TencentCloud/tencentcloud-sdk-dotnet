@@ -293,86 +293,6 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 一键接入
-        /// </summary>
-        /// <param name="req"><see cref="AddSpartaProtectionAutoRequest"/></param>
-        /// <returns><see cref="AddSpartaProtectionAutoResponse"/></returns>
-        public async Task<AddSpartaProtectionAutoResponse> AddSpartaProtectionAuto(AddSpartaProtectionAutoRequest req)
-        {
-             JsonResponseModel<AddSpartaProtectionAutoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AddSpartaProtectionAuto");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSpartaProtectionAutoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 一键接入
-        /// </summary>
-        /// <param name="req"><see cref="AddSpartaProtectionAutoRequest"/></param>
-        /// <returns><see cref="AddSpartaProtectionAutoResponse"/></returns>
-        public AddSpartaProtectionAutoResponse AddSpartaProtectionAutoSync(AddSpartaProtectionAutoRequest req)
-        {
-             JsonResponseModel<AddSpartaProtectionAutoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AddSpartaProtectionAuto");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSpartaProtectionAutoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 批量添加域名
-        /// </summary>
-        /// <param name="req"><see cref="AddSpartaProtectionsAutoRequest"/></param>
-        /// <returns><see cref="AddSpartaProtectionsAutoResponse"/></returns>
-        public async Task<AddSpartaProtectionsAutoResponse> AddSpartaProtectionsAuto(AddSpartaProtectionsAutoRequest req)
-        {
-             JsonResponseModel<AddSpartaProtectionsAutoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AddSpartaProtectionsAuto");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSpartaProtectionsAutoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 批量添加域名
-        /// </summary>
-        /// <param name="req"><see cref="AddSpartaProtectionsAutoRequest"/></param>
-        /// <returns><see cref="AddSpartaProtectionsAutoResponse"/></returns>
-        public AddSpartaProtectionsAutoResponse AddSpartaProtectionsAutoSync(AddSpartaProtectionsAutoRequest req)
-        {
-             JsonResponseModel<AddSpartaProtectionsAutoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AddSpartaProtectionsAuto");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSpartaProtectionsAutoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口用于创建访问日志导出
         /// </summary>
         /// <param name="req"><see cref="CreateAccessExportRequest"/></param>
@@ -1734,6 +1654,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDomainDetailsSaas");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainDetailsSaasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取添加域名操作的结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainVerifyResultRequest"/></param>
+        /// <returns><see cref="DescribeDomainVerifyResultResponse"/></returns>
+        public async Task<DescribeDomainVerifyResultResponse> DescribeDomainVerifyResult(DescribeDomainVerifyResultRequest req)
+        {
+             JsonResponseModel<DescribeDomainVerifyResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainVerifyResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainVerifyResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取添加域名操作的结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainVerifyResultRequest"/></param>
+        /// <returns><see cref="DescribeDomainVerifyResultResponse"/></returns>
+        public DescribeDomainVerifyResultResponse DescribeDomainVerifyResultSync(DescribeDomainVerifyResultRequest req)
+        {
+             JsonResponseModel<DescribeDomainVerifyResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainVerifyResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainVerifyResultResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

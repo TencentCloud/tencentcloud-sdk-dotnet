@@ -54,8 +54,8 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
-        /// 0 - 合同发起时通知（默认）
-        /// 1 - 签署完成后通知
+        /// <ul><li> **0** :合同发起时通知通知对方来查看合同（默认）</li>
+        /// <li> **1** : 签署完成后通知对方来查看合同</li></ul>
         /// </summary>
         [JsonProperty("CcNotifyType")]
         public long? CcNotifyType{ get; set; }

@@ -25,37 +25,39 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 操作人信息,UserId必填
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 自动签场景:
-        /// E_PRESCRIPTION_AUTO_SIGN 电子处方
+        /// 自动签使用的场景值, 可以选择的场景值如下:
+        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+        /// 
+        /// 注: `现在仅支持电子处方场景`
         /// </summary>
         [JsonProperty("SceneKey")]
         public string SceneKey{ get; set; }
 
         /// <summary>
-        /// 自动签开通，签署相关配置
+        /// 自动签开通配置信息, 包括开通的人员的信息等
         /// </summary>
         [JsonProperty("AutoSignConfig")]
         public AutoSignConfig AutoSignConfig{ get; set; }
 
         /// <summary>
-        /// 链接类型，
-        /// 空-默认小程序端链接
-        /// H5SIGN-h5端链接
+        /// 生成的链接类型：
+        /// <ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
+        /// <li> **H5SIGN** : 生成H5端开通链接</li><ul>
         /// </summary>
         [JsonProperty("UrlType")]
         public string UrlType{ get; set; }
 
         /// <summary>
-        /// 通知类型
-        /// 
-        /// 默认不设置为不通知开通方，
-        /// SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
+        /// 是否通知开通方，通知类型:
+        /// <ul><li>默认不设置为不通知开通方</li>
+        /// <li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
@@ -67,13 +69,14 @@ namespace TencentCloud.Ess.V20201111.Models
         public string NotifyAddress{ get; set; }
 
         /// <summary>
-        /// 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+        /// 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

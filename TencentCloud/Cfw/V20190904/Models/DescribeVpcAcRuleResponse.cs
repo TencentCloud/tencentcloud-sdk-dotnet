@@ -15,15 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AddSpartaProtectionAutoResponse : AbstractModel
+    public class DescribeVpcAcRuleResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 总条数
+        /// </summary>
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
+
+        /// <summary>
+        /// 内网间访问控制列表数据
+        /// </summary>
+        [JsonProperty("Data")]
+        public VpcRuleItem[] Data{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +48,8 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

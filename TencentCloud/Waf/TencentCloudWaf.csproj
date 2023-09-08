@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.843</VersionPrefix>
+    <VersionPrefix>3.0.844</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,12 +68,8 @@
     <Compile Include="V20180125\Models\AddCustomWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\AddDomainWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\AddDomainWhiteRuleResponse.cs" />
-    <Compile Include="V20180125\Models\AddSpartaProtectionAutoRequest.cs" />
-    <Compile Include="V20180125\Models\AddSpartaProtectionAutoResponse.cs" />
     <Compile Include="V20180125\Models\AddSpartaProtectionRequest.cs" />
     <Compile Include="V20180125\Models\AddSpartaProtectionResponse.cs" />
-    <Compile Include="V20180125\Models\AddSpartaProtectionsAutoRequest.cs" />
-    <Compile Include="V20180125\Models\AddSpartaProtectionsAutoResponse.cs" />
     <Compile Include="V20180125\Models\AttackLogInfo.cs" />
     <Compile Include="V20180125\Models\AutoDenyDetail.cs" />
     <Compile Include="V20180125\Models\BatchIpAccessControlData.cs" />
@@ -162,6 +158,8 @@
     <Compile Include="V20180125\Models\DescribeDomainDetailsClbResponse.cs" />
     <Compile Include="V20180125\Models\DescribeDomainDetailsSaasRequest.cs" />
     <Compile Include="V20180125\Models\DescribeDomainDetailsSaasResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainVerifyResultRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainVerifyResultResponse.cs" />
     <Compile Include="V20180125\Models\DescribeDomainWhiteRulesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeDomainWhiteRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeDomainsRequest.cs" />
@@ -216,7 +214,6 @@
     <Compile Include="V20180125\Models\DomainsPartInfo.cs" />
     <Compile Include="V20180125\Models\DownloadAttackRecordInfo.cs" />
     <Compile Include="V20180125\Models\ExportAccessInfo.cs" />
-    <Compile Include="V20180125\Models\FailedInfo.cs" />
     <Compile Include="V20180125\Models\FiltersItemNew.cs" />
     <Compile Include="V20180125\Models\FindAllDomainDetail.cs" />
     <Compile Include="V20180125\Models\FraudPkg.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.843</VersionPrefix>
+    <VersionPrefix>3.0.844</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,14 +48,25 @@
 
   <ItemGroup>
     <Compile Include="V20230308\TrocketClient.cs" />
+    <Compile Include="V20230308\Models\CreateInstanceRequest.cs" />
+    <Compile Include="V20230308\Models\CreateInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\DeleteInstanceRequest.cs" />
+    <Compile Include="V20230308\Models\DeleteInstanceResponse.cs" />
     <Compile Include="V20230308\Models\DescribeInstanceListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeInstanceListResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeInstanceRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeInstanceResponse.cs" />
     <Compile Include="V20230308\Models\DescribeTopicListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeTopicListResponse.cs" />
+    <Compile Include="V20230308\Models\Endpoint.cs" />
     <Compile Include="V20230308\Models\Filter.cs" />
     <Compile Include="V20230308\Models\InstanceItem.cs" />
+    <Compile Include="V20230308\Models\IpRule.cs" />
+    <Compile Include="V20230308\Models\ModifyInstanceRequest.cs" />
+    <Compile Include="V20230308\Models\ModifyInstanceResponse.cs" />
     <Compile Include="V20230308\Models\Tag.cs" />
     <Compile Include="V20230308\Models\TagFilter.cs" />
     <Compile Include="V20230308\Models\TopicItem.cs" />
+    <Compile Include="V20230308\Models\VpcInfo.cs" />
   </ItemGroup>
 </Project>

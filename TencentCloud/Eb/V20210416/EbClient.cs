@@ -613,6 +613,46 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
+        /// 获取平台产品事件模板
+        /// </summary>
+        /// <param name="req"><see cref="GetPlatformEventTemplateRequest"/></param>
+        /// <returns><see cref="GetPlatformEventTemplateResponse"/></returns>
+        public async Task<GetPlatformEventTemplateResponse> GetPlatformEventTemplate(GetPlatformEventTemplateRequest req)
+        {
+             JsonResponseModel<GetPlatformEventTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetPlatformEventTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPlatformEventTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取平台产品事件模板
+        /// </summary>
+        /// <param name="req"><see cref="GetPlatformEventTemplateRequest"/></param>
+        /// <returns><see cref="GetPlatformEventTemplateResponse"/></returns>
+        public GetPlatformEventTemplateResponse GetPlatformEventTemplateSync(GetPlatformEventTemplateRequest req)
+        {
+             JsonResponseModel<GetPlatformEventTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetPlatformEventTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPlatformEventTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取事件规则详情
         /// </summary>
         /// <param name="req"><see cref="GetRuleRequest"/></param>
@@ -764,6 +804,126 @@ namespace TencentCloud.Eb.V20210416
              {
                  var strResp = this.InternalRequestSync(req, "ListEventBuses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListEventBusesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取平台产品事件名称
+        /// </summary>
+        /// <param name="req"><see cref="ListPlatformEventNamesRequest"/></param>
+        /// <returns><see cref="ListPlatformEventNamesResponse"/></returns>
+        public async Task<ListPlatformEventNamesResponse> ListPlatformEventNames(ListPlatformEventNamesRequest req)
+        {
+             JsonResponseModel<ListPlatformEventNamesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListPlatformEventNames");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPlatformEventNamesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取平台产品事件名称
+        /// </summary>
+        /// <param name="req"><see cref="ListPlatformEventNamesRequest"/></param>
+        /// <returns><see cref="ListPlatformEventNamesResponse"/></returns>
+        public ListPlatformEventNamesResponse ListPlatformEventNamesSync(ListPlatformEventNamesRequest req)
+        {
+             JsonResponseModel<ListPlatformEventNamesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListPlatformEventNames");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPlatformEventNamesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取平台产品事件匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="ListPlatformEventPatternsRequest"/></param>
+        /// <returns><see cref="ListPlatformEventPatternsResponse"/></returns>
+        public async Task<ListPlatformEventPatternsResponse> ListPlatformEventPatterns(ListPlatformEventPatternsRequest req)
+        {
+             JsonResponseModel<ListPlatformEventPatternsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListPlatformEventPatterns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPlatformEventPatternsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取平台产品事件匹配规则
+        /// </summary>
+        /// <param name="req"><see cref="ListPlatformEventPatternsRequest"/></param>
+        /// <returns><see cref="ListPlatformEventPatternsResponse"/></returns>
+        public ListPlatformEventPatternsResponse ListPlatformEventPatternsSync(ListPlatformEventPatternsRequest req)
+        {
+             JsonResponseModel<ListPlatformEventPatternsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListPlatformEventPatterns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPlatformEventPatternsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取平台产品列表
+        /// </summary>
+        /// <param name="req"><see cref="ListPlatformProductsRequest"/></param>
+        /// <returns><see cref="ListPlatformProductsResponse"/></returns>
+        public async Task<ListPlatformProductsResponse> ListPlatformProducts(ListPlatformProductsRequest req)
+        {
+             JsonResponseModel<ListPlatformProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListPlatformProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPlatformProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取平台产品列表
+        /// </summary>
+        /// <param name="req"><see cref="ListPlatformProductsRequest"/></param>
+        /// <returns><see cref="ListPlatformProductsResponse"/></returns>
+        public ListPlatformProductsResponse ListPlatformProductsSync(ListPlatformProductsRequest req)
+        {
+             JsonResponseModel<ListPlatformProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListPlatformProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPlatformProductsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

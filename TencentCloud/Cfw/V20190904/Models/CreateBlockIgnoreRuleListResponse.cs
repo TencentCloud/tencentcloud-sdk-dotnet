@@ -25,6 +25,12 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
+        /// 成功返回
+        /// </summary>
+        [JsonProperty("List")]
+        public IocListData[] List{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "List.", this.List);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

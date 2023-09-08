@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{773BF0CA-2F21-3865-B1F5-ADC28ACADE8A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.843</VersionPrefix>
+    <VersionPrefix>3.0.844</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -91,6 +91,8 @@
     <Compile Include="V20210416\Models\Filter.cs" />
     <Compile Include="V20210416\Models\GetEventBusRequest.cs" />
     <Compile Include="V20210416\Models\GetEventBusResponse.cs" />
+    <Compile Include="V20210416\Models\GetPlatformEventTemplateRequest.cs" />
+    <Compile Include="V20210416\Models\GetPlatformEventTemplateResponse.cs" />
     <Compile Include="V20210416\Models\GetRuleRequest.cs" />
     <Compile Include="V20210416\Models\GetRuleResponse.cs" />
     <Compile Include="V20210416\Models\GetTransformationRequest.cs" />
@@ -99,6 +101,12 @@
     <Compile Include="V20210416\Models\ListConnectionsResponse.cs" />
     <Compile Include="V20210416\Models\ListEventBusesRequest.cs" />
     <Compile Include="V20210416\Models\ListEventBusesResponse.cs" />
+    <Compile Include="V20210416\Models\ListPlatformEventNamesRequest.cs" />
+    <Compile Include="V20210416\Models\ListPlatformEventNamesResponse.cs" />
+    <Compile Include="V20210416\Models\ListPlatformEventPatternsRequest.cs" />
+    <Compile Include="V20210416\Models\ListPlatformEventPatternsResponse.cs" />
+    <Compile Include="V20210416\Models\ListPlatformProductsRequest.cs" />
+    <Compile Include="V20210416\Models\ListPlatformProductsResponse.cs" />
     <Compile Include="V20210416\Models\ListRulesRequest.cs" />
     <Compile Include="V20210416\Models\ListRulesResponse.cs" />
     <Compile Include="V20210416\Models\ListTargetsRequest.cs" />
@@ -106,6 +114,9 @@
     <Compile Include="V20210416\Models\LogFilter.cs" />
     <Compile Include="V20210416\Models\LogFilters.cs" />
     <Compile Include="V20210416\Models\OutputStructParam.cs" />
+    <Compile Include="V20210416\Models\PlatformEventDetail.cs" />
+    <Compile Include="V20210416\Models\PlatformEventSummary.cs" />
+    <Compile Include="V20210416\Models\PlatformProduct.cs" />
     <Compile Include="V20210416\Models\PublishEventRequest.cs" />
     <Compile Include="V20210416\Models\PublishEventResponse.cs" />
     <Compile Include="V20210416\Models\PutEventsRequest.cs" />

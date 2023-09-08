@@ -25,41 +25,41 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 签署人姓名，最大长度50个字符
+        /// 签署人姓名，最大长度50个字。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 签署人手机号
+        /// 签署人手机号。
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
+        /// 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
         /// </summary>
         [JsonProperty("RelievedApproverReceiptId")]
         public string RelievedApproverReceiptId{ get; set; }
 
         /// <summary>
         /// 指定签署人类型，目前仅支持
-        /// ORGANIZATION-企业
-        /// ENTERPRISESERVER-企业静默签
+        /// <ul><li> **ORGANIZATION**：企业（默认值）</li>
+        /// <li> **ENTERPRISESERVER**：企业静默签</li></ul>
         /// </summary>
         [JsonProperty("ApproverType")]
         public string ApproverType{ get; set; }
 
         /// <summary>
-        /// 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
-        /// - SIGN_SEAL-默认为印章控件类型
-        /// - SIGN_SIGNATURE-手写签名控件类型
+        /// 签署控件类型，支持自定义企业签署方的签署控件类型
+        /// <ul><li> **SIGN_SEAL**：默认为印章控件类型（默认值）</li>
+        /// <li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
         /// </summary>
         [JsonProperty("ApproverSignComponentType")]
         public string ApproverSignComponentType{ get; set; }
 
         /// <summary>
-        /// 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。  如果想改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字符
+        /// 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议默认会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。如果您需要改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字。
         /// </summary>
         [JsonProperty("ApproverSignRole")]
         public string ApproverSignRole{ get; set; }
