@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.844</VersionPrefix>
+    <VersionPrefix>3.0.845</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -109,6 +109,10 @@
     <Compile Include="V20190904\Models\DescribeAcListsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeAclRuleRequest.cs" />
     <Compile Include="V20190904\Models\DescribeAclRuleResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeAddressTemplateListRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeAddressTemplateListResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeAssetSyncRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeAssetSyncResponse.cs" />
     <Compile Include="V20190904\Models\DescribeAssociatedInstanceListRequest.cs" />
     <Compile Include="V20190904\Models\DescribeAssociatedInstanceListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeBlockByIpTimesListRequest.cs" />
@@ -129,6 +133,8 @@
     <Compile Include="V20190904\Models\DescribeFwEdgeIpsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeFwGroupInstanceInfoRequest.cs" />
     <Compile Include="V20190904\Models\DescribeFwGroupInstanceInfoResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeFwSyncStatusRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeFwSyncStatusResponse.cs" />
     <Compile Include="V20190904\Models\DescribeGuideScanInfoRequest.cs" />
     <Compile Include="V20190904\Models\DescribeGuideScanInfoResponse.cs" />
     <Compile Include="V20190904\Models\DescribeIPStatusListRequest.cs" />
@@ -147,6 +153,8 @@
     <Compile Include="V20190904\Models\DescribeNatFwInstancesInfoResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwVpcDnsLstRequest.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwVpcDnsLstResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeNatSwitchListRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeNatSwitchListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeResourceGroupNewRequest.cs" />
     <Compile Include="V20190904\Models\DescribeResourceGroupNewResponse.cs" />
     <Compile Include="V20190904\Models\DescribeResourceGroupRequest.cs" />
@@ -191,6 +199,8 @@
     <Compile Include="V20190904\Models\ModifyAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\ModifyAclRuleRequest.cs" />
     <Compile Include="V20190904\Models\ModifyAclRuleResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyAddressTemplateRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyAddressTemplateResponse.cs" />
     <Compile Include="V20190904\Models\ModifyAllPublicIPSwitchStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifyAllPublicIPSwitchStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifyAllRuleStatusRequest.cs" />
@@ -199,6 +209,8 @@
     <Compile Include="V20190904\Models\ModifyAllVPCSwitchStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifyAssetScanRequest.cs" />
     <Compile Include="V20190904\Models\ModifyAssetScanResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyAssetSyncRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyAssetSyncResponse.cs" />
     <Compile Include="V20190904\Models\ModifyBlockIgnoreListRequest.cs" />
     <Compile Include="V20190904\Models\ModifyBlockIgnoreListResponse.cs" />
     <Compile Include="V20190904\Models\ModifyBlockIgnoreRuleRequest.cs" />
@@ -223,6 +235,8 @@
     <Compile Include="V20190904\Models\ModifyNatFwSwitchResponse.cs" />
     <Compile Include="V20190904\Models\ModifyNatFwVpcDnsSwitchRequest.cs" />
     <Compile Include="V20190904\Models\ModifyNatFwVpcDnsSwitchResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyNatInstanceRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyNatInstanceResponse.cs" />
     <Compile Include="V20190904\Models\ModifyNatSequenceRulesRequest.cs" />
     <Compile Include="V20190904\Models\ModifyNatSequenceRulesResponse.cs" />
     <Compile Include="V20190904\Models\ModifyPublicIPSwitchStatusRequest.cs" />
@@ -255,6 +269,7 @@
     <Compile Include="V20190904\Models\NatFwFilter.cs" />
     <Compile Include="V20190904\Models\NatFwInstance.cs" />
     <Compile Include="V20190904\Models\NatInstanceInfo.cs" />
+    <Compile Include="V20190904\Models\NatSwitchListData.cs" />
     <Compile Include="V20190904\Models\NetInstancesInfo.cs" />
     <Compile Include="V20190904\Models\NewModeItems.cs" />
     <Compile Include="V20190904\Models\RemoveAcRuleRequest.cs" />
@@ -285,7 +300,10 @@
     <Compile Include="V20190904\Models\StopSecurityGroupRuleDispatchRequest.cs" />
     <Compile Include="V20190904\Models\StopSecurityGroupRuleDispatchResponse.cs" />
     <Compile Include="V20190904\Models\SwitchListsData.cs" />
+    <Compile Include="V20190904\Models\SyncFwOperateRequest.cs" />
+    <Compile Include="V20190904\Models\SyncFwOperateResponse.cs" />
     <Compile Include="V20190904\Models\TLogInfo.cs" />
+    <Compile Include="V20190904\Models\TemplateListInfo.cs" />
     <Compile Include="V20190904\Models\UnHandleEvent.cs" />
     <Compile Include="V20190904\Models\UnHandleEventDetail.cs" />
     <Compile Include="V20190904\Models\VpcDnsInfo.cs" />

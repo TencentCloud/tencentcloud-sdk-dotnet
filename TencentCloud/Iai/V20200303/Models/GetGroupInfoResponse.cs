@@ -55,7 +55,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public string FaceModelVersion{ get; set; }
 
         /// <summary>
-        /// Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。
+        /// Group的创建时间和日期。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。
         /// </summary>
         [JsonProperty("CreationTimestamp")]
         public ulong? CreationTimestamp{ get; set; }

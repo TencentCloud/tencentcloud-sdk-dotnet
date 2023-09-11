@@ -813,7 +813,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// 创建自定义账户
+        /// 创建服务级账户
         /// </summary>
         /// <param name="req"><see cref="CreateServiceAccountRequest"/></param>
         /// <returns><see cref="CreateServiceAccountResponse"/></returns>
@@ -833,7 +833,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// 创建自定义账户
+        /// 创建服务级账户
         /// </summary>
         /// <param name="req"><see cref="CreateServiceAccountRequest"/></param>
         /// <returns><see cref="CreateServiceAccountResponse"/></returns>

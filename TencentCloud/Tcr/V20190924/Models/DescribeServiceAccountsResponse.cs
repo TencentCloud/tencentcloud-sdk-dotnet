@@ -32,7 +32,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public ServiceAccount[] ServiceAccounts{ get; set; }
 
         /// <summary>
-        /// 自定义账户数量
+        /// 服务级账户数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

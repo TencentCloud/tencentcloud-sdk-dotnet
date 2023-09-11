@@ -1813,6 +1813,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口(DescribeHASwitchLog)用于手动主备切换。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHASwitchLogRequest"/></param>
+        /// <returns><see cref="DescribeHASwitchLogResponse"/></returns>
+        public async Task<DescribeHASwitchLogResponse> DescribeHASwitchLog(DescribeHASwitchLogRequest req)
+        {
+             JsonResponseModel<DescribeHASwitchLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHASwitchLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHASwitchLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeHASwitchLog)用于手动主备切换。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHASwitchLogRequest"/></param>
+        /// <returns><see cref="DescribeHASwitchLogResponse"/></returns>
+        public DescribeHASwitchLogResponse DescribeHASwitchLogSync(DescribeHASwitchLogRequest req)
+        {
+             JsonResponseModel<DescribeHASwitchLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHASwitchLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHASwitchLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeIncrementalMigration）用于查询增量备份导入任务。
         /// </summary>
         /// <param name="req"><see cref="DescribeIncrementalMigrationRequest"/></param>
@@ -4450,6 +4490,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "StopMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(SwitchCloudInstanceHA)用于手动主备切换。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchCloudInstanceHARequest"/></param>
+        /// <returns><see cref="SwitchCloudInstanceHAResponse"/></returns>
+        public async Task<SwitchCloudInstanceHAResponse> SwitchCloudInstanceHA(SwitchCloudInstanceHARequest req)
+        {
+             JsonResponseModel<SwitchCloudInstanceHAResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchCloudInstanceHA");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchCloudInstanceHAResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(SwitchCloudInstanceHA)用于手动主备切换。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchCloudInstanceHARequest"/></param>
+        /// <returns><see cref="SwitchCloudInstanceHAResponse"/></returns>
+        public SwitchCloudInstanceHAResponse SwitchCloudInstanceHASync(SwitchCloudInstanceHARequest req)
+        {
+             JsonResponseModel<SwitchCloudInstanceHAResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchCloudInstanceHA");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchCloudInstanceHAResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

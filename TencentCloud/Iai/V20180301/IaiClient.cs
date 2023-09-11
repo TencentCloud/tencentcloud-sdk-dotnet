@@ -550,7 +550,6 @@ namespace TencentCloud.Iai.V20180301
         /// 
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DetectFaceRequest"/></param>
         /// <returns><see cref="DetectFaceResponse"/></returns>
@@ -585,7 +584,6 @@ namespace TencentCloud.Iai.V20180301
         /// 
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DetectFaceRequest"/></param>
         /// <returns><see cref="DetectFaceResponse"/></returns>

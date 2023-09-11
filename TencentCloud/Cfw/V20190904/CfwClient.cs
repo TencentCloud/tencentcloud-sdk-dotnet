@@ -1053,6 +1053,86 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 查询地址模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddressTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeAddressTemplateListResponse"/></returns>
+        public async Task<DescribeAddressTemplateListResponse> DescribeAddressTemplateList(DescribeAddressTemplateListRequest req)
+        {
+             JsonResponseModel<DescribeAddressTemplateListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAddressTemplateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddressTemplateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询地址模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddressTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeAddressTemplateListResponse"/></returns>
+        public DescribeAddressTemplateListResponse DescribeAddressTemplateListSync(DescribeAddressTemplateListRequest req)
+        {
+             JsonResponseModel<DescribeAddressTemplateListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAddressTemplateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddressTemplateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 资产同步状态查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetSyncRequest"/></param>
+        /// <returns><see cref="DescribeAssetSyncResponse"/></returns>
+        public async Task<DescribeAssetSyncResponse> DescribeAssetSync(DescribeAssetSyncRequest req)
+        {
+             JsonResponseModel<DescribeAssetSyncResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAssetSync");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetSyncResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 资产同步状态查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetSyncRequest"/></param>
+        /// <returns><see cref="DescribeAssetSyncResponse"/></returns>
+        public DescribeAssetSyncResponse DescribeAssetSyncSync(DescribeAssetSyncRequest req)
+        {
+             JsonResponseModel<DescribeAssetSyncResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAssetSync");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetSyncResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取安全组关联实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAssociatedInstanceListRequest"/></param>
@@ -1453,6 +1533,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 获取防火墙同步状态，一般在执行同步操作后查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFwSyncStatusRequest"/></param>
+        /// <returns><see cref="DescribeFwSyncStatusResponse"/></returns>
+        public async Task<DescribeFwSyncStatusResponse> DescribeFwSyncStatus(DescribeFwSyncStatusRequest req)
+        {
+             JsonResponseModel<DescribeFwSyncStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFwSyncStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFwSyncStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取防火墙同步状态，一般在执行同步操作后查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFwSyncStatusRequest"/></param>
+        /// <returns><see cref="DescribeFwSyncStatusResponse"/></returns>
+        public DescribeFwSyncStatusResponse DescribeFwSyncStatusSync(DescribeFwSyncStatusRequest req)
+        {
+             JsonResponseModel<DescribeFwSyncStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFwSyncStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFwSyncStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeGuideScanInfo新手引导扫描接口信息
         /// </summary>
         /// <param name="req"><see cref="DescribeGuideScanInfoRequest"/></param>
@@ -1804,6 +1924,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "DescribeNatFwVpcDnsLst");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatFwVpcDnsLstResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询NAT边界防火墙开关列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatSwitchListRequest"/></param>
+        /// <returns><see cref="DescribeNatSwitchListResponse"/></returns>
+        public async Task<DescribeNatSwitchListResponse> DescribeNatSwitchList(DescribeNatSwitchListRequest req)
+        {
+             JsonResponseModel<DescribeNatSwitchListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNatSwitchList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatSwitchListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询NAT边界防火墙开关列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatSwitchListRequest"/></param>
+        /// <returns><see cref="DescribeNatSwitchListResponse"/></returns>
+        public DescribeNatSwitchListResponse DescribeNatSwitchListSync(DescribeNatSwitchListRequest req)
+        {
+             JsonResponseModel<DescribeNatSwitchListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNatSwitchList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatSwitchListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2413,6 +2573,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 修改地址模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAddressTemplateRequest"/></param>
+        /// <returns><see cref="ModifyAddressTemplateResponse"/></returns>
+        public async Task<ModifyAddressTemplateResponse> ModifyAddressTemplate(ModifyAddressTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAddressTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAddressTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAddressTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改地址模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAddressTemplateRequest"/></param>
+        /// <returns><see cref="ModifyAddressTemplateResponse"/></returns>
+        public ModifyAddressTemplateResponse ModifyAddressTemplateSync(ModifyAddressTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAddressTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAddressTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAddressTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 互联网边界防火墙一键开关
         /// </summary>
         /// <param name="req"><see cref="ModifyAllPublicIPSwitchStatusRequest"/></param>
@@ -2564,6 +2764,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAssetScan");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAssetScanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 资产同步
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetSyncRequest"/></param>
+        /// <returns><see cref="ModifyAssetSyncResponse"/></returns>
+        public async Task<ModifyAssetSyncResponse> ModifyAssetSync(ModifyAssetSyncRequest req)
+        {
+             JsonResponseModel<ModifyAssetSyncResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAssetSync");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAssetSyncResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 资产同步
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssetSyncRequest"/></param>
+        /// <returns><see cref="ModifyAssetSyncResponse"/></returns>
+        public ModifyAssetSyncResponse ModifyAssetSyncSync(ModifyAssetSyncRequest req)
+        {
+             JsonResponseModel<ModifyAssetSyncResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAssetSync");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAssetSyncResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3052,6 +3292,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "ModifyNatFwVpcDnsSwitch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatFwVpcDnsSwitchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑NAT防火墙
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatInstanceRequest"/></param>
+        /// <returns><see cref="ModifyNatInstanceResponse"/></returns>
+        public async Task<ModifyNatInstanceResponse> ModifyNatInstance(ModifyNatInstanceRequest req)
+        {
+             JsonResponseModel<ModifyNatInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNatInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑NAT防火墙
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatInstanceRequest"/></param>
+        /// <returns><see cref="ModifyNatInstanceResponse"/></returns>
+        public ModifyNatInstanceResponse ModifyNatInstanceSync(ModifyNatInstanceRequest req)
+        {
+             JsonResponseModel<ModifyNatInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNatInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3934,6 +4214,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "StopSecurityGroupRuleDispatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopSecurityGroupRuleDispatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 同步防火墙操作，包括同步防火墙路由（若vpc，专线网关等增加了Cidr，需要手动同步一下路由使之在防火墙上生效）等。
+        /// </summary>
+        /// <param name="req"><see cref="SyncFwOperateRequest"/></param>
+        /// <returns><see cref="SyncFwOperateResponse"/></returns>
+        public async Task<SyncFwOperateResponse> SyncFwOperate(SyncFwOperateRequest req)
+        {
+             JsonResponseModel<SyncFwOperateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SyncFwOperate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncFwOperateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 同步防火墙操作，包括同步防火墙路由（若vpc，专线网关等增加了Cidr，需要手动同步一下路由使之在防火墙上生效）等。
+        /// </summary>
+        /// <param name="req"><see cref="SyncFwOperateRequest"/></param>
+        /// <returns><see cref="SyncFwOperateResponse"/></returns>
+        public SyncFwOperateResponse SyncFwOperateSync(SyncFwOperateRequest req)
+        {
+             JsonResponseModel<SyncFwOperateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SyncFwOperate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncFwOperateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

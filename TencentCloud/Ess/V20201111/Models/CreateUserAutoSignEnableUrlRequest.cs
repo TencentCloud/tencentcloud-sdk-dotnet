@@ -49,7 +49,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 生成的链接类型：
         /// <ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
-        /// <li> **H5SIGN** : 生成H5端开通链接</li><ul>
+        /// <li> **H5SIGN** : 生成H5端开通链接</li></ul>
         /// </summary>
         [JsonProperty("UrlType")]
         public string UrlType{ get; set; }
