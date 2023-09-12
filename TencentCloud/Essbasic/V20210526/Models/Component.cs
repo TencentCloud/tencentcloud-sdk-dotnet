@@ -336,6 +336,20 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Placeholder")]
         public string Placeholder{ get; set; }
 
+        /// <summary>
+        /// 是否锁定控件值不允许编辑（嵌入式发起使用） <br/>默认false：不锁定控件值，允许在页面编辑控件值	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LockComponentValue")]
+        public bool? LockComponentValue{ get; set; }
+
+        /// <summary>
+        /// 是否禁止移动和删除控件 <br/>默认false，不禁止移动和删除控件	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ForbidMoveAndDelete")]
+        public bool? ForbidMoveAndDelete{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -367,6 +381,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
             this.SetParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);
             this.SetParamSimple(map, prefix + "Placeholder", this.Placeholder);
+            this.SetParamSimple(map, prefix + "LockComponentValue", this.LockComponentValue);
+            this.SetParamSimple(map, prefix + "ForbidMoveAndDelete", this.ForbidMoveAndDelete);
         }
     }
 }

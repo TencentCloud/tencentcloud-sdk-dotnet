@@ -290,6 +290,13 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("VerifyStatus")]
         public long? VerifyStatus{ get; set; }
 
+        /// <summary>
+        /// bot访问数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BotAccessCount")]
+        public long? BotAccessCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -334,6 +341,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "VerifyDomain", this.VerifyDomain);
             this.SetParamSimple(map, prefix + "VerifyTXTRecord", this.VerifyTXTRecord);
             this.SetParamSimple(map, prefix + "VerifyStatus", this.VerifyStatus);
+            this.SetParamSimple(map, prefix + "BotAccessCount", this.BotAccessCount);
         }
     }
 }

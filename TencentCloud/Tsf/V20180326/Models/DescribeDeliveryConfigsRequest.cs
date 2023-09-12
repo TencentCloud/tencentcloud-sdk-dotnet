@@ -42,6 +42,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 数据集idList
+        /// </summary>
+        [JsonProperty("ProgramIdList")]
+        public string[] ProgramIdList{ get; set; }
+
+        /// <summary>
+        /// ConfigIdList
+        /// </summary>
+        [JsonProperty("ConfigIdList")]
+        public string[] ConfigIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
+            this.SetParamArraySimple(map, prefix + "ConfigIdList.", this.ConfigIdList);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 页起始偏移，取值为(页码-1)*一页条数
+        /// 规则偏移量，取值为(页码-1)*一页条数
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

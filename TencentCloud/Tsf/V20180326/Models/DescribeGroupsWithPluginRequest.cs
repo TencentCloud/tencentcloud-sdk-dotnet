@@ -31,12 +31,6 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string PluginId{ get; set; }
 
         /// <summary>
-        /// 绑定/未绑定: true / false
-        /// </summary>
-        [JsonProperty("Bound")]
-        public bool? Bound{ get; set; }
-
-        /// <summary>
         /// 翻页偏移量
         /// </summary>
         [JsonProperty("Offset")]
@@ -47,6 +41,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 绑定/未绑定: true / false
+        /// </summary>
+        [JsonProperty("Bound")]
+        public bool? Bound{ get; set; }
 
         /// <summary>
         /// 搜索关键字
@@ -67,9 +67,9 @@ namespace TencentCloud.Tsf.V20180326.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "PluginId", this.PluginId);
-            this.SetParamSimple(map, prefix + "Bound", this.Bound);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Bound", this.Bound);
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
         }

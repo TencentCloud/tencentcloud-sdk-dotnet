@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.845</VersionPrefix>
+    <VersionPrefix>3.0.846</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -214,6 +214,8 @@
     <Compile Include="V20180717\Models\CreateClassResponse.cs" />
     <Compile Include="V20180717\Models\CreateContentReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateContentReviewTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateDomainVerifyRecordRequest.cs" />
+    <Compile Include="V20180717\Models\CreateDomainVerifyRecordResponse.cs" />
     <Compile Include="V20180717\Models\CreateEnhanceMediaTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateEnhanceMediaTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateHeadTailTemplateRequest.cs" />
@@ -253,6 +255,7 @@
     <Compile Include="V20180717\Models\CreateWatermarkTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateWordSamplesRequest.cs" />
     <Compile Include="V20180717\Models\CreateWordSamplesResponse.cs" />
+    <Compile Include="V20180717\Models\DNSVerifyInfo.cs" />
     <Compile Include="V20180717\Models\DailyPlayStatInfo.cs" />
     <Compile Include="V20180717\Models\DeleteAIAnalysisTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteAIAnalysisTemplateResponse.cs" />
@@ -439,6 +442,7 @@
     <Compile Include="V20180717\Models\FileDeleteTask.cs" />
     <Compile Include="V20180717\Models\FileReviewInfo.cs" />
     <Compile Include="V20180717\Models\FileUploadTask.cs" />
+    <Compile Include="V20180717\Models\FileVerifyInfo.cs" />
     <Compile Include="V20180717\Models\ForbidMediaDistributionRequest.cs" />
     <Compile Include="V20180717\Models\ForbidMediaDistributionResponse.cs" />
     <Compile Include="V20180717\Models\FrameTagConfigureInfo.cs" />
@@ -778,6 +782,10 @@
     <Compile Include="V20180717\Models\UserDefineFaceReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\UserDefineOcrTextReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\UserDefineOcrTextReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\VerifyDomainOwnershipForConsoleRequest.cs" />
+    <Compile Include="V20180717\Models\VerifyDomainOwnershipForConsoleResponse.cs" />
+    <Compile Include="V20180717\Models\VerifyDomainRecordRequest.cs" />
+    <Compile Include="V20180717\Models\VerifyDomainRecordResponse.cs" />
     <Compile Include="V20180717\Models\VideoDenoiseInfo.cs" />
     <Compile Include="V20180717\Models\VideoFrameInterpolationInfo.cs" />
     <Compile Include="V20180717\Models\VideoTemplateInfo.cs" />

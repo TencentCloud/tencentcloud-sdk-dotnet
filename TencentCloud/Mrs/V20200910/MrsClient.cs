@@ -216,5 +216,45 @@ namespace TencentCloud.Mrs.V20200910
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 将PDF格式的体检报告文件结构化,解析关键信息.
+        /// </summary>
+        /// <param name="req"><see cref="TurnPDFToObjectRequest"/></param>
+        /// <returns><see cref="TurnPDFToObjectResponse"/></returns>
+        public async Task<TurnPDFToObjectResponse> TurnPDFToObject(TurnPDFToObjectRequest req)
+        {
+             JsonResponseModel<TurnPDFToObjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TurnPDFToObject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnPDFToObjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将PDF格式的体检报告文件结构化,解析关键信息.
+        /// </summary>
+        /// <param name="req"><see cref="TurnPDFToObjectRequest"/></param>
+        /// <returns><see cref="TurnPDFToObjectResponse"/></returns>
+        public TurnPDFToObjectResponse TurnPDFToObjectSync(TurnPDFToObjectRequest req)
+        {
+             JsonResponseModel<TurnPDFToObjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TurnPDFToObject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnPDFToObjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

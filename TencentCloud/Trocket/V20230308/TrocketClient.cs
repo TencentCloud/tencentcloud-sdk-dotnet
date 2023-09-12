@@ -53,6 +53,46 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 创建消费组
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerGroupRequest"/></param>
+        /// <returns><see cref="CreateConsumerGroupResponse"/></returns>
+        public async Task<CreateConsumerGroupResponse> CreateConsumerGroup(CreateConsumerGroupRequest req)
+        {
+             JsonResponseModel<CreateConsumerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateConsumerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建消费组
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerGroupRequest"/></param>
+        /// <returns><see cref="CreateConsumerGroupResponse"/></returns>
+        public CreateConsumerGroupResponse CreateConsumerGroupSync(CreateConsumerGroupRequest req)
+        {
+             JsonResponseModel<CreateConsumerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateConsumerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 购买新实例
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
@@ -93,6 +133,86 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 创建主题
+        /// </summary>
+        /// <param name="req"><see cref="CreateTopicRequest"/></param>
+        /// <returns><see cref="CreateTopicResponse"/></returns>
+        public async Task<CreateTopicResponse> CreateTopic(CreateTopicRequest req)
+        {
+             JsonResponseModel<CreateTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建主题
+        /// </summary>
+        /// <param name="req"><see cref="CreateTopicRequest"/></param>
+        /// <returns><see cref="CreateTopicResponse"/></returns>
+        public CreateTopicResponse CreateTopicSync(CreateTopicRequest req)
+        {
+             JsonResponseModel<CreateTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除消费组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerGroupRequest"/></param>
+        /// <returns><see cref="DeleteConsumerGroupResponse"/></returns>
+        public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroup(DeleteConsumerGroupRequest req)
+        {
+             JsonResponseModel<DeleteConsumerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteConsumerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteConsumerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除消费组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerGroupRequest"/></param>
+        /// <returns><see cref="DeleteConsumerGroupResponse"/></returns>
+        public DeleteConsumerGroupResponse DeleteConsumerGroupSync(DeleteConsumerGroupRequest req)
+        {
+             JsonResponseModel<DeleteConsumerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteConsumerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteConsumerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除实例
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
@@ -124,6 +244,86 @@ namespace TencentCloud.Trocket.V20230308
              {
                  var strResp = this.InternalRequestSync(req, "DeleteInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除主题
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTopicRequest"/></param>
+        /// <returns><see cref="DeleteTopicResponse"/></returns>
+        public async Task<DeleteTopicResponse> DeleteTopic(DeleteTopicRequest req)
+        {
+             JsonResponseModel<DeleteTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除主题
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTopicRequest"/></param>
+        /// <returns><see cref="DeleteTopicResponse"/></returns>
+        public DeleteTopicResponse DeleteTopicSync(DeleteTopicRequest req)
+        {
+             JsonResponseModel<DeleteTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询消费组详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupResponse"/></returns>
+        public async Task<DescribeConsumerGroupResponse> DescribeConsumerGroup(DescribeConsumerGroupRequest req)
+        {
+             JsonResponseModel<DescribeConsumerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeConsumerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConsumerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询消费组详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupResponse"/></returns>
+        public DescribeConsumerGroupResponse DescribeConsumerGroupSync(DescribeConsumerGroupRequest req)
+        {
+             JsonResponseModel<DescribeConsumerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeConsumerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConsumerGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -225,6 +425,50 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 查询主题详情，Offset和Limit参数是指订阅该主题的消费组查询分页参数，Filter参数使用说明如下：
+        /// 
+        /// ConsumerGroup，消费组名称过滤
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicRequest"/></param>
+        /// <returns><see cref="DescribeTopicResponse"/></returns>
+        public async Task<DescribeTopicResponse> DescribeTopic(DescribeTopicRequest req)
+        {
+             JsonResponseModel<DescribeTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询主题详情，Offset和Limit参数是指订阅该主题的消费组查询分页参数，Filter参数使用说明如下：
+        /// 
+        /// ConsumerGroup，消费组名称过滤
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicRequest"/></param>
+        /// <returns><see cref="DescribeTopicResponse"/></returns>
+        public DescribeTopicResponse DescribeTopicSync(DescribeTopicRequest req)
+        {
+             JsonResponseModel<DescribeTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取主题列表，Filter参数使用说明如下：
         /// 
         /// 1. TopicName，主题名称模糊搜索
@@ -271,6 +515,86 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 运营端查询topicStata
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicStatsOpRequest"/></param>
+        /// <returns><see cref="DescribeTopicStatsOpResponse"/></returns>
+        public async Task<DescribeTopicStatsOpResponse> DescribeTopicStatsOp(DescribeTopicStatsOpRequest req)
+        {
+             JsonResponseModel<DescribeTopicStatsOpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopicStatsOp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicStatsOpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 运营端查询topicStata
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicStatsOpRequest"/></param>
+        /// <returns><see cref="DescribeTopicStatsOpResponse"/></returns>
+        public DescribeTopicStatsOpResponse DescribeTopicStatsOpSync(DescribeTopicStatsOpRequest req)
+        {
+             JsonResponseModel<DescribeTopicStatsOpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopicStatsOp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicStatsOpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改消费组属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupResponse"/></returns>
+        public async Task<ModifyConsumerGroupResponse> ModifyConsumerGroup(ModifyConsumerGroupRequest req)
+        {
+             JsonResponseModel<ModifyConsumerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyConsumerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConsumerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改消费组属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupResponse"/></returns>
+        public ModifyConsumerGroupResponse ModifyConsumerGroupSync(ModifyConsumerGroupRequest req)
+        {
+             JsonResponseModel<ModifyConsumerGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyConsumerGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConsumerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改实例属性
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
@@ -302,6 +626,46 @@ namespace TencentCloud.Trocket.V20230308
              {
                  var strResp = this.InternalRequestSync(req, "ModifyInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改主题属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTopicRequest"/></param>
+        /// <returns><see cref="ModifyTopicResponse"/></returns>
+        public async Task<ModifyTopicResponse> ModifyTopic(ModifyTopicRequest req)
+        {
+             JsonResponseModel<ModifyTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改主题属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTopicRequest"/></param>
+        /// <returns><see cref="ModifyTopicResponse"/></returns>
+        public ModifyTopicResponse ModifyTopicSync(ModifyTopicRequest req)
+        {
+             JsonResponseModel<ModifyTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTopicResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

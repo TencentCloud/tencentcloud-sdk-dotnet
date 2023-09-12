@@ -59,7 +59,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverSignComponentType{ get; set; }
 
         /// <summary>
-        /// 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议默认会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。如果您需要改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字。
+        /// 参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
+        /// 
+        /// 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
         /// </summary>
         [JsonProperty("ApproverSignRole")]
         public string ApproverSignRole{ get; set; }

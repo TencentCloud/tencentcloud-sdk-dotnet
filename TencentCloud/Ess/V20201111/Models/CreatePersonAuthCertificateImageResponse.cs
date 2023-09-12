@@ -25,34 +25,41 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 个人用户证明证书的下载链接
+        /// 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
         /// </summary>
         [JsonProperty("AuthCertUrl")]
         public string AuthCertUrl{ get; set; }
 
         /// <summary>
-        /// 证书图片上的证书编号，20位数字
+        /// 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
+        /// 该编号会合成到个人用户证书证明图片。
+        /// 
+        /// 注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageCertId")]
         public string ImageCertId{ get; set; }
 
         /// <summary>
-        /// 图片证明对应的CA证书序列号
+        /// CA供应商下发给用户的证书编号，在证书到期后自动续期后此证书编号会发生变动，且不会合成到个人用户证书证明图片中。
+        /// 
+        /// 注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下。`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SerialNumber")]
         public string SerialNumber{ get; set; }
 
         /// <summary>
-        /// CA证书颁发时间戳
+        /// CA证书颁发时间，格式为Unix标准时间戳（秒）   
+        /// 该时间格式化后会合成到个人用户证书证明图片
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidFrom")]
         public ulong? ValidFrom{ get; set; }
 
         /// <summary>
-        /// CA证书有效截止时间戳
+        /// CA证书有效截止时间，格式为Unix标准时间戳（秒）
+        /// 该时间格式化后会合成到个人用户证书证明图片
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidTo")]

@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string PluginId{ get; set; }
 
         /// <summary>
-        /// 插件绑定到的对象类型:group/api
+        /// 插件绑定到的对象类型:group/api/all
         /// </summary>
         [JsonProperty("ScopeType")]
         public string ScopeType{ get; set; }
@@ -42,6 +42,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ScopeValue")]
         public string ScopeValue{ get; set; }
 
+        /// <summary>
+        /// 创建关联的服务id，关联envoy网关时使用
+        /// </summary>
+        [JsonProperty("MicroserviceId")]
+        public string MicroserviceId{ get; set; }
+
+        /// <summary>
+        /// 网关id
+        /// </summary>
+        [JsonProperty("GatewayInstanceId")]
+        public string GatewayInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "PluginId", this.PluginId);
             this.SetParamSimple(map, prefix + "ScopeType", this.ScopeType);
             this.SetParamSimple(map, prefix + "ScopeValue", this.ScopeValue);
+            this.SetParamSimple(map, prefix + "MicroserviceId", this.MicroserviceId);
+            this.SetParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
         }
     }
 }

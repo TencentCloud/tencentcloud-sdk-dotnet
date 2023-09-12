@@ -3735,7 +3735,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 获取多个投递项配置 
+        /// 获取多个投递项配置
         /// </summary>
         /// <param name="req"><see cref="DescribeDeliveryConfigsRequest"/></param>
         /// <returns><see cref="DescribeDeliveryConfigsResponse"/></returns>
@@ -3755,7 +3755,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 获取多个投递项配置 
+        /// 获取多个投递项配置
         /// </summary>
         /// <param name="req"><see cref="DescribeDeliveryConfigsRequest"/></param>
         /// <returns><see cref="DescribeDeliveryConfigsResponse"/></returns>

@@ -43,7 +43,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 鉴权类型
+        /// 鉴权类型。 secret： 密钥鉴权； none:无鉴权
         /// </summary>
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }

@@ -78,6 +78,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("DocumentSize")]
         public ulong? DocumentSize{ get; set; }
 
+        /// <summary>
+        /// 是否对不支持元素开启自动处理的功能。默认关闭。
+        /// </summary>
+        [JsonProperty("AutoHandleUnsupportedElement")]
+        public bool? AutoHandleUnsupportedElement{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +98,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "Permission", this.Permission);
             this.SetParamSimple(map, prefix + "DocumentType", this.DocumentType);
             this.SetParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
+            this.SetParamSimple(map, prefix + "AutoHandleUnsupportedElement", this.AutoHandleUnsupportedElement);
         }
     }
 }

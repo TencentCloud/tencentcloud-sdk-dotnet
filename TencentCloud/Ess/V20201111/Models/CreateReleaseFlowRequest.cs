@@ -38,7 +38,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string NeedRelievedFlowId{ get; set; }
 
         /// <summary>
-        /// 解除协议内容。
+        /// 解除协议内容, 包括解除理由等信息。
         /// </summary>
         [JsonProperty("ReliveInfo")]
         public RelieveInfo ReliveInfo{ get; set; }
@@ -50,12 +50,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 解除协议的签署人列表(如不指定该参数，默认使用原流程的签署人列表)。 <br/>
-        /// 如需更换原合同中的签署人，可通过指定该签署人的RecipientId编号更换此签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
-        /// 解除协议的签署人数量不能多于原流程的签署人数量。<br/>
+        /// 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
+        /// 如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
         /// 
-        /// `注意：只能更换同企业的签署人。`<br/>
-        /// `注意：不支持更换个人类型的签署人。`<br/>
+        /// 注意：
+        /// `只能更换自己企业的签署人,  不支持更换个人类型或者其他企业的签署人。`
+        /// `可以不指定替换签署人, 使用原流程的签署人 `
         /// </summary>
         [JsonProperty("ReleasedApprovers")]
         public ReleasedApprover[] ReleasedApprovers{ get; set; }

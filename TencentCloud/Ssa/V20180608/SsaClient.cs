@@ -53,6 +53,46 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
+        /// 安全大屏-用户威胁告警信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmStatRequest"/></param>
+        /// <returns><see cref="DescribeAlarmStatResponse"/></returns>
+        public async Task<DescribeAlarmStatResponse> DescribeAlarmStat(DescribeAlarmStatRequest req)
+        {
+             JsonResponseModel<DescribeAlarmStatResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 安全大屏-用户威胁告警信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmStatRequest"/></param>
+        /// <returns><see cref="DescribeAlarmStatResponse"/></returns>
+        public DescribeAlarmStatResponse DescribeAlarmStatSync(DescribeAlarmStatRequest req)
+        {
+             JsonResponseModel<DescribeAlarmStatResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 资产安全页资产详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetDetailRequest"/></param>

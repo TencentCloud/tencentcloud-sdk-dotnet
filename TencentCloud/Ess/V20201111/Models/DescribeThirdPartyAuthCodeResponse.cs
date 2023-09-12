@@ -25,7 +25,10 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 用户是否实名，VERIFIED 为实名，UNVERIFIED 未实名
+        /// AuthCode 中对应个人用户是否实名
+        /// <ul>
+        /// <li> **VERIFIED** : 此个人已实名</li>
+        /// <li> **UNVERIFIED**: 此个人未实名</li></ul>
         /// </summary>
         [JsonProperty("VerifyStatus")]
         public string VerifyStatus{ get; set; }

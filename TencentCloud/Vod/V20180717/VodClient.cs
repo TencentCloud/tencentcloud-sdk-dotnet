@@ -531,6 +531,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainVerifyRecordRequest"/></param>
+        /// <returns><see cref="CreateDomainVerifyRecordResponse"/></returns>
+        public async Task<CreateDomainVerifyRecordResponse> CreateDomainVerifyRecord(CreateDomainVerifyRecordRequest req)
+        {
+             JsonResponseModel<CreateDomainVerifyRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDomainVerifyRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainVerifyRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainVerifyRecordRequest"/></param>
+        /// <returns><see cref="CreateDomainVerifyRecordResponse"/></returns>
+        public CreateDomainVerifyRecordResponse CreateDomainVerifyRecordSync(CreateDomainVerifyRecordRequest req)
+        {
+             JsonResponseModel<CreateDomainVerifyRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDomainVerifyRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainVerifyRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建音画质重生模板。
         /// </summary>
         /// <param name="req"><see cref="CreateEnhanceMediaTemplateRequest"/></param>
@@ -6960,6 +7000,86 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "SplitMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SplitMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 控制台验证域名归属
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDomainOwnershipForConsoleRequest"/></param>
+        /// <returns><see cref="VerifyDomainOwnershipForConsoleResponse"/></returns>
+        public async Task<VerifyDomainOwnershipForConsoleResponse> VerifyDomainOwnershipForConsole(VerifyDomainOwnershipForConsoleRequest req)
+        {
+             JsonResponseModel<VerifyDomainOwnershipForConsoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyDomainOwnershipForConsole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyDomainOwnershipForConsoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 控制台验证域名归属
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDomainOwnershipForConsoleRequest"/></param>
+        /// <returns><see cref="VerifyDomainOwnershipForConsoleResponse"/></returns>
+        public VerifyDomainOwnershipForConsoleResponse VerifyDomainOwnershipForConsoleSync(VerifyDomainOwnershipForConsoleRequest req)
+        {
+             JsonResponseModel<VerifyDomainOwnershipForConsoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyDomainOwnershipForConsole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyDomainOwnershipForConsoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于验证域名解析值。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDomainRecordRequest"/></param>
+        /// <returns><see cref="VerifyDomainRecordResponse"/></returns>
+        public async Task<VerifyDomainRecordResponse> VerifyDomainRecord(VerifyDomainRecordRequest req)
+        {
+             JsonResponseModel<VerifyDomainRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyDomainRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyDomainRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于验证域名解析值。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDomainRecordRequest"/></param>
+        /// <returns><see cref="VerifyDomainRecordResponse"/></returns>
+        public VerifyDomainRecordResponse VerifyDomainRecordSync(VerifyDomainRecordRequest req)
+        {
+             JsonResponseModel<VerifyDomainRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyDomainRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyDomainRecordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

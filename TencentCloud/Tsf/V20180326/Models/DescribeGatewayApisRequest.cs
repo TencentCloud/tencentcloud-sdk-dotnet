@@ -54,6 +54,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("GatewayDeployGroupId")]
         public string GatewayDeployGroupId{ get; set; }
 
+        /// <summary>
+        /// 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+        /// </summary>
+        [JsonProperty("ReleaseStatus")]
+        public string ReleaseStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "GatewayDeployGroupId", this.GatewayDeployGroupId);
+            this.SetParamSimple(map, prefix + "ReleaseStatus", this.ReleaseStatus);
         }
     }
 }

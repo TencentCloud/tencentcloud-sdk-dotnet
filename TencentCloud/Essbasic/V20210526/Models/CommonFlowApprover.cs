@@ -101,7 +101,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
         /// </summary>
         [JsonProperty("NotifyType")]
-        [System.Obsolete]
         public string NotifyType{ get; set; }
 
         /// <summary>
@@ -115,6 +114,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }
+
+        /// <summary>
+        /// 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1 查看合同的认证方式 Flow层级的优先于approver层级的 （当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+        /// </summary>
+        [JsonProperty("ApproverVerifyTypes")]
+        public long?[] ApproverVerifyTypes{ get; set; }
+
+        /// <summary>
+        /// 签署人签署合同时的认证方式 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)	
+        /// </summary>
+        [JsonProperty("ApproverSignTypes")]
+        public long?[] ApproverSignTypes{ get; set; }
 
 
         /// <summary>
@@ -137,6 +148,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
             this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
+            this.SetParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
+            this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
         }
     }
 }

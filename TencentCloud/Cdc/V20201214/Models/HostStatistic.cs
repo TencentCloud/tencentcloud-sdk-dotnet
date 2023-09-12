@@ -54,6 +54,55 @@ namespace TencentCloud.Cdc.V20201214.Models
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
+        /// <summary>
+        /// 平均cpu负载百分比
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CpuAverage")]
+        public float? CpuAverage{ get; set; }
+
+        /// <summary>
+        /// 平均内存使用率百分比
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MemAverage")]
+        public float? MemAverage{ get; set; }
+
+        /// <summary>
+        /// 平均网络流量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetAverage")]
+        public float? NetAverage{ get; set; }
+
+        /// <summary>
+        /// cpu详细监控数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CpuDetailData")]
+        public DetailData CpuDetailData{ get; set; }
+
+        /// <summary>
+        /// 内存详细数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MemDetailData")]
+        public DetailData MemDetailData{ get; set; }
+
+        /// <summary>
+        /// 网络速率详细数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetRateDetailData")]
+        public DetailData NetRateDetailData{ get; set; }
+
+        /// <summary>
+        /// 网速包详细数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetPacketDetailData")]
+        public DetailData NetPacketDetailData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +114,13 @@ namespace TencentCloud.Cdc.V20201214.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "CpuAverage", this.CpuAverage);
+            this.SetParamSimple(map, prefix + "MemAverage", this.MemAverage);
+            this.SetParamSimple(map, prefix + "NetAverage", this.NetAverage);
+            this.SetParamObj(map, prefix + "CpuDetailData.", this.CpuDetailData);
+            this.SetParamObj(map, prefix + "MemDetailData.", this.MemDetailData);
+            this.SetParamObj(map, prefix + "NetRateDetailData.", this.NetRateDetailData);
+            this.SetParamObj(map, prefix + "NetPacketDetailData.", this.NetPacketDetailData);
         }
     }
 }

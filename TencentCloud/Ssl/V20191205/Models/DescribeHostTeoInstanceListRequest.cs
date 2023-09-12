@@ -54,6 +54,24 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("OldCertificateId")]
         public string OldCertificateId{ get; set; }
 
+        /// <summary>
+        /// 分页偏移量，从0开始。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 每页数量，默认10。	
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 是否异步
+        /// </summary>
+        [JsonProperty("AsyncCache")]
+        public long? AsyncCache{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "IsCache", this.IsCache);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "AsyncCache", this.AsyncCache);
         }
     }
 }

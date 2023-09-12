@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D4BEBF31-4FF4-321A-ABD7-95742951DA20}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.845</VersionPrefix>
+    <VersionPrefix>3.0.846</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -94,11 +94,14 @@
     <Compile Include="V20201002\Models\ListEmailIdentitiesResponse.cs" />
     <Compile Include="V20201002\Models\ListEmailTemplatesRequest.cs" />
     <Compile Include="V20201002\Models\ListEmailTemplatesResponse.cs" />
+    <Compile Include="V20201002\Models\ListReceiverDetailsRequest.cs" />
+    <Compile Include="V20201002\Models\ListReceiverDetailsResponse.cs" />
     <Compile Include="V20201002\Models\ListReceiversRequest.cs" />
     <Compile Include="V20201002\Models\ListReceiversResponse.cs" />
     <Compile Include="V20201002\Models\ListSendTasksRequest.cs" />
     <Compile Include="V20201002\Models\ListSendTasksResponse.cs" />
     <Compile Include="V20201002\Models\ReceiverData.cs" />
+    <Compile Include="V20201002\Models\ReceiverDetail.cs" />
     <Compile Include="V20201002\Models\ReceiverInputData.cs" />
     <Compile Include="V20201002\Models\SendEmailRequest.cs" />
     <Compile Include="V20201002\Models\SendEmailResponse.cs" />

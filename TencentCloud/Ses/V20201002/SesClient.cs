@@ -857,6 +857,46 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// 根据收件人列表id查询收件人列表中的所有收件人邮箱地址，分页查询，可以根据收件邮箱地址来过滤查询
+        /// </summary>
+        /// <param name="req"><see cref="ListReceiverDetailsRequest"/></param>
+        /// <returns><see cref="ListReceiverDetailsResponse"/></returns>
+        public async Task<ListReceiverDetailsResponse> ListReceiverDetails(ListReceiverDetailsRequest req)
+        {
+             JsonResponseModel<ListReceiverDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListReceiverDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListReceiverDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据收件人列表id查询收件人列表中的所有收件人邮箱地址，分页查询，可以根据收件邮箱地址来过滤查询
+        /// </summary>
+        /// <param name="req"><see cref="ListReceiverDetailsRequest"/></param>
+        /// <returns><see cref="ListReceiverDetailsResponse"/></returns>
+        public ListReceiverDetailsResponse ListReceiverDetailsSync(ListReceiverDetailsRequest req)
+        {
+             JsonResponseModel<ListReceiverDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListReceiverDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListReceiverDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据条件查询收件人列表，支持分页，模糊查询，状态查询
         /// </summary>
         /// <param name="req"><see cref="ListReceiversRequest"/></param>

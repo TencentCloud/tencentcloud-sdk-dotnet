@@ -134,6 +134,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string CumulativeScore{ get; set; }
 
         /// <summary>
+        /// 当前时间（仅电子驾驶证支持返回该字段）
+        /// </summary>
+        [JsonProperty("CurrentTime")]
+        public string CurrentTime{ get; set; }
+
+        /// <summary>
+        /// 生成时间（仅电子驾驶证支持返回该字段）
+        /// </summary>
+        [JsonProperty("GenerateTime")]
+        public string GenerateTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -162,6 +174,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "CumulativeScore", this.CumulativeScore);
+            this.SetParamSimple(map, prefix + "CurrentTime", this.CurrentTime);
+            this.SetParamSimple(map, prefix + "GenerateTime", this.GenerateTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

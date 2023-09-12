@@ -25,7 +25,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 帐户信息
+        /// 账户信息
         /// </summary>
         [JsonProperty("UserInfo")]
         public UserInfo UserInfo{ get; set; }

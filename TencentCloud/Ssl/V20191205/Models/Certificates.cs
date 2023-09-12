@@ -292,6 +292,27 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
+        /// <summary>
+        /// 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostingStatus")]
+        public long? HostingStatus{ get; set; }
+
+        /// <summary>
+        /// 托管完成时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostingCompleteTime")]
+        public string HostingCompleteTime{ get; set; }
+
+        /// <summary>
+        /// 托管新证书ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostingRenewCertId")]
+        public string HostingRenewCertId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -336,6 +357,9 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
             this.SetParamObj(map, prefix + "PreAuditInfo.", this.PreAuditInfo);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "HostingStatus", this.HostingStatus);
+            this.SetParamSimple(map, prefix + "HostingCompleteTime", this.HostingCompleteTime);
+            this.SetParamSimple(map, prefix + "HostingRenewCertId", this.HostingRenewCertId);
         }
     }
 }

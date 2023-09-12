@@ -25,7 +25,8 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 流程列表
+        /// 合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 
+        /// 注：`与入参 FlowIds 的顺序可能存在不一致的情况。`
         /// </summary>
         [JsonProperty("FlowBriefs")]
         public FlowBrief[] FlowBriefs{ get; set; }

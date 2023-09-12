@@ -30,6 +30,30 @@ namespace TencentCloud.Cdc.V20201214.Models
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
+        /// <summary>
+        /// 宿主机id
+        /// </summary>
+        [JsonProperty("HostId")]
+        public string HostId{ get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 时间范围精度，1分钟/5分钟
+        /// </summary>
+        [JsonProperty("Period")]
+        public string Period{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +61,10 @@ namespace TencentCloud.Cdc.V20201214.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+            this.SetParamSimple(map, prefix + "HostId", this.HostId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

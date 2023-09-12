@@ -44,6 +44,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Limit")]
         public string Limit{ get; set; }
 
+        /// <summary>
+        /// 是否获取协议端口模板成员标识。
+        /// </summary>
+        [JsonProperty("NeedMemberInfo")]
+        public bool? NeedMemberInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "NeedMemberInfo", this.NeedMemberInfo);
         }
     }
 }
