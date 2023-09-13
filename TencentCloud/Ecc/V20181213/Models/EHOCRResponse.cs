@@ -28,7 +28,14 @@ namespace TencentCloud.Ecc.V20181213.Models
         /// 接口返回数据
         /// </summary>
         [JsonProperty("Data")]
+        [System.Obsolete]
         public CompostionContext Data{ get; set; }
+
+        /// <summary>
+        /// 接口返回数据
+        /// </summary>
+        [JsonProperty("ResultData")]
+        public CompositionContext ResultData{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +50,7 @@ namespace TencentCloud.Ecc.V20181213.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamObj(map, prefix + "ResultData.", this.ResultData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

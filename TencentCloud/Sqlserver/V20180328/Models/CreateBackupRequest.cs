@@ -48,6 +48,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
 
+        /// <summary>
+        /// 备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线，默认取值0
+        /// </summary>
+        [JsonProperty("StorageStrategy")]
+        public long? StorageStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArraySimple(map, prefix + "DBNames.", this.DBNames);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamSimple(map, prefix + "StorageStrategy", this.StorageStrategy);
         }
     }
 }

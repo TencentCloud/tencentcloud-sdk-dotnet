@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.846</VersionPrefix>
+    <VersionPrefix>3.0.847</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -782,8 +782,6 @@
     <Compile Include="V20180717\Models\UserDefineFaceReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\UserDefineOcrTextReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\UserDefineOcrTextReviewTemplateInfoForUpdate.cs" />
-    <Compile Include="V20180717\Models\VerifyDomainOwnershipForConsoleRequest.cs" />
-    <Compile Include="V20180717\Models\VerifyDomainOwnershipForConsoleResponse.cs" />
     <Compile Include="V20180717\Models\VerifyDomainRecordRequest.cs" />
     <Compile Include="V20180717\Models\VerifyDomainRecordResponse.cs" />
     <Compile Include="V20180717\Models\VideoDenoiseInfo.cs" />

@@ -2533,7 +2533,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeSparkSessionBatchSqlLog）用于获取SparkSQL批任务日志
+        /// 本接口（DescribeSparkSessionBatchSqlLog）用于查询Spark SQL批任务日志
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkSessionBatchSqlLogRequest"/></param>
         /// <returns><see cref="DescribeSparkSessionBatchSqlLogResponse"/></returns>
@@ -2553,7 +2553,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeSparkSessionBatchSqlLog）用于获取SparkSQL批任务日志
+        /// 本接口（DescribeSparkSessionBatchSqlLog）用于查询Spark SQL批任务日志
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkSessionBatchSqlLogRequest"/></param>
         /// <returns><see cref="DescribeSparkSessionBatchSqlLogResponse"/></returns>

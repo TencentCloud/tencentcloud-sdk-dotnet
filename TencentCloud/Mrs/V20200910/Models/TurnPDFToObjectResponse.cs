@@ -37,7 +37,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public TextType[] TextTypeList{ get; set; }
 
         /// <summary>
-        /// 报告结构化结果
+        /// 报告结构化结果(体检报告PDF结构化接口返回的 json 内容非常多，建议通过本地代码调用)
         /// </summary>
         [JsonProperty("Block")]
         public Block Block{ get; set; }

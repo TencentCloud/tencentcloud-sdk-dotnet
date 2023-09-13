@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 状态：0：初始化、1：成功、2：失败、3：取消、4：异常；
+        /// 状态：0：运行中、1：成功、2：失败、3：取消、4：超时；
         /// </summary>
         [JsonProperty("State")]
         public ulong? State{ get; set; }

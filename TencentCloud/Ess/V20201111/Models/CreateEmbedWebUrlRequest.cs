@@ -25,7 +25,8 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 操作者信息
+        /// 执行本接口操作的员工信息。
+        /// <br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
@@ -55,7 +56,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public string BusinessId{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作
+        /// 代理企业和员工的信息。
+        /// <br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -67,7 +69,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public ReviewerInfo Reviewer{ get; set; }
 
         /// <summary>
-        /// 个性化参数
+        /// 个性化参数，用于控制页面展示内容
         /// </summary>
         [JsonProperty("Option")]
         public EmbedUrlOption Option{ get; set; }

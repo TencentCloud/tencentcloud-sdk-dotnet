@@ -25,10 +25,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 印章id
+        /// 电子印章ID，为32位字符串。
+        /// 建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+        /// 可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
         /// </summary>
         [JsonProperty("SealId")]
         public string SealId{ get; set; }
+
+        /// <summary>
+        /// 电子印章预览链接地址，地址默认失效时间为24小时。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageUrl")]
+        public string ImageUrl{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +52,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SealId", this.SealId);
+            this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

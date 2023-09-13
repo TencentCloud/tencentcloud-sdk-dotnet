@@ -25,7 +25,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -49,6 +50,50 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传请传字段 SealImage
+        /// </summary>
+        [JsonProperty("GenerateSource")]
+        public string GenerateSource{ get; set; }
+
+        /// <summary>
+        /// 电子印章类型：
+        /// <ul><li>OFFICIAL-公章</li>
+        /// <li>CONTRACT-合同专用章;</li>
+        /// <li>FINANCE-合财务专用章;</li>
+        /// <li>PERSONNEL-人事专用章
+        /// </li>
+        /// <li>默认：OFFICIAL</li>
+        /// <ul>
+        /// </summary>
+        [JsonProperty("SealType")]
+        public string SealType{ get; set; }
+
+        /// <summary>
+        /// 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
+        /// </summary>
+        [JsonProperty("SealHorizontalText")]
+        public string SealHorizontalText{ get; set; }
+
+        /// <summary>
+        /// 印章样式:
+        /// 
+        /// <ul><li>cycle:圆形印章</li>
+        /// <li>ellipse:椭圆印章</li>
+        /// <li> 注：默认圆形印章</li></ul>
+        /// </summary>
+        [JsonProperty("SealStyle")]
+        public string SealStyle{ get; set; }
+
+        /// <summary>
+        /// 印章尺寸取值描述：<ul><li> 42_42 圆形企业公章直径42mm</li>
+        /// <li> 40_40 圆形企业印章直径40mm</li>
+        /// <li> 45_30 椭圆形印章45mm x 30mm</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("SealSize")]
+        public string SealSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +104,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "SealName", this.SealName);
             this.SetParamSimple(map, prefix + "SealImage", this.SealImage);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
+            this.SetParamSimple(map, prefix + "SealType", this.SealType);
+            this.SetParamSimple(map, prefix + "SealHorizontalText", this.SealHorizontalText);
+            this.SetParamSimple(map, prefix + "SealStyle", this.SealStyle);
+            this.SetParamSimple(map, prefix + "SealSize", this.SealSize);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mrs.V20200910.Models
     {
         
         /// <summary>
-        /// 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符
+        /// 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
         /// </summary>
         [JsonProperty("PdfInfo")]
         public PdfInfo PdfInfo{ get; set; }

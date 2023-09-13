@@ -7009,46 +7009,6 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 控制台验证域名归属
-        /// </summary>
-        /// <param name="req"><see cref="VerifyDomainOwnershipForConsoleRequest"/></param>
-        /// <returns><see cref="VerifyDomainOwnershipForConsoleResponse"/></returns>
-        public async Task<VerifyDomainOwnershipForConsoleResponse> VerifyDomainOwnershipForConsole(VerifyDomainOwnershipForConsoleRequest req)
-        {
-             JsonResponseModel<VerifyDomainOwnershipForConsoleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "VerifyDomainOwnershipForConsole");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyDomainOwnershipForConsoleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 控制台验证域名归属
-        /// </summary>
-        /// <param name="req"><see cref="VerifyDomainOwnershipForConsoleRequest"/></param>
-        /// <returns><see cref="VerifyDomainOwnershipForConsoleResponse"/></returns>
-        public VerifyDomainOwnershipForConsoleResponse VerifyDomainOwnershipForConsoleSync(VerifyDomainOwnershipForConsoleRequest req)
-        {
-             JsonResponseModel<VerifyDomainOwnershipForConsoleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "VerifyDomainOwnershipForConsole");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyDomainOwnershipForConsoleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 该接口用于验证域名解析值。
         /// </summary>
         /// <param name="req"><see cref="VerifyDomainRecordRequest"/></param>

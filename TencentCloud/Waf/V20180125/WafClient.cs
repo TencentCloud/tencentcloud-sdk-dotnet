@@ -2223,6 +2223,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 获取非标端口列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePortsRequest"/></param>
+        /// <returns><see cref="DescribePortsResponse"/></returns>
+        public async Task<DescribePortsResponse> DescribePorts(DescribePortsRequest req)
+        {
+             JsonResponseModel<DescribePortsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePorts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePortsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取非标端口列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePortsRequest"/></param>
+        /// <returns><see cref="DescribePortsResponse"/></returns>
+        public DescribePortsResponse DescribePortsSync(DescribePortsRequest req)
+        {
+             JsonResponseModel<DescribePortsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePorts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePortsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取各个模块具体的规格限制
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleLimitRequest"/></param>

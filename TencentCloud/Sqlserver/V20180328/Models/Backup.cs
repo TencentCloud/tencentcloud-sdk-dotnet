@@ -85,6 +85,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Strategy{ get; set; }
 
         /// <summary>
+        /// 备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线
+        /// </summary>
+        [JsonProperty("StorageStrategy")]
+        public long? StorageStrategy{ get; set; }
+
+        /// <summary>
         /// 备份方式，0-定时备份；1-手动临时备份；2-定期备份
         /// </summary>
         [JsonProperty("BackupWay")]
@@ -142,6 +148,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "DBs.", this.DBs);
             this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
+            this.SetParamSimple(map, prefix + "StorageStrategy", this.StorageStrategy);
             this.SetParamSimple(map, prefix + "BackupWay", this.BackupWay);
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);

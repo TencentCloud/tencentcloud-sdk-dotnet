@@ -103,6 +103,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("CageId")]
         public string CageId{ get; set; }
 
+        /// <summary>
+        /// 专用宿主机关联的标签列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +129,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "HostIp", this.HostIp);
             this.SetParamObj(map, prefix + "HostResource.", this.HostResource);
             this.SetParamSimple(map, prefix + "CageId", this.CageId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

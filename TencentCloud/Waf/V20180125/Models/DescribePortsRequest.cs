@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ess.V20201111.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateChannelSubOrganizationModifyQrCodeResponse : AbstractModel
+    public class DescribePortsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 二维码下载链接
+        /// 版本
         /// </summary>
-        [JsonProperty("QrCodeUrl")]
-        public string QrCodeUrl{ get; set; }
+        [JsonProperty("Edition")]
+        public string Edition{ get; set; }
 
         /// <summary>
-        /// 二维码失效时间 UNIX 时间戳 精确到秒
+        /// 实例ID
         /// </summary>
-        [JsonProperty("ExpiredTime")]
-        public long? ExpiredTime{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "QrCodeUrl", this.QrCodeUrl);
-            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Edition", this.Edition);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
         }
     }
 }
