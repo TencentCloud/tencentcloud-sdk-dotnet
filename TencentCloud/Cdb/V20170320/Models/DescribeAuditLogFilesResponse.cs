@@ -32,6 +32,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 审计日志文件详情。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public AuditLogFile[] Items{ get; set; }

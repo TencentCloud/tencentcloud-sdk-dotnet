@@ -6899,7 +6899,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 查询用户镜像仓库下的项目名称列表
+        /// 查询用户镜像仓库下的命令空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeImageRegistryNamespaceListRequest"/></param>
         /// <returns><see cref="DescribeImageRegistryNamespaceListResponse"/></returns>
@@ -6919,7 +6919,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 查询用户镜像仓库下的项目名称列表
+        /// 查询用户镜像仓库下的命令空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeImageRegistryNamespaceListRequest"/></param>
         /// <returns><see cref="DescribeImageRegistryNamespaceListResponse"/></returns>

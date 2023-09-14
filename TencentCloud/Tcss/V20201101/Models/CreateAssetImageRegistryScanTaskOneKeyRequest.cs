@@ -25,9 +25,10 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 是否扫描全部镜像
+        /// 是否扫描全部镜像(废弃)
         /// </summary>
         [JsonProperty("All")]
+        [System.Obsolete]
         public bool? All{ get; set; }
 
         /// <summary>
@@ -48,6 +49,42 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Id")]
         public ulong?[] Id{ get; set; }
 
+        /// <summary>
+        /// 是否最新镜像
+        /// </summary>
+        [JsonProperty("IsLatest")]
+        public bool? IsLatest{ get; set; }
+
+        /// <summary>
+        /// 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+        /// </summary>
+        [JsonProperty("ScanScope")]
+        public ulong? ScanScope{ get; set; }
+
+        /// <summary>
+        /// 仓库类型
+        /// </summary>
+        [JsonProperty("RegistryType")]
+        public string[] RegistryType{ get; set; }
+
+        /// <summary>
+        /// 命名空间
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string[] Namespace{ get; set; }
+
+        /// <summary>
+        /// 是否存在运行中的容器
+        /// </summary>
+        [JsonProperty("ContainerRunning")]
+        public bool? ContainerRunning{ get; set; }
+
+        /// <summary>
+        /// 任务超时时长单位s
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public ulong? Timeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +95,12 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamArraySimple(map, prefix + "ScanType.", this.ScanType);
             this.SetParamArraySimple(map, prefix + "Id.", this.Id);
+            this.SetParamSimple(map, prefix + "IsLatest", this.IsLatest);
+            this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
+            this.SetParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
+            this.SetParamArraySimple(map, prefix + "Namespace.", this.Namespace);
+            this.SetParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
         }
     }
 }

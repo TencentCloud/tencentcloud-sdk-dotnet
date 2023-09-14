@@ -55,7 +55,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string EmailAddress{ get; set; }
 
         /// <summary>
-        /// 可以指定任务ID进行查询
+        /// 已废弃
         /// </summary>
         [JsonProperty("TaskID")]
         public string TaskID{ get; set; }

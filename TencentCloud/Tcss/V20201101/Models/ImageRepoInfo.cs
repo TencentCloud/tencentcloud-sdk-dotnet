@@ -94,6 +94,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 敏感信息数
         /// </summary>
         [JsonProperty("SentiveInfoCnt")]
+        [System.Obsolete]
         public ulong? SentiveInfoCnt{ get; set; }
 
         /// <summary>
@@ -242,6 +243,61 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("IsLatestImage")]
         public bool? IsLatestImage{ get; set; }
 
+        /// <summary>
+        /// low级别漏洞个数
+        /// </summary>
+        [JsonProperty("LowLevelVulCnt")]
+        public ulong? LowLevelVulCnt{ get; set; }
+
+        /// <summary>
+        /// medium级别漏洞个数
+        /// </summary>
+        [JsonProperty("MediumLevelVulCnt")]
+        public ulong? MediumLevelVulCnt{ get; set; }
+
+        /// <summary>
+        /// high级别漏洞个数
+        /// </summary>
+        [JsonProperty("HighLevelVulCnt")]
+        public ulong? HighLevelVulCnt{ get; set; }
+
+        /// <summary>
+        /// critical级别漏洞个数
+        /// </summary>
+        [JsonProperty("CriticalLevelVulCnt")]
+        public ulong? CriticalLevelVulCnt{ get; set; }
+
+        /// <summary>
+        /// 关联容器数
+        /// </summary>
+        [JsonProperty("ContainerCnt")]
+        public ulong? ContainerCnt{ get; set; }
+
+        /// <summary>
+        /// 组件数
+        /// </summary>
+        [JsonProperty("ComponentCnt")]
+        public ulong? ComponentCnt{ get; set; }
+
+        /// <summary>
+        /// 是否运行中
+        /// </summary>
+        [JsonProperty("IsRunning")]
+        public bool? IsRunning{ get; set; }
+
+        /// <summary>
+        /// 是否存在必修漏洞
+        /// </summary>
+        [JsonProperty("HasNeedFixVul")]
+        public bool? HasNeedFixVul{ get; set; }
+
+        /// <summary>
+        /// 敏感信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SensitiveInfoCnt")]
+        public ulong? SensitiveInfoCnt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -282,6 +338,15 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "ImageCreateTime", this.ImageCreateTime);
             this.SetParamSimple(map, prefix + "IsLatestImage", this.IsLatestImage);
+            this.SetParamSimple(map, prefix + "LowLevelVulCnt", this.LowLevelVulCnt);
+            this.SetParamSimple(map, prefix + "MediumLevelVulCnt", this.MediumLevelVulCnt);
+            this.SetParamSimple(map, prefix + "HighLevelVulCnt", this.HighLevelVulCnt);
+            this.SetParamSimple(map, prefix + "CriticalLevelVulCnt", this.CriticalLevelVulCnt);
+            this.SetParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
+            this.SetParamSimple(map, prefix + "ComponentCnt", this.ComponentCnt);
+            this.SetParamSimple(map, prefix + "IsRunning", this.IsRunning);
+            this.SetParamSimple(map, prefix + "HasNeedFixVul", this.HasNeedFixVul);
+            this.SetParamSimple(map, prefix + "SensitiveInfoCnt", this.SensitiveInfoCnt);
         }
     }
 }

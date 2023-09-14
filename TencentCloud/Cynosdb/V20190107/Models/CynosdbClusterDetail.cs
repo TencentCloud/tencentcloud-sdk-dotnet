@@ -340,6 +340,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
+        /// <summary>
+        /// 节点网络类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetworkType")]
+        public string NetworkType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -394,6 +401,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "NetworkStatus", this.NetworkStatus);
             this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
         }
     }
 }

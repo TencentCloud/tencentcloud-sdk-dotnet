@@ -2133,7 +2133,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（DescribeInstanceSpecs）用于查询实例规格
+        /// 本接口（DescribeInstanceSpecs）用于查询购买页可购买的实例规格
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSpecsRequest"/></param>
         /// <returns><see cref="DescribeInstanceSpecsResponse"/></returns>
@@ -2153,7 +2153,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（DescribeInstanceSpecs）用于查询实例规格
+        /// 本接口（DescribeInstanceSpecs）用于查询购买页可购买的实例规格
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSpecsRequest"/></param>
         /// <returns><see cref="DescribeInstanceSpecsResponse"/></returns>

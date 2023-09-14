@@ -34,7 +34,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 物体出现的片段列表。
         /// </summary>
         [JsonProperty("SegmentSet")]
+        [System.Obsolete]
         public AiRecognitionTaskObjectSeqmentItem[] SegmentSet{ get; set; }
+
+        /// <summary>
+        /// 物体出现的片段列表。
+        /// </summary>
+        [JsonProperty("RecognitionSegmentSet")]
+        public AiRecognitionTaskObjectSegmentItem[] RecognitionSegmentSet{ get; set; }
 
 
         /// <summary>
@@ -44,6 +51,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+            this.SetParamArrayObj(map, prefix + "RecognitionSegmentSet.", this.RecognitionSegmentSet);
         }
     }
 }

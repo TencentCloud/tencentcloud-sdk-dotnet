@@ -2867,6 +2867,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 获取套餐实例的弹性qps上限
+        /// </summary>
+        /// <param name="req"><see cref="GetInstanceQpsLimitRequest"/></param>
+        /// <returns><see cref="GetInstanceQpsLimitResponse"/></returns>
+        public async Task<GetInstanceQpsLimitResponse> GetInstanceQpsLimit(GetInstanceQpsLimitRequest req)
+        {
+             JsonResponseModel<GetInstanceQpsLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetInstanceQpsLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetInstanceQpsLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取套餐实例的弹性qps上限
+        /// </summary>
+        /// <param name="req"><see cref="GetInstanceQpsLimitRequest"/></param>
+        /// <returns><see cref="GetInstanceQpsLimitResponse"/></returns>
+        public GetInstanceQpsLimitResponse GetInstanceQpsLimitSync(GetInstanceQpsLimitRequest req)
+        {
+             JsonResponseModel<GetInstanceQpsLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetInstanceQpsLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetInstanceQpsLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于修改访问日志保存期限及大字段是否存储
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessPeriodRequest"/></param>

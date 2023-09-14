@@ -29,7 +29,7 @@ namespace TencentCloud.Advisor.V20200721.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Strategies")]
-        public DescribeStrategie[] Strategies{ get; set; }
+        public Strategies[] Strategies{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

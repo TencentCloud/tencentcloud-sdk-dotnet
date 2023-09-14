@@ -32,7 +32,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 签署报告编号
+        /// 签署报告编号, 由<a href="https://qian.tencent.com/developers/companyApis/certificate/CreateFlowEvidenceReport" target="_blank">提交申请出证报告任务</a>产生
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }

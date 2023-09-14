@@ -25,16 +25,22 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 可返回的项目空间的总量。
+        /// 可返回的命令空间的总量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 返回的项目空间列表
+        /// 返回的命令空间列表
         /// </summary>
         [JsonProperty("NamespaceList")]
         public string[] NamespaceList{ get; set; }
+
+        /// <summary>
+        /// 返回的命令空间详细信息列表
+        /// </summary>
+        [JsonProperty("NamespaceDetail")]
+        public NamespaceInfo[] NamespaceDetail{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArraySimple(map, prefix + "NamespaceList.", this.NamespaceList);
+            this.SetParamArrayObj(map, prefix + "NamespaceDetail.", this.NamespaceDetail);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

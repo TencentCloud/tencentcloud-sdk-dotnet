@@ -79,6 +79,34 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
+        /// <summary>
+        /// 公网IP列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OuterIpList")]
+        public string[] OuterIpList{ get; set; }
+
+        /// <summary>
+        /// 内网IP列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InnerIpList")]
+        public string[] InnerIpList{ get; set; }
+
+        /// <summary>
+        /// 专享实例计费信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceChargePrepaid")]
+        public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
+
+        /// <summary>
+        /// 所属vpc
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +122,10 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "DealName", this.DealName);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamArraySimple(map, prefix + "OuterIpList.", this.OuterIpList);
+            this.SetParamArraySimple(map, prefix + "InnerIpList.", this.InnerIpList);
+            this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         }
     }
 }

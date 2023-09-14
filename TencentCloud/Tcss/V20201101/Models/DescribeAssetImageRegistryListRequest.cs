@@ -61,6 +61,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("OnlyShowLatest")]
         public bool? OnlyShowLatest{ get; set; }
 
+        /// <summary>
+        /// 是否仅展示运行中容器镜像
+        /// </summary>
+        [JsonProperty("IsRunning")]
+        public bool? IsRunning{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "By", this.By);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "OnlyShowLatest", this.OnlyShowLatest);
+            this.SetParamSimple(map, prefix + "IsRunning", this.IsRunning);
         }
     }
 }

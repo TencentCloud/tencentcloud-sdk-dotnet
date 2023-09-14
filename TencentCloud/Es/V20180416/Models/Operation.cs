@@ -66,6 +66,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }
 
+        /// <summary>
+        /// 操作者Uin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubAccountUin")]
+        public string SubAccountUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +86,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         }
     }
 }

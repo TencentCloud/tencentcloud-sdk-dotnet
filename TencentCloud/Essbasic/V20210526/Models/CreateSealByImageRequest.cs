@@ -64,7 +64,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>PERSONNEL-人事专用章
         /// </li>
         /// <li>默认：OFFICIAL</li>
-        /// <ul>
+        /// </ul>
         /// </summary>
         [JsonProperty("SealType")]
         public string SealType{ get; set; }

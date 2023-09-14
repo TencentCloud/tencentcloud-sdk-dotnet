@@ -37,7 +37,7 @@ namespace TencentCloud.Es.V20180416.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 智能运维每天定时巡检时间
+        /// 智能运维每天定时巡检时间，时间格式为HH:00:00，例如15:00:00
         /// </summary>
         [JsonProperty("CronTime")]
         public string CronTime{ get; set; }

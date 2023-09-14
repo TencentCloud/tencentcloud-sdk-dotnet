@@ -36,6 +36,13 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("EmailAddress")]
         public string EmailAddress{ get; set; }
 
+        /// <summary>
+        /// 被拉黑的理由
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IspDesc")]
+        public string IspDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Ses.V20201002.Models
         {
             this.SetParamSimple(map, prefix + "BounceTime", this.BounceTime);
             this.SetParamSimple(map, prefix + "EmailAddress", this.EmailAddress);
+            this.SetParamSimple(map, prefix + "IspDesc", this.IspDesc);
         }
     }
 }

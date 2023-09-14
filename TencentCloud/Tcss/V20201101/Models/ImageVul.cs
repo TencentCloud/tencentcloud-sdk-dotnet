@@ -157,6 +157,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
+        /// <summary>
+        /// 攻击热度 0-3
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttackLevel")]
+        public long? AttackLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +189,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArraySimple(map, prefix + "Tag.", this.Tag);
             this.SetParamSimple(map, prefix + "Component", this.Component);
             this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
         }
     }
 }

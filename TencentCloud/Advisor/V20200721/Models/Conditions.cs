@@ -21,7 +21,7 @@ namespace TencentCloud.Advisor.V20200721.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeStrategiesCondition : AbstractModel
+    public class Conditions : AbstractModel
     {
         
         /// <summary>

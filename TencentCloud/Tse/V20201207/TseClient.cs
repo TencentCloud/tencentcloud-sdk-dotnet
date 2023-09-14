@@ -773,6 +773,46 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 获取云原生API网关实例网络配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConfigRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayConfigResponse"/></returns>
+        public async Task<DescribeCloudNativeAPIGatewayConfigResponse> DescribeCloudNativeAPIGatewayConfig(DescribeCloudNativeAPIGatewayConfigRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云原生API网关实例网络配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConfigRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayConfigResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayConfigResponse DescribeCloudNativeAPIGatewayConfigSync(DescribeCloudNativeAPIGatewayConfigRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取云原生网关节点列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayNodesRequest"/></param>

@@ -213,7 +213,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// 销毁集群实例 
+        /// 销毁集群实例
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
         /// <returns><see cref="DeleteInstanceResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// 销毁集群实例 
+        /// 销毁集群实例
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
         /// <returns><see cref="DeleteInstanceResponse"/></returns>

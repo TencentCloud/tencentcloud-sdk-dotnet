@@ -54,6 +54,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 扫描全部镜像
         /// </summary>
         [JsonProperty("All")]
+        [System.Obsolete]
         public bool? All{ get; set; }
 
         /// <summary>
@@ -78,6 +79,37 @@ namespace TencentCloud.Tcss.V20201101.Models
         public bool? Latest{ get; set; }
 
         /// <summary>
+        /// 扫描结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScanEndTime")]
+        public string ScanEndTime{ get; set; }
+
+        /// <summary>
+        /// 仓库类型 tcr,ccr,harbor	
+        /// </summary>
+        [JsonProperty("RegistryType")]
+        public string[] RegistryType{ get; set; }
+
+        /// <summary>
+        /// 是否存在运行中的容器	
+        /// </summary>
+        [JsonProperty("ContainerRunning")]
+        public bool? ContainerRunning{ get; set; }
+
+        /// <summary>
+        /// 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+        /// </summary>
+        [JsonProperty("ScanScope")]
+        public ulong? ScanScope{ get; set; }
+
+        /// <summary>
+        /// 命名空间
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string[] Namespace{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -97,6 +129,11 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamArraySimple(map, prefix + "Id.", this.Id);
             this.SetParamSimple(map, prefix + "Latest", this.Latest);
+            this.SetParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
+            this.SetParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
+            this.SetParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+            this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
+            this.SetParamArraySimple(map, prefix + "Namespace.", this.Namespace);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

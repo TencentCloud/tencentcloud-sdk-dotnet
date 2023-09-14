@@ -49,7 +49,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] ProxyIds{ get; set; }
 
         /// <summary>
-        /// 分页查询的限制数目，默认值为 20，最大查询条目为 1000。
+        /// 分页查询的限制数目，默认值为 20，最大查询条目为 300。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

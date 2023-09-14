@@ -34,8 +34,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 请指定需执行批量签署的流程ID，数量范围为1-100。</br>
-        /// 您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。</br>
+        /// 请指定需执行批量签署的流程ID，数量范围为1-100。
+        /// 您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
         /// 用户将利用链接对这些合同实施批量操作。
         /// </summary>
         [JsonProperty("FlowIds")]
@@ -49,8 +49,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 员工在腾讯电子签平台的独特身份标识，为32位字符串。</br>
-        /// 您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。</br>
+        /// 员工在腾讯电子签平台的独特身份标识，为32位字符串。
+        /// 您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。
         /// UserId必须是传入合同（FlowId）中的签署人。
         /// - 1. 若UserId为空，Name和Mobile 必须提供。
         /// - 2. 若UserId 与 Name，Mobile均存在，将优先采用UserId对应的员工。
@@ -59,13 +59,15 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 员工姓名，必须与手机号码一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+        /// 员工姓名，必须与手机号码一起使用。
+        /// 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 员工手机号，必须与姓名一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+        /// 员工手机号，必须与姓名一起使用。
+        ///  如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }

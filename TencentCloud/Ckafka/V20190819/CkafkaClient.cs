@@ -1173,6 +1173,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 删除后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstancePostRequest"/></param>
+        /// <returns><see cref="DeleteInstancePostResponse"/></returns>
+        public async Task<DeleteInstancePostResponse> DeleteInstancePost(DeleteInstancePostRequest req)
+        {
+             JsonResponseModel<DeleteInstancePostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteInstancePost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstancePostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstancePostRequest"/></param>
+        /// <returns><see cref="DeleteInstancePostResponse"/></returns>
+        public DeleteInstancePostResponse DeleteInstancePostSync(DeleteInstancePostRequest req)
+        {
+             JsonResponseModel<DeleteInstancePostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteInstancePost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstancePostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除预付费实例
         /// </summary>
         /// <param name="req"><see cref="DeleteInstancePreRequest"/></param>

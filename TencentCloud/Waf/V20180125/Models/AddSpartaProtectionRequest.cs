@@ -145,7 +145,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 是否开启长连接，仅IP回源时可以用填次参数，域名回源时这个参数无效
+        /// 是否开启长连接，0 短连接，1 长连接
         /// </summary>
         [JsonProperty("IsKeepAlive")]
         public string IsKeepAlive{ get; set; }

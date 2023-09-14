@@ -25,43 +25,52 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 合同（流程）的名称
+        /// 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+        /// 该名称还将用于合同签署完成后的下载文件名。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 合同（流程）的签署方信息
+        /// 签署流程参与者信息，最大限制50方
+        /// 注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
         /// </summary>
         [JsonProperty("Approvers")]
         public ApproverInfo[] Approvers{ get; set; }
 
         /// <summary>
-        /// 发起合同（流程）的资源Id,此资源必须是PDF文件,来自UploadFiles,使用文件发起合同(流程)组时必传
+        /// 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
+        /// 建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// 发起合同（流程）的模板Id,用模板发起合同（流程）组时必填
+        /// 合同模板ID，为32位字符串。
+        /// 建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+        /// 可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 合同（流程）的类型
+        /// 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+        /// 示例值：劳务合同
         /// </summary>
         [JsonProperty("FlowType")]
         public string FlowType{ get; set; }
 
         /// <summary>
-        /// 合同（流程）的描述
+        /// 签署流程描述,最大长度1000个字符
         /// </summary>
         [JsonProperty("FlowDescription")]
         public string FlowDescription{ get; set; }
 
         /// <summary>
-        /// 合同（流程）的截止时间戳，单位秒。默认是一年
+        /// 签署流程的签署截止时间。
+        /// 
+        /// 值为unix时间戳,精确到秒,不传默认为当前时间一年后
+        /// 示例值：1604912664
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
@@ -70,34 +79,52 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 合同（流程）的回调地址
         /// </summary>
         [JsonProperty("CallbackUrl")]
+        [System.Obsolete]
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 第三方平台传递过来的信息, 限制1024字符 格式必须是base64的
+        /// 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+        /// 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+        /// 回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
         /// <summary>
-        /// 合同（流程）的签署是否是无序签, true - 无序。 false - 有序, 默认 
+        /// 发送类型：
+        /// true：无序签
+        /// false：有序签
+        /// 注：默认为false（有序签），请和模板中的配置保持一致
+        /// 示例值：true
         /// </summary>
         [JsonProperty("Unordered")]
         public bool? Unordered{ get; set; }
 
         /// <summary>
-        /// 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
+        /// 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+        /// <ul><li>单行文本控件</li>
+        /// <li>多行文本控件</li>
+        /// <li>勾选框控件</li>
+        /// <li>数字控件</li>
+        /// <li>图片控件</li>
+        /// <li>动态表格等填写控件</li></ul>
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }
 
         /// <summary>
-        /// 本企业（发起方）是否需要签署审批，若需要审批则只允许查看不允许签署，需要您调用接口CreateFlowSignReview提交审批结果。
+        /// 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+        /// 若设置为true，审核结果需通过接口 [CreateFlowSignReview](https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview) 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+        /// 
+        /// 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+        /// 示例值：true
         /// </summary>
         [JsonProperty("NeedSignReview")]
         public bool? NeedSignReview{ get; set; }
 
         /// <summary>
-        /// 本企业（发起方）自动签署，需要您在发起合同时给印章控件指定自动签的印章。
+        /// 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+        /// 示例值：E_PRESCRIPTION_AUTO_SIGN
         /// </summary>
         [JsonProperty("AutoSignScene")]
         public string AutoSignScene{ get; set; }

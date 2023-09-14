@@ -21,7 +21,7 @@ namespace TencentCloud.Advisor.V20200721.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeStrategie : AbstractModel
+    public class Strategies : AbstractModel
     {
         
         /// <summary>
@@ -85,7 +85,7 @@ namespace TencentCloud.Advisor.V20200721.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Conditions")]
-        public DescribeStrategiesCondition[] Conditions{ get; set; }
+        public Conditions[] Conditions{ get; set; }
 
 
         /// <summary>

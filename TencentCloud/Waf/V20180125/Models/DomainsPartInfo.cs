@@ -25,6 +25,54 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
+        /// 域名
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 域名id
+        /// </summary>
+        [JsonProperty("DomainId")]
+        public string DomainId{ get; set; }
+
+        /// <summary>
+        /// 实例id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 类型
+        /// </summary>
+        [JsonProperty("Edition")]
+        public string Edition{ get; set; }
+
+        /// <summary>
+        /// 实例名
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// 证书
+        /// </summary>
+        [JsonProperty("Cert")]
+        public string Cert{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// AI防御模式
+        /// </summary>
+        [JsonProperty("Engine")]
+        public ulong? Engine{ get; set; }
+
+        /// <summary>
         /// 是否开启httpRewrite
         /// </summary>
         [JsonProperty("HttpsRewrite")]
@@ -221,6 +269,14 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Edition", this.Edition);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "Cert", this.Cert);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Engine", this.Engine);
             this.SetParamSimple(map, prefix + "HttpsRewrite", this.HttpsRewrite);
             this.SetParamSimple(map, prefix + "HttpsUpstreamPort", this.HttpsUpstreamPort);
             this.SetParamSimple(map, prefix + "IsCdn", this.IsCdn);

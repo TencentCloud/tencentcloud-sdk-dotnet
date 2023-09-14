@@ -25,9 +25,9 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 发起合同（流程）组的合同（流程）签署人校验方式
-        /// VerifyCheck: 人脸识别（默认）
-        /// MobileCheck：手机号验证
+        /// 签署人校验方式,支持以下类型
+        /// <ul><li>VerifyCheck : 人脸识别 (默认值)</li>
+        /// <li>MobileCheck : 手机号验证</li></ul>
         /// 参数说明：此参数仅在合同组文件发起有效，可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
         /// </summary>
         [JsonProperty("ApproverVerifyType")]
@@ -35,14 +35,16 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 发起合同（流程）组本方企业经办人通知方式
-        /// 签署通知类型：sms--短信，none--不通知
+        /// 签署通知类型，支持以下类型
+        /// <ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
         /// </summary>
         [JsonProperty("SelfOrganizationApproverNotifyType")]
         public string SelfOrganizationApproverNotifyType{ get; set; }
 
         /// <summary>
         /// 发起合同（流程）组他方经办人通知方式
-        /// 签署通知类型：sms--短信，none--不通知
+        /// 签署通知类型，支持以下类型
+        /// <ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
         /// </summary>
         [JsonProperty("OtherApproverNotifyType")]
         public string OtherApproverNotifyType{ get; set; }

@@ -34,7 +34,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
         /// </summary>
         [JsonProperty("Transitions")]
+        [System.Obsolete]
         public TransitionOpertion[] Transitions{ get; set; }
+
+        /// <summary>
+        /// 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
+        /// </summary>
+        [JsonProperty("MediaTransitions")]
+        public TransitionOperation[] MediaTransitions{ get; set; }
 
 
         /// <summary>
@@ -44,6 +51,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamArrayObj(map, prefix + "Transitions.", this.Transitions);
+            this.SetParamArrayObj(map, prefix + "MediaTransitions.", this.MediaTransitions);
         }
     }
 }

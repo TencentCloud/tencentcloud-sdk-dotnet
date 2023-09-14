@@ -31,25 +31,25 @@ namespace TencentCloud.Es.V20180416.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// IK分词主词典COS地址
+        /// 安装时填IK分词主词典COS地址，删除时填词典名如test.dic
         /// </summary>
         [JsonProperty("IkMainDicts")]
         public string[] IkMainDicts{ get; set; }
 
         /// <summary>
-        /// IK分词停用词词典COS地址
+        /// 安装时填IK分词停用词词典COS地址，删除时填词典名如test.dic
         /// </summary>
         [JsonProperty("IkStopwords")]
         public string[] IkStopwords{ get; set; }
 
         /// <summary>
-        /// 同义词词典COS地址
+        /// 安装时填同义词词典COS地址，删除时填词典名如test.dic
         /// </summary>
         [JsonProperty("Synonym")]
         public string[] Synonym{ get; set; }
 
         /// <summary>
-        /// QQ分词词典COS地址
+        /// 安装时填QQ分词词典COS地址，删除时填词典名如test.dic
         /// </summary>
         [JsonProperty("QQDict")]
         public string[] QQDict{ get; set; }

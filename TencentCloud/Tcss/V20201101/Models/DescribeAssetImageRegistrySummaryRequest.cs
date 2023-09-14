@@ -24,12 +24,19 @@ namespace TencentCloud.Tcss.V20201101.Models
     public class DescribeAssetImageRegistrySummaryRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 过滤字段
+        /// </summary>
+        [JsonProperty("Filters")]
+        public AssetFilters[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

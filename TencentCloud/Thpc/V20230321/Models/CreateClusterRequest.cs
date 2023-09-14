@@ -149,6 +149,12 @@ namespace TencentCloud.Thpc.V20230321.Models
         [JsonProperty("InitNodeScripts")]
         public NodeScript[] InitNodeScripts{ get; set; }
 
+        /// <summary>
+        /// 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
+        /// </summary>
+        [JsonProperty("HpcClusterId")]
+        public string HpcClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -175,6 +181,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AutoScalingType", this.AutoScalingType);
             this.SetParamArrayObj(map, prefix + "InitNodeScripts.", this.InitNodeScripts);
+            this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         }
     }
 }

@@ -138,6 +138,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("TrxLivingTime")]
         public ulong? TrxLivingTime{ get; set; }
 
+        /// <summary>
+        /// 日志命中规则模板的基本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TemplateInfo")]
+        public LogRuleTemplateInfo[] TemplateInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +169,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "LockWaitTime", this.LockWaitTime);
             this.SetParamSimple(map, prefix + "NsTime", this.NsTime);
             this.SetParamSimple(map, prefix + "TrxLivingTime", this.TrxLivingTime);
+            this.SetParamArrayObj(map, prefix + "TemplateInfo.", this.TemplateInfo);
         }
     }
 }

@@ -194,6 +194,25 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("PodMem")]
         public long? PodMem{ get; set; }
 
+        /// <summary>
+        /// 集群名称
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// pod uid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PodUid")]
+        public string PodUid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +246,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
             this.SetParamSimple(map, prefix + "PodCpu", this.PodCpu);
             this.SetParamSimple(map, prefix + "PodMem", this.PodMem);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "PodUid", this.PodUid);
         }
     }
 }

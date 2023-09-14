@@ -25,15 +25,15 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 操作人信息
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 主题类型
-        /// <br/>EMBED_WEB_THEME：嵌入式主题
-        /// <br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
+        /// 主题类型，取值如下：
+        /// <ul><li> **EMBED_WEB_THEME**：嵌入式主题（默认），web页面嵌入的主题风格配置</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("ThemeType")]
         public string ThemeType{ get; set; }
@@ -45,7 +45,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public WebThemeConfig WebThemeConfig{ get; set; }
 
         /// <summary>
-        /// 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
