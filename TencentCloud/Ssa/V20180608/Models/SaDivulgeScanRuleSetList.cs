@@ -15,27 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ess.V20201111.Models
+namespace TencentCloud.Ssa.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIntegrationMainOrganizationUserResponse : AbstractModel
+    public class SaDivulgeScanRuleSetList : AbstractModel
     {
         
         /// <summary>
-        /// 主企业员工账号信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Value
         /// </summary>
-        [JsonProperty("IntegrationMainOrganizationUser")]
-        public IntegrationMainOrganizationUser IntegrationMainOrganizationUser{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// Code
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Code")]
+        public long? Code{ get; set; }
+
+        /// <summary>
+        /// Message
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
 
         /// <summary>
@@ -43,8 +48,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "IntegrationMainOrganizationUser.", this.IntegrationMainOrganizationUser);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

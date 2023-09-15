@@ -44,6 +44,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("AuditRuleFilters")]
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
+        /// <summary>
+        /// 是否是审计策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OldRule")]
+        public bool? OldRule{ get; set; }
+
+        /// <summary>
+        /// 实例应用的规则模板详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleTemplates")]
+        public RuleTemplateInfo[] RuleTemplates{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +67,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "AuditRule", this.AuditRule);
             this.SetParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
+            this.SetParamSimple(map, prefix + "OldRule", this.OldRule);
+            this.SetParamArrayObj(map, prefix + "RuleTemplates.", this.RuleTemplates);
         }
     }
 }

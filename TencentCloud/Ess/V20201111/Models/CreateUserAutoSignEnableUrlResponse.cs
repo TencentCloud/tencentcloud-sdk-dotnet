@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 个人用户自动签的开通链接, 短链形式
+        /// 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

@@ -150,6 +150,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("DockerVersion")]
         public string DockerVersion{ get; set; }
 
+        /// <summary>
+        /// 镜像是否已共享。
+        /// </summary>
+        [JsonProperty("BlueprintShared")]
+        public bool? BlueprintShared{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -176,6 +182,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "GuideUrl", this.GuideUrl);
             this.SetParamArraySimple(map, prefix + "SceneIdSet.", this.SceneIdSet);
             this.SetParamSimple(map, prefix + "DockerVersion", this.DockerVersion);
+            this.SetParamSimple(map, prefix + "BlueprintShared", this.BlueprintShared);
         }
     }
 }

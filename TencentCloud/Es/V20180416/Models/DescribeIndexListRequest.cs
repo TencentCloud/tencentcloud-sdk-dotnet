@@ -79,7 +79,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string[] IndexStatusList{ get; set; }
 
         /// <summary>
-        /// 排序顺序，支持asc、desc
+        /// 排序顺序，支持asc、desc，默认为desc 数据格式"asc","desc"
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

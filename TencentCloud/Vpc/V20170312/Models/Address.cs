@@ -166,6 +166,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
+        /// 静态单线IP网络出口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Egress")]
+        public string Egress{ get; set; }
+
+        /// <summary>
         /// 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
         /// </summary>
         [JsonProperty("AntiDDoSPackageId")]
@@ -198,6 +205,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "DeadlineDate", this.DeadlineDate);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "Egress", this.Egress);
             this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
         }
     }

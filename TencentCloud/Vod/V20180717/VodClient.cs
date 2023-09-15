@@ -1837,7 +1837,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除用户自定义的任务流模板。  
+        /// 删除用户自定义的任务流模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteProcedureTemplateRequest"/></param>
         /// <returns><see cref="DeleteProcedureTemplateResponse"/></returns>
@@ -1857,7 +1857,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除用户自定义的任务流模板。  
+        /// 删除用户自定义的任务流模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteProcedureTemplateRequest"/></param>
         /// <returns><see cref="DeleteProcedureTemplateResponse"/></returns>
@@ -6387,7 +6387,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 发起视频重生
+        /// 发起音画质重生
         /// </summary>
         /// <param name="req"><see cref="RebuildMediaRequest"/></param>
         /// <returns><see cref="RebuildMediaResponse"/></returns>
@@ -6407,7 +6407,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 发起视频重生
+        /// 发起音画质重生
         /// </summary>
         /// <param name="req"><see cref="RebuildMediaRequest"/></param>
         /// <returns><see cref="RebuildMediaResponse"/></returns>

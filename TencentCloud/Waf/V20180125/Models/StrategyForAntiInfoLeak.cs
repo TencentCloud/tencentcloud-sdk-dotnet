@@ -25,19 +25,24 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 匹配字段
+        /// 匹配条件，returncode（响应码）、keywords（关键字）、information（敏感信息）
         /// </summary>
         [JsonProperty("Field")]
         public string Field{ get; set; }
 
         /// <summary>
-        /// 逻辑符号
+        /// 逻辑符号，固定取值为contains
         /// </summary>
         [JsonProperty("CompareFunc")]
         public string CompareFunc{ get; set; }
 
         /// <summary>
-        /// 匹配内容
+        /// 匹配内容。
+        /// 以下三个对应Field为information时可取的匹配内容：
+        /// idcard（身份证）、phone（手机号）、bankcard（银行卡）。
+        /// 以下为对应Field为returncode时可取的匹配内容：
+        /// 400（状态码400）、403（状态码403）、404（状态码404）、4xx（其它4xx状态码）、500（状态码500）、501（状态码501）、502（状态码502）、504（状态码504）、5xx（其它5xx状态码）。
+        /// 当对应Field为keywords时由用户自己输入匹配内容。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

@@ -533,7 +533,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 创建审计规则模版
+        /// 创建审计规则模板
         /// </summary>
         /// <param name="req"><see cref="CreateAuditRuleTemplateRequest"/></param>
         /// <returns><see cref="CreateAuditRuleTemplateResponse"/></returns>
@@ -553,7 +553,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 创建审计规则模版
+        /// 创建审计规则模板
         /// </summary>
         /// <param name="req"><see cref="CreateAuditRuleTemplateRequest"/></param>
         /// <returns><see cref="CreateAuditRuleTemplateResponse"/></returns>
@@ -933,7 +933,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 删除审计规则模版
+        /// 删除审计规则模板
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
@@ -953,7 +953,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 删除审计规则模版
+        /// 删除审计规则模板
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
@@ -1293,7 +1293,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询审计规则模版信息
+        /// 查询审计规则模板信息
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAuditRuleTemplatesResponse"/></returns>
@@ -1313,7 +1313,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询审计规则模版信息
+        /// 查询审计规则模板信息
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAuditRuleTemplatesResponse"/></returns>
@@ -3293,7 +3293,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改审计规则模版
+        /// 修改审计规则模板
         /// </summary>
         /// <param name="req"><see cref="ModifyAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="ModifyAuditRuleTemplatesResponse"/></returns>
@@ -3313,7 +3313,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改审计规则模版
+        /// 修改审计规则模板
         /// </summary>
         /// <param name="req"><see cref="ModifyAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="ModifyAuditRuleTemplatesResponse"/></returns>

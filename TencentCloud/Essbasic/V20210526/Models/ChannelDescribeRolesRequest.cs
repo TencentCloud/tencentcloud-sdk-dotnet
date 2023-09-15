@@ -31,12 +31,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
         /// 指定每页多少条数据，单页最大200
         /// </summary>
         [JsonProperty("Limit")]
@@ -46,9 +40,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 查询的关键字段:
         /// Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
         /// Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
+        /// Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
         /// 操作人信息
@@ -64,9 +65,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }

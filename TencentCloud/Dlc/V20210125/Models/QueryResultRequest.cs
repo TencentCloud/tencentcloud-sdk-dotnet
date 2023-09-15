@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ess.V20201111.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIntegrationMainOrganizationUserRequest : AbstractModel
+    public class QueryResultRequest : AbstractModel
     {
         
         /// <summary>
-        /// 操作人信息，userId必填
+        /// 任务ID
         /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// lastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
+        /// </summary>
+        [JsonProperty("NextToken")]
+        public string NextToken{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
         }
     }
 }

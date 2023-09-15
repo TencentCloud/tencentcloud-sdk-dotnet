@@ -42,6 +42,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("IsBlocked")]
         public bool? IsBlocked{ get; set; }
 
+        /// <summary>
+        /// 资源封堵类型。NORMAL表示未封禁，SECURITY表示安全封禁，USER表示用户封禁，OTHER表示其他封禁，多个原因封禁时用&连接，比如：SECURITY&USER&OTHER。
+        /// </summary>
+        [JsonProperty("BlockType")]
+        public string BlockType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AddressId", this.AddressId);
             this.SetParamSimple(map, prefix + "PublicIpAddress", this.PublicIpAddress);
             this.SetParamSimple(map, prefix + "IsBlocked", this.IsBlocked);
+            this.SetParamSimple(map, prefix + "BlockType", this.BlockType);
         }
     }
 }

@@ -25,25 +25,25 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+        /// 指定分页返回的页码。页码从0开始，最大为2000。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 指定每页多少条数据，单页最大200
+        /// 指定分页每页返回的数据条数，单页最大支持 200。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 符合查询条件的总的角色数
+        /// 符合查询条件的总角色数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 企业角色信息列表
+        /// 企业角色信息列表。
         /// </summary>
         [JsonProperty("IntegrateRoles")]
         public IntegrateRole[] IntegrateRoles{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{46495F04-57A1-3328-BD3F-406E6BB2D037}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.848</VersionPrefix>
+    <VersionPrefix>3.0.849</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -76,13 +76,8 @@
     <Compile Include="V20190408\Models\SentenceCorrectionRequest.cs" />
     <Compile Include="V20190408\Models\SentenceCorrectionResponse.cs" />
     <Compile Include="V20190408\Models\SentencePair.cs" />
-    <Compile Include="V20190408\Models\TestingTextGenerationRequest.cs" />
-    <Compile Include="V20190408\Models\TestingTextGenerationResponse.cs" />
     <Compile Include="V20190408\Models\TextEmbellishRequest.cs" />
     <Compile Include="V20190408\Models\TextEmbellishResponse.cs" />
-    <Compile Include="V20190408\Models\TextGenerationChoices.cs" />
-    <Compile Include="V20190408\Models\TextGenerationMessage.cs" />
-    <Compile Include="V20190408\Models\TextGenerationUsage.cs" />
     <Compile Include="V20190408\Models\TextWritingRequest.cs" />
     <Compile Include="V20190408\Models\TextWritingResponse.cs" />
     <Compile Include="V20190408\Models\Writing.cs" />

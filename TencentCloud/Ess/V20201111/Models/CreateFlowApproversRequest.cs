@@ -25,32 +25,39 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方用户信息，userId 必填
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 签署流程编号
+        /// 合同流程ID，为32位字符串。
+        /// 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+        /// 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 补充签署人信息
+        /// 补充企业签署人信息。
+        /// 
+        /// - 如果发起方指定的补充签署人是企业微信签署人（ApproverSource=WEWORKAPP），则需要提供企业微信UserId进行补充；
+        /// 
+        /// - 如果不指定，则使用姓名和手机号进行补充。
         /// </summary>
         [JsonProperty("Approvers")]
         public FillApproverInfo[] Approvers{ get; set; }
 
         /// <summary>
-        /// 企微消息中的发起人
+        /// 在可定制的企业微信通知中，发起人可以根据具体需求进行自定义设置。
         /// </summary>
         [JsonProperty("Initiator")]
         public string Initiator{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作
-        /// 
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

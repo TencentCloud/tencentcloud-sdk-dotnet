@@ -1013,6 +1013,46 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
+        /// SaDivulgeScanRuleMutate
+        /// </summary>
+        /// <param name="req"><see cref="SaDivulgeScanRuleMutateRequest"/></param>
+        /// <returns><see cref="SaDivulgeScanRuleMutateResponse"/></returns>
+        public async Task<SaDivulgeScanRuleMutateResponse> SaDivulgeScanRuleMutate(SaDivulgeScanRuleMutateRequest req)
+        {
+             JsonResponseModel<SaDivulgeScanRuleMutateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SaDivulgeScanRuleMutate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SaDivulgeScanRuleMutateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// SaDivulgeScanRuleMutate
+        /// </summary>
+        /// <param name="req"><see cref="SaDivulgeScanRuleMutateRequest"/></param>
+        /// <returns><see cref="SaDivulgeScanRuleMutateResponse"/></returns>
+        public SaDivulgeScanRuleMutateResponse SaDivulgeScanRuleMutateSync(SaDivulgeScanRuleMutateRequest req)
+        {
+             JsonResponseModel<SaDivulgeScanRuleMutateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SaDivulgeScanRuleMutate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SaDivulgeScanRuleMutateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 安全事件通用字段
         /// </summary>
         /// <param name="req"><see cref="SaEventPubRequest"/></param>

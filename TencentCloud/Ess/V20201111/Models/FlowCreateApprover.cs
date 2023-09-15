@@ -84,9 +84,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverIdCardNumber{ get; set; }
 
         /// <summary>
-        /// 签署方经办人在模板中的参与方ID
-        /// <br/>模板发起合同时，该参数为必填项
-        /// <br/>文件发起合同是，该参数无序传值
+        /// 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
+        /// 模板发起合同时，该参数为必填项。
+        /// 文件发起合同是，该参数无需传值。
+        /// 如果开发者后续用合同模板发起合同，建议保存此值，在用合同模板发起合同中需此值绑定对应的签署经办人 。
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }

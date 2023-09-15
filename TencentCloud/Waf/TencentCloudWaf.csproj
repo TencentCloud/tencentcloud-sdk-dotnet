@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.848</VersionPrefix>
+    <VersionPrefix>3.0.849</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,6 +90,7 @@
     <Compile Include="V20180125\Models\CreateAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\CreateHostRequest.cs" />
     <Compile Include="V20180125\Models\CreateHostResponse.cs" />
+    <Compile Include="V20180125\Models\DealData.cs" />
     <Compile Include="V20180125\Models\DeleteAccessExportRequest.cs" />
     <Compile Include="V20180125\Models\DeleteAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\DeleteAntiFakeUrlRequest.cs" />
@@ -221,6 +222,8 @@
     <Compile Include="V20180125\Models\FraudPkg.cs" />
     <Compile Include="V20180125\Models\FreshAntiFakeUrlRequest.cs" />
     <Compile Include="V20180125\Models\FreshAntiFakeUrlResponse.cs" />
+    <Compile Include="V20180125\Models\GenerateDealsAndPayNewRequest.cs" />
+    <Compile Include="V20180125\Models\GenerateDealsAndPayNewResponse.cs" />
     <Compile Include="V20180125\Models\GetAttackDownloadRecordsRequest.cs" />
     <Compile Include="V20180125\Models\GetAttackDownloadRecordsResponse.cs" />
     <Compile Include="V20180125\Models\GetAttackHistogramRequest.cs" />
@@ -229,6 +232,8 @@
     <Compile Include="V20180125\Models\GetAttackTotalCountResponse.cs" />
     <Compile Include="V20180125\Models\GetInstanceQpsLimitRequest.cs" />
     <Compile Include="V20180125\Models\GetInstanceQpsLimitResponse.cs" />
+    <Compile Include="V20180125\Models\GoodNews.cs" />
+    <Compile Include="V20180125\Models\GoodsDetailNew.cs" />
     <Compile Include="V20180125\Models\HostDel.cs" />
     <Compile Include="V20180125\Models\HostRecord.cs" />
     <Compile Include="V20180125\Models\HostStatus.cs" />

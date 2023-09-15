@@ -3453,6 +3453,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 获取任务结果查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryResultRequest"/></param>
+        /// <returns><see cref="QueryResultResponse"/></returns>
+        public async Task<QueryResultResponse> QueryResult(QueryResultRequest req)
+        {
+             JsonResponseModel<QueryResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取任务结果查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryResultRequest"/></param>
+        /// <returns><see cref="QueryResultResponse"/></returns>
+        public QueryResultResponse QueryResultSync(QueryResultRequest req)
+        {
+             JsonResponseModel<QueryResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 上报元数据心跳
         /// </summary>
         /// <param name="req"><see cref="ReportHeartbeatMetaDataRequest"/></param>

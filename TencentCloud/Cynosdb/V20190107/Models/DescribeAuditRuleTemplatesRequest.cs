@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 规则模版ID。
+        /// 规则模板ID。
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
 
         /// <summary>
-        /// 规则模版名称
+        /// 规则模板名称
         /// </summary>
         [JsonProperty("RuleTemplateNames")]
         public string[] RuleTemplateNames{ get; set; }
@@ -48,6 +48,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// 告警等级。1-低风险，2-中风险，3-高风险。
+        /// </summary>
+        [JsonProperty("AlarmLevel")]
+        public ulong? AlarmLevel{ get; set; }
+
+        /// <summary>
+        /// 告警策略。0-不告警，1-告警。
+        /// </summary>
+        [JsonProperty("AlarmPolicy")]
+        public ulong? AlarmPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "RuleTemplateNames.", this.RuleTemplateNames);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+            this.SetParamSimple(map, prefix + "AlarmPolicy", this.AlarmPolicy);
         }
     }
 }

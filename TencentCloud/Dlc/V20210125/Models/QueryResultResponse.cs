@@ -15,35 +15,45 @@
  * under the License.
  */
 
-namespace TencentCloud.Ess.V20201111.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IntegrationMainOrganizationUser : AbstractModel
+    public class QueryResultResponse : AbstractModel
     {
         
         /// <summary>
-        /// 主企业id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 任务Id
         /// </summary>
-        [JsonProperty("MainOrganizationId")]
-        public string MainOrganizationId{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
-        /// 主企业员工UserId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 结果数据
         /// </summary>
-        [JsonProperty("MainUserId")]
-        public string MainUserId{ get; set; }
+        [JsonProperty("ResultSet")]
+        public string ResultSet{ get; set; }
 
         /// <summary>
-        /// 主企业员工名
+        /// schema
+        /// </summary>
+        [JsonProperty("ResultSchema")]
+        public Column[] ResultSchema{ get; set; }
+
+        /// <summary>
+        /// 分页信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("UserName")]
-        public string UserName{ get; set; }
+        [JsonProperty("NextToken")]
+        public string NextToken{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +61,11 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MainOrganizationId", this.MainOrganizationId);
-            this.SetParamSimple(map, prefix + "MainUserId", this.MainUserId);
-            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "ResultSet", this.ResultSet);
+            this.SetParamArrayObj(map, prefix + "ResultSchema.", this.ResultSchema);
+            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

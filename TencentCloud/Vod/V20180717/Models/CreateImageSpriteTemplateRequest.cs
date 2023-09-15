@@ -42,12 +42,14 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 雪碧图中小图的行数。
+        /// 注意：小图的行数会影响最终大图的高度，大图的高度最大为15000像素，其中大图的高度为小图行数与小图高度的乘积。
         /// </summary>
         [JsonProperty("RowCount")]
         public ulong? RowCount{ get; set; }
 
         /// <summary>
         /// 雪碧图中小图的列数。
+        /// 注意：小图的列数会影响最终大图的宽度，大图的宽度最大为15000像素，其中大图的宽度为小图列数与小图宽度的乘积。
         /// </summary>
         [JsonProperty("ColumnCount")]
         public ulong? ColumnCount{ get; set; }
@@ -86,6 +88,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
         /// <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
         /// 默认值：0。
+        /// 注意：小图的宽度会影响最终大图的宽度，大图的宽度最大为15000像素，其中大图的宽度为小图列数与小图宽度的乘积。
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
@@ -97,6 +100,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
         /// <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
         /// 默认值：0。
+        /// 注意：小图的高度会影响最终大图的高度，大图的高度最大为15000像素，其中大图的高度为小图行数与小图高度的乘积。
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }

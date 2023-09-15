@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 视频重生的任务 ID，可以通过该 ID 查询视频重生任务的状态。
+        /// 音画质重生的任务 ID，可以通过该 ID 查询音画质重生任务的状态。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

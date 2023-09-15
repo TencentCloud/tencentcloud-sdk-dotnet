@@ -15,44 +15,41 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TestingTextGenerationResponse : AbstractModel
+    public class GenerateDealsAndPayNewResponse : AbstractModel
     {
         
         /// <summary>
-        /// 结果
+        /// 计费下单响应结构体
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Choices")]
-        public TextGenerationChoices[] Choices{ get; set; }
+        [JsonProperty("Data")]
+        public DealData Data{ get; set; }
 
         /// <summary>
-        /// unix时间戳的字符串
+        /// 1:成功，0:失败
         /// </summary>
-        [JsonProperty("Created")]
-        public long? Created{ get; set; }
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
         /// <summary>
-        /// 会话id
+        /// 返回message
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("ReturnMessage")]
+        public string ReturnMessage{ get; set; }
 
         /// <summary>
-        /// 模型名
+        /// 购买的实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Model")]
-        public string Model{ get; set; }
-
-        /// <summary>
-        /// token数量
-        /// </summary>
-        [JsonProperty("Usage")]
-        public TextGenerationUsage Usage{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -66,11 +63,10 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Choices.", this.Choices);
-            this.SetParamSimple(map, prefix + "Created", this.Created);
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Model", this.Model);
-            this.SetParamObj(map, prefix + "Usage.", this.Usage);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ReturnMessage", this.ReturnMessage);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

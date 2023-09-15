@@ -31,16 +31,28 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public RuleFilters[] RuleFilters{ get; set; }
 
         /// <summary>
-        /// 规则模版名称。
+        /// 规则模板名称。
         /// </summary>
         [JsonProperty("RuleTemplateName")]
         public string RuleTemplateName{ get; set; }
 
         /// <summary>
-        /// 规则模版描述。
+        /// 规则模板描述。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
+
+        /// <summary>
+        /// 告警等级。1-低风险，2-中风险，3-高风险
+        /// </summary>
+        [JsonProperty("AlarmLevel")]
+        public ulong? AlarmLevel{ get; set; }
+
+        /// <summary>
+        /// 告警策略。0-不告警，1-告警。
+        /// </summary>
+        [JsonProperty("AlarmPolicy")]
+        public ulong? AlarmPolicy{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "RuleFilters.", this.RuleFilters);
             this.SetParamSimple(map, prefix + "RuleTemplateName", this.RuleTemplateName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+            this.SetParamSimple(map, prefix + "AlarmPolicy", this.AlarmPolicy);
         }
     }
 }

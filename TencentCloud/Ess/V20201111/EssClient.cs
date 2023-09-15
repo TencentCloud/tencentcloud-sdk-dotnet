@@ -375,7 +375,14 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 本接口（CreateEmbedWebUrl）用于创建嵌入web的链接 本接口支持创建：创建印章，创建模板，修改模板，预览模板，预览合同流程的web链接 进入web连接后与当前控制台操作保持一致
+        /// 本接口（CreateEmbedWebUrl）用于创建嵌入Web的链接，支持以下类型的Web链接创建：
+        /// 1. 创建印章
+        /// 2. 创建模板
+        /// 3. 修改模板
+        /// 4. 预览模板
+        /// 5. 预览合同流程
+        /// 
+        /// 用户可以通过这些链接快速将其集成到自己的系统中。
         /// </summary>
         /// <param name="req"><see cref="CreateEmbedWebUrlRequest"/></param>
         /// <returns><see cref="CreateEmbedWebUrlResponse"/></returns>
@@ -395,7 +402,14 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 本接口（CreateEmbedWebUrl）用于创建嵌入web的链接 本接口支持创建：创建印章，创建模板，修改模板，预览模板，预览合同流程的web链接 进入web连接后与当前控制台操作保持一致
+        /// 本接口（CreateEmbedWebUrl）用于创建嵌入Web的链接，支持以下类型的Web链接创建：
+        /// 1. 创建印章
+        /// 2. 创建模板
+        /// 3. 修改模板
+        /// 4. 预览模板
+        /// 5. 预览合同流程
+        /// 
+        /// 用户可以通过这些链接快速将其集成到自己的系统中。
         /// </summary>
         /// <param name="req"><see cref="CreateEmbedWebUrlRequest"/></param>
         /// <returns><see cref="CreateEmbedWebUrlResponse"/></returns>
@@ -465,12 +479,13 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// ### 适用场景
-        /// 在通过模板或者文件发起合同时，若未指定企业签署人信息，则流程发起后，可以调用此接口补充或签签署人。
-        /// 同一签署人可以补充多个员工作为或签签署人,最终实际签署人取决于谁先领取合同完成签署。
-        /// ### 限制条件
-        /// -  本企业(发起方企业)支持通过企业微信UserId 或者 姓名+手机号补充
-        /// - 他方企业仅支持通过姓名+手机号补充
+        /// 适用场景：
+        /// 当通过模板或文件发起合同时，若未指定企业签署人信息，则可调用此接口补充或添加签署人。同一签署人可补充多个员工作为或签署人，最终实际签署人取决于谁先领取合同完成签署。
+        /// 
+        /// 限制条件：
+        /// 1. 本企业（发起方企业）企业微信签署人仅支持通过企业微信UserId或姓名+手机号进行补充。
+        /// 2. 本企业（发起方企业）非企业微信签署人仅支持通过姓名+手机号进行补充。
+        /// 3. 他方企业仅支持通过姓名+手机号进行补充。
         /// </summary>
         /// <param name="req"><see cref="CreateFlowApproversRequest"/></param>
         /// <returns><see cref="CreateFlowApproversResponse"/></returns>
@@ -490,12 +505,13 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// ### 适用场景
-        /// 在通过模板或者文件发起合同时，若未指定企业签署人信息，则流程发起后，可以调用此接口补充或签签署人。
-        /// 同一签署人可以补充多个员工作为或签签署人,最终实际签署人取决于谁先领取合同完成签署。
-        /// ### 限制条件
-        /// -  本企业(发起方企业)支持通过企业微信UserId 或者 姓名+手机号补充
-        /// - 他方企业仅支持通过姓名+手机号补充
+        /// 适用场景：
+        /// 当通过模板或文件发起合同时，若未指定企业签署人信息，则可调用此接口补充或添加签署人。同一签署人可补充多个员工作为或签署人，最终实际签署人取决于谁先领取合同完成签署。
+        /// 
+        /// 限制条件：
+        /// 1. 本企业（发起方企业）企业微信签署人仅支持通过企业微信UserId或姓名+手机号进行补充。
+        /// 2. 本企业（发起方企业）非企业微信签署人仅支持通过姓名+手机号进行补充。
+        /// 3. 他方企业仅支持通过姓名+手机号进行补充。
         /// </summary>
         /// <param name="req"><see cref="CreateFlowApproversRequest"/></param>
         /// <returns><see cref="CreateFlowApproversResponse"/></returns>
@@ -665,8 +681,9 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 此接口（CreateFlowGroupByTemplates）通过多模板创建合同组签署流程。<br/>
-        /// 此接口合同组中的子合同必须都是模板发起的合同。 <br/>目前最大仅支持50个子合同
+        /// 此接口（CreateFlowGroupByTemplates）可用于通过多个模板创建合同组签署流程。
+        /// 
+        /// 适用场景：该接口适用于需要一次性完成多份合同签署的情况，多份合同一般具有关联性，用户以目录的形式查看合同。
         /// </summary>
         /// <param name="req"><see cref="CreateFlowGroupByTemplatesRequest"/></param>
         /// <returns><see cref="CreateFlowGroupByTemplatesResponse"/></returns>
@@ -686,8 +703,9 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 此接口（CreateFlowGroupByTemplates）通过多模板创建合同组签署流程。<br/>
-        /// 此接口合同组中的子合同必须都是模板发起的合同。 <br/>目前最大仅支持50个子合同
+        /// 此接口（CreateFlowGroupByTemplates）可用于通过多个模板创建合同组签署流程。
+        /// 
+        /// 适用场景：该接口适用于需要一次性完成多份合同签署的情况，多份合同一般具有关联性，用户以目录的形式查看合同。
         /// </summary>
         /// <param name="req"><see cref="CreateFlowGroupByTemplatesRequest"/></param>
         /// <returns><see cref="CreateFlowGroupByTemplatesResponse"/></returns>
@@ -999,7 +1017,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 绑定员工与对应角色
+        /// 此接口用于赋予员工指定的角色权限，如需解绑请使用 DeleteIntegrationRoleUsers 接口。
         /// </summary>
         /// <param name="req"><see cref="CreateIntegrationUserRolesRequest"/></param>
         /// <returns><see cref="CreateIntegrationUserRolesResponse"/></returns>
@@ -1019,7 +1037,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 绑定员工与对应角色
+        /// 此接口用于赋予员工指定的角色权限，如需解绑请使用 DeleteIntegrationRoleUsers 接口。
         /// </summary>
         /// <param name="req"><see cref="CreateIntegrationUserRolesRequest"/></param>
         /// <returns><see cref="CreateIntegrationUserRolesResponse"/></returns>
@@ -1157,7 +1175,11 @@ namespace TencentCloud.Ess.V20201111
         /// 
         /// ![image](https://dyn.ess.tencent.cn/guide/capi/CreatePersonAuthCertificateImage.png)
         /// 
-        /// 注:  `只能获取个人用户证明图片, 企业员工的暂不支持`
+        /// 注:  
+        /// <ul>
+        /// <li>只能获取个人用户证明图片, 企业员工的暂不支持</li>
+        /// <li>处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。  </li>
+        /// </ul>
         /// </summary>
         /// <param name="req"><see cref="CreatePersonAuthCertificateImageRequest"/></param>
         /// <returns><see cref="CreatePersonAuthCertificateImageResponse"/></returns>
@@ -1183,7 +1205,11 @@ namespace TencentCloud.Ess.V20201111
         /// 
         /// ![image](https://dyn.ess.tencent.cn/guide/capi/CreatePersonAuthCertificateImage.png)
         /// 
-        /// 注:  `只能获取个人用户证明图片, 企业员工的暂不支持`
+        /// 注:  
+        /// <ul>
+        /// <li>只能获取个人用户证明图片, 企业员工的暂不支持</li>
+        /// <li>处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。  </li>
+        /// </ul>
         /// </summary>
         /// <param name="req"><see cref="CreatePersonAuthCertificateImageRequest"/></param>
         /// <returns><see cref="CreatePersonAuthCertificateImageResponse"/></returns>
@@ -1667,7 +1693,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 解绑员工与对应角色关系
+        /// 解绑员工与对应角色的关系，如需绑定请使用 CreateIntegrationUserRoles 接口。
         /// </summary>
         /// <param name="req"><see cref="DeleteIntegrationRoleUsersRequest"/></param>
         /// <returns><see cref="DeleteIntegrationRoleUsersResponse"/></returns>
@@ -1687,7 +1713,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 解绑员工与对应角色关系
+        /// 解绑员工与对应角色的关系，如需绑定请使用 CreateIntegrationUserRoles 接口。
         /// </summary>
         /// <param name="req"><see cref="DeleteIntegrationRoleUsersRequest"/></param>
         /// <returns><see cref="DeleteIntegrationRoleUsersResponse"/></returns>
@@ -2167,51 +2193,9 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 集团企业统一使用主代子进行操作，无需根据子企业账号进行转化查询，该接口需要屏蔽下线
+        /// 此接口（DescribeIntegrationRoles）用于分页查询企业角色列表，列表按照角色创建时间升序排列。
         /// 
-        /// 通过子企业影子账号查询主企业员工账号
-        /// </summary>
-        /// <param name="req"><see cref="DescribeIntegrationMainOrganizationUserRequest"/></param>
-        /// <returns><see cref="DescribeIntegrationMainOrganizationUserResponse"/></returns>
-        public async Task<DescribeIntegrationMainOrganizationUserResponse> DescribeIntegrationMainOrganizationUser(DescribeIntegrationMainOrganizationUserRequest req)
-        {
-             JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeIntegrationMainOrganizationUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 集团企业统一使用主代子进行操作，无需根据子企业账号进行转化查询，该接口需要屏蔽下线
-        /// 
-        /// 通过子企业影子账号查询主企业员工账号
-        /// </summary>
-        /// <param name="req"><see cref="DescribeIntegrationMainOrganizationUserRequest"/></param>
-        /// <returns><see cref="DescribeIntegrationMainOrganizationUserResponse"/></returns>
-        public DescribeIntegrationMainOrganizationUserResponse DescribeIntegrationMainOrganizationUserSync(DescribeIntegrationMainOrganizationUserRequest req)
-        {
-             JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeIntegrationMainOrganizationUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 分页查询企业角色列表，法人的角色是系统保留角色，不会返回，按照角色创建时间升序排列
+        /// 注：`法人角色是系统保留角色，因此返回列表中不含法人角色。`
         /// </summary>
         /// <param name="req"><see cref="DescribeIntegrationRolesRequest"/></param>
         /// <returns><see cref="DescribeIntegrationRolesResponse"/></returns>
@@ -2231,7 +2215,9 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 分页查询企业角色列表，法人的角色是系统保留角色，不会返回，按照角色创建时间升序排列
+        /// 此接口（DescribeIntegrationRoles）用于分页查询企业角色列表，列表按照角色创建时间升序排列。
+        /// 
+        /// 注：`法人角色是系统保留角色，因此返回列表中不含法人角色。`
         /// </summary>
         /// <param name="req"><see cref="DescribeIntegrationRolesRequest"/></param>
         /// <returns><see cref="DescribeIntegrationRolesResponse"/></returns>

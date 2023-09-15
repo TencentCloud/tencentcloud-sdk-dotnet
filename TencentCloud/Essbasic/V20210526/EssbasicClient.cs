@@ -917,6 +917,54 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 此接口（ChannelCreateRole）用来创建企业自定义角色。
+        /// 
+        /// 适用场景1：创建当前企业的自定义角色，并且创建时不进行权限的设置（PermissionGroups 参数不传），角色中的权限内容可通过接口 ChannelModifyRole 完成更新。
+        /// 
+        /// 适用场景2：创建当前企业的自定义角色，并且创建时进行权限的设置（PermissionGroups 参数要传），权限树内容 PermissionGroups 可参考接口 ChannelDescribeRoles 的输出。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateRoleRequest"/></param>
+        /// <returns><see cref="ChannelCreateRoleResponse"/></returns>
+        public async Task<ChannelCreateRoleResponse> ChannelCreateRole(ChannelCreateRoleRequest req)
+        {
+             JsonResponseModel<ChannelCreateRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ChannelCreateRole）用来创建企业自定义角色。
+        /// 
+        /// 适用场景1：创建当前企业的自定义角色，并且创建时不进行权限的设置（PermissionGroups 参数不传），角色中的权限内容可通过接口 ChannelModifyRole 完成更新。
+        /// 
+        /// 适用场景2：创建当前企业的自定义角色，并且创建时进行权限的设置（PermissionGroups 参数要传），权限树内容 PermissionGroups 可参考接口 ChannelDescribeRoles 的输出。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateRoleRequest"/></param>
+        /// <returns><see cref="ChannelCreateRoleResponse"/></returns>
+        public ChannelCreateRoleResponse ChannelCreateRoleSync(ChannelCreateRoleRequest req)
+        {
+             JsonResponseModel<ChannelCreateRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 将指定印章授权给第三方平台子客企业下的某些员工
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateSealPolicyRequest"/></param>
@@ -1037,7 +1085,8 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 生成页面主题配置
+        /// 用来创建嵌入式页面个性化主题配置（例如是否展示电子签logo、定义主题色等），该接口配合其他所有可嵌入页面接口使用
+        /// 创建配置对当前第三方应用全局生效，如果多次调用，会以最后一次的配置为准
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateWebThemeConfigRequest"/></param>
         /// <returns><see cref="ChannelCreateWebThemeConfigResponse"/></returns>
@@ -1057,7 +1106,8 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 生成页面主题配置
+        /// 用来创建嵌入式页面个性化主题配置（例如是否展示电子签logo、定义主题色等），该接口配合其他所有可嵌入页面接口使用
+        /// 创建配置对当前第三方应用全局生效，如果多次调用，会以最后一次的配置为准
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateWebThemeConfigRequest"/></param>
         /// <returns><see cref="ChannelCreateWebThemeConfigResponse"/></returns>
@@ -1068,6 +1118,50 @@ namespace TencentCloud.Essbasic.V20210526
              {
                  var strResp = this.InternalRequestSync(req, "ChannelCreateWebThemeConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateWebThemeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ChannelDeleteRole）用来删除企业自定义角色。
+        /// 
+        /// 注意：系统角色不可删除。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDeleteRoleRequest"/></param>
+        /// <returns><see cref="ChannelDeleteRoleResponse"/></returns>
+        public async Task<ChannelDeleteRoleResponse> ChannelDeleteRole(ChannelDeleteRoleRequest req)
+        {
+             JsonResponseModel<ChannelDeleteRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelDeleteRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDeleteRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ChannelDeleteRole）用来删除企业自定义角色。
+        /// 
+        /// 注意：系统角色不可删除。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDeleteRoleRequest"/></param>
+        /// <returns><see cref="ChannelDeleteRoleResponse"/></returns>
+        public ChannelDeleteRoleResponse ChannelDeleteRoleSync(ChannelDeleteRoleRequest req)
+        {
+             JsonResponseModel<ChannelDeleteRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelDeleteRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDeleteRoleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1279,7 +1373,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 查询角色列表，支持根据类型和状态过滤角色列表
+        /// 分页查询企业角色列表，法人的角色是系统保留角色，不会返回，按照角色创建时间升序排列
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeRolesRequest"/></param>
         /// <returns><see cref="ChannelDescribeRolesResponse"/></returns>
@@ -1299,7 +1393,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 查询角色列表，支持根据类型和状态过滤角色列表
+        /// 分页查询企业角色列表，法人的角色是系统保留角色，不会返回，按照角色创建时间升序排列
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeRolesRequest"/></param>
         /// <returns><see cref="ChannelDescribeRolesResponse"/></returns>
@@ -1432,6 +1526,54 @@ namespace TencentCloud.Essbasic.V20210526
              {
                  var strResp = this.InternalRequestSync(req, "ChannelGetTaskResultApi");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelGetTaskResultApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ChannelModifyRole）用来更新企业自定义角色。
+        /// 
+        /// 适用场景1：更新当前企业的自定义角色的名称或描述等其他信息，更新时不进行权限的设置（PermissionGroups 参数不传）。
+        /// 
+        /// 适用场景2：更新当前企业的自定义角色的权限信息，更新时进行权限的设置（PermissionGroups 参数要传），权限树内容 PermissionGroups 可参考接口 ChannelDescribeRoles 的输出。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelModifyRoleRequest"/></param>
+        /// <returns><see cref="ChannelModifyRoleResponse"/></returns>
+        public async Task<ChannelModifyRoleResponse> ChannelModifyRole(ChannelModifyRoleRequest req)
+        {
+             JsonResponseModel<ChannelModifyRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelModifyRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelModifyRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ChannelModifyRole）用来更新企业自定义角色。
+        /// 
+        /// 适用场景1：更新当前企业的自定义角色的名称或描述等其他信息，更新时不进行权限的设置（PermissionGroups 参数不传）。
+        /// 
+        /// 适用场景2：更新当前企业的自定义角色的权限信息，更新时进行权限的设置（PermissionGroups 参数要传），权限树内容 PermissionGroups 可参考接口 ChannelDescribeRoles 的输出。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelModifyRoleRequest"/></param>
+        /// <returns><see cref="ChannelModifyRoleResponse"/></returns>
+        public ChannelModifyRoleResponse ChannelModifyRoleSync(ChannelModifyRoleRequest req)
+        {
+             JsonResponseModel<ChannelModifyRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelModifyRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelModifyRoleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

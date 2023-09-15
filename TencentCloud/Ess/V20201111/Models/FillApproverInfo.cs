@@ -25,7 +25,10 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 对应模板中的参与方ID
+        /// 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
+        /// 模板发起合同时，该参数为必填项。
+        /// 文件发起合同是，该参数无需传值。
+        /// 如果开发者后序用合同模板发起合同，建议保存此值，在用合同模板发起合同中需此值绑定对应的签署经办人 。
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
@@ -39,20 +42,20 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverSource{ get; set; }
 
         /// <summary>
-        /// 企业自定义账号ID
-        /// <br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企微明文的userid
+        /// 企业微信UserId
+        /// <br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企业微信的UserId
         /// </summary>
         [JsonProperty("CustomUserId")]
         public string CustomUserId{ get; set; }
 
         /// <summary>
-        /// 补充签署人姓名
+        /// 补充企业签署人员工姓名
         /// </summary>
         [JsonProperty("ApproverName")]
         public string ApproverName{ get; set; }
 
         /// <summary>
-        /// 补充签署人手机号
+        /// 补充企业签署人员工手机号
         /// </summary>
         [JsonProperty("ApproverMobile")]
         public string ApproverMobile{ get; set; }

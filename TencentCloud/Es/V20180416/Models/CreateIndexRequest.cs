@@ -43,7 +43,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// 创建的索引元数据JSON，如mappings、settings
+        /// 【必填】创建的索引元数据JSON，如mappings、settings
         /// </summary>
         [JsonProperty("IndexMetaJson")]
         public string IndexMetaJson{ get; set; }

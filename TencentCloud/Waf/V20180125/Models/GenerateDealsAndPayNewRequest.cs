@@ -15,21 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextGenerationChoices : AbstractModel
+    public class GenerateDealsAndPayNewRequest : AbstractModel
     {
         
         /// <summary>
-        /// 内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 计费下单入参
         /// </summary>
-        [JsonProperty("Message")]
-        public TextGenerationMessage Message{ get; set; }
+        [JsonProperty("Goods")]
+        public GoodNews[] Goods{ get; set; }
 
 
         /// <summary>
@@ -37,7 +36,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Message.", this.Message);
+            this.SetParamArrayObj(map, prefix + "Goods.", this.Goods);
         }
     }
 }

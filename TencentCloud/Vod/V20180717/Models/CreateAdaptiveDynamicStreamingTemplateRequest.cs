@@ -56,7 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>SimpleAES</li>
         /// <li>Widevine</li>
         /// <li>FairPlay</li>
-        /// 如果取值为空字符串，代表不对视频做 DRM 保护。
+        /// 默认值为空字符串，如果取值为空字符串，代表不对视频做 DRM 保护。
         /// </summary>
         [JsonProperty("DrmType")]
         public string DrmType{ get; set; }

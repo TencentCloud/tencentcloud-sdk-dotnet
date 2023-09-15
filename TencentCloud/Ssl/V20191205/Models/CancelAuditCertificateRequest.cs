@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Ssl.V20191205.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextGenerationUsage : AbstractModel
+    public class CancelAuditCertificateRequest : AbstractModel
     {
         
         /// <summary>
-        /// 输入tokens数量
+        /// 证书ID
         /// </summary>
-        [JsonProperty("PromptTokens")]
-        public long? PromptTokens{ get; set; }
-
-        /// <summary>
-        /// 输出tokens数量
-        /// </summary>
-        [JsonProperty("CompletionTokens")]
-        public long? CompletionTokens{ get; set; }
-
-        /// <summary>
-        /// 总token数量
-        /// </summary>
-        [JsonProperty("TotalTokens")]
-        public long? TotalTokens{ get; set; }
+        [JsonProperty("CertificateId")]
+        public string CertificateId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PromptTokens", this.PromptTokens);
-            this.SetParamSimple(map, prefix + "CompletionTokens", this.CompletionTokens);
-            this.SetParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
+            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
         }
     }
 }

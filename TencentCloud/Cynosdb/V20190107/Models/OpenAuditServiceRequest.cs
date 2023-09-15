@@ -49,10 +49,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
         /// <summary>
-        /// 规则模版ID。同AuditRuleFilters都不填是全审计。
+        /// 规则模板ID。同AuditRuleFilters都不填是全审计。
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
+
+        /// <summary>
+        /// 审计类型。true-全审计；默认false-规则审计。
+        /// </summary>
+        [JsonProperty("AuditAll")]
+        public bool? AuditAll{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "HighLogExpireDay", this.HighLogExpireDay);
             this.SetParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
             this.SetParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
+            this.SetParamSimple(map, prefix + "AuditAll", this.AuditAll);
         }
     }
 }

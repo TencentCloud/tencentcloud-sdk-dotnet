@@ -853,7 +853,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// 重启ES集群实例(用于系统版本更新等操作) 
+        /// 重启ES集群实例(用于系统版本更新等操作)
         /// </summary>
         /// <param name="req"><see cref="RestartInstanceRequest"/></param>
         /// <returns><see cref="RestartInstanceResponse"/></returns>
@@ -873,7 +873,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// 重启ES集群实例(用于系统版本更新等操作) 
+        /// 重启ES集群实例(用于系统版本更新等操作)
         /// </summary>
         /// <param name="req"><see cref="RestartInstanceRequest"/></param>
         /// <returns><see cref="RestartInstanceResponse"/></returns>
@@ -893,7 +893,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// 重启Kibana 
+        /// 重启Kibana
         /// </summary>
         /// <param name="req"><see cref="RestartKibanaRequest"/></param>
         /// <returns><see cref="RestartKibanaResponse"/></returns>
@@ -913,7 +913,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// 重启Kibana 
+        /// 重启Kibana
         /// </summary>
         /// <param name="req"><see cref="RestartKibanaRequest"/></param>
         /// <returns><see cref="RestartKibanaResponse"/></returns>

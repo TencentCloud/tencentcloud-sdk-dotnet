@@ -45,6 +45,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("RoleStatus")]
         public ulong? RoleStatus{ get; set; }
 
+        /// <summary>
+        /// 权限树
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PermissionGroups")]
+        public PermissionGroup[] PermissionGroups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamSimple(map, prefix + "RoleStatus", this.RoleStatus);
+            this.SetParamArrayObj(map, prefix + "PermissionGroups.", this.PermissionGroups);
         }
     }
 }

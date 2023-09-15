@@ -2747,6 +2747,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 计费资源购买、续费下单接口
+        /// </summary>
+        /// <param name="req"><see cref="GenerateDealsAndPayNewRequest"/></param>
+        /// <returns><see cref="GenerateDealsAndPayNewResponse"/></returns>
+        public async Task<GenerateDealsAndPayNewResponse> GenerateDealsAndPayNew(GenerateDealsAndPayNewRequest req)
+        {
+             JsonResponseModel<GenerateDealsAndPayNewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenerateDealsAndPayNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateDealsAndPayNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 计费资源购买、续费下单接口
+        /// </summary>
+        /// <param name="req"><see cref="GenerateDealsAndPayNewRequest"/></param>
+        /// <returns><see cref="GenerateDealsAndPayNewResponse"/></returns>
+        public GenerateDealsAndPayNewResponse GenerateDealsAndPayNewSync(GenerateDealsAndPayNewRequest req)
+        {
+             JsonResponseModel<GenerateDealsAndPayNewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateDealsAndPayNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateDealsAndPayNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询下载攻击日志任务记录列表
         /// </summary>
         /// <param name="req"><see cref="GetAttackDownloadRecordsRequest"/></param>

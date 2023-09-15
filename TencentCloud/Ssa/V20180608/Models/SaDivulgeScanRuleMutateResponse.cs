@@ -15,28 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Ssa.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextGenerationMessage : AbstractModel
+    public class SaDivulgeScanRuleMutateResponse : AbstractModel
     {
         
         /// <summary>
-        /// 角色支持 system, user, assistant。默认为user。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Data
         /// </summary>
-        [JsonProperty("Role")]
-        public string Role{ get; set; }
+        [JsonProperty("Data")]
+        public SaDivulgeScanRuleSetList Data{ get; set; }
 
         /// <summary>
-        /// 消息的内容。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +42,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Role", this.Role);
-            this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

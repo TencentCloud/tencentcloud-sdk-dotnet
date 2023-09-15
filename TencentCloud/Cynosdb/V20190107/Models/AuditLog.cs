@@ -150,6 +150,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("NsTime")]
         public long? NsTime{ get; set; }
 
+        /// <summary>
+        /// 日志命中规则模板的基本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TemplateInfo")]
+        public LogRuleTemplateInfo[] TemplateInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -176,6 +183,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "LockWaitTime", this.LockWaitTime);
             this.SetParamSimple(map, prefix + "TrxLivingTime", this.TrxLivingTime);
             this.SetParamSimple(map, prefix + "NsTime", this.NsTime);
+            this.SetParamArrayObj(map, prefix + "TemplateInfo.", this.TemplateInfo);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.848</VersionPrefix>
+    <VersionPrefix>3.0.849</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -154,8 +154,6 @@
     <Compile Include="V20201111\Models\DescribeIntegrationDepartmentsResponse.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationEmployeesRequest.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationEmployeesResponse.cs" />
-    <Compile Include="V20201111\Models\DescribeIntegrationMainOrganizationUserRequest.cs" />
-    <Compile Include="V20201111\Models\DescribeIntegrationMainOrganizationUserResponse.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationRolesRequest.cs" />
     <Compile Include="V20201111\Models\DescribeIntegrationRolesResponse.cs" />
     <Compile Include="V20201111\Models\DescribeOrganizationGroupOrganizationsRequest.cs" />
@@ -193,7 +191,6 @@
     <Compile Include="V20201111\Models\HasAuthUser.cs" />
     <Compile Include="V20201111\Models\IntegrateRole.cs" />
     <Compile Include="V20201111\Models\IntegrationDepartment.cs" />
-    <Compile Include="V20201111\Models\IntegrationMainOrganizationUser.cs" />
     <Compile Include="V20201111\Models\ModifyApplicationCallbackInfoRequest.cs" />
     <Compile Include="V20201111\Models\ModifyApplicationCallbackInfoResponse.cs" />
     <Compile Include="V20201111\Models\ModifyIntegrationDepartmentRequest.cs" />

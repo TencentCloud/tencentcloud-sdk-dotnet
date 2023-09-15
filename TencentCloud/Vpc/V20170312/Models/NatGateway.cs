@@ -154,6 +154,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NatProductVersion")]
         public ulong? NatProductVersion{ get; set; }
 
+        /// <summary>
+        /// 是否启用根据目的网段选择SNAT使用的EIP功能	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SmartScheduleMode")]
+        public bool? SmartScheduleMode{ get; set; }
+
+        /// <summary>
+        /// NAT实例归属的专属集群id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -180,6 +194,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
             this.SetParamSimple(map, prefix + "RestrictState", this.RestrictState);
             this.SetParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
+            this.SetParamSimple(map, prefix + "SmartScheduleMode", this.SmartScheduleMode);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         }
     }
 }

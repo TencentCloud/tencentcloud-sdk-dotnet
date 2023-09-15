@@ -32,25 +32,25 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// WEB嵌入资源类型。
-        /// <br/>CREATE_SEAL: 生成创建印章的嵌入页面
-        /// <br/>CREATE_TEMPLATE：生成创建模板的嵌入页面
-        /// <br/>MODIFY_TEMPLATE：生成编辑模板的嵌入页面
-        /// <br/>PREVIEW_TEMPLATE：生成预览模板的嵌入页面
-        /// <br/>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面
-        /// <br/>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面
-        /// <br/>EXTEND_SERVICE：生成拓展服务的嵌入页面
-        /// <br/>PREVIEW_FLOW：生成预览合同的嵌入页面
-        /// <br/>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面
+        /// WEB嵌入资源类型，支持以下类型
+        /// <ul><li>CREATE_SEAL: 生成创建印章的嵌入页面</li>
+        /// <li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
+        /// <li>MODIFY_TEMPLATE：生成编辑模板的嵌入页面</li>
+        /// <li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
+        /// <li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
+        /// <li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
+        /// <li>EXTEND_SERVICE：生成拓展服务的嵌入页面</li>
+        /// <li>PREVIEW_FLOW：生成预览合同的嵌入页面</li>
+        /// <li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面</li></ul>
         /// </summary>
         [JsonProperty("EmbedType")]
         public string EmbedType{ get; set; }
 
         /// <summary>
         /// WEB嵌入的业务资源ID
-        /// <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-        /// <br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
-        /// <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
+        /// <ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
+        /// <li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
+        /// <li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li><ul>
         /// </summary>
         [JsonProperty("BusinessId")]
         public string BusinessId{ get; set; }

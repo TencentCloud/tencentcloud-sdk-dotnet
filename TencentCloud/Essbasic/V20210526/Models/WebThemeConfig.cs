@@ -25,16 +25,17 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 页面底部是否显示电子签logo
-        /// <br/>true：允许在页面底部隐藏电子签logo 
-        /// <br/>默认false，不允许允许在页面底部隐藏电子签logo
+        /// 是否显示页面底部电子签logo，取值如下：
+        /// <ul><li> **true**：页面底部显示电子签logo</li>
+        /// <li> **false**：页面底部不显示电子签logo（默认）</li></ul>
         /// </summary>
         [JsonProperty("DisplaySignBrandLogo")]
         public bool? DisplaySignBrandLogo{ get; set; }
 
         /// <summary>
-        /// 嵌入式主题颜色
-        /// <br/>支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+        /// 主题颜色：
+        /// 支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+        /// <br/>
         /// </summary>
         [JsonProperty("WebEmbedThemeColor")]
         public string WebEmbedThemeColor{ get; set; }
