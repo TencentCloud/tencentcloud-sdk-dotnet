@@ -25,27 +25,27 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 员工数据列表
+        /// 员工信息列表。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Employees")]
         public Staff[] Employees{ get; set; }
 
         /// <summary>
-        /// 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
+        /// 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 指定每页多少条数据，单页最大20
+        /// 指定分页每页返回的数据条数，单页最大支持 20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 符合条件的员工数量
+        /// 符合条件的员工数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

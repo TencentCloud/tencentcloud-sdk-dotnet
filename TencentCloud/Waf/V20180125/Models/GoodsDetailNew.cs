@@ -32,7 +32,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 单位，支持m、y、d
+        /// 单位，支持购买d、m、y 即（日、月、年）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeUnit")]
@@ -40,12 +40,18 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 子产品标签,。新购，续费必传，变配时放在oldConfig newConfig里面
-        /// 高级版 ：sp_wsm_waf_premium
-        /// 企业版 ：sp_wsm_waf_enterprise
-        /// 旗舰版 ：sp_wsm_waf_ultimate
+        /// 
+        /// Saas 高级版 ：sp_wsm_waf_premium
+        /// Saas企业版 ：sp_wsm_waf_enterprise
+        /// Saas旗舰版 ：sp_wsm_waf_ultimate
+        /// Saas 业务扩展包：sp_wsm_waf_qpsep
+        /// Saas 域名扩展包：sp_wsm_waf_domain
+        /// 
         /// 高级版-CLB:sp_wsm_waf_premium_clb
         /// 企业版-CLB : sp_wsm_waf_enterprise_clb
         /// 旗舰版-CLB:sp_wsm_waf_ultimate_clb
+        ///  业务扩展包-CLB：sp_wsm_waf_qpsep_clb
+        /// 域名扩展包-CLB：sp_wsm_waf_domain_clb
         /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -57,9 +63,13 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 高级版 ：1000827
         /// 企业版 ：1000830
         /// 旗舰版 ：1000832
+        /// 域名包 : 1000834
+        /// 业务扩展包 : 1000481
         /// 高级版-CLB:1001150
         /// 企业版-CLB : 1001152
         /// 旗舰版-CLB:1001154
+        /// 域名包-CLB: 1001156
+        /// 业务扩展包-CLB : 1001160
         /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -89,6 +99,24 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 计费细项标签数组
+        /// Saas 高级版  sv_wsm_waf_package_premium 
+        /// Saas 企业版  sv_wsm_waf_package_enterprise
+        /// Saas 旗舰版  sv_wsm_waf_package_ultimate 
+        /// Saas 非中国大陆高级版  sv_wsm_waf_package_premium_intl
+        /// Saas 非中国大陆企业版   sv_wsm_waf_package_enterprise_intl
+        /// Saas 非中国大陆旗舰版  sv_wsm_waf_package_ultimate _intl
+        /// Saas 业务扩展包  sv_wsm_waf_qps_ep
+        /// Saas 域名扩展包  sv_wsm_waf_domain
+        /// 
+        /// 高级版CLB   sv_wsm_waf_package_premium_clb
+        /// 企业版CLB  sv_wsm_waf_package_enterprise_clb
+        /// 旗舰版CLB   sv_wsm_waf_package_ultimate_clb
+        /// 非中国大陆高级版 CLB sv_wsm_waf_package_premium_clb_intl
+        /// 非中国大陆企业版CLB   sv_wsm_waf_package_premium_clb_intl
+        /// 非中国大陆旗舰版CLB  sv_wsm_waf_package_ultimate_clb _intl
+        /// 业务扩展包CLB sv_wsm_waf_qps_ep_clb
+        /// 域名扩展包CLB  sv_wsm_waf_domain_clb
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelTypes")]

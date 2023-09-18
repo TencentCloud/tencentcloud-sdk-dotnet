@@ -855,7 +855,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// waf斯巴达-删除防护域名
+        /// SAASWAF删除防护域名
         /// </summary>
         /// <param name="req"><see cref="DeleteSpartaProtectionRequest"/></param>
         /// <returns><see cref="DeleteSpartaProtectionResponse"/></returns>
@@ -875,7 +875,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// waf斯巴达-删除防护域名
+        /// SAASWAF删除防护域名
         /// </summary>
         /// <param name="req"><see cref="DeleteSpartaProtectionRequest"/></param>
         /// <returns><see cref="DeleteSpartaProtectionResponse"/></returns>
@@ -3700,6 +3700,166 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "ModifyHostStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例的QPS弹性计费开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceElasticModeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceElasticModeResponse"/></returns>
+        public async Task<ModifyInstanceElasticModeResponse> ModifyInstanceElasticMode(ModifyInstanceElasticModeRequest req)
+        {
+             JsonResponseModel<ModifyInstanceElasticModeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceElasticMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceElasticModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例的QPS弹性计费开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceElasticModeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceElasticModeResponse"/></returns>
+        public ModifyInstanceElasticModeResponse ModifyInstanceElasticModeSync(ModifyInstanceElasticModeRequest req)
+        {
+             JsonResponseModel<ModifyInstanceElasticModeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceElasticMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceElasticModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例的名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNameRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNameResponse"/></returns>
+        public async Task<ModifyInstanceNameResponse> ModifyInstanceName(ModifyInstanceNameRequest req)
+        {
+             JsonResponseModel<ModifyInstanceNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例的名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNameRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNameResponse"/></returns>
+        public ModifyInstanceNameResponse ModifyInstanceNameSync(ModifyInstanceNameRequest req)
+        {
+             JsonResponseModel<ModifyInstanceNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置套餐实例的弹性qps上限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceQpsLimitRequest"/></param>
+        /// <returns><see cref="ModifyInstanceQpsLimitResponse"/></returns>
+        public async Task<ModifyInstanceQpsLimitResponse> ModifyInstanceQpsLimit(ModifyInstanceQpsLimitRequest req)
+        {
+             JsonResponseModel<ModifyInstanceQpsLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceQpsLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceQpsLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置套餐实例的弹性qps上限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceQpsLimitRequest"/></param>
+        /// <returns><see cref="ModifyInstanceQpsLimitResponse"/></returns>
+        public ModifyInstanceQpsLimitResponse ModifyInstanceQpsLimitSync(ModifyInstanceQpsLimitRequest req)
+        {
+             JsonResponseModel<ModifyInstanceQpsLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceQpsLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceQpsLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例的自动续费开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyInstanceRenewFlagResponse"/></returns>
+        public async Task<ModifyInstanceRenewFlagResponse> ModifyInstanceRenewFlag(ModifyInstanceRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyInstanceRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例的自动续费开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyInstanceRenewFlagResponse"/></returns>
+        public ModifyInstanceRenewFlagResponse ModifyInstanceRenewFlagSync(ModifyInstanceRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyInstanceRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceRenewFlagResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

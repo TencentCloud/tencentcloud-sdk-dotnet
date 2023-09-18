@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 部门id
+        /// 部门ID。
         /// </summary>
         [JsonProperty("DepartmentId")]
         public string DepartmentId{ get; set; }
 
         /// <summary>
-        /// 部门名称
+        /// 部门名称。
         /// </summary>
         [JsonProperty("DepartmentName")]
         public string DepartmentName{ get; set; }

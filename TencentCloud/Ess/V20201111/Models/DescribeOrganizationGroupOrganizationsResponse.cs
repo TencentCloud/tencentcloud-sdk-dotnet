@@ -25,14 +25,14 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 查询到的符合条件的成员企业总数量
+        /// 符合查询条件的资源实例总数量。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 已授权待激活的企业数量
+        /// 已授权待激活的子企业总数量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JoinedTotal")]
@@ -61,7 +61,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public GroupOrganization[] List{ get; set; }
 
         /// <summary>
-        /// 已加入的企业数量
+        /// 已加入的子企业总数量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivatedTotal")]

@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 部门列表
+        /// 部门信息列表。部门信息根据部门排序号OrderNo降序排列，根据部门创建时间升序排列。
         /// </summary>
         [JsonProperty("Departments")]
         public IntegrationDepartment[] Departments{ get; set; }

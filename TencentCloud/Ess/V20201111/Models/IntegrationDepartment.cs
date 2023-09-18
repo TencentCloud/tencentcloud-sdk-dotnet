@@ -25,14 +25,14 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 部门ID
+        /// 部门ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeptId")]
         public string DeptId{ get; set; }
 
         /// <summary>
-        /// 部门名
+        /// 部门名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeptName")]
@@ -53,7 +53,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string DeptOpenId{ get; set; }
 
         /// <summary>
-        /// 序列号
+        /// 序列号。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderNo")]

@@ -78,6 +78,14 @@ namespace TencentCloud.Tat.V20201028.Models
         public string DefaultParameters{ get; set; }
 
         /// <summary>
+        /// 自定义参数数组。
+        /// 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+        /// 自定义参数最多20个。
+        /// </summary>
+        [JsonProperty("DefaultParameterConfs")]
+        public DefaultParameterConf[] DefaultParameterConfs{ get; set; }
+
+        /// <summary>
         /// 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
         /// 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
         /// </summary>
@@ -113,6 +121,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+            this.SetParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);
             this.SetParamSimple(map, prefix + "OutputCOSKeyPrefix", this.OutputCOSKeyPrefix);

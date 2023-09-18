@@ -61,7 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ConnectionPoolTimeOut{ get; set; }
 
         /// <summary>
-        /// 安全组ID数组
+        /// 绑定的安全组ID数组
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// vip信息
+        /// 想要绑定的vip信息，需与UniqueVpcId对应。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
@@ -92,7 +92,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AutoAddRo{ get; set; }
 
         /// <summary>
-        /// 是否开启故障转移
+        /// 是否开启故障转移。
+        /// yes：开启
+        /// no：不开启。
+        /// 数据库代理出现故障时，链接地址将会路由到主实例
         /// </summary>
         [JsonProperty("FailOver")]
         public string FailOver{ get; set; }
@@ -112,13 +115,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string RwType{ get; set; }
 
         /// <summary>
-        /// 一致性超时时间
+        /// 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
         /// </summary>
         [JsonProperty("ConsistencyTimeOut")]
         public long? ConsistencyTimeOut{ get; set; }
 
         /// <summary>
-        /// 事务拆分
+        /// 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }

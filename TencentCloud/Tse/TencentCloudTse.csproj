@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.849</VersionPrefix>
+    <VersionPrefix>3.0.850</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,7 @@
     <Compile Include="V20201207\Models\AutoScalerPolicy.cs" />
     <Compile Include="V20201207\Models\AutoScalerRules.cs" />
     <Compile Include="V20201207\Models\BoundK8SInfo.cs" />
+    <Compile Include="V20201207\Models\CertificateInfo.cs" />
     <Compile Include="V20201207\Models\CloudAPIGatewayCanaryRuleList.cs" />
     <Compile Include="V20201207\Models\CloudNativeAPIGatewayBalancedService.cs" />
     <Compile Include="V20201207\Models\CloudNativeAPIGatewayCanaryRule.cs" />
@@ -69,6 +70,8 @@
     <Compile Include="V20201207\Models\CloudNativeAPIGatewayVpcConfig.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCanaryRuleRequest.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCanaryRuleResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCertificateRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCertificateResponse.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRequest.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayResponse.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayResult.cs" />
@@ -87,6 +90,8 @@
     <Compile Include="V20201207\Models\CreateNativeGatewayServerGroupResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCanaryRuleRequest.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCanaryRuleResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCertificateRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCertificateResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRequest.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayResult.cs" />
@@ -105,6 +110,10 @@
     <Compile Include="V20201207\Models\DeleteNativeGatewayServerGroupResult.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCanaryRulesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCanaryRulesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCertificateDetailsRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCertificateDetailsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCertificatesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCertificatesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigResult.cs" />
@@ -156,6 +165,9 @@
     <Compile Include="V20201207\Models\InternetConfig.cs" />
     <Compile Include="V20201207\Models\KVMapping.cs" />
     <Compile Include="V20201207\Models\KVPair.cs" />
+    <Compile Include="V20201207\Models\KongCertificate.cs" />
+    <Compile Include="V20201207\Models\KongCertificatesList.cs" />
+    <Compile Include="V20201207\Models\KongCertificatesPreview.cs" />
     <Compile Include="V20201207\Models\KongRoutePreview.cs" />
     <Compile Include="V20201207\Models\KongServiceDetail.cs" />
     <Compile Include="V20201207\Models\KongServicePreview.cs" />
@@ -189,6 +201,8 @@
     <Compile Include="V20201207\Models\RateLimitResponse.cs" />
     <Compile Include="V20201207\Models\SREInstance.cs" />
     <Compile Include="V20201207\Models\ServiceGovernanceInfo.cs" />
+    <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewayCertificateInfoRequest.cs" />
+    <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewayCertificateInfoResponse.cs" />
     <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewayResult.cs" />
     <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewaySpecRequest.cs" />
     <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewaySpecResponse.cs" />

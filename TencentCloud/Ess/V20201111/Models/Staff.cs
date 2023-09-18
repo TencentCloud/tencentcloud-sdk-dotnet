@@ -25,100 +25,102 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 用户在电子签平台的id
-        /// 注：创建和更新场景无需填写
+        /// 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+        /// 注：`创建和更新场景无需填写。`
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 显示的用户名/昵称
+        /// 显示的用户名/昵称。
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// 用户手机号
+        /// 用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 用户邮箱
+        /// 用户邮箱。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// 用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
+        /// 用户在第三方平台ID。
+        /// 注：`如需在此接口提醒员工实名，该参数不传。`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
-        /// 员工角色
-        /// 注：创建和更新场景无需填写
+        /// 员工角色信息。
+        /// 注：`创建和更新场景无需填写。`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Roles")]
         public StaffRole[] Roles{ get; set; }
 
         /// <summary>
-        /// 员工部门
+        /// 员工部门信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Department")]
         public Department Department{ get; set; }
 
         /// <summary>
-        /// 员工是否实名
-        /// 注：创建和更新场景无需填写
+        /// 员工是否实名。
+        /// 注：`创建和更新场景无需填写。`
         /// </summary>
         [JsonProperty("Verified")]
         public bool? Verified{ get; set; }
 
         /// <summary>
-        /// 员工创建时间戳，单位秒
-        /// 注：创建和更新场景无需填写
+        /// 员工创建时间戳，单位秒。
+        /// 注：`创建和更新场景无需填写。`
         /// </summary>
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
 
         /// <summary>
-        /// 员工实名时间戳，单位秒
-        /// 注：创建和更新场景无需填写
+        /// 员工实名时间戳，单位秒。
+        /// 注：`创建和更新场景无需填写。`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifiedOn")]
         public long? VerifiedOn{ get; set; }
 
         /// <summary>
-        /// 员工是否离职：0-未离职，1-离职
-        /// 注：创建和更新场景无需填写
+        /// 员工是否离职：
+        /// <ul><li>**0**：未离职</li><li>**1**：离职</li></ul>
+        /// 注：`创建和更新场景无需填写。`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuiteJob")]
         public long? QuiteJob{ get; set; }
 
         /// <summary>
-        /// 员工离职交接人用户id
-        /// 注：创建和更新场景无需填写
+        /// 员工离职交接人用户ID。
+        /// 注：`创建和更新场景无需填写。`
         /// </summary>
         [JsonProperty("ReceiveUserId")]
         public string ReceiveUserId{ get; set; }
 
         /// <summary>
-        /// 员工离职交接人用户OpenId
-        /// 注：创建和更新场景无需填写
+        /// 员工离职交接人用户OpenId。
+        /// 注：`创建和更新场景无需填写。`
         /// </summary>
         [JsonProperty("ReceiveOpenId")]
         public string ReceiveOpenId{ get; set; }
 
         /// <summary>
-        /// 企业微信用户账号ID
-        /// 注：仅企微类型的企业创建员工接口支持该字段
+        /// 企业微信用户账号ID。
+        /// 注：`仅企微类型的企业创建员工接口支持该字段。`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WeworkOpenId")]

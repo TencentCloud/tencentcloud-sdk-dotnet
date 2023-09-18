@@ -43,12 +43,6 @@ namespace TencentCloud.Batch.V20170312.Models
         public string[] HostIds{ get; set; }
 
         /// <summary>
-        /// 指定母机IP生产子机
-        /// </summary>
-        [JsonProperty("HostIps")]
-        public string[] HostIps{ get; set; }
-
-        /// <summary>
         /// 实例所属的专用宿主机ID，仅用于出参。
         /// </summary>
         [JsonProperty("HostId")]
@@ -63,7 +57,6 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArraySimple(map, prefix + "HostIds.", this.HostIds);
-            this.SetParamArraySimple(map, prefix + "HostIps.", this.HostIps);
             this.SetParamSimple(map, prefix + "HostId", this.HostId);
         }
     }

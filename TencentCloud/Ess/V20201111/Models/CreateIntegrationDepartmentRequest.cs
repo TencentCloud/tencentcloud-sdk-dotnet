@@ -32,38 +32,39 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 部门名称，不超过50个字符
+        /// 部门名称，最大长度为50个字符。
         /// </summary>
         [JsonProperty("DeptName")]
         public string DeptName{ get; set; }
 
         /// <summary>
-        /// 代理企业和员工的信息。
-        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 电子签父部门ID，与ParentDeptOpenId二选一,优先ParentDeptId,都为空时自动填充至根节点下
+        /// 电子签父部门ID。
+        /// 注：`如果同时指定了ParentDeptId与ParentDeptOpenId参数，系统将优先使用ParentDeptId。当二者都未指定时，创建的新部门将自动填充至根节点部门下。`
         /// </summary>
         [JsonProperty("ParentDeptId")]
         public string ParentDeptId{ get; set; }
 
         /// <summary>
-        /// 第三方平台中父部门ID,与ParentDeptId二选一,优先ParentDeptId,都为空时自动填充至根节点下
+        /// 第三方平台中父部门ID。
+        /// 注：`如果同时指定了ParentDeptId与ParentDeptOpenId参数，系统将优先使用ParentDeptId。当二者都未指定时，创建的新部门将自动填充至根节点部门下。`
         /// </summary>
         [JsonProperty("ParentDeptOpenId")]
         public string ParentDeptOpenId{ get; set; }
 
         /// <summary>
-        /// 客户系统部门ID，不超过64个字符
+        /// 客户系统部门ID，最大长度为64个字符。
         /// </summary>
         [JsonProperty("DeptOpenId")]
         public string DeptOpenId{ get; set; }
 
         /// <summary>
-        /// 排序号,1~30000范围内
+        /// 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
         /// </summary>
         [JsonProperty("OrderNo")]
         public ulong? OrderNo{ get; set; }

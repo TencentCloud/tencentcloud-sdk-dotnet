@@ -25,7 +25,8 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 绑定是否成功，1表示成功，0表示失败
+        /// 绑定是否成功。
+        /// <ul><li>**0**：失败</li><li>**1**：成功</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

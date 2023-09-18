@@ -25,7 +25,9 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 员工删除数据
+        /// 员工删除结果。包含成功数据与失败数据。
+        /// <ul><li>**成功数据**：展示员工姓名、手机号与电子签平台UserId</li>
+        /// <li>**失败数据**：展示员工电子签平台UserId、第三方平台OpenId和失败原因</li></ul>
         /// </summary>
         [JsonProperty("DeleteEmployeeResult")]
         public DeleteStaffsResult DeleteEmployeeResult{ get; set; }

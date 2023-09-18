@@ -43,7 +43,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ConsistencyType{ get; set; }
 
         /// <summary>
-        /// 一致性超时时间
+        /// 一致性超时时间。
+        /// 取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
         /// </summary>
         [JsonProperty("ConsistencyTimeOut")]
         public string ConsistencyTimeOut{ get; set; }
@@ -55,7 +56,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// 实例只读权重
+        /// 实例只读权重。
+        /// 该参数必填。
         /// </summary>
         [JsonProperty("InstanceWeights")]
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }
@@ -73,7 +75,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AutoAddRo{ get; set; }
 
         /// <summary>
-        /// 是否打开读写分离
+        /// 是否打开读写分离。
+        /// 该参数已废弃，请通过RwType设置读写属性。
         /// </summary>
         [JsonProperty("OpenRw")]
         public string OpenRw{ get; set; }
@@ -86,7 +89,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string RwType{ get; set; }
 
         /// <summary>
-        /// 事务拆分
+        /// 事务拆分。
+        /// 在一个事务中拆分读和写到不同的实例上去执行。
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
@@ -113,7 +117,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// 连接池时间
+        /// 连接池时间。
+        /// 可选范围:0~300（秒）
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }

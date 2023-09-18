@@ -79,6 +79,14 @@ namespace TencentCloud.Tat.V20201028.Models
         public string DefaultParameters{ get; set; }
 
         /// <summary>
+        /// 自定义参数数组。
+        /// 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+        /// 自定义参数最多20个。
+        /// </summary>
+        [JsonProperty("DefaultParameterConfs")]
+        public DefaultParameterConf[] DefaultParameterConfs{ get; set; }
+
+        /// <summary>
         /// 为命令关联的标签，列表长度不超过10。
         /// </summary>
         [JsonProperty("Tags")]
@@ -120,6 +128,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+            this.SetParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);

@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 电子签部门ID
+        /// 电子签部门ID。建议开发者保存此部门ID，方便后续查询或修改部门信息。
         /// </summary>
         [JsonProperty("DeptId")]
         public string DeptId{ get; set; }

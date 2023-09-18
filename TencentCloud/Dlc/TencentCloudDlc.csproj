@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.849</VersionPrefix>
+    <VersionPrefix>3.0.850</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -135,8 +135,12 @@
     <Compile Include="V20210125\Models\DataEngineInfo.cs" />
     <Compile Include="V20210125\Models\DataFormat.cs" />
     <Compile Include="V20210125\Models\DataGovernPolicy.cs" />
+    <Compile Include="V20210125\Models\DataSourceInfo.cs" />
     <Compile Include="V20210125\Models\DatabaseInfo.cs" />
     <Compile Include="V20210125\Models\DatabaseResponseInfo.cs" />
+    <Compile Include="V20210125\Models\DatasourceConnectionConfig.cs" />
+    <Compile Include="V20210125\Models\DatasourceConnectionInfo.cs" />
+    <Compile Include="V20210125\Models\DatasourceConnectionLocation.cs" />
     <Compile Include="V20210125\Models\DeleteNotebookSessionRequest.cs" />
     <Compile Include="V20210125\Models\DeleteNotebookSessionResponse.cs" />
     <Compile Include="V20210125\Models\DeleteScriptRequest.cs" />
@@ -161,6 +165,8 @@
     <Compile Include="V20210125\Models\DescribeDataEnginesResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeDatasourceConnectionRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeDatasourceConnectionResponse.cs" />
     <Compile Include="V20210125\Models\DescribeEngineUsageInfoRequest.cs" />
     <Compile Include="V20210125\Models\DescribeEngineUsageInfoResponse.cs" />
     <Compile Include="V20210125\Models\DescribeForbiddenTableProRequest.cs" />
@@ -221,12 +227,17 @@
     <Compile Include="V20210125\Models\DropDMSPartitionsResponse.cs" />
     <Compile Include="V20210125\Models\DropDMSTableRequest.cs" />
     <Compile Include="V20210125\Models\DropDMSTableResponse.cs" />
+    <Compile Include="V20210125\Models\ElasticsearchInfo.cs" />
     <Compile Include="V20210125\Models\Execution.cs" />
     <Compile Include="V20210125\Models\Filter.cs" />
     <Compile Include="V20210125\Models\GenerateCreateMangedTableSqlRequest.cs" />
     <Compile Include="V20210125\Models\GenerateCreateMangedTableSqlResponse.cs" />
+    <Compile Include="V20210125\Models\HiveInfo.cs" />
+    <Compile Include="V20210125\Models\IpPortPair.cs" />
     <Compile Include="V20210125\Models\JobLogResult.cs" />
     <Compile Include="V20210125\Models\KVPair.cs" />
+    <Compile Include="V20210125\Models\KafkaInfo.cs" />
+    <Compile Include="V20210125\Models\KerberosInfo.cs" />
     <Compile Include="V20210125\Models\ListTaskJobLogDetailRequest.cs" />
     <Compile Include="V20210125\Models\ListTaskJobLogDetailResponse.cs" />
     <Compile Include="V20210125\Models\LockComponentInfo.cs" />
@@ -242,12 +253,14 @@
     <Compile Include="V20210125\Models\ModifyUserResponse.cs" />
     <Compile Include="V20210125\Models\ModifyWorkGroupRequest.cs" />
     <Compile Include="V20210125\Models\ModifyWorkGroupResponse.cs" />
+    <Compile Include="V20210125\Models\MysqlInfo.cs" />
     <Compile Include="V20210125\Models\NetworkConnection.cs" />
     <Compile Include="V20210125\Models\NotebookSessionInfo.cs" />
     <Compile Include="V20210125\Models\NotebookSessionStatementBatchInformation.cs" />
     <Compile Include="V20210125\Models\NotebookSessionStatementInfo.cs" />
     <Compile Include="V20210125\Models\NotebookSessions.cs" />
     <Compile Include="V20210125\Models\Other.cs" />
+    <Compile Include="V20210125\Models\OtherDatasourceConnection.cs" />
     <Compile Include="V20210125\Models\Partition.cs" />
     <Compile Include="V20210125\Models\Policy.cs" />
     <Compile Include="V20210125\Models\PrestoMonitorMetrics.cs" />

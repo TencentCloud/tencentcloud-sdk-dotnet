@@ -37,13 +37,15 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string RollbackStrategy{ get; set; }
 
         /// <summary>
-        /// 回档ID
+        /// 备份文件ID。
+        /// 回档策略为按备份文件回档时必填。
         /// </summary>
         [JsonProperty("RollbackId")]
         public ulong? RollbackId{ get; set; }
 
         /// <summary>
-        /// 期望回档时间
+        /// 期望回档时间。
+        /// 回档策略为timeRollback按时间点回档时必填。
         /// </summary>
         [JsonProperty("ExpectTime")]
         public string ExpectTime{ get; set; }

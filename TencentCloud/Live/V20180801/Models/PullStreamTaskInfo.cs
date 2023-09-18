@@ -256,6 +256,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("RecordTemplateId")]
         public string RecordTemplateId{ get; set; }
 
+        /// <summary>
+        /// 新增的推流地址。用于单任务推两路场景。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupToUrl")]
+        public string BackupToUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -290,6 +297,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
             this.SetParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
             this.SetParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
+            this.SetParamSimple(map, prefix + "BackupToUrl", this.BackupToUrl);
         }
     }
 }

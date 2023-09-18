@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// 用户传入的手机号
+        /// 用户传入的手机号，明文展示
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
@@ -43,7 +43,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Reason{ get; set; }
 
         /// <summary>
-        /// 用户Id
+        /// 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+        /// 可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

@@ -32,7 +32,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 超管手机号
+        /// 超管手机号，打码显示
+        /// 示例值：138****1569
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mobile")]

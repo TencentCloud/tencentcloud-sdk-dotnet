@@ -32,7 +32,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
+        /// 电子签中的部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口可获得。
         /// </summary>
         [JsonProperty("DeptId")]
         public string DeptId{ get; set; }
@@ -45,7 +45,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
+        /// 交接部门ID。
+        /// 待删除部门中的合同、印章和模板数据，将会被交接至该部门ID下；若未填写则交接至公司根部门。
         /// </summary>
         [JsonProperty("ReceiveDeptId")]
         public string ReceiveDeptId{ get; set; }

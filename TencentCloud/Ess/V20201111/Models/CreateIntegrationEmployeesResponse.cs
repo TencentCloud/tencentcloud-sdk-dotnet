@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 创建员工的结果
+        /// 创建员工的结果。包含创建成功的数据与创建失败数据。
         /// </summary>
         [JsonProperty("CreateEmployeeResult")]
         public CreateStaffResult CreateEmployeeResult{ get; set; }

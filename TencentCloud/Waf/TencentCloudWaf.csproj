@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.849</VersionPrefix>
+    <VersionPrefix>3.0.850</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -283,6 +283,14 @@
     <Compile Include="V20180125\Models\ModifyHostResponse.cs" />
     <Compile Include="V20180125\Models\ModifyHostStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyHostStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyInstanceElasticModeRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyInstanceElasticModeResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyInstanceNameRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyInstanceNameResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyInstanceQpsLimitRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyInstanceQpsLimitResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyInstanceRenewFlagRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyInstanceRenewFlagResponse.cs" />
     <Compile Include="V20180125\Models\ModifyProtectionStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyProtectionStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifySpartaProtectionModeRequest.cs" />

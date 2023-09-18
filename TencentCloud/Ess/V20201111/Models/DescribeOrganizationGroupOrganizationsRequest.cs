@@ -25,19 +25,20 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 操作人信息，userId必填
+        /// 执行本接口操作的员工信息,userId必填。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 指定每页多少条数据，单页最大1000
+        /// 指定分页每页返回的数据条数，单页最大1000
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0
+        /// 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -49,19 +50,27 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
+        /// 成员企业加入集团的当前状态
+        /// <ul><li> **1**：待授权</li>
+        /// <li> **2**：已授权待激活</li>
+        /// <li> **3**：拒绝授权</li>
+        /// <li> **4**：已解除</li>
+        /// <li> **5**：已加入</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 是否导出当前成员企业数据
+        /// <ul><li> **false**：不导出（默认值）</li>
+        /// <li> **true**：导出</li></ul>
         /// </summary>
         [JsonProperty("Export")]
         public bool? Export{ get; set; }
 
         /// <summary>
-        /// 成员企业机构 ID，在PC控制台 集团管理可获取
+        /// 成员企业机构 ID，32 位字符串，在PC控制台 集团管理可获取
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

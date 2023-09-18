@@ -1933,6 +1933,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（DescribeDatasourceConnection）用于查询数据源信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatasourceConnectionRequest"/></param>
+        /// <returns><see cref="DescribeDatasourceConnectionResponse"/></returns>
+        public async Task<DescribeDatasourceConnectionResponse> DescribeDatasourceConnection(DescribeDatasourceConnectionRequest req)
+        {
+             JsonResponseModel<DescribeDatasourceConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatasourceConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatasourceConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDatasourceConnection）用于查询数据源信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatasourceConnectionRequest"/></param>
+        /// <returns><see cref="DescribeDatasourceConnectionResponse"/></returns>
+        public DescribeDatasourceConnectionResponse DescribeDatasourceConnectionSync(DescribeDatasourceConnectionRequest req)
+        {
+             JsonResponseModel<DescribeDatasourceConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatasourceConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatasourceConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口根据引擎ID查询数据引擎资源使用情况
         /// </summary>
         /// <param name="req"><see cref="DescribeEngineUsageInfoRequest"/></param>

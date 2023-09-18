@@ -32,7 +32,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
+        /// 电子签部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
         /// </summary>
         [JsonProperty("DeptId")]
         public string DeptId{ get; set; }
@@ -45,25 +45,25 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
+        /// 电子签父部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
         /// </summary>
         [JsonProperty("ParentDeptId")]
         public string ParentDeptId{ get; set; }
 
         /// <summary>
-        /// 部门名称，不超过50个字符
+        /// 部门名称，最大长度为50个字符。
         /// </summary>
         [JsonProperty("DeptName")]
         public string DeptName{ get; set; }
 
         /// <summary>
-        /// 客户系统部门ID，不超过64个字符
+        /// 客户系统部门ID，最大长度为64个字符。
         /// </summary>
         [JsonProperty("DeptOpenId")]
         public string DeptOpenId{ get; set; }
 
         /// <summary>
-        /// 排序号,1~30000范围内
+        /// 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
         /// </summary>
         [JsonProperty("OrderNo")]
         public ulong? OrderNo{ get; set; }

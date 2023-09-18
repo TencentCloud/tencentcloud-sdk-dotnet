@@ -96,6 +96,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("PublicIpFromSameZone")]
         public bool? PublicIpFromSameZone{ get; set; }
 
+        /// <summary>
+        /// NAT网关大版本号，1是传统型，2是标准型，默认是1
+        /// </summary>
+        [JsonProperty("NatProductVersion")]
+        public ulong? NatProductVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "StockPublicIpAddressesBandwidthOut", this.StockPublicIpAddressesBandwidthOut);
             this.SetParamSimple(map, prefix + "PublicIpAddressesBandwidthOut", this.PublicIpAddressesBandwidthOut);
             this.SetParamSimple(map, prefix + "PublicIpFromSameZone", this.PublicIpFromSameZone);
+            this.SetParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
         }
     }
 }

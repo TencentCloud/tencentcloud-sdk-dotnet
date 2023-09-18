@@ -32,7 +32,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
+        /// 查询类型，支持以下类型：
+        /// <ul><li>**0**：查询单个部门节点列表，不包含子节点部门信息</li>
+        /// <li>**1**：查询单个部门节点级一级子节点部门信息列表</li></ul>
         /// </summary>
         [JsonProperty("QueryType")]
         public ulong? QueryType{ get; set; }
@@ -45,13 +47,15 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
+        /// 查询的部门ID。
+        /// 注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
         /// </summary>
         [JsonProperty("DeptId")]
         public string DeptId{ get; set; }
 
         /// <summary>
-        /// 客户系统部门ID,与DeptId二选一,优先DeptId,都为空时获取根节点数据
+        /// 查询的客户系统部门ID。
+        /// 注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
         /// </summary>
         [JsonProperty("DeptOpenId")]
         public string DeptOpenId{ get; set; }

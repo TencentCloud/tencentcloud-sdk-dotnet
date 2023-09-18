@@ -67,6 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>ArchiveBulkRetrieval：归档批量取回量。</li>
         /// <li>DeepArchiveStandardRetrieval：深度归档标准取回量。</li>
         /// <li>DeepArchiveBulkRetrieval：深度归档批量取回量。</li>
+        /// <li>InfrequentRetrieval：低频存储取回量。</li>
         /// 默认值为 TotalStorage。
         /// </summary>
         [JsonProperty("StorageType")]

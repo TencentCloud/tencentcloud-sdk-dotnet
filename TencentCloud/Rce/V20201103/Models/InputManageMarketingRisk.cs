@@ -25,7 +25,15 @@ namespace TencentCloud.Rce.V20201103.Models
     {
         
         /// <summary>
-        /// 账号信息。
+        /// 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
+        /// 信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
+        /// 开放账号）： 
+        /// 1：QQ 开放账号。 
+        /// 2：微信开放账号。 
+        /// 4：手机号（暂仅支持国内手机号）。 
+        /// 8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
+        /// 0： 其他。 
+        /// 10004：手机号 MD5。
         /// </summary>
         [JsonProperty("Account")]
         public AccountInfo Account{ get; set; }
@@ -131,9 +139,12 @@ namespace TencentCloud.Rce.V20201103.Models
         public string VendorId{ get; set; }
 
         /// <summary>
-        /// 设备类型：
-        /// 1：Android
-        /// 2：IOS
+        /// 设备类型，账号类型为8时必填： 
+        /// 0:未知 
+        /// 1:Imei;国际移动设备识别号（15-17位数字） 
+        /// 2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
+        /// 3:Idfa; 
+        /// 4:IdfaMD5;
         /// </summary>
         [JsonProperty("DeviceType")]
         public long? DeviceType{ get; set; }
@@ -157,7 +168,10 @@ namespace TencentCloud.Rce.V20201103.Models
         public OnlineScamInfo OnlineScam{ get; set; }
 
         /// <summary>
-        /// 平台: 1android
+        /// 1：安卓
+        /// 2：iOS 
+        /// 3：H5 
+        /// 4：小程序 
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }

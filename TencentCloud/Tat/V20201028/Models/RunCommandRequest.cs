@@ -31,7 +31,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 待执行命令的实例ID列表，上限100。支持实例类型：
+        /// 待执行命令的实例ID列表，上限200。支持实例类型：
         /// <li> CVM
         /// <li> LIGHTHOUSE
         /// </summary>
@@ -70,9 +70,9 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 是否保存命令，取值范围：
-        /// <li> True：保存
-        /// <li> False：不保存
-        /// 默认为 False。
+        /// <li> true：保存
+        /// <li> false：不保存
+        /// 默认为 false。
         /// </summary>
         [JsonProperty("SaveCommand")]
         public bool? SaveCommand{ get; set; }
@@ -80,6 +80,9 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// 是否启用自定义参数功能。
         /// 一旦创建，此值不提供修改。
+        /// 取值范围：
+        /// <li> true：启用
+        /// <li> false：不启用
         /// 默认值：false。
         /// </summary>
         [JsonProperty("EnableParameter")]
@@ -94,6 +97,12 @@ namespace TencentCloud.Tat.V20201028.Models
         /// </summary>
         [JsonProperty("DefaultParameters")]
         public string DefaultParameters{ get; set; }
+
+        /// <summary>
+        /// 自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。
+        /// </summary>
+        [JsonProperty("DefaultParameterConfs")]
+        public DefaultParameterConf[] DefaultParameterConfs{ get; set; }
 
         /// <summary>
         /// Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
@@ -149,6 +158,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "SaveCommand", this.SaveCommand);
             this.SetParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+            this.SetParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
             this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Username", this.Username);

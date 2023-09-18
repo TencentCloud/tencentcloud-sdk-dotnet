@@ -133,6 +133,46 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 创建云原生网关证书
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayCertificateRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayCertificateResponse"/></returns>
+        public async Task<CreateCloudNativeAPIGatewayCertificateResponse> CreateCloudNativeAPIGatewayCertificate(CreateCloudNativeAPIGatewayCertificateRequest req)
+        {
+             JsonResponseModel<CreateCloudNativeAPIGatewayCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCloudNativeAPIGatewayCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建云原生网关证书
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayCertificateRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayCertificateResponse"/></returns>
+        public CreateCloudNativeAPIGatewayCertificateResponse CreateCloudNativeAPIGatewayCertificateSync(CreateCloudNativeAPIGatewayCertificateRequest req)
+        {
+             JsonResponseModel<CreateCloudNativeAPIGatewayCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCloudNativeAPIGatewayCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建云原生网关路由
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayRouteRequest"/></param>
@@ -453,6 +493,46 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 删除云原生网关证书
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayCertificateRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayCertificateResponse"/></returns>
+        public async Task<DeleteCloudNativeAPIGatewayCertificateResponse> DeleteCloudNativeAPIGatewayCertificate(DeleteCloudNativeAPIGatewayCertificateRequest req)
+        {
+             JsonResponseModel<DeleteCloudNativeAPIGatewayCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCloudNativeAPIGatewayCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除云原生网关证书
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayCertificateRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayCertificateResponse"/></returns>
+        public DeleteCloudNativeAPIGatewayCertificateResponse DeleteCloudNativeAPIGatewayCertificateSync(DeleteCloudNativeAPIGatewayCertificateRequest req)
+        {
+             JsonResponseModel<DeleteCloudNativeAPIGatewayCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCloudNativeAPIGatewayCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除云原生网关路由
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayRouteRequest"/></param>
@@ -764,6 +844,86 @@ namespace TencentCloud.Tse.V20201207
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayCanaryRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayCanaryRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询云原生网关单个证书详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayCertificateDetailsRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayCertificateDetailsResponse"/></returns>
+        public async Task<DescribeCloudNativeAPIGatewayCertificateDetailsResponse> DescribeCloudNativeAPIGatewayCertificateDetails(DescribeCloudNativeAPIGatewayCertificateDetailsRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayCertificateDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayCertificateDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayCertificateDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询云原生网关单个证书详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayCertificateDetailsRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayCertificateDetailsResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayCertificateDetailsResponse DescribeCloudNativeAPIGatewayCertificateDetailsSync(DescribeCloudNativeAPIGatewayCertificateDetailsRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayCertificateDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayCertificateDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayCertificateDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询云原生网关证书列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayCertificatesRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayCertificatesResponse"/></returns>
+        public async Task<DescribeCloudNativeAPIGatewayCertificatesResponse> DescribeCloudNativeAPIGatewayCertificates(DescribeCloudNativeAPIGatewayCertificatesRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayCertificatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayCertificates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayCertificatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询云原生网关证书列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayCertificatesRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayCertificatesResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayCertificatesResponse DescribeCloudNativeAPIGatewayCertificatesSync(DescribeCloudNativeAPIGatewayCertificatesRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayCertificatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayCertificates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayCertificatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1684,6 +1844,46 @@ namespace TencentCloud.Tse.V20201207
              {
                  var strResp = this.InternalRequestSync(req, "ModifyNativeGatewayServerGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNativeGatewayServerGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改云原生网关证书信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCloudNativeAPIGatewayCertificateInfoRequest"/></param>
+        /// <returns><see cref="UpdateCloudNativeAPIGatewayCertificateInfoResponse"/></returns>
+        public async Task<UpdateCloudNativeAPIGatewayCertificateInfoResponse> UpdateCloudNativeAPIGatewayCertificateInfo(UpdateCloudNativeAPIGatewayCertificateInfoRequest req)
+        {
+             JsonResponseModel<UpdateCloudNativeAPIGatewayCertificateInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateCloudNativeAPIGatewayCertificateInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCloudNativeAPIGatewayCertificateInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改云原生网关证书信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCloudNativeAPIGatewayCertificateInfoRequest"/></param>
+        /// <returns><see cref="UpdateCloudNativeAPIGatewayCertificateInfoResponse"/></returns>
+        public UpdateCloudNativeAPIGatewayCertificateInfoResponse UpdateCloudNativeAPIGatewayCertificateInfoSync(UpdateCloudNativeAPIGatewayCertificateInfoRequest req)
+        {
+             JsonResponseModel<UpdateCloudNativeAPIGatewayCertificateInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateCloudNativeAPIGatewayCertificateInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCloudNativeAPIGatewayCertificateInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

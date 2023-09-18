@@ -52,19 +52,19 @@ namespace TencentCloud.Iss.V20230517.Models
         /// 要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量）
         /// </summary>
         [JsonProperty("Add")]
-        public string Add{ get; set; }
+        public ChannelInfo[] Add{ get; set; }
 
         /// <summary>
         /// 要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
         /// </summary>
         [JsonProperty("Del")]
-        public string Del{ get; set; }
+        public string[] Del{ get; set; }
 
         /// <summary>
         /// 添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
         /// </summary>
         [JsonProperty("OrganizationId")]
-        public string OrganizationId{ get; set; }
+        public string[] OrganizationId{ get; set; }
 
 
         /// <summary>
@@ -76,9 +76,9 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "Describe", this.Describe);
             this.SetParamObj(map, prefix + "LifeCycle.", this.LifeCycle);
-            this.SetParamSimple(map, prefix + "Add", this.Add);
-            this.SetParamSimple(map, prefix + "Del", this.Del);
-            this.SetParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
+            this.SetParamArrayObj(map, prefix + "Add.", this.Add);
+            this.SetParamArraySimple(map, prefix + "Del.", this.Del);
+            this.SetParamArraySimple(map, prefix + "OrganizationId.", this.OrganizationId);
         }
     }
 }

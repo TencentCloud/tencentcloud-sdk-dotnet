@@ -25,19 +25,21 @@ namespace TencentCloud.Rce.V20201103.Models
     {
         
         /// <summary>
-        /// 是否授权
+        /// 是否授权：1已授权，否则未授权。
+        ///  调用全栈式风控引擎接口服务时，客户需先明确授权
+        /// 
         /// </summary>
         [JsonProperty("IsAuthorized")]
         public string IsAuthorized{ get; set; }
 
         /// <summary>
-        /// 加密类型
+        /// 加密类型：1AES加密
         /// </summary>
         [JsonProperty("CryptoType")]
         public string CryptoType{ get; set; }
 
         /// <summary>
-        /// 加密内容
+        /// 加密内容，非空时接口采用加密模式。
         /// </summary>
         [JsonProperty("CryptoContent")]
         public string CryptoContent{ get; set; }

@@ -39,21 +39,28 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 成员企业id
+        /// 成员企业id，为 32 位字符串，可在电子签PC 控制台，企业设置->企业电子签账号 获取
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrganizationId")]
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// 更新时间，时间戳，单位秒
+        /// 记录更新时间， unix时间戳，单位秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
+        /// 成员企业加入集团的当前状态
+        /// <ul><li> **1**：待授权</li>
+        /// <li> **2**：已授权待激活</li>
+        /// <li> **3**：拒绝授权</li>
+        /// <li> **4**：已解除</li>
+        /// <li> **5**：已加入</li>
+        /// </ul>
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -81,28 +88,30 @@ namespace TencentCloud.Ess.V20201111.Models
         public Admin AdminInfo{ get; set; }
 
         /// <summary>
-        /// 企业许可证
+        /// 企业许可证Id，此字段暂时不需要关注
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("License")]
         public string License{ get; set; }
 
         /// <summary>
-        /// 企业许可证过期时间，时间戳，单位秒
+        /// 企业许可证过期时间，unix时间戳，单位秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseExpireTime")]
         public ulong? LicenseExpireTime{ get; set; }
 
         /// <summary>
-        /// 成员企业加入集团时间，时间戳，单位秒
+        /// 成员企业加入集团时间，unix时间戳，单位秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JoinTime")]
         public ulong? JoinTime{ get; set; }
 
         /// <summary>
-        /// 是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
+        /// 是否使用自建审批流引擎（即不是企微审批流引擎）
+        /// <ul><li> **true**：是</li>
+        /// <li> **false**：否</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowEngineEnable")]

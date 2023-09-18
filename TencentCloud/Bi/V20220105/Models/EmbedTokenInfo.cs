@@ -101,6 +101,20 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 使用者企业Id(仅用于多用户)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserCorpId")]
+        public string UserCorpId{ get; set; }
+
+        /// <summary>
+        /// 使用者Id(仅用于多用户)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +132,8 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
             this.SetParamSimple(map, prefix + "Scope", this.Scope);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "UserCorpId", this.UserCorpId);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }
