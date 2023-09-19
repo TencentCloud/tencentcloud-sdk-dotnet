@@ -43,7 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string MainDomain{ get; set; }
 
         /// <summary>
-        /// waf模式，同saas waf保持一致
+        /// 规则引擎防护模式，0 观察模式，1拦截模式
         /// </summary>
         [JsonProperty("Mode")]
         public ulong? Mode{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? State{ get; set; }
 
         /// <summary>
-        /// 使用的规则，同saas waf保持一致
+        /// 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
         /// </summary>
         [JsonProperty("Engine")]
         public ulong? Engine{ get; set; }
@@ -137,6 +137,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("EngineType")]
         public long? EngineType{ get; set; }
 
+        /// <summary>
+        /// 云类型:public:公有云；private:私有云;hybrid:混合云
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudType")]
+        public string CloudType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +168,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "AlbType", this.AlbType);
             this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
+            this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
         }
     }
 }

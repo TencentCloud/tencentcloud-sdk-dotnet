@@ -53,6 +53,46 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// 追加与私有域关联的VPC
+        /// </summary>
+        /// <param name="req"><see cref="AddSpecifyPrivateZoneVpcRequest"/></param>
+        /// <returns><see cref="AddSpecifyPrivateZoneVpcResponse"/></returns>
+        public async Task<AddSpecifyPrivateZoneVpcResponse> AddSpecifyPrivateZoneVpc(AddSpecifyPrivateZoneVpcRequest req)
+        {
+             JsonResponseModel<AddSpecifyPrivateZoneVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddSpecifyPrivateZoneVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSpecifyPrivateZoneVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 追加与私有域关联的VPC
+        /// </summary>
+        /// <param name="req"><see cref="AddSpecifyPrivateZoneVpcRequest"/></param>
+        /// <returns><see cref="AddSpecifyPrivateZoneVpcResponse"/></returns>
+        public AddSpecifyPrivateZoneVpcResponse AddSpecifyPrivateZoneVpcSync(AddSpecifyPrivateZoneVpcRequest req)
+        {
+             JsonResponseModel<AddSpecifyPrivateZoneVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddSpecifyPrivateZoneVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSpecifyPrivateZoneVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建私有域解析账号
         /// </summary>
         /// <param name="req"><see cref="CreatePrivateDNSAccountRequest"/></param>
@@ -324,6 +364,46 @@ namespace TencentCloud.Privatedns.V20201028
              {
                  var strResp = this.InternalRequestSync(req, "DeletePrivateZoneRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrivateZoneRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除与私有域关联的VPC
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSpecifyPrivateZoneVpcRequest"/></param>
+        /// <returns><see cref="DeleteSpecifyPrivateZoneVpcResponse"/></returns>
+        public async Task<DeleteSpecifyPrivateZoneVpcResponse> DeleteSpecifyPrivateZoneVpc(DeleteSpecifyPrivateZoneVpcRequest req)
+        {
+             JsonResponseModel<DeleteSpecifyPrivateZoneVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSpecifyPrivateZoneVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSpecifyPrivateZoneVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除与私有域关联的VPC
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSpecifyPrivateZoneVpcRequest"/></param>
+        /// <returns><see cref="DeleteSpecifyPrivateZoneVpcResponse"/></returns>
+        public DeleteSpecifyPrivateZoneVpcResponse DeleteSpecifyPrivateZoneVpcSync(DeleteSpecifyPrivateZoneVpcRequest req)
+        {
+             JsonResponseModel<DeleteSpecifyPrivateZoneVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSpecifyPrivateZoneVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSpecifyPrivateZoneVpcResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

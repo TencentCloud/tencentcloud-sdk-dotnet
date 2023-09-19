@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.850</VersionPrefix>
+    <VersionPrefix>3.0.851</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -171,6 +171,26 @@
     <Compile Include="V20190612\Models\ClassificationConfigureInfo.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ColorEnhanceConfig.cs" />
+    <Compile Include="V20190612\Models\ComposeAudioItem.cs" />
+    <Compile Include="V20190612\Models\ComposeAudioOperation.cs" />
+    <Compile Include="V20190612\Models\ComposeAudioStream.cs" />
+    <Compile Include="V20190612\Models\ComposeCanvas.cs" />
+    <Compile Include="V20190612\Models\ComposeEmptyItem.cs" />
+    <Compile Include="V20190612\Models\ComposeImageItem.cs" />
+    <Compile Include="V20190612\Models\ComposeImageOperation.cs" />
+    <Compile Include="V20190612\Models\ComposeMediaConfig.cs" />
+    <Compile Include="V20190612\Models\ComposeMediaItem.cs" />
+    <Compile Include="V20190612\Models\ComposeMediaTrack.cs" />
+    <Compile Include="V20190612\Models\ComposeSourceMedia.cs" />
+    <Compile Include="V20190612\Models\ComposeStyles.cs" />
+    <Compile Include="V20190612\Models\ComposeSubtitleItem.cs" />
+    <Compile Include="V20190612\Models\ComposeSubtitleStyle.cs" />
+    <Compile Include="V20190612\Models\ComposeTargetInfo.cs" />
+    <Compile Include="V20190612\Models\ComposeTrackTime.cs" />
+    <Compile Include="V20190612\Models\ComposeTransitionItem.cs" />
+    <Compile Include="V20190612\Models\ComposeTransitionOperation.cs" />
+    <Compile Include="V20190612\Models\ComposeVideoItem.cs" />
+    <Compile Include="V20190612\Models\ComposeVideoStream.cs" />
     <Compile Include="V20190612\Models\ContentReviewTemplateItem.cs" />
     <Compile Include="V20190612\Models\CosFileUploadTrigger.cs" />
     <Compile Include="V20190612\Models\CosInputInfo.cs" />
@@ -393,6 +413,13 @@
     <Compile Include="V20190612\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkTemplate.cs" />
     <Compile Include="V20190612\Models\InputAddress.cs" />
+    <Compile Include="V20190612\Models\LiveActivityResItem.cs" />
+    <Compile Include="V20190612\Models\LiveActivityResult.cs" />
+    <Compile Include="V20190612\Models\LiveRecordFile.cs" />
+    <Compile Include="V20190612\Models\LiveRecordResult.cs" />
+    <Compile Include="V20190612\Models\LiveRecordTaskInput.cs" />
+    <Compile Include="V20190612\Models\LiveScheduleLiveRecordTaskResult.cs" />
+    <Compile Include="V20190612\Models\LiveScheduleTask.cs" />
     <Compile Include="V20190612\Models\LiveStreamAiAnalysisResultInfo.cs" />
     <Compile Include="V20190612\Models\LiveStreamAiAnalysisResultItem.cs" />
     <Compile Include="V20190612\Models\LiveStreamAiQualityControlResultInfo.cs" />

@@ -25,28 +25,32 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方用户信息，userId 必填
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 签署流程编号
+        /// 合同流程ID，为32位字符串。
+        /// 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+        /// 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 企业内部审核结果
-        /// PASS: 通过 
-        /// REJECT: 拒绝
+        /// 企业审核结果
+        /// <ul><li>PASS: 通过</li> 
+        /// <li>REJECT: 拒绝</li></ul>
         /// </summary>
         [JsonProperty("ReviewType")]
         public string ReviewType{ get; set; }
 
         /// <summary>
-        /// 审核原因 
-        /// 当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
+        /// 审核结果原因，
+        /// 字符串长度不超过200
+        /// 当ReviewType 是拒绝（REJECT） 时此字段必填。
         /// </summary>
         [JsonProperty("ReviewMessage")]
         public string ReviewMessage{ get; set; }
@@ -58,21 +62,20 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
+        /// 审核签署节点人标识，
+        /// 用来标识审核的签署方。
+        /// 如果签署审核节点是个人， 此参数必填。
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
 
         /// <summary>
-        /// 操作类型：（接口通过该字段区分操作类型）
+        /// 操作类型：（接口通过该字段区分不同的操作类型）
         /// 
-        /// SignReview:签署审核
-        /// CreateReview:发起审核
+        /// <ul><li>SignReview: 签署审核（默认）</li>
+        /// <li>CreateReview: 创建审核</li></ul>
         /// 
-        /// 默认：SignReview；SignReview:签署审核
-        /// 
-        /// 该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-        /// 若发起个人审核，则指定该字段为：SignReview
+        /// 如果审核节点是个人，则操作类型只能为SignReview。
         /// </summary>
         [JsonProperty("OperateType")]
         public string OperateType{ get; set; }

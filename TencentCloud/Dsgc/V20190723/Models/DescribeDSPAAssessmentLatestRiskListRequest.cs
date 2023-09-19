@@ -96,6 +96,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("RiskSide")]
         public string[] RiskSide{ get; set; }
 
+        /// <summary>
+        /// ASC 正序，DESC倒叙
+        /// </summary>
+        [JsonProperty("TimeSort")]
+        public string TimeSort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
             this.SetParamArraySimple(map, prefix + "RiskSide.", this.RiskSide);
+            this.SetParamSimple(map, prefix + "TimeSort", this.TimeSort);
         }
     }
 }

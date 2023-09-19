@@ -217,7 +217,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] IpHeaders{ get; set; }
 
         /// <summary>
-        /// 0:关闭xff重置；1:开启xff重置
+        /// 0:关闭xff重置；1:开启xff重置，只有在IsCdn=0时可以开启
         /// </summary>
         [JsonProperty("XFFReset")]
         public long? XFFReset{ get; set; }

@@ -26,12 +26,14 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
         /// 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

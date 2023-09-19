@@ -92,6 +92,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("LoadBalancerType")]
         public string LoadBalancerType{ get; set; }
 
+        /// <summary>
+        /// 负载均衡的域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerDomain")]
+        public string LoadBalancerDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
             this.SetParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
+            this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
         }
     }
 }

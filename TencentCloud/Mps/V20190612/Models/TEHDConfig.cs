@@ -38,7 +38,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 不填或填0表示不设视频码率上限。
         /// </summary>
         [JsonProperty("MaxVideoBitrate")]
-        public ulong? MaxVideoBitrate{ get; set; }
+        public long? MaxVideoBitrate{ get; set; }
 
 
         /// <summary>

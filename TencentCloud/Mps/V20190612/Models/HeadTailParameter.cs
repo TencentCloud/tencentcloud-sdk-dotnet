@@ -26,12 +26,14 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 片头列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeadSet")]
         public MediaInputInfo[] HeadSet{ get; set; }
 
         /// <summary>
         /// 片尾列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TailSet")]
         public MediaInputInfo[] TailSet{ get; set; }

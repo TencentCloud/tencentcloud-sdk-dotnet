@@ -25,6 +25,12 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
+        /// 新名称
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
         /// 实例id
         /// </summary>
         [JsonProperty("InstanceID")]
@@ -42,6 +48,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
         }

@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string DataEngineName{ get; set; }
 
         /// <summary>
-        /// 运行sql
+        /// 运行sql，需要base64编码。
         /// </summary>
         [JsonProperty("ExecuteSQL")]
         public string ExecuteSQL{ get; set; }
@@ -87,7 +87,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public KVPair[] Arguments{ get; set; }
 
         /// <summary>
-        /// 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+        /// 是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
         /// </summary>
         [JsonProperty("IsInherit")]
         public long? IsInherit{ get; set; }

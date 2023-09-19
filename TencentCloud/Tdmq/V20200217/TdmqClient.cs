@@ -2853,6 +2853,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 接口用于查询RocketMQ实例的公网接入信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQPublicAccessPointRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQPublicAccessPointResponse"/></returns>
+        public async Task<DescribeRocketMQPublicAccessPointResponse> DescribeRocketMQPublicAccessPoint(DescribeRocketMQPublicAccessPointRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQPublicAccessPointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQPublicAccessPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQPublicAccessPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口用于查询RocketMQ实例的公网接入信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQPublicAccessPointRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQPublicAccessPointResponse"/></returns>
+        public DescribeRocketMQPublicAccessPointResponse DescribeRocketMQPublicAccessPointSync(DescribeRocketMQPublicAccessPointRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQPublicAccessPointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQPublicAccessPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQPublicAccessPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// rocketmq 消息查询
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQTopicMsgsRequest"/></param>
@@ -3404,6 +3444,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "ModifyEnvironmentRole");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnvironmentRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// RabbitMQ专享版修改公网管控台，vpc15672开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPublicNetworkAccessPointRequest"/></param>
+        /// <returns><see cref="ModifyPublicNetworkAccessPointResponse"/></returns>
+        public async Task<ModifyPublicNetworkAccessPointResponse> ModifyPublicNetworkAccessPoint(ModifyPublicNetworkAccessPointRequest req)
+        {
+             JsonResponseModel<ModifyPublicNetworkAccessPointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPublicNetworkAccessPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPublicNetworkAccessPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// RabbitMQ专享版修改公网管控台，vpc15672开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPublicNetworkAccessPointRequest"/></param>
+        /// <returns><see cref="ModifyPublicNetworkAccessPointResponse"/></returns>
+        public ModifyPublicNetworkAccessPointResponse ModifyPublicNetworkAccessPointSync(ModifyPublicNetworkAccessPointRequest req)
+        {
+             JsonResponseModel<ModifyPublicNetworkAccessPointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPublicNetworkAccessPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPublicNetworkAccessPointResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4248,6 +4328,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "SendRocketMQMessage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendRocketMQMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于开启关闭公网访问、设置安全访问策略
+        /// </summary>
+        /// <param name="req"><see cref="SetRocketMQPublicAccessPointRequest"/></param>
+        /// <returns><see cref="SetRocketMQPublicAccessPointResponse"/></returns>
+        public async Task<SetRocketMQPublicAccessPointResponse> SetRocketMQPublicAccessPoint(SetRocketMQPublicAccessPointRequest req)
+        {
+             JsonResponseModel<SetRocketMQPublicAccessPointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetRocketMQPublicAccessPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetRocketMQPublicAccessPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于开启关闭公网访问、设置安全访问策略
+        /// </summary>
+        /// <param name="req"><see cref="SetRocketMQPublicAccessPointRequest"/></param>
+        /// <returns><see cref="SetRocketMQPublicAccessPointResponse"/></returns>
+        public SetRocketMQPublicAccessPointResponse SetRocketMQPublicAccessPointSync(SetRocketMQPublicAccessPointRequest req)
+        {
+             JsonResponseModel<SetRocketMQPublicAccessPointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetRocketMQPublicAccessPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetRocketMQPublicAccessPointResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

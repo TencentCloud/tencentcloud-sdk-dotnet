@@ -96,6 +96,18 @@ namespace TencentCloud.Tts.V20190823.Models
         [JsonProperty("VoiceoverDialogueSplit")]
         public bool? VoiceoverDialogueSplit{ get; set; }
 
+        /// <summary>
+        /// 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+        /// </summary>
+        [JsonProperty("EmotionCategory")]
+        public string EmotionCategory{ get; set; }
+
+        /// <summary>
+        /// 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效。
+        /// </summary>
+        [JsonProperty("EmotionIntensity")]
+        public long? EmotionIntensity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "EnableSubtitle", this.EnableSubtitle);
             this.SetParamSimple(map, prefix + "VoiceoverDialogueSplit", this.VoiceoverDialogueSplit);
+            this.SetParamSimple(map, prefix + "EmotionCategory", this.EmotionCategory);
+            this.SetParamSimple(map, prefix + "EmotionIntensity", this.EmotionIntensity);
         }
     }
 }

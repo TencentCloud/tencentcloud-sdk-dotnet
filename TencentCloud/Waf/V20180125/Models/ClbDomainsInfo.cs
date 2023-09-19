@@ -100,6 +100,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("CdcClusters")]
         public string CdcClusters{ get; set; }
 
+        /// <summary>
+        /// 云类型:public:公有云；private:私有云;hybrid:混合云
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudType")]
+        public string CloudType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "AlbType", this.AlbType);
             this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
             this.SetParamSimple(map, prefix + "CdcClusters", this.CdcClusters);
+            this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
         }
     }
 }

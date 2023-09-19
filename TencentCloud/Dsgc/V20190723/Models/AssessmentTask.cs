@@ -31,6 +31,14 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string TaskId{ get; set; }
 
         /// <summary>
+        /// 评估任务的自增ID
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskUid")]
+        public long? TaskUid{ get; set; }
+
+        /// <summary>
         /// 评估任务名称
         /// </summary>
         [JsonProperty("TaskName")]
@@ -128,6 +136,20 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("ErrorInfo")]
         public string ErrorInfo{ get; set; }
 
+        /// <summary>
+        /// 模版主键id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TemplateUid")]
+        public long? TemplateUid{ get; set; }
+
+        /// <summary>
+        /// 进度百分比
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProgressPercent")]
+        public long? ProgressPercent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +157,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "TaskUid", this.TaskUid);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "BusinessName", this.BusinessName);
             this.SetParamSimple(map, prefix + "BusinessDept", this.BusinessDept);
@@ -151,6 +174,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamArrayObj(map, prefix + "RiskCountInfoList.", this.RiskCountInfoList);
             this.SetParamObj(map, prefix + "DiscoveryCondition.", this.DiscoveryCondition);
             this.SetParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
+            this.SetParamSimple(map, prefix + "TemplateUid", this.TemplateUid);
+            this.SetParamSimple(map, prefix + "ProgressPercent", this.ProgressPercent);
         }
     }
 }

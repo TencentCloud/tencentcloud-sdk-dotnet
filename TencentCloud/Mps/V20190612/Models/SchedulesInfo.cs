@@ -38,6 +38,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ScheduleName{ get; set; }
 
         /// <summary>
+        /// 编排类型，可选值：
+        ///  <li>Preset：系统预置编排；</li>
+        /// <li>Custom：用户自定义编排。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// 编排状态，取值范围：
         /// Enabled：已启用，
         /// Disabled：已禁用。
@@ -103,6 +112,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
             this.SetParamSimple(map, prefix + "ScheduleName", this.ScheduleName);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Trigger.", this.Trigger);
             this.SetParamArrayObj(map, prefix + "Activities.", this.Activities);

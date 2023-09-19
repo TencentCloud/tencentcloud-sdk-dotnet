@@ -27,7 +27,7 @@ namespace TencentCloud.Iai.V20200303.Models
         /// <summary>
         /// A 图片 base64 数据，base64 编码后大小不可超过5M。
         /// jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-        /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+        /// 若图片中包含多张人脸，只选取其中置信度最高的人脸。
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("ImageA")]
@@ -36,7 +36,7 @@ namespace TencentCloud.Iai.V20200303.Models
         /// <summary>
         /// B 图片 base64 数据，base64 编码后大小不可超过5M。
         /// jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-        /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+        /// 若图片中包含多张人脸，只选取其中置信度最高的人脸。
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("ImageB")]

@@ -100,6 +100,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("IsASMTemplate")]
         public bool? IsASMTemplate{ get; set; }
 
+        /// <summary>
+        /// 合规组id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IdentifyComplianceId")]
+        public long? IdentifyComplianceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "SupportDataSource.", this.SupportDataSource);
             this.SetParamSimple(map, prefix + "IsASMTemplate", this.IsASMTemplate);
+            this.SetParamSimple(map, prefix + "IdentifyComplianceId", this.IdentifyComplianceId);
         }
     }
 }

@@ -213,6 +213,46 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 创建企业组织
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationRequest"/></param>
+        /// <returns><see cref="CreateOrganizationResponse"/></returns>
+        public async Task<CreateOrganizationResponse> CreateOrganization(CreateOrganizationRequest req)
+        {
+             JsonResponseModel<CreateOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建企业组织
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationRequest"/></param>
+        /// <returns><see cref="CreateOrganizationResponse"/></returns>
+        public CreateOrganizationResponse CreateOrganizationSync(CreateOrganizationRequest req)
+        {
+             JsonResponseModel<CreateOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建组织成员
         /// </summary>
         /// <param name="req"><see cref="CreateOrganizationMemberRequest"/></param>
@@ -324,6 +364,46 @@ namespace TencentCloud.Organization.V20210331
              {
                  var strResp = this.InternalRequestSync(req, "CreateOrganizationMemberPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationMemberPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除企业组织
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationResponse"/></returns>
+        public async Task<DeleteOrganizationResponse> DeleteOrganization(DeleteOrganizationRequest req)
+        {
+             JsonResponseModel<DeleteOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除企业组织
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationResponse"/></returns>
+        public DeleteOrganizationResponse DeleteOrganizationSync(DeleteOrganizationRequest req)
+        {
+             JsonResponseModel<DeleteOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

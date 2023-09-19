@@ -149,6 +149,20 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("RiskSide")]
         public string RiskSide{ get; set; }
 
+        /// <summary>
+        /// API安全风险链接
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("APIRiskLinkURL")]
+        public string APIRiskLinkURL{ get; set; }
+
+        /// <summary>
+        /// 备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +187,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "IdentifyComplianceId", this.IdentifyComplianceId);
             this.SetParamSimple(map, prefix + "ItemSubType", this.ItemSubType);
             this.SetParamSimple(map, prefix + "RiskSide", this.RiskSide);
+            this.SetParamSimple(map, prefix + "APIRiskLinkURL", this.APIRiskLinkURL);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

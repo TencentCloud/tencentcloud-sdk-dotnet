@@ -145,6 +145,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("RiskSide")]
         public string RiskSide{ get; set; }
 
+        /// <summary>
+        /// 数据源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataSourceType")]
+        public string DataSourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +177,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamArrayObj(map, prefix + "SecurityProduct.", this.SecurityProduct);
             this.SetParamSimple(map, prefix + "RiskType", this.RiskType);
             this.SetParamSimple(map, prefix + "RiskSide", this.RiskSide);
+            this.SetParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
         }
     }
 }

@@ -26,24 +26,28 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// SQS 队列区域。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SQSRegion")]
         public string SQSRegion{ get; set; }
 
         /// <summary>
         /// SQS 队列名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SQSQueueName")]
         public string SQSQueueName{ get; set; }
 
         /// <summary>
         /// 读写SQS的秘钥id。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3SecretId")]
         public string S3SecretId{ get; set; }
 
         /// <summary>
         /// 读写SQS的秘钥key。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("S3SecretKey")]
         public string S3SecretKey{ get; set; }

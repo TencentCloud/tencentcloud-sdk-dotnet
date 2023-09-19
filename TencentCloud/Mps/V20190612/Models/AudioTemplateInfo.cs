@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 当取值为 0，表示音频码率和原始音频保持一致。
         /// </summary>
         [JsonProperty("Bitrate")]
-        public ulong? Bitrate{ get; set; }
+        public long? Bitrate{ get; set; }
 
         /// <summary>
         /// 音频流的采样率，可选值：

@@ -31,16 +31,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// 视频剪辑的起始时间偏移，单位：秒。
+        /// 【剪辑】任务生效，视频剪辑的起始时间偏移，单位：秒。
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 视频剪辑的结束时间偏移，单位：秒。
+        /// 【剪辑】任务生效，视频剪辑的结束时间偏移，单位：秒。
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
+
+        /// <summary>
+        /// 【合成】任务必选，用于轨道元素中媒体关联源素材 ID。
+        /// 
+        /// 注意：允许字母、数字、-、_ ，最长 32 字符
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
 
         /// <summary>
@@ -51,6 +60,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

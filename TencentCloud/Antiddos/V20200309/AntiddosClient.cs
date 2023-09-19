@@ -1733,6 +1733,8 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 接口变更
+        /// 
         /// 获取DDoS防护的IP黑白名单
         /// </summary>
         /// <param name="req"><see cref="DescribeBlackWhiteIpListRequest"/></param>
@@ -1753,6 +1755,8 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 接口变更
+        /// 
         /// 获取DDoS防护的IP黑白名单
         /// </summary>
         /// <param name="req"><see cref="DescribeBlackWhiteIpListRequest"/></param>
@@ -2693,6 +2697,8 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 接口变更
+        /// 
         /// 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等
         /// </summary>
         /// <param name="req"><see cref="DescribeListProtectThresholdConfigRequest"/></param>
@@ -2713,6 +2719,8 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 接口变更
+        /// 
         /// 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等
         /// </summary>
         /// <param name="req"><see cref="DescribeListProtectThresholdConfigRequest"/></param>

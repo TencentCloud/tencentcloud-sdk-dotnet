@@ -84,6 +84,16 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
+        /// <summary>
+        /// 直播编排ID。
+        /// 注意1：对于OutputStorage、OutputDir参数：
+        /// <li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
+        /// <li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若对直播流发起处理（ProcessLiveStream）有输出，将覆盖原有编排的默认输出。</li>
+        /// 注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessLiveStream）有设置，将覆盖原有编排的默认回调。
+        /// </summary>
+        [JsonProperty("ScheduleId")]
+        public long? ScheduleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +110,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         }
     }
 }

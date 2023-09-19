@@ -38,15 +38,25 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 媒体处理输出文件的目标路径。
+        /// 
+        /// 注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
-        /// 编辑后生成的文件配置。
+        /// 【剪辑】任务生成的文件配置。
         /// </summary>
         [JsonProperty("OutputConfig")]
         public EditMediaOutputConfig OutputConfig{ get; set; }
+
+        /// <summary>
+        /// 【合成】任务配置。
+        /// 
+        /// 注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。
+        /// </summary>
+        [JsonProperty("ComposeConfig")]
+        public ComposeMediaConfig ComposeConfig{ get; set; }
 
         /// <summary>
         /// 任务的事件通知信息，不填代表不获取事件通知。
@@ -82,6 +92,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+            this.SetParamObj(map, prefix + "ComposeConfig.", this.ComposeConfig);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);

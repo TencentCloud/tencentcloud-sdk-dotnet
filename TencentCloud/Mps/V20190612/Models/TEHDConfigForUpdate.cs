@@ -39,7 +39,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxVideoBitrate")]
-        public ulong? MaxVideoBitrate{ get; set; }
+        public long? MaxVideoBitrate{ get; set; }
 
 
         /// <summary>

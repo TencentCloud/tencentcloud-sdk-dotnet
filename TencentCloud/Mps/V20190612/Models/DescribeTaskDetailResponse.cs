@@ -121,6 +121,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public ScheduleTask ScheduleTask{ get; set; }
 
         /// <summary>
+        /// 直播编排处理任务信息，仅当 TaskType 为 LiveScheduleTask，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LiveScheduleTask")]
+        public LiveScheduleTask LiveScheduleTask{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -146,6 +153,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamObj(map, prefix + "ScheduleTask.", this.ScheduleTask);
+            this.SetParamObj(map, prefix + "LiveScheduleTask.", this.LiveScheduleTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

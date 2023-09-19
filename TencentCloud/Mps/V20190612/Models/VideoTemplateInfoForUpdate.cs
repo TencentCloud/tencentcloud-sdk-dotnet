@@ -42,7 +42,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Fps")]
-        public ulong? Fps{ get; set; }
+        public long? Fps{ get; set; }
 
         /// <summary>
         /// 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
@@ -50,7 +50,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bitrate")]
-        public ulong? Bitrate{ get; set; }
+        public long? Bitrate{ get; set; }
 
         /// <summary>
         /// 分辨率自适应，可选值：

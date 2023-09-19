@@ -81,6 +81,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Cls")]
         public ulong? Cls{ get; set; }
 
+        /// <summary>
+        /// 标记是否是混合云接入。hybrid表示混合云接入域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudType")]
+        public string CloudType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +103,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "WriteConfig", this.WriteConfig);
             this.SetParamSimple(map, prefix + "Cls", this.Cls);
+            this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
         }
     }
 }
