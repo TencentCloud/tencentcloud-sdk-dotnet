@@ -25,7 +25,9 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 电子印章编号
+        /// 电子印章ID，为32位字符串。
+        /// 建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+        /// 可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
         /// </summary>
         [JsonProperty("SealId")]
         public string SealId{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public FlowDetailInfo[] FlowDetailInfos{ get; set; }
 
         /// <summary>
-        /// 合同组ID
+        /// 合同组ID，为32位字符串
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }

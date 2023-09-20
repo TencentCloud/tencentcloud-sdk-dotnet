@@ -25,52 +25,56 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方员工/经办人信息
-        /// UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-        /// 注：请保证员工有相关的角色权限
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息
-        /// 如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 查询内容类型
-        /// 0-模板列表及详情（默认）
-        /// 1-仅模板列表
+        /// 查询内容控制
+        /// 
+        /// <ul><li>**0**：模板列表及详情（默认）</li>
+        /// <li>**1**：仅模板列表</li></ul>
         /// </summary>
         [JsonProperty("ContentType")]
         public long? ContentType{ get; set; }
 
         /// <summary>
         /// 搜索条件，本字段用于指定模板Id进行查询。
-        /// Key：template-id
-        /// Values：需要查询的模板Id列表
+        /// Key：template-id Values：需要查询的模板Id列表
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+        /// 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+        /// 
+        /// 注：`1.offset从0开始，即第一页为0。`
+        /// `2.默认从第一页返回。`
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 指定每页多少条数据，如果不传默认为20，单页最大200。
+        /// 指定每页返回的数据条数，和Offset参数配合使用。
+        /// 
+        /// 注：`1.默认值为20，单页做大值为200。`
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 用于查询指定应用号下单模板列表。
-        /// ApplicationId不为空，查询指定应用下的模板列表
-        /// ApplicationId为空，查询所有应用下的模板列表
+        /// 指定查询的应用号，指定后查询该应用号下的模板列表。
+        /// 
+        /// 注：`1.ApplicationId为空时，查询所有应用下的模板列表。`
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }

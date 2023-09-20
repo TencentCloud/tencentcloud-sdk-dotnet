@@ -1093,6 +1093,46 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 退出企业组织
+        /// </summary>
+        /// <param name="req"><see cref="QuitOrganizationRequest"/></param>
+        /// <returns><see cref="QuitOrganizationResponse"/></returns>
+        public async Task<QuitOrganizationResponse> QuitOrganization(QuitOrganizationRequest req)
+        {
+             JsonResponseModel<QuitOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QuitOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QuitOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 退出企业组织
+        /// </summary>
+        /// <param name="req"><see cref="QuitOrganizationRequest"/></param>
+        /// <returns><see cref="QuitOrganizationResponse"/></returns>
+        public QuitOrganizationResponse QuitOrganizationSync(QuitOrganizationRequest req)
+        {
+             JsonResponseModel<QuitOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QuitOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QuitOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新组织成员信息
         /// </summary>
         /// <param name="req"><see cref="UpdateOrganizationMemberRequest"/></param>

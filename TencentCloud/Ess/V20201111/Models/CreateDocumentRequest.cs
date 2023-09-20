@@ -60,6 +60,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 是否为预览模式，取值如下：
         /// <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
         /// <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+        /// 注: `当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
         /// </summary>
         [JsonProperty("NeedPreview")]
         public bool? NeedPreview{ get; set; }

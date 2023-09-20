@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 快速发起预览链接，有效期5分钟
+        /// 发起流程的web页面链接，有效期5分钟
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

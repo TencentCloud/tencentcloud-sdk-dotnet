@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 模板详情列表
+        /// 模板详情列表数据
         /// </summary>
         [JsonProperty("Templates")]
         public TemplateInfo[] Templates{ get; set; }
 
         /// <summary>
-        /// 查询到的总数
+        /// 查询到的模板总数
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

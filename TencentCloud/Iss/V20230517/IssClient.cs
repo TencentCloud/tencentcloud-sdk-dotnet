@@ -1859,6 +1859,48 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
+        /// 平台支持将数据以TS切片的形式存入客户自有COS桶，该接口用于支持客户快捷查询切片信息列表
+        /// （注意：只支持标准存储类型的查询）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordSliceRequest"/></param>
+        /// <returns><see cref="DescribeRecordSliceResponse"/></returns>
+        public async Task<DescribeRecordSliceResponse> DescribeRecordSlice(DescribeRecordSliceRequest req)
+        {
+             JsonResponseModel<DescribeRecordSliceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordSlice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordSliceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 平台支持将数据以TS切片的形式存入客户自有COS桶，该接口用于支持客户快捷查询切片信息列表
+        /// （注意：只支持标准存储类型的查询）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordSliceRequest"/></param>
+        /// <returns><see cref="DescribeRecordSliceResponse"/></returns>
+        public DescribeRecordSliceResponse DescribeRecordSliceSync(DescribeRecordSliceRequest req)
+        {
+             JsonResponseModel<DescribeRecordSliceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordSlice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordSliceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询实时上云模板详情
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordTemplateRequest"/></param>

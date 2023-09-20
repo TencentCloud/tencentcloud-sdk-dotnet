@@ -57,6 +57,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string BackupType{ get; set; }
 
         /// <summary>
+        /// 跨地域逻辑备份配置修改时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogicCrossRegionsConfigUpdateTime")]
+        public string LogicCrossRegionsConfigUpdateTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -73,6 +80,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
             this.SetParamArraySimple(map, prefix + "BackupFreq.", this.BackupFreq);
             this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
+            this.SetParamSimple(map, prefix + "LogicCrossRegionsConfigUpdateTime", this.LogicCrossRegionsConfigUpdateTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

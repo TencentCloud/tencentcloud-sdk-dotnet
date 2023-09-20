@@ -39,7 +39,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ThemeType{ get; set; }
 
         /// <summary>
-        /// 主题配置
+        /// 电子签logo是否展示，主体颜色等配置项
         /// </summary>
         [JsonProperty("WebThemeConfig")]
         public WebThemeConfig WebThemeConfig{ get; set; }

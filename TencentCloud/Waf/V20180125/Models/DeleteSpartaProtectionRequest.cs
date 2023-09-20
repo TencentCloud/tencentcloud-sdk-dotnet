@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 版本
+        /// 实例类型
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }

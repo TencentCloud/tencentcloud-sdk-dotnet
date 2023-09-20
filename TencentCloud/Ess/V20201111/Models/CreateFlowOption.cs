@@ -26,7 +26,7 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-        /// <br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑
+        /// <br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
         /// </summary>
         [JsonProperty("CanEditFlow")]
         public bool? CanEditFlow{ get; set; }
@@ -34,8 +34,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 是否允许编辑模板控件
         /// <br/>true:允许编辑模板控件信息
-        /// <br/>false:不允许编辑模板控件信息
-        /// <br/>默认false:不允许编辑模板控件信息
+        /// <br/>false:不允许编辑模板控件信息（默认值）
+        /// <br/>
         /// </summary>
         [JsonProperty("CanEditFormField")]
         public bool? CanEditFormField{ get; set; }
@@ -43,8 +43,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 发起页面隐藏合同名称展示
         /// <br/>true:发起页面隐藏合同名称展示
-        /// <br/>false:发起页面不隐藏合同名称展示
-        /// <br/>默认false:发起页面不隐藏合同名称展示
+        /// <br/>false:发起页面不隐藏合同名称展示（默认值）
+        /// <br/>
         /// </summary>
         [JsonProperty("HideShowFlowName")]
         public bool? HideShowFlowName{ get; set; }
@@ -52,8 +52,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 发起页面隐藏合同类型展示
         /// <br/>true:发起页面隐藏合同类型展示
-        /// <br/>false:发起页面不隐藏合同类型展示
-        /// <br/>默认false:发起页面不隐藏合同类型展示
+        /// <br/>false:发起页面不隐藏合同类型展示（默认值）
+        /// <br/>
         /// </summary>
         [JsonProperty("HideShowFlowType")]
         public bool? HideShowFlowType{ get; set; }
@@ -61,8 +61,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 发起页面隐藏合同截止日期展示
         /// <br/>true:发起页面隐藏合同截止日期展示
-        /// <br/>false:发起页面不隐藏合同截止日期展示
-        /// <br/>默认false:发起页面不隐藏合同截止日期展示
+        /// <br/>false:发起页面不隐藏合同截止日期展示（默认值）
+        /// <br/>
         /// </summary>
         [JsonProperty("HideShowDeadline")]
         public bool? HideShowDeadline{ get; set; }
@@ -70,8 +70,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 发起页面允许跳过添加签署人环节
         /// <br/>true:发起页面允许跳过添加签署人环节
-        /// <br/>false:发起页面不允许跳过添加签署人环节
-        /// <br/>默认false:发起页面不允许跳过添加签署人环节
+        /// <br/>false:发起页面不允许跳过添加签署人环节（默认值）
+        /// <br/>
         /// </summary>
         [JsonProperty("CanSkipAddApprover")]
         public bool? CanSkipAddApprover{ get; set; }
@@ -79,8 +79,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 文件发起页面跳过文件上传步骤
         /// <br/>true:文件发起页面跳过文件上传步骤
-        /// <br/>false:文件发起页面不跳过文件上传步骤
-        /// <br/>默认false:文件发起页面不跳过文件上传步骤
+        /// <br/>false:文件发起页面不跳过文件上传步骤（默认值）
+        /// <br/>
         /// </summary>
         [JsonProperty("SkipUploadFile")]
         public bool? SkipUploadFile{ get; set; }
@@ -88,14 +88,14 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 禁止编辑填写控件
         /// <br/>true:禁止编辑填写控件
-        /// <br/>false:允许编辑填写控件
-        /// <br/>默认false:允许编辑填写控件
+        /// <br/>false:允许编辑填写控件（默认值）
+        /// <br/>
         /// </summary>
         [JsonProperty("ForbidEditFillComponent")]
         public bool? ForbidEditFillComponent{ get; set; }
 
         /// <summary>
-        /// 定制化发起合同弹窗的描述信息，描述信息最长500
+        /// 定制化发起合同弹窗的描述信息，描述信息最长500字符
         /// </summary>
         [JsonProperty("CustomCreateFlowDescription")]
         public string CustomCreateFlowDescription{ get; set; }

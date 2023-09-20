@@ -25,25 +25,30 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方用户信息，userId 必填
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 返回最大数量，最大为100
+        /// 指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 200。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0，最大为20000
+        /// 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 20000。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 查询信息类型，为0时不返回授权用户，为1时返回
+        /// 查询信息类型，取值如下：
+        /// <ul>
+        /// <li>0不返回授权用户</li>
+        /// <li>1返回授权用户信息</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("InfoType")]
         public long? InfoType{ get; set; }
@@ -58,31 +63,36 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 印章类型列表（都是组织机构印章）。
         /// 为空时查询所有类型的印章。
         /// 目前支持以下类型：
-        /// OFFICIAL：企业公章；
-        /// CONTRACT：合同专用章；
-        /// ORGANIZATION_SEAL：企业印章(图片上传创建)；
-        /// LEGAL_PERSON_SEAL：法定代表人章
+        /// <ul>
+        /// <li>OFFICIAL：企业公章；</li>
+        /// <li>CONTRACT：合同专用章；</li>
+        /// <li>ORGANIZATION_SEAL：企业印章(图片上传创建)；</li>
+        /// <li>LEGAL_PERSON_SEAL：法定代表人章</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("SealTypes")]
         public string[] SealTypes{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
         /// 查询的印章状态列表。
-        /// 取值为空，只查询启用状态的印章；
-        /// 取值ALL，查询所有状态的印章；
-        /// 取值CHECKING，查询待审核的印章；
-        /// 取值SUCCESS，查询启用状态的印章；
-        /// 取值FAIL，查询印章审核拒绝的印章；
-        /// 取值DISABLE，查询已停用的印章；
-        /// 取值STOPPED，查询已终止的印章；
-        /// 取值VOID，查询已作废的印章；
-        /// 取值INVALID，查询已失效的印章；
+        /// <ul>
+        /// <li>空，只查询启用状态的印章；</li>
+        /// <li>ALL，查询所有状态的印章；</li>
+        /// <li>CHECKING，查询待审核的印章；</li>
+        /// <li>SUCCESS，查询启用状态的印章；</li>
+        /// <li>FAIL，查询印章审核拒绝的印章；</li>
+        /// <li>DISABLE，查询已停用的印章；</li>
+        /// <li>STOPPED，查询已终止的印章；</li>
+        /// <li>VOID，查询已作废的印章；</li>
+        /// <li>INVALID，查询已失效的印章；</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("SealStatuses")]
         public string[] SealStatuses{ get; set; }

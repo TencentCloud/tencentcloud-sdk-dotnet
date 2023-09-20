@@ -1573,6 +1573,46 @@ namespace TencentCloud.Dasb.V20191018
         }
 
         /// <summary>
+        /// 修改高危命令模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCmdTemplateRequest"/></param>
+        /// <returns><see cref="ModifyCmdTemplateResponse"/></returns>
+        public async Task<ModifyCmdTemplateResponse> ModifyCmdTemplate(ModifyCmdTemplateRequest req)
+        {
+             JsonResponseModel<ModifyCmdTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCmdTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCmdTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改高危命令模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCmdTemplateRequest"/></param>
+        /// <returns><see cref="ModifyCmdTemplateResponse"/></returns>
+        public ModifyCmdTemplateResponse ModifyCmdTemplateSync(ModifyCmdTemplateRequest req)
+        {
+             JsonResponseModel<ModifyCmdTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCmdTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCmdTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改资产信息
         /// </summary>
         /// <param name="req"><see cref="ModifyDeviceRequest"/></param>

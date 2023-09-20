@@ -25,7 +25,8 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 最终授权成功的。其他的跳过的是已经授权了的
+        /// 最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
+        /// 可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }

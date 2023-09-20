@@ -25,16 +25,17 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 独享集群的可用容量大小，单位GiB
-        /// </summary>
-        [JsonProperty("DiskAavilable")]
-        public ulong? DiskAavilable{ get; set; }
-
-        /// <summary>
         /// 独享集群的总容量大小，单位GiB
         /// </summary>
         [JsonProperty("DiskTotal")]
         public ulong? DiskTotal{ get; set; }
+
+        /// <summary>
+        /// 独享集群的可用容量大小，单位GiB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiskAvailable")]
+        public ulong? DiskAvailable{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskAavilable", this.DiskAavilable);
             this.SetParamSimple(map, prefix + "DiskTotal", this.DiskTotal);
+            this.SetParamSimple(map, prefix + "DiskAvailable", this.DiskAvailable);
         }
     }
 }

@@ -54,10 +54,12 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 电子印章类型：
-        /// OFFICIAL-公章；
-        /// CONTRACT-合同专用章;
-        /// FINANCE-合财务专用章;
-        /// PERSONNEL-人事专用章.
+        /// <ul>
+        /// <li>OFFICIAL-公章；</li>
+        /// <li>CONTRACT-合同专用章;</li>
+        /// <li>FINANCE-合财务专用章;</li>
+        /// <li>PERSONNEL-人事专用章.</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("SealType")]
         public string SealType{ get; set; }
@@ -122,20 +124,24 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FileToken{ get; set; }
 
         /// <summary>
-        /// 印章样式:
+        /// 印章样式，取值如下:
         /// 
-        /// cycle:圆形印章;
-        /// ellipse:椭圆印章;
-        /// 注：默认圆形印章
+        /// <ul>
+        /// <li>cycle:圆形印章;</li>
+        /// <li>ellipse:椭圆印章;</li>
+        /// <li>注：默认圆形印章</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("SealStyle")]
         public string SealStyle{ get; set; }
 
         /// <summary>
         /// 印章尺寸取值描述：
-        /// 42_42 圆形企业公章直径42mm；
-        /// 40_40 圆形企业印章直径40mm；
-        /// 45_30 椭圆形印章45mm x 30mm;
+        /// <ul>
+        /// <li>42_42 圆形企业公章直径42mm；</li>
+        /// <li>40_40 圆形企业印章直径40mm；</li>
+        /// <li>45_30 椭圆形印章45mm x 30mm;</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("SealSize")]
         public string SealSize{ get; set; }

@@ -25,24 +25,33 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方用户信息，UserId 必填
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
         /// 文件对应的业务类型，目前支持：
-        /// - 流程 "FLOW"，如需下载合同文件请选择此项
-        /// - 模板 "TEMPLATE"
-        /// - 文档 "DOCUMENT"
-        /// - 印章  “SEAL”
+        /// <ul>
+        /// <li>FLOW 如需下载合同文件请选择此项</li>
+        /// <li>TEMPLATE 如需下载模板文件请选择此项</li>
+        /// <li>DOCUMENT 如需下载文档文件请选择此项</li>
+        /// <li>SEAL 如需下载印章图片请选择此项</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// 业务编号的数组，如流程编号、模板编号、文档编号、印章编号。如需下载合同文件请传入FlowId
-        /// 最大支持20个资源
+        /// 业务编号的数组，取值如下：
+        /// <ul>
+        /// <li>流程编号</li>
+        /// <li>模板编号</li>
+        /// <li>文档编号</li>
+        /// <li>印章编号</li>
+        /// <li>如需下载合同文件请传入FlowId，最大支持20个资源</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("BusinessIds")]
         public string[] BusinessIds{ get; set; }
@@ -54,19 +63,24 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 文件类型，"JPG", "PDF","ZIP"等
+        /// 要下载的文件类型，取值如下：
+        /// <ul>
+        /// <li>JPG</li>
+        /// <li>PDF</li>
+        /// <li>ZIP</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// 指定资源起始偏移量，默认0
+        /// 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 1000。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 指定资源数量，查询全部资源则传入-1
+        /// 指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

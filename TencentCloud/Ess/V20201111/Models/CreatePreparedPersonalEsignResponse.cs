@@ -25,7 +25,8 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 导入生成的印章ID
+        /// 导入生成的印章ID，为32位字符串。
+        /// 建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。
         /// </summary>
         [JsonProperty("SealId")]
         public string SealId{ get; set; }

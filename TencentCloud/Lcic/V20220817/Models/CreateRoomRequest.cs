@@ -169,7 +169,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? IsGradingRequiredPostClass{ get; set; }
 
         /// <summary>
-        /// 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+        /// 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
         /// </summary>
         [JsonProperty("RoomType")]
         public long? RoomType{ get; set; }

@@ -173,7 +173,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// CreateDiagnoseUrl 用于添加域名诊断任务URL， <font color=red>将于 **2023年5月31日** 下线</font><br>
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// CreateDiagnoseUrl 用于添加域名诊断任务URL。
         /// </summary>
         /// <param name="req"><see cref="CreateDiagnoseUrlRequest"/></param>
         /// <returns><see cref="CreateDiagnoseUrlResponse"/></returns>
@@ -193,7 +194,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// CreateDiagnoseUrl 用于添加域名诊断任务URL， <font color=red>将于 **2023年5月31日** 下线</font><br>
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// CreateDiagnoseUrl 用于添加域名诊断任务URL。
         /// </summary>
         /// <param name="req"><see cref="CreateDiagnoseUrlRequest"/></param>
         /// <returns><see cref="CreateDiagnoseUrlResponse"/></returns>
@@ -765,7 +767,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：此接口即将下线，不再进行维护，请通过DescribeIpStatus 接口进行查询）
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：替换接口为DescribeIpStatus）
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
         /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
@@ -785,7 +788,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：此接口即将下线，不再进行维护，请通过DescribeIpStatus 接口进行查询）
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：替换接口为DescribeIpStatus）
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
         /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
@@ -885,7 +889,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// DescribeDiagnoseReport 用于获取指定报告id的内容， <font color=red>将于 **2023年5月31日** 下线</font><br>
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// DescribeDiagnoseReport 用于获取指定报告id的内容。
         /// </summary>
         /// <param name="req"><see cref="DescribeDiagnoseReportRequest"/></param>
         /// <returns><see cref="DescribeDiagnoseReportResponse"/></returns>
@@ -905,7 +910,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// DescribeDiagnoseReport 用于获取指定报告id的内容， <font color=red>将于 **2023年5月31日** 下线</font><br>
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// DescribeDiagnoseReport 用于获取指定报告id的内容。
         /// </summary>
         /// <param name="req"><see cref="DescribeDiagnoseReportRequest"/></param>
         /// <returns><see cref="DescribeDiagnoseReportResponse"/></returns>
@@ -2019,7 +2025,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，中国境内访问会直接返回 403。（注：接口尚在内测中，暂未全量开放；封禁URL并非无限期永久封禁）
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，中国境内访问会直接返回 403。
         /// </summary>
         /// <param name="req"><see cref="DisableCachesRequest"/></param>
         /// <returns><see cref="DisableCachesResponse"/></returns>
@@ -2039,7 +2046,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，中国境内访问会直接返回 403。（注：接口尚在内测中，暂未全量开放；封禁URL并非无限期永久封禁）
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，中国境内访问会直接返回 403。
         /// </summary>
         /// <param name="req"><see cref="DisableCachesRequest"/></param>
         /// <returns><see cref="DisableCachesResponse"/></returns>
@@ -2139,7 +2147,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。（接口尚在内测中，暂未全量开放使用）
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。
         /// </summary>
         /// <param name="req"><see cref="EnableCachesRequest"/></param>
         /// <returns><see cref="EnableCachesResponse"/></returns>
@@ -2159,7 +2168,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。（接口尚在内测中，暂未全量开放使用）
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。
         /// </summary>
         /// <param name="req"><see cref="EnableCachesRequest"/></param>
         /// <returns><see cref="EnableCachesResponse"/></returns>
@@ -2219,7 +2229,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// GetDisableRecords 用于查询资源禁用历史，及 URL 当前状态。（接口尚在内测中，暂未全量开放使用）
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// GetDisableRecords 用于查询资源禁用历史，及 URL 当前状态。
         /// </summary>
         /// <param name="req"><see cref="GetDisableRecordsRequest"/></param>
         /// <returns><see cref="GetDisableRecordsResponse"/></returns>
@@ -2239,7 +2250,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// GetDisableRecords 用于查询资源禁用历史，及 URL 当前状态。（接口尚在内测中，暂未全量开放使用）
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// GetDisableRecords 用于查询资源禁用历史，及 URL 当前状态。
         /// </summary>
         /// <param name="req"><see cref="GetDisableRecordsRequest"/></param>
         /// <returns><see cref="GetDisableRecordsResponse"/></returns>
@@ -2339,7 +2351,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情， <font color=red>将于 **2023年5月31日** 下线</font><br>
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
         /// </summary>
         /// <param name="req"><see cref="ListDiagnoseReportRequest"/></param>
         /// <returns><see cref="ListDiagnoseReportResponse"/></returns>
@@ -2359,7 +2372,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情， <font color=red>将于 **2023年5月31日** 下线</font><br>
+        /// ### <font color=red>**该接口已废弃** </font><br>
+        /// ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
         /// </summary>
         /// <param name="req"><see cref="ListDiagnoseReportRequest"/></param>
         /// <returns><see cref="ListDiagnoseReportResponse"/></returns>

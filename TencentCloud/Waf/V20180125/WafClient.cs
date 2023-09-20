@@ -253,7 +253,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 添加Spart防护域名
+        /// 添加SaaS型WAF防护域名
         /// </summary>
         /// <param name="req"><see cref="AddSpartaProtectionRequest"/></param>
         /// <returns><see cref="AddSpartaProtectionResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 添加Spart防护域名
+        /// 添加SaaS型WAF防护域名
         /// </summary>
         /// <param name="req"><see cref="AddSpartaProtectionRequest"/></param>
         /// <returns><see cref="AddSpartaProtectionResponse"/></returns>
@@ -333,7 +333,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// clb-waf中添加防护的域名
+        /// clb-waf中添加防护域名
         /// </summary>
         /// <param name="req"><see cref="CreateHostRequest"/></param>
         /// <returns><see cref="CreateHostResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// clb-waf中添加防护的域名
+        /// clb-waf中添加防护域名
         /// </summary>
         /// <param name="req"><see cref="CreateHostRequest"/></param>
         /// <returns><see cref="CreateHostResponse"/></returns>
@@ -855,7 +855,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// SAASWAF删除防护域名
+        /// Saas型WAF删除防护域名
         /// </summary>
         /// <param name="req"><see cref="DeleteSpartaProtectionRequest"/></param>
         /// <returns><see cref="DeleteSpartaProtectionResponse"/></returns>
@@ -875,7 +875,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// SAASWAF删除防护域名
+        /// Saas型WAF删除防护域名
         /// </summary>
         /// <param name="req"><see cref="DeleteSpartaProtectionRequest"/></param>
         /// <returns><see cref="DeleteSpartaProtectionResponse"/></returns>
@@ -1423,7 +1423,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 查询加密套件信息
+        /// Saas型WAF接入查询加密套件信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCiphersDetailRequest"/></param>
         /// <returns><see cref="DescribeCiphersDetailResponse"/></returns>
@@ -1443,7 +1443,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 查询加密套件信息
+        /// Saas型WAF接入查询加密套件信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCiphersDetailRequest"/></param>
         /// <returns><see cref="DescribeCiphersDetailResponse"/></returns>
@@ -1583,7 +1583,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 获取一个clb域名详情
+        /// 获取一个clbwaf域名详情
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainDetailsClbRequest"/></param>
         /// <returns><see cref="DescribeDomainDetailsClbResponse"/></returns>
@@ -1603,7 +1603,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 获取一个clb域名详情
+        /// 获取一个clbwaf域名详情
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainDetailsClbRequest"/></param>
         /// <returns><see cref="DescribeDomainDetailsClbResponse"/></returns>
@@ -1623,7 +1623,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 查询单个saas域名详情
+        /// 查询单个saaswaf域名详情
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainDetailsSaasRequest"/></param>
         /// <returns><see cref="DescribeDomainDetailsSaasResponse"/></returns>
@@ -1643,7 +1643,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 查询单个saas域名详情
+        /// 查询单个saaswaf域名详情
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainDetailsSaasRequest"/></param>
         /// <returns><see cref="DescribeDomainDetailsSaasResponse"/></returns>
@@ -2223,7 +2223,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 获取非标端口列表
+        /// 获取Saas型WAF防护端口列表
         /// </summary>
         /// <param name="req"><see cref="DescribePortsRequest"/></param>
         /// <returns><see cref="DescribePortsResponse"/></returns>
@@ -2243,7 +2243,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 获取非标端口列表
+        /// 获取Saas型WAF防护端口列表
         /// </summary>
         /// <param name="req"><see cref="DescribePortsRequest"/></param>
         /// <returns><see cref="DescribePortsResponse"/></returns>
@@ -3427,7 +3427,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 修改ipv6开关
+        /// 切换ipv6开关
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainIpv6StatusRequest"/></param>
         /// <returns><see cref="ModifyDomainIpv6StatusResponse"/></returns>
@@ -3447,7 +3447,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 修改ipv6开关
+        /// 切换ipv6开关
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainIpv6StatusRequest"/></param>
         /// <returns><see cref="ModifyDomainIpv6StatusResponse"/></returns>
@@ -4300,6 +4300,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "SwitchDomainRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDomainRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 切换弹性的开关
+        /// </summary>
+        /// <param name="req"><see cref="SwitchElasticModeRequest"/></param>
+        /// <returns><see cref="SwitchElasticModeResponse"/></returns>
+        public async Task<SwitchElasticModeResponse> SwitchElasticMode(SwitchElasticModeRequest req)
+        {
+             JsonResponseModel<SwitchElasticModeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchElasticMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchElasticModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 切换弹性的开关
+        /// </summary>
+        /// <param name="req"><see cref="SwitchElasticModeRequest"/></param>
+        /// <returns><see cref="SwitchElasticModeResponse"/></returns>
+        public SwitchElasticModeResponse SwitchElasticModeSync(SwitchElasticModeRequest req)
+        {
+             JsonResponseModel<SwitchElasticModeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchElasticMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchElasticModeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

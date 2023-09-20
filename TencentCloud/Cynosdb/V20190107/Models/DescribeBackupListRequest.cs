@@ -103,6 +103,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("SnapshotIdList")]
         public long?[] SnapshotIdList{ get; set; }
 
+        /// <summary>
+        /// 备份地域
+        /// </summary>
+        [JsonProperty("BackupRegion")]
+        public string BackupRegion{ get; set; }
+
+        /// <summary>
+        /// 是否跨地域备份
+        /// </summary>
+        [JsonProperty("IsCrossRegionsBackup")]
+        public string IsCrossRegionsBackup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +134,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "FileNames.", this.FileNames);
             this.SetParamArraySimple(map, prefix + "BackupNames.", this.BackupNames);
             this.SetParamArraySimple(map, prefix + "SnapshotIdList.", this.SnapshotIdList);
+            this.SetParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
+            this.SetParamSimple(map, prefix + "IsCrossRegionsBackup", this.IsCrossRegionsBackup);
         }
     }
 }

@@ -25,35 +25,40 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方用户信息，userId 必填
+        /// 执行本接口操作的员工信息。使用此接口时，必须填写userId。
+        /// 支持填入集团子公司经办人 userId 代发合同。
+        /// 
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 资源id，与ResourceType对应
+        /// 资源id，与ResourceType相对应，取值范围：
+        /// <ul>
+        /// <li>文件Id（通过UploadFiles获取文件资源Id）</li>
+        /// <li>模板Id</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 合同名称
+        /// 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 是否顺序签署
-        /// true:无序签
-        /// false:顺序签
+        /// 合同流程的签署顺序类型：
+        /// <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
+        /// <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
         /// </summary>
         [JsonProperty("Unordered")]
         public bool? Unordered{ get; set; }
 
         /// <summary>
-        /// 签署流程的签署截止时间。
-        /// 值为unix时间戳,精确到秒
-        /// 不传默认为当前时间一年后
+        /// 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
@@ -61,46 +66,44 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 用户自定义合同类型Id
         /// 
-        /// 该id为电子签企业内的合同类型id， 可以在自定义合同类型处获取
+        /// 该id为电子签企业内的合同类型id， 可以在控制台-合同-自定义合同类型处获取
+        /// 注: `该参数如果和FlowType同时传，以该参数优先生效`
         /// </summary>
         [JsonProperty("UserFlowTypeId")]
         public string UserFlowTypeId{ get; set; }
 
         /// <summary>
-        /// 合同类型名称
-        /// 该字段用于客户自定义合同类型
-        /// 建议使用时指定合同类型，便于之后合同分类以及查看
-        /// 如果合同类型与自定义的合同类型描述一致，会自动归类到自定义的合同类型处，如果不一致，则会创建一个新的自定义合同类型
+        /// 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
         /// </summary>
         [JsonProperty("FlowType")]
         public string FlowType{ get; set; }
 
         /// <summary>
-        /// 签署流程参与者信息，最大限制50方
+        /// 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+        /// 
+        /// 如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
         /// </summary>
         [JsonProperty("Approvers")]
         public FlowCreateApprover[] Approvers{ get; set; }
 
         /// <summary>
-        /// 打开智能添加填写区
-        /// 默认开启，打开:"OPEN"
-        ///  关闭："CLOSE"
+        /// 开启或者关闭智能添加填写区：
+        /// <ul><li> **OPEN**：开启（默认值）</li>
+        /// <li> **CLOSE**：关闭</li></ul>
         /// </summary>
         [JsonProperty("IntelligentStatus")]
         public string IntelligentStatus{ get; set; }
 
         /// <summary>
-        /// 资源类型，
-        /// 1：模板
-        /// 2：文件，
-        /// 不传默认为2：文件
+        /// 资源类型，取值有：
+        /// <ul><li> **1**：模板</li>
+        /// <li> **2**：文件（默认值）</li></ul>
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }
 
         /// <summary>
-        /// 发起方填写控件
-        /// 该类型控件由发起方完成填写
+        /// 该字段已废弃，请使用InitiatorComponents
         /// </summary>
         [JsonProperty("Components")]
         public Component Components{ get; set; }
@@ -114,40 +117,53 @@ namespace TencentCloud.Ess.V20201111.Models
         public CreateFlowOption FlowOption{ get; set; }
 
         /// <summary>
-        /// 是否开启发起方签署审核
-        /// true:开启发起方签署审核
-        /// false:不开启发起方签署审核
-        /// 默认false:不开启发起方签署审核
+        /// 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+        /// <ul><li> **false**：（默认）不需要审批，直接签署。</li>
+        /// <li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+        /// 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+        /// <ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+        /// <li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+        /// 注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
         /// </summary>
         [JsonProperty("NeedSignReview")]
         public bool? NeedSignReview{ get; set; }
 
         /// <summary>
-        /// 开启发起方发起合同审核
-        /// true:开启发起方发起合同审核
-        /// false:不开启发起方发起合同审核
-        /// 默认false:不开启发起方发起合同审核
+        /// 发起方企业的签署人进行发起操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+        /// 
+        /// 若设置为true，发起审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行发起操作，否则会阻塞其发起操作。
+        /// 
         /// </summary>
         [JsonProperty("NeedCreateReview")]
         public bool? NeedCreateReview{ get; set; }
 
         /// <summary>
-        /// 用户自定义参数
+        /// 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+        /// 
+        /// 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
         /// <summary>
-        /// 合同id,用于通过已web页面发起的合同id快速生成一个web发起合同链接
+        /// 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
+        /// 注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
+
+        /// <summary>
+        /// 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+        /// </summary>
+        [JsonProperty("InitiatorComponents")]
+        public Component[] InitiatorComponents{ get; set; }
 
 
         /// <summary>
@@ -172,6 +188,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamArrayObj(map, prefix + "InitiatorComponents.", this.InitiatorComponents);
         }
     }
 }

@@ -80,6 +80,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AwsSQS")]
         public AwsSQS AwsSQS{ get; set; }
 
+        /// <summary>
+        /// 用于生成回调签名的key。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NotifyKey")]
+        public string NotifyKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamObj(map, prefix + "AwsSQS.", this.AwsSQS);
+            this.SetParamSimple(map, prefix + "NotifyKey", this.NotifyKey);
         }
     }
 }

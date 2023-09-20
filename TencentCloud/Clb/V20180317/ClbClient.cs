@@ -2311,6 +2311,166 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// InquiryPriceCreateLoadBalancer接口查询创建负载均衡的价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceCreateLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateLoadBalancerResponse"/></returns>
+        public async Task<InquiryPriceCreateLoadBalancerResponse> InquiryPriceCreateLoadBalancer(InquiryPriceCreateLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceCreateLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceCreateLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceCreateLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// InquiryPriceCreateLoadBalancer接口查询创建负载均衡的价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceCreateLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateLoadBalancerResponse"/></returns>
+        public InquiryPriceCreateLoadBalancerResponse InquiryPriceCreateLoadBalancerSync(InquiryPriceCreateLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceCreateLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceCreateLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceCreateLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// InquiryPriceModifyLoadBalancer接口修改负载均衡配置询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceModifyLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceModifyLoadBalancerResponse"/></returns>
+        public async Task<InquiryPriceModifyLoadBalancerResponse> InquiryPriceModifyLoadBalancer(InquiryPriceModifyLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceModifyLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceModifyLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceModifyLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// InquiryPriceModifyLoadBalancer接口修改负载均衡配置询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceModifyLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceModifyLoadBalancerResponse"/></returns>
+        public InquiryPriceModifyLoadBalancerResponse InquiryPriceModifyLoadBalancerSync(InquiryPriceModifyLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceModifyLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceModifyLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceModifyLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// InquiryPriceRefundLoadBalancer接口查询负载均衡退费价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRefundLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceRefundLoadBalancerResponse"/></returns>
+        public async Task<InquiryPriceRefundLoadBalancerResponse> InquiryPriceRefundLoadBalancer(InquiryPriceRefundLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceRefundLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceRefundLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRefundLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// InquiryPriceRefundLoadBalancer接口查询负载均衡退费价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRefundLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceRefundLoadBalancerResponse"/></returns>
+        public InquiryPriceRefundLoadBalancerResponse InquiryPriceRefundLoadBalancerSync(InquiryPriceRefundLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceRefundLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceRefundLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRefundLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// InquiryPriceRenewLoadBalancer接口查询对负载均衡续费的价格，只支持预付费负载均衡续费。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewLoadBalancerResponse"/></returns>
+        public async Task<InquiryPriceRenewLoadBalancerResponse> InquiryPriceRenewLoadBalancer(InquiryPriceRenewLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceRenewLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceRenewLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// InquiryPriceRenewLoadBalancer接口查询对负载均衡续费的价格，只支持预付费负载均衡续费。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewLoadBalancerResponse"/></returns>
+        public InquiryPriceRenewLoadBalancerResponse InquiryPriceRenewLoadBalancerSync(InquiryPriceRenewLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceRenewLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceRenewLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用户手动配置原访问地址和重定向地址，系统自动将原访问地址的请求重定向至对应路径的目的地址。同一域名下可以配置多条路径作为重定向策略，实现http/https之间请求的自动跳转。设置重定向时，需满足如下约束条件：若A已经重定向至B，则A不能再重定向至C（除非先删除老的重定向关系，再建立新的重定向关系），B不能重定向至任何其它地址。
         /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
         /// </summary>
