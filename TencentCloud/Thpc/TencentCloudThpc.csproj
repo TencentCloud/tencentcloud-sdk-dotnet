@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.852</VersionPrefix>
+    <VersionPrefix>3.0.853</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -85,6 +85,7 @@
     <Compile Include="V20230321\Models\DescribeNodesResponse.cs" />
     <Compile Include="V20230321\Models\DescribeQueuesRequest.cs" />
     <Compile Include="V20230321\Models\DescribeQueuesResponse.cs" />
+    <Compile Include="V20230321\Models\EnhancedService.cs" />
     <Compile Include="V20230321\Models\ExpansionNodeConfig.cs" />
     <Compile Include="V20230321\Models\ExpansionNodeConfigOverview.cs" />
     <Compile Include="V20230321\Models\Filter.cs" />
@@ -108,6 +109,9 @@
     <Compile Include="V20230321\Models\QueueConfig.cs" />
     <Compile Include="V20230321\Models\QueueConfigOverview.cs" />
     <Compile Include="V20230321\Models\QueueOverview.cs" />
+    <Compile Include="V20230321\Models\RunAutomationServiceEnabled.cs" />
+    <Compile Include="V20230321\Models\RunMonitorServiceEnabled.cs" />
+    <Compile Include="V20230321\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="V20230321\Models\SetAutoScalingConfigurationRequest.cs" />
     <Compile Include="V20230321\Models\SetAutoScalingConfigurationResponse.cs" />
     <Compile Include="V20230321\Models\StorageOption.cs" />

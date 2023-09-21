@@ -3253,6 +3253,86 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 查询指定时刻指标的最新值
+        /// </summary>
+        /// <param name="req"><see cref="QueryMetricRequest"/></param>
+        /// <returns><see cref="QueryMetricResponse"/></returns>
+        public async Task<QueryMetricResponse> QueryMetric(QueryMetricRequest req)
+        {
+             JsonResponseModel<QueryMetricResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryMetric");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMetricResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定时刻指标的最新值
+        /// </summary>
+        /// <param name="req"><see cref="QueryMetricRequest"/></param>
+        /// <returns><see cref="QueryMetricResponse"/></returns>
+        public QueryMetricResponse QueryMetricSync(QueryMetricRequest req)
+        {
+             JsonResponseModel<QueryMetricResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryMetric");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMetricResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定时间范围内指标的变化趋势
+        /// </summary>
+        /// <param name="req"><see cref="QueryRangeMetricRequest"/></param>
+        /// <returns><see cref="QueryRangeMetricResponse"/></returns>
+        public async Task<QueryRangeMetricResponse> QueryRangeMetric(QueryRangeMetricRequest req)
+        {
+             JsonResponseModel<QueryRangeMetricResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryRangeMetric");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryRangeMetricResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定时间范围内指标的变化趋势
+        /// </summary>
+        /// <param name="req"><see cref="QueryRangeMetricRequest"/></param>
+        /// <returns><see cref="QueryRangeMetricResponse"/></returns>
+        public QueryRangeMetricResponse QueryRangeMetricSync(QueryRangeMetricRequest req)
+        {
+             JsonResponseModel<QueryRangeMetricResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryRangeMetric");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryRangeMetricResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 重试失败的投递任务
         /// </summary>
         /// <param name="req"><see cref="RetryShipperTaskRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.852</VersionPrefix>
+    <VersionPrefix>3.0.853</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -270,6 +270,10 @@
     <Compile Include="V20201016\Models\PreviewKafkaRechargeRequest.cs" />
     <Compile Include="V20201016\Models\PreviewKafkaRechargeResponse.cs" />
     <Compile Include="V20201016\Models\PreviewLogStatistic.cs" />
+    <Compile Include="V20201016\Models\QueryMetricRequest.cs" />
+    <Compile Include="V20201016\Models\QueryMetricResponse.cs" />
+    <Compile Include="V20201016\Models\QueryRangeMetricRequest.cs" />
+    <Compile Include="V20201016\Models\QueryRangeMetricResponse.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskRequest.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskResponse.cs" />
     <Compile Include="V20201016\Models\RuleInfo.cs" />

@@ -121,6 +121,12 @@ namespace TencentCloud.Thpc.V20230321.Models
         [JsonProperty("ScaleUpMemRatio")]
         public long? ScaleUpMemRatio{ get; set; }
 
+        /// <summary>
+        /// 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务、自动化助手服务。
+        /// </summary>
+        [JsonProperty("EnhancedService")]
+        public EnhancedService EnhancedService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamSimple(map, prefix + "ScaleOutNodeThreshold", this.ScaleOutNodeThreshold);
             this.SetParamSimple(map, prefix + "MaxNodesPerCycle", this.MaxNodesPerCycle);
             this.SetParamSimple(map, prefix + "ScaleUpMemRatio", this.ScaleUpMemRatio);
+            this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
         }
     }
 }

@@ -71,7 +71,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+        /// 是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SniSwitch")]

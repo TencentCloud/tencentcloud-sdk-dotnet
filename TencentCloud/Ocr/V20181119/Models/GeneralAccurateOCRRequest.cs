@@ -64,6 +64,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("PdfPageNumber")]
         public ulong? PdfPageNumber{ get; set; }
 
+        /// <summary>
+        /// 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
+        /// </summary>
+        [JsonProperty("EnableDetectText")]
+        public bool? EnableDetectText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +82,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "EnableDetectSplit", this.EnableDetectSplit);
             this.SetParamSimple(map, prefix + "IsPdf", this.IsPdf);
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+            this.SetParamSimple(map, prefix + "EnableDetectText", this.EnableDetectText);
         }
     }
 }

@@ -67,6 +67,20 @@ namespace TencentCloud.Mps.V20190612.Models
         public ScheduleTask ScheduleTaskEvent{ get; set; }
 
         /// <summary>
+        /// - 过期时间，事件通知签名过期 UNIX 时间戳。
+        /// - 来自媒体处理的消息通知默认过期时间是10分钟，如果一条消息通知中的 Timestamp 值所指定的时间已经过期，则可以判定这条通知无效，进而可以防止网络重放攻击。
+        /// - Timestamp 的格式为十进制 UNIX 时间戳，即从1970年01月01日（UTC/GMT 的午夜）开始所经过的秒数。
+        /// </summary>
+        [JsonProperty("Timestamp")]
+        public long? Timestamp{ get; set; }
+
+        /// <summary>
+        /// 事件通知安全签名 Sign = MD5（NotifyKey + Timestamp）。说明：媒体处理把 TaskNotifyConfig 里面的NotifyKey 和 Timestamp 进行字符串拼接后通过 MD5 计算得出 Sign 值，并将其放在通知消息里，您的后台服务器在收到通知消息后可以根据同样的算法确认 Sign 是否正确，进而确认消息是否确实来自媒体处理后台。
+        /// </summary>
+        [JsonProperty("Sign")]
+        public string Sign{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -84,6 +98,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamObj(map, prefix + "ScheduleTaskEvent.", this.ScheduleTaskEvent);
+            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamSimple(map, prefix + "Sign", this.Sign);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

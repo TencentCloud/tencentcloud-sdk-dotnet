@@ -164,6 +164,34 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("PackSpec")]
         public PackSpec[] PackSpec{ get; set; }
 
+        /// <summary>
+        /// 商品名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
+
+        /// <summary>
+        /// 商品规格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductSpecification")]
+        public string ProductSpecification{ get; set; }
+
+        /// <summary>
+        /// 商品ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
+
+        /// <summary>
+        /// 码关系是否预关联
+        /// 0:否, 1:是
+        /// </summary>
+        [JsonProperty("RelateType")]
+        public long? RelateType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +218,10 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "PackType", this.PackType);
             this.SetParamSimple(map, prefix + "PackLevel", this.PackLevel);
             this.SetParamArrayObj(map, prefix + "PackSpec.", this.PackSpec);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamSimple(map, prefix + "ProductSpecification", this.ProductSpecification);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "RelateType", this.RelateType);
         }
     }
 }

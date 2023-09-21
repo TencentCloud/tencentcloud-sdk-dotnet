@@ -213,6 +213,46 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
+        /// 开始云端推流到指定URL
+        /// </summary>
+        /// <param name="req"><see cref="StartPublishStreamWithURLRequest"/></param>
+        /// <returns><see cref="StartPublishStreamWithURLResponse"/></returns>
+        public async Task<StartPublishStreamWithURLResponse> StartPublishStreamWithURL(StartPublishStreamWithURLRequest req)
+        {
+             JsonResponseModel<StartPublishStreamWithURLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartPublishStreamWithURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartPublishStreamWithURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开始云端推流到指定URL
+        /// </summary>
+        /// <param name="req"><see cref="StartPublishStreamWithURLRequest"/></param>
+        /// <returns><see cref="StartPublishStreamWithURLResponse"/></returns>
+        public StartPublishStreamWithURLResponse StartPublishStreamWithURLSync(StartPublishStreamWithURLRequest req)
+        {
+             JsonResponseModel<StartPublishStreamWithURLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartPublishStreamWithURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartPublishStreamWithURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 停止云端推流
         /// </summary>
         /// <param name="req"><see cref="StopPublishStreamRequest"/></param>

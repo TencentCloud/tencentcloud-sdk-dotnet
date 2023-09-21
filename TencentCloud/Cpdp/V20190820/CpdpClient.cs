@@ -7915,46 +7915,6 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 登记挂账撤销。此接口可以实现把RegisterBillSupportWithdraw接口完成的登记挂账进行撤销，即调减普通会员子账户的可提现和可用余额，调增挂账子账户的可用余额。
-        /// </summary>
-        /// <param name="req"><see cref="RevResigterBillSupportWithdrawRequest"/></param>
-        /// <returns><see cref="RevResigterBillSupportWithdrawResponse"/></returns>
-        public async Task<RevResigterBillSupportWithdrawResponse> RevResigterBillSupportWithdraw(RevResigterBillSupportWithdrawRequest req)
-        {
-             JsonResponseModel<RevResigterBillSupportWithdrawResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RevResigterBillSupportWithdraw");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RevResigterBillSupportWithdrawResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 登记挂账撤销。此接口可以实现把RegisterBillSupportWithdraw接口完成的登记挂账进行撤销，即调减普通会员子账户的可提现和可用余额，调增挂账子账户的可用余额。
-        /// </summary>
-        /// <param name="req"><see cref="RevResigterBillSupportWithdrawRequest"/></param>
-        /// <returns><see cref="RevResigterBillSupportWithdrawResponse"/></returns>
-        public RevResigterBillSupportWithdrawResponse RevResigterBillSupportWithdrawSync(RevResigterBillSupportWithdrawRequest req)
-        {
-             JsonResponseModel<RevResigterBillSupportWithdrawResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RevResigterBillSupportWithdraw");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RevResigterBillSupportWithdrawResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 修改会员属性-普通商户子账户。修改会员的会员属性。
         /// </summary>
         /// <param name="req"><see cref="ReviseMbrPropertyRequest"/></param>

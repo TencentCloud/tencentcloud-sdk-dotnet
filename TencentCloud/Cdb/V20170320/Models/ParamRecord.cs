@@ -52,6 +52,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 参数是否修改成功
         /// </summary>
         [JsonProperty("IsSucess")]
+        [System.Obsolete]
         public bool? IsSucess{ get; set; }
 
         /// <summary>
@@ -59,6 +60,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
+
+        /// <summary>
+        /// 参数是否修改成功
+        /// </summary>
+        [JsonProperty("IsSuccess")]
+        public bool? IsSuccess{ get; set; }
 
 
         /// <summary>
@@ -72,6 +79,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "NewValue", this.NewValue);
             this.SetParamSimple(map, prefix + "IsSucess", this.IsSucess);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "IsSuccess", this.IsSuccess);
         }
     }
 }

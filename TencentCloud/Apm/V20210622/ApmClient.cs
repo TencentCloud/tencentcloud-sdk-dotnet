@@ -215,6 +215,46 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// 通用查询调用链列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGeneralSpanListRequest"/></param>
+        /// <returns><see cref="DescribeGeneralSpanListResponse"/></returns>
+        public async Task<DescribeGeneralSpanListResponse> DescribeGeneralSpanList(DescribeGeneralSpanListRequest req)
+        {
+             JsonResponseModel<DescribeGeneralSpanListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGeneralSpanList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGeneralSpanListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通用查询调用链列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGeneralSpanListRequest"/></param>
+        /// <returns><see cref="DescribeGeneralSpanListResponse"/></returns>
+        public DescribeGeneralSpanListResponse DescribeGeneralSpanListSync(DescribeGeneralSpanListRequest req)
+        {
+             JsonResponseModel<DescribeGeneralSpanListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGeneralSpanList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGeneralSpanListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 拉取通用指标列表
         /// </summary>
         /// <param name="req"><see cref="DescribeMetricRecordsRequest"/></param>

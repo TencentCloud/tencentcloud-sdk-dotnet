@@ -36,6 +36,13 @@ namespace TencentCloud.Tag.V20180813.Models
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }
 
+        /// <summary>
+        /// 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Tag.V20180813.Models
         {
             this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
             this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
         }
     }
 }

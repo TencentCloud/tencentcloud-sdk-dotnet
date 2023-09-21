@@ -83,15 +83,15 @@ namespace TencentCloud.Asr.V20190614.Models
         public ulong? ResTextFormat{ get; set; }
 
         /// <summary>
-        /// 语音数据来源
-        /// 0：语音 URL；
-        /// 1：语音数据（post body）
+        /// 音频数据来源
+        /// 0：音频URL；
+        /// 1：音频数据（post body）
         /// </summary>
         [JsonProperty("SourceType")]
         public ulong? SourceType{ get; set; }
 
         /// <summary>
-        /// 语音数据base64编码
+        /// 音频数据base64编码
         /// **当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
         /// 
         /// 注意：音频数据要小于5MB（含）
@@ -106,7 +106,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public ulong? DataLen{ get; set; }
 
         /// <summary>
-        /// 语音URL的地址（需要公网环境浏览器可下载）
+        /// 音频URL的地址（需要公网环境浏览器可下载）
         /// **当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
         /// 
         /// 注意：

@@ -84,6 +84,18 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("SerialType")]
         public ulong? SerialType{ get; set; }
 
+        /// <summary>
+        /// 关联产品ID
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
+
+        /// <summary>
+        /// 层级码时是否提前生成关联关系，默认为 1
+        /// </summary>
+        [JsonProperty("RelateType")]
+        public long? RelateType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamArrayObj(map, prefix + "PackSpec.", this.PackSpec);
             this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
             this.SetParamSimple(map, prefix + "SerialType", this.SerialType);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "RelateType", this.RelateType);
         }
     }
 }

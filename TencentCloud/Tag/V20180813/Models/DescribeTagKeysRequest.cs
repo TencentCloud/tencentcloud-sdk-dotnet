@@ -37,7 +37,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页大小，默认为 15
+        /// 每页大小，默认为 15，最大1000
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -47,6 +47,12 @@ namespace TencentCloud.Tag.V20180813.Models
         /// </summary>
         [JsonProperty("ShowProject")]
         public ulong? ShowProject{ get; set; }
+
+        /// <summary>
+        /// 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+        /// </summary>
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Tag.V20180813.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ShowProject", this.ShowProject);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
         }
     }
 }
