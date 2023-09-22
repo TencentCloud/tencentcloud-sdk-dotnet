@@ -2573,6 +2573,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（DescribeSparkSessionBatchSQL）用于查询Spark SQL批任务运行状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkSessionBatchSQLRequest"/></param>
+        /// <returns><see cref="DescribeSparkSessionBatchSQLResponse"/></returns>
+        public async Task<DescribeSparkSessionBatchSQLResponse> DescribeSparkSessionBatchSQL(DescribeSparkSessionBatchSQLRequest req)
+        {
+             JsonResponseModel<DescribeSparkSessionBatchSQLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSparkSessionBatchSQL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkSessionBatchSQLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSparkSessionBatchSQL）用于查询Spark SQL批任务运行状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkSessionBatchSQLRequest"/></param>
+        /// <returns><see cref="DescribeSparkSessionBatchSQLResponse"/></returns>
+        public DescribeSparkSessionBatchSQLResponse DescribeSparkSessionBatchSQLSync(DescribeSparkSessionBatchSQLRequest req)
+        {
+             JsonResponseModel<DescribeSparkSessionBatchSQLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSparkSessionBatchSQL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkSessionBatchSQLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeSparkSessionBatchSqlLog）用于查询Spark SQL批任务日志
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkSessionBatchSqlLogRequest"/></param>

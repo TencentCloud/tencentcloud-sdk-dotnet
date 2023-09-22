@@ -26,7 +26,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         
         /// <summary>
         /// 第三方云储存的供应商:
-        /// 0：腾讯云存储 COS，暂不支持其他家。
+        /// 0：腾讯云存储 COS。
+        /// 【*注意】：目前第三方仅支持腾讯云存储COS，暂不支持AWS等其他第三方云存储。
         /// </summary>
         [JsonProperty("Vendor")]
         public ulong? Vendor{ get; set; }

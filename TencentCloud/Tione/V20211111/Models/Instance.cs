@@ -105,6 +105,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("SpecAlias")]
         public string SpecAlias{ get; set; }
 
+        /// <summary>
+        /// 计费项特性列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpecFeatures")]
+        public string[] SpecFeatures{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +128,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "SpecId", this.SpecId);
             this.SetParamSimple(map, prefix + "SpecAlias", this.SpecAlias);
+            this.SetParamArraySimple(map, prefix + "SpecFeatures.", this.SpecFeatures);
         }
     }
 }

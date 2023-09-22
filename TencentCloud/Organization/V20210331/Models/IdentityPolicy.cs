@@ -25,16 +25,30 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 策略ID
+        /// CAM预设策略ID。PolicyType 为预设策略时有效且必选
         /// </summary>
         [JsonProperty("PolicyId")]
         public ulong? PolicyId{ get; set; }
 
         /// <summary>
-        /// 策略名称
+        /// CAM预设策略名称。PolicyType 为预设策略时有效且必选
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
+
+        /// <summary>
+        /// 策略类型。取值 1-自定义策略  2-预设策略；默认值2
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PolicyType")]
+        public ulong? PolicyType{ get; set; }
+
+        /// <summary>
+        /// 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PolicyDocument")]
+        public string PolicyDocument{ get; set; }
 
 
         /// <summary>
@@ -44,6 +58,8 @@ namespace TencentCloud.Organization.V20210331.Models
         {
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
+            this.SetParamSimple(map, prefix + "PolicyType", this.PolicyType);
+            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
         }
     }
 }

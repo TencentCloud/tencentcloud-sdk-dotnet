@@ -105,6 +105,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [System.Obsolete]
         public ApproverRestriction ApproverRestrictions{ get; set; }
 
+        /// <summary>
+        /// 指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
+        /// </summary>
+        [JsonProperty("ApproverComponentLimitTypes")]
+        public ApproverComponentLimitType[] ApproverComponentLimitTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +128,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
+            this.SetParamArrayObj(map, prefix + "ApproverComponentLimitTypes.", this.ApproverComponentLimitTypes);
         }
     }
 }

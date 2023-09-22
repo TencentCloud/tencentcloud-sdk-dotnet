@@ -25,19 +25,20 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 签署流程信息
+        /// 合同流程的详细信息。
+        /// 如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
         /// </summary>
         [JsonProperty("FlowDetailInfos")]
         public FlowDetailInfo[] FlowDetailInfos{ get; set; }
 
         /// <summary>
-        /// 合同组ID，为32位字符串
+        /// 合同组ID，只有在查询合同组信息时才会返回。
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
 
         /// <summary>
-        /// 合同组名称
+        /// 合同组名称，只有在查询合同组信息时才会返回。
         /// </summary>
         [JsonProperty("FlowGroupName")]
         public string FlowGroupName{ get; set; }

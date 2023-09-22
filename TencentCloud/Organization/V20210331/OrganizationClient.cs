@@ -813,7 +813,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 获取组织成员可被管理的身份列表
+        /// 获取组织成员访问授权列表
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMemberAuthIdentitiesRequest"/></param>
         /// <returns><see cref="DescribeOrganizationMemberAuthIdentitiesResponse"/></returns>
@@ -833,7 +833,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 获取组织成员可被管理的身份列表
+        /// 获取组织成员访问授权列表
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMemberAuthIdentitiesRequest"/></param>
         /// <returns><see cref="DescribeOrganizationMemberAuthIdentitiesResponse"/></returns>

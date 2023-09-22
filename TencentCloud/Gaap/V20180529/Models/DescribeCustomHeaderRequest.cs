@@ -24,12 +24,19 @@ namespace TencentCloud.Gaap.V20180529.Models
     public class DescribeCustomHeaderRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 规则ID
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
         }
     }
 }

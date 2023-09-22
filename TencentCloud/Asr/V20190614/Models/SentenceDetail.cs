@@ -39,6 +39,13 @@ namespace TencentCloud.Asr.V20190614.Models
         public string SliceSentence{ get; set; }
 
         /// <summary>
+        /// 口语转书面语结果，开启改功能才有值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WrittenText")]
+        public string WrittenText{ get; set; }
+
+        /// <summary>
         /// 单句开始时间（毫秒）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -109,6 +116,7 @@ namespace TencentCloud.Asr.V20190614.Models
         {
             this.SetParamSimple(map, prefix + "FinalSentence", this.FinalSentence);
             this.SetParamSimple(map, prefix + "SliceSentence", this.SliceSentence);
+            this.SetParamSimple(map, prefix + "WrittenText", this.WrittenText);
             this.SetParamSimple(map, prefix + "StartMs", this.StartMs);
             this.SetParamSimple(map, prefix + "EndMs", this.EndMs);
             this.SetParamSimple(map, prefix + "WordsNum", this.WordsNum);

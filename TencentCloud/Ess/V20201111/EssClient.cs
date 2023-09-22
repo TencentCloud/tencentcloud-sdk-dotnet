@@ -2063,7 +2063,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 接口用户查询合同流程的详情信息, 支持查询多个(数量不能超过100)
+        /// 此接口用于查询合同流程的详情信息，支持查询多个（数量不能超过100）。
         /// 
         /// 适用场景：可用于主动查询某个合同详情信息。
         /// </summary>
@@ -2085,7 +2085,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 接口用户查询合同流程的详情信息, 支持查询多个(数量不能超过100)
+        /// 此接口用于查询合同流程的详情信息，支持查询多个（数量不能超过100）。
         /// 
         /// 适用场景：可用于主动查询某个合同详情信息。
         /// </summary>
@@ -2370,6 +2370,46 @@ namespace TencentCloud.Ess.V20201111
              {
                  var strResp = this.InternalRequestSync(req, "DescribeOrganizationSeals");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationSealsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（DescribePersonCertificate）用于查询个人数字证书信息。<br />注：`1.目前仅用于查询开通了医疗自动签署功能的个人数字证书。`<br />`2.调用此接口需要开通白名单，使用前请联系相关人员开通白名单。`
+        /// </summary>
+        /// <param name="req"><see cref="DescribePersonCertificateRequest"/></param>
+        /// <returns><see cref="DescribePersonCertificateResponse"/></returns>
+        public async Task<DescribePersonCertificateResponse> DescribePersonCertificate(DescribePersonCertificateRequest req)
+        {
+             JsonResponseModel<DescribePersonCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePersonCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（DescribePersonCertificate）用于查询个人数字证书信息。<br />注：`1.目前仅用于查询开通了医疗自动签署功能的个人数字证书。`<br />`2.调用此接口需要开通白名单，使用前请联系相关人员开通白名单。`
+        /// </summary>
+        /// <param name="req"><see cref="DescribePersonCertificateRequest"/></param>
+        /// <returns><see cref="DescribePersonCertificateResponse"/></returns>
+        public DescribePersonCertificateResponse DescribePersonCertificateSync(DescribePersonCertificateRequest req)
+        {
+             JsonResponseModel<DescribePersonCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePersonCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonCertificateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

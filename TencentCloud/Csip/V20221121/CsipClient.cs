@@ -173,6 +173,86 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 删除域名和ip请求
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDomainAndIpRequest"/></param>
+        /// <returns><see cref="DeleteDomainAndIpResponse"/></returns>
+        public async Task<DeleteDomainAndIpResponse> DeleteDomainAndIp(DeleteDomainAndIpRequest req)
+        {
+             JsonResponseModel<DeleteDomainAndIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDomainAndIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainAndIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除域名和ip请求
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDomainAndIpRequest"/></param>
+        /// <returns><see cref="DeleteDomainAndIpResponse"/></returns>
+        public DeleteDomainAndIpResponse DeleteDomainAndIpSync(DeleteDomainAndIpRequest req)
+        {
+             JsonResponseModel<DeleteDomainAndIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDomainAndIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainAndIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除风险中心扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRiskScanTaskRequest"/></param>
+        /// <returns><see cref="DeleteRiskScanTaskResponse"/></returns>
+        public async Task<DeleteRiskScanTaskResponse> DeleteRiskScanTask(DeleteRiskScanTaskRequest req)
+        {
+             JsonResponseModel<DeleteRiskScanTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRiskScanTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRiskScanTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除风险中心扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRiskScanTaskRequest"/></param>
+        /// <returns><see cref="DeleteRiskScanTaskResponse"/></returns>
+        public DeleteRiskScanTaskResponse DeleteRiskScanTaskSync(DeleteRiskScanTaskRequest req)
+        {
+             JsonResponseModel<DeleteRiskScanTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRiskScanTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRiskScanTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// cvm详情
         /// </summary>
         /// <param name="req"><see cref="DescribeCVMAssetInfoRequest"/></param>
@@ -844,6 +924,46 @@ namespace TencentCloud.Csip.V20221121
              {
                  var strResp = this.InternalRequestSync(req, "DescribeVpcAssets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcAssetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止扫风险中心扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="StopRiskCenterTaskRequest"/></param>
+        /// <returns><see cref="StopRiskCenterTaskResponse"/></returns>
+        public async Task<StopRiskCenterTaskResponse> StopRiskCenterTask(StopRiskCenterTaskRequest req)
+        {
+             JsonResponseModel<StopRiskCenterTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopRiskCenterTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopRiskCenterTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止扫风险中心扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="StopRiskCenterTaskRequest"/></param>
+        /// <returns><see cref="StopRiskCenterTaskResponse"/></returns>
+        public StopRiskCenterTaskResponse StopRiskCenterTaskSync(StopRiskCenterTaskRequest req)
+        {
+             JsonResponseModel<StopRiskCenterTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopRiskCenterTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopRiskCenterTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

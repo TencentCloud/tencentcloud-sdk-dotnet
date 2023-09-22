@@ -94,6 +94,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string MinScaleResolution{ get; set; }
 
         /// <summary>
+        /// 此参数仅对动态转码生效。
         /// 是否对不支持元素开启自动处理的功能。默认不开启。
         /// 
         /// 在开启自动处理的情况下，会自动进行如下处理：

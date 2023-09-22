@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.853</VersionPrefix>
+    <VersionPrefix>3.0.854</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,10 @@
     <Compile Include="V20221121\Models\DBAssetVO.cs" />
     <Compile Include="V20221121\Models\DataSearchBug.cs" />
     <Compile Include="V20221121\Models\DbAssetInfo.cs" />
+    <Compile Include="V20221121\Models\DeleteDomainAndIpRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteDomainAndIpResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteRiskScanTaskRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteRiskScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetsRequest.cs" />
@@ -103,9 +107,12 @@
     <Compile Include="V20221121\Models\Filter.cs" />
     <Compile Include="V20221121\Models\FilterDataObject.cs" />
     <Compile Include="V20221121\Models\IpAssetListVO.cs" />
+    <Compile Include="V20221121\Models\PublicIpDomainListKey.cs" />
     <Compile Include="V20221121\Models\ReportItemKey.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfo.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfoList.cs" />
+    <Compile Include="V20221121\Models\StopRiskCenterTaskRequest.cs" />
+    <Compile Include="V20221121\Models\StopRiskCenterTaskResponse.cs" />
     <Compile Include="V20221121\Models\SubnetAsset.cs" />
     <Compile Include="V20221121\Models\Tag.cs" />
     <Compile Include="V20221121\Models\TaskAdvanceCFG.cs" />
@@ -113,6 +120,7 @@
     <Compile Include="V20221121\Models\TaskCenterCFGRiskInputParam.cs" />
     <Compile Include="V20221121\Models\TaskCenterVulRiskInputParam.cs" />
     <Compile Include="V20221121\Models\TaskCenterWeakPwdRiskInputParam.cs" />
+    <Compile Include="V20221121\Models\TaskIdListKey.cs" />
     <Compile Include="V20221121\Models\TaskLogInfo.cs" />
     <Compile Include="V20221121\Models\TaskLogURL.cs" />
     <Compile Include="V20221121\Models\Vpc.cs" />

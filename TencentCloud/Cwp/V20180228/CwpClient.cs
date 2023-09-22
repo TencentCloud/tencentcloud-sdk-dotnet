@@ -1539,6 +1539,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取agent安装命令
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentInstallCommandRequest"/></param>
+        /// <returns><see cref="DescribeAgentInstallCommandResponse"/></returns>
+        public async Task<DescribeAgentInstallCommandResponse> DescribeAgentInstallCommand(DescribeAgentInstallCommandRequest req)
+        {
+             JsonResponseModel<DescribeAgentInstallCommandResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAgentInstallCommand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentInstallCommandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取agent安装命令
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentInstallCommandRequest"/></param>
+        /// <returns><see cref="DescribeAgentInstallCommandResponse"/></returns>
+        public DescribeAgentInstallCommandResponse DescribeAgentInstallCommandSync(DescribeAgentInstallCommandRequest req)
+        {
+             JsonResponseModel<DescribeAgentInstallCommandResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAgentInstallCommand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentInstallCommandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取告警点所在事件的所有节点信息
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmIncidentNodesRequest"/></param>

@@ -93,6 +93,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
+        /// </summary>
+        [JsonProperty("ApproverComponentLimitTypes")]
+        public ApproverComponentLimitType[] ApproverComponentLimitTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +115,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamArrayObj(map, prefix + "ApproverComponentLimitTypes.", this.ApproverComponentLimitTypes);
         }
     }
 }

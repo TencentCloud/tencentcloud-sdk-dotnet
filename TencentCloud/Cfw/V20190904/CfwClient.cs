@@ -3381,6 +3381,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 已上新接口，支持串行
+        /// 
         /// 单个修改互联网边界防火墙开关
         /// </summary>
         /// <param name="req"><see cref="ModifyPublicIPSwitchStatusRequest"/></param>
@@ -3401,6 +3403,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 已上新接口，支持串行
+        /// 
         /// 单个修改互联网边界防火墙开关
         /// </summary>
         /// <param name="req"><see cref="ModifyPublicIPSwitchStatusRequest"/></param>

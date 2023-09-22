@@ -37,10 +37,16 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 组织成员Uin。
+        /// 组织成员Uin。入参MemberUin与IdentityId至少填写一个
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
+
+        /// <summary>
+        /// 身份ID。入参MemberUin与IdentityId至少填写一个
+        /// </summary>
+        [JsonProperty("IdentityId")]
+        public ulong? IdentityId{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
+            this.SetParamSimple(map, prefix + "IdentityId", this.IdentityId);
         }
     }
 }

@@ -105,7 +105,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// 根据策略名称模糊搜索
+        /// 根据策略名称模糊搜索,不支持大小写区分
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
@@ -135,7 +135,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] PolicyIds{ get; set; }
 
         /// <summary>
-        /// 告警等级
+        /// 告警等级,取值范围：Remind、Serious、Warn
         /// </summary>
         [JsonProperty("AlarmLevels")]
         public string[] AlarmLevels{ get; set; }

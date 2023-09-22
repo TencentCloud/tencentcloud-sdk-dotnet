@@ -46,32 +46,53 @@ namespace TencentCloud.Organization.V20210331.Models
         public string IdentityRoleAliasName{ get; set; }
 
         /// <summary>
-        /// 描述。
+        /// 身份描述。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// 首次配置成功的时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间。
+        /// 最后一次配置成功的时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 身份类型。取值： 1-预设  2-自定义
+        /// 身份类型。取值： 1-预设身份  2-自定义身份
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityType")]
         public ulong? IdentityType{ get; set; }
+
+        /// <summary>
+        /// 配置状态。取值：1-配置完成 2-需重新配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// 成员Uin。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MemberUin")]
+        public long? MemberUin{ get; set; }
+
+        /// <summary>
+        /// 成员名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MemberName")]
+        public string MemberName{ get; set; }
 
 
         /// <summary>
@@ -86,6 +107,9 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "IdentityType", this.IdentityType);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
+            this.SetParamSimple(map, prefix + "MemberName", this.MemberName);
         }
     }
 }
