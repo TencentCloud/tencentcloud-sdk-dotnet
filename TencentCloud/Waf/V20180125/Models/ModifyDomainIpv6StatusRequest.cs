@@ -43,7 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string DomainId{ get; set; }
 
         /// <summary>
-        /// 修改域名的Ipv6开关为Status （0:关闭 1:开启）
+        /// 修改域名的Ipv6开关为Status （1:开启 2:关闭）
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

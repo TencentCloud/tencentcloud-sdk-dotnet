@@ -132,6 +132,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
+        /// <summary>
+        /// 分页查询方式 offset-按照偏移量分页查询，pageNumber-按照页数分页查询，默认取值pageNumber
+        /// </summary>
+        [JsonProperty("PaginationType")]
+        public string PaginationType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +160,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
             this.SetParamArraySimple(map, prefix + "UidSet.", this.UidSet);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "PaginationType", this.PaginationType);
         }
     }
 }

@@ -85,13 +85,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 规则防御模式,0观察模式 1拦截模式
+        /// 规则引擎防护模式,0观察模式 1拦截模式
         /// </summary>
         [JsonProperty("Mode")]
         public ulong? Mode{ get; set; }
 
         /// <summary>
-        /// AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+        /// 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
         /// </summary>
         [JsonProperty("Engine")]
         public ulong? Engine{ get; set; }
@@ -203,6 +203,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("SgDetail")]
         public string SgDetail{ get; set; }
 
+        /// <summary>
+        /// 域名类型:hybrid表示混合云域名，public表示公有云域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudType")]
+        public string CloudType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +245,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "AlbType", this.AlbType);
             this.SetParamSimple(map, prefix + "SgState", this.SgState);
             this.SetParamSimple(map, prefix + "SgDetail", this.SgDetail);
+            this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
         }
     }
 }

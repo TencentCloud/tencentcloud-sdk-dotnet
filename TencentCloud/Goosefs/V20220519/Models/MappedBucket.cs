@@ -64,6 +64,26 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("RuleDescription")]
         public string RuleDescription{ get; set; }
 
+        /// <summary>
+        /// 桶关联状态 0：关联中 1：关联完成
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// 是否使用全球加速域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccelerateFlag")]
+        public bool? AccelerateFlag{ get; set; }
+
+        /// <summary>
+        /// 桶所在的园区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BucketRegion")]
+        public string BucketRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +95,9 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamArraySimple(map, prefix + "DataRepositoryTaskAutoStrategy.", this.DataRepositoryTaskAutoStrategy);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "RuleDescription", this.RuleDescription);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "AccelerateFlag", this.AccelerateFlag);
+            this.SetParamSimple(map, prefix + "BucketRegion", this.BucketRegion);
         }
     }
 }

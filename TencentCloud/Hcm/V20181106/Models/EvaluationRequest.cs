@@ -64,6 +64,7 @@ namespace TencentCloud.Hcm.V20181106.Models
         /// 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
         /// </summary>
         [JsonProperty("IsAsync")]
+        [System.Obsolete]
         public long? IsAsync{ get; set; }
 
         /// <summary>

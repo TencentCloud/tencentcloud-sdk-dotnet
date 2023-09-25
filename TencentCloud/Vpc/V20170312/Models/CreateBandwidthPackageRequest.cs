@@ -28,6 +28,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 带宽包类型, 默认值: BGP, 可选值:
         /// <li>BGP: 普通BGP共享带宽包</li>
         /// <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+        /// <li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+        /// <li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+        /// <li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
@@ -79,6 +82,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
+        /// <summary>
+        /// 网络出口，默认值：center_egress1
+        /// </summary>
+        [JsonProperty("Egress")]
+        public string Egress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +102,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "Egress", this.Egress);
         }
     }
 }

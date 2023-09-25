@@ -52,12 +52,14 @@ namespace TencentCloud.Tse.V20201207.Models
         /// 证书私钥
         /// </summary>
         [JsonProperty("Key")]
+        [System.Obsolete]
         public string Key{ get; set; }
 
         /// <summary>
         /// 证书pem格式
         /// </summary>
         [JsonProperty("Crt")]
+        [System.Obsolete]
         public string Crt{ get; set; }
 
 

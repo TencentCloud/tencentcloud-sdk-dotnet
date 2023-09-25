@@ -41,6 +41,7 @@ namespace TencentCloud.Hcm.V20181106.Models
         /// 任务 id，用于查询接口
         /// </summary>
         [JsonProperty("TaskId")]
+        [System.Obsolete]
         public string TaskId{ get; set; }
 
         /// <summary>
