@@ -149,6 +149,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("UpdateEnable")]
         public long? UpdateEnable{ get; set; }
 
+        /// <summary>
+        /// 是的需要升级引擎 支持 nat拨测 1需要 0不需要
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NeedProbeEngineUpdate")]
+        public long? NeedProbeEngineUpdate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +181,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "RuleMax", this.RuleMax);
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "UpdateEnable", this.UpdateEnable);
+            this.SetParamSimple(map, prefix + "NeedProbeEngineUpdate", this.NeedProbeEngineUpdate);
         }
     }
 }

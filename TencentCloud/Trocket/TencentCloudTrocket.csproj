@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.855</VersionPrefix>
+    <VersionPrefix>3.0.856</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,12 +52,16 @@
     <Compile Include="V20230308\Models\CreateConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\CreateInstanceRequest.cs" />
     <Compile Include="V20230308\Models\CreateInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\CreateRoleRequest.cs" />
+    <Compile Include="V20230308\Models\CreateRoleResponse.cs" />
     <Compile Include="V20230308\Models\CreateTopicRequest.cs" />
     <Compile Include="V20230308\Models\CreateTopicResponse.cs" />
     <Compile Include="V20230308\Models\DeleteConsumerGroupRequest.cs" />
     <Compile Include="V20230308\Models\DeleteConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\DeleteInstanceRequest.cs" />
     <Compile Include="V20230308\Models\DeleteInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\DeleteRoleRequest.cs" />
+    <Compile Include="V20230308\Models\DeleteRoleResponse.cs" />
     <Compile Include="V20230308\Models\DeleteTopicRequest.cs" />
     <Compile Include="V20230308\Models\DeleteTopicResponse.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerGroupRequest.cs" />
@@ -66,6 +70,8 @@
     <Compile Include="V20230308\Models\DescribeInstanceListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeInstanceRequest.cs" />
     <Compile Include="V20230308\Models\DescribeInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeRoleListRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeRoleListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeTopicListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeTopicListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeTopicRequest.cs" />
@@ -80,8 +86,11 @@
     <Compile Include="V20230308\Models\ModifyConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20230308\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\ModifyRoleRequest.cs" />
+    <Compile Include="V20230308\Models\ModifyRoleResponse.cs" />
     <Compile Include="V20230308\Models\ModifyTopicRequest.cs" />
     <Compile Include="V20230308\Models\ModifyTopicResponse.cs" />
+    <Compile Include="V20230308\Models\RoleItem.cs" />
     <Compile Include="V20230308\Models\SubscriptionData.cs" />
     <Compile Include="V20230308\Models\Tag.cs" />
     <Compile Include="V20230308\Models\TagFilter.cs" />

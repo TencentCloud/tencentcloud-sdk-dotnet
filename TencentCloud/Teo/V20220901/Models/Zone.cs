@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点ID。
+        /// 站点 ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -54,15 +54,17 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li> pending：NS 未切换；</li>
         /// <li> moved：NS 已切走；</li>
         /// <li> deactivated：被封禁。 </li>
+        /// <li> initializing：待绑定套餐。 </li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 站点接入方式，取值有
-        /// <li> full：NS 接入； </li>
+        /// 站点接入方式，取值有：
+        /// <li> full：NS 接入；</li>
         /// <li> partial：CNAME 接入；</li>
-        /// <li> noDomainAccess：无域名接入。</li>
+        /// <li> noDomainAccess：无域名接入；</li>
+        /// <li> vodeo：vodeo默认站点。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -161,10 +163,17 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? IsFake{ get; set; }
 
         /// <summary>
-        /// 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+        /// 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作；</li><li> plan_migrate：套餐迁移中，不允许进行修改操作。</li>
         /// </summary>
         [JsonProperty("LockStatus")]
         public string LockStatus{ get; set; }
+
+        /// <summary>
+        /// 归属权验证信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnershipVerification")]
+        public OwnershipVerification OwnershipVerification{ get; set; }
 
 
         /// <summary>
@@ -192,6 +201,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
             this.SetParamSimple(map, prefix + "IsFake", this.IsFake);
             this.SetParamSimple(map, prefix + "LockStatus", this.LockStatus);
+            this.SetParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
         }
     }
 }

@@ -25,10 +25,23 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点ID。
+        /// 站点 ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// 站点归属权验证信息。站点完成创建后，您还需要完成归属权校验，站点才能正常服务。
+        /// 
+        /// Type = partial 时，您需要参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789) 前往您的域名解析服务商添加 TXT 记录或者前往根域名服务器添加文件，再调用接口 [VerifyOwnership]() 完成验证；
+        /// 
+        /// Type = full 时，您需要参考 [修改 DNS 服务器](https://cloud.tencent.com/document/product/1552/90452) 切换 DNS 服务器即可，可通过接口 [VerifyOwnership]() 查询 DNS 是否切换成功；
+        /// 
+        /// Type = noDomainAccess 时，该值为空，不需要进行任何操作。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnershipVerification")]
+        public OwnershipVerification OwnershipVerification{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +56,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

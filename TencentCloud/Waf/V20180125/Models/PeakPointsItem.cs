@@ -67,53 +67,81 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? BotAccess{ get; set; }
 
         /// <summary>
-        /// WAF返回给客户端状态码次数
+        /// WAF返回给客户端状态码5xx次数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusServerError")]
         public ulong? StatusServerError{ get; set; }
 
         /// <summary>
-        /// WAF返回给客户端状态码次数
+        /// WAF返回给客户端状态码4xx次数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusClientError")]
         public ulong? StatusClientError{ get; set; }
 
         /// <summary>
-        /// WAF返回给客户端状态码次数
+        /// WAF返回给客户端状态码302次数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusRedirect")]
         public ulong? StatusRedirect{ get; set; }
 
         /// <summary>
-        /// WAF返回给客户端状态码次数
+        /// WAF返回给客户端状态码202次数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusOk")]
         public ulong? StatusOk{ get; set; }
 
         /// <summary>
-        /// 源站返回给WAF状态码次数
+        /// 源站返回给WAF状态码5xx次数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamServerError")]
         public ulong? UpstreamServerError{ get; set; }
 
         /// <summary>
-        /// 源站返回给WAF状态码次数
+        /// 源站返回给WAF状态码4xx次数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamClientError")]
         public ulong? UpstreamClientError{ get; set; }
 
         /// <summary>
-        /// 源站返回给WAF状态码次数
+        /// 源站返回给WAF状态码302次数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamRedirect")]
         public ulong? UpstreamRedirect{ get; set; }
+
+        /// <summary>
+        /// 黑名单次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BlackIP")]
+        public ulong? BlackIP{ get; set; }
+
+        /// <summary>
+        /// 防篡改次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tamper")]
+        public ulong? Tamper{ get; set; }
+
+        /// <summary>
+        /// 信息防泄露次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Leak")]
+        public ulong? Leak{ get; set; }
+
+        /// <summary>
+        /// 访问控制 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ACL")]
+        public ulong? ACL{ get; set; }
 
 
         /// <summary>
@@ -135,6 +163,10 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "UpstreamServerError", this.UpstreamServerError);
             this.SetParamSimple(map, prefix + "UpstreamClientError", this.UpstreamClientError);
             this.SetParamSimple(map, prefix + "UpstreamRedirect", this.UpstreamRedirect);
+            this.SetParamSimple(map, prefix + "BlackIP", this.BlackIP);
+            this.SetParamSimple(map, prefix + "Tamper", this.Tamper);
+            this.SetParamSimple(map, prefix + "Leak", this.Leak);
+            this.SetParamSimple(map, prefix + "ACL", this.ACL);
         }
     }
 }

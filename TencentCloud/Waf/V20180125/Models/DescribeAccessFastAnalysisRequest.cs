@@ -54,6 +54,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("FieldName")]
         public string FieldName{ get; set; }
 
+        /// <summary>
+        /// 排序字段,升序asc,降序desc，默认降序desc 
+        /// </summary>
+        [JsonProperty("Sort")]
+        public string Sort{ get; set; }
+
+        /// <summary>
+        /// 返回的top数，默认返回top5
+        /// </summary>
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "To", this.To);
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "FieldName", this.FieldName);
+            this.SetParamSimple(map, prefix + "Sort", this.Sort);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

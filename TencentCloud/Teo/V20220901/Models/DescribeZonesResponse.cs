@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 站点详细信息列表。
+        /// 站点详细信息。
         /// </summary>
         [JsonProperty("Zones")]
         public Zone[] Zones{ get; set; }

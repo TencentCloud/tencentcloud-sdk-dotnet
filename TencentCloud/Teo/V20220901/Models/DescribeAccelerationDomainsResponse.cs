@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 加速域名总数。
+        /// 符合查询条件的加速域名个数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 加速域名列表。
+        /// 符合查询条件的所有加速域名的信息。
         /// </summary>
         [JsonProperty("AccelerationDomains")]
         public AccelerationDomain[] AccelerationDomains{ get; set; }

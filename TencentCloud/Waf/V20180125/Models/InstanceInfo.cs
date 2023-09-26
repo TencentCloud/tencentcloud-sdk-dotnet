@@ -221,6 +221,20 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("IsAPISecurityTrial")]
         public ulong? IsAPISecurityTrial{ get; set; }
 
+        /// <summary>
+        /// 重保包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MajorEventsPkg")]
+        public MajorEventsPkg MajorEventsPkg{ get; set; }
+
+        /// <summary>
+        /// 混合云子节点包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HybridPkg")]
+        public HybridPkg HybridPkg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -258,6 +272,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SandboxQps", this.SandboxQps);
             this.SetParamSimple(map, prefix + "IsAPISecurityTrial", this.IsAPISecurityTrial);
+            this.SetParamObj(map, prefix + "MajorEventsPkg.", this.MajorEventsPkg);
+            this.SetParamObj(map, prefix + "HybridPkg.", this.HybridPkg);
         }
     }
 }

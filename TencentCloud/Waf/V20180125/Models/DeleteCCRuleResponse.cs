@@ -32,6 +32,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Data{ get; set; }
 
         /// <summary>
+        /// 操作的规则Id
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public long? RuleId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +50,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Data", this.Data);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

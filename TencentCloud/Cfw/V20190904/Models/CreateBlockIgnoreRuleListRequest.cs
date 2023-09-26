@@ -36,6 +36,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
 
+        /// <summary>
+        /// 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+        /// </summary>
+        [JsonProperty("CoverDuplicate")]
+        public long? CoverDuplicate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         {
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "CoverDuplicate", this.CoverDuplicate);
         }
     }
 }

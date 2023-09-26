@@ -31,13 +31,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// 规则名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 动作
+        /// 动作，0（告警）、1（替换）、2（仅显示前四位）、3（仅显示后四位）、4（阻断）
         /// </summary>
         [JsonProperty("ActionType")]
         public ulong? ActionType{ get; set; }

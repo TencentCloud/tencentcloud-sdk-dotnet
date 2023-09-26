@@ -37,6 +37,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] Items{ get; set; }
 
         /// <summary>
+        /// 若IsId字段为True，则Items列表元素需为Id，否则为IP
+        /// </summary>
+        [JsonProperty("IsId")]
+        public bool? IsId{ get; set; }
+
+        /// <summary>
         /// 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
         /// </summary>
         [JsonProperty("DeleteAll")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamArraySimple(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "IsId", this.IsId);
             this.SetParamSimple(map, prefix + "DeleteAll", this.DeleteAll);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
         }

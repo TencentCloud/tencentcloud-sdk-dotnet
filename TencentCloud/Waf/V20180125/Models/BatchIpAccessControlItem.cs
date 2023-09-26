@@ -25,6 +25,13 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
+        /// mongo表自增Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// 黑名单42或白名单40
         /// </summary>
         [JsonProperty("ActionType")]
@@ -72,6 +79,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Note", this.Note);

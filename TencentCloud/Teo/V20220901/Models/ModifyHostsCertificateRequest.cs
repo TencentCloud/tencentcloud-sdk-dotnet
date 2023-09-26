@@ -31,23 +31,34 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 本次变更的域名列表。
+        /// 需要修改证书配置的加速域名。
         /// </summary>
         [JsonProperty("Hosts")]
         public string[] Hosts{ get; set; }
 
         /// <summary>
-        /// 证书信息, 只需要传入 CertId 即可, 如果为空, 则使用默认证书。
+        /// 配置证书的模式，取值有：
+        /// <li>disable：不配置证书；</li>
+        /// <li>eofreecert：配置 EdgeOne 免费证书；</li>
+        /// <li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
         /// </summary>
         [JsonProperty("ServerCertInfo")]
         public ServerCertInfo[] ServerCertInfo{ get; set; }
 
         /// <summary>
         /// 托管类型，取值有：
-        /// <li>apply：托管EO；</li>
-        /// <li>none：不托管EO；</li>不填，默认取值为none。
+        /// <li>none：不托管EO；</li>
+        /// <li>apply：托管EO</li>
+        /// 不填，默认取值为none。
         /// </summary>
         [JsonProperty("ApplyType")]
+        [System.Obsolete]
         public string ApplyType{ get; set; }
 
 
@@ -58,6 +69,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamArraySimple(map, prefix + "Hosts.", this.Hosts);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamArrayObj(map, prefix + "ServerCertInfo.", this.ServerCertInfo);
             this.SetParamSimple(map, prefix + "ApplyType", this.ApplyType);
         }

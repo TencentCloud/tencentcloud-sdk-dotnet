@@ -114,6 +114,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
+        /// <summary>
+        /// 规则需要启用的SessionID
+        /// </summary>
+        [JsonProperty("SessionApplied")]
+        public long?[] SessionApplied{ get; set; }
+
+        /// <summary>
+        /// 规则ID，新增时填0
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public long? RuleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamArraySimple(map, prefix + "SessionApplied.", this.SessionApplied);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
         }
     }
 }

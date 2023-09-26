@@ -42,6 +42,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
 
+        /// <summary>
+        /// 规则Id
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public long? RuleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
         }
     }
 }

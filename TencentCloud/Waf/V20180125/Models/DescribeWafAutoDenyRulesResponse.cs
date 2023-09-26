@@ -49,6 +49,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? DefenseStatus{ get; set; }
 
         /// <summary>
+        /// 重保护网域名状态
+        /// </summary>
+        [JsonProperty("HWState")]
+        public long? HWState{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "TimeThreshold", this.TimeThreshold);
             this.SetParamSimple(map, prefix + "DenyTimeThreshold", this.DenyTimeThreshold);
             this.SetParamSimple(map, prefix + "DefenseStatus", this.DefenseStatus);
+            this.SetParamSimple(map, prefix + "HWState", this.HWState);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

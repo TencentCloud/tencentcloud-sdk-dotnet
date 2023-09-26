@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0E2E4A0A-F402-371E-ABDD-F5704C69EAD3}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.855</VersionPrefix>
+    <VersionPrefix>3.0.856</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,8 +51,62 @@
     <Compile Include="V20220105\Models\ApplyEmbedIntervalRequest.cs" />
     <Compile Include="V20220105\Models\ApplyEmbedIntervalResponse.cs" />
     <Compile Include="V20220105\Models\ApplyEmbedTokenInfo.cs" />
+    <Compile Include="V20220105\Models\BaseStateAction.cs" />
+    <Compile Include="V20220105\Models\CorpUserListData.cs" />
+    <Compile Include="V20220105\Models\CreateDatasourceCloudRequest.cs" />
+    <Compile Include="V20220105\Models\CreateDatasourceCloudResponse.cs" />
+    <Compile Include="V20220105\Models\CreateDatasourceRequest.cs" />
+    <Compile Include="V20220105\Models\CreateDatasourceResponse.cs" />
     <Compile Include="V20220105\Models\CreateEmbedTokenRequest.cs" />
     <Compile Include="V20220105\Models\CreateEmbedTokenResponse.cs" />
+    <Compile Include="V20220105\Models\CreateProjectRequest.cs" />
+    <Compile Include="V20220105\Models\CreateProjectResponse.cs" />
+    <Compile Include="V20220105\Models\CreateUserRoleProjectRequest.cs" />
+    <Compile Include="V20220105\Models\CreateUserRoleProjectResponse.cs" />
+    <Compile Include="V20220105\Models\CreateUserRoleRequest.cs" />
+    <Compile Include="V20220105\Models\CreateUserRoleResponse.cs" />
+    <Compile Include="V20220105\Models\Data.cs" />
+    <Compile Include="V20220105\Models\DataId.cs" />
+    <Compile Include="V20220105\Models\DatasourceInfo.cs" />
+    <Compile Include="V20220105\Models\DatasourceInfoData.cs" />
+    <Compile Include="V20220105\Models\DeleteDatasourceRequest.cs" />
+    <Compile Include="V20220105\Models\DeleteDatasourceResponse.cs" />
+    <Compile Include="V20220105\Models\DeleteProjectRequest.cs" />
+    <Compile Include="V20220105\Models\DeleteProjectResponse.cs" />
+    <Compile Include="V20220105\Models\DeleteUserRoleProjectRequest.cs" />
+    <Compile Include="V20220105\Models\DeleteUserRoleProjectResponse.cs" />
+    <Compile Include="V20220105\Models\DeleteUserRoleRequest.cs" />
+    <Compile Include="V20220105\Models\DeleteUserRoleResponse.cs" />
+    <Compile Include="V20220105\Models\DescribeDatasourceListRequest.cs" />
+    <Compile Include="V20220105\Models\DescribeDatasourceListResponse.cs" />
+    <Compile Include="V20220105\Models\DescribeProjectInfoRequest.cs" />
+    <Compile Include="V20220105\Models\DescribeProjectInfoResponse.cs" />
+    <Compile Include="V20220105\Models\DescribeProjectListRequest.cs" />
+    <Compile Include="V20220105\Models\DescribeProjectListResponse.cs" />
+    <Compile Include="V20220105\Models\DescribeUserProjectListRequest.cs" />
+    <Compile Include="V20220105\Models\DescribeUserProjectListResponse.cs" />
+    <Compile Include="V20220105\Models\DescribeUserRoleListRequest.cs" />
+    <Compile Include="V20220105\Models\DescribeUserRoleListResponse.cs" />
     <Compile Include="V20220105\Models\EmbedTokenInfo.cs" />
+    <Compile Include="V20220105\Models\IdDTO.cs" />
+    <Compile Include="V20220105\Models\ModifyDatasourceCloudRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyDatasourceCloudResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyDatasourceRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyDatasourceResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyProjectRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyProjectResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyUserRoleProjectRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyUserRoleProjectResponse.cs" />
+    <Compile Include="V20220105\Models\PermissionComponent.cs" />
+    <Compile Include="V20220105\Models\PermissionGroup.cs" />
+    <Compile Include="V20220105\Models\Project.cs" />
+    <Compile Include="V20220105\Models\ProjectConfigList.cs" />
+    <Compile Include="V20220105\Models\ProjectConfigResult.cs" />
+    <Compile Include="V20220105\Models\ProjectListData.cs" />
+    <Compile Include="V20220105\Models\UserIdAndUserName.cs" />
+    <Compile Include="V20220105\Models\UserInfo.cs" />
+    <Compile Include="V20220105\Models\UserRoleListData.cs" />
+    <Compile Include="V20220105\Models\UserRoleListDataRoleInfo.cs" />
+    <Compile Include="V20220105\Models\UserRoleListDataUserRoleInfo.cs" />
   </ItemGroup>
 </Project>

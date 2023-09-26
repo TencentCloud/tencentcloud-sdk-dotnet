@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.855</VersionPrefix>
+    <VersionPrefix>3.0.856</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -237,6 +237,7 @@
     <Compile Include="V20180125\Models\HostDel.cs" />
     <Compile Include="V20180125\Models\HostRecord.cs" />
     <Compile Include="V20180125\Models\HostStatus.cs" />
+    <Compile Include="V20180125\Models\HybridPkg.cs" />
     <Compile Include="V20180125\Models\InstanceInfo.cs" />
     <Compile Include="V20180125\Models\IpAccessControlData.cs" />
     <Compile Include="V20180125\Models\IpAccessControlItem.cs" />
@@ -245,6 +246,7 @@
     <Compile Include="V20180125\Models\LoadBalancer.cs" />
     <Compile Include="V20180125\Models\LoadBalancerPackageNew.cs" />
     <Compile Include="V20180125\Models\LogHistogramInfo.cs" />
+    <Compile Include="V20180125\Models\MajorEventsPkg.cs" />
     <Compile Include="V20180125\Models\ModifyAccessPeriodRequest.cs" />
     <Compile Include="V20180125\Models\ModifyAccessPeriodResponse.cs" />
     <Compile Include="V20180125\Models\ModifyAntiFakeUrlRequest.cs" />

@@ -25,6 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
+        /// 当您的站点未进行归属权验证时，您可通过该参数返回的信息单独对域名进行归属权校验。详情参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789)。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnershipVerification")]
+        public OwnershipVerification OwnershipVerification{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

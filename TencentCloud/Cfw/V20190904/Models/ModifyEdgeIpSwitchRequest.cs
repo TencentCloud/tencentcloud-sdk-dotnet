@@ -27,6 +27,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// <summary>
         /// 0 关闭开关
         /// 1 打开开关
+        /// 2 不操作开关，此次切换模式
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
@@ -37,6 +38,21 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("EdgeIpSwitchLst")]
         public EdgeIpSwitch[] EdgeIpSwitchLst{ get; set; }
 
+        /// <summary>
+        /// 0 不自动选择子网
+        /// 1 自动选择子网创建私有连接
+        /// </summary>
+        [JsonProperty("AutoChooseSubnet")]
+        public long? AutoChooseSubnet{ get; set; }
+
+        /// <summary>
+        /// 0 切换为旁路
+        /// 1 切换为串行
+        /// 2 不切换模式，此次操作开关
+        /// </summary>
+        [JsonProperty("SwitchMode")]
+        public long? SwitchMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +61,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         {
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamArrayObj(map, prefix + "EdgeIpSwitchLst.", this.EdgeIpSwitchLst);
+            this.SetParamSimple(map, prefix + "AutoChooseSubnet", this.AutoChooseSubnet);
+            this.SetParamSimple(map, prefix + "SwitchMode", this.SwitchMode);
         }
     }
 }

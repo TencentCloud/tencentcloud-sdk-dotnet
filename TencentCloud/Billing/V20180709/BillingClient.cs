@@ -173,7 +173,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 查询账单明细数据。
+        /// 获取账单明细数据。
         /// 注意事项：
         /// 1.在请求接口时，由于网络不稳定或其它异常，可能会导致请求失败。如果您遇到这种情况，我们建议您在接口请求失败时，手动发起重试操作，这样可以更好地确保您的接口请求能够成功执行。
         /// 2.对于账单明细数据量级很大（例如每月账单明细量级超过20w）的客户，通过 API 调用账单数据效率较低，建议您开通账单数据存储功能，通过存储桶中获取账单文件进行分析。[账单存储至COS桶](https://cloud.tencent.com/document/product/555/61275)
@@ -196,7 +196,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 查询账单明细数据。
+        /// 获取账单明细数据。
         /// 注意事项：
         /// 1.在请求接口时，由于网络不稳定或其它异常，可能会导致请求失败。如果您遇到这种情况，我们建议您在接口请求失败时，手动发起重试操作，这样可以更好地确保您的接口请求能够成功执行。
         /// 2.对于账单明细数据量级很大（例如每月账单明细量级超过20w）的客户，通过 API 调用账单数据效率较低，建议您开通账单数据存储功能，通过存储桶中获取账单文件进行分析。[账单存储至COS桶](https://cloud.tencent.com/document/product/555/61275)
@@ -210,6 +210,88 @@ namespace TencentCloud.Billing.V20180709
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBillDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 成员账号获取管理账号代付账单（费用明细）。
+        /// 注意事项：在请求接口时，由于网络不稳定或其它异常，可能会导致请求失败。如果您遇到这种情况，我们建议您在接口请求失败时，手动发起重试操作，这样可以更好地确保您的接口请求能够成功执行。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillDetailForOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeBillDetailForOrganizationResponse"/></returns>
+        public async Task<DescribeBillDetailForOrganizationResponse> DescribeBillDetailForOrganization(DescribeBillDetailForOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeBillDetailForOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillDetailForOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDetailForOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 成员账号获取管理账号代付账单（费用明细）。
+        /// 注意事项：在请求接口时，由于网络不稳定或其它异常，可能会导致请求失败。如果您遇到这种情况，我们建议您在接口请求失败时，手动发起重试操作，这样可以更好地确保您的接口请求能够成功执行。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillDetailForOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeBillDetailForOrganizationResponse"/></returns>
+        public DescribeBillDetailForOrganizationResponse DescribeBillDetailForOrganizationSync(DescribeBillDetailForOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeBillDetailForOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillDetailForOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDetailForOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口支持通过传参，获取L0-PDF、L1-汇总、L2-资源、L3-明细、账单包、五类账单文件下载链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeBillDownloadUrlResponse"/></returns>
+        public async Task<DescribeBillDownloadUrlResponse> DescribeBillDownloadUrl(DescribeBillDownloadUrlRequest req)
+        {
+             JsonResponseModel<DescribeBillDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口支持通过传参，获取L0-PDF、L1-汇总、L2-资源、L3-明细、账单包、五类账单文件下载链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeBillDownloadUrlResponse"/></returns>
+        public DescribeBillDownloadUrlResponse DescribeBillDownloadUrlSync(DescribeBillDownloadUrlRequest req)
+        {
+             JsonResponseModel<DescribeBillDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDownloadUrlResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -259,7 +341,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 查询账单资源汇总数据
+        /// 获取账单资源汇总数据
         /// </summary>
         /// <param name="req"><see cref="DescribeBillResourceSummaryRequest"/></param>
         /// <returns><see cref="DescribeBillResourceSummaryResponse"/></returns>
@@ -279,7 +361,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 查询账单资源汇总数据
+        /// 获取账单资源汇总数据
         /// </summary>
         /// <param name="req"><see cref="DescribeBillResourceSummaryRequest"/></param>
         /// <returns><see cref="DescribeBillResourceSummaryResponse"/></returns>
@@ -290,6 +372,46 @@ namespace TencentCloud.Billing.V20180709
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBillResourceSummary");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillResourceSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 成员账号获取管理账号代付账单（按资源汇总）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillResourceSummaryForOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeBillResourceSummaryForOrganizationResponse"/></returns>
+        public async Task<DescribeBillResourceSummaryForOrganizationResponse> DescribeBillResourceSummaryForOrganization(DescribeBillResourceSummaryForOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeBillResourceSummaryForOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillResourceSummaryForOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillResourceSummaryForOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 成员账号获取管理账号代付账单（按资源汇总）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillResourceSummaryForOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeBillResourceSummaryForOrganizationResponse"/></returns>
+        public DescribeBillResourceSummaryForOrganizationResponse DescribeBillResourceSummaryForOrganizationSync(DescribeBillResourceSummaryForOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeBillResourceSummaryForOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillResourceSummaryForOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillResourceSummaryForOrganizationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -530,6 +652,46 @@ namespace TencentCloud.Billing.V20180709
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBillSummaryByTag");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口支持通过传参，按照产品、项目、地域、计费模式和标签五个维度获取账单费用明细。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryForOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryForOrganizationResponse"/></returns>
+        public async Task<DescribeBillSummaryForOrganizationResponse> DescribeBillSummaryForOrganization(DescribeBillSummaryForOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryForOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillSummaryForOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryForOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口支持通过传参，按照产品、项目、地域、计费模式和标签五个维度获取账单费用明细。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryForOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryForOrganizationResponse"/></returns>
+        public DescribeBillSummaryForOrganizationResponse DescribeBillSummaryForOrganizationSync(DescribeBillSummaryForOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryForOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillSummaryForOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryForOrganizationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

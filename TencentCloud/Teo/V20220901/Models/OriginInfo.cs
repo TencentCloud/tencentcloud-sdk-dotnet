@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>ORIGIN_GROUP：源站组类型源站；</li>
         /// <li>AWS_S3：S3兼容对象存储源站；</li>
         /// <li>LB: 负载均衡类型源站；</li>
-        /// <li>SPACE：EdgeOne Shield Space 存储。</li>
+        /// <li>SPACE：EdgeOne Shield Space 存储。</li>  
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }

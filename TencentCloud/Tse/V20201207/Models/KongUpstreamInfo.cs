@@ -26,117 +26,143 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// IP或域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
         /// 端口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
         /// 服务来源ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceID")]
         public string SourceID{ get; set; }
 
         /// <summary>
         /// 命名空间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
         /// 服务（注册中心或Kubernetes中的服务）名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
         /// 服务后端类型是IPList时提供
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Targets")]
         public KongTarget[] Targets{ get; set; }
 
         /// <summary>
         /// 服务来源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
         /// SCF函数类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScfType")]
         public string ScfType{ get; set; }
 
         /// <summary>
         /// SCF函数命名空间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScfNamespace")]
         public string ScfNamespace{ get; set; }
 
         /// <summary>
         /// SCF函数名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScfLambdaName")]
         public string ScfLambdaName{ get; set; }
 
         /// <summary>
         /// SCF函数版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScfLambdaQualifier")]
         public string ScfLambdaQualifier{ get; set; }
 
         /// <summary>
         /// 冷启动时间，单位秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlowStart")]
         public long? SlowStart{ get; set; }
 
         /// <summary>
         /// 负载均衡算法，默认为 round-robin，还支持 least-connections，consisten_hashing
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Algorithm")]
         public string Algorithm{ get; set; }
 
         /// <summary>
         /// CVM弹性伸缩组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoScalingGroupID")]
         public string AutoScalingGroupID{ get; set; }
 
         /// <summary>
         /// CVM弹性伸缩组端口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoScalingCvmPort")]
         public ulong? AutoScalingCvmPort{ get; set; }
 
         /// <summary>
         /// CVM弹性伸缩组使用的CVM TAT命令状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoScalingTatCmdStatus")]
         public string AutoScalingTatCmdStatus{ get; set; }
 
         /// <summary>
         /// CVM弹性伸缩组生命周期挂钩状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoScalingHookStatus")]
         public string AutoScalingHookStatus{ get; set; }
 
         /// <summary>
         /// 服务来源的名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceName")]
         public string SourceName{ get; set; }
 
         /// <summary>
         /// 精确的服务来源类型，新建服务来源时候传入的类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealSourceType")]
         public string RealSourceType{ get; set; }
+
+        /// <summary>
+        /// upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HealthStatus")]
+        public string HealthStatus{ get; set; }
 
 
         /// <summary>
@@ -163,6 +189,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "AutoScalingHookStatus", this.AutoScalingHookStatus);
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
             this.SetParamSimple(map, prefix + "RealSourceType", this.RealSourceType);
+            this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
         }
     }
 }

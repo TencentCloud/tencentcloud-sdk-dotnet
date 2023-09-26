@@ -130,6 +130,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
+        /// <summary>
+        /// 开机自启动[0:否|1:是]
+        /// </summary>
+        [JsonProperty("IsAutoRun")]
+        public long? IsAutoRun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +157,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "IsNew", this.IsNew);
             this.SetParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+            this.SetParamSimple(map, prefix + "IsAutoRun", this.IsAutoRun);
         }
     }
 }

@@ -32,6 +32,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Domain{ get; set; }
 
         /// <summary>
+        /// IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IP")]
+        public string IP{ get; set; }
+
+        /// <summary>
         /// 规则ip
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -143,6 +150,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "IP", this.IP);
             this.SetParamSimple(map, prefix + "Ioc", this.Ioc);
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "EventName", this.EventName);

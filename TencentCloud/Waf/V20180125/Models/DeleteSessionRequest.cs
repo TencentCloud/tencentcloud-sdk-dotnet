@@ -36,6 +36,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
 
+        /// <summary>
+        /// 要删除的SessionID
+        /// </summary>
+        [JsonProperty("SessionID")]
+        public long? SessionID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
+            this.SetParamSimple(map, prefix + "SessionID", this.SessionID);
         }
     }
 }

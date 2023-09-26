@@ -25,6 +25,13 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
+        /// mongo表自增Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// 动作
         /// </summary>
         [JsonProperty("ActionType")]
@@ -61,18 +68,27 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ValidTs")]
         public ulong? ValidTs{ get; set; }
 
+        /// <summary>
+        /// 生效状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ValidStatus")]
+        public long? ValidStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Note", this.Note);
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "TsVersion", this.TsVersion);
             this.SetParamSimple(map, prefix + "ValidTs", this.ValidTs);
+            this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
         }
     }
 }

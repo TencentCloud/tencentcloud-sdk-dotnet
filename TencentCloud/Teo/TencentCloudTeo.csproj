@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.855</VersionPrefix>
+    <VersionPrefix>3.0.856</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -180,6 +180,7 @@
     <Compile Include="V20220901\Models\DescribeZonesResponse.cs" />
     <Compile Include="V20220901\Models\DetailHost.cs" />
     <Compile Include="V20220901\Models\DiffIPWhitelist.cs" />
+    <Compile Include="V20220901\Models\DnsVerification.cs" />
     <Compile Include="V20220901\Models\DownloadL4LogsRequest.cs" />
     <Compile Include="V20220901\Models\DownloadL4LogsResponse.cs" />
     <Compile Include="V20220901\Models\DownloadL7LogsRequest.cs" />
@@ -192,6 +193,7 @@
     <Compile Include="V20220901\Models\ExceptUserRuleScope.cs" />
     <Compile Include="V20220901\Models\FailReason.cs" />
     <Compile Include="V20220901\Models\FileAscriptionInfo.cs" />
+    <Compile Include="V20220901\Models\FileVerification.cs" />
     <Compile Include="V20220901\Models\Filter.cs" />
     <Compile Include="V20220901\Models\FirstPartConfig.cs" />
     <Compile Include="V20220901\Models\FollowOrigin.cs" />
@@ -248,6 +250,7 @@
     <Compile Include="V20220901\Models\ModifyZoneStatusResponse.cs" />
     <Compile Include="V20220901\Models\NoCache.cs" />
     <Compile Include="V20220901\Models\NormalAction.cs" />
+    <Compile Include="V20220901\Models\NsVerification.cs" />
     <Compile Include="V20220901\Models\OfflineCache.cs" />
     <Compile Include="V20220901\Models\Origin.cs" />
     <Compile Include="V20220901\Models\OriginDetail.cs" />
@@ -255,6 +258,7 @@
     <Compile Include="V20220901\Models\OriginInfo.cs" />
     <Compile Include="V20220901\Models\OriginProtectionInfo.cs" />
     <Compile Include="V20220901\Models\OriginRecord.cs" />
+    <Compile Include="V20220901\Models\OwnershipVerification.cs" />
     <Compile Include="V20220901\Models\PartialModule.cs" />
     <Compile Include="V20220901\Models\PlanInfo.cs" />
     <Compile Include="V20220901\Models\PostMaxSize.cs" />

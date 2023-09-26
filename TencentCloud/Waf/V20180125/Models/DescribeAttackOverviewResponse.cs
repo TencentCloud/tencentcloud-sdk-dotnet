@@ -68,6 +68,27 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? ApiRiskEventCount{ get; set; }
 
         /// <summary>
+        /// 黑名单总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IPBlackCount")]
+        public ulong? IPBlackCount{ get; set; }
+
+        /// <summary>
+        /// 防篡改总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TamperCount")]
+        public ulong? TamperCount{ get; set; }
+
+        /// <summary>
+        /// 信息泄露总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LeakCount")]
+        public ulong? LeakCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -86,6 +107,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "BotCount", this.BotCount);
             this.SetParamSimple(map, prefix + "ApiAssetsCount", this.ApiAssetsCount);
             this.SetParamSimple(map, prefix + "ApiRiskEventCount", this.ApiRiskEventCount);
+            this.SetParamSimple(map, prefix + "IPBlackCount", this.IPBlackCount);
+            this.SetParamSimple(map, prefix + "TamperCount", this.TamperCount);
+            this.SetParamSimple(map, prefix + "LeakCount", this.LeakCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

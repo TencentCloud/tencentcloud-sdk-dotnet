@@ -55,20 +55,18 @@ namespace TencentCloud.Waf.V20180125.Models
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 十三个值可选：
+        /// 十一个值可选：
         /// access-峰值qps趋势图
         /// botAccess- bot峰值qps趋势图
         /// down-下行峰值带宽趋势图
         /// up-上行峰值带宽趋势图
         /// attack-Web攻击总数趋势图
         /// cc-CC攻击总数趋势图
-        /// StatusServerError-WAF返回给客户端状态码次数趋势图
-        /// StatusClientError-WAF返回给客户端状态码次数趋势图
-        /// StatusRedirect-WAF返回给客户端状态码次数趋势图
-        /// StatusOk-WAF返回给客户端状态码次数趋势图
-        /// UpstreamServerError-源站返回给WAF状态码次数趋势图
-        /// UpstreamClientError-源站返回给WAF状态码次数趋势图
-        /// UpstreamRedirect-源站返回给WAF状态码次数趋势图
+        /// bw-黑IP攻击总数趋势图
+        /// tamper-防篡改攻击总数趋势图
+        /// leak-防泄露攻击总数趋势图
+        /// acl-访问控制攻击总数趋势图
+        /// http_status-状态码各次数趋势图
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

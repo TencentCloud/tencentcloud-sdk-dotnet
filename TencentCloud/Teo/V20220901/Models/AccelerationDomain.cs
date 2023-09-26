@@ -25,35 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 源站信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 站点 ID。
         /// </summary>
-        [JsonProperty("OriginDetail")]
-        public OriginDetail OriginDetail{ get; set; }
-
-        /// <summary>
-        /// 创建时间。
-        /// </summary>
-        [JsonProperty("CreatedOn")]
-        public string CreatedOn{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
         /// 加速域名名称。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
-
-        /// <summary>
-        /// 修改时间。
-        /// </summary>
-        [JsonProperty("ModifiedOn")]
-        public string ModifiedOn{ get; set; }
-
-        /// <summary>
-        /// 站点 ID。
-        /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
 
         /// <summary>
         /// 加速域名状态，取值有：
@@ -65,6 +46,13 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("DomainStatus")]
         public string DomainStatus{ get; set; }
+
+        /// <summary>
+        /// 源站信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginDetail")]
+        public OriginDetail OriginDetail{ get; set; }
 
         /// <summary>
         /// CNAME 地址。
@@ -79,20 +67,40 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("IdentificationStatus")]
         public string IdentificationStatus{ get; set; }
 
+        /// <summary>
+        /// 创建时间。
+        /// </summary>
+        [JsonProperty("CreatedOn")]
+        public string CreatedOn{ get; set; }
+
+        /// <summary>
+        /// 修改时间。
+        /// </summary>
+        [JsonProperty("ModifiedOn")]
+        public string ModifiedOn{ get; set; }
+
+        /// <summary>
+        /// 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnershipVerification")]
+        public OwnershipVerification OwnershipVerification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "OriginDetail.", this.OriginDetail);
-            this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
-            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
-            this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
+            this.SetParamObj(map, prefix + "OriginDetail.", this.OriginDetail);
             this.SetParamSimple(map, prefix + "Cname", this.Cname);
             this.SetParamSimple(map, prefix + "IdentificationStatus", this.IdentificationStatus);
+            this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+            this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+            this.SetParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
         }
     }
 }

@@ -133,6 +133,46 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 添加角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleRequest"/></param>
+        /// <returns><see cref="CreateRoleResponse"/></returns>
+        public async Task<CreateRoleResponse> CreateRole(CreateRoleRequest req)
+        {
+             JsonResponseModel<CreateRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleRequest"/></param>
+        /// <returns><see cref="CreateRoleResponse"/></returns>
+        public CreateRoleResponse CreateRoleSync(CreateRoleRequest req)
+        {
+             JsonResponseModel<CreateRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建主题
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRequest"/></param>
@@ -244,6 +284,46 @@ namespace TencentCloud.Trocket.V20230308
              {
                  var strResp = this.InternalRequestSync(req, "DeleteInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除角色
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleRequest"/></param>
+        /// <returns><see cref="DeleteRoleResponse"/></returns>
+        public async Task<DeleteRoleResponse> DeleteRole(DeleteRoleRequest req)
+        {
+             JsonResponseModel<DeleteRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除角色
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleRequest"/></param>
+        /// <returns><see cref="DeleteRoleResponse"/></returns>
+        public DeleteRoleResponse DeleteRoleSync(DeleteRoleRequest req)
+        {
+             JsonResponseModel<DeleteRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -416,6 +496,50 @@ namespace TencentCloud.Trocket.V20230308
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstanceList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询角色列表，Filter参数使用说明如下：
+        /// 
+        /// 1. RoleName，角色名称模糊搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
+        /// <returns><see cref="DescribeRoleListResponse"/></returns>
+        public async Task<DescribeRoleListResponse> DescribeRoleList(DescribeRoleListRequest req)
+        {
+             JsonResponseModel<DescribeRoleListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoleList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoleListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询角色列表，Filter参数使用说明如下：
+        /// 
+        /// 1. RoleName，角色名称模糊搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
+        /// <returns><see cref="DescribeRoleListResponse"/></returns>
+        public DescribeRoleListResponse DescribeRoleListSync(DescribeRoleListRequest req)
+        {
+             JsonResponseModel<DescribeRoleListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoleList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoleListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -626,6 +750,46 @@ namespace TencentCloud.Trocket.V20230308
              {
                  var strResp = this.InternalRequestSync(req, "ModifyInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改角色
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoleRequest"/></param>
+        /// <returns><see cref="ModifyRoleResponse"/></returns>
+        public async Task<ModifyRoleResponse> ModifyRole(ModifyRoleRequest req)
+        {
+             JsonResponseModel<ModifyRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改角色
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoleRequest"/></param>
+        /// <returns><see cref="ModifyRoleResponse"/></returns>
+        public ModifyRoleResponse ModifyRoleSync(ModifyRoleRequest req)
+        {
+             JsonResponseModel<ModifyRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

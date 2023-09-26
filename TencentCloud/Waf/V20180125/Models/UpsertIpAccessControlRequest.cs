@@ -37,6 +37,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] Items{ get; set; }
 
         /// <summary>
+        /// 实例Id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
         /// WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
         /// </summary>
         [JsonProperty("Edition")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamArraySimple(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
         }

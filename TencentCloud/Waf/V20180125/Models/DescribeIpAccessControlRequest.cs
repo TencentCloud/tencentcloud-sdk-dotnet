@@ -96,6 +96,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
+        /// <summary>
+        /// 生效状态
+        /// </summary>
+        [JsonProperty("ValidStatus")]
+        public long? ValidStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
+            this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
         }
     }
 }

@@ -177,6 +177,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("SwitchMode")]
         public ulong? SwitchMode{ get; set; }
 
+        /// <summary>
+        /// 开关权重
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SwitchWeight")]
+        public long? SwitchWeight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +210,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "EndpointId", this.EndpointId);
             this.SetParamSimple(map, prefix + "EndpointIp", this.EndpointIp);
             this.SetParamSimple(map, prefix + "SwitchMode", this.SwitchMode);
+            this.SetParamSimple(map, prefix + "SwitchWeight", this.SwitchWeight);
         }
     }
 }
