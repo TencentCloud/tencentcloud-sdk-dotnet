@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.857</VersionPrefix>
+    <VersionPrefix>3.0.858</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20210527\DbbrainClient.cs" />
     <Compile Include="V20210527\Models\AddUserContactRequest.cs" />
     <Compile Include="V20210527\Models\AddUserContactResponse.cs" />
+    <Compile Include="V20210527\Models\Aggregation.cs" />
     <Compile Include="V20210527\Models\AlarmProfileList.cs" />
     <Compile Include="V20210527\Models\AlarmsRules.cs" />
     <Compile Include="V20210527\Models\AuditInstance.cs" />
@@ -114,6 +115,10 @@
     <Compile Include="V20210527\Models\DescribeDiagDBInstancesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeHealthScoreRequest.cs" />
     <Compile Include="V20210527\Models\DescribeHealthScoreResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeIndexRecommendAggregationSlowLogsRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeIndexRecommendAggregationSlowLogsResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeIndexRecommendInfoRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeIndexRecommendInfoResponse.cs" />
     <Compile Include="V20210527\Models\DescribeMailProfileRequest.cs" />
     <Compile Include="V20210527\Models\DescribeMailProfileResponse.cs" />
     <Compile Include="V20210527\Models\DescribeMySqlProcessListRequest.cs" />
@@ -124,6 +129,8 @@
     <Compile Include="V20210527\Models\DescribeProxyProcessStatisticsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeProxySessionKillTasksRequest.cs" />
     <Compile Include="V20210527\Models\DescribeProxySessionKillTasksResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisProcessListRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisProcessListResponse.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopBigKeysRequest.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopBigKeysResponse.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopKeyPrefixListRequest.cs" />
@@ -160,6 +167,8 @@
     <Compile Include="V20210527\Models\HealthReportTask.cs" />
     <Compile Include="V20210527\Models\HealthScoreInfo.cs" />
     <Compile Include="V20210527\Models\HealthStatus.cs" />
+    <Compile Include="V20210527\Models\IndexesToBuild.cs" />
+    <Compile Include="V20210527\Models\IndexesToDrop.cs" />
     <Compile Include="V20210527\Models\InstanceBasicInfo.cs" />
     <Compile Include="V20210527\Models\InstanceConfs.cs" />
     <Compile Include="V20210527\Models\InstanceID.cs" />
@@ -176,6 +185,7 @@
     <Compile Include="V20210527\Models\ModifyDiagDBInstanceConfResponse.cs" />
     <Compile Include="V20210527\Models\ModifySqlFiltersRequest.cs" />
     <Compile Include="V20210527\Models\ModifySqlFiltersResponse.cs" />
+    <Compile Include="V20210527\Models\MongoDBIndex.cs" />
     <Compile Include="V20210527\Models\MonitorFloatMetric.cs" />
     <Compile Include="V20210527\Models\MonitorFloatMetricSeriesData.cs" />
     <Compile Include="V20210527\Models\MonitorMetric.cs" />
@@ -183,6 +193,7 @@
     <Compile Include="V20210527\Models\MySqlProcess.cs" />
     <Compile Include="V20210527\Models\OpenAuditServiceRequest.cs" />
     <Compile Include="V20210527\Models\OpenAuditServiceResponse.cs" />
+    <Compile Include="V20210527\Models\Process.cs" />
     <Compile Include="V20210527\Models\ProcessStatistic.cs" />
     <Compile Include="V20210527\Models\ProfileInfo.cs" />
     <Compile Include="V20210527\Models\ReceiveInfo.cs" />

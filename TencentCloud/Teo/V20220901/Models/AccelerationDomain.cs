@@ -86,6 +86,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("OwnershipVerification")]
         public OwnershipVerification OwnershipVerification{ get; set; }
 
+        /// <summary>
+        /// 域名证书信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Certificate")]
+        public AccelerationDomainCertificate Certificate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +108,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
             this.SetParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
+            this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
         }
     }
 }

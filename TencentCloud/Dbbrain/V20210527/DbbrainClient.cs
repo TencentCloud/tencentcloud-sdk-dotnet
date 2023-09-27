@@ -1213,6 +1213,86 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 查询某张表的慢查模板概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIndexRecommendAggregationSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeIndexRecommendAggregationSlowLogsResponse"/></returns>
+        public async Task<DescribeIndexRecommendAggregationSlowLogsResponse> DescribeIndexRecommendAggregationSlowLogs(DescribeIndexRecommendAggregationSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeIndexRecommendAggregationSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIndexRecommendAggregationSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIndexRecommendAggregationSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某张表的慢查模板概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIndexRecommendAggregationSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeIndexRecommendAggregationSlowLogsResponse"/></returns>
+        public DescribeIndexRecommendAggregationSlowLogsResponse DescribeIndexRecommendAggregationSlowLogsSync(DescribeIndexRecommendAggregationSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeIndexRecommendAggregationSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIndexRecommendAggregationSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIndexRecommendAggregationSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例的索引推荐信息，包括索引统计相关信息，推荐索引列表，无效索引列表等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIndexRecommendInfoRequest"/></param>
+        /// <returns><see cref="DescribeIndexRecommendInfoResponse"/></returns>
+        public async Task<DescribeIndexRecommendInfoResponse> DescribeIndexRecommendInfo(DescribeIndexRecommendInfoRequest req)
+        {
+             JsonResponseModel<DescribeIndexRecommendInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIndexRecommendInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIndexRecommendInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例的索引推荐信息，包括索引统计相关信息，推荐索引列表，无效索引列表等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIndexRecommendInfoRequest"/></param>
+        /// <returns><see cref="DescribeIndexRecommendInfoResponse"/></returns>
+        public DescribeIndexRecommendInfoResponse DescribeIndexRecommendInfoSync(DescribeIndexRecommendInfoRequest req)
+        {
+             JsonResponseModel<DescribeIndexRecommendInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIndexRecommendInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIndexRecommendInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取发送邮件的配置， 包括数据库巡检的邮件配置以及定期生成健康报告的邮件发送配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeMailProfileRequest"/></param>
@@ -1404,6 +1484,46 @@ namespace TencentCloud.Dbbrain.V20210527
              {
                  var strResp = this.InternalRequestSync(req, "DescribeProxySessionKillTasks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxySessionKillTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取 Redis 实例所有 proxy 节点的实时会话详情列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisProcessListRequest"/></param>
+        /// <returns><see cref="DescribeRedisProcessListResponse"/></returns>
+        public async Task<DescribeRedisProcessListResponse> DescribeRedisProcessList(DescribeRedisProcessListRequest req)
+        {
+             JsonResponseModel<DescribeRedisProcessListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRedisProcessList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRedisProcessListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取 Redis 实例所有 proxy 节点的实时会话详情列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisProcessListRequest"/></param>
+        /// <returns><see cref="DescribeRedisProcessListResponse"/></returns>
+        public DescribeRedisProcessListResponse DescribeRedisProcessListSync(DescribeRedisProcessListRequest req)
+        {
+             JsonResponseModel<DescribeRedisProcessListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRedisProcessList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRedisProcessListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
