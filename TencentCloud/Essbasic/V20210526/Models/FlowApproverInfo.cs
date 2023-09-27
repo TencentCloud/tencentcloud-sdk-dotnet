@@ -191,6 +191,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("AddSignComponentsLimits")]
         public ComponentLimit[] AddSignComponentsLimits{ get; set; }
 
+        /// <summary>
+        /// 自定义签署方角色名称
+        /// </summary>
+        [JsonProperty("ApproverRoleName")]
+        public string ApproverRoleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -220,6 +226,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "SignId", this.SignId);
             this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamArrayObj(map, prefix + "AddSignComponentsLimits.", this.AddSignComponentsLimits);
+            this.SetParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
         }
     }
 }

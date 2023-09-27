@@ -413,7 +413,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 资产列表
+        /// 数据库资产列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDbAssetsRequest"/></param>
         /// <returns><see cref="DescribeDbAssetsResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 资产列表
+        /// 数据库资产列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDbAssetsRequest"/></param>
         /// <returns><see cref="DescribeDbAssetsResponse"/></returns>

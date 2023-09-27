@@ -57,6 +57,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public TaskInfo[] TaskInfos{ get; set; }
 
         /// <summary>
+        /// 签署方信息，如角色ID、角色名称等
+        /// </summary>
+        [JsonProperty("FlowApprovers")]
+        public FlowApproverItem[] FlowApprovers{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -73,6 +79,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArraySimple(map, prefix + "ErrorMessages.", this.ErrorMessages);
             this.SetParamArraySimple(map, prefix + "PreviewUrls.", this.PreviewUrls);
             this.SetParamArrayObj(map, prefix + "TaskInfos.", this.TaskInfos);
+            this.SetParamArrayObj(map, prefix + "FlowApprovers.", this.FlowApprovers);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

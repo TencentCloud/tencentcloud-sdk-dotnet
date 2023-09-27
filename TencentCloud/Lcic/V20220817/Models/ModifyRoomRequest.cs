@@ -71,8 +71,8 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Resolution{ get; set; }
 
         /// <summary>
-        /// 最大连麦人数（不包括老师）。取值范围[0, 17)
-        /// 直播开始后不允许修改。
+        /// 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。
+        /// 取值范围[0,16]，当取值为0时表示当前课堂/直播，不支持连麦互动。
         /// </summary>
         [JsonProperty("MaxMicNumber")]
         public ulong? MaxMicNumber{ get; set; }
@@ -152,7 +152,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? IsGradingRequiredPostClass{ get; set; }
 
         /// <summary>
-        /// 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+        /// 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 （预留参数、暂未开放)
         /// </summary>
         [JsonProperty("RoomType")]
         public ulong? RoomType{ get; set; }

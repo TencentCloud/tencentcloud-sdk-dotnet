@@ -110,6 +110,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ApproveType")]
         public string ApproveType{ get; set; }
 
+        /// <summary>
+        /// 自定义签署人角色
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApproverRoleName")]
+        public string ApproverRoleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +134,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ApproveMessage", this.ApproveMessage);
             this.SetParamSimple(map, prefix + "ApproveTime", this.ApproveTime);
             this.SetParamSimple(map, prefix + "ApproveType", this.ApproveType);
+            this.SetParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
         }
     }
 }

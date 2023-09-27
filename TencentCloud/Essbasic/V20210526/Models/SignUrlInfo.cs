@@ -118,6 +118,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
 
+        /// <summary>
+        /// 二维码，在生成动态签署人跳转封面页链接时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SignQrcodeUrl")]
+        public string SignQrcodeUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +144,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
             this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
+            this.SetParamSimple(map, prefix + "SignQrcodeUrl", this.SignQrcodeUrl);
         }
     }
 }

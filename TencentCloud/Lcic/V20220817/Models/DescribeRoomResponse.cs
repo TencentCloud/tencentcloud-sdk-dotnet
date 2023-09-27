@@ -157,7 +157,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? VideoOrientation{ get; set; }
 
         /// <summary>
-        /// 开启课后评分。 0：不开启(默认)  1：开启
+        /// 该房间是否开启了课后评分功能。0：未开启  1：开启
         /// </summary>
         [JsonProperty("IsGradingRequiredPostClass")]
         public long? IsGradingRequiredPostClass{ get; set; }

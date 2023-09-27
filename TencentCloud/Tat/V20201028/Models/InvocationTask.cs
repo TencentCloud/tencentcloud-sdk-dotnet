@@ -75,12 +75,14 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 执行任务开始时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 执行任务结束时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

@@ -813,6 +813,46 @@ namespace TencentCloud.Bi.V20220105
         }
 
         /// <summary>
+        /// 修改用户角色信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserRoleRequest"/></param>
+        /// <returns><see cref="ModifyUserRoleResponse"/></returns>
+        public async Task<ModifyUserRoleResponse> ModifyUserRole(ModifyUserRoleRequest req)
+        {
+             JsonResponseModel<ModifyUserRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyUserRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户角色信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserRoleRequest"/></param>
+        /// <returns><see cref="ModifyUserRoleResponse"/></returns>
+        public ModifyUserRoleResponse ModifyUserRoleSync(ModifyUserRoleRequest req)
+        {
+             JsonResponseModel<ModifyUserRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyUserRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 项目-修改用户角色信息
         /// </summary>
         /// <param name="req"><see cref="ModifyUserRoleProjectRequest"/></param>

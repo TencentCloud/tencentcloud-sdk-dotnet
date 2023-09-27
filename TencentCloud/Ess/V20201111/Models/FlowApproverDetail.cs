@@ -129,6 +129,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("SignId")]
         public string SignId{ get; set; }
 
+        /// <summary>
+        /// 自定义签署人角色
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApproverRoleName")]
+        public string ApproverRoleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +156,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
             this.SetParamSimple(map, prefix + "SignId", this.SignId);
+            this.SetParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
         }
     }
 }

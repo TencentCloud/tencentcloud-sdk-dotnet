@@ -44,6 +44,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public string PreviewUrl{ get; set; }
 
         /// <summary>
+        /// 签署方信息，如角色ID、角色名称等
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Approvers")]
+        public ApproverItem[] Approvers{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +64,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
+            this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

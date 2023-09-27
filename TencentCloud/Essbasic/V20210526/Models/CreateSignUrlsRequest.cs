@@ -127,6 +127,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Hides")]
         public long?[] Hides{ get; set; }
 
+        /// <summary>
+        /// 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+        /// </summary>
+        [JsonProperty("RecipientIds")]
+        public string[] RecipientIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +153,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArraySimple(map, prefix + "Hides.", this.Hides);
+            this.SetParamArraySimple(map, prefix + "RecipientIds.", this.RecipientIds);
         }
     }
 }

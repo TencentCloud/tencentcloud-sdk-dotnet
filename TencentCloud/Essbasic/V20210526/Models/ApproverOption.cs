@@ -30,6 +30,15 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("HideOneKeySign")]
         public bool? HideOneKeySign{ get; set; }
 
+        /// <summary>
+        /// 签署人信息补充类型，默认无需补充。
+        /// 
+        /// <ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("FillType")]
+        public long? FillType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +46,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "HideOneKeySign", this.HideOneKeySign);
+            this.SetParamSimple(map, prefix + "FillType", this.FillType);
         }
     }
 }

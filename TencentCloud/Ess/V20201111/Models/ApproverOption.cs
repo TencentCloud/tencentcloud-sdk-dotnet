@@ -42,6 +42,15 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("NoTransfer")]
         public bool? NoTransfer{ get; set; }
 
+        /// <summary>
+        /// 签署人信息补充类型，默认无需补充。
+        /// 
+        /// <ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("FillType")]
+        public long? FillType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -50,6 +59,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "NoRefuse", this.NoRefuse);
             this.SetParamSimple(map, prefix + "NoTransfer", this.NoTransfer);
+            this.SetParamSimple(map, prefix + "FillType", this.FillType);
         }
     }
 }

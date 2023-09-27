@@ -46,7 +46,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// corn
+        /// cron格式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanPlanContent")]
@@ -109,7 +109,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? AssetNumber{ get; set; }
 
         /// <summary>
-        /// 扫描状态 0 初始值  1正在扫描  2扫描完成  3扫描出错
+        /// 扫描状态, 0-初始值，1-正在扫描，2-扫描完成，3-扫描出错，4-停止扫描
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanStatus")]
@@ -297,6 +297,13 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("IsDelete")]
         public long? IsDelete{ get; set; }
 
+        /// <summary>
+        /// 任务源类型，0-默认，1-小助手，2-体检项
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public long? SourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -342,6 +349,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ScanFrom", this.ScanFrom);
             this.SetParamSimple(map, prefix + "IsFree", this.IsFree);
             this.SetParamSimple(map, prefix + "IsDelete", this.IsDelete);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
         }
     }
 }

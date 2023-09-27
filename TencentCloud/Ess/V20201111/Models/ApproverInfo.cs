@@ -108,6 +108,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? ApproverRole{ get; set; }
 
         /// <summary>
+        /// 自定义签署人角色名：收款人、开具人、见证人
+        /// </summary>
+        [JsonProperty("ApproverRoleName")]
+        public string ApproverRoleName{ get; set; }
+
+        /// <summary>
         /// 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
         /// 
         /// 注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
@@ -216,6 +222,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
             this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamSimple(map, prefix + "ApproverRole", this.ApproverRole);
+            this.SetParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
             this.SetParamArraySimple(map, prefix + "VerifyChannel.", this.VerifyChannel);
             this.SetParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);

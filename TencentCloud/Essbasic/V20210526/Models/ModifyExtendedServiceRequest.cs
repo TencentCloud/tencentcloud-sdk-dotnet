@@ -51,6 +51,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Operate")]
         public string Operate{ get; set; }
 
+        /// <summary>
+        /// 链接跳转类型，支持以下类型
+        /// <ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+        /// <li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
+        /// </summary>
+        [JsonProperty("Endpoint")]
+        public string Endpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +68,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamSimple(map, prefix + "Operate", this.Operate);
+            this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
         }
     }
 }

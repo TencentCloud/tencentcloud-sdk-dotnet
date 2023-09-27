@@ -60,6 +60,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverMobile")]
         public string ApproverMobile{ get; set; }
 
+        /// <summary>
+        /// 补充企业动态签署人时，需要指定对应企业名称
+        /// </summary>
+        [JsonProperty("OrganizationName")]
+        public string OrganizationName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,6 +77,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "CustomUserId", this.CustomUserId);
             this.SetParamSimple(map, prefix + "ApproverName", this.ApproverName);
             this.SetParamSimple(map, prefix + "ApproverMobile", this.ApproverMobile);
+            this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         }
     }
 }

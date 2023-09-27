@@ -111,6 +111,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Hides")]
         public long?[] Hides{ get; set; }
 
+        /// <summary>
+        /// 签署节点ID，用于生成动态签署人链接完成领取
+        /// </summary>
+        [JsonProperty("RecipientId")]
+        public string RecipientId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArraySimple(map, prefix + "Hides.", this.Hides);
+            this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
         }
     }
 }

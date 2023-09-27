@@ -58,6 +58,13 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
+        /// <summary>
+        /// 多云资产唯一id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Arn")]
+        public string Arn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +76,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
             this.SetParamSimple(map, prefix + "Asset", this.Asset);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Arn", this.Arn);
         }
     }
 }

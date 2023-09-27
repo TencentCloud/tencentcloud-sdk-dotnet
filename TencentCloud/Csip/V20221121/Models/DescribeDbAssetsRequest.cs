@@ -30,6 +30,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Filter")]
         public Filter Filter{ get; set; }
 
+        /// <summary>
+        /// 资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+        /// </summary>
+        [JsonProperty("AssetTypes")]
+        public string[] AssetTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamArraySimple(map, prefix + "AssetTypes.", this.AssetTypes);
         }
     }
 }

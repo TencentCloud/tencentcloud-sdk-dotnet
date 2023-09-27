@@ -32,6 +32,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowId{ get; set; }
 
         /// <summary>
+        /// 签署方信息，如角色ID、角色名称等
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Approvers")]
+        public ApproverItem[] Approvers{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +51,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

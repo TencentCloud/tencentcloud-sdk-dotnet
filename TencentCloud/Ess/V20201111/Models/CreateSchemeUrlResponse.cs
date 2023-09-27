@@ -35,6 +35,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string SchemeUrl{ get; set; }
 
         /// <summary>
+        /// 二维码，在生成动态签署人跳转封面页链接时返回
+        /// </summary>
+        [JsonProperty("SchemeQrcodeUrl")]
+        public string SchemeQrcodeUrl{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -47,6 +53,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SchemeUrl", this.SchemeUrl);
+            this.SetParamSimple(map, prefix + "SchemeQrcodeUrl", this.SchemeQrcodeUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

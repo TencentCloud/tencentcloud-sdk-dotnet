@@ -1377,7 +1377,7 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// 获取房间信息
+        /// 获取房间配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomRequest"/></param>
         /// <returns><see cref="DescribeRoomResponse"/></returns>
@@ -1397,7 +1397,7 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// 获取房间信息
+        /// 获取房间配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomRequest"/></param>
         /// <returns><see cref="DescribeRoomResponse"/></returns>

@@ -87,6 +87,20 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("RenewFlag")]
         public ulong? RenewFlag{ get; set; }
 
+        /// <summary>
+        /// 购买页bot6折
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BotCPWaf")]
+        public long? BotCPWaf{ get; set; }
+
+        /// <summary>
+        /// 控制台买bot5折
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BotNPWaf")]
+        public long? BotNPWaf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +116,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "UsedNum", this.UsedNum);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "BotCPWaf", this.BotCPWaf);
+            this.SetParamSimple(map, prefix + "BotNPWaf", this.BotNPWaf);
         }
     }
 }
