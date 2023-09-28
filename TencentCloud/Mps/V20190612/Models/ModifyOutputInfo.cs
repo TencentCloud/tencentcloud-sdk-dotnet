@@ -79,6 +79,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("MaxConcurrent")]
         public ulong? MaxConcurrent{ get; set; }
 
+        /// <summary>
+        /// 绑定的安全组 ID。 仅支持关联一组安全组。	
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
             this.SetParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
             this.SetParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

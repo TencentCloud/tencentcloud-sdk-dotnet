@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DF6825D5-FAEE-38FB-A622-37599AD65B25}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.858</VersionPrefix>
+    <VersionPrefix>3.0.859</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,8 @@
     <Compile Include="V20180419\Models\AutoScalingGroup.cs" />
     <Compile Include="V20180419\Models\AutoScalingGroupAbstract.cs" />
     <Compile Include="V20180419\Models\AutoScalingNotification.cs" />
+    <Compile Include="V20180419\Models\CancelInstanceRefreshRequest.cs" />
+    <Compile Include="V20180419\Models\CancelInstanceRefreshResponse.cs" />
     <Compile Include="V20180419\Models\ClearLaunchConfigurationAttributesRequest.cs" />
     <Compile Include="V20180419\Models\ClearLaunchConfigurationAttributesResponse.cs" />
     <Compile Include="V20180419\Models\CompleteLifecycleActionRequest.cs" />
@@ -108,6 +110,8 @@
     <Compile Include="V20180419\Models\DescribeLifecycleHooksResponse.cs" />
     <Compile Include="V20180419\Models\DescribeNotificationConfigurationsRequest.cs" />
     <Compile Include="V20180419\Models\DescribeNotificationConfigurationsResponse.cs" />
+    <Compile Include="V20180419\Models\DescribeRefreshActivitiesRequest.cs" />
+    <Compile Include="V20180419\Models\DescribeRefreshActivitiesResponse.cs" />
     <Compile Include="V20180419\Models\DescribeScalingPoliciesRequest.cs" />
     <Compile Include="V20180419\Models\DescribeScalingPoliciesResponse.cs" />
     <Compile Include="V20180419\Models\DescribeScheduledActionsRequest.cs" />
@@ -124,6 +128,8 @@
     <Compile Include="V20180419\Models\EnhancedService.cs" />
     <Compile Include="V20180419\Models\ExecuteScalingPolicyRequest.cs" />
     <Compile Include="V20180419\Models\ExecuteScalingPolicyResponse.cs" />
+    <Compile Include="V20180419\Models\ExitStandbyRequest.cs" />
+    <Compile Include="V20180419\Models\ExitStandbyResponse.cs" />
     <Compile Include="V20180419\Models\Filter.cs" />
     <Compile Include="V20180419\Models\ForwardLoadBalancer.cs" />
     <Compile Include="V20180419\Models\ForwardLoadBalancerIdentification.cs" />
@@ -162,9 +168,18 @@
     <Compile Include="V20180419\Models\ModifyScheduledActionRequest.cs" />
     <Compile Include="V20180419\Models\ModifyScheduledActionResponse.cs" />
     <Compile Include="V20180419\Models\NotificationTarget.cs" />
+    <Compile Include="V20180419\Models\RefreshActivity.cs" />
+    <Compile Include="V20180419\Models\RefreshBatch.cs" />
+    <Compile Include="V20180419\Models\RefreshBatchRelatedInstance.cs" />
+    <Compile Include="V20180419\Models\RefreshSettings.cs" />
     <Compile Include="V20180419\Models\RelatedInstance.cs" />
     <Compile Include="V20180419\Models\RemoveInstancesRequest.cs" />
     <Compile Include="V20180419\Models\RemoveInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\ResumeInstanceRefreshRequest.cs" />
+    <Compile Include="V20180419\Models\ResumeInstanceRefreshResponse.cs" />
+    <Compile Include="V20180419\Models\RollbackInstanceRefreshRequest.cs" />
+    <Compile Include="V20180419\Models\RollbackInstanceRefreshResponse.cs" />
+    <Compile Include="V20180419\Models\RollingUpdateSettings.cs" />
     <Compile Include="V20180419\Models\RunAutomationServiceEnabled.cs" />
     <Compile Include="V20180419\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20180419\Models\RunSecurityServiceEnabled.cs" />
@@ -181,8 +196,12 @@
     <Compile Include="V20180419\Models\SpotMixedAllocationPolicy.cs" />
     <Compile Include="V20180419\Models\StartAutoScalingInstancesRequest.cs" />
     <Compile Include="V20180419\Models\StartAutoScalingInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\StartInstanceRefreshRequest.cs" />
+    <Compile Include="V20180419\Models\StartInstanceRefreshResponse.cs" />
     <Compile Include="V20180419\Models\StopAutoScalingInstancesRequest.cs" />
     <Compile Include="V20180419\Models\StopAutoScalingInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\StopInstanceRefreshRequest.cs" />
+    <Compile Include="V20180419\Models\StopInstanceRefreshResponse.cs" />
     <Compile Include="V20180419\Models\SystemDisk.cs" />
     <Compile Include="V20180419\Models\Tag.cs" />
     <Compile Include="V20180419\Models\TargetAttribute.cs" />

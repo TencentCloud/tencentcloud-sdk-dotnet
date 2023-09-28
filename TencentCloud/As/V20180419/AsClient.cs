@@ -137,6 +137,52 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 取消伸缩组的实例刷新活动。
+        /// * 已刷新/正在刷新的批次不受影响，待刷新批次被取消
+        /// * 刷新失败的实例保持备用中状态，需用户手动处理后尝试退出备用中状态或销毁
+        /// * 取消后不允许回滚操作，也不支持恢复操作
+        /// </summary>
+        /// <param name="req"><see cref="CancelInstanceRefreshRequest"/></param>
+        /// <returns><see cref="CancelInstanceRefreshResponse"/></returns>
+        public async Task<CancelInstanceRefreshResponse> CancelInstanceRefresh(CancelInstanceRefreshRequest req)
+        {
+             JsonResponseModel<CancelInstanceRefreshResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelInstanceRefresh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelInstanceRefreshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消伸缩组的实例刷新活动。
+        /// * 已刷新/正在刷新的批次不受影响，待刷新批次被取消
+        /// * 刷新失败的实例保持备用中状态，需用户手动处理后尝试退出备用中状态或销毁
+        /// * 取消后不允许回滚操作，也不支持恢复操作
+        /// </summary>
+        /// <param name="req"><see cref="CancelInstanceRefreshRequest"/></param>
+        /// <returns><see cref="CancelInstanceRefreshResponse"/></returns>
+        public CancelInstanceRefreshResponse CancelInstanceRefreshSync(CancelInstanceRefreshRequest req)
+        {
+             JsonResponseModel<CancelInstanceRefreshResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelInstanceRefresh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelInstanceRefreshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ClearLaunchConfigurationAttributes）用于将启动配置内的特定属性完全清空。
         /// </summary>
         /// <param name="req"><see cref="ClearLaunchConfigurationAttributesRequest"/></param>
@@ -1241,6 +1287,46 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 本接口（DescribeRefreshActivities）用于查询伸缩组的实例刷新活动记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRefreshActivitiesRequest"/></param>
+        /// <returns><see cref="DescribeRefreshActivitiesResponse"/></returns>
+        public async Task<DescribeRefreshActivitiesResponse> DescribeRefreshActivities(DescribeRefreshActivitiesRequest req)
+        {
+             JsonResponseModel<DescribeRefreshActivitiesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRefreshActivities");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRefreshActivitiesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRefreshActivities）用于查询伸缩组的实例刷新活动记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRefreshActivitiesRequest"/></param>
+        /// <returns><see cref="DescribeRefreshActivitiesResponse"/></returns>
+        public DescribeRefreshActivitiesResponse DescribeRefreshActivitiesSync(DescribeRefreshActivitiesRequest req)
+        {
+             JsonResponseModel<DescribeRefreshActivitiesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRefreshActivities");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRefreshActivitiesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeScalingPolicies）用于查询告警触发策略。
         /// </summary>
         /// <param name="req"><see cref="DescribeScalingPoliciesRequest"/></param>
@@ -1558,6 +1644,50 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = this.InternalRequestSync(req, "ExecuteScalingPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExecuteScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 伸缩组内实例退出备用中状态。
+        /// * 备用中状态的实例负载均衡器权重值为 0，退出备用中状态后，权重值也会恢复
+        /// * 对备用中状态实例进行开关机操作也会使其退出备用中状态
+        /// </summary>
+        /// <param name="req"><see cref="ExitStandbyRequest"/></param>
+        /// <returns><see cref="ExitStandbyResponse"/></returns>
+        public async Task<ExitStandbyResponse> ExitStandby(ExitStandbyRequest req)
+        {
+             JsonResponseModel<ExitStandbyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExitStandby");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExitStandbyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 伸缩组内实例退出备用中状态。
+        /// * 备用中状态的实例负载均衡器权重值为 0，退出备用中状态后，权重值也会恢复
+        /// * 对备用中状态实例进行开关机操作也会使其退出备用中状态
+        /// </summary>
+        /// <param name="req"><see cref="ExitStandbyRequest"/></param>
+        /// <returns><see cref="ExitStandbyResponse"/></returns>
+        public ExitStandbyResponse ExitStandbySync(ExitStandbyRequest req)
+        {
+             JsonResponseModel<ExitStandbyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExitStandby");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExitStandbyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1989,6 +2119,94 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 恢复暂停状态的实例刷新活动，使其重试当前批次刷新失败实例或继续刷新后续批次，非暂停状态下调用该接口无效。
+        /// </summary>
+        /// <param name="req"><see cref="ResumeInstanceRefreshRequest"/></param>
+        /// <returns><see cref="ResumeInstanceRefreshResponse"/></returns>
+        public async Task<ResumeInstanceRefreshResponse> ResumeInstanceRefresh(ResumeInstanceRefreshRequest req)
+        {
+             JsonResponseModel<ResumeInstanceRefreshResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResumeInstanceRefresh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeInstanceRefreshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 恢复暂停状态的实例刷新活动，使其重试当前批次刷新失败实例或继续刷新后续批次，非暂停状态下调用该接口无效。
+        /// </summary>
+        /// <param name="req"><see cref="ResumeInstanceRefreshRequest"/></param>
+        /// <returns><see cref="ResumeInstanceRefreshResponse"/></returns>
+        public ResumeInstanceRefreshResponse ResumeInstanceRefreshSync(ResumeInstanceRefreshRequest req)
+        {
+             JsonResponseModel<ResumeInstanceRefreshResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResumeInstanceRefresh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeInstanceRefreshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 回滚操作会生成一个新的实例刷新活动，该活动也支持分批次刷新以及暂停、恢复、取消操作，接口返回回滚活动的 RefreshActivityId。
+        /// * 原活动中待刷新实例变更为已取消，忽略不存在实例，其他状态实例进入回滚流程
+        /// * 原活动中正在刷新的实例不会立刻终止，刷新结束后再执行回滚活动
+        /// * 暂停状态或最近一次成功的刷新活动支持回滚，其他状态不支持回滚
+        /// * 原活动刷新方式为重装实例时，对于 ImageId参数，会自动恢复到回滚前镜像 ID；对于 UserData、EnhancedService、LoginSettings、 HostName 参数，依然会从启动配置中读取，需用户在回滚前自行修改启动配置
+        /// </summary>
+        /// <param name="req"><see cref="RollbackInstanceRefreshRequest"/></param>
+        /// <returns><see cref="RollbackInstanceRefreshResponse"/></returns>
+        public async Task<RollbackInstanceRefreshResponse> RollbackInstanceRefresh(RollbackInstanceRefreshRequest req)
+        {
+             JsonResponseModel<RollbackInstanceRefreshResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RollbackInstanceRefresh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackInstanceRefreshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 回滚操作会生成一个新的实例刷新活动，该活动也支持分批次刷新以及暂停、恢复、取消操作，接口返回回滚活动的 RefreshActivityId。
+        /// * 原活动中待刷新实例变更为已取消，忽略不存在实例，其他状态实例进入回滚流程
+        /// * 原活动中正在刷新的实例不会立刻终止，刷新结束后再执行回滚活动
+        /// * 暂停状态或最近一次成功的刷新活动支持回滚，其他状态不支持回滚
+        /// * 原活动刷新方式为重装实例时，对于 ImageId参数，会自动恢复到回滚前镜像 ID；对于 UserData、EnhancedService、LoginSettings、 HostName 参数，依然会从启动配置中读取，需用户在回滚前自行修改启动配置
+        /// </summary>
+        /// <param name="req"><see cref="RollbackInstanceRefreshRequest"/></param>
+        /// <returns><see cref="RollbackInstanceRefreshResponse"/></returns>
+        public RollbackInstanceRefreshResponse RollbackInstanceRefreshSync(RollbackInstanceRefreshRequest req)
+        {
+             JsonResponseModel<RollbackInstanceRefreshResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RollbackInstanceRefresh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackInstanceRefreshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 为伸缩组指定数量缩容实例，返回缩容活动的 ActivityId。
         /// * 伸缩组需要未处于活动中
         /// * 伸缩组处于停用状态时，该接口也会生效，可参考[停用伸缩组](https://cloud.tencent.com/document/api/377/20435)文档查看伸缩组停用状态的影响范围
@@ -2177,6 +2395,56 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 根据启动配置中参数，刷新伸缩组内运行中状态 CVM 实例，返回实例刷新活动的 RefreshActivityId。
+        /// * 对于重装实例的刷新方式（目前仅支持重装），重装时仅会从启动配置中获取 ImageId、UserData、EnhancedService、 HostName、LoginSettings 参数进行刷新，实例的其他参数不会刷新
+        /// * 实例刷新期间（包括暂停状态），伸缩组会被停用。不建议刷新期间修改关联启动配置，否则会影响刷新参数，造成实例配置不一致
+        /// * 滚动更新模式会分成多批次进行刷新实例，单批次中若存在刷新失败实例，活动会进入失败暂停状态
+        /// * 若待刷新实例被移出或销毁，会被标记为 NOT_FOUND 状态，不阻塞实例刷新活动
+        /// * 运行中状态实例与最新启动配置参数一致，实例也会再次刷新
+        /// </summary>
+        /// <param name="req"><see cref="StartInstanceRefreshRequest"/></param>
+        /// <returns><see cref="StartInstanceRefreshResponse"/></returns>
+        public async Task<StartInstanceRefreshResponse> StartInstanceRefresh(StartInstanceRefreshRequest req)
+        {
+             JsonResponseModel<StartInstanceRefreshResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartInstanceRefresh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartInstanceRefreshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据启动配置中参数，刷新伸缩组内运行中状态 CVM 实例，返回实例刷新活动的 RefreshActivityId。
+        /// * 对于重装实例的刷新方式（目前仅支持重装），重装时仅会从启动配置中获取 ImageId、UserData、EnhancedService、 HostName、LoginSettings 参数进行刷新，实例的其他参数不会刷新
+        /// * 实例刷新期间（包括暂停状态），伸缩组会被停用。不建议刷新期间修改关联启动配置，否则会影响刷新参数，造成实例配置不一致
+        /// * 滚动更新模式会分成多批次进行刷新实例，单批次中若存在刷新失败实例，活动会进入失败暂停状态
+        /// * 若待刷新实例被移出或销毁，会被标记为 NOT_FOUND 状态，不阻塞实例刷新活动
+        /// * 运行中状态实例与最新启动配置参数一致，实例也会再次刷新
+        /// </summary>
+        /// <param name="req"><see cref="StartInstanceRefreshRequest"/></param>
+        /// <returns><see cref="StartInstanceRefreshResponse"/></returns>
+        public StartInstanceRefreshResponse StartInstanceRefreshSync(StartInstanceRefreshRequest req)
+        {
+             JsonResponseModel<StartInstanceRefreshResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartInstanceRefresh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartInstanceRefreshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（StopAutoScalingInstances）用于关闭伸缩组内 CVM 实例。
         /// * 关机方式采用`SOFT_FIRST`方式，表示在正常关闭失败后进行强制关闭
         /// * 关闭`IN_SERVICE`状态的实例，会减少期望实例数，期望实例数不可低于设置的最小值
@@ -2216,6 +2484,50 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = this.InternalRequestSync(req, "StopAutoScalingInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopAutoScalingInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 暂停正在执行的实例刷新活动。
+        /// * 暂停状态下，伸缩组也会处于停用中状态
+        /// * 当前正在更新的实例不会暂停，待更新的实例会暂停更新
+        /// </summary>
+        /// <param name="req"><see cref="StopInstanceRefreshRequest"/></param>
+        /// <returns><see cref="StopInstanceRefreshResponse"/></returns>
+        public async Task<StopInstanceRefreshResponse> StopInstanceRefresh(StopInstanceRefreshRequest req)
+        {
+             JsonResponseModel<StopInstanceRefreshResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopInstanceRefresh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopInstanceRefreshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 暂停正在执行的实例刷新活动。
+        /// * 暂停状态下，伸缩组也会处于停用中状态
+        /// * 当前正在更新的实例不会暂停，待更新的实例会暂停更新
+        /// </summary>
+        /// <param name="req"><see cref="StopInstanceRefreshRequest"/></param>
+        /// <returns><see cref="StopInstanceRefreshResponse"/></returns>
+        public StopInstanceRefreshResponse StopInstanceRefreshSync(StopInstanceRefreshRequest req)
+        {
+             JsonResponseModel<StopInstanceRefreshResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopInstanceRefresh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopInstanceRefreshResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -1225,6 +1225,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 此接口（CreateOrganizationInfoChangeUrl）用于创建企业信息变更链接，支持创建企业超管变更链接或企业基础信息变更链接，通过入参ChangeType指定。
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationInfoChangeUrlRequest"/></param>
+        /// <returns><see cref="CreateOrganizationInfoChangeUrlResponse"/></returns>
+        public async Task<CreateOrganizationInfoChangeUrlResponse> CreateOrganizationInfoChangeUrl(CreateOrganizationInfoChangeUrlRequest req)
+        {
+             JsonResponseModel<CreateOrganizationInfoChangeUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOrganizationInfoChangeUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationInfoChangeUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（CreateOrganizationInfoChangeUrl）用于创建企业信息变更链接，支持创建企业超管变更链接或企业基础信息变更链接，通过入参ChangeType指定。
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationInfoChangeUrlRequest"/></param>
+        /// <returns><see cref="CreateOrganizationInfoChangeUrlResponse"/></returns>
+        public CreateOrganizationInfoChangeUrlResponse CreateOrganizationInfoChangeUrlSync(CreateOrganizationInfoChangeUrlRequest req)
+        {
+             JsonResponseModel<CreateOrganizationInfoChangeUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOrganizationInfoChangeUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationInfoChangeUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取个人用户认证证书图片下载URL
         /// 
         /// 个人用户认证证书图片样式如下图

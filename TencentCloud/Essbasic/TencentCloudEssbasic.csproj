@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.858</VersionPrefix>
+    <VersionPrefix>3.0.859</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -268,6 +268,8 @@
     <Compile Include="V20210526\Models\ComponentLimit.cs" />
     <Compile Include="V20210526\Models\CreateChannelFlowEvidenceReportRequest.cs" />
     <Compile Include="V20210526\Models\CreateChannelFlowEvidenceReportResponse.cs" />
+    <Compile Include="V20210526\Models\CreateChannelOrganizationInfoChangeUrlRequest.cs" />
+    <Compile Include="V20210526\Models\CreateChannelOrganizationInfoChangeUrlResponse.cs" />
     <Compile Include="V20210526\Models\CreateConsoleLoginUrlRequest.cs" />
     <Compile Include="V20210526\Models\CreateConsoleLoginUrlResponse.cs" />
     <Compile Include="V20210526\Models\CreateFlowOption.cs" />

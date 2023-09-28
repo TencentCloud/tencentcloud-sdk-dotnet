@@ -24,12 +24,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     public class RejectVpcPeeringConnectionRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 对等连接唯一ID。
+        /// </summary>
+        [JsonProperty("PeeringConnectionId")]
+        public string PeeringConnectionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "PeeringConnectionId", this.PeeringConnectionId);
         }
     }
 }

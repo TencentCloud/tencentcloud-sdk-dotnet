@@ -46,6 +46,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string[] PartSuccessList{ get; set; }
 
         /// <summary>
+        /// 集群id与流程id的映射列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterToFlowIdList")]
+        public ClusterIDToFlowID[] ClusterToFlowIdList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -60,6 +67,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArraySimple(map, prefix + "SuccessList.", this.SuccessList);
             this.SetParamArraySimple(map, prefix + "FailList.", this.FailList);
             this.SetParamArraySimple(map, prefix + "PartSuccessList.", this.PartSuccessList);
+            this.SetParamArrayObj(map, prefix + "ClusterToFlowIdList.", this.ClusterToFlowIdList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

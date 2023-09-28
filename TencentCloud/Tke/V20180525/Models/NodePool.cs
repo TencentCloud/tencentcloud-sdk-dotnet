@@ -155,6 +155,48 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
+        /// <summary>
+        /// 节点配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtraArgs")]
+        public InstanceExtraArgs ExtraArgs{ get; set; }
+
+        /// <summary>
+        /// GPU驱动相关参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GPUArgs")]
+        public GPUArgs GPUArgs{ get; set; }
+
+        /// <summary>
+        /// dockerd --graph 指定值, 默认为 /var/lib/docker
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DockerGraphPath")]
+        public string DockerGraphPath{ get; set; }
+
+        /// <summary>
+        /// 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataDisks")]
+        public DataDisk[] DataDisks{ get; set; }
+
+        /// <summary>
+        /// 是否不可调度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Unschedulable")]
+        public long? Unschedulable{ get; set; }
+
+        /// <summary>
+        /// 用户自定义脚本,在UserScript前执行
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PreStartUserScript")]
+        public string PreStartUserScript{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -181,6 +223,12 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "UserScript", this.UserScript);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+            this.SetParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
+            this.SetParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
+            this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+            this.SetParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
+            this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
         }
     }
 }

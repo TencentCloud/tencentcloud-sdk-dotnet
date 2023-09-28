@@ -126,6 +126,13 @@ namespace TencentCloud.Live.V20180801.Models
         public long? OffsetTime{ get; set; }
 
         /// <summary>
+        /// 目标 Url。
+        /// 换目标地址，会断流重推到新地址。
+        /// </summary>
+        [JsonProperty("ToUrl")]
+        public string ToUrl{ get; set; }
+
+        /// <summary>
         /// 任务备注。
         /// </summary>
         [JsonProperty("Comment")]
@@ -192,6 +199,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "FileIndex", this.FileIndex);
             this.SetParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
+            this.SetParamSimple(map, prefix + "ToUrl", this.ToUrl);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
             this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);

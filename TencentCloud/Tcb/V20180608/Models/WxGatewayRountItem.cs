@@ -130,6 +130,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("GatewayRoutePathMatchType")]
         public string GatewayRoutePathMatchType{ get; set; }
 
+        /// <summary>
+        /// 安全网关自定义头部
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomHeader")]
+        public CustomHeader CustomHeader{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -152,6 +159,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "GatewayRoutePort", this.GatewayRoutePort);
             this.SetParamSimple(map, prefix + "GatewayRouteEnvId", this.GatewayRouteEnvId);
             this.SetParamSimple(map, prefix + "GatewayRoutePathMatchType", this.GatewayRoutePathMatchType);
+            this.SetParamObj(map, prefix + "CustomHeader.", this.CustomHeader);
         }
     }
 }

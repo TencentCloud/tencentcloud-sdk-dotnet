@@ -1413,6 +1413,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 预留券实例的购买会预先扣除本次实例购买所需金额，在调用本接口前请确保账户余额充足。
+        /// </summary>
+        /// <param name="req"><see cref="CreateReservedInstancesRequest"/></param>
+        /// <returns><see cref="CreateReservedInstancesResponse"/></returns>
+        public async Task<CreateReservedInstancesResponse> CreateReservedInstances(CreateReservedInstancesRequest req)
+        {
+             JsonResponseModel<CreateReservedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReservedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReservedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 预留券实例的购买会预先扣除本次实例购买所需金额，在调用本接口前请确保账户余额充足。
+        /// </summary>
+        /// <param name="req"><see cref="CreateReservedInstancesRequest"/></param>
+        /// <returns><see cref="CreateReservedInstancesResponse"/></returns>
+        public CreateReservedInstancesResponse CreateReservedInstancesSync(CreateReservedInstancesRequest req)
+        {
+             JsonResponseModel<CreateReservedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReservedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReservedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建边缘计算集群
         /// </summary>
         /// <param name="req"><see cref="CreateTKEEdgeClusterRequest"/></param>
@@ -2524,6 +2564,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DeletePrometheusTemplateSync");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrometheusTemplateSyncResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 预留券实例如符合退还规则，可通过本接口主动退还。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReservedInstancesRequest"/></param>
+        /// <returns><see cref="DeleteReservedInstancesResponse"/></returns>
+        public async Task<DeleteReservedInstancesResponse> DeleteReservedInstances(DeleteReservedInstancesRequest req)
+        {
+             JsonResponseModel<DeleteReservedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteReservedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReservedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 预留券实例如符合退还规则，可通过本接口主动退还。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReservedInstancesRequest"/></param>
+        /// <returns><see cref="DeleteReservedInstancesResponse"/></returns>
+        public DeleteReservedInstancesResponse DeleteReservedInstancesSync(DeleteReservedInstancesRequest req)
+        {
+             JsonResponseModel<DeleteReservedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteReservedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReservedInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4573,6 +4653,126 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询各个规格的 Pod 的抵扣率
+        /// </summary>
+        /// <param name="req"><see cref="DescribePodDeductionRateRequest"/></param>
+        /// <returns><see cref="DescribePodDeductionRateResponse"/></returns>
+        public async Task<DescribePodDeductionRateResponse> DescribePodDeductionRate(DescribePodDeductionRateRequest req)
+        {
+             JsonResponseModel<DescribePodDeductionRateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePodDeductionRate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePodDeductionRateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询各个规格的 Pod 的抵扣率
+        /// </summary>
+        /// <param name="req"><see cref="DescribePodDeductionRateRequest"/></param>
+        /// <returns><see cref="DescribePodDeductionRateResponse"/></returns>
+        public DescribePodDeductionRateResponse DescribePodDeductionRateSync(DescribePodDeductionRateRequest req)
+        {
+             JsonResponseModel<DescribePodDeductionRateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePodDeductionRate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePodDeductionRateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询可以用预留券抵扣的 Pod 信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePodsBySpecRequest"/></param>
+        /// <returns><see cref="DescribePodsBySpecResponse"/></returns>
+        public async Task<DescribePodsBySpecResponse> DescribePodsBySpec(DescribePodsBySpecRequest req)
+        {
+             JsonResponseModel<DescribePodsBySpecResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePodsBySpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePodsBySpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询可以用预留券抵扣的 Pod 信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePodsBySpecRequest"/></param>
+        /// <returns><see cref="DescribePodsBySpecResponse"/></returns>
+        public DescribePodsBySpecResponse DescribePodsBySpecSync(DescribePodsBySpecRequest req)
+        {
+             JsonResponseModel<DescribePodsBySpecResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePodsBySpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePodsBySpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 包括 Pod 资源统计和绑定的预留券资源统计。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePostNodeResourcesRequest"/></param>
+        /// <returns><see cref="DescribePostNodeResourcesResponse"/></returns>
+        public async Task<DescribePostNodeResourcesResponse> DescribePostNodeResources(DescribePostNodeResourcesRequest req)
+        {
+             JsonResponseModel<DescribePostNodeResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePostNodeResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePostNodeResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 包括 Pod 资源统计和绑定的预留券资源统计。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePostNodeResourcesRequest"/></param>
+        /// <returns><see cref="DescribePostNodeResourcesResponse"/></returns>
+        public DescribePostNodeResourcesResponse DescribePostNodeResourcesSync(DescribePostNodeResourcesRequest req)
+        {
+             JsonResponseModel<DescribePostNodeResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePostNodeResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePostNodeResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取关联目标集群的实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusAgentInstancesRequest"/></param>
@@ -5333,6 +5533,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 预留实例用量查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRIUtilizationDetailRequest"/></param>
+        /// <returns><see cref="DescribeRIUtilizationDetailResponse"/></returns>
+        public async Task<DescribeRIUtilizationDetailResponse> DescribeRIUtilizationDetail(DescribeRIUtilizationDetailRequest req)
+        {
+             JsonResponseModel<DescribeRIUtilizationDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRIUtilizationDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRIUtilizationDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 预留实例用量查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRIUtilizationDetailRequest"/></param>
+        /// <returns><see cref="DescribeRIUtilizationDetailResponse"/></returns>
+        public DescribeRIUtilizationDetailResponse DescribeRIUtilizationDetailSync(DescribeRIUtilizationDetailRequest req)
+        {
+             JsonResponseModel<DescribeRIUtilizationDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRIUtilizationDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRIUtilizationDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取容器服务支持的所有地域
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
@@ -5364,6 +5604,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRegions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询预留实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesResponse"/></returns>
+        public async Task<DescribeReservedInstancesResponse> DescribeReservedInstances(DescribeReservedInstancesRequest req)
+        {
+             JsonResponseModel<DescribeReservedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReservedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询预留实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesResponse"/></returns>
+        public DescribeReservedInstancesResponse DescribeReservedInstancesSync(DescribeReservedInstancesRequest req)
+        {
+             JsonResponseModel<DescribeReservedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReservedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -7293,6 +7573,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 修改预留券的抵扣范围，抵扣范围取值：Region、Zone 和 Node。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReservedInstanceScopeRequest"/></param>
+        /// <returns><see cref="ModifyReservedInstanceScopeResponse"/></returns>
+        public async Task<ModifyReservedInstanceScopeResponse> ModifyReservedInstanceScope(ModifyReservedInstanceScopeRequest req)
+        {
+             JsonResponseModel<ModifyReservedInstanceScopeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyReservedInstanceScope");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyReservedInstanceScopeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改预留券的抵扣范围，抵扣范围取值：Region、Zone 和 Node。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReservedInstanceScopeRequest"/></param>
+        /// <returns><see cref="ModifyReservedInstanceScopeResponse"/></returns>
+        public ModifyReservedInstanceScopeResponse ModifyReservedInstanceScopeSync(ModifyReservedInstanceScopeRequest req)
+        {
+             JsonResponseModel<ModifyReservedInstanceScopeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyReservedInstanceScope");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyReservedInstanceScopeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 移出节点池节点，但保留在集群内
         /// </summary>
         /// <param name="req"><see cref="RemoveNodeFromNodePoolRequest"/></param>
@@ -7324,6 +7644,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "RemoveNodeFromNodePool");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveNodeFromNodePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 续费时请确保账户余额充足。
+        /// </summary>
+        /// <param name="req"><see cref="RenewReservedInstancesRequest"/></param>
+        /// <returns><see cref="RenewReservedInstancesResponse"/></returns>
+        public async Task<RenewReservedInstancesResponse> RenewReservedInstances(RenewReservedInstancesRequest req)
+        {
+             JsonResponseModel<RenewReservedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewReservedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewReservedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 续费时请确保账户余额充足。
+        /// </summary>
+        /// <param name="req"><see cref="RenewReservedInstancesRequest"/></param>
+        /// <returns><see cref="RenewReservedInstancesResponse"/></returns>
+        public RenewReservedInstancesResponse RenewReservedInstancesSync(RenewReservedInstancesRequest req)
+        {
+             JsonResponseModel<RenewReservedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RenewReservedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewReservedInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

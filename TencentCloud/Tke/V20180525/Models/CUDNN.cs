@@ -26,24 +26,28 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// cuDNN的版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// cuDNN的名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// cuDNN的Doc名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DocName")]
         public string DocName{ get; set; }
 
         /// <summary>
         /// cuDNN的Dev名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DevName")]
         public string DevName{ get; set; }

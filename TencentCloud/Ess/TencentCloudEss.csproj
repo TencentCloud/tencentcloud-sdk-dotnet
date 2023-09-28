@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.858</VersionPrefix>
+    <VersionPrefix>3.0.859</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -111,6 +111,8 @@
     <Compile Include="V20201111\Models\CreateMultiFlowSignQRCodeResponse.cs" />
     <Compile Include="V20201111\Models\CreateOrganizationBatchSignUrlRequest.cs" />
     <Compile Include="V20201111\Models\CreateOrganizationBatchSignUrlResponse.cs" />
+    <Compile Include="V20201111\Models\CreateOrganizationInfoChangeUrlRequest.cs" />
+    <Compile Include="V20201111\Models\CreateOrganizationInfoChangeUrlResponse.cs" />
     <Compile Include="V20201111\Models\CreatePersonAuthCertificateImageRequest.cs" />
     <Compile Include="V20201111\Models\CreatePersonAuthCertificateImageResponse.cs" />
     <Compile Include="V20201111\Models\CreatePrepareFlowRequest.cs" />

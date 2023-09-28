@@ -132,6 +132,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DockerGraphPath")]
         public string DockerGraphPath{ get; set; }
 
+        /// <summary>
+        /// base64编码后的自定义脚本
+        /// </summary>
+        [JsonProperty("PreStartUserScript")]
+        public string PreStartUserScript{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
             this.SetParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
+            this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
         }
     }
 }

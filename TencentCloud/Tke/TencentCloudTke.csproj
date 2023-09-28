@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.858</VersionPrefix>
+    <VersionPrefix>3.0.859</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -147,6 +147,8 @@
     <Compile Include="V20180525\Models\CreatePrometheusTempResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusTemplateRequest.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusTemplateResponse.cs" />
+    <Compile Include="V20180525\Models\CreateReservedInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\CreateReservedInstancesResponse.cs" />
     <Compile Include="V20180525\Models\CreateTKEEdgeClusterRequest.cs" />
     <Compile Include="V20180525\Models\CreateTKEEdgeClusterResponse.cs" />
     <Compile Include="V20180525\Models\CustomDriver.cs" />
@@ -207,6 +209,8 @@
     <Compile Include="V20180525\Models\DeletePrometheusTemplateResponse.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateSyncRequest.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateSyncResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteReservedInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteReservedInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DeleteTKEEdgeClusterRequest.cs" />
     <Compile Include="V20180525\Models\DeleteTKEEdgeClusterResponse.cs" />
     <Compile Include="V20180525\Models\DescribeAddonRequest.cs" />
@@ -309,6 +313,12 @@
     <Compile Include="V20180525\Models\DescribeImageCachesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeImagesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeImagesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePodDeductionRateRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePodDeductionRateResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePodsBySpecRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePodsBySpecResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePostNodeResourcesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePostNodeResourcesResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusAgentInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusAgentInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusAgentsRequest.cs" />
@@ -347,8 +357,12 @@
     <Compile Include="V20180525\Models\DescribePrometheusTemplateSyncResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusTemplatesRequest.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusTemplatesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeRIUtilizationDetailRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeRIUtilizationDetailResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRegionsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeReservedInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeReservedInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeResourceUsageRequest.cs" />
     <Compile Include="V20180525\Models\DescribeResourceUsageResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
@@ -443,6 +457,7 @@
     <Compile Include="V20180525\Models\InstallLogAgentResponse.cs" />
     <Compile Include="V20180525\Models\Instance.cs" />
     <Compile Include="V20180525\Models\InstanceAdvancedSettings.cs" />
+    <Compile Include="V20180525\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20180525\Models\InstanceDataDiskMountSetting.cs" />
     <Compile Include="V20180525\Models\InstanceExtraArgs.cs" />
     <Compile Include="V20180525\Models\InstanceUpgradeClusterStatus.cs" />
@@ -501,14 +516,18 @@
     <Compile Include="V20180525\Models\ModifyPrometheusTempResponse.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusTemplateRequest.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusTemplateResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyReservedInstanceScopeRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyReservedInstanceScopeResponse.cs" />
     <Compile Include="V20180525\Models\NfsVolume.cs" />
     <Compile Include="V20180525\Models\NodeCountSummary.cs" />
     <Compile Include="V20180525\Models\NodePool.cs" />
     <Compile Include="V20180525\Models\NodePoolOption.cs" />
     <Compile Include="V20180525\Models\OIDCConfigAuthenticationOptions.cs" />
     <Compile Include="V20180525\Models\PendingRelease.cs" />
+    <Compile Include="V20180525\Models\PodDeductionRate.cs" />
     <Compile Include="V20180525\Models\PodLimitsByType.cs" />
     <Compile Include="V20180525\Models\PodLimitsInstance.cs" />
+    <Compile Include="V20180525\Models\PodNodeInfo.cs" />
     <Compile Include="V20180525\Models\Probe.cs" />
     <Compile Include="V20180525\Models\PrometheusAgentInfo.cs" />
     <Compile Include="V20180525\Models\PrometheusAgentOverview.cs" />
@@ -533,6 +552,7 @@
     <Compile Include="V20180525\Models\PrometheusTemplate.cs" />
     <Compile Include="V20180525\Models\PrometheusTemplateModify.cs" />
     <Compile Include="V20180525\Models\PrometheusTemplateSyncTarget.cs" />
+    <Compile Include="V20180525\Models\RIUtilizationDetail.cs" />
     <Compile Include="V20180525\Models\RegionInstance.cs" />
     <Compile Include="V20180525\Models\Release.cs" />
     <Compile Include="V20180525\Models\ReleaseDetails.cs" />
@@ -540,6 +560,11 @@
     <Compile Include="V20180525\Models\ReleaseValues.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\RenewReservedInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\RenewReservedInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\ReservedInstance.cs" />
+    <Compile Include="V20180525\Models\ReservedInstanceScope.cs" />
+    <Compile Include="V20180525\Models\ReservedInstanceSpec.cs" />
     <Compile Include="V20180525\Models\ResourceDeleteOption.cs" />
     <Compile Include="V20180525\Models\ResourceUsage.cs" />
     <Compile Include="V20180525\Models\ResourceUsageDetail.cs" />
@@ -566,6 +591,7 @@
     <Compile Include="V20180525\Models\SetNodePoolNodeProtectionRequest.cs" />
     <Compile Include="V20180525\Models\SetNodePoolNodeProtectionResponse.cs" />
     <Compile Include="V20180525\Models\SubnetInfos.cs" />
+    <Compile Include="V20180525\Models\SuperNodeResource.cs" />
     <Compile Include="V20180525\Models\SyncPrometheusTempRequest.cs" />
     <Compile Include="V20180525\Models\SyncPrometheusTempResponse.cs" />
     <Compile Include="V20180525\Models\SyncPrometheusTemplateRequest.cs" />

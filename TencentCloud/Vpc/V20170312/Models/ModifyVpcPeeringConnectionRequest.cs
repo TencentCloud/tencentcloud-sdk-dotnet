@@ -24,12 +24,40 @@ namespace TencentCloud.Vpc.V20170312.Models
     public class ModifyVpcPeeringConnectionRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 对等连接ID。
+        /// </summary>
+        [JsonProperty("PeeringConnectionId")]
+        public string PeeringConnectionId{ get; set; }
+
+        /// <summary>
+        /// 对等连接名称。
+        /// </summary>
+        [JsonProperty("PeeringConnectionName")]
+        public string PeeringConnectionName{ get; set; }
+
+        /// <summary>
+        /// 带宽上限，单位Mbps。
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public long? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// 计费模式，日峰值POSTPAID_BY_DAY_MAX，月95 POSTPAID_BY_MONTH_95。
+        /// </summary>
+        [JsonProperty("ChargeType")]
+        public string ChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "PeeringConnectionId", this.PeeringConnectionId);
+            this.SetParamSimple(map, prefix + "PeeringConnectionName", this.PeeringConnectionName);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
         }
     }
 }

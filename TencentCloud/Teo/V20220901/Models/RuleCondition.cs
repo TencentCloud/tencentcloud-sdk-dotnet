@@ -35,14 +35,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 匹配类型，取值有：
-        /// <li> filename：文件名； </li>
-        /// <li> extension：文件后缀； </li>
-        /// <li> host：HOST； </li>
-        /// <li> full_url：URL Full，当前站点下完整 URL 路径，必须包含 HTTP 协议，Host 和 路径； </li>
-        /// <li> url：URL Path，当前站点下 URL 路径的请求； </li><li>client_country：客户端国家/地区；</li>
-        /// <li> query_string：查询字符串，当前站点下请求URL的查询字符串； </li>
-        /// <li> request_header：HTTP请求头部。 </li>
+        /// 匹配类型，取值有： <li> filename：文件名； </li> <li> extension：文件后缀； </li> <li> host：HOST； </li> <li> full_url：URL Full，当前站点下完整 URL 路径，必须包含 HTTP 协议，Host 和 路径； </li> <li> url：URL Path，当前站点下 URL 路径的请求； </li><li>client_country：客户端国家/地区；</li> <li> query_string：查询字符串，当前站点下请求URL的查询字符串； </li> <li> request_header：HTTP请求头部。 </li>
         /// </summary>
         [JsonProperty("Target")]
         public string Target{ get; set; }
@@ -81,6 +74,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IgnoreNameCase")]
+        [System.Obsolete]
         public bool? IgnoreNameCase{ get; set; }
 
 

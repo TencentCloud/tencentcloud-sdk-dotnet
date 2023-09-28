@@ -43,7 +43,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public Rect Rect{ get; set; }
 
         /// <summary>
-        /// 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
+        /// 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
         /// </summary>
         [JsonProperty("Color")]
         public string Color{ get; set; }
