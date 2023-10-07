@@ -25,6 +25,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
+        /// 创建的企业信息变更链接。
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
+        /// 链接过期时间。链接7天有效。
+        /// </summary>
+        [JsonProperty("ExpiredTime")]
+        public long? ExpiredTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

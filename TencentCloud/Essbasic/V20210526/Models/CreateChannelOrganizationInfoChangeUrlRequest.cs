@@ -24,12 +24,27 @@ namespace TencentCloud.Essbasic.V20210526.Models
     public class CreateChannelOrganizationInfoChangeUrlRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
+        /// <summary>
+        /// 企业信息变更类型，可选类型如下：
+        /// <ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
+        /// </summary>
+        [JsonProperty("ChangeType")]
+        public ulong? ChangeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "ChangeType", this.ChangeType);
         }
     }
 }

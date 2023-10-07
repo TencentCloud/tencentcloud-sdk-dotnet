@@ -143,6 +143,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 资源id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +167,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArraySimple(map, prefix + "LabelCounts.", this.LabelCounts);
             this.SetParamSimple(map, prefix + "CurDeadline", this.CurDeadline);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }
