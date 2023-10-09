@@ -61,6 +61,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// - NOT_CHANNEL：非第三方平台子客企业企业
         /// - PERSON：个人
         /// - FOLLOWER：关注方，目前是合同抄送方
+        /// - RECIPIENT：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接
         /// </summary>
         [JsonProperty("GenerateType")]
         public string GenerateType{ get; set; }
@@ -128,7 +129,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long?[] Hides{ get; set; }
 
         /// <summary>
-        /// 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+        /// 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致并且一一对应
         /// </summary>
         [JsonProperty("RecipientIds")]
         public string[] RecipientIds{ get; set; }

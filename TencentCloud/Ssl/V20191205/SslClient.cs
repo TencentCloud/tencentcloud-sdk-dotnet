@@ -1693,6 +1693,8 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 证书托管接口已重构， 旧接口预下线， 近30天无请求
+        /// 
         /// 云资源托管
         /// </summary>
         /// <param name="req"><see cref="HostCertificateRequest"/></param>
@@ -1713,6 +1715,8 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 证书托管接口已重构， 旧接口预下线， 近30天无请求
+        /// 
         /// 云资源托管
         /// </summary>
         /// <param name="req"><see cref="HostCertificateRequest"/></param>

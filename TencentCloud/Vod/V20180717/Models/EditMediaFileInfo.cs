@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 视频剪辑的起始偏移时间偏移，单位：秒。
+        /// 视频剪辑起始的偏移时间，单位：秒。
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 视频剪辑的起始结束时间偏移，单位：秒。
+        /// 视频剪辑结束的偏移时间，单位：秒。
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

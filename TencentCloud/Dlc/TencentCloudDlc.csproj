@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.860</VersionPrefix>
+    <VersionPrefix>3.0.861</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -76,6 +76,12 @@
     <Compile Include="V20210125\Models\CancelSparkSessionBatchSQLResponse.cs" />
     <Compile Include="V20210125\Models\CancelTaskRequest.cs" />
     <Compile Include="V20210125\Models\CancelTaskResponse.cs" />
+    <Compile Include="V20210125\Models\CheckDataEngineConfigPairsValidityRequest.cs" />
+    <Compile Include="V20210125\Models\CheckDataEngineConfigPairsValidityResponse.cs" />
+    <Compile Include="V20210125\Models\CheckDataEngineImageCanBeRollbackRequest.cs" />
+    <Compile Include="V20210125\Models\CheckDataEngineImageCanBeRollbackResponse.cs" />
+    <Compile Include="V20210125\Models\CheckDataEngineImageCanBeUpgradeRequest.cs" />
+    <Compile Include="V20210125\Models\CheckDataEngineImageCanBeUpgradeResponse.cs" />
     <Compile Include="V20210125\Models\CheckLockMetaDataRequest.cs" />
     <Compile Include="V20210125\Models\CheckLockMetaDataResponse.cs" />
     <Compile Include="V20210125\Models\Column.cs" />
@@ -133,6 +139,7 @@
     <Compile Include="V20210125\Models\DMSTable.cs" />
     <Compile Include="V20210125\Models\DMSTableInfo.cs" />
     <Compile Include="V20210125\Models\DataEngineConfigPair.cs" />
+    <Compile Include="V20210125\Models\DataEngineImageVersion.cs" />
     <Compile Include="V20210125\Models\DataEngineInfo.cs" />
     <Compile Include="V20210125\Models\DataFormat.cs" />
     <Compile Include="V20210125\Models\DataGovernPolicy.cs" />
@@ -142,6 +149,8 @@
     <Compile Include="V20210125\Models\DatasourceConnectionConfig.cs" />
     <Compile Include="V20210125\Models\DatasourceConnectionInfo.cs" />
     <Compile Include="V20210125\Models\DatasourceConnectionLocation.cs" />
+    <Compile Include="V20210125\Models\DeleteDataEngineRequest.cs" />
+    <Compile Include="V20210125\Models\DeleteDataEngineResponse.cs" />
     <Compile Include="V20210125\Models\DeleteNotebookSessionRequest.cs" />
     <Compile Include="V20210125\Models\DeleteNotebookSessionResponse.cs" />
     <Compile Include="V20210125\Models\DeleteScriptRequest.cs" />
@@ -162,6 +171,12 @@
     <Compile Include="V20210125\Models\DescribeDMSTableResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDMSTablesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDMSTablesResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeDataEngineImageVersionsRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeDataEngineImageVersionsResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeDataEnginePythonSparkImagesRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeDataEnginePythonSparkImagesResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeDataEngineRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeDataEngineResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDataEnginesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDataEnginesResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDatabasesRequest.cs" />
@@ -212,12 +227,20 @@
     <Compile Include="V20210125\Models\DescribeTaskResultResponse.cs" />
     <Compile Include="V20210125\Models\DescribeTasksRequest.cs" />
     <Compile Include="V20210125\Models\DescribeTasksResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeUserDataEngineConfigRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeUserDataEngineConfigResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeUserInfoRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeUserInfoResponse.cs" />
     <Compile Include="V20210125\Models\DescribeUserRolesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeUserRolesResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeUserTypeRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeUserTypeResponse.cs" />
     <Compile Include="V20210125\Models\DescribeUsersRequest.cs" />
     <Compile Include="V20210125\Models\DescribeUsersResponse.cs" />
     <Compile Include="V20210125\Models\DescribeViewsRequest.cs" />
     <Compile Include="V20210125\Models\DescribeViewsResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeWorkGroupInfoRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeWorkGroupInfoResponse.cs" />
     <Compile Include="V20210125\Models\DescribeWorkGroupsRequest.cs" />
     <Compile Include="V20210125\Models\DescribeWorkGroupsResponse.cs" />
     <Compile Include="V20210125\Models\DetachUserPolicyRequest.cs" />
@@ -246,6 +269,8 @@
     <Compile Include="V20210125\Models\LockComponentInfo.cs" />
     <Compile Include="V20210125\Models\LockMetaDataRequest.cs" />
     <Compile Include="V20210125\Models\LockMetaDataResponse.cs" />
+    <Compile Include="V20210125\Models\ModifyDataEngineDescriptionRequest.cs" />
+    <Compile Include="V20210125\Models\ModifyDataEngineDescriptionResponse.cs" />
     <Compile Include="V20210125\Models\ModifyGovernEventRuleRequest.cs" />
     <Compile Include="V20210125\Models\ModifyGovernEventRuleResponse.cs" />
     <Compile Include="V20210125\Models\ModifySparkAppBatchRequest.cs" />
@@ -254,6 +279,8 @@
     <Compile Include="V20210125\Models\ModifySparkAppResponse.cs" />
     <Compile Include="V20210125\Models\ModifyUserRequest.cs" />
     <Compile Include="V20210125\Models\ModifyUserResponse.cs" />
+    <Compile Include="V20210125\Models\ModifyUserTypeRequest.cs" />
+    <Compile Include="V20210125\Models\ModifyUserTypeResponse.cs" />
     <Compile Include="V20210125\Models\ModifyWorkGroupRequest.cs" />
     <Compile Include="V20210125\Models\ModifyWorkGroupResponse.cs" />
     <Compile Include="V20210125\Models\MysqlInfo.cs" />
@@ -266,12 +293,20 @@
     <Compile Include="V20210125\Models\OtherDatasourceConnection.cs" />
     <Compile Include="V20210125\Models\Partition.cs" />
     <Compile Include="V20210125\Models\Policy.cs" />
+    <Compile Include="V20210125\Models\Policys.cs" />
     <Compile Include="V20210125\Models\PrestoMonitorMetrics.cs" />
     <Compile Include="V20210125\Models\Property.cs" />
+    <Compile Include="V20210125\Models\PythonSparkImage.cs" />
     <Compile Include="V20210125\Models\QueryResultRequest.cs" />
     <Compile Include="V20210125\Models\QueryResultResponse.cs" />
+    <Compile Include="V20210125\Models\RenewDataEngineRequest.cs" />
+    <Compile Include="V20210125\Models\RenewDataEngineResponse.cs" />
     <Compile Include="V20210125\Models\ReportHeartbeatMetaDataRequest.cs" />
     <Compile Include="V20210125\Models\ReportHeartbeatMetaDataResponse.cs" />
+    <Compile Include="V20210125\Models\RestartDataEngineRequest.cs" />
+    <Compile Include="V20210125\Models\RestartDataEngineResponse.cs" />
+    <Compile Include="V20210125\Models\RollbackDataEngineImageRequest.cs" />
+    <Compile Include="V20210125\Models\RollbackDataEngineImageResponse.cs" />
     <Compile Include="V20210125\Models\SQLTask.cs" />
     <Compile Include="V20210125\Models\Script.cs" />
     <Compile Include="V20210125\Models\SessionResourceTemplate.cs" />
@@ -283,6 +318,8 @@
     <Compile Include="V20210125\Models\StreamingStatistics.cs" />
     <Compile Include="V20210125\Models\SuspendResumeDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\SuspendResumeDataEngineResponse.cs" />
+    <Compile Include="V20210125\Models\SwitchDataEngineImageRequest.cs" />
+    <Compile Include="V20210125\Models\SwitchDataEngineImageResponse.cs" />
     <Compile Include="V20210125\Models\SwitchDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\SwitchDataEngineResponse.cs" />
     <Compile Include="V20210125\Models\TColumn.cs" />
@@ -301,16 +338,28 @@
     <Compile Include="V20210125\Models\UnbindWorkGroupsFromUserResponse.cs" />
     <Compile Include="V20210125\Models\UnlockMetaDataRequest.cs" />
     <Compile Include="V20210125\Models\UnlockMetaDataResponse.cs" />
+    <Compile Include="V20210125\Models\UpdateDataEngineConfigRequest.cs" />
+    <Compile Include="V20210125\Models\UpdateDataEngineConfigResponse.cs" />
+    <Compile Include="V20210125\Models\UpdateDataEngineRequest.cs" />
+    <Compile Include="V20210125\Models\UpdateDataEngineResponse.cs" />
     <Compile Include="V20210125\Models\UpdateRowFilterRequest.cs" />
     <Compile Include="V20210125\Models\UpdateRowFilterResponse.cs" />
+    <Compile Include="V20210125\Models\UpdateUserDataEngineConfigRequest.cs" />
+    <Compile Include="V20210125\Models\UpdateUserDataEngineConfigResponse.cs" />
+    <Compile Include="V20210125\Models\UpgradeDataEngineImageRequest.cs" />
+    <Compile Include="V20210125\Models\UpgradeDataEngineImageResponse.cs" />
+    <Compile Include="V20210125\Models\UserDetailInfo.cs" />
     <Compile Include="V20210125\Models\UserIdSetOfWorkGroupId.cs" />
     <Compile Include="V20210125\Models\UserInfo.cs" />
     <Compile Include="V20210125\Models\UserMessage.cs" />
     <Compile Include="V20210125\Models\UserRole.cs" />
+    <Compile Include="V20210125\Models\Users.cs" />
     <Compile Include="V20210125\Models\ViewBaseInfo.cs" />
     <Compile Include="V20210125\Models\ViewResponseInfo.cs" />
+    <Compile Include="V20210125\Models\WorkGroupDetailInfo.cs" />
     <Compile Include="V20210125\Models\WorkGroupIdSetOfUserId.cs" />
     <Compile Include="V20210125\Models\WorkGroupInfo.cs" />
     <Compile Include="V20210125\Models\WorkGroupMessage.cs" />
+    <Compile Include="V20210125\Models\WorkGroups.cs" />
   </ItemGroup>
 </Project>

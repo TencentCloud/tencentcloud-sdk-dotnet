@@ -54,6 +54,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
+        /// <summary>
+        /// 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneResourceState")]
+        public long? ZoneResourceState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ZoneState", this.ZoneState);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "ZoneResourceState", this.ZoneResourceState);
         }
     }
 }

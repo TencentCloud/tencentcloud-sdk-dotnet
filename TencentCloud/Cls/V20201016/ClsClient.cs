@@ -2493,7 +2493,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取告警任务历史
+        /// 本接口用于获取告警策略执行详情
         /// </summary>
         /// <param name="req"><see cref="GetAlarmLogRequest"/></param>
         /// <returns><see cref="GetAlarmLogResponse"/></returns>
@@ -2513,7 +2513,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取告警任务历史
+        /// 本接口用于获取告警策略执行详情
         /// </summary>
         /// <param name="req"><see cref="GetAlarmLogRequest"/></param>
         /// <returns><see cref="GetAlarmLogResponse"/></returns>

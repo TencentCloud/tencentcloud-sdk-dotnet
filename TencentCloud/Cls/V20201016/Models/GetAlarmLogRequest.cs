@@ -25,43 +25,46 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 要查询的日志的起始时间，Unix时间戳，单位ms
+        /// 要查询的执行详情的起始时间，Unix时间戳，单位ms
         /// </summary>
         [JsonProperty("From")]
         public long? From{ get; set; }
 
         /// <summary>
-        /// 要查询的日志的结束时间，Unix时间戳，单位ms
+        /// 要查询的执行详情的结束时间，Unix时间戳，单位ms
         /// </summary>
         [JsonProperty("To")]
         public long? To{ get; set; }
 
         /// <summary>
-        /// 查询语句，语句长度最大为1024
+        /// 查询过滤条件，例如：
+        /// - 按告警策略ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971"`
+        /// - 按监控对象ID查询：`monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b") `
+        /// - 按告警策略ID及监控对象ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971" AND monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b")`
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 单次查询返回的日志条数，最大值为1000
+        /// 单次查询返回的执行详情条数，最大值为1000
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+        /// 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// 日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+        /// 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+        /// 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
         /// </summary>
         [JsonProperty("UseNewAnalysis")]
         public bool? UseNewAnalysis{ get; set; }

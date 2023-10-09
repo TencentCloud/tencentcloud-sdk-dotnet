@@ -1423,6 +1423,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 获取证书的检查结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertificateVerifyResultRequest"/></param>
+        /// <returns><see cref="DescribeCertificateVerifyResultResponse"/></returns>
+        public async Task<DescribeCertificateVerifyResultResponse> DescribeCertificateVerifyResult(DescribeCertificateVerifyResultRequest req)
+        {
+             JsonResponseModel<DescribeCertificateVerifyResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCertificateVerifyResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateVerifyResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取证书的检查结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertificateVerifyResultRequest"/></param>
+        /// <returns><see cref="DescribeCertificateVerifyResultResponse"/></returns>
+        public DescribeCertificateVerifyResultResponse DescribeCertificateVerifyResultSync(DescribeCertificateVerifyResultRequest req)
+        {
+             JsonResponseModel<DescribeCertificateVerifyResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCertificateVerifyResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateVerifyResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Saas型WAF接入查询加密套件信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCiphersDetailRequest"/></param>

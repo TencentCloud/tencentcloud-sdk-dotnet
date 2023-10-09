@@ -159,6 +159,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? Published{ get; set; }
 
         /// <summary>
+        /// 分享来源的模板ID。用在集团账号子企业模板里
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShareTemplateId")]
+        public string ShareTemplateId{ get; set; }
+
+        /// <summary>
         /// 模板内部指定的印章列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -199,6 +206,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
             this.SetParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
             this.SetParamSimple(map, prefix + "Published", this.Published);
+            this.SetParamSimple(map, prefix + "ShareTemplateId", this.ShareTemplateId);
             this.SetParamArrayObj(map, prefix + "TemplateSeals.", this.TemplateSeals);
             this.SetParamArrayObj(map, prefix + "Seals.", this.Seals);
         }

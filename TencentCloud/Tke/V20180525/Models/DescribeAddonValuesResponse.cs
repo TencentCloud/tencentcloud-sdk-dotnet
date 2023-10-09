@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 参数列表，如果addon已安装，会使用已设置的的参数做渲染，是一个json格式的字符串
+        /// 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串
         /// </summary>
         [JsonProperty("Values")]
         public string Values{ get; set; }

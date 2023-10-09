@@ -25,19 +25,19 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 加载后续内容的Context
+        /// 加载后续详情的Context
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// 日志查询结果是否全部返回
+        /// 指定时间范围内的告警执行详情是否完整返回
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }
 
         /// <summary>
-        /// 返回的是否为分析结果
+        /// 返回的结果是否为SQL分析结果
         /// </summary>
         [JsonProperty("Analysis")]
         public bool? Analysis{ get; set; }
@@ -50,28 +50,28 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] ColNames{ get; set; }
 
         /// <summary>
-        /// 日志查询结果；当Analysis为True时，可能返回为null
+        /// 执行详情查询结果；当Analysis为True时，可能返回为null
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Results")]
         public LogInfo[] Results{ get; set; }
 
         /// <summary>
-        /// 日志分析结果；当Analysis为False时，可能返回为null
+        /// 执行详情统计分析结果；当Analysis为False时，可能返回为null
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisResults")]
         public LogItems[] AnalysisResults{ get; set; }
 
         /// <summary>
-        /// 新的日志分析结果; UseNewAnalysis为true有效
+        /// 执行详情统计分析结果; UseNewAnalysis为true有效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisRecords")]
         public string[] AnalysisRecords{ get; set; }
 
         /// <summary>
-        /// 日志分析的列属性; UseNewAnalysis为true有效
+        /// 分析结果的列名， UseNewAnalysis为true有效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Columns")]

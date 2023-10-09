@@ -88,6 +88,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// 死信查询时该值为true，只对Rocketmq有效
         /// </summary>
         [JsonProperty("QueryDlqMsg")]
+        [System.Obsolete]
         public bool? QueryDlqMsg{ get; set; }
 
         /// <summary>
@@ -95,6 +96,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         [JsonProperty("NumOfLatestMsg")]
         public long? NumOfLatestMsg{ get; set; }
+
+        /// <summary>
+        /// TAG表达式
+        /// </summary>
+        [JsonProperty("Tag")]
+        public string Tag{ get; set; }
+
+        /// <summary>
+        /// 死信查询时该值为true，只对Rocketmq有效
+        /// </summary>
+        [JsonProperty("QueryDeadLetterMessage")]
+        public bool? QueryDeadLetterMessage{ get; set; }
 
 
         /// <summary>
@@ -114,6 +127,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "TaskRequestId", this.TaskRequestId);
             this.SetParamSimple(map, prefix + "QueryDlqMsg", this.QueryDlqMsg);
             this.SetParamSimple(map, prefix + "NumOfLatestMsg", this.NumOfLatestMsg);
+            this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamSimple(map, prefix + "QueryDeadLetterMessage", this.QueryDeadLetterMessage);
         }
     }
 }

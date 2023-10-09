@@ -78,7 +78,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 
         /// <ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
         /// <li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-        /// <li> **2** : 腾讯电子签小程序合同列表页</li></ul>
+        /// <li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
+        /// 注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
         /// </summary>
         [JsonProperty("PathType")]
         public ulong? PathType{ get; set; }
@@ -112,7 +113,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public long?[] Hides{ get; set; }
 
         /// <summary>
-        /// 签署节点ID，用于生成动态签署人链接完成领取
+        /// 签署节点ID，用于生成动态签署人链接完成领取。
+        /// 
+        /// 注：`生成动态签署人补充链接时必传。`
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }

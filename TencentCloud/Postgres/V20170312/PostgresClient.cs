@@ -3630,5 +3630,45 @@ namespace TencentCloud.Postgres.V20170312
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 本接口（UpgradeDBInstanceMajorVersion）用于升级实例内核大版本，例如从PostgreSQL 12升级到PostgreSQL 15。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceMajorVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceMajorVersionResponse"/></returns>
+        public async Task<UpgradeDBInstanceMajorVersionResponse> UpgradeDBInstanceMajorVersion(UpgradeDBInstanceMajorVersionRequest req)
+        {
+             JsonResponseModel<UpgradeDBInstanceMajorVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeDBInstanceMajorVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceMajorVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeDBInstanceMajorVersion）用于升级实例内核大版本，例如从PostgreSQL 12升级到PostgreSQL 15。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceMajorVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceMajorVersionResponse"/></returns>
+        public UpgradeDBInstanceMajorVersionResponse UpgradeDBInstanceMajorVersionSync(UpgradeDBInstanceMajorVersionRequest req)
+        {
+             JsonResponseModel<UpgradeDBInstanceMajorVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeDBInstanceMajorVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceMajorVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

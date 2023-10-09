@@ -471,6 +471,56 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 适用场景：
+        /// 当通过模板或文件发起合同时，若未指定企业签署人信息，则可调用此接口动态补充签署人。同一签署人只允许补充一人，最终实际签署人取决于谁先领取合同完成签署。
+        /// 
+        /// 限制条件：
+        /// 1. 本企业（发起方企业）企业签署人仅支持通过企业名称+姓名+手机号进行补充。
+        /// 2. 个人签署人仅支持通过姓名+手机号进行补充。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateFlowApproversRequest"/></param>
+        /// <returns><see cref="ChannelCreateFlowApproversResponse"/></returns>
+        public async Task<ChannelCreateFlowApproversResponse> ChannelCreateFlowApprovers(ChannelCreateFlowApproversRequest req)
+        {
+             JsonResponseModel<ChannelCreateFlowApproversResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateFlowApprovers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateFlowApproversResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 适用场景：
+        /// 当通过模板或文件发起合同时，若未指定企业签署人信息，则可调用此接口动态补充签署人。同一签署人只允许补充一人，最终实际签署人取决于谁先领取合同完成签署。
+        /// 
+        /// 限制条件：
+        /// 1. 本企业（发起方企业）企业签署人仅支持通过企业名称+姓名+手机号进行补充。
+        /// 2. 个人签署人仅支持通过姓名+手机号进行补充。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateFlowApproversRequest"/></param>
+        /// <returns><see cref="ChannelCreateFlowApproversResponse"/></returns>
+        public ChannelCreateFlowApproversResponse ChannelCreateFlowApproversSync(ChannelCreateFlowApproversRequest req)
+        {
+             JsonResponseModel<ChannelCreateFlowApproversResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateFlowApprovers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateFlowApproversResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口（ChannelCreateFlowByFiles）用于通过文件创建签署流程。此接口静默签能力不可直接使用，请联系客户经理申请使用
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateFlowByFilesRequest"/></param>
@@ -790,6 +840,56 @@ namespace TencentCloud.Essbasic.V20210526
              {
                  var strResp = this.InternalRequestSync(req, "ChannelCreateMultiFlowSignQRCode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateMultiFlowSignQRCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口，创建小程序批量签署链接，可以创建企业批量签署链接，员工只需点击链接即可跳转至控制台进行批量签署。
+        /// 
+        /// 注：
+        /// - 员工必须在企业下完成实名认证，且需作为批量签署合同的签署方或者领取方。
+        /// - 仅支持传入待签署或者待领取的合同，待填写暂不支持。
+        /// - 员工批量签署，支持多种签名方式，包括手写签名、临摹签名、系统签名、个人印章，暂不支持签批控件
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateOrganizationBatchSignUrlRequest"/></param>
+        /// <returns><see cref="ChannelCreateOrganizationBatchSignUrlResponse"/></returns>
+        public async Task<ChannelCreateOrganizationBatchSignUrlResponse> ChannelCreateOrganizationBatchSignUrl(ChannelCreateOrganizationBatchSignUrlRequest req)
+        {
+             JsonResponseModel<ChannelCreateOrganizationBatchSignUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateOrganizationBatchSignUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateOrganizationBatchSignUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口，创建小程序批量签署链接，可以创建企业批量签署链接，员工只需点击链接即可跳转至控制台进行批量签署。
+        /// 
+        /// 注：
+        /// - 员工必须在企业下完成实名认证，且需作为批量签署合同的签署方或者领取方。
+        /// - 仅支持传入待签署或者待领取的合同，待填写暂不支持。
+        /// - 员工批量签署，支持多种签名方式，包括手写签名、临摹签名、系统签名、个人印章，暂不支持签批控件
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateOrganizationBatchSignUrlRequest"/></param>
+        /// <returns><see cref="ChannelCreateOrganizationBatchSignUrlResponse"/></returns>
+        public ChannelCreateOrganizationBatchSignUrlResponse ChannelCreateOrganizationBatchSignUrlSync(ChannelCreateOrganizationBatchSignUrlRequest req)
+        {
+             JsonResponseModel<ChannelCreateOrganizationBatchSignUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateOrganizationBatchSignUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateOrganizationBatchSignUrlResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
