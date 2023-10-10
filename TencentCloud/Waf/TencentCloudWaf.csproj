@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.861</VersionPrefix>
+    <VersionPrefix>3.0.862</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -161,6 +161,8 @@
     <Compile Include="V20180125\Models\DescribeDomainDetailsClbResponse.cs" />
     <Compile Include="V20180125\Models\DescribeDomainDetailsSaasRequest.cs" />
     <Compile Include="V20180125\Models\DescribeDomainDetailsSaasResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeDomainVerifyResultRequest.cs" />
     <Compile Include="V20180125\Models\DescribeDomainVerifyResultResponse.cs" />
     <Compile Include="V20180125\Models\DescribeDomainWhiteRulesRequest.cs" />
@@ -203,6 +205,8 @@
     <Compile Include="V20180125\Models\DescribeUserClbWafRegionsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserDomainInfoRequest.cs" />
     <Compile Include="V20180125\Models\DescribeUserDomainInfoResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeUserSignatureRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeUserSignatureRuleResponse.cs" />
     <Compile Include="V20180125\Models\DescribeVipInfoRequest.cs" />
     <Compile Include="V20180125\Models\DescribeVipInfoResponse.cs" />
     <Compile Include="V20180125\Models\DescribeWafAutoDenyRulesRequest.cs" />
@@ -295,18 +299,26 @@
     <Compile Include="V20180125\Models\ModifyInstanceQpsLimitResponse.cs" />
     <Compile Include="V20180125\Models\ModifyInstanceRenewFlagRequest.cs" />
     <Compile Include="V20180125\Models\ModifyInstanceRenewFlagResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyModuleStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyModuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyProtectionStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyProtectionStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifySpartaProtectionModeRequest.cs" />
     <Compile Include="V20180125\Models\ModifySpartaProtectionModeResponse.cs" />
     <Compile Include="V20180125\Models\ModifySpartaProtectionRequest.cs" />
     <Compile Include="V20180125\Models\ModifySpartaProtectionResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyUserLevelRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyUserLevelResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyUserSignatureRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyUserSignatureRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyWafAutoDenyRulesRequest.cs" />
     <Compile Include="V20180125\Models\ModifyWafAutoDenyRulesResponse.cs" />
     <Compile Include="V20180125\Models\ModifyWafAutoDenyStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyWafAutoDenyStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyWafThreatenIntelligenceRequest.cs" />
     <Compile Include="V20180125\Models\ModifyWafThreatenIntelligenceResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyWebshellStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyWebshellStatusResponse.cs" />
     <Compile Include="V20180125\Models\PageInfo.cs" />
     <Compile Include="V20180125\Models\PeakPointsItem.cs" />
     <Compile Include="V20180125\Models\PortInfo.cs" />
@@ -317,7 +329,9 @@
     <Compile Include="V20180125\Models\QpsData.cs" />
     <Compile Include="V20180125\Models\RefreshAccessCheckResultRequest.cs" />
     <Compile Include="V20180125\Models\RefreshAccessCheckResultResponse.cs" />
+    <Compile Include="V20180125\Models\ReqUserRule.cs" />
     <Compile Include="V20180125\Models\ResponseCode.cs" />
+    <Compile Include="V20180125\Models\Rule.cs" />
     <Compile Include="V20180125\Models\RuleList.cs" />
     <Compile Include="V20180125\Models\SearchAccessLogRequest.cs" />
     <Compile Include="V20180125\Models\SearchAccessLogResponse.cs" />
@@ -343,8 +357,10 @@
     <Compile Include="V20180125\Models\UpsertSessionRequest.cs" />
     <Compile Include="V20180125\Models\UpsertSessionResponse.cs" />
     <Compile Include="V20180125\Models\UserDomainInfo.cs" />
+    <Compile Include="V20180125\Models\UserSignatureRule.cs" />
     <Compile Include="V20180125\Models\VipInfo.cs" />
     <Compile Include="V20180125\Models\WafRuleLimit.cs" />
     <Compile Include="V20180125\Models\WafThreatenIntelligenceDetails.cs" />
+    <Compile Include="V20180125\Models\WebshellStatus.cs" />
   </ItemGroup>
 </Project>

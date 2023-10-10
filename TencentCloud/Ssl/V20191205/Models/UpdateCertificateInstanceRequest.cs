@@ -25,12 +25,6 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 一键更新新证书ID
-        /// </summary>
-        [JsonProperty("CertificateId")]
-        public string CertificateId{ get; set; }
-
-        /// <summary>
         /// 一键更新原证书ID
         /// </summary>
         [JsonProperty("OldCertificateId")]
@@ -41,6 +35,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// </summary>
         [JsonProperty("ResourceTypes")]
         public string[] ResourceTypes{ get; set; }
+
+        /// <summary>
+        /// 一键更新新证书ID
+        /// </summary>
+        [JsonProperty("CertificateId")]
+        public string CertificateId{ get; set; }
 
         /// <summary>
         /// 需要部署的地域列表（废弃）
@@ -55,17 +55,66 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("ResourceTypesRegions")]
         public ResourceTypeRegions[] ResourceTypesRegions{ get; set; }
 
+        /// <summary>
+        /// 证书公钥， 若上传证书公钥， 则CertificateId不用传
+        /// </summary>
+        [JsonProperty("CertificatePublicKey")]
+        public string CertificatePublicKey{ get; set; }
+
+        /// <summary>
+        /// 证书私钥，若上传证书公钥， 则证书私钥必填
+        /// </summary>
+        [JsonProperty("CertificatePrivateKey")]
+        public string CertificatePrivateKey{ get; set; }
+
+        /// <summary>
+        /// 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知
+        /// </summary>
+        [JsonProperty("ExpiringNotificationSwitch")]
+        public ulong? ExpiringNotificationSwitch{ get; set; }
+
+        /// <summary>
+        /// 相同的证书是否允许重复上传，若上传证书公钥， 则可以配置该参数
+        /// </summary>
+        [JsonProperty("Repeatable")]
+        public bool? Repeatable{ get; set; }
+
+        /// <summary>
+        /// 是否允许下载，若上传证书公钥， 则可以配置该参数
+        /// </summary>
+        [JsonProperty("AllowDownload")]
+        public bool? AllowDownload{ get; set; }
+
+        /// <summary>
+        /// 标签列表，若上传证书公钥， 则可以配置该参数
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tags[] Tags{ get; set; }
+
+        /// <summary>
+        /// 项目 ID，若上传证书公钥， 则可以配置该参数
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public ulong? ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
             this.SetParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
             this.SetParamArraySimple(map, prefix + "ResourceTypes.", this.ResourceTypes);
+            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
             this.SetParamArraySimple(map, prefix + "Regions.", this.Regions);
             this.SetParamArrayObj(map, prefix + "ResourceTypesRegions.", this.ResourceTypesRegions);
+            this.SetParamSimple(map, prefix + "CertificatePublicKey", this.CertificatePublicKey);
+            this.SetParamSimple(map, prefix + "CertificatePrivateKey", this.CertificatePrivateKey);
+            this.SetParamSimple(map, prefix + "ExpiringNotificationSwitch", this.ExpiringNotificationSwitch);
+            this.SetParamSimple(map, prefix + "Repeatable", this.Repeatable);
+            this.SetParamSimple(map, prefix + "AllowDownload", this.AllowDownload);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

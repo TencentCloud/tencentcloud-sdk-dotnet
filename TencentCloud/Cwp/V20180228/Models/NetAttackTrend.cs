@@ -1,0 +1,68 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Cwp.V20180228.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class NetAttackTrend : AbstractModel
+    {
+        
+        /// <summary>
+        /// 时间点，如 2023-05-06
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DateTime")]
+        public string DateTime{ get; set; }
+
+        /// <summary>
+        /// 攻击次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttackCount")]
+        public ulong? AttackCount{ get; set; }
+
+        /// <summary>
+        /// 尝试攻击次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TryAttackCount")]
+        public ulong? TryAttackCount{ get; set; }
+
+        /// <summary>
+        /// 攻击成功次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SuccAttackCount")]
+        public ulong? SuccAttackCount{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "DateTime", this.DateTime);
+            this.SetParamSimple(map, prefix + "AttackCount", this.AttackCount);
+            this.SetParamSimple(map, prefix + "TryAttackCount", this.TryAttackCount);
+            this.SetParamSimple(map, prefix + "SuccAttackCount", this.SuccAttackCount);
+        }
+    }
+}
+

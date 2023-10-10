@@ -140,6 +140,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? Line{ get; set; }
 
         /// <summary>
+        /// 不计费的业务带宽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FreeServiceBandwidth")]
+        public ulong? FreeServiceBandwidth{ get; set; }
+
+        /// <summary>
         /// 弹性业务带宽开关
         /// </summary>
         [JsonProperty("ElasticServiceBandwidth")]
@@ -188,6 +195,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
             this.SetParamSimple(map, prefix + "VitalityVersion", this.VitalityVersion);
             this.SetParamSimple(map, prefix + "Line", this.Line);
+            this.SetParamSimple(map, prefix + "FreeServiceBandwidth", this.FreeServiceBandwidth);
             this.SetParamSimple(map, prefix + "ElasticServiceBandwidth", this.ElasticServiceBandwidth);
             this.SetParamSimple(map, prefix + "GiftServiceBandWidth", this.GiftServiceBandWidth);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);

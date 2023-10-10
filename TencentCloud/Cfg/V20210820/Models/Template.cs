@@ -124,6 +124,20 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TemplateSource")]
         public long? TemplateSource{ get; set; }
 
+        /// <summary>
+        /// apm应用信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApmServiceList")]
+        public ApmServiceInfo[] ApmServiceList{ get; set; }
+
+        /// <summary>
+        /// 告警指标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmPolicy")]
+        public string[] AlarmPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -146,6 +160,8 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamObj(map, prefix + "TemplatePolicy.", this.TemplatePolicy);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "TemplateSource", this.TemplateSource);
+            this.SetParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
+            this.SetParamArraySimple(map, prefix + "AlarmPolicy.", this.AlarmPolicy);
         }
     }
 }

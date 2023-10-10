@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.861</VersionPrefix>
+    <VersionPrefix>3.0.862</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -255,9 +255,12 @@
     <Compile Include="V20210125\Models\DropDMSTableResponse.cs" />
     <Compile Include="V20210125\Models\ElasticsearchInfo.cs" />
     <Compile Include="V20210125\Models\Execution.cs" />
+    <Compile Include="V20210125\Models\FavorInfo.cs" />
     <Compile Include="V20210125\Models\Filter.cs" />
     <Compile Include="V20210125\Models\GenerateCreateMangedTableSqlRequest.cs" />
     <Compile Include="V20210125\Models\GenerateCreateMangedTableSqlResponse.cs" />
+    <Compile Include="V20210125\Models\GetOptimizerPolicyRequest.cs" />
+    <Compile Include="V20210125\Models\GetOptimizerPolicyResponse.cs" />
     <Compile Include="V20210125\Models\HiveInfo.cs" />
     <Compile Include="V20210125\Models\IpPortPair.cs" />
     <Compile Include="V20210125\Models\JobLogResult.cs" />
@@ -303,6 +306,7 @@
     <Compile Include="V20210125\Models\RenewDataEngineResponse.cs" />
     <Compile Include="V20210125\Models\ReportHeartbeatMetaDataRequest.cs" />
     <Compile Include="V20210125\Models\ReportHeartbeatMetaDataResponse.cs" />
+    <Compile Include="V20210125\Models\ResourceInfo.cs" />
     <Compile Include="V20210125\Models\RestartDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\RestartDataEngineResponse.cs" />
     <Compile Include="V20210125\Models\RollbackDataEngineImageRequest.cs" />
@@ -310,6 +314,12 @@
     <Compile Include="V20210125\Models\SQLTask.cs" />
     <Compile Include="V20210125\Models\Script.cs" />
     <Compile Include="V20210125\Models\SessionResourceTemplate.cs" />
+    <Compile Include="V20210125\Models\SmartOptimizerIndexPolicy.cs" />
+    <Compile Include="V20210125\Models\SmartOptimizerLifecyclePolicy.cs" />
+    <Compile Include="V20210125\Models\SmartOptimizerPolicy.cs" />
+    <Compile Include="V20210125\Models\SmartOptimizerWrittenPolicy.cs" />
+    <Compile Include="V20210125\Models\SmartPolicy.cs" />
+    <Compile Include="V20210125\Models\SmartPolicyBaseInfo.cs" />
     <Compile Include="V20210125\Models\SparkJobInfo.cs" />
     <Compile Include="V20210125\Models\SparkMonitorMetrics.cs" />
     <Compile Include="V20210125\Models\SparkSessionBatchLog.cs" />

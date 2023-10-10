@@ -1057,6 +1057,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 修改用户密码（用户管理）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserManagerPwdRequest"/></param>
+        /// <returns><see cref="ModifyUserManagerPwdResponse"/></returns>
+        public async Task<ModifyUserManagerPwdResponse> ModifyUserManagerPwd(ModifyUserManagerPwdRequest req)
+        {
+             JsonResponseModel<ModifyUserManagerPwdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyUserManagerPwd");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserManagerPwdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户密码（用户管理）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserManagerPwdRequest"/></param>
+        /// <returns><see cref="ModifyUserManagerPwdResponse"/></returns>
+        public ModifyUserManagerPwdResponse ModifyUserManagerPwdSync(ModifyUserManagerPwdRequest req)
+        {
+             JsonResponseModel<ModifyUserManagerPwdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyUserManagerPwd");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserManagerPwdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建流程作业
         /// </summary>
         /// <param name="req"><see cref="RunJobFlowRequest"/></param>

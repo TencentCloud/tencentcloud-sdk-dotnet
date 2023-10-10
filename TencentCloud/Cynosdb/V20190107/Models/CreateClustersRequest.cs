@@ -275,7 +275,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+        /// 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }

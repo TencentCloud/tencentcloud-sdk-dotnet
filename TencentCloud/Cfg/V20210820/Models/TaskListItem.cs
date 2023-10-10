@@ -88,6 +88,20 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TaskExpect")]
         public long? TaskExpect{ get; set; }
 
+        /// <summary>
+        /// 关联应用ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// 关联应用名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationName")]
+        public string ApplicationName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +118,8 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskPreCheckStatus", this.TaskPreCheckStatus);
             this.SetParamSimple(map, prefix + "TaskPreCheckSuccess", this.TaskPreCheckSuccess);
             this.SetParamSimple(map, prefix + "TaskExpect", this.TaskExpect);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         }
     }
 }

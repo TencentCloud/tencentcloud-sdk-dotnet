@@ -78,6 +78,24 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("Filters")]
         public ActionFilter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 演练ID
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public ulong?[] TaskId{ get; set; }
+
+        /// <summary>
+        /// 关联应用ID筛选
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string[] ApplicationId{ get; set; }
+
+        /// <summary>
+        /// 关联应用筛选
+        /// </summary>
+        [JsonProperty("ApplicationName")]
+        public string[] ApplicationName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +111,9 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskEndTime", this.TaskEndTime);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "TaskId.", this.TaskId);
+            this.SetParamArraySimple(map, prefix + "ApplicationId.", this.ApplicationId);
+            this.SetParamArraySimple(map, prefix + "ApplicationName.", this.ApplicationName);
         }
     }
 }

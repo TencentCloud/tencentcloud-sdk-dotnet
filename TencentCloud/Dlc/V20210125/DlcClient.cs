@@ -3693,6 +3693,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// GetOptimizerPolicy
+        /// </summary>
+        /// <param name="req"><see cref="GetOptimizerPolicyRequest"/></param>
+        /// <returns><see cref="GetOptimizerPolicyResponse"/></returns>
+        public async Task<GetOptimizerPolicyResponse> GetOptimizerPolicy(GetOptimizerPolicyRequest req)
+        {
+             JsonResponseModel<GetOptimizerPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetOptimizerPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetOptimizerPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// GetOptimizerPolicy
+        /// </summary>
+        /// <param name="req"><see cref="GetOptimizerPolicyRequest"/></param>
+        /// <returns><see cref="GetOptimizerPolicyResponse"/></returns>
+        public GetOptimizerPolicyResponse GetOptimizerPolicySync(GetOptimizerPolicyRequest req)
+        {
+             JsonResponseModel<GetOptimizerPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetOptimizerPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetOptimizerPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
         /// </summary>
         /// <param name="req"><see cref="ListTaskJobLogDetailRequest"/></param>

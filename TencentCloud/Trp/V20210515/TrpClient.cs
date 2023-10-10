@@ -775,6 +775,48 @@ namespace TencentCloud.Trp.V20210515
         /// <summary>
         /// 查询批次列表
         /// </summary>
+        /// <param name="req"><see cref="DescribeCodeBatchesRequest"/></param>
+        /// <returns><see cref="DescribeCodeBatchesResponse"/></returns>
+        public async Task<DescribeCodeBatchesResponse> DescribeCodeBatches(DescribeCodeBatchesRequest req)
+        {
+             JsonResponseModel<DescribeCodeBatchesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCodeBatches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCodeBatchesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询批次列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCodeBatchesRequest"/></param>
+        /// <returns><see cref="DescribeCodeBatchesResponse"/></returns>
+        public DescribeCodeBatchesResponse DescribeCodeBatchesSync(DescribeCodeBatchesRequest req)
+        {
+             JsonResponseModel<DescribeCodeBatchesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCodeBatches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCodeBatchesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询批次列表
+        /// 
+        /// 旧版接口已经弃用，新业务请使用用新版的接口 DescribeCodeBatches
+        /// </summary>
         /// <param name="req"><see cref="DescribeCodeBatchsRequest"/></param>
         /// <returns><see cref="DescribeCodeBatchsResponse"/></returns>
         public async Task<DescribeCodeBatchsResponse> DescribeCodeBatchs(DescribeCodeBatchsRequest req)
@@ -794,6 +836,8 @@ namespace TencentCloud.Trp.V20210515
 
         /// <summary>
         /// 查询批次列表
+        /// 
+        /// 旧版接口已经弃用，新业务请使用用新版的接口 DescribeCodeBatches
         /// </summary>
         /// <param name="req"><see cref="DescribeCodeBatchsRequest"/></param>
         /// <returns><see cref="DescribeCodeBatchsResponse"/></returns>

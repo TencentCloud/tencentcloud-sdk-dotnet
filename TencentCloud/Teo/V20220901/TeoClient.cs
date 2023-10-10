@@ -297,46 +297,6 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建源站组
-        /// </summary>
-        /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
-        /// <returns><see cref="CreateOriginGroupResponse"/></returns>
-        public async Task<CreateOriginGroupResponse> CreateOriginGroup(CreateOriginGroupRequest req)
-        {
-             JsonResponseModel<CreateOriginGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateOriginGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOriginGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 创建源站组
-        /// </summary>
-        /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
-        /// <returns><see cref="CreateOriginGroupResponse"/></returns>
-        public CreateOriginGroupResponse CreateOriginGroupSync(CreateOriginGroupRequest req)
-        {
-             JsonResponseModel<CreateOriginGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateOriginGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOriginGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 为未购买套餐的站点购买套餐
         /// </summary>
         /// <param name="req"><see cref="CreatePlanForZoneRequest"/></param>
@@ -776,46 +736,6 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DeleteApplicationProxyRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationProxyRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 删除源站组
-        /// </summary>
-        /// <param name="req"><see cref="DeleteOriginGroupRequest"/></param>
-        /// <returns><see cref="DeleteOriginGroupResponse"/></returns>
-        public async Task<DeleteOriginGroupResponse> DeleteOriginGroup(DeleteOriginGroupRequest req)
-        {
-             JsonResponseModel<DeleteOriginGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteOriginGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOriginGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 删除源站组
-        /// </summary>
-        /// <param name="req"><see cref="DeleteOriginGroupRequest"/></param>
-        /// <returns><see cref="DeleteOriginGroupResponse"/></returns>
-        public DeleteOriginGroupResponse DeleteOriginGroupSync(DeleteOriginGroupRequest req)
-        {
-             JsonResponseModel<DeleteOriginGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteOriginGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOriginGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2420,46 +2340,6 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "ModifyHostsCertificate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostsCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改源站组
-        /// </summary>
-        /// <param name="req"><see cref="ModifyOriginGroupRequest"/></param>
-        /// <returns><see cref="ModifyOriginGroupResponse"/></returns>
-        public async Task<ModifyOriginGroupResponse> ModifyOriginGroup(ModifyOriginGroupRequest req)
-        {
-             JsonResponseModel<ModifyOriginGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyOriginGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyOriginGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改源站组
-        /// </summary>
-        /// <param name="req"><see cref="ModifyOriginGroupRequest"/></param>
-        /// <returns><see cref="ModifyOriginGroupResponse"/></returns>
-        public ModifyOriginGroupResponse ModifyOriginGroupSync(ModifyOriginGroupRequest req)
-        {
-             JsonResponseModel<ModifyOriginGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyOriginGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyOriginGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

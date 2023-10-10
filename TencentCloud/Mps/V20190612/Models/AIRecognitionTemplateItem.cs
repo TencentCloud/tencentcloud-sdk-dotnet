@@ -73,6 +73,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public AsrWordsConfigureInfo AsrWordsConfigure{ get; set; }
 
         /// <summary>
+        /// 语音翻译控制参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TranslateConfigure")]
+        public TranslateConfigureInfo TranslateConfigure{ get; set; }
+
+        /// <summary>
         /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -107,6 +114,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
             this.SetParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
             this.SetParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+            this.SetParamObj(map, prefix + "TranslateConfigure.", this.TranslateConfigure);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Type", this.Type);

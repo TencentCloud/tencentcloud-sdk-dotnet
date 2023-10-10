@@ -174,6 +174,34 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TaskPlanTitle")]
         public string TaskPlanTitle{ get; set; }
 
+        /// <summary>
+        /// 关联的应用ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// 关联的应用名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationName")]
+        public string ApplicationName{ get; set; }
+
+        /// <summary>
+        /// 关联的告警指标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmPolicy")]
+        public string[] AlarmPolicy{ get; set; }
+
+        /// <summary>
+        /// 关联的APM服务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApmServiceList")]
+        public ApmServiceInfo[] ApmServiceList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +231,10 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "TaskPlanId", this.TaskPlanId);
             this.SetParamSimple(map, prefix + "TaskPlanTitle", this.TaskPlanTitle);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
+            this.SetParamArraySimple(map, prefix + "AlarmPolicy.", this.AlarmPolicy);
+            this.SetParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
         }
     }
 }
