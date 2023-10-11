@@ -25,31 +25,36 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 拦截页面的唯一Id。系统默认包含一个自带拦截页面，Id值为0。
-        /// 该Id可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。
+        /// 拦截页面的唯一 Id。系统默认包含一个自带拦截页面，Id 值为0。
+        /// 该 Id 可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。该参数已废弃。
         /// </summary>
         [JsonProperty("PageId")]
         public long? PageId{ get; set; }
 
         /// <summary>
-        /// 拦截页面的HTTP状态码。状态码范围是100-600。
+        /// 拦截页面的 HTTP 状态码。状态码取值：100～600，不支持 3xx 状态码。托管规则拦截页面默认：566，安全防护（除托管规则外）拦截页面默认：567.
         /// </summary>
         [JsonProperty("StatusCode")]
         public long? StatusCode{ get; set; }
 
         /// <summary>
-        /// 页面文件名或url。
+        /// 页面文件名或 url。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 页面的类型，取值有：
-        /// <li> file：页面文件内容；</li>
-        /// <li> url：上传的url地址。</li>
+        /// <li>page：指定页面。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
+
+        /// <summary>
+        /// 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Type 类型是 page 时必填，且不能为空。
+        /// </summary>
+        [JsonProperty("CustomResponseId")]
+        public string CustomResponseId{ get; set; }
 
 
         /// <summary>
@@ -61,6 +66,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "StatusCode", this.StatusCode);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "CustomResponseId", this.CustomResponseId);
         }
     }
 }

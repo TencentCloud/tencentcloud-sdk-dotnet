@@ -24,12 +24,33 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class RollbackDataEngineImageRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 引擎ID
+        /// </summary>
+        [JsonProperty("DataEngineId")]
+        public string DataEngineId{ get; set; }
+
+        /// <summary>
+        /// 检查是否能回滚的接口返回的FromRecordId参数
+        /// </summary>
+        [JsonProperty("FromRecordId")]
+        public string FromRecordId{ get; set; }
+
+        /// <summary>
+        /// 检查是否能回滚的接口返回的ToRecordId参数
+        /// </summary>
+        [JsonProperty("ToRecordId")]
+        public string ToRecordId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+            this.SetParamSimple(map, prefix + "FromRecordId", this.FromRecordId);
+            this.SetParamSimple(map, prefix + "ToRecordId", this.ToRecordId);
         }
     }
 }

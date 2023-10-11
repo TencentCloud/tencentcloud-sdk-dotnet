@@ -24,12 +24,28 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class DataEngineConfigPair : AbstractModel
     {
         
+        /// <summary>
+        /// 配置项
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigItem")]
+        public string ConfigItem{ get; set; }
+
+        /// <summary>
+        /// 配置值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigValue")]
+        public string ConfigValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ConfigItem", this.ConfigItem);
+            this.SetParamSimple(map, prefix + "ConfigValue", this.ConfigValue);
         }
     }
 }

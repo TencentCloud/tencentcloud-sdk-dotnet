@@ -261,6 +261,46 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
+        /// 批量删除命令接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCommandsRequest"/></param>
+        /// <returns><see cref="DeleteCommandsResponse"/></returns>
+        public async Task<DeleteCommandsResponse> DeleteCommands(DeleteCommandsRequest req)
+        {
+             JsonResponseModel<DeleteCommandsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCommands");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCommandsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除命令接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCommandsRequest"/></param>
+        /// <returns><see cref="DeleteCommandsResponse"/></returns>
+        public DeleteCommandsResponse DeleteCommandsSync(DeleteCommandsRequest req)
+        {
+             JsonResponseModel<DeleteCommandsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCommands");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCommandsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口用于删除执行器。
         /// </summary>
         /// <param name="req"><see cref="DeleteInvokerRequest"/></param>
@@ -612,6 +652,46 @@ namespace TencentCloud.Tat.V20201028
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInvokers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvokersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于获取配额信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuotasRequest"/></param>
+        /// <returns><see cref="DescribeQuotasResponse"/></returns>
+        public async Task<DescribeQuotasResponse> DescribeQuotas(DescribeQuotasRequest req)
+        {
+             JsonResponseModel<DescribeQuotasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeQuotas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于获取配额信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuotasRequest"/></param>
+        /// <returns><see cref="DescribeQuotasResponse"/></returns>
+        public DescribeQuotasResponse DescribeQuotasSync(DescribeQuotasRequest req)
+        {
+             JsonResponseModel<DescribeQuotasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeQuotas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQuotasResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

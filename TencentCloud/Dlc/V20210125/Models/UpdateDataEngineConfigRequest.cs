@@ -24,12 +24,26 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class UpdateDataEngineConfigRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 引擎ID
+        /// </summary>
+        [JsonProperty("DataEngineIds")]
+        public string[] DataEngineIds{ get; set; }
+
+        /// <summary>
+        /// 引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置）
+        /// </summary>
+        [JsonProperty("DataEngineConfigCommand")]
+        public string DataEngineConfigCommand{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "DataEngineIds.", this.DataEngineIds);
+            this.SetParamSimple(map, prefix + "DataEngineConfigCommand", this.DataEngineConfigCommand);
         }
     }
 }

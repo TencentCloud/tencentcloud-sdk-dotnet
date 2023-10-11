@@ -24,12 +24,26 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class RestartDataEngineRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 引擎ID
+        /// </summary>
+        [JsonProperty("DataEngineId")]
+        public string DataEngineId{ get; set; }
+
+        /// <summary>
+        /// 是否强制重启，忽略任务
+        /// </summary>
+        [JsonProperty("ForcedOperation")]
+        public bool? ForcedOperation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+            this.SetParamSimple(map, prefix + "ForcedOperation", this.ForcedOperation);
         }
     }
 }

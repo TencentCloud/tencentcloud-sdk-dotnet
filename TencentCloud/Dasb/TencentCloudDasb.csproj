@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4ACC8A01-FDA5-3C33-AEEA-E6EE529B3ACA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.862</VersionPrefix>
+    <VersionPrefix>3.0.863</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -74,6 +74,8 @@
     <Compile Include="V20191018\Models\CreateDeviceAccountResponse.cs" />
     <Compile Include="V20191018\Models\CreateDeviceGroupRequest.cs" />
     <Compile Include="V20191018\Models\CreateDeviceGroupResponse.cs" />
+    <Compile Include="V20191018\Models\CreateResourceRequest.cs" />
+    <Compile Include="V20191018\Models\CreateResourceResponse.cs" />
     <Compile Include="V20191018\Models\CreateUserGroupRequest.cs" />
     <Compile Include="V20191018\Models\CreateUserGroupResponse.cs" />
     <Compile Include="V20191018\Models\CreateUserRequest.cs" />
@@ -144,6 +146,8 @@
     <Compile Include="V20191018\Models\ModifyDeviceGroupResponse.cs" />
     <Compile Include="V20191018\Models\ModifyDeviceRequest.cs" />
     <Compile Include="V20191018\Models\ModifyDeviceResponse.cs" />
+    <Compile Include="V20191018\Models\ModifyResourceRequest.cs" />
+    <Compile Include="V20191018\Models\ModifyResourceResponse.cs" />
     <Compile Include="V20191018\Models\ModifyUserRequest.cs" />
     <Compile Include="V20191018\Models\ModifyUserResponse.cs" />
     <Compile Include="V20191018\Models\OperationEvent.cs" />

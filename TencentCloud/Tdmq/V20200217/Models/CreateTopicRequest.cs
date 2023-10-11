@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
+        /// 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过32。
         /// </summary>
         [JsonProperty("Partitions")]
         public ulong? Partitions{ get; set; }

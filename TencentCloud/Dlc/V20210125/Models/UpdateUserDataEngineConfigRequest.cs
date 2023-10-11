@@ -24,12 +24,33 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class UpdateUserDataEngineConfigRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 引擎ID
+        /// </summary>
+        [JsonProperty("DataEngineId")]
+        public string DataEngineId{ get; set; }
+
+        /// <summary>
+        /// 引擎配置项
+        /// </summary>
+        [JsonProperty("DataEngineConfigPairs")]
+        public DataEngineConfigPair[] DataEngineConfigPairs{ get; set; }
+
+        /// <summary>
+        /// 作业引擎资源配置模版
+        /// </summary>
+        [JsonProperty("SessionResourceTemplate")]
+        public SessionResourceTemplate SessionResourceTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+            this.SetParamArrayObj(map, prefix + "DataEngineConfigPairs.", this.DataEngineConfigPairs);
+            this.SetParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
         }
     }
 }

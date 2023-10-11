@@ -70,6 +70,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("HighlightTask")]
         public AiAnalysisTaskHighlightResult HighlightTask{ get; set; }
 
+        /// <summary>
+        /// 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeLogoTask")]
+        public AiAnalysisTaskDelLogoResult DeLogoTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +89,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "TagTask.", this.TagTask);
             this.SetParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
             this.SetParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
+            this.SetParamObj(map, prefix + "DeLogoTask.", this.DeLogoTask);
         }
     }
 }

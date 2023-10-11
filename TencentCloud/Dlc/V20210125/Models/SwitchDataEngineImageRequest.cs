@@ -24,12 +24,26 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class SwitchDataEngineImageRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 引擎ID
+        /// </summary>
+        [JsonProperty("DataEngineId")]
+        public string DataEngineId{ get; set; }
+
+        /// <summary>
+        /// 新镜像版本ID
+        /// </summary>
+        [JsonProperty("NewImageVersionId")]
+        public string NewImageVersionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+            this.SetParamSimple(map, prefix + "NewImageVersionId", this.NewImageVersionId);
         }
     }
 }

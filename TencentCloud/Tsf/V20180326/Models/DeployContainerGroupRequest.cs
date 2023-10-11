@@ -193,7 +193,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public bool? DeployAgent{ get; set; }
 
         /// <summary>
-        /// 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+        /// 节点调度策略。若不指定该参数，则默认不使用节点调度策略。
         /// </summary>
         [JsonProperty("SchedulingStrategy")]
         public SchedulingStrategy SchedulingStrategy{ get; set; }

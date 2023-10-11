@@ -35,10 +35,10 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>trans：放行；</li>
         /// <li>drop：拦截；</li>
         /// <li>monitor：观察；</li>
-        /// <li>ban：IP封禁；</li>
+        /// <li>ban：IP 封禁；</li>
         /// <li>redirect：重定向；</li>
         /// <li>page：指定页面；</li>
-        /// <li>alg：Javascript挑战。</li>
+        /// <li>alg：JavaScript 挑战。</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -64,63 +64,61 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? RulePriority{ get; set; }
 
         /// <summary>
-        /// 规则Id。仅出参使用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 规则 Id。仅出参使用。
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
         /// 更新时间。仅出参使用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// ip封禁的惩罚时间，取值范围0-2天。默认为0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// ip 封禁的惩罚时间。Action 是 ban 时必填，且不能为空，取值范围0-2天。
         /// </summary>
         [JsonProperty("PunishTime")]
         public long? PunishTime{ get; set; }
 
         /// <summary>
-        /// ip封禁的惩罚时间单位，取值有：
+        /// ip 封禁的惩罚时间单位，取值有：
         /// <li>second：秒；</li>
         /// <li>minutes：分；</li>
-        /// <li>hour：小时。</li>默认为second。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <li>hour：小时。</li>默认为 second。
         /// </summary>
         [JsonProperty("PunishTimeUnit")]
         public string PunishTimeUnit{ get; set; }
 
         /// <summary>
-        /// 自定义返回页面的名称。默认为空字符串。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 自定义返回页面的名称。Action 是 page 时必填，且不能为空。	
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 自定义返回页面的实例id。默认为0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 自定义返回页面的实例 Id。默认为0，代表使用系统默认拦截页面。该参数已废弃。
         /// </summary>
         [JsonProperty("PageId")]
         public long? PageId{ get; set; }
 
         /// <summary>
-        /// 重定向时候的地址，必须为本用户接入的站点子域名。默认为空字符串。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Action 是 page 时必填，且不能为空。	
         /// </summary>
-        [JsonProperty("RedirectUrl")]
-        public string RedirectUrl{ get; set; }
+        [JsonProperty("CustomResponseId")]
+        public string CustomResponseId{ get; set; }
 
         /// <summary>
-        /// 重定向时候的返回码。默认为0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 自定义返回页面的响应码。Action 是 page 时必填，且不能为空，取值: 100~600，不支持 3xx 响应码。默认值：567。
         /// </summary>
         [JsonProperty("ResponseCode")]
         public long? ResponseCode{ get; set; }
+
+        /// <summary>
+        /// 重定向时候的地址。Action 是 redirect 时必填，且不能为空。	
+        /// </summary>
+        [JsonProperty("RedirectUrl")]
+        public string RedirectUrl{ get; set; }
 
 
         /// <summary>
@@ -139,8 +137,9 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "PunishTimeUnit", this.PunishTimeUnit);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "PageId", this.PageId);
-            this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
+            this.SetParamSimple(map, prefix + "CustomResponseId", this.CustomResponseId);
             this.SetParamSimple(map, prefix + "ResponseCode", this.ResponseCode);
+            this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         }
     }
 }

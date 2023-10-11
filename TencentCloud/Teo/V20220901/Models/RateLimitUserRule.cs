@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 处置动作，取值有： <li>monitor：观察；</li> <li>drop：拦截；</li> <li>alg：JavaScript挑战。</li>	
+        /// 处置动作，取值有： <li>monitor：观察；</li> <li>drop：拦截；</li><li> redirect：重定向；</li><li> page：指定页面；</li><li>alg：JavaScript 挑战。</li>	
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -66,7 +66,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 规则状态，取值有：
         /// <li>on：生效；</li>
-        /// <li>off：不生效。</li>默认on生效。
+        /// <li>off：不生效。</li>默认 on 生效。
         /// </summary>
         [JsonProperty("RuleStatus")]
         public string RuleStatus{ get; set; }
@@ -85,34 +85,56 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 规则 Id。仅出参使用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
         /// 过滤词，取值有：
-        /// <li>sip：客户端ip。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <li>sip：客户端 ip。</li>
+        /// 默认为空字符串。
         /// </summary>
         [JsonProperty("FreqFields")]
         public string[] FreqFields{ get; set; }
 
         /// <summary>
-        /// 更新时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 更新时间。仅出参使用。修改时默认为当前时间。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 统计范围，字段为 null 时，代表 source_to_eo。取值有：
-        /// <li>source_to_eo：（响应）源站到EdgeOne。</li>
-        /// <li>client_to_eo：（请求）客户端到EdgeOne；</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 统计范围。取值有：
+        /// <li>source_to_eo：（响应）源站到  EdgeOne；</li>
+        /// <li>client_to_eo：（请求）客户端到  EdgeOne。</li>
+        /// 默认为 source_to_eo。
         /// </summary>
         [JsonProperty("FreqScope")]
         public string[] FreqScope{ get; set; }
+
+        /// <summary>
+        /// 自定义返回页面的名称。Action 是 page 时必填，且不能为空。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Action 是 page 时必填，且不能为空。	
+        /// </summary>
+        [JsonProperty("CustomResponseId")]
+        public string CustomResponseId{ get; set; }
+
+        /// <summary>
+        /// 自定义返回页面的响应码。Action 是 page 时必填，且不能为空，取值: 100~600，不支持 3xx 响应码。默认值：567。
+        /// </summary>
+        [JsonProperty("ResponseCode")]
+        public long? ResponseCode{ get; set; }
+
+        /// <summary>
+        /// 重定向时候的地址。Action 是 redirect 时必填，且不能为空。
+        /// </summary>
+        [JsonProperty("RedirectUrl")]
+        public string RedirectUrl{ get; set; }
 
 
         /// <summary>
@@ -133,6 +155,10 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "FreqFields.", this.FreqFields);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArraySimple(map, prefix + "FreqScope.", this.FreqScope);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "CustomResponseId", this.CustomResponseId);
+            this.SetParamSimple(map, prefix + "ResponseCode", this.ResponseCode);
+            this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         }
     }
 }
