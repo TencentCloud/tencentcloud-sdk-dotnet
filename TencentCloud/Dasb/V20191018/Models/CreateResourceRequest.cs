@@ -25,6 +25,12 @@ namespace TencentCloud.Dasb.V20191018.Models
     {
         
         /// <summary>
+        /// 部署region
+        /// </summary>
+        [JsonProperty("DeployRegion")]
+        public string DeployRegion{ get; set; }
+
+        /// <summary>
         /// 部署堡垒机的VpcId
         /// </summary>
         [JsonProperty("VpcId")]
@@ -36,14 +42,64 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// 资源类型。取值:standard/pro
+        /// </summary>
+        [JsonProperty("ResourceEdition")]
+        public string ResourceEdition{ get; set; }
+
+        /// <summary>
+        /// 资源节点数
+        /// </summary>
+        [JsonProperty("ResourceNode")]
+        public long? ResourceNode{ get; set; }
+
+        /// <summary>
+        /// 计费周期
+        /// </summary>
+        [JsonProperty("TimeUnit")]
+        public string TimeUnit{ get; set; }
+
+        /// <summary>
+        /// 计费时长
+        /// </summary>
+        [JsonProperty("TimeSpan")]
+        public long? TimeSpan{ get; set; }
+
+        /// <summary>
+        /// 计费模式 1预付费
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
+        /// <summary>
+        /// 自动续费
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
+
+        /// <summary>
+        /// 部署zone
+        /// </summary>
+        [JsonProperty("DeployZone")]
+        public string DeployZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DeployRegion", this.DeployRegion);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "ResourceEdition", this.ResourceEdition);
+            this.SetParamSimple(map, prefix + "ResourceNode", this.ResourceNode);
+            this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+            this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "DeployZone", this.DeployZone);
         }
     }
 }

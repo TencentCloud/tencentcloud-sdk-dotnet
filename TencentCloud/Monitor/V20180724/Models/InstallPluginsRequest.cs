@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 插件信息
+        /// 插件信息(可通过 DescribePluginOverviews 接口获取)
         /// </summary>
         [JsonProperty("Plugins")]
         public GrafanaPlugin[] Plugins{ get; set; }

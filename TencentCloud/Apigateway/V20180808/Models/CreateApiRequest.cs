@@ -313,6 +313,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceScfFunctionType{ get; set; }
 
         /// <summary>
+        /// 是否开启SCF Event异步调用。
+        /// </summary>
+        [JsonProperty("ServiceScfEventIsAsyncCall")]
+        public bool? ServiceScfEventIsAsyncCall{ get; set; }
+
+        /// <summary>
         /// EIAM应用类型。
         /// </summary>
         [JsonProperty("EIAMAppType")]
@@ -396,6 +402,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
             this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
             this.SetParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
+            this.SetParamSimple(map, prefix + "ServiceScfEventIsAsyncCall", this.ServiceScfEventIsAsyncCall);
             this.SetParamSimple(map, prefix + "EIAMAppType", this.EIAMAppType);
             this.SetParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);
             this.SetParamSimple(map, prefix + "TokenTimeout", this.TokenTimeout);

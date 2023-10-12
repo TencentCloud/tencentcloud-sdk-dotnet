@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 通道 ID 数组。例如：nchannel-abcd1234
+        /// 通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
         /// </summary>
         [JsonProperty("ChannelIDs")]
         public string[] ChannelIDs{ get; set; }

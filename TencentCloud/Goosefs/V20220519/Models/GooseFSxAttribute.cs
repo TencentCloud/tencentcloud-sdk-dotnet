@@ -31,7 +31,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
         public string Model{ get; set; }
 
         /// <summary>
-        /// 容量单位是GB, 比如4608(4.5TB)
+        /// 容量单位是GB, 例如4608(4.5TB)
         /// </summary>
         [JsonProperty("Capacity")]
         public ulong? Capacity{ get; set; }

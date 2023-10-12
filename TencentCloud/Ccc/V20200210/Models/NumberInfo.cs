@@ -36,6 +36,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("CallOutSkillGroupIds")]
         public ulong?[] CallOutSkillGroupIds{ get; set; }
 
+        /// <summary>
+        /// 号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
+        /// </summary>
+        [JsonProperty("State")]
+        public long? State{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "Number", this.Number);
             this.SetParamArraySimple(map, prefix + "CallOutSkillGroupIds.", this.CallOutSkillGroupIds);
+            this.SetParamSimple(map, prefix + "State", this.State);
         }
     }
 }

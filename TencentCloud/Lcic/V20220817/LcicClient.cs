@@ -1457,6 +1457,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 获取课堂评分列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScoreListRequest"/></param>
+        /// <returns><see cref="DescribeScoreListResponse"/></returns>
+        public async Task<DescribeScoreListResponse> DescribeScoreList(DescribeScoreListRequest req)
+        {
+             JsonResponseModel<DescribeScoreListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScoreList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScoreListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取课堂评分列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScoreListRequest"/></param>
+        /// <returns><see cref="DescribeScoreListResponse"/></returns>
+        public DescribeScoreListResponse DescribeScoreListSync(DescribeScoreListRequest req)
+        {
+             JsonResponseModel<DescribeScoreListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScoreList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScoreListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口用于获取指定应用ID下用户列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSdkAppIdUsersRequest"/></param>

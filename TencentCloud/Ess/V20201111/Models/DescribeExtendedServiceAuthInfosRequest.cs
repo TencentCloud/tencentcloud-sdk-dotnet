@@ -39,7 +39,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
         /// <li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
         /// <li>PAGING_SEAL：骑缝章</li>
-        /// <li>BATCH_SIGN：批量签署</li></ul>
+        /// <li>BATCH_SIGN：批量签署</li>
+        /// <li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li></ul>
         /// </summary>
         [JsonProperty("ExtendServiceType")]
         public string ExtendServiceType{ get; set; }

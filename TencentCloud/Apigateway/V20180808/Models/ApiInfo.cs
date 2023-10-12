@@ -381,6 +381,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("Base64EncodedTriggerRules")]
         public Base64EncodedTriggerRule[] Base64EncodedTriggerRules{ get; set; }
 
+        /// <summary>
+        /// 是否开启SCF Event异步调用。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceScfEventIsAsyncCall")]
+        public bool? ServiceScfEventIsAsyncCall{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -438,6 +445,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
             this.SetParamSimple(map, prefix + "IsBase64Trigger", this.IsBase64Trigger);
             this.SetParamArrayObj(map, prefix + "Base64EncodedTriggerRules.", this.Base64EncodedTriggerRules);
+            this.SetParamSimple(map, prefix + "ServiceScfEventIsAsyncCall", this.ServiceScfEventIsAsyncCall);
         }
     }
 }

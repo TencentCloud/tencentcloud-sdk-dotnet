@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.863</VersionPrefix>
+    <VersionPrefix>3.0.864</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -86,6 +86,7 @@
     <Compile Include="V20180125\Models\ClbDomainsInfo.cs" />
     <Compile Include="V20180125\Models\ClbHostResult.cs" />
     <Compile Include="V20180125\Models\ClbHostsParams.cs" />
+    <Compile Include="V20180125\Models\ClbObject.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportRequest.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\CreateHostRequest.cs" />
@@ -185,6 +186,8 @@
     <Compile Include="V20180125\Models\DescribeIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DescribeIpHitItemsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeIpHitItemsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeObjectsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeObjectsResponse.cs" />
     <Compile Include="V20180125\Models\DescribePeakPointsRequest.cs" />
     <Compile Include="V20180125\Models\DescribePeakPointsResponse.cs" />
     <Compile Include="V20180125\Models\DescribePeakValueRequest.cs" />
@@ -301,6 +304,8 @@
     <Compile Include="V20180125\Models\ModifyInstanceRenewFlagResponse.cs" />
     <Compile Include="V20180125\Models\ModifyModuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyModuleStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyObjectRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyObjectResponse.cs" />
     <Compile Include="V20180125\Models\ModifyProtectionStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyProtectionStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifySpartaProtectionModeRequest.cs" />

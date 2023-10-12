@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 权限
+        /// 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
         /// </summary>
         [JsonProperty("Role")]
         public GrafanaAccountRole[] Role{ get; set; }

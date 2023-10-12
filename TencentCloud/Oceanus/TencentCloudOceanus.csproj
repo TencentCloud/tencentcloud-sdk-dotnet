@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.863</VersionPrefix>
+    <VersionPrefix>3.0.864</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -105,6 +105,7 @@
     <Compile Include="V20190422\Models\DescribeWorkSpacesResponse.cs" />
     <Compile Include="V20190422\Models\ExpertModeConfiguration.cs" />
     <Compile Include="V20190422\Models\Filter.cs" />
+    <Compile Include="V20190422\Models\GatewayRefItem.cs" />
     <Compile Include="V20190422\Models\JobConfig.cs" />
     <Compile Include="V20190422\Models\JobGraph.cs" />
     <Compile Include="V20190422\Models\JobGraphEdge.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="V20190422\Models\Savepoint.cs" />
     <Compile Include="V20190422\Models\SlotSharingGroup.cs" />
     <Compile Include="V20190422\Models\SlotSharingGroupSpec.cs" />
+    <Compile Include="V20190422\Models\SqlGatewayItem.cs" />
     <Compile Include="V20190422\Models\StopJobDescription.cs" />
     <Compile Include="V20190422\Models\StopJobsRequest.cs" />
     <Compile Include="V20190422\Models\StopJobsResponse.cs" />

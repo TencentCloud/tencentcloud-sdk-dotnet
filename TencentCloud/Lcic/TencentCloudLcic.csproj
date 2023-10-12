@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.863</VersionPrefix>
+    <VersionPrefix>3.0.864</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -73,6 +73,7 @@
     <Compile Include="V20220817\Models\BatchUserRequest.cs" />
     <Compile Include="V20220817\Models\BindDocumentToRoomRequest.cs" />
     <Compile Include="V20220817\Models\BindDocumentToRoomResponse.cs" />
+    <Compile Include="V20220817\Models\ClassScoreItem.cs" />
     <Compile Include="V20220817\Models\CreateDocumentRequest.cs" />
     <Compile Include="V20220817\Models\CreateDocumentResponse.cs" />
     <Compile Include="V20220817\Models\CreateGroupWithMembersRequest.cs" />
@@ -125,6 +126,8 @@
     <Compile Include="V20220817\Models\DescribeRoomResponse.cs" />
     <Compile Include="V20220817\Models\DescribeRoomStatisticsRequest.cs" />
     <Compile Include="V20220817\Models\DescribeRoomStatisticsResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeScoreListRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeScoreListResponse.cs" />
     <Compile Include="V20220817\Models\DescribeSdkAppIdUsersRequest.cs" />
     <Compile Include="V20220817\Models\DescribeSdkAppIdUsersResponse.cs" />
     <Compile Include="V20220817\Models\DescribeSupervisorsRequest.cs" />

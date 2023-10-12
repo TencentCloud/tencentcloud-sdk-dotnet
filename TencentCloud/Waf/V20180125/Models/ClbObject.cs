@@ -1,0 +1,141 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Waf.V20180125.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class ClbObject : AbstractModel
+    {
+        
+        /// <summary>
+        /// 对象ID
+        /// </summary>
+        [JsonProperty("ObjectId")]
+        public string ObjectId{ get; set; }
+
+        /// <summary>
+        /// 实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 实例名称
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// 精准域名列表
+        /// </summary>
+        [JsonProperty("PreciseDomains")]
+        public string[] PreciseDomains{ get; set; }
+
+        /// <summary>
+        /// WAF功能开关状态，0关闭1开启
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// WAF日志开关状态，0关闭1开启
+        /// </summary>
+        [JsonProperty("ClsStatus")]
+        public long? ClsStatus{ get; set; }
+
+        /// <summary>
+        /// CLB对象对应的虚拟域名
+        /// </summary>
+        [JsonProperty("VirtualDomain")]
+        public string VirtualDomain{ get; set; }
+
+        /// <summary>
+        /// 对象名称
+        /// </summary>
+        [JsonProperty("ObjectName")]
+        public string ObjectName{ get; set; }
+
+        /// <summary>
+        /// 公网地址
+        /// </summary>
+        [JsonProperty("PublicIp")]
+        public string[] PublicIp{ get; set; }
+
+        /// <summary>
+        /// 内网地址
+        /// </summary>
+        [JsonProperty("PrivateIp")]
+        public string[] PrivateIp{ get; set; }
+
+        /// <summary>
+        /// VPC名称
+        /// </summary>
+        [JsonProperty("VpcName")]
+        public string VpcName{ get; set; }
+
+        /// <summary>
+        /// VPC ID
+        /// </summary>
+        [JsonProperty("Vpc")]
+        public string Vpc{ get; set; }
+
+        /// <summary>
+        /// waf实例等级，如果未绑定实例为0
+        /// </summary>
+        [JsonProperty("InstanceLevel")]
+        public long? InstanceLevel{ get; set; }
+
+        /// <summary>
+        /// clb投递开关
+        /// </summary>
+        [JsonProperty("PostCLSStatus")]
+        public long? PostCLSStatus{ get; set; }
+
+        /// <summary>
+        /// kafka投递开关
+        /// </summary>
+        [JsonProperty("PostCKafkaStatus")]
+        public long? PostCKafkaStatus{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "ObjectId", this.ObjectId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamArraySimple(map, prefix + "PreciseDomains.", this.PreciseDomains);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ClsStatus", this.ClsStatus);
+            this.SetParamSimple(map, prefix + "VirtualDomain", this.VirtualDomain);
+            this.SetParamSimple(map, prefix + "ObjectName", this.ObjectName);
+            this.SetParamArraySimple(map, prefix + "PublicIp.", this.PublicIp);
+            this.SetParamArraySimple(map, prefix + "PrivateIp.", this.PrivateIp);
+            this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
+            this.SetParamSimple(map, prefix + "Vpc", this.Vpc);
+            this.SetParamSimple(map, prefix + "InstanceLevel", this.InstanceLevel);
+            this.SetParamSimple(map, prefix + "PostCLSStatus", this.PostCLSStatus);
+            this.SetParamSimple(map, prefix + "PostCKafkaStatus", this.PostCKafkaStatus);
+        }
+    }
+}
+

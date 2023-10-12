@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 环境变量字符串
+        /// JSON 序列化后的环境变量字符串，如 "{\"key1\":\"key2\"}"
         /// </summary>
         [JsonProperty("Envs")]
         public string Envs{ get; set; }

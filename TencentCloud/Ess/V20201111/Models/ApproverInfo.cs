@@ -207,6 +207,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("AddSignComponentsLimits")]
         public ComponentLimit[] AddSignComponentsLimits{ get; set; }
 
+        /// <summary>
+        /// 签署须知：支持传入富文本，最长字数：500个中文字符
+        /// </summary>
+        [JsonProperty("SignInstructionContent")]
+        public string SignInstructionContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +239,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
             this.SetParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
             this.SetParamArrayObj(map, prefix + "AddSignComponentsLimits.", this.AddSignComponentsLimits);
+            this.SetParamSimple(map, prefix + "SignInstructionContent", this.SignInstructionContent);
         }
     }
 }

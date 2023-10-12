@@ -283,7 +283,15 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uui")]
+        [System.Obsolete]
         public string Uui{ get; set; }
+
+        /// <summary>
+        /// 客户自定义数据（User-to-User Interface）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UUI")]
+        public string UUI{ get; set; }
 
         /// <summary>
         /// IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
@@ -367,6 +375,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "ProtectedCaller", this.ProtectedCaller);
             this.SetParamSimple(map, prefix + "ProtectedCallee", this.ProtectedCallee);
             this.SetParamSimple(map, prefix + "Uui", this.Uui);
+            this.SetParamSimple(map, prefix + "UUI", this.UUI);
             this.SetParamArrayObj(map, prefix + "IVRKeyPressedEx.", this.IVRKeyPressedEx);
             this.SetParamSimple(map, prefix + "AsrUrl", this.AsrUrl);
             this.SetParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);

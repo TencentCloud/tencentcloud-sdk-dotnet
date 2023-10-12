@@ -32,9 +32,10 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 过滤条件。
-        /// <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+        /// <li>MachineName- String - 是否必填：否 - 主机别名筛选</li>
+        /// <li>IP- String - 是否必填：否 - 主机ip筛选</li>
+        /// <li>InstanceID- String - 是否必填：否 - 主机实例ID筛选</li>
         /// <li>User- string - 是否必填：否 - 运行用户</li>
-        /// <li>Ip - String - 是否必填：否 - 绑定IP</li>
         /// <li>Port - Int - 是否必填：否 - 端口</li>
         /// <li>Name - Int - 是否必填：否 - 数据库名称
         /// 0:全部

@@ -46,7 +46,14 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 音频套餐包消耗分钟数
         /// </summary>
         [JsonProperty("VoipCallInCount")]
+        [System.Obsolete]
         public long? VoipCallInCount{ get; set; }
+
+        /// <summary>
+        /// 音频套餐包消耗分钟数
+        /// </summary>
+        [JsonProperty("VOIPCallInCount")]
+        public long? VOIPCallInCount{ get; set; }
 
         /// <summary>
         /// 离线语音转文字套餐包消耗分钟数
@@ -76,6 +83,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "TelCallInCount", this.TelCallInCount);
             this.SetParamSimple(map, prefix + "SeatUsedCount", this.SeatUsedCount);
             this.SetParamSimple(map, prefix + "VoipCallInCount", this.VoipCallInCount);
+            this.SetParamSimple(map, prefix + "VOIPCallInCount", this.VOIPCallInCount);
             this.SetParamSimple(map, prefix + "AsrOfflineCount", this.AsrOfflineCount);
             this.SetParamSimple(map, prefix + "AsrRealtimeCount", this.AsrRealtimeCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

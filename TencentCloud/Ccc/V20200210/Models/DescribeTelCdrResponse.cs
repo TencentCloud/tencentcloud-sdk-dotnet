@@ -34,7 +34,14 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 话单记录
         /// </summary>
         [JsonProperty("TelCdrs")]
+        [System.Obsolete]
         public TelCdrInfo[] TelCdrs{ get; set; }
+
+        /// <summary>
+        /// 话单记录
+        /// </summary>
+        [JsonProperty("TelCdrList")]
+        public TelCdrInfo[] TelCdrList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +57,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "TelCdrs.", this.TelCdrs);
+            this.SetParamArrayObj(map, prefix + "TelCdrList.", this.TelCdrList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

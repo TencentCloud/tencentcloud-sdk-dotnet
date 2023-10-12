@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 版本别名，例如：v7.4.2
+        /// 版本别名，目前固定为 v9.1.5
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }

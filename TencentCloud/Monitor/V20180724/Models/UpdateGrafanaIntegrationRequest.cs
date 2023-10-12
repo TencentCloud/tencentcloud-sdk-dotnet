@@ -43,7 +43,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Kind{ get; set; }
 
         /// <summary>
-        /// 集成内容
+        /// 集成内容，请查看示例
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

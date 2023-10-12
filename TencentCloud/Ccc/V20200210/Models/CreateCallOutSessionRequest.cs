@@ -64,7 +64,14 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 自定义数据，长度限制 1024 字节
         /// </summary>
         [JsonProperty("Uui")]
+        [System.Obsolete]
         public string Uui{ get; set; }
+
+        /// <summary>
+        /// 自定义数据，长度限制 1024 字节
+        /// </summary>
+        [JsonProperty("UUI")]
+        public string UUI{ get; set; }
 
 
         /// <summary>
@@ -79,6 +86,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArraySimple(map, prefix + "Callers.", this.Callers);
             this.SetParamSimple(map, prefix + "IsForceUseMobile", this.IsForceUseMobile);
             this.SetParamSimple(map, prefix + "Uui", this.Uui);
+            this.SetParamSimple(map, prefix + "UUI", this.UUI);
         }
     }
 }

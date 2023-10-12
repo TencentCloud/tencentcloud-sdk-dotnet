@@ -37,13 +37,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// 默认为1，已废弃，请使用 OrganizationIds
+        /// 默认为1，建议使用 OrganizationIds
         /// </summary>
         [JsonProperty("OrgId")]
         public long? OrgId{ get; set; }
 
         /// <summary>
-        /// 接受告警通道 ID 数组
+        /// 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
         /// </summary>
         [JsonProperty("Receivers")]
         public string[] Receivers{ get; set; }

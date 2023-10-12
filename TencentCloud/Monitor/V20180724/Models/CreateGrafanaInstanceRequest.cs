@@ -31,13 +31,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// VPC ID (私有网络 ID)
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网 ID 数组
+        /// 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public bool? EnableInternet{ get; set; }
 
         /// <summary>
-        /// Grafana 初始密码
+        /// Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
         /// </summary>
         [JsonProperty("GrafanaInitPassword")]
         public string GrafanaInitPassword{ get; set; }

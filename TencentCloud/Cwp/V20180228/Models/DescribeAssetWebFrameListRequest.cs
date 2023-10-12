@@ -32,7 +32,9 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 过滤条件。
-        /// <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+        /// <li>IP - String - 是否必填：否 - 主机ip</li>
+        /// <li>MachineName - String - 是否必填：否 - 主机名称</li>
+        /// <li>InstanceID - string - 是否必填：否 - 实例ID</li>
         /// <li>Name - String - 是否必填：否 - 框架名</li>
         /// <li>NameStrict - String - 是否必填：否 - 框架名（严格匹配）</li>
         /// <li>Lang - String - 是否必填：否 - 框架语言:java/python</li>

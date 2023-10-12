@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Organization{ get; set; }
 
         /// <summary>
-        /// 权限
+        /// 权限(Admin、Editor、Viewer)
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }

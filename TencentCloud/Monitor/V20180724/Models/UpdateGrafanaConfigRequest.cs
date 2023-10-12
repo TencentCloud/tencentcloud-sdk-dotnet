@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// JSON 编码后的字符串
+        /// JSON 编码后的字符串，如 "{"server":{"root_url":"http://custom.domain"}}"
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }

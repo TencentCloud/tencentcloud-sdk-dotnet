@@ -2183,6 +2183,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 查看防护对象列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeObjectsRequest"/></param>
+        /// <returns><see cref="DescribeObjectsResponse"/></returns>
+        public async Task<DescribeObjectsResponse> DescribeObjects(DescribeObjectsRequest req)
+        {
+             JsonResponseModel<DescribeObjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeObjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeObjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看防护对象列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeObjectsRequest"/></param>
+        /// <returns><see cref="DescribeObjectsResponse"/></returns>
+        public DescribeObjectsResponse DescribeObjectsSync(DescribeObjectsRequest req)
+        {
+             JsonResponseModel<DescribeObjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeObjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeObjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询业务和攻击概要趋势
         /// </summary>
         /// <param name="req"><see cref="DescribePeakPointsRequest"/></param>
@@ -4020,6 +4060,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "ModifyModuleStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModuleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改防护对象
+        /// </summary>
+        /// <param name="req"><see cref="ModifyObjectRequest"/></param>
+        /// <returns><see cref="ModifyObjectResponse"/></returns>
+        public async Task<ModifyObjectResponse> ModifyObject(ModifyObjectRequest req)
+        {
+             JsonResponseModel<ModifyObjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyObject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyObjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改防护对象
+        /// </summary>
+        /// <param name="req"><see cref="ModifyObjectRequest"/></param>
+        /// <returns><see cref="ModifyObjectResponse"/></returns>
+        public ModifyObjectResponse ModifyObjectSync(ModifyObjectRequest req)
+        {
+             JsonResponseModel<ModifyObjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyObject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyObjectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

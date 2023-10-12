@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
+        /// 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }

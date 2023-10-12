@@ -31,7 +31,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
+        /// 白名单数组，输入白名单 IP 或 CIDR，如：127.0.0.1或127.0.0.1/24
+        /// 如有多个 IP 可换行输入
         /// </summary>
         [JsonProperty("Whitelist")]
         public string[] Whitelist{ get; set; }

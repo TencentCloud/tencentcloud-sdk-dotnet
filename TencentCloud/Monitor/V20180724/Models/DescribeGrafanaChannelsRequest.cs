@@ -55,7 +55,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] ChannelIds{ get; set; }
 
         /// <summary>
-        /// 告警通道状态
+        /// 告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)
         /// </summary>
         [JsonProperty("ChannelState")]
         public long? ChannelState{ get; set; }

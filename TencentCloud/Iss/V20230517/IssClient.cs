@@ -2061,6 +2061,46 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
+        /// 用于获取视频通道的码率信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoBitRateRequest"/></param>
+        /// <returns><see cref="DescribeVideoBitRateResponse"/></returns>
+        public async Task<DescribeVideoBitRateResponse> DescribeVideoBitRate(DescribeVideoBitRateRequest req)
+        {
+             JsonResponseModel<DescribeVideoBitRateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVideoBitRate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoBitRateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取视频通道的码率信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoBitRateRequest"/></param>
+        /// <returns><see cref="DescribeVideoBitRateResponse"/></returns>
+        public DescribeVideoBitRateResponse DescribeVideoBitRateSync(DescribeVideoBitRateRequest req)
+        {
+             JsonResponseModel<DescribeVideoBitRateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVideoBitRate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoBitRateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于获取云录像下载 url
         /// </summary>
         /// <param name="req"><see cref="DescribeVideoDownloadUrlRequest"/></param>
