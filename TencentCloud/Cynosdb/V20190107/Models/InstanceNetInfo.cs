@@ -81,7 +81,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string WanDomain{ get; set; }
 
         /// <summary>
-        /// 外网Ip
+        /// 外网IP
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WanIP")]

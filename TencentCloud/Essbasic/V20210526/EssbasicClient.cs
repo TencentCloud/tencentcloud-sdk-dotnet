@@ -1579,7 +1579,8 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 分页查询企业角色列表，法人的角色是系统保留角色，不会返回，按照角色创建时间升序排列
+        /// 分页查询企业角色列表，法人的角色是系统保留角色，不会返回，按照角色创建时间升序排列。
+        /// 相关系统默认角色说明可参考文档：https://cloud.tencent.com/document/product/1323/61355
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeRolesRequest"/></param>
         /// <returns><see cref="ChannelDescribeRolesResponse"/></returns>
@@ -1599,7 +1600,8 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 分页查询企业角色列表，法人的角色是系统保留角色，不会返回，按照角色创建时间升序排列
+        /// 分页查询企业角色列表，法人的角色是系统保留角色，不会返回，按照角色创建时间升序排列。
+        /// 相关系统默认角色说明可参考文档：https://cloud.tencent.com/document/product/1323/61355
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeRolesRequest"/></param>
         /// <returns><see cref="ChannelDescribeRolesResponse"/></returns>

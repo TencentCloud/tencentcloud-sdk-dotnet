@@ -127,7 +127,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Device{ get; set; }
 
         /// <summary>
-        /// 是否海外
+        /// 显示是否海外
         /// </summary>
         [JsonProperty("IsAbroad")]
         public string IsAbroad{ get; set; }
@@ -157,6 +157,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("GroupByType")]
         public long? GroupByType{ get; set; }
 
+        /// <summary>
+        /// 无需关注，是否查询zhiyan
+        /// </summary>
+        [JsonProperty("IsNewData")]
+        public long? IsNewData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -185,6 +191,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "Browser", this.Browser);
             this.SetParamSimple(map, prefix + "Env", this.Env);
             this.SetParamSimple(map, prefix + "GroupByType", this.GroupByType);
+            this.SetParamSimple(map, prefix + "IsNewData", this.IsNewData);
         }
     }
 }

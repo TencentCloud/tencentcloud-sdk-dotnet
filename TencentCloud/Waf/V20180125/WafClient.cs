@@ -133,6 +133,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 供用户控制台调用，增加Tiga规则引擎白名单。
+        /// </summary>
+        /// <param name="req"><see cref="AddAttackWhiteRuleRequest"/></param>
+        /// <returns><see cref="AddAttackWhiteRuleResponse"/></returns>
+        public async Task<AddAttackWhiteRuleResponse> AddAttackWhiteRule(AddAttackWhiteRuleRequest req)
+        {
+             JsonResponseModel<AddAttackWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddAttackWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddAttackWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 供用户控制台调用，增加Tiga规则引擎白名单。
+        /// </summary>
+        /// <param name="req"><see cref="AddAttackWhiteRuleRequest"/></param>
+        /// <returns><see cref="AddAttackWhiteRuleResponse"/></returns>
+        public AddAttackWhiteRuleResponse AddAttackWhiteRuleSync(AddAttackWhiteRuleRequest req)
+        {
+             JsonResponseModel<AddAttackWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddAttackWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddAttackWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 增加访问控制（自定义策略）
         /// </summary>
         /// <param name="req"><see cref="AddCustomRuleRequest"/></param>
@@ -524,6 +564,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DeleteAttackDownloadRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAttackDownloadRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 供用户控制台调用，删除Tiga规则引擎白名单。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAttackWhiteRuleRequest"/></param>
+        /// <returns><see cref="DeleteAttackWhiteRuleResponse"/></returns>
+        public async Task<DeleteAttackWhiteRuleResponse> DeleteAttackWhiteRule(DeleteAttackWhiteRuleRequest req)
+        {
+             JsonResponseModel<DeleteAttackWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAttackWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAttackWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 供用户控制台调用，删除Tiga规则引擎白名单。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAttackWhiteRuleRequest"/></param>
+        /// <returns><see cref="DeleteAttackWhiteRuleResponse"/></returns>
+        public DeleteAttackWhiteRuleResponse DeleteAttackWhiteRuleSync(DeleteAttackWhiteRuleRequest req)
+        {
+             JsonResponseModel<DeleteAttackWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAttackWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAttackWhiteRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1250,6 +1330,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAttackOverview");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAttackOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户规则白名单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAttackWhiteRuleRequest"/></param>
+        /// <returns><see cref="DescribeAttackWhiteRuleResponse"/></returns>
+        public async Task<DescribeAttackWhiteRuleResponse> DescribeAttackWhiteRule(DescribeAttackWhiteRuleRequest req)
+        {
+             JsonResponseModel<DescribeAttackWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAttackWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAttackWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户规则白名单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAttackWhiteRuleRequest"/></param>
+        /// <returns><see cref="DescribeAttackWhiteRuleResponse"/></returns>
+        public DescribeAttackWhiteRuleResponse DescribeAttackWhiteRuleSync(DescribeAttackWhiteRuleRequest req)
+        {
+             JsonResponseModel<DescribeAttackWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAttackWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAttackWhiteRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3378,6 +3498,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAreaBanStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAreaBanStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 供用户控制台调用，修改Tiga规则引擎白名单。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAttackWhiteRuleRequest"/></param>
+        /// <returns><see cref="ModifyAttackWhiteRuleResponse"/></returns>
+        public async Task<ModifyAttackWhiteRuleResponse> ModifyAttackWhiteRule(ModifyAttackWhiteRuleRequest req)
+        {
+             JsonResponseModel<ModifyAttackWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAttackWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAttackWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 供用户控制台调用，修改Tiga规则引擎白名单。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAttackWhiteRuleRequest"/></param>
+        /// <returns><see cref="ModifyAttackWhiteRuleResponse"/></returns>
+        public ModifyAttackWhiteRuleResponse ModifyAttackWhiteRuleSync(ModifyAttackWhiteRuleRequest req)
+        {
+             JsonResponseModel<ModifyAttackWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAttackWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAttackWhiteRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

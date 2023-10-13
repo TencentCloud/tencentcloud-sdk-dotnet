@@ -109,13 +109,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string MotorTaxRate{ get; set; }
 
         /// <summary>
-        /// 开户行
+        /// 银行账号
         /// </summary>
         [JsonProperty("MotorBankName")]
         public string MotorBankName{ get; set; }
 
         /// <summary>
-        /// 账号
+        /// 开户行
         /// </summary>
         [JsonProperty("MotorBankAccount")]
         public string MotorBankAccount{ get; set; }

@@ -28,6 +28,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 实例 ID（废弃）
         /// </summary>
         [JsonProperty("InstanceId")]
+        [System.Obsolete]
         public long? InstanceId{ get; set; }
 
         /// <summary>

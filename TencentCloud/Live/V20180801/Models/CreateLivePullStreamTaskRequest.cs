@@ -162,6 +162,15 @@ namespace TencentCloud.Live.V20180801.Models
         public string ExtraCmd{ get; set; }
 
         /// <summary>
+        /// 自定义任务 ID。
+        /// 注：
+        /// 1. 该自定义 ID 为可选参数，如果传入，请确保该账号下传入的 ID 唯一。
+        /// 2. 该自定义 ID 用于防止重复发起请求时产生重复任务。后面也可以用 SpecifyTaskId 来修改或删除任务。
+        /// </summary>
+        [JsonProperty("SpecifyTaskId")]
+        public string SpecifyTaskId{ get; set; }
+
+        /// <summary>
         /// 任务描述，限制 512 字节。
         /// </summary>
         [JsonProperty("Comment")]
@@ -243,6 +252,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "VodRefreshType", this.VodRefreshType);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "ExtraCmd", this.ExtraCmd);
+            this.SetParamSimple(map, prefix + "SpecifyTaskId", this.SpecifyTaskId);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "ToUrl", this.ToUrl);
             this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);

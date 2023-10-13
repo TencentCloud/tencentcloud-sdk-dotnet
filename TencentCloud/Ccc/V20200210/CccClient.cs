@@ -939,6 +939,46 @@ namespace TencentCloud.Ccc.V20200210
         /// <summary>
         /// 获取包括全媒体和文本会话两种类型的服务记录。
         /// </summary>
+        /// <param name="req"><see cref="DescribeIMCdrListRequest"/></param>
+        /// <returns><see cref="DescribeIMCdrListResponse"/></returns>
+        public async Task<DescribeIMCdrListResponse> DescribeIMCdrList(DescribeIMCdrListRequest req)
+        {
+             JsonResponseModel<DescribeIMCdrListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIMCdrList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIMCdrListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取包括全媒体和文本会话两种类型的服务记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIMCdrListRequest"/></param>
+        /// <returns><see cref="DescribeIMCdrListResponse"/></returns>
+        public DescribeIMCdrListResponse DescribeIMCdrListSync(DescribeIMCdrListRequest req)
+        {
+             JsonResponseModel<DescribeIMCdrListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIMCdrList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIMCdrListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取包括全媒体和文本会话两种类型的服务记录。
+        /// </summary>
         /// <param name="req"><see cref="DescribeIMCdrsRequest"/></param>
         /// <returns><see cref="DescribeIMCdrsResponse"/></returns>
         public async Task<DescribeIMCdrsResponse> DescribeIMCdrs(DescribeIMCdrsRequest req)

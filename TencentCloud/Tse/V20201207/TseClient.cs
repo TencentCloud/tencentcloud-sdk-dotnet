@@ -1653,6 +1653,46 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 更新云原生网关证书
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayCertificateRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayCertificateResponse"/></returns>
+        public async Task<ModifyCloudNativeAPIGatewayCertificateResponse> ModifyCloudNativeAPIGatewayCertificate(ModifyCloudNativeAPIGatewayCertificateRequest req)
+        {
+             JsonResponseModel<ModifyCloudNativeAPIGatewayCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCloudNativeAPIGatewayCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新云原生网关证书
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayCertificateRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayCertificateResponse"/></returns>
+        public ModifyCloudNativeAPIGatewayCertificateResponse ModifyCloudNativeAPIGatewayCertificateSync(ModifyCloudNativeAPIGatewayCertificateRequest req)
+        {
+             JsonResponseModel<ModifyCloudNativeAPIGatewayCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCloudNativeAPIGatewayCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改云原生网关路由
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayRouteRequest"/></param>

@@ -733,6 +733,46 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取端口视角的端口风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskCenterPortViewPortRiskListRequest"/></param>
+        /// <returns><see cref="DescribeRiskCenterPortViewPortRiskListResponse"/></returns>
+        public async Task<DescribeRiskCenterPortViewPortRiskListResponse> DescribeRiskCenterPortViewPortRiskList(DescribeRiskCenterPortViewPortRiskListRequest req)
+        {
+             JsonResponseModel<DescribeRiskCenterPortViewPortRiskListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRiskCenterPortViewPortRiskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskCenterPortViewPortRiskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取端口视角的端口风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskCenterPortViewPortRiskListRequest"/></param>
+        /// <returns><see cref="DescribeRiskCenterPortViewPortRiskListResponse"/></returns>
+        public DescribeRiskCenterPortViewPortRiskListResponse DescribeRiskCenterPortViewPortRiskListSync(DescribeRiskCenterPortViewPortRiskListRequest req)
+        {
+             JsonResponseModel<DescribeRiskCenterPortViewPortRiskListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRiskCenterPortViewPortRiskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskCenterPortViewPortRiskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取风险服务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskCenterServerRiskListRequest"/></param>
@@ -764,6 +804,46 @@ namespace TencentCloud.Csip.V20221121
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRiskCenterServerRiskList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskCenterServerRiskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取漏洞视角的漏洞风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskCenterVULViewVULRiskListRequest"/></param>
+        /// <returns><see cref="DescribeRiskCenterVULViewVULRiskListResponse"/></returns>
+        public async Task<DescribeRiskCenterVULViewVULRiskListResponse> DescribeRiskCenterVULViewVULRiskList(DescribeRiskCenterVULViewVULRiskListRequest req)
+        {
+             JsonResponseModel<DescribeRiskCenterVULViewVULRiskListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRiskCenterVULViewVULRiskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskCenterVULViewVULRiskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取漏洞视角的漏洞风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskCenterVULViewVULRiskListRequest"/></param>
+        /// <returns><see cref="DescribeRiskCenterVULViewVULRiskListResponse"/></returns>
+        public DescribeRiskCenterVULViewVULRiskListResponse DescribeRiskCenterVULViewVULRiskListSync(DescribeRiskCenterVULViewVULRiskListRequest req)
+        {
+             JsonResponseModel<DescribeRiskCenterVULViewVULRiskListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRiskCenterVULViewVULRiskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskCenterVULViewVULRiskListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1084,6 +1164,46 @@ namespace TencentCloud.Csip.V20221121
              {
                  var strResp = this.InternalRequestSync(req, "DescribeVpcAssets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcAssetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改风险中心风险状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRiskCenterRiskStatusRequest"/></param>
+        /// <returns><see cref="ModifyRiskCenterRiskStatusResponse"/></returns>
+        public async Task<ModifyRiskCenterRiskStatusResponse> ModifyRiskCenterRiskStatus(ModifyRiskCenterRiskStatusRequest req)
+        {
+             JsonResponseModel<ModifyRiskCenterRiskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRiskCenterRiskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRiskCenterRiskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改风险中心风险状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRiskCenterRiskStatusRequest"/></param>
+        /// <returns><see cref="ModifyRiskCenterRiskStatusResponse"/></returns>
+        public ModifyRiskCenterRiskStatusResponse ModifyRiskCenterRiskStatusSync(ModifyRiskCenterRiskStatusRequest req)
+        {
+             JsonResponseModel<ModifyRiskCenterRiskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRiskCenterRiskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRiskCenterRiskStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

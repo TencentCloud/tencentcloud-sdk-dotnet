@@ -79,6 +79,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// RideHailingTransportLicense -- 网约车运输证
         /// WayBill -- 快递运单
         /// AccountOpeningPermit -- 银行开户许可证
+        /// InvoiceEng -- 海外发票模版
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }

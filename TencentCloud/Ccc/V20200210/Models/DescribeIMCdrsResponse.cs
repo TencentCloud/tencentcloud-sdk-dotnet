@@ -34,7 +34,15 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 服务记录列表
         /// </summary>
         [JsonProperty("IMCdrs")]
+        [System.Obsolete]
         public IMCdrInfo[] IMCdrs{ get; set; }
+
+        /// <summary>
+        /// 服务记录列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IMCdrList")]
+        public IMCdrInfo[] IMCdrList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +58,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "IMCdrs.", this.IMCdrs);
+            this.SetParamArrayObj(map, prefix + "IMCdrList.", this.IMCdrList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

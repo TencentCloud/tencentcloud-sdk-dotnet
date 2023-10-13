@@ -31,7 +31,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 记录ID
+        /// 记录ID（调用DescribePrivateZoneRecordList可获取到RecordId）
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }

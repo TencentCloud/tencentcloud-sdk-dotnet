@@ -93,6 +93,46 @@ namespace TencentCloud.Cdwpg.V20201230
         }
 
         /// <summary>
+        /// 根据实例ID查询某个实例的具体信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
+        /// <returns><see cref="DescribeInstanceResponse"/></returns>
+        public async Task<DescribeInstanceResponse> DescribeInstance(DescribeInstanceRequest req)
+        {
+             JsonResponseModel<DescribeInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据实例ID查询某个实例的具体信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
+        /// <returns><see cref="DescribeInstanceResponse"/></returns>
+        public DescribeInstanceResponse DescribeInstanceSync(DescribeInstanceRequest req)
+        {
+             JsonResponseModel<DescribeInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 集群详情页中显示集群状态、流程进度等
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceStateRequest"/></param>

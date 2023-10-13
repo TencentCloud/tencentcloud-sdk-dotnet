@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.864</VersionPrefix>
+    <VersionPrefix>3.0.865</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -95,8 +95,12 @@
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewVULRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewWeakPasswordRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterAssetViewWeakPasswordRiskListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskCenterPortViewPortRiskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskCenterPortViewPortRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterServerRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterServerRiskListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskCenterVULViewVULRiskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeRiskCenterVULViewVULRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterWebsiteRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeRiskCenterWebsiteRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeScanReportListRequest.cs" />
@@ -117,8 +121,12 @@
     <Compile Include="V20221121\Models\Filter.cs" />
     <Compile Include="V20221121\Models\FilterDataObject.cs" />
     <Compile Include="V20221121\Models\IpAssetListVO.cs" />
+    <Compile Include="V20221121\Models\ModifyRiskCenterRiskStatusRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyRiskCenterRiskStatusResponse.cs" />
+    <Compile Include="V20221121\Models\PortViewPortRisk.cs" />
     <Compile Include="V20221121\Models\PublicIpDomainListKey.cs" />
     <Compile Include="V20221121\Models\ReportItemKey.cs" />
+    <Compile Include="V20221121\Models\RiskCenterStatusKey.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfo.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfoList.cs" />
     <Compile Include="V20221121\Models\ServerRisk.cs" />
@@ -135,6 +143,7 @@
     <Compile Include="V20221121\Models\TaskIdListKey.cs" />
     <Compile Include="V20221121\Models\TaskLogInfo.cs" />
     <Compile Include="V20221121\Models\TaskLogURL.cs" />
+    <Compile Include="V20221121\Models\VULViewVULRisk.cs" />
     <Compile Include="V20221121\Models\Vpc.cs" />
     <Compile Include="V20221121\Models\WebsiteRisk.cs" />
     <Compile Include="V20221121\Models\WhereFilter.cs" />

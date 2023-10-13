@@ -69,7 +69,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string RegionCode{ get; set; }
 
         /// <summary>
-        /// 销方税号，通用机打电子发票必填
+        /// 销方税号，通用机打电子发票必填，区块链发票时必填
         /// </summary>
         [JsonProperty("SellerTaxCode")]
         public string SellerTaxCode{ get; set; }

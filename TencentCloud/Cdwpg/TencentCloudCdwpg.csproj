@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1692997E-2AD5-365B-9B13-A65EC48A38B5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.864</VersionPrefix>
+    <VersionPrefix>3.0.865</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,13 +52,18 @@
     <Compile Include="V20201230\Models\ChargeProperties.cs" />
     <Compile Include="V20201230\Models\CreateInstanceByApiRequest.cs" />
     <Compile Include="V20201230\Models\CreateInstanceByApiResponse.cs" />
+    <Compile Include="V20201230\Models\DescribeInstanceRequest.cs" />
+    <Compile Include="V20201230\Models\DescribeInstanceResponse.cs" />
     <Compile Include="V20201230\Models\DescribeInstanceStateRequest.cs" />
     <Compile Include="V20201230\Models\DescribeInstanceStateResponse.cs" />
     <Compile Include="V20201230\Models\DescribeSimpleInstancesRequest.cs" />
     <Compile Include="V20201230\Models\DescribeSimpleInstancesResponse.cs" />
     <Compile Include="V20201230\Models\DestroyInstanceByApiRequest.cs" />
     <Compile Include="V20201230\Models\DestroyInstanceByApiResponse.cs" />
+    <Compile Include="V20201230\Models\InstanceInfo.cs" />
+    <Compile Include="V20201230\Models\InstanceNodeGroup.cs" />
     <Compile Include="V20201230\Models\InstanceSimpleInfoNew.cs" />
+    <Compile Include="V20201230\Models\InstanceStateInfo.cs" />
     <Compile Include="V20201230\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20201230\Models\ModifyInstanceResponse.cs" />
     <Compile Include="V20201230\Models\ResourceSpecNew.cs" />

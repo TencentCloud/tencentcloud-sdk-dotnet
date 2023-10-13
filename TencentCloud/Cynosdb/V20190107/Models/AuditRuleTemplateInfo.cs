@@ -77,7 +77,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? AlarmPolicy{ get; set; }
 
         /// <summary>
-        /// 模版状态。0-无任务 ，1-修改中。
+        /// 模板状态。0-无任务 ，1-修改中。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
