@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.865</VersionPrefix>
+    <VersionPrefix>3.0.866</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -151,6 +151,8 @@
     <Compile Include="V20210820\Models\CreateCustomFunctionResponse.cs" />
     <Compile Include="V20210820\Models\CreateDataSourceRequest.cs" />
     <Compile Include="V20210820\Models\CreateDataSourceResponse.cs" />
+    <Compile Include="V20210820\Models\CreateDsFolderRequest.cs" />
+    <Compile Include="V20210820\Models\CreateDsFolderResponse.cs" />
     <Compile Include="V20210820\Models\CreateFolderRequest.cs" />
     <Compile Include="V20210820\Models\CreateFolderResponse.cs" />
     <Compile Include="V20210820\Models\CreateHiveTableByDDLRequest.cs" />
@@ -198,6 +200,8 @@
     <Compile Include="V20210820\Models\DeleteCustomFunctionResponse.cs" />
     <Compile Include="V20210820\Models\DeleteDataSourcesRequest.cs" />
     <Compile Include="V20210820\Models\DeleteDataSourcesResponse.cs" />
+    <Compile Include="V20210820\Models\DeleteDsFolderRequest.cs" />
+    <Compile Include="V20210820\Models\DeleteDsFolderResponse.cs" />
     <Compile Include="V20210820\Models\DeleteFilePathRequest.cs" />
     <Compile Include="V20210820\Models\DeleteFilePathResponse.cs" />
     <Compile Include="V20210820\Models\DeleteFileRequest.cs" />
@@ -304,6 +308,10 @@
     <Compile Include="V20210820\Models\DescribeDrInstanceScriptContentResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDrSonInstanceRequest.cs" />
     <Compile Include="V20210820\Models\DescribeDrSonInstanceResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeDsFolderTreeRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeDsFolderTreeResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeDsParentFolderTreeRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeDsParentFolderTreeResponse.cs" />
     <Compile Include="V20210820\Models\DescribeEventCasesRequest.cs" />
     <Compile Include="V20210820\Models\DescribeEventCasesResponse.cs" />
     <Compile Include="V20210820\Models\DescribeEventConsumeTasksRequest.cs" />
@@ -583,7 +591,10 @@
     <Compile Include="V20210820\Models\ExportTaskInfo.cs" />
     <Compile Include="V20210820\Models\FieldConfig.cs" />
     <Compile Include="V20210820\Models\Filter.cs" />
+    <Compile Include="V20210820\Models\FindAllFolderRequest.cs" />
+    <Compile Include="V20210820\Models\FindAllFolderResponse.cs" />
     <Compile Include="V20210820\Models\Folder.cs" />
+    <Compile Include="V20210820\Models\FolderDsDto.cs" />
     <Compile Include="V20210820\Models\FolderOpsDto.cs" />
     <Compile Include="V20210820\Models\ForceSucInstancesRequest.cs" />
     <Compile Include="V20210820\Models\ForceSucInstancesResponse.cs" />
@@ -672,6 +683,8 @@
     <Compile Include="V20210820\Models\ModifyDataSourceResponse.cs" />
     <Compile Include="V20210820\Models\ModifyDimensionWeightRequest.cs" />
     <Compile Include="V20210820\Models\ModifyDimensionWeightResponse.cs" />
+    <Compile Include="V20210820\Models\ModifyDsFolderRequest.cs" />
+    <Compile Include="V20210820\Models\ModifyDsFolderResponse.cs" />
     <Compile Include="V20210820\Models\ModifyExecStrategyRequest.cs" />
     <Compile Include="V20210820\Models\ModifyExecStrategyResponse.cs" />
     <Compile Include="V20210820\Models\ModifyFolderRequest.cs" />
@@ -716,6 +729,7 @@
     <Compile Include="V20210820\Models\PairDto.cs" />
     <Compile Include="V20210820\Models\ParamInfo.cs" />
     <Compile Include="V20210820\Models\Partition.cs" />
+    <Compile Include="V20210820\Models\PathNodeDsVO.cs" />
     <Compile Include="V20210820\Models\ProdSchedulerTask.cs" />
     <Compile Include="V20210820\Models\ProjectBaseInfoOpsRequest.cs" />
     <Compile Include="V20210820\Models\Property.cs" />
@@ -776,6 +790,10 @@
     <Compile Include="V20210820\Models\RuleTemplateHistory.cs" />
     <Compile Include="V20210820\Models\RuleTemplateHistoryPage.cs" />
     <Compile Include="V20210820\Models\RuleTemplatePage.cs" />
+    <Compile Include="V20210820\Models\RunForceSucScheduleInstancesRequest.cs" />
+    <Compile Include="V20210820\Models\RunForceSucScheduleInstancesResponse.cs" />
+    <Compile Include="V20210820\Models\RunRerunScheduleInstancesRequest.cs" />
+    <Compile Include="V20210820\Models\RunRerunScheduleInstancesResponse.cs" />
     <Compile Include="V20210820\Models\RunTaskRequest.cs" />
     <Compile Include="V20210820\Models\RunTaskResponse.cs" />
     <Compile Include="V20210820\Models\RunTasksByMultiWorkflowRequest.cs" />

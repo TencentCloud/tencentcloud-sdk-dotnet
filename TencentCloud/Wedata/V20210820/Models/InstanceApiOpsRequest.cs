@@ -204,6 +204,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DataTimeCycle")]
         public string DataTimeCycle{ get; set; }
 
+        /// <summary>
+        /// 资源组id,多个资源组id用英文逗号分隔
+        /// </summary>
+        [JsonProperty("ExecutorGroupIdList")]
+        public string[] ExecutorGroupIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -240,6 +246,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DagDepth", this.DagDepth);
             this.SetParamSimple(map, prefix + "TenantId", this.TenantId);
             this.SetParamSimple(map, prefix + "DataTimeCycle", this.DataTimeCycle);
+            this.SetParamArraySimple(map, prefix + "ExecutorGroupIdList.", this.ExecutorGroupIdList);
         }
     }
 }

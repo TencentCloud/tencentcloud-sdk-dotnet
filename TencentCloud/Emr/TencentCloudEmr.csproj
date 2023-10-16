@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.865</VersionPrefix>
+    <VersionPrefix>3.0.866</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,7 @@
     <Compile Include="V20190103\Models\AddUsersForUserManagerResponse.cs" />
     <Compile Include="V20190103\Models\AllNodeResourceSpec.cs" />
     <Compile Include="V20190103\Models\ApplicationStatics.cs" />
+    <Compile Include="V20190103\Models\AutoScaleRecord.cs" />
     <Compile Include="V20190103\Models\BootstrapAction.cs" />
     <Compile Include="V20190103\Models\COSSettings.cs" />
     <Compile Include="V20190103\Models\CdbInfo.cs" />
@@ -71,6 +72,8 @@
     <Compile Include="V20190103\Models\DeleteUserManagerUserListRequest.cs" />
     <Compile Include="V20190103\Models\DeleteUserManagerUserListResponse.cs" />
     <Compile Include="V20190103\Models\DependService.cs" />
+    <Compile Include="V20190103\Models\DescribeAutoScaleRecordsRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeAutoScaleRecordsResponse.cs" />
     <Compile Include="V20190103\Models\DescribeClusterNodesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeClusterNodesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeCvmQuotaRequest.cs" />
@@ -122,6 +125,7 @@
     <Compile Include="V20190103\Models\JobFlowResource.cs" />
     <Compile Include="V20190103\Models\JobFlowResourceSpec.cs" />
     <Compile Include="V20190103\Models\JobResult.cs" />
+    <Compile Include="V20190103\Models\KeyValue.cs" />
     <Compile Include="V20190103\Models\LoginSettings.cs" />
     <Compile Include="V20190103\Models\MetaDbInfo.cs" />
     <Compile Include="V20190103\Models\ModifyResourcePoolsRequest.cs" />

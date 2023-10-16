@@ -78,6 +78,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RunningOrderId")]
         public ulong? RunningOrderId{ get; set; }
 
+        /// <summary>
+        /// 关键字
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
             this.SetParamSimple(map, prefix + "RunningOrderId", this.RunningOrderId);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
         }
     }
 }

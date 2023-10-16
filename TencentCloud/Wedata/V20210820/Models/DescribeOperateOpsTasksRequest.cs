@@ -144,6 +144,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AlarmType")]
         public string AlarmType{ get; set; }
 
+        /// <summary>
+        /// 资源组id,多个资源组id之间以英文字符逗号分隔
+        /// </summary>
+        [JsonProperty("ExecutorGroupIdList")]
+        public string ExecutorGroupIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TargetServiceId", this.TargetServiceId);
             this.SetParamSimple(map, prefix + "TargetServiceType", this.TargetServiceType);
             this.SetParamSimple(map, prefix + "AlarmType", this.AlarmType);
+            this.SetParamSimple(map, prefix + "ExecutorGroupIdList", this.ExecutorGroupIdList);
         }
     }
 }

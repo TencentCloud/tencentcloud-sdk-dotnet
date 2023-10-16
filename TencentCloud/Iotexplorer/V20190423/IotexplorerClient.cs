@@ -2373,6 +2373,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 拉取设备统计汇总数据 
+        /// </summary>
+        /// <param name="req"><see cref="GetDeviceSumStatisticsRequest"/></param>
+        /// <returns><see cref="GetDeviceSumStatisticsResponse"/></returns>
+        public async Task<GetDeviceSumStatisticsResponse> GetDeviceSumStatistics(GetDeviceSumStatisticsRequest req)
+        {
+             JsonResponseModel<GetDeviceSumStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDeviceSumStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceSumStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取设备统计汇总数据 
+        /// </summary>
+        /// <param name="req"><see cref="GetDeviceSumStatisticsRequest"/></param>
+        /// <returns><see cref="GetDeviceSumStatisticsResponse"/></returns>
+        public GetDeviceSumStatisticsResponse GetDeviceSumStatisticsSync(GetDeviceSumStatisticsRequest req)
+        {
+             JsonResponseModel<GetDeviceSumStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetDeviceSumStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceSumStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于获取设备绑定的用户列表
         /// </summary>
         /// <param name="req"><see cref="GetFamilyDeviceUserListRequest"/></param>

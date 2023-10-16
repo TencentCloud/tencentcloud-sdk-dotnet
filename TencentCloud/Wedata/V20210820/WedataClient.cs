@@ -1339,7 +1339,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        ///  创建用户自定义函数
+        /// 创建用户自定义函数
         /// </summary>
         /// <param name="req"><see cref="CreateCustomFunctionRequest"/></param>
         /// <returns><see cref="CreateCustomFunctionResponse"/></returns>
@@ -1359,7 +1359,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        ///  创建用户自定义函数
+        /// 创建用户自定义函数
         /// </summary>
         /// <param name="req"><see cref="CreateCustomFunctionRequest"/></param>
         /// <returns><see cref="CreateCustomFunctionResponse"/></returns>
@@ -1412,6 +1412,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "CreateDataSource");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDataSourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编排空间-创建文件夹
+        /// </summary>
+        /// <param name="req"><see cref="CreateDsFolderRequest"/></param>
+        /// <returns><see cref="CreateDsFolderResponse"/></returns>
+        public async Task<CreateDsFolderResponse> CreateDsFolder(CreateDsFolderRequest req)
+        {
+             JsonResponseModel<CreateDsFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDsFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDsFolderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编排空间-创建文件夹
+        /// </summary>
+        /// <param name="req"><see cref="CreateDsFolderRequest"/></param>
+        /// <returns><see cref="CreateDsFolderResponse"/></returns>
+        public CreateDsFolderResponse CreateDsFolderSync(CreateDsFolderRequest req)
+        {
+             JsonResponseModel<CreateDsFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDsFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDsFolderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2180,6 +2220,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDataSources");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDataSourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编排空间-删除文件夹
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDsFolderRequest"/></param>
+        /// <returns><see cref="DeleteDsFolderResponse"/></returns>
+        public async Task<DeleteDsFolderResponse> DeleteDsFolder(DeleteDsFolderRequest req)
+        {
+             JsonResponseModel<DeleteDsFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDsFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDsFolderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编排空间-删除文件夹
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDsFolderRequest"/></param>
+        /// <returns><see cref="DeleteDsFolderResponse"/></returns>
+        public DeleteDsFolderResponse DeleteDsFolderSync(DeleteDsFolderRequest req)
+        {
+             JsonResponseModel<DeleteDsFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDsFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDsFolderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4201,6 +4281,86 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查询目录树
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDsFolderTreeRequest"/></param>
+        /// <returns><see cref="DescribeDsFolderTreeResponse"/></returns>
+        public async Task<DescribeDsFolderTreeResponse> DescribeDsFolderTree(DescribeDsFolderTreeRequest req)
+        {
+             JsonResponseModel<DescribeDsFolderTreeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDsFolderTree");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDsFolderTreeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询目录树
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDsFolderTreeRequest"/></param>
+        /// <returns><see cref="DescribeDsFolderTreeResponse"/></returns>
+        public DescribeDsFolderTreeResponse DescribeDsFolderTreeSync(DescribeDsFolderTreeRequest req)
+        {
+             JsonResponseModel<DescribeDsFolderTreeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDsFolderTree");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDsFolderTreeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询父目录树，用于工作流、任务定位
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDsParentFolderTreeRequest"/></param>
+        /// <returns><see cref="DescribeDsParentFolderTreeResponse"/></returns>
+        public async Task<DescribeDsParentFolderTreeResponse> DescribeDsParentFolderTree(DescribeDsParentFolderTreeRequest req)
+        {
+             JsonResponseModel<DescribeDsParentFolderTreeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDsParentFolderTree");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDsParentFolderTreeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询父目录树，用于工作流、任务定位
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDsParentFolderTreeRequest"/></param>
+        /// <returns><see cref="DescribeDsParentFolderTreeResponse"/></returns>
+        public DescribeDsParentFolderTreeResponse DescribeDsParentFolderTreeSync(DescribeDsParentFolderTreeRequest req)
+        {
+             JsonResponseModel<DescribeDsParentFolderTreeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDsParentFolderTree");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDsParentFolderTreeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据项目ID和事件名称查看事件详情
         /// </summary>
         /// <param name="req"><see cref="DescribeEventRequest"/></param>
@@ -5727,6 +5887,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 没用到
+        /// 
         /// 获取kafka的topic信息
         /// </summary>
         /// <param name="req"><see cref="DescribeKafkaTopicInfoRequest"/></param>
@@ -5747,6 +5909,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 没用到
+        /// 
         /// 获取kafka的topic信息
         /// </summary>
         /// <param name="req"><see cref="DescribeKafkaTopicInfoRequest"/></param>
@@ -9299,6 +9463,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查找全部的文件夹
+        /// </summary>
+        /// <param name="req"><see cref="FindAllFolderRequest"/></param>
+        /// <returns><see cref="FindAllFolderResponse"/></returns>
+        public async Task<FindAllFolderResponse> FindAllFolder(FindAllFolderRequest req)
+        {
+             JsonResponseModel<FindAllFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FindAllFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FindAllFolderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查找全部的文件夹
+        /// </summary>
+        /// <param name="req"><see cref="FindAllFolderRequest"/></param>
+        /// <returns><see cref="FindAllFolderResponse"/></returns>
+        public FindAllFolderResponse FindAllFolderSync(FindAllFolderRequest req)
+        {
+             JsonResponseModel<FindAllFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FindAllFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FindAllFolderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 实例批量置成功
         /// </summary>
@@ -10188,6 +10392,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDimensionWeight");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDimensionWeightResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据开发模块-文件夹更新
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDsFolderRequest"/></param>
+        /// <returns><see cref="ModifyDsFolderResponse"/></returns>
+        public async Task<ModifyDsFolderResponse> ModifyDsFolder(ModifyDsFolderRequest req)
+        {
+             JsonResponseModel<ModifyDsFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDsFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDsFolderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 数据开发模块-文件夹更新
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDsFolderRequest"/></param>
+        /// <returns><see cref="ModifyDsFolderResponse"/></returns>
+        public ModifyDsFolderResponse ModifyDsFolderSync(ModifyDsFolderRequest req)
+        {
+             JsonResponseModel<ModifyDsFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDsFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDsFolderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -11166,6 +11410,86 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "RobAndLockIntegrationTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RobAndLockIntegrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例强制成功
+        /// </summary>
+        /// <param name="req"><see cref="RunForceSucScheduleInstancesRequest"/></param>
+        /// <returns><see cref="RunForceSucScheduleInstancesResponse"/></returns>
+        public async Task<RunForceSucScheduleInstancesResponse> RunForceSucScheduleInstances(RunForceSucScheduleInstancesRequest req)
+        {
+             JsonResponseModel<RunForceSucScheduleInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RunForceSucScheduleInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunForceSucScheduleInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例强制成功
+        /// </summary>
+        /// <param name="req"><see cref="RunForceSucScheduleInstancesRequest"/></param>
+        /// <returns><see cref="RunForceSucScheduleInstancesResponse"/></returns>
+        public RunForceSucScheduleInstancesResponse RunForceSucScheduleInstancesSync(RunForceSucScheduleInstancesRequest req)
+        {
+             JsonResponseModel<RunForceSucScheduleInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RunForceSucScheduleInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunForceSucScheduleInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例批量重跑
+        /// </summary>
+        /// <param name="req"><see cref="RunRerunScheduleInstancesRequest"/></param>
+        /// <returns><see cref="RunRerunScheduleInstancesResponse"/></returns>
+        public async Task<RunRerunScheduleInstancesResponse> RunRerunScheduleInstances(RunRerunScheduleInstancesRequest req)
+        {
+             JsonResponseModel<RunRerunScheduleInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RunRerunScheduleInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunRerunScheduleInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例批量重跑
+        /// </summary>
+        /// <param name="req"><see cref="RunRerunScheduleInstancesRequest"/></param>
+        /// <returns><see cref="RunRerunScheduleInstancesResponse"/></returns>
+        public RunRerunScheduleInstancesResponse RunRerunScheduleInstancesSync(RunRerunScheduleInstancesRequest req)
+        {
+             JsonResponseModel<RunRerunScheduleInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RunRerunScheduleInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunRerunScheduleInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

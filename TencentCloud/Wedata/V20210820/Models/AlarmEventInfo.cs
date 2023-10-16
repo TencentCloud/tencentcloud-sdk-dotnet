@@ -141,6 +141,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RegularId")]
         public string RegularId{ get; set; }
 
+        /// <summary>
+        /// 告警接收人昵称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmRecipientName")]
+        public string AlarmRecipientName{ get; set; }
+
+        /// <summary>
+        /// 告警任务类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public long? TaskType{ get; set; }
+
+        /// <summary>
+        /// 发送结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SendResult")]
+        public string SendResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +186,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "MessageId", this.MessageId);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "RegularId", this.RegularId);
+            this.SetParamSimple(map, prefix + "AlarmRecipientName", this.AlarmRecipientName);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "SendResult", this.SendResult);
         }
     }
 }

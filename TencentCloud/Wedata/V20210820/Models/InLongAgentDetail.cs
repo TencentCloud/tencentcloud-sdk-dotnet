@@ -113,6 +113,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("LifeDays")]
         public long? LifeDays{ get; set; }
 
+        /// <summary>
+        /// 集群ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// agent地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentRegion")]
+        public string AgentRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +147,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "CvmAgentStatusList.", this.CvmAgentStatusList);
             this.SetParamSimple(map, prefix + "AgentTotal", this.AgentTotal);
             this.SetParamSimple(map, prefix + "LifeDays", this.LifeDays);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "AgentRegion", this.AgentRegion);
         }
     }
 }

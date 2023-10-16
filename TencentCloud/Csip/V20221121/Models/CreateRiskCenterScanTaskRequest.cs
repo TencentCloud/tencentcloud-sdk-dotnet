@@ -67,6 +67,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] SelfDefiningAssets{ get; set; }
 
         /// <summary>
+        /// 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
+        /// </summary>
+        [JsonProperty("ScanFrom")]
+        public string ScanFrom{ get; set; }
+
+        /// <summary>
         /// 高级配置
         /// </summary>
         [JsonProperty("TaskAdvanceCFG")]
@@ -91,6 +97,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "Assets.", this.Assets);
             this.SetParamSimple(map, prefix + "ScanPlanContent", this.ScanPlanContent);
             this.SetParamArraySimple(map, prefix + "SelfDefiningAssets.", this.SelfDefiningAssets);
+            this.SetParamSimple(map, prefix + "ScanFrom", this.ScanFrom);
             this.SetParamObj(map, prefix + "TaskAdvanceCFG.", this.TaskAdvanceCFG);
             this.SetParamSimple(map, prefix + "TaskMode", this.TaskMode);
         }

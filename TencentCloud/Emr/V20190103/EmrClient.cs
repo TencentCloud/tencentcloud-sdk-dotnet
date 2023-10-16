@@ -215,6 +215,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 获取集群的自动扩缩容的详细记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScaleRecordsRequest"/></param>
+        /// <returns><see cref="DescribeAutoScaleRecordsResponse"/></returns>
+        public async Task<DescribeAutoScaleRecordsResponse> DescribeAutoScaleRecords(DescribeAutoScaleRecordsRequest req)
+        {
+             JsonResponseModel<DescribeAutoScaleRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAutoScaleRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoScaleRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取集群的自动扩缩容的详细记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScaleRecordsRequest"/></param>
+        /// <returns><see cref="DescribeAutoScaleRecordsResponse"/></returns>
+        public DescribeAutoScaleRecordsResponse DescribeAutoScaleRecordsSync(DescribeAutoScaleRecordsRequest req)
+        {
+             JsonResponseModel<DescribeAutoScaleRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAutoScaleRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoScaleRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群节点信息
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>

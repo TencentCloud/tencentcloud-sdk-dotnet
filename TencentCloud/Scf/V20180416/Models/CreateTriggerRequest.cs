@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TriggerName{ get; set; }
 
         /// <summary>
-        /// 触发器类型，目前支持 cos 、cmq、 timer、 ckafka、apigw类型。创建 cls 触发器请参考[CLS 创建投递 SCF 任务](https://cloud.tencent.com/document/product/614/61096)。
+        /// 触发器类型，目前支持 cos 、cmq、 timer、 ckafka、apigw类型。创建函数URL请在此填写 http 。创建 cls 触发器请参考[CLS 创建投递 SCF 任务](https://cloud.tencent.com/document/product/614/61096)。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

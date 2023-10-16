@@ -124,6 +124,7 @@ namespace TencentCloud.Soe.V20180724.Models
         /// 注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
         /// </summary>
         [JsonProperty("StorageMode")]
+        [System.Obsolete]
         public long? StorageMode{ get; set; }
 
         /// <summary>
@@ -172,6 +173,12 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
+        /// <summary>
+        /// 音频存储路径，支持通过子路径指定文件夹名称
+        /// </summary>
+        [JsonProperty("COSBucketURL")]
+        public string COSBucketURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -196,6 +203,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "IsQuery", this.IsQuery);
             this.SetParamSimple(map, prefix + "TextMode", this.TextMode);
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamSimple(map, prefix + "COSBucketURL", this.COSBucketURL);
         }
     }
 }

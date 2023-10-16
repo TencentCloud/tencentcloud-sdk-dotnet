@@ -25,13 +25,13 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 要查看的实时任务的任务Id
+        /// 要查看的实时任务的任务ID，可在任务列表页面中获得
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 要查看的项目ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

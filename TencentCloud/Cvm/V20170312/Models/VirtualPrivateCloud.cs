@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 是否用作公网网关。公网网关只有在实例拥有公网IP以及处于私有网络下时才能正常使用。取值范围：<br><li>TRUE：表示用作公网网关<br><li>FALSE：表示不作为公网网关<br><br>默认取值：FALSE。
+        /// 是否用作公网网关。公网网关只有在实例拥有公网IP以及处于私有网络下时才能正常使用。取值范围：<br><li>true：表示用作公网网关<br><li>false：表示不作为公网网关<br><br>默认取值：false。
         /// </summary>
         [JsonProperty("AsVpcGateway")]
         public bool? AsVpcGateway{ get; set; }

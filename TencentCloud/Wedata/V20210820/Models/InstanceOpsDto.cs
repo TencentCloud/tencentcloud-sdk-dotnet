@@ -388,6 +388,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InstanceKey")]
         public string InstanceKey{ get; set; }
 
+        /// <summary>
+        /// 资源组id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutorGroupId")]
+        public string ExecutorGroupId{ get; set; }
+
+        /// <summary>
+        /// 资源组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutorGroupName")]
+        public string ExecutorGroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -446,6 +460,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "TenantId", this.TenantId);
             this.SetParamSimple(map, prefix + "InstanceKey", this.InstanceKey);
+            this.SetParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
+            this.SetParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
         }
     }
 }

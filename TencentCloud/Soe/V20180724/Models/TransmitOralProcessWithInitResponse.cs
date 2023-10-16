@@ -58,6 +58,7 @@ namespace TencentCloud.Soe.V20180724.Models
         /// 已废弃，不再保存语音音频文件下载地址
         /// </summary>
         [JsonProperty("AudioUrl")]
+        [System.Obsolete]
         public string AudioUrl{ get; set; }
 
         /// <summary>

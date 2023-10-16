@@ -25,13 +25,13 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 类型：HIVE、SPARK
+        /// 枚举值：HIVE、SPARK、DLC
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 分类：窗口函数、聚合函数、日期函数......
+        /// 枚举值：ANALYSIS(函数)、ENCRYPTION(加密函数)、AGGREGATE(聚合函数)、LOGIC(逻辑函数)、DATE_AND_TIME(日期与时间函数)、MATH(数学函数)、CONVERSION(转换函数)、STRING(字符串函数)、IP_AND_DOMAIN(IP和域名函数)、WINDOW(窗口函数)、OTHER(其他函数)
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
