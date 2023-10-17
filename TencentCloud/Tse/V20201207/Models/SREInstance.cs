@@ -247,6 +247,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("EnableClientIntranet")]
         public bool? EnableClientIntranet{ get; set; }
 
+        /// <summary>
+        /// 存储额外配置选项
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StorageOption")]
+        public StorageOption[] StorageOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -286,6 +293,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "EKSType", this.EKSType);
             this.SetParamSimple(map, prefix + "FeatureVersion", this.FeatureVersion);
             this.SetParamSimple(map, prefix + "EnableClientIntranet", this.EnableClientIntranet);
+            this.SetParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
         }
     }
 }

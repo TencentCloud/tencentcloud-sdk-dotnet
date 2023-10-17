@@ -44,6 +44,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("SyncMode")]
         public string SyncMode{ get; set; }
 
+        /// <summary>
+        /// 绑定的kubernetes集群所在地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BindRegion")]
+        public string BindRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +60,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "BoundClusterId", this.BoundClusterId);
             this.SetParamSimple(map, prefix + "BoundClusterType", this.BoundClusterType);
             this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
+            this.SetParamSimple(map, prefix + "BindRegion", this.BindRegion);
         }
     }
 }

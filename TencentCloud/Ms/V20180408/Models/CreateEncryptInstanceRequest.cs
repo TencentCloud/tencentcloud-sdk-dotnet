@@ -66,6 +66,12 @@ namespace TencentCloud.Ms.V20180408.Models
         [JsonProperty("AppletInfo")]
         public AppletInfo AppletInfo{ get; set; }
 
+        /// <summary>
+        /// iOS混淆信息
+        /// </summary>
+        [JsonProperty("IOSInfo")]
+        public IOSInfo IOSInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ms.V20180408.Models
             this.SetParamObj(map, prefix + "AndroidAppInfo.", this.AndroidAppInfo);
             this.SetParamObj(map, prefix + "AndroidPlan.", this.AndroidPlan);
             this.SetParamObj(map, prefix + "AppletInfo.", this.AppletInfo);
+            this.SetParamObj(map, prefix + "IOSInfo.", this.IOSInfo);
         }
     }
 }

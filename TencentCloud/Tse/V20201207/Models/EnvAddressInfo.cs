@@ -63,6 +63,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("InternetBandWidth")]
         public long? InternetBandWidth{ get; set; }
 
+        /// <summary>
+        /// 客户端公网CLB多可用区信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CLBMultiRegion")]
+        public CLBMultiRegion CLBMultiRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +82,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ConfigIntranetAddress", this.ConfigIntranetAddress);
             this.SetParamSimple(map, prefix + "EnableConfigIntranet", this.EnableConfigIntranet);
             this.SetParamSimple(map, prefix + "InternetBandWidth", this.InternetBandWidth);
+            this.SetParamObj(map, prefix + "CLBMultiRegion.", this.CLBMultiRegion);
         }
     }
 }

@@ -78,6 +78,13 @@ namespace TencentCloud.Tse.V20201207.Models
         public PolarisLimiterAddress[] LimiterAddressInfos{ get; set; }
 
         /// <summary>
+        /// InternetAddress 的公网 CLB 多可用区信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CLBMultiRegion")]
+        public CLBMultiRegion CLBMultiRegion{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -97,6 +104,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "InternetBandWidth", this.InternetBandWidth);
             this.SetParamSimple(map, prefix + "ConsoleInternetBandWidth", this.ConsoleInternetBandWidth);
             this.SetParamArrayObj(map, prefix + "LimiterAddressInfos.", this.LimiterAddressInfos);
+            this.SetParamObj(map, prefix + "CLBMultiRegion.", this.CLBMultiRegion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

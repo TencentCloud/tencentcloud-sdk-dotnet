@@ -31,7 +31,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 如果是hive这里写rpc，如果是其他类型不传
+        /// 连接类型
         /// </summary>
         [JsonProperty("ConnectionType")]
         public string ConnectionType{ get; set; }

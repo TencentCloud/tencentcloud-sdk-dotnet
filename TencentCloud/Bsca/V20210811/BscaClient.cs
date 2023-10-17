@@ -93,6 +93,46 @@ namespace TencentCloud.Bsca.V20210811
         }
 
         /// <summary>
+        /// 查询特定组件的版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBComponentVersionListRequest"/></param>
+        /// <returns><see cref="DescribeKBComponentVersionListResponse"/></returns>
+        public async Task<DescribeKBComponentVersionListResponse> DescribeKBComponentVersionList(DescribeKBComponentVersionListRequest req)
+        {
+             JsonResponseModel<DescribeKBComponentVersionListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKBComponentVersionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKBComponentVersionListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询特定组件的版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBComponentVersionListRequest"/></param>
+        /// <returns><see cref="DescribeKBComponentVersionListResponse"/></returns>
+        public DescribeKBComponentVersionListResponse DescribeKBComponentVersionListSync(DescribeKBComponentVersionListRequest req)
+        {
+             JsonResponseModel<DescribeKBComponentVersionListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKBComponentVersionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKBComponentVersionListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeKBComponentVulnerability)用于在知识库中查询开源组件的漏洞信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeKBComponentVulnerabilityRequest"/></param>
@@ -244,6 +284,46 @@ namespace TencentCloud.Bsca.V20210811
              {
                  var strResp = this.InternalRequestSync(req, "MatchKBPURLList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<MatchKBPURLListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据输入的组件名、组件类型搜索相应的组件，返回符合条件的组件列表
+        /// </summary>
+        /// <param name="req"><see cref="SearchKBComponentRequest"/></param>
+        /// <returns><see cref="SearchKBComponentResponse"/></returns>
+        public async Task<SearchKBComponentResponse> SearchKBComponent(SearchKBComponentRequest req)
+        {
+             JsonResponseModel<SearchKBComponentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchKBComponent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchKBComponentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据输入的组件名、组件类型搜索相应的组件，返回符合条件的组件列表
+        /// </summary>
+        /// <param name="req"><see cref="SearchKBComponentRequest"/></param>
+        /// <returns><see cref="SearchKBComponentResponse"/></returns>
+        public SearchKBComponentResponse SearchKBComponentSync(SearchKBComponentRequest req)
+        {
+             JsonResponseModel<SearchKBComponentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchKBComponent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchKBComponentResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

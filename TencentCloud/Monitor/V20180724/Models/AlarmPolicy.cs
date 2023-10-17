@@ -272,6 +272,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 是否支持告警标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportAlarmTag")]
+        public long? IsSupportAlarmTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -313,6 +320,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "AdvancedMetricNumber", this.AdvancedMetricNumber);
             this.SetParamSimple(map, prefix + "IsBindAll", this.IsBindAll);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "IsSupportAlarmTag", this.IsSupportAlarmTag);
         }
     }
 }

@@ -73,6 +73,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// 该字段没有使用（已过期）。
         /// </summary>
         [JsonProperty("Ipv6ISP")]
+        [System.Obsolete]
         public string Ipv6ISP{ get; set; }
 
 

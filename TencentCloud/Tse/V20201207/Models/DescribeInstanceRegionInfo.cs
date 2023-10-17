@@ -46,11 +46,18 @@ namespace TencentCloud.Tse.V20201207.Models
         public string SpecId{ get; set; }
 
         /// <summary>
-        /// 内网的网络信息
+        /// 客户端内网的网络信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntranetVpcInfos")]
         public VpcInfo[] IntranetVpcInfos{ get; set; }
+
+        /// <summary>
+        /// 控制台内网的网络信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConsoleIntranetVpcInfos")]
+        public VpcInfo[] ConsoleIntranetVpcInfos{ get; set; }
 
         /// <summary>
         /// 是否开公网
@@ -58,6 +65,27 @@ namespace TencentCloud.Tse.V20201207.Models
         /// </summary>
         [JsonProperty("EnableClientInternet")]
         public bool? EnableClientInternet{ get; set; }
+
+        /// <summary>
+        /// 限流客户端内网的网络信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LimiterIntranetVpcInfos")]
+        public VpcInfo[] LimiterIntranetVpcInfos{ get; set; }
+
+        /// <summary>
+        /// 是否为主地域，仅在服务治理中心多地域有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MainRegion")]
+        public bool? MainRegion{ get; set; }
+
+        /// <summary>
+        /// 该地域所在的EKS集群
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EKSClusterID")]
+        public string EKSClusterID{ get; set; }
 
 
         /// <summary>
@@ -69,7 +97,11 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Replica", this.Replica);
             this.SetParamSimple(map, prefix + "SpecId", this.SpecId);
             this.SetParamArrayObj(map, prefix + "IntranetVpcInfos.", this.IntranetVpcInfos);
+            this.SetParamArrayObj(map, prefix + "ConsoleIntranetVpcInfos.", this.ConsoleIntranetVpcInfos);
             this.SetParamSimple(map, prefix + "EnableClientInternet", this.EnableClientInternet);
+            this.SetParamArrayObj(map, prefix + "LimiterIntranetVpcInfos.", this.LimiterIntranetVpcInfos);
+            this.SetParamSimple(map, prefix + "MainRegion", this.MainRegion);
+            this.SetParamSimple(map, prefix + "EKSClusterID", this.EKSClusterID);
         }
     }
 }

@@ -42,6 +42,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("VpcInfos")]
         public VpcInfo[] VpcInfos{ get; set; }
 
+        /// <summary>
+        /// 是否为主地域
+        /// </summary>
+        [JsonProperty("MainRegion")]
+        public bool? MainRegion{ get; set; }
+
+        /// <summary>
+        /// 引擎规格ID
+        /// </summary>
+        [JsonProperty("SpecId")]
+        public string SpecId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "EngineRegion", this.EngineRegion);
             this.SetParamSimple(map, prefix + "Replica", this.Replica);
             this.SetParamArrayObj(map, prefix + "VpcInfos.", this.VpcInfos);
+            this.SetParamSimple(map, prefix + "MainRegion", this.MainRegion);
+            this.SetParamSimple(map, prefix + "SpecId", this.SpecId);
         }
     }
 }

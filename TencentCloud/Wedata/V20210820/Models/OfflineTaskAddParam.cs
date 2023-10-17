@@ -133,6 +133,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecutionStartTime")]
         public string ExecutionStartTime{ get; set; }
 
+        /// <summary>
+        /// 是否自动提交
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskAutoSubmit")]
+        public bool? TaskAutoSubmit{ get; set; }
+
+        /// <summary>
+        /// 实例初始化策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceInitStrategy")]
+        public string InstanceInitStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +170,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskAction", this.TaskAction);
             this.SetParamSimple(map, prefix + "ExecutionEndTime", this.ExecutionEndTime);
             this.SetParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
+            this.SetParamSimple(map, prefix + "TaskAutoSubmit", this.TaskAutoSubmit);
+            this.SetParamSimple(map, prefix + "InstanceInitStrategy", this.InstanceInitStrategy);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 任务类型：201. stream,   202. offline
+        /// 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
         /// </summary>
         [JsonProperty("TaskType")]
         public ulong? TaskType{ get; set; }

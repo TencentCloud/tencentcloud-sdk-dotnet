@@ -72,6 +72,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("LimiterVpcInfos")]
         public VpcInfo[] LimiterVpcInfos{ get; set; }
 
+        /// <summary>
+        /// 引擎关联CLS日志主题信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CLSTopics")]
+        public PolarisCLSTopicInfo[] CLSTopics{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "MainPassword", this.MainPassword);
             this.SetParamArrayObj(map, prefix + "PgwVpcInfos.", this.PgwVpcInfos);
             this.SetParamArrayObj(map, prefix + "LimiterVpcInfos.", this.LimiterVpcInfos);
+            this.SetParamArrayObj(map, prefix + "CLSTopics.", this.CLSTopics);
         }
     }
 }

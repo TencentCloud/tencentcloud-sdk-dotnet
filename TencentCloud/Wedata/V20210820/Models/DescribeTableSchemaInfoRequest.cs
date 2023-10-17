@@ -37,7 +37,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// 表类型
+        /// 数据源的类型（例如MYSQL、HIVE、KAFKA等）
         /// </summary>
         [JsonProperty("MsType")]
         public string MsType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string DatasourceId{ get; set; }
 
         /// <summary>
-        /// HIVE传rpc
+        /// 连接类型（示例值rpc）
         /// </summary>
         [JsonProperty("ConnectionType")]
         public string ConnectionType{ get; set; }

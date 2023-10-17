@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59F84071-5597-3F91-BE72-09F462EAE82A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.866</VersionPrefix>
+    <VersionPrefix>3.0.867</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,10 +51,13 @@
     <Compile Include="V20210811\Models\CVSSV2Info.cs" />
     <Compile Include="V20210811\Models\CVSSV3Info.cs" />
     <Compile Include="V20210811\Models\Component.cs" />
+    <Compile Include="V20210811\Models\ComponentVersion.cs" />
     <Compile Include="V20210811\Models\ComponentVulnerabilitySummary.cs" />
     <Compile Include="V20210811\Models\ComponentVulnerabilityUnion.cs" />
     <Compile Include="V20210811\Models\DescribeKBComponentRequest.cs" />
     <Compile Include="V20210811\Models\DescribeKBComponentResponse.cs" />
+    <Compile Include="V20210811\Models\DescribeKBComponentVersionListRequest.cs" />
+    <Compile Include="V20210811\Models\DescribeKBComponentVersionListResponse.cs" />
     <Compile Include="V20210811\Models\DescribeKBComponentVulnerabilityRequest.cs" />
     <Compile Include="V20210811\Models\DescribeKBComponentVulnerabilityResponse.cs" />
     <Compile Include="V20210811\Models\DescribeKBLicenseRequest.cs" />
@@ -69,6 +72,8 @@
     <Compile Include="V20210811\Models\MatchKBPURLListResponse.cs" />
     <Compile Include="V20210811\Models\PURL.cs" />
     <Compile Include="V20210811\Models\Qualifier.cs" />
+    <Compile Include="V20210811\Models\SearchKBComponentRequest.cs" />
+    <Compile Include="V20210811\Models\SearchKBComponentResponse.cs" />
     <Compile Include="V20210811\Models\VulnerabilityDetail.cs" />
     <Compile Include="V20210811\Models\VulnerabilitySummary.cs" />
     <Compile Include="V20210811\Models\VulnerabilityUnion.cs" />

@@ -973,6 +973,46 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 查询Sql Gateway的Statement执行结果
+        /// </summary>
+        /// <param name="req"><see cref="FetchSqlGatewayStatementResultRequest"/></param>
+        /// <returns><see cref="FetchSqlGatewayStatementResultResponse"/></returns>
+        public async Task<FetchSqlGatewayStatementResultResponse> FetchSqlGatewayStatementResult(FetchSqlGatewayStatementResultRequest req)
+        {
+             JsonResponseModel<FetchSqlGatewayStatementResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FetchSqlGatewayStatementResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchSqlGatewayStatementResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询Sql Gateway的Statement执行结果
+        /// </summary>
+        /// <param name="req"><see cref="FetchSqlGatewayStatementResultRequest"/></param>
+        /// <returns><see cref="FetchSqlGatewayStatementResultResponse"/></returns>
+        public FetchSqlGatewayStatementResultResponse FetchSqlGatewayStatementResultSync(FetchSqlGatewayStatementResultRequest req)
+        {
+             JsonResponseModel<FetchSqlGatewayStatementResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FetchSqlGatewayStatementResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchSqlGatewayStatementResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新作业属性，仅允许以下3种操作，不支持组合操作：
         /// (1)	更新作业名称
         /// (2)	更新作业备注 
@@ -1062,6 +1102,46 @@ namespace TencentCloud.Oceanus.V20190422
              {
                  var strResp = this.InternalRequestSync(req, "RunJobs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过Sql gateway执行satement
+        /// </summary>
+        /// <param name="req"><see cref="RunSqlGatewayStatementRequest"/></param>
+        /// <returns><see cref="RunSqlGatewayStatementResponse"/></returns>
+        public async Task<RunSqlGatewayStatementResponse> RunSqlGatewayStatement(RunSqlGatewayStatementRequest req)
+        {
+             JsonResponseModel<RunSqlGatewayStatementResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RunSqlGatewayStatement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunSqlGatewayStatementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过Sql gateway执行satement
+        /// </summary>
+        /// <param name="req"><see cref="RunSqlGatewayStatementRequest"/></param>
+        /// <returns><see cref="RunSqlGatewayStatementResponse"/></returns>
+        public RunSqlGatewayStatementResponse RunSqlGatewayStatementSync(RunSqlGatewayStatementRequest req)
+        {
+             JsonResponseModel<RunSqlGatewayStatementResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RunSqlGatewayStatement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunSqlGatewayStatementResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
