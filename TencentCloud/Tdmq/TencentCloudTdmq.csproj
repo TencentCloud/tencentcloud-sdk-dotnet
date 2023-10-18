@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1732CBF0-BE93-36A0-A593-39E6D6FF17BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.867</VersionPrefix>
+    <VersionPrefix>3.0.868</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -196,6 +196,8 @@
     <Compile Include="V20200217\Models\DescribeRocketMQClustersResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQGroupsRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQGroupsResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQMigratingTopicListRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQMigratingTopicListResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQMsgRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQMsgResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQMsgTraceRequest.cs" />
@@ -204,6 +206,14 @@
     <Compile Include="V20200217\Models\DescribeRocketMQNamespacesResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQPublicAccessPointRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQPublicAccessPointResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQSmoothMigrationTaskListRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQSmoothMigrationTaskListResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQSmoothMigrationTaskRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQSmoothMigrationTaskResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQSourceClusterGroupListRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQSourceClusterGroupListResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQSourceClusterTopicListRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQSourceClusterTopicListResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQTopicMsgsRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQTopicMsgsResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQTopicsRequest.cs" />
@@ -224,8 +234,13 @@
     <Compile Include="V20200217\Models\ExchangeQuota.cs" />
     <Compile Include="V20200217\Models\Filter.cs" />
     <Compile Include="V20200217\Models\FilterSubscription.cs" />
+    <Compile Include="V20200217\Models\ImportRocketMQConsumerGroupsRequest.cs" />
+    <Compile Include="V20200217\Models\ImportRocketMQConsumerGroupsResponse.cs" />
+    <Compile Include="V20200217\Models\ImportRocketMQTopicsRequest.cs" />
+    <Compile Include="V20200217\Models\ImportRocketMQTopicsResponse.cs" />
     <Compile Include="V20200217\Models\InstanceNodeDistribution.cs" />
     <Compile Include="V20200217\Models\InternalTenant.cs" />
+    <Compile Include="V20200217\Models\MigrateTopic.cs" />
     <Compile Include="V20200217\Models\ModifyAMQPClusterRequest.cs" />
     <Compile Include="V20200217\Models\ModifyAMQPClusterResponse.cs" />
     <Compile Include="V20200217\Models\ModifyClusterRequest.cs" />
@@ -297,12 +312,18 @@
     <Compile Include="V20200217\Models\RocketMQClusterInfo.cs" />
     <Compile Include="V20200217\Models\RocketMQClusterRecentStats.cs" />
     <Compile Include="V20200217\Models\RocketMQGroup.cs" />
+    <Compile Include="V20200217\Models\RocketMQGroupConfig.cs" />
+    <Compile Include="V20200217\Models\RocketMQGroupConfigOutput.cs" />
     <Compile Include="V20200217\Models\RocketMQInstanceConfig.cs" />
     <Compile Include="V20200217\Models\RocketMQMessageTrack.cs" />
+    <Compile Include="V20200217\Models\RocketMQMigrationTopicDistribution.cs" />
     <Compile Include="V20200217\Models\RocketMQMsgLog.cs" />
     <Compile Include="V20200217\Models\RocketMQNamespace.cs" />
+    <Compile Include="V20200217\Models\RocketMQSmoothMigrationTaskItem.cs" />
     <Compile Include="V20200217\Models\RocketMQSubscription.cs" />
     <Compile Include="V20200217\Models\RocketMQTopic.cs" />
+    <Compile Include="V20200217\Models\RocketMQTopicConfig.cs" />
+    <Compile Include="V20200217\Models\RocketMQTopicConfigOutput.cs" />
     <Compile Include="V20200217\Models\RocketMQTopicDistribution.cs" />
     <Compile Include="V20200217\Models\RocketMQVipInstance.cs" />
     <Compile Include="V20200217\Models\Role.cs" />

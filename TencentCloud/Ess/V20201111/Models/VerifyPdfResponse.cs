@@ -54,6 +54,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string VerifySerialNo{ get; set; }
 
         /// <summary>
+        /// 合同文件MD5哈希值
+        /// </summary>
+        [JsonProperty("PdfResourceMd5")]
+        public string PdfResourceMd5{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -68,6 +74,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "VerifyResult", this.VerifyResult);
             this.SetParamArrayObj(map, prefix + "PdfVerifyResults.", this.PdfVerifyResults);
             this.SetParamSimple(map, prefix + "VerifySerialNo", this.VerifySerialNo);
+            this.SetParamSimple(map, prefix + "PdfResourceMd5", this.PdfResourceMd5);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

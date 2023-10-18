@@ -24,12 +24,33 @@ namespace TencentCloud.Oceanus.V20190422.Models
     public class RunSqlGatewayStatementRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 需要执行的sql，该sql会被Sql Gateway执行，当前支持的是paimon修改需求，因此主要是DDL语句
+        /// </summary>
+        [JsonProperty("Sql")]
+        public string Sql{ get; set; }
+
+        /// <summary>
+        /// Sql Gateway会话ID，可不填，如果不填则会自动创建一个会话ID，每个会话ID都有一个存活时间，测试环境为10分钟，线上默认是30分钟
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Sql", this.Sql);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
         }
     }
 }

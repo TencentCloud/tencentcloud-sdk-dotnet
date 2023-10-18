@@ -205,6 +205,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SessionResourceTemplate")]
         public SessionResourceTemplate SessionResourceTemplate{ get; set; }
 
+        /// <summary>
+        /// 自动授权
+        /// </summary>
+        [JsonProperty("AutoAuthorization")]
+        public bool? AutoAuthorization{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -241,6 +247,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
             this.SetParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
             this.SetParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
+            this.SetParamSimple(map, prefix + "AutoAuthorization", this.AutoAuthorization);
         }
     }
 }

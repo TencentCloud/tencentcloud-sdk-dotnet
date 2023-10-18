@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B15FC666-859E-397F-91C6-A33130097096}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.867</VersionPrefix>
+    <VersionPrefix>3.0.868</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,8 @@
     <Compile Include="V20180808\Models\CheckDomainRequest.cs" />
     <Compile Include="V20180808\Models\CheckDomainResponse.cs" />
     <Compile Include="V20180808\Models\ContactInfo.cs" />
+    <Compile Include="V20180808\Models\CreateCustomDnsHostRequest.cs" />
+    <Compile Include="V20180808\Models\CreateCustomDnsHostResponse.cs" />
     <Compile Include="V20180808\Models\CreateDomainBatchRequest.cs" />
     <Compile Include="V20180808\Models\CreateDomainBatchResponse.cs" />
     <Compile Include="V20180808\Models\CreateDomainRedemptionRequest.cs" />

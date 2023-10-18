@@ -2097,6 +2097,54 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 返回正在直播中的流列表。适用于推流成功后查询在线流信息。
+        /// 
+        /// 注意：
+        /// 1. 该接口仅提供辅助查询在线流列表功能，业务重要场景不可强依赖该接口。
+        /// 2. 该接口仅适用于流数少于2万路的情况，对于流数较大用户请联系售后。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupStreamListRequest"/></param>
+        /// <returns><see cref="DescribeBackupStreamListResponse"/></returns>
+        public async Task<DescribeBackupStreamListResponse> DescribeBackupStreamList(DescribeBackupStreamListRequest req)
+        {
+             JsonResponseModel<DescribeBackupStreamListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupStreamList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupStreamListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 返回正在直播中的流列表。适用于推流成功后查询在线流信息。
+        /// 
+        /// 注意：
+        /// 1. 该接口仅提供辅助查询在线流列表功能，业务重要场景不可强依赖该接口。
+        /// 2. 该接口仅适用于流数少于2万路的情况，对于流数较大用户请联系售后。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupStreamListRequest"/></param>
+        /// <returns><see cref="DescribeBackupStreamListResponse"/></returns>
+        public DescribeBackupStreamListResponse DescribeBackupStreamListSync(DescribeBackupStreamListRequest req)
+        {
+             JsonResponseModel<DescribeBackupStreamListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupStreamList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupStreamListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直播播放带宽和流量数据查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeBillBandwidthAndFluxListRequest"/></param>
@@ -5193,6 +5241,48 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 启用择优调度。
+        /// 注意：流维度的择优调度，当主备流结束后自动失效。
+        /// </summary>
+        /// <param name="req"><see cref="EnableOptimalSwitchingRequest"/></param>
+        /// <returns><see cref="EnableOptimalSwitchingResponse"/></returns>
+        public async Task<EnableOptimalSwitchingResponse> EnableOptimalSwitching(EnableOptimalSwitchingRequest req)
+        {
+             JsonResponseModel<EnableOptimalSwitchingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableOptimalSwitching");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableOptimalSwitchingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用择优调度。
+        /// 注意：流维度的择优调度，当主备流结束后自动失效。
+        /// </summary>
+        /// <param name="req"><see cref="EnableOptimalSwitchingRequest"/></param>
+        /// <returns><see cref="EnableOptimalSwitchingResponse"/></returns>
+        public EnableOptimalSwitchingResponse EnableOptimalSwitchingSync(EnableOptimalSwitchingRequest req)
+        {
+             JsonResponseModel<EnableOptimalSwitchingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableOptimalSwitching");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableOptimalSwitchingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 停止使用某个直播域名。
         /// </summary>
         /// <param name="req"><see cref="ForbidLiveDomainRequest"/></param>
@@ -6204,6 +6294,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "StopScreenshotTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopScreenshotTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调用该接口实现切换当前播放所使用的主备流。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchBackupStreamRequest"/></param>
+        /// <returns><see cref="SwitchBackupStreamResponse"/></returns>
+        public async Task<SwitchBackupStreamResponse> SwitchBackupStream(SwitchBackupStreamRequest req)
+        {
+             JsonResponseModel<SwitchBackupStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchBackupStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchBackupStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调用该接口实现切换当前播放所使用的主备流。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchBackupStreamRequest"/></param>
+        /// <returns><see cref="SwitchBackupStreamResponse"/></returns>
+        public SwitchBackupStreamResponse SwitchBackupStreamSync(SwitchBackupStreamRequest req)
+        {
+             JsonResponseModel<SwitchBackupStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchBackupStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchBackupStreamResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

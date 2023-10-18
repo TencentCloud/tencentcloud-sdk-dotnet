@@ -61,7 +61,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public long? DiskCount{ get; set; }
 
         /// <summary>
-        /// 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+        /// 指定云硬盘备份点配额，取值范围: [0, 500]。不传时默认为不带备份点配额。
         /// </summary>
         [JsonProperty("DiskBackupQuota")]
         public long? DiskBackupQuota{ get; set; }

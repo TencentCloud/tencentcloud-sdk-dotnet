@@ -103,7 +103,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? CpuSize{ get; set; }
 
         /// <summary>
-        /// Cpu使用率百分比
+        /// Cpu负载
         /// </summary>
         [JsonProperty("CpuLoad")]
         public string CpuLoad{ get; set; }
@@ -244,6 +244,20 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
+        /// <summary>
+        /// CpuLoadVul
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CpuLoadVul")]
+        public string CpuLoadVul{ get; set; }
+
+        /// <summary>
+        /// 时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FirstTime")]
+        public string FirstTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -286,6 +300,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+            this.SetParamSimple(map, prefix + "CpuLoadVul", this.CpuLoadVul);
+            this.SetParamSimple(map, prefix + "FirstTime", this.FirstTime);
         }
     }
 }

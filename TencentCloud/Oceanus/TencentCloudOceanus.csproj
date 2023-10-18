@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.867</VersionPrefix>
+    <VersionPrefix>3.0.868</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -115,6 +115,7 @@
     <Compile Include="V20190422\Models\JobInstanceForSubmissionLog.cs" />
     <Compile Include="V20190422\Models\JobV1.cs" />
     <Compile Include="V20190422\Models\LogContent.cs" />
+    <Compile Include="V20190422\Models\LogicalType.cs" />
     <Compile Include="V20190422\Models\ModifyJobRequest.cs" />
     <Compile Include="V20190422\Models\ModifyJobResponse.cs" />
     <Compile Include="V20190422\Models\NodeConfig.cs" />
@@ -128,6 +129,8 @@
     <Compile Include="V20190422\Models\ResourceRef.cs" />
     <Compile Include="V20190422\Models\ResourceRefDetail.cs" />
     <Compile Include="V20190422\Models\ResourceRefJobInfo.cs" />
+    <Compile Include="V20190422\Models\ResultColumn.cs" />
+    <Compile Include="V20190422\Models\ResultData.cs" />
     <Compile Include="V20190422\Models\RoleAuth.cs" />
     <Compile Include="V20190422\Models\RunJobDescription.cs" />
     <Compile Include="V20190422\Models\RunJobsRequest.cs" />
@@ -138,6 +141,7 @@
     <Compile Include="V20190422\Models\SlotSharingGroup.cs" />
     <Compile Include="V20190422\Models\SlotSharingGroupSpec.cs" />
     <Compile Include="V20190422\Models\SqlGatewayItem.cs" />
+    <Compile Include="V20190422\Models\StatementResult.cs" />
     <Compile Include="V20190422\Models\StopJobDescription.cs" />
     <Compile Include="V20190422\Models\StopJobsRequest.cs" />
     <Compile Include="V20190422\Models\StopJobsResponse.cs" />

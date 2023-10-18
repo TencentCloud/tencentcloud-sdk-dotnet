@@ -25,6 +25,48 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
+        /// 错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrorMessage")]
+        public string[] ErrorMessage{ get; set; }
+
+        /// <summary>
+        /// 返回类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResultType")]
+        public string ResultType{ get; set; }
+
+        /// <summary>
+        /// 是否DQL结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsQueryResult")]
+        public bool? IsQueryResult{ get; set; }
+
+        /// <summary>
+        /// 结果类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResultKind")]
+        public string ResultKind{ get; set; }
+
+        /// <summary>
+        /// 结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Results")]
+        public StatementResult Results{ get; set; }
+
+        /// <summary>
+        /// 下一次请求的uri
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NextResultUri")]
+        public string NextResultUri{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +78,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "ErrorMessage.", this.ErrorMessage);
+            this.SetParamSimple(map, prefix + "ResultType", this.ResultType);
+            this.SetParamSimple(map, prefix + "IsQueryResult", this.IsQueryResult);
+            this.SetParamSimple(map, prefix + "ResultKind", this.ResultKind);
+            this.SetParamObj(map, prefix + "Results.", this.Results);
+            this.SetParamSimple(map, prefix + "NextResultUri", this.NextResultUri);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

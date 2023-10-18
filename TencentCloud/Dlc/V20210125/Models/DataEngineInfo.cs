@@ -326,6 +326,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SessionResourceTemplate")]
         public SessionResourceTemplate SessionResourceTemplate{ get; set; }
 
+        /// <summary>
+        /// 自动授权开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoAuthorization")]
+        public bool? AutoAuthorization{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -377,6 +384,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UserAppId", this.UserAppId);
             this.SetParamSimple(map, prefix + "UserUin", this.UserUin);
             this.SetParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
+            this.SetParamSimple(map, prefix + "AutoAuthorization", this.AutoAuthorization);
         }
     }
 }

@@ -9789,6 +9789,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 开发空间-获取数据开发脚本信息
+        /// </summary>
+        /// <param name="req"><see cref="GetFileInfoRequest"/></param>
+        /// <returns><see cref="GetFileInfoResponse"/></returns>
+        public async Task<GetFileInfoResponse> GetFileInfo(GetFileInfoRequest req)
+        {
+             JsonResponseModel<GetFileInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetFileInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFileInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开发空间-获取数据开发脚本信息
+        /// </summary>
+        /// <param name="req"><see cref="GetFileInfoRequest"/></param>
+        /// <returns><see cref="GetFileInfoResponse"/></returns>
+        public GetFileInfoResponse GetFileInfoSync(GetFileInfoRequest req)
+        {
+             JsonResponseModel<GetFileInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetFileInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFileInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提取数据集成节点字段Schema
         /// </summary>
         /// <param name="req"><see cref="GetIntegrationNodeColumnSchemaRequest"/></param>

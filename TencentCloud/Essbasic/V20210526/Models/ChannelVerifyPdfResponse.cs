@@ -25,16 +25,39 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 验签结果，1-文件未被篡改，全部签名在腾讯电子签完成； 2-文件未被篡改，部分签名在腾讯电子签完成；3-文件被篡改；4-异常：文件内没有签名域；5-异常：文件签名格式错误
+        /// 验签结果代码，代码的含义如下：
+        /// 
+        /// <ul><li>**1**：文件未被篡改，全部签名在腾讯电子签完成。</li>
+        /// <li>**2**：文件未被篡改，部分签名在腾讯电子签完成。</li>
+        /// <li>**3**：文件被篡改。</li>
+        /// <li>**4**：异常：文件内没有签名域。</li>
+        /// <li>**5**：异常：文件签名格式错误。</li></ul>
         /// </summary>
         [JsonProperty("VerifyResult")]
         public long? VerifyResult{ get; set; }
 
         /// <summary>
-        /// 验签结果详情,内部状态1-验签成功，在电子签签署；2-验签成功，在其他平台签署；3-验签失败；4-pdf文件没有签名域；5-文件签名格式错误
+        /// 验签结果详情，每个签名域对应的验签结果。状态值如下
+        /// <ul><li> **1** :验签成功，在电子签签署</li>
+        /// <li> **2** :验签成功，在其他平台签署</li>
+        /// <li> **3** :验签失败</li>
+        /// <li> **4** :pdf文件没有签名域</li>
+        /// <li> **5** :文件签名格式错误</li></ul>
         /// </summary>
         [JsonProperty("PdfVerifyResults")]
         public PdfVerifyResult[] PdfVerifyResults{ get; set; }
+
+        /// <summary>
+        /// 验签序列号, 为11为数组组成的字符串
+        /// </summary>
+        [JsonProperty("VerifySerialNo")]
+        public string VerifySerialNo{ get; set; }
+
+        /// <summary>
+        /// 合同文件MD5哈希值
+        /// </summary>
+        [JsonProperty("PdfResourceMd5")]
+        public string PdfResourceMd5{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +73,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamSimple(map, prefix + "VerifyResult", this.VerifyResult);
             this.SetParamArrayObj(map, prefix + "PdfVerifyResults.", this.PdfVerifyResults);
+            this.SetParamSimple(map, prefix + "VerifySerialNo", this.VerifySerialNo);
+            this.SetParamSimple(map, prefix + "PdfResourceMd5", this.PdfResourceMd5);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -24,12 +24,41 @@ namespace TencentCloud.Cdb.V20170320.Models
     public class StartCpuExpandRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 实例 ID 。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 扩容类型。可选值：auto：代表进行自动扩容
+        /// manual：代表进行手动扩容
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 手动扩容时，扩容的CPU核心数。Type 为 manual 时必传。
+        /// </summary>
+        [JsonProperty("ExpandCpu")]
+        public long? ExpandCpu{ get; set; }
+
+        /// <summary>
+        /// 自动扩容策略。Type 为 auto 时必传。
+        /// </summary>
+        [JsonProperty("AutoStrategy")]
+        public AutoStrategy AutoStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
+            this.SetParamObj(map, prefix + "AutoStrategy.", this.AutoStrategy);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 全部同步
+        /// 全部同步，俩参数必选一个 All优先
         /// </summary>
         [JsonProperty("All")]
         public bool? All{ get; set; }
 
         /// <summary>
-        /// 要同步的主机列表 两个参数必选一个 All优先
+        /// 要同步的主机列表uuid ，俩参数必选一个 All优先
         /// </summary>
         [JsonProperty("Hosts")]
         public string[] Hosts{ get; set; }

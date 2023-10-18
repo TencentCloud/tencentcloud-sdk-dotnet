@@ -25,6 +25,25 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
+        /// 错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrorMessage")]
+        public string[] ErrorMessage{ get; set; }
+
+        /// <summary>
+        /// 会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
+        /// 返回执行id，可以根据该执行id和会话id获取执行结果
+        /// </summary>
+        [JsonProperty("OperationHandleId")]
+        public string OperationHandleId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +55,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "ErrorMessage.", this.ErrorMessage);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "OperationHandleId", this.OperationHandleId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

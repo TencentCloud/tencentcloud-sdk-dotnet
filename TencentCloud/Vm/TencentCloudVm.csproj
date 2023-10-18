@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F5D5EEC8-AE19-3226-9D01-52472441AFA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.867</VersionPrefix>
+    <VersionPrefix>3.0.868</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,40 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20200709\VmClient.cs" />
+    <Compile Include="V20200709\Models\AudioResult.cs" />
+    <Compile Include="V20200709\Models\AudioResultDetailLanguageResult.cs" />
+    <Compile Include="V20200709\Models\AudioResultDetailMoanResult.cs" />
+    <Compile Include="V20200709\Models\AudioResultDetailTextResult.cs" />
+    <Compile Include="V20200709\Models\AudioSegments.cs" />
+    <Compile Include="V20200709\Models\BucketInfo.cs" />
+    <Compile Include="V20200709\Models\CancelTaskRequest.cs" />
+    <Compile Include="V20200709\Models\CancelTaskResponse.cs" />
+    <Compile Include="V20200709\Models\CreateBizConfigRequest.cs" />
+    <Compile Include="V20200709\Models\CreateBizConfigResponse.cs" />
+    <Compile Include="V20200709\Models\CreateVideoModerationTaskRequest.cs" />
+    <Compile Include="V20200709\Models\CreateVideoModerationTaskResponse.cs" />
+    <Compile Include="V20200709\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="V20200709\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="V20200709\Models\DescribeVideoStatRequest.cs" />
+    <Compile Include="V20200709\Models\DescribeVideoStatResponse.cs" />
+    <Compile Include="V20200709\Models\EvilCount.cs" />
+    <Compile Include="V20200709\Models\FileOutput.cs" />
+    <Compile Include="V20200709\Models\Filters.cs" />
+    <Compile Include="V20200709\Models\ImageResult.cs" />
+    <Compile Include="V20200709\Models\ImageResultResult.cs" />
+    <Compile Include="V20200709\Models\ImageResultsResultDetail.cs" />
+    <Compile Include="V20200709\Models\ImageResultsResultDetailLocation.cs" />
+    <Compile Include="V20200709\Models\ImageSegments.cs" />
+    <Compile Include="V20200709\Models\InputInfo.cs" />
+    <Compile Include="V20200709\Models\MediaInfo.cs" />
+    <Compile Include="V20200709\Models\MediaModerationConfig.cs" />
+    <Compile Include="V20200709\Models\Overview.cs" />
+    <Compile Include="V20200709\Models\StorageInfo.cs" />
+    <Compile Include="V20200709\Models\TaskInput.cs" />
+    <Compile Include="V20200709\Models\TaskLabel.cs" />
+    <Compile Include="V20200709\Models\TaskResult.cs" />
+    <Compile Include="V20200709\Models\TrendCount.cs" />
     <Compile Include="V20201229\VmClient.cs" />
     <Compile Include="V20201229\Models\AudioResult.cs" />
     <Compile Include="V20201229\Models\AudioResultDetailLanguageResult.cs" />
@@ -108,39 +142,5 @@
     <Compile Include="V20210922\Models\TaskInput.cs" />
     <Compile Include="V20210922\Models\TaskLabel.cs" />
     <Compile Include="V20210922\Models\TaskResult.cs" />
-    <Compile Include="V20200709\VmClient.cs" />
-    <Compile Include="V20200709\Models\AudioResult.cs" />
-    <Compile Include="V20200709\Models\AudioResultDetailLanguageResult.cs" />
-    <Compile Include="V20200709\Models\AudioResultDetailMoanResult.cs" />
-    <Compile Include="V20200709\Models\AudioResultDetailTextResult.cs" />
-    <Compile Include="V20200709\Models\AudioSegments.cs" />
-    <Compile Include="V20200709\Models\BucketInfo.cs" />
-    <Compile Include="V20200709\Models\CancelTaskRequest.cs" />
-    <Compile Include="V20200709\Models\CancelTaskResponse.cs" />
-    <Compile Include="V20200709\Models\CreateBizConfigRequest.cs" />
-    <Compile Include="V20200709\Models\CreateBizConfigResponse.cs" />
-    <Compile Include="V20200709\Models\CreateVideoModerationTaskRequest.cs" />
-    <Compile Include="V20200709\Models\CreateVideoModerationTaskResponse.cs" />
-    <Compile Include="V20200709\Models\DescribeTaskDetailRequest.cs" />
-    <Compile Include="V20200709\Models\DescribeTaskDetailResponse.cs" />
-    <Compile Include="V20200709\Models\DescribeVideoStatRequest.cs" />
-    <Compile Include="V20200709\Models\DescribeVideoStatResponse.cs" />
-    <Compile Include="V20200709\Models\EvilCount.cs" />
-    <Compile Include="V20200709\Models\FileOutput.cs" />
-    <Compile Include="V20200709\Models\Filters.cs" />
-    <Compile Include="V20200709\Models\ImageResult.cs" />
-    <Compile Include="V20200709\Models\ImageResultResult.cs" />
-    <Compile Include="V20200709\Models\ImageResultsResultDetail.cs" />
-    <Compile Include="V20200709\Models\ImageResultsResultDetailLocation.cs" />
-    <Compile Include="V20200709\Models\ImageSegments.cs" />
-    <Compile Include="V20200709\Models\InputInfo.cs" />
-    <Compile Include="V20200709\Models\MediaInfo.cs" />
-    <Compile Include="V20200709\Models\MediaModerationConfig.cs" />
-    <Compile Include="V20200709\Models\Overview.cs" />
-    <Compile Include="V20200709\Models\StorageInfo.cs" />
-    <Compile Include="V20200709\Models\TaskInput.cs" />
-    <Compile Include="V20200709\Models\TaskLabel.cs" />
-    <Compile Include="V20200709\Models\TaskResult.cs" />
-    <Compile Include="V20200709\Models\TrendCount.cs" />
   </ItemGroup>
 </Project>

@@ -43,13 +43,15 @@ namespace TencentCloud.Gme.V20180711.Models
         public long? AuditType{ get; set; }
 
         /// <summary>
-        /// 用户号正则表达式
+        /// 用户号正则表达式。
+        /// 符合此正则表达式规则的用户号将被送检。示例：^6.*（表示所有以6开头的用户号将被送检）
         /// </summary>
         [JsonProperty("UserIdRegex")]
         public string[] UserIdRegex{ get; set; }
 
         /// <summary>
-        /// 房间号正则表达式
+        /// 房间号正则表达式。
+        /// 符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
         /// </summary>
         [JsonProperty("RoomIdRegex")]
         public string[] RoomIdRegex{ get; set; }

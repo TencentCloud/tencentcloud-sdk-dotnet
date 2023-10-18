@@ -173,6 +173,46 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 创建自定义DNS Host
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomDnsHostRequest"/></param>
+        /// <returns><see cref="CreateCustomDnsHostResponse"/></returns>
+        public async Task<CreateCustomDnsHostResponse> CreateCustomDnsHost(CreateCustomDnsHostRequest req)
+        {
+             JsonResponseModel<CreateCustomDnsHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomDnsHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomDnsHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建自定义DNS Host
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomDnsHostRequest"/></param>
+        /// <returns><see cref="CreateCustomDnsHostResponse"/></returns>
+        public CreateCustomDnsHostResponse CreateCustomDnsHostSync(CreateCustomDnsHostRequest req)
+        {
+             JsonResponseModel<CreateCustomDnsHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomDnsHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomDnsHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 ( CreateDomainBatch ) 用于批量域名注册 。
         /// </summary>
         /// <param name="req"><see cref="CreateDomainBatchRequest"/></param>
