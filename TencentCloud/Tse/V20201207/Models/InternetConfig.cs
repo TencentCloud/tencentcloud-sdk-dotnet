@@ -49,7 +49,7 @@ namespace TencentCloud.Tse.V20201207.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 负载均衡的规格类型，传 "SLA" 表示性能容量型，不传为共享型。
+        /// 负载均衡的规格类型，支持clb.c2.medium、clb.c3.small、clb.c3.medium、clb.c4.small、clb.c4.medium、clb.c4.large、clb.c4.xlarge，不传为共享型。
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }

@@ -2663,6 +2663,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// waf斯巴达-获取防护域名信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpartaProtectionInfoRequest"/></param>
+        /// <returns><see cref="DescribeSpartaProtectionInfoResponse"/></returns>
+        public async Task<DescribeSpartaProtectionInfoResponse> DescribeSpartaProtectionInfo(DescribeSpartaProtectionInfoRequest req)
+        {
+             JsonResponseModel<DescribeSpartaProtectionInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSpartaProtectionInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpartaProtectionInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// waf斯巴达-获取防护域名信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpartaProtectionInfoRequest"/></param>
+        /// <returns><see cref="DescribeSpartaProtectionInfoResponse"/></returns>
+        public DescribeSpartaProtectionInfoResponse DescribeSpartaProtectionInfoSync(DescribeSpartaProtectionInfoRequest req)
+        {
+             JsonResponseModel<DescribeSpartaProtectionInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSpartaProtectionInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpartaProtectionInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询用户TLS版本
         /// </summary>
         /// <param name="req"><see cref="DescribeTlsVersionRequest"/></param>
@@ -2854,6 +2894,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUserDomainInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserDomainInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户防护规则等级
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserLevelRequest"/></param>
+        /// <returns><see cref="DescribeUserLevelResponse"/></returns>
+        public async Task<DescribeUserLevelResponse> DescribeUserLevel(DescribeUserLevelRequest req)
+        {
+             JsonResponseModel<DescribeUserLevelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserLevel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserLevelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户防护规则等级
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserLevelRequest"/></param>
+        /// <returns><see cref="DescribeUserLevelResponse"/></returns>
+        public DescribeUserLevelResponse DescribeUserLevelSync(DescribeUserLevelRequest req)
+        {
+             JsonResponseModel<DescribeUserLevelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserLevel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserLevelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3098,6 +3178,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeWafThreatenIntelligence");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafThreatenIntelligenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名的webshell状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebshellStatusRequest"/></param>
+        /// <returns><see cref="DescribeWebshellStatusResponse"/></returns>
+        public async Task<DescribeWebshellStatusResponse> DescribeWebshellStatus(DescribeWebshellStatusRequest req)
+        {
+             JsonResponseModel<DescribeWebshellStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWebshellStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebshellStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名的webshell状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebshellStatusRequest"/></param>
+        /// <returns><see cref="DescribeWebshellStatusResponse"/></returns>
+        public DescribeWebshellStatusResponse DescribeWebshellStatusSync(DescribeWebshellStatusRequest req)
+        {
+             JsonResponseModel<DescribeWebshellStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWebshellStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebshellStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

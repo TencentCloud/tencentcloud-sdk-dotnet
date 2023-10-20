@@ -2413,6 +2413,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 获取LakeFs上task执行结果访问信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLakeFsTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeLakeFsTaskResultResponse"/></returns>
+        public async Task<DescribeLakeFsTaskResultResponse> DescribeLakeFsTaskResult(DescribeLakeFsTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeLakeFsTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLakeFsTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLakeFsTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取LakeFs上task执行结果访问信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLakeFsTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeLakeFsTaskResultResponse"/></returns>
+        public DescribeLakeFsTaskResultResponse DescribeLakeFsTaskResultSync(DescribeLakeFsTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeLakeFsTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLakeFsTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLakeFsTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeNotebookSession）用于查询交互式 session详情信息
         /// </summary>
         /// <param name="req"><see cref="DescribeNotebookSessionRequest"/></param>

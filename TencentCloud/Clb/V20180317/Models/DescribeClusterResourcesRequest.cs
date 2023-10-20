@@ -40,7 +40,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// 查询集群中资源列表条件，详细的过滤条件如下：
         /// <li> cluster-id - String - 是否必填：否 - （过滤条件）按照 集群 的唯一ID过滤，如 ："tgw-12345678","stgw-12345678","vpcgw-12345678"。</li>
         /// <li> vip - String - 是否必填：否 - （过滤条件）按照vip过滤。</li>
-        /// <li> loadblancer-id - String - 是否必填：否 - （过滤条件）按照负载均衡唯一ID过滤。</li>
+        /// <li> loadbalancer-id - String - 是否必填：否 - （过滤条件）按照负载均衡唯一ID过滤。</li>
         /// <li> idle - String 是否必填：否 - （过滤条件）按照是否闲置过滤，如"True","False"。</li>
         /// </summary>
         [JsonProperty("Filters")]

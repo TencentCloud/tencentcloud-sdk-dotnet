@@ -25,7 +25,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 多个合同ID
+        /// 生成的合同流程ID数组，合同流程ID为32位字符串。
+        /// 建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
@@ -44,7 +45,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] ErrorMessages{ get; set; }
 
         /// <summary>
-        /// 预览模式下返回的预览文件url数组
+        /// 合同预览链接URL数组。
+        /// 
+        /// 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
         /// </summary>
         [JsonProperty("PreviewUrls")]
         public string[] PreviewUrls{ get; set; }

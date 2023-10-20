@@ -333,6 +333,126 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 创建工作空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkSpaceRequest"/></param>
+        /// <returns><see cref="CreateWorkSpaceResponse"/></returns>
+        public async Task<CreateWorkSpaceResponse> CreateWorkSpace(CreateWorkSpaceRequest req)
+        {
+             JsonResponseModel<CreateWorkSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWorkSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWorkSpaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建工作空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkSpaceRequest"/></param>
+        /// <returns><see cref="CreateWorkSpaceResponse"/></returns>
+        public CreateWorkSpaceResponse CreateWorkSpaceSync(CreateWorkSpaceRequest req)
+        {
+             JsonResponseModel<CreateWorkSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateWorkSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWorkSpaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 作业列表删除文件夹
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFoldersRequest"/></param>
+        /// <returns><see cref="DeleteFoldersResponse"/></returns>
+        public async Task<DeleteFoldersResponse> DeleteFolders(DeleteFoldersRequest req)
+        {
+             JsonResponseModel<DeleteFoldersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteFolders");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFoldersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 作业列表删除文件夹
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFoldersRequest"/></param>
+        /// <returns><see cref="DeleteFoldersResponse"/></returns>
+        public DeleteFoldersResponse DeleteFoldersSync(DeleteFoldersRequest req)
+        {
+             JsonResponseModel<DeleteFoldersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteFolders");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFoldersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除作业配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJobConfigsRequest"/></param>
+        /// <returns><see cref="DeleteJobConfigsResponse"/></returns>
+        public async Task<DeleteJobConfigsResponse> DeleteJobConfigs(DeleteJobConfigsRequest req)
+        {
+             JsonResponseModel<DeleteJobConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteJobConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteJobConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除作业配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJobConfigsRequest"/></param>
+        /// <returns><see cref="DeleteJobConfigsResponse"/></returns>
+        public DeleteJobConfigsResponse DeleteJobConfigsSync(DeleteJobConfigsRequest req)
+        {
+             JsonResponseModel<DeleteJobConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteJobConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteJobConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量删除作业接口，批量操作数量上限20
         /// </summary>
         /// <param name="req"><see cref="DeleteJobsRequest"/></param>
@@ -1013,6 +1133,46 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 自定义树状结构页面拖拽文件夹
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFolderRequest"/></param>
+        /// <returns><see cref="ModifyFolderResponse"/></returns>
+        public async Task<ModifyFolderResponse> ModifyFolder(ModifyFolderRequest req)
+        {
+             JsonResponseModel<ModifyFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFolderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 自定义树状结构页面拖拽文件夹
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFolderRequest"/></param>
+        /// <returns><see cref="ModifyFolderResponse"/></returns>
+        public ModifyFolderResponse ModifyFolderSync(ModifyFolderRequest req)
+        {
+             JsonResponseModel<ModifyFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFolderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新作业属性，仅允许以下3种操作，不支持组合操作：
         /// (1)	更新作业名称
         /// (2)	更新作业备注 
@@ -1062,6 +1222,46 @@ namespace TencentCloud.Oceanus.V20190422
              {
                  var strResp = this.InternalRequestSync(req, "ModifyJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改工作空间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkSpaceRequest"/></param>
+        /// <returns><see cref="ModifyWorkSpaceResponse"/></returns>
+        public async Task<ModifyWorkSpaceResponse> ModifyWorkSpace(ModifyWorkSpaceRequest req)
+        {
+             JsonResponseModel<ModifyWorkSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyWorkSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWorkSpaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改工作空间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkSpaceRequest"/></param>
+        /// <returns><see cref="ModifyWorkSpaceResponse"/></returns>
+        public ModifyWorkSpaceResponse ModifyWorkSpaceSync(ModifyWorkSpaceRequest req)
+        {
+             JsonResponseModel<ModifyWorkSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyWorkSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWorkSpaceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -2693,6 +2693,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取指定消费组下当前客户端的连接情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQConsumerConnectionsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQConsumerConnectionsResponse"/></returns>
+        public async Task<DescribeRocketMQConsumerConnectionsResponse> DescribeRocketMQConsumerConnections(DescribeRocketMQConsumerConnectionsRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQConsumerConnectionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQConsumerConnections");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQConsumerConnectionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定消费组下当前客户端的连接情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQConsumerConnectionsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQConsumerConnectionsResponse"/></returns>
+        public DescribeRocketMQConsumerConnectionsResponse DescribeRocketMQConsumerConnectionsSync(DescribeRocketMQConsumerConnectionsRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQConsumerConnectionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQConsumerConnections");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQConsumerConnectionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取RocketMQ消费组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQGroupsRequest"/></param>

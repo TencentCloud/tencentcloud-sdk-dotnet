@@ -99,9 +99,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 合同流程的签署顺序类型：
         /// <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
         /// <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
-        /// 
-        /// 注
-        /// `有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
+        /// **注**: `有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
         /// </summary>
         [JsonProperty("Unordered")]
         public bool? Unordered{ get; set; }
@@ -164,9 +162,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 签署方签署控件（印章/签名等）的生成方式：
         /// <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
         /// <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-        /// 
-        /// 注:
-        /// `发起后添加控件功能不支持添加签批控件`
+        /// **注**: `发起后添加控件功能不支持添加签批控件`
         /// </summary>
         [JsonProperty("SignBeanTag")]
         public long? SignBeanTag{ get; set; }

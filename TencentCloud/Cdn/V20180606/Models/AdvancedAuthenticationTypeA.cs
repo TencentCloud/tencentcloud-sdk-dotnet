@@ -55,7 +55,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? ExpireTimeRequired{ get; set; }
 
         /// <summary>
-        /// Url组成格式，如：${private_key}${schema}${host}${full_uri。
+        /// URL 组成格式，如：${private_key}${schema}${host}${full_uri}。
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

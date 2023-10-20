@@ -39,6 +39,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("FillType")]
         public long? FillType{ get; set; }
 
+        /// <summary>
+        /// 签署人阅读合同限制参数
+        ///  <br/>取值：
+        /// <ul>
+        /// <li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
+        /// <li> LimitReadTime，阅读合同仅限制阅读时长</li>
+        /// <li> LimitBottom，阅读合同仅限制必须阅读到底</li>
+        /// <li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("FlowReadLimit")]
+        public string FlowReadLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +60,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamSimple(map, prefix + "HideOneKeySign", this.HideOneKeySign);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
+            this.SetParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
         }
     }
 }

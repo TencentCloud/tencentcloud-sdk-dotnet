@@ -31,7 +31,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string DatasourceId{ get; set; }
 
         /// <summary>
-        /// 数据库
+        /// 数据库名称
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }

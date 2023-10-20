@@ -24,12 +24,19 @@ namespace TencentCloud.Cwp.V20180228.Models
     public class DescribeLicenseWhiteConfigRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 规则名称,例如: cwp
+        /// </summary>
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
         }
     }
 }

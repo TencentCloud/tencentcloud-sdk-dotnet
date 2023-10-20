@@ -2137,6 +2137,86 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 1、按照指定身份发送消息，目前支持表情消息、图片消息、文本消息。
+        /// </summary>
+        /// <param name="req"><see cref="SendRoomNormalMessageRequest"/></param>
+        /// <returns><see cref="SendRoomNormalMessageResponse"/></returns>
+        public async Task<SendRoomNormalMessageResponse> SendRoomNormalMessage(SendRoomNormalMessageRequest req)
+        {
+             JsonResponseModel<SendRoomNormalMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SendRoomNormalMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendRoomNormalMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 1、按照指定身份发送消息，目前支持表情消息、图片消息、文本消息。
+        /// </summary>
+        /// <param name="req"><see cref="SendRoomNormalMessageRequest"/></param>
+        /// <returns><see cref="SendRoomNormalMessageResponse"/></returns>
+        public SendRoomNormalMessageResponse SendRoomNormalMessageSync(SendRoomNormalMessageRequest req)
+        {
+             JsonResponseModel<SendRoomNormalMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendRoomNormalMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendRoomNormalMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// App 管理员可以通过该接口在群组中发送通知、公告等。目前仅支持文本消息。
+        /// </summary>
+        /// <param name="req"><see cref="SendRoomNotificationMessageRequest"/></param>
+        /// <returns><see cref="SendRoomNotificationMessageResponse"/></returns>
+        public async Task<SendRoomNotificationMessageResponse> SendRoomNotificationMessage(SendRoomNotificationMessageRequest req)
+        {
+             JsonResponseModel<SendRoomNotificationMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SendRoomNotificationMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendRoomNotificationMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// App 管理员可以通过该接口在群组中发送通知、公告等。目前仅支持文本消息。
+        /// </summary>
+        /// <param name="req"><see cref="SendRoomNotificationMessageRequest"/></param>
+        /// <returns><see cref="SendRoomNotificationMessageResponse"/></returns>
+        public SendRoomNotificationMessageResponse SendRoomNotificationMessageSync(SendRoomNotificationMessageRequest req)
+        {
+             JsonResponseModel<SendRoomNotificationMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendRoomNotificationMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendRoomNotificationMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 设置应用的自定义内容，包括应用图标，自定义的代码等。如果已存在，则为更新。更新js、css内容后，要生效也需要调用该接口
         /// </summary>
         /// <param name="req"><see cref="SetAppCustomContentRequest"/></param>

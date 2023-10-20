@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 后端服务的类型，可取：CVM、ENI
+        /// 后端服务的类型，可取：CVM、ENI、CCN
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -83,6 +83,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("EniId")]
         public string EniId{ get; set; }
 
+        /// <summary>
+        /// 标签。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tag")]
+        public string Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +105,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
             this.SetParamSimple(map, prefix + "EniId", this.EniId);
+            this.SetParamSimple(map, prefix + "Tag", this.Tag);
         }
     }
 }

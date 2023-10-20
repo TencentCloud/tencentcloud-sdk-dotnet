@@ -32,6 +32,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] Data{ get; set; }
 
         /// <summary>
+        /// 包含详细属性的地域信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RichDatas")]
+        public ClbWafRegionItem[] RichDatas{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +51,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Data.", this.Data);
+            this.SetParamArrayObj(map, prefix + "RichDatas.", this.RichDatas);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -26,7 +26,6 @@ namespace TencentCloud.Tione.V20211111.Models
         
         /// <summary>
         /// 对话的目标模型ID。
-        /// 多行业多场景大模型在线体验聊天：tj_llm_clm-v1。
         /// 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
         /// </summary>
         [JsonProperty("Model")]

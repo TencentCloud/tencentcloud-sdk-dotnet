@@ -36,6 +36,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
 
+        /// <summary>
+        /// 实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
         }
     }
 }

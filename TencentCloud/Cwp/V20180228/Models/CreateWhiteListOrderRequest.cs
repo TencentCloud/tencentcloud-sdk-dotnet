@@ -24,12 +24,54 @@ namespace TencentCloud.Cwp.V20180228.Models
     public class CreateWhiteListOrderRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 授权类型
+        /// </summary>
+        [JsonProperty("LicenseType")]
+        public ulong? LicenseType{ get; set; }
+
+        /// <summary>
+        /// 授权数量,最小为1 最大99999
+        /// </summary>
+        [JsonProperty("LicenseNum")]
+        public ulong? LicenseNum{ get; set; }
+
+        /// <summary>
+        /// 到期时间,最小为1
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public ulong? Deadline{ get; set; }
+
+        /// <summary>
+        /// 规则名称,大资产中心:asset_center
+        /// </summary>
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
+
+        /// <summary>
+        /// 地域, 1 广州 9新加坡, 默认为 1. 非必要情况不要选9
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public ulong? RegionId{ get; set; }
+
+        /// <summary>
+        /// 额外参数,json字符串,包含ResourceId 资源ID,LicenseType 授权类型
+        /// </summary>
+        [JsonProperty("ExtraParam")]
+        public string ExtraParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
+            this.SetParamSimple(map, prefix + "LicenseNum", this.LicenseNum);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
         }
     }
 }

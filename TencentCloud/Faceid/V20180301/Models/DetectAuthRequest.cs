@@ -38,7 +38,7 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// 身份标识（未使用OCR服务时，必须传入）。
-        /// 规则：a-zA-Z0-9组合。最长长度32位。
+        /// 规则：a-z，A-Z，0-9组合。最长长度32位。
         /// </summary>
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }

@@ -2012,5 +2012,45 @@ namespace TencentCloud.Tse.V20201207
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 更新网关上游实例列表，仅支持IPList服务类型
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUpstreamTargetsRequest"/></param>
+        /// <returns><see cref="UpdateUpstreamTargetsResponse"/></returns>
+        public async Task<UpdateUpstreamTargetsResponse> UpdateUpstreamTargets(UpdateUpstreamTargetsRequest req)
+        {
+             JsonResponseModel<UpdateUpstreamTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateUpstreamTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUpstreamTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新网关上游实例列表，仅支持IPList服务类型
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUpstreamTargetsRequest"/></param>
+        /// <returns><see cref="UpdateUpstreamTargetsResponse"/></returns>
+        public UpdateUpstreamTargetsResponse UpdateUpstreamTargetsSync(UpdateUpstreamTargetsRequest req)
+        {
+             JsonResponseModel<UpdateUpstreamTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateUpstreamTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUpstreamTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

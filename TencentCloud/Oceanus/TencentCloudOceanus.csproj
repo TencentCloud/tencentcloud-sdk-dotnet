@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.868</VersionPrefix>
+    <VersionPrefix>3.0.869</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -70,6 +70,12 @@
     <Compile Include="V20190422\Models\CreateResourceConfigResponse.cs" />
     <Compile Include="V20190422\Models\CreateResourceRequest.cs" />
     <Compile Include="V20190422\Models\CreateResourceResponse.cs" />
+    <Compile Include="V20190422\Models\CreateWorkSpaceRequest.cs" />
+    <Compile Include="V20190422\Models\CreateWorkSpaceResponse.cs" />
+    <Compile Include="V20190422\Models\DeleteFoldersRequest.cs" />
+    <Compile Include="V20190422\Models\DeleteFoldersResponse.cs" />
+    <Compile Include="V20190422\Models\DeleteJobConfigsRequest.cs" />
+    <Compile Include="V20190422\Models\DeleteJobConfigsResponse.cs" />
     <Compile Include="V20190422\Models\DeleteJobsRequest.cs" />
     <Compile Include="V20190422\Models\DeleteJobsResponse.cs" />
     <Compile Include="V20190422\Models\DeleteResourceConfigsRequest.cs" />
@@ -116,8 +122,12 @@
     <Compile Include="V20190422\Models\JobV1.cs" />
     <Compile Include="V20190422\Models\LogContent.cs" />
     <Compile Include="V20190422\Models\LogicalType.cs" />
+    <Compile Include="V20190422\Models\ModifyFolderRequest.cs" />
+    <Compile Include="V20190422\Models\ModifyFolderResponse.cs" />
     <Compile Include="V20190422\Models\ModifyJobRequest.cs" />
     <Compile Include="V20190422\Models\ModifyJobResponse.cs" />
+    <Compile Include="V20190422\Models\ModifyWorkSpaceRequest.cs" />
+    <Compile Include="V20190422\Models\ModifyWorkSpaceResponse.cs" />
     <Compile Include="V20190422\Models\NodeConfig.cs" />
     <Compile Include="V20190422\Models\Order.cs" />
     <Compile Include="V20190422\Models\Property.cs" />

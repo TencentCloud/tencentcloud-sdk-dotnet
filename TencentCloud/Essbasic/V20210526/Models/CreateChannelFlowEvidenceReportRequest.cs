@@ -25,13 +25,21 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+        /// 员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// <ul>
+        /// <li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 签署流程编号
+        /// 合同流程ID，为32位字符串。
+        /// 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

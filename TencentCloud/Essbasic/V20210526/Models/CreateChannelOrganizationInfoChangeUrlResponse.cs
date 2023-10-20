@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 创建的企业信息变更链接。
+        /// 创建的企业信息变更链接。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.868</VersionPrefix>
+    <VersionPrefix>3.0.869</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -89,6 +89,7 @@
     <Compile Include="V20180125\Models\ClbHostResult.cs" />
     <Compile Include="V20180125\Models\ClbHostsParams.cs" />
     <Compile Include="V20180125\Models\ClbObject.cs" />
+    <Compile Include="V20180125\Models\ClbWafRegionItem.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportRequest.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\CreateHostRequest.cs" />
@@ -210,6 +211,8 @@
     <Compile Include="V20180125\Models\DescribeRuleLimitResponse.cs" />
     <Compile Include="V20180125\Models\DescribeSessionRequest.cs" />
     <Compile Include="V20180125\Models\DescribeSessionResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeSpartaProtectionInfoRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeSpartaProtectionInfoResponse.cs" />
     <Compile Include="V20180125\Models\DescribeTlsVersionRequest.cs" />
     <Compile Include="V20180125\Models\DescribeTlsVersionResponse.cs" />
     <Compile Include="V20180125\Models\DescribeTopAttackDomainRequest.cs" />
@@ -220,6 +223,8 @@
     <Compile Include="V20180125\Models\DescribeUserClbWafRegionsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserDomainInfoRequest.cs" />
     <Compile Include="V20180125\Models\DescribeUserDomainInfoResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeUserLevelRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeUserLevelResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserSignatureRuleRequest.cs" />
     <Compile Include="V20180125\Models\DescribeUserSignatureRuleResponse.cs" />
     <Compile Include="V20180125\Models\DescribeVipInfoRequest.cs" />
@@ -232,6 +237,8 @@
     <Compile Include="V20180125\Models\DescribeWafInfoResponse.cs" />
     <Compile Include="V20180125\Models\DescribeWafThreatenIntelligenceRequest.cs" />
     <Compile Include="V20180125\Models\DescribeWafThreatenIntelligenceResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeWebshellStatusRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeWebshellStatusResponse.cs" />
     <Compile Include="V20180125\Models\DomainInfo.cs" />
     <Compile Include="V20180125\Models\DomainPackageNew.cs" />
     <Compile Include="V20180125\Models\DomainURI.cs" />

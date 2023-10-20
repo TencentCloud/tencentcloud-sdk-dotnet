@@ -99,11 +99,18 @@ namespace TencentCloud.Tse.V20201207.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 负载均衡的规格类型，传 "SLA" 表示性能容量型，返回空为共享型
+        /// 负载均衡的规格类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }
+
+        /// <summary>
+        /// clb规格名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SlaName")]
+        public string SlaName{ get; set; }
 
         /// <summary>
         /// clb vip
@@ -179,6 +186,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
+            this.SetParamSimple(map, prefix + "SlaName", this.SlaName);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "MultiZoneFlag", this.MultiZoneFlag);

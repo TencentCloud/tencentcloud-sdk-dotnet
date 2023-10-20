@@ -80,6 +80,12 @@ namespace TencentCloud.Cme.V20191029.Models
         public VODExportInfo VODExportInfo{ get; set; }
 
         /// <summary>
+        /// 视频导出扩展参数。可以覆盖导出模板中的参数，灵活的指定导出规格及参数。
+        /// </summary>
+        [JsonProperty("ExportExtensionArgs")]
+        public VideoExportExtensionArgs ExportExtensionArgs{ get; set; }
+
+        /// <summary>
         /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使用的媒资该操作者需要拥有使用权限。
         /// </summary>
         [JsonProperty("Operator")]
@@ -99,6 +105,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "CoverData", this.CoverData);
             this.SetParamObj(map, prefix + "CMEExportInfo.", this.CMEExportInfo);
             this.SetParamObj(map, prefix + "VODExportInfo.", this.VODExportInfo);
+            this.SetParamObj(map, prefix + "ExportExtensionArgs.", this.ExportExtensionArgs);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }

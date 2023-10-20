@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B15FC666-859E-397F-91C6-A33130097096}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.868</VersionPrefix>
+    <VersionPrefix>3.0.869</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,9 @@
     <Compile Include="V20180808\Models\CreatePhoneEmailResponse.cs" />
     <Compile Include="V20180808\Models\CreateTemplateRequest.cs" />
     <Compile Include="V20180808\Models\CreateTemplateResponse.cs" />
+    <Compile Include="V20180808\Models\CustomDnsHost.cs" />
+    <Compile Include="V20180808\Models\DeleteCustomDnsHostRequest.cs" />
+    <Compile Include="V20180808\Models\DeleteCustomDnsHostResponse.cs" />
     <Compile Include="V20180808\Models\DeletePhoneEmailRequest.cs" />
     <Compile Include="V20180808\Models\DeletePhoneEmailResponse.cs" />
     <Compile Include="V20180808\Models\DeleteTemplateRequest.cs" />
@@ -75,6 +78,8 @@
     <Compile Include="V20180808\Models\DescribeBatchOperationLogDetailsResponse.cs" />
     <Compile Include="V20180808\Models\DescribeBatchOperationLogsRequest.cs" />
     <Compile Include="V20180808\Models\DescribeBatchOperationLogsResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeCustomDnsHostSetRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeCustomDnsHostSetResponse.cs" />
     <Compile Include="V20180808\Models\DescribeDomainBaseInfoRequest.cs" />
     <Compile Include="V20180808\Models\DescribeDomainBaseInfoResponse.cs" />
     <Compile Include="V20180808\Models\DescribeDomainNameListRequest.cs" />
@@ -94,10 +99,14 @@
     <Compile Include="V20180808\Models\DomainBatchLogSet.cs" />
     <Compile Include="V20180808\Models\DomainList.cs" />
     <Compile Include="V20180808\Models\DomainSimpleInfo.cs" />
+    <Compile Include="V20180808\Models\ModifyCustomDnsHostRequest.cs" />
+    <Compile Include="V20180808\Models\ModifyCustomDnsHostResponse.cs" />
     <Compile Include="V20180808\Models\ModifyDomainDNSBatchRequest.cs" />
     <Compile Include="V20180808\Models\ModifyDomainDNSBatchResponse.cs" />
     <Compile Include="V20180808\Models\ModifyDomainOwnerBatchRequest.cs" />
     <Compile Include="V20180808\Models\ModifyDomainOwnerBatchResponse.cs" />
+    <Compile Include="V20180808\Models\ModifyIntlCustomDnsHostRequest.cs" />
+    <Compile Include="V20180808\Models\ModifyIntlCustomDnsHostResponse.cs" />
     <Compile Include="V20180808\Models\PhoneEmailData.cs" />
     <Compile Include="V20180808\Models\PriceInfo.cs" />
     <Compile Include="V20180808\Models\RenewDomainBatchRequest.cs" />
@@ -106,6 +115,8 @@
     <Compile Include="V20180808\Models\SendPhoneEmailCodeResponse.cs" />
     <Compile Include="V20180808\Models\SetDomainAutoRenewRequest.cs" />
     <Compile Include="V20180808\Models\SetDomainAutoRenewResponse.cs" />
+    <Compile Include="V20180808\Models\SyncCustomDnsHostRequest.cs" />
+    <Compile Include="V20180808\Models\SyncCustomDnsHostResponse.cs" />
     <Compile Include="V20180808\Models\TemplateInfo.cs" />
     <Compile Include="V20180808\Models\TransferInDomainBatchRequest.cs" />
     <Compile Include="V20180808\Models\TransferInDomainBatchResponse.cs" />

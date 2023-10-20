@@ -38,6 +38,20 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("HttpsPort")]
         public string HttpsPort{ get; set; }
 
+        /// <summary>
+        /// 监听的 tcp 端口范围。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TcpPort")]
+        public string TcpPort{ get; set; }
+
+        /// <summary>
+        /// 监听的 udp 端口范围。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UdpPort")]
+        public string UdpPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +60,8 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "HttpPort", this.HttpPort);
             this.SetParamSimple(map, prefix + "HttpsPort", this.HttpsPort);
+            this.SetParamSimple(map, prefix + "TcpPort", this.TcpPort);
+            this.SetParamSimple(map, prefix + "UdpPort", this.UdpPort);
         }
     }
 }

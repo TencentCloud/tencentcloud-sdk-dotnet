@@ -61,6 +61,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
 
+        /// <summary>
+        /// 标签。
+        /// </summary>
+        [JsonProperty("Tag")]
+        public string Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "EniIp", this.EniIp);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
+            this.SetParamSimple(map, prefix + "Tag", this.Tag);
         }
     }
 }

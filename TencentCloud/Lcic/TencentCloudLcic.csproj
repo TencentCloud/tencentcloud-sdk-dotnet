@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.868</VersionPrefix>
+    <VersionPrefix>3.0.869</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -139,6 +139,7 @@
     <Compile Include="V20220817\Models\EndRoomResponse.cs" />
     <Compile Include="V20220817\Models\EventDataInfo.cs" />
     <Compile Include="V20220817\Models\EventInfo.cs" />
+    <Compile Include="V20220817\Models\FaceMsgContent.cs" />
     <Compile Include="V20220817\Models\GetRoomEventRequest.cs" />
     <Compile Include="V20220817\Models\GetRoomEventResponse.cs" />
     <Compile Include="V20220817\Models\GetRoomMessageRequest.cs" />
@@ -149,6 +150,8 @@
     <Compile Include="V20220817\Models\GetWatermarkResponse.cs" />
     <Compile Include="V20220817\Models\GroupBaseInfo.cs" />
     <Compile Include="V20220817\Models\GroupInfo.cs" />
+    <Compile Include="V20220817\Models\ImageInfo.cs" />
+    <Compile Include="V20220817\Models\ImageMsgContent.cs" />
     <Compile Include="V20220817\Models\KickUserFromRoomRequest.cs" />
     <Compile Include="V20220817\Models\KickUserFromRoomResponse.cs" />
     <Compile Include="V20220817\Models\LoginOriginIdRequest.cs" />
@@ -166,12 +169,17 @@
     <Compile Include="V20220817\Models\ModifyRoomResponse.cs" />
     <Compile Include="V20220817\Models\ModifyUserProfileRequest.cs" />
     <Compile Include="V20220817\Models\ModifyUserProfileResponse.cs" />
+    <Compile Include="V20220817\Models\MsgBody.cs" />
     <Compile Include="V20220817\Models\QuestionInfo.cs" />
     <Compile Include="V20220817\Models\RegisterUserRequest.cs" />
     <Compile Include="V20220817\Models\RegisterUserResponse.cs" />
     <Compile Include="V20220817\Models\RoomInfo.cs" />
     <Compile Include="V20220817\Models\RoomItem.cs" />
     <Compile Include="V20220817\Models\SceneItem.cs" />
+    <Compile Include="V20220817\Models\SendRoomNormalMessageRequest.cs" />
+    <Compile Include="V20220817\Models\SendRoomNormalMessageResponse.cs" />
+    <Compile Include="V20220817\Models\SendRoomNotificationMessageRequest.cs" />
+    <Compile Include="V20220817\Models\SendRoomNotificationMessageResponse.cs" />
     <Compile Include="V20220817\Models\SetAppCustomContentRequest.cs" />
     <Compile Include="V20220817\Models\SetAppCustomContentResponse.cs" />
     <Compile Include="V20220817\Models\SetWatermarkRequest.cs" />
@@ -179,6 +187,7 @@
     <Compile Include="V20220817\Models\StartRoomRequest.cs" />
     <Compile Include="V20220817\Models\StartRoomResponse.cs" />
     <Compile Include="V20220817\Models\TextMarkConfig.cs" />
+    <Compile Include="V20220817\Models\TextMsgContent.cs" />
     <Compile Include="V20220817\Models\UnbindDocumentFromRoomRequest.cs" />
     <Compile Include="V20220817\Models\UnbindDocumentFromRoomResponse.cs" />
     <Compile Include="V20220817\Models\UserInfo.cs" />

@@ -373,6 +373,46 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 删除自定义DNS Host
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomDnsHostRequest"/></param>
+        /// <returns><see cref="DeleteCustomDnsHostResponse"/></returns>
+        public async Task<DeleteCustomDnsHostResponse> DeleteCustomDnsHost(DeleteCustomDnsHostRequest req)
+        {
+             JsonResponseModel<DeleteCustomDnsHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCustomDnsHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomDnsHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除自定义DNS Host
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomDnsHostRequest"/></param>
+        /// <returns><see cref="DeleteCustomDnsHostResponse"/></returns>
+        public DeleteCustomDnsHostResponse DeleteCustomDnsHostSync(DeleteCustomDnsHostRequest req)
+        {
+             JsonResponseModel<DeleteCustomDnsHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCustomDnsHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomDnsHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口用于删除已验证的手机邮箱
         /// </summary>
         /// <param name="req"><see cref="DeletePhoneEmailRequest"/></param>
@@ -524,6 +564,46 @@ namespace TencentCloud.Domain.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBatchOperationLogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBatchOperationLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询自定义DNS Host
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomDnsHostSetRequest"/></param>
+        /// <returns><see cref="DescribeCustomDnsHostSetResponse"/></returns>
+        public async Task<DescribeCustomDnsHostSetResponse> DescribeCustomDnsHostSet(DescribeCustomDnsHostSetRequest req)
+        {
+             JsonResponseModel<DescribeCustomDnsHostSetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomDnsHostSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomDnsHostSetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询自定义DNS Host
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomDnsHostSetRequest"/></param>
+        /// <returns><see cref="DescribeCustomDnsHostSetResponse"/></returns>
+        public DescribeCustomDnsHostSetResponse DescribeCustomDnsHostSetSync(DescribeCustomDnsHostSetRequest req)
+        {
+             JsonResponseModel<DescribeCustomDnsHostSetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomDnsHostSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomDnsHostSetResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -813,6 +893,46 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 修改自定义DNS Host
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomDnsHostRequest"/></param>
+        /// <returns><see cref="ModifyCustomDnsHostResponse"/></returns>
+        public async Task<ModifyCustomDnsHostResponse> ModifyCustomDnsHost(ModifyCustomDnsHostRequest req)
+        {
+             JsonResponseModel<ModifyCustomDnsHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCustomDnsHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomDnsHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改自定义DNS Host
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomDnsHostRequest"/></param>
+        /// <returns><see cref="ModifyCustomDnsHostResponse"/></returns>
+        public ModifyCustomDnsHostResponse ModifyCustomDnsHostSync(ModifyCustomDnsHostRequest req)
+        {
+             JsonResponseModel<ModifyCustomDnsHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCustomDnsHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomDnsHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainDNSBatchRequest"/></param>
@@ -884,6 +1004,46 @@ namespace TencentCloud.Domain.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDomainOwnerBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainOwnerBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 国际站-修改DNS Host
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIntlCustomDnsHostRequest"/></param>
+        /// <returns><see cref="ModifyIntlCustomDnsHostResponse"/></returns>
+        public async Task<ModifyIntlCustomDnsHostResponse> ModifyIntlCustomDnsHost(ModifyIntlCustomDnsHostRequest req)
+        {
+             JsonResponseModel<ModifyIntlCustomDnsHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyIntlCustomDnsHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIntlCustomDnsHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 国际站-修改DNS Host
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIntlCustomDnsHostRequest"/></param>
+        /// <returns><see cref="ModifyIntlCustomDnsHostResponse"/></returns>
+        public ModifyIntlCustomDnsHostResponse ModifyIntlCustomDnsHostSync(ModifyIntlCustomDnsHostRequest req)
+        {
+             JsonResponseModel<ModifyIntlCustomDnsHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyIntlCustomDnsHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIntlCustomDnsHostResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1004,6 +1164,46 @@ namespace TencentCloud.Domain.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "SetDomainAutoRenew");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetDomainAutoRenewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 同步自定义DNS Host
+        /// </summary>
+        /// <param name="req"><see cref="SyncCustomDnsHostRequest"/></param>
+        /// <returns><see cref="SyncCustomDnsHostResponse"/></returns>
+        public async Task<SyncCustomDnsHostResponse> SyncCustomDnsHost(SyncCustomDnsHostRequest req)
+        {
+             JsonResponseModel<SyncCustomDnsHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SyncCustomDnsHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncCustomDnsHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 同步自定义DNS Host
+        /// </summary>
+        /// <param name="req"><see cref="SyncCustomDnsHostRequest"/></param>
+        /// <returns><see cref="SyncCustomDnsHostResponse"/></returns>
+        public SyncCustomDnsHostResponse SyncCustomDnsHostSync(SyncCustomDnsHostRequest req)
+        {
+             JsonResponseModel<SyncCustomDnsHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SyncCustomDnsHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncCustomDnsHostResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
