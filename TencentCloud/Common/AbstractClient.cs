@@ -105,7 +105,6 @@ namespace TencentCloud.Common
                 throw new TencentCloudSDKException(
                     $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync()}");
             }
-            string strResp = await response.Content.ReadAsStringAsync();
 
             string strResp = null;
             try
