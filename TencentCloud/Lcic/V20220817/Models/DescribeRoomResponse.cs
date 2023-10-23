@@ -181,6 +181,24 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? EndDelayTime{ get; set; }
 
         /// <summary>
+        /// 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+        /// </summary>
+        [JsonProperty("LiveType")]
+        public ulong? LiveType{ get; set; }
+
+        /// <summary>
+        /// 伪直播链接
+        /// </summary>
+        [JsonProperty("RecordLiveUrl")]
+        public string RecordLiveUrl{ get; set; }
+
+        /// <summary>
+        /// 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+        /// </summary>
+        [JsonProperty("EnableAutoStart")]
+        public ulong? EnableAutoStart{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -215,6 +233,9 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RoomType", this.RoomType);
             this.SetParamSimple(map, prefix + "VideoDuration", this.VideoDuration);
             this.SetParamSimple(map, prefix + "EndDelayTime", this.EndDelayTime);
+            this.SetParamSimple(map, prefix + "LiveType", this.LiveType);
+            this.SetParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
+            this.SetParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -613,6 +613,46 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 删除工作空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkSpaceRequest"/></param>
+        /// <returns><see cref="DeleteWorkSpaceResponse"/></returns>
+        public async Task<DeleteWorkSpaceResponse> DeleteWorkSpace(DeleteWorkSpaceRequest req)
+        {
+             JsonResponseModel<DeleteWorkSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteWorkSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWorkSpaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除工作空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkSpaceRequest"/></param>
+        /// <returns><see cref="DeleteWorkSpaceResponse"/></returns>
+        public DeleteWorkSpaceResponse DeleteWorkSpaceSync(DeleteWorkSpaceRequest req)
+        {
+             JsonResponseModel<DeleteWorkSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteWorkSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWorkSpaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群
         /// </summary>
         /// <param name="req"><see cref="DescribeClustersRequest"/></param>

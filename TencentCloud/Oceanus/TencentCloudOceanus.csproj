@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.869</VersionPrefix>
+    <VersionPrefix>3.0.870</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -84,6 +84,8 @@
     <Compile Include="V20190422\Models\DeleteResourcesResponse.cs" />
     <Compile Include="V20190422\Models\DeleteTableConfigRequest.cs" />
     <Compile Include="V20190422\Models\DeleteTableConfigResponse.cs" />
+    <Compile Include="V20190422\Models\DeleteWorkSpaceRequest.cs" />
+    <Compile Include="V20190422\Models\DeleteWorkSpaceResponse.cs" />
     <Compile Include="V20190422\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20190422\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20190422\Models\DescribeJobConfigsRequest.cs" />

@@ -2451,6 +2451,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DescribeDBInstanceLogToCLS)用于查询实例慢日志、错误日志投递CLS的配置，通过appId、Region以及实例ID过滤出当前实例日志投递CLS的配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceLogToCLSRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceLogToCLSResponse"/></returns>
+        public async Task<DescribeDBInstanceLogToCLSResponse> DescribeDBInstanceLogToCLS(DescribeDBInstanceLogToCLSRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceLogToCLSResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceLogToCLS");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceLogToCLSResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBInstanceLogToCLS)用于查询实例慢日志、错误日志投递CLS的配置，通过appId、Region以及实例ID过滤出当前实例日志投递CLS的配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceLogToCLSRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceLogToCLSResponse"/></returns>
+        public DescribeDBInstanceLogToCLSResponse DescribeDBInstanceLogToCLSSync(DescribeDBInstanceLogToCLSRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceLogToCLSResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceLogToCLS");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceLogToCLSResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBInstanceRebootTime)用于查询云数据库实例重启预计所需的时间。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceRebootTimeRequest"/></param>
@@ -4460,6 +4500,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyCdbProxyParam");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCdbProxyParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启/关闭CDB慢日志、错误日志投递CLS
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceLogToCLSRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceLogToCLSResponse"/></returns>
+        public async Task<ModifyDBInstanceLogToCLSResponse> ModifyDBInstanceLogToCLS(ModifyDBInstanceLogToCLSRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceLogToCLSResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceLogToCLS");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceLogToCLSResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启/关闭CDB慢日志、错误日志投递CLS
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceLogToCLSRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceLogToCLSResponse"/></returns>
+        public ModifyDBInstanceLogToCLSResponse ModifyDBInstanceLogToCLSSync(ModifyDBInstanceLogToCLSRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceLogToCLSResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceLogToCLS");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceLogToCLSResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

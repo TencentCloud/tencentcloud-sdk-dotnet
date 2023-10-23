@@ -347,6 +347,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
 
+        /// <summary>
+        /// 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceIndexMode")]
+        public string InstanceIndexMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -405,6 +412,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
             this.SetParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
             this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
+            this.SetParamSimple(map, prefix + "InstanceIndexMode", this.InstanceIndexMode);
         }
     }
 }

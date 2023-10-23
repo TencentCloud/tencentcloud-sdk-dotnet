@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{70147D26-20D1-3AB4-8897-76660439CE6B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.869</VersionPrefix>
+    <VersionPrefix>3.0.870</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,62 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20201221\TemClient.cs" />
-    <Compile Include="V20201221\Models\CosToken.cs" />
-    <Compile Include="V20201221\Models\CreateCosTokenRequest.cs" />
-    <Compile Include="V20201221\Models\CreateCosTokenResponse.cs" />
-    <Compile Include="V20201221\Models\CreateCosTokenV2Request.cs" />
-    <Compile Include="V20201221\Models\CreateCosTokenV2Response.cs" />
-    <Compile Include="V20201221\Models\CreateNamespaceRequest.cs" />
-    <Compile Include="V20201221\Models\CreateNamespaceResponse.cs" />
-    <Compile Include="V20201221\Models\CreateResourceRequest.cs" />
-    <Compile Include="V20201221\Models\CreateResourceResponse.cs" />
-    <Compile Include="V20201221\Models\CreateServiceV2Request.cs" />
-    <Compile Include="V20201221\Models\CreateServiceV2Response.cs" />
-    <Compile Include="V20201221\Models\DeleteIngressRequest.cs" />
-    <Compile Include="V20201221\Models\DeleteIngressResponse.cs" />
-    <Compile Include="V20201221\Models\DeployServiceV2Request.cs" />
-    <Compile Include="V20201221\Models\DeployServiceV2Response.cs" />
-    <Compile Include="V20201221\Models\DeployStrategyConf.cs" />
-    <Compile Include="V20201221\Models\DescribeIngressRequest.cs" />
-    <Compile Include="V20201221\Models\DescribeIngressResponse.cs" />
-    <Compile Include="V20201221\Models\DescribeIngressesRequest.cs" />
-    <Compile Include="V20201221\Models\DescribeIngressesResponse.cs" />
-    <Compile Include="V20201221\Models\DescribeNamespacesRequest.cs" />
-    <Compile Include="V20201221\Models\DescribeNamespacesResponse.cs" />
-    <Compile Include="V20201221\Models\DescribeRelatedIngressesRequest.cs" />
-    <Compile Include="V20201221\Models\DescribeRelatedIngressesResponse.cs" />
-    <Compile Include="V20201221\Models\DescribeRunPodPage.cs" />
-    <Compile Include="V20201221\Models\DescribeServiceRunPodListV2Request.cs" />
-    <Compile Include="V20201221\Models\DescribeServiceRunPodListV2Response.cs" />
-    <Compile Include="V20201221\Models\EksService.cs" />
-    <Compile Include="V20201221\Models\EsInfo.cs" />
-    <Compile Include="V20201221\Models\GenerateDownloadUrlRequest.cs" />
-    <Compile Include="V20201221\Models\GenerateDownloadUrlResponse.cs" />
-    <Compile Include="V20201221\Models\HealthCheckConfig.cs" />
-    <Compile Include="V20201221\Models\IngressInfo.cs" />
-    <Compile Include="V20201221\Models\IngressRule.cs" />
-    <Compile Include="V20201221\Models\IngressRuleBackend.cs" />
-    <Compile Include="V20201221\Models\IngressRulePath.cs" />
-    <Compile Include="V20201221\Models\IngressRuleValue.cs" />
-    <Compile Include="V20201221\Models\IngressTls.cs" />
-    <Compile Include="V20201221\Models\LogOutputConf.cs" />
-    <Compile Include="V20201221\Models\ModifyIngressRequest.cs" />
-    <Compile Include="V20201221\Models\ModifyIngressResponse.cs" />
-    <Compile Include="V20201221\Models\ModifyNamespaceRequest.cs" />
-    <Compile Include="V20201221\Models\ModifyNamespaceResponse.cs" />
-    <Compile Include="V20201221\Models\ModifyServiceInfoRequest.cs" />
-    <Compile Include="V20201221\Models\ModifyServiceInfoResponse.cs" />
-    <Compile Include="V20201221\Models\MountedSettingConf.cs" />
-    <Compile Include="V20201221\Models\NamespacePage.cs" />
-    <Compile Include="V20201221\Models\Pair.cs" />
-    <Compile Include="V20201221\Models\PortMapping.cs" />
-    <Compile Include="V20201221\Models\RestartServiceRunPodRequest.cs" />
-    <Compile Include="V20201221\Models\RestartServiceRunPodResponse.cs" />
-    <Compile Include="V20201221\Models\RunVersionPod.cs" />
-    <Compile Include="V20201221\Models\StorageConf.cs" />
-    <Compile Include="V20201221\Models\StorageMountConf.cs" />
-    <Compile Include="V20201221\Models\TemNamespaceInfo.cs" />
     <Compile Include="V20210701\TemClient.cs" />
     <Compile Include="V20210701\Models\Autoscaler.cs" />
     <Compile Include="V20210701\Models\ConfigData.cs" />
@@ -254,5 +198,61 @@
     <Compile Include="V20210701\Models\TemServiceVersionInfo.cs" />
     <Compile Include="V20210701\Models\UseDefaultRepoParameters.cs" />
     <Compile Include="V20210701\Models\WorkloadInfo.cs" />
+    <Compile Include="V20201221\TemClient.cs" />
+    <Compile Include="V20201221\Models\CosToken.cs" />
+    <Compile Include="V20201221\Models\CreateCosTokenRequest.cs" />
+    <Compile Include="V20201221\Models\CreateCosTokenResponse.cs" />
+    <Compile Include="V20201221\Models\CreateCosTokenV2Request.cs" />
+    <Compile Include="V20201221\Models\CreateCosTokenV2Response.cs" />
+    <Compile Include="V20201221\Models\CreateNamespaceRequest.cs" />
+    <Compile Include="V20201221\Models\CreateNamespaceResponse.cs" />
+    <Compile Include="V20201221\Models\CreateResourceRequest.cs" />
+    <Compile Include="V20201221\Models\CreateResourceResponse.cs" />
+    <Compile Include="V20201221\Models\CreateServiceV2Request.cs" />
+    <Compile Include="V20201221\Models\CreateServiceV2Response.cs" />
+    <Compile Include="V20201221\Models\DeleteIngressRequest.cs" />
+    <Compile Include="V20201221\Models\DeleteIngressResponse.cs" />
+    <Compile Include="V20201221\Models\DeployServiceV2Request.cs" />
+    <Compile Include="V20201221\Models\DeployServiceV2Response.cs" />
+    <Compile Include="V20201221\Models\DeployStrategyConf.cs" />
+    <Compile Include="V20201221\Models\DescribeIngressRequest.cs" />
+    <Compile Include="V20201221\Models\DescribeIngressResponse.cs" />
+    <Compile Include="V20201221\Models\DescribeIngressesRequest.cs" />
+    <Compile Include="V20201221\Models\DescribeIngressesResponse.cs" />
+    <Compile Include="V20201221\Models\DescribeNamespacesRequest.cs" />
+    <Compile Include="V20201221\Models\DescribeNamespacesResponse.cs" />
+    <Compile Include="V20201221\Models\DescribeRelatedIngressesRequest.cs" />
+    <Compile Include="V20201221\Models\DescribeRelatedIngressesResponse.cs" />
+    <Compile Include="V20201221\Models\DescribeRunPodPage.cs" />
+    <Compile Include="V20201221\Models\DescribeServiceRunPodListV2Request.cs" />
+    <Compile Include="V20201221\Models\DescribeServiceRunPodListV2Response.cs" />
+    <Compile Include="V20201221\Models\EksService.cs" />
+    <Compile Include="V20201221\Models\EsInfo.cs" />
+    <Compile Include="V20201221\Models\GenerateDownloadUrlRequest.cs" />
+    <Compile Include="V20201221\Models\GenerateDownloadUrlResponse.cs" />
+    <Compile Include="V20201221\Models\HealthCheckConfig.cs" />
+    <Compile Include="V20201221\Models\IngressInfo.cs" />
+    <Compile Include="V20201221\Models\IngressRule.cs" />
+    <Compile Include="V20201221\Models\IngressRuleBackend.cs" />
+    <Compile Include="V20201221\Models\IngressRulePath.cs" />
+    <Compile Include="V20201221\Models\IngressRuleValue.cs" />
+    <Compile Include="V20201221\Models\IngressTls.cs" />
+    <Compile Include="V20201221\Models\LogOutputConf.cs" />
+    <Compile Include="V20201221\Models\ModifyIngressRequest.cs" />
+    <Compile Include="V20201221\Models\ModifyIngressResponse.cs" />
+    <Compile Include="V20201221\Models\ModifyNamespaceRequest.cs" />
+    <Compile Include="V20201221\Models\ModifyNamespaceResponse.cs" />
+    <Compile Include="V20201221\Models\ModifyServiceInfoRequest.cs" />
+    <Compile Include="V20201221\Models\ModifyServiceInfoResponse.cs" />
+    <Compile Include="V20201221\Models\MountedSettingConf.cs" />
+    <Compile Include="V20201221\Models\NamespacePage.cs" />
+    <Compile Include="V20201221\Models\Pair.cs" />
+    <Compile Include="V20201221\Models\PortMapping.cs" />
+    <Compile Include="V20201221\Models\RestartServiceRunPodRequest.cs" />
+    <Compile Include="V20201221\Models\RestartServiceRunPodResponse.cs" />
+    <Compile Include="V20201221\Models\RunVersionPod.cs" />
+    <Compile Include="V20201221\Models\StorageConf.cs" />
+    <Compile Include="V20201221\Models\StorageMountConf.cs" />
+    <Compile Include="V20201221\Models\TemNamespaceInfo.cs" />
   </ItemGroup>
 </Project>

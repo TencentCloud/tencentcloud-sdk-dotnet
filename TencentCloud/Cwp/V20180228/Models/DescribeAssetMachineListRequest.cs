@@ -26,7 +26,15 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 过滤条件。
-        /// <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+        /// <li>MachineName  主机名称
+        /// 
+        /// 
+        /// 
+        /// InstanceID  实例ID  
+        /// 
+        ///  
+        /// 
+        /// IP   内网IP或公网IP</li>
         /// <li>OsType - String - 是否必填：否 - windows或linux</li>
         /// <li>CpuLoad - Int - 是否必填：否 - 
         /// 0: 未知  1: 低负载

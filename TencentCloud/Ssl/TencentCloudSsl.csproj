@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.869</VersionPrefix>
+    <VersionPrefix>3.0.870</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -156,6 +156,7 @@
     <Compile Include="V20191205\Models\DvAuths.cs" />
     <Compile Include="V20191205\Models\Error.cs" />
     <Compile Include="V20191205\Models\Filter.cs" />
+    <Compile Include="V20191205\Models\GatewayCertificate.cs" />
     <Compile Include="V20191205\Models\HostCertificateRequest.cs" />
     <Compile Include="V20191205\Models\HostCertificateResponse.cs" />
     <Compile Include="V20191205\Models\LighthouseInstanceDetail.cs" />
@@ -196,6 +197,8 @@
     <Compile Include="V20191205\Models\TCBHostInstance.cs" />
     <Compile Include="V20191205\Models\TCBHostService.cs" />
     <Compile Include="V20191205\Models\TCBInstanceList.cs" />
+    <Compile Include="V20191205\Models\TSEInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\TSEInstanceList.cs" />
     <Compile Include="V20191205\Models\Tags.cs" />
     <Compile Include="V20191205\Models\TeoInstanceDetail.cs" />
     <Compile Include="V20191205\Models\TeoInstanceList.cs" />

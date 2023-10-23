@@ -40,6 +40,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// 实例数量
         /// </summary>
         [JsonProperty("ProvederInstanceNum")]
+        [System.Obsolete]
         public long? ProvederInstanceNum{ get; set; }
 
         /// <summary>
@@ -47,6 +48,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         [JsonProperty("ZoneInstanceInfoSet")]
         public ZoneInstanceInfo[] ZoneInstanceInfoSet{ get; set; }
+
+        /// <summary>
+        /// 实例数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProviderInstanceNum")]
+        public long? ProviderInstanceNum{ get; set; }
 
 
         /// <summary>
@@ -58,6 +66,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "ProviderNodeNum", this.ProviderNodeNum);
             this.SetParamSimple(map, prefix + "ProvederInstanceNum", this.ProvederInstanceNum);
             this.SetParamArrayObj(map, prefix + "ZoneInstanceInfoSet.", this.ZoneInstanceInfoSet);
+            this.SetParamSimple(map, prefix + "ProviderInstanceNum", this.ProviderInstanceNum);
         }
     }
 }

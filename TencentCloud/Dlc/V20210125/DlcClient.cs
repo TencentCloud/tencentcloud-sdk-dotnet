@@ -1853,6 +1853,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 查询sql查询界面高级设置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAdvancedStoreLocationRequest"/></param>
+        /// <returns><see cref="DescribeAdvancedStoreLocationResponse"/></returns>
+        public async Task<DescribeAdvancedStoreLocationResponse> DescribeAdvancedStoreLocation(DescribeAdvancedStoreLocationRequest req)
+        {
+             JsonResponseModel<DescribeAdvancedStoreLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAdvancedStoreLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAdvancedStoreLocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询sql查询界面高级设置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAdvancedStoreLocationRequest"/></param>
+        /// <returns><see cref="DescribeAdvancedStoreLocationResponse"/></returns>
+        public DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocationSync(DescribeAdvancedStoreLocationRequest req)
+        {
+             JsonResponseModel<DescribeAdvancedStoreLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAdvancedStoreLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAdvancedStoreLocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DMS元数据获取库
         /// </summary>
         /// <param name="req"><see cref="DescribeDMSDatabaseRequest"/></param>
@@ -3844,6 +3884,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "LockMetaData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<LockMetaDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改sql查询界面高级设置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAdvancedStoreLocationRequest"/></param>
+        /// <returns><see cref="ModifyAdvancedStoreLocationResponse"/></returns>
+        public async Task<ModifyAdvancedStoreLocationResponse> ModifyAdvancedStoreLocation(ModifyAdvancedStoreLocationRequest req)
+        {
+             JsonResponseModel<ModifyAdvancedStoreLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAdvancedStoreLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAdvancedStoreLocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改sql查询界面高级设置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAdvancedStoreLocationRequest"/></param>
+        /// <returns><see cref="ModifyAdvancedStoreLocationResponse"/></returns>
+        public ModifyAdvancedStoreLocationResponse ModifyAdvancedStoreLocationSync(ModifyAdvancedStoreLocationRequest req)
+        {
+             JsonResponseModel<ModifyAdvancedStoreLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAdvancedStoreLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAdvancedStoreLocationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

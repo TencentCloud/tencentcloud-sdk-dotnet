@@ -31,13 +31,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 开始时间，如 2019-09-04 00:00:00
+        /// 开始时间
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，如 2019-09-04 12:00:00
+        /// 结束时间
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -55,18 +55,17 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 指定区域下载日志
-        /// mainland：获取境内加速日志包下载链接
-        /// overseas：获取境外加速日志包下载链接
-        /// global：同时获取境内、境外加速日志包下载链接（分开打包）
-        /// 不指定时默认为 mainland
+        /// 指定区域下载日志，默认为 mainland，可取值有：
+        /// <li>mainland：获取境内加速日志包下载链接</li>
+        /// <li>overseas：获取境外加速日志包下载链接</li>
+        /// <li>global：同时获取境内、境外加速日志包下载链接（分开打包）</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 指定下载日志的类型，目前仅支持访问日志（access）。
-        /// access：访问日志
+        /// 指定下载日志的类型，可取值有：
+        /// <li>access：访问日志</li>
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }

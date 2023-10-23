@@ -726,7 +726,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// DescribeCdnIp 用于查询 CDN IP 归属。
-        /// （注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）  
+        /// （注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnIpRequest"/></param>
         /// <returns><see cref="DescribeCdnIpResponse"/></returns>
@@ -747,7 +747,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// DescribeCdnIp 用于查询 CDN IP 归属。
-        /// （注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）  
+        /// （注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnIpRequest"/></param>
         /// <returns><see cref="DescribeCdnIpResponse"/></returns>

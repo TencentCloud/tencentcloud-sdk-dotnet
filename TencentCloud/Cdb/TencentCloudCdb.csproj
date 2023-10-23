@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.869</VersionPrefix>
+    <VersionPrefix>3.0.870</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -198,6 +198,8 @@
     <Compile Include="V20170320\Models\DescribeDBInstanceGTIDResponse.cs" />
     <Compile Include="V20170320\Models\DescribeDBInstanceInfoRequest.cs" />
     <Compile Include="V20170320\Models\DescribeDBInstanceInfoResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstanceLogToCLSRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstanceLogToCLSResponse.cs" />
     <Compile Include="V20170320\Models\DescribeDBInstanceRebootTimeRequest.cs" />
     <Compile Include="V20170320\Models\DescribeDBInstanceRebootTimeResponse.cs" />
     <Compile Include="V20170320\Models\DescribeDBInstancesRequest.cs" />
@@ -286,6 +288,7 @@
     <Compile Include="V20170320\Models\LocalBinlogConfig.cs" />
     <Compile Include="V20170320\Models\LocalBinlogConfigDefault.cs" />
     <Compile Include="V20170320\Models\LogRuleTemplateInfo.cs" />
+    <Compile Include="V20170320\Models\LogToCLSConfig.cs" />
     <Compile Include="V20170320\Models\MasterInfo.cs" />
     <Compile Include="V20170320\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20170320\Models\ModifyAccountDescriptionResponse.cs" />
@@ -315,6 +318,8 @@
     <Compile Include="V20170320\Models\ModifyCdbProxyAddressVipAndVPortResponse.cs" />
     <Compile Include="V20170320\Models\ModifyCdbProxyParamRequest.cs" />
     <Compile Include="V20170320\Models\ModifyCdbProxyParamResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyDBInstanceLogToCLSRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyDBInstanceLogToCLSResponse.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceProjectRequest.cs" />
