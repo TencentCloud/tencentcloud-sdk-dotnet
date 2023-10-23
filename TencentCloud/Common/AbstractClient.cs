@@ -113,7 +113,7 @@ namespace TencentCloud.Common
             }
             catch (Exception e)
             {
-                throw new TencentCloudSDKException("failed to read http content", e);
+                throw new TencentCloudSDKException("API request failed", e);
             }
 
             JsonResponseModel<JsonResponseErrModel> errResp = null;
@@ -164,7 +164,7 @@ namespace TencentCloud.Common
             }
             catch (Exception e)
             {
-                throw new TencentCloudSDKException("The request failed with exception", e);
+                throw new TencentCloudSDKException("API request failed", e);
             }
             
             return null;
@@ -314,7 +314,7 @@ namespace TencentCloud.Common
             }
             catch (Exception e)
             {
-                throw new TencentCloudSDKException("The request failed with exception", e);
+                throw new TencentCloudSDKException("API request failed", e);
             }
             
             return null;
