@@ -107,8 +107,25 @@ namespace TencentCloud.Common
             }
             string strResp = await response.Content.ReadAsStringAsync();
 
-            JsonResponseModel<JsonResponseErrModel> errResp = 
-                JsonConvert.DeserializeObject<JsonResponseModel<JsonResponseErrModel>>(strResp);
+            string strResp = null;
+            try
+            {
+                strResp = await response.Content.ReadAsStringAsync();
+            }
+            catch (Exception e)
+            {
+                throw new TencentCloudSDKException("failed to read http content", e);
+            }
+
+            JsonResponseModel<JsonResponseErrModel> errResp = null;
+            try
+            {
+                errResp = JsonConvert.DeserializeObject<JsonResponseModel<JsonResponseErrModel>>(strResp);
+            }
+            catch (JsonSerializationException e)
+            {
+                throw new TencentCloudSDKException(e.Message);
+            }
             if (errResp.Response.Error != null)
             {
                 throw new TencentCloudSDKException($"code:{errResp.Response.Error.Code} message:{errResp.Response.Error.Message} ",
@@ -137,12 +154,19 @@ namespace TencentCloud.Common
                 this.Profile.HttpProfile.Timeout,
                 this.Profile.HttpProfile.WebProxy,
                 this.HttpClient);
-            
-            if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
-                return await conn.GetRequestAsync(this.Path, canonicalQueryString, headers);
-            
-            if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
-                return await conn.PostRequestAsync(this.Path, requestPayload, headers);
+
+            try
+            {
+                if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
+                    return await conn.GetRequestAsync(this.Path, canonicalQueryString, headers);
+
+                if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
+                    return await conn.PostRequestAsync(this.Path, requestPayload, headers);
+            }
+            catch (Exception e)
+            {
+                throw new TencentCloudSDKException("The request failed with exception", e);
+            }
             
             return null;
         }
@@ -280,11 +304,19 @@ namespace TencentCloud.Common
                 this.Profile.HttpProfile.Timeout,
                 this.Profile.HttpProfile.WebProxy,
                 this.HttpClient);
-            if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
-                return await conn.GetRequestAsync(this.Path, param);
-            
-            if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
-                return await conn.PostRequestAsync(this.Path, param);
+
+            try
+            {
+                if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
+                    return await conn.GetRequestAsync(this.Path, param);
+
+                if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
+                    return await conn.PostRequestAsync(this.Path, param);
+            }
+            catch (Exception e)
+            {
+                throw new TencentCloudSDKException("The request failed with exception", e);
+            }
             
             return null;
         }

@@ -31,6 +31,11 @@ namespace TencentCloud.Common
         {
             this.RequestId = requestId;
         }
+        
+        public TencentCloudSDKException(string message, Exception innerException) :
+            base(message, innerException)
+        {
+        }
 
         /// <summary>
         /// UUID of a request.
