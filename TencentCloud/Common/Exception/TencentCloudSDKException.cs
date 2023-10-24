@@ -31,6 +31,11 @@ namespace TencentCloud.Common
         {
             this.RequestId = requestId;
         }
+        
+        public TencentCloudSDKException(string message,Exception innerException) :
+            base(message, innerException)
+        {
+        }
 
         /// <summary>
         /// UUID of a request.
@@ -39,7 +44,10 @@ namespace TencentCloud.Common
 
         public override string ToString()
         {
-            return $"message：{this.Message} requestId{RequestId}";
+            string msg = "";
+            if (!string.IsNullOrEmpty(RequestId))
+                msg += $"requestId: {RequestId} ";
+            return msg + base.ToString();
         }
     }
 }

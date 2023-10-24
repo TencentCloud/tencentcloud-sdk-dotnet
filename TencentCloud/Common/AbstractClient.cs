@@ -102,16 +102,18 @@ namespace TencentCloud.Common
 
             if (response.StatusCode != HttpStatusCode.OK)
             {
-                throw new TencentCloudSDKException(response.StatusCode + await response.Content.ReadAsStringAsync());
+                throw new TencentCloudSDKException(
+                    $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync()}");
             }
+
             string strResp = null;
             try
             {
                 strResp = await response.Content.ReadAsStringAsync();
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new TencentCloudSDKException($"The API responded with HTTP: {ex.Message}");
+                throw new TencentCloudSDKException("API request failed", e);
             }
 
             JsonResponseModel<JsonResponseErrModel> errResp = null;
@@ -133,9 +135,7 @@ namespace TencentCloud.Common
 
         protected string InternalRequestSync(AbstractModel request, string actionName)
         {
-            Task<string> task = Task.Run(() => this.InternalRequest(request, actionName) );
-            task.Wait();
-            return task.Result;
+            return InternalRequest(request, actionName).Result;
         }
 
         private async Task<HttpResponseMessage> RequestV3(AbstractModel request, string actionName)
@@ -153,22 +153,21 @@ namespace TencentCloud.Common
                 this.Profile.HttpProfile.Timeout,
                 this.Profile.HttpProfile.WebProxy,
                 this.HttpClient);
+
             try
             {
                 if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
-                {
                     return await conn.GetRequestAsync(this.Path, canonicalQueryString, headers);
-                } 
-                else if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
-                {
+
+                if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
                     return await conn.PostRequestAsync(this.Path, requestPayload, headers);
-                }
-                return null;
             }
             catch (Exception e)
             {
-                throw new TencentCloudSDKException($"The request with exception: {e.Message}");
+                throw new TencentCloudSDKException("API request failed", e);
             }
+            
+            return null;
         }
 
         private Dictionary<string, string> BuildHeaders(string contentType, string requestPayload, string canonicalQueryString)
@@ -304,22 +303,21 @@ namespace TencentCloud.Common
                 this.Profile.HttpProfile.Timeout,
                 this.Profile.HttpProfile.WebProxy,
                 this.HttpClient);
+
             try
             {
                 if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
-                {
                     return await conn.GetRequestAsync(this.Path, param);
-                }
-                else if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
-                {
+
+                if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
                     return await conn.PostRequestAsync(this.Path, param);
-                }
-                return null;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new TencentCloudSDKException($"The request with exception: {ex.Message }");
+                throw new TencentCloudSDKException("API request failed", e);
             }
+            
+            return null;
         }
 
         private Dictionary<string, string> FormatRequestData(string action, Dictionary<string, string> param)
