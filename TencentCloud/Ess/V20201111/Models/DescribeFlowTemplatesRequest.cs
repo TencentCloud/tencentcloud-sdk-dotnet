@@ -101,6 +101,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [System.Obsolete]
         public ulong? GenerateSource{ get; set; }
 
+        /// <summary>
+        /// 是否获取模板预览链接
+        /// </summary>
+        [JsonProperty("WithPreviewUrl")]
+        public bool? WithPreviewUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +123,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "IsChannel", this.IsChannel);
             this.SetParamObj(map, prefix + "Organization.", this.Organization);
             this.SetParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
+            this.SetParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
         }
     }
 }

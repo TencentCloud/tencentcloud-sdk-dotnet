@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// 策略组id
+        /// 策略组id,即1.0的告警策略id,可以从策略详情获取
         /// </summary>
         [JsonProperty("GroupId")]
         public long?[] GroupId{ get; set; }

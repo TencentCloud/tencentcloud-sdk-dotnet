@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{40D73980-F3D8-31AD-91A8-DEE12D7F48C3}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.870</VersionPrefix>
+    <VersionPrefix>3.0.871</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,31 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20230508\CloudstudioClient.cs" />
+    <Compile Include="V20230508\Models\CreateWorkspaceRequest.cs" />
+    <Compile Include="V20230508\Models\CreateWorkspaceResponse.cs" />
+    <Compile Include="V20230508\Models\CreateWorkspaceTokenRequest.cs" />
+    <Compile Include="V20230508\Models\CreateWorkspaceTokenResponse.cs" />
+    <Compile Include="V20230508\Models\DescribeConfigRequest.cs" />
+    <Compile Include="V20230508\Models\DescribeConfigResponse.cs" />
+    <Compile Include="V20230508\Models\DescribeImagesRequest.cs" />
+    <Compile Include="V20230508\Models\DescribeImagesResponse.cs" />
+    <Compile Include="V20230508\Models\DescribeWorkspacesRequest.cs" />
+    <Compile Include="V20230508\Models\DescribeWorkspacesResponse.cs" />
+    <Compile Include="V20230508\Models\Env.cs" />
+    <Compile Include="V20230508\Models\GitRepository.cs" />
+    <Compile Include="V20230508\Models\Image.cs" />
+    <Compile Include="V20230508\Models\LifeCycle.cs" />
+    <Compile Include="V20230508\Models\LifeCycleCommand.cs" />
+    <Compile Include="V20230508\Models\ModifyWorkspaceRequest.cs" />
+    <Compile Include="V20230508\Models\ModifyWorkspaceResponse.cs" />
+    <Compile Include="V20230508\Models\RemoveWorkspaceRequest.cs" />
+    <Compile Include="V20230508\Models\RemoveWorkspaceResponse.cs" />
+    <Compile Include="V20230508\Models\RunWorkspaceRequest.cs" />
+    <Compile Include="V20230508\Models\RunWorkspaceResponse.cs" />
+    <Compile Include="V20230508\Models\StopWorkspaceRequest.cs" />
+    <Compile Include="V20230508\Models\StopWorkspaceResponse.cs" />
+    <Compile Include="V20230508\Models\WorkspaceStatusInfo.cs" />
     <Compile Include="V20210524\CloudstudioClient.cs" />
     <Compile Include="V20210524\Models\AgentSpaceDTO.cs" />
     <Compile Include="V20210524\Models\CreateCustomizeTemplatesRequest.cs" />
@@ -108,30 +133,5 @@
     <Compile Include="V20210524\Models\WorkspaceTemplateInfo.cs" />
     <Compile Include="V20210524\Models\WorkspaceTokenDTO.cs" />
     <Compile Include="V20210524\Models\WorkspaceTokenInfoV0.cs" />
-    <Compile Include="V20230508\CloudstudioClient.cs" />
-    <Compile Include="V20230508\Models\CreateWorkspaceRequest.cs" />
-    <Compile Include="V20230508\Models\CreateWorkspaceResponse.cs" />
-    <Compile Include="V20230508\Models\CreateWorkspaceTokenRequest.cs" />
-    <Compile Include="V20230508\Models\CreateWorkspaceTokenResponse.cs" />
-    <Compile Include="V20230508\Models\DescribeConfigRequest.cs" />
-    <Compile Include="V20230508\Models\DescribeConfigResponse.cs" />
-    <Compile Include="V20230508\Models\DescribeImagesRequest.cs" />
-    <Compile Include="V20230508\Models\DescribeImagesResponse.cs" />
-    <Compile Include="V20230508\Models\DescribeWorkspacesRequest.cs" />
-    <Compile Include="V20230508\Models\DescribeWorkspacesResponse.cs" />
-    <Compile Include="V20230508\Models\Env.cs" />
-    <Compile Include="V20230508\Models\GitRepository.cs" />
-    <Compile Include="V20230508\Models\Image.cs" />
-    <Compile Include="V20230508\Models\LifeCycle.cs" />
-    <Compile Include="V20230508\Models\LifeCycleCommand.cs" />
-    <Compile Include="V20230508\Models\ModifyWorkspaceRequest.cs" />
-    <Compile Include="V20230508\Models\ModifyWorkspaceResponse.cs" />
-    <Compile Include="V20230508\Models\RemoveWorkspaceRequest.cs" />
-    <Compile Include="V20230508\Models\RemoveWorkspaceResponse.cs" />
-    <Compile Include="V20230508\Models\RunWorkspaceRequest.cs" />
-    <Compile Include="V20230508\Models\RunWorkspaceResponse.cs" />
-    <Compile Include="V20230508\Models\StopWorkspaceRequest.cs" />
-    <Compile Include="V20230508\Models\StopWorkspaceResponse.cs" />
-    <Compile Include="V20230508\Models\WorkspaceStatusInfo.cs" />
   </ItemGroup>
 </Project>

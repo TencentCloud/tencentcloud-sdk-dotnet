@@ -114,6 +114,18 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
+        /// <summary>
+        /// 代金券主类型 has_price 为有价现金券 no_price 为无价代金券
+        /// </summary>
+        [JsonProperty("VoucherMainType")]
+        public string VoucherMainType{ get; set; }
+
+        /// <summary>
+        /// 代金券副类型 discount 为折扣券 deduct 为抵扣券
+        /// </summary>
+        [JsonProperty("VoucherSubType")]
+        public string VoucherSubType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "PayScene", this.PayScene);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "VoucherMainType", this.VoucherMainType);
+            this.SetParamSimple(map, prefix + "VoucherSubType", this.VoucherSubType);
         }
     }
 }

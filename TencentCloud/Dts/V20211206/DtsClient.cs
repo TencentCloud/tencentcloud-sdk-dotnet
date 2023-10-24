@@ -1225,6 +1225,46 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 修改任务运行时属性，此接口不同于配置类接口，不会进行状态机判断。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMigrateRuntimeAttributeRequest"/></param>
+        /// <returns><see cref="ModifyMigrateRuntimeAttributeResponse"/></returns>
+        public async Task<ModifyMigrateRuntimeAttributeResponse> ModifyMigrateRuntimeAttribute(ModifyMigrateRuntimeAttributeRequest req)
+        {
+             JsonResponseModel<ModifyMigrateRuntimeAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMigrateRuntimeAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMigrateRuntimeAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改任务运行时属性，此接口不同于配置类接口，不会进行状态机判断。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMigrateRuntimeAttributeRequest"/></param>
+        /// <returns><see cref="ModifyMigrateRuntimeAttributeResponse"/></returns>
+        public ModifyMigrateRuntimeAttributeResponse ModifyMigrateRuntimeAttributeSync(ModifyMigrateRuntimeAttributeRequest req)
+        {
+             JsonResponseModel<ModifyMigrateRuntimeAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMigrateRuntimeAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMigrateRuntimeAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 配置迁移服务，配置成功后可通过`CreateMigrationCheckJob` 创建迁移校验任务接口发起校验任务，只有校验通过才能启动迁移任务。
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrationJobRequest"/></param>

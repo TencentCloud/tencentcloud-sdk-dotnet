@@ -73,7 +73,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CsrEncryptAlgo{ get; set; }
 
         /// <summary>
-        /// 密钥对参数，RSA仅支持2048。ECC仅支持prime256v1
+        /// 密钥对参数，RSA仅支持2048。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
         /// </summary>
         [JsonProperty("CsrKeyParameter")]
         public string CsrKeyParameter{ get; set; }

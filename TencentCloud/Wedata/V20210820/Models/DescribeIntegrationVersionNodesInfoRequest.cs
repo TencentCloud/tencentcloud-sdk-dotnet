@@ -37,13 +37,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// task version path
+        /// 该任务选定版本的存储路径：
+        /// DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 TaskInfo.TaskExt.Properties 下 Base64.encode($region | $bucket | $ftp.file.name) 值
         /// </summary>
         [JsonProperty("TaskVersionPath")]
         public string TaskVersionPath{ get; set; }
 
         /// <summary>
-        /// task version
+        /// 该任务选定版本id：
+        /// DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 VersionId 取值
         /// </summary>
         [JsonProperty("TaskVersion")]
         public string TaskVersion{ get; set; }

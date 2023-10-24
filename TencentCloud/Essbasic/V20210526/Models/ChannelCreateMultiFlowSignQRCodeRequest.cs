@@ -25,50 +25,60 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。
-        /// 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// <ul>
+        /// <li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 模版ID
+        /// 合同模板ID，为32位字符串。
+        /// 建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 签署流程名称，最大长度200个字符。
+        /// 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。 该名称还将用于合同签署完成后的下载文件名。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 最大可发起签署流程份数
-        /// <br/>默认5份
-        /// <br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
+        /// 通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。 一旦发起流程数超越该限制，该二维码将自动失效。	
         /// </summary>
         [JsonProperty("MaxFlowNum")]
         public long? MaxFlowNum{ get; set; }
 
         /// <summary>
-        /// 签署流程有效天数 默认7天 最高设置不超过30天
+        /// 合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。 若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。 最长设定期限不得超过30天。	
         /// </summary>
         [JsonProperty("FlowEffectiveDay")]
         public long? FlowEffectiveDay{ get; set; }
 
         /// <summary>
-        /// 二维码有效天数 默认7天 最高设置不超过90天
+        /// 二维码的有效期限，默认为7天，最高设定不得超过90天。 一旦超过二维码的有效期限，该二维码将自动失效。	
         /// </summary>
         [JsonProperty("QrEffectiveDay")]
         public long? QrEffectiveDay{ get; set; }
 
         /// <summary>
-        /// 指定的签署二维码签署人
-        /// <br/>指定后，只允许知道的人操作和签署
+        /// 指定签署人信息。 在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。	
         /// </summary>
         [JsonProperty("Restrictions")]
         public ApproverRestriction[] Restrictions{ get; set; }
+
+        /// <summary>
+        /// 指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
+        /// </summary>
+        [JsonProperty("ApproverComponentLimitTypes")]
+        public ApproverComponentLimitType[] ApproverComponentLimitTypes{ get; set; }
 
         /// <summary>
         /// 已废弃，回调配置统一使用企业应用管理-应用集成-第三方应用中的配置
@@ -93,12 +103,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
-        /// <summary>
-        /// 指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
-        /// </summary>
-        [JsonProperty("ApproverComponentLimitTypes")]
-        public ApproverComponentLimitType[] ApproverComponentLimitTypes{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,10 +116,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
             this.SetParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
             this.SetParamArrayObj(map, prefix + "Restrictions.", this.Restrictions);
+            this.SetParamArrayObj(map, prefix + "ApproverComponentLimitTypes.", this.ApproverComponentLimitTypes);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamArrayObj(map, prefix + "ApproverComponentLimitTypes.", this.ApproverComponentLimitTypes);
         }
     }
 }

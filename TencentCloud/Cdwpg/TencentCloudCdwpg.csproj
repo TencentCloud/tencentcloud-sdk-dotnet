@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1692997E-2AD5-365B-9B13-A65EC48A38B5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.870</VersionPrefix>
+    <VersionPrefix>3.0.871</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,9 +49,12 @@
   <ItemGroup>
     <Compile Include="V20201230\CdwpgClient.cs" />
     <Compile Include="V20201230\Models\CBSSpec.cs" />
+    <Compile Include="V20201230\Models\CBSSpecInfo.cs" />
     <Compile Include="V20201230\Models\ChargeProperties.cs" />
     <Compile Include="V20201230\Models\CreateInstanceByApiRequest.cs" />
     <Compile Include="V20201230\Models\CreateInstanceByApiResponse.cs" />
+    <Compile Include="V20201230\Models\DescribeInstanceInfoRequest.cs" />
+    <Compile Include="V20201230\Models\DescribeInstanceInfoResponse.cs" />
     <Compile Include="V20201230\Models\DescribeInstanceRequest.cs" />
     <Compile Include="V20201230\Models\DescribeInstanceResponse.cs" />
     <Compile Include="V20201230\Models\DescribeInstanceStateRequest.cs" />
@@ -68,8 +71,10 @@
     <Compile Include="V20201230\Models\InstanceStateInfo.cs" />
     <Compile Include="V20201230\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20201230\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="V20201230\Models\ResourceInfo.cs" />
     <Compile Include="V20201230\Models\ResourceSpecNew.cs" />
     <Compile Include="V20201230\Models\SearchTags.cs" />
+    <Compile Include="V20201230\Models\SimpleInstanceInfo.cs" />
     <Compile Include="V20201230\Models\Tag.cs" />
   </ItemGroup>
 </Project>

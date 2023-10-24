@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59F84071-5597-3F91-BE72-09F462EAE82A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.870</VersionPrefix>
+    <VersionPrefix>3.0.871</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20210811\BscaClient.cs" />
+    <Compile Include="V20210811\Models\AffectedComponent.cs" />
     <Compile Include="V20210811\Models\CVSSV2Info.cs" />
     <Compile Include="V20210811\Models\CVSSV3Info.cs" />
     <Compile Include="V20210811\Models\Component.cs" />

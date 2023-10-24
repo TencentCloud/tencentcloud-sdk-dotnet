@@ -189,6 +189,34 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ExpertModeConfiguration")]
         public ExpertModeConfiguration ExpertModeConfiguration{ get; set; }
 
+        /// <summary>
+        /// trace链路
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TraceModeOn")]
+        public bool? TraceModeOn{ get; set; }
+
+        /// <summary>
+        /// trace链路配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TraceModeConfiguration")]
+        public TraceModeConfiguration TraceModeConfiguration{ get; set; }
+
+        /// <summary>
+        /// checkpoint保留个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckpointRetainedNum")]
+        public long? CheckpointRetainedNum{ get; set; }
+
+        /// <summary>
+        /// 算子拓扑图
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobGraph")]
+        public JobGraph JobGraph{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +247,10 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamArrayObj(map, prefix + "ClazzLevels.", this.ClazzLevels);
             this.SetParamSimple(map, prefix + "ExpertModeOn", this.ExpertModeOn);
             this.SetParamObj(map, prefix + "ExpertModeConfiguration.", this.ExpertModeConfiguration);
+            this.SetParamSimple(map, prefix + "TraceModeOn", this.TraceModeOn);
+            this.SetParamObj(map, prefix + "TraceModeConfiguration.", this.TraceModeConfiguration);
+            this.SetParamSimple(map, prefix + "CheckpointRetainedNum", this.CheckpointRetainedNum);
+            this.SetParamObj(map, prefix + "JobGraph.", this.JobGraph);
         }
     }
 }

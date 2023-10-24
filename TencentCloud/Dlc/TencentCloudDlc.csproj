@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.870</VersionPrefix>
+    <VersionPrefix>3.0.871</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -332,6 +332,7 @@
     <Compile Include="V20210125\Models\SparkMonitorMetrics.cs" />
     <Compile Include="V20210125\Models\SparkSessionBatchLog.cs" />
     <Compile Include="V20210125\Models\SparkSessionBatchLogOperate.cs" />
+    <Compile Include="V20210125\Models\StatementInformation.cs" />
     <Compile Include="V20210125\Models\StatementOutput.cs" />
     <Compile Include="V20210125\Models\StreamingStatistics.cs" />
     <Compile Include="V20210125\Models\SuspendResumeDataEngineRequest.cs" />

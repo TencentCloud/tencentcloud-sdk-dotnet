@@ -95,7 +95,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 控件生成的方式：
         /// NORMAL - 普通控件
         /// FIELD - 表单域
-        /// KEYWORD - 关键字
+        /// KEYWORD - 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）
         /// </summary>
         [JsonProperty("GenerateMode")]
         public string GenerateMode{ get; set; }

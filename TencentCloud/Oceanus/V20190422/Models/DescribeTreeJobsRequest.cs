@@ -25,6 +25,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
+        /// 筛选条件字段
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
         /// 工作空间 Serialid
         /// </summary>
         [JsonProperty("WorkSpaceId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         }
     }

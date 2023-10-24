@@ -287,6 +287,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("SqlGateways")]
         public SqlGatewayItem[] SqlGateways{ get; set; }
 
+        /// <summary>
+        /// 0 公网访问 // 1 内网访问	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WebUIType")]
+        public long? WebUIType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -333,6 +340,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamArrayObj(map, prefix + "Orders.", this.Orders);
             this.SetParamArrayObj(map, prefix + "SqlGateways.", this.SqlGateways);
+            this.SetParamSimple(map, prefix + "WebUIType", this.WebUIType);
         }
     }
 }

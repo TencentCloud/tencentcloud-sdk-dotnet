@@ -133,6 +133,46 @@ namespace TencentCloud.Cdwpg.V20201230
         }
 
         /// <summary>
+        /// 获取集群信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceInfoResponse"/></returns>
+        public async Task<DescribeInstanceInfoResponse> DescribeInstanceInfo(DescribeInstanceInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取集群信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceInfoResponse"/></returns>
+        public DescribeInstanceInfoResponse DescribeInstanceInfoSync(DescribeInstanceInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 集群详情页中显示集群状态、流程进度等
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceStateRequest"/></param>

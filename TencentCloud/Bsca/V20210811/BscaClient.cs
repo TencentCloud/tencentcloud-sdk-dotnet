@@ -213,7 +213,7 @@ namespace TencentCloud.Bsca.V20210811
         }
 
         /// <summary>
-        /// 本接口(DescribeKBVulnerability)用于在知识库中查询漏洞详细信息，支持根据CVE ID查询或者根据Vul ID查询。
+        /// 本接口(DescribeKBVulnerability)用于在知识库中查询漏洞详细信息，支持根据CVE、Vul ID、CNVD ID、CNNVD ID查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeKBVulnerabilityRequest"/></param>
         /// <returns><see cref="DescribeKBVulnerabilityResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Bsca.V20210811
         }
 
         /// <summary>
-        /// 本接口(DescribeKBVulnerability)用于在知识库中查询漏洞详细信息，支持根据CVE ID查询或者根据Vul ID查询。
+        /// 本接口(DescribeKBVulnerability)用于在知识库中查询漏洞详细信息，支持根据CVE、Vul ID、CNVD ID、CNNVD ID查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeKBVulnerabilityRequest"/></param>
         /// <returns><see cref="DescribeKBVulnerabilityResponse"/></returns>
