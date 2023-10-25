@@ -34,7 +34,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 水印的宽度。支持 %、px 两种格式：
         /// <li>当字符串以 % 结尾，表示水印 Width 为视频宽度的百分比大小，如 10% 表示 Width 为视频宽度的 10%；</li>
         /// <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素。取值范围为[8, 4096]。</li>
-        /// 默认值：10%。
+        /// 当宽高都不填或者为0时，默认为 10%。
         /// </summary>
         [JsonProperty("Width")]
         public string Width{ get; set; }

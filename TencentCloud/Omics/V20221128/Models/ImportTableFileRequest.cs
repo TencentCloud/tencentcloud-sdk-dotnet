@@ -31,7 +31,7 @@ namespace TencentCloud.Omics.V20221128.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 表格名称，支持20个字符内的英文字符、数字和下划线。
+        /// 表格名称。最多支持200个字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Omics.V20221128.Models
         public string[] DataType{ get; set; }
 
         /// <summary>
-        /// 表格描述。
+        /// 表格描述。最多支持500个字符。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

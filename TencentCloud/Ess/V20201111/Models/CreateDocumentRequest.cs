@@ -60,7 +60,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 是否为预览模式，取值如下：
         /// <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
         /// <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
-        /// 注: `当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
+        /// 注: `当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容，动态表格合成完后会触发文档合成完成的回调通知`
         /// </summary>
         [JsonProperty("NeedPreview")]
         public bool? NeedPreview{ get; set; }
@@ -68,8 +68,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 预览模式下产生的预览链接类型 
         /// <ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
-        /// <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
-        /// 注: `此参数在NeedPreview 为true时有效`
+        /// <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>
+        /// 注: `1.此参数在NeedPreview 为true时有效`
+        /// `2.动态表格控件不支持H5链接方式预览`
         /// </summary>
         [JsonProperty("PreviewType")]
         public long? PreviewType{ get; set; }

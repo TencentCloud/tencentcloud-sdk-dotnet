@@ -129,6 +129,12 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("City")]
         public string[] City{ get; set; }
 
+        /// <summary>
+        /// es scroll查询id
+        /// </summary>
+        [JsonProperty("ScrollID")]
+        public string ScrollID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +154,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamArraySimple(map, prefix + "Districts.", this.Districts);
             this.SetParamArraySimple(map, prefix + "ErrorTypes.", this.ErrorTypes);
             this.SetParamArraySimple(map, prefix + "City.", this.City);
+            this.SetParamSimple(map, prefix + "ScrollID", this.ScrollID);
         }
     }
 }

@@ -49,6 +49,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string RuleName{ get; set; }
 
         /// <summary>
+        /// 订单类型, 1 试用 2 赠送 3 体验 4 SSL-证书赠送 5 cvm赠送
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public ulong? SourceType{ get; set; }
+
+        /// <summary>
         /// 地域, 1 广州 9新加坡, 默认为 1. 非必要情况不要选9
         /// </summary>
         [JsonProperty("RegionId")]
@@ -70,6 +76,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "LicenseNum", this.LicenseNum);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
         }

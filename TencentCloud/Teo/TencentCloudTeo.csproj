@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.871</VersionPrefix>
+    <VersionPrefix>3.0.872</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,25 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20220106\TeoClient.cs" />
-    <Compile Include="V20220106\Models\CreatePrefetchTaskRequest.cs" />
-    <Compile Include="V20220106\Models\CreatePrefetchTaskResponse.cs" />
-    <Compile Include="V20220106\Models\CreatePurgeTaskRequest.cs" />
-    <Compile Include="V20220106\Models\CreatePurgeTaskResponse.cs" />
-    <Compile Include="V20220106\Models\DescribePrefetchTasksRequest.cs" />
-    <Compile Include="V20220106\Models\DescribePrefetchTasksResponse.cs" />
-    <Compile Include="V20220106\Models\DescribePurgeTasksRequest.cs" />
-    <Compile Include="V20220106\Models\DescribePurgeTasksResponse.cs" />
-    <Compile Include="V20220106\Models\DescribeZonesRequest.cs" />
-    <Compile Include="V20220106\Models\DescribeZonesResponse.cs" />
-    <Compile Include="V20220106\Models\FailReason.cs" />
-    <Compile Include="V20220106\Models\Header.cs" />
-    <Compile Include="V20220106\Models\Resource.cs" />
-    <Compile Include="V20220106\Models\Sv.cs" />
-    <Compile Include="V20220106\Models\Tag.cs" />
-    <Compile Include="V20220106\Models\Task.cs" />
-    <Compile Include="V20220106\Models\Zone.cs" />
-    <Compile Include="V20220106\Models\ZoneFilter.cs" />
     <Compile Include="V20220901\TeoClient.cs" />
     <Compile Include="V20220901\Models\AccelerateMainland.cs" />
     <Compile Include="V20220901\Models\AccelerateType.cs" />
@@ -335,5 +316,24 @@
     <Compile Include="V20220901\Models\WebSocket.cs" />
     <Compile Include="V20220901\Models\Zone.cs" />
     <Compile Include="V20220901\Models\ZoneSetting.cs" />
+    <Compile Include="V20220106\TeoClient.cs" />
+    <Compile Include="V20220106\Models\CreatePrefetchTaskRequest.cs" />
+    <Compile Include="V20220106\Models\CreatePrefetchTaskResponse.cs" />
+    <Compile Include="V20220106\Models\CreatePurgeTaskRequest.cs" />
+    <Compile Include="V20220106\Models\CreatePurgeTaskResponse.cs" />
+    <Compile Include="V20220106\Models\DescribePrefetchTasksRequest.cs" />
+    <Compile Include="V20220106\Models\DescribePrefetchTasksResponse.cs" />
+    <Compile Include="V20220106\Models\DescribePurgeTasksRequest.cs" />
+    <Compile Include="V20220106\Models\DescribePurgeTasksResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeZonesRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeZonesResponse.cs" />
+    <Compile Include="V20220106\Models\FailReason.cs" />
+    <Compile Include="V20220106\Models\Header.cs" />
+    <Compile Include="V20220106\Models\Resource.cs" />
+    <Compile Include="V20220106\Models\Sv.cs" />
+    <Compile Include="V20220106\Models\Tag.cs" />
+    <Compile Include="V20220106\Models\Task.cs" />
+    <Compile Include="V20220106\Models\Zone.cs" />
+    <Compile Include="V20220106\Models\ZoneFilter.cs" />
   </ItemGroup>
 </Project>

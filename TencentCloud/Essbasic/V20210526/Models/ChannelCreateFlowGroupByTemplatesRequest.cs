@@ -25,19 +25,28 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// <ul>
+        /// <li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+        /// </ul>
+        /// 
+        /// 子客企业和子客企业中的员工比较走完创建和实名过程
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 每个子合同的发起所需的信息，数量限制2-50（合同组暂不支持抄送功能）
+        /// 合同组中每个合同签署流程的信息，合同组中最少包含2个合同，不能超过50个合同。
         /// </summary>
         [JsonProperty("FlowInfos")]
         public FlowInfo[] FlowInfos{ get; set; }
 
         /// <summary>
-        /// 合同组名称，长度不超过200个字符
+        /// 合同组的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
         /// </summary>
         [JsonProperty("FlowGroupName")]
         public string FlowGroupName{ get; set; }

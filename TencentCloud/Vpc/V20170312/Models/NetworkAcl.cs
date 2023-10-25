@@ -55,13 +55,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Subnet[] SubnetSet{ get; set; }
 
         /// <summary>
-        /// 网络ACl入站规则。
+        /// 该参数仅对三元组ACL有效，网络ACl入站规则。
         /// </summary>
         [JsonProperty("IngressEntries")]
         public NetworkAclEntry[] IngressEntries{ get; set; }
 
         /// <summary>
-        /// 网络ACL出站规则。
+        /// 该参数仅对三元组ACL有效，网络ACL出站规则。
         /// </summary>
         [JsonProperty("EgressEntries")]
         public NetworkAclEntry[] EgressEntries{ get; set; }

@@ -86,6 +86,13 @@ namespace TencentCloud.Tms.V20201229.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 该字段用于返回违规文本命中信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HitInfos")]
+        public HitInfo[] HitInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +108,7 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamSimple(map, prefix + "LibName", this.LibName);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "HitInfos.", this.HitInfos);
         }
     }
 }

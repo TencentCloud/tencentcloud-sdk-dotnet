@@ -49,7 +49,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 是否隐藏输出，取值范围：<br><li>true：隐藏输出 <br><li>false：不隐藏 <br>默认为 false。
+        /// 是否隐藏输出，取值范围：<br><li>true：隐藏输出 <br><li>false：不隐藏 <br>默认为 true。
         /// </summary>
         [JsonProperty("HideOutput")]
         public bool? HideOutput{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 合同催办详情信息
+        /// 合同催办结果的详细信息列表。
         /// </summary>
         [JsonProperty("RemindFlowRecords")]
         public RemindFlowRecords[] RemindFlowRecords{ get; set; }

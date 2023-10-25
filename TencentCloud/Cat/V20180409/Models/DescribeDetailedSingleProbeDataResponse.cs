@@ -37,6 +37,12 @@ namespace TencentCloud.Cat.V20180409.Models
         public long? TotalNumber{ get; set; }
 
         /// <summary>
+        /// es scroll查询的id
+        /// </summary>
+        [JsonProperty("ScrollID")]
+        public string ScrollID{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Cat.V20180409.Models
         {
             this.SetParamArrayObj(map, prefix + "DataSet.", this.DataSet);
             this.SetParamSimple(map, prefix + "TotalNumber", this.TotalNumber);
+            this.SetParamSimple(map, prefix + "ScrollID", this.ScrollID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
