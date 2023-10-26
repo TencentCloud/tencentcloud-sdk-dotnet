@@ -112,6 +112,34 @@ namespace TencentCloud.Cls.V20201016.Models
         public AnalysisDimensional[] Analysis{ get; set; }
 
         /// <summary>
+        /// 分组触发状态。1：开启，0：关闭（默认）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupTriggerStatus")]
+        public bool? GroupTriggerStatus{ get; set; }
+
+        /// <summary>
+        /// 分组触发条件。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupTriggerCondition")]
+        public string[] GroupTriggerCondition{ get; set; }
+
+        /// <summary>
+        /// 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MonitorObjectType")]
+        public ulong? MonitorObjectType{ get; set; }
+
+        /// <summary>
+        /// 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmLevel")]
+        public ulong? AlarmLevel{ get; set; }
+
+        /// <summary>
         /// 多触发条件。
         /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
@@ -139,6 +167,10 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
             this.SetParamObj(map, prefix + "CallBack.", this.CallBack);
             this.SetParamArrayObj(map, prefix + "Analysis.", this.Analysis);
+            this.SetParamSimple(map, prefix + "GroupTriggerStatus", this.GroupTriggerStatus);
+            this.SetParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
+            this.SetParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
+            this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
             this.SetParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
         }
     }

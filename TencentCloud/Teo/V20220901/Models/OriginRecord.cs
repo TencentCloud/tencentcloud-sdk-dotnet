@@ -31,50 +31,29 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Record{ get; set; }
 
         /// <summary>
+        /// 源站类型，取值有：
+        /// <li>IP_DOMAIN：IPV4、IPV6、域名类型源站；</li>
+        /// <li>COS：COS源。</li>
+        /// <li>AWS_S3：AWS S3对象存储源站。</li>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// 源站记录ID。
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// 源站端口，取值范围：[1-65535]。
-        /// </summary>
-        [JsonProperty("Port")]
-        public ulong? Port{ get; set; }
-
-        /// <summary>
-        /// 当源站配置类型ConfigurationType=weight时，表示权重。
-        /// 不配置权重信息时，所有源站组记录统一填写为0或者不填写，表示多个源站轮询回源。
-        /// 配置权重信息时，取值为[1-100]，多个源站权重总和应为100，表示多个源站按照权重回源。
-        /// 当源站配置类型ConfigurationType=proto时，表示权重。
-        /// 不配置权重信息时，所有源站组记录统一填写为0或者不填写，表示多个源站轮询回源。
-        /// 配置权重信息时，取值为[1-100]，源站组内Proto相同的多个源站权重总和应为100，表示多个源站按照权重回源。
+        /// 源站权重，取值为0-100, 不填表示不设置权重，由系统自由调度，填0表示权重为0, 流量将不会调度到此源站。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// 当源站配置类型ConfigurationType=proto时，表示源站的协议类型，将按照客户端请求协议回到相应的源站，取值有：
-        /// <li>http：HTTP协议源站；</li>
-        /// <li>https：HTTPS协议源站。</li>
-        /// </summary>
-        [JsonProperty("Proto")]
-        public string Proto{ get; set; }
-
-        /// <summary>
-        /// 当源站配置类型ConfigurationType=area时，表示区域，为空表示全部地区。取值为iso-3166中alpha-2编码或者大洲区域代码。大洲区域代码取值为：
-        /// <li>Asia：亚洲；</li>
-        /// <li>Europe：欧洲；</li>
-        /// <li>Africa：非洲；</li>
-        /// <li>Oceania：大洋洲；</li>
-        /// <li>Americas：美洲。</li>源站组记录中，至少需要有一项为全部地区。
-        /// </summary>
-        [JsonProperty("Area")]
-        public string[] Area{ get; set; }
-
-        /// <summary>
-        /// 当源站类型OriginType=third_part时有效
-        /// 是否私有鉴权，取值有：
+        /// 是否私有鉴权，当源站类型 RecordType=COS/AWS_S3 时生效，取值有：
         /// <li>true：使用私有鉴权；</li>
         /// <li>false：不使用私有鉴权。</li>不填写，默认值为：false。
         /// </summary>
@@ -82,7 +61,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public bool? Private{ get; set; }
 
         /// <summary>
-        /// 当源站类型Private=true时有效，表示私有鉴权使用参数。
+        /// 私有鉴权参数，当源站类型Private=true时有效。
         /// </summary>
         [JsonProperty("PrivateParameters")]
         public PrivateParameter[] PrivateParameters{ get; set; }
@@ -94,11 +73,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Record", this.Record);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
-            this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
-            this.SetParamSimple(map, prefix + "Proto", this.Proto);
-            this.SetParamArraySimple(map, prefix + "Area.", this.Area);
             this.SetParamSimple(map, prefix + "Private", this.Private);
             this.SetParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
         }

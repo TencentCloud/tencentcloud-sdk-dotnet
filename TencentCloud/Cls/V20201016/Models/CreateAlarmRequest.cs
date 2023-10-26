@@ -49,7 +49,11 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? TriggerCount{ get; set; }
 
         /// <summary>
-        /// 告警重复的周期。单位是分钟。取值范围是0~1440。
+        /// 告警重复的周期。
+        /// 
+        /// 单位是分钟。
+        /// 
+        /// 取值范围是0~1440。
         /// </summary>
         [JsonProperty("AlarmPeriod")]
         public long? AlarmPeriod{ get; set; }
@@ -71,10 +75,22 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Condition{ get; set; }
 
         /// <summary>
+        /// 告警级别。
+        /// 
+        /// 0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
+        /// 
+        /// 注意:  
+        /// - 不填则默认为0。
+        /// - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+        /// </summary>
+        [JsonProperty("AlarmLevel")]
+        public ulong? AlarmLevel{ get; set; }
+
+        /// <summary>
         /// 多触发条件。
         /// 
         ///  注意:  
-        /// - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li>
+        /// - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
         /// 
         /// 
         /// </summary>
@@ -82,7 +98,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public MultiCondition[] MultiConditions{ get; set; }
 
         /// <summary>
-        /// 是否开启告警策略。默认值为true
+        /// 是否开启告警策略。
+        /// 
+        /// 默认值为true
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
@@ -105,6 +123,38 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Analysis")]
         public AnalysisDimensional[] Analysis{ get; set; }
 
+        /// <summary>
+        /// 分组触发状态。
+        /// 
+        /// 默认值false
+        /// </summary>
+        [JsonProperty("GroupTriggerStatus")]
+        public bool? GroupTriggerStatus{ get; set; }
+
+        /// <summary>
+        /// 分组触发条件。
+        /// </summary>
+        [JsonProperty("GroupTriggerCondition")]
+        public string[] GroupTriggerCondition{ get; set; }
+
+        /// <summary>
+        /// 标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。
+        /// 
+        /// 最大支持10个标签键值对，并且不能有重复的键值对。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+        /// 
+        /// 不填则默认为0。
+        /// 
+        /// 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+        /// </summary>
+        [JsonProperty("MonitorObjectType")]
+        public ulong? MonitorObjectType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,11 +168,16 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "AlarmPeriod", this.AlarmPeriod);
             this.SetParamArraySimple(map, prefix + "AlarmNoticeIds.", this.AlarmNoticeIds);
             this.SetParamSimple(map, prefix + "Condition", this.Condition);
+            this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
             this.SetParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
             this.SetParamObj(map, prefix + "CallBack.", this.CallBack);
             this.SetParamArrayObj(map, prefix + "Analysis.", this.Analysis);
+            this.SetParamSimple(map, prefix + "GroupTriggerStatus", this.GroupTriggerStatus);
+            this.SetParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
         }
     }
 }

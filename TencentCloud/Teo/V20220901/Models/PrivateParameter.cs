@@ -27,7 +27,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 私有鉴权参数名称，取值有：
         /// <li>AccessKeyId：鉴权参数Access Key ID；</li>
-        /// <li>SecretAccessKey：鉴权参数Secret Access Key。</li>
+        /// <li>SecretAccessKey：鉴权参数Secret Access Key；</li>
+        /// <li>SignatureVersion：鉴权版本，v2或者v4；</li>
+        /// <li>Region：存储桶地域。</li>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

@@ -94,6 +94,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("UpdatedDate")]
         public string UpdatedDate{ get; set; }
 
+        /// <summary>
+        /// dnssec
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Dnssec")]
+        public string Dnssec{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamArraySimple(map, prefix + "Registrar.", this.Registrar);
             this.SetParamArraySimple(map, prefix + "Status.", this.Status);
             this.SetParamSimple(map, prefix + "UpdatedDate", this.UpdatedDate);
+            this.SetParamSimple(map, prefix + "Dnssec", this.Dnssec);
         }
     }
 }

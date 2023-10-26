@@ -55,11 +55,18 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamEndNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 录制回调 URL，
+        /// 录制文件回调 URL，
         /// 相关协议文档：[事件消息通知](/document/product/267/32744)。
         /// </summary>
         [JsonProperty("RecordNotifyUrl")]
         public string RecordNotifyUrl{ get; set; }
+
+        /// <summary>
+        /// 录制状态回调 URL ，
+        /// 相关协议文档：[事件消息通知](/document/product/267/32744)。
+        /// </summary>
+        [JsonProperty("RecordStatusNotifyUrl")]
+        public string RecordStatusNotifyUrl{ get; set; }
 
         /// <summary>
         /// 截图回调 URL，
@@ -111,6 +118,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "StreamBeginNotifyUrl", this.StreamBeginNotifyUrl);
             this.SetParamSimple(map, prefix + "StreamEndNotifyUrl", this.StreamEndNotifyUrl);
             this.SetParamSimple(map, prefix + "RecordNotifyUrl", this.RecordNotifyUrl);
+            this.SetParamSimple(map, prefix + "RecordStatusNotifyUrl", this.RecordStatusNotifyUrl);
             this.SetParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
             this.SetParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
             this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);

@@ -119,6 +119,25 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Analysis")]
         public AnalysisDimensional[] Analysis{ get; set; }
 
+        /// <summary>
+        /// 分组触发状态。true：开启，false：关闭（默认）
+        /// </summary>
+        [JsonProperty("GroupTriggerStatus")]
+        public bool? GroupTriggerStatus{ get; set; }
+
+        /// <summary>
+        /// 分组触发条件。
+        /// </summary>
+        [JsonProperty("GroupTriggerCondition")]
+        public string[] GroupTriggerCondition{ get; set; }
+
+        /// <summary>
+        /// 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+        /// <li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+        /// </summary>
+        [JsonProperty("MonitorObjectType")]
+        public ulong? MonitorObjectType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +158,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
             this.SetParamObj(map, prefix + "CallBack.", this.CallBack);
             this.SetParamArrayObj(map, prefix + "Analysis.", this.Analysis);
+            this.SetParamSimple(map, prefix + "GroupTriggerStatus", this.GroupTriggerStatus);
+            this.SetParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
+            this.SetParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
         }
     }
 }

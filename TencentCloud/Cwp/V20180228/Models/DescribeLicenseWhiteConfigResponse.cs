@@ -25,6 +25,24 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
+        /// 旗舰版 配置信息
+        /// </summary>
+        [JsonProperty("FlagShip")]
+        public VersionWhiteConfig FlagShip{ get; set; }
+
+        /// <summary>
+        /// 专业版 配置信息
+        /// </summary>
+        [JsonProperty("Professional")]
+        public VersionWhiteConfig Professional{ get; set; }
+
+        /// <summary>
+        /// 普惠版 配置信息
+        /// </summary>
+        [JsonProperty("PrattWhitney")]
+        public VersionWhiteConfig PrattWhitney{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +54,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "FlagShip.", this.FlagShip);
+            this.SetParamObj(map, prefix + "Professional.", this.Professional);
+            this.SetParamObj(map, prefix + "PrattWhitney.", this.PrattWhitney);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

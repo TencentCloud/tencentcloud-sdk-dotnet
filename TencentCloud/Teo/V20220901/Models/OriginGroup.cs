@@ -25,52 +25,42 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点ID。
-        /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
-
-        /// <summary>
-        /// 站点名称。
-        /// </summary>
-        [JsonProperty("ZoneName")]
-        public string ZoneName{ get; set; }
-
-        /// <summary>
         /// 源站组ID。
         /// </summary>
-        [JsonProperty("OriginGroupId")]
-        public string OriginGroupId{ get; set; }
-
-        /// <summary>
-        /// 源站类型，取值有：
-        /// <li>self：自有源站；</li>
-        /// <li>third_party：第三方源站；</li>
-        /// <li>cos：腾讯云COS源站。</li>
-        /// </summary>
-        [JsonProperty("OriginType")]
-        public string OriginType{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
         /// <summary>
         /// 源站组名称。
         /// </summary>
-        [JsonProperty("OriginGroupName")]
-        public string OriginGroupName{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 源站配置类型，当OriginType=self时，取值有：
-        /// <li>area：按区域配置；</li>
-        /// <li>weight： 按权重配置。</li>
-        /// <li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。
+        /// 源站组类型，取值有：
+        /// <li>GENERAL：通用型源站组；</li>
+        /// <li>HTTP： HTTP专用型源站组。</li>
         /// </summary>
-        [JsonProperty("ConfigurationType")]
-        public string ConfigurationType{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
         /// 源站记录信息。
         /// </summary>
-        [JsonProperty("OriginRecords")]
-        public OriginRecord[] OriginRecords{ get; set; }
+        [JsonProperty("Records")]
+        public OriginRecord[] Records{ get; set; }
+
+        /// <summary>
+        /// 源站组被引用实例列表。	
+        /// </summary>
+        [JsonProperty("References")]
+        public OriginGroupReference[] References{ get; set; }
+
+        /// <summary>
+        /// 源站组创建时间。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
         /// <summary>
         /// 源站组更新时间。
@@ -78,28 +68,19 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
-        /// <summary>
-        /// 当OriginType=self时，表示回源Host。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("HostHeader")]
-        public string HostHeader{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
-            this.SetParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
-            this.SetParamSimple(map, prefix + "OriginType", this.OriginType);
-            this.SetParamSimple(map, prefix + "OriginGroupName", this.OriginGroupName);
-            this.SetParamSimple(map, prefix + "ConfigurationType", this.ConfigurationType);
-            this.SetParamArrayObj(map, prefix + "OriginRecords.", this.OriginRecords);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "Records.", this.Records);
+            this.SetParamArrayObj(map, prefix + "References.", this.References);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-            this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
         }
     }
 }

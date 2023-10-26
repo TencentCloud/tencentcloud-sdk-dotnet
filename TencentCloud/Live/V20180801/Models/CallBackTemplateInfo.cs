@@ -61,7 +61,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamEndNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 录制回调 URL。
+        /// 录制文件回调 URL。
         /// </summary>
         [JsonProperty("RecordNotifyUrl")]
         public string RecordNotifyUrl{ get; set; }

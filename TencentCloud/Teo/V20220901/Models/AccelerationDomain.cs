@@ -55,6 +55,40 @@ namespace TencentCloud.Teo.V20220901.Models
         public OriginDetail OriginDetail{ get; set; }
 
         /// <summary>
+        /// 回源协议，取值有：
+        /// <li>FOLLOW: 协议跟随；</li>
+        /// <li>HTTP: HTTP协议回源；</li>
+        /// <li>HTTPS: HTTPS协议回源。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginProtocol")]
+        public string OriginProtocol{ get; set; }
+
+        /// <summary>
+        /// HTTP回源端口。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HttpOriginPort")]
+        public ulong? HttpOriginPort{ get; set; }
+
+        /// <summary>
+        /// HTTPS回源端口。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HttpsOriginPort")]
+        public ulong? HttpsOriginPort{ get; set; }
+
+        /// <summary>
+        /// IPv6状态，取值有：
+        /// <li>follow：遵循站点IPv6配置；</li>
+        /// <li>on：开启状态；</li>
+        /// <li>off：关闭状态。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IPv6Status")]
+        public string IPv6Status{ get; set; }
+
+        /// <summary>
         /// CNAME 地址。
         /// </summary>
         [JsonProperty("Cname")]
@@ -103,6 +137,10 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
             this.SetParamObj(map, prefix + "OriginDetail.", this.OriginDetail);
+            this.SetParamSimple(map, prefix + "OriginProtocol", this.OriginProtocol);
+            this.SetParamSimple(map, prefix + "HttpOriginPort", this.HttpOriginPort);
+            this.SetParamSimple(map, prefix + "HttpsOriginPort", this.HttpsOriginPort);
+            this.SetParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
             this.SetParamSimple(map, prefix + "Cname", this.Cname);
             this.SetParamSimple(map, prefix + "IdentificationStatus", this.IdentificationStatus);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);

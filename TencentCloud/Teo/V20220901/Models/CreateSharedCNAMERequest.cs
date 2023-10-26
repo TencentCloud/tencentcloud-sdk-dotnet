@@ -32,8 +32,10 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 共享 CNAME 前缀。请输入合法的域名前缀，例如"test-api"、"test-api.com"，限制输入 50 个字符。
-        /// 共享 CNAME 完整格式为：<自定义前缀>+<zoneid中的12位随机字符串>+"share.eo.dnse[0-5].com"。例如前缀传入 example.com，EO 会为您创建共享 CNAME：example.com.sai2ig51kaa5.eo.dns2.com
-        /// 示例值：example.com
+        /// 
+        /// 共享 CNAME 完整格式为：<自定义前缀>+<zoneid中的12位随机字符串>+"share.eo.dnse[0-5].com"。
+        /// 
+        /// 例如前缀传入 example.com，EO 会为您创建共享 CNAME：example.com.sai2ig51kaa5.share.eo.dnse2.com
         /// </summary>
         [JsonProperty("SharedCNAMEPrefix")]
         public string SharedCNAMEPrefix{ get; set; }

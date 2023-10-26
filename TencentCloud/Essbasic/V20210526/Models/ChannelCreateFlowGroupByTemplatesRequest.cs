@@ -33,7 +33,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
         /// <li>第三方平台子客企业中的员工标识: Agent.AppId</li>
         /// </ul>
-        /// 
         /// 子客企业和子客企业中的员工比较走完创建和实名过程
         /// </summary>
         [JsonProperty("Agent")]

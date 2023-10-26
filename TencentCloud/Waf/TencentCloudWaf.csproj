@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.872</VersionPrefix>
+    <VersionPrefix>3.0.873</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -261,6 +261,8 @@
     <Compile Include="V20180125\Models\GetInstanceQpsLimitRequest.cs" />
     <Compile Include="V20180125\Models\GetInstanceQpsLimitResponse.cs" />
     <Compile Include="V20180125\Models\GoodNews.cs" />
+    <Compile Include="V20180125\Models\Goods.cs" />
+    <Compile Include="V20180125\Models\GoodsDetail.cs" />
     <Compile Include="V20180125\Models\GoodsDetailNew.cs" />
     <Compile Include="V20180125\Models\HostDel.cs" />
     <Compile Include="V20180125\Models\HostRecord.cs" />
@@ -308,6 +310,8 @@
     <Compile Include="V20180125\Models\ModifyDomainWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyDomainsCLSStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyDomainsCLSStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyGenerateDealsRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyGenerateDealsResponse.cs" />
     <Compile Include="V20180125\Models\ModifyHostFlowModeRequest.cs" />
     <Compile Include="V20180125\Models\ModifyHostFlowModeResponse.cs" />
     <Compile Include="V20180125\Models\ModifyHostModeRequest.cs" />
@@ -353,6 +357,7 @@
     <Compile Include="V20180125\Models\PortItem.cs" />
     <Compile Include="V20180125\Models\PostAttackDownloadTaskRequest.cs" />
     <Compile Include="V20180125\Models\PostAttackDownloadTaskResponse.cs" />
+    <Compile Include="V20180125\Models\ProductInfo.cs" />
     <Compile Include="V20180125\Models\QPSPackageNew.cs" />
     <Compile Include="V20180125\Models\QpsData.cs" />
     <Compile Include="V20180125\Models\RefreshAccessCheckResultRequest.cs" />

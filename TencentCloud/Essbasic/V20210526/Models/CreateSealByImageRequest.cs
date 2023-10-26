@@ -25,20 +25,31 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 代理企业和员工的信息。
-        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// <ul>
+        /// <li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+        /// </ul>
+        /// 第三方平台子客企业和员工必须已经经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 印章名称，最大长度不超过50字符
+        /// 电子印章名字，1-50个中文字符
+        /// 注:`同一企业下电子印章名字不能相同`
         /// </summary>
         [JsonProperty("SealName")]
         public string SealName{ get; set; }
 
         /// <summary>
-        /// 印章图片base64，大小不超过10M（原始图片不超过7.6M）
+        /// 电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式
+        /// 
+        /// 注: `通过图片创建的电子印章，需电子签平台人工审核`
+        /// 
         /// </summary>
         [JsonProperty("SealImage")]
         public string SealImage{ get; set; }
@@ -51,45 +62,49 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传，此字段置空并且传字段 SealImage
+        /// 电子印章生成方式
+        /// <ul>
+        /// <li><strong>空值</strong>:(默认)使用上传的图片生成印章, 此时需要上传SealImage图片</li>
+        /// <li><strong>SealGenerateSourceSystem</strong>: 系统生成印章, 无需上传SealImage图片</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("GenerateSource")]
         public string GenerateSource{ get; set; }
 
         /// <summary>
-        /// 电子印章类型：
-        /// <ul><li>OFFICIAL-公章</li>
-        /// <li>CONTRACT-合同专用章;</li>
-        /// <li>FINANCE-合财务专用章;</li>
-        /// <li>PERSONNEL-人事专用章
-        /// </li>
-        /// <li>默认：OFFICIAL</li>
+        /// 电子印章类型 , 可选类型如下: 
+        /// <ul><li>**OFFICIAL**: (默认)公章</li>
+        /// <li>**CONTRACT**: 合同专用章;</li>
+        /// <li>**FINANCE**: 合财务专用章;</li>
+        /// <li>**PERSONNEL**: 人事专用章</li>
         /// </ul>
+        /// 注: `同企业下只能有一个公章, 重复创建会报错`
         /// </summary>
         [JsonProperty("SealType")]
         public string SealType{ get; set; }
 
         /// <summary>
-        /// 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
+        /// 企业印章横向文字，最多可填15个汉字  (若超过印章最大宽度，优先压缩字间距，其次缩小字号)
+        /// 横向文字的位置如下图中的"印章横向文字在这里"
+        /// 
+        /// ![image](https://dyn.ess.tencent.cn/guide/capi/CreateSealByImage2.png)
         /// </summary>
         [JsonProperty("SealHorizontalText")]
         public string SealHorizontalText{ get; set; }
 
         /// <summary>
-        /// 印章样式:
-        /// 
-        /// <ul><li>cycle:圆形印章</li>
-        /// <li>ellipse:椭圆印章</li>
-        /// <li> 注：默认圆形印章</li></ul>
+        /// 印章样式, 可以选择的样式如下: 
+        /// <ul><li>**cycle**:(默认)圆形印章</li>
+        /// <li>**ellipse**:椭圆印章</li>
         /// </summary>
         [JsonProperty("SealStyle")]
         public string SealStyle{ get; set; }
 
         /// <summary>
-        /// 印章尺寸取值描述：<ul><li> 42_42 圆形企业公章直径42mm</li>
-        /// <li> 40_40 圆形企业印章直径40mm</li>
-        /// <li> 45_30 椭圆形印章45mm x 30mm</li>
-        /// </ul>
+        /// 印章尺寸取值描述, 可以选择的尺寸如下: 
+        /// <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
+        /// <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
+        /// <li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
         /// </summary>
         [JsonProperty("SealSize")]
         public string SealSize{ get; set; }
