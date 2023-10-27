@@ -72,6 +72,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
+        /// <summary>
+        /// 网关设备接入协议（仅网关接入支持）
+        /// </summary>
+        [JsonProperty("ProtocolType")]
+        public long? ProtocolType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         }
     }
 }

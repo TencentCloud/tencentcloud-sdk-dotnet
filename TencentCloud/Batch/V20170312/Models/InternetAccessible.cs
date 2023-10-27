@@ -37,7 +37,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 是否分配公网IP。取值范围：<br><li>TRUE：表示分配公网IP<br><li>FALSE：表示不分配公网IP<br><br>当公网带宽大于0Mbps时，可自由选择开通与否，默认开通公网IP；当公网带宽为0，则不允许分配公网IP。该参数仅在RunInstances接口中作为入参使用。
+        /// 是否分配公网IP。取值范围：<br><li>true：表示分配公网IP<br><li>false：表示不分配公网IP<br><br>当公网带宽大于0Mbps时，可自由选择开通与否，默认开通公网IP；当公网带宽为0，则不允许分配公网IP。该参数仅在RunInstances接口中作为入参使用。
         /// </summary>
         [JsonProperty("PublicIpAssigned")]
         public bool? PublicIpAssigned{ get; set; }

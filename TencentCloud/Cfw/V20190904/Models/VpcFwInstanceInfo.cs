@@ -184,6 +184,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("UpdateEnable")]
         public long? UpdateEnable{ get; set; }
 
+        /// <summary>
+        /// 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrafficMode")]
+        public string TrafficMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -213,6 +220,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "FlowMax", this.FlowMax);
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "UpdateEnable", this.UpdateEnable);
+            this.SetParamSimple(map, prefix + "TrafficMode", this.TrafficMode);
         }
     }
 }

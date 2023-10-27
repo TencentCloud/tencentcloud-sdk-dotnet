@@ -128,7 +128,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string[] FwInsRegion{ get; set; }
 
         /// <summary>
-        /// 0 观察 1 拦截 2 严格 3 关闭
+        /// 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpsAction")]

@@ -25,16 +25,22 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
+        /// 0: 预览， 1: 下载
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
+
+        /// <summary>
         /// 任务报告Id 列表
         /// </summary>
         [JsonProperty("ReportItemKeyList")]
         public ReportItemKey[] ReportItemKeyList{ get; set; }
 
         /// <summary>
-        /// 0: 预览， 1: 下载
+        /// 报告中任务id列表
         /// </summary>
-        [JsonProperty("Type")]
-        public long? Type{ get; set; }
+        [JsonProperty("ReportTaskIdList")]
+        public ReportTaskIdList[] ReportTaskIdList{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ReportItemKeyList.", this.ReportItemKeyList);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "ReportItemKeyList.", this.ReportItemKeyList);
+            this.SetParamArrayObj(map, prefix + "ReportTaskIdList.", this.ReportTaskIdList);
         }
     }
 }

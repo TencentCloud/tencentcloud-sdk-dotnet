@@ -42,6 +42,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("IgnoreAsset")]
         public long? IgnoreAsset{ get; set; }
 
+        /// <summary>
+        /// 资产标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public AssetTag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 删除类型，取值： ALL， 删除全部，将直接忽略Content的内容；                                           其他值 ,非全部，则Centent必填，  默认为其他值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "RetainPath", this.RetainPath);
             this.SetParamSimple(map, prefix + "IgnoreAsset", this.IgnoreAsset);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

@@ -100,6 +100,13 @@ namespace TencentCloud.Omics.V20221128.Models
         public ExecutionTime ExecutionTime{ get; set; }
 
         /// <summary>
+        /// 缓存信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Cache")]
+        public CacheInfo Cache{ get; set; }
+
+        /// <summary>
         /// 错误信息。
         /// </summary>
         [JsonProperty("ErrorMessage")]
@@ -135,6 +142,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "Input", this.Input);
             this.SetParamObj(map, prefix + "Option.", this.Option);
             this.SetParamObj(map, prefix + "ExecutionTime.", this.ExecutionTime);
+            this.SetParamObj(map, prefix + "Cache.", this.Cache);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

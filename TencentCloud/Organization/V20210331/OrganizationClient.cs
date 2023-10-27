@@ -453,6 +453,46 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 删除成员账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountRequest"/></param>
+        /// <returns><see cref="DeleteAccountResponse"/></returns>
+        public async Task<DeleteAccountResponse> DeleteAccount(DeleteAccountRequest req)
+        {
+             JsonResponseModel<DeleteAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除成员账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountRequest"/></param>
+        /// <returns><see cref="DeleteAccountResponse"/></returns>
+        public DeleteAccountResponse DeleteAccountSync(DeleteAccountRequest req)
+        {
+             JsonResponseModel<DeleteAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除企业组织
         /// </summary>
         /// <param name="req"><see cref="DeleteOrganizationRequest"/></param>

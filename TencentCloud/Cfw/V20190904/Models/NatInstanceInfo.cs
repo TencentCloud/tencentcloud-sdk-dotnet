@@ -156,6 +156,27 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("NeedProbeEngineUpdate")]
         public long? NeedProbeEngineUpdate{ get; set; }
 
+        /// <summary>
+        /// 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrafficMode")]
+        public string TrafficMode{ get; set; }
+
+        /// <summary>
+        /// 实例主所在可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// 实例备所在可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneBak")]
+        public string ZoneBak{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +203,9 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "UpdateEnable", this.UpdateEnable);
             this.SetParamSimple(map, prefix + "NeedProbeEngineUpdate", this.NeedProbeEngineUpdate);
+            this.SetParamSimple(map, prefix + "TrafficMode", this.TrafficMode);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "ZoneBak", this.ZoneBak);
         }
     }
 }

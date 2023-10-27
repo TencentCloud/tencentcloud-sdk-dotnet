@@ -32,7 +32,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 设备编码（即我们为设备生成的20位国标编码）
+        /// 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]

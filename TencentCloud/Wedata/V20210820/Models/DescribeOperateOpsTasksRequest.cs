@@ -150,6 +150,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecutorGroupIdList")]
         public string ExecutorGroupIdList{ get; set; }
 
+        /// <summary>
+        /// 任务标签
+        /// </summary>
+        [JsonProperty("TaskTags")]
+        public TaskTag[] TaskTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TargetServiceType", this.TargetServiceType);
             this.SetParamSimple(map, prefix + "AlarmType", this.AlarmType);
             this.SetParamSimple(map, prefix + "ExecutorGroupIdList", this.ExecutorGroupIdList);
+            this.SetParamArrayObj(map, prefix + "TaskTags.", this.TaskTags);
         }
     }
 }

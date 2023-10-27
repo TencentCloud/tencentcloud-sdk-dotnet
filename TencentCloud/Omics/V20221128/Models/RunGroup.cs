@@ -104,10 +104,17 @@ namespace TencentCloud.Omics.V20221128.Models
         public string Input{ get; set; }
 
         /// <summary>
-        /// 运行选项。
+        /// WDL运行选项。
         /// </summary>
         [JsonProperty("Option")]
         public RunOption Option{ get; set; }
+
+        /// <summary>
+        /// Nextflow运行选项。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NFOption")]
+        public NFOption NFOption{ get; set; }
 
         /// <summary>
         /// 任务总数量。
@@ -145,6 +152,34 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 创建者。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Creator")]
+        public string Creator{ get; set; }
+
+        /// <summary>
+        /// 创建者ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatorId")]
+        public string CreatorId{ get; set; }
+
+        /// <summary>
+        /// 运行结果通知方式。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResultNotify")]
+        public string ResultNotify{ get; set; }
+
+        /// <summary>
+        /// 应用版本。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationVersion")]
+        public ApplicationVersion ApplicationVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,12 +200,17 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Input", this.Input);
             this.SetParamObj(map, prefix + "Option.", this.Option);
+            this.SetParamObj(map, prefix + "NFOption.", this.NFOption);
             this.SetParamSimple(map, prefix + "TotalRun", this.TotalRun);
             this.SetParamArrayObj(map, prefix + "RunStatusCounts.", this.RunStatusCounts);
             this.SetParamObj(map, prefix + "ExecutionTime.", this.ExecutionTime);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "Creator", this.Creator);
+            this.SetParamSimple(map, prefix + "CreatorId", this.CreatorId);
+            this.SetParamSimple(map, prefix + "ResultNotify", this.ResultNotify);
+            this.SetParamObj(map, prefix + "ApplicationVersion.", this.ApplicationVersion);
         }
     }
 }

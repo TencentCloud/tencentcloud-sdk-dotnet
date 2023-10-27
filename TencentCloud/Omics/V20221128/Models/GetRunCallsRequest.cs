@@ -31,16 +31,16 @@ namespace TencentCloud.Omics.V20221128.Models
         public string RunUuid{ get; set; }
 
         /// <summary>
-        /// 项目ID。
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
-
-        /// <summary>
         /// 作业路径
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
+
+        /// <summary>
+        /// 项目ID。
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Omics.V20221128.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RunUuid", this.RunUuid);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

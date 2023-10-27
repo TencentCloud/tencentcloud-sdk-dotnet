@@ -30,6 +30,31 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
+        /// <summary>
+        /// 翻页支持，读取偏移
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 翻页支持，读取长度限制
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 排序方式，asc或者desc
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 过滤器,可以允许如下的值：
+        /// RuleId,Match_field,Name,Action,Status
+        /// </summary>
+        [JsonProperty("Filters")]
+        public FiltersItemNew[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +62,10 @@ namespace TencentCloud.Waf.V20180125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

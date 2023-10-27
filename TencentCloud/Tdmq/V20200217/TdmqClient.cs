@@ -2413,6 +2413,86 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 查询RabbitMQ队列详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQQueueDetailRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQQueueDetailResponse"/></returns>
+        public async Task<DescribeRabbitMQQueueDetailResponse> DescribeRabbitMQQueueDetail(DescribeRabbitMQQueueDetailRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQQueueDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRabbitMQQueueDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQQueueDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询RabbitMQ队列详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQQueueDetailRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQQueueDetailResponse"/></returns>
+        public DescribeRabbitMQQueueDetailResponse DescribeRabbitMQQueueDetailSync(DescribeRabbitMQQueueDetailRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQQueueDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRabbitMQQueueDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQQueueDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询RabbitMQ队列列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQQueuesRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQQueuesResponse"/></returns>
+        public async Task<DescribeRabbitMQQueuesResponse> DescribeRabbitMQQueues(DescribeRabbitMQQueuesRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQQueuesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRabbitMQQueues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQQueuesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询RabbitMQ队列列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQQueuesRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQQueuesResponse"/></returns>
+        public DescribeRabbitMQQueuesResponse DescribeRabbitMQQueuesSync(DescribeRabbitMQQueuesRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQQueuesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRabbitMQQueues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQQueuesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询RabbitMQ用户列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQUserRequest"/></param>

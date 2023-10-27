@@ -84,6 +84,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("TaskMode")]
         public long? TaskMode{ get; set; }
 
+        /// <summary>
+        /// 资产标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public AssetTag Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ScanFrom", this.ScanFrom);
             this.SetParamObj(map, prefix + "TaskAdvanceCFG.", this.TaskAdvanceCFG);
             this.SetParamSimple(map, prefix + "TaskMode", this.TaskMode);
+            this.SetParamObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

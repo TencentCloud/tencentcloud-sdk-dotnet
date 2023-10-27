@@ -164,6 +164,13 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("Stderr")]
         public string Stderr{ get; set; }
 
+        /// <summary>
+        /// 其他信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Meta")]
+        public string Meta{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +197,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "CallCached", this.CallCached);
             this.SetParamSimple(map, prefix + "Stdout", this.Stdout);
             this.SetParamSimple(map, prefix + "Stderr", this.Stderr);
+            this.SetParamSimple(map, prefix + "Meta", this.Meta);
         }
     }
 }

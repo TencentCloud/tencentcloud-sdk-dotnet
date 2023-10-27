@@ -101,6 +101,13 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("StartTimeMillis")]
         public long? StartTimeMillis{ get; set; }
 
+        /// <summary>
+        /// Parent Span Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParentSpanID")]
+        public string ParentSpanID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "SpanID", this.SpanID);
             this.SetParamSimple(map, prefix + "StartTimeMillis", this.StartTimeMillis);
+            this.SetParamSimple(map, prefix + "ParentSpanID", this.ParentSpanID);
         }
     }
 }

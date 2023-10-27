@@ -297,7 +297,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建源站组
+        /// 创建源站组，以源站组的方式管理业务源站。此处配置的源站组可于**添加加速域名**和**四层代理**等功能中引用。
         /// </summary>
         /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
         /// <returns><see cref="CreateOriginGroupResponse"/></returns>
@@ -317,7 +317,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建源站组
+        /// 创建源站组，以源站组的方式管理业务源站。此处配置的源站组可于**添加加速域名**和**四层代理**等功能中引用。
         /// </summary>
         /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
         /// <returns><see cref="CreateOriginGroupResponse"/></returns>
@@ -1665,6 +1665,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 查询指定策略模板的绑定关系列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityTemplateBindingsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityTemplateBindingsResponse"/></returns>
+        public async Task<DescribeSecurityTemplateBindingsResponse> DescribeSecurityTemplateBindings(DescribeSecurityTemplateBindingsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityTemplateBindingsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityTemplateBindings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityTemplateBindingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定策略模板的绑定关系列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityTemplateBindingsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityTemplateBindingsResponse"/></returns>
+        public DescribeSecurityTemplateBindingsResponse DescribeSecurityTemplateBindingsSync(DescribeSecurityTemplateBindingsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityTemplateBindingsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityTemplateBindings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityTemplateBindingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeTimingL4Data）用于查询四层时序流量数据列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL4DataRequest"/></param>
@@ -2429,7 +2469,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改源站组
+        /// 修改源站组配置，新提交的源站记录将会覆盖原有源站组中的源站记录。
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginGroupRequest"/></param>
         /// <returns><see cref="ModifyOriginGroupResponse"/></returns>
@@ -2449,7 +2489,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改源站组
+        /// 修改源站组配置，新提交的源站记录将会覆盖原有源站组中的源站记录。
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginGroupRequest"/></param>
         /// <returns><see cref="ModifyOriginGroupResponse"/></returns>

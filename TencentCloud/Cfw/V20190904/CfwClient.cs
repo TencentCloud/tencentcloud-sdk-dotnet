@@ -333,6 +333,126 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 用户告警中心-封隔离处置按钮
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlertCenterIsolateRequest"/></param>
+        /// <returns><see cref="CreateAlertCenterIsolateResponse"/></returns>
+        public async Task<CreateAlertCenterIsolateResponse> CreateAlertCenterIsolate(CreateAlertCenterIsolateRequest req)
+        {
+             JsonResponseModel<CreateAlertCenterIsolateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAlertCenterIsolate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAlertCenterIsolateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户告警中心-封隔离处置按钮
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlertCenterIsolateRequest"/></param>
+        /// <returns><see cref="CreateAlertCenterIsolateResponse"/></returns>
+        public CreateAlertCenterIsolateResponse CreateAlertCenterIsolateSync(CreateAlertCenterIsolateRequest req)
+        {
+             JsonResponseModel<CreateAlertCenterIsolateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAlertCenterIsolate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAlertCenterIsolateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户告警中心-忽略处置按钮
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlertCenterOmitRequest"/></param>
+        /// <returns><see cref="CreateAlertCenterOmitResponse"/></returns>
+        public async Task<CreateAlertCenterOmitResponse> CreateAlertCenterOmit(CreateAlertCenterOmitRequest req)
+        {
+             JsonResponseModel<CreateAlertCenterOmitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAlertCenterOmit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAlertCenterOmitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户告警中心-忽略处置按钮
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlertCenterOmitRequest"/></param>
+        /// <returns><see cref="CreateAlertCenterOmitResponse"/></returns>
+        public CreateAlertCenterOmitResponse CreateAlertCenterOmitSync(CreateAlertCenterOmitRequest req)
+        {
+             JsonResponseModel<CreateAlertCenterOmitResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAlertCenterOmit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAlertCenterOmitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户告警中心-封禁、放通处置按钮
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlertCenterRuleRequest"/></param>
+        /// <returns><see cref="CreateAlertCenterRuleResponse"/></returns>
+        public async Task<CreateAlertCenterRuleResponse> CreateAlertCenterRule(CreateAlertCenterRuleRequest req)
+        {
+             JsonResponseModel<CreateAlertCenterRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAlertCenterRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAlertCenterRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户告警中心-封禁、放通处置按钮
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlertCenterRuleRequest"/></param>
+        /// <returns><see cref="CreateAlertCenterRuleResponse"/></returns>
+        public CreateAlertCenterRuleResponse CreateAlertCenterRuleSync(CreateAlertCenterRuleRequest req)
+        {
+             JsonResponseModel<CreateAlertCenterRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAlertCenterRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAlertCenterRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量添加入侵防御封禁列表、放通列表规则
         /// </summary>
         /// <param name="req"><see cref="CreateBlockIgnoreRuleListRequest"/></param>

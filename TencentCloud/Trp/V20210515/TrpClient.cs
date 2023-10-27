@@ -1257,6 +1257,46 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 查询安心计划二维码列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlanQRCodesRequest"/></param>
+        /// <returns><see cref="DescribePlanQRCodesResponse"/></returns>
+        public async Task<DescribePlanQRCodesResponse> DescribePlanQRCodes(DescribePlanQRCodesRequest req)
+        {
+             JsonResponseModel<DescribePlanQRCodesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePlanQRCodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePlanQRCodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询安心计划二维码列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlanQRCodesRequest"/></param>
+        /// <returns><see cref="DescribePlanQRCodesResponse"/></returns>
+        public DescribePlanQRCodesResponse DescribePlanQRCodesSync(DescribePlanQRCodesRequest req)
+        {
+             JsonResponseModel<DescribePlanQRCodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePlanQRCodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePlanQRCodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询商品信息
         /// </summary>
         /// <param name="req"><see cref="DescribeProductByIdRequest"/></param>

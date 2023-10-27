@@ -30,6 +30,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Filter")]
         public Filter Filter{ get; set; }
 
+        /// <summary>
+        /// 安全中心自定义标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public AssetTag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

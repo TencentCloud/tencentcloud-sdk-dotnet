@@ -111,7 +111,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public EnhancedService EnhancedService{ get; set; }
 
         /// <summary>
-        /// 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
+        /// 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
@@ -140,6 +140,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }
 
+        /// <summary>
+        /// 实例启动模板。
+        /// </summary>
+        [JsonProperty("LaunchTemplate")]
+        public LaunchTemplate LaunchTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +171,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+            this.SetParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
         }
     }
 }

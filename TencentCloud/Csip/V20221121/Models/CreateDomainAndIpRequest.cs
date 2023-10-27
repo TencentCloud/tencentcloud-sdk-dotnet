@@ -25,10 +25,16 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// -
+        /// 公网IP/域名
         /// </summary>
         [JsonProperty("Content")]
         public string[] Content{ get; set; }
+
+        /// <summary>
+        /// 资产标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public AssetTag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Content.", this.Content);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

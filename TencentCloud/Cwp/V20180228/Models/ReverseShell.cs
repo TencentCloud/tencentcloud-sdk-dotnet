@@ -139,7 +139,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ProcTree{ get; set; }
 
         /// <summary>
-        /// 检测方法
+        /// 检测方法: 0行为分析; 1命令特征检测
         /// </summary>
         [JsonProperty("DetectBy")]
         public ulong? DetectBy{ get; set; }
@@ -157,6 +157,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
+
+        /// <summary>
+        /// 威胁等级：0中危，1高危
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RiskLevel")]
+        public ulong? RiskLevel{ get; set; }
 
 
         /// <summary>
@@ -186,6 +193,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "DetectBy", this.DetectBy);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
+            this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.873</VersionPrefix>
+    <VersionPrefix>3.0.874</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -185,6 +185,8 @@
     <Compile Include="V20220901\Models\DescribeRulesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeRulesSettingRequest.cs" />
     <Compile Include="V20220901\Models\DescribeRulesSettingResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeSecurityTemplateBindingsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeSecurityTemplateBindingsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL4DataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL4DataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL7AnalysisDataRequest.cs" />
@@ -208,6 +210,7 @@
     <Compile Include="V20220901\Models\DownloadL7LogsResponse.cs" />
     <Compile Include="V20220901\Models\DropPageConfig.cs" />
     <Compile Include="V20220901\Models\DropPageDetail.cs" />
+    <Compile Include="V20220901\Models\EntityStatus.cs" />
     <Compile Include="V20220901\Models\ExceptConfig.cs" />
     <Compile Include="V20220901\Models\ExceptUserRule.cs" />
     <Compile Include="V20220901\Models\ExceptUserRuleCondition.cs" />
@@ -310,6 +313,7 @@
     <Compile Include="V20220901\Models\SecEntry.cs" />
     <Compile Include="V20220901\Models\SecEntryValue.cs" />
     <Compile Include="V20220901\Models\SecurityConfig.cs" />
+    <Compile Include="V20220901\Models\SecurityTemplateBinding.cs" />
     <Compile Include="V20220901\Models\SecurityType.cs" />
     <Compile Include="V20220901\Models\ServerCertInfo.cs" />
     <Compile Include="V20220901\Models\SkipCondition.cs" />
@@ -324,6 +328,7 @@
     <Compile Include="V20220901\Models\Tag.cs" />
     <Compile Include="V20220901\Models\Task.cs" />
     <Compile Include="V20220901\Models\TemplateConfig.cs" />
+    <Compile Include="V20220901\Models\TemplateScope.cs" />
     <Compile Include="V20220901\Models\TimingDataItem.cs" />
     <Compile Include="V20220901\Models\TimingDataRecord.cs" />
     <Compile Include="V20220901\Models\TimingTypeValue.cs" />

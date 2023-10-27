@@ -85,6 +85,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DatasourceConnectionTypes")]
         public string[] DatasourceConnectionTypes{ get; set; }
 
+        /// <summary>
+        /// 返回指定hive版本的数据源，该参数指定后，会过滤掉该参数指定版本以外的hive数据源，非hive数据源正常返回
+        /// </summary>
+        [JsonProperty("HiveVersion")]
+        public string[] HiveVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "DatasourceConnectionNames.", this.DatasourceConnectionNames);
             this.SetParamArraySimple(map, prefix + "DatasourceConnectionTypes.", this.DatasourceConnectionTypes);
+            this.SetParamArraySimple(map, prefix + "HiveVersion.", this.HiveVersion);
         }
     }
 }

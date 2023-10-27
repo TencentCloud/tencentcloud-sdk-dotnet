@@ -73,6 +73,20 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
 
+        /// <summary>
+        /// 实例主机所在可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// 实例备机所在可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneBak")]
+        public string ZoneBak{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +100,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "ZoneZh", this.ZoneZh);
             this.SetParamSimple(map, prefix + "ZoneZhBack", this.ZoneZhBack);
             this.SetParamSimple(map, prefix + "BandWidth", this.BandWidth);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "ZoneBak", this.ZoneBak);
         }
     }
 }
