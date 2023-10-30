@@ -25,14 +25,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 签署流程资源对应链接信息
+        /// 合同流程PDF下载链接
         /// </summary>
         [JsonProperty("FlowResourceUrlInfos")]
         public FlowResourceUrlInfo[] FlowResourceUrlInfos{ get; set; }
 
         /// <summary>
-        /// 创建消息，对应多个合同ID，
-        /// 成功为“”,创建失败则对应失败消息
+        /// 如果某个序号的合同流程生成PDF下载链接成功, 对应序号的值为空
+        /// 如果某个序号的合同流程生成PDF下载链接失败, 对应序号的值为错误的原因
         /// </summary>
         [JsonProperty("ErrorMessages")]
         public string[] ErrorMessages{ get; set; }

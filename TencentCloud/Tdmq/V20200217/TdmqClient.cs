@@ -3213,6 +3213,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 用于获取RocketMQ消费组订阅关系数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQSubscriptionsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQSubscriptionsResponse"/></returns>
+        public async Task<DescribeRocketMQSubscriptionsResponse> DescribeRocketMQSubscriptions(DescribeRocketMQSubscriptionsRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQSubscriptionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQSubscriptions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQSubscriptionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取RocketMQ消费组订阅关系数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQSubscriptionsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQSubscriptionsResponse"/></returns>
+        public DescribeRocketMQSubscriptionsResponse DescribeRocketMQSubscriptionsSync(DescribeRocketMQSubscriptionsRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQSubscriptionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQSubscriptions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQSubscriptionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// rocketmq 消息查询
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQTopicMsgsRequest"/></param>

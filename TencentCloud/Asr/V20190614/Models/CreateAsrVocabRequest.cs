@@ -37,7 +37,8 @@ namespace TencentCloud.Asr.V20190614.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10个汉字或30个英文字符，权重为[1,10]之间整数，数组长度不大于1000
+        /// 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10个汉字或30个英文字符，权重为[1,11]之间整数，数组长度不大于1000
+        /// 注意: 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
         /// </summary>
         [JsonProperty("WordWeights")]
         public HotWord[] WordWeights{ get; set; }

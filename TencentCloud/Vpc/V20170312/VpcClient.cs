@@ -11853,6 +11853,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口用于修改 SSL-VPN 服务端属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpnGatewaySslServerRequest"/></param>
+        /// <returns><see cref="ModifyVpnGatewaySslServerResponse"/></returns>
+        public async Task<ModifyVpnGatewaySslServerResponse> ModifyVpnGatewaySslServer(ModifyVpnGatewaySslServerRequest req)
+        {
+             JsonResponseModel<ModifyVpnGatewaySslServerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVpnGatewaySslServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpnGatewaySslServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于修改 SSL-VPN 服务端属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpnGatewaySslServerRequest"/></param>
+        /// <returns><see cref="ModifyVpnGatewaySslServerResponse"/></returns>
+        public ModifyVpnGatewaySslServerResponse ModifyVpnGatewaySslServerSync(ModifyVpnGatewaySslServerRequest req)
+        {
+             JsonResponseModel<ModifyVpnGatewaySslServerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVpnGatewaySslServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpnGatewaySslServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（NotifyRoutes）用于路由表列表页操作增加“发布到云联网”，发布路由到云联网。
         /// </summary>
         /// <param name="req"><see cref="NotifyRoutesRequest"/></param>

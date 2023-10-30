@@ -26,30 +26,35 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptAlgorithm")]
         public string EncryptAlgorithm{ get; set; }
 
         /// <summary>
         /// 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntegrityAlgorith")]
         public string IntegrityAlgorith{ get; set; }
 
         /// <summary>
         /// IPsec SA lifetime(s)：单位秒，取值范围：180-604800
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPSECSaLifetimeSeconds")]
         public ulong? IPSECSaLifetimeSeconds{ get; set; }
 
         /// <summary>
         /// PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PfsDhGroup")]
         public string PfsDhGroup{ get; set; }
 
         /// <summary>
         /// IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPSECSaLifetimeTraffic")]
         public ulong? IPSECSaLifetimeTraffic{ get; set; }

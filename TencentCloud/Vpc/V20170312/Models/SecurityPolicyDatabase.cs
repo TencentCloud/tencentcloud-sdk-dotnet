@@ -26,12 +26,14 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 本端网段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalCidrBlock")]
         public string LocalCidrBlock{ get; set; }
 
         /// <summary>
         /// 对端网段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemoteCidrBlock")]
         public string[] RemoteCidrBlock{ get; set; }

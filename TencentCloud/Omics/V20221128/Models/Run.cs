@@ -91,6 +91,7 @@ namespace TencentCloud.Omics.V20221128.Models
         /// 运行选项。
         /// </summary>
         [JsonProperty("Option")]
+        [System.Obsolete]
         public RunOption Option{ get; set; }
 
         /// <summary>

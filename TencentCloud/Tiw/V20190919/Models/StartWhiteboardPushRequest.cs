@@ -33,8 +33,8 @@ namespace TencentCloud.Tiw.V20190919.Models
         /// <summary>
         /// 需要推流的白板房间号，取值范围: (1, 4294967295)。
         /// 
-        /// 1. 白板推流默认以RoomId的字符串表达形式作为IM群组的GroupID（比如RoomId为1234，则IM群组的GroupID为"1234"）加群进行信令同步，请在开始推流前确保相应IM群组已创建完成，否则会导致推流失败。
-        /// 2. 在没有指定TRTCRoomId和TRTCRoomIdStr的情况下，默认会以RoomId作为白板流进行推流的TRTC房间号。
+        /// 1. 在没有指定`GroupId`的情况下，白板推流默认以`RoomId`的字符串表达形式作为IM群组ID（比如RoomId为1234，则IM群组ID为"1234"），并加群进行信令同步，请在开始推流前确保相应IM群组已创建完成，否则会导致推流失败。
+        /// 2. 在没有指定`TRTCRoomId`和`TRTCRoomIdStr`的情况下，默认会以`RoomId`作为白板流进行推流的TRTC房间号。
         /// </summary>
         [JsonProperty("RoomId")]
         public long? RoomId{ get; set; }
@@ -47,7 +47,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string PushUserId{ get; set; }
 
         /// <summary>
-        /// 与PushUserId对应的IM签名(usersig)。
+        /// 与`PushUserId`对应的IM签名(usersig)。
         /// </summary>
         [JsonProperty("PushUserSig")]
         public string PushUserSig{ get; set; }
@@ -111,7 +111,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public bool? AutoRecord{ get; set; }
 
         /// <summary>
-        /// 指定白板推流录制的RecordID，指定的RecordID会用于填充实时音视频云端录制完成后的回调消息中的 "userdefinerecordid" 字段内容，便于您更方便的识别录制回调，以及在点播媒体资源管理中查找相应的录制视频文件。
+        /// 指定白板推流这路流在音视频云端录制中的RecordID，指定的RecordID会用于填充实时音视频云端录制完成后的回调消息中的 "userdefinerecordid" 字段内容，便于您更方便的识别录制回调，以及在点播媒体资源管理中查找相应的录制视频文件。
         /// 
         /// 限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符。
         /// 
@@ -138,7 +138,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public bool? AutoPublish{ get; set; }
 
         /// <summary>
-        /// 指定实时音视频在旁路白板推流时的StreamID，设置之后，您就可以在腾讯云直播 CDN 上通过标准直播方案（FLV或HLS）播放该用户的音视频流。
+        /// 指定实时音视频在旁路白板推流这路流时的StreamID，设置之后，您就可以在腾讯云直播 CDN 上通过标准直播方案（FLV或HLS）播放该用户的音视频流。
         /// 
         /// 限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符。
         /// 
@@ -163,9 +163,9 @@ namespace TencentCloud.Tiw.V20190919.Models
         /// <summary>
         /// TRTC数字类型房间号，取值范围: (1, 4294967295)。
         /// 
-        /// 在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
+        /// 在同时指定了`RoomId`与`TRTCRoomId`的情况下，优先使用`TRTCRoomId`作为白板流进行推流的TRTC房间号。
         /// 
-        /// 当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
+        /// 当指定了`TRTCRoomIdStr`的情况下，此字段将被忽略。
         /// </summary>
         [JsonProperty("TRTCRoomId")]
         public long? TRTCRoomId{ get; set; }
@@ -173,7 +173,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         /// <summary>
         /// TRTC字符串类型房间号。
         /// 
-        /// 在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
+        /// 在指定了`TRTCRoomIdStr`的情况下，会优先使用`TRTCRoomIdStr`作为白板流进行推流的TRTC房间号。
         /// </summary>
         [JsonProperty("TRTCRoomIdStr")]
         public string TRTCRoomIdStr{ get; set; }
@@ -205,6 +205,14 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("TRTCEnterRoomMode")]
         public string TRTCEnterRoomMode{ get; set; }
 
+        /// <summary>
+        /// 白板进行信令同步的 IM 群组 ID。
+        /// 在没有指定`GroupId`的情况下，白板推流服务将使用 `RoomId` 的字符串形式作为同步白板信令的IM群组ID。
+        /// 在指定了`GroupId`的情况下，白板推流将优先`GroupId`作为同步白板信令的群组ID。请在开始推流前确保指定的IM群组已创建完成，否则会导致推流失败。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -232,6 +240,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamObj(map, prefix + "IMAuthParam.", this.IMAuthParam);
             this.SetParamObj(map, prefix + "TRTCAuthParam.", this.TRTCAuthParam);
             this.SetParamSimple(map, prefix + "TRTCEnterRoomMode", this.TRTCEnterRoomMode);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

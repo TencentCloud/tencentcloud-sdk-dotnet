@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] KeyIds{ get; set; }
 
         /// <summary>
-        /// 是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再解绑密钥。取值范围：<br><li>TRUE：表示在正常关机失败后进行强制关机。<br><li>FALSE：表示在正常关机失败后不进行强制关机。<br><br>默认取值：FALSE。
+        /// 是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再解绑密钥。取值范围：<br><li>true：表示在正常关机失败后进行强制关机。<br><li>false：表示在正常关机失败后不进行强制关机。<br><br>默认取值：false。
         /// </summary>
         [JsonProperty("ForceStop")]
         public bool? ForceStop{ get; set; }

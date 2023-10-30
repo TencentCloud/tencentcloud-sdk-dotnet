@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 合同（流程）下载地址
+        /// 跳转控制台合同下载页面链接 , 5分钟之内有效，且只能访问一次
         /// </summary>
         [JsonProperty("DownLoadUrl")]
         public string DownLoadUrl{ get; set; }

@@ -155,7 +155,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// DCN同步模式，0：普通DCN同步，1：一致性同步
+        /// DCN同步模式，0：异步， 1：强同步
         /// </summary>
         [JsonProperty("DcnSyncMode")]
         public long? DcnSyncMode{ get; set; }

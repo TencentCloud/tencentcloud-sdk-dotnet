@@ -30,6 +30,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
+        /// <summary>
+        /// 事件类型
+        /// </summary>
+        [JsonProperty("EventType")]
+        public string EventType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "EventType", this.EventType);
         }
     }
 }

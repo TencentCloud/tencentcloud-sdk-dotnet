@@ -41,6 +41,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// FRONT 为驾驶证主页正面（有红色印章的一面），
         /// BACK 为驾驶证副页正面（有档案编号的一面）。
+        /// DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
         /// 默认值为：FRONT。
         /// </summary>
         [JsonProperty("CardSide")]

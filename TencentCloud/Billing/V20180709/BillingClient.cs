@@ -93,6 +93,46 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 创建节省计划订单，创建订单完成需调用PayDeals接口完成订单支付
+        /// </summary>
+        /// <param name="req"><see cref="CreateSavingPlanOrderRequest"/></param>
+        /// <returns><see cref="CreateSavingPlanOrderResponse"/></returns>
+        public async Task<CreateSavingPlanOrderResponse> CreateSavingPlanOrder(CreateSavingPlanOrderRequest req)
+        {
+             JsonResponseModel<CreateSavingPlanOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSavingPlanOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSavingPlanOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建节省计划订单，创建订单完成需调用PayDeals接口完成订单支付
+        /// </summary>
+        /// <param name="req"><see cref="CreateSavingPlanOrderRequest"/></param>
+        /// <returns><see cref="CreateSavingPlanOrderResponse"/></returns>
+        public CreateSavingPlanOrderResponse CreateSavingPlanOrderSync(CreateSavingPlanOrderRequest req)
+        {
+             JsonResponseModel<CreateSavingPlanOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSavingPlanOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSavingPlanOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量取消设置分账标签
         /// </summary>
         /// <param name="req"><see cref="DeleteAllocationTagRequest"/></param>
@@ -1012,6 +1052,126 @@ namespace TencentCloud.Billing.V20180709
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDosageDetailByDate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDosageDetailByDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanCoverageRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanCoverageResponse"/></returns>
+        public async Task<DescribeSavingPlanCoverageResponse> DescribeSavingPlanCoverage(DescribeSavingPlanCoverageRequest req)
+        {
+             JsonResponseModel<DescribeSavingPlanCoverageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSavingPlanCoverage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSavingPlanCoverageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanCoverageRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanCoverageResponse"/></returns>
+        public DescribeSavingPlanCoverageResponse DescribeSavingPlanCoverageSync(DescribeSavingPlanCoverageRequest req)
+        {
+             JsonResponseModel<DescribeSavingPlanCoverageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSavingPlanCoverage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSavingPlanCoverageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查用当前用户明细节省计划总览查询时段内的使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanOverviewRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanOverviewResponse"/></returns>
+        public async Task<DescribeSavingPlanOverviewResponse> DescribeSavingPlanOverview(DescribeSavingPlanOverviewRequest req)
+        {
+             JsonResponseModel<DescribeSavingPlanOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSavingPlanOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSavingPlanOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查用当前用户明细节省计划总览查询时段内的使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanOverviewRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanOverviewResponse"/></returns>
+        public DescribeSavingPlanOverviewResponse DescribeSavingPlanOverviewSync(DescribeSavingPlanOverviewRequest req)
+        {
+             JsonResponseModel<DescribeSavingPlanOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSavingPlanOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSavingPlanOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查用当前用户明细节省计划查询时段内的使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanUsageRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanUsageResponse"/></returns>
+        public async Task<DescribeSavingPlanUsageResponse> DescribeSavingPlanUsage(DescribeSavingPlanUsageRequest req)
+        {
+             JsonResponseModel<DescribeSavingPlanUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSavingPlanUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSavingPlanUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查用当前用户明细节省计划查询时段内的使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanUsageRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanUsageResponse"/></returns>
+        public DescribeSavingPlanUsageResponse DescribeSavingPlanUsageSync(DescribeSavingPlanUsageRequest req)
+        {
+             JsonResponseModel<DescribeSavingPlanUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSavingPlanUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSavingPlanUsageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

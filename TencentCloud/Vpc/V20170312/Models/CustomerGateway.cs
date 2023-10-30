@@ -48,6 +48,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
+        /// <summary>
+        /// BGP ASN。
+        /// </summary>
+        [JsonProperty("BgpAsn")]
+        public ulong? BgpAsn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CustomerGatewayName", this.CustomerGatewayName);
             this.SetParamSimple(map, prefix + "IpAddress", this.IpAddress);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
         }
     }
 }

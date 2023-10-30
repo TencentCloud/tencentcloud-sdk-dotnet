@@ -25,7 +25,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
     {
         
         /// <summary>
-        /// 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+        /// 分片节点可用区分布，可填写多个可用区。
         /// 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
         /// </summary>
         [JsonProperty("Zones")]
@@ -160,6 +160,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// DCN同步模式，0：异步， 1：强同步 
+        /// </summary>
+        [JsonProperty("DcnSyncMode")]
+        public long? DcnSyncMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +194,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
         }
     }
 }

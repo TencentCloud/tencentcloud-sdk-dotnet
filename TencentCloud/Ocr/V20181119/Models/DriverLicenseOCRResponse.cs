@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 姓名
+        /// 驾驶证正页姓名
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -80,7 +80,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// 证号
+        /// 驾驶证正页证号
         /// </summary>
         [JsonProperty("CardCode")]
         public string CardCode{ get; set; }
@@ -146,6 +146,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string GenerateTime{ get; set; }
 
         /// <summary>
+        /// 驾驶证副页姓名
+        /// </summary>
+        [JsonProperty("BackPageName")]
+        public string BackPageName{ get; set; }
+
+        /// <summary>
+        /// 驾驶证副页证号
+        /// </summary>
+        [JsonProperty("BackPageCardCode")]
+        public string BackPageCardCode{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -176,6 +188,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "CumulativeScore", this.CumulativeScore);
             this.SetParamSimple(map, prefix + "CurrentTime", this.CurrentTime);
             this.SetParamSimple(map, prefix + "GenerateTime", this.GenerateTime);
+            this.SetParamSimple(map, prefix + "BackPageName", this.BackPageName);
+            this.SetParamSimple(map, prefix + "BackPageCardCode", this.BackPageCardCode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

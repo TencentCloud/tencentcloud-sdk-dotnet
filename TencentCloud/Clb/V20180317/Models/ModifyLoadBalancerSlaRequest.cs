@@ -30,6 +30,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LoadBalancerSla")]
         public SlaUpdateParam[] LoadBalancerSla{ get; set; }
 
+        /// <summary>
+        /// 是否强制升级，默认否。
+        /// </summary>
+        [JsonProperty("Force")]
+        public bool? Force{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "LoadBalancerSla.", this.LoadBalancerSla);
+            this.SetParamSimple(map, prefix + "Force", this.Force);
         }
     }
 }

@@ -31,7 +31,10 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 需要录制的房间号，取值范围: (1, 4294967295)
+        /// 需要录制的白板房间号，取值范围: (1, 4294967295)。
+        /// 
+        /// 1. 在没有指定`GroupId`的情况下，实时录制默认以`RoomId`的字符串表达形式作为同步白板信令的IM群组ID（比如`RoomId`为1234，则IM群组ID为"1234"），并加群进行信令同步，请在开始录制前确保相应IM群组已创建完成，否则会导致录制失败。
+        /// 2. 在没有指定`TRTCRoomId`和`TRTCRoomIdStr`的情况下，默认会以`RoomId`作为TRTC房间号进房拉流进行录制。
         /// </summary>
         [JsonProperty("RoomId")]
         public long? RoomId{ get; set; }
@@ -44,13 +47,15 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string RecordUserId{ get; set; }
 
         /// <summary>
-        /// 与RecordUserId对应的签名
+        /// 与`RecordUserId`对应的IM签名
         /// </summary>
         [JsonProperty("RecordUserSig")]
         public string RecordUserSig{ get; set; }
 
         /// <summary>
-        /// （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
+        /// 白板进行信令同步的 IM 群组 ID。
+        /// 在没有指定`GroupId`的情况下，实时录制服务将使用 `RoomId` 的字符串形式作为同步白板信令的IM群组ID。
+        /// 在指定了`GroupId`的情况下，实时录制将优先使用`GroupId`作为同步白板信令的群组ID。请在开始录制前确保相应的IM群组已创建完成，否则会导致录制失败。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -127,6 +132,24 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("ExtraData")]
         public string ExtraData{ get; set; }
 
+        /// <summary>
+        /// TRTC数字类型房间号，取值范围: (1, 4294967295)。
+        /// 
+        /// 在同时指定了`RoomId`与`TRTCRoomId`的情况下，优先使用`TRTCRoomId`作为实时录制拉TRTC流的TRTC房间号。
+        /// 
+        /// 当指定了`TRTCRoomIdStr`的情况下，此字段将被忽略。
+        /// </summary>
+        [JsonProperty("TRTCRoomId")]
+        public long? TRTCRoomId{ get; set; }
+
+        /// <summary>
+        /// TRTC字符串类型房间号。
+        /// 
+        /// 在指定了`TRTCRoomIdStr`的情况下，会优先使用`TRTCRoomIdStr`作为实时录制拉TRTC流的TRTC房间号。
+        /// </summary>
+        [JsonProperty("TRTCRoomIdStr")]
+        public string TRTCRoomIdStr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +171,8 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "ChatGroupId", this.ChatGroupId);
             this.SetParamSimple(map, prefix + "AutoStopTimeout", this.AutoStopTimeout);
             this.SetParamSimple(map, prefix + "ExtraData", this.ExtraData);
+            this.SetParamSimple(map, prefix + "TRTCRoomId", this.TRTCRoomId);
+            this.SetParamSimple(map, prefix + "TRTCRoomIdStr", this.TRTCRoomIdStr);
         }
     }
 }

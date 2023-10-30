@@ -79,13 +79,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? Page{ get; set; }
 
         /// <summary>
-        /// 发票详细类型，详见上方 SubType 返回值说明
+        /// 发票详细类型，详见票据识别（高级版）接口文档说明中 SubType 返回值说明
         /// </summary>
         [JsonProperty("SubType")]
         public string SubType{ get; set; }
 
         /// <summary>
-        /// 发票类型描述，详见上方 TypeDescription  返回值说明
+        /// 发票类型描述，详见票据识别（高级版）接口文档说明中 TypeDescription  返回值说明
         /// </summary>
         [JsonProperty("TypeDescription")]
         public string TypeDescription{ get; set; }
@@ -101,6 +101,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         [JsonProperty("SubTypeDescription")]
         public string SubTypeDescription{ get; set; }
+
+        /// <summary>
+        /// 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+        /// </summary>
+        [JsonProperty("ItemPolygon")]
+        public ItemPolygonInfo[] ItemPolygon{ get; set; }
 
 
         /// <summary>
@@ -118,6 +124,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "TypeDescription", this.TypeDescription);
             this.SetParamSimple(map, prefix + "CutImage", this.CutImage);
             this.SetParamSimple(map, prefix + "SubTypeDescription", this.SubTypeDescription);
+            this.SetParamArrayObj(map, prefix + "ItemPolygon.", this.ItemPolygon);
         }
     }
 }

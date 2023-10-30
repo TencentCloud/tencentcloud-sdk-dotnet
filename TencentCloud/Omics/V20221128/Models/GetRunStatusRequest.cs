@@ -32,6 +32,7 @@ namespace TencentCloud.Omics.V20221128.Models
 
         /// <summary>
         /// 项目ID。
+        /// （不填使用指定地域下的默认项目）
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

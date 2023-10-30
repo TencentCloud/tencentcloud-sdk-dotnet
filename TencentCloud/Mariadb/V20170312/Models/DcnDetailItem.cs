@@ -152,6 +152,60 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("EncryptStatus")]
         public long? EncryptStatus{ get; set; }
 
+        /// <summary>
+        /// 实例DCN状态描述信息
+        /// </summary>
+        [JsonProperty("DcnStatusDesc")]
+        public string DcnStatusDesc{ get; set; }
+
+        /// <summary>
+        /// DCN实例绑定的北极星服务所属的北极星实例Id，若未绑定则为空
+        /// </summary>
+        [JsonProperty("PolarisInstanceId")]
+        public string PolarisInstanceId{ get; set; }
+
+        /// <summary>
+        /// DCN实例绑定的北极星服务所属的北极星实例名，若未绑定则为空
+        /// </summary>
+        [JsonProperty("PolarisInstanceName")]
+        public string PolarisInstanceName{ get; set; }
+
+        /// <summary>
+        /// DCN实例绑定的北极星服务所属的北极星命名空间，若未绑定则为空
+        /// </summary>
+        [JsonProperty("PolarisNamespace")]
+        public string PolarisNamespace{ get; set; }
+
+        /// <summary>
+        /// DCN实例绑定的北极星服务，若未绑定则为空
+        /// </summary>
+        [JsonProperty("PolarisService")]
+        public string PolarisService{ get; set; }
+
+        /// <summary>
+        /// DCN实例在北极星服务中的状态 0:未开启; 1:已开启; 2:已隔离; 3:切换中
+        /// </summary>
+        [JsonProperty("PolarisServiceStatus")]
+        public long? PolarisServiceStatus{ get; set; }
+
+        /// <summary>
+        /// DCN实例在北极星服务中的状态的描述信息
+        /// </summary>
+        [JsonProperty("PolarisServiceStatusDesc")]
+        public string PolarisServiceStatusDesc{ get; set; }
+
+        /// <summary>
+        /// 北极星管控地址
+        /// </summary>
+        [JsonProperty("PolarisRegion")]
+        public string PolarisRegion{ get; set; }
+
+        /// <summary>
+        /// 是否支持DCN切换
+        /// </summary>
+        [JsonProperty("IsDcnSwitchSupported")]
+        public long? IsDcnSwitchSupported{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +233,15 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamObj(map, prefix + "ReplicaConfig.", this.ReplicaConfig);
             this.SetParamObj(map, prefix + "ReplicaStatus.", this.ReplicaStatus);
             this.SetParamSimple(map, prefix + "EncryptStatus", this.EncryptStatus);
+            this.SetParamSimple(map, prefix + "DcnStatusDesc", this.DcnStatusDesc);
+            this.SetParamSimple(map, prefix + "PolarisInstanceId", this.PolarisInstanceId);
+            this.SetParamSimple(map, prefix + "PolarisInstanceName", this.PolarisInstanceName);
+            this.SetParamSimple(map, prefix + "PolarisNamespace", this.PolarisNamespace);
+            this.SetParamSimple(map, prefix + "PolarisService", this.PolarisService);
+            this.SetParamSimple(map, prefix + "PolarisServiceStatus", this.PolarisServiceStatus);
+            this.SetParamSimple(map, prefix + "PolarisServiceStatusDesc", this.PolarisServiceStatusDesc);
+            this.SetParamSimple(map, prefix + "PolarisRegion", this.PolarisRegion);
+            this.SetParamSimple(map, prefix + "IsDcnSwitchSupported", this.IsDcnSwitchSupported);
         }
     }
 }

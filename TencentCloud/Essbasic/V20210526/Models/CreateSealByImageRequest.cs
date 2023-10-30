@@ -29,9 +29,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 
         /// 此接口下面信息必填。
         /// <ul>
-        /// <li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-        /// <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-        /// <li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+        /// <li>渠道应用标识:  Agent.AppId</li>
+        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
         /// </ul>
         /// 第三方平台子客企业和员工必须已经经过实名认证
         /// </summary>
@@ -75,7 +75,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 电子印章类型 , 可选类型如下: 
         /// <ul><li>**OFFICIAL**: (默认)公章</li>
         /// <li>**CONTRACT**: 合同专用章;</li>
-        /// <li>**FINANCE**: 合财务专用章;</li>
+        /// <li>**FINANCE**: 财务专用章;</li>
         /// <li>**PERSONNEL**: 人事专用章</li>
         /// </ul>
         /// 注: `同企业下只能有一个公章, 重复创建会报错`

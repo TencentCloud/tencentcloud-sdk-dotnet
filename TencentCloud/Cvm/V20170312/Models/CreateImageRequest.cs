@@ -44,14 +44,14 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 是否执行强制关机以制作镜像。
-        /// 取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+        /// 取值范围：<br><li>true：表示关机之后制作镜像<br><li>false：表示开机状态制作镜像<br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
         /// </summary>
         [JsonProperty("ForcePoweroff")]
         public string ForcePoweroff{ get; set; }
 
         /// <summary>
         /// 创建Windows镜像时是否启用Sysprep。
-        /// 取值范围：TRUE或FALSE，默认取值为FALSE。
+        /// 取值范围：true或false，传true表示启用Sysprep，传false表示不启用，默认取值为false。
         /// 
         /// 关于Sysprep的详情请参考[链接](https://cloud.tencent.com/document/product/213/43498)。
         /// </summary>
@@ -71,7 +71,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] SnapshotIds{ get; set; }
 
         /// <summary>
-        /// 检测本次请求的是否成功，但不会对操作的资源产生任何影响
+        /// 检测本次请求的是否成功，但不会对操作的资源产生任何影响。默认取值为false。
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

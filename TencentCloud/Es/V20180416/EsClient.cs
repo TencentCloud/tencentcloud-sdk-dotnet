@@ -333,6 +333,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 查询智能运维诊断结果报告
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiagnoseRequest"/></param>
+        /// <returns><see cref="DescribeDiagnoseResponse"/></returns>
+        public async Task<DescribeDiagnoseResponse> DescribeDiagnose(DescribeDiagnoseRequest req)
+        {
+             JsonResponseModel<DescribeDiagnoseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiagnose");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiagnoseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询智能运维诊断结果报告
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiagnoseRequest"/></param>
+        /// <returns><see cref="DescribeDiagnoseResponse"/></returns>
+        public DescribeDiagnoseResponse DescribeDiagnoseSync(DescribeDiagnoseRequest req)
+        {
+             JsonResponseModel<DescribeDiagnoseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDiagnose");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiagnoseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取索引列表
         /// </summary>
         /// <param name="req"><see cref="DescribeIndexListRequest"/></param>
@@ -484,6 +524,46 @@ namespace TencentCloud.Es.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstanceOperations");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceOperationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例插件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancePluginListRequest"/></param>
+        /// <returns><see cref="DescribeInstancePluginListResponse"/></returns>
+        public async Task<DescribeInstancePluginListResponse> DescribeInstancePluginList(DescribeInstancePluginListRequest req)
+        {
+             JsonResponseModel<DescribeInstancePluginListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancePluginList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancePluginListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例插件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancePluginListRequest"/></param>
+        /// <returns><see cref="DescribeInstancePluginListResponse"/></returns>
+        public DescribeInstancePluginListResponse DescribeInstancePluginListSync(DescribeInstancePluginListRequest req)
+        {
+             JsonResponseModel<DescribeInstancePluginListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstancePluginList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancePluginListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -764,6 +844,46 @@ namespace TencentCloud.Es.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "DiagnoseInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DiagnoseInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看智能运维配置
+        /// </summary>
+        /// <param name="req"><see cref="GetDiagnoseSettingsRequest"/></param>
+        /// <returns><see cref="GetDiagnoseSettingsResponse"/></returns>
+        public async Task<GetDiagnoseSettingsResponse> GetDiagnoseSettings(GetDiagnoseSettingsRequest req)
+        {
+             JsonResponseModel<GetDiagnoseSettingsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDiagnoseSettings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDiagnoseSettingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看智能运维配置
+        /// </summary>
+        /// <param name="req"><see cref="GetDiagnoseSettingsRequest"/></param>
+        /// <returns><see cref="GetDiagnoseSettingsResponse"/></returns>
+        public GetDiagnoseSettingsResponse GetDiagnoseSettingsSync(GetDiagnoseSettingsRequest req)
+        {
+             JsonResponseModel<GetDiagnoseSettingsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetDiagnoseSettings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDiagnoseSettingsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

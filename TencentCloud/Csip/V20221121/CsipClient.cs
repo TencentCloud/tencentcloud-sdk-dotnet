@@ -1133,6 +1133,46 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询漏洞风险高级配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVULRiskAdvanceCFGListRequest"/></param>
+        /// <returns><see cref="DescribeVULRiskAdvanceCFGListResponse"/></returns>
+        public async Task<DescribeVULRiskAdvanceCFGListResponse> DescribeVULRiskAdvanceCFGList(DescribeVULRiskAdvanceCFGListRequest req)
+        {
+             JsonResponseModel<DescribeVULRiskAdvanceCFGListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVULRiskAdvanceCFGList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVULRiskAdvanceCFGListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询漏洞风险高级配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVULRiskAdvanceCFGListRequest"/></param>
+        /// <returns><see cref="DescribeVULRiskAdvanceCFGListResponse"/></returns>
+        public DescribeVULRiskAdvanceCFGListResponse DescribeVULRiskAdvanceCFGListSync(DescribeVULRiskAdvanceCFGListRequest req)
+        {
+             JsonResponseModel<DescribeVULRiskAdvanceCFGListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVULRiskAdvanceCFGList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVULRiskAdvanceCFGListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取vpc列表
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcAssetsRequest"/></param>

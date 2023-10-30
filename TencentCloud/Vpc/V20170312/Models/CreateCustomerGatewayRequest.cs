@@ -42,6 +42,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// BGP ASN。ASN取值范围为1- 4294967295，其中139341、45090和58835不可用。
+        /// </summary>
+        [JsonProperty("BgpAsn")]
+        public long? BgpAsn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CustomerGatewayName", this.CustomerGatewayName);
             this.SetParamSimple(map, prefix + "IpAddress", this.IpAddress);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
         }
     }
 }

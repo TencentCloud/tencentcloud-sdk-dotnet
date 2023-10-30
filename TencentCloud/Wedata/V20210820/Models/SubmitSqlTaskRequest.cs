@@ -102,6 +102,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ConfParams")]
         public string ConfParams{ get; set; }
 
+        /// <summary>
+        /// 脚本内容是否base64加密
+        /// </summary>
+        [JsonProperty("ScriptEncryption")]
+        public bool? ScriptEncryption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ComputeResource", this.ComputeResource);
             this.SetParamSimple(map, prefix + "RunParams", this.RunParams);
             this.SetParamSimple(map, prefix + "ConfParams", this.ConfParams);
+            this.SetParamSimple(map, prefix + "ScriptEncryption", this.ScriptEncryption);
         }
     }
 }

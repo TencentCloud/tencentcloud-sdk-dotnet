@@ -136,6 +136,20 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ApplicableVersion")]
         public string ApplicableVersion{ get; set; }
 
+        /// <summary>
+        /// 检查项描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 检查项审计方法
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AuditProcedure")]
+        public string AuditProcedure{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +172,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "FixSuggestion", this.FixSuggestion);
             this.SetParamSimple(map, prefix + "BenchmarkStandardId", this.BenchmarkStandardId);
             this.SetParamSimple(map, prefix + "ApplicableVersion", this.ApplicableVersion);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "AuditProcedure", this.AuditProcedure);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{07FCB225-F7A7-392A-A759-E2C6236ECC1C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.874</VersionPrefix>
+    <VersionPrefix>3.0.875</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -78,6 +78,8 @@
     <Compile Include="V20180709\Models\CostDetail.cs" />
     <Compile Include="V20180709\Models\CreateAllocationTagRequest.cs" />
     <Compile Include="V20180709\Models\CreateAllocationTagResponse.cs" />
+    <Compile Include="V20180709\Models\CreateSavingPlanOrderRequest.cs" />
+    <Compile Include="V20180709\Models\CreateSavingPlanOrderResponse.cs" />
     <Compile Include="V20180709\Models\Deal.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationTagRequest.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationTagResponse.cs" />
@@ -125,6 +127,12 @@
     <Compile Include="V20180709\Models\DescribeDosageCosDetailByDateResponse.cs" />
     <Compile Include="V20180709\Models\DescribeDosageDetailByDateRequest.cs" />
     <Compile Include="V20180709\Models\DescribeDosageDetailByDateResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeSavingPlanCoverageRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeSavingPlanCoverageResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeSavingPlanOverviewRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeSavingPlanOverviewResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeSavingPlanUsageRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeSavingPlanUsageResponse.cs" />
     <Compile Include="V20180709\Models\DescribeTagListRequest.cs" />
     <Compile Include="V20180709\Models\DescribeTagListResponse.cs" />
     <Compile Include="V20180709\Models\DescribeVoucherInfoRequest.cs" />
@@ -141,6 +149,10 @@
     <Compile Include="V20180709\Models\ProductInfo.cs" />
     <Compile Include="V20180709\Models\ProjectSummaryOverviewItem.cs" />
     <Compile Include="V20180709\Models\RegionSummaryOverviewItem.cs" />
+    <Compile Include="V20180709\Models\SavingPlanCoverageDetail.cs" />
+    <Compile Include="V20180709\Models\SavingPlanCoverageRate.cs" />
+    <Compile Include="V20180709\Models\SavingPlanOverviewDetail.cs" />
+    <Compile Include="V20180709\Models\SavingPlanUsageDetail.cs" />
     <Compile Include="V20180709\Models\SummaryDetail.cs" />
     <Compile Include="V20180709\Models\SummaryTotal.cs" />
     <Compile Include="V20180709\Models\TagDataInfo.cs" />

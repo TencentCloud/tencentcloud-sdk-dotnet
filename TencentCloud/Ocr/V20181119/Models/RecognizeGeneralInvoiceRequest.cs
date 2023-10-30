@@ -97,6 +97,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableCutImage")]
         public bool? EnableCutImage{ get; set; }
 
+        /// <summary>
+        /// 是否打开字段坐标返回。默认为false。
+        /// </summary>
+        [JsonProperty("EnableItemPolygon")]
+        public bool? EnableItemPolygon{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +117,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
             this.SetParamSimple(map, prefix + "EnableMultiplePage", this.EnableMultiplePage);
             this.SetParamSimple(map, prefix + "EnableCutImage", this.EnableCutImage);
+            this.SetParamSimple(map, prefix + "EnableItemPolygon", this.EnableItemPolygon);
         }
     }
 }

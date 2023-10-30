@@ -127,6 +127,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DpdAction")]
         public string DpdAction{ get; set; }
 
+        /// <summary>
+        /// 创建通道路由信息。
+        /// </summary>
+        [JsonProperty("Route")]
+        public CreateVpnConnRoute Route{ get; set; }
+
+        /// <summary>
+        /// BGP配置。
+        /// </summary>
+        [JsonProperty("BgpConfig")]
+        public BgpConfig BgpConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +162,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
             this.SetParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
             this.SetParamSimple(map, prefix + "DpdAction", this.DpdAction);
+            this.SetParamObj(map, prefix + "Route.", this.Route);
+            this.SetParamObj(map, prefix + "BgpConfig.", this.BgpConfig);
         }
     }
 }

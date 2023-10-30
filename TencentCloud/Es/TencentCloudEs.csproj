@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BAB1D217-C279-3DCE-8001-02A83445B39E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.874</VersionPrefix>
+    <VersionPrefix>3.0.875</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,8 @@
     <Compile Include="V20180416\Models\DeleteLogstashInstanceResponse.cs" />
     <Compile Include="V20180416\Models\DeleteLogstashPipelinesRequest.cs" />
     <Compile Include="V20180416\Models\DeleteLogstashPipelinesResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeDiagnoseRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeDiagnoseResponse.cs" />
     <Compile Include="V20180416\Models\DescribeIndexListRequest.cs" />
     <Compile Include="V20180416\Models\DescribeIndexListResponse.cs" />
     <Compile Include="V20180416\Models\DescribeIndexMetaRequest.cs" />
@@ -73,6 +75,9 @@
     <Compile Include="V20180416\Models\DescribeInstanceLogsResponse.cs" />
     <Compile Include="V20180416\Models\DescribeInstanceOperationsRequest.cs" />
     <Compile Include="V20180416\Models\DescribeInstanceOperationsResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeInstancePluginInfo.cs" />
+    <Compile Include="V20180416\Models\DescribeInstancePluginListRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeInstancePluginListResponse.cs" />
     <Compile Include="V20180416\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20180416\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20180416\Models\DescribeLogstashInstanceLogsRequest.cs" />
@@ -87,11 +92,17 @@
     <Compile Include="V20180416\Models\DescribeViewsResponse.cs" />
     <Compile Include="V20180416\Models\DiagnoseInstanceRequest.cs" />
     <Compile Include="V20180416\Models\DiagnoseInstanceResponse.cs" />
+    <Compile Include="V20180416\Models\DiagnoseJobMeta.cs" />
+    <Compile Include="V20180416\Models\DiagnoseJobResult.cs" />
+    <Compile Include="V20180416\Models\DiagnoseResult.cs" />
     <Compile Include="V20180416\Models\DictInfo.cs" />
+    <Compile Include="V20180416\Models\Dimension.cs" />
     <Compile Include="V20180416\Models\EsAcl.cs" />
     <Compile Include="V20180416\Models\EsConfigSetInfo.cs" />
     <Compile Include="V20180416\Models\EsDictionaryInfo.cs" />
     <Compile Include="V20180416\Models\EsPublicAcl.cs" />
+    <Compile Include="V20180416\Models\GetDiagnoseSettingsRequest.cs" />
+    <Compile Include="V20180416\Models\GetDiagnoseSettingsResponse.cs" />
     <Compile Include="V20180416\Models\GetRequestTargetNodeTypesRequest.cs" />
     <Compile Include="V20180416\Models\GetRequestTargetNodeTypesResponse.cs" />
     <Compile Include="V20180416\Models\IndexMetaField.cs" />
@@ -100,10 +111,12 @@
     <Compile Include="V20180416\Models\IndexSettingsField.cs" />
     <Compile Include="V20180416\Models\InstanceInfo.cs" />
     <Compile Include="V20180416\Models\InstanceLog.cs" />
+    <Compile Include="V20180416\Models\JobParam.cs" />
     <Compile Include="V20180416\Models\KeyValue.cs" />
     <Compile Include="V20180416\Models\KibanaNodeInfo.cs" />
     <Compile Include="V20180416\Models\KibanaView.cs" />
     <Compile Include="V20180416\Models\LocalDiskInfo.cs" />
+    <Compile Include="V20180416\Models\LogDetail.cs" />
     <Compile Include="V20180416\Models\LogstashBindedES.cs" />
     <Compile Include="V20180416\Models\LogstashExtendedFile.cs" />
     <Compile Include="V20180416\Models\LogstashInstanceInfo.cs" />
@@ -111,6 +124,8 @@
     <Compile Include="V20180416\Models\LogstashPipeline.cs" />
     <Compile Include="V20180416\Models\LogstashPipelineInfo.cs" />
     <Compile Include="V20180416\Models\MasterNodeInfo.cs" />
+    <Compile Include="V20180416\Models\Metric.cs" />
+    <Compile Include="V20180416\Models\MetricDetail.cs" />
     <Compile Include="V20180416\Models\ModifyEsVipSecurityGroupRequest.cs" />
     <Compile Include="V20180416\Models\ModifyEsVipSecurityGroupResponse.cs" />
     <Compile Include="V20180416\Models\NodeInfo.cs" />
@@ -131,6 +146,7 @@
     <Compile Include="V20180416\Models\RestartNodesResponse.cs" />
     <Compile Include="V20180416\Models\SaveAndDeployLogstashPipelineRequest.cs" />
     <Compile Include="V20180416\Models\SaveAndDeployLogstashPipelineResponse.cs" />
+    <Compile Include="V20180416\Models\SettingDetail.cs" />
     <Compile Include="V20180416\Models\StartLogstashPipelinesRequest.cs" />
     <Compile Include="V20180416\Models\StartLogstashPipelinesResponse.cs" />
     <Compile Include="V20180416\Models\StopLogstashPipelinesRequest.cs" />

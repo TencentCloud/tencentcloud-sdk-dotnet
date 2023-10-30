@@ -53,6 +53,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 操作安全策略模板，支持将域名绑定或换绑到指定的策略模板，或者从指定的策略模板解绑。
+        /// </summary>
+        /// <param name="req"><see cref="BindSecurityTemplateToEntityRequest"/></param>
+        /// <returns><see cref="BindSecurityTemplateToEntityResponse"/></returns>
+        public async Task<BindSecurityTemplateToEntityResponse> BindSecurityTemplateToEntity(BindSecurityTemplateToEntityRequest req)
+        {
+             JsonResponseModel<BindSecurityTemplateToEntityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindSecurityTemplateToEntity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindSecurityTemplateToEntityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 操作安全策略模板，支持将域名绑定或换绑到指定的策略模板，或者从指定的策略模板解绑。
+        /// </summary>
+        /// <param name="req"><see cref="BindSecurityTemplateToEntityRequest"/></param>
+        /// <returns><see cref="BindSecurityTemplateToEntityResponse"/></returns>
+        public BindSecurityTemplateToEntityResponse BindSecurityTemplateToEntitySync(BindSecurityTemplateToEntityRequest req)
+        {
+             JsonResponseModel<BindSecurityTemplateToEntityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindSecurityTemplateToEntity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindSecurityTemplateToEntityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 将未绑定套餐的站点绑定到已有套餐
         /// </summary>
         /// <param name="req"><see cref="BindZoneToPlanRequest"/></param>

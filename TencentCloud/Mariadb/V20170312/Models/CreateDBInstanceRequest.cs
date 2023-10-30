@@ -25,7 +25,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
     {
         
         /// <summary>
-        /// 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+        /// 实例节点可用区分布，可填写多个可用区。
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
@@ -147,6 +147,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("DcnInstanceId")]
         public string DcnInstanceId{ get; set; }
 
+        /// <summary>
+        /// DCN同步模式，0：异步， 1：强同步
+        /// </summary>
+        [JsonProperty("DcnSyncMode")]
+        public long? DcnSyncMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +179,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamArrayObj(map, prefix + "InitParams.", this.InitParams);
             this.SetParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
             this.SetParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
+            this.SetParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
         }
     }
 }

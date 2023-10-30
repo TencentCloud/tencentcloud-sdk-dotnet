@@ -107,6 +107,13 @@ namespace TencentCloud.Rce.V20201103.Models
         [JsonProperty("ConstId")]
         public string ConstId{ get; set; }
 
+        /// <summary>
+        /// 扩展信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RiskInformation")]
+        public string RiskInformation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +127,7 @@ namespace TencentCloud.Rce.V20201103.Models
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
             this.SetParamArraySimple(map, prefix + "RiskType.", this.RiskType);
             this.SetParamSimple(map, prefix + "ConstId", this.ConstId);
+            this.SetParamSimple(map, prefix + "RiskInformation", this.RiskInformation);
         }
     }
 }

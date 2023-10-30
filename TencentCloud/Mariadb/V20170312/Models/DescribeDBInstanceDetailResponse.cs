@@ -386,6 +386,18 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public bool? IsPhysicalReplicationSupported{ get; set; }
 
         /// <summary>
+        /// 是否支持强同步DCN
+        /// </summary>
+        [JsonProperty("IsDcnStrongSyncSupported")]
+        public long? IsDcnStrongSyncSupported{ get; set; }
+
+        /// <summary>
+        /// 是否支持DCN切换
+        /// </summary>
+        [JsonProperty("IsDcnSwitchSupported")]
+        public long? IsDcnSwitchSupported{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -454,6 +466,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "RsAccessStrategy", this.RsAccessStrategy);
             this.SetParamArrayObj(map, prefix + "ReservedNetResources.", this.ReservedNetResources);
             this.SetParamSimple(map, prefix + "IsPhysicalReplicationSupported", this.IsPhysicalReplicationSupported);
+            this.SetParamSimple(map, prefix + "IsDcnStrongSyncSupported", this.IsDcnStrongSyncSupported);
+            this.SetParamSimple(map, prefix + "IsDcnSwitchSupported", this.IsDcnSwitchSupported);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

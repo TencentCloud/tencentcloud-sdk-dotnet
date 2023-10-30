@@ -174,6 +174,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("RollbackTime")]
         public string RollbackTime{ get; set; }
 
+        /// <summary>
+        /// DCN同步模式，0：异步， 1：强同步
+        /// </summary>
+        [JsonProperty("DcnSyncMode")]
+        public long? DcnSyncMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamArraySimple(map, prefix + "SlaveHostIds.", this.SlaveHostIds);
             this.SetParamSimple(map, prefix + "RollbackInstanceId", this.RollbackInstanceId);
             this.SetParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
+            this.SetParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
         }
     }
 }
