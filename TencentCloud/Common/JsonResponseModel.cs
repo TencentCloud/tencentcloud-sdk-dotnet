@@ -14,13 +14,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 using Newtonsoft.Json;
 
 namespace TencentCloud.Common
 {
     public class JsonResponseModel<T>
     {
-        [JsonProperty("Response")]
-        public T Response { get; set; }
+        [JsonProperty("Response")] public T Response { get; set; }
     }
 }

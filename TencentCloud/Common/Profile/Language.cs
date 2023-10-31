@@ -2,6 +2,8 @@
 {
     public enum Language
     {
-        DEFAULT, EN_US, ZH_CN
+        DEFAULT,
+        EN_US,
+        ZH_CN
     }
 }

@@ -14,6 +14,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace TencentCloud.Common.Profile
 {
     /// <summary>
@@ -34,7 +35,7 @@ namespace TencentCloud.Common.Profile
         /// <summary>
         /// HTTP method POST.
         /// </summary>
-        public static readonly  string REQ_POST = "POST";
+        public static readonly string REQ_POST = "POST";
 
         /// <summary>
         /// HTTP method GET.

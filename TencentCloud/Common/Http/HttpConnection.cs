@@ -14,6 +14,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -29,15 +30,13 @@ namespace TencentCloud.Common.Http
     {
         private class HttpClientHolder
         {
-            private static readonly ConcurrentDictionary<string, HttpClientHolder> httpclients = new ConcurrentDictionary<string, HttpClientHolder>();
+            private static readonly ConcurrentDictionary<string, HttpClientHolder> httpclients =
+                new ConcurrentDictionary<string, HttpClientHolder>();
 
             public static HttpClient GetClient(string proxy)
             {
                 string key = string.IsNullOrEmpty(proxy) ? "" : proxy;
-                HttpClientHolder result = httpclients.GetOrAdd(key, (k) =>
-                {
-                    return new HttpClientHolder(k);
-                });
+                HttpClientHolder result = httpclients.GetOrAdd(key, (k) => { return new HttpClientHolder(k); });
                 TimeSpan timeSpan = DateTime.Now - result.createTime;
 
                 // A new connection is created every 5 minutes
@@ -46,12 +45,10 @@ namespace TencentCloud.Common.Http
                 {
                     ICollection<KeyValuePair<string, HttpClientHolder>> kv = httpclients;
                     kv.Remove(new KeyValuePair<string, HttpClientHolder>(key, result));
-                    result = httpclients.GetOrAdd(key, (k) =>
-                    {
-                        return new HttpClientHolder(k);
-                    });
+                    result = httpclients.GetOrAdd(key, (k) => { return new HttpClientHolder(k); });
                     timeSpan = DateTime.Now - result.createTime;
                 }
+
                 return result.client;
             }
 
@@ -75,6 +72,7 @@ namespace TencentCloud.Common.Http
 
                     this.client = new HttpClient(handler: httpClientHandler, disposeHandler: true);
                 }
+
                 this.client.Timeout = TimeSpan.FromSeconds(60);
                 this.createTime = DateTime.Now;
             }
@@ -109,6 +107,7 @@ namespace TencentCloud.Common.Http
             {
                 builder.Append($"{WebUtility.UrlEncode(kvp.Key)}={WebUtility.UrlEncode(kvp.Value)}&");
             }
+
             return builder.ToString().TrimEnd('&');
         }
 
@@ -121,14 +120,16 @@ namespace TencentCloud.Common.Http
             return await this.Send(HttpMethod.Get, fullurl, payload, headers);
         }
 
-        public async Task<HttpResponseMessage> GetRequestAsync(string path, string queryString, Dictionary<string, string> headers)
+        public async Task<HttpResponseMessage> GetRequestAsync(string path, string queryString,
+            Dictionary<string, string> headers)
         {
             string fullurl = $"{this.baseUrl.TrimEnd('/')}{path}?{queryString}";
             string payload = "";
             return await this.Send(HttpMethod.Get, fullurl, payload, headers);
         }
 
-        public async Task<HttpResponseMessage> PostRequestAsync(string path, string payload, Dictionary<string, string> headers)
+        public async Task<HttpResponseMessage> PostRequestAsync(string path, string payload,
+            Dictionary<string, string> headers)
         {
             string fullurl = $"{baseUrl.TrimEnd('/')}{path}";
             return await this.Send(HttpMethod.Post, fullurl, payload, headers);
@@ -144,7 +145,8 @@ namespace TencentCloud.Common.Http
             return await this.Send(HttpMethod.Post, fullurl, payload, headers);
         }
 
-        private async Task<HttpResponseMessage> Send(HttpMethod method, string url, string payload, Dictionary<string, string> headers)
+        private async Task<HttpResponseMessage> Send(HttpMethod method, string url, string payload,
+            Dictionary<string, string> headers)
         {
             using (var cts = new System.Threading.CancellationTokenSource(timeout * 1000))
             {
@@ -162,13 +164,15 @@ namespace TencentCloud.Common.Http
                         }
                         else if (kvp.Key.Equals("Authorization"))
                         {
-                            msg.Headers.Authorization = new AuthenticationHeaderValue("TC3-HMAC-SHA256", kvp.Value.Substring("TC3-HMAC-SHA256".Length));
+                            msg.Headers.Authorization = new AuthenticationHeaderValue("TC3-HMAC-SHA256",
+                                kvp.Value.Substring("TC3-HMAC-SHA256".Length));
                         }
                         else
                         {
                             msg.Headers.Add(kvp.Key, kvp.Value);
                         }
                     }
+
                     return await http.SendAsync(msg, cts.Token);
                 }
             }

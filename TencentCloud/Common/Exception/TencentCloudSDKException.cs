@@ -31,8 +31,8 @@ namespace TencentCloud.Common
         {
             this.RequestId = requestId;
         }
-        
-        public TencentCloudSDKException(string message,Exception innerException) :
+
+        public TencentCloudSDKException(string message, Exception innerException) :
             base(message, innerException)
         {
         }
