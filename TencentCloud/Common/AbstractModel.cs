@@ -14,6 +14,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,7 @@ namespace TencentCloud.Common
 
         protected void SetParamSimple<V>(Dictionary<string, string> map, String key, V value)
         {
-            if ((value!= null) && !value.Equals(default(V)) )
+            if ((value != null) && !value.Equals(default(V)))
             {
                 key = key.Substring(0, 1).ToUpper() + key.Substring(1);
                 key = key.Replace("_", ".");
@@ -45,7 +46,7 @@ namespace TencentCloud.Common
             }
         }
 
-        protected void SetParamObj<V>(Dictionary<string, string> map, String prefix, V obj)  where V: AbstractModel
+        protected void SetParamObj<V>(Dictionary<string, string> map, String prefix, V obj) where V : AbstractModel
         {
             if (obj != null)
             {
@@ -53,7 +54,8 @@ namespace TencentCloud.Common
             }
         }
 
-        protected  void SetParamArrayObj<V>(Dictionary<String, String> map, String prefix, V[] array) where V : AbstractModel
+        protected void SetParamArrayObj<V>(Dictionary<String, String> map, String prefix, V[] array)
+            where V : AbstractModel
         {
             if (array != null)
             {
@@ -70,7 +72,7 @@ namespace TencentCloud.Common
         /// <typeparam name="V">A class inherited from AbstrctModel.</typeparam>
         /// <param name="obj">An object of the class.</param>
         /// <returns>JSON formatted string.</returns>
-        public static string ToJsonString<V>(V obj) where V: AbstractModel
+        public static string ToJsonString<V>(V obj) where V : AbstractModel
         {
             return JsonConvert.SerializeObject(obj);
         }
@@ -81,7 +83,7 @@ namespace TencentCloud.Common
         /// <typeparam name="V">A class inherited from AbstrctModel.</typeparam>
         /// <param name="json">JSON formatted string.</param>
         /// <returns>An object of the class.</returns>
-        public static V FromJsonString<V>(string json) 
+        public static V FromJsonString<V>(string json)
         {
             return JsonConvert.DeserializeObject<V>(json);
         }
