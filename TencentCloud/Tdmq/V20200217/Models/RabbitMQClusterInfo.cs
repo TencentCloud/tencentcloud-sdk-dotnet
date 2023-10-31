@@ -135,6 +135,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }
 
+        /// <summary>
+        /// 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
+
+        /// <summary>
+        /// 是否开启镜像队列策略。1表示开启，0表示没开启。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MirrorQueuePolicyFlag")]
+        public long? MirrorQueuePolicyFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +173,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ExchangeNumber", this.ExchangeNumber);
             this.SetParamSimple(map, prefix + "ExceptionInformation", this.ExceptionInformation);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
         }
     }
 }

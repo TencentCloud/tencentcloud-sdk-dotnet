@@ -773,6 +773,8 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 废弃接口，无有效调用
+        /// 
         /// 删除访问日志下载记录
         /// </summary>
         /// <param name="req"><see cref="DeleteDownloadRecordRequest"/></param>
@@ -793,6 +795,8 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 废弃接口，无有效调用
+        /// 
         /// 删除访问日志下载记录
         /// </summary>
         /// <param name="req"><see cref="DeleteDownloadRecordRequest"/></param>

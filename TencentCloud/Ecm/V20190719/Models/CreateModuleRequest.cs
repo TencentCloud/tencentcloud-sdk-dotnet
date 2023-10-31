@@ -31,7 +31,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string ModuleName{ get; set; }
 
         /// <summary>
-        /// 默认带宽，单位：Mbps。范围不得超过带宽上下限，详看DescribeConfig。
+        /// 默认带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
         /// </summary>
         [JsonProperty("DefaultBandWidth")]
         public long? DefaultBandWidth{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看DescribeConfig。
+        /// 默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
         /// </summary>
         [JsonProperty("DefaultSystemDiskSize")]
         public long? DefaultSystemDiskSize{ get; set; }
 
         /// <summary>
-        /// 默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看DescribeConfig。
+        /// 默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
         /// </summary>
         [JsonProperty("DefaultDataDiskSize")]
         public long? DefaultDataDiskSize{ get; set; }
@@ -81,7 +81,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string[] SecurityGroups{ get; set; }
 
         /// <summary>
-        /// 默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看DescribeConfig。
+        /// 默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
         /// </summary>
         [JsonProperty("DefaultBandWidthIn")]
         public long? DefaultBandWidthIn{ get; set; }

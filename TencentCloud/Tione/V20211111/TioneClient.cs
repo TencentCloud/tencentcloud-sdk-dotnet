@@ -1053,6 +1053,46 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 查询资源组节点运行中的任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingResourceInstanceRunningJobsRequest"/></param>
+        /// <returns><see cref="DescribeBillingResourceInstanceRunningJobsResponse"/></returns>
+        public async Task<DescribeBillingResourceInstanceRunningJobsResponse> DescribeBillingResourceInstanceRunningJobs(DescribeBillingResourceInstanceRunningJobsRequest req)
+        {
+             JsonResponseModel<DescribeBillingResourceInstanceRunningJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillingResourceInstanceRunningJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingResourceInstanceRunningJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询资源组节点运行中的任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingResourceInstanceRunningJobsRequest"/></param>
+        /// <returns><see cref="DescribeBillingResourceInstanceRunningJobsResponse"/></returns>
+        public DescribeBillingResourceInstanceRunningJobsResponse DescribeBillingResourceInstanceRunningJobsSync(DescribeBillingResourceInstanceRunningJobsRequest req)
+        {
+             JsonResponseModel<DescribeBillingResourceInstanceRunningJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillingResourceInstanceRunningJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingResourceInstanceRunningJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeBillingSpecs)用于查询计费项列表
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingSpecsRequest"/></param>

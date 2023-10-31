@@ -258,5 +258,85 @@ namespace TencentCloud.Mrs.V20200910
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 体检报告PDF文件结构化-异步接口
+        /// </summary>
+        /// <param name="req"><see cref="TurnPDFToObjectAsyncRequest"/></param>
+        /// <returns><see cref="TurnPDFToObjectAsyncResponse"/></returns>
+        public async Task<TurnPDFToObjectAsyncResponse> TurnPDFToObjectAsync(TurnPDFToObjectAsyncRequest req)
+        {
+             JsonResponseModel<TurnPDFToObjectAsyncResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TurnPDFToObjectAsync");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnPDFToObjectAsyncResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 体检报告PDF文件结构化-异步接口
+        /// </summary>
+        /// <param name="req"><see cref="TurnPDFToObjectAsyncRequest"/></param>
+        /// <returns><see cref="TurnPDFToObjectAsyncResponse"/></returns>
+        public TurnPDFToObjectAsyncResponse TurnPDFToObjectAsyncSync(TurnPDFToObjectAsyncRequest req)
+        {
+             JsonResponseModel<TurnPDFToObjectAsyncResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TurnPDFToObjectAsync");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnPDFToObjectAsyncResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 体检报告PDF文件结构化异步获取结果接口
+        /// </summary>
+        /// <param name="req"><see cref="TurnPDFToObjectAsyncGetResultRequest"/></param>
+        /// <returns><see cref="TurnPDFToObjectAsyncGetResultResponse"/></returns>
+        public async Task<TurnPDFToObjectAsyncGetResultResponse> TurnPDFToObjectAsyncGetResult(TurnPDFToObjectAsyncGetResultRequest req)
+        {
+             JsonResponseModel<TurnPDFToObjectAsyncGetResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TurnPDFToObjectAsyncGetResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnPDFToObjectAsyncGetResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 体检报告PDF文件结构化异步获取结果接口
+        /// </summary>
+        /// <param name="req"><see cref="TurnPDFToObjectAsyncGetResultRequest"/></param>
+        /// <returns><see cref="TurnPDFToObjectAsyncGetResultResponse"/></returns>
+        public TurnPDFToObjectAsyncGetResultResponse TurnPDFToObjectAsyncGetResultSync(TurnPDFToObjectAsyncGetResultRequest req)
+        {
+             JsonResponseModel<TurnPDFToObjectAsyncGetResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TurnPDFToObjectAsyncGetResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnPDFToObjectAsyncGetResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

@@ -25,25 +25,31 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 自动签开通个人用户的三要素
+        /// 自动签开通个人用户信息, 包括名字,身份证等
         /// </summary>
         [JsonProperty("UserInfo")]
         public UserThreeFactor UserInfo{ get; set; }
 
         /// <summary>
-        /// 是否回调证书信息
+        /// 是否回调证书信息:
+        /// <ul><li>**false**: 不需要(默认)</li>
+        /// <li>**true**:需要</li></ul>
         /// </summary>
         [JsonProperty("CertInfoCallback")]
         public bool? CertInfoCallback{ get; set; }
 
         /// <summary>
-        /// 是否支持用户自定义签名印章
+        /// 是否支持用户自定义签名印章:
+        /// <ul><li>**false**: 不能自己定义(默认)</li>
+        /// <li>**true**: 可以自己定义</li></ul>
         /// </summary>
         [JsonProperty("UserDefineSeal")]
         public bool? UserDefineSeal{ get; set; }
 
         /// <summary>
-        /// 是否需要回调的时候返回印章(签名) 图片的 base64
+        /// 回调中是否需要自动签将要使用的印章（签名）图片的 base64:
+        /// <ul><li>**false**: 不需要(默认)</li>
+        /// <li>**true**: 需要</li></ul>
         /// </summary>
         [JsonProperty("SealImgCallback")]
         public bool? SealImgCallback{ get; set; }
@@ -55,13 +61,22 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+        /// 开通时候的身份验证方式, 取值为：
+        /// <ul><li>**WEIXINAPP** : 微信人脸识别</li>
+        /// <li>**INSIGHT** : 慧眼人脸认别</li>
+        /// <li>**TELECOM** : 运营商三要素验证</li></ul>
+        /// 注：
+        /// <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
+        /// <li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
         /// </summary>
         [JsonProperty("VerifyChannels")]
         public string[] VerifyChannels{ get; set; }
 
         /// <summary>
-        /// 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+        /// 设置用户开通自动签时是否绑定个人自动签账号许可。
+        /// 
+        /// <ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("LicenseType")]
         public long? LicenseType{ get; set; }

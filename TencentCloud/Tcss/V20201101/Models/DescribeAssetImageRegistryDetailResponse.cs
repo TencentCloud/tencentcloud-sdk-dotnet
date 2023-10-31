@@ -257,6 +257,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? SensitiveInfoCnt{ get; set; }
 
         /// <summary>
+        /// Id
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -301,6 +307,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
             this.SetParamSimple(map, prefix + "ImageCreateTime", this.ImageCreateTime);
             this.SetParamSimple(map, prefix + "SensitiveInfoCnt", this.SensitiveInfoCnt);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

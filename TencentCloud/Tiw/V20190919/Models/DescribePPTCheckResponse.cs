@@ -63,6 +63,13 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? Progress{ get; set; }
 
         /// <summary>
+        /// 错误列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Errs")]
+        public PPTErr[] Errs{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -80,6 +87,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamArrayObj(map, prefix + "Slides.", this.Slides);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamArrayObj(map, prefix + "Errs.", this.Errs);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

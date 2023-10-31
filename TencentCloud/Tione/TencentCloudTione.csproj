@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.875</VersionPrefix>
+    <VersionPrefix>3.0.876</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -120,6 +120,8 @@
     <Compile Include="V20211111\Models\DescribeBatchTasksResponse.cs" />
     <Compile Include="V20211111\Models\DescribeBillingResourceGroupsRequest.cs" />
     <Compile Include="V20211111\Models\DescribeBillingResourceGroupsResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeBillingResourceInstanceRunningJobsRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeBillingResourceInstanceRunningJobsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeBillingSpecsPriceRequest.cs" />
     <Compile Include="V20211111\Models\DescribeBillingSpecsPriceResponse.cs" />
     <Compile Include="V20211111\Models\DescribeBillingSpecsRequest.cs" />
@@ -234,6 +236,7 @@
     <Compile Include="V20211111\Models\ResourceConfigInfo.cs" />
     <Compile Include="V20211111\Models\ResourceGroup.cs" />
     <Compile Include="V20211111\Models\ResourceInfo.cs" />
+    <Compile Include="V20211111\Models\ResourceInstanceRunningJobInfo.cs" />
     <Compile Include="V20211111\Models\RestartModelAccelerateTaskRequest.cs" />
     <Compile Include="V20211111\Models\RestartModelAccelerateTaskResponse.cs" />
     <Compile Include="V20211111\Models\RowItem.cs" />

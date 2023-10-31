@@ -72,6 +72,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("CPU")]
         public ulong? CPU{ get; set; }
 
+        /// <summary>
+        /// 专用集群ID。
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
             this.SetParamSimple(map, prefix + "CPU", this.CPU);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         }
     }
 }

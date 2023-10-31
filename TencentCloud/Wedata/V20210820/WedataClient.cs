@@ -3877,6 +3877,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查询数据库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseMetasRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseMetasResponse"/></returns>
+        public async Task<DescribeDatabaseMetasResponse> DescribeDatabaseMetas(DescribeDatabaseMetasRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseMetasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatabaseMetas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseMetasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询数据库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseMetasRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseMetasResponse"/></returns>
+        public DescribeDatabaseMetasResponse DescribeDatabaseMetasSync(DescribeDatabaseMetasRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseMetasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatabaseMetas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseMetasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 数据源详情
         /// </summary>

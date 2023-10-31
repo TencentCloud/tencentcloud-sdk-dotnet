@@ -25,27 +25,38 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// <ul>
+        /// <li>渠道应用标识:  Agent.AppId</li>
+        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+        /// </ul>
+        /// 第三方平台子客企业和员工必须已经经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 指定每页多少条数据，单页最大20
+        /// 指定分页每页返回的数据条数，单页最大支持 20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 查询过滤实名用户，Key为Status，Values为["IsVerified"]
-        /// 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
-        /// 查询离职员工时，Key为Status，Values为["QuiteJob"]
+        /// 查询的关键字段，支持Key-Values查询。可选键值如下：
+        /// <ul>
+        ///   <li>Key:**"Status"**，根据实名状态查询员工，Values可选：
+        ///     <ul><li>**["IsVerified"]**：查询已实名的员工</li><li>**["QuiteJob"]**：查询离职员工</li></ul></li>
+        ///   <li>Key:**"StaffOpenId"**，根据第三方系统用户OpenId查询员工，Values为第三方系统用户OpenId列表：**["OpenId1","OpenId2",...]**</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0,最大为20000
+        /// 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

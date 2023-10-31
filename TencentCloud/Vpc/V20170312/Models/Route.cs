@@ -47,7 +47,9 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-        /// 特殊说明：GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+        /// 特殊说明：
+        /// GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+        /// GatewayType为EIP时，GatewayId填写0。
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
@@ -89,6 +91,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DestinationIpv6CidrBlock")]
         public string DestinationIpv6CidrBlock{ get; set; }

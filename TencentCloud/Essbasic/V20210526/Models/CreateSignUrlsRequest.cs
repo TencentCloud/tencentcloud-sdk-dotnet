@@ -33,7 +33,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
         /// <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
         /// </ul>
-        /// 第三方平台子客企业和员工必须已经经过实名认证
+        /// 第三方平台子客企业和员工必须已经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -56,7 +56,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 签署链接类型,可以设置的参数如下
         /// <ul><li> **WEIXINAPP** :(默认)跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型 ，此时返回短链</li>
         /// <li> **CHANNEL** :带有H5引导页的跳转电子签小程序的链接</li>
-        /// <li> **APP** :第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型</li>
+        /// <li> **APP** :第三方App或小程序跳转电子签小程序的path, App或者小程序跳转适合此类型</li>
         /// <li> **LONGURL2WEIXINAPP** :跳转电子签小程序的链接, H5跳转适合此类型，此时返回长链</li></ul>
         /// 
         /// 详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**

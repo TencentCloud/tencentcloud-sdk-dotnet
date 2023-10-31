@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.875</VersionPrefix>
+    <VersionPrefix>3.0.876</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -192,6 +192,7 @@
     <Compile Include="V20210820\Models\DataSourceInfo.cs" />
     <Compile Include="V20210820\Models\DataSourceInfoPage.cs" />
     <Compile Include="V20210820\Models\DatabaseInfo.cs" />
+    <Compile Include="V20210820\Models\DatabaseMeta.cs" />
     <Compile Include="V20210820\Models\DatasourceBaseInfo.cs" />
     <Compile Include="V20210820\Models\DatasourceTypeByTaskType.cs" />
     <Compile Include="V20210820\Models\DeleteBaselineRequest.cs" />
@@ -287,6 +288,8 @@
     <Compile Include="V20210820\Models\DescribeDataTypesResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDatabaseInfoListRequest.cs" />
     <Compile Include="V20210820\Models\DescribeDatabaseInfoListResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeDatabaseMetasRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeDatabaseMetasResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDatasourceRequest.cs" />
     <Compile Include="V20210820\Models\DescribeDatasourceResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDependOpsTaskListRequest.cs" />

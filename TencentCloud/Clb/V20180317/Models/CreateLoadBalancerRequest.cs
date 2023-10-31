@@ -132,6 +132,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SlaType{ get; set; }
 
         /// <summary>
+        /// 集群ID，集群标识，在需要配置公有云独占集群或本地专有集群时使用。公有云独占集群申请请[提交工单](https://console.cloud.tencent.com/workorder/category)，本地专有集群请参考[本地专有集群](https://cloud.tencent.com/document/product/1346)描述。
+        /// </summary>
+        [JsonProperty("ClusterIds")]
+        public string[] ClusterIds{ get; set; }
+
+        /// <summary>
         /// 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
         /// </summary>
         [JsonProperty("ClientToken")]
@@ -209,6 +215,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
             this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
+            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
             this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);

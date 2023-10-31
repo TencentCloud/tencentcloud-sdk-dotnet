@@ -186,7 +186,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 签署人签署合同时的认证方式
-        /// 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+        /// <ul><li> **1** :人脸认证</li>
+        /// <li> **2** :签署密码</li>
+        /// <li> **3** :运营商三要素</li></ul>
+        /// 
+        /// 默认为1(人脸认证 ),2(签署密码)
+        /// 
+        /// 注: `用模版创建合同场景, 签署人的认证方式需要在配置模板的时候指定, 在此创建合同指定无效`
         /// </summary>
         [JsonProperty("ApproverSignTypes")]
         public long?[] ApproverSignTypes{ get; set; }

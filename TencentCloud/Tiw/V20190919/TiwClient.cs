@@ -705,7 +705,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 查询PPT检测任务的执行进度或结果
+        /// 查询PPT检测任务的执行进度或结果，支持查询最近半年内的任务结果
         /// </summary>
         /// <param name="req"><see cref="DescribePPTCheckRequest"/></param>
         /// <returns><see cref="DescribePPTCheckResponse"/></returns>
@@ -725,7 +725,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 查询PPT检测任务的执行进度或结果
+        /// 查询PPT检测任务的执行进度或结果，支持查询最近半年内的任务结果
         /// </summary>
         /// <param name="req"><see cref="DescribePPTCheckRequest"/></param>
         /// <returns><see cref="DescribePPTCheckResponse"/></returns>
