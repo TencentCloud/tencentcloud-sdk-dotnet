@@ -25,19 +25,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 模板列表
+        /// 模板详情列表数据
         /// </summary>
         [JsonProperty("Templates")]
         public TemplateInfo[] Templates{ get; set; }
 
         /// <summary>
-        /// 查询到的总数
+        /// 查询到的模板总数
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 每页多少条数据
+        /// 每页返回的数据条数
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

@@ -32,30 +32,30 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 任务状态，需要关注的状态
-        /// 0  :NeedTranform   - 任务已提交
-        /// 4  :Processing     - 文档转换中
-        /// 8  :TaskEnd        - 任务处理完成
-        /// -2 :DownloadFailed - 下载失败
-        /// -6 :ProcessFailed  - 转换失败
-        /// -13:ProcessTimeout - 转换文件超时
+        /// <ul><li>**0**  :NeedTranform   - 任务已提交</li>
+        /// <li>**4**  :Processing     - 文档转换中</li>
+        /// <li>**8**  :TaskEnd        - 任务处理完成</li>
+        /// <li>**-2** :DownloadFailed - 下载失败</li>
+        /// <li>**-6** :ProcessFailed  - 转换失败</li>
+        /// <li>**-13**:ProcessTimeout - 转换文件超时</li></ul>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }
 
         /// <summary>
         /// 状态描述，需要关注的状态
-        /// NeedTranform   - 任务已提交
-        /// Processing     - 文档转换中
-        /// TaskEnd        - 任务处理完成
-        /// DownloadFailed - 下载失败
-        /// ProcessFailed  - 转换失败
-        /// ProcessTimeout - 转换文件超时
+        /// <ul><li> **NeedTranform** : 任务已提交</li>
+        /// <li> **Processing** : 文档转换中</li>
+        /// <li> **TaskEnd** : 任务处理完成</li>
+        /// <li> **DownloadFailed** : 下载失败</li>
+        /// <li> **ProcessFailed** : 转换失败</li>
+        /// <li> **ProcessTimeout** : 转换文件超时</li></ul>
         /// </summary>
         [JsonProperty("TaskMessage")]
         public string TaskMessage{ get; set; }
 
         /// <summary>
-        /// 资源Id，也是FileId，用于文件发起使用
+        /// 资源Id，也是FileId，用于文件发起时使用
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
+        /// 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
@@ -79,6 +79,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
 
+        /// <summary>
+        /// 带宽包到期时间，只有预付费会返回，按量计费返回为null
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public string Deadline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "ResourceSet.", this.ResourceSet);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
         }
     }
 }

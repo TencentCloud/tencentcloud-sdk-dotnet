@@ -21,7 +21,7 @@ namespace TencentCloud.Cls.V20201016.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UploadLogRequest : AbstractModel
+    public class UploadLogRequest : AbstractModel, IOctetRequest
     {
         
         /// <summary>
@@ -41,6 +41,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         [JsonProperty("CompressType")]
         public string CompressType{ get; set; }
+
+        public byte[] OctetBody { get; set; }
 
 
         /// <summary>

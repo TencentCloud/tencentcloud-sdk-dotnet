@@ -108,7 +108,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? ApproverRole{ get; set; }
 
         /// <summary>
-        /// 自定义签署人角色名：收款人、开具人、见证人
+        /// 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+        /// 
+        /// 注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
         /// </summary>
         [JsonProperty("ApproverRoleName")]
         public string ApproverRoleName{ get; set; }
@@ -169,7 +171,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </li></ul>
         /// 注: 
         /// <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
-        /// <li>此字段不可传多个校验方式</li></ul>
+        /// <li>此字段可传多个校验方式</li></ul>
         /// </summary>
         [JsonProperty("ApproverVerifyTypes")]
         public long?[] ApproverVerifyTypes{ get; set; }

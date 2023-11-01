@@ -2773,6 +2773,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取消费详情列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQConsumeStatsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQConsumeStatsResponse"/></returns>
+        public async Task<DescribeRocketMQConsumeStatsResponse> DescribeRocketMQConsumeStats(DescribeRocketMQConsumeStatsRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQConsumeStatsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQConsumeStats");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQConsumeStatsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取消费详情列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQConsumeStatsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQConsumeStatsResponse"/></returns>
+        public DescribeRocketMQConsumeStatsResponse DescribeRocketMQConsumeStatsSync(DescribeRocketMQConsumeStatsRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQConsumeStatsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQConsumeStats");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQConsumeStatsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取指定消费组下当前客户端的连接情况
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQConsumerConnectionsRequest"/></param>
@@ -4848,6 +4888,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "UnbindCmqDeadLetter");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCmqDeadLetterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Rocketmq消费验证
+        /// </summary>
+        /// <param name="req"><see cref="VerifyRocketMQConsumeRequest"/></param>
+        /// <returns><see cref="VerifyRocketMQConsumeResponse"/></returns>
+        public async Task<VerifyRocketMQConsumeResponse> VerifyRocketMQConsume(VerifyRocketMQConsumeRequest req)
+        {
+             JsonResponseModel<VerifyRocketMQConsumeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyRocketMQConsume");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyRocketMQConsumeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Rocketmq消费验证
+        /// </summary>
+        /// <param name="req"><see cref="VerifyRocketMQConsumeRequest"/></param>
+        /// <returns><see cref="VerifyRocketMQConsumeResponse"/></returns>
+        public VerifyRocketMQConsumeResponse VerifyRocketMQConsumeSync(VerifyRocketMQConsumeRequest req)
+        {
+             JsonResponseModel<VerifyRocketMQConsumeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyRocketMQConsume");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyRocketMQConsumeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

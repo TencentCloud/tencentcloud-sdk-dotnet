@@ -261,6 +261,46 @@ namespace TencentCloud.Drm.V20181115
         }
 
         /// <summary>
+        /// 开发者需要指定使用的DRM类型取值 NORMALAES、和需要加密的Track类型取值 SD,ContentType取值 LiveVideo
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDRMLicenseRequest"/></param>
+        /// <returns><see cref="DescribeDRMLicenseResponse"/></returns>
+        public async Task<DescribeDRMLicenseResponse> DescribeDRMLicense(DescribeDRMLicenseRequest req)
+        {
+             JsonResponseModel<DescribeDRMLicenseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDRMLicense");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDRMLicenseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开发者需要指定使用的DRM类型取值 NORMALAES、和需要加密的Track类型取值 SD,ContentType取值 LiveVideo
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDRMLicenseRequest"/></param>
+        /// <returns><see cref="DescribeDRMLicenseResponse"/></returns>
+        public DescribeDRMLicenseResponse DescribeDRMLicenseSync(DescribeDRMLicenseRequest req)
+        {
+             JsonResponseModel<DescribeDRMLicenseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDRMLicense");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDRMLicenseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用来查询设置的FairPlay私钥校验信息。可用该接口校验设置的私钥与本身的私钥是否一致。
         /// </summary>
         /// <param name="req"><see cref="DescribeFairPlayPemRequest"/></param>

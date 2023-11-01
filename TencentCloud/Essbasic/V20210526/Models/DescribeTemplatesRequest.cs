@@ -25,74 +25,110 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 
-        /// 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// <ul>
+        /// <li>渠道应用标识:  Agent.AppId</li>
+        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+        /// </ul>
+        /// 第三方平台子客企业和员工必须已经经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 模板唯一标识，查询单个模板时使用
+        /// 合同模板ID，为32位字符串。
+        /// 建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 查询内容：
-        /// 0-模板列表及详情（默认），
-        /// 1-仅模板列表
+        /// 查询内容控制
+        /// 
+        /// <ul><li>**0**：模板列表及详情（默认）</li>
+        /// <li>**1**：仅模板列表</li></ul>
         /// </summary>
         [JsonProperty("ContentType")]
         public long? ContentType{ get; set; }
 
         /// <summary>
-        /// 指定每页多少条数据，如果不传默认为20，单页最大100。
+        /// 合同模板ID数组，每一个合同模板ID为32位字符串。
+        /// 建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+        /// 
+        /// ```注意: 
+        /// 1. 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。
+        /// 2. 请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。
+        /// 3. 最多支持200个模板。
+        /// 4. 若传递此参数，分页参数(Limit,Offset)无效```
+        /// </summary>
+        [JsonProperty("TemplateIds")]
+        public string[] TemplateIds{ get; set; }
+
+        /// <summary>
+        /// 指定每页返回的数据条数，和Offset参数配合使用。
+        /// 
+        /// 注：`1.默认值为20，单页做大值为200。`
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+        /// 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+        /// 
+        /// 注：`1.offset从0开始，即第一页为0。`
+        /// `2.默认从第一页返回。`
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 是否返回所有组件信息。
-        /// 默认false，只返回发起方控件；
-        /// true，返回所有签署方控件
-        /// </summary>
-        [JsonProperty("QueryAllComponents")]
-        public bool? QueryAllComponents{ get; set; }
-
-        /// <summary>
-        /// 模糊搜索模板名称，最大长度200
+        /// 模糊搜索的模板名称，注意是模板名的连续部分，最大长度200
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 是否获取模板预览链接，
-        /// 默认false-不获取
-        /// true-获取
+        /// 对应第三方应用平台企业的模板ID，通过此值可以搜索由第三方应用平台模板ID下发或领取得到的子客模板列表。
+        /// </summary>
+        [JsonProperty("ChannelTemplateId")]
+        public string ChannelTemplateId{ get; set; }
+
+        /// <summary>
+        /// 是否返回所有控件信息。
+        /// 
+        /// <ul><li>**false**：只返回发起方控件（默认）</li>
+        /// <li>**true**：返回所有签署方控件</li></ul>
+        /// </summary>
+        [JsonProperty("QueryAllComponents")]
+        public bool? QueryAllComponents{ get; set; }
+
+        /// <summary>
+        /// 是否获取模板预览链接。
+        /// 
+        /// <ul><li>**false**：不获取（默认）</li>
+        /// <li>**true**：获取</li></ul>
+        /// 
+        /// 设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,有效期5分钟。
+        /// 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+        /// （此功能开放需要联系客户经理）
         /// </summary>
         [JsonProperty("WithPreviewUrl")]
         public bool? WithPreviewUrl{ get; set; }
 
         /// <summary>
         /// 是否获取模板的PDF文件链接。
-        /// 默认false-不获取
-        /// true-获取
-        /// 请联系客户经理开白后使用。
+        /// 
+        /// <ul><li>**false**：不获取（默认）</li>
+        /// <li>**true**：获取</li></ul>
+        /// 
+        /// 设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟。
+        /// （此功能开放需要联系客户经理）
         /// </summary>
         [JsonProperty("WithPdfUrl")]
         public bool? WithPdfUrl{ get; set; }
-
-        /// <summary>
-        /// 对应第三方应用平台企业的模板ID
-        /// </summary>
-        [JsonProperty("ChannelTemplateId")]
-        public string ChannelTemplateId{ get; set; }
 
         /// <summary>
         /// 操作者的信息
@@ -110,13 +146,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
+            this.SetParamArraySimple(map, prefix + "TemplateIds.", this.TemplateIds);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "QueryAllComponents", this.QueryAllComponents);
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
+            this.SetParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
+            this.SetParamSimple(map, prefix + "QueryAllComponents", this.QueryAllComponents);
             this.SetParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
             this.SetParamSimple(map, prefix + "WithPdfUrl", this.WithPdfUrl);
-            this.SetParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }

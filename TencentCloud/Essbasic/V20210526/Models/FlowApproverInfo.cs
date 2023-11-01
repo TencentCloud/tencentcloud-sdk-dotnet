@@ -177,9 +177,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? ApproverNeedSignReview{ get; set; }
 
         /// <summary>
-        /// 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
-        /// 查看合同的认证方式 Flow层级的优先于approver层级的
-        /// （当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+        /// 指定个人签署方查看合同的校验方式,可以传值如下:
+        /// <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
+        /// <li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+        /// </li></ul>
+        /// 注: 
+        /// <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
+        /// <li>此字段可传多个校验方式</li></ul>
         /// </summary>
         [JsonProperty("ApproverVerifyTypes")]
         public long?[] ApproverVerifyTypes{ get; set; }
@@ -224,7 +228,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public ComponentLimit[] AddSignComponentsLimits{ get; set; }
 
         /// <summary>
-        /// 自定义签署人角色名，如收款人、开具人、见证人等
+        /// 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+        /// 
+        /// 注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
         /// </summary>
         [JsonProperty("ApproverRoleName")]
         public string ApproverRoleName{ get; set; }
