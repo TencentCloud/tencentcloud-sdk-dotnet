@@ -134,6 +134,13 @@ namespace TencentCloud.Common.Http
             string fullurl = $"{baseUrl.TrimEnd('/')}{path}";
             return await this.Send(HttpMethod.Post, fullurl, payload, headers);
         }
+        
+        public async Task<HttpResponseMessage> PostRequestAsync(string path, byte[] payload,
+            Dictionary<string, string> headers)
+        {
+            string fullurl = $"{baseUrl.TrimEnd('/')}{path}";
+            return await this.Send(HttpMethod.Post, fullurl, payload, headers);
+        }
 
         public async Task<HttpResponseMessage> PostRequestAsync(string url, Dictionary<string, string> param)
         {
@@ -148,6 +155,12 @@ namespace TencentCloud.Common.Http
         private async Task<HttpResponseMessage> Send(HttpMethod method, string url, string payload,
             Dictionary<string, string> headers)
         {
+            return await Send(method, url, Encoding.UTF8.GetBytes(payload), headers);
+        }
+        
+        private async Task<HttpResponseMessage> Send(
+            HttpMethod method, string url, byte[] payload, Dictionary<string, string> headers)
+        {
             using (var cts = new System.Threading.CancellationTokenSource(timeout * 1000))
             {
                 using (var msg = new HttpRequestMessage(method, url))
@@ -156,7 +169,10 @@ namespace TencentCloud.Common.Http
                     {
                         if (kvp.Key.Equals("Content-Type"))
                         {
-                            msg.Content = new StringContent(payload, Encoding.UTF8, kvp.Value);
+                            ByteArrayContent content = new ByteArrayContent(payload);
+                            content.Headers.Remove("Content-Type");
+                            content.Headers.Add("Content-Type", kvp.Value);
+                            msg.Content = content;
                         }
                         else if (kvp.Key.Equals("Host"))
                         {

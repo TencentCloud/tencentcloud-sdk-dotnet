@@ -57,9 +57,14 @@ namespace TencentCloud.Common
 
         public static string SHA256Hex(string s)
         {
+            return SHA256Hex(Encoding.UTF8.GetBytes(s));
+        }
+        
+        public static string SHA256Hex(byte[] s)
+        {
             using (SHA256 algo = SHA256.Create())
             {
-                byte[] hashbytes = algo.ComputeHash(Encoding.UTF8.GetBytes(s));
+                byte[] hashbytes = algo.ComputeHash(s);
                 StringBuilder builder = new StringBuilder();
                 for (int i = 0; i < hashbytes.Length; ++i)
                 {

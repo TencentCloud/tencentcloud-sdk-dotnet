@@ -148,10 +148,11 @@ namespace TencentCloud.Common
         private async Task<HttpResponseMessage> RequestV3(AbstractModel request, string actionName)
         {
             string canonicalQueryString = this.BuildCanonicalQueryString(request);
-            string requestPayload = this.BuildRequestPayload(request);
-            string contentType = this.BuildContentType();
+            byte[] requestPayload = this.BuildRequestPayload(request);
+            string contentType = this.BuildContentType(request);
 
-            Dictionary<string, string> headers = this.BuildHeaders(contentType, requestPayload, canonicalQueryString);
+            Dictionary<string, string> headers =
+                this.BuildHeaders(contentType, requestPayload, canonicalQueryString, request);
             headers.Add("X-TC-Action", actionName);
             string endpoint = headers["Host"];
 
@@ -177,8 +178,8 @@ namespace TencentCloud.Common
             return null;
         }
 
-        private Dictionary<string, string> BuildHeaders(string contentType, string requestPayload,
-            string canonicalQueryString)
+        private Dictionary<string, string> BuildHeaders(string contentType, byte[] requestPayload,
+            string canonicalQueryString, AbstractModel request)
         {
             string endpoint = this.Endpoint;
             if (!string.IsNullOrEmpty(this.Profile.HttpProfile.Endpoint))
@@ -188,7 +189,7 @@ namespace TencentCloud.Common
 
             string httpRequestMethod = this.Profile.HttpProfile.ReqMethod;
             string canonicalURI = "/";
-            string canonicalHeaders = "content-type:" + contentType + "; charset=utf-8\nhost:" + endpoint + "\n";
+            string canonicalHeaders = "content-type:" + contentType + "\nhost:" + endpoint + "\n";
             string signedHeaders = "content-type;host";
             string hashedRequestPayload = SignHelper.SHA256Hex(requestPayload);
             string canonicalRequest = httpRequestMethod + "\n"
@@ -245,11 +246,22 @@ namespace TencentCloud.Common
                 headers.Add("X-TC-Language", "zh-CN");
             }
 
+            if (contentType == "application/octet-stream")
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>();
+                request.ToMap(param, "X-" + service.ToUpper() + "-");
+                foreach (KeyValuePair<string, string> kv in param)
+                    headers.Add(kv.Key, kv.Value);
+            }
+
             return headers;
         }
 
-        private string BuildContentType()
+        private string BuildContentType(AbstractModel request)
         {
+            if (request is IOctetRequest)
+                return "application/octet-stream";
+
             string httpRequestMethod = this.Profile.HttpProfile.ReqMethod;
             if (HttpProfile.REQ_GET.Equals(httpRequestMethod))
             {
@@ -280,20 +292,30 @@ namespace TencentCloud.Common
             return urlBuilder.ToString().TrimEnd('&');
         }
 
-        private string BuildRequestPayload(AbstractModel request)
+        private byte[] BuildRequestPayload(AbstractModel request)
         {
             string httpRequestMethod = this.Profile.HttpProfile.ReqMethod;
             if (HttpProfile.REQ_GET.Equals(httpRequestMethod))
             {
-                return "";
+                return Encoding.UTF8.GetBytes("");
             }
 
             var serializableRequest = request as ISerializable;
             if (serializableRequest != null)
-                return serializableRequest.Serialize();
-            return JsonConvert.SerializeObject(request,
-                Newtonsoft.Json.Formatting.None,
-                new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+                return Encoding.UTF8.GetBytes(serializableRequest.Serialize());
+            
+            var octetRequest = request as IOctetRequest;
+            if (octetRequest != null)
+            {
+                byte[] octetBody = octetRequest.OctetBody;
+                if (octetBody != null)
+                    return octetBody;
+                return Encoding.UTF8.GetBytes("");
+            }
+
+            return Encoding.UTF8.GetBytes(
+                JsonConvert.SerializeObject(request, Formatting.None,
+                    new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }));
         }
 
         private Dictionary<string, string> BuildParam(AbstractModel request, string actionName)
