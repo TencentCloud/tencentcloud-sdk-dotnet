@@ -82,10 +82,23 @@ namespace TencentCloud.Vrs.V20200824.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 任务类型 1:在线 2:离线  默认为1
+        /// 模型类型 1:在线 2:离线  默认为1
         /// </summary>
         [JsonProperty("ModelType")]
         public long? ModelType{ get; set; }
+
+        /// <summary>
+        /// 任务类型 0:默认类型 1:轻量级复刻
+        /// 默认为0
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public long? TaskType{ get; set; }
+
+        /// <summary>
+        /// 校验音频ID
+        /// </summary>
+        [JsonProperty("VPRAudioId")]
+        public string VPRAudioId{ get; set; }
 
 
         /// <summary>
@@ -102,6 +115,8 @@ namespace TencentCloud.Vrs.V20200824.Models
             this.SetParamArraySimple(map, prefix + "AudioIdList.", this.AudioIdList);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "VPRAudioId", this.VPRAudioId);
         }
     }
 }

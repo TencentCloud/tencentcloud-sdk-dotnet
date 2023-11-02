@@ -68,6 +68,16 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("SkillGroupNameList")]
         public string[] SkillGroupNameList{ get; set; }
 
+        /// <summary>
+        /// 1:管理员
+        /// 2:质检员
+        /// 3:普通座席
+        /// else:自定义角色ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Role")]
+        public long? Role{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +91,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamArraySimple(map, prefix + "SkillGroupNameList.", this.SkillGroupNameList);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
         }
     }
 }

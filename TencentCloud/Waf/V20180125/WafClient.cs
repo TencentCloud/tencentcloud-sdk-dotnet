@@ -1179,6 +1179,8 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 废弃接口
+        /// 
         /// 获取防篡改url
         /// </summary>
         /// <param name="req"><see cref="DescribeAntiFakeUrlRequest"/></param>
@@ -1199,6 +1201,8 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 废弃接口
+        /// 
         /// 获取防篡改url
         /// </summary>
         /// <param name="req"><see cref="DescribeAntiFakeUrlRequest"/></param>
@@ -1507,6 +1511,8 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 没有在使用。
+        /// 
         /// Waf  CC V2 Query接口
         /// </summary>
         /// <param name="req"><see cref="DescribeCCRuleRequest"/></param>
@@ -1527,6 +1533,8 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 没有在使用。
+        /// 
         /// Waf  CC V2 Query接口
         /// </summary>
         /// <param name="req"><see cref="DescribeCCRuleRequest"/></param>

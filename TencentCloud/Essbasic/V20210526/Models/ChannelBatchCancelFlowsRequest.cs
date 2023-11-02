@@ -25,37 +25,45 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// <ul>
+        /// <li>渠道应用标识:  Agent.AppId</li>
+        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+        /// </ul>
+        /// 第三方平台子客企业和员工必须已经经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 签署流程Id数组，最多100个，超过100不处理
+        /// 要撤销的合同流程ID列表，最多100个，超过100不处理
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 撤销理由,不超过200个字符
+        /// 撤回原因，长度不能超过200，只能由中文、字母、数字和下划线组成。
+        /// 
+        /// 备注:`如果不传递撤回原因，那么默认撤回原因是 "自动撤销（通过接口实现）"`
         /// </summary>
         [JsonProperty("CancelMessage")]
         public string CancelMessage{ get; set; }
 
         /// <summary>
-        /// 撤销理由自定义格式，支持以下格式
-        /// <ul><li>0 : 默认值</li>
-        /// <li>1 : 只保留身份信息</li>
-        /// <li>2 : 保留身份信息+企业名称</li>
-        /// <li>3 : 保留身份信息+企业名称+经办人名称</li></ul>
-        /// 例如,假设合同的发起方是典子谦示例企业的经办人张三，撤销理由是"合同内容错误，需要修正",合同撤销后，各签署方看到的撤销理由是会是
+        /// 撤销理由自定义格式,  会展示在合同预览的界面中,  可以选择下面的组合方式：
         /// 
-        /// 0: 发起方-典子谦示例企业-张三以"合同内容错误，需要修正"的理由撤销当前合同
-        /// 1: 发起方以"合同内容错误，需要修正"的理由撤销当前合同
-        /// 2: 发起方-典子谦示例企业以"合同内容错误，需要修正"的理由撤销当前合同
-        /// 3: 发起方-典子谦示例企业-张三以"合同内容错误，需要修正"的理由撤销当前合同</br>
+        /// **0** : 默认格式,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+        /// **1** :  合同封面页面会展示为:  发起方以**CancelMessage**的理由撤销当前合同
+        /// **2** : 保留企业名称,  合同封面页面会展示为:  发起方-企业名称以**CancelMessage**的理由撤销当前合同
+        /// **3** : 保留企业名称+经办人名字,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
         /// 
-        /// 备注:`如果不传递撤销理由，那么默认撤销理由是 "自动撤销（通过接口实现）"`
+        /// 注: `CancelMessage为撤销当前合同的理由`
+        /// 
+        /// ![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+        /// 
         /// </summary>
         [JsonProperty("CancelMessageFormat")]
         public long? CancelMessageFormat{ get; set; }

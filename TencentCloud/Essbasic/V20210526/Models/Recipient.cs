@@ -25,28 +25,28 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 签署人唯一标识，在通过模板发起合同的时候对应签署方ID
+        /// 合同参与方的角色ID
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
 
         /// <summary>
-        /// 参与者类型，默认为空。
-        /// ENTERPRISE-企业；
-        /// INDIVIDUAL-个人；
-        /// PROMOTER-发起方
+        /// 参与者类型, 可以选择的类型如下:
+        /// <ul><li> **ENTERPRISE** :此角色为企业参与方</li>
+        /// <li> **INDIVIDUAL** :此角色为个人参与方</li>
+        /// <li> **PROMOTER** :此角色是发起方</li></ul>
         /// </summary>
         [JsonProperty("RecipientType")]
         public string RecipientType{ get; set; }
 
         /// <summary>
-        /// 描述信息	
+        /// 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 角色名称	
+        /// 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }

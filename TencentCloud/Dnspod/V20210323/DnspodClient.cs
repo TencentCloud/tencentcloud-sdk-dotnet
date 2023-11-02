@@ -293,6 +293,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 创建域名的自定义线路
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainCustomLineRequest"/></param>
+        /// <returns><see cref="CreateDomainCustomLineResponse"/></returns>
+        public async Task<CreateDomainCustomLineResponse> CreateDomainCustomLine(CreateDomainCustomLineRequest req)
+        {
+             JsonResponseModel<CreateDomainCustomLineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDomainCustomLine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainCustomLineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建域名的自定义线路
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainCustomLineRequest"/></param>
+        /// <returns><see cref="CreateDomainCustomLineResponse"/></returns>
+        public CreateDomainCustomLineResponse CreateDomainCustomLineSync(CreateDomainCustomLineRequest req)
+        {
+             JsonResponseModel<CreateDomainCustomLineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDomainCustomLine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainCustomLineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建域名分组
         /// </summary>
         /// <param name="req"><see cref="CreateDomainGroupRequest"/></param>
@@ -604,6 +644,46 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDomainBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除域名的自定义线路
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDomainCustomLineRequest"/></param>
+        /// <returns><see cref="DeleteDomainCustomLineResponse"/></returns>
+        public async Task<DeleteDomainCustomLineResponse> DeleteDomainCustomLine(DeleteDomainCustomLineRequest req)
+        {
+             JsonResponseModel<DeleteDomainCustomLineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDomainCustomLine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainCustomLineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除域名的自定义线路
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDomainCustomLineRequest"/></param>
+        /// <returns><see cref="DeleteDomainCustomLineResponse"/></returns>
+        public DeleteDomainCustomLineResponse DeleteDomainCustomLineSync(DeleteDomainCustomLineRequest req)
+        {
+             JsonResponseModel<DeleteDomainCustomLineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDomainCustomLine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainCustomLineResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -964,6 +1044,46 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDomainAnalytics");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainAnalyticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名的自定义线路列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainCustomLineListRequest"/></param>
+        /// <returns><see cref="DescribeDomainCustomLineListResponse"/></returns>
+        public async Task<DescribeDomainCustomLineListResponse> DescribeDomainCustomLineList(DescribeDomainCustomLineListRequest req)
+        {
+             JsonResponseModel<DescribeDomainCustomLineListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainCustomLineList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainCustomLineListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名的自定义线路列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainCustomLineListRequest"/></param>
+        /// <returns><see cref="DescribeDomainCustomLineListResponse"/></returns>
+        public DescribeDomainCustomLineListResponse DescribeDomainCustomLineListSync(DescribeDomainCustomLineListRequest req)
+        {
+             JsonResponseModel<DescribeDomainCustomLineListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainCustomLineList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainCustomLineListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1964,6 +2084,46 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "DownloadSnapshot");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改域名的自定义线路
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainCustomLineRequest"/></param>
+        /// <returns><see cref="ModifyDomainCustomLineResponse"/></returns>
+        public async Task<ModifyDomainCustomLineResponse> ModifyDomainCustomLine(ModifyDomainCustomLineRequest req)
+        {
+             JsonResponseModel<ModifyDomainCustomLineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDomainCustomLine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainCustomLineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改域名的自定义线路
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainCustomLineRequest"/></param>
+        /// <returns><see cref="ModifyDomainCustomLineResponse"/></returns>
+        public ModifyDomainCustomLineResponse ModifyDomainCustomLineSync(ModifyDomainCustomLineRequest req)
+        {
+             JsonResponseModel<ModifyDomainCustomLineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDomainCustomLine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainCustomLineResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

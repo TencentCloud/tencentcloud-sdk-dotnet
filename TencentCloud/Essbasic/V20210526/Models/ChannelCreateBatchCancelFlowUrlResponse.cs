@@ -25,19 +25,20 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 批量撤销url
+        /// 批量撤销合同的URL链接, 需要在手机端打开, 有效期24小时
         /// </summary>
         [JsonProperty("BatchCancelFlowUrl")]
         public string BatchCancelFlowUrl{ get; set; }
 
         /// <summary>
-        /// 签署流程批量撤销失败原因
+        /// 与入参的FlowIds数组一致,   成功生成到撤销链接中,则为"",   不能撤销合同则为失败原因
         /// </summary>
         [JsonProperty("FailMessages")]
         public string[] FailMessages{ get; set; }
 
         /// <summary>
-        /// 签署撤销url过期时间-年月日-时分秒
+        /// 签署撤销链接的过期时间(格式为:年-月-日 时:分:秒), 默认是生成链接的24小时后失效
+        /// 
         /// </summary>
         [JsonProperty("UrlExpireOn")]
         public string UrlExpireOn{ get; set; }

@@ -107,6 +107,20 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
+        /// <summary>
+        /// 报告类型： 1安全体检 2日报 3周报 4月报
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReportType")]
+        public long? ReportType{ get; set; }
+
+        /// <summary>
+        /// 报告模板id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public long? TemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +139,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "UIN", this.UIN);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "ReportType", this.ReportType);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

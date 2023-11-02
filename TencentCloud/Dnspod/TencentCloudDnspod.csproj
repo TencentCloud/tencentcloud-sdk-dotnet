@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.880</VersionPrefix>
+    <VersionPrefix>3.0.881</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,8 @@
     <Compile Include="V20210323\Models\CreateDomainBatchRecord.cs" />
     <Compile Include="V20210323\Models\CreateDomainBatchRequest.cs" />
     <Compile Include="V20210323\Models\CreateDomainBatchResponse.cs" />
+    <Compile Include="V20210323\Models\CreateDomainCustomLineRequest.cs" />
+    <Compile Include="V20210323\Models\CreateDomainCustomLineResponse.cs" />
     <Compile Include="V20210323\Models\CreateDomainGroupRequest.cs" />
     <Compile Include="V20210323\Models\CreateDomainGroupResponse.cs" />
     <Compile Include="V20210323\Models\CreateDomainRequest.cs" />
@@ -76,12 +78,15 @@
     <Compile Include="V20210323\Models\CreateRecordResponse.cs" />
     <Compile Include="V20210323\Models\CreateSnapshotRequest.cs" />
     <Compile Include="V20210323\Models\CreateSnapshotResponse.cs" />
+    <Compile Include="V20210323\Models\CustomLineInfo.cs" />
     <Compile Include="V20210323\Models\Deals.cs" />
     <Compile Include="V20210323\Models\DeleteDomainAliasRequest.cs" />
     <Compile Include="V20210323\Models\DeleteDomainAliasResponse.cs" />
     <Compile Include="V20210323\Models\DeleteDomainBatchDetail.cs" />
     <Compile Include="V20210323\Models\DeleteDomainBatchRequest.cs" />
     <Compile Include="V20210323\Models\DeleteDomainBatchResponse.cs" />
+    <Compile Include="V20210323\Models\DeleteDomainCustomLineRequest.cs" />
+    <Compile Include="V20210323\Models\DeleteDomainCustomLineResponse.cs" />
     <Compile Include="V20210323\Models\DeleteDomainRequest.cs" />
     <Compile Include="V20210323\Models\DeleteDomainResponse.cs" />
     <Compile Include="V20210323\Models\DeleteRecordBatchDetail.cs" />
@@ -102,6 +107,8 @@
     <Compile Include="V20210323\Models\DescribeDomainAliasListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainAnalyticsRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainAnalyticsResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainCustomLineListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainCustomLineListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainFilterListRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainFilterListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainGroupListRequest.cs" />
@@ -168,6 +175,8 @@
     <Compile Include="V20210323\Models\LineGroupInfo.cs" />
     <Compile Include="V20210323\Models\LineInfo.cs" />
     <Compile Include="V20210323\Models\LockInfo.cs" />
+    <Compile Include="V20210323\Models\ModifyDomainCustomLineRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyDomainCustomLineResponse.cs" />
     <Compile Include="V20210323\Models\ModifyDomainLockRequest.cs" />
     <Compile Include="V20210323\Models\ModifyDomainLockResponse.cs" />
     <Compile Include="V20210323\Models\ModifyDomainOwnerRequest.cs" />

@@ -3533,6 +3533,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 消息查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicMsgsRequest"/></param>
+        /// <returns><see cref="DescribeTopicMsgsResponse"/></returns>
+        public async Task<DescribeTopicMsgsResponse> DescribeTopicMsgs(DescribeTopicMsgsRequest req)
+        {
+             JsonResponseModel<DescribeTopicMsgsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopicMsgs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicMsgsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 消息查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicMsgsRequest"/></param>
+        /// <returns><see cref="DescribeTopicMsgsResponse"/></returns>
+        public DescribeTopicMsgsResponse DescribeTopicMsgsSync(DescribeTopicMsgsRequest req)
+        {
+             JsonResponseModel<DescribeTopicMsgsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopicMsgs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicMsgsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取环境下主题列表
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicsRequest"/></param>

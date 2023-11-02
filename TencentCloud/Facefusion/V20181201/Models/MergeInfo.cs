@@ -25,25 +25,26 @@ namespace TencentCloud.Facefusion.V20181201.Models
     {
         
         /// <summary>
-        /// 输入图片base64
+        /// 输入图片base64。
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
-        /// 输入图片url
+        /// 输入图片url。
+        /// Url、Image必须提供一个，如果都提供，只使用 Url。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 上传的图片人脸位置信息（人脸框）
+        /// 输入图片人脸位置信息（人脸框）。不填默认取输入图中最大人脸。
         /// </summary>
         [JsonProperty("InputImageFaceRect")]
         public FaceRect InputImageFaceRect{ get; set; }
 
         /// <summary>
-        /// 控制台上传的素材人脸ID，不填默认取最大人脸
+        /// 素材人脸ID，不填默认取素材中最大人脸。
         /// </summary>
         [JsonProperty("TemplateFaceID")]
         public string TemplateFaceID{ get; set; }

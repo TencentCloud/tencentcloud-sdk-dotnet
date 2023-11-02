@@ -33,7 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段，不填则表示允许任意客户端 IP。
+        /// 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段。
         /// </summary>
         [JsonProperty("AllowClientIPList")]
         public string[] AllowClientIPList{ get; set; }

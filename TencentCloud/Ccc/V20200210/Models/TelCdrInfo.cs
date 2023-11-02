@@ -61,6 +61,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string RecordURL{ get; set; }
 
         /// <summary>
+        /// 录音 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordId")]
+        public string RecordId{ get; set; }
+
+        /// <summary>
         /// 坐席信息
         /// </summary>
         [JsonProperty("SeatUser")]
@@ -354,6 +361,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "RecordURL", this.RecordURL);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamObj(map, prefix + "SeatUser.", this.SeatUser);
             this.SetParamSimple(map, prefix + "EndStatus", this.EndStatus);
             this.SetParamSimple(map, prefix + "SkillGroup", this.SkillGroup);

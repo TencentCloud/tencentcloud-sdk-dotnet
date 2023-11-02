@@ -25,50 +25,57 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 渠道应用相关信息
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 自动签场景:
-        /// E_PRESCRIPTION_AUTO_SIGN 电子处方
+        /// 自动签使用的场景值, 可以选择的场景值如下:
+        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+        /// 
+        /// 注: `现在仅支持电子处方场景`
         /// </summary>
         [JsonProperty("SceneKey")]
         public string SceneKey{ get; set; }
 
         /// <summary>
-        /// 操作人信息
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 自动签开通，签署相关配置
+        /// 自动签开通配置信息, 包括开通的人员的信息等
         /// </summary>
         [JsonProperty("AutoSignConfig")]
         public AutoSignConfig AutoSignConfig{ get; set; }
 
         /// <summary>
-        /// 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
+        /// 生成的链接类型：
+        /// <ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
+        /// <li> **H5SIGN** : 生成H5端开通链接</li></ul>
         /// </summary>
         [JsonProperty("UrlType")]
         public string UrlType{ get; set; }
 
         /// <summary>
-        /// 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
+        /// 是否通知开通方，通知类型:
+        /// <ul><li>默认不设置为不通知开通方</li>
+        /// <li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// 若上方填写为 SMS，则此处为手机号
+        /// 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
         /// </summary>
         [JsonProperty("NotifyAddress")]
         public string NotifyAddress{ get; set; }
 
         /// <summary>
-        /// 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+        /// 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }

@@ -40,29 +40,28 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 合同模板ID，为32位字符串。
-        /// 建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+        /// 
+        /// 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 查询内容控制
+        /// 查询模版的内容
         /// 
-        /// <ul><li>**0**：模板列表及详情（默认）</li>
-        /// <li>**1**：仅模板列表</li></ul>
+        /// <ul><li>**0**：（默认）模板列表及详情</li>
+        /// <li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul>
         /// </summary>
         [JsonProperty("ContentType")]
         public long? ContentType{ get; set; }
 
         /// <summary>
-        /// 合同模板ID数组，每一个合同模板ID为32位字符串。
-        /// 建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+        /// 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
         /// 
-        /// ```注意: 
-        /// 1. 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。
-        /// 2. 请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。
-        /// 3. 最多支持200个模板。
-        /// 4. 若传递此参数，分页参数(Limit,Offset)无效```
+        /// 注意: 
+        /// 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
+        /// 2. `请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。`
+        /// 4. `若传递此参数，分页参数(Limit,Offset)无效`
         /// </summary>
         [JsonProperty("TemplateIds")]
         public string[] TemplateIds{ get; set; }
@@ -85,7 +84,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 模糊搜索的模板名称，注意是模板名的连续部分，最大长度200
+        /// 模糊搜索的模板名称，注意是模板名的连续部分，长度不能超过200，可支持由中文、字母、数字和下划线组成字符串。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
@@ -97,10 +96,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ChannelTemplateId{ get; set; }
 
         /// <summary>
-        /// 是否返回所有控件信息。
+        /// 返回控件的范围, 是只返回发起方自己的还是所有参与方的
         /// 
-        /// <ul><li>**false**：只返回发起方控件（默认）</li>
-        /// <li>**true**：返回所有签署方控件</li></ul>
+        /// <ul><li>**false**：（默认）只返回发起方控件</li>
+        /// <li>**true**：返回所有参与方(包括发起方和签署方)控件</li></ul>
         /// </summary>
         [JsonProperty("QueryAllComponents")]
         public bool? QueryAllComponents{ get; set; }
@@ -111,9 +110,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <ul><li>**false**：不获取（默认）</li>
         /// <li>**true**：获取</li></ul>
         /// 
-        /// 设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,有效期5分钟。
-        /// 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-        /// （此功能开放需要联系客户经理）
+        /// 设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,  有效期5分钟。可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+        /// 
+        /// 注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
         /// </summary>
         [JsonProperty("WithPreviewUrl")]
         public bool? WithPreviewUrl{ get; set; }
@@ -124,8 +123,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <ul><li>**false**：不获取（默认）</li>
         /// <li>**true**：获取</li></ul>
         /// 
-        /// 设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟。
-        /// （此功能开放需要联系客户经理）
+        /// 设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
+        /// 
+        /// 注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
         /// </summary>
         [JsonProperty("WithPdfUrl")]
         public bool? WithPdfUrl{ get; set; }

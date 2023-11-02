@@ -46,6 +46,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? NotViewNumber{ get; set; }
 
         /// <summary>
+        /// 报告模板数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReportTemplateNumber")]
+        public long? ReportTemplateNumber{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -60,6 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "NotViewNumber", this.NotViewNumber);
+            this.SetParamSimple(map, prefix + "ReportTemplateNumber", this.ReportTemplateNumber);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
