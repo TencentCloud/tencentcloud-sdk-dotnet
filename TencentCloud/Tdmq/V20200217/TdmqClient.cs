@@ -2133,6 +2133,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 查询消息轨迹
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgTraceRequest"/></param>
+        /// <returns><see cref="DescribeMsgTraceResponse"/></returns>
+        public async Task<DescribeMsgTraceResponse> DescribeMsgTrace(DescribeMsgTraceRequest req)
+        {
+             JsonResponseModel<DescribeMsgTraceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMsgTrace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMsgTraceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询消息轨迹
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgTraceRequest"/></param>
+        /// <returns><see cref="DescribeMsgTraceResponse"/></returns>
+        public DescribeMsgTraceResponse DescribeMsgTraceSync(DescribeMsgTraceRequest req)
+        {
+             JsonResponseModel<DescribeMsgTraceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMsgTrace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMsgTraceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 运营端获取命名空间bundle列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNamespaceBundlesOptRequest"/></param>

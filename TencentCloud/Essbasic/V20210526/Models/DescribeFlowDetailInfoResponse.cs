@@ -25,33 +25,34 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 第三方平台应用号Id
+        /// 合同归属的第三方平台应用号ID
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 第三方平台子客企业OpenId
+        /// 合同归属的第三方平台子客企业OpenId
         /// </summary>
         [JsonProperty("ProxyOrganizationOpenId")]
         public string ProxyOrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 合同(签署流程)的具体详细描述信息
+        /// 合同流程的详细信息。
+        /// 如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowInfo")]
         public FlowDetailInfo[] FlowInfo{ get; set; }
 
         /// <summary>
-        /// 合同组编号
+        /// 合同组ID，只有在查询合同组信息时才会返回。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
 
         /// <summary>
-        /// 合同组名称
+        /// 合同组名称，只有在查询合同组信息时才会返回。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowGroupName")]

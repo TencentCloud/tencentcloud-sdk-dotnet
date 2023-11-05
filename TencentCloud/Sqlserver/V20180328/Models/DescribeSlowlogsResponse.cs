@@ -34,7 +34,14 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// 慢查询日志信息列表
         /// </summary>
         [JsonProperty("Slowlogs")]
+        [System.Obsolete]
         public SlowlogInfo[] Slowlogs{ get; set; }
+
+        /// <summary>
+        /// 慢查询日志信息列表
+        /// </summary>
+        [JsonProperty("SlowLogs")]
+        public SlowLog[] SlowLogs{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +57,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Slowlogs.", this.Slowlogs);
+            this.SetParamArrayObj(map, prefix + "SlowLogs.", this.SlowLogs);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

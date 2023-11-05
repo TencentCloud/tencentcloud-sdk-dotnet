@@ -25,19 +25,29 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// <ul>
+        /// <li>渠道应用标识:  Agent.AppId</li>
+        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+        /// </ul>
+        /// 第三方平台子客企业必须已经经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 操作类型，新增:"CREATE"，修改:"UPDATE"，离职:"RESIGN"
+        /// 操作类型，对应的操作
+        /// <ul><li> **CREATE** :新增员工</li>
+        /// <li> **UPDATE** :修改员工</li>
+        /// <li> **RESIGN** :离职员工</li></ul>
         /// </summary>
         [JsonProperty("OperatorType")]
         public string OperatorType{ get; set; }
 
         /// <summary>
-        /// 经办人信息列表，最大长度200
+        /// 员工信息列表，最多支持200个
         /// </summary>
         [JsonProperty("ProxyOrganizationOperators")]
         public ProxyOrganizationOperator[] ProxyOrganizationOperators{ get; set; }

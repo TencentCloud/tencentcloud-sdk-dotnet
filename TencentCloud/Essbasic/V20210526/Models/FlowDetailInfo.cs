@@ -25,76 +25,78 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 合同(流程)的Id
+        /// 合同流程ID，为32位字符串。
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的名字
+        /// 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的类型
+        /// 合同流程的类别分类（如销售合同/入职合同等）。
         /// </summary>
         [JsonProperty("FlowType")]
         public string FlowType{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的状态, 状态如下
-        /// 
-        /// INIT 合同创建
-        /// PART 合同签署中
-        /// REJECT 合同拒签
-        /// ALL 合同签署完成
-        /// DEADLINE 合同流签(合同过期)
-        /// CANCEL 合同撤回
-        /// RELIEVED 解除协议（已解除）
+        /// 合同流程当前的签署状态, 会存在下列的状态值
+        /// <ul><li> **INIT** :合同创建</li>
+        /// <li> **PART** :合同签署中(至少有一个签署方已经签署)</li>
+        /// <li> **REJECT** :合同拒签</li>
+        /// <li> **ALL** :合同签署完成</li>
+        /// <li> **DEADLINE** :合同流签(合同过期)</li>
+        /// <li> **CANCEL** :合同撤回</li>
+        /// <li> **RELIEVED** :解除协议（已解除）</li></ul>
         ///  
         /// </summary>
         [JsonProperty("FlowStatus")]
         public string FlowStatus{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的信息
+        /// 当合同流程状态为已拒签（即 FlowStatus=REJECT）或已撤销（即 FlowStatus=CANCEL ）时，此字段 FlowMessage 为拒签或撤销原因。
         /// </summary>
         [JsonProperty("FlowMessage")]
         public string FlowMessage{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的创建时间戳，单位秒
+        /// 合同流程的创建时间戳，格式为Unix标准时间戳（秒）。
         /// </summary>
         [JsonProperty("CreateOn")]
         public long? CreateOn{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的签署截止时间戳，单位秒
+        /// 签署流程的签署截止时间, 值为unix时间戳, 精确到秒。
         /// </summary>
         [JsonProperty("DeadLine")]
         public long? DeadLine{ get; set; }
 
         /// <summary>
-        /// 用户自定义数据
+        /// 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 1000长度。
+        /// 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
         /// </summary>
         [JsonProperty("CustomData")]
         public string CustomData{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的签署人数组
+        /// 合同流程的签署方数组
         /// </summary>
         [JsonProperty("FlowApproverInfos")]
         public FlowApproverDetail[] FlowApproverInfos{ get; set; }
 
         /// <summary>
-        /// 合同(流程)关注方信息列表
+        /// 合同流程的关注方信息数组
         /// </summary>
         [JsonProperty("CcInfos")]
         public FlowApproverDetail[] CcInfos{ get; set; }
 
         /// <summary>
-        /// 是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
+        /// 是否需要发起前审批
+        /// <ul><li>当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程</li>
+        /// <li>当NeedCreateReview为false，不需要发起前审核的合同</li></ul>
         /// </summary>
         [JsonProperty("NeedCreateReview")]
         public bool? NeedCreateReview{ get; set; }

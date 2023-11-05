@@ -28,6 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// 返回错误码
         /// </summary>
         [JsonProperty("Errno")]
+        [System.Obsolete]
         public long? Errno{ get; set; }
 
         /// <summary>
@@ -35,6 +36,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }
+
+        /// <summary>
+        /// 返回错误码
+        /// </summary>
+        [JsonProperty("Code")]
+        public long? Code{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +57,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         {
             this.SetParamSimple(map, prefix + "Errno", this.Errno);
             this.SetParamSimple(map, prefix + "Msg", this.Msg);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

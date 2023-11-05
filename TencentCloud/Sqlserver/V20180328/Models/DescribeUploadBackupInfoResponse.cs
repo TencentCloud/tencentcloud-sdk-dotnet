@@ -58,6 +58,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// 临时密钥Token
         /// </summary>
         [JsonProperty("XCosSecurityToken")]
+        [System.Obsolete]
         public string XCosSecurityToken{ get; set; }
 
         /// <summary>
@@ -71,6 +72,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
+
+        /// <summary>
+        /// 临时密钥Token
+        /// </summary>
+        [JsonProperty("CosSecurityToken")]
+        public string CosSecurityToken{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -92,6 +99,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "XCosSecurityToken", this.XCosSecurityToken);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+            this.SetParamSimple(map, prefix + "CosSecurityToken", this.CosSecurityToken);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

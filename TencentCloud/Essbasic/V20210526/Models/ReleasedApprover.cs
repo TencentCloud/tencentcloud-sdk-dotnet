@@ -25,75 +25,84 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符
-        /// </summary>
-        [JsonProperty("OrganizationName")]
-        public string OrganizationName{ get; set; }
-
-        /// <summary>
-        /// 签署人在原流程中的签署人列表中的顺序序号（从0开始，按顺序依次递增），如果不清楚原流程中的签署人列表，可以通过DescribeFlows接口查看
+        /// 签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。</br>
+        /// 可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。
         /// </summary>
         [JsonProperty("ApproverNumber")]
         public ulong? ApproverNumber{ get; set; }
 
         /// <summary>
-        /// 签署人类型，目前仅支持
-        /// ORGANIZATION-企业
-        /// ENTERPRISESERVER-企业静默签
+        /// 指定签署人类型，目前支持
+        /// <ul><li> **ORGANIZATION**：企业（默认值）</li>
+        /// <li> **ENTERPRISESERVER**：企业静默签</li></ul>
         /// </summary>
         [JsonProperty("ApproverType")]
         public string ApproverType{ get; set; }
 
         /// <summary>
-        /// 签署人姓名，最大长度50个字符
+        /// 签署人姓名，最大长度50个字。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 签署人身份证件类型
-        /// 1.ID_CARD 居民身份证
-        /// 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
-        /// 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
+        /// 签署方经办人的证件类型，支持以下类型
+        /// <ul><li>ID_CARD : 居民身份证  (默认值)</li>
+        /// <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+        /// <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
 
         /// <summary>
-        /// 签署人证件号
+        /// 证件号码，应符合以下规则
+        /// <ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+        /// <li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+        /// <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
         /// </summary>
         [JsonProperty("IdCardNumber")]
         public string IdCardNumber{ get; set; }
 
         /// <summary>
-        /// 签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号
+        /// 签署人手机号。
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
+        /// 组织机构名称。
+        /// 请确认该名称与企业营业执照中注册的名称一致。
+        /// 如果名称中包含英文括号()，请使用中文括号（）代替。
+        /// 如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
+        /// </summary>
+        [JsonProperty("OrganizationName")]
+        public string OrganizationName{ get; set; }
+
+        /// <summary>
+        /// 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。</br>
+        /// 当为子客企业指定经办人时，此OrganizationOpenId必传。
         /// </summary>
         [JsonProperty("OrganizationOpenId")]
         public string OrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 用户侧第三方id，最大长度64个字符
-        /// 当签署方为同一第三方应用下的员工时，该字必传
+        /// 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。</br>
+        /// 当签署方为同一第三方平台下的员工时，此OpenId必传。
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
-        /// 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
-        /// - SIGN_SEAL-默认为印章控件类型
-        /// - SIGN_SIGNATURE-手写签名控件类型
+        /// 签署控件类型，支持自定义企业签署方的签署控件类型
+        /// <ul><li> **SIGN_SEAL**：默认为印章控件类型(默认值)</li>
+        /// <li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
         /// </summary>
         [JsonProperty("ApproverSignComponentType")]
         public string ApproverSignComponentType{ get; set; }
 
         /// <summary>
-        /// 签署方自定义控件别名，最大长度20个字符
+        /// 参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。</br>
+        /// 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
         /// </summary>
         [JsonProperty("ApproverSignRole")]
         public string ApproverSignRole{ get; set; }
@@ -104,13 +113,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
             this.SetParamSimple(map, prefix + "ApproverNumber", this.ApproverNumber);
             this.SetParamSimple(map, prefix + "ApproverType", this.ApproverType);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "IdCardType", this.IdCardType);
             this.SetParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
+            this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
             this.SetParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
             this.SetParamSimple(map, prefix + "ApproverSignComponentType", this.ApproverSignComponentType);

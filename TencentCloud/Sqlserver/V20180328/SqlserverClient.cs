@@ -1693,7 +1693,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（DescribeDBs）用于查询数据库列表。
+        /// 本接口（DescribeDBs）用于查询数据库列表。**已废弃，请使用接口DescribeDatabases**
         /// </summary>
         /// <param name="req"><see cref="DescribeDBsRequest"/></param>
         /// <returns><see cref="DescribeDBsResponse"/></returns>
@@ -1713,7 +1713,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（DescribeDBs）用于查询数据库列表。
+        /// 本接口（DescribeDBs）用于查询数据库列表。**已废弃，请使用接口DescribeDatabases**
         /// </summary>
         /// <param name="req"><see cref="DescribeDBsRequest"/></param>
         /// <returns><see cref="DescribeDBsResponse"/></returns>
@@ -1733,7 +1733,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号
+        /// 本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号。**此接口已废弃，请使用DescribeDatabasesNormal。**
         /// </summary>
         /// <param name="req"><see cref="DescribeDBsNormalRequest"/></param>
         /// <returns><see cref="DescribeDBsNormalResponse"/></returns>
@@ -1753,7 +1753,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号
+        /// 本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号。**此接口已废弃，请使用DescribeDatabasesNormal。**
         /// </summary>
         /// <param name="req"><see cref="DescribeDBsNormalRequest"/></param>
         /// <returns><see cref="DescribeDBsNormalResponse"/></returns>
@@ -3493,7 +3493,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(ModifyDatabaseMdf)用于收缩数据库mdf(Shrink mdf)
+        /// 本接口(ModifyDatabaseMdf)用于收缩数据库mdf(Shrink mdf)。**本接口已废弃，请使用接口ModifyDatabaseShrinkMDF**。
         /// </summary>
         /// <param name="req"><see cref="ModifyDatabaseMdfRequest"/></param>
         /// <returns><see cref="ModifyDatabaseMdfResponse"/></returns>
@@ -3513,7 +3513,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(ModifyDatabaseMdf)用于收缩数据库mdf(Shrink mdf)
+        /// 本接口(ModifyDatabaseMdf)用于收缩数据库mdf(Shrink mdf)。**本接口已废弃，请使用接口ModifyDatabaseShrinkMDF**。
         /// </summary>
         /// <param name="req"><see cref="ModifyDatabaseMdfRequest"/></param>
         /// <returns><see cref="ModifyDatabaseMdfResponse"/></returns>
