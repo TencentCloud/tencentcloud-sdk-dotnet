@@ -235,6 +235,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("HybridPkg")]
         public HybridPkg HybridPkg{ get; set; }
 
+        /// <summary>
+        /// API安全资源包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApiPkg")]
+        public ApiPkg ApiPkg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -274,6 +281,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "IsAPISecurityTrial", this.IsAPISecurityTrial);
             this.SetParamObj(map, prefix + "MajorEventsPkg.", this.MajorEventsPkg);
             this.SetParamObj(map, prefix + "HybridPkg.", this.HybridPkg);
+            this.SetParamObj(map, prefix + "ApiPkg.", this.ApiPkg);
         }
     }
 }

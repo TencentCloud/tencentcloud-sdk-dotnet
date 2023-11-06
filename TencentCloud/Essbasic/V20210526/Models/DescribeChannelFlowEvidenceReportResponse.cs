@@ -25,18 +25,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 出证报告下载 URL
+        /// 出证报告PDF的下载 URL，有效期为5分钟，超过有效期后将无法再下载。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportUrl")]
         public string ReportUrl{ get; set; }
 
         /// <summary>
-        /// 出征任务的执行状态,状态列表如下
+        /// 出证任务执行的状态, 状态含义如下：
         /// 
-        /// - EvidenceStatusExecuting : 出征任务正在执行中
-        /// - EvidenceStatusSuccess : 出征任务执行成功
-        /// - EvidenceStatusFailed : 出征任务执行失败
+        /// <ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+        /// <li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+        /// <li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -25,55 +25,71 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
+        /// 验签结果详情，每个签名域对应的验签结果。状态值如下
+        /// <ul><li> **1** :验签成功，在电子签签署</li>
+        /// <li> **2** :验签成功，在其他平台签署</li>
+        /// <li> **3** :验签失败</li>
+        /// <li> **4** :pdf文件没有签名域</li>
+        /// <li> **5** :文件签名格式错误</li></ul>
         /// </summary>
         [JsonProperty("VerifyResult")]
         public long? VerifyResult{ get; set; }
 
         /// <summary>
-        /// 签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。
+        /// 签署平台
+        /// 如果文件是在腾讯电子签平台签署，则为**腾讯电子签**，
+        /// 如果文件不在腾讯电子签平台签署，则为**其他平台**。
         /// </summary>
         [JsonProperty("SignPlatform")]
         public string SignPlatform{ get; set; }
 
         /// <summary>
-        /// 签署人名称
+        /// 申请证书的主体的名字
+        /// 
+        /// 如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下
+        /// **企业**:  ESS@企业名称@编码
+        /// **个人**: ESS@个人姓名@证件号@808854
+        /// 
+        /// 如果在其他平台签署的, 主体的名字参考其他平台的说明
         /// </summary>
         [JsonProperty("SignerName")]
         public string SignerName{ get; set; }
 
         /// <summary>
-        /// 签署时间戳，单位秒
+        /// 签署时间的Unix时间戳，单位毫秒
         /// </summary>
         [JsonProperty("SignTime")]
         public long? SignTime{ get; set; }
 
         /// <summary>
-        /// 签名算法
+        /// 证书签名算法,  如SHA1withRSA等算法
         /// </summary>
         [JsonProperty("SignAlgorithm")]
         public string SignAlgorithm{ get; set; }
 
         /// <summary>
-        /// 签名证书序列号
+        /// CA供应商下发给用户的证书编号
+        /// 
+        /// 注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下`。
         /// </summary>
         [JsonProperty("CertSn")]
         public string CertSn{ get; set; }
 
         /// <summary>
-        /// 证书起始时间戳，单位秒
+        /// 证书起始时间的Unix时间戳，单位毫秒
         /// </summary>
         [JsonProperty("CertNotBefore")]
         public long? CertNotBefore{ get; set; }
 
         /// <summary>
-        /// 证书过期时间戳，单位秒
+        /// 证书过期时间的时间戳，单位毫秒
         /// </summary>
         [JsonProperty("CertNotAfter")]
         public long? CertNotAfter{ get; set; }
 
         /// <summary>
-        /// 签名类型
+        /// 签名类型, 保留字段, 现在全部为0
+        /// 
         /// </summary>
         [JsonProperty("SignType")]
         public long? SignType{ get; set; }

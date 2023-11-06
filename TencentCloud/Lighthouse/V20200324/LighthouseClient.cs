@@ -323,6 +323,48 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（CancelShareBlueprintAcrossAccounts）用于取消镜像跨账号共享。
+        /// 指定的镜像ID必须为自定义镜像，且指定账号ID必须已进行共享。
+        /// </summary>
+        /// <param name="req"><see cref="CancelShareBlueprintAcrossAccountsRequest"/></param>
+        /// <returns><see cref="CancelShareBlueprintAcrossAccountsResponse"/></returns>
+        public async Task<CancelShareBlueprintAcrossAccountsResponse> CancelShareBlueprintAcrossAccounts(CancelShareBlueprintAcrossAccountsRequest req)
+        {
+             JsonResponseModel<CancelShareBlueprintAcrossAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelShareBlueprintAcrossAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelShareBlueprintAcrossAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CancelShareBlueprintAcrossAccounts）用于取消镜像跨账号共享。
+        /// 指定的镜像ID必须为自定义镜像，且指定账号ID必须已进行共享。
+        /// </summary>
+        /// <param name="req"><see cref="CancelShareBlueprintAcrossAccountsRequest"/></param>
+        /// <returns><see cref="CancelShareBlueprintAcrossAccountsResponse"/></returns>
+        public CancelShareBlueprintAcrossAccountsResponse CancelShareBlueprintAcrossAccountsSync(CancelShareBlueprintAcrossAccountsRequest req)
+        {
+             JsonResponseModel<CancelShareBlueprintAcrossAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelShareBlueprintAcrossAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelShareBlueprintAcrossAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CreateBlueprint) 用于创建镜像。
         /// </summary>
         /// <param name="req"><see cref="CreateBlueprintRequest"/></param>
@@ -4246,6 +4288,50 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "RunDockerContainers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunDockerContainersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ShareBlueprintAcrossAccounts）用于跨账号共享镜像。
+        /// 仅支持共享自定义镜像， 且用于共享的镜像状态必须为NORMAL。
+        /// 共享的账号必须为主账号。
+        /// </summary>
+        /// <param name="req"><see cref="ShareBlueprintAcrossAccountsRequest"/></param>
+        /// <returns><see cref="ShareBlueprintAcrossAccountsResponse"/></returns>
+        public async Task<ShareBlueprintAcrossAccountsResponse> ShareBlueprintAcrossAccounts(ShareBlueprintAcrossAccountsRequest req)
+        {
+             JsonResponseModel<ShareBlueprintAcrossAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ShareBlueprintAcrossAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ShareBlueprintAcrossAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ShareBlueprintAcrossAccounts）用于跨账号共享镜像。
+        /// 仅支持共享自定义镜像， 且用于共享的镜像状态必须为NORMAL。
+        /// 共享的账号必须为主账号。
+        /// </summary>
+        /// <param name="req"><see cref="ShareBlueprintAcrossAccountsRequest"/></param>
+        /// <returns><see cref="ShareBlueprintAcrossAccountsResponse"/></returns>
+        public ShareBlueprintAcrossAccountsResponse ShareBlueprintAcrossAccountsSync(ShareBlueprintAcrossAccountsRequest req)
+        {
+             JsonResponseModel<ShareBlueprintAcrossAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ShareBlueprintAcrossAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ShareBlueprintAcrossAccountsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -2395,6 +2395,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 查询各个waf基础安全模块的开关状态，看每个模块是否开启
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModuleStatusRequest"/></param>
+        /// <returns><see cref="DescribeModuleStatusResponse"/></returns>
+        public async Task<DescribeModuleStatusResponse> DescribeModuleStatus(DescribeModuleStatusRequest req)
+        {
+             JsonResponseModel<DescribeModuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeModuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeModuleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询各个waf基础安全模块的开关状态，看每个模块是否开启
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModuleStatusRequest"/></param>
+        /// <returns><see cref="DescribeModuleStatusResponse"/></returns>
+        public DescribeModuleStatusResponse DescribeModuleStatusSync(DescribeModuleStatusRequest req)
+        {
+             JsonResponseModel<DescribeModuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeModuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeModuleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查看防护对象列表
         /// </summary>
         /// <param name="req"><see cref="DescribeObjectsRequest"/></param>

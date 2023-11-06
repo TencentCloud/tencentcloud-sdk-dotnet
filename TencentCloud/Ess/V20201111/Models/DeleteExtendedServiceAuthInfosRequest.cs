@@ -38,10 +38,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public string[] UserIds{ get; set; }
 
         /// <summary>
-        /// 要查询的扩展服务类型。
-        /// 默认为空，即查询当前支持的所有扩展服务信息。
-        /// 若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
+        /// 取值如下所示：
         /// <ul><li>OPEN_SERVER_SIGN：企业自动签</li>
+        /// <li>BATCH_SIGN：批量签署</li>
         /// </ul>
         /// </summary>
         [JsonProperty("ExtendServiceType")]

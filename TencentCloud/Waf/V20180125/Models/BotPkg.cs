@@ -101,6 +101,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("BotNPWaf")]
         public long? BotNPWaf{ get; set; }
 
+        /// <summary>
+        /// 7天bot试用标识 1 试用 0 没有试用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsBotTrial")]
+        public long? IsBotTrial{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "BotCPWaf", this.BotCPWaf);
             this.SetParamSimple(map, prefix + "BotNPWaf", this.BotNPWaf);
+            this.SetParamSimple(map, prefix + "IsBotTrial", this.IsBotTrial);
         }
     }
 }

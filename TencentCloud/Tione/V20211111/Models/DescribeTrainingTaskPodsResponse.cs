@@ -40,7 +40,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// pod详细信息
         /// </summary>
         [JsonProperty("PodInfoList")]
-        public PodInfo PodInfoList{ get; set; }
+        public PodInfo[] PodInfoList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -56,7 +56,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamArraySimple(map, prefix + "PodNames.", this.PodNames);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamObj(map, prefix + "PodInfoList.", this.PodInfoList);
+            this.SetParamArrayObj(map, prefix + "PodInfoList.", this.PodInfoList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

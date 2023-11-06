@@ -66,6 +66,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("IncludeTask")]
         public bool? IncludeTask{ get; set; }
 
+        /// <summary>
+        /// 是否包含虚拟任务，当 IncludeTask 为 true 的时候，该参数才生效，默认为 true
+        /// </summary>
+        [JsonProperty("IncludeVirtualTask")]
+        public bool? IncludeVirtualTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamSimple(map, prefix + "IncludeWorkflow", this.IncludeWorkflow);
             this.SetParamSimple(map, prefix + "IncludeTask", this.IncludeTask);
+            this.SetParamSimple(map, prefix + "IncludeVirtualTask", this.IncludeVirtualTask);
         }
     }
 }

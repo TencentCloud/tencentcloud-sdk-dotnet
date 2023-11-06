@@ -25,31 +25,38 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 签署短链接，不支持小程序嵌入，只支持移动端浏览器打开。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+        /// 签署短链接。</br>
+        /// 注意:
+        /// - 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+        /// - 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
         /// </summary>
         [JsonProperty("SignUrl")]
         public string SignUrl{ get; set; }
 
         /// <summary>
-        /// 签署人类型 PERSON-个人
+        /// 签署人类型。
+        /// - **PERSON**: 个人
         /// </summary>
         [JsonProperty("ApproverType")]
         public string ApproverType{ get; set; }
 
         /// <summary>
-        /// 签署人姓名
+        /// 签署人姓名。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 签署人手机号
+        /// 签署人手机号。
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 签署长链接，支持小程序嵌入。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+        /// 签署长链接。</br>
+        /// 注意:
+        /// - 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+        /// - 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LongUrl")]

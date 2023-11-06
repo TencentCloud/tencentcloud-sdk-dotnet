@@ -132,6 +132,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("COSRegion")]
         public string COSRegion{ get; set; }
 
+        /// <summary>
+        /// 操作项目id
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "OwnerProjectIdent", this.OwnerProjectIdent);
             this.SetParamSimple(map, prefix + "COSBucket", this.COSBucket);
             this.SetParamSimple(map, prefix + "COSRegion", this.COSRegion);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

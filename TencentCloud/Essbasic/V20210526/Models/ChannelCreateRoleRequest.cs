@@ -43,7 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 权限树，权限树内容 PermissionGroups 可参考接口 DescribeIntegrationRoles 的输出
+        /// 权限树，权限树内容 PermissionGroups 可参考接口 ChannelDescribeRoles 的输出
         /// </summary>
         [JsonProperty("PermissionGroups")]
         public PermissionGroup[] PermissionGroups{ get; set; }

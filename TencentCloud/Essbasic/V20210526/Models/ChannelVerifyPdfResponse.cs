@@ -30,19 +30,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <ul><li>**1**：文件未被篡改，全部签名在腾讯电子签完成。</li>
         /// <li>**2**：文件未被篡改，部分签名在腾讯电子签完成。</li>
         /// <li>**3**：文件被篡改。</li>
-        /// <li>**4**：异常：文件内没有签名域。</li>
+        /// <li>**4**：异常：文件内没有签名域。(如果合同还没有签署也会返回此代码)</li>
         /// <li>**5**：异常：文件签名格式错误。</li></ul>
         /// </summary>
         [JsonProperty("VerifyResult")]
         public long? VerifyResult{ get; set; }
 
         /// <summary>
-        /// 验签结果详情，每个签名域对应的验签结果。状态值如下
-        /// <ul><li> **1** :验签成功，在电子签签署</li>
-        /// <li> **2** :验签成功，在其他平台签署</li>
-        /// <li> **3** :验签失败</li>
-        /// <li> **4** :pdf文件没有签名域</li>
-        /// <li> **5** :文件签名格式错误</li></ul>
+        /// 验签结果详情，所有签署区(包括签名区, 印章区, 日期签署区,骑缝章等)的签署验签结果
         /// </summary>
         [JsonProperty("PdfVerifyResults")]
         public PdfVerifyResult[] PdfVerifyResults{ get; set; }
