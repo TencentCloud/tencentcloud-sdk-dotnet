@@ -85,6 +85,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MaxQueuesPerTopic")]
         public ulong? MaxQueuesPerTopic{ get; set; }
 
+        /// <summary>
+        /// topic分布
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicDistribution")]
+        public RocketMQTopicDistribution[] TopicDistribution{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +108,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxRetentionTime", this.MaxRetentionTime);
             this.SetParamSimple(map, prefix + "MaxLatencyTime", this.MaxLatencyTime);
             this.SetParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
+            this.SetParamArrayObj(map, prefix + "TopicDistribution.", this.TopicDistribution);
         }
     }
 }

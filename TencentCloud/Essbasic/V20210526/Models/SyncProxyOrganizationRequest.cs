@@ -25,14 +25,20 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用信息
-        /// 此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// <ul>
+        /// <li>渠道应用标识:  Agent.AppId</li>
+        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 第三方平台子客企业名称，最大长度64个字符
+        /// 第三方平台子客企业名称，请确认该名称与企业营业执照中注册的名称一致。
+        /// 注: `如果名称中包含英文括号()，请使用中文括号（）代替。`
         /// </summary>
         [JsonProperty("ProxyOrganizationName")]
         public string ProxyOrganizationName{ get; set; }
@@ -50,7 +56,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string UniformSocialCreditCode{ get; set; }
 
         /// <summary>
-        /// 第三方平台子客企业法人/负责人姓名
+        /// 第三方平台子客企业法定代表人的名字
         /// </summary>
         [JsonProperty("ProxyLegalName")]
         public string ProxyLegalName{ get; set; }
@@ -63,16 +69,27 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+        /// 第三方平台子客企业法定代表人的证件类型，支持以下类型
+        /// <ul><li>ID_CARD : 居民身份证 (默认值)</li></ul>
+        /// 注: `现在仅支持ID_CARD居民身份证类型`
         /// </summary>
         [JsonProperty("ProxyLegalIdCardType")]
         public string ProxyLegalIdCardType{ get; set; }
 
         /// <summary>
-        /// 第三方平台子客企业法人/负责人证件号
+        /// 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
+        /// <ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
         /// </summary>
         [JsonProperty("ProxyLegalIdCardNumber")]
         public string ProxyLegalIdCardNumber{ get; set; }
+
+        /// <summary>
+        /// 第三方平台子客企业详细住所，最大长度500个字符
+        /// 
+        /// 注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`
+        /// </summary>
+        [JsonProperty("ProxyAddress")]
+        public string ProxyAddress{ get; set; }
 
 
         /// <summary>
@@ -88,6 +105,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "ProxyLegalIdCardType", this.ProxyLegalIdCardType);
             this.SetParamSimple(map, prefix + "ProxyLegalIdCardNumber", this.ProxyLegalIdCardNumber);
+            this.SetParamSimple(map, prefix + "ProxyAddress", this.ProxyAddress);
         }
     }
 }

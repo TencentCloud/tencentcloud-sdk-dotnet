@@ -453,6 +453,46 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 获取单设备的实时流量统计指标
+        /// </summary>
+        /// <param name="req"><see cref="GetNetMonitorRequest"/></param>
+        /// <returns><see cref="GetNetMonitorResponse"/></returns>
+        public async Task<GetNetMonitorResponse> GetNetMonitor(GetNetMonitorRequest req)
+        {
+             JsonResponseModel<GetNetMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetNetMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetNetMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取单设备的实时流量统计指标
+        /// </summary>
+        /// <param name="req"><see cref="GetNetMonitorRequest"/></param>
+        /// <returns><see cref="GetNetMonitorResponse"/></returns>
+        public GetNetMonitorResponse GetNetMonitorSync(GetNetMonitorRequest req)
+        {
+             JsonResponseModel<GetNetMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetNetMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetNetMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取公钥用于验签
         /// </summary>
         /// <param name="req"><see cref="GetPublicKeyRequest"/></param>

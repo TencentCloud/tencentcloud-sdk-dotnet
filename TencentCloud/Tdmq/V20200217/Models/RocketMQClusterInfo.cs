@@ -137,6 +137,48 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("HttpInternalEndpoint")]
         public string HttpInternalEndpoint{ get; set; }
 
+        /// <summary>
+        /// 是否开启ACL鉴权，专享实例支持关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AclEnabled")]
+        public bool? AclEnabled{ get; set; }
+
+        /// <summary>
+        /// 公网CLB实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicClbId")]
+        public string PublicClbId{ get; set; }
+
+        /// <summary>
+        /// vip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
+
+        /// <summary>
+        /// 所属VPC
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// 是否支持迁移
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SupportMigration")]
+        public bool? SupportMigration{ get; set; }
+
+        /// <summary>
+        /// 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceStatus")]
+        public long? InstanceStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +202,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "HttpVpcEndpoint", this.HttpVpcEndpoint);
             this.SetParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
             this.SetParamSimple(map, prefix + "HttpInternalEndpoint", this.HttpInternalEndpoint);
+            this.SetParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
+            this.SetParamSimple(map, prefix + "PublicClbId", this.PublicClbId);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SupportMigration", this.SupportMigration);
+            this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         }
     }
 }

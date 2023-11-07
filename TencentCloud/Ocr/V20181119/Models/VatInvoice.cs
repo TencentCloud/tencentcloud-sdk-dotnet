@@ -188,6 +188,32 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("TrafficFreeFlag")]
         public string TrafficFreeFlag{ get; set; }
 
+        /// <summary>
+        /// 是否为红票
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RedLetterInvoiceMark")]
+        public bool? RedLetterInvoiceMark{ get; set; }
+
+        /// <summary>
+        /// 开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IssuingTypeMark")]
+        public long? IssuingTypeMark{ get; set; }
+
+        /// <summary>
+        /// 代开销售方名称
+        /// </summary>
+        [JsonProperty("SellerAgentName")]
+        public string SellerAgentName{ get; set; }
+
+        /// <summary>
+        /// 代开销售方税号
+        /// </summary>
+        [JsonProperty("SellerAgentTaxID")]
+        public string SellerAgentTaxID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +245,10 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "TaxBureau", this.TaxBureau);
             this.SetParamSimple(map, prefix + "TrafficFreeFlag", this.TrafficFreeFlag);
+            this.SetParamSimple(map, prefix + "RedLetterInvoiceMark", this.RedLetterInvoiceMark);
+            this.SetParamSimple(map, prefix + "IssuingTypeMark", this.IssuingTypeMark);
+            this.SetParamSimple(map, prefix + "SellerAgentName", this.SellerAgentName);
+            this.SetParamSimple(map, prefix + "SellerAgentTaxID", this.SellerAgentTaxID);
         }
     }
 }

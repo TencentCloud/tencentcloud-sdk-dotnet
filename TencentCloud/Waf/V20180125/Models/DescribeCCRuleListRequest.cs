@@ -24,12 +24,54 @@ namespace TencentCloud.Waf.V20180125.Models
     public class DescribeCCRuleListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 需要查询的API所属的域名
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 偏移
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 容量
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 目前支持根据ts_version排序
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
+        /// <summary>
+        /// 过滤数组,name可以是如下的值： RuleID,ParamName,Url,Action,Method,Source,Status
+        /// </summary>
+        [JsonProperty("Filters")]
+        public FiltersItemNew[] Filters{ get; set; }
+
+        /// <summary>
+        /// asc或者desc
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
         }
     }
 }

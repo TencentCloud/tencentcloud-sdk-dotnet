@@ -93,6 +93,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 用于加速域名绑定或解绑共享 CNAME，该功能白名单内测中。
+        /// </summary>
+        /// <param name="req"><see cref="BindSharedCNAMERequest"/></param>
+        /// <returns><see cref="BindSharedCNAMEResponse"/></returns>
+        public async Task<BindSharedCNAMEResponse> BindSharedCNAME(BindSharedCNAMERequest req)
+        {
+             JsonResponseModel<BindSharedCNAMEResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindSharedCNAME");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindSharedCNAMEResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于加速域名绑定或解绑共享 CNAME，该功能白名单内测中。
+        /// </summary>
+        /// <param name="req"><see cref="BindSharedCNAMERequest"/></param>
+        /// <returns><see cref="BindSharedCNAMEResponse"/></returns>
+        public BindSharedCNAMEResponse BindSharedCNAMESync(BindSharedCNAMERequest req)
+        {
+             JsonResponseModel<BindSharedCNAMEResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindSharedCNAME");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindSharedCNAMEResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 将未绑定套餐的站点绑定到已有套餐
         /// </summary>
         /// <param name="req"><see cref="BindZoneToPlanRequest"/></param>
@@ -581,7 +621,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建共享 CNAME
+        /// 用于创建共享 CNAME，该功能白名单内测中。
         /// </summary>
         /// <param name="req"><see cref="CreateSharedCNAMERequest"/></param>
         /// <returns><see cref="CreateSharedCNAMEResponse"/></returns>
@@ -601,7 +641,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建共享 CNAME
+        /// 用于创建共享 CNAME，该功能白名单内测中。
         /// </summary>
         /// <param name="req"><see cref="CreateSharedCNAMERequest"/></param>
         /// <returns><see cref="CreateSharedCNAMEResponse"/></returns>
@@ -936,6 +976,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSecurityIPGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityIPGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除共享 CNAME，该功能白名单内测中。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSharedCNAMERequest"/></param>
+        /// <returns><see cref="DeleteSharedCNAMEResponse"/></returns>
+        public async Task<DeleteSharedCNAMEResponse> DeleteSharedCNAME(DeleteSharedCNAMERequest req)
+        {
+             JsonResponseModel<DeleteSharedCNAMEResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSharedCNAME");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSharedCNAMEResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除共享 CNAME，该功能白名单内测中。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSharedCNAMERequest"/></param>
+        /// <returns><see cref="DeleteSharedCNAMEResponse"/></returns>
+        public DeleteSharedCNAMEResponse DeleteSharedCNAMESync(DeleteSharedCNAMERequest req)
+        {
+             JsonResponseModel<DeleteSharedCNAMEResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSharedCNAME");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSharedCNAMEResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -32,8 +32,6 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// 智能图生图支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）
         /// 
         /// 不传默认使用768:768
-        /// 
-        /// 示例值：768:768
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }

@@ -133,6 +133,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于数据加工DSL函数的语法校验。
+        /// </summary>
+        /// <param name="req"><see cref="CheckFunctionRequest"/></param>
+        /// <returns><see cref="CheckFunctionResponse"/></returns>
+        public async Task<CheckFunctionResponse> CheckFunction(CheckFunctionRequest req)
+        {
+             JsonResponseModel<CheckFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于数据加工DSL函数的语法校验。
+        /// </summary>
+        /// <param name="req"><see cref="CheckFunctionRequest"/></param>
+        /// <returns><see cref="CheckFunctionResponse"/></returns>
+        public CheckFunctionResponse CheckFunctionSync(CheckFunctionRequest req)
+        {
+             JsonResponseModel<CheckFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于校验Kafka服务集群是否可以正常访问
         /// </summary>
         /// <param name="req"><see cref="CheckRechargeKafkaServerRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.883</VersionPrefix>
+    <VersionPrefix>3.0.884</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,6 +68,9 @@
     <Compile Include="V20220901\Models\AscriptionInfo.cs" />
     <Compile Include="V20220901\Models\BindSecurityTemplateToEntityRequest.cs" />
     <Compile Include="V20220901\Models\BindSecurityTemplateToEntityResponse.cs" />
+    <Compile Include="V20220901\Models\BindSharedCNAMEMap.cs" />
+    <Compile Include="V20220901\Models\BindSharedCNAMERequest.cs" />
+    <Compile Include="V20220901\Models\BindSharedCNAMEResponse.cs" />
     <Compile Include="V20220901\Models\BindZoneToPlanRequest.cs" />
     <Compile Include="V20220901\Models\BindZoneToPlanResponse.cs" />
     <Compile Include="V20220901\Models\BotConfig.cs" />
@@ -130,6 +133,8 @@
     <Compile Include="V20220901\Models\DeleteRulesResponse.cs" />
     <Compile Include="V20220901\Models\DeleteSecurityIPGroupRequest.cs" />
     <Compile Include="V20220901\Models\DeleteSecurityIPGroupResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteSharedCNAMERequest.cs" />
+    <Compile Include="V20220901\Models\DeleteSharedCNAMEResponse.cs" />
     <Compile Include="V20220901\Models\DeleteZoneRequest.cs" />
     <Compile Include="V20220901\Models\DeleteZoneResponse.cs" />
     <Compile Include="V20220901\Models\DescribeAccelerationDomainsRequest.cs" />

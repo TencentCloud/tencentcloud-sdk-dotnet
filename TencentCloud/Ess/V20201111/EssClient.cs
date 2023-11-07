@@ -2153,6 +2153,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 查询企业使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillUsageDetailRequest"/></param>
+        /// <returns><see cref="DescribeBillUsageDetailResponse"/></returns>
+        public async Task<DescribeBillUsageDetailResponse> DescribeBillUsageDetail(DescribeBillUsageDetailRequest req)
+        {
+             JsonResponseModel<DescribeBillUsageDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillUsageDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillUsageDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询企业使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillUsageDetailRequest"/></param>
+        /// <returns><see cref="DescribeBillUsageDetailResponse"/></returns>
+        public DescribeBillUsageDetailResponse DescribeBillUsageDetailSync(DescribeBillUsageDetailRequest req)
+        {
+             JsonResponseModel<DescribeBillUsageDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillUsageDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillUsageDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询企业扩展服务的开通和授权情况，当前支持查询以下内容：
         /// 1. 企业自动签
         /// 2. 企业与港澳台居民签署合同
