@@ -25,18 +25,32 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// 
+        /// 渠道应用标识: Agent.AppId
+        /// 第三方平台子客企业标识: Agent.ProxyOrganizationOpenId
+        /// 第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId
+        /// 第三方平台子客企业和员工必须已经经过实名认证。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 指定印章ID
+        /// 电子印章ID，为32位字符串。
+        /// 建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+        /// 可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
         /// </summary>
         [JsonProperty("SealId")]
         public string SealId{ get; set; }
 
         /// <summary>
+        /// 
+        /// 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+        /// 可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+        /// 员工在贵司业务系统中的唯一身份标识，用于与腾讯电子签账号进行映射，确保在同一企业内不会出现重复。
+        /// 该标识最大长度为64位字符串，仅支持包含26个英文字母和数字0-9的字符。
         /// 指定待授权的用户ID数组,电子签的用户ID
         /// 可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权。
         /// </summary>

@@ -24,12 +24,61 @@ namespace TencentCloud.Waf.V20180125.Models
     public class ModifyModuleStatusRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 需要设置的domain
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// WEB 安全模块开关，0或1
+        /// </summary>
+        [JsonProperty("WebSecurity")]
+        public ulong? WebSecurity{ get; set; }
+
+        /// <summary>
+        /// 访问控制模块开关，0或者1
+        /// </summary>
+        [JsonProperty("AccessControl")]
+        public ulong? AccessControl{ get; set; }
+
+        /// <summary>
+        /// CC模块开关，0或者1
+        /// </summary>
+        [JsonProperty("CcProtection")]
+        public ulong? CcProtection{ get; set; }
+
+        /// <summary>
+        /// API安全模块开关，0或者1
+        /// </summary>
+        [JsonProperty("ApiProtection")]
+        public ulong? ApiProtection{ get; set; }
+
+        /// <summary>
+        /// 防篡改模块开关，0或者1
+        /// </summary>
+        [JsonProperty("AntiTamper")]
+        public ulong? AntiTamper{ get; set; }
+
+        /// <summary>
+        /// 防泄漏模块开关，0或者1
+        /// </summary>
+        [JsonProperty("AntiLeakage")]
+        public ulong? AntiLeakage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "WebSecurity", this.WebSecurity);
+            this.SetParamSimple(map, prefix + "AccessControl", this.AccessControl);
+            this.SetParamSimple(map, prefix + "CcProtection", this.CcProtection);
+            this.SetParamSimple(map, prefix + "ApiProtection", this.ApiProtection);
+            this.SetParamSimple(map, prefix + "AntiTamper", this.AntiTamper);
+            this.SetParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
         }
     }
 }

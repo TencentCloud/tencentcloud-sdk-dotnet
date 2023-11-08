@@ -413,6 +413,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 创建专业集群——预付费，仅通过api调用
+        /// </summary>
+        /// <param name="req"><see cref="CreateProClusterRequest"/></param>
+        /// <returns><see cref="CreateProClusterResponse"/></returns>
+        public async Task<CreateProClusterResponse> CreateProCluster(CreateProClusterRequest req)
+        {
+             JsonResponseModel<CreateProClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateProCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建专业集群——预付费，仅通过api调用
+        /// </summary>
+        /// <param name="req"><see cref="CreateProClusterRequest"/></param>
+        /// <returns><see cref="CreateProClusterResponse"/></returns>
+        public CreateProClusterResponse CreateProClusterSync(CreateProClusterRequest req)
+        {
+             JsonResponseModel<CreateProClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateProCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建RabbitMQ的用户
         /// </summary>
         /// <param name="req"><see cref="CreateRabbitMQUserRequest"/></param>

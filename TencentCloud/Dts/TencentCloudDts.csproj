@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.884</VersionPrefix>
+    <VersionPrefix>3.0.885</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,67 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20180330\DtsClient.cs" />
+    <Compile Include="V20180330\Models\ActivateSubscribeRequest.cs" />
+    <Compile Include="V20180330\Models\ActivateSubscribeResponse.cs" />
+    <Compile Include="V20180330\Models\CompleteMigrateJobRequest.cs" />
+    <Compile Include="V20180330\Models\CompleteMigrateJobResponse.cs" />
+    <Compile Include="V20180330\Models\ConsistencyParams.cs" />
+    <Compile Include="V20180330\Models\CreateMigrateCheckJobRequest.cs" />
+    <Compile Include="V20180330\Models\CreateMigrateCheckJobResponse.cs" />
+    <Compile Include="V20180330\Models\CreateMigrateJobRequest.cs" />
+    <Compile Include="V20180330\Models\CreateMigrateJobResponse.cs" />
+    <Compile Include="V20180330\Models\CreateSubscribeRequest.cs" />
+    <Compile Include="V20180330\Models\CreateSubscribeResponse.cs" />
+    <Compile Include="V20180330\Models\DeleteMigrateJobRequest.cs" />
+    <Compile Include="V20180330\Models\DeleteMigrateJobResponse.cs" />
+    <Compile Include="V20180330\Models\DescribeAsyncRequestInfoRequest.cs" />
+    <Compile Include="V20180330\Models\DescribeAsyncRequestInfoResponse.cs" />
+    <Compile Include="V20180330\Models\DescribeMigrateCheckJobRequest.cs" />
+    <Compile Include="V20180330\Models\DescribeMigrateCheckJobResponse.cs" />
+    <Compile Include="V20180330\Models\DescribeMigrateJobsRequest.cs" />
+    <Compile Include="V20180330\Models\DescribeMigrateJobsResponse.cs" />
+    <Compile Include="V20180330\Models\DescribeRegionConfRequest.cs" />
+    <Compile Include="V20180330\Models\DescribeRegionConfResponse.cs" />
+    <Compile Include="V20180330\Models\DescribeSubscribeConfRequest.cs" />
+    <Compile Include="V20180330\Models\DescribeSubscribeConfResponse.cs" />
+    <Compile Include="V20180330\Models\DescribeSubscribesRequest.cs" />
+    <Compile Include="V20180330\Models\DescribeSubscribesResponse.cs" />
+    <Compile Include="V20180330\Models\DstInfo.cs" />
+    <Compile Include="V20180330\Models\ErrorInfo.cs" />
+    <Compile Include="V20180330\Models\IsolateSubscribeRequest.cs" />
+    <Compile Include="V20180330\Models\IsolateSubscribeResponse.cs" />
+    <Compile Include="V20180330\Models\MigrateDetailInfo.cs" />
+    <Compile Include="V20180330\Models\MigrateJobInfo.cs" />
+    <Compile Include="V20180330\Models\MigrateOption.cs" />
+    <Compile Include="V20180330\Models\MigrateStepDetailInfo.cs" />
+    <Compile Include="V20180330\Models\ModifyMigrateJobRequest.cs" />
+    <Compile Include="V20180330\Models\ModifyMigrateJobResponse.cs" />
+    <Compile Include="V20180330\Models\ModifySubscribeAutoRenewFlagRequest.cs" />
+    <Compile Include="V20180330\Models\ModifySubscribeAutoRenewFlagResponse.cs" />
+    <Compile Include="V20180330\Models\ModifySubscribeConsumeTimeRequest.cs" />
+    <Compile Include="V20180330\Models\ModifySubscribeConsumeTimeResponse.cs" />
+    <Compile Include="V20180330\Models\ModifySubscribeNameRequest.cs" />
+    <Compile Include="V20180330\Models\ModifySubscribeNameResponse.cs" />
+    <Compile Include="V20180330\Models\ModifySubscribeObjectsRequest.cs" />
+    <Compile Include="V20180330\Models\ModifySubscribeObjectsResponse.cs" />
+    <Compile Include="V20180330\Models\ModifySubscribeVipVportRequest.cs" />
+    <Compile Include="V20180330\Models\ModifySubscribeVipVportResponse.cs" />
+    <Compile Include="V20180330\Models\OfflineIsolatedSubscribeRequest.cs" />
+    <Compile Include="V20180330\Models\OfflineIsolatedSubscribeResponse.cs" />
+    <Compile Include="V20180330\Models\ResetSubscribeRequest.cs" />
+    <Compile Include="V20180330\Models\ResetSubscribeResponse.cs" />
+    <Compile Include="V20180330\Models\SrcInfo.cs" />
+    <Compile Include="V20180330\Models\StartMigrateJobRequest.cs" />
+    <Compile Include="V20180330\Models\StartMigrateJobResponse.cs" />
+    <Compile Include="V20180330\Models\StopMigrateJobRequest.cs" />
+    <Compile Include="V20180330\Models\StopMigrateJobResponse.cs" />
+    <Compile Include="V20180330\Models\SubsErr.cs" />
+    <Compile Include="V20180330\Models\SubscribeInfo.cs" />
+    <Compile Include="V20180330\Models\SubscribeObject.cs" />
+    <Compile Include="V20180330\Models\SubscribeRegionConf.cs" />
+    <Compile Include="V20180330\Models\TagFilter.cs" />
+    <Compile Include="V20180330\Models\TagItem.cs" />
     <Compile Include="V20211206\DtsClient.cs" />
     <Compile Include="V20211206\Models\CheckStep.cs" />
     <Compile Include="V20211206\Models\CheckStepInfo.cs" />
@@ -204,66 +265,5 @@
     <Compile Include="V20211206\Models\TradeInfo.cs" />
     <Compile Include="V20211206\Models\View.cs" />
     <Compile Include="V20211206\Models\ViewItem.cs" />
-    <Compile Include="V20180330\DtsClient.cs" />
-    <Compile Include="V20180330\Models\ActivateSubscribeRequest.cs" />
-    <Compile Include="V20180330\Models\ActivateSubscribeResponse.cs" />
-    <Compile Include="V20180330\Models\CompleteMigrateJobRequest.cs" />
-    <Compile Include="V20180330\Models\CompleteMigrateJobResponse.cs" />
-    <Compile Include="V20180330\Models\ConsistencyParams.cs" />
-    <Compile Include="V20180330\Models\CreateMigrateCheckJobRequest.cs" />
-    <Compile Include="V20180330\Models\CreateMigrateCheckJobResponse.cs" />
-    <Compile Include="V20180330\Models\CreateMigrateJobRequest.cs" />
-    <Compile Include="V20180330\Models\CreateMigrateJobResponse.cs" />
-    <Compile Include="V20180330\Models\CreateSubscribeRequest.cs" />
-    <Compile Include="V20180330\Models\CreateSubscribeResponse.cs" />
-    <Compile Include="V20180330\Models\DeleteMigrateJobRequest.cs" />
-    <Compile Include="V20180330\Models\DeleteMigrateJobResponse.cs" />
-    <Compile Include="V20180330\Models\DescribeAsyncRequestInfoRequest.cs" />
-    <Compile Include="V20180330\Models\DescribeAsyncRequestInfoResponse.cs" />
-    <Compile Include="V20180330\Models\DescribeMigrateCheckJobRequest.cs" />
-    <Compile Include="V20180330\Models\DescribeMigrateCheckJobResponse.cs" />
-    <Compile Include="V20180330\Models\DescribeMigrateJobsRequest.cs" />
-    <Compile Include="V20180330\Models\DescribeMigrateJobsResponse.cs" />
-    <Compile Include="V20180330\Models\DescribeRegionConfRequest.cs" />
-    <Compile Include="V20180330\Models\DescribeRegionConfResponse.cs" />
-    <Compile Include="V20180330\Models\DescribeSubscribeConfRequest.cs" />
-    <Compile Include="V20180330\Models\DescribeSubscribeConfResponse.cs" />
-    <Compile Include="V20180330\Models\DescribeSubscribesRequest.cs" />
-    <Compile Include="V20180330\Models\DescribeSubscribesResponse.cs" />
-    <Compile Include="V20180330\Models\DstInfo.cs" />
-    <Compile Include="V20180330\Models\ErrorInfo.cs" />
-    <Compile Include="V20180330\Models\IsolateSubscribeRequest.cs" />
-    <Compile Include="V20180330\Models\IsolateSubscribeResponse.cs" />
-    <Compile Include="V20180330\Models\MigrateDetailInfo.cs" />
-    <Compile Include="V20180330\Models\MigrateJobInfo.cs" />
-    <Compile Include="V20180330\Models\MigrateOption.cs" />
-    <Compile Include="V20180330\Models\MigrateStepDetailInfo.cs" />
-    <Compile Include="V20180330\Models\ModifyMigrateJobRequest.cs" />
-    <Compile Include="V20180330\Models\ModifyMigrateJobResponse.cs" />
-    <Compile Include="V20180330\Models\ModifySubscribeAutoRenewFlagRequest.cs" />
-    <Compile Include="V20180330\Models\ModifySubscribeAutoRenewFlagResponse.cs" />
-    <Compile Include="V20180330\Models\ModifySubscribeConsumeTimeRequest.cs" />
-    <Compile Include="V20180330\Models\ModifySubscribeConsumeTimeResponse.cs" />
-    <Compile Include="V20180330\Models\ModifySubscribeNameRequest.cs" />
-    <Compile Include="V20180330\Models\ModifySubscribeNameResponse.cs" />
-    <Compile Include="V20180330\Models\ModifySubscribeObjectsRequest.cs" />
-    <Compile Include="V20180330\Models\ModifySubscribeObjectsResponse.cs" />
-    <Compile Include="V20180330\Models\ModifySubscribeVipVportRequest.cs" />
-    <Compile Include="V20180330\Models\ModifySubscribeVipVportResponse.cs" />
-    <Compile Include="V20180330\Models\OfflineIsolatedSubscribeRequest.cs" />
-    <Compile Include="V20180330\Models\OfflineIsolatedSubscribeResponse.cs" />
-    <Compile Include="V20180330\Models\ResetSubscribeRequest.cs" />
-    <Compile Include="V20180330\Models\ResetSubscribeResponse.cs" />
-    <Compile Include="V20180330\Models\SrcInfo.cs" />
-    <Compile Include="V20180330\Models\StartMigrateJobRequest.cs" />
-    <Compile Include="V20180330\Models\StartMigrateJobResponse.cs" />
-    <Compile Include="V20180330\Models\StopMigrateJobRequest.cs" />
-    <Compile Include="V20180330\Models\StopMigrateJobResponse.cs" />
-    <Compile Include="V20180330\Models\SubsErr.cs" />
-    <Compile Include="V20180330\Models\SubscribeInfo.cs" />
-    <Compile Include="V20180330\Models\SubscribeObject.cs" />
-    <Compile Include="V20180330\Models\SubscribeRegionConf.cs" />
-    <Compile Include="V20180330\Models\TagFilter.cs" />
-    <Compile Include="V20180330\Models\TagItem.cs" />
   </ItemGroup>
 </Project>

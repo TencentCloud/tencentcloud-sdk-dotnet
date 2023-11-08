@@ -29,16 +29,17 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 
         /// 此接口下面信息必填。
         /// <ul>
-        /// <li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-        /// <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-        /// <li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+        /// <li>渠道应用标识:  Agent.AppId</li>
+        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
         /// </ul>
+        /// 第三方平台子客企业和员工必须已经经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 需执行催办的签署流程ID数组，最多包含100个。
+        /// 需执行催办的合同流程ID数组，最多支持100个。
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }

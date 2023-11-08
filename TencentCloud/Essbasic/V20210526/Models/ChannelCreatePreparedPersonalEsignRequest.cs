@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -37,31 +37,43 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 身份证件号码
+        /// 证件号码, 应符合以下规则
+        /// <ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+        /// <li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+        /// <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
         /// </summary>
         [JsonProperty("IdCardNumber")]
         public string IdCardNumber{ get; set; }
 
         /// <summary>
-        /// 印章名称
+        /// 电子印章名字，1-50个中文字符
+        /// 注:`同一企业下电子印章名字不能相同`
         /// </summary>
         [JsonProperty("SealName")]
         public string SealName{ get; set; }
 
         /// <summary>
-        /// 印章图片的base64，最大不超过 8M
+        /// 电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。
+        /// 
         /// </summary>
         [JsonProperty("SealImage")]
         public string SealImage{ get; set; }
 
         /// <summary>
-        /// 操作者信息
+        /// 执行本接口操作的员工信息。
+        /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 身份证件类型
+        /// 证件类型，支持以下类型
+        /// <ul><li>ID_CARD : 居民身份证 (默认值)</li>
+        /// <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+        /// <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+        /// <li>OTHER_CARD_TYPE : 其他</li></ul>
+        /// 
+        /// 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }

@@ -34,7 +34,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 经办人名称
+        /// 合同经办人名称
+        /// 如果有多个经办人用分号隔开。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperatorName")]
@@ -56,7 +57,19 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 0 还没有发起 1等待签署 2部分签署 3拒签 4已签署 5已过期 6已撤销 7还没有预发起 8等待填写 9部分填写 10拒填 11已解除
+        /// 当前合同状态,如下是状态码对应的状态。
+        /// 0-还没有发起
+        /// 1-等待签署
+        /// 2-部分签署 
+        /// 3-拒签
+        /// 4-已签署 
+        /// 5-已过期 
+        /// 6-已撤销 
+        /// 7-还没有预发起
+        /// 8-等待填写
+        /// 9-部分填写 
+        /// 10-拒填
+        /// 11-已解除
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -64,6 +77,21 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 套餐类型
+        /// 对应关系如下
+        /// CloudEnterprise-企业版合同
+        /// SingleSignature-单方签章
+        /// CloudProve-签署报告
+        /// CloudOnlineSign-腾讯会议在线签约
+        /// ChannelWeCard-微工卡
+        /// SignFlow-合同套餐
+        /// SignFace-签署意愿（人脸识别）
+        /// SignPassword-签署意愿（密码）
+        /// SignSMS-签署意愿（短信）
+        /// PersonalEssAuth-签署人实名（腾讯电子签认证）
+        /// PersonalThirdAuth-签署人实名（信任第三方认证）
+        /// OrgEssAuth-签署企业实名
+        /// FlowNotify-短信通知
+        /// AuthService-企业工商信息查询
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuotaType")]
@@ -77,21 +105,22 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? UseCount{ get; set; }
 
         /// <summary>
-        /// 消耗的时间戳
+        /// 消耗的时间戳，格式为Unix标准时间戳（秒）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CostTime")]
         public long? CostTime{ get; set; }
 
         /// <summary>
-        /// 套餐名称
+        /// 消耗的套餐名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuotaName")]
         public string QuotaName{ get; set; }
 
         /// <summary>
-        ///  消耗类型	1.扣费 2.撤销返还
+        /// 消耗类型
+        /// 1.扣费 2.撤销返还
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CostType")]

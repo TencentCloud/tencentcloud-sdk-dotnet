@@ -54,6 +54,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("CloudCustomData")]
         public string CloudCustomData{ get; set; }
 
+        /// <summary>
+        /// 昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义
+        /// </summary>
+        [JsonProperty("NickName")]
+        public string NickName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "FromAccount", this.FromAccount);
             this.SetParamArrayObj(map, prefix + "MsgBody.", this.MsgBody);
             this.SetParamSimple(map, prefix + "CloudCustomData", this.CloudCustomData);
+            this.SetParamSimple(map, prefix + "NickName", this.NickName);
         }
     }
 }

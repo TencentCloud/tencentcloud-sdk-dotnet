@@ -87,7 +87,15 @@ namespace TencentCloud.Dasb.V20191018.Models
         /// 该命令所属会话的会话开始时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
+        [JsonProperty("SessionTime")]
+        public string SessionTime{ get; set; }
+
+        /// <summary>
+        /// 该命令所属会话的会话开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
         [JsonProperty("SessTime")]
+        [System.Obsolete]
         public string SessTime{ get; set; }
 
         /// <summary>
@@ -140,6 +148,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "Account", this.Account);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "FromIp", this.FromIp);
+            this.SetParamSimple(map, prefix + "SessionTime", this.SessionTime);
             this.SetParamSimple(map, prefix + "SessTime", this.SessTime);
             this.SetParamSimple(map, prefix + "ConfirmTime", this.ConfirmTime);
             this.SetParamSimple(map, prefix + "UserDepartmentId", this.UserDepartmentId);

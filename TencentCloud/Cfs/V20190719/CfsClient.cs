@@ -1742,5 +1742,45 @@ namespace TencentCloud.Cfs.V20190719
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 更新文件系统带宽
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFileSystemBandwidthLimitRequest"/></param>
+        /// <returns><see cref="UpdateFileSystemBandwidthLimitResponse"/></returns>
+        public async Task<UpdateFileSystemBandwidthLimitResponse> UpdateFileSystemBandwidthLimit(UpdateFileSystemBandwidthLimitRequest req)
+        {
+             JsonResponseModel<UpdateFileSystemBandwidthLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateFileSystemBandwidthLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFileSystemBandwidthLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新文件系统带宽
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFileSystemBandwidthLimitRequest"/></param>
+        /// <returns><see cref="UpdateFileSystemBandwidthLimitResponse"/></returns>
+        public UpdateFileSystemBandwidthLimitResponse UpdateFileSystemBandwidthLimitSync(UpdateFileSystemBandwidthLimitRequest req)
+        {
+             JsonResponseModel<UpdateFileSystemBandwidthLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateFileSystemBandwidthLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFileSystemBandwidthLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

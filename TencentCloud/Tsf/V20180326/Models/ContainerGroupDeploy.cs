@@ -290,6 +290,27 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("GatewayConfig")]
         public GatewayConfig GatewayConfig{ get; set; }
 
+        /// <summary>
+        /// 容器名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerName")]
+        public string ContainerName{ get; set; }
+
+        /// <summary>
+        /// 附加容器列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdditionalContainerList")]
+        public GroupContainerInfo[] AdditionalContainerList{ get; set; }
+
+        /// <summary>
+        /// 内部容器列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InternalContainerList")]
+        public GroupContainerInfo[] InternalContainerList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -334,6 +355,9 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "RepoType", this.RepoType);
             this.SetParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
             this.SetParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
+            this.SetParamSimple(map, prefix + "ContainerName", this.ContainerName);
+            this.SetParamArrayObj(map, prefix + "AdditionalContainerList.", this.AdditionalContainerList);
+            this.SetParamArrayObj(map, prefix + "InternalContainerList.", this.InternalContainerList);
         }
     }
 }

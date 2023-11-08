@@ -25,7 +25,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用的唯一标识。不同的业务系统可以采用不同的AppId，不同AppId下的数据是隔离的。可以由控制台开发者中心-应用集成自主生成。
+        /// 应用的唯一标识(由电子签平台自动生成)。不同的业务系统可以采用不同的AppId，不同AppId下的数据是隔离的。可以由控制台开发者中心-应用集成自主生成。位置如下:
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/fac77e0d3f28aaec56669f67e65c8db8.png)
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
@@ -43,7 +45,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public UserInfo ProxyOperator{ get; set; }
 
         /// <summary>
-        /// 非必需参数，在第三方平台子客企业开通电子签后，会生成唯一的子客应用Id（ProxyAppId）用于代理调用时的鉴权，在子客开通的回调中获取。
+        /// **不用填写**，在第三方平台子客企业开通电子签后，会生成唯一的子客应用Id（ProxyAppId）用于代理调用时的鉴权，在子客开通的回调中获取。
         /// </summary>
         [JsonProperty("ProxyAppId")]
         public string ProxyAppId{ get; set; }

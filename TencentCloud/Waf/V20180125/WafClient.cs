@@ -1427,8 +1427,6 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 接口已废弃
-        /// 
         /// 描述WAF自动封禁IP详情,对齐自动封堵状态
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoDenyIPRequest"/></param>
@@ -1449,8 +1447,6 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 接口已废弃
-        /// 
         /// 描述WAF自动封禁IP详情,对齐自动封堵状态
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoDenyIPRequest"/></param>

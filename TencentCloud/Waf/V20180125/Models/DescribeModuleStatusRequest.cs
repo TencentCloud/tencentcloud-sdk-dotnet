@@ -24,12 +24,19 @@ namespace TencentCloud.Waf.V20180125.Models
     public class DescribeModuleStatusRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 要查询状态的域名
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

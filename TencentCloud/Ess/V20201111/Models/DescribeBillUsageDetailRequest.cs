@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 查询开始时间，时间跨度不能大于31天
+        /// 查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于31天
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间，时间跨度不能大于31天
+        /// 查询结束时间字符串，格式为yyyymmdd,时间跨度不能大于31天
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -70,8 +70,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public string QuotaType{ get; set; }
 
         /// <summary>
-        /// 非必填，查询某个渠道企业的消耗情况。
-        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 代理企业和员工的信息。
+        /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }

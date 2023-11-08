@@ -4497,7 +4497,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 镜像仓库列表 
+        /// 查询镜像仓库列表
         /// </summary>
         /// <param name="req"><see cref="DescribeImageRepositoryRequest"/></param>
         /// <returns><see cref="DescribeImageRepositoryResponse"/></returns>
@@ -4517,7 +4517,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 镜像仓库列表 
+        /// 查询镜像仓库列表
         /// </summary>
         /// <param name="req"><see cref="DescribeImageRepositoryRequest"/></param>
         /// <returns><see cref="DescribeImageRepositoryResponse"/></returns>

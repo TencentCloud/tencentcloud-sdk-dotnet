@@ -25,26 +25,26 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 模板配置时候的签署人id,与控件绑定
+        /// 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
         /// </summary>
         [JsonProperty("ReceiptId")]
         public string ReceiptId{ get; set; }
 
         /// <summary>
-        /// 平台企业的第三方id
+        /// 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyOrganizationOpenId")]
         public string ProxyOrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 平台企业操作人的第三方id
+        /// 第三方平台子客企业员工的唯一标识
         /// </summary>
         [JsonProperty("ProxyOperatorOpenId")]
         public string ProxyOperatorOpenId{ get; set; }
 
         /// <summary>
-        /// 平台企业名称
+        /// 第三方平台子客企业名称，与企业营业执照中注册的名称一致。
         /// </summary>
         [JsonProperty("ProxyOrganizationName")]
         public string ProxyOrganizationName{ get; set; }
@@ -56,13 +56,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 签署人签署顺序
+        /// 签署顺序，如果是有序签署，签署顺序从小到大
         /// </summary>
         [JsonProperty("SignOrder")]
         public long? SignOrder{ get; set; }
 
         /// <summary>
-        /// 签署人姓名
+        /// 签署方经办人的姓名。
+        /// 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveName")]
@@ -70,26 +71,25 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 当前签署人的状态, 状态如下
-        /// <br/>PENDING 待签署	
-        /// <br/>FILLPENDING 待填写
-        /// <br/>FILLACCEPT 填写完成	
-        /// <br/>FILLREJECT 拒绝填写	
-        /// <br/>WAITPICKUP 待领取	
-        /// <br/>ACCEPT 已签署	
-        /// <br/>REJECT 拒签 
-        /// <br/>DEADLINE 过期没人处理 
-        /// <br/>CANCEL 流程已撤回	
-        /// <br/>FORWARD 已经转他人处理
-        /// <br/>STOP 流程已终止	
-        /// <br/>RELIEVED 解除协议（已解除）
-        /// 
+        /// <ul><li> **PENDING** :待签署</li>
+        /// <li> **FILLPENDING** :待填写</li>
+        /// <li> **FILLACCEPT** :填写完成</li>
+        /// <li> **FILLREJECT** :拒绝填写</li>
+        /// <li> **WAITPICKUP** :待领取</li>
+        /// <li> **ACCEPT** :已签署</li>
+        /// <li> **REJECT** :拒签</li>
+        /// <li> **DEADLINE** :过期没人处理</li>
+        /// <li> **CANCEL** :流程已撤回</li>
+        /// <li> **FORWARD** :已经转他人处理</li>
+        /// <li> **STOP** :流程已终止</li>
+        /// <li> **RELIEVED** :解除协议（已解除）</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveStatus")]
         public string ApproveStatus{ get; set; }
 
         /// <summary>
-        /// 签署人自定义信息
+        /// 签署人拒签等情况的时候填写的原因
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveMessage")]
@@ -103,15 +103,15 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 参与者类型 
-        /// <br/>ORGANIZATION：企业签署人
-        /// <br/>PERSON：个人签署人
+        /// <ul><li> **ORGANIZATION** :企业签署人</li>
+        /// <li> **PERSON** :个人签署人</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveType")]
         public string ApproveType{ get; set; }
 
         /// <summary>
-        /// 自定义签署人角色
+        /// 自定义签署人的角色名, 如: 收款人、开具人、见证人等
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproverRoleName")]

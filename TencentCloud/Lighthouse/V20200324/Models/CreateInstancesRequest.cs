@@ -96,7 +96,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public bool? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
+        /// 防火墙模板ID。若不指定该参数，则使用默认防火墙策略。
         /// </summary>
         [JsonProperty("FirewallTemplateId")]
         public string FirewallTemplateId{ get; set; }

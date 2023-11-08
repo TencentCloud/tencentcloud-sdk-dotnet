@@ -25,6 +25,42 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
+        /// WEB安全规则是否开启
+        /// </summary>
+        [JsonProperty("WebSecurity")]
+        public ulong? WebSecurity{ get; set; }
+
+        /// <summary>
+        /// 访问控制规则是否开启
+        /// </summary>
+        [JsonProperty("AccessControl")]
+        public long? AccessControl{ get; set; }
+
+        /// <summary>
+        /// CC防护是否开启
+        /// </summary>
+        [JsonProperty("CcProtection")]
+        public ulong? CcProtection{ get; set; }
+
+        /// <summary>
+        /// 网页防篡改是否开启
+        /// </summary>
+        [JsonProperty("AntiTamper")]
+        public ulong? AntiTamper{ get; set; }
+
+        /// <summary>
+        /// 信息防泄漏是否开启
+        /// </summary>
+        [JsonProperty("AntiLeakage")]
+        public ulong? AntiLeakage{ get; set; }
+
+        /// <summary>
+        /// API安全是否开启
+        /// </summary>
+        [JsonProperty("ApiProtection")]
+        public ulong? ApiProtection{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +72,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "WebSecurity", this.WebSecurity);
+            this.SetParamSimple(map, prefix + "AccessControl", this.AccessControl);
+            this.SetParamSimple(map, prefix + "CcProtection", this.CcProtection);
+            this.SetParamSimple(map, prefix + "AntiTamper", this.AntiTamper);
+            this.SetParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
+            this.SetParamSimple(map, prefix + "ApiProtection", this.ApiProtection);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

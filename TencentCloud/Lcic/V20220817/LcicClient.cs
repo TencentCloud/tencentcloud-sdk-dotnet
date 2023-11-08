@@ -1417,6 +1417,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 根据房间ID获取群组中被禁言的用户列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoomForbiddenUserRequest"/></param>
+        /// <returns><see cref="DescribeRoomForbiddenUserResponse"/></returns>
+        public async Task<DescribeRoomForbiddenUserResponse> DescribeRoomForbiddenUser(DescribeRoomForbiddenUserRequest req)
+        {
+             JsonResponseModel<DescribeRoomForbiddenUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoomForbiddenUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomForbiddenUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据房间ID获取群组中被禁言的用户列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoomForbiddenUserRequest"/></param>
+        /// <returns><see cref="DescribeRoomForbiddenUserResponse"/></returns>
+        public DescribeRoomForbiddenUserResponse DescribeRoomForbiddenUserSync(DescribeRoomForbiddenUserRequest req)
+        {
+             JsonResponseModel<DescribeRoomForbiddenUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoomForbiddenUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomForbiddenUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取房间统计信息，仅可在房间结束后调用。
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomStatisticsRequest"/></param>
@@ -1648,6 +1688,50 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "EndRoom");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EndRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁止指定房间中某些用户在一段时间内发言。
+        /// 取消对某些用户的禁言。
+        /// 被禁言用户退出房间之后再进入同一房间，禁言仍然有效。
+        /// </summary>
+        /// <param name="req"><see cref="ForbidSendMsgRequest"/></param>
+        /// <returns><see cref="ForbidSendMsgResponse"/></returns>
+        public async Task<ForbidSendMsgResponse> ForbidSendMsg(ForbidSendMsgRequest req)
+        {
+             JsonResponseModel<ForbidSendMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ForbidSendMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForbidSendMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁止指定房间中某些用户在一段时间内发言。
+        /// 取消对某些用户的禁言。
+        /// 被禁言用户退出房间之后再进入同一房间，禁言仍然有效。
+        /// </summary>
+        /// <param name="req"><see cref="ForbidSendMsgRequest"/></param>
+        /// <returns><see cref="ForbidSendMsgResponse"/></returns>
+        public ForbidSendMsgResponse ForbidSendMsgSync(ForbidSendMsgRequest req)
+        {
+             JsonResponseModel<ForbidSendMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ForbidSendMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForbidSendMsgResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

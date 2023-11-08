@@ -78,7 +78,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-        /// <ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+        /// <ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
         /// </summary>
         [JsonProperty("ProxyLegalIdCardNumber")]
         public string ProxyLegalIdCardNumber{ get; set; }
