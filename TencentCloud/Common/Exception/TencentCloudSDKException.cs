@@ -37,10 +37,19 @@ namespace TencentCloud.Common
         {
         }
 
+        public TencentCloudSDKException(string message, string errorCode, string requestId) :
+            base(message)
+        {
+            RequestId = requestId;
+            ErrorCode = errorCode;
+        }
+
         /// <summary>
         /// UUID of a request.
         /// </summary>
         public string RequestId { get; private set; }
+
+        public string ErrorCode { get; private set; }
 
         public override string ToString()
         {
