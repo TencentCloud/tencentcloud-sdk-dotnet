@@ -102,6 +102,20 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
+        /// <summary>
+        /// 验证项ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VerifyId")]
+        public ulong? VerifyId{ get; set; }
+
+        /// <summary>
+        /// 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskStatusType")]
+        public ulong? TaskStatusType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +134,8 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskExpect", this.TaskExpect);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
+            this.SetParamSimple(map, prefix + "VerifyId", this.VerifyId);
+            this.SetParamSimple(map, prefix + "TaskStatusType", this.TaskStatusType);
         }
     }
 }

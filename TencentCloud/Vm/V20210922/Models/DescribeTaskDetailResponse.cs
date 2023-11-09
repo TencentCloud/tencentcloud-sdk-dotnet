@@ -131,9 +131,14 @@ namespace TencentCloud.Vm.V20210922.Models
         public AudioSegments[] AudioSegments{ get; set; }
 
         /// <summary>
-        /// 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+        /// 当任务状态为Error时，返回对应错误的类型，取值：
+        /// **DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
         /// **URL_ERROR**：下载地址验证失败。
-        /// **TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
+        /// **TIMEOUT_ERROR**：处理超时。
+        /// **CALLBACK_ERRORR**：回调错误。
+        /// **MODERATION_ERROR**：审核失败。
+        /// **URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
+        /// 任务状态非Error时默认返回为空。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorType")]
@@ -168,6 +173,13 @@ namespace TencentCloud.Vm.V20210922.Models
         public RcbAsr[] Asrs{ get; set; }
 
         /// <summary>
+        /// 该字段用于返回检测结果明细数据相关的cos url	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SegmentCosUrlList")]
+        public SegmentCosUrlList SegmentCosUrlList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -199,6 +211,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamSimple(map, prefix + "Label", this.Label);
             this.SetParamSimple(map, prefix + "AudioText", this.AudioText);
             this.SetParamArrayObj(map, prefix + "Asrs.", this.Asrs);
+            this.SetParamObj(map, prefix + "SegmentCosUrlList.", this.SegmentCosUrlList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

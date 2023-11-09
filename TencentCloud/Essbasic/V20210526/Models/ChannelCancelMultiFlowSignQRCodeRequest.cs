@@ -29,16 +29,17 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 
         /// 此接口下面信息必填。
         /// <ul>
-        /// <li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-        /// <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-        /// <li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+        /// <li>渠道应用标识:  Agent.AppId</li>
+        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
         /// </ul>
+        /// 第三方平台子客企业和员工必须已经经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 二维码ID，为32位字符串。
+        /// 需要取消签署的二维码ID，为32位字符串。由[创建一码多扫流程签署二维码](https://qian.tencent.com/developers/partnerApis/templates/ChannelCreateMultiFlowSignQRCode)返回
         /// </summary>
         [JsonProperty("QrCodeId")]
         public string QrCodeId{ get; set; }

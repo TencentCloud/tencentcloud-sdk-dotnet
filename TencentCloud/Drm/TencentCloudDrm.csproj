@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{01B0B03A-D868-351D-BB9D-D4D62CA9AE79}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.885</VersionPrefix>
+    <VersionPrefix>3.0.886</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,6 +68,8 @@
     <Compile Include="V20181115\Models\DrmOutputPara.cs" />
     <Compile Include="V20181115\Models\DrmSourceObject.cs" />
     <Compile Include="V20181115\Models\FairPlayPemDigestInfo.cs" />
+    <Compile Include="V20181115\Models\GenerateTDRMKeyRequest.cs" />
+    <Compile Include="V20181115\Models\GenerateTDRMKeyResponse.cs" />
     <Compile Include="V20181115\Models\KeyInfo.cs" />
     <Compile Include="V20181115\Models\KeyParam.cs" />
     <Compile Include="V20181115\Models\ModifyFairPlayPemRequest.cs" />

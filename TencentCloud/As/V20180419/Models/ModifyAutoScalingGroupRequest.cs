@@ -180,6 +180,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("CapacityRebalance")]
         public bool? CapacityRebalance{ get; set; }
 
+        /// <summary>
+        /// 实例名称序号相关设置。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
+        /// </summary>
+        [JsonProperty("InstanceNameIndexSettings")]
+        public InstanceNameIndexSettings InstanceNameIndexSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +214,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
             this.SetParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
             this.SetParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
+            this.SetParamObj(map, prefix + "InstanceNameIndexSettings.", this.InstanceNameIndexSettings);
         }
     }
 }

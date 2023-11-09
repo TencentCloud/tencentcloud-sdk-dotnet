@@ -42,6 +42,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 类型：String
         /// 必选：否
         /// 
+        /// <li> deliverFlag
+        /// 按照【投递状态】进行过滤。
+        /// 类型：String
+        /// 必选：否
+        /// 可选值： "1":未启用,  "2": 已启用, "3":投递异常
+        /// 
         /// 每次请求的Filters的上限为10，Filter.Values的上限为5。
         /// </summary>
         [JsonProperty("Filters")]

@@ -25,25 +25,25 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// preject id
+        /// 项目ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// rule group exec id
+        /// 规则组执行ID
         /// </summary>
         [JsonProperty("RuleGroupExecId")]
         public ulong? RuleGroupExecId{ get; set; }
 
         /// <summary>
-        /// group exec state
+        /// 规则组执行状态
         /// </summary>
         [JsonProperty("RuleGroupState")]
         public string RuleGroupState{ get; set; }
 
         /// <summary>
-        /// runner rule exec result list
+        /// 规则执行结果集合
         /// </summary>
         [JsonProperty("RuleExecResults")]
         public RunnerRuleExecResult[] RuleExecResults{ get; set; }

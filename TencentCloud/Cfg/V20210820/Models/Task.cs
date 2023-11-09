@@ -202,6 +202,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("ApmServiceList")]
         public ApmServiceInfo[] ApmServiceList{ get; set; }
 
+        /// <summary>
+        /// 关联的隐患验证项ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VerifyId")]
+        public ulong? VerifyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -235,6 +242,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
             this.SetParamArraySimple(map, prefix + "AlarmPolicy.", this.AlarmPolicy);
             this.SetParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
+            this.SetParamSimple(map, prefix + "VerifyId", this.VerifyId);
         }
     }
 }

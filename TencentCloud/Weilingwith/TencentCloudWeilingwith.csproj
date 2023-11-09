@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DB419999-DC15-39F3-A20E-BEE2B31253E2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.885</VersionPrefix>
+    <VersionPrefix>3.0.886</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,17 +48,125 @@
 
   <ItemGroup>
     <Compile Include="V20230427\WeilingwithClient.cs" />
+    <Compile Include="V20230427\Models\AddAlarmProcessRecordRequest.cs" />
+    <Compile Include="V20230427\Models\AddAlarmProcessRecordResponse.cs" />
+    <Compile Include="V20230427\Models\BatchCreateDeviceRequest.cs" />
+    <Compile Include="V20230427\Models\BatchCreateDeviceResponse.cs" />
+    <Compile Include="V20230427\Models\BatchKillAlarmRequest.cs" />
+    <Compile Include="V20230427\Models\BatchKillAlarmResponse.cs" />
+    <Compile Include="V20230427\Models\BatchReportAppMessageRequest.cs" />
+    <Compile Include="V20230427\Models\BatchReportAppMessageResponse.cs" />
+    <Compile Include="V20230427\Models\ChangeAlarmStatusRequest.cs" />
+    <Compile Include="V20230427\Models\ChangeAlarmStatusResponse.cs" />
+    <Compile Include="V20230427\Models\ControlCameraPTZRequest.cs" />
+    <Compile Include="V20230427\Models\ControlCameraPTZResponse.cs" />
+    <Compile Include="V20230427\Models\ControlDeviceRequest.cs" />
+    <Compile Include="V20230427\Models\ControlDeviceResponse.cs" />
+    <Compile Include="V20230427\Models\CreateApplicationTokenRequest.cs" />
+    <Compile Include="V20230427\Models\CreateApplicationTokenResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeActionListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeActionListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeAdministrationByTagRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeAdministrationByTagResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeAlarmLevelListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeAlarmLevelListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeAlarmListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeAlarmListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeAlarmStatusListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeAlarmStatusListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeAlarmTypeListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeAlarmTypeListResponse.cs" />
     <Compile Include="V20230427\Models\DescribeApplicationListRequest.cs" />
     <Compile Include="V20230427\Models\DescribeApplicationListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeBuildingListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeBuildingListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeBuildingModelRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeBuildingModelResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeBuildingProfileRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeBuildingProfileResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeCameraExtendInfoRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeCameraExtendInfoResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeCityWorkspaceListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeCityWorkspaceListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceShadowListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceShadowListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceStatusListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceStatusListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceStatusStatRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceStatusStatResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceTagListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceTagListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceTypeListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceTypeListResponse.cs" />
     <Compile Include="V20230427\Models\DescribeEdgeApplicationTokenRequest.cs" />
     <Compile Include="V20230427\Models\DescribeEdgeApplicationTokenResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeElementProfilePageRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeElementProfilePageResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeElementProfileTreeRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeElementProfileTreeResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeEventListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeEventListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeFileDownloadURLRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeFileDownloadURLResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeFileUploadURLRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeFileUploadURLResponse.cs" />
     <Compile Include="V20230427\Models\DescribeInterfaceListRequest.cs" />
     <Compile Include="V20230427\Models\DescribeInterfaceListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeLinkRuleListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeLinkRuleListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeModelListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeModelListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeProductListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeProductListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribePropertyListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribePropertyListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeRuleDetailRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeRuleDetailResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeSceneListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeSceneListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeSpaceDeviceIdListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeSpaceDeviceIdListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeSpaceDeviceRelationListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeSpaceDeviceRelationListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeSpaceInfoByDeviceIdRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeSpaceInfoByDeviceIdResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeSpaceRelationByDeviceIdRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeSpaceRelationByDeviceIdResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeSpaceTypeListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeSpaceTypeListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeTenantBuildingCountAndAreaRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeTenantBuildingCountAndAreaResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeTenantDepartmentListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeTenantDepartmentListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeTenantUserListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeTenantUserListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeVideoCloudRecordRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeVideoCloudRecordResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeVideoLiveStreamRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeVideoLiveStreamResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeVideoRecordStreamRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeVideoRecordStreamResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeWorkSpaceBuildingCountAndAreaRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeWorkSpaceBuildingCountAndAreaResponse.cs" />
     <Compile Include="V20230427\Models\DescribeWorkspaceListRequest.cs" />
     <Compile Include="V20230427\Models\DescribeWorkspaceListResponse.cs" />
     <Compile Include="V20230427\Models\DescribeWorkspaceUserListRequest.cs" />
     <Compile Include="V20230427\Models\DescribeWorkspaceUserListResponse.cs" />
+    <Compile Include="V20230427\Models\ModifyDeviceNameRequest.cs" />
+    <Compile Include="V20230427\Models\ModifyDeviceNameResponse.cs" />
+    <Compile Include="V20230427\Models\ReportAppMessageRequest.cs" />
+    <Compile Include="V20230427\Models\ReportAppMessageResponse.cs" />
+    <Compile Include="V20230427\Models\SsoDepartment.cs" />
+    <Compile Include="V20230427\Models\SsoDepartmentsResult.cs" />
     <Compile Include="V20230427\Models\SsoTeamUser.cs" />
     <Compile Include="V20230427\Models\SsoTeamUserResult.cs" />
+    <Compile Include="V20230427\Models\SsoUser.cs" />
+    <Compile Include="V20230427\Models\SsoUserResult.cs" />
+    <Compile Include="V20230427\Models\StopVideoStreamingRequest.cs" />
+    <Compile Include="V20230427\Models\StopVideoStreamingResponse.cs" />
+    <Compile Include="V20230427\Models\UpdateWorkspaceParkAttributesRequest.cs" />
+    <Compile Include="V20230427\Models\UpdateWorkspaceParkAttributesResponse.cs" />
   </ItemGroup>
 </Project>

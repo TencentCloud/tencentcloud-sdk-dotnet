@@ -8943,7 +8943,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询规则模版维度分布情况
+        /// 查询规则模板维度分布情况
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateDimCountRequest"/></param>
         /// <returns><see cref="DescribeTemplateDimCountResponse"/></returns>
@@ -8963,7 +8963,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询规则模版维度分布情况
+        /// 查询规则模板维度分布情况
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateDimCountRequest"/></param>
         /// <returns><see cref="DescribeTemplateDimCountResponse"/></returns>
@@ -8983,7 +8983,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询规则模版操作记录
+        /// 查询规则模板操作记录
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateHistoryRequest"/></param>
         /// <returns><see cref="DescribeTemplateHistoryResponse"/></returns>
@@ -9003,7 +9003,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询规则模版操作记录
+        /// 查询规则模板操作记录
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateHistoryRequest"/></param>
         /// <returns><see cref="DescribeTemplateHistoryResponse"/></returns>
@@ -10803,7 +10803,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 编辑规则模版
+        /// 编辑规则模板
         /// </summary>
         /// <param name="req"><see cref="ModifyRuleTemplateRequest"/></param>
         /// <returns><see cref="ModifyRuleTemplateResponse"/></returns>
@@ -10823,7 +10823,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 编辑规则模版
+        /// 编辑规则模板
         /// </summary>
         /// <param name="req"><see cref="ModifyRuleTemplateRequest"/></param>
         /// <returns><see cref="ModifyRuleTemplateResponse"/></returns>

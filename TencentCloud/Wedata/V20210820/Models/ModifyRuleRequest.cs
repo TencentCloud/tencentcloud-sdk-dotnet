@@ -67,7 +67,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+        /// 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
         /// </summary>
         [JsonProperty("QualityDim")]
         public ulong? QualityDim{ get; set; }

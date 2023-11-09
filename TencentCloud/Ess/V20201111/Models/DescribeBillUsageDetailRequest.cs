@@ -50,21 +50,23 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 查询的套餐类型 （选填 ）不传则查询所有套餐；
-        /// 对应关系如下
-        /// CloudEnterprise-企业版合同
-        /// SingleSignature-单方签章
-        /// CloudProve-签署报告
-        /// CloudOnlineSign-腾讯会议在线签约
-        /// ChannelWeCard-微工卡
-        /// SignFlow-合同套餐
-        /// SignFace-签署意愿（人脸识别）
-        /// SignPassword-签署意愿（密码）
-        /// SignSMS-签署意愿（短信）
-        /// PersonalEssAuth-签署人实名（腾讯电子签认证）
-        /// PersonalThirdAuth-签署人实名（信任第三方认证）
-        /// OrgEssAuth-签署企业实名
-        /// FlowNotify-短信通知
-        /// AuthService-企业工商信息查询
+        /// 目前支持:
+        /// <ul>
+        /// <li>**CloudEnterprise**: 企业版合同</li>
+        /// <li>**SingleSignature**: 单方签章</li>
+        /// <li>**CloudProve**: 签署报告</li>
+        /// <li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+        /// <li>**ChannelWeCard**: 微工卡</li>
+        /// <li>**SignFlow**: 合同套餐</li>
+        /// <li>**SignFace**: 签署意愿（人脸识别）</li>
+        /// <li>**SignPassword**: 签署意愿（密码）</li>
+        /// <li>**SignSMS**: 签署意愿（短信）</li>
+        /// <li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+        /// <li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+        /// <li>**OrgEssAuth**: 签署企业实名</li>
+        /// <li>**FlowNotify**: 短信通知</li>
+        /// <li>**AuthService**: 企业工商信息查询</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("QuotaType")]
         public string QuotaType{ get; set; }

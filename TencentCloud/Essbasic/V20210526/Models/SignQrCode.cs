@@ -26,6 +26,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 二维码ID，为32位字符串。	
+        /// 
+        /// 注: 需要保留此二维码ID, 用于后序通过<a href="https://qian.tencent.com/developers/partnerApis/templates/ChannelCancelMultiFlowSignQRCode" target="_blank">取消一码多扫二维码</a>关闭这个二维码的签署功能。	
         /// </summary>
         [JsonProperty("QrCodeId")]
         public string QrCodeId{ get; set; }
@@ -37,7 +39,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string QrCodeUrl{ get; set; }
 
         /// <summary>
-        /// 二维码的有截止时间，格式为Unix标准时间戳（秒）。 一旦超过二维码的有效期限，该二维码将自动失效。	
+        /// 二维码的有截止时间，格式为Unix标准时间戳（秒），可以通过入参的QrEffectiveDay来设置有效期，默认为7天有效期。 
+        /// 一旦超过二维码的有效期限，该二维码将自动失效。	
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }

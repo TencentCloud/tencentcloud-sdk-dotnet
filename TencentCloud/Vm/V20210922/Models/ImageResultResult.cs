@@ -79,7 +79,7 @@ namespace TencentCloud.Vm.V20210922.Models
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 如果命中场景为涉政，则该数据为人物姓名列表，否则null
+        /// 人物名称列表，如未识别，则为null
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Names")]

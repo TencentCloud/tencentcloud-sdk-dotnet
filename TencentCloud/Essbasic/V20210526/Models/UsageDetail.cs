@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 子客企业唯一标识
+        /// 子客企业标识
         /// </summary>
         [JsonProperty("ProxyOrganizationOpenId")]
         public string ProxyOrganizationOpenId{ get; set; }
@@ -38,20 +38,20 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ProxyOrganizationName{ get; set; }
 
         /// <summary>
-        /// 日期，当需要汇总数据时日期为空
+        /// 对应的消耗日期, **如果是汇总数据则为1970-01-01**
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// 消耗数量
+        /// 消耗合同数量
         /// </summary>
         [JsonProperty("Usage")]
         public ulong? Usage{ get; set; }
 
         /// <summary>
-        /// 撤回数量
+        /// 撤回合同数量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cancel")]

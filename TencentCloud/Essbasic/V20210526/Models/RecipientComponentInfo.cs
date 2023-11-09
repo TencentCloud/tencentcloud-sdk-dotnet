@@ -25,28 +25,32 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 参与方Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 参与方的角色ID
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
 
         /// <summary>
         /// 参与方填写状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 
+        /// <ul><li> **0** : 还没有填写</li>
+        /// <li> **1** : 已经填写</li></ul>
         /// </summary>
         [JsonProperty("RecipientFillStatus")]
         public string RecipientFillStatus{ get; set; }
 
         /// <summary>
-        /// 是否发起方
+        /// 此角色是否是发起方角色
+        /// 
+        /// <ul><li> **true** : 是发起方角色</li>
+        /// <li> **false** : 不是发起方角色</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPromoter")]
         public bool? IsPromoter{ get; set; }
 
         /// <summary>
-        /// 填写控件内容
+        /// 此角色的填写控件列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Components")]

@@ -46,9 +46,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public RuleTagInfo Tag{ get; set; }
 
         /// <summary>
-        /// 动态索引配置，如果为空时代表未开启动态段索引
-        /// 
-        /// 注意：该功能尚处于内测阶段，如需使用请联系技术支持
+        /// 动态索引配置，为空时代表未开启动态索引。
+        /// 启用后将自动把日志内的字段添加到键值索引字段列表中，包括日志中新增的字段。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DynamicIndex")]

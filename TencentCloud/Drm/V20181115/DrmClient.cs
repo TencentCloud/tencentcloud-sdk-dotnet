@@ -383,6 +383,46 @@ namespace TencentCloud.Drm.V20181115
         }
 
         /// <summary>
+        /// 开发者需要指定使用的DRM类型取值 NORMALAES、和需要加密的Track类型取值 SD,ContentType取值 LiveVideo
+        /// </summary>
+        /// <param name="req"><see cref="GenerateTDRMKeyRequest"/></param>
+        /// <returns><see cref="GenerateTDRMKeyResponse"/></returns>
+        public async Task<GenerateTDRMKeyResponse> GenerateTDRMKey(GenerateTDRMKeyRequest req)
+        {
+             JsonResponseModel<GenerateTDRMKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenerateTDRMKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateTDRMKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开发者需要指定使用的DRM类型取值 NORMALAES、和需要加密的Track类型取值 SD,ContentType取值 LiveVideo
+        /// </summary>
+        /// <param name="req"><see cref="GenerateTDRMKeyRequest"/></param>
+        /// <returns><see cref="GenerateTDRMKeyResponse"/></returns>
+        public GenerateTDRMKeyResponse GenerateTDRMKeySync(GenerateTDRMKeyRequest req)
+        {
+             JsonResponseModel<GenerateTDRMKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateTDRMKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateTDRMKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用来设置fairplay方案所需的私钥、私钥密钥、ask等信息。
         /// 如需使用fairplay方案，请务必先设置私钥。
         /// </summary>

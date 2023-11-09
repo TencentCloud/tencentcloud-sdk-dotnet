@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.885</VersionPrefix>
+    <VersionPrefix>3.0.886</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,7 @@
     <Compile Include="V20181119\Models\AdvertiseOCRRequest.cs" />
     <Compile Include="V20181119\Models\AdvertiseOCRResponse.cs" />
     <Compile Include="V20181119\Models\AdvertiseTextDetection.cs" />
+    <Compile Include="V20181119\Models\AirTicketInfo.cs" />
     <Compile Include="V20181119\Models\AirTransport.cs" />
     <Compile Include="V20181119\Models\ArithmeticOCRRequest.cs" />
     <Compile Include="V20181119\Models\ArithmeticOCRResponse.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="V20181119\Models\Coord.cs" />
     <Compile Include="V20181119\Models\CreateAIFormTaskRequest.cs" />
     <Compile Include="V20181119\Models\CreateAIFormTaskResponse.cs" />
+    <Compile Include="V20181119\Models\DetailInformationOfAirTicketTupleList.cs" />
     <Compile Include="V20181119\Models\DetectedWordCoordPoint.cs" />
     <Compile Include="V20181119\Models\DetectedWords.cs" />
     <Compile Include="V20181119\Models\DriverLicenseOCRRequest.cs" />
@@ -189,6 +191,7 @@
     <Compile Include="V20181119\Models\QuotaInvoice.cs" />
     <Compile Include="V20181119\Models\QuotaInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\QuotaInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\RailwayTicketInfo.cs" />
     <Compile Include="V20181119\Models\RecognizeContainerOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeContainerOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeGeneralInvoiceRequest.cs" />

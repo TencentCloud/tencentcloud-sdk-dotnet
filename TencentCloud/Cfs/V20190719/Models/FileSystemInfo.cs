@@ -55,13 +55,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string LifeCycleState{ get; set; }
 
         /// <summary>
-        /// 文件系统已使用容量,单位Byte
+        /// 文件系统已使用容量。单位：Byte
         /// </summary>
         [JsonProperty("SizeByte")]
         public ulong? SizeByte{ get; set; }
 
         /// <summary>
-        /// 文件系统最大空间限制,GiB
+        /// 文件系统最大空间限制。单位:GiB
         /// </summary>
         [JsonProperty("SizeLimit")]
         public ulong? SizeLimit{ get; set; }
@@ -140,6 +140,7 @@ namespace TencentCloud.Cfs.V20190719.Models
 
         /// <summary>
         /// 文件系统总容量
+        /// 单位:GiB
         /// </summary>
         [JsonProperty("Capacity")]
         public ulong? Capacity{ get; set; }

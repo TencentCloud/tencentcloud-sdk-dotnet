@@ -67,6 +67,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         public string TaskEndTime{ get; set; }
 
         /// <summary>
+        /// 更新时间，固定格式%Y-%m-%d %H:%M:%S
+        /// </summary>
+        [JsonProperty("TaskUpdateTime")]
+        public string TaskUpdateTime{ get; set; }
+
+        /// <summary>
         /// 标签对
         /// </summary>
         [JsonProperty("Tags")]
@@ -96,6 +102,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("ApplicationName")]
         public string[] ApplicationName{ get; set; }
 
+        /// <summary>
+        /// 任务状态筛选--支持多选 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
+        /// </summary>
+        [JsonProperty("TaskStatusList")]
+        public ulong?[] TaskStatusList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,11 +121,13 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
             this.SetParamSimple(map, prefix + "TaskStartTime", this.TaskStartTime);
             this.SetParamSimple(map, prefix + "TaskEndTime", this.TaskEndTime);
+            this.SetParamSimple(map, prefix + "TaskUpdateTime", this.TaskUpdateTime);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "TaskId.", this.TaskId);
             this.SetParamArraySimple(map, prefix + "ApplicationId.", this.ApplicationId);
             this.SetParamArraySimple(map, prefix + "ApplicationName.", this.ApplicationName);
+            this.SetParamArraySimple(map, prefix + "TaskStatusList.", this.TaskStatusList);
         }
     }
 }

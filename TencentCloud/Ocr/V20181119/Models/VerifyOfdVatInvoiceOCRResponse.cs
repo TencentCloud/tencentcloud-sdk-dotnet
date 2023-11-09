@@ -131,6 +131,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public VatInvoiceGoodsInfo[] GoodsInfos{ get; set; }
 
         /// <summary>
+        /// 航空运输电子客票行程单信息
+        /// </summary>
+        [JsonProperty("AirTicketInfo")]
+        public AirTicketInfo AirTicketInfo{ get; set; }
+
+        /// <summary>
+        /// 铁路电子客票
+        /// </summary>
+        [JsonProperty("RailwayTicketInfo")]
+        public RailwayTicketInfo RailwayTicketInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -159,6 +171,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "TaxExclusiveTotalAmount", this.TaxExclusiveTotalAmount);
             this.SetParamSimple(map, prefix + "Note", this.Note);
             this.SetParamArrayObj(map, prefix + "GoodsInfos.", this.GoodsInfos);
+            this.SetParamObj(map, prefix + "AirTicketInfo.", this.AirTicketInfo);
+            this.SetParamObj(map, prefix + "RailwayTicketInfo.", this.RailwayTicketInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

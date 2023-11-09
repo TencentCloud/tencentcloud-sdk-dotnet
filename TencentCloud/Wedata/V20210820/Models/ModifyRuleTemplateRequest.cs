@@ -25,19 +25,19 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 模版ID
+        /// 模板ID
         /// </summary>
         [JsonProperty("TemplateId")]
         public ulong? TemplateId{ get; set; }
 
         /// <summary>
-        /// 模版类型  1.系统模版   2.自定义模版
+        /// 模板类型  1.系统模板   2.自定义模板
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 模版名称
+        /// 模板名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

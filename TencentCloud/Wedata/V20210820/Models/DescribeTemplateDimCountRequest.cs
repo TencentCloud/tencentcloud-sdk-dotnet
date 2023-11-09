@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 模版类型
+        /// 模板类型
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
