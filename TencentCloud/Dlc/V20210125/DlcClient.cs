@@ -2093,6 +2093,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 查询数据引擎事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEngineEventsRequest"/></param>
+        /// <returns><see cref="DescribeDataEngineEventsResponse"/></returns>
+        public async Task<DescribeDataEngineEventsResponse> DescribeDataEngineEvents(DescribeDataEngineEventsRequest req)
+        {
+             JsonResponseModel<DescribeDataEngineEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataEngineEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataEngineEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询数据引擎事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEngineEventsRequest"/></param>
+        /// <returns><see cref="DescribeDataEngineEventsResponse"/></returns>
+        public DescribeDataEngineEventsResponse DescribeDataEngineEventsSync(DescribeDataEngineEventsRequest req)
+        {
+             JsonResponseModel<DescribeDataEngineEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataEngineEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataEngineEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDataEngineImageVersions）用于获取独享集群大版本镜像列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDataEngineImageVersionsRequest"/></param>

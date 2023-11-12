@@ -40,7 +40,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 角色状态：1-启用；2-禁用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleStatus")]
         public ulong? RoleStatus{ get; set; }

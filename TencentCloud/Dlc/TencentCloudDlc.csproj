@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.886</VersionPrefix>
+    <VersionPrefix>3.0.887</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -174,6 +174,8 @@
     <Compile Include="V20210125\Models\DescribeDMSTableResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDMSTablesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDMSTablesResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeDataEngineEventsRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeDataEngineEventsResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDataEngineImageVersionsRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDataEngineImageVersionsResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDataEnginePythonSparkImagesRequest.cs" />
@@ -267,6 +269,7 @@
     <Compile Include="V20210125\Models\GetOptimizerPolicyRequest.cs" />
     <Compile Include="V20210125\Models\GetOptimizerPolicyResponse.cs" />
     <Compile Include="V20210125\Models\HiveInfo.cs" />
+    <Compile Include="V20210125\Models\HouseEventsInfo.cs" />
     <Compile Include="V20210125\Models\IpPortPair.cs" />
     <Compile Include="V20210125\Models\JobLogResult.cs" />
     <Compile Include="V20210125\Models\KVPair.cs" />

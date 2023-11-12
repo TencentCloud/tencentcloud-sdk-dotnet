@@ -413,6 +413,52 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 获取消费组列表，Filter参数使用说明如下：
+        /// 
+        /// 1. ConsumerGroupName，名称模糊查询
+        /// 2. ConsumeMessageOrderly，投递顺序性。"true":顺序投递；"false":并发投递
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupListRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupListResponse"/></returns>
+        public async Task<DescribeConsumerGroupListResponse> DescribeConsumerGroupList(DescribeConsumerGroupListRequest req)
+        {
+             JsonResponseModel<DescribeConsumerGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeConsumerGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConsumerGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取消费组列表，Filter参数使用说明如下：
+        /// 
+        /// 1. ConsumerGroupName，名称模糊查询
+        /// 2. ConsumeMessageOrderly，投递顺序性。"true":顺序投递；"false":并发投递
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupListRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupListResponse"/></returns>
+        public DescribeConsumerGroupListResponse DescribeConsumerGroupListSync(DescribeConsumerGroupListRequest req)
+        {
+             JsonResponseModel<DescribeConsumerGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeConsumerGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConsumerGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRequest"/></param>

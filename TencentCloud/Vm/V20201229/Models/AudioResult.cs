@@ -68,7 +68,7 @@ namespace TencentCloud.Vm.V20201229.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回音频文件的时长，单位为秒。
+        /// 该字段用于返回音频文件的时长，单位为毫秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
