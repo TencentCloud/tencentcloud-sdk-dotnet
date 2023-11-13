@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{35BCDB53-B778-3509-BA78-8C30C7A1F123}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.889</VersionPrefix>
+    <VersionPrefix>3.0.890</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20201210\CiiClient.cs" />
+    <Compile Include="V20201210\Models\CompareMetricsData.cs" />
+    <Compile Include="V20201210\Models\CreateStructureTaskRequest.cs" />
+    <Compile Include="V20201210\Models\CreateStructureTaskResponse.cs" />
+    <Compile Include="V20201210\Models\DescribeStructCompareDataRequest.cs" />
+    <Compile Include="V20201210\Models\DescribeStructCompareDataResponse.cs" />
+    <Compile Include="V20201210\Models\DescribeStructureTaskResultRequest.cs" />
+    <Compile Include="V20201210\Models\DescribeStructureTaskResultResponse.cs" />
+    <Compile Include="V20201210\Models\ResultObject.cs" />
     <Compile Include="V20210408\CiiClient.cs" />
     <Compile Include="V20210408\Models\AddSubStructureTasksRequest.cs" />
     <Compile Include="V20210408\Models\AddSubStructureTasksResponse.cs" />
@@ -94,14 +103,5 @@
     <Compile Include="V20210408\Models\UnderwriteOutput.cs" />
     <Compile Include="V20210408\Models\UploadMedicalFileRequest.cs" />
     <Compile Include="V20210408\Models\UploadMedicalFileResponse.cs" />
-    <Compile Include="V20201210\CiiClient.cs" />
-    <Compile Include="V20201210\Models\CompareMetricsData.cs" />
-    <Compile Include="V20201210\Models\CreateStructureTaskRequest.cs" />
-    <Compile Include="V20201210\Models\CreateStructureTaskResponse.cs" />
-    <Compile Include="V20201210\Models\DescribeStructCompareDataRequest.cs" />
-    <Compile Include="V20201210\Models\DescribeStructCompareDataResponse.cs" />
-    <Compile Include="V20201210\Models\DescribeStructureTaskResultRequest.cs" />
-    <Compile Include="V20201210\Models\DescribeStructureTaskResultResponse.cs" />
-    <Compile Include="V20201210\Models\ResultObject.cs" />
   </ItemGroup>
 </Project>

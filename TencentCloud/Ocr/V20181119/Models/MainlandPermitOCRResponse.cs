@@ -91,6 +91,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Profile{ get; set; }
 
         /// <summary>
+        /// 背面字段信息
+        /// </summary>
+        [JsonProperty("MainlandTravelPermitBackInfos")]
+        public MainlandTravelPermitBackInfos MainlandTravelPermitBackInfos{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -113,6 +119,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "IssueNumber", this.IssueNumber);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Profile", this.Profile);
+            this.SetParamObj(map, prefix + "MainlandTravelPermitBackInfos.", this.MainlandTravelPermitBackInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

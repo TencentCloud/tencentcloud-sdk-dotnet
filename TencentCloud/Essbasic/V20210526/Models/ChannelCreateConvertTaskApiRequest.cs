@@ -49,6 +49,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>jpeg</li>
         /// <li>png</li>
         /// <li>bmp</li>
+        /// <li>html</li>
         /// <li>txt</li></ul>
         /// </summary>
         [JsonProperty("ResourceType")]

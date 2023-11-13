@@ -46,7 +46,7 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 用户类型
+        /// 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserType")]
@@ -81,7 +81,7 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 用户状态
+        /// 用户状态，0待审核，1正常启用，2禁用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -102,21 +102,21 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         public long? UpdateAt{ get; set; }
 
         /// <summary>
-        /// 是否属于团队
+        /// 是否属于团队，0不可用，1属于，2不属
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BelongTeam")]
         public long? BelongTeam{ get; set; }
 
         /// <summary>
-        /// ID
+        /// 部门ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DepartmentId")]
         public string DepartmentId{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// 部门名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DepartmentName")]

@@ -39,7 +39,7 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 用户类型
+        /// 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserType")]

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DB419999-DC15-39F3-A20E-BEE2B31253E2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.889</VersionPrefix>
+    <VersionPrefix>3.0.890</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,9 @@
     <Compile Include="V20230427\WeilingwithClient.cs" />
     <Compile Include="V20230427\Models\AddAlarmProcessRecordRequest.cs" />
     <Compile Include="V20230427\Models\AddAlarmProcessRecordResponse.cs" />
+    <Compile Include="V20230427\Models\ApplicationInfo.cs" />
+    <Compile Include="V20230427\Models\ApplicationList.cs" />
+    <Compile Include="V20230427\Models\ApplicationLogo.cs" />
     <Compile Include="V20230427\Models\BatchCreateDeviceRequest.cs" />
     <Compile Include="V20230427\Models\BatchCreateDeviceResponse.cs" />
     <Compile Include="V20230427\Models\BatchKillAlarmRequest.cs" />
@@ -154,6 +157,8 @@
     <Compile Include="V20230427\Models\DescribeWorkspaceListResponse.cs" />
     <Compile Include="V20230427\Models\DescribeWorkspaceUserListRequest.cs" />
     <Compile Include="V20230427\Models\DescribeWorkspaceUserListResponse.cs" />
+    <Compile Include="V20230427\Models\DeviceShadowInfo.cs" />
+    <Compile Include="V20230427\Models\DeviceShadowRes.cs" />
     <Compile Include="V20230427\Models\ModifyDeviceNameRequest.cs" />
     <Compile Include="V20230427\Models\ModifyDeviceNameResponse.cs" />
     <Compile Include="V20230427\Models\ReportAppMessageRequest.cs" />

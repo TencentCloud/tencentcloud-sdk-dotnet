@@ -39,22 +39,33 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 指定每页多少条数据，单页最大200
+        /// 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
+        /// 
+        /// 注: `因为历史原因, 此字段为字符串类型`
         /// </summary>
         [JsonProperty("Limit")]
         public string Limit{ get; set; }
 
         /// <summary>
         /// 查询的关键字段:
-        /// Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
-        /// Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-        /// Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
+        /// Key:"**RoleType**",Values:["**1**"]查询系统角色，
+        /// Key:"**RoleType**",Values:["**2**"]查询自定义角色
+        /// Key:"**RoleStatus**",Values:["**1**"]查询启用角色
+        /// Key:"**RoleStatus**",Values:["**2**"]查询禁用角色
+        /// Key:"**IsReturnPermissionGroup**"，Values:["**0**"]表示接口不返回角色对应的权限树字段
+        /// Key:"**IsReturnPermissionGroup**"，Values:["**1**"]表示接口返回角色对应的权限树字段
+        /// 
+        /// 注: `同名字的Key的过滤条件会冲突, 只能填写一个`
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+        /// 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+        /// 
+        /// 注：
+        /// 1.`offset从0开始，即第一页为0。`
+        /// 2.`默认从第一页返回。`
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

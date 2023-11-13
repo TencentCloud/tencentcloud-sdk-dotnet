@@ -31,19 +31,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得。单次请求批量删除备份数不能超过10个。
+        /// 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得，单次请求批量删除备份数不能超过10个。当StartTime、EndTime为空时，此字段必填。
         /// </summary>
         [JsonProperty("BackupNames")]
         public string[] BackupNames{ get; set; }
 
         /// <summary>
-        /// 批量删除手动备份起始时间
+        /// 批量删除手动备份起始时间。当BackupNames为空时，此字段必填。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 批量删除手动备份截止时间
+        /// 批量删除手动备份截止时间。当BackupNames为空时，此字段必填。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

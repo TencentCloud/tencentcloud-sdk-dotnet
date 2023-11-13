@@ -88,7 +88,7 @@ namespace TencentCloud.Vrs.V20200824.Models
         public long? ModelType{ get; set; }
 
         /// <summary>
-        /// 任务类型 0:默认类型 1:轻量级复刻
+        /// 任务类型 0:轻量版复刻
         /// 默认为0
         /// </summary>
         [JsonProperty("TaskType")]

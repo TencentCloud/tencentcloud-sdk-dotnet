@@ -8257,6 +8257,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取表元数据list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableMetasRequest"/></param>
+        /// <returns><see cref="DescribeTableMetasResponse"/></returns>
+        public async Task<DescribeTableMetasResponse> DescribeTableMetas(DescribeTableMetasRequest req)
+        {
+             JsonResponseModel<DescribeTableMetasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTableMetas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableMetasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取表元数据list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableMetasRequest"/></param>
+        /// <returns><see cref="DescribeTableMetasResponse"/></returns>
+        public DescribeTableMetasResponse DescribeTableMetasSync(DescribeTableMetasRequest req)
+        {
+             JsonResponseModel<DescribeTableMetasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTableMetas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableMetasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 质量报告-查询表质量详情
         /// </summary>
         /// <param name="req"><see cref="DescribeTableQualityDetailsRequest"/></param>

@@ -189,6 +189,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("VodLocalMode")]
         public long? VodLocalMode{ get; set; }
 
+        /// <summary>
+        /// 新的目标地址。传空值，则取消该地址的推流。
+        /// 传入新值，则替换原有地址。
+        /// </summary>
+        [JsonProperty("BackupToUrl")]
+        public string BackupToUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +221,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
             this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
             this.SetParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
+            this.SetParamSimple(map, prefix + "BackupToUrl", this.BackupToUrl);
         }
     }
 }

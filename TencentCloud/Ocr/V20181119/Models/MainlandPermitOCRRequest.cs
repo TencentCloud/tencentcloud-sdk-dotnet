@@ -49,6 +49,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("RetProfile")]
         public bool? RetProfile{ get; set; }
 
+        /// <summary>
+        /// 图片正反面
+        /// FRONT：正面、BACK：反面，默认为FRONT
+        /// </summary>
+        [JsonProperty("CardSide")]
+        public string CardSide{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "RetProfile", this.RetProfile);
+            this.SetParamSimple(map, prefix + "CardSide", this.CardSide);
         }
     }
 }

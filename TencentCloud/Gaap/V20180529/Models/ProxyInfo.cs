@@ -281,6 +281,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("FeatureBitmap")]
         public long? FeatureBitmap{ get; set; }
 
+        /// <summary>
+        /// 是否是开启了auto scale的通道，0表示否，1表示是。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsAutoScaleProxy")]
+        public long? IsAutoScaleProxy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -322,6 +329,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
             this.SetParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
             this.SetParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
+            this.SetParamSimple(map, prefix + "IsAutoScaleProxy", this.IsAutoScaleProxy);
         }
     }
 }

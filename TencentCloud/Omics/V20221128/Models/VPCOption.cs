@@ -25,6 +25,18 @@ namespace TencentCloud.Omics.V20221128.Models
     {
         
         /// <summary>
+        /// 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
+        /// </summary>
+        [JsonProperty("VPCId")]
+        public string VPCId{ get; set; }
+
+        /// <summary>
+        /// 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
         /// 子网可用区。
         /// </summary>
         [JsonProperty("SubnetZone")]
@@ -48,6 +60,8 @@ namespace TencentCloud.Omics.V20221128.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "VPCId", this.VPCId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "SubnetZone", this.SubnetZone);
             this.SetParamSimple(map, prefix + "VPCCIDRBlock", this.VPCCIDRBlock);
             this.SetParamSimple(map, prefix + "SubnetCIDRBlock", this.SubnetCIDRBlock);

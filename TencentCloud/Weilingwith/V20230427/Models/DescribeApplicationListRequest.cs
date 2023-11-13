@@ -24,12 +24,47 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeApplicationListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 项目空间id，本次查询返回的应用均关联至该空间
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public ulong? WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
+        /// <summary>
+        /// 应用id数组，可选，填了则表示根据id批量查询
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public ulong?[] ApplicationId{ get; set; }
+
+        /// <summary>
+        /// 请求页号
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public ulong? PageNumber{ get; set; }
+
+        /// <summary>
+        /// 页容量，默认为10
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+            this.SetParamArraySimple(map, prefix + "ApplicationId.", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

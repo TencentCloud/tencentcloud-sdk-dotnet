@@ -1613,6 +1613,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 获取database列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeClusterDatabasesResponse"/></returns>
+        public async Task<DescribeClusterDatabasesResponse> DescribeClusterDatabases(DescribeClusterDatabasesRequest req)
+        {
+             JsonResponseModel<DescribeClusterDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取database列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeClusterDatabasesResponse"/></returns>
+        public DescribeClusterDatabasesResponse DescribeClusterDatabasesSync(DescribeClusterDatabasesRequest req)
+        {
+             JsonResponseModel<DescribeClusterDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（DescribeClusterDetail）显示集群详情
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterDetailRequest"/></param>

@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -37,31 +37,38 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0，最大为20000
+        /// 分页查询偏移量，默认为0，最大为20000
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 查询信息类型，为1时返回授权用户，为其他值时不返回
+        /// 查询信息类型
+        /// 支持的值如下：
+        /// <ul><li>0-默认，不返回授权用户信息</li>
+        /// <li>1-返回授权用户信息</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("InfoType")]
         public long? InfoType{ get; set; }
 
         /// <summary>
         /// 印章id（没有输入返回所有）
+        /// 
+        /// 注:  `没有输入返回所有记录，最大返回100条。`
         /// </summary>
         [JsonProperty("SealId")]
         public string SealId{ get; set; }
 
         /// <summary>
-        /// 印章类型列表（都是组织机构印章）。
-        /// 为空时查询所有类型的印章。
-        /// 目前支持以下类型：
-        /// OFFICIAL：企业公章；
-        /// CONTRACT：合同专用章；
-        /// ORGANIZATION_SEAL：企业印章(图片上传创建)；
-        /// LEGAL_PERSON_SEAL：法定代表人章
+        /// 印章类型列表，目前支持传入以下类型：
+        /// <ul><li>OFFICIAL-企业公章</li>
+        /// <li>CONTRACT-合同专用章</li>
+        /// <li>ORGANIZATION_SEAL-企业印章(图片上传创建)</li>
+        /// <li>LEGAL_PERSON_SEAL-法定代表人章</li>
+        /// </ul>
+        /// 
+        /// 注:  `为空时查询所有类型的印章。`
         /// </summary>
         [JsonProperty("SealTypes")]
         public string[] SealTypes{ get; set; }

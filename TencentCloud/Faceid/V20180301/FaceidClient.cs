@@ -373,6 +373,46 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 提供对人脸图片/视频的AI合成、翻拍、水印等攻击痕迹的检测，增强图片/视频防伪能力
+        /// </summary>
+        /// <param name="req"><see cref="DetectAIFakeFacesRequest"/></param>
+        /// <returns><see cref="DetectAIFakeFacesResponse"/></returns>
+        public async Task<DetectAIFakeFacesResponse> DetectAIFakeFaces(DetectAIFakeFacesRequest req)
+        {
+             JsonResponseModel<DetectAIFakeFacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectAIFakeFaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectAIFakeFacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提供对人脸图片/视频的AI合成、翻拍、水印等攻击痕迹的检测，增强图片/视频防伪能力
+        /// </summary>
+        /// <param name="req"><see cref="DetectAIFakeFacesRequest"/></param>
+        /// <returns><see cref="DetectAIFakeFacesResponse"/></returns>
+        public DetectAIFakeFacesResponse DetectAIFakeFacesSync(DetectAIFakeFacesRequest req)
+        {
+             JsonResponseModel<DetectAIFakeFacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetectAIFakeFaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectAIFakeFacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
         /// </summary>
         /// <param name="req"><see cref="DetectAuthRequest"/></param>

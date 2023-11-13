@@ -25,13 +25,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 操作的印章状态，DISABLE-停用印章
+        /// 印章状态，目前支持传入以下类型：
+        /// <ul><li>DISABLE-停用印章</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

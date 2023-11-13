@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// 命名空间，目前只支持QCE/TKE2
+        /// 命名空间，目前支持QCE/TKE2(Conditions必填),QCE/KEEWIDB,QCE/CAMP
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
@@ -44,6 +44,7 @@ namespace TencentCloud.Monitor.V20180724.Models
 
         /// <summary>
         /// 维度条件，操作符支持=、in
+        /// 配置文档参考：https://cloud.tencent.com/document/product/248/53821
         /// </summary>
         [JsonProperty("Conditions")]
         public MidQueryCondition[] Conditions{ get; set; }

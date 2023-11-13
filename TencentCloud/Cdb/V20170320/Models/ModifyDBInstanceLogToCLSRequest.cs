@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 日志类型：errorLog/slowLog
+        /// 日志类型：error/slowLog
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }

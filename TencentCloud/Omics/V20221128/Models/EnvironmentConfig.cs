@@ -54,6 +54,12 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("CVMOption")]
         public CVMOption CVMOption{ get; set; }
 
+        /// <summary>
+        /// 安全组配置。
+        /// </summary>
+        [JsonProperty("SecurityGroupOption")]
+        public SecurityGroupOption SecurityGroupOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamObj(map, prefix + "DatabaseOption.", this.DatabaseOption);
             this.SetParamObj(map, prefix + "StorageOption.", this.StorageOption);
             this.SetParamObj(map, prefix + "CVMOption.", this.CVMOption);
+            this.SetParamObj(map, prefix + "SecurityGroupOption.", this.SecurityGroupOption);
         }
     }
 }

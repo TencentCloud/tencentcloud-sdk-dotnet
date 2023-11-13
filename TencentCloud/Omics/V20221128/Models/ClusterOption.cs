@@ -37,6 +37,18 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// 资源配额。
+        /// </summary>
+        [JsonProperty("ResourceQuota")]
+        public ResourceQuota ResourceQuota{ get; set; }
+
+        /// <summary>
+        /// 限制范围。
+        /// </summary>
+        [JsonProperty("LimitRange")]
+        public LimitRange LimitRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +57,8 @@ namespace TencentCloud.Omics.V20221128.Models
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamObj(map, prefix + "ResourceQuota.", this.ResourceQuota);
+            this.SetParamObj(map, prefix + "LimitRange.", this.LimitRange);
         }
     }
 }

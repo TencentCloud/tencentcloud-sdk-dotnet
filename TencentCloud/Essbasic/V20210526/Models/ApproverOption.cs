@@ -31,6 +31,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? NoRefuse{ get; set; }
 
         /// <summary>
+        /// 是否可以转发 默认false-可以转发 true-不可以转发
+        /// </summary>
+        [JsonProperty("NoTransfer")]
+        public bool? NoTransfer{ get; set; }
+
+        /// <summary>
         /// 是否隐藏一键签署 默认false-不隐藏true-隐藏
         /// </summary>
         [JsonProperty("HideOneKeySign")]
@@ -65,6 +71,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "NoRefuse", this.NoRefuse);
+            this.SetParamSimple(map, prefix + "NoTransfer", this.NoTransfer);
             this.SetParamSimple(map, prefix + "HideOneKeySign", this.HideOneKeySign);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
