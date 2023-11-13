@@ -74,6 +74,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }
 
+        /// <summary>
+        /// 是否对回包整体进行加密
+        /// </summary>
+        [JsonProperty("IsEncryptResponse")]
+        public bool? IsEncryptResponse{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IsNeedIdCardAvatar", this.IsNeedIdCardAvatar);
             this.SetParamSimple(map, prefix + "IsEncrypt", this.IsEncrypt);
             this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
+            this.SetParamSimple(map, prefix + "IsEncryptResponse", this.IsEncryptResponse);
         }
     }
 }
