@@ -1507,8 +1507,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 没有在使用。
-        /// 
+        /// Waf 斯巴达版本查询cc自动封堵状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCAutoStatusRequest"/></param>
+        /// <returns><see cref="DescribeCCAutoStatusResponse"/></returns>
+        public async Task<DescribeCCAutoStatusResponse> DescribeCCAutoStatus(DescribeCCAutoStatusRequest req)
+        {
+             JsonResponseModel<DescribeCCAutoStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCAutoStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCAutoStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf 斯巴达版本查询cc自动封堵状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCAutoStatusRequest"/></param>
+        /// <returns><see cref="DescribeCCAutoStatusResponse"/></returns>
+        public DescribeCCAutoStatusResponse DescribeCCAutoStatusSync(DescribeCCAutoStatusRequest req)
+        {
+             JsonResponseModel<DescribeCCAutoStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCCAutoStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCAutoStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Waf  CC V2 Query接口
         /// </summary>
         /// <param name="req"><see cref="DescribeCCRuleRequest"/></param>
@@ -1529,8 +1567,6 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 没有在使用。
-        /// 
         /// Waf  CC V2 Query接口
         /// </summary>
         /// <param name="req"><see cref="DescribeCCRuleRequest"/></param>
@@ -4837,46 +4873,6 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 配置WAF自动封禁模块状态
-        /// </summary>
-        /// <param name="req"><see cref="ModifyWafAutoDenyStatusRequest"/></param>
-        /// <returns><see cref="ModifyWafAutoDenyStatusResponse"/></returns>
-        public async Task<ModifyWafAutoDenyStatusResponse> ModifyWafAutoDenyStatus(ModifyWafAutoDenyStatusRequest req)
-        {
-             JsonResponseModel<ModifyWafAutoDenyStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyWafAutoDenyStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWafAutoDenyStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 配置WAF自动封禁模块状态
-        /// </summary>
-        /// <param name="req"><see cref="ModifyWafAutoDenyStatusRequest"/></param>
-        /// <returns><see cref="ModifyWafAutoDenyStatusResponse"/></returns>
-        public ModifyWafAutoDenyStatusResponse ModifyWafAutoDenyStatusSync(ModifyWafAutoDenyStatusRequest req)
-        {
-             JsonResponseModel<ModifyWafAutoDenyStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyWafAutoDenyStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWafAutoDenyStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 配置WAF威胁情报封禁模块详情
         /// </summary>
         /// <param name="req"><see cref="ModifyWafThreatenIntelligenceRequest"/></param>
@@ -5188,6 +5184,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "SwitchElasticMode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchElasticModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf 斯巴达版本更新cc自动封堵状态
+        /// </summary>
+        /// <param name="req"><see cref="UpsertCCAutoStatusRequest"/></param>
+        /// <returns><see cref="UpsertCCAutoStatusResponse"/></returns>
+        public async Task<UpsertCCAutoStatusResponse> UpsertCCAutoStatus(UpsertCCAutoStatusRequest req)
+        {
+             JsonResponseModel<UpsertCCAutoStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpsertCCAutoStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpsertCCAutoStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf 斯巴达版本更新cc自动封堵状态
+        /// </summary>
+        /// <param name="req"><see cref="UpsertCCAutoStatusRequest"/></param>
+        /// <returns><see cref="UpsertCCAutoStatusResponse"/></returns>
+        public UpsertCCAutoStatusResponse UpsertCCAutoStatusSync(UpsertCCAutoStatusRequest req)
+        {
+             JsonResponseModel<UpsertCCAutoStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpsertCCAutoStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpsertCCAutoStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

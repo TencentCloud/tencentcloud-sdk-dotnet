@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FB4519A5-C29F-3021-9DF3-791DE27C2D8D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.890</VersionPrefix>
+    <VersionPrefix>3.0.891</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,40 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20180408\MongodbClient.cs" />
-    <Compile Include="V20180408\Models\AssignProjectRequest.cs" />
-    <Compile Include="V20180408\Models\AssignProjectResponse.cs" />
-    <Compile Include="V20180408\Models\ClientConnection.cs" />
-    <Compile Include="V20180408\Models\CreateDBInstanceHourRequest.cs" />
-    <Compile Include="V20180408\Models\CreateDBInstanceHourResponse.cs" />
-    <Compile Include="V20180408\Models\CreateDBInstanceRequest.cs" />
-    <Compile Include="V20180408\Models\CreateDBInstanceResponse.cs" />
-    <Compile Include="V20180408\Models\DescribeClientConnectionsRequest.cs" />
-    <Compile Include="V20180408\Models\DescribeClientConnectionsResponse.cs" />
-    <Compile Include="V20180408\Models\DescribeDBInstancesRequest.cs" />
-    <Compile Include="V20180408\Models\DescribeDBInstancesResponse.cs" />
-    <Compile Include="V20180408\Models\DescribeSlowLogRequest.cs" />
-    <Compile Include="V20180408\Models\DescribeSlowLogResponse.cs" />
-    <Compile Include="V20180408\Models\DescribeSpecInfoRequest.cs" />
-    <Compile Include="V20180408\Models\DescribeSpecInfoResponse.cs" />
-    <Compile Include="V20180408\Models\MongoDBInstance.cs" />
-    <Compile Include="V20180408\Models\MongoDBInstanceDetail.cs" />
-    <Compile Include="V20180408\Models\MongodbShardInfo.cs" />
-    <Compile Include="V20180408\Models\RenameInstanceRequest.cs" />
-    <Compile Include="V20180408\Models\RenameInstanceResponse.cs" />
-    <Compile Include="V20180408\Models\SetAutoRenewRequest.cs" />
-    <Compile Include="V20180408\Models\SetAutoRenewResponse.cs" />
-    <Compile Include="V20180408\Models\SetPasswordRequest.cs" />
-    <Compile Include="V20180408\Models\SetPasswordResponse.cs" />
-    <Compile Include="V20180408\Models\SpecItem.cs" />
-    <Compile Include="V20180408\Models\SpecificationInfo.cs" />
-    <Compile Include="V20180408\Models\TagInfo.cs" />
-    <Compile Include="V20180408\Models\TerminateDBInstanceRequest.cs" />
-    <Compile Include="V20180408\Models\TerminateDBInstanceResponse.cs" />
-    <Compile Include="V20180408\Models\UpgradeDBInstanceHourRequest.cs" />
-    <Compile Include="V20180408\Models\UpgradeDBInstanceHourResponse.cs" />
-    <Compile Include="V20180408\Models\UpgradeDBInstanceRequest.cs" />
-    <Compile Include="V20180408\Models\UpgradeDBInstanceResponse.cs" />
     <Compile Include="V20190725\MongodbClient.cs" />
     <Compile Include="V20190725\Models\AssignProjectRequest.cs" />
     <Compile Include="V20190725\Models\AssignProjectResponse.cs" />
@@ -182,5 +148,39 @@
     <Compile Include="V20190725\Models\TerminateDBInstancesRequest.cs" />
     <Compile Include="V20190725\Models\TerminateDBInstancesResponse.cs" />
     <Compile Include="V20190725\Models\UserInfo.cs" />
+    <Compile Include="V20180408\MongodbClient.cs" />
+    <Compile Include="V20180408\Models\AssignProjectRequest.cs" />
+    <Compile Include="V20180408\Models\AssignProjectResponse.cs" />
+    <Compile Include="V20180408\Models\ClientConnection.cs" />
+    <Compile Include="V20180408\Models\CreateDBInstanceHourRequest.cs" />
+    <Compile Include="V20180408\Models\CreateDBInstanceHourResponse.cs" />
+    <Compile Include="V20180408\Models\CreateDBInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\CreateDBInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeClientConnectionsRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeClientConnectionsResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeDBInstancesRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeSlowLogRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeSlowLogResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeSpecInfoRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeSpecInfoResponse.cs" />
+    <Compile Include="V20180408\Models\MongoDBInstance.cs" />
+    <Compile Include="V20180408\Models\MongoDBInstanceDetail.cs" />
+    <Compile Include="V20180408\Models\MongodbShardInfo.cs" />
+    <Compile Include="V20180408\Models\RenameInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\RenameInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\SetAutoRenewRequest.cs" />
+    <Compile Include="V20180408\Models\SetAutoRenewResponse.cs" />
+    <Compile Include="V20180408\Models\SetPasswordRequest.cs" />
+    <Compile Include="V20180408\Models\SetPasswordResponse.cs" />
+    <Compile Include="V20180408\Models\SpecItem.cs" />
+    <Compile Include="V20180408\Models\SpecificationInfo.cs" />
+    <Compile Include="V20180408\Models\TagInfo.cs" />
+    <Compile Include="V20180408\Models\TerminateDBInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\TerminateDBInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\UpgradeDBInstanceHourRequest.cs" />
+    <Compile Include="V20180408\Models\UpgradeDBInstanceHourResponse.cs" />
+    <Compile Include="V20180408\Models\UpgradeDBInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\UpgradeDBInstanceResponse.cs" />
   </ItemGroup>
 </Project>

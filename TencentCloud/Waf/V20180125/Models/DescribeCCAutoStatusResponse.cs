@@ -21,14 +21,14 @@ namespace TencentCloud.Waf.V20180125.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyWafAutoDenyStatusResponse : AbstractModel
+    public class DescribeCCAutoStatusResponse : AbstractModel
     {
         
         /// <summary>
-        /// WAF 自动封禁配置项
+        /// 配置状态
         /// </summary>
-        [JsonProperty("WafAutoDenyDetails")]
-        public AutoDenyDetail WafAutoDenyDetails{ get; set; }
+        [JsonProperty("AutoCCSwitch")]
+        public long? AutoCCSwitch{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "WafAutoDenyDetails.", this.WafAutoDenyDetails);
+            this.SetParamSimple(map, prefix + "AutoCCSwitch", this.AutoCCSwitch);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

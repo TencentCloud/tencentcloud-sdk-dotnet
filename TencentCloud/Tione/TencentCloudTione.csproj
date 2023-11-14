@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.890</VersionPrefix>
+    <VersionPrefix>3.0.891</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,74 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20191022\TioneClient.cs" />
-    <Compile Include="V20191022\Models\AlgorithmSpecification.cs" />
-    <Compile Include="V20191022\Models\BillingLabel.cs" />
-    <Compile Include="V20191022\Models\ClsConfig.cs" />
-    <Compile Include="V20191022\Models\CodeRepoSummary.cs" />
-    <Compile Include="V20191022\Models\CosDataSource.cs" />
-    <Compile Include="V20191022\Models\CreateCodeRepositoryRequest.cs" />
-    <Compile Include="V20191022\Models\CreateCodeRepositoryResponse.cs" />
-    <Compile Include="V20191022\Models\CreateNotebookInstanceRequest.cs" />
-    <Compile Include="V20191022\Models\CreateNotebookInstanceResponse.cs" />
-    <Compile Include="V20191022\Models\CreateNotebookLifecycleScriptRequest.cs" />
-    <Compile Include="V20191022\Models\CreateNotebookLifecycleScriptResponse.cs" />
-    <Compile Include="V20191022\Models\CreatePresignedNotebookInstanceUrlRequest.cs" />
-    <Compile Include="V20191022\Models\CreatePresignedNotebookInstanceUrlResponse.cs" />
-    <Compile Include="V20191022\Models\CreateTrainingJobRequest.cs" />
-    <Compile Include="V20191022\Models\CreateTrainingJobResponse.cs" />
-    <Compile Include="V20191022\Models\DataSource.cs" />
-    <Compile Include="V20191022\Models\DeleteCodeRepositoryRequest.cs" />
-    <Compile Include="V20191022\Models\DeleteCodeRepositoryResponse.cs" />
-    <Compile Include="V20191022\Models\DeleteNotebookInstanceRequest.cs" />
-    <Compile Include="V20191022\Models\DeleteNotebookInstanceResponse.cs" />
-    <Compile Include="V20191022\Models\DeleteNotebookLifecycleScriptRequest.cs" />
-    <Compile Include="V20191022\Models\DeleteNotebookLifecycleScriptResponse.cs" />
-    <Compile Include="V20191022\Models\DescribeCodeRepositoriesRequest.cs" />
-    <Compile Include="V20191022\Models\DescribeCodeRepositoriesResponse.cs" />
-    <Compile Include="V20191022\Models\DescribeCodeRepositoryRequest.cs" />
-    <Compile Include="V20191022\Models\DescribeCodeRepositoryResponse.cs" />
-    <Compile Include="V20191022\Models\DescribeNotebookInstanceRequest.cs" />
-    <Compile Include="V20191022\Models\DescribeNotebookInstanceResponse.cs" />
-    <Compile Include="V20191022\Models\DescribeNotebookInstancesRequest.cs" />
-    <Compile Include="V20191022\Models\DescribeNotebookInstancesResponse.cs" />
-    <Compile Include="V20191022\Models\DescribeNotebookLifecycleScriptRequest.cs" />
-    <Compile Include="V20191022\Models\DescribeNotebookLifecycleScriptResponse.cs" />
-    <Compile Include="V20191022\Models\DescribeNotebookLifecycleScriptsRequest.cs" />
-    <Compile Include="V20191022\Models\DescribeNotebookLifecycleScriptsResponse.cs" />
-    <Compile Include="V20191022\Models\DescribeNotebookSummaryRequest.cs" />
-    <Compile Include="V20191022\Models\DescribeNotebookSummaryResponse.cs" />
-    <Compile Include="V20191022\Models\DescribeTrainingJobRequest.cs" />
-    <Compile Include="V20191022\Models\DescribeTrainingJobResponse.cs" />
-    <Compile Include="V20191022\Models\DescribeTrainingJobsRequest.cs" />
-    <Compile Include="V20191022\Models\DescribeTrainingJobsResponse.cs" />
-    <Compile Include="V20191022\Models\EnvConfig.cs" />
-    <Compile Include="V20191022\Models\FileSystemDataSource.cs" />
-    <Compile Include="V20191022\Models\Filter.cs" />
-    <Compile Include="V20191022\Models\GitConfig.cs" />
-    <Compile Include="V20191022\Models\GitSecret.cs" />
-    <Compile Include="V20191022\Models\InputDataConfig.cs" />
-    <Compile Include="V20191022\Models\ModelArtifacts.cs" />
-    <Compile Include="V20191022\Models\NotebookInstanceSummary.cs" />
-    <Compile Include="V20191022\Models\NotebookLifecycleScriptsSummary.cs" />
-    <Compile Include="V20191022\Models\OutputDataConfig.cs" />
-    <Compile Include="V20191022\Models\ResourceConfig.cs" />
-    <Compile Include="V20191022\Models\SecondaryStatusTransition.cs" />
-    <Compile Include="V20191022\Models\StartNotebookInstanceRequest.cs" />
-    <Compile Include="V20191022\Models\StartNotebookInstanceResponse.cs" />
-    <Compile Include="V20191022\Models\StopNotebookInstanceRequest.cs" />
-    <Compile Include="V20191022\Models\StopNotebookInstanceResponse.cs" />
-    <Compile Include="V20191022\Models\StopTrainingJobRequest.cs" />
-    <Compile Include="V20191022\Models\StopTrainingJobResponse.cs" />
-    <Compile Include="V20191022\Models\StoppingCondition.cs" />
-    <Compile Include="V20191022\Models\TrainingJobSummary.cs" />
-    <Compile Include="V20191022\Models\UpdateCodeRepositoryRequest.cs" />
-    <Compile Include="V20191022\Models\UpdateCodeRepositoryResponse.cs" />
-    <Compile Include="V20191022\Models\UpdateNotebookInstanceRequest.cs" />
-    <Compile Include="V20191022\Models\UpdateNotebookInstanceResponse.cs" />
-    <Compile Include="V20191022\Models\UpdateNotebookLifecycleScriptRequest.cs" />
-    <Compile Include="V20191022\Models\UpdateNotebookLifecycleScriptResponse.cs" />
-    <Compile Include="V20191022\Models\VpcConfig.cs" />
     <Compile Include="V20211111\TioneClient.cs" />
     <Compile Include="V20211111\Models\APIConfigDetail.cs" />
     <Compile Include="V20211111\Models\BatchModelAccTask.cs" />
@@ -362,5 +294,73 @@
     <Compile Include="V20211111\Models\VolumeMount.cs" />
     <Compile Include="V20211111\Models\WeightEntry.cs" />
     <Compile Include="V20211111\Models\WorkloadStatus.cs" />
+    <Compile Include="V20191022\TioneClient.cs" />
+    <Compile Include="V20191022\Models\AlgorithmSpecification.cs" />
+    <Compile Include="V20191022\Models\BillingLabel.cs" />
+    <Compile Include="V20191022\Models\ClsConfig.cs" />
+    <Compile Include="V20191022\Models\CodeRepoSummary.cs" />
+    <Compile Include="V20191022\Models\CosDataSource.cs" />
+    <Compile Include="V20191022\Models\CreateCodeRepositoryRequest.cs" />
+    <Compile Include="V20191022\Models\CreateCodeRepositoryResponse.cs" />
+    <Compile Include="V20191022\Models\CreateNotebookInstanceRequest.cs" />
+    <Compile Include="V20191022\Models\CreateNotebookInstanceResponse.cs" />
+    <Compile Include="V20191022\Models\CreateNotebookLifecycleScriptRequest.cs" />
+    <Compile Include="V20191022\Models\CreateNotebookLifecycleScriptResponse.cs" />
+    <Compile Include="V20191022\Models\CreatePresignedNotebookInstanceUrlRequest.cs" />
+    <Compile Include="V20191022\Models\CreatePresignedNotebookInstanceUrlResponse.cs" />
+    <Compile Include="V20191022\Models\CreateTrainingJobRequest.cs" />
+    <Compile Include="V20191022\Models\CreateTrainingJobResponse.cs" />
+    <Compile Include="V20191022\Models\DataSource.cs" />
+    <Compile Include="V20191022\Models\DeleteCodeRepositoryRequest.cs" />
+    <Compile Include="V20191022\Models\DeleteCodeRepositoryResponse.cs" />
+    <Compile Include="V20191022\Models\DeleteNotebookInstanceRequest.cs" />
+    <Compile Include="V20191022\Models\DeleteNotebookInstanceResponse.cs" />
+    <Compile Include="V20191022\Models\DeleteNotebookLifecycleScriptRequest.cs" />
+    <Compile Include="V20191022\Models\DeleteNotebookLifecycleScriptResponse.cs" />
+    <Compile Include="V20191022\Models\DescribeCodeRepositoriesRequest.cs" />
+    <Compile Include="V20191022\Models\DescribeCodeRepositoriesResponse.cs" />
+    <Compile Include="V20191022\Models\DescribeCodeRepositoryRequest.cs" />
+    <Compile Include="V20191022\Models\DescribeCodeRepositoryResponse.cs" />
+    <Compile Include="V20191022\Models\DescribeNotebookInstanceRequest.cs" />
+    <Compile Include="V20191022\Models\DescribeNotebookInstanceResponse.cs" />
+    <Compile Include="V20191022\Models\DescribeNotebookInstancesRequest.cs" />
+    <Compile Include="V20191022\Models\DescribeNotebookInstancesResponse.cs" />
+    <Compile Include="V20191022\Models\DescribeNotebookLifecycleScriptRequest.cs" />
+    <Compile Include="V20191022\Models\DescribeNotebookLifecycleScriptResponse.cs" />
+    <Compile Include="V20191022\Models\DescribeNotebookLifecycleScriptsRequest.cs" />
+    <Compile Include="V20191022\Models\DescribeNotebookLifecycleScriptsResponse.cs" />
+    <Compile Include="V20191022\Models\DescribeNotebookSummaryRequest.cs" />
+    <Compile Include="V20191022\Models\DescribeNotebookSummaryResponse.cs" />
+    <Compile Include="V20191022\Models\DescribeTrainingJobRequest.cs" />
+    <Compile Include="V20191022\Models\DescribeTrainingJobResponse.cs" />
+    <Compile Include="V20191022\Models\DescribeTrainingJobsRequest.cs" />
+    <Compile Include="V20191022\Models\DescribeTrainingJobsResponse.cs" />
+    <Compile Include="V20191022\Models\EnvConfig.cs" />
+    <Compile Include="V20191022\Models\FileSystemDataSource.cs" />
+    <Compile Include="V20191022\Models\Filter.cs" />
+    <Compile Include="V20191022\Models\GitConfig.cs" />
+    <Compile Include="V20191022\Models\GitSecret.cs" />
+    <Compile Include="V20191022\Models\InputDataConfig.cs" />
+    <Compile Include="V20191022\Models\ModelArtifacts.cs" />
+    <Compile Include="V20191022\Models\NotebookInstanceSummary.cs" />
+    <Compile Include="V20191022\Models\NotebookLifecycleScriptsSummary.cs" />
+    <Compile Include="V20191022\Models\OutputDataConfig.cs" />
+    <Compile Include="V20191022\Models\ResourceConfig.cs" />
+    <Compile Include="V20191022\Models\SecondaryStatusTransition.cs" />
+    <Compile Include="V20191022\Models\StartNotebookInstanceRequest.cs" />
+    <Compile Include="V20191022\Models\StartNotebookInstanceResponse.cs" />
+    <Compile Include="V20191022\Models\StopNotebookInstanceRequest.cs" />
+    <Compile Include="V20191022\Models\StopNotebookInstanceResponse.cs" />
+    <Compile Include="V20191022\Models\StopTrainingJobRequest.cs" />
+    <Compile Include="V20191022\Models\StopTrainingJobResponse.cs" />
+    <Compile Include="V20191022\Models\StoppingCondition.cs" />
+    <Compile Include="V20191022\Models\TrainingJobSummary.cs" />
+    <Compile Include="V20191022\Models\UpdateCodeRepositoryRequest.cs" />
+    <Compile Include="V20191022\Models\UpdateCodeRepositoryResponse.cs" />
+    <Compile Include="V20191022\Models\UpdateNotebookInstanceRequest.cs" />
+    <Compile Include="V20191022\Models\UpdateNotebookInstanceResponse.cs" />
+    <Compile Include="V20191022\Models\UpdateNotebookLifecycleScriptRequest.cs" />
+    <Compile Include="V20191022\Models\UpdateNotebookLifecycleScriptResponse.cs" />
+    <Compile Include="V20191022\Models\VpcConfig.cs" />
   </ItemGroup>
 </Project>

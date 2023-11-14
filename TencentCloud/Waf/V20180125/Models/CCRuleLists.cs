@@ -21,14 +21,21 @@ namespace TencentCloud.Waf.V20180125.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyWafAutoDenyStatusRequest : AbstractModel
+    public class CCRuleLists : AbstractModel
     {
         
         /// <summary>
-        /// WAF 自动封禁配置项
+        /// 总数
         /// </summary>
-        [JsonProperty("WafAutoDenyDetails")]
-        public AutoDenyDetail WafAutoDenyDetails{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Res")]
+        public CCRuleItems[] Res{ get; set; }
 
 
         /// <summary>
@@ -36,7 +43,8 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "WafAutoDenyDetails.", this.WafAutoDenyDetails);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Res.", this.Res);
         }
     }
 }

@@ -88,21 +88,6 @@ namespace TencentCloud.Waf.V20180125.Models
         public string BillingItem{ get; set; }
 
         /// <summary>
-        /// 1 API安全6折
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("APICPWaf")]
-        public long? APICPWaf{ get; set; }
-
-        /// <summary>
-        /// 1 表示5折折扣
-        /// 2 表示4折折扣
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("APINPWaf")]
-        public long? APINPWaf{ get; set; }
-
-        /// <summary>
         /// api安全7天试用标识。1试用。0没试用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -124,8 +109,6 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "UsedNum", this.UsedNum);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "BillingItem", this.BillingItem);
-            this.SetParamSimple(map, prefix + "APICPWaf", this.APICPWaf);
-            this.SetParamSimple(map, prefix + "APINPWaf", this.APINPWaf);
             this.SetParamSimple(map, prefix + "IsAPISecurityTrial", this.IsAPISecurityTrial);
         }
     }

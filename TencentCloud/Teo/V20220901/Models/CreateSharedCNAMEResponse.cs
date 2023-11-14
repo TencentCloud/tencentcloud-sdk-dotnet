@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 共享 CNAME。格式为：<自定义前缀>+<ZoneId中的12位随机字符串>+"share.dnse[0-5].com"。
+        /// 共享 CNAME。格式为：`<自定义前缀>+<ZoneId中的12位随机字符串>+share.dnse[0-5].com`。
         /// </summary>
         [JsonProperty("SharedCNAME")]
         public string SharedCNAME{ get; set; }
