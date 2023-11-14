@@ -133,8 +133,7 @@ namespace TencentCloud.Common
             if (errResp.Response.Error != null)
             {
                 throw new TencentCloudSDKException(
-                    $"code:{errResp.Response.Error.Code} message:{errResp.Response.Error.Message} ",
-                    errResp.Response.RequestId);
+                    errResp.Response.Error.Message, errResp.Response.Error.Code, errResp.Response.RequestId);
             }
 
             return strResp;
@@ -303,7 +302,7 @@ namespace TencentCloud.Common
             var serializableRequest = request as ISerializable;
             if (serializableRequest != null)
                 return Encoding.UTF8.GetBytes(serializableRequest.Serialize());
-            
+
             var octetRequest = request as IOctetRequest;
             if (octetRequest != null)
             {
