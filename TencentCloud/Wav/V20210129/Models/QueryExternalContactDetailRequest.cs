@@ -25,7 +25,7 @@ namespace TencentCloud.Wav.V20210129.Models
     {
         
         /// <summary>
-        /// 外部联系人的userid，注意不是企业成员的帐号
+        /// 外部联系人的userid，注意不是企业成员的账号
         /// </summary>
         [JsonProperty("ExternalUserId")]
         public string ExternalUserId{ get; set; }

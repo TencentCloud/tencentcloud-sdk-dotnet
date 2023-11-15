@@ -32,7 +32,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// 	资产类型
+        /// 资产类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]

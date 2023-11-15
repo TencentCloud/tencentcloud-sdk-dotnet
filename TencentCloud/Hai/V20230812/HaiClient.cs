@@ -92,5 +92,45 @@ namespace TencentCloud.Hai.V20230812
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 本接口 (TerminateInstances) 用于主动退还实例。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateInstancesRequest"/></param>
+        /// <returns><see cref="TerminateInstancesResponse"/></returns>
+        public async Task<TerminateInstancesResponse> TerminateInstances(TerminateInstancesRequest req)
+        {
+             JsonResponseModel<TerminateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (TerminateInstances) 用于主动退还实例。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateInstancesRequest"/></param>
+        /// <returns><see cref="TerminateInstancesResponse"/></returns>
+        public TerminateInstancesResponse TerminateInstancesSync(TerminateInstancesRequest req)
+        {
+             JsonResponseModel<TerminateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

@@ -61,19 +61,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string FirstTime{ get; set; }
 
         /// <summary>
-        /// 状态，0未处理、1已处置、2已忽略
+        /// 影响资产数量
         /// </summary>
         [JsonProperty("AffectAssetCount")]
         public ulong? AffectAssetCount{ get; set; }
 
         /// <summary>
-        /// 资产唯一id
+        /// 风险ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 资产子类型
+        /// 扫描来源，具体看接口返回枚举类型
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
@@ -109,31 +109,31 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Describe{ get; set; }
 
         /// <summary>
-        /// 负载
+        /// 漏洞payload
         /// </summary>
         [JsonProperty("Payload")]
         public string Payload{ get; set; }
 
         /// <summary>
-        /// 版本名
+        /// 漏洞影响组件
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 相关引用
+        /// 技术参考
         /// </summary>
         [JsonProperty("References")]
         public string References{ get; set; }
 
         /// <summary>
-        /// 版本
+        /// 漏洞影响版本
         /// </summary>
         [JsonProperty("AppVersion")]
         public string AppVersion{ get; set; }
 
         /// <summary>
-        /// 漏洞链接
+        /// 风险点
         /// </summary>
         [JsonProperty("VULURL")]
         public string VULURL{ get; set; }

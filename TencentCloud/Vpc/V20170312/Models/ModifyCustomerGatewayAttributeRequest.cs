@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CustomerGatewayName")]
         public string CustomerGatewayName{ get; set; }
 
+        /// <summary>
+        /// BGP ASN。只有开启BGP白名单才可以修改此参数。
+        /// </summary>
+        [JsonProperty("BgpAsn")]
+        public ulong? BgpAsn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
             this.SetParamSimple(map, prefix + "CustomerGatewayName", this.CustomerGatewayName);
+            this.SetParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
         }
     }
 }

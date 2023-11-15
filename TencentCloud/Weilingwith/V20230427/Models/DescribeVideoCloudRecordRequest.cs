@@ -24,12 +24,47 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeVideoCloudRecordRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 设备的唯一标识
+        /// </summary>
+        [JsonProperty("WID")]
+        public string WID{ get; set; }
+
+        /// <summary>
+        /// 录像开始时间（s）
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
+
+        /// <summary>
+        /// 录像结束时间（s）
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
+
+        /// <summary>
+        /// 工作空间Id
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public long? WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "WID", this.WID);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
         }
     }
 }

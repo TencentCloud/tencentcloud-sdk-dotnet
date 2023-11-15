@@ -213,46 +213,6 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
-        /// 资产测绘-测绘列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAssetsMappingListRequest"/></param>
-        /// <returns><see cref="DescribeAssetsMappingListResponse"/></returns>
-        public async Task<DescribeAssetsMappingListResponse> DescribeAssetsMappingList(DescribeAssetsMappingListRequest req)
-        {
-             JsonResponseModel<DescribeAssetsMappingListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAssetsMappingList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetsMappingListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 资产测绘-测绘列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAssetsMappingListRequest"/></param>
-        /// <returns><see cref="DescribeAssetsMappingListResponse"/></returns>
-        public DescribeAssetsMappingListResponse DescribeAssetsMappingListSync(DescribeAssetsMappingListRequest req)
-        {
-             JsonResponseModel<DescribeAssetsMappingListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAssetsMappingList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetsMappingListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 云安全配置管理资产组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCheckConfigAssetListRequest"/></param>
@@ -653,46 +613,6 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
-        /// 获取安全事件列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSafetyEventListRequest"/></param>
-        /// <returns><see cref="DescribeSafetyEventListResponse"/></returns>
-        public async Task<DescribeSafetyEventListResponse> DescribeSafetyEventList(DescribeSafetyEventListRequest req)
-        {
-             JsonResponseModel<DescribeSafetyEventListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSafetyEventList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafetyEventListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取安全事件列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSafetyEventListRequest"/></param>
-        /// <returns><see cref="DescribeSafetyEventListResponse"/></returns>
-        public DescribeSafetyEventListResponse DescribeSafetyEventListSync(DescribeSafetyEventListRequest req)
-        {
-             JsonResponseModel<DescribeSafetyEventListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSafetyEventList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafetyEventListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 返回告警详情
         /// </summary>
         /// <param name="req"><see cref="DescribeSocAlertDetailsRequest"/></param>
@@ -964,46 +884,6 @@ namespace TencentCloud.Ssa.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeVulList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询【通用字段】【泄露监测数据列表】
-        /// </summary>
-        /// <param name="req"><see cref="SaDivulgeDataQueryPubRequest"/></param>
-        /// <returns><see cref="SaDivulgeDataQueryPubResponse"/></returns>
-        public async Task<SaDivulgeDataQueryPubResponse> SaDivulgeDataQueryPub(SaDivulgeDataQueryPubRequest req)
-        {
-             JsonResponseModel<SaDivulgeDataQueryPubResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SaDivulgeDataQueryPub");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SaDivulgeDataQueryPubResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询【通用字段】【泄露监测数据列表】
-        /// </summary>
-        /// <param name="req"><see cref="SaDivulgeDataQueryPubRequest"/></param>
-        /// <returns><see cref="SaDivulgeDataQueryPubResponse"/></returns>
-        public SaDivulgeDataQueryPubResponse SaDivulgeDataQueryPubSync(SaDivulgeDataQueryPubRequest req)
-        {
-             JsonResponseModel<SaDivulgeDataQueryPubResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SaDivulgeDataQueryPub");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SaDivulgeDataQueryPubResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

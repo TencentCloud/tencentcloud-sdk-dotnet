@@ -58,6 +58,7 @@ namespace TencentCloud.Ms.V20180408.Models
         /// Dex分离，0关闭，1开启
         /// </summary>
         [JsonProperty("SeperateDex")]
+        [System.Obsolete]
         public ulong? SeperateDex{ get; set; }
 
         /// <summary>
@@ -70,6 +71,7 @@ namespace TencentCloud.Ms.V20180408.Models
         /// Dex签名校验，0关闭，1开启
         /// </summary>
         [JsonProperty("DexSig")]
+        [System.Obsolete]
         public ulong? DexSig{ get; set; }
 
         /// <summary>
@@ -100,6 +102,7 @@ namespace TencentCloud.Ms.V20180408.Models
         /// root检测，0关闭，1开启
         /// </summary>
         [JsonProperty("AntiQemuRoot")]
+        [System.Obsolete]
         public ulong? AntiQemuRoot{ get; set; }
 
         /// <summary>
@@ -119,6 +122,27 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         [JsonProperty("AntiSSL")]
         public ulong? AntiSSL{ get; set; }
+
+        /// <summary>
+        /// Dex分离，0关闭，1开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SetFile")]
+        public string SetFile{ get; set; }
+
+        /// <summary>
+        /// Dex签名校验，0关闭，1开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileSign")]
+        public string FileSign{ get; set; }
+
+        /// <summary>
+        /// root检测，0关闭，1开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AntiRoot")]
+        public string AntiRoot{ get; set; }
 
 
         /// <summary>
@@ -142,6 +166,9 @@ namespace TencentCloud.Ms.V20180408.Models
             this.SetParamSimple(map, prefix + "AntiAssets", this.AntiAssets);
             this.SetParamSimple(map, prefix + "AntiScreenshot", this.AntiScreenshot);
             this.SetParamSimple(map, prefix + "AntiSSL", this.AntiSSL);
+            this.SetParamSimple(map, prefix + "SetFile", this.SetFile);
+            this.SetParamSimple(map, prefix + "FileSign", this.FileSign);
+            this.SetParamSimple(map, prefix + "AntiRoot", this.AntiRoot);
         }
     }
 }

@@ -24,12 +24,26 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeCityWorkspaceListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 行政区编码集合
+        /// </summary>
+        [JsonProperty("AdministrativeCodeSet")]
+        public string[] AdministrativeCodeSet{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "AdministrativeCodeSet.", this.AdministrativeCodeSet);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
         }
     }
 }

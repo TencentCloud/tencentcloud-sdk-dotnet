@@ -24,12 +24,54 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeElementProfileTreeRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 建筑id
+        /// </summary>
+        [JsonProperty("BuildingId")]
+        public string BuildingId{ get; set; }
+
+        /// <summary>
+        /// 项目空间id
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public string WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
+        /// <summary>
+        /// 父级构件id
+        /// </summary>
+        [JsonProperty("ElementId")]
+        public string ElementId{ get; set; }
+
+        /// <summary>
+        /// 构件级别
+        /// </summary>
+        [JsonProperty("Level")]
+        public ulong? Level{ get; set; }
+
+        /// <summary>
+        /// 空间分类代码
+        /// </summary>
+        [JsonProperty("SpaceTypeCode")]
+        public string SpaceTypeCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "BuildingId", this.BuildingId);
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+            this.SetParamSimple(map, prefix + "ElementId", this.ElementId);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "SpaceTypeCode", this.SpaceTypeCode);
         }
     }
 }

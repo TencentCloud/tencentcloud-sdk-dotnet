@@ -24,12 +24,47 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeDeviceStatusStatRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 所属空间地理层级，必填。0表示查询所有层级（1、2）的设备状态，1表示楼栋，2表示楼层
+        /// </summary>
+        [JsonProperty("Level")]
+        public long? Level{ get; set; }
+
+        /// <summary>
+        /// 工作空间id
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public long? WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
+        /// <summary>
+        /// 空间位置，非必填。为空表示查询所有（1，2）层级
+        /// </summary>
+        [JsonProperty("SpaceCodeSet")]
+        public string[] SpaceCodeSet{ get; set; }
+
+        /// <summary>
+        /// 设备类型，非必填。为空表示查询所有设备类型
+        /// </summary>
+        [JsonProperty("DeviceTypeSet")]
+        public string[] DeviceTypeSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+            this.SetParamArraySimple(map, prefix + "SpaceCodeSet.", this.SpaceCodeSet);
+            this.SetParamArraySimple(map, prefix + "DeviceTypeSet.", this.DeviceTypeSet);
         }
     }
 }

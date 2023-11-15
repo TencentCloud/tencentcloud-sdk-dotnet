@@ -52,7 +52,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? RiskNumber{ get; set; }
 
         /// <summary>
-        /// 报告生成时间,任务结束时间
+        /// 报告生成时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Time")]

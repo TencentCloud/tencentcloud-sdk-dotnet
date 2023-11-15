@@ -1213,6 +1213,46 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 获取云原生网关服务详情下的Upstream列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayUpstreamRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayUpstreamResponse"/></returns>
+        public async Task<DescribeCloudNativeAPIGatewayUpstreamResponse> DescribeCloudNativeAPIGatewayUpstream(DescribeCloudNativeAPIGatewayUpstreamRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayUpstreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云原生网关服务详情下的Upstream列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayUpstreamRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayUpstreamResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayUpstreamResponse DescribeCloudNativeAPIGatewayUpstreamSync(DescribeCloudNativeAPIGatewayUpstreamRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayUpstreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取云原生API网关实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaysRequest"/></param>
@@ -1484,6 +1524,46 @@ namespace TencentCloud.Tse.V20201207
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSREInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSREInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云原生网关服务健康检查配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpstreamHealthCheckConfigRequest"/></param>
+        /// <returns><see cref="DescribeUpstreamHealthCheckConfigResponse"/></returns>
+        public async Task<DescribeUpstreamHealthCheckConfigResponse> DescribeUpstreamHealthCheckConfig(DescribeUpstreamHealthCheckConfigRequest req)
+        {
+             JsonResponseModel<DescribeUpstreamHealthCheckConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUpstreamHealthCheckConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpstreamHealthCheckConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云原生网关服务健康检查配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpstreamHealthCheckConfigRequest"/></param>
+        /// <returns><see cref="DescribeUpstreamHealthCheckConfigResponse"/></returns>
+        public DescribeUpstreamHealthCheckConfigResponse DescribeUpstreamHealthCheckConfigSync(DescribeUpstreamHealthCheckConfigRequest req)
+        {
+             JsonResponseModel<DescribeUpstreamHealthCheckConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUpstreamHealthCheckConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpstreamHealthCheckConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1893,6 +1973,46 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 修改云原生网关上游实例节点健康状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUpstreamNodeStatusRequest"/></param>
+        /// <returns><see cref="ModifyUpstreamNodeStatusResponse"/></returns>
+        public async Task<ModifyUpstreamNodeStatusResponse> ModifyUpstreamNodeStatus(ModifyUpstreamNodeStatusRequest req)
+        {
+             JsonResponseModel<ModifyUpstreamNodeStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyUpstreamNodeStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUpstreamNodeStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改云原生网关上游实例节点健康状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUpstreamNodeStatusRequest"/></param>
+        /// <returns><see cref="ModifyUpstreamNodeStatusResponse"/></returns>
+        public ModifyUpstreamNodeStatusResponse ModifyUpstreamNodeStatusSync(ModifyUpstreamNodeStatusRequest req)
+        {
+             JsonResponseModel<ModifyUpstreamNodeStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyUpstreamNodeStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUpstreamNodeStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改云原生网关证书信息
         /// </summary>
         /// <param name="req"><see cref="UpdateCloudNativeAPIGatewayCertificateInfoRequest"/></param>
@@ -2004,6 +2124,46 @@ namespace TencentCloud.Tse.V20201207
              {
                  var strResp = this.InternalRequestSync(req, "UpdateEngineInternetAccess");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEngineInternetAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新云原生网关健康检查配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUpstreamHealthCheckConfigRequest"/></param>
+        /// <returns><see cref="UpdateUpstreamHealthCheckConfigResponse"/></returns>
+        public async Task<UpdateUpstreamHealthCheckConfigResponse> UpdateUpstreamHealthCheckConfig(UpdateUpstreamHealthCheckConfigRequest req)
+        {
+             JsonResponseModel<UpdateUpstreamHealthCheckConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateUpstreamHealthCheckConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUpstreamHealthCheckConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新云原生网关健康检查配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUpstreamHealthCheckConfigRequest"/></param>
+        /// <returns><see cref="UpdateUpstreamHealthCheckConfigResponse"/></returns>
+        public UpdateUpstreamHealthCheckConfigResponse UpdateUpstreamHealthCheckConfigSync(UpdateUpstreamHealthCheckConfigRequest req)
+        {
+             JsonResponseModel<UpdateUpstreamHealthCheckConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateUpstreamHealthCheckConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUpstreamHealthCheckConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

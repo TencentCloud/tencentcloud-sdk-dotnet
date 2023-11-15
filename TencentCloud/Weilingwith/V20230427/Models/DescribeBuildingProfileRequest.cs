@@ -24,12 +24,33 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeBuildingProfileRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 建筑id
+        /// </summary>
+        [JsonProperty("BuildingId")]
+        public string BuildingId{ get; set; }
+
+        /// <summary>
+        /// 项目空间id
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public string WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "BuildingId", this.BuildingId);
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
         }
     }
 }

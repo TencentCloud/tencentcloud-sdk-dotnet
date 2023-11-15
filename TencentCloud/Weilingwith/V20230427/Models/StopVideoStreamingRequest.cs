@@ -24,12 +24,40 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class StopVideoStreamingRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 流的唯一标识，播放链接尾缀
+        /// </summary>
+        [JsonProperty("Stream")]
+        public string Stream{ get; set; }
+
+        /// <summary>
+        /// 设备的唯一标识
+        /// </summary>
+        [JsonProperty("WID")]
+        public string WID{ get; set; }
+
+        /// <summary>
+        /// 工作空间Id
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public long? WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Stream", this.Stream);
+            this.SetParamSimple(map, prefix + "WID", this.WID);
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
         }
     }
 }

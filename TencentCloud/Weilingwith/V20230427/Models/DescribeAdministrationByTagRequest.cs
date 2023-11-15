@@ -24,12 +24,33 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeAdministrationByTagRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
+        /// <summary>
+        /// 工作空间ID
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public long? WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 标签值
+        /// </summary>
+        [JsonProperty("Tag")]
+        public string Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "Tag", this.Tag);
         }
     }
 }

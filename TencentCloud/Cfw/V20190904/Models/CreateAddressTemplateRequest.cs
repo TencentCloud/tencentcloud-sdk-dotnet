@@ -46,9 +46,16 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// <summary>
         /// 1 ip模板
         /// 5 域名模板
+        /// 6 协议端口模板
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
+
+        /// <summary>
+        /// 协议端口模板，协议类型，4:4层协议，7:7层协议，Type=6时必填
+        /// </summary>
+        [JsonProperty("ProtocolType")]
+        public string ProtocolType{ get; set; }
 
 
         /// <summary>
@@ -60,6 +67,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Detail", this.Detail);
             this.SetParamSimple(map, prefix + "IpString", this.IpString);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         }
     }
 }

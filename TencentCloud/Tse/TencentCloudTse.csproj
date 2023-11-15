@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.891</VersionPrefix>
+    <VersionPrefix>3.0.892</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -135,6 +135,8 @@
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayUpstreamRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayUpstreamResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewaysRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewaysResponse.cs" />
     <Compile Include="V20201207\Models\DescribeGatewayInstancePortResult.cs" />
@@ -151,6 +153,8 @@
     <Compile Include="V20201207\Models\DescribeSREInstanceAccessAddressResponse.cs" />
     <Compile Include="V20201207\Models\DescribeSREInstancesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeSREInstancesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeUpstreamHealthCheckConfigRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeUpstreamHealthCheckConfigResponse.cs" />
     <Compile Include="V20201207\Models\DescribeZookeeperReplicasRequest.cs" />
     <Compile Include="V20201207\Models\DescribeZookeeperReplicasResponse.cs" />
     <Compile Include="V20201207\Models\DescribeZookeeperServerInterfacesRequest.cs" />
@@ -167,9 +171,11 @@
     <Compile Include="V20201207\Models\InternetConfig.cs" />
     <Compile Include="V20201207\Models\KVMapping.cs" />
     <Compile Include="V20201207\Models\KVPair.cs" />
+    <Compile Include="V20201207\Models\KongActiveHealthCheck.cs" />
     <Compile Include="V20201207\Models\KongCertificate.cs" />
     <Compile Include="V20201207\Models\KongCertificatesList.cs" />
     <Compile Include="V20201207\Models\KongCertificatesPreview.cs" />
+    <Compile Include="V20201207\Models\KongPassiveHealthCheck.cs" />
     <Compile Include="V20201207\Models\KongRoutePreview.cs" />
     <Compile Include="V20201207\Models\KongServiceDetail.cs" />
     <Compile Include="V20201207\Models\KongServicePreview.cs" />
@@ -177,6 +183,8 @@
     <Compile Include="V20201207\Models\KongServices.cs" />
     <Compile Include="V20201207\Models\KongTarget.cs" />
     <Compile Include="V20201207\Models\KongUpstreamInfo.cs" />
+    <Compile Include="V20201207\Models\KongUpstreamList.cs" />
+    <Compile Include="V20201207\Models\KongUpstreamPreview.cs" />
     <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayResult.cs" />
     <Compile Include="V20201207\Models\ListFilter.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayCanaryRuleRequest.cs" />
@@ -195,6 +203,8 @@
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayServiceResponse.cs" />
     <Compile Include="V20201207\Models\ModifyNativeGatewayServerGroupRequest.cs" />
     <Compile Include="V20201207\Models\ModifyNativeGatewayServerGroupResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyUpstreamNodeStatusRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyUpstreamNodeStatusResponse.cs" />
     <Compile Include="V20201207\Models\NacosReplica.cs" />
     <Compile Include="V20201207\Models\NacosServerInterface.cs" />
     <Compile Include="V20201207\Models\NativeGatewayServerGroup.cs" />
@@ -214,8 +224,11 @@
     <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewaySpecResponse.cs" />
     <Compile Include="V20201207\Models\UpdateEngineInternetAccessRequest.cs" />
     <Compile Include="V20201207\Models\UpdateEngineInternetAccessResponse.cs" />
+    <Compile Include="V20201207\Models\UpdateUpstreamHealthCheckConfigRequest.cs" />
+    <Compile Include="V20201207\Models\UpdateUpstreamHealthCheckConfigResponse.cs" />
     <Compile Include="V20201207\Models\UpdateUpstreamTargetsRequest.cs" />
     <Compile Include="V20201207\Models\UpdateUpstreamTargetsResponse.cs" />
+    <Compile Include="V20201207\Models\UpstreamHealthCheckConfig.cs" />
     <Compile Include="V20201207\Models\VpcInfo.cs" />
     <Compile Include="V20201207\Models\ZookeeperReplica.cs" />
     <Compile Include="V20201207\Models\ZookeeperServerInterface.cs" />

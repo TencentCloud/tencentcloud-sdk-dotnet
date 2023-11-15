@@ -109,6 +109,12 @@ namespace TencentCloud.Tds.V20220801.Models
         public ulong? SuggestionLevel{ get; set; }
 
         /// <summary>
+        /// 图灵盾统一ID
+        /// </summary>
+        [JsonProperty("Unionid")]
+        public string Unionid{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -134,6 +140,7 @@ namespace TencentCloud.Tds.V20220801.Models
             this.SetParamSimple(map, prefix + "Openid", this.Openid);
             this.SetParamArrayObj(map, prefix + "SceneRiskInfos.", this.SceneRiskInfos);
             this.SetParamSimple(map, prefix + "SuggestionLevel", this.SuggestionLevel);
+            this.SetParamSimple(map, prefix + "Unionid", this.Unionid);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

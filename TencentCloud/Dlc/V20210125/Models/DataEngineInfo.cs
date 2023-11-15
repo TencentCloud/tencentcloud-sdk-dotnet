@@ -333,6 +333,20 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("AutoAuthorization")]
         public bool? AutoAuthorization{ get; set; }
 
+        /// <summary>
+        /// 引擎版本，支持Native/SuperSQL
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineGeneration")]
+        public string EngineGeneration{ get; set; }
+
+        /// <summary>
+        /// 引擎详细类型，支持：SparkSQL/SparkBatch/PrestoSQL/Kyuubi
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineTypeDetail")]
+        public string EngineTypeDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -385,6 +399,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UserUin", this.UserUin);
             this.SetParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
             this.SetParamSimple(map, prefix + "AutoAuthorization", this.AutoAuthorization);
+            this.SetParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
+            this.SetParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
         }
     }
 }

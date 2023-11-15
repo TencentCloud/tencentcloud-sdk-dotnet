@@ -74,6 +74,14 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableRecognitionRectify")]
         public bool? EnableRecognitionRectify{ get; set; }
 
+        /// <summary>
+        /// 默认值为false。
+        /// 
+        /// 此开关需要在反光检测开关开启下才会生效（即此开关生效的前提是config入参里的"ReflectWarn":true），若EnableReflectDetail设置为true，则会返回反光点覆盖区域详情。反光点覆盖区域详情分为四部分：人像照片位置、国徽位置、识别字段位置、其他位置。一个反光点允许覆盖多个区域，且一张图片可能存在多个反光点。
+        /// </summary>
+        [JsonProperty("EnableReflectDetail")]
+        public bool? EnableReflectDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +93,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "CardSide", this.CardSide);
             this.SetParamSimple(map, prefix + "Config", this.Config);
             this.SetParamSimple(map, prefix + "EnableRecognitionRectify", this.EnableRecognitionRectify);
+            this.SetParamSimple(map, prefix + "EnableReflectDetail", this.EnableReflectDetail);
         }
     }
 }

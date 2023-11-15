@@ -24,12 +24,50 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class ControlCameraPTZRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 设备的唯一标识
+        /// </summary>
+        [JsonProperty("WID")]
+        public string WID{ get; set; }
+
+        /// <summary>
+        /// ptz指令
+        /// left - 向左移动
+        /// right - 向右移动
+        /// up - 向上移动
+        /// down - 向下
+        /// zoomOut - 镜头缩小
+        /// zoomIn - 镜头放大
+        /// irisIn - 光圈缩小
+        /// irisOut - 光圈放大
+        /// focusIn - 焦距变近
+        /// focusOut - 焦距变远
+        /// </summary>
+        [JsonProperty("CMD")]
+        public string CMD{ get; set; }
+
+        /// <summary>
+        /// 工作空间Id
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public long? WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "WID", this.WID);
+            this.SetParamSimple(map, prefix + "CMD", this.CMD);
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
         }
     }
 }

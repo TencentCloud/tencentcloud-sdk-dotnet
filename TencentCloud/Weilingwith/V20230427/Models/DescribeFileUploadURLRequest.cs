@@ -24,12 +24,68 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeFileUploadURLRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 工作空间Id
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public long? WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 文件名称
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
+
+        /// <summary>
+        /// 文件大小
+        /// </summary>
+        [JsonProperty("FileSize")]
+        public long? FileSize{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
+        /// <summary>
+        /// 文件MD5
+        /// </summary>
+        [JsonProperty("FileMD5")]
+        public string FileMD5{ get; set; }
+
+        /// <summary>
+        /// 存储类型
+        /// </summary>
+        [JsonProperty("SaveType")]
+        public string SaveType{ get; set; }
+
+        /// <summary>
+        /// 过期时间，过期时间戳，精确到秒的时间戳，noExpireFlag为false时必填
+        /// </summary>
+        [JsonProperty("FileExpireTime")]
+        public long? FileExpireTime{ get; set; }
+
+        /// <summary>
+        /// 永不过期标记
+        /// </summary>
+        [JsonProperty("NoExpireFlag")]
+        public bool? NoExpireFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+            this.SetParamSimple(map, prefix + "FileMD5", this.FileMD5);
+            this.SetParamSimple(map, prefix + "SaveType", this.SaveType);
+            this.SetParamSimple(map, prefix + "FileExpireTime", this.FileExpireTime);
+            this.SetParamSimple(map, prefix + "NoExpireFlag", this.NoExpireFlag);
         }
     }
 }

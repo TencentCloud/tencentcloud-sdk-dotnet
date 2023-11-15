@@ -47,7 +47,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 查询模版的内容
+        /// 查询模板的内容
         /// 
         /// <ul><li>**0**：（默认）模板列表及详情</li>
         /// <li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul>

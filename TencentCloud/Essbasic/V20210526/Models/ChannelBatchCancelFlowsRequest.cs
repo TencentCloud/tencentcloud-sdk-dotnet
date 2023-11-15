@@ -62,7 +62,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 
         /// 注: `CancelMessage为撤销当前合同的理由`
         /// 
-        /// ![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/f16cf37dbb3a09d6569877f093b92204/channel_ChannelCancelFlow.png)
         /// 
         /// </summary>
         [JsonProperty("CancelMessageFormat")]

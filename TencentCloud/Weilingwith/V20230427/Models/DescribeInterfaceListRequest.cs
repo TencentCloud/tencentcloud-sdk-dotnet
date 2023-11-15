@@ -24,12 +24,54 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeInterfaceListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
+        /// <summary>
+        /// 请求页号
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public ulong? PageNumber{ get; set; }
+
+        /// <summary>
+        /// 请求页容量，默认全量返回
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
+
+        /// <summary>
+        /// 查询关键字
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
+        /// <summary>
+        /// 接口方式 1.http 2消息通知服务
+        /// </summary>
+        [JsonProperty("Style")]
+        public ulong?[] Style{ get; set; }
+
+        /// <summary>
+        /// 接口分类0. 其他服务 1. IOT服务 2. 空间服务 3.微应用服务 4.场景服务 5.AI算法服务 6.任务算法服务 7.第三方服务 8.3DTiles服务
+        /// </summary>
+        [JsonProperty("Type")]
+        public ulong?[] Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamArraySimple(map, prefix + "Style.", this.Style);
+            this.SetParamArraySimple(map, prefix + "Type.", this.Type);
         }
     }
 }

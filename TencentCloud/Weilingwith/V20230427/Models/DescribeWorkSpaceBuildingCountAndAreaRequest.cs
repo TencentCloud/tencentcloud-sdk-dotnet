@@ -24,12 +24,26 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeWorkSpaceBuildingCountAndAreaRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 工作空间ID列表
+        /// </summary>
+        [JsonProperty("WorkspaceIdList")]
+        public string[] WorkspaceIdList{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "WorkspaceIdList.", this.WorkspaceIdList);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
         }
     }
 }

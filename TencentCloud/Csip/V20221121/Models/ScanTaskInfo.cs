@@ -25,14 +25,14 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 任务日志Id
+        /// 任务Id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务日志名称
+        /// 任务名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
@@ -53,21 +53,21 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// 对应的展示时间
+        /// 任务完成时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTime")]
         public string TaskTime{ get; set; }
 
         /// <summary>
-        /// 报表id
+        /// 报告ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }
 
         /// <summary>
-        /// 报表名称
+        /// 报告名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportName")]

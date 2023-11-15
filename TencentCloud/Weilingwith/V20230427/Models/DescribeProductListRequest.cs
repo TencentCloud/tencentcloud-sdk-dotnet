@@ -24,12 +24,61 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeProductListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 工作空间id
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public long? WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 分页查询，第几页
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public long? PageNumber{ get; set; }
+
+        /// <summary>
+        /// 每页条数，大于0
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
+        /// <summary>
+        /// 设备类型
+        /// </summary>
+        [JsonProperty("DeviceTypeSet")]
+        public string[] DeviceTypeSet{ get; set; }
+
+        /// <summary>
+        /// 产品 pid
+        /// </summary>
+        [JsonProperty("ProductIdSet")]
+        public long?[] ProductIdSet{ get; set; }
+
+        /// <summary>
+        /// 模型id
+        /// </summary>
+        [JsonProperty("ModelIdSet")]
+        public string[] ModelIdSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+            this.SetParamArraySimple(map, prefix + "DeviceTypeSet.", this.DeviceTypeSet);
+            this.SetParamArraySimple(map, prefix + "ProductIdSet.", this.ProductIdSet);
+            this.SetParamArraySimple(map, prefix + "ModelIdSet.", this.ModelIdSet);
         }
     }
 }

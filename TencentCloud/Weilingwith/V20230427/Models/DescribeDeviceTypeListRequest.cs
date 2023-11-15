@@ -24,12 +24,33 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeDeviceTypeListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 工作空间id
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public long? WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
+        /// <summary>
+        /// 默认0只拉取设备列表关联的设备类型列表；1拉取空间下所有的设备类型列表
+        /// </summary>
+        [JsonProperty("Flag")]
+        public long? Flag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+            this.SetParamSimple(map, prefix + "Flag", this.Flag);
         }
     }
 }

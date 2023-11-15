@@ -1133,6 +1133,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 删除专业集群——预付费，仅通过API 调用，支持同时删除多个集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProClustersRequest"/></param>
+        /// <returns><see cref="DeleteProClustersResponse"/></returns>
+        public async Task<DeleteProClustersResponse> DeleteProClusters(DeleteProClustersRequest req)
+        {
+             JsonResponseModel<DeleteProClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteProClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除专业集群——预付费，仅通过API 调用，支持同时删除多个集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProClustersRequest"/></param>
+        /// <returns><see cref="DeleteProClustersResponse"/></returns>
+        public DeleteProClustersResponse DeleteProClustersSync(DeleteProClustersRequest req)
+        {
+             JsonResponseModel<DeleteProClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteProClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除RabbitMQ的用户
         /// </summary>
         /// <param name="req"><see cref="DeleteRabbitMQUserRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2D2665D3-3EFE-35CA-BBCD-325648942550}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.891</VersionPrefix>
+    <VersionPrefix>3.0.892</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,10 +65,8 @@
     <Compile Include="V20180608\Models\CheckConfigDetail.cs" />
     <Compile Include="V20180608\Models\ComplianceCheckDetail.cs" />
     <Compile Include="V20180608\Models\ConcernInfo.cs" />
-    <Compile Include="V20180608\Models\DataAssetMapping.cs" />
     <Compile Include="V20180608\Models\DataCheck.cs" />
     <Compile Include="V20180608\Models\DataCompliance.cs" />
-    <Compile Include="V20180608\Models\DataEvent.cs" />
     <Compile Include="V20180608\Models\DescribeAlarmStatRequest.cs" />
     <Compile Include="V20180608\Models\DescribeAlarmStatResponse.cs" />
     <Compile Include="V20180608\Models\DescribeAssetDetailListRequest.cs" />
@@ -77,8 +75,6 @@
     <Compile Include="V20180608\Models\DescribeAssetDetailResponse.cs" />
     <Compile Include="V20180608\Models\DescribeAssetListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeAssetListResponse.cs" />
-    <Compile Include="V20180608\Models\DescribeAssetsMappingListRequest.cs" />
-    <Compile Include="V20180608\Models\DescribeAssetsMappingListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCheckConfigAssetListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCheckConfigAssetListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCheckConfigDetailRequest.cs" />
@@ -99,8 +95,6 @@
     <Compile Include="V20180608\Models\DescribeLeakDetectionListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeMappingResultsRequest.cs" />
     <Compile Include="V20180608\Models\DescribeMappingResultsResponse.cs" />
-    <Compile Include="V20180608\Models\DescribeSafetyEventListRequest.cs" />
-    <Compile Include="V20180608\Models\DescribeSafetyEventListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeSocAlertDetailsRequest.cs" />
     <Compile Include="V20180608\Models\DescribeSocAlertDetailsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeSocAlertListRequest.cs" />
@@ -126,10 +120,6 @@
     <Compile Include="V20180608\Models\QueryFilterV3.cs" />
     <Compile Include="V20180608\Models\QuerySort.cs" />
     <Compile Include="V20180608\Models\Results.cs" />
-    <Compile Include="V20180608\Models\SaDivulgeDataQueryPub.cs" />
-    <Compile Include="V20180608\Models\SaDivulgeDataQueryPubList.cs" />
-    <Compile Include="V20180608\Models\SaDivulgeDataQueryPubRequest.cs" />
-    <Compile Include="V20180608\Models\SaDivulgeDataQueryPubResponse.cs" />
     <Compile Include="V20180608\Models\SaDivulgeScanRuleMutateRequest.cs" />
     <Compile Include="V20180608\Models\SaDivulgeScanRuleMutateResponse.cs" />
     <Compile Include="V20180608\Models\SaDivulgeScanRuleSetList.cs" />

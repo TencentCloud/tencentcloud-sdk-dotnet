@@ -24,12 +24,47 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class CreateApplicationTokenRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 应用id
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public ulong? ApplicationId{ get; set; }
+
+        /// <summary>
+        /// 一个随机数或者时间戳，用于防止重放攻击，每个请求唯一，建议用uuid
+        /// </summary>
+        [JsonProperty("Nonce")]
+        public string Nonce{ get; set; }
+
+        /// <summary>
+        /// 租户id
+        /// </summary>
+        [JsonProperty("TenantId")]
+        public ulong? TenantId{ get; set; }
+
+        /// <summary>
+        /// 请求时间，当前时间的unix毫秒时间戳
+        /// </summary>
+        [JsonProperty("RequestTime")]
+        public ulong? RequestTime{ get; set; }
+
+        /// <summary>
+        /// 签名方法见用户使用文档
+        /// </summary>
+        [JsonProperty("Signature")]
+        public string Signature{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "Nonce", this.Nonce);
+            this.SetParamSimple(map, prefix + "TenantId", this.TenantId);
+            this.SetParamSimple(map, prefix + "RequestTime", this.RequestTime);
+            this.SetParamSimple(map, prefix + "Signature", this.Signature);
         }
     }
 }

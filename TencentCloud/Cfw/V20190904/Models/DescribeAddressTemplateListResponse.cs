@@ -43,6 +43,24 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string[] NameList{ get; set; }
 
         /// <summary>
+        /// Ip地址模板数量
+        /// </summary>
+        [JsonProperty("IpTemplateCount")]
+        public long? IpTemplateCount{ get; set; }
+
+        /// <summary>
+        /// 域名地址模板数量
+        /// </summary>
+        [JsonProperty("DomainTemplateCount")]
+        public long? DomainTemplateCount{ get; set; }
+
+        /// <summary>
+        /// 协议端口模板数量
+        /// </summary>
+        [JsonProperty("PortTemplateCount")]
+        public long? PortTemplateCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +75,9 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamArraySimple(map, prefix + "NameList.", this.NameList);
+            this.SetParamSimple(map, prefix + "IpTemplateCount", this.IpTemplateCount);
+            this.SetParamSimple(map, prefix + "DomainTemplateCount", this.DomainTemplateCount);
+            this.SetParamSimple(map, prefix + "PortTemplateCount", this.PortTemplateCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

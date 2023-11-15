@@ -24,12 +24,40 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class ControlDeviceRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 工作空间id
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public long? WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 设备wid，最大100个
+        /// </summary>
+        [JsonProperty("WIDSet")]
+        public string[] WIDSet{ get; set; }
+
+        /// <summary>
+        /// 控制内容
+        /// </summary>
+        [JsonProperty("ControlData")]
+        public string ControlData{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamArraySimple(map, prefix + "WIDSet.", this.WIDSet);
+            this.SetParamSimple(map, prefix + "ControlData", this.ControlData);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
         }
     }
 }

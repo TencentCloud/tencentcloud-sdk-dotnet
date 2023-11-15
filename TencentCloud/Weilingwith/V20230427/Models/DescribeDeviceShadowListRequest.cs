@@ -67,6 +67,12 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         public long?[] ProductIdSet{ get; set; }
 
         /// <summary>
+        /// 设备标签id
+        /// </summary>
+        [JsonProperty("TagIdSet")]
+        public long?[] TagIdSet{ get; set; }
+
+        /// <summary>
         /// 空间层级，（支持空间多层，比如具体建筑、具体楼层）
         /// </summary>
         [JsonProperty("SpaceCodeSet")]
@@ -91,6 +97,7 @@ namespace TencentCloud.Weilingwith.V20230427.Models
             this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
             this.SetParamArraySimple(map, prefix + "DeviceTypeSet.", this.DeviceTypeSet);
             this.SetParamArraySimple(map, prefix + "ProductIdSet.", this.ProductIdSet);
+            this.SetParamArraySimple(map, prefix + "TagIdSet.", this.TagIdSet);
             this.SetParamArraySimple(map, prefix + "SpaceCodeSet.", this.SpaceCodeSet);
             this.SetParamArraySimple(map, prefix + "DeviceTagSet.", this.DeviceTagSet);
         }

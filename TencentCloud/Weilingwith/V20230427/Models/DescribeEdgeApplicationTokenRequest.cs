@@ -24,12 +24,26 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class DescribeEdgeApplicationTokenRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
+        /// <summary>
+        /// 是否刷新token，默认为false
+        /// </summary>
+        [JsonProperty("Refresh")]
+        public bool? Refresh{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+            this.SetParamSimple(map, prefix + "Refresh", this.Refresh);
         }
     }
 }

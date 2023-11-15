@@ -94,6 +94,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
+        /// 反光点覆盖区域详情结果，具体内容请点击左侧链接
+        /// </summary>
+        [JsonProperty("ReflectDetailInfos")]
+        public ReflectDetailInfo[] ReflectDetailInfos{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -114,6 +120,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Authority", this.Authority);
             this.SetParamSimple(map, prefix + "ValidDate", this.ValidDate);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+            this.SetParamArrayObj(map, prefix + "ReflectDetailInfos.", this.ReflectDetailInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

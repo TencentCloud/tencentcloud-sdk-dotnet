@@ -813,7 +813,7 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
-        /// 删除域名共享
+        /// 按账号删除域名共享
         /// </summary>
         /// <param name="req"><see cref="DeleteShareDomainRequest"/></param>
         /// <returns><see cref="DeleteShareDomainResponse"/></returns>
@@ -833,7 +833,7 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
-        /// 删除域名共享
+        /// 按账号删除域名共享
         /// </summary>
         /// <param name="req"><see cref="DeleteShareDomainRequest"/></param>
         /// <returns><see cref="DeleteShareDomainResponse"/></returns>

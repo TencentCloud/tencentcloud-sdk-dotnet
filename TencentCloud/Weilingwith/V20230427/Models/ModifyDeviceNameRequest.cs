@@ -24,12 +24,33 @@ namespace TencentCloud.Weilingwith.V20230427.Models
     public class ModifyDeviceNameRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 工作空间id
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public long? WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 设备修改信息集合
+        /// </summary>
+        [JsonProperty("Set")]
+        public DeviceModifyInfo[] Set{ get; set; }
+
+        /// <summary>
+        /// 应用token
+        /// </summary>
+        [JsonProperty("ApplicationToken")]
+        public string ApplicationToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamArrayObj(map, prefix + "Set.", this.Set);
+            this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
         }
     }
 }
