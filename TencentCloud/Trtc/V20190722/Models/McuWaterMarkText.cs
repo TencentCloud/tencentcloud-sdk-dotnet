@@ -72,6 +72,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("BackGroundColor")]
         public string BackGroundColor{ get; set; }
 
+        /// <summary>
+        /// 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+        /// </summary>
+        [JsonProperty("DynamicPosType")]
+        public ulong? DynamicPosType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "FontSize", this.FontSize);
             this.SetParamSimple(map, prefix + "FontColor", this.FontColor);
             this.SetParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
+            this.SetParamSimple(map, prefix + "DynamicPosType", this.DynamicPosType);
         }
     }
 }

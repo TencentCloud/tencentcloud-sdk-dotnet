@@ -48,6 +48,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("ApiIds")]
         public string[] ApiIds{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "Environment", this.Environment);
             this.SetParamArraySimple(map, prefix + "ApiIds.", this.ApiIds);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

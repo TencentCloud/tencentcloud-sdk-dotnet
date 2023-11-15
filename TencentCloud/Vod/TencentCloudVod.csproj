@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.892</VersionPrefix>
+    <VersionPrefix>3.0.893</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -226,6 +226,8 @@
     <Compile Include="V20180717\Models\CreateImageSpriteTask2017.cs" />
     <Compile Include="V20180717\Models\CreateImageSpriteTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateImageSpriteTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateJustInTimeTranscodeTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\CreateJustInTimeTranscodeTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreatePersonSampleRequest.cs" />
     <Compile Include="V20180717\Models\CreatePersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\CreateProcedureTemplateRequest.cs" />
@@ -278,6 +280,8 @@
     <Compile Include="V20180717\Models\DeleteImageProcessingTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteImageSpriteTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteImageSpriteTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteJustInTimeTranscodeTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteJustInTimeTranscodeTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteMediaRequest.cs" />
     <Compile Include="V20180717\Models\DeleteMediaResponse.cs" />
     <Compile Include="V20180717\Models\DeletePersonSampleRequest.cs" />
@@ -354,6 +358,8 @@
     <Compile Include="V20180717\Models\DescribeImageReviewUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeJustInTimeTranscodeTemplatesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeJustInTimeTranscodeTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeLicenseUsageDataRequest.cs" />
     <Compile Include="V20180717\Models\DescribeLicenseUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosRequest.cs" />
@@ -473,6 +479,7 @@
     <Compile Include="V20180717\Models\InspectMediaQualityResponse.cs" />
     <Compile Include="V20180717\Models\JitterConfigureInfo.cs" />
     <Compile Include="V20180717\Models\JitterConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\JustInTimeTranscodeTemplate.cs" />
     <Compile Include="V20180717\Models\LicenseUsageDataItem.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipMediaSegmentInfo.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipRequest.cs" />
@@ -557,6 +564,8 @@
     <Compile Include="V20180717\Models\ModifyHeadTailTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyImageSpriteTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyImageSpriteTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyJustInTimeTranscodeTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyJustInTimeTranscodeTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyMediaInfoRequest.cs" />
     <Compile Include="V20180717\Models\ModifyMediaInfoResponse.cs" />
     <Compile Include="V20180717\Models\ModifyMediaStorageClassRequest.cs" />
@@ -786,6 +795,8 @@
     <Compile Include="V20180717\Models\UserDefineOcrTextReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\VerifyDomainRecordRequest.cs" />
     <Compile Include="V20180717\Models\VerifyDomainRecordResponse.cs" />
+    <Compile Include="V20180717\Models\VideoConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\VideoConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\VideoDenoiseInfo.cs" />
     <Compile Include="V20180717\Models\VideoFrameInterpolationInfo.cs" />
     <Compile Include="V20180717\Models\VideoTemplateInfo.cs" />
@@ -793,6 +804,9 @@
     <Compile Include="V20180717\Models\VideoTrackItem.cs" />
     <Compile Include="V20180717\Models\VoiceConfigureInfo.cs" />
     <Compile Include="V20180717\Models\VoiceConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\WatermarkConfigureData.cs" />
+    <Compile Include="V20180717\Models\WatermarkConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\WatermarkConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\WatermarkCycleConfigForUpdate.cs" />
     <Compile Include="V20180717\Models\WatermarkInput.cs" />
     <Compile Include="V20180717\Models\WatermarkTemplate.cs" />

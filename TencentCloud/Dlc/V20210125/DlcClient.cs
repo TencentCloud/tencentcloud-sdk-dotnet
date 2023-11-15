@@ -3253,6 +3253,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 查询可更新配置的引擎列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpdatableDataEnginesRequest"/></param>
+        /// <returns><see cref="DescribeUpdatableDataEnginesResponse"/></returns>
+        public async Task<DescribeUpdatableDataEnginesResponse> DescribeUpdatableDataEngines(DescribeUpdatableDataEnginesRequest req)
+        {
+             JsonResponseModel<DescribeUpdatableDataEnginesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUpdatableDataEngines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpdatableDataEnginesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询可更新配置的引擎列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpdatableDataEnginesRequest"/></param>
+        /// <returns><see cref="DescribeUpdatableDataEnginesResponse"/></returns>
+        public DescribeUpdatableDataEnginesResponse DescribeUpdatableDataEnginesSync(DescribeUpdatableDataEnginesRequest req)
+        {
+             JsonResponseModel<DescribeUpdatableDataEnginesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUpdatableDataEngines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpdatableDataEnginesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询用户自定义引擎参数
         /// </summary>
         /// <param name="req"><see cref="DescribeUserDataEngineConfigRequest"/></param>

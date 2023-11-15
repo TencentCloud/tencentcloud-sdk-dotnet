@@ -222,6 +222,66 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("CompanySealMark")]
         public long? CompanySealMark{ get; set; }
 
+        /// <summary>
+        /// 经营拍卖单位
+        /// </summary>
+        [JsonProperty("AuctionOrgName")]
+        public string AuctionOrgName{ get; set; }
+
+        /// <summary>
+        /// 经营拍卖单位地址
+        /// </summary>
+        [JsonProperty("AuctionOrgAddress")]
+        public string AuctionOrgAddress{ get; set; }
+
+        /// <summary>
+        /// 经营拍卖单位纳税人识别号
+        /// </summary>
+        [JsonProperty("AuctionOrgTaxID")]
+        public string AuctionOrgTaxID{ get; set; }
+
+        /// <summary>
+        /// 经营拍卖单位开户银行账号
+        /// </summary>
+        [JsonProperty("AuctionOrgBankAccount")]
+        public string AuctionOrgBankAccount{ get; set; }
+
+        /// <summary>
+        /// 经营拍卖单位电话
+        /// </summary>
+        [JsonProperty("AuctionOrgPhone")]
+        public string AuctionOrgPhone{ get; set; }
+
+        /// <summary>
+        /// 开票人
+        /// </summary>
+        [JsonProperty("Issuer")]
+        public string Issuer{ get; set; }
+
+        /// <summary>
+        /// 税控码
+        /// </summary>
+        [JsonProperty("TaxCode")]
+        public string TaxCode{ get; set; }
+
+        /// <summary>
+        /// 机器编号
+        /// </summary>
+        [JsonProperty("MachineSerialNumber")]
+        public string MachineSerialNumber{ get; set; }
+
+        /// <summary>
+        /// 机打发票代码
+        /// </summary>
+        [JsonProperty("MachineCode")]
+        public string MachineCode{ get; set; }
+
+        /// <summary>
+        /// 机打发票号码
+        /// </summary>
+        [JsonProperty("MachineNumber")]
+        public string MachineNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -261,6 +321,16 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "FormType", this.FormType);
             this.SetParamSimple(map, prefix + "FormName", this.FormName);
             this.SetParamSimple(map, prefix + "CompanySealMark", this.CompanySealMark);
+            this.SetParamSimple(map, prefix + "AuctionOrgName", this.AuctionOrgName);
+            this.SetParamSimple(map, prefix + "AuctionOrgAddress", this.AuctionOrgAddress);
+            this.SetParamSimple(map, prefix + "AuctionOrgTaxID", this.AuctionOrgTaxID);
+            this.SetParamSimple(map, prefix + "AuctionOrgBankAccount", this.AuctionOrgBankAccount);
+            this.SetParamSimple(map, prefix + "AuctionOrgPhone", this.AuctionOrgPhone);
+            this.SetParamSimple(map, prefix + "Issuer", this.Issuer);
+            this.SetParamSimple(map, prefix + "TaxCode", this.TaxCode);
+            this.SetParamSimple(map, prefix + "MachineSerialNumber", this.MachineSerialNumber);
+            this.SetParamSimple(map, prefix + "MachineCode", this.MachineCode);
+            this.SetParamSimple(map, prefix + "MachineNumber", this.MachineNumber);
         }
     }
 }

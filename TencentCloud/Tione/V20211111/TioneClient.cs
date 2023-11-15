@@ -1293,6 +1293,46 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的事件API
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventsRequest"/></param>
+        /// <returns><see cref="DescribeEventsResponse"/></returns>
+        public async Task<DescribeEventsResponse> DescribeEvents(DescribeEventsRequest req)
+        {
+             JsonResponseModel<DescribeEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的事件API
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventsRequest"/></param>
+        /// <returns><see cref="DescribeEventsResponse"/></returns>
+        public DescribeEventsResponse DescribeEventsSync(DescribeEventsRequest req)
+        {
+             JsonResponseModel<DescribeEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询推理镜像模板
         /// </summary>
         /// <param name="req"><see cref="DescribeInferTemplatesRequest"/></param>
@@ -1373,7 +1413,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 获取训练、推理、Notebook服务的日志 API
+        /// 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的日志API
         /// </summary>
         /// <param name="req"><see cref="DescribeLogsRequest"/></param>
         /// <returns><see cref="DescribeLogsResponse"/></returns>
@@ -1393,7 +1433,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 获取训练、推理、Notebook服务的日志 API
+        /// 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的日志API
         /// </summary>
         /// <param name="req"><see cref="DescribeLogsRequest"/></param>
         /// <returns><see cref="DescribeLogsResponse"/></returns>

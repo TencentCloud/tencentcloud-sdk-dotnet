@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 资产视角的端口风险列表
+        /// 端口视角的端口风险列表
         /// </summary>
         [JsonProperty("Data")]
         public PortViewPortRisk[] Data{ get; set; }

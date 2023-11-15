@@ -90,6 +90,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DatasourceConnectionNameSet")]
         public string[] DatasourceConnectionNameSet{ get; set; }
 
+        /// <summary>
+        /// 引擎版本，有效值：Native/SuperSQL，为空时默认获取SuperSQL引擎
+        /// </summary>
+        [JsonProperty("EngineGeneration")]
+        public string EngineGeneration{ get; set; }
+
+        /// <summary>
+        /// 引擎类型，支持：SparkSQL、SparkBatch、PrestoSQL、Kyuubi
+        /// </summary>
+        [JsonProperty("EngineTypeDetail")]
+        public string EngineTypeDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "EngineExecType", this.EngineExecType);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamArraySimple(map, prefix + "DatasourceConnectionNameSet.", this.DatasourceConnectionNameSet);
+            this.SetParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
+            this.SetParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
         }
     }
 }

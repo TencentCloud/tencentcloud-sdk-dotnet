@@ -101,6 +101,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("BindEnvironments")]
         public UsagePlanBindEnvironment[] BindEnvironments{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamArraySimple(map, prefix + "BindSecretIds.", this.BindSecretIds);
             this.SetParamSimple(map, prefix + "BindEnvironmentTotalCount", this.BindEnvironmentTotalCount);
             this.SetParamArrayObj(map, prefix + "BindEnvironments.", this.BindEnvironments);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

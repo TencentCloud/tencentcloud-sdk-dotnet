@@ -98,7 +98,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认3600
+        /// 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
@@ -211,6 +211,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("AutoAuthorization")]
         public bool? AutoAuthorization{ get; set; }
 
+        /// <summary>
+        /// 引擎网络ID
+        /// </summary>
+        [JsonProperty("EngineNetworkId")]
+        public string EngineNetworkId{ get; set; }
+
+        /// <summary>
+        /// 引擎世代，SuperSQL：代表supersql引擎，Native：代表标准引擎。默认值为SuperSQL
+        /// </summary>
+        [JsonProperty("EngineGeneration")]
+        public string EngineGeneration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -248,6 +260,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
             this.SetParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
             this.SetParamSimple(map, prefix + "AutoAuthorization", this.AutoAuthorization);
+            this.SetParamSimple(map, prefix + "EngineNetworkId", this.EngineNetworkId);
+            this.SetParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
         }
     }
 }

@@ -25,7 +25,12 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 查询哪个服务的事件（可选值为TRAIN, NOTEBOOK, INFER）
+        /// 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
+        /// 枚举值：
+        /// - TRAIN
+        /// - NOTEBOOK
+        /// - INFER
+        /// - BATCH
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }
@@ -49,7 +54,30 @@ namespace TencentCloud.Tione.V20211111.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 查询哪个Pod的日志（支持结尾通配符*)
+        /// 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
+        /// - Service类型为TRAIN：
+        ///   调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
+        /// - Service类型为NOTEBOOK：
+        ///   调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
+        /// - Service类型为INFER：
+        ///   调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
+        /// - Service类型为BATCH：
+        ///   调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
+        /// </summary>
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
+
+        /// <summary>
+        /// Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：
+        /// - Service类型为TRAIN：
+        ///   调用[DescribeTrainingTaskPods接口](/document/product/851/75088)查询训练任务pod列表，PodName为接口返回值中Response.PodNames
+        /// - Service类型为NOTEBOOK：
+        ///   调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName
+        /// - Service类型为INFER：
+        ///   调用[DescribeModelService接口](/document/product/851/82287)查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos
+        /// - Service类型为BATCH：
+        ///   调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList
+        /// 注：支持结尾通配符*
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
@@ -92,6 +120,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "PodName", this.PodName);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);

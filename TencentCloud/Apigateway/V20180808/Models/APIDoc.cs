@@ -42,6 +42,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("ApiDocStatus")]
         public string ApiDocStatus{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "ApiDocId", this.ApiDocId);
             this.SetParamSimple(map, prefix + "ApiDocName", this.ApiDocName);
             this.SetParamSimple(map, prefix + "ApiDocStatus", this.ApiDocStatus);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

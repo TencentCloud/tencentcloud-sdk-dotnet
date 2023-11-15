@@ -136,6 +136,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
+        /// <summary>
+        /// 0系统识别，1人工打标
+        /// </summary>
+        [JsonProperty("IdentifyType")]
+        public long? IdentifyType{ get; set; }
+
+        /// <summary>
+        /// 0未核查，1已核查
+        /// </summary>
+        [JsonProperty("CheckStatus")]
+        public long? CheckStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +170,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "TrustedScore", this.TrustedScore);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "IdentifyType", this.IdentifyType);
+            this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
         }
     }
 }

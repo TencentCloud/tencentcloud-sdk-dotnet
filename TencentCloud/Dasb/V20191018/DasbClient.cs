@@ -1813,6 +1813,46 @@ namespace TencentCloud.Dasb.V20191018
         }
 
         /// <summary>
+        /// 修改用户组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserGroupRequest"/></param>
+        /// <returns><see cref="ModifyUserGroupResponse"/></returns>
+        public async Task<ModifyUserGroupResponse> ModifyUserGroup(ModifyUserGroupRequest req)
+        {
+             JsonResponseModel<ModifyUserGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyUserGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserGroupRequest"/></param>
+        /// <returns><see cref="ModifyUserGroupResponse"/></returns>
+        public ModifyUserGroupResponse ModifyUserGroupSync(ModifyUserGroupRequest req)
+        {
+             JsonResponseModel<ModifyUserGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyUserGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 清除设备账号绑定密码
         /// </summary>
         /// <param name="req"><see cref="ResetDeviceAccountPasswordRequest"/></param>

@@ -312,5 +312,45 @@ namespace TencentCloud.Vrs.V20200824
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 查询复刻音色
+        /// </summary>
+        /// <param name="req"><see cref="GetVRSVoiceTypesRequest"/></param>
+        /// <returns><see cref="GetVRSVoiceTypesResponse"/></returns>
+        public async Task<GetVRSVoiceTypesResponse> GetVRSVoiceTypes(GetVRSVoiceTypesRequest req)
+        {
+             JsonResponseModel<GetVRSVoiceTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetVRSVoiceTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetVRSVoiceTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询复刻音色
+        /// </summary>
+        /// <param name="req"><see cref="GetVRSVoiceTypesRequest"/></param>
+        /// <returns><see cref="GetVRSVoiceTypesResponse"/></returns>
+        public GetVRSVoiceTypesResponse GetVRSVoiceTypesSync(GetVRSVoiceTypesRequest req)
+        {
+             JsonResponseModel<GetVRSVoiceTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetVRSVoiceTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetVRSVoiceTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

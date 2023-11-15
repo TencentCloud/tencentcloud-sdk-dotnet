@@ -66,6 +66,30 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("DestLevelId")]
         public long? DestLevelId{ get; set; }
 
+        /// <summary>
+        /// 调整前的规则id（系统识别的id）
+        /// </summary>
+        [JsonProperty("SrcRuleId")]
+        public long? SrcRuleId{ get; set; }
+
+        /// <summary>
+        /// 调整前的规则id（系统识别的id）
+        /// </summary>
+        [JsonProperty("SrcCategoryId")]
+        public long? SrcCategoryId{ get; set; }
+
+        /// <summary>
+        /// 调整前的等级id
+        /// </summary>
+        [JsonProperty("SrcLevelId")]
+        public long? SrcLevelId{ get; set; }
+
+        /// <summary>
+        /// 0系统识别，1人工打标
+        /// </summary>
+        [JsonProperty("IdentifyType")]
+        public long? IdentifyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +103,10 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "DestRuleId", this.DestRuleId);
             this.SetParamSimple(map, prefix + "DestCategoryId", this.DestCategoryId);
             this.SetParamSimple(map, prefix + "DestLevelId", this.DestLevelId);
+            this.SetParamSimple(map, prefix + "SrcRuleId", this.SrcRuleId);
+            this.SetParamSimple(map, prefix + "SrcCategoryId", this.SrcCategoryId);
+            this.SetParamSimple(map, prefix + "SrcLevelId", this.SrcLevelId);
+            this.SetParamSimple(map, prefix + "IdentifyType", this.IdentifyType);
         }
     }
 }

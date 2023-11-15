@@ -31,7 +31,7 @@ namespace TencentCloud.Ams.V20201229.Models
         public string Codecs{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
+        /// 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为毫秒。**默认值为15秒**，支持用户自定义配置。
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }

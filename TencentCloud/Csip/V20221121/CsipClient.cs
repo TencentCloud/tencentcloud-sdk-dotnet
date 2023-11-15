@@ -853,7 +853,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 获取网站风险列表
+        /// 获取内容风险列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskCenterWebsiteRiskListRequest"/></param>
         /// <returns><see cref="DescribeRiskCenterWebsiteRiskListResponse"/></returns>
@@ -873,7 +873,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// 获取网站风险列表
+        /// 获取内容风险列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskCenterWebsiteRiskListRequest"/></param>
         /// <returns><see cref="DescribeRiskCenterWebsiteRiskListResponse"/></returns>

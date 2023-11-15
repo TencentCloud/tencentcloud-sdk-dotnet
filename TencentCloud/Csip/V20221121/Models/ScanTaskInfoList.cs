@@ -74,7 +74,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 排除扫描资产信息
+        /// 自定义指定扫描资产信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfDefiningAssets")]
@@ -130,7 +130,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ScanItem{ get; set; }
 
         /// <summary>
-        /// 0-全扫，1-指定资产扫，2-排除资产扫
+        /// 0-全扫，1-指定资产扫，2-排除资产扫，3-自定义指定资产扫描
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanAssetType")]

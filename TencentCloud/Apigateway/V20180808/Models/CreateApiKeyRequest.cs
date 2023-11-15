@@ -48,6 +48,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("AccessKeySecret")]
         public string AccessKeySecret{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "AccessKeyType", this.AccessKeyType);
             this.SetParamSimple(map, prefix + "AccessKeyId", this.AccessKeyId);
             this.SetParamSimple(map, prefix + "AccessKeySecret", this.AccessKeySecret);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

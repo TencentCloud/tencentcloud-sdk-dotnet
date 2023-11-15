@@ -48,6 +48,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("MaxRequestNumPreSec")]
         public long? MaxRequestNumPreSec{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "UsagePlanDesc", this.UsagePlanDesc);
             this.SetParamSimple(map, prefix + "MaxRequestNum", this.MaxRequestNum);
             this.SetParamSimple(map, prefix + "MaxRequestNumPreSec", this.MaxRequestNumPreSec);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

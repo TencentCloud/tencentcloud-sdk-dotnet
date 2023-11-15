@@ -241,10 +241,22 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Issuer{ get; set; }
 
         /// <summary>
-        /// 完税凭证号码
+        /// 进口证明书号
         /// </summary>
         [JsonProperty("TaxNum")]
         public string TaxNum{ get; set; }
+
+        /// <summary>
+        /// 完税凭证号码
+        /// </summary>
+        [JsonProperty("TaxPayNum")]
+        public string TaxPayNum{ get; set; }
+
+        /// <summary>
+        /// 税控码
+        /// </summary>
+        [JsonProperty("TaxCode")]
+        public string TaxCode{ get; set; }
 
         /// <summary>
         /// 限乘人数
@@ -319,6 +331,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "FormName", this.FormName);
             this.SetParamSimple(map, prefix + "Issuer", this.Issuer);
             this.SetParamSimple(map, prefix + "TaxNum", this.TaxNum);
+            this.SetParamSimple(map, prefix + "TaxPayNum", this.TaxPayNum);
+            this.SetParamSimple(map, prefix + "TaxCode", this.TaxCode);
             this.SetParamSimple(map, prefix + "MaxPeopleNum", this.MaxPeopleNum);
             this.SetParamSimple(map, prefix + "Origin", this.Origin);
             this.SetParamSimple(map, prefix + "MachineCode", this.MachineCode);

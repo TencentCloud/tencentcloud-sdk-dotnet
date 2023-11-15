@@ -36,6 +36,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("ComplianceId")]
         public long? ComplianceId{ get; set; }
 
+        /// <summary>
+        /// 可信分排序，ASC-升序
+        /// DESC降序
+        /// </summary>
+        [JsonProperty("CreditScore")]
+        public string CreditScore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         {
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
             this.SetParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
+            this.SetParamSimple(map, prefix + "CreditScore", this.CreditScore);
         }
     }
 }

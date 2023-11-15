@@ -54,6 +54,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 可信分排序，ASC升序
+        /// DESC降序
+        /// </summary>
+        [JsonProperty("CreditScore")]
+        public string CreditScore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "CreditScore", this.CreditScore);
         }
     }
 }
