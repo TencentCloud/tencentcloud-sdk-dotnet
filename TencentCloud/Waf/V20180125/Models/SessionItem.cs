@@ -66,6 +66,34 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("TsVersion")]
         public string TsVersion{ get; set; }
 
+        /// <summary>
+        /// SessionID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public long? SessionId{ get; set; }
+
+        /// <summary>
+        /// Session名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionName")]
+        public string SessionName{ get; set; }
+
+        /// <summary>
+        /// Session是否正在被启用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionInUsed")]
+        public bool? SessionInUsed{ get; set; }
+
+        /// <summary>
+        /// Session关联的CC规则ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RelatedRuleID")]
+        public long?[] RelatedRuleID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +107,10 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "EndOffset", this.EndOffset);
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "TsVersion", this.TsVersion);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "SessionName", this.SessionName);
+            this.SetParamSimple(map, prefix + "SessionInUsed", this.SessionInUsed);
+            this.SetParamArraySimple(map, prefix + "RelatedRuleID.", this.RelatedRuleID);
         }
     }
 }
