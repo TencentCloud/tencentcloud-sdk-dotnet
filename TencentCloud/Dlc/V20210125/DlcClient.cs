@@ -3173,6 +3173,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（DescribeTables）用于查询数据表名称列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablesNameRequest"/></param>
+        /// <returns><see cref="DescribeTablesNameResponse"/></returns>
+        public async Task<DescribeTablesNameResponse> DescribeTablesName(DescribeTablesNameRequest req)
+        {
+             JsonResponseModel<DescribeTablesNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTablesName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTablesNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTables）用于查询数据表名称列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablesNameRequest"/></param>
+        /// <returns><see cref="DescribeTablesNameResponse"/></returns>
+        public DescribeTablesNameResponse DescribeTablesNameSync(DescribeTablesNameRequest req)
+        {
+             JsonResponseModel<DescribeTablesNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTablesName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTablesNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询任务结果
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskResultRequest"/></param>

@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 热Key
+        /// 热 Key 的名称。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// Key 类型。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 数量
+        /// 某段时间内热 Key 的访问次数
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

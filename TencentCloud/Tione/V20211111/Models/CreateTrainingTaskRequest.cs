@@ -157,6 +157,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
+        /// <summary>
+        /// 太极预训练模型ID
+        /// </summary>
+        [JsonProperty("PreTrainModel")]
+        public PreTrainModel PreTrainModel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -185,6 +191,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamObj(map, prefix + "PreTrainModel.", this.PreTrainModel);
         }
     }
 }

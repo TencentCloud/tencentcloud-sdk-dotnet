@@ -131,6 +131,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MaxRetryTimes")]
         public long? MaxRetryTimes{ get; set; }
 
+        /// <summary>
+        /// 协议类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientProtocol")]
+        public string ClientProtocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +158,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Consistency", this.Consistency);
             this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
             this.SetParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
+            this.SetParamSimple(map, prefix + "ClientProtocol", this.ClientProtocol);
         }
     }
 }

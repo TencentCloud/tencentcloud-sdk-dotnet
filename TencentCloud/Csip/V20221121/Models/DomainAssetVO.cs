@@ -200,7 +200,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] SeverIp{ get; set; }
 
         /// <summary>
-        /// boi访问数量
+        /// bot攻击数量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BotCount")]
@@ -291,7 +291,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? VerifyStatus{ get; set; }
 
         /// <summary>
-        /// bot访问数据
+        /// bot访问数量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BotAccessCount")]

@@ -25,7 +25,7 @@ namespace TencentCloud.Vrs.V20200824.Models
     {
         
         /// <summary>
-        /// 数据
+        /// 复刻音色信息
         /// </summary>
         [JsonProperty("Data")]
         public VoiceTypeListData Data{ get; set; }

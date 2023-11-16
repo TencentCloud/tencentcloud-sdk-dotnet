@@ -131,6 +131,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Retention")]
         public long? Retention{ get; set; }
 
+        /// <summary>
+        /// 是否开启ACL鉴权
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AclEnabled")]
+        public bool? AclEnabled{ get; set; }
+
+        /// <summary>
+        /// 销毁时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DestroyTime")]
+        public ulong? DestroyTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +168,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxRetention", this.MaxRetention);
             this.SetParamSimple(map, prefix + "MinRetention", this.MinRetention);
             this.SetParamSimple(map, prefix + "Retention", this.Retention);
+            this.SetParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
+            this.SetParamSimple(map, prefix + "DestroyTime", this.DestroyTime);
         }
     }
 }

@@ -26,42 +26,36 @@ namespace TencentCloud.Vrs.V20200824.Models
         
         /// <summary>
         /// 音色id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoiceType")]
         public long? VoiceType{ get; set; }
 
         /// <summary>
         /// 音色名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoiceName")]
         public string VoiceName{ get; set; }
 
         /// <summary>
         /// 音色性别: 1-male 2-female
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoiceGender")]
         public long? VoiceGender{ get; set; }
 
         /// <summary>
         /// 复刻类型: 0-轻量版复刻 1-基础版复刻
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
         /// <summary>
         /// 复刻任务 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskID")]
         public string TaskID{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DateCreated")]
         public string DateCreated{ get; set; }

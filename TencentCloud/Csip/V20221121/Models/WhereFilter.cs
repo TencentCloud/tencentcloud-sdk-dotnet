@@ -39,7 +39,7 @@ namespace TencentCloud.Csip.V20221121.Models
         /// <summary>
         /// 中台定义：
         /// 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
-        /// 精确匹配填 7 模糊匹配填9 兼容 中台定的结构
+        /// 精确匹配填 7 模糊匹配填9 
         /// </summary>
         [JsonProperty("OperatorType")]
         public long? OperatorType{ get; set; }

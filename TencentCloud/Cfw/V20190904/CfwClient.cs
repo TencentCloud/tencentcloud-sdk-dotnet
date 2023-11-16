@@ -2293,7 +2293,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 防火墙开关列表
+        /// 防火墙开关列表，已废弃，请使用DescribeFwEdgeIps
         /// </summary>
         /// <param name="req"><see cref="DescribeSwitchListsRequest"/></param>
         /// <returns><see cref="DescribeSwitchListsResponse"/></returns>
@@ -2313,7 +2313,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 防火墙开关列表
+        /// 防火墙开关列表，已废弃，请使用DescribeFwEdgeIps
         /// </summary>
         /// <param name="req"><see cref="DescribeSwitchListsRequest"/></param>
         /// <returns><see cref="DescribeSwitchListsResponse"/></returns>

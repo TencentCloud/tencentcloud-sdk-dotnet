@@ -19945,7 +19945,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        ///  一键检测
+        /// 漏洞一键检测
         /// </summary>
         /// <param name="req"><see cref="ScanVulRequest"/></param>
         /// <returns><see cref="ScanVulResponse"/></returns>
@@ -19965,7 +19965,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        ///  一键检测
+        /// 漏洞一键检测
         /// </summary>
         /// <param name="req"><see cref="ScanVulRequest"/></param>
         /// <returns><see cref="ScanVulResponse"/></returns>

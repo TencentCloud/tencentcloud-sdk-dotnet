@@ -31,7 +31,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 登录/注册成功后返回登录态token。有效期7天。
+        /// 注册成功后返回登录态token，有效期7天。token过期后可以通过调用“登录”或“源账号登录”进行更新。
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }
