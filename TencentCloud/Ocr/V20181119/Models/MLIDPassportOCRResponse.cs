@@ -25,49 +25,49 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 护照ID
+        /// 护照ID（机读码区的解析结果）
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// 姓名（机读码区的解析结果）
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 出生日期
+        /// 出生日期（机读码区的解析结果）
         /// </summary>
         [JsonProperty("DateOfBirth")]
         public string DateOfBirth{ get; set; }
 
         /// <summary>
-        /// 性别（F女，M男）
+        /// 性别（F女，M男）（机读码区的解析结果）
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 有效期
+        /// 有效期（机读码区的解析结果）
         /// </summary>
         [JsonProperty("DateOfExpiration")]
         public string DateOfExpiration{ get; set; }
 
         /// <summary>
-        /// 发行国
+        /// 发行国（机读码区的解析结果）
         /// </summary>
         [JsonProperty("IssuingCountry")]
         public string IssuingCountry{ get; set; }
 
         /// <summary>
-        /// 国家地区代码
+        /// 国家地区代码（机读码区的解析结果）
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }
 
         /// <summary>
-        /// 告警码
+        /// 告警码：
         /// -9103	证照翻拍告警
         /// -9102	证照复印件告警（包括黑白复印件、彩色复印件）
         /// -9106       证件遮挡告警
@@ -108,18 +108,30 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string CodeCrc{ get; set; }
 
         /// <summary>
-        /// 姓
+        /// 姓（机读码区的解析结果）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Surname")]
         public string Surname{ get; set; }
 
         /// <summary>
-        /// 名
+        /// 名（机读码区的解析结果）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GivenName")]
         public string GivenName{ get; set; }
+
+        /// <summary>
+        /// 类型（机读码区的解析结果）
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 信息区证件内容
+        /// </summary>
+        [JsonProperty("PassportRecognizeInfos")]
+        public PassportRecognizeInfos PassportRecognizeInfos{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -147,6 +159,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "CodeCrc", this.CodeCrc);
             this.SetParamSimple(map, prefix + "Surname", this.Surname);
             this.SetParamSimple(map, prefix + "GivenName", this.GivenName);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamObj(map, prefix + "PassportRecognizeInfos.", this.PassportRecognizeInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -893,7 +893,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 证书查询关联资源
+        /// 证书查询关联资源， 最新查询接口请使用CreateCertificateBindResourceSyncTask， 可以查询更多支持的云资源
         /// </summary>
         /// <param name="req"><see cref="DescribeDeployedResourcesRequest"/></param>
         /// <returns><see cref="DescribeDeployedResourcesResponse"/></returns>
@@ -913,7 +913,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 证书查询关联资源
+        /// 证书查询关联资源， 最新查询接口请使用CreateCertificateBindResourceSyncTask， 可以查询更多支持的云资源
         /// </summary>
         /// <param name="req"><see cref="DescribeDeployedResourcesRequest"/></param>
         /// <returns><see cref="DescribeDeployedResourcesResponse"/></returns>
