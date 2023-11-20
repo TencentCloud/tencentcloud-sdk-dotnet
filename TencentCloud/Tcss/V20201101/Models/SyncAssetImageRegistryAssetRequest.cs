@@ -24,12 +24,26 @@ namespace TencentCloud.Tcss.V20201101.Models
     public class SyncAssetImageRegistryAssetRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 是否同步所有镜像仓库
+        /// </summary>
+        [JsonProperty("All")]
+        public bool? All{ get; set; }
+
+        /// <summary>
+        /// 需要同步的部分镜像仓库
+        /// </summary>
+        [JsonProperty("RegistryIds")]
+        public ulong?[] RegistryIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "All", this.All);
+            this.SetParamArraySimple(map, prefix + "RegistryIds.", this.RegistryIds);
         }
     }
 }

@@ -46,7 +46,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string RiskLevelDescription{ get; set; }
 
         /// <summary>
-        /// 引用的分类分级模版
+        /// 引用的分类分级模板
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentifyComplianceName")]

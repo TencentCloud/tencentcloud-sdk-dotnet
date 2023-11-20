@@ -3273,6 +3273,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取审批分类列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApproveTypeListRequest"/></param>
+        /// <returns><see cref="DescribeApproveTypeListResponse"/></returns>
+        public async Task<DescribeApproveTypeListResponse> DescribeApproveTypeList(DescribeApproveTypeListRequest req)
+        {
+             JsonResponseModel<DescribeApproveTypeListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApproveTypeList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApproveTypeListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取审批分类列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApproveTypeListRequest"/></param>
+        /// <returns><see cref="DescribeApproveTypeListResponse"/></returns>
+        public DescribeApproveTypeListResponse DescribeApproveTypeListSync(DescribeApproveTypeListRequest req)
+        {
+             JsonResponseModel<DescribeApproveTypeListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApproveTypeList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApproveTypeListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询基线DAG
         /// </summary>
         /// <param name="req"><see cref="DescribeBaselineAllTaskDagRequest"/></param>

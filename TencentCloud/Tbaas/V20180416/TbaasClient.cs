@@ -133,6 +133,86 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 获取Fabric某区块的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFabricBlockRequest"/></param>
+        /// <returns><see cref="DescribeFabricBlockResponse"/></returns>
+        public async Task<DescribeFabricBlockResponse> DescribeFabricBlock(DescribeFabricBlockRequest req)
+        {
+             JsonResponseModel<DescribeFabricBlockResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFabricBlock");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFabricBlockResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Fabric某区块的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFabricBlockRequest"/></param>
+        /// <returns><see cref="DescribeFabricBlockResponse"/></returns>
+        public DescribeFabricBlockResponse DescribeFabricBlockSync(DescribeFabricBlockRequest req)
+        {
+             JsonResponseModel<DescribeFabricBlockResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFabricBlock");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFabricBlockResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Fabric交易的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFabricTransactionRequest"/></param>
+        /// <returns><see cref="DescribeFabricTransactionResponse"/></returns>
+        public async Task<DescribeFabricTransactionResponse> DescribeFabricTransaction(DescribeFabricTransactionRequest req)
+        {
+             JsonResponseModel<DescribeFabricTransactionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFabricTransaction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFabricTransactionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Fabric交易的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFabricTransactionRequest"/></param>
+        /// <returns><see cref="DescribeFabricTransactionResponse"/></returns>
+        public DescribeFabricTransactionResponse DescribeFabricTransactionSync(DescribeFabricTransactionRequest req)
+        {
+             JsonResponseModel<DescribeFabricTransactionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFabricTransaction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFabricTransactionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 下载用户证书
         /// </summary>
         /// <param name="req"><see cref="DownloadUserCertRequest"/></param>
@@ -573,6 +653,46 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 调用Fabric用户合约执行交易
+        /// </summary>
+        /// <param name="req"><see cref="InvokeFabricChaincodeRequest"/></param>
+        /// <returns><see cref="InvokeFabricChaincodeResponse"/></returns>
+        public async Task<InvokeFabricChaincodeResponse> InvokeFabricChaincode(InvokeFabricChaincodeRequest req)
+        {
+             JsonResponseModel<InvokeFabricChaincodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InvokeFabricChaincode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeFabricChaincodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调用Fabric用户合约执行交易
+        /// </summary>
+        /// <param name="req"><see cref="InvokeFabricChaincodeRequest"/></param>
+        /// <returns><see cref="InvokeFabricChaincodeResponse"/></returns>
+        public InvokeFabricChaincodeResponse InvokeFabricChaincodeSync(InvokeFabricChaincodeRequest req)
+        {
+             JsonResponseModel<InvokeFabricChaincodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InvokeFabricChaincode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeFabricChaincodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询交易
         /// </summary>
         /// <param name="req"><see cref="QueryRequest"/></param>
@@ -844,6 +964,46 @@ namespace TencentCloud.Tbaas.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "QueryChainMakerTransaction");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryChainMakerTransactionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调用Fabric用户合约查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFabricChaincodeRequest"/></param>
+        /// <returns><see cref="QueryFabricChaincodeResponse"/></returns>
+        public async Task<QueryFabricChaincodeResponse> QueryFabricChaincode(QueryFabricChaincodeRequest req)
+        {
+             JsonResponseModel<QueryFabricChaincodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFabricChaincode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFabricChaincodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调用Fabric用户合约查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFabricChaincodeRequest"/></param>
+        /// <returns><see cref="QueryFabricChaincodeResponse"/></returns>
+        public QueryFabricChaincodeResponse QueryFabricChaincodeSync(QueryFabricChaincodeRequest req)
+        {
+             JsonResponseModel<QueryFabricChaincodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFabricChaincode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFabricChaincodeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

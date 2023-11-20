@@ -103,7 +103,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long? CosTotalQuota{ get; set; }
 
         /// <summary>
-        /// COS配额单位，比如TB。
+        /// COS配额单位，例如:TB。
         /// </summary>
         [JsonProperty("CosQuotaUnit")]
         public string CosQuotaUnit{ get; set; }

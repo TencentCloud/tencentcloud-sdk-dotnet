@@ -32,13 +32,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 评估模版Id
+        /// 评估模板Id
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 评估模版名称
+        /// 评估模板名称
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
@@ -51,37 +51,37 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 模版来源，内置/用户自定，取值（system，user）
+        /// 模板来源，内置/用户自定，取值（system，user）
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 模版类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
+        /// 模板类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
         /// </summary>
         [JsonProperty("UseType")]
         public string UseType{ get; set; }
 
         /// <summary>
-        /// 评估模版创建时间
+        /// 评估模板创建时间
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 模版关联的评估项数量
+        /// 模板关联的评估项数量
         /// </summary>
         [JsonProperty("ControlItemCount")]
         public long? ControlItemCount{ get; set; }
 
         /// <summary>
-        /// 模版已启用的评估项数量
+        /// 模板已启用的评估项数量
         /// </summary>
         [JsonProperty("AppliedItemCount")]
         public long? AppliedItemCount{ get; set; }
 
         /// <summary>
-        /// 模版启用状态，草稿/已启用，取值draft / launched
+        /// 模板启用状态，草稿/已启用，取值draft / launched
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -63,25 +63,25 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string BusinessOwner{ get; set; }
 
         /// <summary>
-        /// 评估模版Id
+        /// 评估模板Id
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 评估模版名称
+        /// 评估模板名称
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 分类分级模版Id
+        /// 分类分级模板Id
         /// </summary>
         [JsonProperty("ComplianceGroupId")]
         public long? ComplianceGroupId{ get; set; }
 
         /// <summary>
-        /// 分类分级模版名称
+        /// 分类分级模板名称
         /// </summary>
         [JsonProperty("ComplianceGroupName")]
         public string ComplianceGroupName{ get; set; }
@@ -137,7 +137,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string ErrorInfo{ get; set; }
 
         /// <summary>
-        /// 模版主键id
+        /// 模板主键id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateUid")]

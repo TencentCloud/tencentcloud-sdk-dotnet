@@ -114,6 +114,20 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("PostCKafkaStatus")]
         public long? PostCKafkaStatus{ get; set; }
 
+        /// <summary>
+        /// 对象类型：CLB:负载均衡器，TSE:云原生网关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 对象地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +149,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "InstanceLevel", this.InstanceLevel);
             this.SetParamSimple(map, prefix + "PostCLSStatus", this.PostCLSStatus);
             this.SetParamSimple(map, prefix + "PostCKafkaStatus", this.PostCKafkaStatus);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

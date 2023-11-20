@@ -91,6 +91,27 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
+        /// <summary>
+        /// 修改时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
+
+        /// <summary>
+        /// 生效状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ValidStatus")]
+        public long? ValidStatus{ get; set; }
+
+        /// <summary>
+        /// 来源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +129,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Strategies.", this.Strategies);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

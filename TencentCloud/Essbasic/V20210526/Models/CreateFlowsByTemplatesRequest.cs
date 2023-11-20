@@ -57,7 +57,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 预览模式下产生的预览链接类型 
-        /// <ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+        /// <ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
         /// <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
         /// 注: `此参数在NeedPreview 为true时有效`
         /// </summary>

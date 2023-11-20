@@ -25,13 +25,13 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 访问日志保存期限，范围为[1, 30]
+        /// 访问日志保存期限，范围为[1, 180]
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 日志主题
+        /// 日志主题，新版本不需要再传
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

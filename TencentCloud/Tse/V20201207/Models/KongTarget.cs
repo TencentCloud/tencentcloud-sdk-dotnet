@@ -66,6 +66,20 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
+        /// <summary>
+        /// CVM实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CvmInstanceId")]
+        public string CvmInstanceId{ get; set; }
+
+        /// <summary>
+        /// CVM实例名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CvmInstanceName")]
+        public string CvmInstanceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +92,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Health", this.Health);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "CvmInstanceId", this.CvmInstanceId);
+            this.SetParamSimple(map, prefix + "CvmInstanceName", this.CvmInstanceName);
         }
     }
 }

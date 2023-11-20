@@ -42,6 +42,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ModifyPayType")]
         public string ModifyPayType{ get; set; }
 
+        /// <summary>
+        /// 自动续费标记，0表示不自动续费，1表示进行自动续费
+        /// </summary>
+        [JsonProperty("AutoRenew")]
+        public long? AutoRenew{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "ModifyPayType", this.ModifyPayType);
+            this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         }
     }
 }

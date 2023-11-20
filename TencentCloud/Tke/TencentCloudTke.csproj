@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.896</VersionPrefix>
+    <VersionPrefix>3.0.897</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -239,6 +239,8 @@
     <Compile Include="V20180525\Models\DescribeClusterEndpointVipStatusResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterEndpointsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterEndpointsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterExtraArgsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterExtraArgsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterInspectionResultsOverviewRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterInspectionResultsOverviewResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterInstancesRequest.cs" />
@@ -309,6 +311,10 @@
     <Compile Include="V20180525\Models\DescribeExistedInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeExternalClusterSpecRequest.cs" />
     <Compile Include="V20180525\Models\DescribeExternalClusterSpecResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeExternalNodeSupportConfigRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeExternalNodeSupportConfigResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeIPAMDRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeIPAMDResponse.cs" />
     <Compile Include="V20180525\Models\DescribeImageCachesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeImageCachesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeImagesRequest.cs" />
@@ -590,6 +596,7 @@
     <Compile Include="V20180525\Models\ServiceAccountAuthenticationOptions.cs" />
     <Compile Include="V20180525\Models\SetNodePoolNodeProtectionRequest.cs" />
     <Compile Include="V20180525\Models\SetNodePoolNodeProtectionResponse.cs" />
+    <Compile Include="V20180525\Models\Step.cs" />
     <Compile Include="V20180525\Models\SubnetInfos.cs" />
     <Compile Include="V20180525\Models\SuperNodeResource.cs" />
     <Compile Include="V20180525\Models\SyncPrometheusTempRequest.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.896</VersionPrefix>
+    <VersionPrefix>3.0.897</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,7 +58,10 @@
     <Compile Include="V20180328\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20180328\Models\Backup.cs" />
     <Compile Include="V20180328\Models\BackupFile.cs" />
+    <Compile Include="V20180328\Models\BalanceReadOnlyGroupRequest.cs" />
+    <Compile Include="V20180328\Models\BalanceReadOnlyGroupResponse.cs" />
     <Compile Include="V20180328\Models\BusinessIntelligenceFile.cs" />
+    <Compile Include="V20180328\Models\CheckItem.cs" />
     <Compile Include="V20180328\Models\CloneDBRequest.cs" />
     <Compile Include="V20180328\Models\CloneDBResponse.cs" />
     <Compile Include="V20180328\Models\CloseInterCommunicationRequest.cs" />
@@ -129,6 +132,10 @@
     <Compile Include="V20180328\Models\DeleteMigrationResponse.cs" />
     <Compile Include="V20180328\Models\DeletePublishSubscribeRequest.cs" />
     <Compile Include="V20180328\Models\DeletePublishSubscribeResponse.cs" />
+    <Compile Include="V20180328\Models\DeleteRestoreTaskRequest.cs" />
+    <Compile Include="V20180328\Models\DeleteRestoreTaskResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeAccountPrivilegeByDBRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeAccountPrivilegeByDBResponse.cs" />
     <Compile Include="V20180328\Models\DescribeAccountsRequest.cs" />
     <Compile Include="V20180328\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeBackupByFlowIdRequest.cs" />
@@ -151,10 +158,14 @@
     <Compile Include="V20180328\Models\DescribeBackupsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeBusinessIntelligenceFileRequest.cs" />
     <Compile Include="V20180328\Models\DescribeBusinessIntelligenceFileResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeCollationTimeZoneRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeCollationTimeZoneResponse.cs" />
     <Compile Include="V20180328\Models\DescribeCrossBackupStatisticalRequest.cs" />
     <Compile Include="V20180328\Models\DescribeCrossBackupStatisticalResponse.cs" />
     <Compile Include="V20180328\Models\DescribeCrossRegionZoneRequest.cs" />
     <Compile Include="V20180328\Models\DescribeCrossRegionZoneResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeCrossRegionsRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeCrossRegionsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeDBCharsetsRequest.cs" />
     <Compile Include="V20180328\Models\DescribeDBCharsetsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeDBInstanceInterRequest.cs" />
@@ -163,12 +174,18 @@
     <Compile Include="V20180328\Models\DescribeDBInstancesAttributeResponse.cs" />
     <Compile Include="V20180328\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="V20180328\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeDBPrivilegeByAccountRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeDBPrivilegeByAccountResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeDBRestoreTimeRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeDBRestoreTimeResponse.cs" />
     <Compile Include="V20180328\Models\DescribeDBSecurityGroupsRequest.cs" />
     <Compile Include="V20180328\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeDBsNormalRequest.cs" />
     <Compile Include="V20180328\Models\DescribeDBsNormalResponse.cs" />
     <Compile Include="V20180328\Models\DescribeDBsRequest.cs" />
     <Compile Include="V20180328\Models\DescribeDBsResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeDatabaseNamesRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeDatabaseNamesResponse.cs" />
     <Compile Include="V20180328\Models\DescribeDatabasesNormalRequest.cs" />
     <Compile Include="V20180328\Models\DescribeDatabasesNormalResponse.cs" />
     <Compile Include="V20180328\Models\DescribeDatabasesRequest.cs" />
@@ -179,12 +196,18 @@
     <Compile Include="V20180328\Models\DescribeHASwitchLogResponse.cs" />
     <Compile Include="V20180328\Models\DescribeIncrementalMigrationRequest.cs" />
     <Compile Include="V20180328\Models\DescribeIncrementalMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeInquiryPriceParameterRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeInquiryPriceParameterResponse.cs" />
     <Compile Include="V20180328\Models\DescribeInstanceByOrdersRequest.cs" />
     <Compile Include="V20180328\Models\DescribeInstanceByOrdersResponse.cs" />
     <Compile Include="V20180328\Models\DescribeInstanceParamRecordsRequest.cs" />
     <Compile Include="V20180328\Models\DescribeInstanceParamRecordsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeInstanceParamsRequest.cs" />
     <Compile Include="V20180328\Models\DescribeInstanceParamsResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeInstanceTasksRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeInstanceTasksResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeInstanceTradeParameterRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeInstanceTradeParameterResponse.cs" />
     <Compile Include="V20180328\Models\DescribeMaintenanceSpanRequest.cs" />
     <Compile Include="V20180328\Models\DescribeMaintenanceSpanResponse.cs" />
     <Compile Include="V20180328\Models\DescribeMigrationDatabasesRequest.cs" />
@@ -197,10 +220,14 @@
     <Compile Include="V20180328\Models\DescribeOrdersResponse.cs" />
     <Compile Include="V20180328\Models\DescribeProductConfigRequest.cs" />
     <Compile Include="V20180328\Models\DescribeProductConfigResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeProductSpecRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeProductSpecResponse.cs" />
     <Compile Include="V20180328\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="V20180328\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="V20180328\Models\DescribePublishSubscribeRequest.cs" />
     <Compile Include="V20180328\Models\DescribePublishSubscribeResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeReadOnlyGroupAutoWeightRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeReadOnlyGroupAutoWeightResponse.cs" />
     <Compile Include="V20180328\Models\DescribeReadOnlyGroupByReadOnlyInstanceRequest.cs" />
     <Compile Include="V20180328\Models\DescribeReadOnlyGroupByReadOnlyInstanceResponse.cs" />
     <Compile Include="V20180328\Models\DescribeReadOnlyGroupDetailsRequest.cs" />
@@ -211,10 +238,16 @@
     <Compile Include="V20180328\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeRegularBackupPlanRequest.cs" />
     <Compile Include="V20180328\Models\DescribeRegularBackupPlanResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeRestoreTaskRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeRestoreTaskResponse.cs" />
     <Compile Include="V20180328\Models\DescribeRollbackTimeRequest.cs" />
     <Compile Include="V20180328\Models\DescribeRollbackTimeResponse.cs" />
     <Compile Include="V20180328\Models\DescribeSlowlogsRequest.cs" />
     <Compile Include="V20180328\Models\DescribeSlowlogsResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeSpecSellStatusRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeSpecSellStatusResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeUpgradeInstanceCheckRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeUpgradeInstanceCheckResponse.cs" />
     <Compile Include="V20180328\Models\DescribeUploadBackupInfoRequest.cs" />
     <Compile Include="V20180328\Models\DescribeUploadBackupInfoResponse.cs" />
     <Compile Include="V20180328\Models\DescribeUploadIncrementalInfoRequest.cs" />
@@ -236,6 +269,7 @@
     <Compile Include="V20180328\Models\InquiryPriceUpgradeDBInstanceResponse.cs" />
     <Compile Include="V20180328\Models\InstanceDBDetail.cs" />
     <Compile Include="V20180328\Models\InstanceRenewInfo.cs" />
+    <Compile Include="V20180328\Models\InstanceTask.cs" />
     <Compile Include="V20180328\Models\InterInstance.cs" />
     <Compile Include="V20180328\Models\InterInstanceFlow.cs" />
     <Compile Include="V20180328\Models\MigrateDB.cs" />
@@ -257,6 +291,8 @@
     <Compile Include="V20180328\Models\ModifyBackupNameResponse.cs" />
     <Compile Include="V20180328\Models\ModifyBackupStrategyRequest.cs" />
     <Compile Include="V20180328\Models\ModifyBackupStrategyResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyCloseWanIpRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyCloseWanIpResponse.cs" />
     <Compile Include="V20180328\Models\ModifyCrossBackupStrategyRequest.cs" />
     <Compile Include="V20180328\Models\ModifyCrossBackupStrategyResponse.cs" />
     <Compile Include="V20180328\Models\ModifyDBEncryptAttributesRequest.cs" />
@@ -265,6 +301,8 @@
     <Compile Include="V20180328\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="V20180328\Models\ModifyDBInstanceNetworkRequest.cs" />
     <Compile Include="V20180328\Models\ModifyDBInstanceNetworkResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyDBInstanceNoteRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyDBInstanceNoteResponse.cs" />
     <Compile Include="V20180328\Models\ModifyDBInstanceProjectRequest.cs" />
     <Compile Include="V20180328\Models\ModifyDBInstanceProjectResponse.cs" />
     <Compile Include="V20180328\Models\ModifyDBInstanceRenewFlagRequest.cs" />
@@ -275,6 +313,7 @@
     <Compile Include="V20180328\Models\ModifyDBNameResponse.cs" />
     <Compile Include="V20180328\Models\ModifyDBRemarkRequest.cs" />
     <Compile Include="V20180328\Models\ModifyDBRemarkResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyDataBaseTuple.cs" />
     <Compile Include="V20180328\Models\ModifyDatabaseCDCRequest.cs" />
     <Compile Include="V20180328\Models\ModifyDatabaseCDCResponse.cs" />
     <Compile Include="V20180328\Models\ModifyDatabaseCTRequest.cs" />
@@ -293,8 +332,12 @@
     <Compile Include="V20180328\Models\ModifyMaintenanceSpanResponse.cs" />
     <Compile Include="V20180328\Models\ModifyMigrationRequest.cs" />
     <Compile Include="V20180328\Models\ModifyMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyOpenWanIpRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyOpenWanIpResponse.cs" />
     <Compile Include="V20180328\Models\ModifyPublishSubscribeNameRequest.cs" />
     <Compile Include="V20180328\Models\ModifyPublishSubscribeNameResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyPublishSubscribeRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyPublishSubscribeResponse.cs" />
     <Compile Include="V20180328\Models\ModifyReadOnlyGroupDetailsRequest.cs" />
     <Compile Include="V20180328\Models\ModifyReadOnlyGroupDetailsResponse.cs" />
     <Compile Include="V20180328\Models\OpenInterCommunicationRequest.cs" />
@@ -302,6 +345,8 @@
     <Compile Include="V20180328\Models\ParamRecord.cs" />
     <Compile Include="V20180328\Models\Parameter.cs" />
     <Compile Include="V20180328\Models\ParameterDetail.cs" />
+    <Compile Include="V20180328\Models\Price.cs" />
+    <Compile Include="V20180328\Models\ProductSpec.cs" />
     <Compile Include="V20180328\Models\PublishSubscribe.cs" />
     <Compile Include="V20180328\Models\QueryMigrationCheckProcessRequest.cs" />
     <Compile Include="V20180328\Models\QueryMigrationCheckProcessResponse.cs" />
@@ -327,6 +372,7 @@
     <Compile Include="V20180328\Models\RestartDBInstanceResponse.cs" />
     <Compile Include="V20180328\Models\RestoreInstanceRequest.cs" />
     <Compile Include="V20180328\Models\RestoreInstanceResponse.cs" />
+    <Compile Include="V20180328\Models\RestoreTask.cs" />
     <Compile Include="V20180328\Models\RollbackInstanceRequest.cs" />
     <Compile Include="V20180328\Models\RollbackInstanceResponse.cs" />
     <Compile Include="V20180328\Models\RunMigrationRequest.cs" />
@@ -337,6 +383,7 @@
     <Compile Include="V20180328\Models\SlowLog.cs" />
     <Compile Include="V20180328\Models\SlowlogInfo.cs" />
     <Compile Include="V20180328\Models\SpecInfo.cs" />
+    <Compile Include="V20180328\Models\SpecSellStatus.cs" />
     <Compile Include="V20180328\Models\StartBackupMigrationRequest.cs" />
     <Compile Include="V20180328\Models\StartBackupMigrationResponse.cs" />
     <Compile Include="V20180328\Models\StartIncrementalMigrationRequest.cs" />
@@ -358,5 +405,6 @@
     <Compile Include="V20180328\Models\UpgradeDBInstanceRequest.cs" />
     <Compile Include="V20180328\Models\UpgradeDBInstanceResponse.cs" />
     <Compile Include="V20180328\Models\ZoneInfo.cs" />
+    <Compile Include="V20180328\Models\ZoneStatus.cs" />
   </ItemGroup>
 </Project>

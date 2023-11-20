@@ -28,6 +28,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
         /// </summary>
         [JsonProperty("All")]
+        [System.Obsolete]
         public bool? All{ get; set; }
 
         /// <summary>
@@ -66,6 +67,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ExcludeImageIds")]
         public string[] ExcludeImageIds{ get; set; }
 
+        /// <summary>
+        /// 镜像是否存在运行中的容器
+        /// </summary>
+        [JsonProperty("ContainerRunning")]
+        public bool? ContainerRunning{ get; set; }
+
+        /// <summary>
+        /// 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+        /// </summary>
+        [JsonProperty("ScanScope")]
+        public ulong? ScanScope{ get; set; }
+
+        /// <summary>
+        /// 任务超时时长单位秒，默认1小时
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public ulong? Timeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +98,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ScanRisk", this.ScanRisk);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "ExcludeImageIds.", this.ExcludeImageIds);
+            this.SetParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+            this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
         }
     }
 }

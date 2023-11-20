@@ -725,6 +725,86 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 导入消费者组列表
+        /// </summary>
+        /// <param name="req"><see cref="ImportSourceClusterConsumerGroupsRequest"/></param>
+        /// <returns><see cref="ImportSourceClusterConsumerGroupsResponse"/></returns>
+        public async Task<ImportSourceClusterConsumerGroupsResponse> ImportSourceClusterConsumerGroups(ImportSourceClusterConsumerGroupsRequest req)
+        {
+             JsonResponseModel<ImportSourceClusterConsumerGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ImportSourceClusterConsumerGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportSourceClusterConsumerGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导入消费者组列表
+        /// </summary>
+        /// <param name="req"><see cref="ImportSourceClusterConsumerGroupsRequest"/></param>
+        /// <returns><see cref="ImportSourceClusterConsumerGroupsResponse"/></returns>
+        public ImportSourceClusterConsumerGroupsResponse ImportSourceClusterConsumerGroupsSync(ImportSourceClusterConsumerGroupsRequest req)
+        {
+             JsonResponseModel<ImportSourceClusterConsumerGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImportSourceClusterConsumerGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportSourceClusterConsumerGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导入topic列表
+        /// </summary>
+        /// <param name="req"><see cref="ImportSourceClusterTopicsRequest"/></param>
+        /// <returns><see cref="ImportSourceClusterTopicsResponse"/></returns>
+        public async Task<ImportSourceClusterTopicsResponse> ImportSourceClusterTopics(ImportSourceClusterTopicsRequest req)
+        {
+             JsonResponseModel<ImportSourceClusterTopicsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ImportSourceClusterTopics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportSourceClusterTopicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导入topic列表
+        /// </summary>
+        /// <param name="req"><see cref="ImportSourceClusterTopicsRequest"/></param>
+        /// <returns><see cref="ImportSourceClusterTopicsResponse"/></returns>
+        public ImportSourceClusterTopicsResponse ImportSourceClusterTopicsSync(ImportSourceClusterTopicsRequest req)
+        {
+             JsonResponseModel<ImportSourceClusterTopicsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImportSourceClusterTopics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportSourceClusterTopicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改消费组属性
         /// </summary>
         /// <param name="req"><see cref="ModifyConsumerGroupRequest"/></param>

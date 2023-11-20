@@ -25,7 +25,7 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// ["sc-abcdefgh"]
+        /// 场景id列表
         /// </summary>
         [JsonProperty("SceneIds")]
         public string[] SceneIds{ get; set; }

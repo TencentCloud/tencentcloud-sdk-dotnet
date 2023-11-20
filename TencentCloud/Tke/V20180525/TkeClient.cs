@@ -3173,6 +3173,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询集群自定义参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterExtraArgsRequest"/></param>
+        /// <returns><see cref="DescribeClusterExtraArgsResponse"/></returns>
+        public async Task<DescribeClusterExtraArgsResponse> DescribeClusterExtraArgs(DescribeClusterExtraArgsRequest req)
+        {
+             JsonResponseModel<DescribeClusterExtraArgsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterExtraArgs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterExtraArgsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群自定义参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterExtraArgsRequest"/></param>
+        /// <returns><see cref="DescribeClusterExtraArgsResponse"/></returns>
+        public DescribeClusterExtraArgsResponse DescribeClusterExtraArgsSync(DescribeClusterExtraArgsRequest req)
+        {
+             JsonResponseModel<DescribeClusterExtraArgsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterExtraArgs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterExtraArgsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询用户单个Region下的所有集群巡检结果概览信息
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterInspectionResultsOverviewRequest"/></param>
@@ -4564,6 +4604,86 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeExternalClusterSpec");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExternalClusterSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看开启第三方节点池配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalNodeSupportConfigRequest"/></param>
+        /// <returns><see cref="DescribeExternalNodeSupportConfigResponse"/></returns>
+        public async Task<DescribeExternalNodeSupportConfigResponse> DescribeExternalNodeSupportConfig(DescribeExternalNodeSupportConfigRequest req)
+        {
+             JsonResponseModel<DescribeExternalNodeSupportConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExternalNodeSupportConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExternalNodeSupportConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看开启第三方节点池配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalNodeSupportConfigRequest"/></param>
+        /// <returns><see cref="DescribeExternalNodeSupportConfigResponse"/></returns>
+        public DescribeExternalNodeSupportConfigResponse DescribeExternalNodeSupportConfigSync(DescribeExternalNodeSupportConfigRequest req)
+        {
+             JsonResponseModel<DescribeExternalNodeSupportConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExternalNodeSupportConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExternalNodeSupportConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取eniipamd组件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPAMDRequest"/></param>
+        /// <returns><see cref="DescribeIPAMDResponse"/></returns>
+        public async Task<DescribeIPAMDResponse> DescribeIPAMD(DescribeIPAMDRequest req)
+        {
+             JsonResponseModel<DescribeIPAMDResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIPAMD");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPAMDResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取eniipamd组件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPAMDRequest"/></param>
+        /// <returns><see cref="DescribeIPAMDResponse"/></returns>
+        public DescribeIPAMDResponse DescribeIPAMDSync(DescribeIPAMDRequest req)
+        {
+             JsonResponseModel<DescribeIPAMDResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIPAMD");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPAMDResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

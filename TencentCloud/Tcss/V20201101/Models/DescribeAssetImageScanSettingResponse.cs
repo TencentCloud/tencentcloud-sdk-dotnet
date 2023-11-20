@@ -64,6 +64,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 扫描全部镜像
         /// </summary>
         [JsonProperty("All")]
+        [System.Obsolete]
         public bool? All{ get; set; }
 
         /// <summary>
@@ -71,6 +72,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         [JsonProperty("Images")]
         public string[] Images{ get; set; }
+
+        /// <summary>
+        /// 镜像是否存在运行中的容器
+        /// </summary>
+        [JsonProperty("ContainerRunning")]
+        public bool? ContainerRunning{ get; set; }
+
+        /// <summary>
+        /// 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+        /// </summary>
+        [JsonProperty("ScanScope")]
+        public ulong? ScanScope{ get; set; }
+
+        /// <summary>
+        /// 扫描结束时间 02:00 时分
+        /// </summary>
+        [JsonProperty("ScanEndTime")]
+        public string ScanEndTime{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -92,6 +111,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ScanVul", this.ScanVul);
             this.SetParamSimple(map, prefix + "All", this.All);
             this.SetParamArraySimple(map, prefix + "Images.", this.Images);
+            this.SetParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+            this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
+            this.SetParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

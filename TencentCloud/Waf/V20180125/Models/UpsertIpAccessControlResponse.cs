@@ -39,6 +39,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? FailedCount{ get; set; }
 
         /// <summary>
+        /// 添加或修改的IP数据Id列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ids")]
+        public string[] Ids{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +59,7 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "FailedItems", this.FailedItems);
             this.SetParamSimple(map, prefix + "FailedCount", this.FailedCount);
+            this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

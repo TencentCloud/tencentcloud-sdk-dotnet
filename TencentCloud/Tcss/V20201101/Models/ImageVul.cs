@@ -164,6 +164,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("AttackLevel")]
         public long? AttackLevel{ get; set; }
 
+        /// <summary>
+        /// 镜像层信息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LayerInfos")]
+        public ImageVulLayerInfo[] LayerInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +197,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Component", this.Component);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
+            this.SetParamArrayObj(map, prefix + "LayerInfos.", this.LayerInfos);
         }
     }
 }

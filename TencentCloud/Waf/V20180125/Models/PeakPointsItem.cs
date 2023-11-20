@@ -143,6 +143,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ACL")]
         public ulong? ACL{ get; set; }
 
+        /// <summary>
+        /// 小程序 qps
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WxAccess")]
+        public ulong? WxAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -167,6 +174,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Tamper", this.Tamper);
             this.SetParamSimple(map, prefix + "Leak", this.Leak);
             this.SetParamSimple(map, prefix + "ACL", this.ACL);
+            this.SetParamSimple(map, prefix + "WxAccess", this.WxAccess);
         }
     }
 }

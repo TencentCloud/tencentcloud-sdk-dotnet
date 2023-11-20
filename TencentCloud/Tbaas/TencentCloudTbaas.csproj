@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{84400F10-9E05-36FF-873D-21C952C381E6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.896</VersionPrefix>
+    <VersionPrefix>3.0.897</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,6 +55,10 @@
     <Compile Include="V20180416\Models\Block.cs" />
     <Compile Include="V20180416\Models\ChainMakerContractResult.cs" />
     <Compile Include="V20180416\Models\ChainMakerTransactionResult.cs" />
+    <Compile Include="V20180416\Models\DescribeFabricBlockRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeFabricBlockResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeFabricTransactionRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeFabricTransactionResponse.cs" />
     <Compile Include="V20180416\Models\DownloadUserCertRequest.cs" />
     <Compile Include="V20180416\Models\DownloadUserCertResponse.cs" />
     <Compile Include="V20180416\Models\EndorserGroup.cs" />
@@ -76,6 +80,8 @@
     <Compile Include="V20180416\Models\InvokeChainMakerContractResponse.cs" />
     <Compile Include="V20180416\Models\InvokeChainMakerDemoContractRequest.cs" />
     <Compile Include="V20180416\Models\InvokeChainMakerDemoContractResponse.cs" />
+    <Compile Include="V20180416\Models\InvokeFabricChaincodeRequest.cs" />
+    <Compile Include="V20180416\Models\InvokeFabricChaincodeResponse.cs" />
     <Compile Include="V20180416\Models\InvokeRequest.cs" />
     <Compile Include="V20180416\Models\InvokeResponse.cs" />
     <Compile Include="V20180416\Models\PeerSet.cs" />
@@ -91,11 +97,14 @@
     <Compile Include="V20180416\Models\QueryChainMakerDemoTransactionResponse.cs" />
     <Compile Include="V20180416\Models\QueryChainMakerTransactionRequest.cs" />
     <Compile Include="V20180416\Models\QueryChainMakerTransactionResponse.cs" />
+    <Compile Include="V20180416\Models\QueryFabricChaincodeRequest.cs" />
+    <Compile Include="V20180416\Models\QueryFabricChaincodeResponse.cs" />
     <Compile Include="V20180416\Models\QueryRequest.cs" />
     <Compile Include="V20180416\Models\QueryResponse.cs" />
     <Compile Include="V20180416\Models\SignCertCsr.cs" />
     <Compile Include="V20180416\Models\SrvInvokeRequest.cs" />
     <Compile Include="V20180416\Models\SrvInvokeResponse.cs" />
+    <Compile Include="V20180416\Models\Transaction.cs" />
     <Compile Include="V20180416\Models\TransactionItem.cs" />
   </ItemGroup>
 </Project>

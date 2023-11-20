@@ -55,7 +55,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 十一个值可选：
+        /// 十二个值可选：
         /// access-峰值qps趋势图
         /// botAccess- bot峰值qps趋势图
         /// down-下行峰值带宽趋势图
@@ -67,6 +67,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// leak-防泄露攻击总数趋势图
         /// acl-访问控制攻击总数趋势图
         /// http_status-状态码各次数趋势图
+        /// wx_access-微信小程序峰值qps趋势图
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

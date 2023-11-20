@@ -37,6 +37,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ImageName{ get; set; }
 
         /// <summary>
+        /// 镜像摘要
+        /// </summary>
+        [JsonProperty("ImageDigest")]
+        public string ImageDigest{ get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -227,6 +233,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "ImageID", this.ImageID);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
+            this.SetParamSimple(map, prefix + "ImageDigest", this.ImageDigest);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "HostCnt", this.HostCnt);

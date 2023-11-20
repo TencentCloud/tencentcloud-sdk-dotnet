@@ -166,7 +166,7 @@ namespace TencentCloud.Hai.V20230812.Models
         public string MaxOutBandwidth{ get; set; }
 
         /// <summary>
-        /// 每月免费流量，默认1000G
+        /// 每月免费流量，默认500G
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxFreeTraffic")]

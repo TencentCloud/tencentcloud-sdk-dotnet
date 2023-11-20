@@ -99,6 +99,40 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ApproveTypeName")]
         public string ApproveTypeName{ get; set; }
 
+        /// <summary>
+        /// 审批异常或者失败信息
+        /// </summary>
+        [JsonProperty("ErrorMessage")]
+        public string ErrorMessage{ get; set; }
+
+        /// <summary>
+        /// 申请名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplyName")]
+        public string ApplyName{ get; set; }
+
+        /// <summary>
+        /// 审批人id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApproverId")]
+        public string ApproverId{ get; set; }
+
+        /// <summary>
+        /// 审批人名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApproverName")]
+        public string ApproverName{ get; set; }
+
+        /// <summary>
+        /// 审批所属项目
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApproveProjectName")]
+        public string ApproveProjectName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +151,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ApproveClassificationName", this.ApproveClassificationName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ApproveTypeName", this.ApproveTypeName);
+            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+            this.SetParamSimple(map, prefix + "ApplyName", this.ApplyName);
+            this.SetParamSimple(map, prefix + "ApproverId", this.ApproverId);
+            this.SetParamSimple(map, prefix + "ApproverName", this.ApproverName);
+            this.SetParamSimple(map, prefix + "ApproveProjectName", this.ApproveProjectName);
         }
     }
 }

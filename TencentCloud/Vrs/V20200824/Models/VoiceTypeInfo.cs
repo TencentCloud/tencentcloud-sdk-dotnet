@@ -60,6 +60,12 @@ namespace TencentCloud.Vrs.V20200824.Models
         [JsonProperty("DateCreated")]
         public string DateCreated{ get; set; }
 
+        /// <summary>
+        /// 部署状态。若已部署，则可通过语音合成接口调用该音色
+        /// </summary>
+        [JsonProperty("IsDeployed")]
+        public bool? IsDeployed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Vrs.V20200824.Models
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "TaskID", this.TaskID);
             this.SetParamSimple(map, prefix + "DateCreated", this.DateCreated);
+            this.SetParamSimple(map, prefix + "IsDeployed", this.IsDeployed);
         }
     }
 }

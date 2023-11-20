@@ -46,12 +46,14 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 有效时间最小时间戳
         /// </summary>
         [JsonProperty("VtsMin")]
+        [System.Obsolete]
         public ulong? VtsMin{ get; set; }
 
         /// <summary>
         /// 有效时间最大时间戳
         /// </summary>
         [JsonProperty("VtsMax")]
+        [System.Obsolete]
         public ulong? VtsMax{ get; set; }
 
         /// <summary>
@@ -96,6 +98,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
+        /// <summary>
+        /// 有效时间最小时间戳
+        /// </summary>
+        [JsonProperty("ValidTimeStampMin")]
+        public ulong? ValidTimeStampMin{ get; set; }
+
+        /// <summary>
+        /// 有效时间最大时间戳
+        /// </summary>
+        [JsonProperty("ValidTimeStampMax")]
+        public ulong? ValidTimeStampMax{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +128,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
+            this.SetParamSimple(map, prefix + "ValidTimeStampMin", this.ValidTimeStampMin);
+            this.SetParamSimple(map, prefix + "ValidTimeStampMax", this.ValidTimeStampMax);
         }
     }
 }

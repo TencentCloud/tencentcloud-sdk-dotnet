@@ -38,13 +38,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string RiskDescription{ get; set; }
 
         /// <summary>
-        /// 评估模版Id
+        /// 评估模板Id
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 评估模版名称
+        /// 评估模板名称
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }

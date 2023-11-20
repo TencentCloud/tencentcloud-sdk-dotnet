@@ -66,6 +66,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("AntiLeakage")]
         public ulong? AntiLeakage{ get; set; }
 
+        /// <summary>
+        /// 限流模块开关，0或1
+        /// </summary>
+        [JsonProperty("RateLimit")]
+        public ulong? RateLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ApiProtection", this.ApiProtection);
             this.SetParamSimple(map, prefix + "AntiTamper", this.AntiTamper);
             this.SetParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
+            this.SetParamSimple(map, prefix + "RateLimit", this.RateLimit);
         }
     }
 }

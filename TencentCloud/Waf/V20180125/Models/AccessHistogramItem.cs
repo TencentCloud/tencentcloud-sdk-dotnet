@@ -28,6 +28,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 时间，单位ms
         /// </summary>
         [JsonProperty("BTime")]
+        [System.Obsolete]
         public long? BTime{ get; set; }
 
         /// <summary>
@@ -35,6 +36,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
+
+        /// <summary>
+        /// 时间，单位ms
+        /// </summary>
+        [JsonProperty("BeginTime")]
+        public long? BeginTime{ get; set; }
 
 
         /// <summary>
@@ -44,6 +51,7 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "BTime", this.BTime);
             this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
         }
     }
 }

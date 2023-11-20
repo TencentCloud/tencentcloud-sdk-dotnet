@@ -66,6 +66,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ExcludeHostIdSet")]
         public string[] ExcludeHostIdSet{ get; set; }
 
+        /// <summary>
+        /// 自动扫描开关
+        /// </summary>
+        [JsonProperty("AutoScanEnabled")]
+        public long? AutoScanEnabled{ get; set; }
+
+        /// <summary>
+        /// 自动扫描范围
+        /// </summary>
+        [JsonProperty("ScanType")]
+        public string[] ScanType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamArrayObj(map, prefix + "HostIdFilters.", this.HostIdFilters);
             this.SetParamArraySimple(map, prefix + "ExcludeHostIdSet.", this.ExcludeHostIdSet);
+            this.SetParamSimple(map, prefix + "AutoScanEnabled", this.AutoScanEnabled);
+            this.SetParamArraySimple(map, prefix + "ScanType.", this.ScanType);
         }
     }
 }

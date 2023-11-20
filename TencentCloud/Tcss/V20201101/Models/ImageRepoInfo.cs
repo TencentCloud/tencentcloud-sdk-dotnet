@@ -298,6 +298,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("SensitiveInfoCnt")]
         public ulong? SensitiveInfoCnt{ get; set; }
 
+        /// <summary>
+        /// 是否推荐处置
+        /// </summary>
+        [JsonProperty("RecommendedFix")]
+        public bool? RecommendedFix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -347,6 +353,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "IsRunning", this.IsRunning);
             this.SetParamSimple(map, prefix + "HasNeedFixVul", this.HasNeedFixVul);
             this.SetParamSimple(map, prefix + "SensitiveInfoCnt", this.SensitiveInfoCnt);
+            this.SetParamSimple(map, prefix + "RecommendedFix", this.RecommendedFix);
         }
     }
 }

@@ -60,7 +60,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string RiskType{ get; set; }
 
         /// <summary>
-        /// 关联模版个数
+        /// 关联模板个数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReferTemplateCount")]
@@ -81,7 +81,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string RiskSide{ get; set; }
 
         /// <summary>
-        /// 关联模版列表
+        /// 关联模板列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReferTemplateList")]

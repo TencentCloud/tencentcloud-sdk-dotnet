@@ -78,6 +78,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string SecurityGroup{ get; set; }
 
         /// <summary>
+        /// 内网访问所属子网
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterIntranetSubnetId")]
+        public string ClusterIntranetSubnetId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -97,6 +104,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterExternalDomain", this.ClusterExternalDomain);
             this.SetParamSimple(map, prefix + "ClusterIntranetDomain", this.ClusterIntranetDomain);
             this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
+            this.SetParamSimple(map, prefix + "ClusterIntranetSubnetId", this.ClusterIntranetSubnetId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

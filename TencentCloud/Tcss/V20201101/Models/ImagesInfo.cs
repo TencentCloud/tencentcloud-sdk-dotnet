@@ -150,6 +150,42 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ComponentCnt")]
         public ulong? ComponentCnt{ get; set; }
 
+        /// <summary>
+        /// 严重漏洞数
+        /// </summary>
+        [JsonProperty("CriticalLevelVulCnt")]
+        public ulong? CriticalLevelVulCnt{ get; set; }
+
+        /// <summary>
+        /// 高危漏洞数
+        /// </summary>
+        [JsonProperty("HighLevelVulCnt")]
+        public ulong? HighLevelVulCnt{ get; set; }
+
+        /// <summary>
+        /// 中危漏洞数
+        /// </summary>
+        [JsonProperty("MediumLevelVulCnt")]
+        public ulong? MediumLevelVulCnt{ get; set; }
+
+        /// <summary>
+        /// 低危漏洞数
+        /// </summary>
+        [JsonProperty("LowLevelVulCnt")]
+        public ulong? LowLevelVulCnt{ get; set; }
+
+        /// <summary>
+        /// 是否最新版本镜像
+        /// </summary>
+        [JsonProperty("IsLatestImage")]
+        public bool? IsLatestImage{ get; set; }
+
+        /// <summary>
+        /// 是否推荐处置
+        /// </summary>
+        [JsonProperty("RecommendedFix")]
+        public bool? RecommendedFix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +213,12 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "IsSuggest", this.IsSuggest);
             this.SetParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
             this.SetParamSimple(map, prefix + "ComponentCnt", this.ComponentCnt);
+            this.SetParamSimple(map, prefix + "CriticalLevelVulCnt", this.CriticalLevelVulCnt);
+            this.SetParamSimple(map, prefix + "HighLevelVulCnt", this.HighLevelVulCnt);
+            this.SetParamSimple(map, prefix + "MediumLevelVulCnt", this.MediumLevelVulCnt);
+            this.SetParamSimple(map, prefix + "LowLevelVulCnt", this.LowLevelVulCnt);
+            this.SetParamSimple(map, prefix + "IsLatestImage", this.IsLatestImage);
+            this.SetParamSimple(map, prefix + "RecommendedFix", this.RecommendedFix);
         }
     }
 }

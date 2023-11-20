@@ -61,12 +61,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 集群的标签列表(已废弃)
-        /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
-
-        /// <summary>
         /// 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
         /// </summary>
         [JsonProperty("ClusterName")]
@@ -84,6 +78,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Vpcs")]
         public VpcInfo Vpcs{ get; set; }
 
+        /// <summary>
+        /// 集群的标签列表(已废弃)
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,10 +95,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamObj(map, prefix + "Vpcs.", this.Vpcs);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -36,6 +36,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ImageIds")]
         public string[] ImageIds{ get; set; }
 
+        /// <summary>
+        /// 是否授权后自动扫描
+        /// </summary>
+        [JsonProperty("NeedScan")]
+        public bool? NeedScan{ get; set; }
+
+        /// <summary>
+        /// 扫描类型
+        /// </summary>
+        [JsonProperty("ScanType")]
+        public string[] ScanType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "AllImages", this.AllImages);
             this.SetParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
+            this.SetParamSimple(map, prefix + "NeedScan", this.NeedScan);
+            this.SetParamArraySimple(map, prefix + "ScanType.", this.ScanType);
         }
     }
 }

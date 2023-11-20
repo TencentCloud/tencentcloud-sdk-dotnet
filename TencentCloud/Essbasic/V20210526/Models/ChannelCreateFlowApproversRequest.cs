@@ -55,18 +55,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public FillApproverInfo[] Approvers{ get; set; }
 
         /// <summary>
+        /// 签署人信息补充方式
+        /// 
+        /// <ul><li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+        /// </summary>
+        [JsonProperty("FillApproverType")]
+        public long? FillApproverType{ get; set; }
+
+        /// <summary>
         /// 操作人信息
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 签署人信息补充方式
-        /// 
-        /// <ul><li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
-        /// </summary>
-        [JsonProperty("FillApproverType")]
-        public long? FillApproverType{ get; set; }
 
 
         /// <summary>
@@ -77,8 +77,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "FillApproverType", this.FillApproverType);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

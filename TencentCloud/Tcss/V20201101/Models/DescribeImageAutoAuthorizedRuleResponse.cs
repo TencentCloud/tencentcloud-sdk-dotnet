@@ -59,6 +59,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? RuleId{ get; set; }
 
         /// <summary>
+        /// 自动扫描开关，0：关闭，1：开启
+        /// </summary>
+        [JsonProperty("AutoScanEnabled")]
+        public long? AutoScanEnabled{ get; set; }
+
+        /// <summary>
+        /// 自动扫描范围
+        /// </summary>
+        [JsonProperty("ScanType")]
+        public string[] ScanType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -75,6 +87,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "HostCount", this.HostCount);
             this.SetParamSimple(map, prefix + "MaxDailyCount", this.MaxDailyCount);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "AutoScanEnabled", this.AutoScanEnabled);
+            this.SetParamArraySimple(map, prefix + "ScanType.", this.ScanType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

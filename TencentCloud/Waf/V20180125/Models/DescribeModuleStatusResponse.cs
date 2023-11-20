@@ -61,6 +61,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? ApiProtection{ get; set; }
 
         /// <summary>
+        /// 限流模块开关
+        /// </summary>
+        [JsonProperty("RateLimit")]
+        public ulong? RateLimit{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "AntiTamper", this.AntiTamper);
             this.SetParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
             this.SetParamSimple(map, prefix + "ApiProtection", this.ApiProtection);
+            this.SetParamSimple(map, prefix + "RateLimit", this.RateLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

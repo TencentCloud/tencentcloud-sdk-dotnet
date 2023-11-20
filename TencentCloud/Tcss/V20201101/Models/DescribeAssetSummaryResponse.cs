@@ -157,6 +157,30 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? SuperNodeRunningCnt{ get; set; }
 
         /// <summary>
+        /// 今日新增镜像个数
+        /// </summary>
+        [JsonProperty("TodayNewImageCnt")]
+        public ulong? TodayNewImageCnt{ get; set; }
+
+        /// <summary>
+        /// 今日新增风险镜像个数
+        /// </summary>
+        [JsonProperty("TodayUnsafeImageCnt")]
+        public ulong? TodayUnsafeImageCnt{ get; set; }
+
+        /// <summary>
+        /// 推荐处置镜像个数
+        /// </summary>
+        [JsonProperty("RecommendedFixImageCnt")]
+        public ulong? RecommendedFixImageCnt{ get; set; }
+
+        /// <summary>
+        /// 已扫描镜像个数
+        /// </summary>
+        [JsonProperty("ScannedImageCnt")]
+        public ulong? ScannedImageCnt{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -190,6 +214,10 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "HostUnInstallCnt", this.HostUnInstallCnt);
             this.SetParamSimple(map, prefix + "SuperNodeCnt", this.SuperNodeCnt);
             this.SetParamSimple(map, prefix + "SuperNodeRunningCnt", this.SuperNodeRunningCnt);
+            this.SetParamSimple(map, prefix + "TodayNewImageCnt", this.TodayNewImageCnt);
+            this.SetParamSimple(map, prefix + "TodayUnsafeImageCnt", this.TodayUnsafeImageCnt);
+            this.SetParamSimple(map, prefix + "RecommendedFixImageCnt", this.RecommendedFixImageCnt);
+            this.SetParamSimple(map, prefix + "ScannedImageCnt", this.ScannedImageCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

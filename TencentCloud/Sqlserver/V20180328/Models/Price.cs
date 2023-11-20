@@ -1,0 +1,68 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Sqlserver.V20180328.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class Price : AbstractModel
+    {
+        
+        /// <summary>
+        /// 包年包月参考价格，单位-分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrepaidPrice")]
+        public ulong? PrepaidPrice{ get; set; }
+
+        /// <summary>
+        /// 包年包月价格单位，M-月
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrepaidPriceUnit")]
+        public string PrepaidPriceUnit{ get; set; }
+
+        /// <summary>
+        /// 按量付费价格，单位-分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PostpaidPrice")]
+        public ulong? PostpaidPrice{ get; set; }
+
+        /// <summary>
+        /// 按量付费价格单位，H-小时
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PostpaidPriceUnit")]
+        public string PostpaidPriceUnit{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "PrepaidPrice", this.PrepaidPrice);
+            this.SetParamSimple(map, prefix + "PrepaidPriceUnit", this.PrepaidPriceUnit);
+            this.SetParamSimple(map, prefix + "PostpaidPrice", this.PostpaidPrice);
+            this.SetParamSimple(map, prefix + "PostpaidPriceUnit", this.PostpaidPriceUnit);
+        }
+    }
+}
+

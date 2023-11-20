@@ -25,14 +25,14 @@ namespace TencentCloud.Dsgc.V20190723.Models
     {
         
         /// <summary>
-        /// 通用key，比如分类名称
+        /// 通用key，例如分类名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 通用value，比如分类个数
+        /// 通用value，例如分类个数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
