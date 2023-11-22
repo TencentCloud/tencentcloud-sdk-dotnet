@@ -34,7 +34,14 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// 证书内容
         /// </summary>
         [JsonProperty("CertCtx")]
+        [System.Obsolete]
         public string CertCtx{ get; set; }
+
+        /// <summary>
+        /// 证书内容
+        /// </summary>
+        [JsonProperty("Cert")]
+        public string Cert{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +57,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "CertName", this.CertName);
             this.SetParamSimple(map, prefix + "CertCtx", this.CertCtx);
+            this.SetParamSimple(map, prefix + "Cert", this.Cert);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

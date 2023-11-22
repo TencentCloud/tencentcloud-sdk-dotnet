@@ -52,8 +52,7 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 四层代理模式，取值有：
-        /// <li>hostname：表示子域名模式；</li>
-        /// <li>instance：表示实例模式。</li>不填写保持原有配置。
+        /// <li>instance：表示实例模式。</li>不填写使用默认值instance。
         /// </summary>
         [JsonProperty("ProxyType")]
         public string ProxyType{ get; set; }

@@ -28,6 +28,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// 交易ID
         /// </summary>
         [JsonProperty("Txid")]
+        [System.Obsolete]
         public string Txid{ get; set; }
 
         /// <summary>
@@ -35,6 +36,12 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         [JsonProperty("Events")]
         public string Events{ get; set; }
+
+        /// <summary>
+        /// 交易ID
+        /// </summary>
+        [JsonProperty("TxId")]
+        public string TxId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +57,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "Txid", this.Txid);
             this.SetParamSimple(map, prefix + "Events", this.Events);
+            this.SetParamSimple(map, prefix + "TxId", this.TxId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

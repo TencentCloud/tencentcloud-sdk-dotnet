@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.898</VersionPrefix>
+    <VersionPrefix>3.0.899</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -139,6 +139,7 @@
     <Compile Include="V20210820\Models\CollectionTaskOpsDto.cs" />
     <Compile Include="V20210820\Models\ColumnAggregationLineage.cs" />
     <Compile Include="V20210820\Models\ColumnLineageInfo.cs" />
+    <Compile Include="V20210820\Models\ColumnMeta.cs" />
     <Compile Include="V20210820\Models\CommitExportTaskRequest.cs" />
     <Compile Include="V20210820\Models\CommitExportTaskResponse.cs" />
     <Compile Include="V20210820\Models\CommitIntegrationTaskRequest.cs" />
@@ -293,6 +294,8 @@
     <Compile Include="V20210820\Models\DescribeClusterNamespaceListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeColumnLineageRequest.cs" />
     <Compile Include="V20210820\Models\DescribeColumnLineageResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeColumnsMetaRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeColumnsMetaResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDataBasesRequest.cs" />
     <Compile Include="V20210820\Models\DescribeDataBasesResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDataCheckStatRequest.cs" />
@@ -758,6 +761,7 @@
     <Compile Include="V20210820\Models\OrderField.cs" />
     <Compile Include="V20210820\Models\OrderFieldOptional.cs" />
     <Compile Include="V20210820\Models\OrganizationalFunction.cs" />
+    <Compile Include="V20210820\Models\Pair.cs" />
     <Compile Include="V20210820\Models\PairDto.cs" />
     <Compile Include="V20210820\Models\ParamInfo.cs" />
     <Compile Include="V20210820\Models\ParamInfoDs.cs" />

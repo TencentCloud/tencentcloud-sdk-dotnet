@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.898</VersionPrefix>
+    <VersionPrefix>3.0.899</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -114,6 +114,8 @@
     <Compile Include="V20201207\Models\DeleteNativeGatewayServerGroupRequest.cs" />
     <Compile Include="V20201207\Models\DeleteNativeGatewayServerGroupResponse.cs" />
     <Compile Include="V20201207\Models\DeleteNativeGatewayServerGroupResult.cs" />
+    <Compile Include="V20201207\Models\DeleteWafDomainsRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteWafDomainsResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCanaryRulesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCanaryRulesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCertificateDetailsRequest.cs" />
@@ -159,6 +161,12 @@
     <Compile Include="V20201207\Models\DescribeSREInstancesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeUpstreamHealthCheckConfigRequest.cs" />
     <Compile Include="V20201207\Models\DescribeUpstreamHealthCheckConfigResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeWafDomainsRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeWafDomainsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeWafDomainsResult.cs" />
+    <Compile Include="V20201207\Models\DescribeWafProtectionRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeWafProtectionResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeWafProtectionResult.cs" />
     <Compile Include="V20201207\Models\DescribeZookeeperReplicasRequest.cs" />
     <Compile Include="V20201207\Models\DescribeZookeeperReplicasResponse.cs" />
     <Compile Include="V20201207\Models\DescribeZookeeperServerInterfacesRequest.cs" />
@@ -220,8 +228,10 @@
     <Compile Include="V20201207\Models\PolarisLimiterAddress.cs" />
     <Compile Include="V20201207\Models\QpsThreshold.cs" />
     <Compile Include="V20201207\Models\RateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\RouteWafStatus.cs" />
     <Compile Include="V20201207\Models\SREInstance.cs" />
     <Compile Include="V20201207\Models\ServiceGovernanceInfo.cs" />
+    <Compile Include="V20201207\Models\ServiceWafStatus.cs" />
     <Compile Include="V20201207\Models\StorageOption.cs" />
     <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewayCertificateInfoRequest.cs" />
     <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewayCertificateInfoResponse.cs" />

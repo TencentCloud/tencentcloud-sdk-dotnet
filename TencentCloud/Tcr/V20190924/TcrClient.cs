@@ -253,6 +253,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 接口未使用
+        /// 
         /// 创建自定义账户
         /// </summary>
         /// <param name="req"><see cref="CreateCustomAccountRequest"/></param>
@@ -273,6 +275,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 接口未使用
+        /// 
         /// 创建自定义账户
         /// </summary>
         /// <param name="req"><see cref="CreateCustomAccountRequest"/></param>
@@ -1133,6 +1137,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 接口未使用
+        /// 
         /// 删除自定义账号
         /// </summary>
         /// <param name="req"><see cref="DeleteCustomAccountRequest"/></param>
@@ -1153,6 +1159,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 接口未使用
+        /// 
         /// 删除自定义账号
         /// </summary>
         /// <param name="req"><see cref="DeleteCustomAccountRequest"/></param>
@@ -2137,6 +2145,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 接口未使用
+        /// 
         /// 查询自定义账号
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomAccountsRequest"/></param>
@@ -2157,6 +2167,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 接口未使用
+        /// 
         /// 查询自定义账号
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomAccountsRequest"/></param>
@@ -3937,6 +3949,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 接口未使用
+        /// 
         /// 更新自定义账户
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomAccountRequest"/></param>
@@ -3957,6 +3971,8 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 接口未使用
+        /// 
         /// 更新自定义账户
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomAccountRequest"/></param>

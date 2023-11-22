@@ -72,6 +72,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("SpecifyEffectTime")]
         public string SpecifyEffectTime{ get; set; }
 
+        /// <summary>
+        /// 可重入ID
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "CommodityCode", this.CommodityCode);
             this.SetParamSimple(map, prefix + "PromiseUseAmount", this.PromiseUseAmount);
             this.SetParamSimple(map, prefix + "SpecifyEffectTime", this.SpecifyEffectTime);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
         }
     }
 }

@@ -3713,6 +3713,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查询表的所有列元数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeColumnsMetaRequest"/></param>
+        /// <returns><see cref="DescribeColumnsMetaResponse"/></returns>
+        public async Task<DescribeColumnsMetaResponse> DescribeColumnsMeta(DescribeColumnsMetaRequest req)
+        {
+             JsonResponseModel<DescribeColumnsMetaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeColumnsMeta");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeColumnsMetaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询表的所有列元数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeColumnsMetaRequest"/></param>
+        /// <returns><see cref="DescribeColumnsMetaResponse"/></returns>
+        public DescribeColumnsMetaResponse DescribeColumnsMetaSync(DescribeColumnsMetaRequest req)
+        {
+             JsonResponseModel<DescribeColumnsMetaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeColumnsMeta");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeColumnsMetaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询数据来源列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDataBasesRequest"/></param>

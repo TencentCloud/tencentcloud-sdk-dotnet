@@ -42,6 +42,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("RestartMode")]
         public long? RestartMode{ get; set; }
 
+        /// <summary>
+        /// 重启时选择是否升级内核patch版本
+        /// </summary>
+        [JsonProperty("UpgradeKernel")]
+        public bool? UpgradeKernel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
             this.SetParamSimple(map, prefix + "RestartMode", this.RestartMode);
+            this.SetParamSimple(map, prefix + "UpgradeKernel", this.UpgradeKernel);
         }
     }
 }

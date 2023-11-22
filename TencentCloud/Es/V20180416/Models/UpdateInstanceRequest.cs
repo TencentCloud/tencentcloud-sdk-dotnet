@@ -234,6 +234,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("KibanaAlteringPublicAccess")]
         public string KibanaAlteringPublicAccess{ get; set; }
 
+        /// <summary>
+        /// kibana内网自定义域名
+        /// </summary>
+        [JsonProperty("KibanaPrivateDomain")]
+        public string KibanaPrivateDomain{ get; set; }
+
+        /// <summary>
+        /// cerebro内网自定义域名
+        /// </summary>
+        [JsonProperty("CerebroPrivateDomain")]
+        public string CerebroPrivateDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -272,6 +284,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "EsConfigSet.", this.EsConfigSet);
             this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
             this.SetParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
+            this.SetParamSimple(map, prefix + "KibanaPrivateDomain", this.KibanaPrivateDomain);
+            this.SetParamSimple(map, prefix + "CerebroPrivateDomain", this.CerebroPrivateDomain);
         }
     }
 }

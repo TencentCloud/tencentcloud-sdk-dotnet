@@ -310,7 +310,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ZoneDetail[] MultiZoneInfo{ get; set; }
 
         /// <summary>
-        /// 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+        /// 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployMode")]
@@ -554,7 +554,7 @@ namespace TencentCloud.Es.V20180416.Models
         public float? ProcessPercent{ get; set; }
 
         /// <summary>
-        /// Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+        /// Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KibanaAlteringPublicAccess")]
@@ -573,6 +573,20 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
+
+        /// <summary>
+        /// kibana内网vip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KibanaPrivateVip")]
+        public string KibanaPrivateVip{ get; set; }
+
+        /// <summary>
+        /// 自定义kibana内网url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomKibanaPrivateUrl")]
+        public string CustomKibanaPrivateUrl{ get; set; }
 
 
         /// <summary>
@@ -663,6 +677,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
             this.SetParamSimple(map, prefix + "HasKernelUpgrade", this.HasKernelUpgrade);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "KibanaPrivateVip", this.KibanaPrivateVip);
+            this.SetParamSimple(map, prefix + "CustomKibanaPrivateUrl", this.CustomKibanaPrivateUrl);
         }
     }
 }

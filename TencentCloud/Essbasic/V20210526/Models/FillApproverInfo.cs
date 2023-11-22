@@ -61,10 +61,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string OrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，organization_open_id+open_id 必传
+        /// 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
         /// </summary>
         [JsonProperty("NotChannelOrganization")]
-        public string NotChannelOrganization{ get; set; }
+        public bool? NotChannelOrganization{ get; set; }
 
 
         /// <summary>

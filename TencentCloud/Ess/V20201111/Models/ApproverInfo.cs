@@ -181,9 +181,11 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <ul><li>**1**：人脸认证，需进行人脸识别成功后才能签署合同；</li>
         /// <li>**2**：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；</li>
         /// <li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。</li></ul>
+        /// 
         /// 注：
-        /// <ul><li>默认情况下，认证校验方式为人脸认证和签署密码两种形式；</li>
-        /// <li>您可以传递多种值，表示可用多种认证校验方式。</li></ul>
+        /// 1. 默认情况下，认证校验方式为人脸认证和签署密码两种形式
+        /// 2. 您可以传递多种值，表示可用多种认证校验方式
+        /// 3. 运营商三要素认证方式对手机号运营商及前缀有限制,可以参考[运营商支持列表类](https://qian.tencent.com/developers/company/mobile_support)得到具体的支持说明
         /// </summary>
         [JsonProperty("ApproverSignTypes")]
         public long?[] ApproverSignTypes{ get; set; }
