@@ -69,13 +69,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? CtsMax{ get; set; }
 
         /// <summary>
-        /// 分页开始条数
+        /// 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
         /// </summary>
         [JsonProperty("OffSet")]
         public ulong? OffSet{ get; set; }
 
         /// <summary>
-        /// 每页的条数
+        /// 每页返回的数量
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

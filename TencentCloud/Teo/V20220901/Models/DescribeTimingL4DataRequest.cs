@@ -41,16 +41,13 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>l4Flow_connections: 访问连接数；</li>
         /// <li>l4Flow_flux: 访问总流量；</li>
         /// <li>l4Flow_inFlux: 访问入流量；</li>
-        /// <li>l4Flow_outFlux: 访问出流量；</li>
-        /// <li> l4Flow_outPkt: 访问出包量。</li>
+        /// <li>l4Flow_outFlux: 访问出流量。</li>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// 站点集合。
-        /// 若不填写，默认选择全部站点，且最多只能查询近30天的数据；
-        /// 若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+        /// 站点 ID 集合，此参数必填。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

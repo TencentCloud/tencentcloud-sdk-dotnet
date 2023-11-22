@@ -66,6 +66,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
+        /// 固定ip回收时间，已安装eniipamd组件才会有值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClaimExpiredDuration")]
+        public string ClaimExpiredDuration{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -83,6 +90,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Phase", this.Phase);
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
             this.SetParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
+            this.SetParamSimple(map, prefix + "ClaimExpiredDuration", this.ClaimExpiredDuration);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

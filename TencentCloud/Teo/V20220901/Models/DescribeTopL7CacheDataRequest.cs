@@ -47,7 +47,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// 站点id集合，不填默认选择全部站点。
+        /// 站点 ID 集合，此参数必填。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

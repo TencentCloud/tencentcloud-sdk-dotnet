@@ -293,6 +293,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 实例关闭审计服务
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public async Task<CloseAuditServiceResponse> CloseAuditService(CloseAuditServiceRequest req)
+        {
+             JsonResponseModel<CloseAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例关闭审计服务
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public CloseAuditServiceResponse CloseAuditServiceSync(CloseAuditServiceRequest req)
+        {
+             JsonResponseModel<CloseAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 关闭数据库代理
         /// </summary>
         /// <param name="req"><see cref="CloseCDBProxyRequest"/></param>
@@ -564,6 +604,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "CreateAuditRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建审计规则模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditRuleTemplateRequest"/></param>
+        /// <returns><see cref="CreateAuditRuleTemplateResponse"/></returns>
+        public async Task<CreateAuditRuleTemplateResponse> CreateAuditRuleTemplate(CreateAuditRuleTemplateRequest req)
+        {
+             JsonResponseModel<CreateAuditRuleTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAuditRuleTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditRuleTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建审计规则模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditRuleTemplateRequest"/></param>
+        /// <returns><see cref="CreateAuditRuleTemplateResponse"/></returns>
+        public CreateAuditRuleTemplateResponse CreateAuditRuleTemplateSync(CreateAuditRuleTemplateRequest req)
+        {
+             JsonResponseModel<CreateAuditRuleTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAuditRuleTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditRuleTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1211,6 +1291,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 删除审计规则模版
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
+        public async Task<DeleteAuditRuleTemplatesResponse> DeleteAuditRuleTemplates(DeleteAuditRuleTemplatesRequest req)
+        {
+             JsonResponseModel<DeleteAuditRuleTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAuditRuleTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditRuleTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除审计规则模版
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
+        public DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplatesSync(DeleteAuditRuleTemplatesRequest req)
+        {
+             JsonResponseModel<DeleteAuditRuleTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAuditRuleTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditRuleTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DeleteBackup)用于删除数据库备份。本接口只支持删除手动发起的备份。
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupRequest"/></param>
@@ -1242,6 +1362,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DeleteBackup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteDatabase)用于在云数据库实例中删除数据库。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDatabaseRequest"/></param>
+        /// <returns><see cref="DeleteDatabaseResponse"/></returns>
+        public async Task<DeleteDatabaseResponse> DeleteDatabase(DeleteDatabaseRequest req)
+        {
+             JsonResponseModel<DeleteDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteDatabase)用于在云数据库实例中删除数据库。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDatabaseRequest"/></param>
+        /// <returns><see cref="DeleteDatabaseResponse"/></returns>
+        public DeleteDatabaseResponse DeleteDatabaseSync(DeleteDatabaseRequest req)
+        {
+             JsonResponseModel<DeleteDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDatabaseResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1531,6 +1691,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 获取审计实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public async Task<DescribeAuditInstanceListResponse> DescribeAuditInstanceList(DescribeAuditInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeAuditInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取审计实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public DescribeAuditInstanceListResponse DescribeAuditInstanceListSync(DescribeAuditInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeAuditInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeAuditLogFiles)用于查询云数据库实例的审计日志文件。
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
@@ -1642,6 +1842,86 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAuditPolicies");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询规则模板变更记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRuleTemplateModifyHistoryRequest"/></param>
+        /// <returns><see cref="DescribeAuditRuleTemplateModifyHistoryResponse"/></returns>
+        public async Task<DescribeAuditRuleTemplateModifyHistoryResponse> DescribeAuditRuleTemplateModifyHistory(DescribeAuditRuleTemplateModifyHistoryRequest req)
+        {
+             JsonResponseModel<DescribeAuditRuleTemplateModifyHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditRuleTemplateModifyHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditRuleTemplateModifyHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询规则模板变更记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRuleTemplateModifyHistoryRequest"/></param>
+        /// <returns><see cref="DescribeAuditRuleTemplateModifyHistoryResponse"/></returns>
+        public DescribeAuditRuleTemplateModifyHistoryResponse DescribeAuditRuleTemplateModifyHistorySync(DescribeAuditRuleTemplateModifyHistoryRequest req)
+        {
+             JsonResponseModel<DescribeAuditRuleTemplateModifyHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditRuleTemplateModifyHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditRuleTemplateModifyHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询审计规则模板信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAuditRuleTemplatesResponse"/></returns>
+        public async Task<DescribeAuditRuleTemplatesResponse> DescribeAuditRuleTemplates(DescribeAuditRuleTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAuditRuleTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditRuleTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditRuleTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询审计规则模板信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAuditRuleTemplatesResponse"/></returns>
+        public DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplatesSync(DescribeAuditRuleTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAuditRuleTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditRuleTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditRuleTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4220,6 +4500,86 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAuditRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改审计规则模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="ModifyAuditRuleTemplatesResponse"/></returns>
+        public async Task<ModifyAuditRuleTemplatesResponse> ModifyAuditRuleTemplates(ModifyAuditRuleTemplatesRequest req)
+        {
+             JsonResponseModel<ModifyAuditRuleTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAuditRuleTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditRuleTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改审计规则模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="ModifyAuditRuleTemplatesResponse"/></returns>
+        public ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplatesSync(ModifyAuditRuleTemplatesRequest req)
+        {
+             JsonResponseModel<ModifyAuditRuleTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAuditRuleTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditRuleTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAuditService)用于修改云数据库审计日志保存时长、审计规则等服务配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public async Task<ModifyAuditServiceResponse> ModifyAuditService(ModifyAuditServiceRequest req)
+        {
+             JsonResponseModel<ModifyAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAuditService)用于修改云数据库审计日志保存时长、审计规则等服务配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public ModifyAuditServiceResponse ModifyAuditServiceSync(ModifyAuditServiceRequest req)
+        {
+             JsonResponseModel<ModifyAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditServiceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

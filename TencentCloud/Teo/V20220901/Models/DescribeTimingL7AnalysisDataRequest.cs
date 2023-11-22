@@ -38,10 +38,10 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 指标列表，取值有:
-        /// <li>l7Flow_outFlux: Edgeone响应流量；</li>
-        /// <li>l7Flow_inFlux: Edgeone请求流量；</li>
-        /// <li>l7Flow_outBandwidth: Edgeone响应带宽；</li>
-        /// <li>l7Flow_inBandwidth：Edgeone请求带宽；</li>
+        /// <li>l7Flow_outFlux: Edgeone 响应流量；</li>
+        /// <li>l7Flow_inFlux: Edgeone 请求流量；</li>
+        /// <li>l7Flow_outBandwidth: Edgeone 响应带宽；</li>
+        /// <li>l7Flow_inBandwidth：Edgeone 请求带宽；</li>
         /// <li>l7Flow_request: 访问请求数；</li>
         /// <li>l7Flow_flux: 访问请求上行+下行流量；</li>
         /// <li>l7Flow_bandwidth：访问请求上行+下行带宽。</li>
@@ -50,8 +50,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// 站点集合。
-        /// 若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+        /// 站点 ID 集合, 此参数必填。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

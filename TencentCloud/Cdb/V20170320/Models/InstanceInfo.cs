@@ -311,6 +311,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
+        /// <summary>
+        /// 当前扩容的CPU核心数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpandCpu")]
+        public long? ExpandCpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -363,6 +370,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
         }
     }
 }

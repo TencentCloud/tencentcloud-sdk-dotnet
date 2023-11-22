@@ -253,6 +253,46 @@ namespace TencentCloud.Cfg.V20210820
         }
 
         /// <summary>
+        /// 获取护栏触发日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskPolicyTriggerLogRequest"/></param>
+        /// <returns><see cref="DescribeTaskPolicyTriggerLogResponse"/></returns>
+        public async Task<DescribeTaskPolicyTriggerLogResponse> DescribeTaskPolicyTriggerLog(DescribeTaskPolicyTriggerLogRequest req)
+        {
+             JsonResponseModel<DescribeTaskPolicyTriggerLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskPolicyTriggerLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskPolicyTriggerLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取护栏触发日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskPolicyTriggerLogRequest"/></param>
+        /// <returns><see cref="DescribeTaskPolicyTriggerLogResponse"/></returns>
+        public DescribeTaskPolicyTriggerLogResponse DescribeTaskPolicyTriggerLogSync(DescribeTaskPolicyTriggerLogRequest req)
+        {
+             JsonResponseModel<DescribeTaskPolicyTriggerLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskPolicyTriggerLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskPolicyTriggerLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询经验库
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateRequest"/></param>
@@ -444,6 +484,46 @@ namespace TencentCloud.Cfg.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "ModifyTaskRunStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTaskRunStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于触发混沌演练护栏（类型为触发和恢复2种）
+        /// </summary>
+        /// <param name="req"><see cref="TriggerPolicyRequest"/></param>
+        /// <returns><see cref="TriggerPolicyResponse"/></returns>
+        public async Task<TriggerPolicyResponse> TriggerPolicy(TriggerPolicyRequest req)
+        {
+             JsonResponseModel<TriggerPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TriggerPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TriggerPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于触发混沌演练护栏（类型为触发和恢复2种）
+        /// </summary>
+        /// <param name="req"><see cref="TriggerPolicyRequest"/></param>
+        /// <returns><see cref="TriggerPolicyResponse"/></returns>
+        public TriggerPolicyResponse TriggerPolicySync(TriggerPolicyRequest req)
+        {
+             JsonResponseModel<TriggerPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TriggerPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TriggerPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

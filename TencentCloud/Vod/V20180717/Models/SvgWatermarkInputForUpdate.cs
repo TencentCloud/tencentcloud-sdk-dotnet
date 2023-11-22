@@ -59,6 +59,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 花括号 {} 表示由 A、B、C、D 4 个水印组成的大周期，可以看出每个大周期持续 20 秒。
         /// 可以看出，A、B、C、D 都是周期性地显示 5 秒、隐藏 15 秒，且四者有固定的显示顺序。
         /// 此配置项即用来描述单个水印的周期配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleConfig")]
         public WatermarkCycleConfigForUpdate CycleConfig{ get; set; }

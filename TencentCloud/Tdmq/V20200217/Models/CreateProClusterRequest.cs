@@ -75,8 +75,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// <summary>
         /// vpc网络标签
         /// </summary>
-        [JsonProperty("Vpcs")]
-        public VpcInfo Vpcs{ get; set; }
+        [JsonProperty("Vpc")]
+        public VpcInfo Vpc{ get; set; }
 
         /// <summary>
         /// 集群的标签列表(已废弃)
@@ -97,7 +97,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
-            this.SetParamObj(map, prefix + "Vpcs.", this.Vpcs);
+            this.SetParamObj(map, prefix + "Vpc.", this.Vpc);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

@@ -51,14 +51,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// 站点集合。
-        /// 若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+        /// 站点 ID 集合，此参数必填。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 查询的域名集合，不填默认查询所有子域名。
+        /// 查询的域名集合，此参数已经废弃。
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
@@ -86,6 +85,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 过滤条件，详细的过滤条件Key值如下：
         /// <li>socket<br>   按照【<strong>HTTP协议类型</strong>】进行过滤。<br>   对应的Value可选项如下：<br>   HTTP：HTTP 协议；<br>   HTTPS：HTTPS协议；<br>   QUIC：QUIC协议。</li>
+        /// <li>domain<br>   按照【<strong>域名</strong>】进行过滤。</li>
         /// <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。</li>
         /// <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。</li>
         /// </summary>
