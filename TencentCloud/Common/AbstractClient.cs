@@ -141,7 +141,7 @@ namespace TencentCloud.Common
 
         protected string InternalRequestSync(AbstractModel request, string actionName)
         {
-            return InternalRequest(request, actionName).Result;
+            return Task.Run(() => InternalRequest(request, actionName)).Result;
         }
 
         private async Task<HttpResponseMessage> RequestV3(AbstractModel request, string actionName)
