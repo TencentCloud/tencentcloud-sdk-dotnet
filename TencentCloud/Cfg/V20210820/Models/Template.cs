@@ -138,6 +138,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("AlarmPolicy")]
         public string[] AlarmPolicy{ get; set; }
 
+        /// <summary>
+        /// 护栏处理方式，1--顺序回滚，2--演练暂停
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PolicyDealType")]
+        public long? PolicyDealType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +169,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TemplateSource", this.TemplateSource);
             this.SetParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
             this.SetParamArraySimple(map, prefix + "AlarmPolicy.", this.AlarmPolicy);
+            this.SetParamSimple(map, prefix + "PolicyDealType", this.PolicyDealType);
         }
     }
 }

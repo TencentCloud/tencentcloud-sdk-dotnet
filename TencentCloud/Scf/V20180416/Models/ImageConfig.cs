@@ -73,9 +73,9 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// 镜像函数端口设置
+        /// 默认值: 9000
         /// -1: 无端口镜像函数
-        /// 0: 默认端口，当前默认端口是9000
-        /// 其他: 特殊端口
+        /// 其他: 取值范围 0 ~ 65535
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImagePort")]

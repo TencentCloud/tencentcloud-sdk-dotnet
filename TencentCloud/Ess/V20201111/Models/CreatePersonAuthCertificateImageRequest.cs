@@ -40,8 +40,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 证件类型，支持以下类型
         /// <ul><li> ID_CARD  : 居民身份证 (默认值)</li>
-        /// <li> PASSPORT  : 护照</li>
-        /// <li> FOREIGN_ID_CARD  : 外国人永久居留身份证</li>
         /// <li> HONGKONG_AND_MACAO  : 港澳居民来往内地通行证</li>
         /// <li> HONGKONG_MACAO_AND_TAIWAN  : 港澳台居民居住证(格式同居民身份证)</li></ul>
         /// </summary>
@@ -64,6 +62,15 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
+        /// <summary>
+        /// 自动签使用的场景值, 可以选择的场景值如下:
+        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+        /// 
+        /// 注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
+        /// </summary>
+        [JsonProperty("SceneKey")]
+        public string SceneKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +82,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "IdCardType", this.IdCardType);
             this.SetParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "SceneKey", this.SceneKey);
         }
     }
 }

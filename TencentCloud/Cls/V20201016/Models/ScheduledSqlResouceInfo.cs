@@ -48,6 +48,31 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
 
+        /// <summary>
+        /// 指标名称
+        /// BizType为1时，优先使用MetricNames字段信息。多指标只能填充到MetricNames字段，单指标建议填充到MetricNames字段
+        /// </summary>
+        [JsonProperty("MetricNames")]
+        public string[] MetricNames{ get; set; }
+
+        /// <summary>
+        /// 指标项
+        /// </summary>
+        [JsonProperty("MetricLabels")]
+        public string[] MetricLabels{ get; set; }
+
+        /// <summary>
+        /// 自定义时间
+        /// </summary>
+        [JsonProperty("CustomTime")]
+        public string CustomTime{ get; set; }
+
+        /// <summary>
+        /// 自定义标签
+        /// </summary>
+        [JsonProperty("CustomMetricLabels")]
+        public MetricLabel[] CustomMetricLabels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +83,10 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
+            this.SetParamArraySimple(map, prefix + "MetricLabels.", this.MetricLabels);
+            this.SetParamSimple(map, prefix + "CustomTime", this.CustomTime);
+            this.SetParamArrayObj(map, prefix + "CustomMetricLabels.", this.CustomMetricLabels);
         }
     }
 }

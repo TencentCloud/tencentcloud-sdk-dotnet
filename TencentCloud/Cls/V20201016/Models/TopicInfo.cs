@@ -130,6 +130,24 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("HotPeriod")]
         public ulong? HotPeriod{ get; set; }
 
+        /// <summary>
+        /// 主题类型。
+        /// - 0: 日志主题 
+        /// - 1: 指标主题
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BizType")]
+        public ulong? BizType{ get; set; }
+
+        /// <summary>
+        /// 免鉴权开关。
+        /// - false: 关闭
+        /// - true: 开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsWebTracking")]
+        public bool? IsWebTracking{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -152,6 +170,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
             this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+            this.SetParamSimple(map, prefix + "BizType", this.BizType);
+            this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         }
     }
 }

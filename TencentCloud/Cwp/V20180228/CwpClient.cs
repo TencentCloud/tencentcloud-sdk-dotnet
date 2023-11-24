@@ -17459,7 +17459,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        ///  用于设置新增主机自动开通专业防护配置。
+        /// 用于设置新增主机自动开通专业防护配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoOpenProVersionConfigRequest"/></param>
         /// <returns><see cref="ModifyAutoOpenProVersionConfigResponse"/></returns>
@@ -17479,7 +17479,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        ///  用于设置新增主机自动开通专业防护配置。
+        /// 用于设置新增主机自动开通专业防护配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoOpenProVersionConfigRequest"/></param>
         /// <returns><see cref="ModifyAutoOpenProVersionConfigResponse"/></returns>

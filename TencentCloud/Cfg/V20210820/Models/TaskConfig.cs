@@ -60,6 +60,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("Tags")]
         public TagWithCreate[] Tags{ get; set; }
 
+        /// <summary>
+        /// 护栏处理方式，1--顺序回滚，2--演练暂停
+        /// </summary>
+        [JsonProperty("PolicyDealType")]
+        public long? PolicyDealType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskMode", this.TaskMode);
             this.SetParamSimple(map, prefix + "TaskPauseDuration", this.TaskPauseDuration);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "PolicyDealType", this.PolicyDealType);
         }
     }
 }

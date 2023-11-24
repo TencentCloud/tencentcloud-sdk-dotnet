@@ -106,6 +106,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? Status{ get; set; }
 
         /// <summary>
+        /// 是否开启告警策略。默认值为true
+        /// </summary>
+        [JsonProperty("Enable")]
+        public bool? Enable{ get; set; }
+
+        /// <summary>
         /// 用户自定义告警内容
         /// </summary>
         [JsonProperty("MessageTemplate")]
@@ -155,6 +161,18 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MonitorObjectType")]
         public ulong? MonitorObjectType{ get; set; }
 
+        /// <summary>
+        /// 告警附加分类信息列表。
+        /// 
+        /// Classifications元素个数不能超过20个。
+        /// 
+        /// Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
+        /// 
+        /// Classifications元素的Value长度不能超过200个字符。
+        /// </summary>
+        [JsonProperty("Classifications")]
+        public AlarmClassification[] Classifications{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +189,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
             this.SetParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
             this.SetParamObj(map, prefix + "CallBack.", this.CallBack);
             this.SetParamArrayObj(map, prefix + "Analysis.", this.Analysis);
@@ -178,6 +197,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
+            this.SetParamArrayObj(map, prefix + "Classifications.", this.Classifications);
         }
     }
 }

@@ -44,6 +44,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("AutoRepurchaseRenewSwitch")]
         public ulong? AutoRepurchaseRenewSwitch{ get; set; }
 
+        /// <summary>
+        /// 手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启
+        /// </summary>
+        [JsonProperty("RepurchaseRenewSwitch")]
+        public ulong? RepurchaseRenewSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
             this.SetParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
+            this.SetParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
         }
     }
 }

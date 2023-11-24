@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.900</VersionPrefix>
+    <VersionPrefix>3.0.901</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -110,6 +110,7 @@
     <Compile Include="V20220901\Models\CnameStatus.cs" />
     <Compile Include="V20220901\Models\CodeAction.cs" />
     <Compile Include="V20220901\Models\Compression.cs" />
+    <Compile Include="V20220901\Models\ConfigGroupVersionInfo.cs" />
     <Compile Include="V20220901\Models\CreateAccelerationDomainRequest.cs" />
     <Compile Include="V20220901\Models\CreateAccelerationDomainResponse.cs" />
     <Compile Include="V20220901\Models\CreateAliasDomainRequest.cs" />
@@ -118,6 +119,8 @@
     <Compile Include="V20220901\Models\CreateApplicationProxyResponse.cs" />
     <Compile Include="V20220901\Models\CreateApplicationProxyRuleRequest.cs" />
     <Compile Include="V20220901\Models\CreateApplicationProxyRuleResponse.cs" />
+    <Compile Include="V20220901\Models\CreateConfigGroupVersionRequest.cs" />
+    <Compile Include="V20220901\Models\CreateConfigGroupVersionResponse.cs" />
     <Compile Include="V20220901\Models\CreateOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\CreateOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\CreatePlanForZoneRequest.cs" />
@@ -156,6 +159,9 @@
     <Compile Include="V20220901\Models\DeleteSharedCNAMEResponse.cs" />
     <Compile Include="V20220901\Models\DeleteZoneRequest.cs" />
     <Compile Include="V20220901\Models\DeleteZoneResponse.cs" />
+    <Compile Include="V20220901\Models\DeployConfigGroupVersionRequest.cs" />
+    <Compile Include="V20220901\Models\DeployConfigGroupVersionResponse.cs" />
+    <Compile Include="V20220901\Models\DeployRecord.cs" />
     <Compile Include="V20220901\Models\DescribeAccelerationDomainsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeAccelerationDomainsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeAliasDomainsRequest.cs" />
@@ -164,6 +170,10 @@
     <Compile Include="V20220901\Models\DescribeApplicationProxiesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeAvailablePlansRequest.cs" />
     <Compile Include="V20220901\Models\DescribeAvailablePlansResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeConfigGroupVersionDetailRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeConfigGroupVersionDetailResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeConfigGroupVersionsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeConfigGroupVersionsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeContentQuotaRequest.cs" />
     <Compile Include="V20220901\Models\DescribeContentQuotaResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackDataRequest.cs" />
@@ -174,6 +184,10 @@
     <Compile Include="V20220901\Models\DescribeDDoSAttackTopDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDefaultCertificatesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDefaultCertificatesResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeDeployHistoryRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeDeployHistoryResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeEnvironmentsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeEnvironmentsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeHostsSettingRequest.cs" />
     <Compile Include="V20220901\Models\DescribeHostsSettingResponse.cs" />
     <Compile Include="V20220901\Models\DescribeIdentificationsRequest.cs" />
@@ -218,6 +232,7 @@
     <Compile Include="V20220901\Models\DropPageConfig.cs" />
     <Compile Include="V20220901\Models\DropPageDetail.cs" />
     <Compile Include="V20220901\Models\EntityStatus.cs" />
+    <Compile Include="V20220901\Models\EnvInfo.cs" />
     <Compile Include="V20220901\Models\ExceptConfig.cs" />
     <Compile Include="V20220901\Models\ExceptUserRule.cs" />
     <Compile Include="V20220901\Models\ExceptUserRuleCondition.cs" />

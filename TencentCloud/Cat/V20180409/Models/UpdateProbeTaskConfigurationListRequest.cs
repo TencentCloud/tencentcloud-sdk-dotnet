@@ -25,25 +25,25 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 任务 ID
+        /// 任务 ID，如task-n1wchki8
         /// </summary>
         [JsonProperty("TaskIds")]
         public string[] TaskIds{ get; set; }
 
         /// <summary>
-        /// 拨测节点
+        /// 拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
         /// </summary>
         [JsonProperty("Nodes")]
         public string[] Nodes{ get; set; }
 
         /// <summary>
-        /// 拨测间隔
+        /// 拨测间隔，如30，单位为分钟。
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }
 
         /// <summary>
-        /// 拨测参数
+        /// 拨测参数，详细参数配置可参考云拨测官网文档。
         /// </summary>
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }
@@ -61,6 +61,12 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("ResourceIDs")]
         public string[] ResourceIDs{ get; set; }
 
+        /// <summary>
+        /// 拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
+        /// </summary>
+        [JsonProperty("NodeIpType")]
+        public long? NodeIpType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
             this.SetParamSimple(map, prefix + "Cron", this.Cron);
             this.SetParamArraySimple(map, prefix + "ResourceIDs.", this.ResourceIDs);
+            this.SetParamSimple(map, prefix + "NodeIpType", this.NodeIpType);
         }
     }
 }

@@ -86,7 +86,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? HotPeriod{ get; set; }
 
         /// <summary>
-        /// webtracking开关； false: 关闭 true： 开启
+        /// 免鉴权开关； false: 关闭 true： 开启
         /// </summary>
         [JsonProperty("IsWebTracking")]
         public bool? IsWebTracking{ get; set; }

@@ -202,7 +202,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public bool? IsVulnerability{ get; set; }
 
         /// <summary>
-        /// 是否可重颁发证书。
+        /// 是否可续费。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewAble")]
@@ -313,6 +313,62 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("HostingRenewCertId")]
         public string HostingRenewCertId{ get; set; }
 
+        /// <summary>
+        /// 存在的续费证书ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HasRenewOrder")]
+        public string HasRenewOrder{ get; set; }
+
+        /// <summary>
+        /// 重颁发证书原证书是否删除
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReplaceOriCertIsDelete")]
+        public bool? ReplaceOriCertIsDelete{ get; set; }
+
+        /// <summary>
+        /// 是否即将过期， 证书即将到期的30天内为即将过期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsExpiring")]
+        public bool? IsExpiring{ get; set; }
+
+        /// <summary>
+        /// DV证书添加验证截止时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DVAuthDeadline")]
+        public string DVAuthDeadline{ get; set; }
+
+        /// <summary>
+        /// 域名验证通过时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ValidationPassedTime")]
+        public string ValidationPassedTime{ get; set; }
+
+        /// <summary>
+        /// 证书关联的多域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CertSANs")]
+        public string[] CertSANs{ get; set; }
+
+        /// <summary>
+        /// 域名验证驳回信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AwaitingValidationMsg")]
+        public string AwaitingValidationMsg{ get; set; }
+
+        /// <summary>
+        /// 是否允许下载
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AllowDownload")]
+        public bool? AllowDownload{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -360,6 +416,14 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "HostingStatus", this.HostingStatus);
             this.SetParamSimple(map, prefix + "HostingCompleteTime", this.HostingCompleteTime);
             this.SetParamSimple(map, prefix + "HostingRenewCertId", this.HostingRenewCertId);
+            this.SetParamSimple(map, prefix + "HasRenewOrder", this.HasRenewOrder);
+            this.SetParamSimple(map, prefix + "ReplaceOriCertIsDelete", this.ReplaceOriCertIsDelete);
+            this.SetParamSimple(map, prefix + "IsExpiring", this.IsExpiring);
+            this.SetParamSimple(map, prefix + "DVAuthDeadline", this.DVAuthDeadline);
+            this.SetParamSimple(map, prefix + "ValidationPassedTime", this.ValidationPassedTime);
+            this.SetParamArraySimple(map, prefix + "CertSANs.", this.CertSANs);
+            this.SetParamSimple(map, prefix + "AwaitingValidationMsg", this.AwaitingValidationMsg);
+            this.SetParamSimple(map, prefix + "AllowDownload", this.AllowDownload);
         }
     }
 }

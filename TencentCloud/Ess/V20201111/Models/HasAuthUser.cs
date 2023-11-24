@@ -40,6 +40,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("BelongTo")]
         public string BelongTo{ get; set; }
 
+        /// <summary>
+        /// 集团主企业id，当前企业为集团子企业时，该字段有值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MainOrganizationId")]
+        public string MainOrganizationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -48,6 +55,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "BelongTo", this.BelongTo);
+            this.SetParamSimple(map, prefix + "MainOrganizationId", this.MainOrganizationId);
         }
     }
 }

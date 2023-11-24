@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6F5BC504-40E8-3B8D-99B3-88CDC3921202}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.900</VersionPrefix>
+    <VersionPrefix>3.0.901</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -113,6 +113,7 @@
     <Compile Include="V20180416\Models\GetReservedConcurrencyConfigResponse.cs" />
     <Compile Include="V20180416\Models\ImageConfig.cs" />
     <Compile Include="V20180416\Models\InstanceConcurrencyConfig.cs" />
+    <Compile Include="V20180416\Models\IntranetConfigOut.cs" />
     <Compile Include="V20180416\Models\InvokeFunctionRequest.cs" />
     <Compile Include="V20180416\Models\InvokeFunctionResponse.cs" />
     <Compile Include="V20180416\Models\InvokeRequest.cs" />

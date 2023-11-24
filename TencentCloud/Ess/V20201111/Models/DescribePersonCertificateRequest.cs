@@ -49,8 +49,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 证书使用场景，可以选择的场景值如下:
-        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
-        /// 注: `现在仅支持电子处方场景`
+        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
         /// </summary>
         [JsonProperty("SceneKey")]
         public string SceneKey{ get; set; }

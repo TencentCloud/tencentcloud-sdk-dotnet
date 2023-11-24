@@ -112,6 +112,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("SpecFeatures")]
         public string[] SpecFeatures{ get; set; }
 
+        /// <summary>
+        /// 纳管cvmid
+        /// </summary>
+        [JsonProperty("CvmInstanceId")]
+        public string CvmInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +135,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SpecId", this.SpecId);
             this.SetParamSimple(map, prefix + "SpecAlias", this.SpecAlias);
             this.SetParamArraySimple(map, prefix + "SpecFeatures.", this.SpecFeatures);
+            this.SetParamSimple(map, prefix + "CvmInstanceId", this.CvmInstanceId);
         }
     }
 }

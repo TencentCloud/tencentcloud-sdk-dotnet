@@ -286,6 +286,13 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TraceEnable{ get; set; }
 
         /// <summary>
+        /// 镜像配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageConfig")]
+        public ImageConfig ImageConfig{ get; set; }
+
+        /// <summary>
         /// HTTP函数支持的访问协议。当前支持WebSockets协议。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -298,6 +305,20 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         [JsonProperty("ProtocolParams")]
         public ProtocolParams ProtocolParams{ get; set; }
+
+        /// <summary>
+        /// 是否开启DNS缓存
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DnsCache")]
+        public string DnsCache{ get; set; }
+
+        /// <summary>
+        /// 内网访问配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IntranetConfig")]
+        public IntranetConfigOut IntranetConfig{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -353,8 +374,11 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
             this.SetParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
             this.SetParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
+            this.SetParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
             this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
             this.SetParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
+            this.SetParamSimple(map, prefix + "DnsCache", this.DnsCache);
+            this.SetParamObj(map, prefix + "IntranetConfig.", this.IntranetConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

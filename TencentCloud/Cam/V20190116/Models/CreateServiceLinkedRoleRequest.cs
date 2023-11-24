@@ -25,7 +25,8 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 授权服务，附加了此角色的腾讯云服务主体。
+        /// 填写此角色的腾讯云服务载体，具体可查询文档（角色载体）字段
+        /// https://cloud.tencent.com/document/product/598/85165
         /// </summary>
         [JsonProperty("QCSServiceName")]
         public string[] QCSServiceName{ get; set; }

@@ -33,9 +33,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 自动签使用的场景值, 可以选择的场景值如下:
-        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
-        /// 
-        /// 注: `现在仅支持电子处方场景`
+        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
         /// </summary>
         [JsonProperty("SceneKey")]
         public string SceneKey{ get; set; }
@@ -57,7 +55,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 是否通知开通方，通知类型:
         /// <ul><li>默认不设置为不通知开通方</li>
-        /// <li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>
+        /// <li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }

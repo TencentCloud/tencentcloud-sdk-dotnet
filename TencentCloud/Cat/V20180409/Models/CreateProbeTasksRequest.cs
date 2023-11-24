@@ -31,13 +31,13 @@ namespace TencentCloud.Cat.V20180409.Models
         public ProbeTaskBasicConfiguration[] BatchTasks{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 拨测节点
+        /// 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
         /// </summary>
         [JsonProperty("Nodes")]
         public string[] Nodes{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public long? Interval{ get; set; }
 
         /// <summary>
-        /// 拨测参数
+        /// 拨测参数，如{}，详细可参考云拨测官方文档。
         /// </summary>
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }
@@ -75,13 +75,13 @@ namespace TencentCloud.Cat.V20180409.Models
         public Tag[] Tag{ get; set; }
 
         /// <summary>
-        /// 测试类型，包含定时测试与即时测试
+        /// 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
         /// </summary>
         [JsonProperty("ProbeType")]
         public ulong? ProbeType{ get; set; }
 
         /// <summary>
-        /// 插件类型
+        /// 插件类型，如CDN，详情参考云拨测官方文档。
         /// </summary>
         [JsonProperty("PluginSource")]
         public string PluginSource{ get; set; }
@@ -91,6 +91,12 @@ namespace TencentCloud.Cat.V20180409.Models
         /// </summary>
         [JsonProperty("ClientNum")]
         public string ClientNum{ get; set; }
+
+        /// <summary>
+        /// 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
+        /// </summary>
+        [JsonProperty("NodeIpType")]
+        public long? NodeIpType{ get; set; }
 
 
         /// <summary>
@@ -109,6 +115,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamSimple(map, prefix + "ProbeType", this.ProbeType);
             this.SetParamSimple(map, prefix + "PluginSource", this.PluginSource);
             this.SetParamSimple(map, prefix + "ClientNum", this.ClientNum);
+            this.SetParamSimple(map, prefix + "NodeIpType", this.NodeIpType);
         }
     }
 }

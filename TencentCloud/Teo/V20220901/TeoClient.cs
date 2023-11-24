@@ -377,6 +377,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 在版本管理模式下，用于创建指定配置组的新版本。版本管理功能内测中，当前仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="CreateConfigGroupVersionRequest"/></param>
+        /// <returns><see cref="CreateConfigGroupVersionResponse"/></returns>
+        public async Task<CreateConfigGroupVersionResponse> CreateConfigGroupVersion(CreateConfigGroupVersionRequest req)
+        {
+             JsonResponseModel<CreateConfigGroupVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateConfigGroupVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConfigGroupVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在版本管理模式下，用于创建指定配置组的新版本。版本管理功能内测中，当前仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="CreateConfigGroupVersionRequest"/></param>
+        /// <returns><see cref="CreateConfigGroupVersionResponse"/></returns>
+        public CreateConfigGroupVersionResponse CreateConfigGroupVersionSync(CreateConfigGroupVersionRequest req)
+        {
+             JsonResponseModel<CreateConfigGroupVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateConfigGroupVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConfigGroupVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建源站组，以源站组的方式管理业务源站。此处配置的源站组可于**添加加速域名**和**四层代理**等功能中引用。
         /// </summary>
         /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
@@ -1065,6 +1105,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 在版本管理模式下，用于版本发布，可通过 EnvId 将版本发布至测试环境或生产环境。版本管理功能内测中，当前仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DeployConfigGroupVersionRequest"/></param>
+        /// <returns><see cref="DeployConfigGroupVersionResponse"/></returns>
+        public async Task<DeployConfigGroupVersionResponse> DeployConfigGroupVersion(DeployConfigGroupVersionRequest req)
+        {
+             JsonResponseModel<DeployConfigGroupVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeployConfigGroupVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployConfigGroupVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在版本管理模式下，用于版本发布，可通过 EnvId 将版本发布至测试环境或生产环境。版本管理功能内测中，当前仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DeployConfigGroupVersionRequest"/></param>
+        /// <returns><see cref="DeployConfigGroupVersionResponse"/></returns>
+        public DeployConfigGroupVersionResponse DeployConfigGroupVersionSync(DeployConfigGroupVersionRequest req)
+        {
+             JsonResponseModel<DeployConfigGroupVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeployConfigGroupVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployConfigGroupVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 您可以通过本接口查看站点下的域名信息，包括加速域名、源站以及域名状态等信息。您可以查看站点下全部域名的信息，也可以指定过滤条件查询对应的域名信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccelerationDomainsRequest"/></param>
@@ -1216,6 +1296,86 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAvailablePlans");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailablePlansResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在版本管理模式下，用于获取版本的详细信息，包括版本 ID、描述、状态、创建时间、所属配置组信息以及版本配置文件的内容。版本管理功能内测中，当前仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigGroupVersionDetailRequest"/></param>
+        /// <returns><see cref="DescribeConfigGroupVersionDetailResponse"/></returns>
+        public async Task<DescribeConfigGroupVersionDetailResponse> DescribeConfigGroupVersionDetail(DescribeConfigGroupVersionDetailRequest req)
+        {
+             JsonResponseModel<DescribeConfigGroupVersionDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeConfigGroupVersionDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigGroupVersionDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在版本管理模式下，用于获取版本的详细信息，包括版本 ID、描述、状态、创建时间、所属配置组信息以及版本配置文件的内容。版本管理功能内测中，当前仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigGroupVersionDetailRequest"/></param>
+        /// <returns><see cref="DescribeConfigGroupVersionDetailResponse"/></returns>
+        public DescribeConfigGroupVersionDetailResponse DescribeConfigGroupVersionDetailSync(DescribeConfigGroupVersionDetailRequest req)
+        {
+             JsonResponseModel<DescribeConfigGroupVersionDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeConfigGroupVersionDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigGroupVersionDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在版本管理模式下，用于查询指定配置组的版本列表。版本管理功能内测中，当前仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigGroupVersionsRequest"/></param>
+        /// <returns><see cref="DescribeConfigGroupVersionsResponse"/></returns>
+        public async Task<DescribeConfigGroupVersionsResponse> DescribeConfigGroupVersions(DescribeConfigGroupVersionsRequest req)
+        {
+             JsonResponseModel<DescribeConfigGroupVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeConfigGroupVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigGroupVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在版本管理模式下，用于查询指定配置组的版本列表。版本管理功能内测中，当前仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigGroupVersionsRequest"/></param>
+        /// <returns><see cref="DescribeConfigGroupVersionsResponse"/></returns>
+        public DescribeConfigGroupVersionsResponse DescribeConfigGroupVersionsSync(DescribeConfigGroupVersionsRequest req)
+        {
+             JsonResponseModel<DescribeConfigGroupVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeConfigGroupVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigGroupVersionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1416,6 +1576,86 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDefaultCertificates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefaultCertificatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在版本管理模式下，用于查询生产/测试环境的版本发布历史。版本管理功能内测中，当前仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeployHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDeployHistoryResponse"/></returns>
+        public async Task<DescribeDeployHistoryResponse> DescribeDeployHistory(DescribeDeployHistoryRequest req)
+        {
+             JsonResponseModel<DescribeDeployHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeployHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeployHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在版本管理模式下，用于查询生产/测试环境的版本发布历史。版本管理功能内测中，当前仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeployHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDeployHistoryResponse"/></returns>
+        public DescribeDeployHistoryResponse DescribeDeployHistorySync(DescribeDeployHistoryRequest req)
+        {
+             JsonResponseModel<DescribeDeployHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeployHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeployHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在版本管理模式下，用于查询环境信息，可获取环境 ID、类型、当前生效版本等。版本管理功能内测中，当前仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
+        public async Task<DescribeEnvironmentsResponse> DescribeEnvironments(DescribeEnvironmentsRequest req)
+        {
+             JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在版本管理模式下，用于查询环境信息，可获取环境 ID、类型、当前生效版本等。版本管理功能内测中，当前仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
+        public DescribeEnvironmentsResponse DescribeEnvironmentsSync(DescribeEnvironmentsRequest req)
+        {
+             JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

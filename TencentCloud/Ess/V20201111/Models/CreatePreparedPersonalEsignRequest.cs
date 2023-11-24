@@ -131,6 +131,15 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("LicenseType")]
         public long? LicenseType{ get; set; }
 
+        /// <summary>
+        /// 自动签使用的场景值, 可以选择的场景值如下:
+        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+        /// 
+        /// 注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
+        /// </summary>
+        [JsonProperty("SceneKey")]
+        public string SceneKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +160,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
+            this.SetParamSimple(map, prefix + "SceneKey", this.SceneKey);
         }
     }
 }

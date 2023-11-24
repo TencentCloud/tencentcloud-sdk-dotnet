@@ -649,6 +649,46 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 您可以查询转推任务的状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamIngestRequest"/></param>
+        /// <returns><see cref="DescribeStreamIngestResponse"/></returns>
+        public async Task<DescribeStreamIngestResponse> DescribeStreamIngest(DescribeStreamIngestRequest req)
+        {
+             JsonResponseModel<DescribeStreamIngestResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamIngest");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamIngestResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 您可以查询转推任务的状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamIngestRequest"/></param>
+        /// <returns><see cref="DescribeStreamIngestResponse"/></returns>
+        public DescribeStreamIngestResponse DescribeStreamIngestSync(DescribeStreamIngestRequest req)
+        {
+             JsonResponseModel<DescribeStreamIngestResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamIngest");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamIngestResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询TRTC监控仪表盘-数据大盘质量指标（包括下列指标）
         /// joinSuccessRate：加入频道成功率。
         /// joinSuccessIn5sRate：5s内加入频道成功率。
@@ -1981,6 +2021,46 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 将一个在线媒体流推到TRTC房间。
+        /// </summary>
+        /// <param name="req"><see cref="StartStreamIngestRequest"/></param>
+        /// <returns><see cref="StartStreamIngestResponse"/></returns>
+        public async Task<StartStreamIngestResponse> StartStreamIngest(StartStreamIngestRequest req)
+        {
+             JsonResponseModel<StartStreamIngestResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartStreamIngest");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartStreamIngestResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将一个在线媒体流推到TRTC房间。
+        /// </summary>
+        /// <param name="req"><see cref="StartStreamIngestRequest"/></param>
+        /// <returns><see cref="StartStreamIngestResponse"/></returns>
+        public StartStreamIngestResponse StartStreamIngestSync(StartStreamIngestRequest req)
+        {
+             JsonResponseModel<StartStreamIngestResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartStreamIngest");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartStreamIngestResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口说明：结束云端混流
         /// </summary>
         /// <param name="req"><see cref="StopMCUMixTranscodeRequest"/></param>
@@ -2092,6 +2172,46 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "StopPublishCdnStream");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopPublishCdnStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止一个拉流转推任务。
+        /// </summary>
+        /// <param name="req"><see cref="StopStreamIngestRequest"/></param>
+        /// <returns><see cref="StopStreamIngestResponse"/></returns>
+        public async Task<StopStreamIngestResponse> StopStreamIngest(StopStreamIngestRequest req)
+        {
+             JsonResponseModel<StopStreamIngestResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopStreamIngest");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopStreamIngestResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止一个拉流转推任务。
+        /// </summary>
+        /// <param name="req"><see cref="StopStreamIngestRequest"/></param>
+        /// <returns><see cref="StopStreamIngestResponse"/></returns>
+        public StopStreamIngestResponse StopStreamIngestSync(StopStreamIngestRequest req)
+        {
+             JsonResponseModel<StopStreamIngestResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopStreamIngest");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopStreamIngestResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

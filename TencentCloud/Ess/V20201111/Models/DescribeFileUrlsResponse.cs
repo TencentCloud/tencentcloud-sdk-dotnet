@@ -26,7 +26,7 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 文件URL信息；
-        /// 链接不是永久链接,  过期时间收UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
+        /// 链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
         /// </summary>
         [JsonProperty("FileUrls")]
         public FileUrl[] FileUrls{ get; set; }

@@ -58,6 +58,13 @@ namespace TencentCloud.Cat.V20180409.Models
         public string[] Nodes{ get; set; }
 
         /// <summary>
+        /// 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeIpType")]
+        public long? NodeIpType{ get; set; }
+
+        /// <summary>
         /// 拨测间隔
         /// </summary>
         [JsonProperty("Interval")]
@@ -154,6 +161,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamArraySimple(map, prefix + "Nodes.", this.Nodes);
+            this.SetParamSimple(map, prefix + "NodeIpType", this.NodeIpType);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
             this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
             this.SetParamSimple(map, prefix + "Status", this.Status);

@@ -158,7 +158,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public RegisterInfo RegisterInfo{ get; set; }
 
         /// <summary>
-        /// 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签等功能开关。
+        /// 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
         /// </summary>
         [JsonProperty("ApproverOption")]
         public ApproverOption ApproverOption{ get; set; }

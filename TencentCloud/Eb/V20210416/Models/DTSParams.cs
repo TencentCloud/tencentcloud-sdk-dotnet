@@ -24,12 +24,34 @@ namespace TencentCloud.Eb.V20210416.Models
     public class DTSParams : AbstractModel
     {
         
+        /// <summary>
+        /// Consumer Group Name
+        /// </summary>
+        [JsonProperty("ConsumerGroupName")]
+        public string ConsumerGroupName{ get; set; }
+
+        /// <summary>
+        /// 账户名
+        /// </summary>
+        [JsonProperty("Account")]
+        public string Account{ get; set; }
+
+        /// <summary>
+        /// 密码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
+            this.SetParamSimple(map, prefix + "Account", this.Account);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }

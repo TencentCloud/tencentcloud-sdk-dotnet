@@ -51,6 +51,13 @@ namespace TencentCloud.Eb.V20210416.Models
         [JsonProperty("DTSParams")]
         public DTSParams DTSParams{ get; set; }
 
+        /// <summary>
+        /// tdmq参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TDMQParams")]
+        public TDMQParams TDMQParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +68,7 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamObj(map, prefix + "APIGWParams.", this.APIGWParams);
             this.SetParamObj(map, prefix + "CkafkaParams.", this.CkafkaParams);
             this.SetParamObj(map, prefix + "DTSParams.", this.DTSParams);
+            this.SetParamObj(map, prefix + "TDMQParams.", this.TDMQParams);
         }
     }
 }
