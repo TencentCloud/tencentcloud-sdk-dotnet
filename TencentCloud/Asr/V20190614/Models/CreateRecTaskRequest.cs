@@ -52,6 +52,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// • 16k_ar：阿拉伯语；
         /// • 16k_es：西班牙语；
         /// • 16k_hi：印地语；
+        /// • 16k_fr：法语；
         /// • 16k_zh_medical：中文医疗引擎
         /// </summary>
         [JsonProperty("EngineModelType")]

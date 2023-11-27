@@ -53,6 +53,46 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 激活硬件设备
+        /// </summary>
+        /// <param name="req"><see cref="ActivateHardwareRequest"/></param>
+        /// <returns><see cref="ActivateHardwareResponse"/></returns>
+        public async Task<ActivateHardwareResponse> ActivateHardware(ActivateHardwareRequest req)
+        {
+             JsonResponseModel<ActivateHardwareResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ActivateHardware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActivateHardwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 激活硬件设备
+        /// </summary>
+        /// <param name="req"><see cref="ActivateHardwareRequest"/></param>
+        /// <returns><see cref="ActivateHardwareResponse"/></returns>
+        public ActivateHardwareResponse ActivateHardwareSync(ActivateHardwareRequest req)
+        {
+             JsonResponseModel<ActivateHardwareResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ActivateHardware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActivateHardwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 新建设备记录
         /// </summary>
         /// <param name="req"><see cref="AddDeviceRequest"/></param>
@@ -84,6 +124,46 @@ namespace TencentCloud.Mna.V20210119
              {
                  var strResp = this.InternalRequestSync(req, "AddDevice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加硬件设备，生成未激活的硬件设备，可支持批量添加
+        /// </summary>
+        /// <param name="req"><see cref="AddHardwareRequest"/></param>
+        /// <returns><see cref="AddHardwareResponse"/></returns>
+        public async Task<AddHardwareResponse> AddHardware(AddHardwareRequest req)
+        {
+             JsonResponseModel<AddHardwareResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddHardware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddHardwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加硬件设备，生成未激活的硬件设备，可支持批量添加
+        /// </summary>
+        /// <param name="req"><see cref="AddHardwareRequest"/></param>
+        /// <returns><see cref="AddHardwareResponse"/></returns>
+        public AddHardwareResponse AddHardwareSync(AddHardwareRequest req)
+        {
+             JsonResponseModel<AddHardwareResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddHardware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddHardwareResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -413,6 +493,46 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 租户获取厂商硬件列表
+        /// </summary>
+        /// <param name="req"><see cref="GetHardwareListRequest"/></param>
+        /// <returns><see cref="GetHardwareListResponse"/></returns>
+        public async Task<GetHardwareListResponse> GetHardwareList(GetHardwareListRequest req)
+        {
+             JsonResponseModel<GetHardwareListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetHardwareList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetHardwareListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 租户获取厂商硬件列表
+        /// </summary>
+        /// <param name="req"><see cref="GetHardwareListRequest"/></param>
+        /// <returns><see cref="GetHardwareListResponse"/></returns>
+        public GetHardwareListResponse GetHardwareListSync(GetHardwareListRequest req)
+        {
+             JsonResponseModel<GetHardwareListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetHardwareList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetHardwareListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量获取设备流量统计曲线
         /// </summary>
         /// <param name="req"><see cref="GetMultiFlowStatisticRequest"/></param>
@@ -573,6 +693,46 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 获取厂商硬件设备列表
+        /// </summary>
+        /// <param name="req"><see cref="GetVendorHardwareRequest"/></param>
+        /// <returns><see cref="GetVendorHardwareResponse"/></returns>
+        public async Task<GetVendorHardwareResponse> GetVendorHardware(GetVendorHardwareRequest req)
+        {
+             JsonResponseModel<GetVendorHardwareResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetVendorHardware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetVendorHardwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取厂商硬件设备列表
+        /// </summary>
+        /// <param name="req"><see cref="GetVendorHardwareRequest"/></param>
+        /// <returns><see cref="GetVendorHardwareResponse"/></returns>
+        public GetVendorHardwareResponse GetVendorHardwareSync(GetVendorHardwareRequest req)
+        {
+             JsonResponseModel<GetVendorHardwareResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetVendorHardware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetVendorHardwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新设备信息
         /// </summary>
         /// <param name="req"><see cref="UpdateDeviceRequest"/></param>
@@ -604,6 +764,46 @@ namespace TencentCloud.Mna.V20210119
              {
                  var strResp = this.InternalRequestSync(req, "UpdateDevice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新硬件信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateHardwareRequest"/></param>
+        /// <returns><see cref="UpdateHardwareResponse"/></returns>
+        public async Task<UpdateHardwareResponse> UpdateHardware(UpdateHardwareRequest req)
+        {
+             JsonResponseModel<UpdateHardwareResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateHardware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateHardwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新硬件信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateHardwareRequest"/></param>
+        /// <returns><see cref="UpdateHardwareResponse"/></returns>
+        public UpdateHardwareResponse UpdateHardwareSync(UpdateHardwareRequest req)
+        {
+             JsonResponseModel<UpdateHardwareResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateHardware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateHardwareResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

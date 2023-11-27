@@ -98,6 +98,13 @@ namespace TencentCloud.Tms.V20201229.Models
         public string ContextText{ get; set; }
 
         /// <summary>
+        /// 情感分析结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SentimentAnalysis")]
+        public SentimentAnalysis SentimentAnalysis{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -120,6 +127,7 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamSimple(map, prefix + "DataId", this.DataId);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
             this.SetParamSimple(map, prefix + "ContextText", this.ContextText);
+            this.SetParamObj(map, prefix + "SentimentAnalysis.", this.SentimentAnalysis);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

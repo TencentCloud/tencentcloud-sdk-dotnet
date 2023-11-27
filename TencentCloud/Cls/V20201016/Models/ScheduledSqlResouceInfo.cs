@@ -50,25 +50,25 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 指标名称
-        /// BizType为1时，优先使用MetricNames字段信息。多指标只能填充到MetricNames字段，单指标建议填充到MetricNames字段
+        /// BizType为1时，优先使用MetricNames字段多指标只能填充到MetricNames字段，单指标建议填充到MetricName字段
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// 指标项
+        /// 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
         /// </summary>
         [JsonProperty("MetricLabels")]
         public string[] MetricLabels{ get; set; }
 
         /// <summary>
-        /// 自定义时间
+        /// 指标时间戳，默认值为SQL查询时间范围的左侧时间点，您也可以指定其他字段（类型为uinx时间，精度毫秒）为指标时间戳。
         /// </summary>
         [JsonProperty("CustomTime")]
         public string CustomTime{ get; set; }
 
         /// <summary>
-        /// 自定义标签
+        /// 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
         /// </summary>
         [JsonProperty("CustomMetricLabels")]
         public MetricLabel[] CustomMetricLabels{ get; set; }

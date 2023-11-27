@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? SecurityType{ get; set; }
 
         /// <summary>
-        /// 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
+        /// 安全模块下的日志类型，
         /// </summary>
         [JsonProperty("LogType")]
         public ulong?[] LogType{ get; set; }

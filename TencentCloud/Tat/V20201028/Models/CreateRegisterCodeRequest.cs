@@ -31,13 +31,13 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 注册实列名称前缀。
+        /// 注册实例名称前缀。
         /// </summary>
         [JsonProperty("InstanceNamePrefix")]
         public string InstanceNamePrefix{ get; set; }
 
         /// <summary>
-        /// 该注册码允许注册的实列数目。默认限制为10个。
+        /// 该注册码允许注册的实例数目。默认限制为10个。
         /// </summary>
         [JsonProperty("RegisterLimit")]
         public long? RegisterLimit{ get; set; }

@@ -42,6 +42,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterRegion")]
         public ulong? FilterRegion{ get; set; }
 
+        /// <summary>
+        /// cnameWaf资源
+        /// </summary>
+        [JsonProperty("CnameWafIdList")]
+        public string[] CnameWafIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
             this.SetParamArraySimple(map, prefix + "IdList.", this.IdList);
             this.SetParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
+            this.SetParamArraySimple(map, prefix + "CnameWafIdList.", this.CnameWafIdList);
         }
     }
 }

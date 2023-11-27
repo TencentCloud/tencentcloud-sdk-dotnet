@@ -49,11 +49,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? TriggerCount{ get; set; }
 
         /// <summary>
-        /// 告警重复的周期。
-        /// 
-        /// 单位是分钟。
-        /// 
-        /// 取值范围是0~1440。
+        /// 告警重复的周期，单位是分钟。取值范围是0~1440。
         /// </summary>
         [JsonProperty("AlarmPeriod")]
         public long? AlarmPeriod{ get; set; }
@@ -65,20 +61,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] AlarmNoticeIds{ get; set; }
 
         /// <summary>
-        /// 触发条件。
-        /// 
+        /// 触发条件
         ///  注意:  
-        /// 
         /// - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// 告警级别。
-        /// 
+        /// 告警级别
         /// 0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-        /// 
         /// 注意:  
         /// - 不填则默认为0。
         /// - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
@@ -87,8 +79,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
-        /// 多触发条件。
-        /// 
+        /// 多触发条件
         ///  注意:  
         /// - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
         /// 
@@ -99,14 +90,13 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 是否开启告警策略。
-        /// 
         /// 默认值为true
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// 是否开启告警策略。默认值为true
+        /// 该参数已废弃，请使用Status参数控制是否开启告警策略。
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }
@@ -131,7 +121,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 分组触发状态。
-        /// 
         /// 默认值false
         /// </summary>
         [JsonProperty("GroupTriggerStatus")]
@@ -153,9 +142,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-        /// 
         /// 不填则默认为0。
-        /// 
         /// 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
         /// </summary>
         [JsonProperty("MonitorObjectType")]
@@ -163,11 +150,8 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 告警附加分类信息列表。
-        /// 
         /// Classifications元素个数不能超过20个。
-        /// 
-        /// Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
-        /// 
+        /// Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
         /// Classifications元素的Value长度不能超过200个字符。
         /// </summary>
         [JsonProperty("Classifications")]

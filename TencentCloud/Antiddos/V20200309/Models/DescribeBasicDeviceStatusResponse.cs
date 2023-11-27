@@ -41,6 +41,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public KeyValue[] CLBData{ get; set; }
 
         /// <summary>
+        /// cnamewaf资源状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CnameWafData")]
+        public KeyValue[] CnameWafData{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -54,6 +61,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         {
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamArrayObj(map, prefix + "CLBData.", this.CLBData);
+            this.SetParamArrayObj(map, prefix + "CnameWafData.", this.CnameWafData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

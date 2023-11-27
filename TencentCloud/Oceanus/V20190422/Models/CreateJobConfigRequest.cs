@@ -180,6 +180,18 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("JobGraph")]
         public JobGraph JobGraph{ get; set; }
 
+        /// <summary>
+        /// es索引名称
+        /// </summary>
+        [JsonProperty("EsServerlessIndex")]
+        public string EsServerlessIndex{ get; set; }
+
+        /// <summary>
+        /// es索引空间
+        /// </summary>
+        [JsonProperty("EsServerlessSpace")]
+        public string EsServerlessSpace{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +224,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamObj(map, prefix + "TraceModeConfiguration.", this.TraceModeConfiguration);
             this.SetParamSimple(map, prefix + "CheckpointRetainedNum", this.CheckpointRetainedNum);
             this.SetParamObj(map, prefix + "JobGraph.", this.JobGraph);
+            this.SetParamSimple(map, prefix + "EsServerlessIndex", this.EsServerlessIndex);
+            this.SetParamSimple(map, prefix + "EsServerlessSpace", this.EsServerlessSpace);
         }
     }
 }

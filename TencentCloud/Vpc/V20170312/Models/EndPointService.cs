@@ -92,6 +92,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
+        /// <summary>
+        /// Uin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceUin")]
+        public string ServiceUin{ get; set; }
+
+        /// <summary>
+        /// 服务IP类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BusinessIpType")]
+        public long? BusinessIpType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +123,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "EndPointSet.", this.EndPointSet);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamSimple(map, prefix + "ServiceUin", this.ServiceUin);
+            this.SetParamSimple(map, prefix + "BusinessIpType", this.BusinessIpType);
         }
     }
 }

@@ -102,7 +102,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// 是否开启告警策略。默认值为true
+        /// 该参数已废弃，请使用Status参数控制是否开启告警策略。
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }

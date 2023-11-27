@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03830C96-3E28-3E4E-924E-998E4E6827D1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.902</VersionPrefix>
+    <VersionPrefix>3.0.903</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,8 +48,13 @@
 
   <ItemGroup>
     <Compile Include="V20210119\MnaClient.cs" />
+    <Compile Include="V20210119\Models\ActivateHardware.cs" />
+    <Compile Include="V20210119\Models\ActivateHardwareRequest.cs" />
+    <Compile Include="V20210119\Models\ActivateHardwareResponse.cs" />
     <Compile Include="V20210119\Models\AddDeviceRequest.cs" />
     <Compile Include="V20210119\Models\AddDeviceResponse.cs" />
+    <Compile Include="V20210119\Models\AddHardwareRequest.cs" />
+    <Compile Include="V20210119\Models\AddHardwareResponse.cs" />
     <Compile Include="V20210119\Models\Capacity.cs" />
     <Compile Include="V20210119\Models\Context.cs" />
     <Compile Include="V20210119\Models\CreateEncryptedKeyRequest.cs" />
@@ -75,6 +80,8 @@
     <Compile Include="V20210119\Models\GetDevicesResponse.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticRequest.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticResponse.cs" />
+    <Compile Include="V20210119\Models\GetHardwareListRequest.cs" />
+    <Compile Include="V20210119\Models\GetHardwareListResponse.cs" />
     <Compile Include="V20210119\Models\GetMultiFlowStatisticRequest.cs" />
     <Compile Include="V20210119\Models\GetMultiFlowStatisticResponse.cs" />
     <Compile Include="V20210119\Models\GetNetMonitorRequest.cs" />
@@ -83,6 +90,10 @@
     <Compile Include="V20210119\Models\GetPublicKeyResponse.cs" />
     <Compile Include="V20210119\Models\GetStatisticDataRequest.cs" />
     <Compile Include="V20210119\Models\GetStatisticDataResponse.cs" />
+    <Compile Include="V20210119\Models\GetVendorHardwareRequest.cs" />
+    <Compile Include="V20210119\Models\GetVendorHardwareResponse.cs" />
+    <Compile Include="V20210119\Models\Hardware.cs" />
+    <Compile Include="V20210119\Models\HardwareInfo.cs" />
     <Compile Include="V20210119\Models\MonitorData.cs" />
     <Compile Include="V20210119\Models\NetDetails.cs" />
     <Compile Include="V20210119\Models\NetworkData.cs" />
@@ -90,6 +101,9 @@
     <Compile Include="V20210119\Models\SrcAddressInfo.cs" />
     <Compile Include="V20210119\Models\UpdateDeviceRequest.cs" />
     <Compile Include="V20210119\Models\UpdateDeviceResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateHardwareRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateHardwareResponse.cs" />
     <Compile Include="V20210119\Models\UpdateNetInfo.cs" />
+    <Compile Include="V20210119\Models\VendorHardware.cs" />
   </ItemGroup>
 </Project>

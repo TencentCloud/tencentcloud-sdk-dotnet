@@ -25,12 +25,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 多可用区部署选择三个可用区，示例"200002","200003","200004"
+        /// 多可用区部署选择三个可用区，示例[200002,200003,200004]
         /// 
-        /// 单可用区部署选择一个可用区，示例"200002"
+        /// 单可用区部署选择一个可用区，示例[200002]
         /// </summary>
         [JsonProperty("ZoneIds")]
-        public string ZoneIds{ get; set; }
+        public long?[] ZoneIds{ get; set; }
 
         /// <summary>
         /// 集群规格代号
@@ -90,7 +90,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneIds", this.ZoneIds);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);

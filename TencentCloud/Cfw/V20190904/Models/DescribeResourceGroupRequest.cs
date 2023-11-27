@@ -36,6 +36,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
+        /// <summary>
+        /// all  包含子组 own自己
+        /// </summary>
+        [JsonProperty("ShowType")]
+        public string ShowType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         {
             this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "ShowType", this.ShowType);
         }
     }
 }
