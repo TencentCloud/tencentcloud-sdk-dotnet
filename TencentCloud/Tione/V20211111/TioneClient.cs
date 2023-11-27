@@ -1013,6 +1013,46 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 查询资源组节点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingResourceGroupRequest"/></param>
+        /// <returns><see cref="DescribeBillingResourceGroupResponse"/></returns>
+        public async Task<DescribeBillingResourceGroupResponse> DescribeBillingResourceGroup(DescribeBillingResourceGroupRequest req)
+        {
+             JsonResponseModel<DescribeBillingResourceGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillingResourceGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingResourceGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询资源组节点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingResourceGroupRequest"/></param>
+        /// <returns><see cref="DescribeBillingResourceGroupResponse"/></returns>
+        public DescribeBillingResourceGroupResponse DescribeBillingResourceGroupSync(DescribeBillingResourceGroupRequest req)
+        {
+             JsonResponseModel<DescribeBillingResourceGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillingResourceGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingResourceGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询资源组详情
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingResourceGroupsRequest"/></param>

@@ -25,31 +25,39 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 资源id，与ResourceType对应
+        /// 合同模板ID，为32位字符串。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源类型，与ResourceId对应1：模板   2: 文件
+        /// 资源类型，此接口固定为**1**表示为用模板发起
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }
 
         /// <summary>
-        /// 合同流程基础信息
+        /// 要创建的合同信息
         /// </summary>
         [JsonProperty("FlowInfo")]
         public BaseFlowInfo FlowInfo{ get; set; }
 
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// <ul>
+        /// <li>渠道应用标识:  Agent.AppId</li>
+        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+        /// </ul>
+        /// 第三方平台子客企业和员工必须已经经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 合同流程配置信息，用于配置发起合同时定制化
+        /// 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
         /// </summary>
         [JsonProperty("FlowOption")]
         public CreateFlowOption FlowOption{ get; set; }
@@ -61,7 +69,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public CommonFlowApprover[] FlowApproverList{ get; set; }
 
         /// <summary>
-        /// 通过flowid快速获得之前成功通过页面发起的合同生成链接
+        /// 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

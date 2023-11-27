@@ -533,6 +533,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于创建投递SCF任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeliverCloudFunctionRequest"/></param>
+        /// <returns><see cref="CreateDeliverCloudFunctionResponse"/></returns>
+        public async Task<CreateDeliverCloudFunctionResponse> CreateDeliverCloudFunction(CreateDeliverCloudFunctionRequest req)
+        {
+             JsonResponseModel<CreateDeliverCloudFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDeliverCloudFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDeliverCloudFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于创建投递SCF任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeliverCloudFunctionRequest"/></param>
+        /// <returns><see cref="CreateDeliverCloudFunctionResponse"/></returns>
+        public CreateDeliverCloudFunctionResponse CreateDeliverCloudFunctionSync(CreateDeliverCloudFunctionRequest req)
+        {
+             JsonResponseModel<CreateDeliverCloudFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDeliverCloudFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDeliverCloudFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>

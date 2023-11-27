@@ -122,7 +122,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public long? ScaleUpMemRatio{ get; set; }
 
         /// <summary>
-        /// 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务、自动化助手服务。
+        /// 增强服务。通过该参数可以指定是否开启云安全、腾讯云可观测平台等服务。若不指定该参数，则默认开启腾讯云可观测平台、云安全服务、自动化助手服务。
         /// </summary>
         [JsonProperty("EnhancedService")]
         public EnhancedService EnhancedService{ get; set; }

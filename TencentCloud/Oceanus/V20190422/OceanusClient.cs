@@ -1222,7 +1222,6 @@ namespace TencentCloud.Oceanus.V20190422
         /// 如果MaxParallelism变大，则要求入参RestartAllowed必须为True
         /// 假设作业运行状态，则先停止作业，再启动作业，中间状态丢失
         /// 假设作业暂停状态，则将作业更改为停止状态，中间状态丢失
-        /// 
         /// </summary>
         /// <param name="req"><see cref="ModifyJobRequest"/></param>
         /// <returns><see cref="ModifyJobResponse"/></returns>
@@ -1251,7 +1250,6 @@ namespace TencentCloud.Oceanus.V20190422
         /// 如果MaxParallelism变大，则要求入参RestartAllowed必须为True
         /// 假设作业运行状态，则先停止作业，再启动作业，中间状态丢失
         /// 假设作业暂停状态，则将作业更改为停止状态，中间状态丢失
-        /// 
         /// </summary>
         /// <param name="req"><see cref="ModifyJobRequest"/></param>
         /// <returns><see cref="ModifyJobResponse"/></returns>

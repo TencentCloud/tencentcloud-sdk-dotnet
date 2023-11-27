@@ -43,19 +43,19 @@ namespace TencentCloud.Tts.V20190823.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 该字在整句中的开始位置，从0开始。
+        /// 该文本在时间戳数组中的开始位置，从0开始。
         /// </summary>
         [JsonProperty("BeginIndex")]
         public long? BeginIndex{ get; set; }
 
         /// <summary>
-        /// 该字在整句中的结束位置，从0开始。
+        /// 该文本在时间戳数组中的结束位置，从0开始。
         /// </summary>
         [JsonProperty("EndIndex")]
         public long? EndIndex{ get; set; }
 
         /// <summary>
-        /// 该字的音素
+        /// 该字的音素。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Phoneme")]

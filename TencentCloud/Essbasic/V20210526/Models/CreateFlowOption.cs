@@ -25,40 +25,59 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 是否允许修改合同信息，true-是，false-否
+        /// 是否允许修改合同信息，
+        /// **true**：可以
+        /// **false**：（默认）不可以
         /// </summary>
         [JsonProperty("CanEditFlow")]
         public bool? CanEditFlow{ get; set; }
 
         /// <summary>
-        /// 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
+        /// 是否允许发起合同弹窗隐藏合同名称
+        /// **true**：允许
+        /// **false**：（默认）不允许
         /// </summary>
         [JsonProperty("HideShowFlowName")]
         public bool? HideShowFlowName{ get; set; }
 
         /// <summary>
-        /// 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
+        /// 是否允许发起合同弹窗隐藏合同类型，
+        /// **true**：允许
+        /// **false**：（默认）不允许
         /// </summary>
         [JsonProperty("HideShowFlowType")]
         public bool? HideShowFlowType{ get; set; }
 
         /// <summary>
-        /// 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
+        /// 是否允许发起合同弹窗隐藏合同到期时间
+        /// **true**：允许
+        /// **false**：（默认）不允许
         /// </summary>
         [JsonProperty("HideShowDeadline")]
         public bool? HideShowDeadline{ get; set; }
 
         /// <summary>
-        /// 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
+        /// 是否允许发起合同步骤跳过指定签署方步骤
+        /// **true**：允许
+        /// **false**：（默认）不允许
         /// </summary>
         [JsonProperty("CanSkipAddApprover")]
         public bool? CanSkipAddApprover{ get; set; }
 
         /// <summary>
-        /// 定制化发起合同弹窗的描述信息，描述信息最长500
+        /// 定制化发起合同弹窗的描述信息，长度不能超过500，只能由中文、字母、数字和标点组成。
         /// </summary>
         [JsonProperty("CustomCreateFlowDescription")]
         public string CustomCreateFlowDescription{ get; set; }
+
+        /// <summary>
+        /// 禁止编辑填写控件
+        /// 
+        /// **true**：禁止编辑填写控件
+        /// **false**：（默认）允许编辑填写控件
+        /// </summary>
+        [JsonProperty("ForbidEditFillComponent")]
+        public bool? ForbidEditFillComponent{ get; set; }
 
 
         /// <summary>
@@ -72,6 +91,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "HideShowDeadline", this.HideShowDeadline);
             this.SetParamSimple(map, prefix + "CanSkipAddApprover", this.CanSkipAddApprover);
             this.SetParamSimple(map, prefix + "CustomCreateFlowDescription", this.CustomCreateFlowDescription);
+            this.SetParamSimple(map, prefix + "ForbidEditFillComponent", this.ForbidEditFillComponent);
         }
     }
 }

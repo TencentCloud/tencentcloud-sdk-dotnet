@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 嵌入的web链接
+        /// 嵌入的web链接，5分钟有效
         /// </summary>
         [JsonProperty("WebUrl")]
         public string WebUrl{ get; set; }

@@ -15,15 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteCustomAccountResponse : AbstractModel
+    public class DescribeBillingResourceGroupResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 资源组节点信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceSet")]
+        public Instance[] InstanceSet{ get; set; }
+
+        /// <summary>
+        /// 资源组纳管类型
+        /// </summary>
+        [JsonProperty("ResourceGroupSWType")]
+        public string ResourceGroupSWType{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +56,9 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
+            this.SetParamSimple(map, prefix + "ResourceGroupSWType", this.ResourceGroupSWType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

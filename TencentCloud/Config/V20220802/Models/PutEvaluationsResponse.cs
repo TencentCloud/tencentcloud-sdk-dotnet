@@ -15,39 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Config.V20220802.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCustomAccountResponse : AbstractModel
+    public class PutEvaluationsResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 自定义用户名（会自动加上前缀tcr$）
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 自定义用户密码，仅展示一次，请注意留存
-        /// </summary>
-        [JsonProperty("Password")]
-        public string Password{ get; set; }
-
-        /// <summary>
-        /// 自定义用户失效时间（时间戳）
-        /// </summary>
-        [JsonProperty("ExpiresAt")]
-        public long? ExpiresAt{ get; set; }
-
-        /// <summary>
-        /// 自定义用户创建时间
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -60,10 +36,6 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Password", this.Password);
-            this.SetParamSimple(map, prefix + "ExpiresAt", this.ExpiresAt);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

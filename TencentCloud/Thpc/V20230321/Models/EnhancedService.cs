@@ -32,7 +32,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public RunSecurityServiceEnabled SecurityService{ get; set; }
 
         /// <summary>
-        /// 开启云监控服务。若不指定该参数，则默认开启云监控服务。
+        /// 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorService")]

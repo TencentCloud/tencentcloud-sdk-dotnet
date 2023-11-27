@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Cls.V20201016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteCustomAccountRequest : AbstractModel
+    public class CreateDeliverCloudFunctionResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实例Id	
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("RegistryId")]
-        public string RegistryId{ get; set; }
-
-        /// <summary>
-        /// 自定义的账户名
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -46,7 +46,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DatabaseType{ get; set; }
 
         /// <summary>
-        /// 节点类型，为空或者"simple"表示普通节点、"cluster"表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)
+        /// 节点类型，为空或者simple表示普通节点、cluster表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)；对于redis实例，为空或simple(单节点)、cluster(集群)、cluster-cache(cache集群)、cluster-proxy(代理集群)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeType")]

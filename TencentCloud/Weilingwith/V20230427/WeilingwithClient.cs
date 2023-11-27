@@ -173,7 +173,7 @@ namespace TencentCloud.Weilingwith.V20230427
         }
 
         /// <summary>
-        /// 批量消息上报
+        /// 批量上报应用消息
         /// </summary>
         /// <param name="req"><see cref="BatchReportAppMessageRequest"/></param>
         /// <returns><see cref="BatchReportAppMessageResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Weilingwith.V20230427
         }
 
         /// <summary>
-        /// 批量消息上报
+        /// 批量上报应用消息
         /// </summary>
         /// <param name="req"><see cref="BatchReportAppMessageRequest"/></param>
         /// <returns><see cref="BatchReportAppMessageResponse"/></returns>
@@ -2213,7 +2213,7 @@ namespace TencentCloud.Weilingwith.V20230427
         }
 
         /// <summary>
-        /// 单条消息上报
+        /// 上报应用消息
         /// </summary>
         /// <param name="req"><see cref="ReportAppMessageRequest"/></param>
         /// <returns><see cref="ReportAppMessageResponse"/></returns>
@@ -2233,7 +2233,7 @@ namespace TencentCloud.Weilingwith.V20230427
         }
 
         /// <summary>
-        /// 单条消息上报
+        /// 上报应用消息
         /// </summary>
         /// <param name="req"><see cref="ReportAppMessageRequest"/></param>
         /// <returns><see cref="ReportAppMessageResponse"/></returns>

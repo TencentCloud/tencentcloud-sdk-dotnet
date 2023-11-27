@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Config.V20220802.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyCustomAccountResponse : AbstractModel
+    public class PutEvaluationsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 回调令牌。从自定义规则所选的scf云函数Context中取参数ResultToken值
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ResultToken")]
+        public string ResultToken{ get; set; }
+
+        /// <summary>
+        /// 自定义规则评估结果信息。
+        /// </summary>
+        [JsonProperty("Evaluations")]
+        public Evaluation[] Evaluations{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ResultToken", this.ResultToken);
+            this.SetParamArrayObj(map, prefix + "Evaluations.", this.Evaluations);
         }
     }
 }

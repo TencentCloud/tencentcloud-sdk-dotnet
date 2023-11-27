@@ -132,5 +132,45 @@ namespace TencentCloud.Config.V20220802
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 上报自定义规则评估结果
+        /// </summary>
+        /// <param name="req"><see cref="PutEvaluationsRequest"/></param>
+        /// <returns><see cref="PutEvaluationsResponse"/></returns>
+        public async Task<PutEvaluationsResponse> PutEvaluations(PutEvaluationsRequest req)
+        {
+             JsonResponseModel<PutEvaluationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PutEvaluations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutEvaluationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上报自定义规则评估结果
+        /// </summary>
+        /// <param name="req"><see cref="PutEvaluationsRequest"/></param>
+        /// <returns><see cref="PutEvaluationsResponse"/></returns>
+        public PutEvaluationsResponse PutEvaluationsSync(PutEvaluationsRequest req)
+        {
+             JsonResponseModel<PutEvaluationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PutEvaluations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutEvaluationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }
