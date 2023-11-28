@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.903</VersionPrefix>
+    <VersionPrefix>3.0.904</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -480,6 +480,8 @@
     <Compile Include="V20211125\Models\DescribeCloudStorageResponse.cs" />
     <Compile Include="V20211125\Models\DescribeCloudStorageStreamDataRequest.cs" />
     <Compile Include="V20211125\Models\DescribeCloudStorageStreamDataResponse.cs" />
+    <Compile Include="V20211125\Models\DescribeCloudStorageThumbnailListRequest.cs" />
+    <Compile Include="V20211125\Models\DescribeCloudStorageThumbnailListResponse.cs" />
     <Compile Include="V20211125\Models\DescribeCloudStorageThumbnailRequest.cs" />
     <Compile Include="V20211125\Models\DescribeCloudStorageThumbnailResponse.cs" />
     <Compile Include="V20211125\Models\DescribeCloudStorageTimeRequest.cs" />
@@ -608,6 +610,7 @@
     <Compile Include="V20211125\Models\SetForwardAuthResponse.cs" />
     <Compile Include="V20211125\Models\StatusStatistic.cs" />
     <Compile Include="V20211125\Models\TRTCParams.cs" />
+    <Compile Include="V20211125\Models\ThumbnailURLInfoList.cs" />
     <Compile Include="V20211125\Models\TransferCloudStorageRequest.cs" />
     <Compile Include="V20211125\Models\TransferCloudStorageResponse.cs" />
     <Compile Include="V20211125\Models\UpdateAIModelChannelRequest.cs" />

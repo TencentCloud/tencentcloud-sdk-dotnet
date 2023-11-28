@@ -55,7 +55,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public float? CosRemainQuota{ get; set; }
 
         /// <summary>
-        /// COS存储量单位，比如TB。
+        /// COS存储量单位，例如TB。
         /// </summary>
         [JsonProperty("CosQuotaUnit")]
         public string CosQuotaUnit{ get; set; }

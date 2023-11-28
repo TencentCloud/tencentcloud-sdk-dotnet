@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.903</VersionPrefix>
+    <VersionPrefix>3.0.904</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -169,6 +169,8 @@
     <Compile Include="V20210526\Models\DescribeBillUsageDetailResponse.cs" />
     <Compile Include="V20210526\Models\DescribeChannelFlowEvidenceReportRequest.cs" />
     <Compile Include="V20210526\Models\DescribeChannelFlowEvidenceReportResponse.cs" />
+    <Compile Include="V20210526\Models\DescribeChannelSealPolicyWorkflowUrlRequest.cs" />
+    <Compile Include="V20210526\Models\DescribeChannelSealPolicyWorkflowUrlResponse.cs" />
     <Compile Include="V20210526\Models\DescribeExtendedServiceAuthInfoRequest.cs" />
     <Compile Include="V20210526\Models\DescribeExtendedServiceAuthInfoResponse.cs" />
     <Compile Include="V20210526\Models\DescribeFlowDetailInfoRequest.cs" />

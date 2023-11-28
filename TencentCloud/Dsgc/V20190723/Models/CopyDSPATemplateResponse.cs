@@ -25,7 +25,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
     {
         
         /// <summary>
-        /// 模版id
+        /// 模板id
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

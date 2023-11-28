@@ -37,7 +37,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 评估模版Id，格式“template-xxxxxxxx”
+        /// 评估模板Id，格式“template-xxxxxxxx”
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
@@ -64,7 +64,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string BusinessOwner{ get; set; }
 
         /// <summary>
-        /// 分类分级模版Id
+        /// 分类分级模板Id
         /// </summary>
         [JsonProperty("ComplianceId")]
         public long? ComplianceId{ get; set; }

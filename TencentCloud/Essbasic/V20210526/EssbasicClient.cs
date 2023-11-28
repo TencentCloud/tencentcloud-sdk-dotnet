@@ -3175,6 +3175,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 生成渠道子客用印申请审批小程序链接，链接类型（通过H5唤起小程序方式查看）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelSealPolicyWorkflowUrlRequest"/></param>
+        /// <returns><see cref="DescribeChannelSealPolicyWorkflowUrlResponse"/></returns>
+        public async Task<DescribeChannelSealPolicyWorkflowUrlResponse> DescribeChannelSealPolicyWorkflowUrl(DescribeChannelSealPolicyWorkflowUrlRequest req)
+        {
+             JsonResponseModel<DescribeChannelSealPolicyWorkflowUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeChannelSealPolicyWorkflowUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChannelSealPolicyWorkflowUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成渠道子客用印申请审批小程序链接，链接类型（通过H5唤起小程序方式查看）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelSealPolicyWorkflowUrlRequest"/></param>
+        /// <returns><see cref="DescribeChannelSealPolicyWorkflowUrlResponse"/></returns>
+        public DescribeChannelSealPolicyWorkflowUrlResponse DescribeChannelSealPolicyWorkflowUrlSync(DescribeChannelSealPolicyWorkflowUrlRequest req)
+        {
+             JsonResponseModel<DescribeChannelSealPolicyWorkflowUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeChannelSealPolicyWorkflowUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChannelSealPolicyWorkflowUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询企业扩展服务的开通和授权情况，当前支持查询以下内容：
         /// 1. 企业自动签
         /// 2. 企业与港澳台居民签署合同

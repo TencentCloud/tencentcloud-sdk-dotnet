@@ -1733,6 +1733,46 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
+        /// 批量拉取云存事件缩略图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageThumbnailListRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageThumbnailListResponse"/></returns>
+        public async Task<DescribeCloudStorageThumbnailListResponse> DescribeCloudStorageThumbnailList(DescribeCloudStorageThumbnailListRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageThumbnailListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudStorageThumbnailList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageThumbnailListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量拉取云存事件缩略图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageThumbnailListRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageThumbnailListResponse"/></returns>
+        public DescribeCloudStorageThumbnailListResponse DescribeCloudStorageThumbnailListSync(DescribeCloudStorageThumbnailListRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageThumbnailListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudStorageThumbnailList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageThumbnailListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取某一天云存时间轴
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudStorageTimeRequest"/></param>

@@ -7045,6 +7045,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 设置点播域名 HTTPS 证书。
+        /// </summary>
+        /// <param name="req"><see cref="SetVodDomainCertificateRequest"/></param>
+        /// <returns><see cref="SetVodDomainCertificateResponse"/></returns>
+        public async Task<SetVodDomainCertificateResponse> SetVodDomainCertificate(SetVodDomainCertificateRequest req)
+        {
+             JsonResponseModel<SetVodDomainCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetVodDomainCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetVodDomainCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置点播域名 HTTPS 证书。
+        /// </summary>
+        /// <param name="req"><see cref="SetVodDomainCertificateRequest"/></param>
+        /// <returns><see cref="SetVodDomainCertificateResponse"/></returns>
+        public SetVodDomainCertificateResponse SetVodDomainCertificateSync(SetVodDomainCertificateRequest req)
+        {
+             JsonResponseModel<SetVodDomainCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetVodDomainCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetVodDomainCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对 HLS 视频进行按时间段裁剪，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
         /// 
         /// 腾讯云点播支持两种剪辑模式：

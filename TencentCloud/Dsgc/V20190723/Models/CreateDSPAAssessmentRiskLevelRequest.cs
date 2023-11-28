@@ -37,7 +37,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string RiskLevelName{ get; set; }
 
         /// <summary>
-        /// 识别模版
+        /// 识别模板
         /// </summary>
         [JsonProperty("IdentifyComplianceId")]
         public long? IdentifyComplianceId{ get; set; }

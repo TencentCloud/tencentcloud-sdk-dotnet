@@ -25,6 +25,23 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// 视频流的编码格式，可选值：
+        /// <li>libx264：H.264 编码；</li>
+        /// <li>libx265：H.265 编码；</li>
+        /// <li>av1：AOMedia Video 1 编码；</li>
+        /// <li>H.266：H.266 编码。</li>
+        /// </summary>
+        [JsonProperty("Codec")]
+        public string Codec{ get; set; }
+
+        /// <summary>
+        /// 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+        /// 当取值为 0 或不填时，表示自动选择最佳视频码率。
+        /// </summary>
+        [JsonProperty("Bitrate")]
+        public ulong? Bitrate{ get; set; }
+
+        /// <summary>
         /// 分辨率自适应，可选值：
         /// <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
         /// <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
@@ -69,6 +86,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Codec", this.Codec);
+            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
             this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);

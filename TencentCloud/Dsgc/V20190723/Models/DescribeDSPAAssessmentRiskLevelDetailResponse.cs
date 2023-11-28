@@ -45,7 +45,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long? IdentifyComplianceId{ get; set; }
 
         /// <summary>
-        /// 分类分级模版名称
+        /// 分类分级模板名称
         /// </summary>
         [JsonProperty("IdentifyComplianceName")]
         public string IdentifyComplianceName{ get; set; }

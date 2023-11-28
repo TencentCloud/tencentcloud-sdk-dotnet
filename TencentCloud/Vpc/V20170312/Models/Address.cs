@@ -178,6 +178,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("AntiDDoSPackageId")]
         public string AntiDDoSPackageId{ get; set; }
 
+        /// <summary>
+        /// 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
+        /// <li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public string RenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -207,6 +214,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
             this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         }
     }
 }

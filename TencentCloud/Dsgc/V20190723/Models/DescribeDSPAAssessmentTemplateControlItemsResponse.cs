@@ -31,7 +31,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 模版关联的评估项列表
+        /// 模板关联的评估项列表
         /// </summary>
         [JsonProperty("Items")]
         public AssessmentControlItem[] Items{ get; set; }

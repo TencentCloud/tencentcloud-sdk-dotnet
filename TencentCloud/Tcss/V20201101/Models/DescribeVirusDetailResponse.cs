@@ -447,6 +447,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
+        /// Namespace
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// 工作负载类型
+        /// </summary>
+        [JsonProperty("WorkloadType")]
+        public string WorkloadType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -517,6 +529,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
             this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

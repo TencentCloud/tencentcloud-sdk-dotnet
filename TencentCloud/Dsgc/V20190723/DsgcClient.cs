@@ -173,7 +173,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 复制合规组模版
+        /// 复制合规组模板
         /// </summary>
         /// <param name="req"><see cref="CopyDSPATemplateRequest"/></param>
         /// <returns><see cref="CopyDSPATemplateResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 复制合规组模版
+        /// 复制合规组模板
         /// </summary>
         /// <param name="req"><see cref="CopyDSPATemplateRequest"/></param>
         /// <returns><see cref="CopyDSPATemplateResponse"/></returns>
@@ -373,7 +373,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 风险评估模版---创建风险评估模版
+        /// 风险评估模板---创建风险评估模板
         /// </summary>
         /// <param name="req"><see cref="CreateDSPAAssessmentRiskTemplateRequest"/></param>
         /// <returns><see cref="CreateDSPAAssessmentRiskTemplateResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 风险评估模版---创建风险评估模版
+        /// 风险评估模板---创建风险评估模板
         /// </summary>
         /// <param name="req"><see cref="CreateDSPAAssessmentRiskTemplateRequest"/></param>
         /// <returns><see cref="CreateDSPAAssessmentRiskTemplateResponse"/></returns>
@@ -2389,7 +2389,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 风险项页面--查看评估模版详情
+        /// 风险项页面--查看评估模板详情
         /// </summary>
         /// <param name="req"><see cref="DescribeDSPAAssessmentRiskTemplateDetailRequest"/></param>
         /// <returns><see cref="DescribeDSPAAssessmentRiskTemplateDetailResponse"/></returns>
@@ -2409,7 +2409,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 风险项页面--查看评估模版详情
+        /// 风险项页面--查看评估模板详情
         /// </summary>
         /// <param name="req"><see cref="DescribeDSPAAssessmentRiskTemplateDetailRequest"/></param>
         /// <returns><see cref="DescribeDSPAAssessmentRiskTemplateDetailResponse"/></returns>
@@ -2429,7 +2429,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 风险模版页面--查询风险模版中的脆弱项配置
+        /// 风险模板页面--查询风险模板中的脆弱项配置
         /// </summary>
         /// <param name="req"><see cref="DescribeDSPAAssessmentRiskTemplateVulnerableListRequest"/></param>
         /// <returns><see cref="DescribeDSPAAssessmentRiskTemplateVulnerableListResponse"/></returns>
@@ -2449,7 +2449,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 风险模版页面--查询风险模版中的脆弱项配置
+        /// 风险模板页面--查询风险模板中的脆弱项配置
         /// </summary>
         /// <param name="req"><see cref="DescribeDSPAAssessmentRiskTemplateVulnerableListRequest"/></param>
         /// <returns><see cref="DescribeDSPAAssessmentRiskTemplateVulnerableListResponse"/></returns>
@@ -5007,7 +5007,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 风险模版---修改风险模版
+        /// 风险模板---修改风险模板
         /// </summary>
         /// <param name="req"><see cref="ModifyDSPAAssessmentRiskTemplateRequest"/></param>
         /// <returns><see cref="ModifyDSPAAssessmentRiskTemplateResponse"/></returns>
@@ -5027,7 +5027,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 风险模版---修改风险模版
+        /// 风险模板---修改风险模板
         /// </summary>
         /// <param name="req"><see cref="ModifyDSPAAssessmentRiskTemplateRequest"/></param>
         /// <returns><see cref="ModifyDSPAAssessmentRiskTemplateResponse"/></returns>

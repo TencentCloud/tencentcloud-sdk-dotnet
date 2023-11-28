@@ -43,7 +43,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 评估模版id
+        /// 评估模板id
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

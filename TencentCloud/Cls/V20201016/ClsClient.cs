@@ -2333,7 +2333,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 获取制定机器组下的机器状态
+        /// 获取指定机器组下的机器状态
         /// </summary>
         /// <param name="req"><see cref="DescribeMachinesRequest"/></param>
         /// <returns><see cref="DescribeMachinesResponse"/></returns>
@@ -2353,7 +2353,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 获取制定机器组下的机器状态
+        /// 获取指定机器组下的机器状态
         /// </summary>
         /// <param name="req"><see cref="DescribeMachinesRequest"/></param>
         /// <returns><see cref="DescribeMachinesResponse"/></returns>

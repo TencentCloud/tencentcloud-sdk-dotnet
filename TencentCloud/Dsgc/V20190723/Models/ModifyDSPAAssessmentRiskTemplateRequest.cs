@@ -31,19 +31,19 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string DspaId{ get; set; }
 
         /// <summary>
-        /// 模版名称
+        /// 模板名称
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 模版的描述
+        /// 模板的描述
         /// </summary>
         [JsonProperty("TemplateDescription")]
         public string TemplateDescription{ get; set; }
 
         /// <summary>
-        /// 模版id
+        /// 模板id
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

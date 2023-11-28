@@ -25,7 +25,8 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 域名
+        /// 具体域名如：test.qcloudwaf.com
+        /// 全局域名为：global
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

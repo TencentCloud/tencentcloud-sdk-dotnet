@@ -46,14 +46,14 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// 风险评估模版id
+        /// 风险评估模板id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssessmentTemplateId")]
         public long? AssessmentTemplateId{ get; set; }
 
         /// <summary>
-        /// 分类分级的模版id
+        /// 分类分级的模板id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentifyTemplateId")]

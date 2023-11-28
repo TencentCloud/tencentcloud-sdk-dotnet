@@ -31,6 +31,21 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string AssetSyncLastTime{ get; set; }
 
         /// <summary>
+        /// 任务状态
+        /// PENDING:待处理
+        /// PROCESSING:处理中
+        /// PROCESSED:已完成
+        /// </summary>
+        [JsonProperty("TaskStatus")]
+        public string TaskStatus{ get; set; }
+
+        /// <summary>
+        /// 任务进度(百分比)
+        /// </summary>
+        [JsonProperty("TaskProcess")]
+        public long? TaskProcess{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +58,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AssetSyncLastTime", this.AssetSyncLastTime);
+            this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+            this.SetParamSimple(map, prefix + "TaskProcess", this.TaskProcess);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

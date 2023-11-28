@@ -232,6 +232,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("HostID")]
         public string HostID{ get; set; }
 
+        /// <summary>
+        /// Namespace
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// WorkloadType
+        /// </summary>
+        [JsonProperty("WorkloadType")]
+        public string WorkloadType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -267,6 +279,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
             this.SetParamSimple(map, prefix + "HostID", this.HostID);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
         }
     }
 }
