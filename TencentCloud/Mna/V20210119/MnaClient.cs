@@ -413,6 +413,46 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 获取设备付费模式
+        /// </summary>
+        /// <param name="req"><see cref="GetDevicePayModeRequest"/></param>
+        /// <returns><see cref="GetDevicePayModeResponse"/></returns>
+        public async Task<GetDevicePayModeResponse> GetDevicePayMode(GetDevicePayModeRequest req)
+        {
+             JsonResponseModel<GetDevicePayModeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDevicePayMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDevicePayModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备付费模式
+        /// </summary>
+        /// <param name="req"><see cref="GetDevicePayModeRequest"/></param>
+        /// <returns><see cref="GetDevicePayModeResponse"/></returns>
+        public GetDevicePayModeResponse GetDevicePayModeSync(GetDevicePayModeRequest req)
+        {
+             JsonResponseModel<GetDevicePayModeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetDevicePayMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDevicePayModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取设备信息列表
         /// </summary>
         /// <param name="req"><see cref="GetDevicesRequest"/></param>
@@ -444,6 +484,46 @@ namespace TencentCloud.Mna.V20210119
              {
                  var strResp = this.InternalRequestSync(req, "GetDevices");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取流量包列表
+        /// </summary>
+        /// <param name="req"><see cref="GetFlowPackagesRequest"/></param>
+        /// <returns><see cref="GetFlowPackagesResponse"/></returns>
+        public async Task<GetFlowPackagesResponse> GetFlowPackages(GetFlowPackagesRequest req)
+        {
+             JsonResponseModel<GetFlowPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetFlowPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFlowPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取流量包列表
+        /// </summary>
+        /// <param name="req"><see cref="GetFlowPackagesRequest"/></param>
+        /// <returns><see cref="GetFlowPackagesResponse"/></returns>
+        public GetFlowPackagesResponse GetFlowPackagesSync(GetFlowPackagesRequest req)
+        {
+             JsonResponseModel<GetFlowPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetFlowPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFlowPackagesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -493,7 +573,7 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
-        /// 租户获取厂商硬件列表
+        /// 获取厂商硬件列表
         /// </summary>
         /// <param name="req"><see cref="GetHardwareListRequest"/></param>
         /// <returns><see cref="GetHardwareListResponse"/></returns>
@@ -513,7 +593,7 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
-        /// 租户获取厂商硬件列表
+        /// 获取厂商硬件列表
         /// </summary>
         /// <param name="req"><see cref="GetHardwareListRequest"/></param>
         /// <returns><see cref="GetHardwareListResponse"/></returns>
@@ -724,6 +804,86 @@ namespace TencentCloud.Mna.V20210119
              {
                  var strResp = this.InternalRequestSync(req, "GetVendorHardware");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetVendorHardwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可开启/关闭流量包自动续费，不影响当前周期正在生效的流量包。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPackageRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyPackageRenewFlagResponse"/></returns>
+        public async Task<ModifyPackageRenewFlagResponse> ModifyPackageRenewFlag(ModifyPackageRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyPackageRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPackageRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPackageRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可开启/关闭流量包自动续费，不影响当前周期正在生效的流量包。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPackageRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyPackageRenewFlagResponse"/></returns>
+        public ModifyPackageRenewFlagResponse ModifyPackageRenewFlagSync(ModifyPackageRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyPackageRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPackageRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPackageRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 购买预付费流量包
+        /// </summary>
+        /// <param name="req"><see cref="OrderFlowPackageRequest"/></param>
+        /// <returns><see cref="OrderFlowPackageResponse"/></returns>
+        public async Task<OrderFlowPackageResponse> OrderFlowPackage(OrderFlowPackageRequest req)
+        {
+             JsonResponseModel<OrderFlowPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OrderFlowPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OrderFlowPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 购买预付费流量包
+        /// </summary>
+        /// <param name="req"><see cref="OrderFlowPackageRequest"/></param>
+        /// <returns><see cref="OrderFlowPackageResponse"/></returns>
+        public OrderFlowPackageResponse OrderFlowPackageSync(OrderFlowPackageRequest req)
+        {
+             JsonResponseModel<OrderFlowPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OrderFlowPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OrderFlowPackageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

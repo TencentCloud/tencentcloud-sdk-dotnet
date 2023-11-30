@@ -25,6 +25,24 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
+        /// 项目ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// 当前页
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public ulong? PageNumber{ get; set; }
+
+        /// <summary>
+        /// 每页记录数
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
+
+        /// <summary>
         /// 过滤条件(key可以是：AlarmLevel,AlarmIndicator,KeyWord)
         /// </summary>
         [JsonProperty("Filters")]
@@ -55,22 +73,10 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
-
-        /// <summary>
-        /// 当前页
-        /// </summary>
-        [JsonProperty("PageNumber")]
-        public ulong? PageNumber{ get; set; }
-
-        /// <summary>
-        /// 每页记录数
-        /// </summary>
-        [JsonProperty("PageSize")]
-        public ulong? PageSize{ get; set; }
+        [JsonProperty("MonitorType")]
+        public ulong? MonitorType{ get; set; }
 
 
         /// <summary>
@@ -78,14 +84,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "OrderFields.", this.OrderFields);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "MonitorType", this.MonitorType);
         }
     }
 }

@@ -4333,6 +4333,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（DescribeDBInstancesAttribute）用于开启\关闭\更新SSL加密
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSSLRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSSLResponse"/></returns>
+        public async Task<ModifyDBInstanceSSLResponse> ModifyDBInstanceSSL(ModifyDBInstanceSSLRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceSSLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceSSL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSSLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstancesAttribute）用于开启\关闭\更新SSL加密
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSSLRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSSLResponse"/></returns>
+        public ModifyDBInstanceSSLResponse ModifyDBInstanceSSLSync(ModifyDBInstanceSSLRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceSSLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceSSL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSSLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>

@@ -36,6 +36,14 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("TimeZone")]
         public ulong? TimeZone{ get; set; }
 
+        /// <summary>
+        /// 文字水印的字体，支持设置以下值：
+        /// 1. Tencent （默认）
+        /// 2. SourceHanSans
+        /// </summary>
+        [JsonProperty("Font")]
+        public string Font{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +52,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         {
             this.SetParamSimple(map, prefix + "Pos", this.Pos);
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "Font", this.Font);
         }
     }
 }

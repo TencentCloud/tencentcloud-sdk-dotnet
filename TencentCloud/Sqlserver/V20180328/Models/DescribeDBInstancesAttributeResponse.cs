@@ -79,6 +79,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public TDEConfigAttribute TDEConfig{ get; set; }
 
         /// <summary>
+        /// SSL加密
+        /// </summary>
+        [JsonProperty("SSLConfig")]
+        public SSLConfig SSLConfig{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -99,6 +105,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BlockedThreshold", this.BlockedThreshold);
             this.SetParamSimple(map, prefix + "EventSaveDays", this.EventSaveDays);
             this.SetParamObj(map, prefix + "TDEConfig.", this.TDEConfig);
+            this.SetParamObj(map, prefix + "SSLConfig.", this.SSLConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

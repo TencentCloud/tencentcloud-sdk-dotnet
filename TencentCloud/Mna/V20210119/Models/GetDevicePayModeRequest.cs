@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tiw.V20190919.Models
+namespace TencentCloud.Mna.V20210119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SetOfflineRecordCallbackResponse : AbstractModel
+    public class GetDevicePayModeRequest : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 设备ID列表
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DeviceIdList")]
+        public string[] DeviceIdList{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "DeviceIdList.", this.DeviceIdList);
         }
     }
 }

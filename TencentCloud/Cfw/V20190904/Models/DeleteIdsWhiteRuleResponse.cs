@@ -15,15 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Tiw.V20190919.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateOfflineRecordResponse : AbstractModel
+    public class DeleteIdsWhiteRuleResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 返回状态码：
+        /// 0 成功
+        /// 非0 失败
+        /// </summary>
+        [JsonProperty("ReturnCode")]
+        public long? ReturnCode{ get; set; }
+
+        /// <summary>
+        /// 返回信息：
+        /// success 成功
+        /// 其他
+        /// </summary>
+        [JsonProperty("ReturnMsg")]
+        public string ReturnMsg{ get; set; }
+
+        /// <summary>
+        /// 返回状态码：
+        /// 0  处置成功
+        /// -1 通用错误，不用处理
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +60,9 @@ namespace TencentCloud.Tiw.V20190919.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+            this.SetParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

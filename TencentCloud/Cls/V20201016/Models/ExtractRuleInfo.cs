@@ -154,7 +154,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public MetaTagInfo[] MetaTags{ get; set; }
 
         /// <summary>
-        /// windows事件日志采集
+        /// Windows事件日志采集
         /// </summary>
         [JsonProperty("EventLogRules")]
         public EventLog[] EventLogRules{ get; set; }

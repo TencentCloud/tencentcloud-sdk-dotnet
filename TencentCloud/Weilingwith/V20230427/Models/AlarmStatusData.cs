@@ -15,20 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Tiw.V20190919.Models
+namespace TencentCloud.Weilingwith.V20230427.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOfflineRecordCallbackResponse : AbstractModel
+    public class AlarmStatusData : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 告警状态ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("StatusID")]
+        public string StatusID{ get; set; }
+
+        /// <summary>
+        /// 告警状态名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StatusName")]
+        public string StatusName{ get; set; }
+
+        /// <summary>
+        /// 告警状态类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StatusType")]
+        public string StatusType{ get; set; }
 
 
         /// <summary>
@@ -36,7 +51,9 @@ namespace TencentCloud.Tiw.V20190919.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "StatusID", this.StatusID);
+            this.SetParamSimple(map, prefix + "StatusName", this.StatusName);
+            this.SetParamSimple(map, prefix + "StatusType", this.StatusType);
         }
     }
 }

@@ -573,6 +573,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 创建入侵防御规则白名单接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateIdsWhiteRuleRequest"/></param>
+        /// <returns><see cref="CreateIdsWhiteRuleResponse"/></returns>
+        public async Task<CreateIdsWhiteRuleResponse> CreateIdsWhiteRule(CreateIdsWhiteRuleRequest req)
+        {
+             JsonResponseModel<CreateIdsWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateIdsWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIdsWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建入侵防御规则白名单接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateIdsWhiteRuleRequest"/></param>
+        /// <returns><see cref="CreateIdsWhiteRuleResponse"/></returns>
+        public CreateIdsWhiteRuleResponse CreateIdsWhiteRuleSync(CreateIdsWhiteRuleRequest req)
+        {
+             JsonResponseModel<CreateIdsWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateIdsWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIdsWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建NAT防火墙实例（Region参数必填）
         /// </summary>
         /// <param name="req"><see cref="CreateNatFwInstanceRequest"/></param>
@@ -884,6 +924,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "DeleteBlockIgnoreRuleList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBlockIgnoreRuleListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除入侵防御规则白名单接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIdsWhiteRuleRequest"/></param>
+        /// <returns><see cref="DeleteIdsWhiteRuleResponse"/></returns>
+        public async Task<DeleteIdsWhiteRuleResponse> DeleteIdsWhiteRule(DeleteIdsWhiteRuleRequest req)
+        {
+             JsonResponseModel<DeleteIdsWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteIdsWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIdsWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除入侵防御规则白名单接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIdsWhiteRuleRequest"/></param>
+        /// <returns><see cref="DeleteIdsWhiteRuleResponse"/></returns>
+        public DeleteIdsWhiteRuleResponse DeleteIdsWhiteRuleSync(DeleteIdsWhiteRuleRequest req)
+        {
+             JsonResponseModel<DeleteIdsWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteIdsWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIdsWhiteRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1764,6 +1844,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "DescribeIPStatusList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPStatusListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询入侵防御规则白名单接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIdsWhiteRuleRequest"/></param>
+        /// <returns><see cref="DescribeIdsWhiteRuleResponse"/></returns>
+        public async Task<DescribeIdsWhiteRuleResponse> DescribeIdsWhiteRule(DescribeIdsWhiteRuleRequest req)
+        {
+             JsonResponseModel<DescribeIdsWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIdsWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIdsWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询入侵防御规则白名单接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIdsWhiteRuleRequest"/></param>
+        /// <returns><see cref="DescribeIdsWhiteRuleResponse"/></returns>
+        public DescribeIdsWhiteRuleResponse DescribeIdsWhiteRuleSync(DescribeIdsWhiteRuleRequest req)
+        {
+             JsonResponseModel<DescribeIdsWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIdsWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIdsWhiteRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

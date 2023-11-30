@@ -15,45 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tiw.V20190919.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateOfflineRecordRequest : AbstractModel
+    public class DescribeIdsWhiteRuleRequest : AbstractModel
     {
         
         /// <summary>
-        /// 客户的SdkAppId
+        /// 每页条数
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public long? SdkAppId{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 录制任务对应的房间号
+        /// 偏移值
         /// </summary>
-        [JsonProperty("RoomId")]
-        public long? RoomId{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 录制任务对应的群组Id
+        /// 过滤条件组合
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("Filters")]
+        public CommonFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// 混流参数配置
-        /// 目前课后录制暂未支持自定义混流布局Custom参数
+        /// desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
         /// </summary>
-        [JsonProperty("MixStream")]
-        public MixStream MixStream{ get; set; }
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
 
         /// <summary>
-        /// 白板参数配置
+        /// 排序所用到的字段
         /// </summary>
-        [JsonProperty("Whiteboard")]
-        public Whiteboard Whiteboard{ get; set; }
+        [JsonProperty("By")]
+        public string By{ get; set; }
 
 
         /// <summary>
@@ -61,11 +60,11 @@ namespace TencentCloud.Tiw.V20190919.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamObj(map, prefix + "MixStream.", this.MixStream);
-            this.SetParamObj(map, prefix + "Whiteboard.", this.Whiteboard);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "By", this.By);
         }
     }
 }

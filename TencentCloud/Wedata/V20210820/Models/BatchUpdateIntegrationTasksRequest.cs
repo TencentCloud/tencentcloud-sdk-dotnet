@@ -48,6 +48,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
+        /// <summary>
+        /// 责任人Id（多个责任人用小写分号隔开）
+        /// </summary>
+        [JsonProperty("InchargeIds")]
+        public string InchargeIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Incharge", this.Incharge);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "InchargeIds", this.InchargeIds);
         }
     }
 }

@@ -75,7 +75,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public Tag[] Tag{ get; set; }
 
         /// <summary>
-        /// 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
+        /// 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
         /// </summary>
         [JsonProperty("ProbeType")]
         public ulong? ProbeType{ get; set; }

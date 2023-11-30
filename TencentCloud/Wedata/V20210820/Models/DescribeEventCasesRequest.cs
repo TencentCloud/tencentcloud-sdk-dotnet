@@ -31,7 +31,10 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 事件实例目录
+        /// 事件实例目录,示例取值:
+        /// - 已过期: expired
+        /// - 未过期: consuming
+        /// - 全部: all
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
@@ -58,6 +61,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// 事件类型
         /// </summary>
         [JsonProperty("EventType")]
+        [System.Obsolete]
         public string EventType{ get; set; }
 
         /// <summary>
@@ -70,12 +74,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// 事件广播类型
         /// </summary>
         [JsonProperty("EventBroadcastType")]
+        [System.Obsolete]
         public string EventBroadcastType{ get; set; }
 
         /// <summary>
-        /// 事件实例状态
+        /// 事件实例状态,示例取值:
+        /// - 已消费: COMSUMED
+        /// - 已过期: EXPIRED
+        /// - 待消费: ACTIVE
+        /// - 消费中: CONSUMING
         /// </summary>
         [JsonProperty("Status")]
+        [System.Obsolete]
         public string Status{ get; set; }
 
         /// <summary>
@@ -120,6 +130,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Dimension")]
         public string Dimension{ get; set; }
 
+        /// <summary>
+        /// 事件实例有效时间
+        /// </summary>
+        [JsonProperty("TimeToLive")]
+        public string TimeToLive{ get; set; }
+
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("SortItem")]
+        public string SortItem{ get; set; }
+
+        /// <summary>
+        /// 排序顺序
+        /// </summary>
+        [JsonProperty("SortType")]
+        public string SortType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +170,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "LogTimeStart", this.LogTimeStart);
             this.SetParamSimple(map, prefix + "LogTimeEnd", this.LogTimeEnd);
             this.SetParamSimple(map, prefix + "Dimension", this.Dimension);
+            this.SetParamSimple(map, prefix + "TimeToLive", this.TimeToLive);
+            this.SetParamSimple(map, prefix + "SortItem", this.SortItem);
+            this.SetParamSimple(map, prefix + "SortType", this.SortType);
         }
     }
 }

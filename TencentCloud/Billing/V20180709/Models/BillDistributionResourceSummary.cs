@@ -249,6 +249,13 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("OriginalCostWithSP")]
         public string OriginalCostWithSP{ get; set; }
 
+        /// <summary>
+        /// 账单归属月
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillMonth")]
+        public string BillMonth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -292,6 +299,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "OriginalCostWithRI", this.OriginalCostWithRI);
             this.SetParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
             this.SetParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
+            this.SetParamSimple(map, prefix + "BillMonth", this.BillMonth);
         }
     }
 }

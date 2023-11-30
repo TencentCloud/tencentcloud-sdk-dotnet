@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 工作空间id
+        /// 项目id
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
+        /// 过滤条件（暂不支持）
         /// </summary>
         [JsonProperty("Filters")]
         public Filter Filters{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public OrderField OrderFields{ get; set; }
 
         /// <summary>
-        /// 数据源类型
+        /// 数据源类型，必选（如MYSQL、DLC等）
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 数据源名称过滤用
+        /// 数据源名称过滤
         /// </summary>
         [JsonProperty("DatasourceName")]
         public string DatasourceName{ get; set; }

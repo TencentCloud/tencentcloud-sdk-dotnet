@@ -162,6 +162,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SendResult")]
         public string SendResult{ get; set; }
 
+        /// <summary>
+        /// 监控对象id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MonitorObjectId")]
+        public string MonitorObjectId{ get; set; }
+
+        /// <summary>
+        /// 监控对象名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MonitorObjectName")]
+        public string MonitorObjectName{ get; set; }
+
+        /// <summary>
+        /// 指标阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Threshold")]
+        public float? Threshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -189,6 +210,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "AlarmRecipientName", this.AlarmRecipientName);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "SendResult", this.SendResult);
+            this.SetParamSimple(map, prefix + "MonitorObjectId", this.MonitorObjectId);
+            this.SetParamSimple(map, prefix + "MonitorObjectName", this.MonitorObjectName);
+            this.SetParamSimple(map, prefix + "Threshold", this.Threshold);
         }
     }
 }

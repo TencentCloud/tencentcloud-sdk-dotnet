@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tiw.V20190919.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SetOfflineRecordCallbackRequest : AbstractModel
+    public class DescribeIdsWhiteRuleResponse : AbstractModel
     {
         
         /// <summary>
-        /// 客户的SdkAppId
+        /// 总条数
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public long? SdkAppId{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 课后录制任务结果回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持 http或https协议，即回调地址以http://或https://开头
+        /// 返回状态码 0 成功 非0不成功
         /// </summary>
-        [JsonProperty("Callback")]
-        public string Callback{ get; set; }
+        [JsonProperty("ReturnCode")]
+        public long? ReturnCode{ get; set; }
+
+        /// <summary>
+        /// 返回信息  success 成功 其他 不成功
+        /// </summary>
+        [JsonProperty("ReturnMsg")]
+        public string ReturnMsg{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Tiw.V20190919.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "Callback", this.Callback);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+            this.SetParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03830C96-3E28-3E4E-924E-998E4E6827D1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.905</VersionPrefix>
+    <VersionPrefix>3.0.906</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -72,12 +72,18 @@
     <Compile Include="V20210119\Models\DeviceDetails.cs" />
     <Compile Include="V20210119\Models\DeviceInfo.cs" />
     <Compile Include="V20210119\Models\DeviceNetInfo.cs" />
+    <Compile Include="V20210119\Models\DevicePayModeInfo.cs" />
     <Compile Include="V20210119\Models\ExpectedThreshold.cs" />
     <Compile Include="V20210119\Models\FlowDetails.cs" />
+    <Compile Include="V20210119\Models\FlowPackageInfo.cs" />
+    <Compile Include="V20210119\Models\GetDevicePayModeRequest.cs" />
+    <Compile Include="V20210119\Models\GetDevicePayModeResponse.cs" />
     <Compile Include="V20210119\Models\GetDeviceRequest.cs" />
     <Compile Include="V20210119\Models\GetDeviceResponse.cs" />
     <Compile Include="V20210119\Models\GetDevicesRequest.cs" />
     <Compile Include="V20210119\Models\GetDevicesResponse.cs" />
+    <Compile Include="V20210119\Models\GetFlowPackagesRequest.cs" />
+    <Compile Include="V20210119\Models\GetFlowPackagesResponse.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticRequest.cs" />
     <Compile Include="V20210119\Models\GetFlowStatisticResponse.cs" />
     <Compile Include="V20210119\Models\GetHardwareListRequest.cs" />
@@ -94,9 +100,13 @@
     <Compile Include="V20210119\Models\GetVendorHardwareResponse.cs" />
     <Compile Include="V20210119\Models\Hardware.cs" />
     <Compile Include="V20210119\Models\HardwareInfo.cs" />
+    <Compile Include="V20210119\Models\ModifyPackageRenewFlagRequest.cs" />
+    <Compile Include="V20210119\Models\ModifyPackageRenewFlagResponse.cs" />
     <Compile Include="V20210119\Models\MonitorData.cs" />
     <Compile Include="V20210119\Models\NetDetails.cs" />
     <Compile Include="V20210119\Models\NetworkData.cs" />
+    <Compile Include="V20210119\Models\OrderFlowPackageRequest.cs" />
+    <Compile Include="V20210119\Models\OrderFlowPackageResponse.cs" />
     <Compile Include="V20210119\Models\SlotNetInfo.cs" />
     <Compile Include="V20210119\Models\SrcAddressInfo.cs" />
     <Compile Include="V20210119\Models\UpdateDeviceRequest.cs" />

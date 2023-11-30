@@ -31,7 +31,37 @@ namespace TencentCloud.Batch.V20170312.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 数据盘类型。数据盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>LOCAL_NVME：本地NVME硬盘，与InstanceType强相关，不支持指定<br><li>LOCAL_PRO：本地HDD硬盘，与InstanceType强相关，不支持指定<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_HSSD：增强型SSD云硬盘<br><li>CLOUD_TSSD：极速型SSD云硬盘<br><li>CLOUD_BSSD：通用型SSD云硬盘<br><br>默认取值：LOCAL_BASIC。<br><br>该参数对`ResizeInstanceDisk`接口无效。
+        /// 数据盘类型。数据盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br />
+        /// <li>
+        ///   LOCAL_BASIC：本地硬盘<br />
+        ///   <li>
+        ///     LOCAL_SSD：本地SSD硬盘<br />
+        ///     <li>
+        ///       LOCAL_NVME：本地NVME硬盘，与InstanceType强相关，不支持指定<br />
+        ///       <li>
+        ///         LOCAL_PRO：本地HDD硬盘，与InstanceType强相关，不支持指定<br />
+        ///         <li>
+        ///           CLOUD_BASIC：普通云硬盘<br />
+        ///           <li>
+        ///             CLOUD_PREMIUM：高性能云硬盘<br />
+        ///             <li>
+        ///               CLOUD_SSD：SSD云硬盘<br />
+        ///               <li>
+        ///                 CLOUD_HSSD：增强型SSD云硬盘<br />
+        ///                 <li>
+        ///                   CLOUD_TSSD：极速型SSD云硬盘<br />
+        ///                   <li>
+        ///                     CLOUD_BSSD：通用型SSD云硬盘<br /><br />默认取值：LOCAL_BASIC。<br /><br />该参数对`ResizeInstanceDisk`接口无效。
+        ///                   </li>
+        ///                 </li>
+        ///               </li>
+        ///             </li>
+        ///           </li>
+        ///         </li>
+        ///       </li>
+        ///     </li>
+        ///   </li>
+        /// </li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -45,10 +75,12 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 数据盘是否随子机销毁。取值范围：
-        /// <li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
-        /// <li>FALSE：子机销毁时，保留数据盘<br>
-        /// 默认取值：TRUE<br>
-        /// 该参数目前仅用于 `RunInstances` 接口。
+        /// <li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
+        /// <li>
+        ///   FALSE：子机销毁时，保留数据盘<br />
+        ///   默认取值：TRUE<br />
+        ///   该参数目前仅用于 `RunInstances` 接口。
+        /// </li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeleteWithInstance")]
@@ -63,10 +95,12 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 数据盘是加密。取值范围：
-        /// <li>true：加密
-        /// <li>false：不加密<br>
-        /// 默认取值：false<br>
-        /// 该参数目前仅用于 `RunInstances` 接口。
+        /// <li>true：加密</li>
+        /// <li>
+        ///   false：不加密<br />
+        ///   默认取值：false<br />
+        ///   该参数目前仅用于 `RunInstances` 接口。
+        /// </li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Encrypt")]
@@ -95,6 +129,15 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
+        /// <summary>
+        /// 突发性能
+        /// 
+        ///  <b>注：内测中。</b>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BurstPerformance")]
+        public bool? BurstPerformance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +153,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
             this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
         }
     }
 }

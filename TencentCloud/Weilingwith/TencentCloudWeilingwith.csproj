@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DB419999-DC15-39F3-A20E-BEE2B31253E2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.905</VersionPrefix>
+    <VersionPrefix>3.0.906</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,7 @@
     <Compile Include="V20230427\Models\AdministrativeDetail.cs" />
     <Compile Include="V20230427\Models\AlarmInfo.cs" />
     <Compile Include="V20230427\Models\AlarmLevelInfo.cs" />
+    <Compile Include="V20230427\Models\AlarmStatusData.cs" />
     <Compile Include="V20230427\Models\AlarmTypeDetailInfo.cs" />
     <Compile Include="V20230427\Models\AlarmTypeInfo.cs" />
     <Compile Include="V20230427\Models\ApiContent.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="V20230427\Models\DescribeAlarmListRes.cs" />
     <Compile Include="V20230427\Models\DescribeAlarmListResponse.cs" />
     <Compile Include="V20230427\Models\DescribeAlarmStatusListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeAlarmStatusListRes.cs" />
     <Compile Include="V20230427\Models\DescribeAlarmStatusListResponse.cs" />
     <Compile Include="V20230427\Models\DescribeAlarmTypeListRequest.cs" />
     <Compile Include="V20230427\Models\DescribeAlarmTypeListRes.cs" />

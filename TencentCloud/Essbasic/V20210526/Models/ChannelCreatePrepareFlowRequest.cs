@@ -25,13 +25,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 合同模板ID，为32位字符串。
+        /// 资源id，与ResourceType相对应，取值范围：
+        /// <ul>
+        /// <li>文件Id（通过UploadFiles获取文件资源Id）</li>
+        /// <li>模板Id</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源类型，此接口固定为**1**表示为用模板发起
+        /// 资源类型，取值有：
+        /// <ul><li> **1**：模板</li>
+        /// <li> **2**：文件（默认值）</li></ul>
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }
@@ -69,7 +75,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public CommonFlowApprover[] FlowApproverList{ get; set; }
 
         /// <summary>
-        /// 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
+        /// 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
+        /// 注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

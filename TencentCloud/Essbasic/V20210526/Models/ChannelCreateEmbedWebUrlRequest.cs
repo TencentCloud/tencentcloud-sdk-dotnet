@@ -81,6 +81,22 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 用户自定义参数
+        /// <ul>
+        /// <li>目前仅支持EmbedType=CREATE_TEMPLATE时传入</li>
+        /// <li>指定后，创建，编辑，删除模版时，回调都会携带该userData</li>
+        /// <li>支持的格式：json字符串的BASE64编码字符串</li>
+        /// <li>示例：<ul>
+        ///                  <li>json字符串：{"ComeFrom":"xxx"}，BASE64编码：eyJDb21lRnJvbSI6Inh4eCJ9</li>
+        ///                  <li>eyJDb21lRnJvbSI6Inh4eCJ9，为符合要求的userData数据格式</li>
+        /// </ul>
+        /// </li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +108,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "BusinessId", this.BusinessId);
             this.SetParamSimple(map, prefix + "HiddenComponents", this.HiddenComponents);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
         }
     }
 }

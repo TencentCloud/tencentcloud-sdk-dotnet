@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 无
+        /// 配置模板Id
         /// </summary>
         [JsonProperty("ConfigTemplateId")]
         public string ConfigTemplateId{ get; set; }

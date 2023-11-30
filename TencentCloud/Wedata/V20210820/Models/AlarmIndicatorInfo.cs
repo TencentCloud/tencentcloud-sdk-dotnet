@@ -32,7 +32,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+        /// 告警指标,0任务失败,1任务运行超时,2任务停止,3任务暂停, 4读取速度,5写入速度,6读取吞吐 7写入吞吐, 8脏数据字节数,9脏数据条数,10任务异常,11任务检测异常, 12重启次数, 13任务延时, 14近20分内的重启次数 15传输延迟,16业务延迟, 50离线包CPU使用率, 51离线包内存使用率, 52离线包并行度使用率, 53离线包排队中的实例数, 54实时包资源使用率, 55实时包运行中的任务数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmIndicator")]
@@ -60,7 +60,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? EstimatedTime{ get; set; }
 
         /// <summary>
-        /// 实时任务告警需要的参数
+        /// 告警阈值的算子,1 大于,2 小于
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operator")]
@@ -80,7 +80,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// 告警周期单位
+        /// 告警周期单位:hour,minute,day
         /// </summary>
         [JsonProperty("DurationUnit")]
         public string DurationUnit{ get; set; }
@@ -90,6 +90,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         [JsonProperty("MaxTimes")]
         public long? MaxTimes{ get; set; }
+
+        /// <summary>
+        /// 指标阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Threshold")]
+        public float? Threshold{ get; set; }
 
 
         /// <summary>
@@ -107,6 +114,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "DurationUnit", this.DurationUnit);
             this.SetParamSimple(map, prefix + "MaxTimes", this.MaxTimes);
+            this.SetParamSimple(map, prefix + "Threshold", this.Threshold);
         }
     }
 }

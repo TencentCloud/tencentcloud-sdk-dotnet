@@ -75,6 +75,15 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("CamRoleType")]
         public string CamRoleType{ get; set; }
 
+        /// <summary>
+        /// 修改实例主机名是否自动重启实例，不传默认自动重启。
+        /// - true: 修改主机名，并自动重启实例；
+        /// - false: 修改主机名，不自动重启实例，需要手动重启使新主机名生效。
+        /// 注意点：本参数仅对修改主机名生效。
+        /// </summary>
+        [JsonProperty("AutoReboot")]
+        public bool? AutoReboot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +98,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
             this.SetParamSimple(map, prefix + "CamRoleType", this.CamRoleType);
+            this.SetParamSimple(map, prefix + "AutoReboot", this.AutoReboot);
         }
     }
 }

@@ -78,6 +78,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AlarmTime")]
         public string AlarmTime{ get; set; }
 
+        /// <summary>
+        /// 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+        /// </summary>
+        [JsonProperty("MonitorType")]
+        public ulong? MonitorType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "AlarmRecipient", this.AlarmRecipient);
             this.SetParamSimple(map, prefix + "AlarmRecipientName", this.AlarmRecipientName);
             this.SetParamSimple(map, prefix + "AlarmTime", this.AlarmTime);
+            this.SetParamSimple(map, prefix + "MonitorType", this.MonitorType);
         }
     }
 }

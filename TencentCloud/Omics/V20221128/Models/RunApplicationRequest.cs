@@ -55,7 +55,7 @@ namespace TencentCloud.Omics.V20221128.Models
         public string InputBase64{ get; set; }
 
         /// <summary>
-        /// 任务缓存清理时间。不填表示不清理。
+        /// 任务缓存清理时间（小时）。不填表示不清理。
         /// </summary>
         [JsonProperty("CacheClearDelay")]
         public ulong? CacheClearDelay{ get; set; }

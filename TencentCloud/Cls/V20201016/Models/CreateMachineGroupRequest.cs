@@ -73,7 +73,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public MetaTagInfo[] MetaTags{ get; set; }
 
         /// <summary>
-        /// 系统类型，默认0，0：Linux，1: windows
+        /// 系统类型，默认0，0：Linux，1: Windows
         /// </summary>
         [JsonProperty("OSType")]
         public ulong? OSType{ get; set; }

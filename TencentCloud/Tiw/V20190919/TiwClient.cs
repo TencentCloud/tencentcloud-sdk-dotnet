@@ -133,50 +133,6 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 课后录制服务已下线
-        /// 
-        /// 创建课后录制任务
-        /// </summary>
-        /// <param name="req"><see cref="CreateOfflineRecordRequest"/></param>
-        /// <returns><see cref="CreateOfflineRecordResponse"/></returns>
-        public async Task<CreateOfflineRecordResponse> CreateOfflineRecord(CreateOfflineRecordRequest req)
-        {
-             JsonResponseModel<CreateOfflineRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateOfflineRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOfflineRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 课后录制服务已下线
-        /// 
-        /// 创建课后录制任务
-        /// </summary>
-        /// <param name="req"><see cref="CreateOfflineRecordRequest"/></param>
-        /// <returns><see cref="CreateOfflineRecordResponse"/></returns>
-        public CreateOfflineRecordResponse CreateOfflineRecordSync(CreateOfflineRecordRequest req)
-        {
-             JsonResponseModel<CreateOfflineRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateOfflineRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOfflineRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 检测PPT文件，识别PPT中包含的动态转码任务（Transcode）不支持的元素
         /// </summary>
         /// <param name="req"><see cref="CreatePPTCheckTaskRequest"/></param>
@@ -528,94 +484,6 @@ namespace TencentCloud.Tiw.V20190919
              {
                  var strResp = this.InternalRequestSync(req, "DescribeIMApplications");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIMApplicationsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 课后录制服务已下线
-        /// 
-        /// 查询课后录制任务的进度与录制结果等相关信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineRecordRequest"/></param>
-        /// <returns><see cref="DescribeOfflineRecordResponse"/></returns>
-        public async Task<DescribeOfflineRecordResponse> DescribeOfflineRecord(DescribeOfflineRecordRequest req)
-        {
-             JsonResponseModel<DescribeOfflineRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeOfflineRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOfflineRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 课后录制服务已下线
-        /// 
-        /// 查询课后录制任务的进度与录制结果等相关信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineRecordRequest"/></param>
-        /// <returns><see cref="DescribeOfflineRecordResponse"/></returns>
-        public DescribeOfflineRecordResponse DescribeOfflineRecordSync(DescribeOfflineRecordRequest req)
-        {
-             JsonResponseModel<DescribeOfflineRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeOfflineRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOfflineRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 课后录制服务已下线
-        /// 
-        /// 查询课后录制回调地址
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineRecordCallbackRequest"/></param>
-        /// <returns><see cref="DescribeOfflineRecordCallbackResponse"/></returns>
-        public async Task<DescribeOfflineRecordCallbackResponse> DescribeOfflineRecordCallback(DescribeOfflineRecordCallbackRequest req)
-        {
-             JsonResponseModel<DescribeOfflineRecordCallbackResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeOfflineRecordCallback");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOfflineRecordCallbackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 课后录制服务已下线
-        /// 
-        /// 查询课后录制回调地址
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineRecordCallbackRequest"/></param>
-        /// <returns><see cref="DescribeOfflineRecordCallbackResponse"/></returns>
-        public DescribeOfflineRecordCallbackResponse DescribeOfflineRecordCallbackSync(DescribeOfflineRecordCallbackRequest req)
-        {
-             JsonResponseModel<DescribeOfflineRecordCallbackResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeOfflineRecordCallback");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOfflineRecordCallbackResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1984,50 +1852,6 @@ namespace TencentCloud.Tiw.V20190919
              {
                  var strResp = this.InternalRequestSync(req, "ResumeOnlineRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeOnlineRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 课后录制服务已下线
-        /// 
-        /// 设置课后录制回调地址
-        /// </summary>
-        /// <param name="req"><see cref="SetOfflineRecordCallbackRequest"/></param>
-        /// <returns><see cref="SetOfflineRecordCallbackResponse"/></returns>
-        public async Task<SetOfflineRecordCallbackResponse> SetOfflineRecordCallback(SetOfflineRecordCallbackRequest req)
-        {
-             JsonResponseModel<SetOfflineRecordCallbackResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SetOfflineRecordCallback");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetOfflineRecordCallbackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 课后录制服务已下线
-        /// 
-        /// 设置课后录制回调地址
-        /// </summary>
-        /// <param name="req"><see cref="SetOfflineRecordCallbackRequest"/></param>
-        /// <returns><see cref="SetOfflineRecordCallbackResponse"/></returns>
-        public SetOfflineRecordCallbackResponse SetOfflineRecordCallbackSync(SetOfflineRecordCallbackRequest req)
-        {
-             JsonResponseModel<SetOfflineRecordCallbackResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SetOfflineRecordCallback");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetOfflineRecordCallbackResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

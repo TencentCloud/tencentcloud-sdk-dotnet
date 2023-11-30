@@ -36,6 +36,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntegrityAlgorith")]
+        [System.Obsolete]
         public string IntegrityAlgorith{ get; set; }
 
         /// <summary>
@@ -59,6 +60,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("IPSECSaLifetimeTraffic")]
         public ulong? IPSECSaLifetimeTraffic{ get; set; }
 
+        /// <summary>
+        /// 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IntegrityAlgorithm")]
+        public string IntegrityAlgorithm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +78,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "IPSECSaLifetimeSeconds", this.IPSECSaLifetimeSeconds);
             this.SetParamSimple(map, prefix + "PfsDhGroup", this.PfsDhGroup);
             this.SetParamSimple(map, prefix + "IPSECSaLifetimeTraffic", this.IPSECSaLifetimeTraffic);
+            this.SetParamSimple(map, prefix + "IntegrityAlgorithm", this.IntegrityAlgorithm);
         }
     }
 }

@@ -105,6 +105,12 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("AutoHandleUnsupportedElement")]
         public bool? AutoHandleUnsupportedElement{ get; set; }
 
+        /// <summary>
+        /// Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效）
+        /// </summary>
+        [JsonProperty("ExcelParam")]
+        public ExcelParam ExcelParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
             this.SetParamSimple(map, prefix + "AutoHandleUnsupportedElement", this.AutoHandleUnsupportedElement);
+            this.SetParamObj(map, prefix + "ExcelParam.", this.ExcelParam);
         }
     }
 }

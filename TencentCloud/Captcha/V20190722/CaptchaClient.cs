@@ -413,6 +413,46 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
+        /// Rce融合验证核查验证码票据结果(Web及APP)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCaptchaRceResultRequest"/></param>
+        /// <returns><see cref="DescribeCaptchaRceResultResponse"/></returns>
+        public async Task<DescribeCaptchaRceResultResponse> DescribeCaptchaRceResult(DescribeCaptchaRceResultRequest req)
+        {
+             JsonResponseModel<DescribeCaptchaRceResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCaptchaRceResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaRceResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Rce融合验证核查验证码票据结果(Web及APP)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCaptchaRceResultRequest"/></param>
+        /// <returns><see cref="DescribeCaptchaRceResultResponse"/></returns>
+        public DescribeCaptchaRceResultResponse DescribeCaptchaRceResultSync(DescribeCaptchaRceResultRequest req)
+        {
+             JsonResponseModel<DescribeCaptchaRceResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaRceResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaRceResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 核查验证码票据结果(Web及APP)
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaResultRequest"/></param>

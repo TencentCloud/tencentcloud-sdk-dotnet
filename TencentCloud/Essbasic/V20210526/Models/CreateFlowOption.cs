@@ -79,6 +79,15 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ForbidEditFillComponent")]
         public bool? ForbidEditFillComponent{ get; set; }
 
+        /// <summary>
+        /// 跳过上传文件步骤
+        /// 
+        /// **true**：跳过
+        /// **false**：（默认）不跳过，需要传ResourceId
+        /// </summary>
+        [JsonProperty("SkipUploadFile")]
+        public string SkipUploadFile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +101,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CanSkipAddApprover", this.CanSkipAddApprover);
             this.SetParamSimple(map, prefix + "CustomCreateFlowDescription", this.CustomCreateFlowDescription);
             this.SetParamSimple(map, prefix + "ForbidEditFillComponent", this.ForbidEditFillComponent);
+            this.SetParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
         }
     }
 }
