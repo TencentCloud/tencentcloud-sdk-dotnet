@@ -38,6 +38,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public long? DeployStatus{ get; set; }
 
         /// <summary>
+        /// 更新异步创建任务进度详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateSyncProgress")]
+        public UpdateSyncProgress[] UpdateSyncProgress{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -51,6 +58,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         {
             this.SetParamSimple(map, prefix + "DeployRecordId", this.DeployRecordId);
             this.SetParamSimple(map, prefix + "DeployStatus", this.DeployStatus);
+            this.SetParamArrayObj(map, prefix + "UpdateSyncProgress.", this.UpdateSyncProgress);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -5817,7 +5817,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 查询简单命名空间列表 
+        /// 查询简单命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSimpleNamespacesRequest"/></param>
         /// <returns><see cref="DescribeSimpleNamespacesResponse"/></returns>
@@ -5837,7 +5837,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 查询简单命名空间列表 
+        /// 查询简单命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSimpleNamespacesRequest"/></param>
         /// <returns><see cref="DescribeSimpleNamespacesResponse"/></returns>

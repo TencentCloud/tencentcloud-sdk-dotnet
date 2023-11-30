@@ -52,6 +52,9 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
+        /// <ul>
+        /// <li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("FormFields")]
         public FormField[] FormFields{ get; set; }

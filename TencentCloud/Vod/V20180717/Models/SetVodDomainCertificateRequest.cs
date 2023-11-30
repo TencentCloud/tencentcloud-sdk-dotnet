@@ -24,12 +24,42 @@ namespace TencentCloud.Vod.V20180717.Models
     public class SetVodDomainCertificateRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 域名。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 本次接口调用的操作类型，可选值：
+        /// <li>Set：设置域名的 HTTPS 所需证书；</li>
+        /// <li>Clear: 清空域名 HTTPS 配置，清空后该域名无法支持 HTTPS 访问。</li>
+        /// </summary>
+        [JsonProperty("Operation")]
+        public string Operation{ get; set; }
+
+        /// <summary>
+        /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
+        /// [腾讯云SSL](/document/product/400/7572) 上传的证书 ID。清空域名 HTTPS 配置时无需填写该字段。
+        /// </summary>
+        [JsonProperty("CertID")]
+        public string CertID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Operation", this.Operation);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "CertID", this.CertID);
         }
     }
 }

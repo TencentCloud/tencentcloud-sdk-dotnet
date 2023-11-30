@@ -29,6 +29,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DmissionCondition")]
+        [System.Obsolete]
         public string DmissionCondition{ get; set; }
 
         /// <summary>
@@ -213,6 +214,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("ObservationDays")]
         public string ObservationDays{ get; set; }
 
+        /// <summary>
+        /// 入院
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdmissionCondition")]
+        public string AdmissionCondition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +254,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "DeathDate", this.DeathDate);
             this.SetParamSimple(map, prefix + "RelapseDate", this.RelapseDate);
             this.SetParamSimple(map, prefix + "ObservationDays", this.ObservationDays);
+            this.SetParamSimple(map, prefix + "AdmissionCondition", this.AdmissionCondition);
         }
     }
 }

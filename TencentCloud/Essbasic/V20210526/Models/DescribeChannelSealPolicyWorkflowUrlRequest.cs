@@ -43,6 +43,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("WorkflowInstanceId")]
         public string WorkflowInstanceId{ get; set; }
 
+        /// <summary>
+        /// 生成链接的类型：
+        /// 生成链接的类型
+        /// <ul><li>**LongLink**：(默认)长链接，H5跳转到电子签小程序链接，链接有效期为1年</li>
+        /// <li>**ShortLink**：H5跳转到电子签小程序链接，一般用于发送短信中带的链接，打开后进入腾讯电子签小程序，链接有效期为7天</li>
+        /// <li>**App**：第三方APP或小程序跳转电子签小程序链接，一般用于贵方小程序或者APP跳转过来，打开后进入腾讯电子签小程序，链接有效期为1年</li></ul>
+        /// </summary>
+        [JsonProperty("Endpoint")]
+        public string Endpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +61,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "WorkflowInstanceId", this.WorkflowInstanceId);
+            this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
         }
     }
 }

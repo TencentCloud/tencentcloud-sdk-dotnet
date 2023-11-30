@@ -50,6 +50,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdmissionDignosis")]
+        [System.Obsolete]
         public string AdmissionDignosis{ get; set; }
 
         /// <summary>
@@ -80,6 +81,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("DischargeInstruction")]
         public string DischargeInstruction{ get; set; }
 
+        /// <summary>
+        /// 入院诊断
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdmissionDiagnosis")]
+        public string AdmissionDiagnosis{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +102,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "DiagnosisTreatment", this.DiagnosisTreatment);
             this.SetParamSimple(map, prefix + "DischargeDiagnosis", this.DischargeDiagnosis);
             this.SetParamSimple(map, prefix + "DischargeInstruction", this.DischargeInstruction);
+            this.SetParamSimple(map, prefix + "AdmissionDiagnosis", this.AdmissionDiagnosis);
         }
     }
 }

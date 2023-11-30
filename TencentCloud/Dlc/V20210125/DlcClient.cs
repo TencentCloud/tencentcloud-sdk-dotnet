@@ -253,6 +253,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 分配原生表表属性
+        /// </summary>
+        /// <param name="req"><see cref="AssignMangedTablePropertiesRequest"/></param>
+        /// <returns><see cref="AssignMangedTablePropertiesResponse"/></returns>
+        public async Task<AssignMangedTablePropertiesResponse> AssignMangedTableProperties(AssignMangedTablePropertiesRequest req)
+        {
+             JsonResponseModel<AssignMangedTablePropertiesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssignMangedTableProperties");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignMangedTablePropertiesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 分配原生表表属性
+        /// </summary>
+        /// <param name="req"><see cref="AssignMangedTablePropertiesRequest"/></param>
+        /// <returns><see cref="AssignMangedTablePropertiesResponse"/></returns>
+        public AssignMangedTablePropertiesResponse AssignMangedTablePropertiesSync(AssignMangedTablePropertiesRequest req)
+        {
+             JsonResponseModel<AssignMangedTablePropertiesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssignMangedTableProperties");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignMangedTablePropertiesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 绑定鉴权策略到用户
         /// </summary>
         /// <param name="req"><see cref="AttachUserPolicyRequest"/></param>

@@ -3175,7 +3175,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 生成渠道子客用印申请审批小程序链接，链接类型（通过H5唤起小程序方式查看）
+        /// 生成渠道子客用印申请审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转的方式查看）
         /// </summary>
         /// <param name="req"><see cref="DescribeChannelSealPolicyWorkflowUrlRequest"/></param>
         /// <returns><see cref="DescribeChannelSealPolicyWorkflowUrlResponse"/></returns>
@@ -3195,7 +3195,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 生成渠道子客用印申请审批小程序链接，链接类型（通过H5唤起小程序方式查看）
+        /// 生成渠道子客用印申请审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转的方式查看）
         /// </summary>
         /// <param name="req"><see cref="DescribeChannelSealPolicyWorkflowUrlRequest"/></param>
         /// <returns><see cref="DescribeChannelSealPolicyWorkflowUrlResponse"/></returns>

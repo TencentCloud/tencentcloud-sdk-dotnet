@@ -79,7 +79,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+        /// 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认命名空间。1：非默认命名空间
         /// </summary>
         [JsonProperty("IsDefault")]
         public string IsDefault{ get; set; }

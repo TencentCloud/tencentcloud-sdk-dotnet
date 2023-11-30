@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 用印审批小程序链接，链接类型（通过H5唤起小程序方式查看），一年内有效。
+        /// 用印审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转方式查看）。
         /// </summary>
         [JsonProperty("WorkflowUrl")]
         public string WorkflowUrl{ get; set; }

@@ -29,6 +29,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableIndictors")]
+        [System.Obsolete]
         public TableIndicators[] TableIndictors{ get; set; }
 
         /// <summary>
@@ -38,6 +39,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
+        /// <summary>
+        /// 检验报告V3结论
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableIndicators")]
+        public TableIndicators[] TableIndicators{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +54,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         {
             this.SetParamArrayObj(map, prefix + "TableIndictors.", this.TableIndictors);
             this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamArrayObj(map, prefix + "TableIndicators.", this.TableIndicators);
         }
     }
 }

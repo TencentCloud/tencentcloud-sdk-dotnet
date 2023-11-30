@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.904</VersionPrefix>
+    <VersionPrefix>3.0.905</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,6 +96,7 @@
     <Compile Include="V20210820\Models\BatchOperateResultDs.cs" />
     <Compile Include="V20210820\Models\BatchOperateResultOpsDto.cs" />
     <Compile Include="V20210820\Models\BatchOperationOpsDto.cs" />
+    <Compile Include="V20210820\Models\BatchOpsDTO.cs" />
     <Compile Include="V20210820\Models\BatchRerunIntegrationTaskInstancesRequest.cs" />
     <Compile Include="V20210820\Models\BatchRerunIntegrationTaskInstancesResponse.cs" />
     <Compile Include="V20210820\Models\BatchResult.cs" />
@@ -612,12 +613,14 @@
     <Compile Include="V20210820\Models\EventCaseAuditLogVOCollection.cs" />
     <Compile Include="V20210820\Models\EventCaseConsumeLogOptDto.cs" />
     <Compile Include="V20210820\Models\EventCaseConsumeLogOptDtoCollection.cs" />
+    <Compile Include="V20210820\Models\EventCaseDTO.cs" />
     <Compile Include="V20210820\Models\EventCaseOpsDto.cs" />
     <Compile Include="V20210820\Models\EventDto.cs" />
     <Compile Include="V20210820\Models\EventListenerOpsDto.cs" />
     <Compile Include="V20210820\Models\EventOpsDto.cs" />
     <Compile Include="V20210820\Models\EventPage.cs" />
     <Compile Include="V20210820\Models\ExportTaskInfo.cs" />
+    <Compile Include="V20210820\Models\FailMessage.cs" />
     <Compile Include="V20210820\Models\FieldConfig.cs" />
     <Compile Include="V20210820\Models\Filter.cs" />
     <Compile Include="V20210820\Models\FilterOptional.cs" />
@@ -931,6 +934,8 @@
     <Compile Include="V20210820\Models\ThresholdValue.cs" />
     <Compile Include="V20210820\Models\TopTableStat.cs" />
     <Compile Include="V20210820\Models\TopTableStatItem.cs" />
+    <Compile Include="V20210820\Models\TriggerDsEventRequest.cs" />
+    <Compile Include="V20210820\Models\TriggerDsEventResponse.cs" />
     <Compile Include="V20210820\Models\TriggerEventRequest.cs" />
     <Compile Include="V20210820\Models\TriggerEventResponse.cs" />
     <Compile Include="V20210820\Models\UnlockIntegrationTaskRequest.cs" />

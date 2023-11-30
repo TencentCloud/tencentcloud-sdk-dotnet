@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 操作状态
+        /// 编辑成功: true / 编辑失败: false
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }

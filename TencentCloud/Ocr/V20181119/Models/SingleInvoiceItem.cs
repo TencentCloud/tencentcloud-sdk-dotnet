@@ -199,6 +199,20 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("VatSalesList")]
         public VatInvoiceInfo VatSalesList{ get; set; }
 
+        /// <summary>
+        /// 电子发票（火车票）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ElectronicTrainTicketFull")]
+        public ElectronicTrainTicketFull ElectronicTrainTicketFull{ get; set; }
+
+        /// <summary>
+        /// 电子发票（机票行程单）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ElectronicFlightTicketFull")]
+        public ElectronicFlightTicketFull ElectronicFlightTicketFull{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +244,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "MedicalOutpatientInvoice.", this.MedicalOutpatientInvoice);
             this.SetParamObj(map, prefix + "MedicalHospitalizedInvoice.", this.MedicalHospitalizedInvoice);
             this.SetParamObj(map, prefix + "VatSalesList.", this.VatSalesList);
+            this.SetParamObj(map, prefix + "ElectronicTrainTicketFull.", this.ElectronicTrainTicketFull);
+            this.SetParamObj(map, prefix + "ElectronicFlightTicketFull.", this.ElectronicFlightTicketFull);
         }
     }
 }

@@ -12467,6 +12467,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 事件管理-触发事件
+        /// </summary>
+        /// <param name="req"><see cref="TriggerDsEventRequest"/></param>
+        /// <returns><see cref="TriggerDsEventResponse"/></returns>
+        public async Task<TriggerDsEventResponse> TriggerDsEvent(TriggerDsEventRequest req)
+        {
+             JsonResponseModel<TriggerDsEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TriggerDsEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TriggerDsEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 事件管理-触发事件
+        /// </summary>
+        /// <param name="req"><see cref="TriggerDsEventRequest"/></param>
+        /// <returns><see cref="TriggerDsEventResponse"/></returns>
+        public TriggerDsEventResponse TriggerDsEventSync(TriggerDsEventRequest req)
+        {
+             JsonResponseModel<TriggerDsEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TriggerDsEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TriggerDsEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 触发事件
         /// </summary>

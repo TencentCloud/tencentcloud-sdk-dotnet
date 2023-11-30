@@ -151,6 +151,18 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("InstanceConcurrencyConfig")]
         public InstanceConcurrencyConfig InstanceConcurrencyConfig{ get; set; }
 
+        /// <summary>
+        /// 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+        /// </summary>
+        [JsonProperty("DnsCache")]
+        public string DnsCache{ get; set; }
+
+        /// <summary>
+        /// 内网访问配置
+        /// </summary>
+        [JsonProperty("IntranetConfig")]
+        public IntranetConfigIn IntranetConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,6 +190,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
             this.SetParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
             this.SetParamObj(map, prefix + "InstanceConcurrencyConfig.", this.InstanceConcurrencyConfig);
+            this.SetParamSimple(map, prefix + "DnsCache", this.DnsCache);
+            this.SetParamObj(map, prefix + "IntranetConfig.", this.IntranetConfig);
         }
     }
 }

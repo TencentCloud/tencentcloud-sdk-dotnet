@@ -25,19 +25,19 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 一键更新原证书ID
+        /// 一键更新原证书ID， 查询绑定该证书的云资源然后进行证书更新
         /// </summary>
         [JsonProperty("OldCertificateId")]
         public string OldCertificateId{ get; set; }
 
         /// <summary>
-        /// 需要部署的资源类型，参数值可选：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb
+        /// 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse
         /// </summary>
         [JsonProperty("ResourceTypes")]
         public string[] ResourceTypes{ get; set; }
 
         /// <summary>
-        /// 一键更新新证书ID
+        /// 一键更新新证书ID，不传该则证书公钥和私钥必传
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] Regions{ get; set; }
 
         /// <summary>
-        /// 云资源需要部署的地域列表
+        /// 云资源需要部署的地域列表，支持地域的云资源类型必传，如：clb、tke、apigateway、waf、tcb、tse等
         /// </summary>
         [JsonProperty("ResourceTypesRegions")]
         public ResourceTypeRegions[] ResourceTypesRegions{ get; set; }
@@ -62,37 +62,37 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificatePublicKey{ get; set; }
 
         /// <summary>
-        /// 证书私钥，若上传证书公钥， 则证书私钥必填
+        /// 证书私钥，若上传证书公钥， 则CertificateId不用传
         /// </summary>
         [JsonProperty("CertificatePrivateKey")]
         public string CertificatePrivateKey{ get; set; }
 
         /// <summary>
-        /// 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知
+        /// 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知，忽略OldCertificateId到期提醒
         /// </summary>
         [JsonProperty("ExpiringNotificationSwitch")]
         public ulong? ExpiringNotificationSwitch{ get; set; }
 
         /// <summary>
-        /// 相同的证书是否允许重复上传，若上传证书公钥， 则可以配置该参数
+        /// 相同的证书是否允许重复上传，若选择上传证书， 则可以配置该参数
         /// </summary>
         [JsonProperty("Repeatable")]
         public bool? Repeatable{ get; set; }
 
         /// <summary>
-        /// 是否允许下载，若上传证书公钥， 则可以配置该参数
+        /// 是否允许下载，若选择上传证书， 则可以配置该参数
         /// </summary>
         [JsonProperty("AllowDownload")]
         public bool? AllowDownload{ get; set; }
 
         /// <summary>
-        /// 标签列表，若上传证书公钥， 则可以配置该参数
+        /// 标签列表，若选择上传证书， 则可以配置该参数
         /// </summary>
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }
 
         /// <summary>
-        /// 项目 ID，若上传证书公钥， 则可以配置该参数
+        /// 项目 ID，若选择上传证书， 则可以配置该参数
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

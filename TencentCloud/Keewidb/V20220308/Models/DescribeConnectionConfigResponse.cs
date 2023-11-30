@@ -37,10 +37,24 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public long? OutNetLimit{ get; set; }
 
         /// <summary>
-        /// 单分片连接数限制。
+        /// 实例当前单分片连接数限制。
         /// </summary>
         [JsonProperty("ClientLimit")]
         public long? ClientLimit{ get; set; }
+
+        /// <summary>
+        /// 单分片连接数限制最小值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientLimitMin")]
+        public long? ClientLimitMin{ get; set; }
+
+        /// <summary>
+        /// 单分片连接数限制最大值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientLimitMax")]
+        public long? ClientLimitMax{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -57,6 +71,8 @@ namespace TencentCloud.Keewidb.V20220308.Models
             this.SetParamSimple(map, prefix + "InNetLimit", this.InNetLimit);
             this.SetParamSimple(map, prefix + "OutNetLimit", this.OutNetLimit);
             this.SetParamSimple(map, prefix + "ClientLimit", this.ClientLimit);
+            this.SetParamSimple(map, prefix + "ClientLimitMin", this.ClientLimitMin);
+            this.SetParamSimple(map, prefix + "ClientLimitMax", this.ClientLimitMax);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

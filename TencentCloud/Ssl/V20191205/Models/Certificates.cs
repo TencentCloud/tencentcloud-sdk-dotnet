@@ -369,6 +369,34 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("AllowDownload")]
         public bool? AllowDownload{ get; set; }
 
+        /// <summary>
+        /// 证书域名是否全部在DNSPOD托管解析
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsDNSPODResolve")]
+        public bool? IsDNSPODResolve{ get; set; }
+
+        /// <summary>
+        /// 是否是权益点购买的证书
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsPackage")]
+        public bool? IsPackage{ get; set; }
+
+        /// <summary>
+        /// 是否存在私钥密码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KeyPasswordCustomFlag")]
+        public bool? KeyPasswordCustomFlag{ get; set; }
+
+        /// <summary>
+        /// 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SupportDownloadType")]
+        public SupportDownloadType SupportDownloadType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -424,6 +452,10 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamArraySimple(map, prefix + "CertSANs.", this.CertSANs);
             this.SetParamSimple(map, prefix + "AwaitingValidationMsg", this.AwaitingValidationMsg);
             this.SetParamSimple(map, prefix + "AllowDownload", this.AllowDownload);
+            this.SetParamSimple(map, prefix + "IsDNSPODResolve", this.IsDNSPODResolve);
+            this.SetParamSimple(map, prefix + "IsPackage", this.IsPackage);
+            this.SetParamSimple(map, prefix + "KeyPasswordCustomFlag", this.KeyPasswordCustomFlag);
+            this.SetParamObj(map, prefix + "SupportDownloadType.", this.SupportDownloadType);
         }
     }
 }

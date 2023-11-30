@@ -4773,6 +4773,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询集群日志（审计、事件、普通日志）开关列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogSwitchesRequest"/></param>
+        /// <returns><see cref="DescribeLogSwitchesResponse"/></returns>
+        public async Task<DescribeLogSwitchesResponse> DescribeLogSwitches(DescribeLogSwitchesRequest req)
+        {
+             JsonResponseModel<DescribeLogSwitchesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogSwitches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogSwitchesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群日志（审计、事件、普通日志）开关列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogSwitchesRequest"/></param>
+        /// <returns><see cref="DescribeLogSwitchesResponse"/></returns>
+        public DescribeLogSwitchesResponse DescribeLogSwitchesSync(DescribeLogSwitchesRequest req)
+        {
+             JsonResponseModel<DescribeLogSwitchesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogSwitches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogSwitchesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询各个规格的 Pod 的抵扣率
         /// </summary>
         /// <param name="req"><see cref="DescribePodDeductionRateRequest"/></param>

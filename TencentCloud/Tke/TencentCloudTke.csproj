@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.904</VersionPrefix>
+    <VersionPrefix>3.0.905</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -319,6 +319,8 @@
     <Compile Include="V20180525\Models\DescribeImageCachesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeImagesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeImagesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeLogSwitchesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeLogSwitchesResponse.cs" />
     <Compile Include="V20180525\Models\DescribePodDeductionRateRequest.cs" />
     <Compile Include="V20180525\Models\DescribePodDeductionRateResponse.cs" />
     <Compile Include="V20180525\Models\DescribePodsBySpecRequest.cs" />
@@ -599,6 +601,8 @@
     <Compile Include="V20180525\Models\Step.cs" />
     <Compile Include="V20180525\Models\SubnetInfos.cs" />
     <Compile Include="V20180525\Models\SuperNodeResource.cs" />
+    <Compile Include="V20180525\Models\Switch.cs" />
+    <Compile Include="V20180525\Models\SwitchInfo.cs" />
     <Compile Include="V20180525\Models\SyncPrometheusTempRequest.cs" />
     <Compile Include="V20180525\Models\SyncPrometheusTempResponse.cs" />
     <Compile Include="V20180525\Models\SyncPrometheusTemplateRequest.cs" />
