@@ -4333,7 +4333,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（DescribeDBInstancesAttribute）用于开启\关闭\更新SSL加密
+        /// 本接口（ModifyDBInstanceSSL）用于开启\关闭\更新SSL加密
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSSLRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSSLResponse"/></returns>
@@ -4353,7 +4353,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（DescribeDBInstancesAttribute）用于开启\关闭\更新SSL加密
+        /// 本接口（ModifyDBInstanceSSL）用于开启\关闭\更新SSL加密
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSSLRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSSLResponse"/></returns>

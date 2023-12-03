@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 绑定的关系数组。
+        /// 绑定的关系数组。一次请求最多支持20个。
         /// </summary>
         [JsonProperty("Associations")]
         public TargetGroupAssociation[] Associations{ get; set; }
