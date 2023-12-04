@@ -113,6 +113,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string RegistrationDate{ get; set; }
 
         /// <summary>
+        ///  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
+        /// 
+        /// </summary>
+        [JsonProperty("Angle")]
+        public float? Angle{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -138,6 +145,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
             this.SetParamSimple(map, prefix + "IsDuplication", this.IsDuplication);
             this.SetParamSimple(map, prefix + "RegistrationDate", this.RegistrationDate);
+            this.SetParamSimple(map, prefix + "Angle", this.Angle);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

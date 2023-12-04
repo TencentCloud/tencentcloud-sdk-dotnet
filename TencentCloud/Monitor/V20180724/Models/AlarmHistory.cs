@@ -177,6 +177,62 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("AlarmLevel")]
         public string AlarmLevel{ get; set; }
 
+        /// <summary>
+        /// 是否有配置告警屏蔽规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShieldFlag")]
+        public long? ShieldFlag{ get; set; }
+
+        /// <summary>
+        /// 屏蔽类型（英文）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmShieldingType")]
+        public string AlarmShieldingType{ get; set; }
+
+        /// <summary>
+        /// 屏蔽时间（英文）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmShieldingTime")]
+        public string AlarmShieldingTime{ get; set; }
+
+        /// <summary>
+        /// 屏蔽类型（中文）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmShieldingShowType")]
+        public string AlarmShieldingShowType{ get; set; }
+
+        /// <summary>
+        /// 屏蔽时间（中文）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmShieldingShowTime")]
+        public string AlarmShieldingShowTime{ get; set; }
+
+        /// <summary>
+        /// 屏蔽原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmShieldReason")]
+        public string AlarmShieldReason{ get; set; }
+
+        /// <summary>
+        /// 告警实例的维度信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InternalDimensions")]
+        public string InternalDimensions{ get; set; }
+
+        /// <summary>
+        /// 指标名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +264,14 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "MetricsInfo.", this.MetricsInfo);
             this.SetParamSimple(map, prefix + "Dimensions", this.Dimensions);
             this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+            this.SetParamSimple(map, prefix + "ShieldFlag", this.ShieldFlag);
+            this.SetParamSimple(map, prefix + "AlarmShieldingType", this.AlarmShieldingType);
+            this.SetParamSimple(map, prefix + "AlarmShieldingTime", this.AlarmShieldingTime);
+            this.SetParamSimple(map, prefix + "AlarmShieldingShowType", this.AlarmShieldingShowType);
+            this.SetParamSimple(map, prefix + "AlarmShieldingShowTime", this.AlarmShieldingShowTime);
+            this.SetParamSimple(map, prefix + "AlarmShieldReason", this.AlarmShieldReason);
+            this.SetParamSimple(map, prefix + "InternalDimensions", this.InternalDimensions);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BAB1D217-C279-3DCE-8001-02A83445B39E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.908</VersionPrefix>
+    <VersionPrefix>3.0.909</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -109,6 +109,8 @@
     <Compile Include="V20180416\Models\IndexOptionsField.cs" />
     <Compile Include="V20180416\Models\IndexPolicyField.cs" />
     <Compile Include="V20180416\Models\IndexSettingsField.cs" />
+    <Compile Include="V20180416\Models\InquirePriceRenewInstanceRequest.cs" />
+    <Compile Include="V20180416\Models\InquirePriceRenewInstanceResponse.cs" />
     <Compile Include="V20180416\Models\InstanceInfo.cs" />
     <Compile Include="V20180416\Models\InstanceLog.cs" />
     <Compile Include="V20180416\Models\JobParam.cs" />

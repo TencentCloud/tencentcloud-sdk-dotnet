@@ -172,21 +172,21 @@ namespace TencentCloud.Dts.V20211206.Models
         public string RoleExternalId{ get; set; }
 
         /// <summary>
-        /// 临时密钥Id，如果为跨账号实例此项必填
+        /// 临时密钥Id，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，如果为跨账号实例此项必填
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TmpSecretId")]
         public string TmpSecretId{ get; set; }
 
         /// <summary>
-        /// 临时密钥Key，如果为跨账号实例此项必填
+        /// 临时密钥Key，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，，如果为跨账号实例此项必填
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TmpSecretKey")]
         public string TmpSecretKey{ get; set; }
 
         /// <summary>
-        /// 临时Token，如果为跨账号实例此项必填
+        /// 临时Token，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，，如果为跨账号实例此项必填
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TmpToken")]

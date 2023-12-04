@@ -933,6 +933,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 集群续费询价接口，续费前通过调用该接口，可获取集群续费的价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewInstanceRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewInstanceResponse"/></returns>
+        public async Task<InquirePriceRenewInstanceResponse> InquirePriceRenewInstance(InquirePriceRenewInstanceRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceRenewInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 集群续费询价接口，续费前通过调用该接口，可获取集群续费的价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewInstanceRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewInstanceResponse"/></returns>
+        public InquirePriceRenewInstanceResponse InquirePriceRenewInstanceSync(InquirePriceRenewInstanceRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceRenewInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改绑定VIP的安全组，传安全组id列表
         /// </summary>
         /// <param name="req"><see cref="ModifyEsVipSecurityGroupRequest"/></param>

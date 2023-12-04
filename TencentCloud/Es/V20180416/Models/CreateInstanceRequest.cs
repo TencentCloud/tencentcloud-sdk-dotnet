@@ -94,7 +94,7 @@ namespace TencentCloud.Es.V20180416.Models
 
         /// <summary>
         /// 已废弃请使用NodeInfoList
-        /// 节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
+        /// 节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -159,7 +159,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string ClusterNameInConf{ get; set; }
 
         /// <summary>
-        /// 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
+        /// 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
         /// </summary>
         [JsonProperty("DeployMode")]
         public ulong? DeployMode{ get; set; }

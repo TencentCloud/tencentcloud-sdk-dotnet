@@ -25,7 +25,7 @@ namespace TencentCloud.Cdc.V20201214.Models
     {
         
         /// <summary>
-        /// 宿主机IP
+        /// 宿主机IP（废弃）
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }

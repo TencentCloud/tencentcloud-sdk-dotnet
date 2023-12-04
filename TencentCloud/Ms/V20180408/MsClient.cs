@@ -827,6 +827,48 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
+        /// 渠道合作资源销毁
+        /// 安卓应用加固-按年收费资源销毁，其他类型暂不支持
+        /// </summary>
+        /// <param name="req"><see cref="DestroyResourceInstancesRequest"/></param>
+        /// <returns><see cref="DestroyResourceInstancesResponse"/></returns>
+        public async Task<DestroyResourceInstancesResponse> DestroyResourceInstances(DestroyResourceInstancesRequest req)
+        {
+             JsonResponseModel<DestroyResourceInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyResourceInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyResourceInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道合作资源销毁
+        /// 安卓应用加固-按年收费资源销毁，其他类型暂不支持
+        /// </summary>
+        /// <param name="req"><see cref="DestroyResourceInstancesRequest"/></param>
+        /// <returns><see cref="DestroyResourceInstancesResponse"/></returns>
+        public DestroyResourceInstancesResponse DestroyResourceInstancesSync(DestroyResourceInstancesRequest req)
+        {
+             JsonResponseModel<DestroyResourceInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyResourceInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyResourceInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// client任务请求
         /// </summary>
         /// <param name="req"><see cref="RequestLocalTaskRequest"/></param>

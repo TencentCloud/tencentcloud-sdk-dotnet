@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{688DC818-0211-3401-8C6A-72CF4B76DD80}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.908</VersionPrefix>
+    <VersionPrefix>3.0.909</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,6 +96,8 @@
     <Compile Include="V20180408\Models\DescribeUrlDetectionResultResponse.cs" />
     <Compile Include="V20180408\Models\DescribeUserBaseInfoInstanceRequest.cs" />
     <Compile Include="V20180408\Models\DescribeUserBaseInfoInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\DestroyResourceInstancesRequest.cs" />
+    <Compile Include="V20180408\Models\DestroyResourceInstancesResponse.cs" />
     <Compile Include="V20180408\Models\EncryptResults.cs" />
     <Compile Include="V20180408\Models\Filter.cs" />
     <Compile Include="V20180408\Models\IOSInfo.cs" />

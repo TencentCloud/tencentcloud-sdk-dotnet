@@ -37,16 +37,16 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 告警通道名称，例如：test
-        /// </summary>
-        [JsonProperty("ChannelName")]
-        public string ChannelName{ get; set; }
-
-        /// <summary>
         /// 接受告警通道 ID 数组
         /// </summary>
         [JsonProperty("Receivers")]
         public string[] Receivers{ get; set; }
+
+        /// <summary>
+        /// 告警通道名称，已废弃，名称不可修改。
+        /// </summary>
+        [JsonProperty("ChannelName")]
+        public string ChannelName{ get; set; }
 
         /// <summary>
         /// 已废弃，请使用 OrganizationIds
@@ -68,8 +68,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ChannelName", this.ChannelName);
             this.SetParamArraySimple(map, prefix + "Receivers.", this.Receivers);
+            this.SetParamSimple(map, prefix + "ChannelName", this.ChannelName);
             this.SetParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
             this.SetParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
         }

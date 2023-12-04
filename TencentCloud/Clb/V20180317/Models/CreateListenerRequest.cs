@@ -116,13 +116,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public MultiCertInfo MultiCertInfo{ get; set; }
 
         /// <summary>
-        /// 监听器最大连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。
+        /// 监听器最大连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
         /// </summary>
         [JsonProperty("MaxConn")]
         public long? MaxConn{ get; set; }
 
         /// <summary>
-        /// 监听器最大新增连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。
+        /// 监听器最大新增连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
         /// </summary>
         [JsonProperty("MaxCps")]
         public long? MaxCps{ get; set; }
