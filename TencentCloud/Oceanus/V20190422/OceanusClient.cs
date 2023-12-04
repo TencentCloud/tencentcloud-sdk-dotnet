@@ -693,6 +693,46 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 查询指定文件夹及其相应的子文件夹信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFolderRequest"/></param>
+        /// <returns><see cref="DescribeFolderResponse"/></returns>
+        public async Task<DescribeFolderResponse> DescribeFolder(DescribeFolderRequest req)
+        {
+             JsonResponseModel<DescribeFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFolderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定文件夹及其相应的子文件夹信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFolderRequest"/></param>
+        /// <returns><see cref="DescribeFolderResponse"/></returns>
+        public DescribeFolderResponse DescribeFolderSync(DescribeFolderRequest req)
+        {
+             JsonResponseModel<DescribeFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFolderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询作业配置列表，一次最多查询100个
         /// </summary>
         /// <param name="req"><see cref="DescribeJobConfigsRequest"/></param>

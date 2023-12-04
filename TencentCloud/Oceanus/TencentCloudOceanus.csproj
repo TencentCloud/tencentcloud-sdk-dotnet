@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.907</VersionPrefix>
+    <VersionPrefix>3.0.908</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -88,6 +88,8 @@
     <Compile Include="V20190422\Models\DeleteWorkSpaceResponse.cs" />
     <Compile Include="V20190422\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20190422\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20190422\Models\DescribeFolderRequest.cs" />
+    <Compile Include="V20190422\Models\DescribeFolderResponse.cs" />
     <Compile Include="V20190422\Models\DescribeJobConfigsRequest.cs" />
     <Compile Include="V20190422\Models\DescribeJobConfigsResponse.cs" />
     <Compile Include="V20190422\Models\DescribeJobSavepointRequest.cs" />
@@ -158,6 +160,7 @@
     <Compile Include="V20190422\Models\StopJobDescription.cs" />
     <Compile Include="V20190422\Models\StopJobsRequest.cs" />
     <Compile Include="V20190422\Models\StopJobsResponse.cs" />
+    <Compile Include="V20190422\Models\SubFolderInfo.cs" />
     <Compile Include="V20190422\Models\SystemResourceItem.cs" />
     <Compile Include="V20190422\Models\Tag.cs" />
     <Compile Include="V20190422\Models\TraceModeConfiguration.cs" />
