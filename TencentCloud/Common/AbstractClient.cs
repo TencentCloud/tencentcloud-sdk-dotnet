@@ -18,6 +18,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -142,6 +143,91 @@ namespace TencentCloud.Common
         protected string InternalRequestSync(AbstractModel request, string actionName)
         {
             return Task.Run(() => InternalRequest(request, actionName)).Result;
+        }
+
+        protected async Task<T> InternalRequestAsync<T>(AbstractModel request, string actionName)
+            where T : AbstractModel
+        {
+            if (Profile.HttpProfile.ReqMethod != HttpProfile.REQ_GET &&
+                Profile.HttpProfile.ReqMethod != HttpProfile.REQ_POST)
+            {
+                throw new TencentCloudSDKException("Method only support (GET, POST)");
+            }
+
+            HttpResponseMessage response;
+            if (ClientProfile.SIGN_SHA1.Equals(Profile.SignMethod)
+                || ClientProfile.SIGN_SHA256.Equals(Profile.SignMethod))
+                response = await RequestV1(request, actionName).ConfigureAwait(false);
+            else
+                response = await RequestV3(request, actionName).ConfigureAwait(false);
+
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                throw new TencentCloudSDKException(
+                    $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync()}");
+            }
+
+            if (response.Content.Headers.TryGetValues("Content-Type", out var cts) &&
+                cts.First() == "text/event-stream")
+            {
+                return await ReadSSEResponseAsync<T>(response).ConfigureAwait(false);
+            }
+
+            return await ReadJsonResponseAsync<T>(response).ConfigureAwait(false);
+        }
+
+        private async Task<T> ReadJsonResponseAsync<T>(HttpResponseMessage response)
+            where T : AbstractModel
+        {
+            string strResp = null;
+            try
+            {
+                strResp = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            }
+            catch (Exception e)
+            {
+                throw new TencentCloudSDKException("API request failed", e);
+            }
+
+            JsonResponseModel<JsonResponseErrModel> errResp = null;
+            try
+            {
+                errResp = JsonConvert.DeserializeObject<JsonResponseModel<JsonResponseErrModel>>(strResp);
+            }
+            catch (JsonSerializationException e)
+            {
+                throw new TencentCloudSDKException(e.Message);
+            }
+
+            if (errResp.Response.Error != null)
+            {
+                throw new TencentCloudSDKException(
+                    errResp.Response.Error.Message, errResp.Response.Error.Code, errResp.Response.RequestId);
+            }
+
+            return JsonConvert.DeserializeObject<JsonResponseModel<T>>(strResp).Response;
+        }
+
+        private Task<T> ReadSSEResponseAsync<T>(HttpResponseMessage response)
+            where T : AbstractModel
+        {
+            if (!typeof(AbstractSSEModel).IsAssignableFrom(typeof(T)))
+            {
+                throw new InvalidCastException(
+                    $"invalid type: {typeof(T)} is not subclass of {nameof(AbstractSSEModel)}");
+            }
+
+            var resp = Activator.CreateInstance<T>() as AbstractSSEModel;
+            if (resp == null)
+            {
+                throw new InvalidCastException(
+                    $"invalid type: {typeof(T)} is not subclass of {nameof(AbstractSSEModel)}");
+            }
+
+            resp.RequestId = response.Headers.GetValues("X-TC-RequestId").FirstOrDefault();
+            resp.Response = response;
+
+            return Task.FromResult(resp as T);
         }
 
         private async Task<HttpResponseMessage> RequestV3(AbstractModel request, string actionName)

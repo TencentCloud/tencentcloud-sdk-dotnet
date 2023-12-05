@@ -134,7 +134,7 @@ namespace TencentCloud.Common.Http
             string fullurl = $"{baseUrl.TrimEnd('/')}{path}";
             return await this.Send(HttpMethod.Post, fullurl, payload, headers);
         }
-        
+
         public async Task<HttpResponseMessage> PostRequestAsync(string path, byte[] payload,
             Dictionary<string, string> headers)
         {
@@ -157,7 +157,7 @@ namespace TencentCloud.Common.Http
         {
             return await Send(method, url, Encoding.UTF8.GetBytes(payload), headers);
         }
-        
+
         private async Task<HttpResponseMessage> Send(
             HttpMethod method, string url, byte[] payload, Dictionary<string, string> headers)
         {
@@ -189,7 +189,7 @@ namespace TencentCloud.Common.Http
                         }
                     }
 
-                    return await http.SendAsync(msg, cts.Token);
+                    return await http.SendAsync(msg, HttpCompletionOption.ResponseHeadersRead, cts.Token);
                 }
             }
         }
