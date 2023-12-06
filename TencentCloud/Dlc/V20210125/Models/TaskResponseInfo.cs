@@ -289,6 +289,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("PrestoMonitorMetrics")]
         public PrestoMonitorMetrics PrestoMonitorMetrics{ get; set; }
 
+        /// <summary>
+        /// 结果文件格式：默认为csv
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResultFormat")]
+        public string ResultFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -335,6 +342,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "CommonMetrics.", this.CommonMetrics);
             this.SetParamObj(map, prefix + "SparkMonitorMetrics.", this.SparkMonitorMetrics);
             this.SetParamObj(map, prefix + "PrestoMonitorMetrics.", this.PrestoMonitorMetrics);
+            this.SetParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
         }
     }
 }

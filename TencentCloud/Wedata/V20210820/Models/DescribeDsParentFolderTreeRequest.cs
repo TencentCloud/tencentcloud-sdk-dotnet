@@ -48,6 +48,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
+        /// <summary>
+        ///  classification:分类展示  catalog:目录展示
+        /// </summary>
+        [JsonProperty("DisplayType")]
+        public string DisplayType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "FolderId", this.FolderId);
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "DisplayType", this.DisplayType);
         }
     }
 }

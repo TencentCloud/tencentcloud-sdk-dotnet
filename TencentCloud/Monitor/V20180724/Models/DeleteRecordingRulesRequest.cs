@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 规则 ID 列表
+        /// 规则 ID 列表(规则 ID 可通过 DescribeRecordingRules 接口获取)
         /// </summary>
         [JsonProperty("RuleIds")]
         public string[] RuleIds{ get; set; }

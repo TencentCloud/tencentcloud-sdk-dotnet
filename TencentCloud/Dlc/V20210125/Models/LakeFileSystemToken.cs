@@ -25,13 +25,13 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// Token使用的临时秘钥的ID
+        /// Token使用的临时密钥的ID
         /// </summary>
         [JsonProperty("SecretId")]
         public string SecretId{ get; set; }
 
         /// <summary>
-        /// Token使用的临时秘钥
+        /// Token使用的临时密钥
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }

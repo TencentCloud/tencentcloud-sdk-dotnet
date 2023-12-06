@@ -32,7 +32,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 性能容量型规格，取值范围：
-        /// <li> SLA：超强型4规格 </li>
         /// <li> clb.c2.medium：标准型规格 </li>
         /// <li> clb.c3.small：高阶型1规格 </li>
         /// <li> clb.c3.medium：高阶型2规格 </li>

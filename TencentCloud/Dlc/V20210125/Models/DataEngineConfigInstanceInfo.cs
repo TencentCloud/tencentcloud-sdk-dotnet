@@ -38,7 +38,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public DataEngineConfigPair[] DataEngineConfigPairs{ get; set; }
 
         /// <summary>
-        /// 作业集群资源参数配置模版
+        /// 作业集群资源参数配置模板
         /// </summary>
         [JsonProperty("SessionResourceTemplate")]
         public SessionResourceTemplate SessionResourceTemplate{ get; set; }

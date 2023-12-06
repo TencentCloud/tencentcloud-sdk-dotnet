@@ -926,6 +926,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 该接口可用于查询 IP 是否为 EdgeOne IP。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPRegionRequest"/></param>
+        /// <returns><see cref="DescribeIPRegionResponse"/></returns>
+        public Task<DescribeIPRegionResponse> DescribeIPRegion(DescribeIPRegionRequest req)
+        {
+            return InternalRequestAsync<DescribeIPRegionResponse>(req, "DescribeIPRegion");
+        }
+
+        /// <summary>
+        /// 该接口可用于查询 IP 是否为 EdgeOne IP。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPRegionRequest"/></param>
+        /// <returns><see cref="DescribeIPRegionResponse"/></returns>
+        public DescribeIPRegionResponse DescribeIPRegionSync(DescribeIPRegionRequest req)
+        {
+            return InternalRequestAsync<DescribeIPRegionResponse>(req, "DescribeIPRegion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询站点的验证信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeIdentificationsRequest"/></param>

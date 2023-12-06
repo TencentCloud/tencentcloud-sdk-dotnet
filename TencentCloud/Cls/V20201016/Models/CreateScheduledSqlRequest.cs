@@ -73,7 +73,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? ProcessPeriod{ get; set; }
 
         /// <summary>
-        /// 单次查询的时间窗口
+        /// 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
         /// </summary>
         [JsonProperty("ProcessTimeWindow")]
         public string ProcessTimeWindow{ get; set; }

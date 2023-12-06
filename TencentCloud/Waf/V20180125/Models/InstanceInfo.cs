@@ -25,25 +25,25 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// id
+        /// 实例唯一ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Name
+        /// 实例名称
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 资源id
+        /// 实例对应资源ID，计费使用
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string ResourceIds{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// 实例所属地域
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -55,73 +55,83 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 自动续费
+        /// 自动续费标识。
+        /// 0：关闭
+        /// 1：开启
         /// </summary>
         [JsonProperty("RenewFlag")]
         public ulong? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 弹性计费
+        /// 弹性计费开关。
+        /// 0：关闭
+        /// 1：开启
         /// </summary>
         [JsonProperty("Mode")]
         public ulong? Mode{ get; set; }
 
         /// <summary>
-        /// 套餐版本
+        /// 实例套餐版本。
+        /// 101：小微版
+        /// 102：超轻版
+        /// 2：高级版
+        /// 3：企业版
+        /// 4：旗舰版
+        /// 6：独享版
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// 实例过期时间
         /// </summary>
         [JsonProperty("ValidTime")]
         public string ValidTime{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 实例开始时间
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 已用
+        /// 已配置域名个数
         /// </summary>
         [JsonProperty("DomainCount")]
         public ulong? DomainCount{ get; set; }
 
         /// <summary>
-        /// 上限
+        /// 域名数量上限
         /// </summary>
         [JsonProperty("SubDomainLimit")]
         public ulong? SubDomainLimit{ get; set; }
 
         /// <summary>
-        /// 已用
+        /// 已配置主域名个数
         /// </summary>
         [JsonProperty("MainDomainCount")]
         public ulong? MainDomainCount{ get; set; }
 
         /// <summary>
-        /// 上限
+        /// 主域名数量上限
         /// </summary>
         [JsonProperty("MainDomainLimit")]
         public ulong? MainDomainLimit{ get; set; }
 
         /// <summary>
-        /// 峰值
+        /// 实例30天内QPS峰值
         /// </summary>
         [JsonProperty("MaxQPS")]
         public ulong? MaxQPS{ get; set; }
 
         /// <summary>
-        /// qps套餐
+        /// qps扩展包信息
         /// </summary>
         [JsonProperty("QPS")]
         public QPSPackageNew QPS{ get; set; }
 
         /// <summary>
-        /// 域名套餐
+        /// 域名扩展包信息
         /// </summary>
         [JsonProperty("DomainPkg")]
         public DomainPackageNew DomainPkg{ get; set; }
@@ -208,7 +218,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 实例沙箱值
+        /// 实例沙箱qps值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SandboxQps")]
@@ -241,6 +251,27 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("ApiPkg")]
         public ApiPkg ApiPkg{ get; set; }
+
+        /// <summary>
+        /// 小程序安全加速包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MiniPkg")]
+        public MiniPkg MiniPkg{ get; set; }
+
+        /// <summary>
+        /// 小程序qps规格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MiniQpsStandard")]
+        public ulong? MiniQpsStandard{ get; set; }
+
+        /// <summary>
+        /// 小程序qps峰值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MiniMaxQPS")]
+        public ulong? MiniMaxQPS{ get; set; }
 
 
         /// <summary>
@@ -282,6 +313,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamObj(map, prefix + "MajorEventsPkg.", this.MajorEventsPkg);
             this.SetParamObj(map, prefix + "HybridPkg.", this.HybridPkg);
             this.SetParamObj(map, prefix + "ApiPkg.", this.ApiPkg);
+            this.SetParamObj(map, prefix + "MiniPkg.", this.MiniPkg);
+            this.SetParamSimple(map, prefix + "MiniQpsStandard", this.MiniQpsStandard);
+            this.SetParamSimple(map, prefix + "MiniMaxQPS", this.MiniMaxQPS);
         }
     }
 }

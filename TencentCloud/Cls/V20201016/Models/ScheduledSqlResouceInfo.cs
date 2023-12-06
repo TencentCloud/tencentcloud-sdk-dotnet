@@ -56,7 +56,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
+        /// 指标维度，不接受时间类型。
         /// </summary>
         [JsonProperty("MetricLabels")]
         public string[] MetricLabels{ get; set; }
@@ -68,7 +68,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public string CustomTime{ get; set; }
 
         /// <summary>
-        /// 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
+        /// 除了MetricLabels，您还可以使用该参数，为指标补充静态的维度。
+        /// 维度名以字母或下划线开头，后面可以跟字母、数字或下划线，长度小于等于1024 字节
         /// </summary>
         [JsonProperty("CustomMetricLabels")]
         public MetricLabel[] CustomMetricLabels{ get; set; }

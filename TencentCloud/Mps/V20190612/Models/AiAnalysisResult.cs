@@ -31,6 +31,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>Tag：智能标签</li>
         /// <li>FrameTag：智能按帧标签</li>
         /// <li>Highlight：智能精彩集锦</li>
+        /// <li>DeLogo：智能去水印</li>
+        /// <li>Description：大模型摘要</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -77,6 +79,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("DeLogoTask")]
         public AiAnalysisTaskDelLogoResult DeLogoTask{ get; set; }
 
+        /// <summary>
+        /// 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DescriptionTask")]
+        public AiAnalysisTaskDescriptionResult DescriptionTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +99,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
             this.SetParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
             this.SetParamObj(map, prefix + "DeLogoTask.", this.DeLogoTask);
+            this.SetParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
         }
     }
 }

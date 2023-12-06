@@ -72,6 +72,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("IncludeVirtualTask")]
         public bool? IncludeVirtualTask{ get; set; }
 
+        /// <summary>
+        /// 任务目录id
+        /// </summary>
+        [JsonProperty("TaskFolderId")]
+        public string TaskFolderId{ get; set; }
+
+        /// <summary>
+        /// classification.分类展示  catalog.目录展示
+        /// </summary>
+        [JsonProperty("DisplayType")]
+        public string DisplayType{ get; set; }
+
+        /// <summary>
+        /// 是否包含任务目录
+        /// </summary>
+        [JsonProperty("IncludeTaskFolder")]
+        public bool? IncludeTaskFolder{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +104,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "IncludeWorkflow", this.IncludeWorkflow);
             this.SetParamSimple(map, prefix + "IncludeTask", this.IncludeTask);
             this.SetParamSimple(map, prefix + "IncludeVirtualTask", this.IncludeVirtualTask);
+            this.SetParamSimple(map, prefix + "TaskFolderId", this.TaskFolderId);
+            this.SetParamSimple(map, prefix + "DisplayType", this.DisplayType);
+            this.SetParamSimple(map, prefix + "IncludeTaskFolder", this.IncludeTaskFolder);
         }
     }
 }

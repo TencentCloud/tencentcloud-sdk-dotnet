@@ -122,7 +122,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 用于创建专用通道的接口
+        /// 创建专用通道。
         /// </summary>
         /// <param name="req"><see cref="CreateDirectConnectTunnelRequest"/></param>
         /// <returns><see cref="CreateDirectConnectTunnelResponse"/></returns>
@@ -132,7 +132,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 用于创建专用通道的接口
+        /// 创建专用通道。
         /// </summary>
         /// <param name="req"><see cref="CreateDirectConnectTunnelRequest"/></param>
         /// <returns><see cref="CreateDirectConnectTunnelResponse"/></returns>

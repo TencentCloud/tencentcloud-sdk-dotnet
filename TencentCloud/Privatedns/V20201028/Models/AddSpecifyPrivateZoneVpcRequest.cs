@@ -42,6 +42,12 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("AccountVpcSet")]
         public AccountVpcInfo[] AccountVpcSet{ get; set; }
 
+        /// <summary>
+        /// 是否为同步操作
+        /// </summary>
+        [JsonProperty("Sync")]
+        public bool? Sync{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
             this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+            this.SetParamSimple(map, prefix + "Sync", this.Sync);
         }
     }
 }

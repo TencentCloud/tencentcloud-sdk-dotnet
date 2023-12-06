@@ -37,13 +37,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Group{ get; set; }
 
         /// <summary>
-        /// Prometheus 实例 ID
+        /// Prometheus 实例 ID(可通过 DescribePrometheusInstances 接口获取)
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Prometheus 聚合规则 ID
+        /// Prometheus 聚合规则 ID(可通过 DescribeRecordingRules 接口获取)
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Prometheus 报警规则 ID
+        /// Prometheus 高警规则 ID
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
@@ -47,25 +47,25 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? RuleState{ get; set; }
 
         /// <summary>
-        /// 报警规则名称
+        /// 告警规则名称
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 报警规则表达式
+        /// 告警规则表达式
         /// </summary>
         [JsonProperty("Expr")]
         public string Expr{ get; set; }
 
         /// <summary>
-        /// 报警规则持续时间
+        /// 告警规则持续时间
         /// </summary>
         [JsonProperty("Duration")]
         public string Duration{ get; set; }
 
         /// <summary>
-        /// 报警规则接收组列表
+        /// 告警规则接收组列表(当前规则绑定的接收组列表可通过 DescribeAlertRules 接口获取；用户已有的接收组列表可通过 DescribeAlarmNotices 接口获取)
         /// </summary>
         [JsonProperty("Receivers")]
         public string[] Receivers{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public PrometheusRuleKV[] Annotations{ get; set; }
 
         /// <summary>
-        /// 报警策略模板分类
+        /// 报警策略模板分类(自定义，可不填)
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

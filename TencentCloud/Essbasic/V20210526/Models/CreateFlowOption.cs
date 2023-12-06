@@ -86,7 +86,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// **false**：（默认）不跳过，需要传ResourceId
         /// </summary>
         [JsonProperty("SkipUploadFile")]
-        public string SkipUploadFile{ get; set; }
+        public bool? SkipUploadFile{ get; set; }
 
 
         /// <summary>

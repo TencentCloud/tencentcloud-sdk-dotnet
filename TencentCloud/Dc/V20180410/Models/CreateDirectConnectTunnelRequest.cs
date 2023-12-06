@@ -25,130 +25,123 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 专线 ID，例如：dc-kd7d06of
+        /// 物理专线ID，例如：dc-kd7d06of。
         /// </summary>
         [JsonProperty("DirectConnectId")]
         public string DirectConnectId{ get; set; }
 
         /// <summary>
-        /// 专用通道名称
+        /// 专用通道名称。
         /// </summary>
         [JsonProperty("DirectConnectTunnelName")]
         public string DirectConnectTunnelName{ get; set; }
 
         /// <summary>
-        /// 物理专线 owner，缺省为当前客户（物理专线 owner）
-        /// 共享专线时这里需要填写共享专线的开发商账号 ID
+        /// 物理专线owner，缺省为当前客户（物理专线 owner）
+        /// 共享专线时这里需要填写共享专线的开发商账号 ID。
         /// </summary>
         [JsonProperty("DirectConnectOwnerAccount")]
         public string DirectConnectOwnerAccount{ get; set; }
 
         /// <summary>
-        /// 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
-        /// VPC：私有网络
-        /// BMVPC：黑石网络
-        /// CCN：云联网
+        /// 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// 网络地域
+        /// 网络地域。
         /// </summary>
         [JsonProperty("NetworkRegion")]
         public string NetworkRegion{ get; set; }
 
         /// <summary>
-        /// 私有网络统一 ID 或者黑石网络统一 ID
+        /// 私有网络统一ID或黑石网络统一ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 专线网关 ID，例如 dcg-d545ddf
+        /// 专线网关ID，例如 dcg-d545ddf。
         /// </summary>
         [JsonProperty("DirectConnectGatewayId")]
         public string DirectConnectGatewayId{ get; set; }
 
         /// <summary>
-        /// 专线带宽，单位：Mbps
-        /// 默认是物理专线带宽值
+        /// 专线带宽，单位：Mbps；默认是物理专线带宽值。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// BGP ：BGP路由
-        /// STATIC：静态
-        /// 默认为 BGP 路由
+        /// 路由类型，枚举：BGP、STATIC；默认为BGP 。（BGP ：BGP路由；STATIC：静态）。
         /// </summary>
         [JsonProperty("RouteType")]
         public string RouteType{ get; set; }
 
         /// <summary>
-        /// BgpPeer，用户侧bgp信息，包括Asn和AuthKey
+        /// BgpPeer，用户侧bgp信息，包括Asn和AuthKey。
         /// </summary>
         [JsonProperty("BgpPeer")]
         public BgpPeer BgpPeer{ get; set; }
 
         /// <summary>
-        /// 静态路由，用户IDC的网段地址
+        /// 静态路由，用户IDC的网段地址。
         /// </summary>
         [JsonProperty("RouteFilterPrefixes")]
         public RouteFilterPrefix[] RouteFilterPrefixes{ get; set; }
 
         /// <summary>
-        /// vlan，范围：0 ~ 3000
-        /// 0：不开启子接口
-        /// 默认值是非0
+        /// vlan，范围：0 ~ 3000。
+        /// 0：不开启子接口，默认值是非0。
         /// </summary>
         [JsonProperty("Vlan")]
         public long? Vlan{ get; set; }
 
         /// <summary>
-        /// TencentAddress，腾讯侧互联 IP
+        /// TencentAddress，腾讯侧互联 IP。
         /// </summary>
         [JsonProperty("TencentAddress")]
         public string TencentAddress{ get; set; }
 
         /// <summary>
-        /// CustomerAddress，用户侧互联 IP
+        /// CustomerAddress，用户侧互联 IP。
         /// </summary>
         [JsonProperty("CustomerAddress")]
         public string CustomerAddress{ get; set; }
 
         /// <summary>
-        /// TencentBackupAddress，腾讯侧备用互联 IP
+        /// TencentBackupAddress，腾讯侧备用互联 IP。
         /// </summary>
         [JsonProperty("TencentBackupAddress")]
         public string TencentBackupAddress{ get; set; }
 
         /// <summary>
-        /// 高速上云服务ID
+        /// 高速上云服务ID。
         /// </summary>
         [JsonProperty("CloudAttachId")]
         public string CloudAttachId{ get; set; }
 
         /// <summary>
-        /// 是否开启BFD
+        /// 是否开启BFD。
         /// </summary>
         [JsonProperty("BfdEnable")]
         public long? BfdEnable{ get; set; }
 
         /// <summary>
-        /// 是否开启NQA
+        /// 是否开启NQA。
         /// </summary>
         [JsonProperty("NqaEnable")]
         public long? NqaEnable{ get; set; }
 
         /// <summary>
-        /// BFD配置信息
+        /// BFD配置信息。
         /// </summary>
         [JsonProperty("BfdInfo")]
         public BFDInfo BfdInfo{ get; set; }
 
         /// <summary>
-        /// NQA配置信息
+        /// NQA配置信息。
         /// </summary>
         [JsonProperty("NqaInfo")]
         public NQAInfo NqaInfo{ get; set; }
